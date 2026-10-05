@@ -60,6 +60,7 @@ sections:
     id: who
     tone: white
     label: Who DECHY helps
+    photo: { asset: asset.photo-who-tailor, layout: rail, position: "28% 40%" }
     heading: Teams of every size, in every industry
     intro: "DECHY is a global company and works with clients remotely, across time zones and markets."
     items:
@@ -85,6 +86,8 @@ sections:
     tone: paper
     numbered: true
     label: Problems DECHY solves
+    columns: 2
+    photo: { asset: asset.photo-problems-warehouse, layout: band, position: "50% 55%" }
     heading: The situations that bring people to us
     intro: "Projects usually begin with a problem, not a technology. These are the most common ones."
     items:
@@ -285,6 +288,7 @@ sections:
     id: work
     tone: white
     label: Selected work and capability
+    photo: { asset: asset.photo-work-vendor, layout: split, position: "50% 38%" }
     heading: The kinds of systems DECHY builds and connects
     intro: "Work at DECHY ranges from focused tools to platforms that span several systems. These are the main kinds of system, each a practice area in its own right."
     items:

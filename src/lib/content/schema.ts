@@ -140,6 +140,18 @@ export const FigureId = z.enum([
 ]);
 export type FigureId = z.infer<typeof FigureId>;
 
+/** A registered photograph placed in a block. Alt text and credit come from the asset registry. */
+export const PhotoRef = z.object({
+  asset: z.string().regex(/^asset\.photo-[a-z0-9-]+$/),
+  layout: z.enum(["rail", "band", "split", "aside"]).default("rail"),
+  /** CSS object-position for the crop, e.g. "30% 40%". Framing only; the file is never cropped. */
+  position: z
+    .string()
+    .regex(/^\d{1,3}% \d{1,3}%$/)
+    .default("50% 50%"),
+});
+export type PhotoRef = z.infer<typeof PhotoRef>;
+
 const tone = z.enum(["paper", "white", "ink"]).default("paper");
 const base = { id: z.string().regex(/^[a-z0-9-]+$/), tone };
 
@@ -181,6 +193,7 @@ export const Block = z.discriminatedUnion("type", [
     intro: z.string().optional(),
     numbered: z.boolean().default(false),
     columns: z.union([z.literal(1), z.literal(2)]).default(1),
+    photo: PhotoRef.optional(),
     items: z.array(z.object({ title: z.string(), body: z.string(), ref: z.string().optional() })),
   }),
   z.object({
@@ -231,6 +244,7 @@ export const Block = z.discriminatedUnion("type", [
     figure: FigureId,
     caption: z.string(),
     points: z.array(z.object({ title: z.string(), body: z.string() })).default([]),
+    photo: PhotoRef.optional(),
   }),
   z.object({
     type: z.literal("columns"),
@@ -280,6 +294,7 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
     intro: z.string(),
+    photo: PhotoRef.optional(),
   }),
 ]);
 export type Block = z.infer<typeof Block>;

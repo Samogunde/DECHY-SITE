@@ -116,6 +116,7 @@ sections:
     heading: What the interface layer of a portal looks like
     intro: "Most people judge a system by its interface. A conceptual wireframe shows how a customer portal might organize navigation, status at a glance, and the records people come for, on a desktop and on a phone."
     figure: portal-wireframe
+    photo: { asset: asset.photo-interfaces-wireframes, layout: aside, position: "50% 35%" }
     caption: "Conceptual wireframe of a customer portal. It illustrates a type of system DECHY designs and builds and is not a client interface."
     points:
       - title: Role-based views

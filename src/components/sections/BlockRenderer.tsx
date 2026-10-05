@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Photo } from "@/components/primitives/Photo";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
 import { ContactForm } from "./ContactForm";
@@ -14,13 +15,15 @@ function ContactFormBlock({ block }: { block: Extract<Block, { type: "contact-fo
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
-        <SectionHeader
-          id={block.id}
-          label={block.label}
-          heading={block.heading}
-          intro={block.intro}
-          className="rail"
-        />
+        <div className="rail">
+          <SectionHeader
+            id={block.id}
+            label={block.label}
+            heading={block.heading}
+            intro={block.intro}
+          />
+          {block.photo ? <Photo photo={block.photo} className="mt-8" /> : null}
+        </div>
         <div className="max-w-[40rem]">
           <ContactForm services={options} />
         </div>

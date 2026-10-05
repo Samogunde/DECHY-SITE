@@ -57,6 +57,9 @@ const SKIP_KEYS = new Set([
   "ref",
   "entityIds",
   "factId",
+  "asset",
+  "layout",
+  "position",
 ]);
 
 /** All human-readable strings in a block (not identifiers or paths). */
@@ -310,6 +313,18 @@ export function validateRegistry(registry: Registry): Issue[] {
     for (const b of page.sections) {
       checkBlock(b, page, registry, err, link);
     }
+    // Photography: each placement must resolve to a registered, approved photograph, and a page
+    // carries a few purposeful photographs, not a gallery.
+    const photoRefs = page.sections.flatMap((b) =>
+      "photo" in b && b.photo ? [{ block: b.id, ref: b.photo.asset }] : [],
+    );
+    for (const p of photoRefs) {
+      const asset = registry.assets.find((a) => a.id === p.ref);
+      if (!asset || asset.role !== "photograph")
+        err("photo-ref", `${where}#${p.block}`, `${p.ref} is not a registered photograph`);
+    }
+    if (photoRefs.length > 4)
+      err("photo-count", where, `${photoRefs.length} photographs on one page; the limit is 4`);
     const minVariety = page.kind === "home" || page.kind === "service" ? 8 : 1;
     if (blockTypes.size < minVariety)
       err(
@@ -389,6 +404,26 @@ export function validateRegistry(registry: Registry): Issue[] {
       err("asset-license", a.id, "Licensed stock needs sourceUrl and licenseUrl");
     if (a.approval !== "approved")
       err("asset-approval", a.id, "Asset is not approved but is registered for use");
+    if (a.source === "licensed-stock") {
+      const evidence = path.join(
+        root,
+        "data/assets/licenses",
+        `${a.id.replace(/^asset\./, "")}.md`,
+      );
+      if (!fs.existsSync(evidence))
+        err(
+          "asset-evidence",
+          a.id,
+          "Licensed stock needs license evidence in data/assets/licenses/",
+        );
+    }
+    if (a.role === "photograph") {
+      if (!a.width || !a.height || !a.sha256)
+        err("asset-photo", a.id, "A photograph needs width, height, and sha256");
+      if (a.alt.length < 20) err("asset-photo", a.id, "A photograph needs descriptive alt text");
+      if (a.source === "original")
+        err("asset-photo", a.id, "A photograph must be licensed, supplied, or client-owned");
+    }
   }
   const IMAGE_EXT = /\.(png|jpe?g|webp|avif|gif|svg|ico)$/i;
   const walkImages = (dir: string) => {

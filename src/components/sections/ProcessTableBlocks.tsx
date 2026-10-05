@@ -1,5 +1,6 @@
 import { Figure } from "@/components/figures/Figure";
 import { Inline } from "@/components/primitives/Inline";
+import { Photo } from "@/components/primitives/Photo";
 import type { Block } from "@/lib/content/schema";
 import { Section, SectionHeader } from "./Section";
 
@@ -109,11 +110,19 @@ export function TableBlock({ block }: { block: Of<"table"> }) {
   );
 }
 
-/** A figure with its explanation. Light or dark surface. */
+/** A figure with its explanation. Light or dark surface. An optional photograph sits beside the points. */
 export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
+  const points = block.points.map((p) => (
+    <div key={p.title} className="rule-top pt-5">
+      <h3 className="t-h4 m-0">{p.title}</h3>
+      <p className="t-body m-0 mt-2">
+        <Inline text={p.body} />
+      </p>
+    </div>
+  ));
   return (
     <Section id={block.id} tone={block.tone}>
-      <div className="max-w-[48rem]">
+      <div className="max-w-[48rem]" data-reveal="block">
         <SectionHeader
           id={block.id}
           label={block.label}
@@ -127,16 +136,18 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
         caption={block.caption}
         className="mt-10 min-[48rem]:mt-14"
       />
-      {block.points.length > 0 ? (
-        <div className="mt-12 grid gap-x-10 gap-y-8 min-[48rem]:grid-cols-3">
-          {block.points.map((p) => (
-            <div key={p.title} className="rule-top pt-5">
-              <h3 className="t-h4 m-0">{p.title}</h3>
-              <p className="t-body m-0 mt-2">
-                <Inline text={p.body} />
-              </p>
-            </div>
-          ))}
+      {block.photo ? (
+        <div className="mt-14 grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:col-span-5">
+            <Photo photo={block.photo} />
+          </div>
+          <div className="grid gap-8 lg:col-span-7" data-reveal="group">
+            {points}
+          </div>
+        </div>
+      ) : block.points.length > 0 ? (
+        <div className="mt-12 grid gap-x-10 gap-y-8 min-[48rem]:grid-cols-3" data-reveal="group">
+          {points}
         </div>
       ) : null}
     </Section>
