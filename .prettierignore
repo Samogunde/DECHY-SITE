@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+package-lock.json
+playwright-report
+test-results
+AGENTS.md
+DECHY_CONTENT_MASTER.md
+DECHY_CLAUDE_MASTER_HANDOFF.md
+docs
+data/taxonomy/generated
+*.png
+src/styles/typography-tokens.css

@@ -1,0 +1,11 @@
+# Netlify configuration. The Next.js runtime is detected automatically.
+# Required site settings (never committed): see .env.example. The contact form needs
+# CONTACT_DELIVERY and its provider variables set in Netlify's environment settings.
+
+[build]
+  command = "node scripts/netlify-build.mjs"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-audit --no-fund"
