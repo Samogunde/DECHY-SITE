@@ -1,50 +1,64 @@
-# DECHY Master Implementation Plan
+# DECHY Master Implementation Plan (Revision 2)
 
 Status: DRAFT FOR REVIEW. Nothing described here has been built. Production implementation starts only after you approve this plan and the decisions register.
-Companion documents: `01-strategic-audit.md` (findings), `03-decisions-register.md` (decisions DEC-01 to DEC-33).
-Labels: CONFIRMED (in the specifications), VERIFIED (checked by me), RECOMMENDED, ASSUMPTION, DECISION REQUIRED (see register).
+Companion documents: `01-strategic-audit.md`, `03-decisions-register.md`, `04-work-architecture.md`, `05-country-architecture.md`, `06-article-plan-53.md`.
+Labels: CONFIRMED (in the specifications or your instructions), VERIFIED (checked by me), RECOMMENDED, ASSUMPTION, DECISION REQUIRED (see register).
 
-House style in this document follows AGENTS 1A.16: no em dashes, no en dashes, no emojis. Ranges are written with "to".
+Revision 2 applies your corrections: the domain is deferred and not a blocker; the 53 articles are retained and fully planned; the full capability architecture is preserved with no public evidence disclaimers; the approved PNG logo is used; the project now lives at `C:\DECHY-SITE`; Work is a primary section with a full architecture; country-level pages are planned (10 to 15 countries, no cities).
+
+House style follows AGENTS 1A.16: no em dashes, no en dashes, no emojis. Ranges are written with "to".
 
 ---
+
 
 ## 1. Executive summary
 
-DECHY is to become a durable global platform that presents **DECHY: Technology, Software, AI & Digital Solutions** as a connected company whose differentiator is joining Software, AI, Automation, Integration, and Cloud. The specifications are strong on principles (anti-fabrication, qualification before creation, entity thinking, quality gates). They are weak on four things that decide whether the project succeeds:
+DECHY is to become a durable global platform presenting **DECHY: Technology, Software, AI & Digital Solutions** as a connected company whose differentiator is joining Software, AI, Automation, Integration, and Cloud, across the full 15-pillar service universe and the full technology ecosystem in the specifications.
 
-1. **Proof.** DECHY has an approved scale claim (since 2010; over 1,500 clients) but no verifiable public footprint. The name also collides with a French commune. The plan therefore treats *trust and entity establishment* as a first-class workstream (Proof Pipeline, named people, entity home, real external profiles), not decoration.
-2. **Scope realism.** The entity universe contains several hundred technologies and thousands of possible intersections. DECHY's real capability for most of them is not established. The plan separates the **entity universe** from **published capability** with a capability tier and publishes only what can be supported.
-3. **Information architecture precision.** The example URLs contain duplicate intents and ambiguous parents. The plan introduces one rule (canonical home) that resolves nearly all of them.
-4. **Operational readiness.** The domain is already registered and live, the repository is in a synced OneDrive folder, there is no vector logo, and the brand palette fails WCAG in several necessary combinations. These are fixable, but they must be handled before building, not after.
+The plan preserves the whole vision: every service, technology, language, platform, AI provider, automation tool, integration, industry, solution, and problem in AGENTS.md is seeded into the entity graph. What the plan controls is not *whether DECHY has a capability* but *how the architecture is published*: pages are created where real search intent and unique content exist, and everything else lives as connected entities that appear in matrices, relationships, and search/filter.
 
-Recommended path: approve the plan, resolve the Phase 0 decisions, then build a technical foundation and **two representative pages** (Home and Software Development) to the full standard, review them in a real browser, and scale only after that review.
+What decides success:
 
-Planning targets (RECOMMENDED, ASSUMPTION; not commitments): about 25 pages at the end of Phase 2, about 60 to 80 after Phase 3, about 150 to 200 after Phase 5, each page individually qualified. The conceptual universe is far larger and deliberately will not be published.
+1. **Depth and variety of content**, because DECHY will publish a large, AI-assisted corpus (15 service pillars, Work, 10 to 15 countries, 53 articles, technology, industry, and solution pages). Quality systems (briefs, validators, review, batches) prevent sameness and thin pages.
+2. **Information architecture precision**: one canonical home per concept, duplicates merged, URLs predictable.
+3. **A Work section** that is real from day one (Work Areas) and grows through project entries as you supply facts, with no invented client details.
+4. **Country architecture** that represents ability to serve markets with country-specific substance, not name swaps.
+5. **Entity clarity** (consistent descriptor-paired naming, Organization schema, real external profiles).
+6. **A reliable engineering and Git workflow**: local development at `C:\DECHY-SITE`, GitHub `Samogunde/DECHY-SITE` as source of truth, Netlify deployment.
+
+Recommended path: approve this plan, then build the technical foundation and two representative pages (Home and Software Development) to the full standard, review them in a real browser, and scale only after that review.
+
+Planning targets (RECOMMENDED, ASSUMPTION; not caps on the entity graph): about 30 pages after Phase 2 (15 pillars, Company, Contact, Work hub and areas, legal), growing through phases to a few hundred qualified pages including 53 articles, 10 to 15 country pages, and Work.
 
 ---
+
 
 ## 2. Business positioning
 
 **CONFIRMED**
-- Name DECHY; domain dechy.com; descriptor exactly "Technology, Software, AI & Digital Solutions".
-- Global company; operating since 2010; statement: "Since 2010, DECHY has helped over 1,500 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types." The number must not be raised or altered.
-- No physical offices, addresses, local teams, or Google Business Profiles may be implied.
-- Differentiator: connecting Software + AI + Automation + Integration + Cloud, inside a broader 15-pillar service universe. AI and Automation must not be presented as outranking other services.
+- Name DECHY; descriptor exactly "Technology, Software, AI & Digital Solutions".
+- Global company; operating since 2010; statement: "Since 2010, DECHY has helped over 1,500 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types." The figure is not to be raised or altered.
+- DECHY has substantial experience across the complete capability set in the specifications. Those capabilities are approved and are presented professionally and without public caveats.
+- No physical offices, addresses, local teams, or Google Business Profiles.
+- Differentiator: connecting Software + AI + Automation + Integration + Cloud, inside a broader service universe. AI and Automation never outrank other services.
+
+**Not generated (CONFIRMED):** specific client identities, project metrics, results, testimonials, awards, certifications, partnerships. Capability claims are approved; specific facts come only from you.
 
 **RECOMMENDED positioning model**
-
 - Category line (fixed): the descriptor.
-- Organizing idea: *connected systems.* DECHY's value is that software, intelligence, automation, integration, and infrastructure are designed together instead of bought as disconnected projects.
-- Proof posture: show method, architecture, and reference implementations until client proof is available; state capability, not outcomes.
+- Organizing idea: *connected systems.* Software, intelligence, automation, integration, and infrastructure designed together.
+- Proof posture: show the work (Work Areas, architecture, and entries as supplied); do not state outcomes that are not supplied.
 - Tone: clear, technical, direct, evidence based (AGENTS 1A.15).
 
-**Candidate positioning statements (DECISION REQUIRED, DEC-23).** These contain no unsupported claim:
-
+**Candidate positioning statements (DEC-23):**
 1. "Software, AI, automation, integration, and cloud, designed to work as one system."
 2. "We build and connect the software, data, and automation your organization runs on."
 3. "One technology partner for building, connecting, automating, and securing digital systems."
 
-**Strategic challenge (for DEC-24).** Fifteen equal pillars can read as "does everything, specializes in nothing." The specification forbids ranking AI or Automation above the rest, and I will respect that. The mitigation is *structure, not hierarchy*: five capability families, the connected-systems narrative as the organizing idea, and depth of content per service. If your actual revenue is concentrated in a few services, the homepage emphasis (not the page set) should reflect the truth.
+**Strategic challenge (DEC-24).** Fifteen equal pillars can read as "does everything." The mitigation is structure, not hierarchy: five capability families, the connected-systems narrative, and Work that shows the built systems. If revenue is concentrated in some services, homepage emphasis (not the page set) can reflect that.
+
+---
+
 
 ## 3. Website purpose
 
@@ -56,29 +70,33 @@ Goals to be set with you (DEC-32): target markets, primary service lines, monthl
 
 Top level (RECOMMENDED):
 
-- **Services** (15 pillars grouped in five families, section 6).
-- **Solutions** (problem-first pages, section 10).
-- **Technologies** (browse hub; individual technology pages live under their canonical service, section 20).
-- **Industries** (qualified only).
-- **Resources** (knowledge: guides, comparisons, definitions, articles).
-- **Work** (hidden until at least three real, permitted case studies or reference implementations exist).
-- **Company** (about, people, how we work, facts).
+- **Services** (15 pillars in five families, section 5).
+- **Solutions** (problem-first pages, section 9).
+- **Technologies** (browse hub; individual pages live under their canonical service, section 20).
+- **Industries**.
+- **Work** (Work Areas and Work Entries; see `04-work-architecture.md`).
+- **Locations** (country pages; see `05-country-architecture.md`).
+- **Resources** (53 launch articles, then guides, comparisons, definitions).
+- **Company** (about, people, how we work, who we work with).
 - **Contact**.
 
-Page-type families (AGENTS 49): Service, Technology/Platform, Industry, Location (gated), Solution/Problem (merged), Integration, Case Study, Knowledge. Plus system pages: Home, Company, Contact, legal, 404.
+Page-type families (AGENTS 49) plus Work Area, Work Entry, and Country. System pages: Home, Company, Contact, legal, 404.
 
 Principles:
-- A concept has **one canonical URL** and one **canonical home** service. Other pages link, never duplicate.
-- Entity does not equal page (section 15).
-- Every indexable page appears in the sitemap and is reachable from at least two parents (validator-enforced; orphans fail the build).
+- One canonical URL and one canonical home service per concept.
+- Entity does not equal page: every entity stays in the graph; pages are created where intent and unique content exist (section 15).
+- Every indexable page is in the sitemap and linked from at least two parents (orphans fail the build).
+
+---
+
 
 ## 5. Navigation
 
-Desktop: logo, Services (mega-menu), Solutions, Technologies, Industries (only once published), Resources, Company, primary CTA "Talk to DECHY" (final wording a copy decision). Footer: all 15 services, legal, company facts, contact.
+Desktop: logo, Services (mega-menu), Solutions, Technologies, Industries, Work, Resources, Company, primary CTA "Talk to DECHY" (final wording a copy decision). Locations is reached from the footer, Company, and relevant content (too many top-level items hurt clarity). Footer: all 15 services, Work Areas, countries, legal, company facts, contact.
 
-Mobile: single full-screen menu, accordions for families, persistent CTA, 44px touch targets.
+Mobile: full-screen menu, accordions for families, persistent CTA, 44px touch targets.
 
-Mega-menu groups (RECOMMENDED capability families; ASSUMPTION about grouping logic):
+Mega-menu families (RECOMMENDED; ASSUMPTION about grouping logic):
 
 | Family | Services |
 |---|---|
@@ -88,7 +106,10 @@ Mega-menu groups (RECOMMENDED capability families; ASSUMPTION about grouping log
 | Design and Growth | UI/UX & Product Design, Branding & Creative, SEO, AEO & GEO, Digital Marketing |
 | Advisory | Consulting & Digital Transformation |
 
-The nine-stage client journey (AGENTS 39) is shown on the homepage as "How engagements work", not used as navigation. Breadcrumbs follow the IA (AGENTS 56).
+The nine-stage client journey (AGENTS 39) appears on the homepage as "How engagements work". Breadcrumbs follow the IA.
+
+---
+
 
 ## 6. Service architecture
 
@@ -120,22 +141,39 @@ The 15 pillars and URLs are CONFIRMED (AGENTS 2 and 29). Two slugs need confirmi
 
 ## 7. Technology architecture (entities)
 
-The technology list in AGENTS 4 to 19 is the **entity universe**. Rules:
+The technology, platform, language, AI, automation, cloud, data, and integration lists in AGENTS 4 to 19 are **preserved in full** and seeded 1:1 into `data/taxonomy/`. Nothing is removed, downgraded, or labeled unproven.
 
-1. Every technology is a data entity with `primaryService` (its canonical home), `kind` (language, framework, platform, cloud service, database, AI provider, tool, standard), and `capability` tier: `core`, `working`, `familiar`, `unverified` (DEC-06).
-2. Only `core` and `working` entities may appear in "DECHY works with X" statements, technology matrices, and schema `knowsAbout`.
-3. A technology receives an indexable page only when it passes the Page Qualification Engine, and its URL is `/{primaryService}/{slug}/`.
-4. `unverified` technologies are used only in neutral reference content (comparisons, migrations) with no capability claim.
-5. No third-party logos in technology sections without rights; names only (trademark and implied partnership risk).
+Each entity carries organizing fields (never public disclaimers):
 
-Initial candidate shortlist for Phase 3 qualification (ASSUMPTION; depends on DEC-06): Next.js, React, TypeScript, Python, WordPress, Shopify, Airtable, Zapier, Make, n8n, OpenAI, Claude, Gemini, AWS, Flutter, React Native, PostgreSQL, Salesforce, HubSpot, Stripe. This shortlist reflects likely commercial intent, not confirmed DECHY capability.
+| Field | Purpose |
+|---|---|
+| `role` | primary service, supporting capability, strategic technology, technology, platform, framework, language, integration, tool |
+| `primaryService` | canonical home (resolves duplicates such as Firebase/Supabase, Kotlin/Swift, IAM) |
+| `prominence` | how much page, navigation, and homepage weight it receives (`feature`, `standard`, `reference`), set by search intent and commercial value |
+| `pagePolicy` | the five exact statuses (CREATE / INDEX, CREATE LATER, MERGE / CONSOLIDATE, REVIEW, DO NOT CREATE), reflecting search intent only |
+| `evidenceLevel` | internal: none, work area, work entry, case study; controls which proof blocks may render next to the entity |
+| `synonyms`, `relations`, `descriptions` | per the data model |
+
+Rules:
+1. Every listed capability is available to the content and entity architecture: it can appear in capability matrices, "technologies we work with" sections, relationship rails, schema `knowsAbout`, comparisons, and search/filter.
+2. `pagePolicy` is about search intent, not capability. A language such as Perl may remain a reference entity because no one searches for a Perl service; that is a page decision, not a statement about DECHY.
+3. Strategic technologies (feature prominence) get dedicated pages first, because their search demand is highest. Initial candidate list for Phase 3 (ASSUMPTION about demand; to be confirmed by the SERP review): Next.js, React, TypeScript, Python, Node.js, PHP, Java, .NET, WordPress, Shopify, Webflow, Airtable, Zapier, Make, n8n, OpenAI, Claude, Gemini, LangChain, AWS, Azure, Google Cloud, Flutter, React Native, Swift, Kotlin, PostgreSQL, MongoDB, Salesforce, HubSpot, Stripe, Docker, Kubernetes, Terraform.
+4. Third-party logos are not used by default (they imply partnership or certification). Technology names appear as text, which preserves the full breadth without implying a vendor relationship.
+5. Copy about any entity may describe what DECHY does with it (approved capability), without outcomes or client claims unless supplied.
+
+---
+
 
 ## 8. Industry architecture
 
-- Industries are entities. Indexable industry pages are created only when DECHY can state industry-specific substance (regulation, data sensitivity, typical systems, integration patterns) and has at least one legitimate proof element or reference implementation relevant to that industry. Otherwise the industry appears as a relationship chip on service pages.
-- Candidate first wave (RECOMMENDED, ASSUMPTION): Healthcare, Financial services, Real estate, Logistics, Retail and ecommerce, Education, Professional services, Manufacturing. Maximum eight in Phase 4.
-- Industry pages are **not** templates with a swapped noun. Each needs a distinct brief (for example healthcare: privacy, interoperability, auditability; logistics: tracking, integrations, exception handling).
-- Service x Industry intersection pages (for example `/software-development/healthcare/`) follow the example in AGENTS 29 but require stronger evidence than the industry page itself.
+- All industries in AGENTS 20 are entities. Industry pages are created where industry-specific substance and search intent exist: industry context, regulation, data sensitivity, typical systems, integration patterns, security and compliance, relevant solutions.
+- Candidate first wave (RECOMMENDED, ASSUMPTION): Healthcare, Financial services (finance, banking, insurance), Real estate and property management, Logistics and transportation, Retail and ecommerce, Education, Professional services, Manufacturing. Others follow by demand.
+- Pages are not noun-swapped templates. Each industry has a distinct brief.
+- Service x Industry intersections (for example `/software-development/healthcare/`) follow the CONFIRMED example in AGENTS 29 and require distinct substance beyond the industry page.
+- Work Entries and Work Areas feed industry pages when supplied; until then the page stands on industry-specific substance.
+
+---
+
 
 ## 9. Solution architecture
 
@@ -147,69 +185,88 @@ The 30 problem statements in AGENTS 22 are search intents and entities. **Recomm
 
 ## 11. Integration architecture
 
-Integrations (Stripe, Salesforce API, HubSpot API, Shopify API, Microsoft Graph, and so on) are technology entities with `primaryService = api-integration` (or ecommerce for commerce-specific ones, per the canonical home registry). Pages follow AGENTS 76: systems connected, data flow, authentication, webhooks, synchronization, error handling, security, monitoring. A data-flow diagram is mandatory. Do not claim a specific integration has been delivered unless evidence exists; "supports" language requires `core` or `working` capability.
+Integrations (Stripe, PayPal, Paystack, Flutterwave, Salesforce API, HubSpot API, Shopify API, Microsoft Graph, Google APIs, and the rest of AGENTS 11) are entities with `primaryService = api-integration` (or ecommerce for commerce-specific ones, per the canonical home registry). All are preserved. Pages follow AGENTS 76: systems connected, data flow, authentication, webhooks, synchronization, error handling, security, monitoring. A data-flow diagram is mandatory on each integration page. Integration pages are created by search intent (for example Salesforce, HubSpot, Stripe first); the rest remain entities linked from service pages, Work Areas, and comparison articles.
+
+---
+
 
 ## 12. Business-type architecture
 
 Fifteen business types (AGENTS 21). **Recommendation:** one "Who we work with" section on the Company page plus relationship data feeding service pages; **no** per-business-type landing pages in the first three phases (high duplicate-intent risk). Reconsider individual pages (for example Startups, Agencies, SaaS companies) only if Search Console shows distinct demand.
 
-## 13. Location architecture
+## 13. Location (country) architecture
 
-CONFIRMED: Global > Country > Region > City concept, strict location rule, no fake presence.
+Full detail in `05-country-architecture.md`. Summary:
 
-RECOMMENDED:
-- Model locations as data. Distinguish `presence: none` (default, always currently true) from `serves: true/false`.
-- **City pages: DO NOT CREATE** by default.
-- **Country pages: CREATE LATER**, only when all of the following hold: documented clients or delivery in that country; country-specific substance (regulation such as GDPR or national identity rules, local payment methods, languages, data residency, procurement norms); content that cannot be produced by swapping the country name; and human review. A page must say DECHY serves clients in the country remotely and must never imply an office.
-- Mandatory site-identification and privacy requirements of target countries (for example Germany) are handled in legal pages before any country content.
-- No `LocalBusiness` schema, no maps, no local phone numbers, no Google Business Profile.
+- **Country level only**; no city pages, no addresses, no offices, no branches, no local teams, no Google Business Profiles, no `LocalBusiness` schema.
+- 10 to 15 strategically selected countries. Candidate pool of 15 from your examples: United States, United Kingdom, Germany, France, Spain, Italy, Netherlands, Ireland, Switzerland, Sweden, Canada, Australia, United Arab Emirates, Belgium, Austria. Waves of 4 to 6 keep quality high (DEC-35).
+- Each page represents DECHY's ability to serve clients in that market, remote-first, truthful to the global positioning.
+- Each page needs market-specific substance: relevant services, technology capabilities, industries, common business needs, solutions, integrations, country-specific considerations (regulation, payments, e-invoicing, languages), FAQs, resources. A similarity validator and sourced, dated regulatory statements guard against thin pages.
+- Pages connect to services, technologies, industries, solutions, business types, Work, and articles through typed edges.
+- Country x service intersections (for example `/software-development/germany/`) are CREATE LATER.
+
+---
+
 
 ## 14. Content architecture
 
-Four classes (CONFIRMED, AGENTS 31): Commercial, Informational, Proof, Authority.
+Four classes (CONFIRMED, AGENTS 31): Commercial, Informational, Proof, Authority. Proof is delivered by the Work architecture.
 
-**Launch articles (DECISION REQUIRED, DEC-04).** The Content Master refers to 53 approved articles "defined in AGENTS.md"; no list exists. Options: (a) you supply the list; (b) I derive a proposed slate from the entity graph, each article tied to a service, a real question, and an interlink plan, for your approval. I recommend (b) with at most 8 to 10 articles per publication batch, and no batch published until the previous batch has been human-reviewed. I will not label an invented list "the 53".
+**Work.** A full section with two layers: Work Areas (system-centric explanations of what DECHY builds, with original architecture diagrams, writable now) and Work Entries (project-level, from facts you supply; summary, detailed, or case-study depth). See `04-work-architecture.md`. Case study = a Work Entry with verified detail.
 
-**Content depth model** (micro/short/medium/long/full) is stored as fields on one entity record with a validator that checks the five lengths do not contradict each other.
+**The 53 launch articles.** Retained in full. Complete architecture in `06-article-plan-53.md`: 53 articles in 6 clusters mapped to all 15 pillars, with search intent, canonical home, entities, linking, and a six-batch publication plan (9, 9, 9, 9, 9, 8). The missing source list is treated as a documentation gap; if an original list exists it is reconciled against this set.
 
-**Authoring workflow** (AGENTS 59 refined): define entity and intent, define relationships, select approved claims from the facts register, write the brief, draft, technical review, editorial review (house-style linter), schema and metadata, link candidates, QA, human approval, publish. Every page records `reviewer`, `lastReviewed`, and `claims[]` (fact IDs).
+**Country pages.** 10 to 15 (section 13).
 
-**Proof Pipeline** (RECOMMENDED, DEC-21): until real client case studies are cleared for publication, DECHY publishes a few **reference implementations**, each labeled "DECHY reference implementation", with a public repository or documented architecture, diagrams, trade-offs, and limits. These are legitimate, original, technical proof of capability. They are not presented as client work. Initial candidates: lead-qualification workflow (Airtable + n8n + an LLM with human review); retrieval-augmented document Q&A with evaluation notes; API integration with robust retry and monitoring. Each directly supports AGENTS 38 and 92 without claiming those systems were delivered.
+**Content depth model** (micro to full) is stored as fields on one record; a validator checks the lengths agree.
+
+**Authoring workflow** (AGENTS 59 refined): define entity and intent, relationships, select approved claims, write the brief, draft, technical review, editorial review (house-style linter), schema and metadata, link candidates, QA, human approval, publish. Every page records `reviewer`, `lastReviewed`, and `claims[]`.
+
+**Factuality rule (CONFIRMED).** Content distinguishes: (1) DECHY capability claims (approved), (2) specific project facts, (3) client identities, (4) measurable results, (5) testimonials, certifications, awards, partnerships (2 to 5 only when supplied). Illustrative examples are labeled illustrative.
+
+**Reference implementations** (optional accelerator, DEC-21): DECHY-built demonstrations (for example a lead-qualification workflow, a document Q&A system) published as Work Entries labeled as DECHY-built, with architecture and trade-offs. They add original, citable material without needing client permissions.
+
+---
+
 
 ## 15. Entity architecture
 
-Entity types and default page policy:
+Entity types and default page policy (all entities live in the graph; page policy is about search intent):
 
 | Entity | Default policy | Becomes a page when |
 |---|---|---|
 | Company | Page (Home, Company) | always |
 | Service pillar | Page | always (15) |
-| Service sub-capability | Section | distinct search intent and enough unique substance |
-| Technology / platform / provider | Data | service x technology intent exists AND capability is `core` or `working` |
-| Language | Data | commercial intent as "X development", capability confirmed |
+| Service sub-capability | Section | distinct intent and substantial unique content |
+| Technology / platform / provider / language | Data (appears in matrices and relations) | service x technology intent exists (canonical-home URL) |
 | Architecture concept | Data / glossary | high-intent definition or guide |
-| Industry | Data + relationship chip | industry-specific substance and evidence |
-| Business type | Data | distinct demand shown by data (not before Phase 5) |
+| Industry | Data + relationship chip | industry-specific substance and demand |
+| Business type | Data + "Who we work with" | distinct demand shown by data |
 | Problem | Data (opens a solution page) | merged into solution page |
 | Solution | Page | passes qualification |
 | Integration | Data | system pair has intent and data-flow content |
-| Use case | Section of services/solutions | rarely a page |
-| Location | Data | country gate in section 13 |
-| Comparison, migration | Page | real buyer decision and balanced content |
-| Article / guide / definition | Page | real question, answer-first, original value |
-| Case study / reference implementation | Page | real work, permission, evidence |
+| Use case | Section of services/solutions/Work Areas | rarely a page |
+| Country | Page (10 to 15, in waves) | country substance requirements met |
+| City | DO NOT CREATE | n/a |
+| Work Area | Page (about 20 to 25) | system-centric substance and diagram |
+| Work Entry / case study | Page | facts supplied and permissions recorded |
+| Comparison, migration | Page | real buyer decision, balanced content |
+| Article / guide / definition | Page | the 53 launch articles, then qualified additions |
 | Person (author, reviewer, lead) | Profile page | real person with consent |
-| External reference | Data | cited in content and `sameAs` where it is DECHY's own profile |
+| External reference | Data | cited; `sameAs` for DECHY's own profiles |
 
-**Schema of the graph.** Entities have stable IDs (`svc.software-development`, `tech.python`, `ind.healthcare`). Edges are typed and live in `data/relations/*.yaml` (not buried in prose). A build-time validator checks that edge endpoints exist, inverse edges are generated, there are no orphans, and no canonical home conflicts exist.
+**Graph.** Stable IDs (`svc.software-development`, `tech.python`, `ind.healthcare`, `workarea.rag-knowledge-systems`, `loc.germany`, `art.017`). Typed edges in `data/relations/*.yaml`. Required chain support (CONFIRMED by you): Work → Service → Technology → Industry → Problem → Solution → Integration → Related article → Related service → Related technology. The build validator checks endpoints, generates inverse edges, rejects orphans and canonical-home conflicts.
 
-**Entity disambiguation (RECOMMENDED).** Always pair the brand with its descriptor in titles and Organization description ("DECHY: Technology, Software, AI & Digital Solutions"). Use a stable Organization `@id` (`https://dechy.com/#organization`), real `sameAs` profiles only (those that exist; DEC-05), and avoid the bare word "Dechy" in isolation in contexts where the town could be meant.
+**Entity disambiguation (RECOMMENDED).** Pair the brand with the descriptor in titles and the Organization description; stable Organization `@id`; real `sameAs` profiles; consistent naming everywhere. This addresses the shared name "Dechy" (also a French commune) without any rename.
+
+---
+
 
 ## 16. SEO architecture
 
 - One primary intent per page, recorded in the page record, with secondary intents. Duplicate-intent detection compares intents and titles.
 - Metadata generated from the content model: title (descriptor suffix on Home and Company only; service pages use "{Service} Services | DECHY"), meta description, canonical, robots, Open Graph, Twitter card.
-- `trailingSlash: true`; canonical includes the trailing slash; HTTP to HTTPS and `www` to apex (or the reverse; DEC-02) via a single redirect rule.
+- `trailingSlash: true`; canonical includes the trailing slash; HTTP to HTTPS and one preferred host variant via a single redirect rule; every absolute URL derives from the configurable `SITE_ORIGIN` so the final domain (DEC-02, deferred) is a setting, not a rewrite.
 - Sitemaps: generated from approved indexable records only; sitemap index split by entity type; accurate `lastmod` (true modification dates only); `hreflang` annotations when locales exist. `changefreq` and `priority` omitted (ignored).
 - robots.txt generated; staging and preview deployments `noindex` and password-protected where possible.
 - Internal linking engine generated from typed edges (section 21).
@@ -230,7 +287,7 @@ Entity types and default page policy:
 Goal: make DECHY a coherent, corroborated entity. Honest limits: no outcome (citation, recommendation, ranking) is promised or claimed.
 
 1. **Entity home:** the Company page, declaring who DECHY is, with facts from the register only.
-2. **Organization schema** with stable `@id`, `name`, `url`, `logo`, `description` (exact descriptor), `foundingDate` (only if you confirm 2010 as the founding or start date; DEC-05), `areaServed` "Worldwide", `knowsAbout` (core and working capabilities only), `contactPoint`, `sameAs` (existing profiles only). Excluded: `numberOfEmployees`, `aggregateRating`, `address`, `award`, anything unverified.
+2. **Organization schema** with stable `@id`, `name`, `url`, `logo`, `description` (exact descriptor), `foundingDate` 2010 (CONFIRMED statement), `areaServed` "Worldwide", `knowsAbout` (drawn from the capability architecture), `contactPoint`, `sameAs` (existing profiles only). Excluded: `numberOfEmployees`, `aggregateRating`, `address`, `award`, anything unverified.
 3. **External corroboration:** create or claim real profiles (LinkedIn company page, GitHub organization, others you confirm), consistent naming and descriptor, link both directions. Directories such as Clutch and GoodFirms rely on real client reviews, so they come after real clients consent. Wikidata/Wikipedia are not targets (notability requirements cannot be met honestly without third-party coverage).
 4. **Original material:** reference implementations, architecture diagrams, evaluation notes, and method documents are the types of first-hand content that others cite.
 5. **Digital PR (later):** publish original technical research or data only when DECHY actually has it.
@@ -257,8 +314,8 @@ Rules (RECOMMENDED, extending AGENTS 29):
 5. Solutions at `/solutions/{slug}/`. No separate problem URLs.
 6. Browse hubs `/services/`, `/technologies/`, `/industries/`, `/solutions/`, `/resources/` are real pages (matrices and guided choosers), not thin lists.
 7. Knowledge: `/resources/{type}/{slug}/` where type is `guides`, `comparisons`, `definitions`, `articles`.
-8. Work: `/work/{slug}/`.
-9. Locations (reserved, gated): `/locations/{country}/` and `/{service}/{country}/`.
+8. Work: `/work/` hub, `/work/areas/{slug}/` for Work Areas, `/work/{slug}/` for Work Entries and case studies.
+9. Countries: `/locations/` hub and `/locations/{country-slug}/`; qualified country x service pages `/{service}/{country-slug}/` are CREATE LATER. No city URLs.
 10. People: `/company/team/{slug}/` when real profiles exist.
 11. A **slug registry** enforces uniqueness inside each parent and flags collisions across entity types (for example a technology named like an industry).
 12. Resolved duplicate: `/automation/airtable/` is the single Airtable page; `/automation/airtable-automation/` is `MERGE / CONSOLIDATE`.
@@ -287,6 +344,8 @@ Rules (RECOMMENDED, extending AGENTS 29):
 | Case study / reference implementation | `Article` (and `SoftwareSourceCode` or `SoftwareApplication` for a real repo or product) |
 | FAQ sections | `FAQPage` only for real questions |
 | People | `ProfilePage` + `Person` |
+| Work Area / Work Entry | `WebPage` (+ `Service` where apt); case-study depth uses `Article`; see `04-work-architecture.md` |
+| Country | `WebPage` + `Service` with `areaServed` = Country; no `LocalBusiness`, no address |
 | Contact | `ContactPage` |
 
 Excluded unless evidenced: `LocalBusiness`, `Review`, `AggregateRating`, `Offer` with prices, employee counts, awards. Schema types come from `schema-dts`; JSON-LD is generated from the content model, never hand-typed per page, and validated in CI. `Service` and `Organization` do not produce rich results; their purpose is entity clarity.
@@ -326,7 +385,7 @@ The brand blue and slate remain the brand; the derivations are used for text and
 
 **Typography (RECOMMENDED, DEC-13).** Long-form body 18px desktop (17px minimum on mobile), line-height 1.65, measure 65 to 75 characters, Source Sans 3. Lead paragraph 21 to 22px. Headings in Manrope with a fluid scale (`clamp`): H1 about 40 to 60px, H2 about 30 to 40px, H3 about 22 to 26px, no oversize startup headlines (AGENTS 1A.8). Table and UI text 15 to 16px minimum. Variable fonts through `next/font`, self-hosted, preloaded, `font-display: swap` with size-adjusted fallbacks to prevent layout shift.
 
-**Shape and surface.** Radius scale 0, 2, 4, 6, 8 (no pills; buttons 6). Hairline 1px borders instead of shadows; shadows only for floating layers (menus, dialogs). No gradients, no glassmorphism, no glow (CONFIRMED). Section rhythm alternates Paper, white, and Ink surfaces; Ink sections need the reverse logo (DEC-03).
+**Shape and surface.** Radius scale 0, 2, 4, 6, 8 (no pills; buttons 6). Hairline 1px borders instead of shadows; shadows only for floating layers (menus, dialogs). No gradients, no glassmorphism, no glow (CONFIRMED). Section rhythm alternates Paper, white, and Ink surfaces; Dark sections do not carry the logo in Phase 1; header and footer logo sit on light surfaces.
 
 **Layout pattern catalogue** (to avoid repetitive card grids):
 1. Split hero with a system diagram.
@@ -341,6 +400,8 @@ The brand blue and slate remain the brand; the derivations are used for text and
 10. Related-content rail, text-forward.
 
 Cards are allowed only where items are genuinely parallel and short.
+
+**Logo usage (CONFIRMED: use the approved PNG as supplied).** The PNG is placed on white or Warm Off White with CSS blending so its near-white background is not visible; it is never redrawn, recolored, cropped without your approval, stretched, or given effects. The descriptor stays inside the artwork where legible; elsewhere it is live text in Manrope. A favicon or social mark derived by faithful crop of the approved artwork is proposed for your approval before use. A vector master, reverse version, and brand guide are later recommendations (DEC-03).
 
 **Iconography.** One line-icon family (candidate: Lucide, MIT licensed; decision at build), used sparingly. No emoji.
 
@@ -380,7 +441,10 @@ Structure (RECOMMENDED, replaces AGENTS 78 layout only where noted, DEC-11):
   docs/                 planning, architecture, brand, seo, decisions (ADRs)
   data/
     facts/              company.yaml (approved facts + IDs), proof.yaml
-    taxonomy/           services, technologies, industries, business-types, locations, canonical-homes
+    taxonomy/           services, technologies, industries, business-types, canonical-homes
+    countries/          country records (05-country-architecture.md)
+    work/               areas/ and entries/ (04-work-architecture.md)
+    articles/           53 article briefs (06-article-plan-53.md)
     relations/          typed edges
     assets/             images.yaml, licenses/
     redirects.yaml
@@ -399,7 +463,7 @@ Structure (RECOMMENDED, replaces AGENTS 78 layout only where noted, DEC-11):
 
 **Content store:** typed files in Git (YAML for structured data, MDX for long-form), validated with Zod schemas, loaded by a thin custom loader. No CMS at launch (DEC-14): one owner, AI-assisted drafting, and Git review make a CMS unnecessary overhead. The model is portable to a headless CMS later (Sanity, Contentful, or a Git-based one) if non-technical editors join.
 
-**Core record fields** (a superset of AGENTS 28, 32, 34): `id`, `type`, `slug`, `canonicalHome`, `parents[]`, `name`, `synonyms[]`, `descriptions{micro,short,medium,long}`, `intent{primary,secondary[]}`, `status` (the five exact statuses), `indexing`, `capability`, `claims[]` (fact IDs), `evidence[]`, `sections[]` (ordered, typed blocks), `faqs[]`, `relations` (via edge files), `seo`, `schema`, `i18n{locale,translationOf}`, `reviewer`, `lastReviewed`, `datePublished`, `dateModified`.
+**Core record fields** (a superset of AGENTS 28, 32, 34): `id`, `type`, `slug`, `canonicalHome`, `parents[]`, `name`, `synonyms[]`, `descriptions{micro,short,medium,long}`, `intent{primary,secondary[]}`, `status` (the five exact statuses), `indexing`, `role`, `primaryService`, `prominence`, `pagePolicy`, `evidenceLevel`, `claims[]` (fact IDs), `evidence[]`, `sections[]` (ordered, typed blocks), `faqs[]`, `relations` (via edge files), `seo`, `schema`, `i18n{locale,translationOf}`, `reviewer`, `lastReviewed`, `datePublished`, `dateModified`.
 
 **Fact register discipline:** copy references facts through a macro (for example `{{fact:company.founded}}`). The validator fails any occurrence of the company statistic or historical claims not produced by a fact, and any change to a fact requires an ADR note.
 
@@ -477,72 +541,91 @@ Visual review is not automated: each milestone requires screenshots and a real-b
 - Branch protection on `main` (CI required, no force-push) once CI exists.
 - `.gitignore` for `node_modules`, `.next`, env files, OS files; `.env.example` only.
 - Releases: milestone tags (`v0.1-foundation`, `v0.2-representative-pages`).
-- The first commit contains the specification documents and this planning set. I will not push production code before approval. Commit identity and pushing the planning docs are in DEC-27 and DEC-28.
-- Working copy moves out of OneDrive (DEC-01); Git history stays intact because it is moved before any commit is relied upon.
+- The first commits contain the specification documents and the planning set, pushed to GitHub as the source of truth. Production code is not written or pushed before you approve this plan. Work is pushed whenever a meaningful, verified unit is complete (DEC-27 covers commit identity).
+- The working copy is at `C:\DECHY-SITE` (moved out of OneDrive and verified; history and remote intact).
 
 ## 35. Netlify deployment strategy
 
-- Netlify site connected to the GitHub repo; `main` → production; PRs and branches → deploy previews; preview URLs `noindex`.
-- Build: `npm ci && npm run build`; Node 22 pinned through `.nvmrc`/`netlify.toml`.
-- Domain: dechy.com is registered (VERIFIED) with DNS at NAMEFIND. Before cutover: confirm control of the registrar and DNS (DEC-02), inventory all DNS records (including MX/SPF/DKIM for email), record what the current site serves and its inbound URLs, build a redirect map, lower TTL, switch DNS, verify HTTPS, then run the production smoke test. Do not point DNS until the production candidate passes all gates and you approve.
-- External blockers I cannot resolve on my own: Netlify authorization/login and plan, DNS/registrar access, and any account creation. These require you.
-- Rollback: Netlify atomic deploys allow instant rollback; DNS change documented with the previous records.
+- Netlify site connected to the GitHub repo; `main` deploys to production; branches and pull requests produce deploy previews; previews are `noindex`.
+- Build: `npm ci && npm run build`; Node 22 pinned.
+- **Domain-independent (DEC-02, deferred):** the public origin is one setting (`SITE_ORIGIN`) used for canonicals, sitemaps, Open Graph, and schema `@id`. Until the domain is chosen (dechy.com if acquired, dechytech.com, dechydev.com, or another), development and review use the Netlify-provided subdomain with search indexing blocked. When the domain is chosen: add it in Netlify, set `SITE_ORIGIN`, configure DNS and HTTPS, run the production smoke test, and only then allow indexing. If a domain ever changes after launch, a redirect map handles it.
+- Things I cannot do alone: Netlify authorization/plan and DNS/registrar access at deployment time. They need you.
+- Rollback: Netlify atomic deploys.
+
+---
+
 
 ## 36. Future expansion strategy and canonical phase sequence
 
-This sequence reconciles AGENTS 60 and 95, the Handoff, the Content Master, and your instruction (audit D-4).
+This reconciles AGENTS 60 and 95, the Handoff, the Content Master, and your instructions.
 
-| Phase | Scope | Gate to exit |
+| Phase | Scope | Exit gate |
 |---|---|---|
-| 0 | Approve plan and decisions; facts register; domain/Git/OneDrive resolution; SERP/competitor review; logo path; extended brand tokens spec; launch article derivation | You approve in writing |
-| 1 | Foundation (scaffold, tokens, content loader, graph, validators, CI, Netlify preview) + **Home** + **Software Development**, plus working Contact page, header/footer, 404, and the minimum legal pages | Browser review desktop/tablet/mobile, all automated checks pass, your approval |
-| 2 | Remaining 14 service pillars, Company, People (if real), Knowledge index, full legal set, production launch candidate and smoke test | Each service page reviewed for non-template structure; production deploy only when you approve |
-| 3 | Technologies, platforms, AI and automation depth, integrations; Proof Pipeline items 1 to 3 | Qualification table (each page: intent, uniqueness, capability, evidence) approved |
-| 4 | Industries, solutions, qualified intersections | Distinct-intent evidence per page |
-| 5 | Knowledge batches (8 to 10 per batch), comparisons, definitions, case studies as real proof arrives | Per-batch editorial review |
-| 6 | Country and language expansion (qualified only) | Genuine localization and evidence per market |
+| 0 | Plan approval; Approved Facts Register; taxonomy seeded 1:1 from AGENTS; SERP review; Work, country, and article briefs scaffolded | You approve the revised plan |
+| 1 | Foundation (scaffold, tokens, content loader, graph, validators, CI, Netlify preview) + **Home** + **Software Development**, plus working Contact page, header/footer, 404, minimum legal pages | Real-browser review at desktop/tablet/mobile; all gates pass; your approval |
+| 2 | Remaining 14 pillars; Company; Work hub with Work Areas (about 20 to 25); full legal set; production launch candidate | Per-page review for non-template structure; production smoke test; your go-ahead |
+| 3 | Technology, platform, AI, automation, and integration pages by search intent (strategic list in section 7); article Batch 1 | Qualification table approved |
+| 4 | Industries; solutions; qualified intersections; country Wave 1 (US, UK, Canada, Australia, Ireland); article Batches 2 to 3; Work Entries as you supply them | Per-batch review |
+| 5 | Country Waves 2 and 3 (DE, FR, NL, CH, BE, AT, ES, IT, SE, AE); article Batches 4 to 6; case studies as verified detail arrives | Per-batch review |
+| 6 | Language localization (locale versions of country and core pages); country x service intersections | Genuine localization and evidence per market |
 
-Guardrails for expansion: page count is never a KPI; consolidation and pruning are scheduled (quarterly) from Search Console data; new entity types need an ADR; applications, portals, dashboards, or AI tools later live on separate subdomains or routes behind authentication and `noindex`, and share the design tokens as a package.
+Article Batch 1 may begin in Phase 2 once the pillar pages it reports to exist. Page count is never a KPI; quarterly consolidation reviews use Search Console data. Applications, portals, dashboards, or AI tools later live on separate routes or subdomains, noindexed behind authentication, sharing design tokens.
+
+---
+
 
 ## 37. Risks
 
-See audit sections H to K. Top ten, ranked:
+Detail in audit sections H to K. Top ten, ranked:
 
-1. Entity weakness: no public footprint, name collision (I-1).
-2. Unsubstantiated capability and scale claims (C-3, I-2).
-3. Thin or scaled-content exposure (I-3).
-4. Domain ownership/continuity and existing live site (H-10).
-5. Logo deliverables incomplete (B3) blocking dark sections, favicon, and Open Graph.
-6. Dependency/security exposure of the stack (H-2).
-7. Accessibility defects from the CONFIRMED palette (K-2).
-8. Repository in OneDrive (H-1).
-9. i18n retrofit cost (H-6).
-10. Template sameness across 15 services (J-1).
+1. Sameness and thinness across a very large AI-assisted corpus (J-1, I-2).
+2. Duplicate intent and cannibalization (D-7, D-9).
+3. Country-page similarity and stale regulatory statements (I-4, I-8).
+4. Dependency/security exposure of the stack (H-2).
+5. Accessibility defects from the approved palette without derived tokens (K-2).
+6. Entity establishment for a shared name (section 15).
+7. Work section depth: breadth without substance (J-6).
+8. i18n retrofit cost if not designed in now (H-6).
+9. Review bottleneck: one approver for hundreds of pages. Mitigation: briefs, validators, batches.
+10. Deployment dependencies outside my access: Netlify authorization, DNS (H-13).
+
+---
+
 
 ## 38. Missing requirements
 
-Approved facts register inputs; legal entity details; people and bios; contact channels; engagement and pricing posture; capability tiers; real external profiles; proof; launch article list; vector logo set and brand guide; measurable goals and target markets; lead handling process and ownership; review authority; Netlify account and plan; domain/DNS access; policy on AI crawlers; analytics choice; legal texts reviewed by a qualified person; image licensing preferences.
+Approved Facts Register inputs (legal entity, contact channels, engagement models, time zones, languages, real external profiles); named authors/reviewers; Work intake information for project entries (not blocking); lead handling process and owner; measurable goals and priority markets; review authority; Netlify authorization; AI crawler policy; analytics choice; legal texts reviewed by a qualified person; image licensing preferences; later: vector logo and brand guide, favicon/monogram derived from the approved logo, final domain.
+
+---
+
 
 ## 39. Recommended improvements (summary)
 
-1. Canonical-home rule and merged problem/solution pages (sections 6, 10, 20).
-2. Capability tiers; neutral entities (section 7).
-3. Proof Pipeline and named people (sections 14, 18).
-4. Country pages gated; no city pages (section 13).
-5. Five-family navigation; hide Work until evidence (section 5).
-6. Derived accessible tokens; larger body type (section 23).
-7. Diagram-first visual system (section 25).
-8. Typed, Git-based content with graph validation, facts macro, and content linter (sections 26, 33).
-9. Static-first Next.js on Netlify with hardened headers (sections 28, 31).
-10. Locale-ready from day one, English-only publication (section 19).
-11. Move out of OneDrive; CLAUDE.md importing AGENTS.md; ADR log.
-12. Privacy-first analytics (section 32).
+1. Canonical-home rule; merged problem and solution pages (sections 6, 9, 20).
+2. Classification that organizes, never removes (section 7).
+3. Two-layer Work architecture (section 14; `04`).
+4. Country architecture in waves with required country-specific substance (section 13; `05`).
+5. A complete 53-article plan with overlap control and batches (`06`).
+6. Five-family navigation with Work and Resources prominent (section 5).
+7. Derived accessible color tokens; 18px body type (section 23).
+8. Diagram-first visual system (section 25).
+9. Typed, Git-based content with graph validation, facts macro, and content linter (sections 26, 33).
+10. Static-first Next.js on Netlify with hardened headers (sections 28, 31).
+11. Locale-ready from day one, English-only publishing (section 19).
+12. Domain-independent configuration (section 35).
+13. CLAUDE.md importing AGENTS.md; ADR log.
+14. Privacy-first analytics (section 32).
+15. Optional DECHY reference implementations (section 14).
+
+---
+
 
 ## 40. Decisions requiring human approval
 
-The full register with options and my recommendation is in `03-decisions-register.md`. Required before Phase 1 starts: DEC-01 to DEC-14, DEC-23, DEC-27, DEC-28. Required before Phase 2 ships: DEC-05, DEC-17 to DEC-22, DEC-26, DEC-29. Phase 6 only: DEC-16 detail and market selection.
+Full register with recommendations: `03-decisions-register.md` (DEC-01 to DEC-40). Before Phase 1 starts: DEC-04, DEC-07 to DEC-15, DEC-23, DEC-24, DEC-30, DEC-31, DEC-34, DEC-36. Before Phase 2 ships: DEC-05, DEC-17 to DEC-22, DEC-26. Later: DEC-02 (domain), DEC-03 (vector logo), DEC-35 (country order), DEC-16 detail.
 
 ---
+
 
 ## Appendix A. Phase 1 definition of done (representative pages)
 
@@ -567,7 +650,7 @@ For approval before drafting. Section order is deliberately different from the o
 4. System types DECHY builds (business applications, SaaS, portals, dashboards, marketplaces, booking, membership/subscription, internal tools) presented as an index list, not cards.
 5. Delivery approach: discovery, architecture, build, test, release, maintain (numbered rail with real artifacts per stage).
 6. Architecture and engineering quality: testing, security, performance, observability, documentation (full-bleed Ink band with figure).
-7. Technology approach: stack categories and selection criteria; names only for `core` and `working` capabilities.
+7. Technology approach: stack categories and selection criteria; technology names drawn from the capability architecture.
 8. Modernizing legacy software: assessment, strangler approach, data migration, risk.
 9. Integration, AI, and automation inside software (connected-systems thesis, labeled conceptual diagram).
 10. Industries and business types (relationship strip; no unsupported industry claims).
@@ -575,4 +658,4 @@ For approval before drafting. Section order is deliberately different from the o
 12. Related services, solutions, resources.
 13. Next step: discovery conversation CTA.
 
-Proof elements appear only if a reference implementation or permitted case exists by then; otherwise the section is absent.
+Related Work Areas appear as soon as they exist; Work Entries appear only if supplied; otherwise that block is absent.
