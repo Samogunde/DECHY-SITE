@@ -1,6 +1,6 @@
 # Phase 1 Implementation Notes
 
-Status: Phase 1 built and verified locally on branch `feat/phase-1-foundation`. Netlify authorization is the only external dependency still open. Sources of truth for scope: plan section 36 ("Phase 1 canonical scope") and Appendix D.
+Status: Phase 1 built, verified locally and green in GitHub Actions on Linux (final commit `3951d34`), merged to `main`. Netlify authorization is the only external dependency still open. Sources of truth for scope: plan section 36 ("Phase 1 canonical scope") and Appendix D.
 
 ## What was built
 
