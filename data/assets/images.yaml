@@ -197,6 +197,7 @@ assets:
     width: 1800
     height: 1201
     alt: A desk seen from above with printed wireframes, a phone interface template, a monitor showing interface components, and a laptop.
+    caption: Interface work starts with wireframes on paper and in design tools, long before any code.
     usage: [software-development]
     approval: approved
     acquired: "2026-10-05"

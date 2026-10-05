@@ -25,11 +25,11 @@ sections:
     variant: service
     eyebrow: Service
     headline: Software Development
-    lead: "Custom software built around how your organization actually works: business applications, SaaS platforms, portals, dashboards, and internal tools, designed, engineered, tested, and maintained as one continuous practice."
-    support: "Part of DECHY's work across software, AI, automation, integration, and cloud."
+    lead: "At DECHY, we build custom software around the way your organization actually works: business applications, SaaS platforms, portals, dashboards, and internal tools, designed, engineered, tested, and maintained as one continuous practice."
+    support: "Software development is one part of our wider work across software, AI, automation, integration, and cloud."
     ctas:
       - { label: Discuss a software project, href: "/contact/?service=software-development" }
-      - { label: See how delivery works, href: "#delivery" }
+      - { label: See how we deliver, href: "#delivery" }
     figure: software-anatomy
     figureCaption: "Conceptual diagram: the parts a custom business application typically has. Real systems vary."
 
@@ -40,8 +40,8 @@ sections:
     heading: What custom software development is, and when it is the right answer
     answer: "Custom software development is the design and engineering of software built for one organization's specific processes, data, and users, instead of adopting a product built for the average customer. It is the right answer when the workflow is a source of advantage, when off-the-shelf tools force workarounds, or when several systems need to behave as one."
     paragraphs:
-      - "It is often the wrong answer too, and a good partner says so. A common spreadsheet process may be better served by a configured platform. A generic need such as invoicing is usually better bought. DECHY starts by testing which of build, buy, or integrate fits, because the cheapest software is the software you do not have to write."
-      - "When building is right, the work covers more than code. It includes understanding the process, designing the architecture and data model, building the application and its APIs, testing it, securing it, deploying it, and keeping it healthy after launch. DECHY treats those as one practice, which is why [software architecture](ref:cap.software-architecture), [software testing](ref:cap.software-testing), and [software maintenance](ref:cap.software-maintenance) are part of every engagement rather than add-ons."
+      - "It is often the wrong answer too, and we will tell you when it is. A common spreadsheet process may be better served by a configured platform. A generic need such as invoicing is usually better bought. We start by testing which of build, buy, or integrate fits, because the cheapest software is the software you do not have to write."
+      - "When building is right, the work covers more than code. It includes understanding the process, designing the architecture and data model, building the application and its APIs, testing it, securing it, deploying it, and keeping it healthy after launch. We treat those as one practice, which is why [software architecture](ref:cap.software-architecture), [software testing](ref:cap.software-testing), and [software maintenance](ref:cap.software-maintenance) are part of every engagement rather than add-ons."
 
   - type: table
     id: build-buy-integrate
@@ -68,14 +68,14 @@ sections:
         - "Most real situations: buy the commodity parts, build the differentiating part, integrate the rest."
         - "Unclear ownership between the pieces."
         - "A pragmatic mix with a clear boundary around what is custom."
-    note: "DECHY recommends an approach on the merits of the situation, including recommending against a build."
+    note: "We recommend an approach on the merits of your situation, including recommending against a build."
 
   - type: index
     id: system-types
     tone: white
     columns: 2
-    label: What DECHY builds
-    heading: Systems DECHY designs and builds
+    label: What we build
+    heading: Systems we design and build
     intro: "Most projects take one of these shapes, or combine several of them."
     items:
       - title: Business applications and management systems
@@ -114,10 +114,10 @@ sections:
     tone: paper
     label: Interfaces
     heading: What the interface layer of a portal looks like
-    intro: "Most people judge a system by its interface. A conceptual wireframe shows how a customer portal might organize navigation, status at a glance, and the records people come for, on a desktop and on a phone."
+    intro: "Most people judge a system by its interface. This conceptual wireframe shows how a customer portal might organize navigation, status at a glance, and the records people come for, on a desktop and on a phone."
     figure: portal-wireframe
     photo: { asset: asset.photo-interfaces-wireframes, layout: aside, position: "50% 35%" }
-    caption: "Conceptual wireframe of a customer portal. It illustrates a type of system DECHY designs and builds and is not a client interface."
+    caption: "Conceptual wireframe of a customer portal. It illustrates a type of system we design and build and is not a client interface."
     points:
       - title: Role-based views
         body: "Customers, staff, and administrators see what they need and nothing they should not, enforced by the same permission model across the interface and the API."
@@ -129,12 +129,12 @@ sections:
   - type: process
     id: delivery
     tone: paper
-    label: How delivery works
+    label: How we deliver
     heading: From first conversation to a system that stays healthy
-    intro: "The stages below are common to most engagements. Their size depends on the project, and none is skipped."
+    intro: "These stages are common to most engagements. Their size depends on the project, and we do not skip any of them."
     steps:
       - title: Discover
-        body: "Understand the process, the users, the data, and what success means. Test whether to build, buy, or integrate."
+        body: "We learn the process, the users, the data, and what success means, and we test whether to build, buy, or integrate."
         artifacts:
           [
             Problem and scope statement,
@@ -142,10 +142,10 @@ sections:
             "Build, buy, or integrate recommendation",
           ]
       - title: Architect
-        body: "Choose the shape of the system: components, data model, integration points, security model, and hosting. Decisions are written down with their trade-offs."
+        body: "We choose the shape of the system: components, data model, integration points, security model, and hosting, and we write decisions down with their trade-offs."
         artifacts: [Architecture overview, Data model, Decision records]
       - title: Build
-        body: "Deliver in short increments you can see and use, riskiest parts first. Code is reviewed, and every increment is demonstrable."
+        body: "We deliver in short increments you can see and use, riskiest parts first. Code is reviewed, and every increment is demonstrable."
         artifacts:
           [Working software each iteration, Reviewed and versioned code, Progress you can inspect]
       - title: Test
@@ -160,7 +160,7 @@ sections:
         body: "Staged releases to a preview environment first, then production, with a rehearsed rollback and a clear handover."
         artifacts: [Deployment pipeline, Release notes, Rollback plan]
       - title: Maintain
-        body: "Monitor, patch, and improve after launch. Software that matters needs an owner who keeps it current."
+        body: "We monitor, patch, and improve after launch. Software that matters needs an owner who keeps it current."
         artifacts:
           [Monitoring and alerts, Dependency and security updates, Documentation and runbooks]
 
@@ -169,7 +169,7 @@ sections:
     tone: ink
     label: Engineering quality
     heading: Testing, security, and performance are part of the build
-    intro: "Quality is a set of habits applied on every change, not a phase at the end. This is the model DECHY works to."
+    intro: "Quality is a set of habits applied on every change, not a phase at the end. This is the model we work to."
     figure: quality-layers
     caption: "Conceptual diagram of an engineering assurance model: a test pyramid and the gates a change passes before release."
     points:
@@ -190,9 +190,9 @@ sections:
       items:
         [Modular monolith, Microservices, Serverless, Event-driven, Multi-tenant SaaS, Headless]
     paragraphs:
-      - "DECHY is not tied to one stack. The language, framework, database, and hosting for a project are chosen for the problem, the team that will maintain it, and the long-term cost of ownership. That is a deliberate position: a framework chosen because it is fashionable becomes a liability once the people who chose it have moved on."
-      - "Across the languages and frameworks DECHY works with, common choices include [Python](ref:lang.python), [TypeScript](ref:lang.typescript), [Java](ref:lang.java), [C#](ref:lang.c-sharp), [Go](ref:lang.go), and [PHP](ref:lang.php) for back ends; [React](ref:fw.react), [Next.js](ref:fw.nextjs), [Vue](ref:fw.vue), and [Angular](ref:fw.angular) for interfaces; [PostgreSQL](ref:tech.postgresql), [MySQL](ref:tech.mysql), and [MongoDB](ref:tech.mongodb) for data; and [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) for hosting, with [Docker](ref:tool.docker) and [Kubernetes](ref:tool.kubernetes) where containers pay for themselves."
-      - "The criteria matter more than the list. DECHY weighs fit with the problem, maturity and community health, the reality of hiring and maintenance, security track record, integration needs, performance, and total cost over the life of the system."
+      - "We are not tied to one stack. The language, framework, database, and hosting for a project are chosen for the problem, the team that will maintain it, and the long-term cost of ownership. That is a deliberate position: a framework chosen because it is fashionable becomes a liability once the people who chose it have moved on."
+      - "Across the languages and frameworks we work with, common choices include [Python](ref:lang.python), [TypeScript](ref:lang.typescript), [Java](ref:lang.java), [C#](ref:lang.c-sharp), [Go](ref:lang.go), and [PHP](ref:lang.php) for back ends; [React](ref:fw.react), [Next.js](ref:fw.nextjs), [Vue](ref:fw.vue), and [Angular](ref:fw.angular) for interfaces; [PostgreSQL](ref:tech.postgresql), [MySQL](ref:tech.mysql), and [MongoDB](ref:tech.mongodb) for data; and [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) for hosting, with [Docker](ref:tool.docker) and [Kubernetes](ref:tool.kubernetes) where containers pay for themselves."
+      - "The criteria matter more than the list. We weigh fit with the problem, maturity and community health, the reality of hiring and maintenance, security track record, integration needs, performance, and total cost over the life of the system."
 
   - type: diagram
     id: modernization
@@ -217,7 +217,7 @@ sections:
     heading: Software that connects to AI, automation, and the cloud
     paragraphs:
       - "A modern business application rarely stands alone. It exchanges data with a CRM or accounting system, takes payments, sends notifications, and increasingly includes AI features such as search over your documents, drafting, classification, or an assistant that can act inside the system."
-      - "Because DECHY also works on [AI and machine learning](ref:svc.ai), [automation and workflows](ref:svc.automation), [API and systems integration](ref:svc.api-integration), and [cloud and DevOps](ref:svc.cloud), those pieces are designed with the application instead of bolted on afterwards. Authentication, permissions, data models, and hosting are decided once, so an AI feature respects the same access rules as the rest of the product."
+      - "Because we also work on [AI and machine learning](ref:svc.ai), [automation and workflows](ref:svc.automation), [API and systems integration](ref:svc.api-integration), and [cloud and DevOps](ref:svc.cloud), we design those pieces with the application instead of bolting them on afterwards. Authentication, permissions, data models, and hosting are decided once, so an AI feature respects the same access rules as the rest of the product."
       - "That is the practical meaning of designing software, AI, automation, integration, and cloud as one system. It is also why security and observability belong in the first architecture discussion rather than in a later hardening phase."
 
   - type: entities
@@ -226,7 +226,7 @@ sections:
     style: chips
     label: Where it is applied
     heading: Industries and business types
-    intro: "Software needs differ by sector. DECHY shapes requirements around each sector's data, regulation, and users."
+    intro: "Software needs differ by sector. We shape requirements around each sector's data, regulation, and users."
     groups:
       - title: Industries
         entityIds:
@@ -263,19 +263,19 @@ sections:
     heading: Questions about custom software
     items:
       - q: How much does custom software cost?
-        a: "It depends on scope, complexity, integrations, and the level of assurance required, so any single figure would be a guess. DECHY estimates after a discovery conversation, in stages: a small discovery or prototype first to reduce risk, then a build plan with a range that narrows as unknowns are resolved. If you are comparing providers, ask each what is included in the price: testing, security, documentation, and support after launch."
+        a: "It depends on scope, complexity, integrations, and the level of assurance required, so any single figure would be a guess. We estimate after a discovery conversation, in stages: a small discovery or prototype first to reduce risk, then a build plan with a range that narrows as unknowns are resolved. If you are comparing providers, ask each what is included in the price: testing, security, documentation, and support after launch."
       - q: How long does a custom software project take?
         a: "A focused internal tool can reach real users in weeks. A multi-role platform with integrations typically takes months, delivered in increments so something usable appears early. The honest answer comes from discovery, because the main drivers are the number of distinct workflows, the quality of the data you start from, and how many external systems must connect."
       - q: Should we build or buy?
         a: "Buy when the need is common and a mature product fits with little customization. Build when the process is specific to you or a source of advantage. Integrate when the tools you have are fine but do not share data. Many projects combine all three, as the comparison above shows."
       - q: Can you work with software we already have?
-        a: "Yes. Improving existing systems is a large part of the work: reviewing and stabilizing code, adding features, integrating with other tools, moving to the cloud, or modernizing in stages. The first step is a technical review to understand what is there."
+        a: "Yes. Improving existing systems is a large part of our work: reviewing and stabilizing code, adding features, integrating with other tools, moving to the cloud, or modernizing in stages. The first step is a technical review to understand what is there."
       - q: Who owns the code and the system afterwards?
-        a: "Ownership and licensing terms are agreed in writing before work starts. A well-run project keeps code in a repository the client can access, documents key decisions, and avoids proprietary lock-in where it is not needed, so the system can be maintained by whoever the client chooses."
+        a: "Ownership and licensing terms are agreed in writing before work starts. We aim to keep code in a repository you can access, document key decisions, and avoid proprietary lock-in where it is not needed, so your system can be maintained by whoever you choose."
       - q: How is security handled?
-        a: "Security is designed in from the architecture stage: authentication and authorization, least-privilege access, encryption in transit and at rest, dependency scanning, and attention to the OWASP Top 10. Where regulation applies, such as privacy law or industry rules, the requirements are identified during discovery. DECHY's [cybersecurity](ref:svc.cybersecurity) practice can also review an existing system."
+        a: "Security is designed in from the architecture stage: authentication and authorization, least-privilege access, encryption in transit and at rest, dependency scanning, and attention to the OWASP Top 10. Where regulation applies, such as privacy law or industry rules, we identify the requirements during discovery. Our [cybersecurity](ref:svc.cybersecurity) practice can also review an existing system."
       - q: Do you support software after launch?
-        a: "Yes. Maintenance includes monitoring, patching dependencies, fixing defects, and extending features. Software that matters needs an owner who keeps it current, whether that is your team, DECHY, or both."
+        a: "Yes. Maintenance includes monitoring, patching dependencies, fixing defects, and extending features. Software that matters needs an owner who keeps it current, whether that is your team, us, or both."
 
   - type: related
     id: related
@@ -319,5 +319,5 @@ sections:
   - type: cta
     id: contact-cta
     heading: Discuss a software project
-    body: "Describe what you want to build, replace, or connect. DECHY will tell you honestly whether building is the right approach and what the first step should be."
+    body: "Describe what you want to build, replace, or connect. We will tell you honestly whether building is the right approach and what the first step should be."
     primary: { label: Talk to DECHY about software, href: "/contact/?service=software-development" }
