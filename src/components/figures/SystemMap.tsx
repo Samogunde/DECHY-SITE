@@ -10,6 +10,10 @@ const LAYERS = [
   { title: "Cloud and security", body: "Infrastructure, pipelines, identity", dark: true },
 ];
 
+import type { CSSProperties } from "react";
+
+const step = (i: number) => ({ "--i": i }) as CSSProperties;
+
 export function SystemMap({ titleId }: { titleId: string }) {
   const h = 76;
   const gap = 10;
@@ -30,7 +34,7 @@ export function SystemMap({ titleId }: { titleId: string }) {
         const y = i * (h + gap);
         const cy = y + h / 2;
         return (
-          <g key={l.title}>
+          <g key={l.title} className="hero-layer" style={step(i)}>
             <rect
               x="1"
               y={y + 1}
@@ -62,11 +66,21 @@ export function SystemMap({ titleId }: { titleId: string }) {
           </g>
         );
       })}
-      <rect x="326" y="1" width="62" height="428" rx="4" className="fill-blue" />
+      <g className="hero-layer" style={step(5)}>
+        <rect x="326" y="1" width="62" height="428" rx="4" className="fill-blue" />
+      </g>
       {LAYERS.map((l, i) => {
         const cy = i * (h + gap) + h / 2;
         return <circle key={l.title} cx="343" cy={cy} r="5" className="fill-white" />;
       })}
+      <circle
+        className="bus-packet"
+        cx="343"
+        cy="38"
+        r="7"
+        fill="#fff"
+        style={{ "--travel": "344px" } as CSSProperties}
+      />
       <text
         transform="translate(373 214) rotate(-90)"
         textAnchor="middle"

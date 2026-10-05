@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Arrow } from "@/components/primitives/Arrow";
 import { EntityName, Inline } from "@/components/primitives/Inline";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
@@ -24,7 +25,11 @@ export function ServiceIndexBlock({ block }: { block: Of<"service-index"> }) {
         {registry.families.map((family) => {
           const services = registry.services.filter((s) => s.family === family.id);
           return (
-            <div key={family.id} className="editorial rule-top py-9 min-[48rem]:py-12">
+            <div
+              key={family.id}
+              data-reveal="block"
+              className="editorial rule-top py-9 min-[48rem]:py-12"
+            >
               <h3 className="t-eyebrow rail m-0 text-ink!">{family.label}</h3>
               <ul className="m-0 grid list-none gap-x-12 gap-y-8 p-0 min-[48rem]:grid-cols-2">
                 {services.map((s) => {
@@ -33,7 +38,7 @@ export function ServiceIndexBlock({ block }: { block: Of<"service-index"> }) {
                     <>
                       <span className="row-title t-h4 block">
                         {s.name}
-                        {href ? <span aria-hidden="true"> &rarr;</span> : null}
+                        {href ? <Arrow className="row-arrow" /> : null}
                       </span>
                       <span className="t-small mt-1.5 block max-w-[46ch] text-slate-text">
                         {s.micro}
@@ -77,9 +82,12 @@ export function EntitiesBlock({ block }: { block: Of<"entities"> }) {
           intro={block.intro}
           className="rail"
         />
-        <div>
+        <div data-reveal="group" className={chips ? "" : "grid gap-x-10 min-[48rem]:grid-cols-2"}>
           {block.groups.map((g) => (
-            <div key={g.title} className="rule-row py-6 first:pt-0 first:border-t-0">
+            <div
+              key={g.title}
+              className={chips ? "rule-row py-6 first:pt-0 first:border-t-0" : "rule-top pb-8 pt-5"}
+            >
               <h3 className="t-h4 m-0">{g.title}</h3>
               {g.note ? (
                 <p className="t-small m-0 mt-1 max-w-[56ch] text-slate-text">
@@ -91,16 +99,16 @@ export function EntitiesBlock({ block }: { block: Of<"entities"> }) {
                   {g.entityIds.map((id) => (
                     <li
                       key={id}
-                      className="t-small rounded-[4px] border border-line bg-white px-3 py-1.5 font-[family-name:var(--font-heading)] font-semibold"
+                      className="chip t-small rounded-[4px] border border-line bg-white px-3 py-1.5 font-[family-name:var(--font-heading)] font-semibold"
                     >
                       <EntityName id={id} />
                     </li>
                   ))}
                 </ul>
               ) : (
-                <ul className="t-small m-0 mt-3 list-none columns-1 gap-x-8 p-0 min-[30rem]:columns-2 min-[64rem]:columns-3">
+                <ul className="inline-list t-small m-0 mt-3 flex list-none flex-wrap p-0">
                   {g.entityIds.map((id) => (
-                    <li key={id} className="break-inside-avoid py-[0.2rem]">
+                    <li key={id}>
                       <EntityName id={id} />
                     </li>
                   ))}
@@ -123,7 +131,10 @@ export function RelatedBlock({ block }: { block: Of<"related"> }) {
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
         <SectionHeader id={block.id} label={block.label} heading={block.heading} className="rail" />
-        <div className="grid gap-10 min-[48rem]:grid-cols-2 min-[64rem]:grid-cols-3">
+        <div
+          data-reveal="group"
+          className="grid gap-10 min-[48rem]:grid-cols-2 min-[64rem]:grid-cols-3"
+        >
           {block.groups.map((g) => (
             <div key={g.title}>
               <h3 className="t-h4 m-0">{g.title}</h3>
@@ -154,6 +165,7 @@ export function ColumnsBlock({ block }: { block: Of<"columns"> }) {
         />
       </div>
       <div
+        data-reveal="group"
         className={`mt-10 grid gap-x-10 gap-y-10 min-[48rem]:mt-14 min-[48rem]:grid-cols-2 ${block.columns.length >= 3 ? "min-[64rem]:grid-cols-3" : ""} ${block.columns.length >= 4 ? "min-[80rem]:grid-cols-4" : ""}`}
       >
         {block.columns.map((c) => (

@@ -43,8 +43,8 @@ export function SectionHeader({
   className?: string;
 }) {
   return (
-    <div className={className}>
-      <p className="t-eyebrow m-0">{label}</p>
+    <div className={className} data-reveal="block">
+      <p className="t-eyebrow eyebrow-accent m-0">{label}</p>
       <h2 id={`${id}-h`} className="t-h2 mt-3 max-w-[22ch]">
         {heading}
       </h2>

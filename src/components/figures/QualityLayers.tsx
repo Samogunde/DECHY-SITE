@@ -3,6 +3,10 @@
  * (many fast checks at the base, few broad ones at the top) beside the release gates a change
  * passes. Original artwork describing method, not a claim about any client system.
  */
+import type { CSSProperties } from "react";
+
+const step = (i: number) => ({ "--i": i }) as CSSProperties;
+
 const GATES = [
   "Type checks and linting",
   "Automated tests",
@@ -23,63 +27,69 @@ export function QualityLayers({ titleId }: { titleId: string }) {
   );
   const pyramid = (
     <g>
-      <path
-        d="M170 8 L230 108 L110 108 Z"
-        className="fill-blue stroke-blue"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <text
-        x="170"
-        y="92"
-        textAnchor="middle"
-        fontSize="14"
-        fontWeight="700"
-        className="fig-text fill-white"
-      >
-        End to end
-      </text>
-      <path
-        d="M104 118 L236 118 L296 218 L44 218 Z"
-        className="fill-ink-raised stroke-blue-on-dark"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <text
-        x="170"
-        y="176"
-        textAnchor="middle"
-        fontSize="16"
-        fontWeight="700"
-        className="fig-text fill-paper"
-      >
-        Integration
-      </text>
-      <path
-        d="M38 228 L302 228 L356 328 L-16 328 Z"
-        className="fill-ink-raised stroke-ink-line"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <text
-        x="170"
-        y="286"
-        textAnchor="middle"
-        fontSize="17"
-        fontWeight="700"
-        className="fig-text fill-paper"
-      >
-        Unit tests
-      </text>
-      <text
-        x="170"
-        y="308"
-        textAnchor="middle"
-        fontSize="14"
-        className="fig-body fill-slate-on-dark"
-      >
-        Many, fast, run on every change
-      </text>
+      <g className="fx-step" style={step(2)}>
+        <path
+          d="M170 8 L230 108 L110 108 Z"
+          className="fill-blue stroke-blue"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+        <text
+          x="170"
+          y="92"
+          textAnchor="middle"
+          fontSize="14"
+          fontWeight="700"
+          className="fig-text fill-white"
+        >
+          End to end
+        </text>
+      </g>
+      <g className="fx-step" style={step(1)}>
+        <path
+          d="M104 118 L236 118 L296 218 L44 218 Z"
+          className="fill-ink-raised stroke-blue-on-dark"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+        <text
+          x="170"
+          y="176"
+          textAnchor="middle"
+          fontSize="16"
+          fontWeight="700"
+          className="fig-text fill-paper"
+        >
+          Integration
+        </text>
+      </g>
+      <g className="fx-step" style={step(0)}>
+        <path
+          d="M38 228 L302 228 L356 328 L-16 328 Z"
+          className="fill-ink-raised stroke-ink-line"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+        <text
+          x="170"
+          y="286"
+          textAnchor="middle"
+          fontSize="17"
+          fontWeight="700"
+          className="fig-text fill-paper"
+        >
+          Unit tests
+        </text>
+        <text
+          x="170"
+          y="308"
+          textAnchor="middle"
+          fontSize="14"
+          className="fig-body fill-slate-on-dark"
+        >
+          Many, fast, run on every change
+        </text>
+      </g>
     </g>
   );
   return (
@@ -106,7 +116,7 @@ export function QualityLayers({ titleId }: { titleId: string }) {
         {GATES.map((g, i) => {
           const y = 62 + i * 50;
           return (
-            <g key={g}>
+            <g key={g} className="fx-step" style={step(i + 3)}>
               {i < GATES.length - 1 ? (
                 <line
                   x1="476"
@@ -169,7 +179,7 @@ export function QualityLayers({ titleId }: { titleId: string }) {
         {GATES.map((g, i) => {
           const y = 396 + i * 40;
           return (
-            <g key={g}>
+            <g key={g} className="fx-step" style={step(i + 3)}>
               {i < GATES.length - 1 ? (
                 <line
                   x1="16"

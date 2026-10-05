@@ -26,7 +26,7 @@ function Entry({
 }) {
   if (!href) return <span className="text-slate-text">{label}</span>;
   return (
-    <Link href={href} onClick={onNavigate} className="text-ink no-underline hover:underline">
+    <Link href={href} onClick={onNavigate} className="menu-link text-ink">
       {label}
     </Link>
   );
@@ -183,7 +183,7 @@ export function HeaderNav({ primary, families, cta }: Props) {
                     aria-expanded={servicesOpen}
                     aria-controls={servicesPanelId}
                     onClick={() => setServicesOpen((v) => !v)}
-                    className="inline-flex min-h-11 cursor-pointer items-center gap-1.5 border-0 bg-transparent p-0 font-[inherit] text-[inherit] text-ink"
+                    className="nav-link inline-flex min-h-11 cursor-pointer items-center gap-1.5 border-0 bg-transparent p-0 font-[inherit] text-[inherit] text-ink"
                   >
                     {item.label}
                     <ChevronIcon open={servicesOpen} />
@@ -195,7 +195,7 @@ export function HeaderNav({ primary, families, cta }: Props) {
                     <Link
                       href={item.href}
                       aria-current={isActive(item.href) ? "page" : undefined}
-                      className="inline-flex min-h-11 items-center text-ink no-underline hover:underline"
+                      className="nav-link inline-flex min-h-11 items-center text-ink"
                     >
                       {item.label}
                     </Link>
@@ -249,11 +249,13 @@ export function HeaderNav({ primary, families, cta }: Props) {
       </div>
 
       {/* Desktop services panel */}
-      {servicesOpen ? (
+      {
         <div
           ref={servicesPanel}
           id={servicesPanelId}
-          className="absolute inset-x-0 top-full hidden border-b border-line bg-white shadow-[0_18px_40px_-24px_rgba(17,24,39,0.35)] min-[74rem]:block"
+          data-open={servicesOpen}
+          inert={!servicesOpen}
+          className="nav-panel absolute inset-x-0 top-full hidden border-b border-line bg-white shadow-[0_18px_40px_-24px_rgba(17,24,39,0.35)] min-[74rem]:block"
         >
           <div className="container-site py-9">
             <div className="grid grid-cols-5 gap-8">
@@ -274,17 +276,19 @@ export function HeaderNav({ primary, families, cta }: Props) {
             </div>
           </div>
         </div>
-      ) : null}
+      }
 
       {/* Mobile and tablet panel */}
-      {mobileOpen ? (
+      {
         <div
           ref={mobilePanel}
           id={mobilePanelId}
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className="fixed inset-x-0 bottom-0 top-[var(--header-h)] z-40 overflow-y-auto overscroll-contain bg-paper min-[74rem]:hidden"
+          data-open={mobileOpen}
+          inert={!mobileOpen}
+          className="nav-panel fixed inset-x-0 bottom-0 top-[var(--header-h)] z-40 overflow-y-auto overscroll-contain bg-paper min-[74rem]:hidden"
         >
           <div className="container-site py-6 pb-28">
             <ul className="m-0 list-none p-0">
@@ -300,25 +304,31 @@ export function HeaderNav({ primary, families, cta }: Props) {
                       {item.label}
                       <ChevronIcon open={mobileServicesOpen} />
                     </button>
-                    {mobileServicesOpen ? (
-                      <div className="pb-4">
-                        {families.map((f) => (
-                          <div key={f.id} className="mb-4">
-                            <p className="t-eyebrow m-0 mb-1.5">{f.label}</p>
-                            <ul className="m-0 list-none p-0">
-                              {f.services.map((s) => (
-                                <li
-                                  key={s.name}
-                                  className="py-1.5 text-[length:var(--fs-body)] leading-snug"
-                                >
-                                  <Entry label={s.name} href={s.href} onNavigate={closeAll} />
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                    <div
+                      className="nav-expand"
+                      data-open={mobileServicesOpen}
+                      inert={!mobileServicesOpen}
+                    >
+                      <div>
+                        <div className="pb-4">
+                          {families.map((f) => (
+                            <div key={f.id} className="mb-4">
+                              <p className="t-eyebrow m-0 mb-1.5">{f.label}</p>
+                              <ul className="m-0 list-none p-0">
+                                {f.services.map((s) => (
+                                  <li
+                                    key={s.name}
+                                    className="py-1.5 text-[length:var(--fs-body)] leading-snug"
+                                  >
+                                    <Entry label={s.name} href={s.href} onNavigate={closeAll} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    ) : null}
+                    </div>
                   </li>
                 ) : (
                   <li key={item.label} className="border-b border-line">
@@ -336,7 +346,7 @@ export function HeaderNav({ primary, families, cta }: Props) {
             </div>
           </div>
         </div>
-      ) : null}
+      }
     </>
   );
 }

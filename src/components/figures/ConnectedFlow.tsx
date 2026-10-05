@@ -4,6 +4,10 @@
  * under a caption that calls it illustrative; it does not claim this system was delivered.
  * Two compositions: a horizontal flow for wide screens and a vertical flow for narrow ones.
  */
+import type { CSSProperties } from "react";
+
+const step = (i: number) => ({ "--i": i }) as CSSProperties;
+
 const STEPS = [
   { n: "1", title: "Web form", body: ["Captures an", "inquiry"] },
   { n: "2", title: "CRM record", body: ["Stores the", "contact"] },
@@ -37,7 +41,7 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
         {STEPS.map((s, i) => {
           const x = i * 166;
           return (
-            <g key={s.n}>
+            <g key={s.n} className="fx-step" style={step(i)}>
               <rect
                 x={x + 1}
                 y="31"
@@ -48,6 +52,14 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
                 strokeWidth="1.5"
               />
               <circle cx={x + 26} cy="56" r="13" className="fill-blue" />
+              <circle
+                cx={x + 26}
+                cy="56"
+                r="13"
+                className="fx-halo fill-none stroke-blue-on-dark"
+                strokeWidth="2"
+                style={step(i)}
+              />
               <text
                 x={x + 26}
                 y="61.5"
@@ -146,7 +158,7 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
         {STEPS.map((s, i) => {
           const y = i * 92;
           return (
-            <g key={s.n}>
+            <g key={s.n} className="fx-step" style={step(i)}>
               {i < STEPS.length - 1 ? (
                 <line
                   x1="30"
@@ -167,6 +179,14 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
                 strokeWidth="1.5"
               />
               <circle cx="30" cy={y + 37} r="14" className="fill-blue" />
+              <circle
+                cx="30"
+                cy={y + 37}
+                r="14"
+                className="fx-halo fill-none stroke-blue-on-dark"
+                strokeWidth="2"
+                style={step(i)}
+              />
               <text
                 x="30"
                 y={y + 42.5}

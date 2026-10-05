@@ -28,7 +28,7 @@ export function Figure({
 }) {
   const Cmp = MAP[id];
   return (
-    <figure className={`figure ${className}`.trim()}>
+    <figure className={`figure ${className}`.trim()} data-reveal="figure">
       <Cmp titleId={`fig-${uid}`} />
       <figcaption className="t-caption mt-3">{caption}</figcaption>
     </figure>

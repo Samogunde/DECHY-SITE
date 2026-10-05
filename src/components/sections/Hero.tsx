@@ -59,6 +59,7 @@ export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: R
                     href={cta.href}
                     variant={i === 0 ? "primary" : "secondary"}
                     className="w-full min-[30rem]:w-auto"
+                    arrow={i === 0}
                   >
                     {cta.label}
                   </LinkButton>

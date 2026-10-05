@@ -3,6 +3,7 @@ import { Manrope, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/patterns/SiteHeader";
 import { SiteFooter } from "@/components/patterns/SiteFooter";
+import { MotionProvider } from "@/components/primitives/MotionProvider";
 import { DESCRIPTOR, SITE_NAME, indexingEnabled, siteOrigin } from "@/lib/site";
 
 const manrope = Manrope({
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <SiteFooter />
+        <MotionProvider />
       </body>
     </html>
   );

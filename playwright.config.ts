@@ -33,7 +33,7 @@ export default defineConfig({
   webServer: {
     command: `npm run start -- -p ${PORT}`,
     url: ORIGIN,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false, // never trust a server left over from an earlier build
     timeout: 120_000,
     env: {
       SITE_ORIGIN: ORIGIN,

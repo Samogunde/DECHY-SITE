@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
+import { Arrow } from "@/components/primitives/Arrow";
 
 type Option = { value: string; label: string };
 type Fields = "name" | "email" | "organization" | "interest" | "timeline" | "message";
@@ -115,7 +116,7 @@ export function ContactForm({ services }: { services: Option[] }) {
         ref={resultRef}
         tabIndex={-1}
         role="status"
-        className="border-l-2 border-blue bg-white p-6 outline-none"
+        className="form-result border-l-2 border-blue bg-white p-6 outline-none"
       >
         <h3 className="t-h3 m-0">Thank you. Your message has been sent.</h3>
         <p className="t-body mt-3 mb-0">
@@ -258,15 +259,30 @@ export function ContactForm({ services }: { services: Option[] }) {
           ref={resultRef}
           tabIndex={-1}
           role="alert"
-          className="border-l-2 border-error-text bg-white p-4 outline-none"
+          className="form-result border-l-2 border-error-text bg-white p-4 outline-none"
         >
           <p className="t-body m-0 font-semibold text-error-text">{formError}</p>
         </div>
       ) : null}
 
       <div>
-        <button type="submit" className="btn btn-primary" disabled={status === "submitting"}>
-          {status === "submitting" ? "Sending..." : "Send message"}
+        <button
+          type="submit"
+          className="btn btn-primary"
+          disabled={status === "submitting"}
+          aria-busy={status === "submitting"}
+        >
+          {status === "submitting" ? (
+            <>
+              <span className="spinner" aria-hidden="true" />
+              Sending
+            </>
+          ) : (
+            <>
+              Send message
+              <Arrow />
+            </>
+          )}
         </button>
         <p className="t-caption mt-3 max-w-[52ch]">
           By sending this form you agree that DECHY may use your details to respond to your inquiry.

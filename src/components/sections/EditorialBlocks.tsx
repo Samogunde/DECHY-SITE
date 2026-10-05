@@ -36,7 +36,7 @@ export function DefinitionBlock({ block }: { block: Of<"definition"> }) {
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
         <SectionHeader id={block.id} label={block.label} heading={block.heading} className="rail" />
-        <div className="prose-service">
+        <div className="prose-service" data-reveal="block">
           <p
             className="answer-lead m-0 font-[family-name:var(--font-heading)] font-semibold"
             style={{ fontSize: "var(--fs-lead)", lineHeight: 1.4 }}
@@ -76,7 +76,7 @@ export function ProseBlock({ block }: { block: Of<"prose"> }) {
             </aside>
           ) : null}
         </div>
-        <div className="prose-service">
+        <div className="prose-service" data-reveal="block">
           {block.paragraphs.map((p, i) => (
             <p key={i}>
               <Inline text={p} />
@@ -149,9 +149,7 @@ export function IndexBlock({ block }: { block: Of<"index"> }) {
   if (photo?.layout === "band") {
     return (
       <Section id={block.id} tone={block.tone}>
-        <div className="max-w-[48rem]" data-reveal="block">
-          {header()}
-        </div>
+        <div className="max-w-[48rem]">{header()}</div>
         <Photo photo={photo} className="mt-10 min-[48rem]:mt-14" />
         <div className="mt-10 min-[48rem]:mt-14">
           <IndexItems block={block} twoCol={block.columns === 2} />
@@ -164,9 +162,7 @@ export function IndexBlock({ block }: { block: Of<"index"> }) {
     return (
       <Section id={block.id} tone={block.tone}>
         <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-5" data-reveal="block">
-            {header()}
-          </div>
+          <div className="lg:col-span-5">{header()}</div>
           <div className="lg:col-span-7">
             <Photo photo={photo} />
           </div>
@@ -181,7 +177,7 @@ export function IndexBlock({ block }: { block: Of<"index"> }) {
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
-        <div className="rail" data-reveal="block">
+        <div className="rail">
           {header()}
           {photo ? <Photo photo={photo} className="mt-8" /> : null}
         </div>

@@ -18,7 +18,10 @@ export function ProcessBlock({ block }: { block: Of<"process"> }) {
           intro={block.intro}
         />
       </div>
-      <ol className="m-0 mt-12 grid list-none gap-x-10 gap-y-12 p-0 min-[48rem]:mt-16 min-[48rem]:grid-cols-2 min-[64rem]:grid-cols-3">
+      <ol
+        data-reveal="group"
+        className="m-0 mt-12 grid list-none gap-x-10 gap-y-12 p-0 min-[48rem]:mt-16 min-[48rem]:grid-cols-2 min-[64rem]:grid-cols-3"
+      >
         {block.steps.map((s, i) => (
           <li key={s.title} className="relative border-t-2 border-ink pt-5">
             <span className="absolute -top-[0.9rem] left-0 inline-flex h-7 min-w-7 items-center justify-center bg-paper pr-3 font-[family-name:var(--font-heading)] text-[length:var(--fs-label)] font-bold tabular-nums text-link">
@@ -62,7 +65,7 @@ export function TableBlock({ block }: { block: Of<"table"> }) {
           intro={block.intro}
           className="rail"
         />
-        <div>
+        <div data-reveal="block">
           <div
             className="table-wrap"
             tabIndex={0}
@@ -122,7 +125,7 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
   ));
   return (
     <Section id={block.id} tone={block.tone}>
-      <div className="max-w-[48rem]" data-reveal="block">
+      <div className="max-w-[48rem]">
         <SectionHeader
           id={block.id}
           label={block.label}

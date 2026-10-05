@@ -2,6 +2,10 @@
  * Conceptual diagram: modernizing a legacy system in stages (a "strangler" approach). Original
  * artwork describing method. Wide screens show four panels across; narrow screens stack them.
  */
+import type { CSSProperties } from "react";
+
+const step = (i: number) => ({ "--i": i }) as CSSProperties;
+
 const STAGES = [
   { n: "1", title: "Assess", body: ["Map the system,", "its data, and risks"] },
   { n: "2", title: "Wrap", body: ["Put a new front", "layer in place"] },
@@ -191,7 +195,7 @@ export function ModernizationPath({ titleId }: { titleId: string }) {
         {STAGES.map((s, i) => {
           const x = i * 250;
           return (
-            <g key={s.n} transform={`translate(${x} 0)`}>
+            <g key={s.n} className="fx-step" style={step(i)} transform={`translate(${x} 0)`}>
               <circle cx="14" cy="14" r="13" className="fill-ink" />
               <text
                 x="14"
@@ -245,7 +249,7 @@ export function ModernizationPath({ titleId }: { titleId: string }) {
           retire what is no longer used.
         </desc>
         {STAGES.map((s, i) => (
-          <g key={s.n} transform={`translate(2 ${i * 230})`}>
+          <g key={s.n} className="fx-step" style={step(i)} transform={`translate(2 ${i * 230})`}>
             <circle cx="14" cy="14" r="13" className="fill-ink" />
             <text
               x="14"

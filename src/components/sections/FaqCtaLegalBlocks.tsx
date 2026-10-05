@@ -49,7 +49,7 @@ export function CtaBlock({ block }: { block: Of<"cta"> }) {
   return (
     <section id={block.id} aria-labelledby={`${block.id}-h`} className="section tone-ink">
       <div className="container-site">
-        <div className="grid items-end gap-10 lg:grid-cols-12">
+        <div className="grid items-end gap-10 lg:grid-cols-12" data-reveal="block">
           <div className="lg:col-span-8">
             <h2 id={`${block.id}-h`} className="t-h2 max-w-[24ch]">
               {block.heading}
@@ -60,7 +60,9 @@ export function CtaBlock({ block }: { block: Of<"cta"> }) {
           </div>
           <div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end">
             {primaryOk ? (
-              <LinkButton href={block.primary.href}>{block.primary.label}</LinkButton>
+              <LinkButton href={block.primary.href} arrow>
+                {block.primary.label}
+              </LinkButton>
             ) : null}
             {block.secondary && secondaryOk ? (
               <LinkButton href={block.secondary.href} variant="secondary">
