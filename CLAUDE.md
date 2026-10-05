@@ -5,7 +5,7 @@ This file tells every Claude Code session how to work on DECHY. It adds no compa
 ## 1. Current state (update at every gate)
 
 - Phase 0 (planning, architecture, governance): **complete and approved.**
-- Phase 1 (production implementation): **authorized and built on branch `feat/phase-1-foundation`; Netlify authorization is the only open dependency.** The authoritative Phase 1 scope is "Phase 1 canonical scope" in `docs/planning/02-master-implementation-plan.md` section 36.
+- Phase 1 (production implementation): **authorized, built, and refined (imagery, company voice, motion); Netlify authorization is the only open dependency.** The authoritative Phase 1 scope is "Phase 1 canonical scope" in `docs/planning/02-master-implementation-plan.md` section 36.
 - Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (private; GitHub is the permanent source of truth). Never use or reference the abandoned Codex repository or its code.
 
 ## 2. Precedence model (which document governs what)
@@ -87,7 +87,7 @@ Normal implementation decisions (component structure, libraries within the appro
 
 ## 7. Commands
 
-`npm ci`, `npm run dev`, `npm run build` (validates content first), `npm run start`, `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` (unit), `npm run validate`, `npm run e2e` (browser tests against the production build; build with `SITE_ORIGIN=http://localhost:4310`), `npm run check`. Configuration is by environment variable; see `.env.example` and `README.md`. Do not let tooling edit the governing documents: `next.config.ts` sets `agentRules: false` and a test guards AGENTS.md. Implementation notes: `docs/planning/09-phase-1-implementation-notes.md`.
+`npm ci`, `npm run dev`, `npm run build` (validates content first), `npm run start`, `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` (unit), `npm run validate`, `npm run e2e` (browser tests against the production build; build with `SITE_ORIGIN=http://localhost:4310`), `npm run check`. Configuration is by environment variable; see `.env.example` and `README.md`. Do not let tooling edit the governing documents: `next.config.ts` sets `agentRules: false` and a test guards AGENTS.md. Implementation notes: `docs/planning/09-phase-1-implementation-notes.md`. Motion rules: `docs/design/motion-system.md`. Photographs need a registry entry and license evidence (`data/assets/licenses/`); the build fails without them. Company copy speaks as "we" except for the approved statement, metadata, and structured data.
 
 ## 8. Research policy
 
