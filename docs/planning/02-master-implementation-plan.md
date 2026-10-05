@@ -550,7 +550,7 @@ Visual review is not automated: each milestone requires screenshots and a real-b
 - Branch protection on `main` (CI required, no force-push) once CI exists.
 - `.gitignore` for `node_modules`, `.next`, env files, OS files; `.env.example` only.
 - Releases: milestone tags (`v0.1-foundation`, `v0.2-representative-pages`).
-- The first commits contain the specification documents and the planning set, pushed to GitHub as the source of truth. Production code is not written or pushed before you approve this plan. Work is pushed whenever a meaningful, verified unit is complete (DEC-27 covers commit identity).
+- The first commits contain the specification documents and the planning set, pushed to GitHub as the source of truth. Production code (Phase 1) was authorized by the owner and is built on short-lived branches. Work is pushed whenever a meaningful, verified unit is complete (DEC-27 covers commit identity).
 - The working copy is at `C:\DECHY-SITE` (moved out of OneDrive and verified; history and remote intact).
 
 ## 35. Netlify deployment strategy
