@@ -25,7 +25,7 @@ The owner is the final product owner. Claude Code is responsible for research, a
 
 ## Amendments to source documents proposed by the Phase 0 package (not yet applied to those documents)
 
-These are recorded here so the replaced text is explicit. They take effect for implementation decisions once the owner approves the Phase 0 package; the source documents are not edited until the owner approves editing them.
+These are recorded here so the replaced text is explicit. They take effect for implementation decisions once the owner approves the Phase 0 package; the amendment ledger and in-place supersession markers are in ADR 0002, which the owner authorized.
 
 | Proposed amendment | Replaces |
 |---|---|
@@ -51,4 +51,4 @@ These are recorded here so the replaced text is explicit. They take effect for i
 
 ## Status of the proposed amendments (table above)
 
-Approved by the owner: root layout instead of `website/`; canonical-home URLs and flat hubs; merging the Airtable pair; problems opening Solution pages; country pages (10 to 15, waves) without cities; the 53-article architecture; derived accessible colors and the typography system. Claude Code as primary engineering agent is established by `CLAUDE.md`. Editing the text of AGENTS.md, the Content Master, or the Handoff (for example retiring the Codex references) still requires a separate explicit instruction; those files are unchanged.
+Approved by the owner: root layout instead of `website/`; canonical-home URLs and flat hubs; merging the Airtable pair; problems opening Solution pages; country pages (10 to 15, waves) without cities; the 53-article architecture; derived accessible colors and the typography system. Claude Code as primary engineering agent is established by `CLAUDE.md`. Editing the text of AGENTS.md, the Content Master, or the Handoff (for example retiring the Codex references) was authorized by the owner in the reconciliation instruction; the files are annotated in place with original wording preserved (see ADR 0002).

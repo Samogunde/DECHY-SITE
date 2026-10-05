@@ -1,6 +1,6 @@
 # DECHY Strategic and Technical Audit (Revision 2)
 
-Status: FINAL PHASE 0 PACKAGE, awaiting owner review. No production code exists. Nothing here has been built.
+Status: HISTORICAL ANALYSIS RECORD (Phase 0). Where it differs from the approved plan, decisions register, or decision records, those govern (CLAUDE.md section 2; ADR 0002). No production code exists.
 Date: 2026-10-04
 Scope: AGENTS.md, DECHY_CONTENT_MASTER.md, DECHY_CLAUDE_MASTER_HANDOFF.md, the approved logo PNG, and the working environment.
 
@@ -73,7 +73,7 @@ Labels: CONFIRMED, VERIFIED (I checked), RECOMMENDED, ASSUMPTION, DECISION REQUI
 | # | Contradiction | Resolution |
 |---|---|---|
 | D-1 | Content Master says the 53 articles are defined in AGENTS.md; they are not. | Documentation gap. Full set proposed (`06`). If an original list exists, reconcile by mapping table. |
-| D-2 | Handoff 13 warns against random stock imagery; AGENTS and Content Master require images on key pages. | Compatible if every image has a job. Practical effect: diagrams and system graphics are the primary visual layer. |
+| D-2 | Handoff 13 warns against random stock imagery; AGENTS and Content Master require images on key pages. | Compatible if every image has a job. Practical effect: original diagrams plus purposeful, properly licensed imagery; no filler (ADR 0002). |
 | D-3 | AGENTS 1A.3 lists a full logo system and says the raster should eventually become vector; your instruction is to use the PNG now. | Your latest instruction governs: PNG now; vector and variants are later recommendations. |
 | D-4 | Four different phase schemes (AGENTS 60, AGENTS 95, Handoff 23, Content Master 14). | One canonical sequence in the plan (section 36). |
 | D-5 | AGENTS 81 names Codex as the primary engineer. | Update on approval (DEC-30). |
@@ -198,7 +198,7 @@ Nothing is removed from the capability architecture.
 
 ## L. Decisions requiring approval
 
-Full register: `03-decisions-register.md` (DEC-01 to DEC-40). Blocking Phase 1: DEC-04 (approve the 53-article plan), DEC-07 to DEC-15, DEC-23, DEC-24, DEC-31, DEC-34, DEC-36. Items for later: final domain, vector logo, legal text review, Netlify authorization, countries beyond wave 1.
+Full register: `03-decisions-register.md`. Every decision that blocked Phase 1 has since been approved (register section A0, ADR 0001 and 0002). Remaining items are non-blocking: final domain, vector logo, legal text review, Netlify authorization, country wave order.
 
 ## M. Recommended implementation sequence
 

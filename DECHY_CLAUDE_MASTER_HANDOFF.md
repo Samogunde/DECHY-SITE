@@ -1,5 +1,7 @@
 # DECHY Claude Code Master Handoff
 
+> **GOVERNANCE NOTE (2026-10-04).** Annotated in place by `docs/decisions/0002-governance-reconciliation.md`. Original wording preserved. The audit and planning stages it requires are complete; the approved plan is in `docs/planning/`. Precedence and the source-of-truth map are in `CLAUDE.md`.
+
 ## 1. ROLE
 
 You are not being engaged only as a coding assistant.
@@ -529,6 +531,8 @@ Use:
 
 ## 13. IMAGE REQUIREMENT
 
+> **CLARIFIED (AMD-04).** Image sourcing follows the standing authorization in ADR 0002 section 2 item 1. Provenance fields listed below are kept in the asset registry.
+
 DECHY currently does not have a complete image library.
 
 Therefore you are responsible for sourcing appropriate visual assets when needed.
@@ -820,6 +824,8 @@ Do not ask the user to debug code that you can diagnose and fix.
 ---
 
 ## 23. BUILD IN PHASES
+
+> **SUPERSEDED as sequencing (AMD-08, AMD-18).** The canonical sequence is plan section 36. Phase 1 scope is the approved list in plan section 36 ("Phase 1 canonical scope"). Country pages begin in plan Phase 4 in waves; language localization is last. Review gates here still apply.
 
 Do not build the entire DECHY website in one uncontrolled operation.
 

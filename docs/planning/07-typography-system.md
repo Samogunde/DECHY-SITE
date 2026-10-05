@@ -1,6 +1,6 @@
 # DECHY Responsive Typography System
 
-Status: DESIGN SPECIFICATION for approval. Part of the Phase 0 design system. No production site exists.
+Status: APPROVED DESIGN SPECIFICATION (kept by the owner, ADR 0001). Part of the Phase 0 design system. No production site exists.
 Source files: `docs/design/typography-tokens.css` (the tokens) and `docs/design/typography-specimen.html` (a review page that uses the tokens). Both are design artifacts, not site code.
 Fonts (CONFIRMED): Manrope for headings and UI, Source Sans 3 for body and long-form, monospace only where technically appropriate.
 Verification: every number below was computed from the tokens, and the specimen was rendered in a real browser at 390, 820, 1280, 1440, and 1920 px wide with the actual web fonts, reading back computed sizes and characters per line.
@@ -152,7 +152,7 @@ Self-hosted through `next/font` with the variable versions of Manrope and Source
 
 ## 13. Test plan for implementation
 
-1. Playwright captures at 320, 360, 390, 430, 768, 820, 1024, 1280, 1440, 1920, and 2560.
+1. Playwright captures at 320, 360, 375, 390, 430, 768, 820, 1024, 1280, 1440, 1920, and 2560 px wide.
 2. A unit test reads computed font sizes and asserts the floors (body at least 17px, nothing readable under 14px).
 3. A test measures characters per line on prose elements (accept 60 to 75).
 4. axe checks for contrast on every template.
@@ -161,4 +161,4 @@ Self-hosted through `next/font` with the variable versions of Manrope and Source
 
 ## 14. Decision
 
-DEC-13 (revised): approve this typography system as the DECHY standard. Tuning after the first browser review of Home and Software Development is expected and allowed through a change to the tokens only, never page by page.
+DEC-13 (approved in principle; this measured system is kept). Tuning after the first browser review of Home and Software Development is expected and allowed through a change to the tokens only, never page by page.

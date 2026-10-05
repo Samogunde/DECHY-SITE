@@ -17,6 +17,7 @@ Date: 2026-10-04. Local path: `C:\DECHY-SITE`. Remote: `https://github.com/Samog
 | 8 | External research log (technology, SEO, AI search facts, kept separate from company facts) | `08-external-research-log.md` |
 | 9 | Governance: precedence model | `CLAUDE.md` |
 | 10 | Record of approvals and proposed amendments | `docs/decisions/0001-phase-0-approvals.md` |
+| 11 | Governance reconciliation and amendment ledger (supersession of older text) | `docs/decisions/0002-governance-reconciliation.md` |
 
 Items 7 to 12 requested in the approval message are summarized below with pointers to the authoritative sections.
 
@@ -27,7 +28,7 @@ Items 7 to 12 requested in the approval message are summarized below with pointe
 - Typed content in Git: YAML for data, MDX for long-form, Zod validation, a thin custom loader. No CMS at launch; the model is portable to a headless CMS later.
 - Entity graph: stable IDs, typed relation files, build-time validator (orphans, canonical-home conflicts, broken edges, duplicate intent, forbidden punctuation, claims without facts, country-page similarity, unsupported location claims).
 - Site origin is one setting (`SITE_ORIGIN`), so the final domain is a configuration change.
-- Tests: tsc, ESLint, Vitest, Playwright at 11 widths, axe, Lighthouse CI budgets, link crawl, security headers check, production smoke test.
+- Tests: tsc, ESLint, Vitest, Playwright at 12 widths (320 to 2560), axe, Lighthouse CI budgets, link crawl, security headers check, production smoke test.
 - Hosting: Netlify via its OpenNext-based adapter (supports App Router, ISR, Server Components, Server Actions); previews are noindex.
 - Security: hardened headers, hash/allowlist CSP, no secrets in Git, Dependabot and npm audit, form protection, security.txt.
 - Open technical risk: Netlify's Next.js adapter is changing during 2026; static-first design limits exposure.
@@ -43,7 +44,7 @@ Items 7 to 12 requested in the approval message are summarized below with pointe
 
 - Brand tokens unchanged; derived accessible colors for failing combinations only (link blue #2A62D8, on-dark blue #7AA5F8, slate text #5B6472, darker functional text colors).
 - Typography: Manrope for headings and UI, Source Sans 3 for body; fluid roles between 360 and 1440px with scale steps at 1920 and 2560; body large 17.5 to 20px, body 17 to 18.5px; fixed UI sizes; prose measures of 62 and 64ch giving about 69 to 71 characters per line (browser verified).
-- Visual language: restrained, editorial, diagram-first; no gradients, glow, or AI clichés; varied layout patterns instead of card walls; one logo as supplied (PNG) on light surfaces.
+- Visual language: restrained, editorial, led by original diagrams and technical illustrations plus purposeful, properly licensed imagery; no gradients, glow, or AI clichés; varied layout patterns instead of card walls; one logo as supplied (PNG) on light surfaces.
 - Homepage hierarchy per owner direction in plan Appendix C.
 
 ## 5. Final SEO, AEO, GEO architecture (summary; plan sections 16 to 22; file 08)

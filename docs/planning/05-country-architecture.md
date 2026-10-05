@@ -1,6 +1,6 @@
 # DECHY Country Architecture
 
-Status: FINAL PHASE 0 PACKAGE, awaiting owner review. Replaces the earlier "no country pages until Phase 6" stance. Country pages are a planned part of the platform.
+Status: APPROVED PHASE 0 ARCHITECTURE (governs its topic under the approved plan; precedence in CLAUDE.md and ADR 0002). Country pages are a planned part of the platform.
 Labels: CONFIRMED, RECOMMENDED, ASSUMPTION, VERIFY AT WRITING (legal or market facts that must be re-checked against current sources when each page is written; I list topics, not final claims).
 
 ## 1. Principles

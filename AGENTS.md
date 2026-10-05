@@ -1,5 +1,7 @@
 # DECHY AGENTS.md
 
+> **GOVERNANCE NOTE (2026-10-04).** This file is annotated in place by the owner-approved reconciliation in `docs/decisions/0002-governance-reconciliation.md`. Original wording is preserved. Where a note below says AMENDED or SUPERSEDED, follow the cited amendment (AMD-nn) instead of the older text. Precedence and the topic-to-file source-of-truth map are in `CLAUDE.md`. Everything not annotated remains in force exactly as written.
+
 ## STATUS
 
 This file is the authoritative build and content instruction set for the
@@ -21,6 +23,8 @@ explicit user instruction. Never invent missing DECHY facts.
 DECHY
 
 ## Domain
+
+> **AMENDED (AMD-01).** The final domain is deferred. dechy.com is registered and parked for sale; candidates include dechy.com, dechytech.com, dechydev.com, and others. The site uses one configurable site origin, so the domain is a later configuration decision. Do not change the brand name. Source of truth: plan section 35 and register DEC-02.
 
 dechy.com
 
@@ -142,6 +146,8 @@ Use the appropriate logo variant for the available space.
 
 ## 1A.3 Logo system
 
+> **AMENDED (AMD-02).** The supplied PNG logo is the approved logo and is used as provided; do not redesign, regenerate, or replace it. The vector master (SVG, AI, EPS) and the full variant set described below are later recommendations and are NOT a gate for any phase. Do not invent variants.
+
 The approved logo direction is based on the selected DECHY wordmark with a
 distinctive bar treatment in the letter E.
 
@@ -212,6 +218,8 @@ Never:
 - place unrelated icons inside the wordmark
 
 ## 1A.5 Brand color system
+
+> **CLARIFIED (AMD-03).** These five brand tokens (#111827, #2F6FED, #F7F6F2, #E5E7EB, #6B7280) are unchanged. Where a combination fails WCAG contrast, documented derived UI colors are used (see `docs/planning/02-master-implementation-plan.md` section 23). Derived colors never replace the brand tokens.
 
 The approved DECHY core palette is deliberately restrained.
 
@@ -399,6 +407,8 @@ Do not use fake handwritten fonts as part of the core identity.
 
 ## 1A.8 Typography hierarchy
 
+> **CLARIFIED (AMD-03).** The responsive type system is specified and measured in `docs/planning/07-typography-system.md` and `docs/design/typography-tokens.css`. Implement those tokens; do not fall back to small fixed sizes.
+
 The final design system must define responsive type tokens for:
 
 - display heading
@@ -487,6 +497,8 @@ Cards should support information grouping, not replace normal page
 structure.
 
 ## 1A.11 Imagery, photography, AI generation, and visual asset governance
+
+> **AMENDED (AMD-04).** Phase 1 is not limited to diagrams. Use purposeful visual content: original diagrams and technical illustrations, legitimate interface or product visuals, and properly licensed professional imagery where it genuinely improves the page. The agent sources and uses images under the standing authorization in ADR 0002 section 2 item 1 (provenance and license recorded in the asset registry; no per-image owner approval; nothing fabricated as evidence). The source hierarchy and authenticity rules below remain in force.
 
 Images are a required part of the DECHY website experience. The website
 must not launch as a text-only technology site. Visual content should make
@@ -1029,6 +1041,8 @@ The fallback system must preserve the visual hierarchy and should not
 introduce a visibly unrelated typeface.
 
 ## 1A.22 Brand asset library
+
+> **CLARIFIED (AMD-17).** The `brand/` folder lives at the repository root. The supplied logo PNG moves there in Phase 1 byte for byte (hash unchanged).
 
 The repository should contain a dedicated brand asset structure such as:
 
@@ -2211,6 +2225,8 @@ Do not create every industry page automatically.
 
 # 22. PROBLEM / PAIN-POINT ARCHITECTURE
 
+> **CLARIFIED (AMD-05).** Problems remain entities and search intents in the graph. They do not require a separate problem-page family; problem intent opens the relevant Solution page.
+
 Examples:
 
 -   Need custom software
@@ -2277,6 +2293,8 @@ These are problem entities and search intents.
 
 # 24. GLOBAL LOCATION ARCHITECTURE
 
+> **AMENDED (AMD-06).** Country level only for now. City pages are NOT created at this stage; no addresses, offices, branches, local teams, or Google Business Profiles. The approved country architecture (10 to 15 countries, waves, market-specific content) is in `docs/planning/05-country-architecture.md`. The Global > Country > Region > City model below remains a data concept only.
+
 Use this conceptual hierarchy:
 
 **Global → Country → Region/State/Province → City**
@@ -2340,6 +2358,8 @@ Do not publish poor machine translations simply to occupy markets.
 ------------------------------------------------------------------------
 
 # 26. MASTER SEARCH INTERSECTION ENGINE
+
+> **CLARIFIED (AMD-06).** Examples that include cities (for example Berlin) illustrate the intersection engine only. City pages are not created at this stage.
 
 The search architecture should model legitimate intersections such as:
 
@@ -2459,6 +2479,8 @@ building.
 ------------------------------------------------------------------------
 
 # 29. URL ARCHITECTURE
+
+> **AMENDED (AMD-07).** Approved URL rules govern (plan section 20): lowercase, hyphenated, trailing slash, no dates or IDs, stable, 301s on change; technologies, platforms, and sub-capabilities under their primary service; hubs /services/, /technologies/, /industries/{slug}/, /solutions/{slug}/, /work/, /locations/{country}/, /resources/{type}/{slug}/; slug registry; noindex for internal search and filter URLs. /ai/ and /cloud/ stay. The canonical Airtable page is /automation/airtable/; /automation/airtable-automation/ is merged into it.
 
 Core examples:
 
@@ -3298,6 +3320,8 @@ AI must not invent DECHY facts.
 
 # 60. CONTENT BATCHING STRATEGY
 
+> **SUPERSEDED as a sequencing instruction (AMD-08).** The canonical phase sequence, including country waves and the six article batches, is plan section 36. The qualification principle below remains mandatory.
+
 Do not generate the entire possible website blindly in one operation.
 
 Build in controlled batches.
@@ -3462,6 +3486,8 @@ accessibility - readability - navigation - SEO - conversion
 
 # 66. WEBSITE INFORMATION ARCHITECTURE
 
+> **AMENDED (AMD-09).** Primary navigation is Services, Solutions, Technologies, Industries, Work, Resources, Company, and the Talk to DECHY button, with the 15 services shown in five navigation families. "Case Studies/Work" is simply "Work". See plan Appendix D item 4.
+
 The navigation should help users understand the broad DECHY universe.
 
 Major discovery paths should include: - Services - Solutions -
@@ -3522,6 +3548,8 @@ The exact structure may vary by service.
 
 # 69. TECHNOLOGY PAGE PRINCIPLE
 
+> **CLARIFIED (AMD-10).** The technology page template renders at the canonical-home URL, which is the service-by-technology page (for example /software-development/python/). A separate generic technology page is created only for genuinely different intent.
+
 A technology page should explain:
 
 -   what the technology is
@@ -3565,6 +3593,8 @@ no industry-specific substance.
 
 # 71. SOLUTION PAGE PRINCIPLE
 
+> **CLARIFIED (AMD-05).** Problem intent opens the Solution page; there is no separate problem-page family.
+
 A solution page should begin with the business problem.
 
 Example:
@@ -3582,6 +3612,8 @@ Do not invent outcome numbers.
 ------------------------------------------------------------------------
 
 # 72. CASE STUDY PRINCIPLE
+
+> **EXTENDED (AMD-16).** Work (Work Areas and Work Entries) is the primary proof architecture. A case study is a verified, detailed Work Entry. See `docs/planning/04-work-architecture.md`. The prohibition on fabricated case studies remains.
 
 Case studies must be based on real work.
 
@@ -3664,6 +3696,8 @@ user-readable.
 
 # 78. REPOSITORY SOURCE-OF-TRUTH STRUCTURE
 
+> **SUPERSEDED (AMD-11).** The Next.js app lives at the repository root. Do not create a website/ subfolder. Application code in src/, page and article copy in content/, structured data in data/, brand assets in brand/, documentation in docs/, tests and scripts in tests/ and scripts/. The docs/ layout below is a recommendation; the approved layout is in plan section 26 and Appendix D item 7. The conceptual separation below is preserved.
+
 Recommended repository:
 
 ``` text
@@ -3725,6 +3759,8 @@ This repository structure is the recommended implementation model.
 ------------------------------------------------------------------------
 
 # 79. MASTER SPECIFICATION DOCUMENTS
+
+> **AMENDED (AMD-12).** Item 10 ("DECHY Codex AGENTS.md") is retired. Claude Code is the primary engineering agent; the governance file is `CLAUDE.md`.
 
 Before significant coding, maintain these source documents:
 
@@ -3885,6 +3921,8 @@ The user's review should focus primarily on whether the result matches the inten
 
 # 81. CODEX IMPLEMENTATION WORKFLOW
 
+> **SUPERSEDED (AMD-12).** Codex is not used. The earlier Codex build and repository are abandoned. Claude Code is the primary engineering agent; follow `CLAUDE.md` and the plan. The staged, plan-first, QA-first principles below still apply.
+
 Codex should be the primary engineering agent for the build.
 
 Claude Code may be used as a second-opinion/review agent if desired.
@@ -3979,6 +4017,8 @@ reliability
 ------------------------------------------------------------------------
 
 # 85. DEPLOYMENT / INFRASTRUCTURE PRINCIPLE
+
+> **AMENDED (AMD-13).** Hosting is decided: Netlify, deployed from the private GitHub repository Samogunde/DECHY-SITE.
 
 The architecture should be capable of deployment to modern cloud
 infrastructure.
@@ -4179,6 +4219,8 @@ Support them with evidence.
 
 # 95. BUILD ORDER
 
+> **SUPERSEDED as a sequencing instruction (AMD-08).** Follow plan section 36 for the phase sequence. This list remains a useful inventory of workstreams.
+
 The practical build should follow this order:
 
 ### Phase 1: Source of truth
@@ -4340,6 +4382,8 @@ A technically valid page that is visually sparse, content-thin, or dependent on 
 ------------------------------------------------------------------------
 
 # 98. PRE-BUILD BRAND AND ASSET GATE
+
+> **CLARIFIED (AMD-02, AMD-04).** Item 1 is satisfied by the supplied PNG logo as provided. The image sourcing and provenance workflow in items 5 and 6 is the asset registry built in the Phase 1 foundation.
 
 Before implementation of the public visual system begins, verify:
 

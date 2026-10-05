@@ -1,6 +1,6 @@
 # DECHY Work Architecture
 
-Status: FINAL PHASE 0 PACKAGE, awaiting owner review. Replaces the earlier recommendation to hide Work. Work is a primary section of the site.
+Status: APPROVED PHASE 0 ARCHITECTURE (governs its topic under the approved plan; precedence in CLAUDE.md and ADR 0002). Work is a primary section of the site.
 Labels: CONFIRMED, RECOMMENDED, ASSUMPTION, DECISION REQUIRED (see `03-decisions-register.md`).
 
 ## 1. Purpose and positioning

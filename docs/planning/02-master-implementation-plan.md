@@ -1,7 +1,7 @@
 # DECHY Master Implementation Plan (Revision 4, approved Phase 0 package)
 
 Status: PHASE 0 COMPLETE. The owner approved the remaining decisions (ADR 0001, second approval). Nothing described here has been built. Phase 1 starts only on explicit owner authorization.
-Companion documents: `00-phase-0-package.md` (index), `01-strategic-audit.md`, `03-decisions-register.md`, `04-work-architecture.md`, `05-country-architecture.md`, `06-article-plan-53.md`, `07-typography-system.md`, `08-external-research-log.md`; governance: `CLAUDE.md` and `docs/decisions/0001-phase-0-approvals.md`.
+Companion documents: `00-phase-0-package.md` (index), `01-strategic-audit.md`, `03-decisions-register.md`, `04-work-architecture.md`, `05-country-architecture.md`, `06-article-plan-53.md`, `07-typography-system.md`, `08-external-research-log.md`; governance: `CLAUDE.md` and `docs/decisions/0001-phase-0-approvals.md`. Governance reconciliation and amendment ledger: `docs/decisions/0002-governance-reconciliation.md`.
 Labels: CONFIRMED (in the specifications or your instructions), VERIFIED (checked by me), RECOMMENDED, ASSUMPTION, DECISION REQUIRED (see register).
 
 Revision 2 applies your corrections: the domain is deferred and not a blocker; the 53 articles are retained and fully planned; the full capability architecture is preserved with no public evidence disclaimers; the approved PNG logo is used; the project now lives at `C:\DECHY-SITE`; Work is a primary section with a full architecture; country-level pages are planned (10 to 15 countries, no cities).
@@ -297,7 +297,7 @@ Goal: make DECHY a coherent, corroborated entity. Honest limits: no outcome (cit
 2. **Organization schema** with stable `@id`, `name`, `url`, `logo`, `description` (exact descriptor), `foundingDate` 2010 (CONFIRMED statement), `areaServed` "Worldwide", `knowsAbout` (drawn from the capability architecture), `contactPoint`, `sameAs` (existing profiles only). Excluded: `numberOfEmployees`, `aggregateRating`, `address`, `award`, anything unverified.
 3. **External corroboration:** create or claim real profiles (LinkedIn company page, GitHub organization, others you confirm), consistent naming and descriptor, link both directions. Directories such as Clutch and GoodFirms rely on real client reviews, so they come after real clients consent. Wikidata/Wikipedia are not targets (notability requirements cannot be met honestly without third-party coverage).
 4. **Original material:** reference implementations, architecture diagrams, evaluation notes, and method documents are the types of first-hand content that others cite.
-5. **Digital PR (later):** publish original technical research or data only when DECHY actually has it.
+5. **Backlink and digital PR strategy (later, when there is something genuinely citable):** earn links and mentions with original technical material, reference implementations, research, and expert commentary; legitimate directory and profile listings; outreach to relevant publications; never paid-link schemes or fabricated authority. Track referring domains in Search Console.
 6. **Crawl policy:** robots.txt allows major search and AI retrieval user agents; policy for AI training crawlers is a business decision (DEC-19). `llms.txt` is optional and not a deliverable: Google states it ignores such files and that AI features need no special files or markup (`08`, R5).
 7. **Consistency:** the facts register is the only source for company statements; descriptions are generated from it.
 
@@ -437,7 +437,7 @@ Process: image brief → source → license evidence saved in `data/assets/licen
 
 Roles and ratios: hero 16:9 and 3:2 crops; service 3:2; article cover 16:9; Open Graph 1200x630 generated at build from templates; icons SVG. Responsive `srcset`, AVIF/WebP, explicit `width` and `height`, `fetchpriority="high"` only for the one LCP image, lazy elsewhere.
 
-Download rule: any image acquisition is batch-approved by you (source, filename, size, license stated) before download. Masters stay outside Git or in LFS; only optimized derivatives are committed (DEC-14). Phase 1 procedure: I present the first image batch (source, filename, size, license) in chat and download after your confirmation; the asset registry and provenance tracking are part of the Phase 1 foundation and scale to later phases.
+Image sourcing: proceeds under the standing authorization in ADR 0002 section 2 item 1. No per-image or per-batch owner approval is needed. Every image gets a license and provenance record in the asset registry before use; only reputable sources with clear commercial licenses; image files only; masters outside Git or in LFS, with optimized derivatives committed (DEC-14). The normal review process catches problems.
 
 ## 26. Content and data architecture
 
@@ -446,7 +446,8 @@ Structure (RECOMMENDED, replaces AGENTS 78 layout only where noted, DEC-11):
 ```text
 /                       Next.js app at repository root
   AGENTS.md  CLAUDE.md  README.md
-  docs/                 planning, architecture, brand, seo, decisions (ADRs)
+  docs/                 planning, decisions (ADRs), design, templates; later: architecture, brand, seo, geo-aeo, content
+  brand/                logos/primary (the supplied PNG, unchanged), later: icons, guidelines
   data/
     facts/              company.yaml (approved facts + IDs), proof.yaml
     taxonomy/           services, technologies, industries, business-types, canonical-homes
@@ -532,7 +533,7 @@ Target: WCAG 2.2 AA. Semantic landmarks; one H1; logical headings; visible focus
 | Content validation | custom graph validator implementing AGENTS 62 and 63: titles, descriptions, H1, canonical, duplicates, orphans, sitemap/index mismatch, claims without facts, unsupported location claims, forbidden punctuation, banned phrases, empty sections | blocks merge |
 | Schema | JSON-LD generation tests and structural validation | blocks merge |
 | Build | `next build` | blocks merge |
-| E2E and responsive | Playwright at 375, 768, 1280, 1536 widths | blocks merge |
+| E2E and responsive | Playwright at 320, 360, 375, 390, 430, 768, 820, 1024, 1280, 1440, 1920, and 2560 px widths | blocks merge |
 | Accessibility | axe in Playwright + manual checklist | blocks merge |
 | Performance | Lighthouse CI budgets | warns, blocks on regression |
 | Links | internal link crawl of the built site | blocks merge |
@@ -557,7 +558,7 @@ Visual review is not automated: each milestone requires screenshots and a real-b
 - Netlify site connected to the GitHub repo; `main` deploys to production; branches and pull requests produce deploy previews; previews are `noindex`.
 - Build: `npm ci && npm run build`; Node 22 pinned.
 - **Domain-independent (DEC-02, deferred):** the public origin is one setting (`SITE_ORIGIN`) used for canonicals, sitemaps, Open Graph, and schema `@id`. Until the domain is chosen (dechy.com if acquired, dechytech.com, dechydev.com, or another), development and review use the Netlify-provided subdomain with search indexing blocked. When the domain is chosen: add it in Netlify, set `SITE_ORIGIN`, configure DNS and HTTPS, run the production smoke test, and only then allow indexing. If a domain ever changes after launch, a redirect map handles it.
-- Things I cannot do alone: Netlify authorization/plan and DNS/registrar access at deployment time. They need you.
+- Netlify authorization does not block Phase 1 foundation work. When a step truly requires it (creating or linking the Netlify site, deploy previews, domain connection), I stop at that specific dependency and state exactly what is needed from the owner. Domain and DNS actions need explicit owner go-ahead.
 - Rollback: Netlify atomic deploys.
 
 ---
@@ -570,12 +571,26 @@ This reconciles AGENTS 60 and 95, the Handoff, the Content Master, and your inst
 | Phase | Scope | Exit gate |
 |---|---|---|
 | 0 | Plan approval; Approved Facts Register; taxonomy seeded 1:1 from AGENTS; SERP review; Work, country, and article briefs scaffolded | You approve the revised plan |
-| 1 | Foundation (scaffold, tokens, content loader, graph, validators, CI, Netlify preview) + **Home** + **Software Development**, plus working Contact page, header/footer, 404, minimum legal pages | Real-browser review at desktop/tablet/mobile; all gates pass; your approval |
+| 1 | Application foundation and Home + Software Development with Contact, shell, and legal (full list below) | Responsive browser review; all gates pass; your approval |
 | 2 | Remaining 14 pillars; Company; Work hub with Work Areas (about 20 to 25); full legal set; production launch candidate | Per-page review for non-template structure; production smoke test; your go-ahead |
 | 3 | Technology, platform, AI, automation, and integration pages by search intent (strategic list in section 7); article Batch 1 | Qualification table approved |
 | 4 | Industries; solutions; qualified intersections; country Wave 1 (US, UK, Canada, Australia, Ireland); article Batches 2 to 3; Work Entries as you supply them | Per-batch review |
 | 5 | Country Waves 2 and 3 (DE, FR, NL, CH, BE, AT, ES, IT, SE, AE); article Batches 4 to 6; case studies as verified detail arrives | Per-batch review |
 | 6 | Language localization (locale versions of country and core pages); country x service intersections | Genuine localization and evidence per market |
+
+**Phase 1 canonical scope (APPROVED; authoritative list).**
+
+1. Application foundation on the current patched Next.js stack (React, TypeScript strict, App Router, Tailwind), at the repository root.
+2. Design tokens, including the derived accessible colors, and the responsive typography system.
+3. Typed content loader, entity graph, and validators; asset registry with provenance and license tracking.
+4. Tests and CI.
+5. SEO plumbing: metadata, canonical URLs, sitemap, robots.txt, JSON-LD, breadcrumbs, Open Graph.
+6. Pages: Home and Software Development, a working Contact page with secure form architecture (configurable destination, no invented inbox), header, footer, 404, and the minimum legal pages.
+7. Purposeful visual content (diagrams, technical illustrations, legitimate interface visuals, properly licensed imagery); no placeholders.
+8. Unbuilt references render as plain text, never dead links, fake routes, "coming soon", or placeholder pages.
+9. Responsive browser review at the widths in section 33 (mobile, tablet, laptop, desktop, large desktop), then Netlify preview when authorization is available.
+
+Phase 1 does not include the other 14 pillars, the Work hub and Work Areas, country pages, or articles.
 
 Article Batch 1 may begin in Phase 2 once the pillar pages it reports to exist. Page count is never a KPI; quarterly consolidation reviews use Search Console data. Applications, portals, dashboards, or AI tools later live on separate routes or subdomains, noindexed behind authentication, sharing design tokens.
 
@@ -616,7 +631,7 @@ Approved Facts Register inputs (legal entity, contact channels, engagement model
 5. A complete 53-article plan with overlap control and batches (`06`).
 6. Five-family navigation with Work and Resources prominent (section 5).
 7. Derived accessible color tokens; 18px body type (section 23).
-8. Diagram-first visual system (section 25).
+8. Purposeful visual system: original diagrams and technical illustrations plus properly licensed imagery and legitimate interface visuals where they help (section 25).
 9. Typed, Git-based content with graph validation, facts macro, and content linter (sections 26, 33).
 10. Static-first Next.js on Netlify with hardened headers (sections 28, 31).
 11. Locale-ready from day one, English-only publishing (section 19).
@@ -640,10 +655,10 @@ Full register: `03-decisions-register.md`. All decisions that block Phase 1 are 
 Home and Software Development, each:
 - Full content per the Content Master blueprints, every claim traced to the facts register or written as method/capability language only.
 - Layout built from at least five distinct patterns; no section is a repeated card grid; at least two original diagrams per page.
-- Real browser inspection at 375, 768, 1280, 1536 with screenshots; no horizontal scroll; readable body type.
+- Real browser inspection at 320, 360, 375, 390, 430, 768, 820, 1024, 1280, 1440, 1920, and 2560 px with screenshots; no horizontal overflow; readable body type; touch targets at least 44px; navigation, forms, images, diagrams, and grids checked at each class.
 - Metadata, canonical, Open Graph, JSON-LD, sitemap entry, robots, breadcrumbs, internal links verified.
 - axe: zero serious or critical issues; keyboard walkthrough passed.
-- Lighthouse mobile budgets met on the Netlify preview.
+- Lighthouse mobile budgets met on the local production build, and re-confirmed on the Netlify preview once the owner has authorized Netlify (foundation work is not blocked by that authorization).
 - Zero placeholder text, images, or links. Unbuilt pages render as plain text, not links. The contact form handles submission end to end in preview against a non-production sink; the production destination is configured through secure environment variables when authorization is available (no fake production inbox, no credentials in the repository).
 - Content linter: zero dash characters, zero banned phrases.
 - Written self-review against AGENTS 80A.8, then your review.
@@ -700,7 +715,25 @@ Visual rhythm requirement: at least five distinct layout patterns across the pag
 4. **Navigation (APPROVED, DEC-10).** Services, Solutions, Technologies, Industries, Work, Resources, Company, and the "Talk to DECHY" button. Five families: BUILD (Software Development, Web Development, Mobile App Development, Ecommerce Solutions); INTELLIGENCE AND AUTOMATION (AI & Machine Learning, Automation/Workflows & AI Solutions, Data & Analytics, API & Systems Integration); INFRASTRUCTURE AND SECURITY (Cloud & DevOps, Cybersecurity); DESIGN AND GROWTH (UI/UX & Product Design, Branding & Creative, SEO/AEO/GEO, Digital Marketing); ADVISORY (Consulting & Digital Transformation). Families only organize navigation; none of the 15 is removed or merged. Mobile navigation and the mobile CTA are fully responsive and accessible.
 5. **URL rules (APPROVED, DEC-08).** As in section 20; `/ai/` and `/cloud/` stay; `/automation/airtable/` is the canonical Airtable page and `/automation/airtable-automation/` is merged; slug registry and uniqueness rules kept; search and filter URLs are noindex.
 6. **Entity principles (APPROVED, DEC-07).** Entity does not equal page; one canonical home per concept; service-by-technology page is canonical when "X development" intent dominates; problems stay entities but open solution pages; the full graph is kept; informational explainers live in Resources.
-7. **Repository layout (APPROVED, DEC-11).** App at the repository root. Conceptual separation is enforced, not optional: application code in `src/`; page and article copy in `content/`; structured data in `data/` (`facts/`, `taxonomy/`, `relations/`, `countries/`, `work/`, `articles/`, `assets/`); documentation in `docs/`; tests and scripts in `tests/` and `scripts/`. Rules: no content or data inside `src/`; a README in each top-level folder states what belongs there; validators fail the build on stray files; new top-level folders need a decision record.
-8. **Responsive quality.** Mobile, tablet, laptop, desktop, and large desktop are all first-class. Phase 1 browser validation covers navigation, typography, spacing, images, cards, grids, buttons, forms, diagrams, content width, touch targets, page density, image cropping, horizontal overflow, and stacking. Mobile quality is a major priority; layouts are designed per device class, not shrunk from desktop.
+7. **Repository layout (APPROVED, DEC-11).** App at the repository root. Conceptual separation is enforced, not optional: application code in `src/`; page and article copy in `content/`; structured data in `data/` (`facts/`, `taxonomy/`, `relations/`, `countries/`, `work/`, `articles/`, `assets/`); documentation in `docs/`; tests and scripts in `tests/` and `scripts/`. Rules: no content or data inside `src/`; a README in each top-level folder states what belongs there; validators fail the build on stray files; new top-level folders need a decision record. Allowed at the repository root: the Next.js and tooling configuration files, `AGENTS.md`, `CLAUDE.md`, the two other governing documents (DECHY_CONTENT_MASTER.md, DECHY_CLAUDE_MASTER_HANDOFF.md), `README.md`, and the folders `src/ content/ data/ brand/ docs/ tests/ scripts/ public/`. The supplied logo PNG currently sits at the root as delivered; in Phase 1 it is moved byte for byte to `brand/logos/primary/` (hash unchanged). There is no website/ subfolder.
+8. **Responsive quality.** Mobile, tablet, laptop, desktop, and large desktop are all first-class experiences, designed per device class and never a shrunk desktop. Phase 1 browser validation runs at 320, 360, 375, 390, 430, 768, 820, 1024, 1280, 1440, 1920, and 2560 px and covers navigation, typography, spacing, grids, buttons, forms, images, diagrams, content width, stacking, cropping, density, overflow, and touch targets (44px minimum). Mobile quality is a major priority.
 9. **FAQs and llms.txt.** FAQs stay (users, semantic understanding, answer engines, long-tail questions, structure, internal linking) even though Google retired FAQ rich results. `llms.txt` is optional and never a core dependency.
 10. **GitHub.** Repository is private. Commits use `102127730+Samogunde@users.noreply.github.com`. Existing commits are not rewritten. Branch protection may be unavailable on a free private repository; CI via GitHub Actions and the merge discipline in CLAUDE.md apply regardless.
+
+
+## Appendix E. Search architecture non-regression checklist
+
+No instruction anywhere may weaken these. Every Phase and page is checked against them.
+
+- Technical SEO, on-page SEO, internal linking from typed entity relationships, structured data, canonicalization, crawl and index controls (robots, sitemap, noindex for search and filter URLs), Core Web Vitals.
+- International SEO: locale-ready architecture, hreflang when locales exist, genuinely localized content only, country pages as separate market-specific documents.
+- Search intent: one primary intent per page; qualification before creation; no thin pages and no URL-count targets.
+- Topical authority: pillars, the 53 articles, Work, solutions, and technology pages interlinked by the entity graph.
+- AEO: answer-first definitions, real question headings, semantic tables and lists, useful FAQs where they help users and search understanding (kept despite the retirement of FAQ rich results).
+- GEO: factual entity clarity, consistent descriptor-paired naming, Organization schema with stable @id, external authority and citations where appropriate, backlink and digital PR strategy (section 18).
+- llms.txt is optional and never a core dependency.
+- Factual integrity: no fabricated clients, projects, people, locations, metrics, testimonials, awards, certifications, or case-study outcomes; approved capabilities described with legitimate generalized descriptions.
+
+## Appendix F. Source of truth and superseded text
+
+Precedence and the topic-to-file map are in `CLAUDE.md`. Superseded and amended instructions in AGENTS.md, DECHY_CONTENT_MASTER.md, and DECHY_CLAUDE_MASTER_HANDOFF.md are marked in place and listed in `docs/decisions/0002-governance-reconciliation.md`. If this plan and an older planning document disagree, this plan governs.

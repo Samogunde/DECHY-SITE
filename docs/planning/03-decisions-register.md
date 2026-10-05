@@ -1,6 +1,6 @@
 # DECHY Decisions Register (Revision 4, Phase 0 complete)
 
-Status: PHASE 0 COMPLETE. Every decision that blocks Phase 1 is approved. Remaining open items are non-blocking and are listed in section B. The owner is the final product owner.
+Status: PHASE 0 COMPLETE. Every decision that blocks Phase 1 is approved. Remaining open items are non-blocking and are listed in section B. The owner is the final product owner. Source-of-truth precedence and the amendment ledger: `docs/decisions/0002-governance-reconciliation.md`.
 Priority: **P0** blocks Phase 1. **P1** blocks Phase 2 release. **P2** later. State: Resolved, Deferred, Open.
 
 ## A0. Approved by the owner (ADR 0001, first and second approval)
@@ -19,7 +19,7 @@ Priority: **P0** blocks Phase 1. **P1** blocks Phase 2 release. **P2** later. St
 | DEC-14 | Typed content architecture | Approved. |
 | DEC-15 | Next.js, React, TypeScript, App Router, Tailwind | Approved; versions verified at scaffold. |
 | DEC-16 | Locale-ready architecture, English-only publication | Covered by the original "internationalization readiness" requirement; applied. |
-| DEC-20 | Image policy | Changed: Phase 1 is not diagram-only; purposeful original and properly licensed visuals, provenance tracked; per-batch download confirmation retained as procedure. |
+| DEC-20 | Image policy | Amended: Phase 1 is not diagram-only. Purposeful original and properly licensed visuals; provenance and license recorded in the asset registry; standing authorization (ADR 0002 section 2 item 1) means no per-image or per-batch owner approval. |
 | DEC-23 | Positioning | Approved as working copy (Option 1 plus breadth line); refined in Phase 1; descriptor unchanged. |
 | DEC-24 | Homepage emphasis | Approved; structure not ranking; all 15 pillars in the index. |
 | DEC-27 | Commit identity | Approved: `102127730+Samogunde@users.noreply.github.com`, configured for this repository and verified; existing commits not rewritten. |
@@ -80,7 +80,7 @@ Priority: **P0** blocks Phase 1. **P1** blocks Phase 2 release. **P2** later. St
 | DEC-18 | P1 | Contact and lead handling: form stack, email provider, storage, who responds and how fast. | Start with email plus an optional Airtable record; tell me the owner. |
 | DEC-19 | P1 | AI crawler policy: allow retrieval/search agents; allow or block training agents. | Allow retrieval; training is your call (my lean: allow, since discoverability is a stated goal). |
 | DEC-25 | P1 | Git workflow: `main` protected and deployed; short-lived branches; GitHub Actions CI; Dependabot. | Approve. |
-| DEC-26 | P1 | Netlify: you authorize the account and plan; I configure the rest. | Needed at first preview deployment. |
+| DEC-26 | P1 | Netlify: the owner authorizes the account and plan when a step requires it. | Does not block Phase 1 foundation work; I stop at the specific dependency and state exactly what is needed. |
 
 ### Notes on what remains
 

@@ -1,5 +1,7 @@
 # DECHY CONTENT MASTER
 
+> **GOVERNANCE NOTE (2026-10-04).** Annotated in place by `docs/decisions/0002-governance-reconciliation.md`. Original wording preserved; follow cited amendments where marked. Precedence and the source-of-truth map are in `CLAUDE.md`.
+
 ## 1. Purpose
 
 This document is the companion content-production specification for `AGENTS.md`.
@@ -157,6 +159,8 @@ Do not claim that content will be cited or recommended by any AI system.
 ---
 
 ## 6. Homepage Content Blueprint
+
+> **CLARIFIED.** The approved homepage hierarchy is plan Appendix D and Appendix C of `docs/planning/02-master-implementation-plan.md`. All 15 pillars appear in a balanced service index. Services whose pages do not exist yet render as plain text, never dead links or "coming soon" items.
 
 The homepage is a company-level page, not a service directory.
 
@@ -368,6 +372,8 @@ No city-name swapping, technology-name swapping, or industry-name swapping.
 
 ## 9. The 53 Launch Articles
 
+> **AMENDED (AMD-14).** AGENTS.md does not contain the list. The approved 53-article architecture, in six batches of 9, 9, 9, 9, 9, and 8, is `docs/planning/06-article-plan-53.md`. All 53 are retained.
+
 The 53 approved launch articles already defined in `AGENTS.md` remain the launch content set. Each article must be developed as a genuine useful article, not a short SEO post.
 
 Every article should include, where appropriate:
@@ -392,6 +398,8 @@ Article content must support the surrounding entity graph rather than exist as i
 ---
 
 ## 10. Visual Content Standard
+
+> **CLARIFIED (AMD-04).** Image sourcing proceeds under the standing authorization in ADR 0002 section 2 item 1: license and provenance recorded, no per-image owner approval, nothing fabricated as evidence.
 
 The website must not depend entirely on text and cards.
 
@@ -522,6 +530,8 @@ If the answer to several questions is no, the page is not complete.
 ---
 
 ## 14. Content Production Sequence
+
+> **SUPERSEDED as sequencing (AMD-08, AMD-15).** Use plan section 36. "Stage 5" expands the remaining 14 pillars (not 15) after Software Development. Country pages and article batches follow the plan. The stage logic of review before scaling stays.
 
 ### Stage 1
 

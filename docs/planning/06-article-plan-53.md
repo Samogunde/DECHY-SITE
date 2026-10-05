@@ -1,6 +1,6 @@
 # DECHY 53 Launch Article Plan
 
-Status: FINAL PHASE 0 PACKAGE, awaiting owner review. The 53-article requirement is retained in full.
+Status: APPROVED PHASE 0 ARCHITECTURE (governs its topic under the approved plan; precedence in CLAUDE.md and ADR 0002). The 53-article requirement is retained in full.
 Documentation gap: the Content Master says the list is defined in AGENTS.md, but AGENTS.md does not contain it. This document is the proposed complete 53-article architecture. If an earlier original list exists anywhere (the abandoned build, notes), send it and I will reconcile it against this set with a mapping table; nothing here blocks that.
 
 ## 1. Selection logic
