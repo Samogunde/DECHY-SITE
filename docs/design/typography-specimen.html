@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>DECHY typography specimen (Phase 0 design review, not site code)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="typography-tokens.css">
+<style>
+  :root{--ink:#111827;--paper:#F7F6F2;--line:#E5E7EB;--blue:#2F6FED;--link:#2A62D8;--slate-text:#5B6472}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);font-kerning:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+  h1,h2,h3,h4,h5{font-family:var(--font-heading);margin:0;color:var(--ink);text-wrap:balance}
+  .display{font-size:var(--fs-display);line-height:var(--lh-display);letter-spacing:var(--ls-display);font-weight:700;max-width:var(--measure-heading)}
+  h1{font-size:var(--fs-h1);line-height:var(--lh-h1);letter-spacing:var(--ls-h1);font-weight:700}
+  h2{font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:var(--ls-h2);font-weight:700}
+  h3{font-size:var(--fs-h3);line-height:var(--lh-h3);letter-spacing:var(--ls-h3);font-weight:600}
+  h4{font-size:var(--fs-h4);line-height:var(--lh-h4);font-weight:600}
+  .eyebrow{font-family:var(--font-heading);font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--slate-text)}
+  .lead{font-size:var(--fs-lead);line-height:var(--lh-lead);max-width:var(--measure-lead);color:#1f2937}
+  p{margin:0 0 1em}
+  .prose{max-width:var(--measure-prose);font-size:var(--fs-body-lg);line-height:var(--lh-body-lg)}
+  .service{max-width:var(--measure-service);font-size:var(--fs-body-lg);line-height:var(--lh-body-lg)}
+  .small{font-size:var(--fs-body-sm);line-height:var(--lh-small);color:var(--slate-text)}
+  .caption{font-size:var(--fs-caption);line-height:1.45;color:var(--slate-text)}
+  a{color:var(--link);text-underline-offset:.18em}
+  section{padding:clamp(2.5rem,5vw,4.5rem) 0;border-top:1px solid var(--line)}
+  .tag{font-family:var(--font-heading);font-size:var(--fs-label);font-weight:600;color:var(--slate-text);margin-bottom:.75rem;display:block}
+  nav.demo{display:flex;gap:1.5rem;align-items:center;font-family:var(--font-heading);font-size:var(--fs-nav);font-weight:600;padding:1rem 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  nav.demo a{color:var(--ink);text-decoration:none}
+  .btn{display:inline-flex;align-items:center;min-height:44px;padding:0 1.25rem;border-radius:6px;font-family:var(--font-heading);font-size:var(--fs-button);font-weight:600;background:var(--blue);color:#fff;text-decoration:none}
+  .btn.alt{background:transparent;color:var(--ink);border:1px solid #8A919C}
+  .crumbs{font-size:var(--fs-caption);color:var(--slate-text)}
+  .grid{display:grid;gap:1.5rem}
+  @media(min-width:48rem){.grid.c2{grid-template-columns:1fr 1fr}}
+  @media(min-width:64rem){.grid.c3{grid-template-columns:repeat(3,1fr)}}
+  .card{border:1px solid var(--line);background:#fff;padding:1.5rem;border-radius:6px}
+  .card h3{font-size:clamp(1.125rem,1.05rem + .3vw,1.3125rem);font-weight:600;margin-bottom:.5rem}
+  .card p{margin:0}
+  details{border-top:1px solid var(--line);padding:1rem 0;max-width:var(--measure-service)}
+  summary{font-family:var(--font-heading);font-weight:600;font-size:var(--fs-h4);line-height:var(--lh-h4);cursor:pointer}
+  table{border-collapse:collapse;width:100%;font-size:var(--fs-body-sm);line-height:1.45}
+  th,td{text-align:left;padding:.75rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--font-heading);font-weight:700;font-size:var(--fs-label)}
+  pre,code{font-family:var(--font-mono);font-size:var(--fs-code)}
+  pre{background:#111827;color:#E5E7EB;padding:1rem 1.25rem;border-radius:6px;overflow:auto;line-height:1.6;font-size:max(.875rem,.9em)}
+  label{display:block;font-size:var(--fs-label);font-weight:600;margin-bottom:.25rem}
+  input{font:inherit;font-size:var(--fs-input);min-height:44px;width:100%;max-width:26rem;padding:0 .75rem;border:1px solid #8A919C;border-radius:6px;background:#fff}
+  #readout{position:sticky;top:0;z-index:5;background:#111827;color:#fff;font:14px/1.4 var(--font-mono);padding:.5rem var(--gutter);white-space:pre-wrap}
+  .cal span{display:inline-block;margin-right:2rem}
+</style>
+</head>
+<body>
+<div id="readout">measuring...</div>
+<div class="wrap">
+  <nav class="demo" aria-label="Demo navigation"><strong>DECHY</strong><a href="#">Services</a><a href="#">Solutions</a><a href="#">Technologies</a><a href="#">Industries</a><a href="#">Work</a><a href="#">Resources</a><a href="#">Company</a><a class="btn" href="#">Talk to DECHY</a></nav>
+
+  <section id="hero" style="border-top:0">
+    <span class="eyebrow">Technology, Software, AI &amp; Digital Solutions</span>
+    <p class="display" style="margin-top:.75rem">Software, AI, automation, integration, and cloud, designed to work as one system.</p>
+    <p class="lead" style="margin-top:1.25rem">Lead text. DECHY helps organizations build, connect, automate, and secure the digital systems they run on, across the full range of modern technology.</p>
+    <p><a class="btn" href="#">Talk to DECHY</a> &nbsp; <a class="btn alt" href="#">See our work</a></p>
+  </section>
+
+  <section id="service">
+    <div class="crumbs">Home / Services / Software Development</div>
+    <h1 style="margin-top:.75rem;max-width:var(--measure-heading)">Software Development</h1>
+    <p class="lead" style="margin-top:1rem">Custom software, business applications, SaaS platforms, and internal tools, designed and built to fit how your organization actually works.</p>
+    <h2 style="margin:2.5rem 0 1rem">Build, buy, or integrate</h2>
+    <div class="service">
+      <p>Most organizations reach a point where off-the-shelf tools no longer fit. Spreadsheets multiply, systems stop talking to each other, and staff spend hours moving information by hand. The question is rarely whether to use software, but which combination of building, buying, and connecting produces a system people will really use and the business can maintain.</p>
+      <p>A sound answer starts with the workflow rather than the technology. We map how work moves, where data is created and consumed, and what must stay flexible. Only then do we decide what to build, what to buy, and what to connect through APIs. That order keeps the architecture simple and the maintenance burden predictable over years, not months.</p>
+    </div>
+    <h3 style="margin:2rem 0 .75rem">What a delivered system typically includes</h3>
+    <h4 style="margin:0 0 .5rem">Architecture and quality</h4>
+    <p class="small">Small supporting text. Secondary descriptions, table cells and tertiary notes use this size and never carry primary reading content.</p>
+    <p class="caption">Caption text, figure notes and metadata at 14px minimum.</p>
+  </section>
+
+  <section id="cards">
+    <span class="tag">Card text uses body size, titles use Manrope 600</span>
+    <div class="grid c3">
+      <div class="card"><h3>Custom applications</h3><p>Business applications, portals, and dashboards built around your workflow, with clear ownership of data and logic.</p></div>
+      <div class="card"><h3>SaaS platforms</h3><p>Multi-tenant products from first release to scale, including billing, permissions, and operations.</p></div>
+      <div class="card"><h3>Modernization</h3><p>Replacing or extending legacy systems in stages so the business keeps running throughout.</p></div>
+    </div>
+  </section>
+
+  <section id="article">
+    <span class="eyebrow">Guide</span>
+    <h1 style="margin:.75rem 0 1rem;max-width:var(--measure-heading)">What Are AI Agents and How Do They Differ from Chatbots and Automation</h1>
+    <p class="caption">By a named author · Reviewed by a named reviewer · Updated with a real date · 12 min read</p>
+    <div class="prose" style="margin-top:1.5rem">
+      <p>An AI agent is a software system that uses a language model to decide what to do next, call tools, and work toward a goal with limited step-by-step instruction. A chatbot answers; an agent acts. Automation follows fixed rules; an agent chooses among options at run time.</p>
+      <h2 style="margin:2rem 0 .75rem">Why the distinction matters</h2>
+      <p>The three terms are often used interchangeably, which leads to poor purchasing and design decisions. A fixed workflow is cheaper, faster, and easier to test. An agent is justified only when the path to the result cannot be fully specified in advance, and when the cost of an occasional wrong step is acceptable or guarded by review.</p>
+      <h3 style="margin:1.75rem 0 .5rem">Failure modes to plan for</h3>
+      <p>Common problems include tool misuse, loops, hidden cost growth, and unreviewed actions on live systems. Each needs a specific control, such as step limits, scoped permissions, logging, and human approval for irreversible actions. See <a href="#">AI security and governance</a> for the full checklist.</p>
+    </div>
+    <h4 style="margin:2rem 0 .5rem">Inline code and blocks</h4>
+    <div class="prose"><p>Set the limit with <code>max_steps = 8</code> and log every tool call.</p></div>
+    <pre tabindex="0">max_steps = 8
+allowed_tools = ["search_docs", "create_ticket"]
+require_approval = ["create_ticket"]</pre>
+  </section>
+
+  <section id="faq">
+    <h2 style="margin-bottom:1rem">Common questions</h2>
+    <details open><summary>When should a business build custom software?</summary><div class="service" style="font-size:var(--fs-body);margin-top:.5rem"><p>When a core workflow is specific to the business, existing tools force workarounds, or integration needs exceed what off-the-shelf products allow.</p></div></details>
+    <details><summary>How long does a project take?</summary><div class="service" style="font-size:var(--fs-body);margin-top:.5rem"><p>It depends on scope. Discovery clarifies scope first.</p></div></details>
+  </section>
+
+  <section id="table-form">
+    <div style="overflow-x:auto"><table><thead><tr><th>Approach</th><th>Best when</th><th>Trade-off</th></tr></thead><tbody>
+      <tr><td>Build</td><td>The workflow is a differentiator</td><td>Higher upfront cost, full control</td></tr>
+      <tr><td>Buy</td><td>The need is common</td><td>Faster, less flexible</td></tr>
+      <tr><td>Integrate</td><td>Good tools exist but are disconnected</td><td>Depends on API quality</td></tr></tbody></table></div>
+    <form style="margin-top:2rem" onsubmit="return false"><label for="n">Your name</label><input id="n" placeholder="Name"><p class="caption" style="margin-top:.35rem">Help text is 14px minimum.</p></form>
+  </section>
+
+  <section id="cal" class="cal">
+    <span class="tag">Calibration: measured x-height ratio and glyph width of the actual fonts</span>
+    <div id="calout" class="small" style="color:var(--ink)"></div>
+  </section>
+</div>
+<script>
+(async function(){
+  try{await document.fonts.ready}catch(e){}
+  const cs=(el)=>getComputedStyle(el);
+  const px=(sel)=>parseFloat(cs(document.querySelector(sel)).fontSize);
+  function chars(sel){const el=document.querySelector(sel);const r=document.createElement('canvas').getContext('2d');const c=cs(el);r.font=c.fontWeight+' '+c.fontSize+' '+c.fontFamily;const w=el.getBoundingClientRect().width;const aw=r.measureText('abcdefghijklmnopqrstuvwxyz the quick brown fox').width/46;return {w:Math.round(w),cpl:Math.round(w/aw)}}
+  function xh(font){const c=document.createElement('canvas').getContext('2d');c.font='400 200px '+font;const m=c.measureText('x');return +(m.actualBoundingBoxAscent/200).toFixed(3)}
+  function render(){
+    const vw=window.innerWidth;
+    const e=(s)=>px(s).toFixed(1);
+    const p=chars('#article .prose'), s=chars('#service .service');
+    document.getElementById('readout').textContent=
+     `viewport ${vw}px | display ${e('.display')} h1 ${e('h1')} h2 ${e('h2')} h3 ${e('h3')} h4 ${e('h4')} lead ${e('.lead')} body-lg ${e('.prose')} body ${e('#faq .service')} small ${e('.small')} | article measure ${p.w}px ~${p.cpl} chars/line | service ${s.w}px ~${s.cpl} chars/line`;
+  }
+  render();addEventListener('resize',render);
+  const out=['Manrope','"Source Sans 3"','Inter, system-ui','system-ui','Arial'].map(f=>f+': x-height '+xh(f)+' em').join('  |  ');
+  const ss=xh('"Source Sans 3"');
+  const eq=[16,17,18,19,20].map(s=>`Source Sans 3 at ${s}px has x-height ${(ss*s).toFixed(2)}px`).join('; ');
+  const sys=xh('system-ui');
+  document.getElementById('calout').innerHTML=out+'<br>'+eq+'<br>system-ui 16px x-height = '+(sys*16).toFixed(2)+'px, system-ui 17px = '+(sys*17).toFixed(2)+'px';
+})();
+</script>
+</body>
+</html>

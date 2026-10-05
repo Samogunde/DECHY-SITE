@@ -1,7 +1,24 @@
-# DECHY Decisions Register (Revision 2)
+# DECHY Decisions Register (Revision 3, final Phase 0 package)
 
-Status: DRAFT FOR REVIEW. Reply with the numbers you approve ("approve all recommendations except DEC-xx") or change any.
+Status: FINAL PHASE 0 PACKAGE. Items approved in the Phase 0 approval message are marked Approved; the remainder are Open. Reply with the numbers you approve ("approve all remaining recommendations except DEC-xx") or change any. Authority model: the owner is the final product owner (DEC-33 resolved).
 Priority: **P0** blocks Phase 1. **P1** blocks Phase 2 release. **P2** later. State: Resolved, Deferred, Open.
+
+## A0. Approved by the owner (recorded in ADR 0001)
+
+| ID | Decision | Approved as |
+|---|---|---|
+| DEC-04 | 53-article architecture and six-batch structure | Approved. Articles are written in the content phase, not now. |
+| DEC-09 | Country pages only, no cities, no implied offices | Approved. Countries are for international search and content expansion and do not limit DECHY's global scope or imply priority markets. |
+| DEC-12 | Derived accessible color variants | Approved. Brand tokens unchanged; derived colors documented. |
+| DEC-13 | Larger, more readable typography | Approved in direction; full system in `07-typography-system.md` awaiting final review. |
+| DEC-14 | Typed content architecture | Approved. |
+| DEC-15 | Next.js, React, TypeScript, App Router, Tailwind | Approved. Exact versions verified at scaffold (`08`). |
+| DEC-30 | CLAUDE.md with precedence model | Approved; created (`CLAUDE.md`). |
+| DEC-33 | Final approver | Resolved: the owner is the final product owner; Claude challenges weak decisions and presents major changes for approval. |
+| DEC-34 | Work Areas and Work Entries | Approved. Work Areas must be substantive, not thin SEO pages. |
+| DEC-35 | Country pool (15 listed) | Pool retained; wave order still open. |
+| DEC-36 | Seed all capabilities; internal classification only | Approved. |
+| DEC-40 | Push policy | Approved: planning pushed after verification; code follows implement, test, inspect, fix, verify, commit, push. |
 
 ## A. Resolved or deferred by your corrections
 
@@ -57,7 +74,7 @@ Priority: **P0** blocks Phase 1. **P1** blocks Phase 2 release. **P2** later. St
 | ID | Pri | Decision | Recommendation |
 |---|---|---|---|
 | DEC-12 | P0 | Derived accessible tokens (link blue #2A62D8, on-dark blue #7AA5F8, slate text #5B6472, darker functional text colors; computed). Brand values unchanged. | Approve. |
-| DEC-13 | P0 | Type sizing: body 18px desktop (17 minimum mobile), line-height 1.65. | Approve. |
+| DEC-13 | P0 | Typography system (revised): approve `07-typography-system.md` as the standard (fluid roles, fixed UI sizes, measures, breakpoints). | Approved in direction; confirm the full specification. |
 | DEC-20 | P1 | Image policy: diagrams first; licensed photography sparingly; AI imagery conceptual only; per-batch download approval; masters outside Git. | Approve. |
 | DEC-31 | P0 | Phase 1 scope: Home + Software Development + working Contact + header/footer + 404 + minimum legal pages (flagged for qualified review before launch). | Approve. |
 
@@ -72,7 +89,6 @@ Priority: **P0** blocks Phase 1. **P1** blocks Phase 2 release. **P2** later. St
 | DEC-26 | P1 | Netlify: you authorize the account and plan; I configure the rest. | Needed at first preview deployment. |
 | DEC-27 | P0 | Commit identity: configured `Samogunde` / `ssmmyjoy5@gmail.com`. Is that email attached to the Samogunde GitHub account? | Confirm; otherwise I switch to the right email or a GitHub noreply address. |
 | DEC-30 | P0 | Governance: add `CLAUDE.md` importing AGENTS.md; replace Codex references in AGENTS.md (sections 79, 81); add `docs/decisions/` ADR log. AGENTS.md edits are listed in an ADR for your approval first. | Approve. |
-| DEC-33 | P0 | Final approver and any separate content reviewer. | Name roles; I assume you are final approver. |
 | DEC-40 | P0 | Push policy: after each verified milestone I push to `main` for planning/docs; for code, short-lived branches merged after CI and your milestone approval. | Approve. |
 
 ## C. Defaults I will apply unless you object

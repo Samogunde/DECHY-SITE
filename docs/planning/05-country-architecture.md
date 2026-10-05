@@ -1,6 +1,6 @@
 # DECHY Country Architecture
 
-Status: DRAFT FOR REVIEW (revision 2). Replaces the earlier "no country pages until Phase 6" stance. Country pages are a planned part of the platform.
+Status: FINAL PHASE 0 PACKAGE, awaiting owner review. Replaces the earlier "no country pages until Phase 6" stance. Country pages are a planned part of the platform.
 Labels: CONFIRMED, RECOMMENDED, ASSUMPTION, VERIFY AT WRITING (legal or market facts that must be re-checked against current sources when each page is written; I list topics, not final claims).
 
 ## 1. Principles
@@ -11,6 +11,7 @@ CONFIRMED by your instruction:
 - 10 to 15 strategically selected countries.
 - No template-with-country-name pages. Each page needs market-specific substance.
 - Pages connect to services, technologies, industries, solutions, business types, and content.
+- **Global scope (Phase 0 approval):** the country set is for international search and content expansion. It does not mean DECHY only targets these countries, and no page may call them DECHY's only or priority markets unless separately approved. Copy says DECHY serves organizations and clients in these markets as part of a global practice.
 
 ## 2. Country set
 

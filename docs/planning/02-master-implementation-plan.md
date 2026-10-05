@@ -1,10 +1,12 @@
-# DECHY Master Implementation Plan (Revision 2)
+# DECHY Master Implementation Plan (Revision 3, final Phase 0 package)
 
-Status: DRAFT FOR REVIEW. Nothing described here has been built. Production implementation starts only after you approve this plan and the decisions register.
-Companion documents: `01-strategic-audit.md`, `03-decisions-register.md`, `04-work-architecture.md`, `05-country-architecture.md`, `06-article-plan-53.md`.
+Status: FINAL PHASE 0 PACKAGE, awaiting owner review. Nothing described here has been built. Phase 1 production implementation starts only when the owner explicitly authorizes it.
+Companion documents: `00-phase-0-package.md` (index), `01-strategic-audit.md`, `03-decisions-register.md`, `04-work-architecture.md`, `05-country-architecture.md`, `06-article-plan-53.md`, `07-typography-system.md`, `08-external-research-log.md`; governance: `CLAUDE.md` and `docs/decisions/0001-phase-0-approvals.md`.
 Labels: CONFIRMED (in the specifications or your instructions), VERIFIED (checked by me), RECOMMENDED, ASSUMPTION, DECISION REQUIRED (see register).
 
 Revision 2 applies your corrections: the domain is deferred and not a blocker; the 53 articles are retained and fully planned; the full capability architecture is preserved with no public evidence disclaimers; the approved PNG logo is used; the project now lives at `C:\DECHY-SITE`; Work is a primary section with a full architecture; country-level pages are planned (10 to 15 countries, no cities).
+
+Revision 3 records your Phase 0 approvals (ADR 0001), adds the approved homepage hierarchy (Appendix C), clarifies that country pages do not limit DECHY's global scope, adopts the full responsive typography system (`07`), adds `CLAUDE.md` governance with a precedence model, and updates technology facts from current external research (`08`).
 
 House style follows AGENTS 1A.16: no em dashes, no en dashes, no emojis. Ranges are written with "to".
 
@@ -201,6 +203,7 @@ Full detail in `05-country-architecture.md`. Summary:
 - **Country level only**; no city pages, no addresses, no offices, no branches, no local teams, no Google Business Profiles, no `LocalBusiness` schema.
 - 10 to 15 strategically selected countries. Candidate pool of 15 from your examples: United States, United Kingdom, Germany, France, Spain, Italy, Netherlands, Ireland, Switzerland, Sweden, Canada, Australia, United Arab Emirates, Belgium, Austria. Waves of 4 to 6 keep quality high (DEC-35).
 - Each page represents DECHY's ability to serve clients in that market, remote-first, truthful to the global positioning.
+- **Global scope (CONFIRMED, Phase 0 approval).** The country set exists for international search and content expansion. It does not mean DECHY only targets those countries, and pages must not describe them as DECHY's only or priority markets unless the owner separately approves that. Copy says DECHY serves organizations and clients in those markets as part of a global practice; it never implies offices or branches.
 - Each page needs market-specific substance: relevant services, technology capabilities, industries, common business needs, solutions, integrations, country-specific considerations (regulation, payments, e-invoicing, languages), FAQs, resources. A similarity validator and sourced, dated regulatory statements guard against thin pages.
 - Pages connect to services, technologies, industries, solutions, business types, Work, and articles through typed edges.
 - Country x service intersections (for example `/software-development/germany/`) are CREATE LATER.
@@ -279,7 +282,7 @@ Entity types and default page policy (all entities live in the graph; page polic
 - Question headings only where a real question exists; each question has a direct answer paragraph before elaboration.
 - Comparison tables in semantic `<table>` markup; definition lists in `<dl>`; ordered steps in `<ol>`.
 - Stable heading anchors so passages can be cited.
-- `FAQPage` markup is allowed where the questions are real, with the understanding that no SERP rich result is expected for commercial sites since 2023. It is retained for semantic clarity only.
+- `FAQPage` markup is allowed where the questions are real. Google retired FAQ rich results on 7 May 2026 (`08`, R6), so it is retained only for semantic clarity and other parsers; no effort is budgeted for FAQ rich results.
 - Freshness: visible "last reviewed" date and reviewer.
 
 ## 18. GEO architecture
@@ -291,7 +294,7 @@ Goal: make DECHY a coherent, corroborated entity. Honest limits: no outcome (cit
 3. **External corroboration:** create or claim real profiles (LinkedIn company page, GitHub organization, others you confirm), consistent naming and descriptor, link both directions. Directories such as Clutch and GoodFirms rely on real client reviews, so they come after real clients consent. Wikidata/Wikipedia are not targets (notability requirements cannot be met honestly without third-party coverage).
 4. **Original material:** reference implementations, architecture diagrams, evaluation notes, and method documents are the types of first-hand content that others cite.
 5. **Digital PR (later):** publish original technical research or data only when DECHY actually has it.
-6. **Crawl policy:** robots.txt allows major search and AI retrieval user agents; policy for AI training crawlers is a business decision (DEC-19). `llms.txt` optional and low priority; not relied upon.
+6. **Crawl policy:** robots.txt allows major search and AI retrieval user agents; policy for AI training crawlers is a business decision (DEC-19). `llms.txt` is optional and not a deliverable: Google states it ignores such files and that AI features need no special files or markup (`08`, R5).
 7. **Consistency:** the facts register is the only source for company statements; descriptions are generated from it.
 
 ## 19. International architecture
@@ -366,7 +369,7 @@ Tokens (CONFIRMED values from AGENTS 1A.5, 1A.7):
 | Body | Source Sans 3 |
 | Mono | system or a restrained monospace, code only |
 
-**Derived accessible tokens (DECISION REQUIRED, DEC-12).** The CONFIRMED palette fails WCAG in necessary combinations (audit K-2). I propose derivations, each computed and verified:
+**Derived accessible tokens (APPROVED in direction, DEC-12).** The approved brand tokens are unchanged (#111827, #2F6FED, #F7F6F2, #E5E7EB, #6B7280). The palette fails WCAG for some combinations (audit K-2), so documented derived UI colors are used only where a combination fails. Each was computed:
 
 | Derived token | Value | Verified ratio |
 |---|---|---|
@@ -383,7 +386,7 @@ Tokens (CONFIRMED values from AGENTS 1A.5, 1A.7):
 
 The brand blue and slate remain the brand; the derivations are used for text and states only. The CONFIRMED brand values are untouched.
 
-**Typography (RECOMMENDED, DEC-13).** Long-form body 18px desktop (17px minimum on mobile), line-height 1.65, measure 65 to 75 characters, Source Sans 3. Lead paragraph 21 to 22px. Headings in Manrope with a fluid scale (`clamp`): H1 about 40 to 60px, H2 about 30 to 40px, H3 about 22 to 26px, no oversize startup headlines (AGENTS 1A.8). Table and UI text 15 to 16px minimum. Variable fonts through `next/font`, self-hosted, preloaded, `font-display: swap` with size-adjusted fallbacks to prevent layout shift.
+**Typography (APPROVED in direction, DEC-13; full specification in `07-typography-system.md` and `docs/design/typography-tokens.css`).** Roles, not pixel values. Fluid `clamp()` between 360px and 1440px for Display (36 to 68), H1 (32 to 52), H2 (26 to 38), H3 (21 to 28), H4 (18.5 to 22), Lead (19.5 to 24), Body large (17.5 to 20), Body (17 to 18.5), Body small (15 to 16), with scale steps of 1.06 at 1920px and 1.12 at 2560px. Fixed UI sizes: captions and labels 14, navigation 15 then 16 from 1280, buttons and inputs 16. Line heights step at 768 and 1024. Reading measures of 62ch (articles) and 64ch (service and similar narrative) give about 69 to 71 real characters per line, verified in a browser at 390, 820, 1280, 1440, and 1920 px. Nothing readable is below 14px and body copy is never below 17px. Self-hosted variable fonts through `next/font`.
 
 **Shape and surface.** Radius scale 0, 2, 4, 6, 8 (no pills; buttons 6). Hairline 1px borders instead of shadows; shadows only for floating layers (menus, dialogs). No gradients, no glassmorphism, no glow (CONFIRMED). Section rhythm alternates Paper, white, and Ink surfaces; Dark sections do not carry the logo in Phase 1; header and footer logo sit on light surfaces.
 
@@ -477,7 +480,7 @@ Rules: Server Components by default; Client Components only for interaction (men
 
 ## 28. Technical architecture
 
-- **Framework:** Next.js (latest stable at scaffold time, patched for current security advisories), React, TypeScript strict, App Router, Tailwind CSS (v4 style, tokens in CSS variables), npm, Node 22 LTS. **CONFIRMED direction; versions to be verified at scaffold.**
+- **Framework:** Next.js 16.x on the newest patched release (16.3.8 was current on 2026-10-04; React 19.2.1 or later, per the React Server Components advisory), React, TypeScript strict, App Router, Tailwind CSS 4.x (modern-browser baseline: Chrome 111, Safari 16.4, Firefox 128), npm, Node 22 LTS. **CONFIRMED direction; exact versions and advisories re-verified at scaffold** (`08`).
 - **Rendering:** static generation for all content routes (`generateStaticParams`, `dynamicParams = false`), minimal server runtime. Server endpoints only for the contact form and health check.
 - **Validation:** Zod for content and form input.
 - **Schema:** `schema-dts` types, generated JSON-LD component.
@@ -622,7 +625,7 @@ Approved Facts Register inputs (legal entity, contact channels, engagement model
 
 ## 40. Decisions requiring human approval
 
-Full register with recommendations: `03-decisions-register.md` (DEC-01 to DEC-40). Before Phase 1 starts: DEC-04, DEC-07 to DEC-15, DEC-23, DEC-24, DEC-30, DEC-31, DEC-34, DEC-36. Before Phase 2 ships: DEC-05, DEC-17 to DEC-22, DEC-26. Later: DEC-02 (domain), DEC-03 (vector logo), DEC-35 (country order), DEC-16 detail.
+Full register: `03-decisions-register.md`. Approved in direction by the owner (ADR 0001) and awaiting only final package review: DEC-01, DEC-04, DEC-09, DEC-12, DEC-13, DEC-14, DEC-15, DEC-30, DEC-33, DEC-34, DEC-35 (pool), DEC-36, DEC-40. Still open and needed before Phase 1 starts: DEC-07, DEC-08, DEC-10, DEC-11, DEC-23, DEC-24, DEC-27, DEC-31, DEC-32. Before Phase 2 ships: DEC-05, DEC-16 to DEC-22, DEC-25, DEC-26, DEC-37 to DEC-39. Later: DEC-02 (domain), DEC-03 (vector logo and brand assets).
 
 ---
 
@@ -659,3 +662,27 @@ For approval before drafting. Section order is deliberately different from the o
 13. Next step: discovery conversation CTA.
 
 Related Work Areas appear as soon as they exist; Work Entries appear only if supplied; otherwise that block is absent.
+
+## Appendix C. Homepage content hierarchy (owner direction)
+
+Positioning: DECHY is a broad global technology company. The homepage must not read as an AI startup, a generic digital agency, a freelancer portfolio, or a keyword directory, and must feel substantial. AI, automation, web, or SEO is never the whole identity; the connected strength (Software + AI + Automation + Integration + Cloud) is the organizing idea within the full capability system.
+
+Hierarchy, top to bottom (maps onto the 12 blocks of the Content Master homepage blueprint):
+
+| # | Section | Content Master block | Notes |
+|---|---|---|---|
+| 1 | DECHY, the exact descriptor, positioning statement, CTAs | 1 Hero | Descriptor as eyebrow or sub-line, exact text; Display type role; original system diagram |
+| 2 | What DECHY does | 2 Connected capability proposition | Plain statement of breadth plus the connected-systems idea |
+| 3 | Who DECHY helps | 8 Industries and business types (first half) | Business types and organization kinds; global |
+| 4 | Problems DECHY solves | 5 Problems | Problem-first language from AGENTS 22 |
+| 5 | Major service capabilities | 3 Service universe, 4 What DECHY helps accomplish | All 15 pillars in five families, as a structured index (not a card wall) |
+| 6 | Software and technology capabilities | 7 Technology depth | Technology groups from the capability architecture; names, not logos |
+| 7 | AI and automation | 6 Solutions and use cases | Presented as a major capability beside the others, never above them |
+| 8 | Integrations and systems | 6 and 7 | Connected-systems diagram, integration patterns |
+| 9 | Industries and business types | 8 | Second half; no presence claims |
+| 10 | Selected work and capability | 10 Proof | Work Areas now; Work Entries when supplied; no invented clients |
+| 11 | Useful resources | 11 Knowledge | Pillar articles from the 53 |
+| 12 | Why DECHY | 9 How engagements work plus differentiators | Evidence-based, no unsupported superlatives |
+| 13 | Strong next-step CTAs | 12 Final conversion | Discovery conversation; clear next step |
+
+Visual rhythm requirement: at least five distinct layout patterns across the page, at least two original diagrams, alternating light and dark surfaces, no run of identical card grids.
