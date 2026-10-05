@@ -4,9 +4,9 @@ This file tells every Claude Code session how to work on DECHY. It adds no new c
 
 ## 1. Current state (update at every gate)
 
-- Phase 0 (planning and architecture): package complete, **awaiting owner approval**.
-- Phase 1 (production implementation): **NOT authorized.** Do not scaffold the app, build the homepage, or build service pages until the owner says so in chat.
-- Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (GitHub is the permanent source of truth). Never use or reference the abandoned Codex repository or its code.
+- Phase 0 (planning and architecture): **complete and approved.**
+- Phase 1 (production implementation): **not started; requires the owner's explicit authorization in chat.** Approved Phase 1 scope is in `docs/planning/02-master-implementation-plan.md` (Appendix D and section 36).
+- Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (GitHub is the permanent source of truth). The repository is private. Never use or reference the abandoned Codex repository or its code.
 
 ## 2. Precedence model (which document governs what)
 
@@ -18,9 +18,9 @@ When documents disagree, resolve in this order. A higher item wins over a lower 
 | 2 | `AGENTS.md` | Brand, positioning facts, descriptor, services, entity and SEO/AEO/GEO rules, URL and content-model principles, engineering quality gates (section 80A), prohibited behavior |
 | 3 | `DECHY_CONTENT_MASTER.md` | Content depth, page composition, homepage and service blueprints, visual content standard, content QA and definition of done |
 | 4 | `DECHY_CLAUDE_MASTER_HANDOFF.md` | Claude's role, audit and approval gates, phase order, working principles |
-| 5 | `docs/planning/*` (approved Phase 0 package) | Concrete architecture, designs, and decisions that the owner has approved, including amendments to rows 2 to 4 |
-| 6 | `docs/decisions/` (ADRs) | The record of why an approved amendment was made and which text it supersedes |
-| 7 | This file | Process and conduct only |
+| 5 | `docs/planning/*` (approved Phase 0 plan) | Concrete architecture, designs, and decisions the owner approved, including amendments to rows 2 to 4 |
+| 6 | `docs/decisions/` (decision records) | Why an approved amendment was made and which text it supersedes |
+| 7 | Implementation details (code conventions, this file's process notes) | How things are built within everything above |
 
 Rules for conflicts:
 1. An approved planning decision or ADR that explicitly amends AGENTS.md, the Content Master, or the Handoff governs that specific point, and the ADR names the replaced text. Until an amendment is approved, the source document governs.
@@ -40,6 +40,8 @@ Where to look first: for facts and brand read `AGENTS.md` sections 1 and 1A; for
 - AI, Automation, Web, or SEO must not become the whole identity or outrank other services.
 - Style: no em dashes, no en dashes, no emojis in DECHY content or docs. Use "to" for ranges.
 - Brand tokens are fixed: #111827, #2F6FED, #F7F6F2, #E5E7EB, #6B7280, Manrope (headings), Source Sans 3 (body). Derived accessible variants are allowed for contrast and must be documented; they never replace the brand tokens. Use the supplied PNG logo as is; do not redraw, recolor, stretch, or regenerate it.
+- Imagery: purposeful original and properly licensed visuals, provenance tracked in the asset registry, nothing fabricated as evidence; confirm each download batch (source, filename, size, license) with the owner before downloading.
+- Unbuilt pages render as plain text, never as dead links, fake routes, "Coming Soon", or placeholder pages.
 - Typography follows `docs/planning/07-typography-system.md` and `docs/design/typography-tokens.css`.
 - Company facts live only in the Approved Facts Register (to be created in Phase 1 under `data/facts/`). External technical research is kept separate (see `docs/planning/08-external-research-log.md`) and never becomes a company fact.
 
@@ -58,6 +60,7 @@ Plan, implement, test, inspect (in a real browser for UI), diagnose and fix, re-
 - Verify `git remote -v` shows `Samogunde/DECHY-SITE` before any push.
 - Planning and documentation: commit and push after verification.
 - Production code (once authorized): short-lived branches, CI green, then merge to `main`; conventional commit messages (`feat:`, `fix:`, `content:`, `docs:`, `chore:`); never push knowingly broken work; never commit secrets; keep binary masters out of Git unless explicitly approved.
+- Commit identity for this repository: `Samogunde <102127730+Samogunde@users.noreply.github.com>` (set in the local repo config; verify with `git config user.email` before committing). Existing commits are not rewritten.
 - Commit messages end with the co-author line required by the session attribution instructions.
 - Work only in `C:\DECHY-SITE` (outside OneDrive).
 

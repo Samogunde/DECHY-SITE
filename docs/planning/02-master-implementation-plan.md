@@ -1,12 +1,14 @@
-# DECHY Master Implementation Plan (Revision 3, final Phase 0 package)
+# DECHY Master Implementation Plan (Revision 4, approved Phase 0 package)
 
-Status: FINAL PHASE 0 PACKAGE, awaiting owner review. Nothing described here has been built. Phase 1 production implementation starts only when the owner explicitly authorizes it.
+Status: PHASE 0 COMPLETE. The owner approved the remaining decisions (ADR 0001, second approval). Nothing described here has been built. Phase 1 starts only on explicit owner authorization.
 Companion documents: `00-phase-0-package.md` (index), `01-strategic-audit.md`, `03-decisions-register.md`, `04-work-architecture.md`, `05-country-architecture.md`, `06-article-plan-53.md`, `07-typography-system.md`, `08-external-research-log.md`; governance: `CLAUDE.md` and `docs/decisions/0001-phase-0-approvals.md`.
 Labels: CONFIRMED (in the specifications or your instructions), VERIFIED (checked by me), RECOMMENDED, ASSUMPTION, DECISION REQUIRED (see register).
 
 Revision 2 applies your corrections: the domain is deferred and not a blocker; the 53 articles are retained and fully planned; the full capability architecture is preserved with no public evidence disclaimers; the approved PNG logo is used; the project now lives at `C:\DECHY-SITE`; Work is a primary section with a full architecture; country-level pages are planned (10 to 15 countries, no cities).
 
 Revision 3 records your Phase 0 approvals (ADR 0001), adds the approved homepage hierarchy (Appendix C), clarifies that country pages do not limit DECHY's global scope, adopts the full responsive typography system (`07`), adds `CLAUDE.md` governance with a precedence model, and updates technology facts from current external research (`08`).
+
+Revision 4 applies the second approval message: repository private; commit identity changed to the GitHub no-reply address; approved DEC-07, DEC-08, DEC-10, DEC-11, DEC-23 (working copy), DEC-24, DEC-31, DEC-32; imagery is no longer limited to diagrams in Phase 1; unbuilt pages render as plain text; the contact form is built with a securely configurable destination. See Appendix D.
 
 House style follows AGENTS 1A.16: no em dashes, no en dashes, no emojis. Ranges are written with "to".
 
@@ -57,7 +59,9 @@ Planning targets (RECOMMENDED, ASSUMPTION; not caps on the entity graph): about 
 2. "We build and connect the software, data, and automation your organization runs on."
 3. "One technology partner for building, connecting, automating, and securing digital systems."
 
-**Strategic challenge (DEC-24).** Fifteen equal pillars can read as "does everything." The mitigation is structure, not hierarchy: five capability families, the connected-systems narrative, and Work that shows the built systems. If revenue is concentrated in some services, homepage emphasis (not the page set) can reflect that.
+**Approved working direction (DEC-23).** Descriptor unchanged. Working positioning: "Software, AI, automation, integration, and cloud, designed to work as one system." with the breadth line "From custom software and AI to cloud, security, data, design, and search visibility, DECHY helps organizations build, connect, automate, and scale." Both are working copy, to be refined in Phase 1 for clarity, natural tone, differentiation, SEO, AEO, GEO, and conversion, without sounding like a generic agency slogan. The descriptor is never changed.
+
+**Strategic challenge (DEC-24).** Fifteen equal pillars can read as "does everything." The mitigation is structure, not hierarchy: five capability families, the connected-systems narrative, and Work that shows the built systems. If revenue is concentrated in some services, homepage emphasis (not the page set) can reflect that. APPROVED (DEC-24): emphasis comes from structure only. The service index shows all 15 pillars with equal visual weight; featured problems, Work Areas, technologies, solutions, and articles can vary to show strengths; no ranking language.
 
 ---
 
@@ -66,7 +70,7 @@ Planning targets (RECOMMENDED, ASSUMPTION; not caps on the entity graph): about 
 
 Primary: convert qualified visitors into discovery conversations. Secondary: establish DECHY as a recognizable, corroborated entity for people, search engines, and AI systems; give technical buyers enough substance to evaluate competence.
 
-Goals to be set with you (DEC-32): target markets, primary service lines, monthly qualified inquiries, and definition of a qualified lead. No numeric target in this plan is a commitment.
+Initial positioning (DEC-32, approved): DECHY is a global technology company serving startups, small and medium-sized businesses, enterprises, agencies, organizations, businesses, professionals, teams, and other legitimate client types. The selected country pages are international search and content expansion architecture and are not exclusive priority markets. The homepage keeps broad global positioning. Detailed conversion goals, lead targets, and analytics goals are refined in a later optimization phase and do not block Phase 1.
 
 ## 4. Information architecture
 
@@ -421,18 +425,19 @@ Cards are allowed only where items are genuinely parallel and short.
 
 ## 25. Image and media system
 
-Priority (adjusts AGENTS 1A.11 for reality, DECISION REQUIRED DEC-20):
+Visual mix (APPROVED, DEC-20 revised): Phase 1 establishes the real DECHY visual standard and is not limited to diagrams. Every image has a job; no placeholders; no random stock; nothing fabricated (offices, employees, client meetings, client projects, client screenshots, results, testimonials).
 
-1. **Purpose-built visuals as the primary layer:** original SVG/HTML diagrams (system maps, architecture, data flow, workflow, process), data visualizations from real data, typographic and structural graphics in the brand palette. Rendered as live SVG or components so text is real, accessible, translatable, and crisp. These are original work for DECHY and carry no licensing risk.
+1. **Original technical visuals:** original SVG/HTML diagrams (system maps, architecture, data flow, workflow, process), data visualizations from real data, typographic and structural graphics in the brand palette. Rendered as live SVG or components so text is real, accessible, translatable, and crisp. These are original work for DECHY and carry no licensing risk.
 2. **Real DECHY material when available:** actual team photography (real people with consent), screenshots of real reference implementations, public repositories.
-3. **Licensed editorial photography** from reputable libraries with clear commercial licenses (candidates: Unsplash, Pexels; others per case), used sparingly for atmosphere, never to imply DECHY people, places, or clients. License terms captured at acquisition.
+3. **Properly licensed, relevant photography and imagery** from reputable libraries with clear commercial licenses (candidates: Unsplash, Pexels; others per case), used where it serves the page: human editorial context, technology in real use, section atmosphere. Never implies DECHY people, places, clients, or projects. License terms and provenance captured at acquisition.
+3a. **Legitimate interface and product visuals:** real screenshots of real systems with permission, or clearly labeled conceptual interfaces.
 4. **AI-generated imagery** only for non-photographic conceptual use, art directed, never as people or evidence, with the AGENTS 1A.11 inspection checklist. Disclosure obligations for synthetic media (including emerging EU rules) to be reviewed before use.
 
 Process: image brief → source → license evidence saved in `data/assets/licenses/` → registry entry → optimized derivatives → alt text and caption → review. Registry fields per AGENTS 1A.11 (id, filename, source, URL, creator, license, date, page usage, role, dimensions, format, alt, caption, focal point, approval, expiry).
 
 Roles and ratios: hero 16:9 and 3:2 crops; service 3:2; article cover 16:9; Open Graph 1200x630 generated at build from templates; icons SVG. Responsive `srcset`, AVIF/WebP, explicit `width` and `height`, `fetchpriority="high"` only for the one LCP image, lazy elsewhere.
 
-Download rule: any image acquisition is batch-approved by you (source, filename, size, license stated) before download. Masters stay outside Git or in LFS; only optimized derivatives are committed (DEC-14).
+Download rule: any image acquisition is batch-approved by you (source, filename, size, license stated) before download. Masters stay outside Git or in LFS; only optimized derivatives are committed (DEC-14). Phase 1 procedure: I present the first image batch (source, filename, size, license) in chat and download after your confirmation; the asset registry and provenance tracking are part of the Phase 1 foundation and scale to later phases.
 
 ## 26. Content and data architecture
 
@@ -625,7 +630,7 @@ Approved Facts Register inputs (legal entity, contact channels, engagement model
 
 ## 40. Decisions requiring human approval
 
-Full register: `03-decisions-register.md`. Approved in direction by the owner (ADR 0001) and awaiting only final package review: DEC-01, DEC-04, DEC-09, DEC-12, DEC-13, DEC-14, DEC-15, DEC-30, DEC-33, DEC-34, DEC-35 (pool), DEC-36, DEC-40. Still open and needed before Phase 1 starts: DEC-07, DEC-08, DEC-10, DEC-11, DEC-23, DEC-24, DEC-27, DEC-31, DEC-32. Before Phase 2 ships: DEC-05, DEC-16 to DEC-22, DEC-25, DEC-26, DEC-37 to DEC-39. Later: DEC-02 (domain), DEC-03 (vector logo and brand assets).
+Full register: `03-decisions-register.md`. All decisions that block Phase 1 are approved. Remaining open decisions are non-blocking and listed in the register (facts register inputs, analytics, AI crawler policy, reference implementations, authors, Netlify authorization, country wave order, Work Area priority, regulatory review).
 
 ---
 
@@ -639,7 +644,7 @@ Home and Software Development, each:
 - Metadata, canonical, Open Graph, JSON-LD, sitemap entry, robots, breadcrumbs, internal links verified.
 - axe: zero serious or critical issues; keyboard walkthrough passed.
 - Lighthouse mobile budgets met on the Netlify preview.
-- Zero placeholder text, images, or links; contact path works end to end in preview.
+- Zero placeholder text, images, or links. Unbuilt pages render as plain text, not links. The contact form handles submission end to end in preview against a non-production sink; the production destination is configured through secure environment variables when authorization is available (no fake production inbox, no credentials in the repository).
 - Content linter: zero dash characters, zero banned phrases.
 - Written self-review against AGENTS 80A.8, then your review.
 
@@ -686,3 +691,16 @@ Hierarchy, top to bottom (maps onto the 12 blocks of the Content Master homepage
 | 13 | Strong next-step CTAs | 12 Final conversion | Discovery conversation; clear next step |
 
 Visual rhythm requirement: at least five distinct layout patterns across the page, at least two original diagrams, alternating light and dark surfaces, no run of identical card grids.
+
+## Appendix D. Approved Phase 1 handling rules (second approval)
+
+1. **Unbuilt pages.** If a referenced service or page does not exist yet: no dead link, no fake route, no "Coming Soon", no placeholder page. Render the entity as normal non-linked text. When the page ships, the validator requires the reference to become a proper internal link. Implementation: an entity's published state decides link versus text at build time.
+2. **Contact.** The Contact page and form are built properly: validation, bot protection, rate limiting, accessible error handling. The delivery destination is read from server-side environment configuration; nothing is hard-coded; no secrets in Git; no fake inbox.
+3. **Imagery.** See section 25.
+4. **Navigation (APPROVED, DEC-10).** Services, Solutions, Technologies, Industries, Work, Resources, Company, and the "Talk to DECHY" button. Five families: BUILD (Software Development, Web Development, Mobile App Development, Ecommerce Solutions); INTELLIGENCE AND AUTOMATION (AI & Machine Learning, Automation/Workflows & AI Solutions, Data & Analytics, API & Systems Integration); INFRASTRUCTURE AND SECURITY (Cloud & DevOps, Cybersecurity); DESIGN AND GROWTH (UI/UX & Product Design, Branding & Creative, SEO/AEO/GEO, Digital Marketing); ADVISORY (Consulting & Digital Transformation). Families only organize navigation; none of the 15 is removed or merged. Mobile navigation and the mobile CTA are fully responsive and accessible.
+5. **URL rules (APPROVED, DEC-08).** As in section 20; `/ai/` and `/cloud/` stay; `/automation/airtable/` is the canonical Airtable page and `/automation/airtable-automation/` is merged; slug registry and uniqueness rules kept; search and filter URLs are noindex.
+6. **Entity principles (APPROVED, DEC-07).** Entity does not equal page; one canonical home per concept; service-by-technology page is canonical when "X development" intent dominates; problems stay entities but open solution pages; the full graph is kept; informational explainers live in Resources.
+7. **Repository layout (APPROVED, DEC-11).** App at the repository root. Conceptual separation is enforced, not optional: application code in `src/`; page and article copy in `content/`; structured data in `data/` (`facts/`, `taxonomy/`, `relations/`, `countries/`, `work/`, `articles/`, `assets/`); documentation in `docs/`; tests and scripts in `tests/` and `scripts/`. Rules: no content or data inside `src/`; a README in each top-level folder states what belongs there; validators fail the build on stray files; new top-level folders need a decision record.
+8. **Responsive quality.** Mobile, tablet, laptop, desktop, and large desktop are all first-class. Phase 1 browser validation covers navigation, typography, spacing, images, cards, grids, buttons, forms, diagrams, content width, touch targets, page density, image cropping, horizontal overflow, and stacking. Mobile quality is a major priority; layouts are designed per device class, not shrunk from desktop.
+9. **FAQs and llms.txt.** FAQs stay (users, semantic understanding, answer engines, long-tail questions, structure, internal linking) even though Google retired FAQ rich results. `llms.txt` is optional and never a core dependency.
+10. **GitHub.** Repository is private. Commits use `102127730+Samogunde@users.noreply.github.com`. Existing commits are not rewritten. Branch protection may be unavailable on a free private repository; CI via GitHub Actions and the merge discipline in CLAUDE.md apply regardless.

@@ -1,6 +1,6 @@
 # ADR 0001: Phase 0 approvals and standing decisions
 
-Status: Accepted by the owner (Phase 0 approval message, 2026-10-04), subject to the Phase 0 package review.
+Status: Accepted by the owner (first Phase 0 approval and second decision approval, 2026-10-04).
 Authority: owner's explicit instructions in chat.
 
 ## Approved direction
@@ -36,3 +36,19 @@ These are recorded here so the replaced text is explicit. They take effect for i
 | Country pages (10 to 15) with waves; no city pages | Clarifies AGENTS 24, 47 |
 | The 53-article architecture in `docs/planning/06-article-plan-53.md` | Fills the missing list referenced by Content Master 9 |
 | Derived accessible color tokens and the typography system | Adds to AGENTS 1A.5 to 1A.8; brand values unchanged |
+
+## Second approval (decision register review)
+
+- Repository `Samogunde/DECHY-SITE` is private. No other repository created; name unchanged. The three existing commits stay as they are (no rewrite, no force-push).
+- Future commits use `102127730+Samogunde@users.noreply.github.com`.
+- Approved: DEC-07 (four entity/page principles), DEC-08 (URL rules, `/ai/` and `/cloud/` kept, Airtable merged), DEC-10 (navigation and five families), DEC-11 (root application layout with enforced conceptual separation), DEC-23 (working positioning copy, refined in Phase 1), DEC-24 (structure not ranking), DEC-31 (Phase 1 scope), DEC-32 (global positioning; countries not exclusive).
+- Phase 1 handling: unbuilt pages are plain text, never dead links, fake routes, "Coming Soon", or placeholder pages; the contact form is built with a securely configurable destination and no fake inbox; imagery is not restricted to diagrams but is purposeful, properly licensed, provenance-tracked, never fabricated evidence.
+- Responsive design: mobile, tablet, laptop, desktop, and large desktop are all first-class and validated in a browser.
+- The measured typography system (`docs/planning/07-typography-system.md`, `docs/design/typography-tokens.css`) is kept.
+- FAQs are kept despite the retirement of FAQ rich results. `llms.txt` is optional, never a core dependency.
+- External research continues but is kept separate from company facts and never weakens or invents capability claims.
+- Precedence model: owner instruction; AGENTS.md; DECHY_CONTENT_MASTER.md; DECHY_CLAUDE_MASTER_HANDOFF.md; approved Phase 0 plan; decision records; implementation details.
+
+## Status of the proposed amendments (table above)
+
+Approved by the owner: root layout instead of `website/`; canonical-home URLs and flat hubs; merging the Airtable pair; problems opening Solution pages; country pages (10 to 15, waves) without cities; the 53-article architecture; derived accessible colors and the typography system. Claude Code as primary engineering agent is established by `CLAUDE.md`. Editing the text of AGENTS.md, the Content Master, or the Handoff (for example retiring the Codex references) still requires a separate explicit instruction; those files are unchanged.

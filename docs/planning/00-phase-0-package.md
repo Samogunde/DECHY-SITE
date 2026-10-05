@@ -1,6 +1,6 @@
 # DECHY Phase 0 Package (final, for owner review)
 
-Status: complete and awaiting owner review. **Phase 1 is not started and not authorized.**
+Status: **Phase 0 complete and approved.** Phase 1 is not started and requires explicit owner authorization.
 Date: 2026-10-04. Local path: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git`.
 
 ## 1. Contents
@@ -62,7 +62,7 @@ Items 7 to 12 requested in the approval message are summarized below with pointe
 
 ## 7. Remaining decisions
 
-See `03-decisions-register.md`. Needed before Phase 1 starts: DEC-07 (entity and canonical-home principles), DEC-08 (URL rules), DEC-10 (navigation families), DEC-11 (app at repository root), DEC-23 (positioning statement), DEC-24 (homepage emphasis by revenue), DEC-27 (commit email), DEC-31 (Phase 1 scope), DEC-32 (goals and markets). Everything else can follow in later phases. Also needed whenever convenient: Work intake forms for real projects.
+None blocks Phase 1. Open and non-blocking: facts register inputs (DEC-05), analytics (DEC-17), contact destination (DEC-18, configured securely later), AI crawler policy (DEC-19), reference implementations (DEC-21), named authors (DEC-22), Netlify authorization (DEC-26, needed at the preview step), trademark clearance (DEC-29), country wave order (DEC-35), regulatory reviewer (DEC-38), Work Area priority (DEC-39). See `03-decisions-register.md`.
 
 ## 8. Recommended implementation sequence
 
