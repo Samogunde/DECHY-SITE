@@ -123,7 +123,9 @@ for (const width of WIDTHS) {
       // 4. Reading measure: 55 to 80 average characters per line for long-form paragraphs (tablet and up)
       if (width >= 768 && p.kind !== "contact") {
         const cpl = await page.evaluate(() => {
-          const el = document.querySelector<HTMLElement>(".prose-service p, .prose-article p");
+          const el = document.querySelector<HTMLElement>(
+            ".prose-service > p:not(.answer-lead), .prose-article > p",
+          );
           if (!el) return null;
           const cs = getComputedStyle(el);
           const c = document.createElement("canvas").getContext("2d")!;

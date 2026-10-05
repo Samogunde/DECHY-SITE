@@ -37,7 +37,7 @@ export function DefinitionBlock({ block }: { block: Of<"definition"> }) {
         <SectionHeader id={block.id} label={block.label} heading={block.heading} className="rail" />
         <div className="prose-service">
           <p
-            className="m-0 font-[family-name:var(--font-heading)] font-semibold"
+            className="answer-lead m-0 font-[family-name:var(--font-heading)] font-semibold"
             style={{ fontSize: "var(--fs-lead)", lineHeight: 1.4 }}
           >
             <Inline text={block.answer} />
