@@ -1,0 +1,20 @@
+# Country-level architecture (docs/planning/05-country-architecture.md). Country pages represent
+# DECHY serving clients in a market, remotely. presence is fixed to "none": no offices, branches,
+# local teams, addresses, or Google Business Profiles. No city entities exist or will be created
+# at this stage. No country page is built in Phase 1; these are graph entities only.
+countries:
+  - { id: loc.united-states, type: country, name: United States, slug: united-states, iso: US, wave: 1, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.united-kingdom, type: country, name: United Kingdom, slug: united-kingdom, iso: GB, wave: 1, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.canada, type: country, name: Canada, slug: canada, iso: CA, wave: 1, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.australia, type: country, name: Australia, slug: australia, iso: AU, wave: 1, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.ireland, type: country, name: Ireland, slug: ireland, iso: IE, wave: 1, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.germany, type: country, name: Germany, slug: germany, iso: DE, wave: 2, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.france, type: country, name: France, slug: france, iso: FR, wave: 2, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.netherlands, type: country, name: Netherlands, slug: netherlands, iso: NL, wave: 2, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.switzerland, type: country, name: Switzerland, slug: switzerland, iso: CH, wave: 2, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.belgium, type: country, name: Belgium, slug: belgium, iso: BE, wave: 2, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.austria, type: country, name: Austria, slug: austria, iso: AT, wave: 2, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.spain, type: country, name: Spain, slug: spain, iso: ES, wave: 3, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.italy, type: country, name: Italy, slug: italy, iso: IT, wave: 3, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.sweden, type: country, name: Sweden, slug: sweden, iso: SE, wave: 3, presence: none, pagePolicy: CREATE LATER }
+  - { id: loc.united-arab-emirates, type: country, name: United Arab Emirates, slug: united-arab-emirates, iso: AE, wave: 3, presence: none, pagePolicy: CREATE LATER }

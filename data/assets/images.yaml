@@ -1,0 +1,129 @@
+# Asset registry and provenance. Every image and diagram on the site is listed here with its
+# source and license. The validator fails the build if a file in public/ or brand/ is missing from
+# this registry, if a license or alt text is absent, or if a registered file does not exist.
+#
+# kind:     file (a binary asset) | component (an original diagram drawn as an SVG React component)
+# source:   owner-supplied | original | licensed-stock | client-supplied
+# For licensed-stock entries also record: sourceUrl, creator, license, licenseUrl, acquired, and
+# keep the license evidence under data/assets/licenses/.
+#
+# No licensed stock photography is used in Phase 1: available candidates were generic
+# (glowing code on screens, sticky-note whiteboards) and did not meet the "purposeful, authentic"
+# standard. Real project or team photography is preferred when supplied.
+assets:
+  - id: asset.logo-primary-master
+    kind: file
+    file: brand/logos/primary/dechy-logo-primary.png
+    role: logo
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. The approved logo, used exactly as supplied; never redrawn, recolored, or altered.
+    originalFilename: Minimalist DECHY Tech Logo.png
+    sha256: c8079c2161bcd9290c1d70878b15bdea155dacda50225265a0dd86ab0f95711c
+    width: 1536
+    height: 676
+    alt: "DECHY: Technology, Software, AI & Digital Solutions"
+    usage: [header, footer, structured-data, open-graph-composition]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.logo-primary-delivery
+    kind: file
+    file: public/brand/dechy-logo-primary.png
+    role: logo
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. Byte-identical delivery copy of the master, referenced by Organization structured data.
+    sha256: c8079c2161bcd9290c1d70878b15bdea155dacda50225265a0dd86ab0f95711c
+    width: 1536
+    height: 676
+    alt: "DECHY: Technology, Software, AI & Digital Solutions"
+    usage: [structured-data]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.og-default
+    kind: file
+    file: public/og/dechy-og.png
+    role: open-graph
+    source: original
+    creator: DECHY
+    license: Original DECHY work. Composed by scripts/generate-og.ts from the unmodified approved logo and the working positioning line.
+    width: 1200
+    height: 630
+    alt: "DECHY: Technology, Software, AI & Digital Solutions"
+    usage: [open-graph, twitter-card]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.fig-system-map
+    kind: component
+    file: src/components/figures/SystemMap.tsx
+    role: diagram
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (SVG component). Conceptual; labeled as such by its caption.
+    alt: One system, five connected layers joined by an integration bus
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.fig-connected-flow
+    kind: component
+    file: src/components/figures/ConnectedFlow.tsx
+    role: diagram
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (SVG component). Illustrative architecture, not a delivered system.
+    alt: Illustrative connected system from web form to analytics
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.fig-software-anatomy
+    kind: component
+    file: src/components/figures/SoftwareAnatomy.tsx
+    role: diagram
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (SVG component). Conceptual anatomy of a business application.
+    alt: Anatomy of a custom business application
+    usage: [software-development]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.fig-portal-wireframe
+    kind: component
+    file: src/components/figures/PortalWireframe.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (SVG component). Conceptual wireframe; contains no client interface, data, or figures.
+    alt: Conceptual wireframe of a customer portal on desktop and phone
+    usage: [software-development]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.fig-quality-layers
+    kind: component
+    file: src/components/figures/QualityLayers.tsx
+    role: diagram
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (SVG component). Describes method.
+    alt: Engineering assurance with a test pyramid and release gates
+    usage: [software-development]
+    approval: approved
+    acquired: "2026-10-04"
+
+  - id: asset.fig-modernization-path
+    kind: component
+    file: src/components/figures/ModernizationPath.tsx
+    role: diagram
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (SVG component). Describes method.
+    alt: Modernizing legacy software in four stages
+    usage: [software-development]
+    approval: approved
+    acquired: "2026-10-04"

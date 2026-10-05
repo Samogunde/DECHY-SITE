@@ -1,0 +1,57 @@
+id: page.privacy
+kind: legal
+locale: en
+path: /privacy/
+title: "Privacy Policy | DECHY"
+description: "How DECHY handles personal information collected through this website, including contact form submissions, hosting data, cookies, and your rights."
+breadcrumbLabel: Privacy policy
+h1: Privacy policy
+lead: "How this website handles personal information. Last updated 4 October 2026."
+intent:
+  primary: read the website privacy policy
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+schemaTypes: [WebPage]
+
+sections:
+  - type: legal
+    id: policy
+    tone: paper
+    sections:
+      - heading: Who we are
+        paragraphs:
+          - "This website is operated by DECHY, a global technology company. In this policy, DECHY, we, and us mean the operator of this website. You can contact us about privacy through the [contact page](/contact/)."
+      - heading: What information we collect
+        paragraphs:
+          - "Information you give us. When you use the contact form we receive your name, your email address, and the message you write. You may also choose to give an organization name, a topic, and a timeline."
+          - "Information collected automatically. The website is delivered by a hosting provider, which processes standard technical data such as your IP address, browser type, and request details in order to serve pages and keep the site secure."
+          - "This website does not currently use analytics, advertising, or tracking cookies. See the [cookie policy](/cookies/)."
+      - heading: How we use information
+        paragraphs:
+          - "We use the information you send through the contact form to respond to your inquiry and to assess how DECHY might help. We use technical data to operate and secure the website. We do not sell personal information, and we do not use contact form submissions for unrelated marketing."
+      - heading: Legal bases
+        paragraphs:
+          - "Where data protection law such as the GDPR or the UK GDPR applies, we rely on our legitimate interest in responding to inquiries and operating a secure website, and on taking steps at your request before entering into a contract."
+      - heading: Who receives information
+        paragraphs:
+          - "Messages are delivered to us using service providers that help operate the website and deliver messages, such as hosting, email, or workflow providers. They process information on our behalf and only for those purposes. We may also disclose information when the law requires it."
+      - heading: International transfers
+        paragraphs:
+          - "DECHY works globally, and our service providers may process information in countries other than your own. Where the law requires it, we use appropriate safeguards for those transfers."
+      - heading: How long we keep information
+        paragraphs:
+          - "We keep inquiry details only as long as needed to respond and to manage any resulting relationship, and then delete or anonymize them. Hosting logs are kept for short periods for security and operations."
+      - heading: Your rights
+        paragraphs:
+          - "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, to data portability, and to withdraw consent where we rely on it. To exercise a right, contact us through the [contact page](/contact/). You may also complain to your local data protection authority."
+      - heading: Security
+        paragraphs:
+          - "We use measures such as encryption in transit, access controls, and input validation to protect information. No method of transmission over the internet is perfectly secure."
+      - heading: Children
+        paragraphs:
+          - "This website is not directed at children, and we do not knowingly collect their personal information."
+      - heading: Changes to this policy
+        paragraphs:
+          - "We may update this policy from time to time. The date at the top of the page shows when it was last revised."

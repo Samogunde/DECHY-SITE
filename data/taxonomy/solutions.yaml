@@ -1,0 +1,205 @@
+# solutions
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: sol.ai-agents
+    type: solution
+    name: AI Agents
+    slug: ai-agents
+    primaryService: svc.ai
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.ai-automation
+    type: solution
+    name: AI Automation
+    slug: ai-automation
+    primaryService: svc.automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.ai-customer-support
+    type: solution
+    name: AI Customer Support
+    slug: ai-customer-support
+    primaryService: svc.ai
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.ai-knowledge-systems
+    type: solution
+    name: AI Knowledge Systems
+    slug: ai-knowledge-systems
+    primaryService: svc.ai
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.api-integration
+    type: solution
+    name: API Integration
+    slug: api-integration
+    primaryService: svc.api-integration
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.booking-platforms
+    type: solution
+    name: Booking Platforms
+    slug: booking-platforms
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.business-dashboards
+    type: solution
+    name: Business Dashboards
+    slug: business-dashboards
+    primaryService: svc.data-analytics
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.business-process-automation
+    type: solution
+    name: Business Process Automation
+    slug: business-process-automation
+    primaryService: svc.automation
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.cloud-migration
+    type: solution
+    name: Cloud Migration
+    slug: cloud-migration
+    primaryService: svc.cloud
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.crm-integration
+    type: solution
+    name: CRM Integration
+    slug: crm-integration
+    primaryService: svc.api-integration
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.customer-experience-systems
+    type: solution
+    name: Customer Experience Systems
+    slug: customer-experience-systems
+    primaryService: svc.ui-ux
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.customer-portal-development
+    type: solution
+    name: Customer Portal Development
+    slug: customer-portal-development
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.data-systems
+    type: solution
+    name: Data Systems
+    slug: data-systems
+    primaryService: svc.data-analytics
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.digital-transformation
+    type: solution
+    name: Digital Transformation
+    slug: digital-transformation
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.ecommerce-systems
+    type: solution
+    name: Ecommerce Systems
+    slug: ecommerce-systems
+    primaryService: svc.ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.internal-business-software
+    type: solution
+    name: Internal Business Software
+    slug: internal-business-software
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.legacy-system-modernization
+    type: solution
+    name: Legacy System Modernization
+    slug: legacy-system-modernization
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.marketplace-platforms
+    type: solution
+    name: Marketplace Platforms
+    slug: marketplace-platforms
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.payment-integration
+    type: solution
+    name: Payment Integration
+    slug: payment-integration
+    primaryService: svc.api-integration
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.saas-platforms
+    type: solution
+    name: SaaS Platforms
+    slug: saas-platforms
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.subscription-platforms
+    type: solution
+    name: Subscription Platforms
+    slug: subscription-platforms
+    primaryService: svc.software-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 23
+  - id: sol.workflow-automation
+    type: solution
+    name: Workflow Automation
+    slug: workflow-automation
+    primaryService: svc.automation
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 23

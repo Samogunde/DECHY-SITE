@@ -1,0 +1,277 @@
+# problems
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: prob.disconnected-systems
+    type: problem
+    name: Disconnected systems
+    slug: disconnected-systems
+    primaryService: svc.api-integration
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.legacy-software
+    type: problem
+    name: Legacy software
+    slug: legacy-software
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.manual-data-entry
+    type: problem
+    name: Manual data entry
+    slug: manual-data-entry
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.manual-reporting
+    type: problem
+    name: Manual reporting
+    slug: manual-reporting
+    primaryService: svc.data-analytics
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-ai-agent
+    type: problem
+    name: Need AI agent
+    slug: need-ai-agent
+    primaryService: svc.ai
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-ai-automation
+    type: problem
+    name: Need AI automation
+    slug: need-ai-automation
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-ai-chatbot
+    type: problem
+    name: Need AI chatbot
+    slug: need-ai-chatbot
+    primaryService: svc.ai
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-ai-implementation
+    type: problem
+    name: Need AI implementation
+    slug: need-ai-implementation
+    primaryService: svc.ai
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-ai-integration
+    type: problem
+    name: Need AI integration
+    slug: need-ai-integration
+    primaryService: svc.ai
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-api-integration
+    type: problem
+    name: Need API integration
+    slug: need-api-integration
+    primaryService: svc.api-integration
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-business-automation
+    type: problem
+    name: Need business automation
+    slug: need-business-automation
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-cloud-migration
+    type: problem
+    name: Need cloud migration
+    slug: need-cloud-migration
+    primaryService: svc.cloud
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-crm-integration
+    type: problem
+    name: Need CRM integration
+    slug: need-crm-integration
+    primaryService: svc.api-integration
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-custom-software
+    type: problem
+    name: Need custom software
+    slug: need-custom-software
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-ecommerce-automation
+    type: problem
+    name: Need ecommerce automation
+    slug: need-ecommerce-automation
+    primaryService: svc.ecommerce
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-mobile-application
+    type: problem
+    name: Need mobile application
+    slug: need-mobile-application
+    primaryService: svc.mobile-app-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-software-integration
+    type: problem
+    name: Need software integration
+    slug: need-software-integration
+    primaryService: svc.api-integration
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-to-adopt-ai
+    type: problem
+    name: Need to adopt AI
+    slug: need-to-adopt-ai
+    primaryService: svc.ai
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-to-automate-repetitive-work
+    type: problem
+    name: Need to automate repetitive work
+    slug: need-to-automate-repetitive-work
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-to-connect-business-tools
+    type: problem
+    name: Need to connect business tools
+    slug: need-to-connect-business-tools
+    primaryService: svc.api-integration
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-to-replace-legacy-systems
+    type: problem
+    name: Need to replace legacy systems
+    slug: need-to-replace-legacy-systems
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.need-workflow-automation
+    type: problem
+    name: Need workflow automation
+    slug: need-workflow-automation
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.outdated-software
+    type: problem
+    name: Outdated software
+    slug: outdated-software
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.outdated-website
+    type: problem
+    name: Outdated website
+    slug: outdated-website
+    primaryService: svc.web-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.poor-customer-experience
+    type: problem
+    name: Poor customer experience
+    slug: poor-customer-experience
+    primaryService: svc.ui-ux
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.poor-lead-management
+    type: problem
+    name: Poor lead management
+    slug: poor-lead-management
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.slow-business-processes
+    type: problem
+    name: Slow business processes
+    slug: slow-business-processes
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.slow-customer-support
+    type: problem
+    name: Slow customer support
+    slug: slow-customer-support
+    primaryService: svc.ai
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.too-many-spreadsheets
+    type: problem
+    name: Too many spreadsheets
+    slug: too-many-spreadsheets
+    primaryService: svc.automation
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22
+  - id: prob.website-not-converting
+    type: problem
+    name: Website not converting
+    slug: website-not-converting
+    primaryService: svc.web-development
+    prominence: reference
+    pagePolicy: MERGE / CONSOLIDATE
+    evidenceLevel: none
+    sourceSection: 22

@@ -1,0 +1,3155 @@
+# capabilities
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: cap.access-management
+    type: capability
+    name: Access Management
+    slug: access-management
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.accounting-automation
+    type: capability
+    name: Accounting Automation
+    slug: accounting-automation
+    primaryService: svc.automation
+    group: Business function automation / Finance
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-adoption
+    type: capability
+    name: AI Adoption
+    slug: ai-adoption
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.ai-agent-automation
+    type: capability
+    name: AI Agent Automation
+    slug: ai-agent-automation
+    primaryService: svc.ai
+    group: AI agents
+    alsoListedUnder:
+      - svc.automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-agent-development
+    type: capability
+    name: AI Agent Development
+    slug: ai-agent-development
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-analytics
+    type: capability
+    name: AI Analytics
+    slug: ai-analytics
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.ai-application-development
+    type: capability
+    name: AI Application Development
+    slug: ai-application-development
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-assistants
+    type: capability
+    name: AI Assistants
+    slug: ai-assistants
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-business-applications
+    type: capability
+    name: AI Business Applications
+    slug: ai-business-applications
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-business-assistants
+    type: capability
+    name: AI Business Assistants
+    slug: ai-business-assistants
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-business-automation
+    type: capability
+    name: AI Business Automation
+    slug: ai-business-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-chatbot-automation
+    type: capability
+    name: AI Chatbot Automation
+    slug: ai-chatbot-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-chatbots
+    type: capability
+    name: AI Chatbots
+    slug: ai-chatbots
+    primaryService: svc.ai
+    group: Business function automation / Customer Service
+    alsoListedUnder:
+      - svc.automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-citation-optimization
+    type: capability
+    name: AI Citation Optimization
+    slug: ai-citation-optimization
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.ai-consulting
+    type: capability
+    name: AI Consulting
+    slug: ai-consulting
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.ai-content-systems
+    type: capability
+    name: AI Content Systems
+    slug: ai-content-systems
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-copilots
+    type: capability
+    name: AI Copilots
+    slug: ai-copilots
+    primaryService: svc.ai
+    group: Generative AI
+    alsoListedUnder:
+      - svc.automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-crm-automation
+    type: capability
+    name: AI CRM Automation
+    slug: ai-crm-automation
+    primaryService: svc.automation
+    group: Business function automation / CRM
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-customer-service-automation
+    type: capability
+    name: AI Customer Service Automation
+    slug: ai-customer-service-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-customer-support
+    type: capability
+    name: AI Customer Support
+    slug: ai-customer-support
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-data-processing
+    type: capability
+    name: AI Data Processing
+    slug: ai-data-processing
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-document-automation
+    type: capability
+    name: AI Document Automation
+    slug: ai-document-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-implementation
+    type: capability
+    name: AI Implementation
+    slug: ai-implementation
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.ai-integration
+    type: capability
+    name: AI Integration
+    slug: ai-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.ai-knowledge-retrieval
+    type: capability
+    name: AI Knowledge Retrieval
+    slug: ai-knowledge-retrieval
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-knowledge-systems
+    type: capability
+    name: AI Knowledge Systems
+    slug: ai-knowledge-systems
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-lead-qualification
+    type: capability
+    name: AI Lead Qualification
+    slug: ai-lead-qualification
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-marketing-automation
+    type: capability
+    name: AI Marketing Automation
+    slug: ai-marketing-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-mobile-applications
+    type: capability
+    name: AI Mobile Applications
+    slug: ai-mobile-applications
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-operations-agents
+    type: capability
+    name: AI Operations Agents
+    slug: ai-operations-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-operations-automation
+    type: capability
+    name: AI Operations Automation
+    slug: ai-operations-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-platforms
+    type: capability
+    name: AI Platforms
+    slug: ai-platforms
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-powered-applications
+    type: capability
+    name: AI-Powered Applications
+    slug: ai-powered-applications
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-process-automation
+    type: capability
+    name: AI Process Automation
+    slug: ai-process-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-product-development
+    type: capability
+    name: AI Product Development
+    slug: ai-product-development
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-readiness-assessment
+    type: capability
+    name: AI Readiness Assessment
+    slug: ai-readiness-assessment
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.ai-saas
+    type: capability
+    name: AI SaaS
+    slug: ai-saas
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-sales-automation
+    type: capability
+    name: AI Sales Automation
+    slug: ai-sales-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-search
+    type: capability
+    name: AI Search
+    slug: ai-search
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-search-optimization
+    type: capability
+    name: AI Search Optimization
+    slug: ai-search-optimization
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.ai-software-development
+    type: capability
+    name: AI Software Development
+    slug: ai-software-development
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-strategy
+    type: capability
+    name: AI Strategy
+    slug: ai-strategy
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.ai-visibility
+    type: capability
+    name: AI Visibility
+    slug: ai-visibility
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.ai-voice-agents
+    type: capability
+    name: AI Voice Agents
+    slug: ai-voice-agents
+    primaryService: svc.automation
+    group: Business function automation / Customer Service
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-voice-automation
+    type: capability
+    name: AI Voice Automation
+    slug: ai-voice-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ai-web-applications
+    type: capability
+    name: AI Web Applications
+    slug: ai-web-applications
+    primaryService: svc.ai
+    group: AI development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ai-workflow-automation
+    type: capability
+    name: AI Workflow Automation
+    slug: ai-workflow-automation
+    primaryService: svc.automation
+    group: AI automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-automation
+    type: capability
+    name: Airtable Automation
+    slug: airtable-automation
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-business-operations
+    type: capability
+    name: Airtable Business Operations
+    slug: airtable-business-operations
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-crm
+    type: capability
+    name: Airtable CRM
+    slug: airtable-crm
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-database-systems
+    type: capability
+    name: Airtable Database Systems
+    slug: airtable-database-systems
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-development
+    type: capability
+    name: Airtable Development
+    slug: airtable-development
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-integrations
+    type: capability
+    name: Airtable Integrations
+    slug: airtable-integrations
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-plus-ai
+    type: capability
+    name: Airtable + AI
+    slug: airtable-plus-ai
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-plus-make
+    type: capability
+    name: Airtable + Make
+    slug: airtable-plus-make
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-plus-n8n
+    type: capability
+    name: Airtable + n8n
+    slug: airtable-plus-n8n
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-plus-zapier
+    type: capability
+    name: Airtable + Zapier
+    slug: airtable-plus-zapier
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-project-management
+    type: capability
+    name: Airtable Project Management
+    slug: airtable-project-management
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-solutions
+    type: capability
+    name: Airtable Solutions
+    slug: airtable-solutions
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.airtable-workflow-automation
+    type: capability
+    name: Airtable Workflow Automation
+    slug: airtable-workflow-automation
+    primaryService: svc.automation
+    group: Airtable
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.analytics-automation
+    type: capability
+    name: Analytics Automation
+    slug: analytics-automation
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.android-app-development
+    type: capability
+    name: Android App Development
+    slug: android-app-development
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.answer-engine-optimization
+    type: capability
+    name: Answer Engine Optimization
+    slug: answer-engine-optimization
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.answer-optimization
+    type: capability
+    name: Answer Optimization
+    slug: answer-optimization
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.api-development
+    type: capability
+    name: API Development
+    slug: api-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.api-integration
+    type: capability
+    name: API Integration
+    slug: api-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.api-security
+    type: capability
+    name: API Security
+    slug: api-security
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.application-development
+    type: capability
+    name: Application Development
+    slug: application-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.application-security
+    type: capability
+    name: Application Security
+    slug: application-security
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.approval-automation
+    type: capability
+    name: Approval Automation
+    slug: approval-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.approval-workflows
+    type: capability
+    name: Approval Workflows
+    slug: approval-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.automated-workflows
+    type: capability
+    name: Automated Workflows
+    slug: automated-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.automation-consulting
+    type: capability
+    name: Automation Consulting
+    slug: automation-consulting
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.automation-strategy
+    type: capability
+    name: Automation Strategy
+    slug: automation-strategy
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.autonomous-ai-agents
+    type: capability
+    name: Autonomous AI Agents
+    slug: autonomous-ai-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.backend-development
+    type: capability
+    name: Backend Development
+    slug: backend-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.backup-and-disaster-recovery
+    type: capability
+    name: Backup & Disaster Recovery
+    slug: backup-and-disaster-recovery
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.booking-systems
+    type: capability
+    name: Booking Systems
+    slug: booking-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.brand-guidelines
+    type: capability
+    name: Brand Guidelines
+    slug: brand-guidelines
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.brand-identity
+    type: capability
+    name: Brand Identity
+    slug: brand-identity
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.brand-strategy
+    type: capability
+    name: Brand Strategy
+    slug: brand-strategy
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.business-ai-agents
+    type: capability
+    name: Business AI Agents
+    slug: business-ai-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.business-dashboards
+    type: capability
+    name: Business Dashboards
+    slug: business-dashboards
+    primaryService: svc.data-analytics
+    group: Services
+    alsoListedUnder:
+      - svc.software-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.business-intelligence
+    type: capability
+    name: Business Intelligence
+    slug: business-intelligence
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.business-intelligence-systems
+    type: capability
+    name: Business Intelligence Systems
+    slug: business-intelligence-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.business-management-systems
+    type: capability
+    name: Business Management Systems
+    slug: business-management-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.business-operations-automation
+    type: capability
+    name: Business Operations Automation
+    slug: business-operations-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.business-process-automation
+    type: capability
+    name: Business Process Automation
+    slug: business-process-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.business-software-development
+    type: capability
+    name: Business Software Development
+    slug: business-software-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.business-workflow-systems
+    type: capability
+    name: Business Workflow Systems
+    slug: business-workflow-systems
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.classification
+    type: capability
+    name: Classification
+    slug: classification
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.cloud-consulting
+    type: capability
+    name: Cloud Consulting
+    slug: cloud-consulting
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.cloud-integration
+    type: capability
+    name: Cloud Integration
+    slug: cloud-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.cloud-security
+    type: capability
+    name: Cloud Security
+    slug: cloud-security
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.computer-vision
+    type: capability
+    name: Computer Vision
+    slug: computer-vision
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.content-marketing
+    type: capability
+    name: Content Marketing
+    slug: content-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.content-strategy
+    type: capability
+    name: Content Strategy
+    slug: content-strategy
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.content-workflow-automation
+    type: capability
+    name: Content Workflow Automation
+    slug: content-workflow-automation
+    primaryService: svc.automation
+    group: Business function automation / Marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.conversion-optimization
+    type: capability
+    name: Conversion Optimization
+    slug: conversion-optimization
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.core-web-vitals
+    type: capability
+    name: Core Web Vitals
+    slug: core-web-vitals
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.crawl-optimization
+    type: capability
+    name: Crawl Optimization
+    slug: crawl-optimization
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.creative-direction
+    type: capability
+    name: Creative Direction
+    slug: creative-direction
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.crm-automation
+    type: capability
+    name: CRM Automation
+    slug: crm-automation
+    primaryService: svc.automation
+    group: Business function automation / CRM
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.crm-development
+    type: capability
+    name: CRM Development
+    slug: crm-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.crm-integration
+    type: capability
+    name: CRM Integration
+    slug: crm-integration
+    primaryService: svc.api-integration
+    group: Integration services / CRM
+    alsoListedUnder:
+      - svc.automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.crm-marketing
+    type: capability
+    name: CRM Marketing
+    slug: crm-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.crm-workflow-automation
+    type: capability
+    name: CRM Workflow Automation
+    slug: crm-workflow-automation
+    primaryService: svc.automation
+    group: Business function automation / CRM
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.cross-platform-app-development
+    type: capability
+    name: Cross-Platform App Development
+    slug: cross-platform-app-development
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.custom-application-development
+    type: capability
+    name: Custom Application Development
+    slug: custom-application-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.custom-platforms
+    type: capability
+    name: Custom Platforms
+    slug: custom-platforms
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.custom-software-development
+    type: capability
+    name: Custom Software Development
+    slug: custom-software-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.custom-web-applications
+    type: capability
+    name: Custom Web Applications
+    slug: custom-web-applications
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.customer-automation
+    type: capability
+    name: Customer Automation
+    slug: customer-automation
+    primaryService: svc.automation
+    group: Business function automation / Ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.customer-onboarding-automation
+    type: capability
+    name: Customer Onboarding Automation
+    slug: customer-onboarding-automation
+    primaryService: svc.automation
+    group: Business function automation / Customer Service
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.customer-portals
+    type: capability
+    name: Customer Portals
+    slug: customer-portals
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.customer-service-agents
+    type: capability
+    name: Customer Service Agents
+    slug: customer-service-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.customer-service-automation
+    type: capability
+    name: Customer Service Automation
+    slug: customer-service-automation
+    primaryService: svc.automation
+    group: Business function automation / Customer Service
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.customer-workflows
+    type: capability
+    name: Customer Workflows
+    slug: customer-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.cybersecurity-consulting
+    type: capability
+    name: Cybersecurity Consulting
+    slug: cybersecurity-consulting
+    primaryService: svc.cybersecurity
+    group: Services
+    alsoListedUnder:
+      - svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.dashboard-design
+    type: capability
+    name: Dashboard Design
+    slug: dashboard-design
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.data-analytics
+    type: capability
+    name: Data Analytics
+    slug: data-analytics
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.data-automation
+    type: capability
+    name: Data Automation
+    slug: data-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.data-engineering
+    type: capability
+    name: Data Engineering
+    slug: data-engineering
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.data-integration
+    type: capability
+    name: Data Integration
+    slug: data-integration
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.data-migration
+    type: capability
+    name: Data Migration
+    slug: data-migration
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.data-visualization
+    type: capability
+    name: Data Visualization
+    slug: data-visualization
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.data-warehousing
+    type: capability
+    name: Data Warehousing
+    slug: data-warehousing
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.database-integration
+    type: capability
+    name: Database Integration
+    slug: database-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.design-systems
+    type: capability
+    name: Design Systems
+    slug: design-systems
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.digital-branding
+    type: capability
+    name: Digital Branding
+    slug: digital-branding
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.digital-marketing
+    type: capability
+    name: Digital Marketing
+    slug: digital-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.digital-pr
+    type: capability
+    name: Digital PR
+    slug: digital-pr
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.digital-process-automation
+    type: capability
+    name: Digital Process Automation
+    slug: digital-process-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.digital-strategy
+    type: capability
+    name: Digital Strategy
+    slug: digital-strategy
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.digital-transformation
+    type: capability
+    name: Digital Transformation
+    slug: digital-transformation
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.digital-transformation-strategy
+    type: capability
+    name: Digital Transformation Strategy
+    slug: digital-transformation-strategy
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.digital-workflows
+    type: capability
+    name: Digital Workflows
+    slug: digital-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.document-automation
+    type: capability
+    name: Document Automation
+    slug: document-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.document-intelligence
+    type: capability
+    name: Document Intelligence
+    slug: document-intelligence
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.ecommerce-ai
+    type: capability
+    name: Ecommerce AI
+    slug: ecommerce-ai
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.ecommerce-analytics
+    type: capability
+    name: Ecommerce Analytics
+    slug: ecommerce-analytics
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.ecommerce-automation
+    type: capability
+    name: Ecommerce Automation
+    slug: ecommerce-automation
+    primaryService: svc.ecommerce
+    group: Services / Ecommerce
+    alsoListedUnder:
+      - svc.automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ecommerce-design
+    type: capability
+    name: Ecommerce Design
+    slug: ecommerce-design
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.ecommerce-development
+    type: capability
+    name: Ecommerce Development
+    slug: ecommerce-development
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.ecommerce-integration
+    type: capability
+    name: Ecommerce Integration
+    slug: ecommerce-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    alsoListedUnder:
+      - svc.ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.ecommerce-migration
+    type: capability
+    name: Ecommerce Migration
+    slug: ecommerce-migration
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.ecommerce-redesign
+    type: capability
+    name: Ecommerce Redesign
+    slug: ecommerce-redesign
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.ecommerce-seo
+    type: capability
+    name: Ecommerce SEO
+    slug: ecommerce-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.email-automation
+    type: capability
+    name: Email Automation
+    slug: email-automation
+    primaryService: svc.automation
+    group: Business function automation / Marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.email-marketing
+    type: capability
+    name: Email Marketing
+    slug: email-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.embeddings
+    type: capability
+    name: Embeddings
+    slug: embeddings
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.employee-onboarding
+    type: capability
+    name: Employee Onboarding
+    slug: employee-onboarding
+    primaryService: svc.automation
+    group: Business function automation / HR
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.employee-portals
+    type: capability
+    name: Employee Portals
+    slug: employee-portals
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.employee-workflow-automation
+    type: capability
+    name: Employee Workflow Automation
+    slug: employee-workflow-automation
+    primaryService: svc.automation
+    group: Business function automation / HR
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.employee-workflows
+    type: capability
+    name: Employee Workflows
+    slug: employee-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.enterprise-seo
+    type: capability
+    name: Enterprise SEO
+    slug: enterprise-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.enterprise-software-development
+    type: capability
+    name: Enterprise Software Development
+    slug: enterprise-software-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.entity-authority
+    type: capability
+    name: Entity Authority
+    slug: entity-authority
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.entity-optimization
+    type: capability
+    name: Entity Optimization
+    slug: entity-optimization
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.erp-development
+    type: capability
+    name: ERP Development
+    slug: erp-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.erp-integration
+    type: capability
+    name: ERP Integration
+    slug: erp-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.featured-snippet-optimization
+    type: capability
+    name: Featured Snippet Optimization
+    slug: featured-snippet-optimization
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.finance-automation
+    type: capability
+    name: Finance Automation
+    slug: finance-automation
+    primaryService: svc.automation
+    group: Business function automation / Finance
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.financial-reporting-automation
+    type: capability
+    name: Financial Reporting Automation
+    slug: financial-reporting-automation
+    primaryService: svc.automation
+    group: Business function automation / Finance
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.fine-tuning
+    type: capability
+    name: Fine-Tuning
+    slug: fine-tuning
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.frontend-development
+    type: capability
+    name: Frontend Development
+    slug: frontend-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.full-stack-development
+    type: capability
+    name: Full-Stack Development
+    slug: full-stack-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.full-stack-web-development
+    type: capability
+    name: Full-Stack Web Development
+    slug: full-stack-web-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.generative-ai-solutions
+    type: capability
+    name: Generative AI Solutions
+    slug: generative-ai-solutions
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.generative-engine-optimization
+    type: capability
+    name: Generative Engine Optimization
+    slug: generative-engine-optimization
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.google-ads
+    type: capability
+    name: Google Ads
+    slug: google-ads
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.growth-marketing
+    type: capability
+    name: Growth Marketing
+    slug: growth-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.headless-web-development
+    type: capability
+    name: Headless Web Development
+    slug: headless-web-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.hr-automation
+    type: capability
+    name: HR Automation
+    slug: hr-automation
+    primaryService: svc.automation
+    group: Business function automation / HR
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.identity-management
+    type: capability
+    name: Identity Management
+    slug: identity-management
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.image-ai
+    type: capability
+    name: Image AI
+    slug: image-ai
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.indexation
+    type: capability
+    name: Indexation
+    slug: indexation
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.internal-business-software
+    type: capability
+    name: Internal Business Software
+    slug: internal-business-software
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.internal-linking
+    type: capability
+    name: Internal Linking
+    slug: internal-linking
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.internal-tools
+    type: capability
+    name: Internal Tools
+    slug: internal-tools
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.internal-workflow-automation
+    type: capability
+    name: Internal Workflow Automation
+    slug: internal-workflow-automation
+    primaryService: svc.automation
+    group: Business function automation / Operations
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.internal-workflow-systems
+    type: capability
+    name: Internal Workflow Systems
+    slug: internal-workflow-systems
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.international-seo
+    type: capability
+    name: International SEO
+    slug: international-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.inventory-automation
+    type: capability
+    name: Inventory Automation
+    slug: inventory-automation
+    primaryService: svc.automation
+    group: Business function automation / Ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.inventory-systems
+    type: capability
+    name: Inventory Systems
+    slug: inventory-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.invoice-automation
+    type: capability
+    name: Invoice Automation
+    slug: invoice-automation
+    primaryService: svc.automation
+    group: Business function automation / Finance
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ios-app-development
+    type: capability
+    name: iOS App Development
+    slug: ios-app-development
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.keyword-research
+    type: capability
+    name: Keyword Research
+    slug: keyword-research
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.knowledge-ecosystem-development
+    type: capability
+    name: Knowledge Ecosystem Development
+    slug: knowledge-ecosystem-development
+    primaryService: svc.seo-aeo-geo
+    group: GEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.knowledge-graph-optimization
+    type: capability
+    name: Knowledge Graph Optimization
+    slug: knowledge-graph-optimization
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.knowledge-graphs
+    type: capability
+    name: Knowledge Graphs
+    slug: knowledge-graphs
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.knowledge-systems
+    type: capability
+    name: Knowledge Systems
+    slug: knowledge-systems
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.lead-automation
+    type: capability
+    name: Lead Automation
+    slug: lead-automation
+    primaryService: svc.automation
+    group: Business function automation / Sales
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.lead-generation
+    type: capability
+    name: Lead Generation
+    slug: lead-generation
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.lead-nurturing
+    type: capability
+    name: Lead Nurturing
+    slug: lead-nurturing
+    primaryService: svc.automation
+    group: Business function automation / Marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.lead-qualification
+    type: capability
+    name: Lead Qualification
+    slug: lead-qualification
+    primaryService: svc.automation
+    group: Business function automation / Sales
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.learning-platforms
+    type: capability
+    name: Learning Platforms
+    slug: learning-platforms
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.legacy-software-modernization
+    type: capability
+    name: Legacy Software Modernization
+    slug: legacy-software-modernization
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.legacy-system-integration
+    type: capability
+    name: Legacy System Integration
+    slug: legacy-system-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.linkedin-marketing
+    type: capability
+    name: LinkedIn Marketing
+    slug: linkedin-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.llm-applications
+    type: capability
+    name: LLM Applications
+    slug: llm-applications
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.local-seo
+    type: capability
+    name: Local SEO
+    slug: local-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.logo-design
+    type: capability
+    name: Logo Design
+    slug: logo-design
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.management-systems
+    type: capability
+    name: Management Systems
+    slug: management-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.marketing-automation
+    type: capability
+    name: Marketing Automation
+    slug: marketing-automation
+    primaryService: svc.automation
+    group: Business function automation / Marketing
+    alsoListedUnder:
+      - svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.marketing-design
+    type: capability
+    name: Marketing Design
+    slug: marketing-design
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.marketing-workflows
+    type: capability
+    name: Marketing Workflows
+    slug: marketing-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.marketplace-development
+    type: capability
+    name: Marketplace Development
+    slug: marketplace-development
+    primaryService: svc.software-development
+    group: Services
+    alsoListedUnder:
+      - svc.ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.membership-platforms
+    type: capability
+    name: Membership Platforms
+    slug: membership-platforms
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.meta-ads
+    type: capability
+    name: Meta Ads
+    slug: meta-ads
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.mobile-app-design
+    type: capability
+    name: Mobile App Design
+    slug: mobile-app-design
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.mobile-app-development
+    type: capability
+    name: Mobile App Development
+    slug: mobile-app-development
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.mobile-app-maintenance
+    type: capability
+    name: Mobile App Maintenance
+    slug: mobile-app-maintenance
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.mobile-app-modernization
+    type: capability
+    name: Mobile App Modernization
+    slug: mobile-app-modernization
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.mobile-application-design
+    type: capability
+    name: Mobile Application Design
+    slug: mobile-application-design
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.mobile-mvp-development
+    type: capability
+    name: Mobile MVP Development
+    slug: mobile-mvp-development
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.mobile-product-development
+    type: capability
+    name: Mobile Product Development
+    slug: mobile-product-development
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.mobile-ui-ux
+    type: capability
+    name: Mobile UI/UX
+    slug: mobile-ui-ux
+    primaryService: svc.mobile-app-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: cap.model-integration
+    type: capability
+    name: Model Integration
+    slug: model-integration
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.multi-agent-systems
+    type: capability
+    name: Multi-Agent Systems
+    slug: multi-agent-systems
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.multi-step-workflows
+    type: capability
+    name: Multi-Step Workflows
+    slug: multi-step-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.mvp-development
+    type: capability
+    name: MVP Development
+    slug: mvp-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.network-security
+    type: capability
+    name: Network Security
+    slug: network-security
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.nlp
+    type: capability
+    name: NLP
+    slug: nlp
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.notification-automation
+    type: capability
+    name: Notification Automation
+    slug: notification-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.ocr
+    type: capability
+    name: OCR
+    slug: ocr
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.on-page-seo
+    type: capability
+    name: On-Page SEO
+    slug: on-page-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.operational-automation
+    type: capability
+    name: Operational Automation
+    slug: operational-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.operational-workflow-systems
+    type: capability
+    name: Operational Workflow Systems
+    slug: operational-workflow-systems
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.operations-automation
+    type: capability
+    name: Operations Automation
+    slug: operations-automation
+    primaryService: svc.automation
+    group: Business function automation / Operations
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.operations-workflows
+    type: capability
+    name: Operations Workflows
+    slug: operations-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.order-automation
+    type: capability
+    name: Order Automation
+    slug: order-automation
+    primaryService: svc.automation
+    group: Business function automation / Ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.payment-automation
+    type: capability
+    name: Payment Automation
+    slug: payment-automation
+    primaryService: svc.automation
+    group: Business function automation / Finance
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.payment-integration
+    type: capability
+    name: Payment Integration
+    slug: payment-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    alsoListedUnder:
+      - svc.ecommerce
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.payment-systems
+    type: capability
+    name: Payment Systems
+    slug: payment-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.pitch-deck-design
+    type: capability
+    name: Pitch Deck Design
+    slug: pitch-deck-design
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.ppc
+    type: capability
+    name: PPC
+    slug: ppc
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.predictive-analytics
+    type: capability
+    name: Predictive Analytics
+    slug: predictive-analytics
+    primaryService: svc.ai
+    group: AI capabilities
+    alsoListedUnder:
+      - svc.data-analytics
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.presentation-design
+    type: capability
+    name: Presentation Design
+    slug: presentation-design
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.process-automation
+    type: capability
+    name: Process Automation
+    slug: process-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.product-design
+    type: capability
+    name: Product Design
+    slug: product-design
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.product-strategy
+    type: capability
+    name: Product Strategy
+    slug: product-strategy
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.programmatic-seo
+    type: capability
+    name: Programmatic SEO
+    slug: programmatic-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.progressive-web-applications
+    type: capability
+    name: Progressive Web Applications
+    slug: progressive-web-applications
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.prototyping
+    type: capability
+    name: Prototyping
+    slug: prototyping
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.question-optimization
+    type: capability
+    name: Question Optimization
+    slug: question-optimization
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.rag-applications
+    type: capability
+    name: RAG Applications
+    slug: rag-applications
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.recommendation-systems
+    type: capability
+    name: Recommendation Systems
+    slug: recommendation-systems
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.recruitment-automation
+    type: capability
+    name: Recruitment Automation
+    slug: recruitment-automation
+    primaryService: svc.automation
+    group: Business function automation / HR
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.reporting
+    type: capability
+    name: Reporting
+    slug: reporting
+    primaryService: svc.data-analytics
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: cap.reporting-automation
+    type: capability
+    name: Reporting Automation
+    slug: reporting-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.research-agents
+    type: capability
+    name: Research Agents
+    slug: research-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.retrieval-augmented-generation
+    type: capability
+    name: Retrieval-Augmented Generation
+    slug: retrieval-augmented-generation
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.saas-development
+    type: capability
+    name: SaaS Development
+    slug: saas-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.saas-integration
+    type: capability
+    name: SaaS Integration
+    slug: saas-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.saas-platforms
+    type: capability
+    name: SaaS Platforms
+    slug: saas-platforms
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.saas-product-design
+    type: capability
+    name: SaaS Product Design
+    slug: saas-product-design
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.saas-product-development
+    type: capability
+    name: SaaS Product Development
+    slug: saas-product-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.sales-agents
+    type: capability
+    name: Sales Agents
+    slug: sales-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.sales-automation
+    type: capability
+    name: Sales Automation
+    slug: sales-automation
+    primaryService: svc.automation
+    group: Business function automation / Sales
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.sales-follow-up-automation
+    type: capability
+    name: Sales Follow-Up Automation
+    slug: sales-follow-up-automation
+    primaryService: svc.automation
+    group: Business function automation / Sales
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.sales-workflows
+    type: capability
+    name: Sales Workflows
+    slug: sales-workflows
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.scheduling-systems
+    type: capability
+    name: Scheduling Systems
+    slug: scheduling-systems
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.secure-software-development
+    type: capability
+    name: Secure Software Development
+    slug: secure-software-development
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.security-architecture
+    type: capability
+    name: Security Architecture
+    slug: security-architecture
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.security-audits
+    type: capability
+    name: Security Audits
+    slug: security-audits
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.security-testing
+    type: capability
+    name: Security Testing
+    slug: security-testing
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.sentiment-analysis
+    type: capability
+    name: Sentiment Analysis
+    slug: sentiment-analysis
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.site-architecture
+    type: capability
+    name: Site Architecture
+    slug: site-architecture
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.social-media-design
+    type: capability
+    name: Social Media Design
+    slug: social-media-design
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.social-media-marketing
+    type: capability
+    name: Social Media Marketing
+    slug: social-media-marketing
+    primaryService: svc.digital-marketing
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 16
+  - id: cap.software-architecture
+    type: capability
+    name: Software Architecture
+    slug: software-architecture
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.software-consulting
+    type: capability
+    name: Software Consulting
+    slug: software-consulting
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.software-development
+    type: capability
+    name: Software Development
+    slug: software-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.software-integration
+    type: capability
+    name: Software Integration
+    slug: software-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.software-maintenance
+    type: capability
+    name: Software Maintenance
+    slug: software-maintenance
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.software-modernization
+    type: capability
+    name: Software Modernization
+    slug: software-modernization
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.software-product-development
+    type: capability
+    name: Software Product Development
+    slug: software-product-development
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.software-testing
+    type: capability
+    name: Software Testing
+    slug: software-testing
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.solution-architecture
+    type: capability
+    name: Solution Architecture
+    slug: solution-architecture
+    primaryService: svc.consulting
+    group: Services
+    alsoListedUnder:
+      - svc.software-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.speech-ai
+    type: capability
+    name: Speech AI
+    slug: speech-ai
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.structured-answers
+    type: capability
+    name: Structured Answers
+    slug: structured-answers
+    primaryService: svc.seo-aeo-geo
+    group: AEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.structured-data
+    type: capability
+    name: Structured Data
+    slug: structured-data
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.subscription-ecommerce
+    type: capability
+    name: Subscription Ecommerce
+    slug: subscription-ecommerce
+    primaryService: svc.ecommerce
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: cap.subscription-platforms
+    type: capability
+    name: Subscription Platforms
+    slug: subscription-platforms
+    primaryService: svc.software-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 3
+  - id: cap.system-integration
+    type: capability
+    name: System Integration
+    slug: system-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.task-automation
+    type: capability
+    name: Task Automation
+    slug: task-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.technical-discovery
+    type: capability
+    name: Technical Discovery
+    slug: technical-discovery
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.technical-seo
+    type: capability
+    name: Technical SEO
+    slug: technical-seo
+    primaryService: svc.seo-aeo-geo
+    group: SEO
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: cap.technology-audits
+    type: capability
+    name: Technology Audits
+    slug: technology-audits
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.technology-consulting
+    type: capability
+    name: Technology Consulting
+    slug: technology-consulting
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.technology-strategy
+    type: capability
+    name: Technology Strategy
+    slug: technology-strategy
+    primaryService: svc.consulting
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 17
+  - id: cap.third-party-integration
+    type: capability
+    name: Third-Party Integration
+    slug: third-party-integration
+    primaryService: svc.api-integration
+    group: Integration services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: cap.ui-design
+    type: capability
+    name: UI Design
+    slug: ui-design
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.usability-testing
+    type: capability
+    name: Usability Testing
+    slug: usability-testing
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.ux-design
+    type: capability
+    name: UX Design
+    slug: ux-design
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.ux-research
+    type: capability
+    name: UX Research
+    slug: ux-research
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.vector-search
+    type: capability
+    name: Vector Search
+    slug: vector-search
+    primaryService: svc.ai
+    group: Generative AI
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.video-ai
+    type: capability
+    name: Video AI
+    slug: video-ai
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.visual-identity
+    type: capability
+    name: Visual Identity
+    slug: visual-identity
+    primaryService: svc.branding
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 14
+  - id: cap.voice-ai
+    type: capability
+    name: Voice AI
+    slug: voice-ai
+    primaryService: svc.ai
+    group: AI capabilities
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.vulnerability-management
+    type: capability
+    name: Vulnerability Management
+    slug: vulnerability-management
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.web-application-development
+    type: capability
+    name: Web Application Development
+    slug: web-application-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.web-application-security
+    type: capability
+    name: Web Application Security
+    slug: web-application-security
+    primaryService: svc.cybersecurity
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: cap.web-design
+    type: capability
+    name: Web Design
+    slug: web-design
+    primaryService: svc.ui-ux
+    group: Services
+    alsoListedUnder:
+      - svc.web-development
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.web-development
+    type: capability
+    name: Web Development
+    slug: web-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.web-modernization
+    type: capability
+    name: Web Modernization
+    slug: web-modernization
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.website-development
+    type: capability
+    name: Website Development
+    slug: website-development
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.website-maintenance
+    type: capability
+    name: Website Maintenance
+    slug: website-maintenance
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.website-migration
+    type: capability
+    name: Website Migration
+    slug: website-migration
+    primaryService: svc.web-development
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: cap.wireframing
+    type: capability
+    name: Wireframing
+    slug: wireframing
+    primaryService: svc.ui-ux
+    group: Services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: cap.workflow-agents
+    type: capability
+    name: Workflow Agents
+    slug: workflow-agents
+    primaryService: svc.ai
+    group: AI agents
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: cap.workflow-automation
+    type: capability
+    name: Workflow Automation
+    slug: workflow-automation
+    primaryService: svc.automation
+    group: Business automation
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.workflow-design
+    type: capability
+    name: Workflow Design
+    slug: workflow-design
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.workflow-development
+    type: capability
+    name: Workflow Development
+    slug: workflow-development
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: cap.workflow-optimization
+    type: capability
+    name: Workflow Optimization
+    slug: workflow-optimization
+    primaryService: svc.automation
+    group: Workflow systems
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7

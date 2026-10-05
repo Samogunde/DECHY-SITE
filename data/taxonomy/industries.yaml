@@ -1,0 +1,303 @@
+# industries
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: ind.agriculture
+    type: industry
+    name: Agriculture
+    slug: agriculture
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.architecture
+    type: industry
+    name: Architecture
+    slug: architecture
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.automotive
+    type: industry
+    name: Automotive
+    slug: automotive
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.banking
+    type: industry
+    name: Banking
+    slug: banking
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.beauty
+    type: industry
+    name: Beauty
+    slug: beauty
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.construction
+    type: industry
+    name: Construction
+    slug: construction
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.cybersecurity
+    type: industry
+    name: Cybersecurity
+    slug: cybersecurity
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.ecommerce
+    type: industry
+    name: Ecommerce
+    slug: ecommerce
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.education
+    type: industry
+    name: Education
+    slug: education
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.energy
+    type: industry
+    name: Energy
+    slug: energy
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.engineering
+    type: industry
+    name: Engineering
+    slug: engineering
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.entertainment
+    type: industry
+    name: Entertainment
+    slug: entertainment
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.finance
+    type: industry
+    name: Finance
+    slug: finance
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.fitness
+    type: industry
+    name: Fitness
+    slug: fitness
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.government
+    type: industry
+    name: Government
+    slug: government
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.healthcare
+    type: industry
+    name: Healthcare
+    slug: healthcare
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.hospitality
+    type: industry
+    name: Hospitality
+    slug: hospitality
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.human-resources
+    type: industry
+    name: Human Resources
+    slug: human-resources
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.insurance
+    type: industry
+    name: Insurance
+    slug: insurance
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.legal
+    type: industry
+    name: Legal
+    slug: legal
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.logistics
+    type: industry
+    name: Logistics
+    slug: logistics
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.manufacturing
+    type: industry
+    name: Manufacturing
+    slug: manufacturing
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.media
+    type: industry
+    name: Media
+    slug: media
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.nonprofits
+    type: industry
+    name: Nonprofits
+    slug: nonprofits
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.pharmaceuticals
+    type: industry
+    name: Pharmaceuticals
+    slug: pharmaceuticals
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.professional-services
+    type: industry
+    name: Professional Services
+    slug: professional-services
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.property-management
+    type: industry
+    name: Property Management
+    slug: property-management
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.real-estate
+    type: industry
+    name: Real Estate
+    slug: real-estate
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.recruitment
+    type: industry
+    name: Recruitment
+    slug: recruitment
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.restaurants
+    type: industry
+    name: Restaurants
+    slug: restaurants
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.retail
+    type: industry
+    name: Retail
+    slug: retail
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.saas
+    type: industry
+    name: SaaS
+    slug: saas
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.sports
+    type: industry
+    name: Sports
+    slug: sports
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.technology
+    type: industry
+    name: Technology
+    slug: technology
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.telecommunications
+    type: industry
+    name: Telecommunications
+    slug: telecommunications
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.transportation
+    type: industry
+    name: Transportation
+    slug: transportation
+    prominence: standard
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.travel
+    type: industry
+    name: Travel
+    slug: travel
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 20

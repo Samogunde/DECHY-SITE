@@ -1,0 +1,127 @@
+# business-types
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: bt.agencies
+    type: business-type
+    name: Agencies
+    slug: agencies
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.ecommerce-businesses
+    type: business-type
+    name: Ecommerce Businesses
+    slug: ecommerce-businesses
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.enterprises
+    type: business-type
+    name: Enterprises
+    slug: enterprises
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.franchises
+    type: business-type
+    name: Franchises
+    slug: franchises
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.government-organizations
+    type: business-type
+    name: Government Organizations
+    slug: government-organizations
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.local-businesses
+    type: business-type
+    name: Local Businesses
+    slug: local-businesses
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.manufacturers
+    type: business-type
+    name: Manufacturers
+    slug: manufacturers
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.multinational-companies
+    type: business-type
+    name: Multinational Companies
+    slug: multinational-companies
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.nonprofits
+    type: business-type
+    name: Nonprofits
+    slug: nonprofits
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.online-businesses
+    type: business-type
+    name: Online Businesses
+    slug: online-businesses
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.professional-services
+    type: business-type
+    name: Professional Services
+    slug: professional-services
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.saas-companies
+    type: business-type
+    name: SaaS Companies
+    slug: saas-companies
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.small-businesses
+    type: business-type
+    name: Small Businesses
+    slug: small-businesses
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.smes
+    type: business-type
+    name: SMEs
+    slug: smes
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21
+  - id: bt.startups
+    type: business-type
+    name: Startups
+    slug: startups
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 21

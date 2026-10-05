@@ -1,0 +1,2871 @@
+# technologies
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: eco.bing
+    type: ecosystem
+    name: Bing
+    slug: bing
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.chatgpt
+    type: ecosystem
+    name: ChatGPT
+    slug: chatgpt
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.claude
+    type: ecosystem
+    name: Claude
+    slug: claude
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.gemini
+    type: ecosystem
+    name: Gemini
+    slug: gemini
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.google-ai-mode
+    type: ecosystem
+    name: Google AI Mode
+    slug: google-ai-mode
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.google-ai-overviews
+    type: ecosystem
+    name: Google AI Overviews
+    slug: google-ai-overviews
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.google-search
+    type: ecosystem
+    name: Google Search
+    slug: google-search
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.grok
+    type: ecosystem
+    name: Grok
+    slug: grok
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.meta-ai
+    type: ecosystem
+    name: Meta AI
+    slug: meta-ai
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.microsoft-copilot
+    type: ecosystem
+    name: Microsoft Copilot
+    slug: microsoft-copilot
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: eco.perplexity
+    type: ecosystem
+    name: Perplexity
+    slug: perplexity
+    primaryService: svc.seo-aeo-geo
+    group: Target search/AI ecosystem
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 15
+  - id: fw.alpinejs
+    type: framework
+    name: Alpine.js
+    slug: alpinejs
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.angular
+    type: framework
+    name: Angular
+    slug: angular
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.astro
+    type: framework
+    name: Astro
+    slug: astro
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.ember
+    type: framework
+    name: Ember
+    slug: ember
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.gatsby
+    type: framework
+    name: Gatsby
+    slug: gatsby
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.haystack
+    type: framework
+    name: Haystack
+    slug: haystack
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.keras
+    type: framework
+    name: Keras
+    slug: keras
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.langchain
+    type: framework
+    name: LangChain
+    slug: langchain
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.lit
+    type: framework
+    name: Lit
+    slug: lit
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.llamaindex
+    type: framework
+    name: LlamaIndex
+    slug: llamaindex
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.nextjs
+    type: framework
+    name: Next.js
+    slug: nextjs
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.nuxt
+    type: framework
+    name: Nuxt
+    slug: nuxt
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.preact
+    type: framework
+    name: Preact
+    slug: preact
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.pytorch
+    type: framework
+    name: PyTorch
+    slug: pytorch
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.react
+    type: framework
+    name: React
+    slug: react
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.remix
+    type: framework
+    name: Remix
+    slug: remix
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.scikit-learn
+    type: framework
+    name: scikit-learn
+    slug: scikit-learn
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.semantic-kernel
+    type: framework
+    name: Semantic Kernel
+    slug: semantic-kernel
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.solidjs
+    type: framework
+    name: SolidJS
+    slug: solidjs
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.svelte
+    type: framework
+    name: Svelte
+    slug: svelte
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.sveltekit
+    type: framework
+    name: SvelteKit
+    slug: sveltekit
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: fw.tensorflow
+    type: framework
+    name: TensorFlow
+    slug: tensorflow
+    primaryService: svc.ai
+    group: AI frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: fw.vue
+    type: framework
+    name: Vue
+    slug: vue
+    primaryService: svc.web-development
+    group: Frontend technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: int.adyen
+    type: integration
+    name: Adyen
+    slug: adyen
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.braintree
+    type: integration
+    name: Braintree
+    slug: braintree
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.flutterwave
+    type: integration
+    name: Flutterwave
+    slug: flutterwave
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.google-apis
+    type: integration
+    name: Google APIs
+    slug: google-apis
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.hubspot-api
+    type: integration
+    name: HubSpot API
+    slug: hubspot-api
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.microsoft-graph
+    type: integration
+    name: Microsoft Graph
+    slug: microsoft-graph
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.paypal
+    type: integration
+    name: PayPal
+    slug: paypal
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.paystack
+    type: integration
+    name: Paystack
+    slug: paystack
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.salesforce-api
+    type: integration
+    name: Salesforce API
+    slug: salesforce-api
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.shopify-api
+    type: integration
+    name: Shopify API
+    slug: shopify-api
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.square
+    type: integration
+    name: Square
+    slug: square
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.stripe
+    type: integration
+    name: Stripe
+    slug: stripe
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.wix-apis
+    type: integration
+    name: Wix APIs
+    slug: wix-apis
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.woocommerce-api
+    type: integration
+    name: WooCommerce API
+    slug: woocommerce-api
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: int.wordpress-rest-api
+    type: integration
+    name: WordPress REST API
+    slug: wordpress-rest-api
+    primaryService: svc.api-integration
+    group: Business/payment integrations
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: lang.bash
+    type: language
+    name: Bash
+    slug: bash
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.c
+    type: language
+    name: C
+    slug: c
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.c-plus-plus
+    type: language
+    name: C++
+    slug: c-plus-plus
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.c-sharp
+    type: language
+    name: C#
+    slug: c-sharp
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.dart
+    type: language
+    name: Dart
+    slug: dart
+    primaryService: svc.mobile-app-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.go
+    type: language
+    name: Go
+    slug: go
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.java
+    type: language
+    name: Java
+    slug: java
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.javascript
+    type: language
+    name: JavaScript
+    slug: javascript
+    primaryService: svc.web-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.lua
+    type: language
+    name: Lua
+    slug: lua
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.matlab
+    type: language
+    name: MATLAB
+    slug: matlab
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.objective-c
+    type: language
+    name: Objective-C
+    slug: objective-c
+    primaryService: svc.mobile-app-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.perl
+    type: language
+    name: Perl
+    slug: perl
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.php
+    type: language
+    name: PHP
+    slug: php
+    primaryService: svc.web-development
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.powershell
+    type: language
+    name: PowerShell
+    slug: powershell
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.python
+    type: language
+    name: Python
+    slug: python
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.r
+    type: language
+    name: R
+    slug: r
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.ruby
+    type: language
+    name: Ruby
+    slug: ruby
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.rust
+    type: language
+    name: Rust
+    slug: rust
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.scala
+    type: language
+    name: Scala
+    slug: scala
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.sql
+    type: language
+    name: SQL
+    slug: sql
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.typescript
+    type: language
+    name: TypeScript
+    slug: typescript
+    primaryService: svc.web-development
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 18
+  - id: lang.visual-basic
+    type: language
+    name: Visual Basic
+    slug: visual-basic
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 18
+  - id: plat.airtable
+    type: platform
+    name: Airtable
+    slug: airtable
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.appwrite
+    type: platform
+    name: Appwrite
+    slug: appwrite
+    primaryService: svc.data-analytics
+    group: Backend/database platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.asana
+    type: platform
+    name: Asana
+    slug: asana
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.aws
+    type: platform
+    name: AWS
+    slug: aws
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.azure
+    type: platform
+    name: Azure
+    slug: azure
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.bigcommerce
+    type: platform
+    name: BigCommerce
+    slug: bigcommerce
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.clickhouse
+    type: platform
+    name: ClickHouse
+    slug: clickhouse
+    primaryService: svc.data-analytics
+    group: Analytics/data platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.clickup
+    type: platform
+    name: ClickUp
+    slug: clickup
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.cloudflare
+    type: platform
+    name: Cloudflare
+    slug: cloudflare
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.contentful
+    type: platform
+    name: Contentful
+    slug: contentful
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.databricks
+    type: platform
+    name: Databricks
+    slug: databricks
+    primaryService: svc.data-analytics
+    group: Analytics/data platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.digitalocean
+    type: platform
+    name: DigitalOcean
+    slug: digitalocean
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.directus
+    type: platform
+    name: Directus
+    slug: directus
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.drupal
+    type: platform
+    name: Drupal
+    slug: drupal
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.firebase
+    type: platform
+    name: Firebase
+    slug: firebase
+    primaryService: svc.cloud
+    group: Cloud platforms
+    alsoListedUnder:
+      - svc.data-analytics
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.ghost
+    type: platform
+    name: Ghost
+    slug: ghost
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.google-cloud
+    type: platform
+    name: Google Cloud
+    slug: google-cloud
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.google-workspace
+    type: platform
+    name: Google Workspace
+    slug: google-workspace
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.hubspot
+    type: platform
+    name: HubSpot
+    slug: hubspot
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.hubspot-cms
+    type: platform
+    name: HubSpot CMS
+    slug: hubspot-cms
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.joomla
+    type: platform
+    name: Joomla
+    slug: joomla
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.magento-adobe-commerce
+    type: platform
+    name: Magento / Adobe Commerce
+    slug: magento-adobe-commerce
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.microsoft-365
+    type: platform
+    name: Microsoft 365
+    slug: microsoft-365
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.mondaycom
+    type: platform
+    name: Monday.com
+    slug: mondaycom
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.netlify
+    type: platform
+    name: Netlify
+    slug: netlify
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.notion
+    type: platform
+    name: Notion
+    slug: notion
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.opencart
+    type: platform
+    name: OpenCart
+    slug: opencart
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.pocketbase
+    type: platform
+    name: PocketBase
+    slug: pocketbase
+    primaryService: svc.data-analytics
+    group: Backend/database platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.prestashop
+    type: platform
+    name: PrestaShop
+    slug: prestashop
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.prismic
+    type: platform
+    name: Prismic
+    slug: prismic
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.railway
+    type: platform
+    name: Railway
+    slug: railway
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.redshift
+    type: platform
+    name: Redshift
+    slug: redshift
+    primaryService: svc.data-analytics
+    group: Analytics/data platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.render
+    type: platform
+    name: Render
+    slug: render
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.salesforce
+    type: platform
+    name: Salesforce
+    slug: salesforce
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 7
+  - id: plat.sanity
+    type: platform
+    name: Sanity
+    slug: sanity
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.shopify
+    type: platform
+    name: Shopify
+    slug: shopify
+    primaryService: svc.ecommerce
+    group: Platforms
+    alsoListedUnder:
+      - svc.web-development
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.shopify-plus
+    type: platform
+    name: Shopify Plus
+    slug: shopify-plus
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.snowflake
+    type: platform
+    name: Snowflake
+    slug: snowflake
+    primaryService: svc.data-analytics
+    group: Analytics/data platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.squarespace
+    type: platform
+    name: Squarespace
+    slug: squarespace
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.squarespace-commerce
+    type: platform
+    name: Squarespace Commerce
+    slug: squarespace-commerce
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.storyblok
+    type: platform
+    name: Storyblok
+    slug: storyblok
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.strapi
+    type: platform
+    name: Strapi
+    slug: strapi
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.supabase
+    type: platform
+    name: Supabase
+    slug: supabase
+    primaryService: svc.cloud
+    group: Cloud platforms
+    alsoListedUnder:
+      - svc.data-analytics
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.vercel
+    type: platform
+    name: Vercel
+    slug: vercel
+    primaryService: svc.cloud
+    group: Cloud platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: plat.webflow
+    type: platform
+    name: Webflow
+    slug: webflow
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.webflow-ecommerce
+    type: platform
+    name: Webflow Ecommerce
+    slug: webflow-ecommerce
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.wix
+    type: platform
+    name: Wix
+    slug: wix
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.wix-ecommerce
+    type: platform
+    name: Wix Ecommerce
+    slug: wix-ecommerce
+    primaryService: svc.ecommerce
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 12
+  - id: plat.wix-studio
+    type: platform
+    name: Wix Studio
+    slug: wix-studio
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.wix-velo
+    type: platform
+    name: Wix Velo
+    slug: wix-velo
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.woocommerce
+    type: platform
+    name: WooCommerce
+    slug: woocommerce
+    primaryService: svc.ecommerce
+    group: Platforms
+    alsoListedUnder:
+      - svc.web-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.wordpress
+    type: platform
+    name: WordPress
+    slug: wordpress
+    primaryService: svc.web-development
+    group: Platforms
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 4
+  - id: plat.xano
+    type: platform
+    name: Xano
+    slug: xano
+    primaryService: svc.data-analytics
+    group: Backend/database platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: plat.zoho
+    type: platform
+    name: Zoho
+    slug: zoho
+    primaryService: svc.automation
+    group: Workflow/business platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: prov.amazon-bedrock
+    type: provider
+    name: Amazon Bedrock
+    slug: amazon-bedrock
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.anthropic-claude
+    type: provider
+    name: Anthropic Claude
+    slug: anthropic-claude
+    primaryService: svc.ai
+    group: AI providers
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.cohere
+    type: provider
+    name: Cohere
+    slug: cohere
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.google-gemini
+    type: provider
+    name: Google Gemini
+    slug: google-gemini
+    primaryService: svc.ai
+    group: AI providers
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.groq
+    type: provider
+    name: Groq
+    slug: groq
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.hugging-face
+    type: provider
+    name: Hugging Face
+    slug: hugging-face
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.meta-llama
+    type: provider
+    name: Meta Llama
+    slug: meta-llama
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.microsoft-azure-ai
+    type: provider
+    name: Microsoft Azure AI
+    slug: microsoft-azure-ai
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.mistral
+    type: provider
+    name: Mistral
+    slug: mistral
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.openai
+    type: provider
+    name: OpenAI
+    slug: openai
+    primaryService: svc.ai
+    group: AI providers
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 6
+  - id: prov.together-ai
+    type: provider
+    name: Together AI
+    slug: together-ai
+    primaryService: svc.ai
+    group: AI providers
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.ai-gateways
+    type: technology
+    name: AI Gateways
+    slug: ai-gateways
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.aks
+    type: technology
+    name: AKS
+    slug: aks
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.amplify
+    type: technology
+    name: Amplify
+    slug: amplify
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.android-sdk
+    type: technology
+    name: Android SDK
+    slug: android-sdk
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.api-gateway
+    type: technology
+    name: API Gateway
+    slug: api-gateway
+    primaryService: svc.api-integration
+    group: API technologies
+    alsoListedUnder:
+      - svc.cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.api-management
+    type: technology
+    name: API Management
+    slug: api-management
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.apis
+    type: technology
+    name: APIs
+    slug: apis
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.app-service
+    type: technology
+    name: App Service
+    slug: app-service
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.aurora
+    type: technology
+    name: Aurora
+    slug: aurora
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.azure-devops
+    type: technology
+    name: Azure DevOps
+    slug: azure-devops
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.azure-functions
+    type: technology
+    name: Azure Functions
+    slug: azure-functions
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.azure-sql
+    type: technology
+    name: Azure SQL
+    slug: azure-sql
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.azure-storage
+    type: technology
+    name: Azure Storage
+    slug: azure-storage
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.bigquery
+    type: technology
+    name: BigQuery
+    slug: bigquery
+    primaryService: svc.data-analytics
+    group: Analytics/data platforms
+    alsoListedUnder:
+      - svc.cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.blob-storage
+    type: technology
+    name: Blob Storage
+    slug: blob-storage
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cassandra
+    type: technology
+    name: Cassandra
+    slug: cassandra
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.cdk
+    type: technology
+    name: CDK
+    slug: cdk
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cdn
+    type: technology
+    name: CDN
+    slug: cdn
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.chroma
+    type: technology
+    name: Chroma
+    slug: chroma
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.cloud-build
+    type: technology
+    name: Cloud Build
+    slug: cloud-build
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloud-functions
+    type: technology
+    name: Cloud Functions
+    slug: cloud-functions
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloud-run
+    type: technology
+    name: Cloud Run
+    slug: cloud-run
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloud-sql
+    type: technology
+    name: Cloud SQL
+    slug: cloud-sql
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloud-storage
+    type: technology
+    name: Cloud Storage
+    slug: cloud-storage
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloudformation
+    type: technology
+    name: CloudFormation
+    slug: cloudformation
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloudfront
+    type: technology
+    name: CloudFront
+    slug: cloudfront
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cloudwatch
+    type: technology
+    name: CloudWatch
+    slug: cloudwatch
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cockroachdb
+    type: technology
+    name: CockroachDB
+    slug: cockroachdb
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.cognito
+    type: technology
+    name: Cognito
+    slug: cognito
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.compute-engine
+    type: technology
+    name: Compute Engine
+    slug: compute-engine
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.container-apps
+    type: technology
+    name: Container Apps
+    slug: container-apps
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.cosmos-db
+    type: technology
+    name: Cosmos DB
+    slug: cosmos-db
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.couchbase
+    type: technology
+    name: Couchbase
+    slug: couchbase
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.cross-platform-automation
+    type: technology
+    name: Cross-Platform Automation
+    slug: cross-platform-automation
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.dotnet-maui
+    type: technology
+    name: .NET MAUI
+    slug: dotnet-maui
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.dynamodb
+    type: technology
+    name: DynamoDB
+    slug: dynamodb
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    alsoListedUnder:
+      - svc.cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.ec2
+    type: technology
+    name: EC2
+    slug: ec2
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.ecs
+    type: technology
+    name: ECS
+    slug: ecs
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.eks
+    type: technology
+    name: EKS
+    slug: eks
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.elastic-beanstalk
+    type: technology
+    name: Elastic Beanstalk
+    slug: elastic-beanstalk
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.elastic-load-balancing
+    type: technology
+    name: Elastic Load Balancing
+    slug: elastic-load-balancing
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.entra-id
+    type: technology
+    name: Entra ID
+    slug: entra-id
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.event-driven-architecture
+    type: technology
+    name: Event-Driven Architecture
+    slug: event-driven-architecture
+    primaryService: svc.api-integration
+    group: API technologies
+    alsoListedUnder:
+      - svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.eventbridge
+    type: technology
+    name: EventBridge
+    slug: eventbridge
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.faiss
+    type: technology
+    name: FAISS
+    slug: faiss
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.firestore
+    type: technology
+    name: Firestore
+    slug: firestore
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    alsoListedUnder:
+      - svc.cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.flutter
+    type: technology
+    name: Flutter
+    slug: flutter
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.flutterflow
+    type: technology
+    name: FlutterFlow
+    slug: flutterflow
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.gke
+    type: technology
+    name: GKE
+    slug: gke
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.graphql
+    type: technology
+    name: GraphQL
+    slug: graphql
+    primaryService: svc.api-integration
+    group: API technologies
+    alsoListedUnder:
+      - svc.automation
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.grpc
+    type: technology
+    name: gRPC
+    slug: grpc
+    primaryService: svc.api-integration
+    group: API technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.iam
+    type: technology
+    name: IAM
+    slug: iam
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    alsoListedUnder:
+      - svc.cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.ionic
+    type: technology
+    name: Ionic
+    slug: ionic
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.ios-sdk
+    type: technology
+    name: iOS SDK
+    slug: ios-sdk
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.jetpack-compose
+    type: technology
+    name: Jetpack Compose
+    slug: jetpack-compose
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.key-vault
+    type: technology
+    name: Key Vault
+    slug: key-vault
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.kotlin
+    type: technology
+    name: Kotlin
+    slug: kotlin
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.kotlin-multiplatform
+    type: technology
+    name: Kotlin Multiplatform
+    slug: kotlin-multiplatform
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.lambda
+    type: technology
+    name: Lambda
+    slug: lambda
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.load-balancing
+    type: technology
+    name: Load Balancing
+    slug: load-balancing
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.low-code-automation
+    type: technology
+    name: Low-Code Automation
+    slug: low-code-automation
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.make
+    type: technology
+    name: Make
+    slug: make
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.mariadb
+    type: technology
+    name: MariaDB
+    slug: mariadb
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.microservices
+    type: technology
+    name: Microservices
+    slug: microservices
+    primaryService: svc.api-integration
+    group: API technologies
+    alsoListedUnder:
+      - svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.microsoft-power-automate
+    type: technology
+    name: Microsoft Power Automate
+    slug: microsoft-power-automate
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.milvus
+    type: technology
+    name: Milvus
+    slug: milvus
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.model-apis
+    type: technology
+    name: Model APIs
+    slug: model-apis
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.model-orchestration
+    type: technology
+    name: Model Orchestration
+    slug: model-orchestration
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.mongodb
+    type: technology
+    name: MongoDB
+    slug: mongodb
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.monitor
+    type: technology
+    name: Monitor
+    slug: monitor
+    primaryService: svc.cloud
+    group: Azure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.mysql
+    type: technology
+    name: MySQL
+    slug: mysql
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.n8n
+    type: technology
+    name: n8n
+    slug: n8n
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.neo4j
+    type: technology
+    name: Neo4j
+    slug: neo4j
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.no-code-automation
+    type: technology
+    name: No-Code Automation
+    slug: no-code-automation
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.openid-connect
+    type: technology
+    name: OpenID Connect
+    slug: openid-connect
+    primaryService: svc.api-integration
+    group: API technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.oracle
+    type: technology
+    name: Oracle
+    slug: oracle
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.pinecone
+    type: technology
+    name: Pinecone
+    slug: pinecone
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.postgresql
+    type: technology
+    name: PostgreSQL
+    slug: postgresql
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.pub-sub
+    type: technology
+    name: Pub/Sub
+    slug: pub-sub
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.qdrant
+    type: technology
+    name: Qdrant
+    slug: qdrant
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.rag-infrastructure
+    type: technology
+    name: RAG Infrastructure
+    slug: rag-infrastructure
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.rds
+    type: technology
+    name: RDS
+    slug: rds
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.react-native
+    type: technology
+    name: React Native
+    slug: react-native
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.redis
+    type: technology
+    name: Redis
+    slug: redis
+    primaryService: svc.data-analytics
+    group: NoSQL/distributed systems
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.rest
+    type: technology
+    name: REST
+    slug: rest
+    primaryService: svc.api-integration
+    group: API technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.rest-apis
+    type: technology
+    name: REST APIs
+    slug: rest-apis
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.rpa
+    type: technology
+    name: RPA
+    slug: rpa
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.s3
+    type: technology
+    name: S3
+    slug: s3
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.saas-integrations
+    type: technology
+    name: SaaS Integrations
+    slug: saas-integrations
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.secrets-manager
+    type: technology
+    name: Secrets Manager
+    slug: secrets-manager
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.sns
+    type: technology
+    name: SNS
+    slug: sns
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.soap
+    type: technology
+    name: SOAP
+    slug: soap
+    primaryService: svc.api-integration
+    group: API technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.sql-server
+    type: technology
+    name: SQL Server
+    slug: sql-server
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.sqlite
+    type: technology
+    name: SQLite
+    slug: sqlite
+    primaryService: svc.data-analytics
+    group: Relational databases
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 10
+  - id: tech.sqs
+    type: technology
+    name: SQS
+    slug: sqs
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.step-functions
+    type: technology
+    name: Step Functions
+    slug: step-functions
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.swift
+    type: technology
+    name: Swift
+    slug: swift
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.swiftui
+    type: technology
+    name: SwiftUI
+    slug: swiftui
+    primaryService: svc.mobile-app-development
+    group: Technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 5
+  - id: tech.vector-databases
+    type: technology
+    name: Vector Databases
+    slug: vector-databases
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.vertex-ai
+    type: technology
+    name: Vertex AI
+    slug: vertex-ai
+    primaryService: svc.cloud
+    group: Google Cloud
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.waf
+    type: technology
+    name: WAF
+    slug: waf
+    primaryService: svc.cloud
+    group: AWS
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tech.weaviate
+    type: technology
+    name: Weaviate
+    slug: weaviate
+    primaryService: svc.ai
+    group: AI/vector infrastructure
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 6
+  - id: tech.webhooks
+    type: technology
+    name: Webhooks
+    slug: webhooks
+    primaryService: svc.api-integration
+    group: API technologies
+    alsoListedUnder:
+      - svc.automation
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tech.websockets
+    type: technology
+    name: WebSockets
+    slug: websockets
+    primaryService: svc.api-integration
+    group: API technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 11
+  - id: tech.zapier
+    type: technology
+    name: Zapier
+    slug: zapier
+    primaryService: svc.automation
+    group: Automation platforms and technologies
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+    sourceSection: 7
+  - id: tool.adobe-xd
+    type: tool
+    name: Adobe XD
+    slug: adobe-xd
+    primaryService: svc.ui-ux
+    group: Tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: tool.ansible
+    type: tool
+    name: Ansible
+    slug: ansible
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.ant-design
+    type: tool
+    name: Ant Design
+    slug: ant-design
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.apache
+    type: tool
+    name: Apache
+    slug: apache
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.argo-cd
+    type: tool
+    name: Argo CD
+    slug: argo-cd
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.babel
+    type: tool
+    name: Babel
+    slug: babel
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.bootstrap
+    type: tool
+    name: Bootstrap
+    slug: bootstrap
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.bulma
+    type: tool
+    name: Bulma
+    slug: bulma
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.canva
+    type: tool
+    name: Canva
+    slug: canva
+    primaryService: svc.ui-ux
+    group: Tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: tool.chakra-ui
+    type: tool
+    name: Chakra UI
+    slug: chakra-ui
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.circleci
+    type: tool
+    name: CircleCI
+    slug: circleci
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.debian
+    type: tool
+    name: Debian
+    slug: debian
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.docker
+    type: tool
+    name: Docker
+    slug: docker
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.elk
+    type: tool
+    name: ELK
+    slug: elk
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.eslint
+    type: tool
+    name: ESLint
+    slug: eslint
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.figma
+    type: tool
+    name: Figma
+    slug: figma
+    primaryService: svc.ui-ux
+    group: Tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: tool.foundation
+    type: tool
+    name: Foundation
+    slug: foundation
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.github-actions
+    type: tool
+    name: GitHub Actions
+    slug: github-actions
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.gitlab-ci-cd
+    type: tool
+    name: GitLab CI/CD
+    slug: gitlab-ci-cd
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.grafana
+    type: tool
+    name: Grafana
+    slug: grafana
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.haproxy
+    type: tool
+    name: HAProxy
+    slug: haproxy
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.helm
+    type: tool
+    name: Helm
+    slug: helm
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.illustrator
+    type: tool
+    name: Illustrator
+    slug: illustrator
+    primaryService: svc.ui-ux
+    group: Tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: tool.jenkins
+    type: tool
+    name: Jenkins
+    slug: jenkins
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.kubernetes
+    type: tool
+    name: Kubernetes
+    slug: kubernetes
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.linux
+    type: tool
+    name: Linux
+    slug: linux
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.material-ui
+    type: tool
+    name: Material UI
+    slug: material-ui
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.nginx
+    type: tool
+    name: Nginx
+    slug: nginx
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.npm
+    type: tool
+    name: npm
+    slug: npm
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.opentelemetry
+    type: tool
+    name: OpenTelemetry
+    slug: opentelemetry
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.parcel
+    type: tool
+    name: Parcel
+    slug: parcel
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.photoshop
+    type: tool
+    name: Photoshop
+    slug: photoshop
+    primaryService: svc.ui-ux
+    group: Tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 13
+  - id: tool.pnpm
+    type: tool
+    name: pnpm
+    slug: pnpm
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.prettier
+    type: tool
+    name: Prettier
+    slug: prettier
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.prometheus
+    type: tool
+    name: Prometheus
+    slug: prometheus
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.pulumi
+    type: tool
+    name: Pulumi
+    slug: pulumi
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.rocky-linux
+    type: tool
+    name: Rocky Linux
+    slug: rocky-linux
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.rollup
+    type: tool
+    name: Rollup
+    slug: rollup
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.tailwind-css
+    type: tool
+    name: Tailwind CSS
+    slug: tailwind-css
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.terraform
+    type: tool
+    name: Terraform
+    slug: terraform
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.travis-ci
+    type: tool
+    name: Travis CI
+    slug: travis-ci
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.ubuntu
+    type: tool
+    name: Ubuntu
+    slug: ubuntu
+    primaryService: svc.cloud
+    group: DevOps
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 8
+  - id: tool.vite
+    type: tool
+    name: Vite
+    slug: vite
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.webpack
+    type: tool
+    name: Webpack
+    slug: webpack
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4
+  - id: tool.yarn
+    type: tool
+    name: Yarn
+    slug: yarn
+    primaryService: svc.web-development
+    group: Frontend tools/frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 4

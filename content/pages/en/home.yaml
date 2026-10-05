@@ -1,0 +1,237 @@
+id: page.home
+kind: home
+locale: en
+path: /
+title: "DECHY | Technology, Software, AI & Digital Solutions"
+description: "DECHY is a global technology company. Software, AI, automation, integration, and cloud, designed to work as one system, across fifteen service areas."
+breadcrumbLabel: Home
+intent:
+  primary: understand what DECHY is and which technology services it provides
+  secondary:
+    - global technology company software ai services
+    - technology partner for software automation integration and cloud
+indexing: index
+claims: [company.name, company.descriptor, company.statement, company.founded, company.scope, company.positioning, company.breadth]
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+schemaTypes: [WebPage, FAQPage]
+
+sections:
+  - type: hero
+    id: hero
+    variant: home
+    eyebrow: "Technology, Software, AI & Digital Solutions"
+    headline: "Software, AI, automation, integration, and cloud, designed to work as one system."
+    lead: "{{fact:company.breadth}}"
+    support: "DECHY is a global technology company. It works with startups, small and medium-sized businesses, enterprises, agencies, and professional teams, from a first product to a platform that spans many systems."
+    ctas:
+      - { label: Talk to DECHY, href: /contact/ }
+      - { label: Explore the services, href: "#services" }
+    figure: system-map
+    figureCaption: "Conceptual diagram: five layers of one system joined by an integration bus. Real engagements vary by organization."
+
+  - type: statement
+    id: since-2010
+    tone: white
+    label: About DECHY
+    factId: company.statement
+
+  - type: prose
+    id: connected
+    tone: paper
+    label: The idea behind DECHY
+    heading: Technology works better when it is designed together
+    paragraphs:
+      - "Most organizations do not have a technology problem in one place. They have a website that does not talk to the CRM, a spreadsheet that feeds three reports, an automation nobody monitors, and an AI pilot with no route into daily work. Each tool was a reasonable purchase. Together they are a system nobody designed."
+      - "DECHY works across the full range of technology disciplines, from software and web development to AI, automation, integration, cloud, security, data, design, and search visibility. That breadth matters for one practical reason: the hardest problems sit between disciplines. A good workflow automation depends on clean data and reliable APIs. A good AI feature depends on the application around it, the permissions behind it, and the infrastructure under it."
+      - "So engagements start from the outcome and the workflow, not from a product category. Sometimes the right answer is a custom application. Sometimes it is connecting tools the organization already owns. Sometimes it is recommending that something should not be built at all."
+      - "That is the idea behind the line at the top of this page: software, AI, automation, integration, and cloud, designed to work as one system, inside a wider practice that also covers design, security, data, growth, and strategy."
+
+  - type: index
+    id: who
+    tone: white
+    label: Who DECHY helps
+    heading: Teams of every size, in every industry
+    intro: "DECHY is a global company and works with clients remotely, across time zones and markets."
+    items:
+      - title: Startups
+        ref: bt.startups
+        body: "From a first product to the platform behind a growing company: architecture that survives the first hundred customers, and an honest view of what to build now and what to defer."
+      - title: Small and medium-sized businesses
+        ref: bt.smes
+        body: "Practical systems that replace spreadsheets and manual handoffs: portals, automations, integrations, and websites that fit the way the business already works."
+      - title: Enterprises
+        ref: bt.enterprises
+        body: "Integration across existing systems, modernization of aging software, cloud migration, security reviews, and AI introduced with governance rather than around it."
+      - title: Agencies
+        ref: bt.agencies
+        body: "A technical partner for web, software, automation, or integration work that sits beyond what an agency delivers in house."
+      - title: Professionals and teams
+        body: "Independent professionals, practices, and internal teams that need a dependable site, a better booking or client workflow, or a tool built around their process."
+      - title: Organizations in every sector
+        body: "Nonprofits, public bodies, and organizations in regulated industries, where privacy, accessibility, and auditability shape the design from the start."
+
+  - type: index
+    id: problems
+    tone: paper
+    numbered: true
+    label: Problems DECHY solves
+    heading: The situations that bring people to us
+    intro: "Projects usually begin with a problem, not a technology. These are the most common ones."
+    items:
+      - title: Manual work that should not be manual
+        body: "Re-keying data between systems, chasing approvals by email, assembling reports by hand. Automation and integration remove the repetition and keep a record of what happened."
+      - title: Disconnected systems
+        body: "A CRM, accounting, ecommerce, support, and internal tools that each hold part of the truth. Integration gives them one shared flow of data instead of exports and copy-paste."
+      - title: Outdated software
+        body: "Systems that are slow to change, hard to hire for, or no longer supported. Modernization replaces or wraps them in stages, so the business keeps running."
+      - title: Poor customer experiences
+        body: "Clumsy portals, slow sites, and forms that lose people. Better product design, performance, and accessibility fix what visitors actually feel."
+      - title: Fragmented data
+        body: "Numbers that differ from report to report. Clean pipelines, a shared data model, and dashboards people trust."
+      - title: Inefficient workflows
+        body: "Processes that depend on one person's memory. Map the workflow first, then automate the parts that deserve it."
+      - title: AI that never reaches daily use
+        body: "Pilots with no route into the work. Retrieval, assistants, and agents connected to your data and permissions, with evaluation and human review built in."
+      - title: Integration challenges
+        body: "Undocumented APIs, payment flows that fail quietly, legacy systems with no interface. Integration engineering with monitoring and error handling."
+      - title: Growth and search visibility
+        body: "A good business that people cannot find, in search or in AI answers. Technical SEO, structured content, and measurement."
+
+  - type: service-index
+    id: services
+    tone: white
+    label: Services
+    heading: Fifteen disciplines, one practice
+    intro: "Every service is a full practice area. When a project needs several, they are planned together."
+
+  - type: entities
+    id: technology
+    tone: paper
+    style: lists
+    label: Technology depth
+    heading: The tools and platforms behind the work
+    intro: "A representative view of the technologies DECHY works with. The range is broad on purpose, and each project uses only what it needs."
+    groups:
+      - title: Languages and frameworks
+        entityIds: [lang.python, lang.typescript, lang.javascript, lang.java, lang.c-sharp, lang.go, lang.php, fw.react, fw.nextjs, fw.vue, fw.angular, fw.svelte]
+      - title: Web and ecommerce platforms
+        entityIds: [plat.wordpress, plat.shopify, plat.webflow, plat.woocommerce, plat.bigcommerce, plat.wix, plat.squarespace, plat.drupal]
+      - title: Mobile
+        entityIds: [tech.flutter, tech.react-native, tech.swift, tech.kotlin, tech.swiftui, tech.jetpack-compose]
+      - title: AI and data
+        entityIds: [prov.openai, prov.anthropic-claude, prov.google-gemini, fw.langchain, tech.pinecone, tech.postgresql, tech.mongodb, plat.snowflake, tech.bigquery, plat.databricks]
+      - title: Automation and business platforms
+        entityIds: [plat.airtable, tech.zapier, tech.make, tech.n8n, tech.microsoft-power-automate, plat.hubspot, plat.salesforce, plat.notion]
+      - title: Cloud and delivery
+        entityIds: [plat.aws, plat.azure, plat.google-cloud, tool.docker, tool.kubernetes, tool.terraform, tool.github-actions, plat.cloudflare]
+      - title: Integration and payments
+        entityIds: [tech.rest, tech.graphql, tech.webhooks, int.stripe, int.paypal, int.paystack, int.flutterwave, int.adyen]
+      - title: Design and brand tools
+        entityIds: [tool.figma, tool.photoshop, tool.illustrator, tool.canva]
+
+  - type: diagram
+    id: connected-systems
+    tone: ink
+    label: AI, automation, and integration
+    heading: Where AI and automation fit
+    intro: "AI and automation are major capabilities, and they work best inside the system rather than beside it, connected to the software, data, and permissions around them. The diagram shows one illustrative pattern."
+    figure: connected-flow
+    caption: "Illustrative architecture for lead handling. It describes a pattern DECHY can design and build, not a specific delivered system."
+    points:
+      - title: Automation is not always AI
+        body: "Many workflows need clear rules, reliable integrations, and monitoring more than a model. AI is added where judgment, language, or unstructured documents justify the extra care."
+      - title: Integration is the foundation
+        body: "Every step depends on stable APIs, clean data, and authentication. Getting that layer right keeps an automation or an AI feature running long after launch."
+      - title: People stay in the loop
+        body: "Where decisions matter, the design includes review, approvals, and audit logs, so the system is explainable and the team stays in control."
+
+  - type: entities
+    id: sectors
+    tone: paper
+    style: chips
+    label: Industries and business types
+    heading: Technology that adapts to the sector it serves
+    intro: "DECHY works with organizations across industries. These are some of the sectors in scope; the work is shaped by each sector's data, regulation, and customers."
+    groups:
+      - title: Industries
+        entityIds: [ind.healthcare, ind.finance, ind.banking, ind.insurance, ind.real-estate, ind.construction, ind.logistics, ind.transportation, ind.manufacturing, ind.retail, ind.ecommerce, ind.education, ind.legal, ind.government, ind.hospitality, ind.travel, ind.energy, ind.telecommunications, ind.media, ind.nonprofits, ind.professional-services, ind.saas, ind.technology]
+      - title: Business types
+        entityIds: [bt.startups, bt.small-businesses, bt.smes, bt.enterprises, bt.agencies, bt.saas-companies, bt.ecommerce-businesses, bt.franchises, bt.nonprofits, bt.government-organizations, bt.online-businesses, bt.multinational-companies]
+
+  - type: index
+    id: work
+    tone: white
+    label: Selected work and capability
+    heading: The kinds of systems DECHY builds and connects
+    intro: "Work at DECHY ranges from focused tools to platforms that span several systems. These are the main kinds of system, each a practice area in its own right."
+    items:
+      - title: Custom business applications and portals
+        body: "Internal tools, customer and employee portals, and management systems built around a specific process."
+      - title: SaaS platforms and marketplaces
+        body: "Multi-tenant products with billing, permissions, and operations designed for growth."
+      - title: Websites, web applications, and online stores
+        body: "Fast, accessible, search-ready sites and commerce platforms, with the integrations behind them."
+      - title: Mobile applications
+        body: "iOS, Android, and cross-platform apps with secure APIs, notifications, and release routines."
+      - title: AI assistants, retrieval systems, and agents
+        body: "Applications that answer from your knowledge, act inside your tools, and are evaluated before and after launch."
+      - title: Workflow and business process automation
+        body: "CRM, sales, finance, support, and operations workflows on platforms such as Airtable, Zapier, Make, and n8n."
+      - title: API and systems integration
+        body: "Reliable data flow between CRM, ERP, payments, commerce, and legacy systems."
+      - title: Cloud, DevOps, and security programs
+        body: "Migration, delivery pipelines, observability, identity, and assessments."
+      - title: Data platforms and dashboards
+        body: "Pipelines, warehouses, and reporting that replace manual spreadsheets."
+      - title: Design systems, brand, and growth programs
+        body: "Product design, brand identity, SEO, and marketing systems connected to measurement."
+
+  - type: columns
+    id: why
+    tone: paper
+    label: Why DECHY
+    heading: How DECHY approaches the work
+    intro: "These are working principles, not slogans. They explain how engagements are planned and what to expect from them."
+    columns:
+      - title: Systems thinking
+        items:
+          - "Every engagement considers the surrounding systems, data, and people, not only the deliverable."
+          - "Disciplines are planned together, so authentication, data, and infrastructure are decided once."
+      - title: Honest recommendations
+        items:
+          - "Build, buy, or integrate is decided on the merits, including advising against a build."
+          - "AI and automation are proposed where they help and left out where they do not."
+      - title: Engineering discipline
+        items:
+          - "Testing, security, and performance are part of delivery, not extras."
+          - "Decisions and architecture are documented so the system can outlive the project."
+      - title: Clear communication
+        items:
+          - "Plain language, visible progress, and no jargon for its own sake."
+          - "Remote-first collaboration across time zones, with shared tools and written decisions."
+
+  - type: faq
+    id: questions
+    tone: white
+    label: Common questions
+    heading: Short answers about DECHY
+    items:
+      - q: What does DECHY do?
+        a: "DECHY is a global technology company covering software, web, and mobile development; AI and machine learning; automation and workflows; cloud and DevOps; cybersecurity; data and analytics; API and systems integration; ecommerce; UI/UX and product design; branding; SEO, AEO, and GEO; digital marketing; and technology consulting. Projects often combine several of these."
+      - q: Is DECHY a web agency, an AI agency, or a software company?
+        a: "None of those alone. Web, AI, and automation are major parts of the work, but DECHY is a broader technology company. What sets the approach apart is designing software, AI, automation, integration, and cloud as one system rather than as separate projects."
+      - q: Who does DECHY work with?
+        a: "Startups, small and medium-sized businesses, enterprises, agencies, organizations, professionals, and teams, across a wide range of industries and business types."
+      - q: Does DECHY work internationally?
+        a: "Yes. DECHY is a global company and works with clients remotely, across time zones and markets, with engagements planned around clear communication, documentation, and shared tooling."
+      - q: How does an engagement start?
+        a: "With a conversation about the outcome you want and the systems you already have. From there DECHY recommends an approach, which may be to build, to buy and configure, or to integrate what exists, and agrees a scope before work begins. You can start through the [contact page](/contact/)."
+      - q: Does DECHY only build new systems?
+        a: "No. A large share of useful work is improving what already exists: modernizing legacy software, integrating tools, automating manual steps, tightening security, and fixing performance."
+
+  - type: cta
+    id: contact-cta
+    heading: "Tell us what you are trying to build, connect, or fix."
+    body: "A short conversation is enough to find out whether and how DECHY can help. There is no obligation, and you do not need a finished brief."
+    primary: { label: Talk to DECHY, href: /contact/ }

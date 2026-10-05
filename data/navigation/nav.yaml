@@ -1,0 +1,27 @@
+# Approved navigation (DEC-10). An item whose page does not exist yet renders as plain text, never
+# as a dead link, a fake route, or a "coming soon" page. When the page is built it becomes a link
+# automatically because the item's path matches a published page.
+primary:
+  - { label: Services, kind: menu }
+  - { label: Solutions, kind: link, path: /solutions/ }
+  - { label: Technologies, kind: link, path: /technologies/ }
+  - { label: Industries, kind: link, path: /industries/ }
+  - { label: Work, kind: link, path: /work/ }
+  - { label: Resources, kind: link, path: /resources/ }
+  - { label: Company, kind: link, path: /company/ }
+cta:
+  label: Talk to DECHY
+  path: /contact/
+footer:
+  explore:
+    - { label: Solutions, path: /solutions/ }
+    - { label: Technologies, path: /technologies/ }
+    - { label: Industries, path: /industries/ }
+    - { label: Work, path: /work/ }
+    - { label: Resources, path: /resources/ }
+    - { label: Locations, path: /locations/ }
+    - { label: Company, path: /company/ }
+    - { label: Contact, path: /contact/ }
+  legal:
+    - { label: Privacy policy, path: /privacy/ }
+    - { label: Cookie policy, path: /cookies/ }

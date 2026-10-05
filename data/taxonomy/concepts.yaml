@@ -1,0 +1,239 @@
+# concepts
+# Seeded one-for-one from the approved capability lists in AGENTS.md (sections 3 to 23)
+# by scripts/seed-taxonomy.ts on first bootstrap. From now on this file is edited directly.
+# Internal classification only: it organizes the entity graph and is never shown as a disclaimer.
+# Fields: role is the entity type; prominence feature|standard|reference; pagePolicy uses the five
+# exact statuses; evidenceLevel none|work-area|work-entry|case-study (internal).
+entities:
+  - id: con.api-architecture
+    type: concept
+    name: API Architecture
+    slug: api-architecture
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.clean-architecture
+    type: concept
+    name: Clean Architecture
+    slug: clean-architecture
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.cloud-architecture
+    type: concept
+    name: Cloud Architecture
+    slug: cloud-architecture
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.database-architecture
+    type: concept
+    name: Database Architecture
+    slug: database-architecture
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.distributed-systems
+    type: concept
+    name: Distributed Systems
+    slug: distributed-systems
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.domain-driven-design
+    type: concept
+    name: Domain-Driven Design
+    slug: domain-driven-design
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.encryption
+    type: concept
+    name: Encryption
+    slug: encryption
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.functional-programming
+    type: concept
+    name: Functional Programming
+    slug: functional-programming
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.headless-architecture
+    type: concept
+    name: Headless Architecture
+    slug: headless-architecture
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.jwt
+    type: concept
+    name: JWT
+    slug: jwt
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    alsoListedUnder:
+      - svc.api-integration
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.mfa
+    type: concept
+    name: MFA
+    slug: mfa
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.monolithic-architecture
+    type: concept
+    name: Monolithic Architecture
+    slug: monolithic-architecture
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.multi-tenant-systems
+    type: concept
+    name: Multi-Tenant Systems
+    slug: multi-tenant-systems
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.mvc
+    type: concept
+    name: MVC
+    slug: mvc
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.mvvm
+    type: concept
+    name: MVVM
+    slug: mvvm
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.oauth
+    type: concept
+    name: OAuth
+    slug: oauth
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    alsoListedUnder:
+      - svc.api-integration
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.oauth2
+    type: concept
+    name: OAuth2
+    slug: oauth2
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    alsoListedUnder:
+      - svc.api-integration
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.oop
+    type: concept
+    name: OOP
+    slug: oop
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.owasp
+    type: concept
+    name: OWASP
+    slug: owasp
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.secrets-management
+    type: concept
+    name: Secrets Management
+    slug: secrets-management
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.secure-coding
+    type: concept
+    name: Secure Coding
+    slug: secure-coding
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.serverless
+    type: concept
+    name: Serverless
+    slug: serverless
+    primaryService: svc.software-development
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 19
+  - id: con.tls-ssl
+    type: concept
+    name: TLS/SSL
+    slug: tls-ssl
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9
+  - id: con.zero-trust
+    type: concept
+    name: Zero Trust
+    slug: zero-trust
+    primaryService: svc.cybersecurity
+    group: Technologies/concepts
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+    sourceSection: 9

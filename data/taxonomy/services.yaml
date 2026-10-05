@@ -1,0 +1,144 @@
+# The 15 approved service pillars (AGENTS 2). order follows the approved master list. Families only organize navigation; none is removed,
+# merged, hidden, or downgraded. All 15 carry equal weight in indexes.
+families:
+  - { id: build, label: Build }
+  - { id: intelligence-automation, label: Intelligence and Automation }
+  - { id: infrastructure-security, label: Infrastructure and Security }
+  - { id: design-growth, label: Design and Growth }
+  - { id: advisory, label: Advisory }
+
+services:
+  - id: svc.software-development
+    slug: software-development
+    name: Software Development
+    family: build
+    order: 1
+    micro: Custom software, SaaS platforms, business applications, portals, and internal tools, designed, built, and maintained end to end.
+    short: Custom software, SaaS products, business applications, customer and employee portals, dashboards, and internal tools, with architecture, testing, security, and maintenance treated as part of the work rather than extras.
+    pagePolicy: CREATE / INDEX
+
+  - id: svc.web-development
+    slug: web-development
+    name: Web Development
+    family: build
+    order: 2
+    micro: Websites and web applications on modern frameworks and CMS platforms, built for speed, accessibility, and long-term maintainability.
+    short: Marketing sites, web applications, headless and CMS-driven builds, migrations, and modernization, with performance, accessibility, and search visibility designed in from the start.
+    pagePolicy: CREATE LATER
+
+  - id: svc.mobile-app-development
+    slug: mobile-app-development
+    name: Mobile App Development
+    family: build
+    order: 3
+    micro: iOS, Android, and cross-platform apps, from product design and APIs to release and ongoing maintenance.
+    short: Native and cross-platform mobile applications with authentication, notifications, offline behavior, backend APIs, and the release and maintenance routines that keep an app healthy after launch.
+    pagePolicy: CREATE LATER
+
+  - id: svc.ecommerce
+    slug: ecommerce
+    name: Ecommerce Solutions
+    family: build
+    order: 10
+    micro: Online stores and commerce systems on Shopify, WooCommerce, Adobe Commerce, BigCommerce, and custom platforms, with the integrations behind them.
+    short: Store builds, redesigns, migrations, payment and subscription setups, marketplace models, and the inventory, fulfillment, CRM, and analytics integrations that make a store run.
+    pagePolicy: CREATE LATER
+
+  - id: svc.ai
+    slug: ai
+    name: AI & Machine Learning
+    family: intelligence-automation
+    order: 4
+    micro: AI applications, assistants, agents, retrieval systems, and machine learning, integrated into the software and workflows you already run.
+    short: Generative AI and LLM applications, retrieval-augmented generation, AI agents and copilots, document intelligence, speech and vision, with evaluation, security, and governance built into delivery.
+    pagePolicy: CREATE LATER
+
+  - id: svc.automation
+    slug: automation
+    name: Automation, Workflows & AI Solutions
+    family: intelligence-automation
+    order: 5
+    micro: Business process and workflow automation across CRM, operations, finance, support, and marketing, with AI where it genuinely helps.
+    short: Workflow design and automation on platforms such as Airtable, Zapier, Make, n8n, and Power Automate, connected to your CRM and business systems, with monitoring and error handling so automations stay reliable.
+    pagePolicy: CREATE LATER
+
+  - id: svc.data-analytics
+    slug: data-analytics
+    name: Data & Analytics
+    family: intelligence-automation
+    order: 8
+    micro: Data engineering, warehouses, dashboards, and reporting that people trust and decisions can rely on.
+    short: Data pipelines, warehousing, business intelligence, dashboards, data quality, and predictive analytics, so reporting stops depending on manual spreadsheets and disconnected exports.
+    pagePolicy: CREATE LATER
+
+  - id: svc.api-integration
+    slug: api-integration
+    name: API & Systems Integration
+    family: intelligence-automation
+    order: 9
+    micro: REST, GraphQL, and event-driven integrations that connect CRM, ERP, payments, commerce, AI, and legacy systems.
+    short: API design and integration across SaaS, CRM, ERP, payment, ecommerce, database, and legacy systems, with authentication, synchronization, error handling, and monitoring treated as first-class concerns.
+    pagePolicy: CREATE LATER
+
+  - id: svc.cloud
+    slug: cloud
+    name: Cloud & DevOps
+    family: infrastructure-security
+    order: 6
+    micro: Cloud architecture, migration, infrastructure as code, CI/CD, monitoring, and reliability on AWS, Azure, Google Cloud, and more.
+    short: Cloud architecture and migration, containers and Kubernetes, infrastructure as code, delivery pipelines, observability, scaling, and disaster recovery across the major cloud platforms.
+    pagePolicy: CREATE LATER
+
+  - id: svc.cybersecurity
+    slug: cybersecurity
+    name: Cybersecurity
+    family: infrastructure-security
+    order: 7
+    micro: Application, API, and cloud security, identity and access, secure development, assessments, and recovery planning.
+    short: Security architecture, secure development practices, vulnerability management, identity and access management, encryption, audits and testing, and backup and disaster recovery planning.
+    pagePolicy: CREATE LATER
+
+  - id: svc.ui-ux
+    slug: ui-ux
+    name: UI/UX & Product Design
+    family: design-growth
+    order: 11
+    micro: Research, product strategy, interface design, design systems, and prototypes for web, mobile, and SaaS products.
+    short: UX research, information architecture, wireframes, prototypes, interface and design-system work, usability testing, and the handoff practices that keep design and engineering aligned.
+    pagePolicy: CREATE LATER
+
+  - id: svc.branding
+    slug: branding
+    name: Branding & Creative
+    family: design-growth
+    order: 12
+    micro: Brand strategy, identity, guidelines, and marketing design that stay consistent across digital touchpoints.
+    short: Brand strategy and positioning, visual identity, brand guidelines, presentation and pitch design, social and marketing design, and consistent digital branding across every channel.
+    pagePolicy: CREATE LATER
+
+  - id: svc.seo-aeo-geo
+    slug: seo-aeo-geo
+    name: SEO, AEO & GEO
+    family: design-growth
+    order: 13
+    micro: Technical and semantic SEO, answer and generative engine optimization, structured data, and measurement.
+    short: Technical and on-page SEO, entity and semantic optimization, international and ecommerce SEO, structured data, internal linking, answer engine and generative engine optimization, and digital PR.
+    pagePolicy: CREATE LATER
+
+  - id: svc.digital-marketing
+    slug: digital-marketing
+    name: Digital Marketing
+    family: design-growth
+    order: 14
+    micro: Content, search, social, email, paid media, and lead generation, connected to your CRM and measurement.
+    short: Content and social marketing, email, paid search and social advertising, lead generation, conversion optimization, and marketing automation connected to the CRM and analytics behind them.
+    pagePolicy: CREATE LATER
+
+  - id: svc.consulting
+    slug: consulting
+    name: Consulting & Digital Transformation
+    family: advisory
+    order: 15
+    micro: Technology strategy, architecture, audits, AI and automation strategy, and implementation roadmaps.
+    short: Technology and software consulting, AI readiness and strategy, automation strategy, cloud and security consulting, technical discovery, audits, and digital transformation roadmaps.
+    pagePolicy: CREATE LATER

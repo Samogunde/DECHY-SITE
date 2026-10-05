@@ -1,0 +1,43 @@
+id: page.contact
+kind: contact
+locale: en
+path: /contact/
+title: "Contact DECHY | Start a Conversation"
+description: "Contact DECHY to discuss software, AI, automation, integration, cloud, or any technology project. Tell us what you want to build, connect, or fix."
+breadcrumbLabel: Contact
+h1: Talk to DECHY
+lead: "Tell us what you are trying to build, connect, or fix. A few sentences are enough to start."
+intent:
+  primary: contact a technology company about a project
+  secondary:
+    - start a software or ai project
+indexing: index
+claims: [company.name, company.scope]
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+schemaTypes: [ContactPage]
+
+sections:
+  - type: contact-form
+    id: form
+    tone: white
+    label: Send a message
+    heading: Start the conversation
+    intro: "Share the situation and what you would like to achieve. We reply to the email address you provide."
+
+  - type: prose
+    id: next
+    tone: paper
+    label: What happens next
+    heading: From your message to a first step
+    paragraphs:
+      - "We read your message and reply to the email address you provided. If more detail would help, we ask a few questions. If a conversation is more useful than email, we suggest a time to talk."
+      - "From there, DECHY recommends an approach and a sensible first step before any commitment: sometimes a short discovery, sometimes a technical review of what you already have, and sometimes simply advice on what not to build."
+      - "DECHY is a global company and works with clients remotely, across time zones. You do not need a finished brief, a budget, or technical vocabulary to get in touch."
+    aside:
+      title: Useful to include
+      items:
+        - "What you want to achieve, in your own words"
+        - "The systems or tools involved today"
+        - "Any deadline that matters"
+        - "Who will use the result"

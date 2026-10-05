@@ -1,0 +1,47 @@
+# Approved Facts Register. The ONLY source of company statements used in copy and schema.
+# Page content cites facts by id ({{fact:company.statement}}); the validator rejects the company
+# statistic or history appearing anywhere except through these facts. Do not add facts here that the
+# owner has not approved. Capabilities are approved separately (see data/taxonomy); specific
+# evidence (clients, projects, metrics, people, locations) is added only when known.
+facts:
+  - id: company.name
+    label: Company name
+    value: DECHY
+    status: approved
+    source: AGENTS.md section 1; ADR 0001
+
+  - id: company.descriptor
+    label: Official descriptor
+    value: "Technology, Software, AI & Digital Solutions"
+    status: approved
+    source: AGENTS.md section 1A.2 (exact; never shortened)
+
+  - id: company.statement
+    label: Approved company statement
+    value: "Since 2010, DECHY has helped over 1,500 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types."
+    status: approved
+    source: DECHY_CLAUDE_MASTER_HANDOFF.md section 2; owner instruction (figures not to be altered)
+
+  - id: company.founded
+    label: Operating since
+    value: "2010"
+    status: approved
+    source: Approved company statement
+
+  - id: company.scope
+    label: Geographic scope
+    value: Global. Serves clients worldwide, remotely. No physical offices, branches, or addresses are claimed.
+    status: approved
+    source: AGENTS.md sections 24 and 47; ADR 0001
+
+  - id: company.positioning
+    label: Working positioning line
+    value: "Software, AI, automation, integration, and cloud, designed to work as one system."
+    status: approved
+    source: Owner approval of working positioning (DEC-23); refinable, descriptor unchanged
+
+  - id: company.breadth
+    label: Working breadth line
+    value: "From custom software and AI to cloud, security, data, design, and search visibility, DECHY helps organizations build, connect, automate, and scale."
+    status: approved
+    source: Owner approval of working positioning (DEC-23); refinable, descriptor unchanged

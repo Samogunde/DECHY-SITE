@@ -1,0 +1,34 @@
+id: page.cookies
+kind: legal
+locale: en
+path: /cookies/
+title: "Cookie Policy | DECHY"
+description: "What cookies and similar technologies the DECHY website uses. At present it sets no cookies and uses no analytics, advertising, or tracking technologies."
+breadcrumbLabel: Cookie policy
+h1: Cookie policy
+lead: "What this website stores in your browser. Last updated 4 October 2026."
+intent:
+  primary: read the website cookie policy
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+schemaTypes: [WebPage]
+
+sections:
+  - type: legal
+    id: policy
+    tone: paper
+    sections:
+      - heading: What cookies are
+        paragraphs:
+          - "Cookies are small files that a website can store in your browser. Similar technologies, such as local storage, serve comparable purposes."
+      - heading: What this website uses
+        paragraphs:
+          - "At present this website sets no cookies and uses no analytics, advertising, or tracking technologies. The contact form does not set cookies. Fonts are served from this website itself rather than from a third-party font service."
+      - heading: If this changes
+        paragraphs:
+          - "If we add analytics or other optional technologies, we will update this policy and ask for your consent first where the law requires it."
+      - heading: Managing cookies
+        paragraphs:
+          - "You can control or delete cookies in your browser settings at any time. See the [privacy policy](/privacy/) for how personal information is handled, or reach us through the [contact page](/contact/) with any question."
