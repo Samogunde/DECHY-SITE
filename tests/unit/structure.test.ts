@@ -32,6 +32,7 @@ const ALLOWED_ROOT = new Set([
   "playwright.config.ts",
   "netlify.toml",
   ".gitignore",
+  ".gitattributes",
   ".prettierrc.json",
   ".prettierignore",
   ".env.example",

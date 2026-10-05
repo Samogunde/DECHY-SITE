@@ -16,28 +16,28 @@ cp .env.example .env.local   # then edit; never commit real values
 npm run dev                  # http://localhost:3000
 ```
 
-| Command | What it does |
-|---|---|
-| `npm run dev` | Development server |
-| `npm run build` | Validates all content, then builds for production |
-| `npm run start` | Serves the production build |
-| `npm run typecheck` / `lint` / `format:check` | Static checks |
-| `npm test` | Unit tests (loader, validator, SEO, contact policy, brand integrity) |
-| `npm run validate` | Content and entity-graph validation (also part of `build`) |
-| `npm run e2e` | Browser tests against the production build: routes, 12 responsive widths, navigation, accessibility, security headers. Build first with `SITE_ORIGIN=http://localhost:4310` |
-| `npm run check` | Typecheck, lint, tests, and build |
+| Command                                       | What it does                                                                                                                                                                |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run dev`                                 | Development server                                                                                                                                                          |
+| `npm run build`                               | Validates all content, then builds for production                                                                                                                           |
+| `npm run start`                               | Serves the production build                                                                                                                                                 |
+| `npm run typecheck` / `lint` / `format:check` | Static checks                                                                                                                                                               |
+| `npm test`                                    | Unit tests (loader, validator, SEO, contact policy, brand integrity)                                                                                                        |
+| `npm run validate`                            | Content and entity-graph validation (also part of `build`)                                                                                                                  |
+| `npm run e2e`                                 | Browser tests against the production build: routes, 12 responsive widths, navigation, accessibility, security headers. Build first with `SITE_ORIGIN=http://localhost:4310` |
+| `npm run check`                               | Typecheck, lint, tests, and build                                                                                                                                           |
 
 ## Repository layout
 
-| Folder | Holds |
-|---|---|
-| `src/` | Application code only (routes, components, libraries, styles) |
-| `content/` | Page and article copy (typed YAML records) |
-| `data/` | Structured data: facts, taxonomy (the entity graph), relations, navigation |
-| `brand/` | The approved logo, exactly as supplied |
-| `docs/` | Planning, decisions, design specification, templates |
-| `public/` | Static files served as-is (delivery copy of the logo, Open Graph image) |
-| `tests/`, `scripts/` | Tests; build-time tooling |
+| Folder               | Holds                                                                      |
+| -------------------- | -------------------------------------------------------------------------- |
+| `src/`               | Application code only (routes, components, libraries, styles)              |
+| `content/`           | Page and article copy (typed YAML records)                                 |
+| `data/`              | Structured data: facts, taxonomy (the entity graph), relations, navigation |
+| `brand/`             | The approved logo, exactly as supplied                                     |
+| `docs/`              | Planning, decisions, design specification, templates                       |
+| `public/`            | Static files served as-is (delivery copy of the logo, Open Graph image)    |
+| `tests/`, `scripts/` | Tests; build-time tooling                                                  |
 
 ## Configuration
 

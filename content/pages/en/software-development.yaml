@@ -134,22 +134,34 @@ sections:
     steps:
       - title: Discover
         body: "Understand the process, the users, the data, and what success means. Test whether to build, buy, or integrate."
-        artifacts: [Problem and scope statement, Process and data map, "Build, buy, or integrate recommendation"]
+        artifacts:
+          [
+            Problem and scope statement,
+            Process and data map,
+            "Build, buy, or integrate recommendation",
+          ]
       - title: Architect
         body: "Choose the shape of the system: components, data model, integration points, security model, and hosting. Decisions are written down with their trade-offs."
         artifacts: [Architecture overview, Data model, Decision records]
       - title: Build
         body: "Deliver in short increments you can see and use, riskiest parts first. Code is reviewed, and every increment is demonstrable."
-        artifacts: [Working software each iteration, Reviewed and versioned code, Progress you can inspect]
+        artifacts:
+          [Working software each iteration, Reviewed and versioned code, Progress you can inspect]
       - title: Test
         body: "Automated tests at several levels, plus accessibility, performance, and security checks, run on every change."
-        artifacts: [Automated test suite, Security and dependency scan results, Performance and accessibility checks]
+        artifacts:
+          [
+            Automated test suite,
+            Security and dependency scan results,
+            Performance and accessibility checks,
+          ]
       - title: Release
         body: "Staged releases to a preview environment first, then production, with a rehearsed rollback and a clear handover."
         artifacts: [Deployment pipeline, Release notes, Rollback plan]
       - title: Maintain
         body: "Monitor, patch, and improve after launch. Software that matters needs an owner who keeps it current."
-        artifacts: [Monitoring and alerts, Dependency and security updates, Documentation and runbooks]
+        artifacts:
+          [Monitoring and alerts, Dependency and security updates, Documentation and runbooks]
 
   - type: diagram
     id: quality
@@ -174,7 +186,8 @@ sections:
     heading: Choosing technology on the merits
     aside:
       title: Architecture styles considered
-      items: [Modular monolith, Microservices, Serverless, Event-driven, Multi-tenant SaaS, Headless]
+      items:
+        [Modular monolith, Microservices, Serverless, Event-driven, Multi-tenant SaaS, Headless]
     paragraphs:
       - "DECHY is not tied to one stack. The language, framework, database, and hosting for a project are chosen for the problem, the team that will maintain it, and the long-term cost of ownership. That is a deliberate position: a framework chosen because it is fashionable becomes a liability once the people who chose it have moved on."
       - "Across the languages and frameworks DECHY works with, common choices include [Python](ref:lang.python), [TypeScript](ref:lang.typescript), [Java](ref:lang.java), [C#](ref:lang.c-sharp), [Go](ref:lang.go), and [PHP](ref:lang.php) for back ends; [React](ref:fw.react), [Next.js](ref:fw.nextjs), [Vue](ref:fw.vue), and [Angular](ref:fw.angular) for interfaces; [PostgreSQL](ref:tech.postgresql), [MySQL](ref:tech.mysql), and [MongoDB](ref:tech.mongodb) for data; and [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) for hosting, with [Docker](ref:tool.docker) and [Kubernetes](ref:tool.kubernetes) where containers pay for themselves."
@@ -215,9 +228,32 @@ sections:
     intro: "Software needs differ by sector. DECHY shapes requirements around each sector's data, regulation, and users."
     groups:
       - title: Industries
-        entityIds: [ind.healthcare, ind.real-estate, ind.construction, ind.finance, ind.education, ind.logistics, ind.retail, ind.ecommerce, ind.manufacturing, ind.hospitality, ind.legal, ind.government, ind.professional-services]
+        entityIds:
+          [
+            ind.healthcare,
+            ind.real-estate,
+            ind.construction,
+            ind.finance,
+            ind.education,
+            ind.logistics,
+            ind.retail,
+            ind.ecommerce,
+            ind.manufacturing,
+            ind.hospitality,
+            ind.legal,
+            ind.government,
+            ind.professional-services,
+          ]
       - title: Business types
-        entityIds: [bt.startups, bt.small-businesses, bt.smes, bt.enterprises, bt.saas-companies, bt.agencies]
+        entityIds:
+          [
+            bt.startups,
+            bt.small-businesses,
+            bt.smes,
+            bt.enterprises,
+            bt.saas-companies,
+            bt.agencies,
+          ]
 
   - type: faq
     id: faq
@@ -247,11 +283,37 @@ sections:
     heading: Related services, solutions, and technologies
     groups:
       - title: Related services
-        entityIds: [svc.web-development, svc.mobile-app-development, svc.ai, svc.automation, svc.api-integration, svc.cloud, svc.cybersecurity, svc.ui-ux]
+        entityIds:
+          [
+            svc.web-development,
+            svc.mobile-app-development,
+            svc.ai,
+            svc.automation,
+            svc.api-integration,
+            svc.cloud,
+            svc.cybersecurity,
+            svc.ui-ux,
+          ]
       - title: Related solutions
-        entityIds: [sol.internal-business-software, sol.customer-portal-development, sol.legacy-system-modernization, sol.saas-platforms, sol.business-dashboards]
+        entityIds:
+          [
+            sol.internal-business-software,
+            sol.customer-portal-development,
+            sol.legacy-system-modernization,
+            sol.saas-platforms,
+            sol.business-dashboards,
+          ]
       - title: Related technologies
-        entityIds: [lang.python, lang.typescript, fw.react, fw.nextjs, tech.postgresql, plat.aws, tool.docker]
+        entityIds:
+          [
+            lang.python,
+            lang.typescript,
+            fw.react,
+            fw.nextjs,
+            tech.postgresql,
+            plat.aws,
+            tool.docker,
+          ]
 
   - type: cta
     id: contact-cta

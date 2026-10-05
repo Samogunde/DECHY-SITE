@@ -11,7 +11,16 @@ intent:
     - global technology company software ai services
     - technology partner for software automation integration and cloud
 indexing: index
-claims: [company.name, company.descriptor, company.statement, company.founded, company.scope, company.positioning, company.breadth]
+claims:
+  [
+    company.name,
+    company.descriptor,
+    company.statement,
+    company.founded,
+    company.scope,
+    company.positioning,
+    company.breadth,
+  ]
 datePublished: "2026-10-04"
 dateModified: "2026-10-04"
 schemaTypes: [WebPage, FAQPage]
@@ -114,19 +123,93 @@ sections:
     intro: "A representative view of the technologies DECHY works with. The range is broad on purpose, and each project uses only what it needs."
     groups:
       - title: Languages and frameworks
-        entityIds: [lang.python, lang.typescript, lang.javascript, lang.java, lang.c-sharp, lang.go, lang.php, fw.react, fw.nextjs, fw.vue, fw.angular, fw.svelte]
+        entityIds:
+          [
+            lang.python,
+            lang.typescript,
+            lang.javascript,
+            lang.java,
+            lang.c-sharp,
+            lang.go,
+            lang.php,
+            fw.react,
+            fw.nextjs,
+            fw.vue,
+            fw.angular,
+            fw.svelte,
+          ]
       - title: Web and ecommerce platforms
-        entityIds: [plat.wordpress, plat.shopify, plat.webflow, plat.woocommerce, plat.bigcommerce, plat.wix, plat.squarespace, plat.drupal]
+        entityIds:
+          [
+            plat.wordpress,
+            plat.shopify,
+            plat.webflow,
+            plat.woocommerce,
+            plat.bigcommerce,
+            plat.wix,
+            plat.squarespace,
+            plat.drupal,
+          ]
       - title: Mobile
-        entityIds: [tech.flutter, tech.react-native, tech.swift, tech.kotlin, tech.swiftui, tech.jetpack-compose]
+        entityIds:
+          [
+            tech.flutter,
+            tech.react-native,
+            tech.swift,
+            tech.kotlin,
+            tech.swiftui,
+            tech.jetpack-compose,
+          ]
       - title: AI and data
-        entityIds: [prov.openai, prov.anthropic-claude, prov.google-gemini, fw.langchain, tech.pinecone, tech.postgresql, tech.mongodb, plat.snowflake, tech.bigquery, plat.databricks]
+        entityIds:
+          [
+            prov.openai,
+            prov.anthropic-claude,
+            prov.google-gemini,
+            fw.langchain,
+            tech.pinecone,
+            tech.postgresql,
+            tech.mongodb,
+            plat.snowflake,
+            tech.bigquery,
+            plat.databricks,
+          ]
       - title: Automation and business platforms
-        entityIds: [plat.airtable, tech.zapier, tech.make, tech.n8n, tech.microsoft-power-automate, plat.hubspot, plat.salesforce, plat.notion]
+        entityIds:
+          [
+            plat.airtable,
+            tech.zapier,
+            tech.make,
+            tech.n8n,
+            tech.microsoft-power-automate,
+            plat.hubspot,
+            plat.salesforce,
+            plat.notion,
+          ]
       - title: Cloud and delivery
-        entityIds: [plat.aws, plat.azure, plat.google-cloud, tool.docker, tool.kubernetes, tool.terraform, tool.github-actions, plat.cloudflare]
+        entityIds:
+          [
+            plat.aws,
+            plat.azure,
+            plat.google-cloud,
+            tool.docker,
+            tool.kubernetes,
+            tool.terraform,
+            tool.github-actions,
+            plat.cloudflare,
+          ]
       - title: Integration and payments
-        entityIds: [tech.rest, tech.graphql, tech.webhooks, int.stripe, int.paypal, int.paystack, int.flutterwave, int.adyen]
+        entityIds:
+          [
+            tech.rest,
+            tech.graphql,
+            tech.webhooks,
+            int.stripe,
+            int.paypal,
+            int.paystack,
+            int.flutterwave,
+            int.adyen,
+          ]
       - title: Design and brand tools
         entityIds: [tool.figma, tool.photoshop, tool.illustrator, tool.canva]
 
@@ -155,9 +238,48 @@ sections:
     intro: "DECHY works with organizations across industries. These are some of the sectors in scope; the work is shaped by each sector's data, regulation, and customers."
     groups:
       - title: Industries
-        entityIds: [ind.healthcare, ind.finance, ind.banking, ind.insurance, ind.real-estate, ind.construction, ind.logistics, ind.transportation, ind.manufacturing, ind.retail, ind.ecommerce, ind.education, ind.legal, ind.government, ind.hospitality, ind.travel, ind.energy, ind.telecommunications, ind.media, ind.nonprofits, ind.professional-services, ind.saas, ind.technology]
+        entityIds:
+          [
+            ind.healthcare,
+            ind.finance,
+            ind.banking,
+            ind.insurance,
+            ind.real-estate,
+            ind.construction,
+            ind.logistics,
+            ind.transportation,
+            ind.manufacturing,
+            ind.retail,
+            ind.ecommerce,
+            ind.education,
+            ind.legal,
+            ind.government,
+            ind.hospitality,
+            ind.travel,
+            ind.energy,
+            ind.telecommunications,
+            ind.media,
+            ind.nonprofits,
+            ind.professional-services,
+            ind.saas,
+            ind.technology,
+          ]
       - title: Business types
-        entityIds: [bt.startups, bt.small-businesses, bt.smes, bt.enterprises, bt.agencies, bt.saas-companies, bt.ecommerce-businesses, bt.franchises, bt.nonprofits, bt.government-organizations, bt.online-businesses, bt.multinational-companies]
+        entityIds:
+          [
+            bt.startups,
+            bt.small-businesses,
+            bt.smes,
+            bt.enterprises,
+            bt.agencies,
+            bt.saas-companies,
+            bt.ecommerce-businesses,
+            bt.franchises,
+            bt.nonprofits,
+            bt.government-organizations,
+            bt.online-businesses,
+            bt.multinational-companies,
+          ]
 
   - type: index
     id: work

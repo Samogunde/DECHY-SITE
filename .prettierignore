@@ -11,3 +11,4 @@ docs
 data/taxonomy/generated
 *.png
 src/styles/typography-tokens.css
+CLAUDE.md

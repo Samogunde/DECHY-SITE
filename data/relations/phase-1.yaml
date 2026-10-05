@@ -54,7 +54,11 @@ relations:
   - { from: svc.software-development, type: addressesProblem, to: prob.legacy-software }
   - { from: svc.software-development, type: addressesProblem, to: prob.outdated-software }
   - { from: svc.software-development, type: addressesProblem, to: prob.too-many-spreadsheets }
-  - { from: svc.software-development, type: addressesProblem, to: prob.need-to-replace-legacy-systems }
+  - {
+      from: svc.software-development,
+      type: addressesProblem,
+      to: prob.need-to-replace-legacy-systems,
+    }
   - { from: svc.software-development, type: addressesProblem, to: prob.manual-data-entry }
   - { from: sol.internal-business-software, type: solves, to: prob.too-many-spreadsheets }
   - { from: sol.internal-business-software, type: solves, to: prob.need-custom-software }
