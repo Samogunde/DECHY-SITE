@@ -202,7 +202,12 @@ sections:
       - title: Solutions
         entityIds: [sol.workflow-automation, sol.business-process-automation]
       - title: Systems we build
-        entityIds: [workarea.workflow-automation, workarea.automation-systems, workarea.integration-platforms]
+        entityIds:
+          [
+            workarea.workflow-automation,
+            workarea.automation-systems,
+            workarea.integration-platforms,
+          ]
       - title: Where it applies
         entityIds: [ind.retail, ind.logistics, ind.media]
 

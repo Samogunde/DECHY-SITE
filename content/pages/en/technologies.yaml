@@ -96,8 +96,8 @@ sections:
     tone: white
     style: chips
     label: What we work with
-    heading: Technologies we commonly use
-    intro: "This is a sample, grouped by the kind of job each does. We choose from it, and beyond it, to suit the project."
+    heading: A wider sample of what we work with
+    intro: "This is a sample, grouped by the kind of job each does. We choose from it, and beyond it, to suit the project. Names that have their own page are linked."
     groups:
       - title: Languages
         note: "What software is written in."
@@ -172,6 +172,40 @@ sections:
       - title: Design
         note: "Tools used to design and prototype."
         entityIds: [tool.figma, tool.adobe-xd, tool.illustrator, tool.photoshop]
+
+  - type: entities
+    id: pages
+    tone: paper
+    style: lists
+    label: Technology pages
+    heading: Read about a technology in detail
+    intro: "These pages explain where each technology fits, when it is the right choice, what the alternatives are, and what we do with it. They sit under the service they belong to."
+    groups:
+      - title: Web development
+        note: "Frameworks, languages, and platforms for sites and web applications."
+        entityIds: [fw.nextjs, fw.react, lang.typescript, lang.php, plat.wordpress, plat.webflow]
+      - title: Software development
+        note: "Languages for back-end systems."
+        entityIds: [lang.python, lang.java]
+      - title: Mobile app development
+        note: "Native and cross-platform ways of building apps."
+        entityIds: [tech.flutter, tech.react-native, tech.swift, tech.kotlin]
+      - title: AI and machine learning
+        note: "Model providers and the framework that connects them."
+        entityIds: [prov.openai, prov.anthropic-claude, prov.google-gemini, fw.langchain]
+      - title: Automation and business platforms
+        note: "Workflow tools and customer platforms."
+        entityIds: [tech.zapier, tech.make, tech.n8n, plat.airtable, plat.hubspot, plat.salesforce]
+      - title: Cloud and DevOps
+        note: "Clouds, containers, and infrastructure as code."
+        entityIds:
+          [plat.aws, plat.azure, plat.google-cloud, tool.docker, tool.kubernetes, tool.terraform]
+      - title: Data and analytics
+        note: "Databases for applications and reporting."
+        entityIds: [tech.postgresql, tech.mongodb]
+      - title: Ecommerce and integration
+        note: "Selling online and taking payments."
+        entityIds: [plat.shopify, int.stripe]
 
   - type: diagram
     id: process

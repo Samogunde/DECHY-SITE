@@ -193,11 +193,13 @@ sections:
       - title: The service behind this
         entityIds: [svc.web-development]
       - title: Related technologies
-        entityIds: [fw.react, lang.typescript, plat.vercel, plat.netlify, plat.contentful, plat.sanity]
+        entityIds:
+          [fw.react, lang.typescript, plat.vercel, plat.netlify, plat.contentful, plat.sanity]
       - title: Solutions
         entityIds: [sol.customer-portal-development, sol.saas-platforms]
       - title: Systems we build
-        entityIds: [workarea.business-web-platforms, workarea.customer-portals, workarea.digital-products]
+        entityIds:
+          [workarea.business-web-platforms, workarea.customer-portals, workarea.digital-products]
       - title: Where it applies
         entityIds: [ind.retail, ind.professional-services, ind.saas]
 

@@ -1,0 +1,221 @@
+id: page.tech-docker
+kind: technology
+locale: en
+path: /cloud/docker/
+parent: /cloud/
+entityId: tool.docker
+title: "Docker and Containerization Services | DECHY"
+description: "Docker from DECHY: packaging software in containers so it runs the same everywhere, with the practices that keep containers safe and small."
+breadcrumbLabel: Docker
+intent:
+  primary: docker containerization services
+  secondary:
+    - docker deployment and development environments
+    - containerizing existing applications
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Docker packages an application and everything it needs into a container, a sealed unit that runs the same way on a laptop, a test server, or in the cloud."
+  problem: "Software that works on one machine fails on another because of small differences in versions and settings, and releases depend on one person's careful steps."
+  audience: "Teams deploying software to servers or the cloud, and developers who lose time to set-up and environment differences."
+  choose: "Use containers when software must run the same in several places or be released often. Skip them for a single simple site on managed hosting."
+  next: "Tell us how your software is run and released today. We will say whether containers would help and how to adopt them without disruption."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Tool
+    headline: Docker and containers
+    lead: "A container packages an application with everything it needs, so it behaves the same wherever it runs. It removes the 'works on my machine' problem and makes releases repeatable. We use Docker for most deployable software, and we say when it is not worth the trouble."
+    support: "This page covers what containers fix, how we use them, and what they do not do."
+    ctas:
+      - { label: Talk to us about containers, href: "/contact/?service=cloud" }
+      - { label: What changes, href: "#difference" }
+    spec:
+      kind: before-after
+      before:
+        title: Without containers
+        text: Each environment is set up by hand.
+        nodes:
+          - title: A developer's laptop has one set of versions
+          - title: The test server has another
+          - title: Production has a third, and a release breaks
+      after:
+        title: With containers
+        text: One package runs everywhere.
+        nodes:
+          - title: The application and its needs travel together
+          - title: The same package runs on laptop, test, and live
+          - title: A release is a known, repeatable step
+      hubLabel: Same everywhere
+    purpose: before-after
+    takeaway: "A container carries an application and its requirements together, so the same package runs on a laptop, a test server, and in production."
+    visualTitle: "Environments set up by hand, and with containers"
+    figureCaption: "This diagram contrasts three environments set up by hand, each with different versions, with one container package that runs the same in all of them."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A sealed box for software
+    answer: "Docker is a tool for building and running containers. A container holds an application plus its libraries and settings, and runs in isolation from other containers on the same machine. It is lighter than a full virtual machine."
+    paragraphs:
+      - "The benefit is predictability. If it ran in the container in testing, it will run in the same container in production, because it is the same package."
+      - "Containers are a means, not a goal. They matter most when software is released often, runs in several places, or is built by several people with different machines."
+
+  - type: chooser
+    id: difference
+    tone: paper
+    label: Where it fits
+    heading: Do you need containers?
+    intro: "They are very common, but not always necessary."
+    question: What are you running?
+    options:
+      - label: A simple site on managed hosting
+        when: "A brochure site or a standard content platform on a host that handles it for you."
+        get: "Probably no containers. The host already provides a repeatable environment."
+        watch: "Adding containers here can be extra complexity for little gain."
+        cta: { label: Ask for an honest view, href: "/contact/?service=cloud" }
+      - label: A custom application
+        when: "A web application or API that you or a team release regularly."
+        get: "Containers give each release the same package from the developer's machine to production."
+        watch: "Invest in the build pipeline, or the benefit is lost."
+        cta: { label: Plan containerization, href: "/contact/?service=cloud" }
+      - label: Many services
+        when: "Several applications, several teams, and a need to run and scale them together."
+        get: "Containers plus an orchestrator such as [Kubernetes](ref:tool.kubernetes), if the scale justifies it."
+        watch: "Orchestration is a large step. Start with simpler container hosting if you can."
+        cta: { label: Plan a platform, href: "/contact/?service=cloud" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: Containers compared with other ways of deploying
+    caption: Containers compared with other ways of running software
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Containers
+        - "Applications released often or run in several places."
+        - "A new skill, and a build process to maintain."
+      - - Virtual machines
+        - "Whole systems that must be isolated, or older software."
+        - "Heavier, and slower to start and update."
+      - - Platform hosting without containers
+        - "Standard applications on a host that handles the environment."
+        - "Less control over the environment."
+      - - Functions on demand
+        - "Short, event-driven pieces of code."
+        - "Awkward for long-running work."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Where containers help most
+    items:
+      - title: A web application released every week
+        body: "The same package passes through testing and goes live, so what was tested is what runs."
+      - title: A team with different laptops
+        body: "A new developer starts the whole application locally with one command, and gets the same setup as everyone else."
+      - title: Scheduled and background jobs
+        body: "Reports and data processing run in the same controlled environment as the application."
+      - title: A move between hosts
+        body: "A packaged application is easier to move from a server to a managed cloud service, or between clouds."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Docker
+    columns:
+      - title: Package
+        items:
+          - "Containerizing existing applications."
+          - "Small, secure images with clear build steps."
+      - title: Develop
+        items:
+          - "Local environments that start with one command."
+          - "Matching test and live set-ups."
+      - title: Release
+        items:
+          - "Pipelines that build, test, and deploy containers."
+          - "Safe rollouts and quick rollbacks."
+      - title: Run
+        items:
+          - "Hosting on managed container services."
+          - "Monitoring and updates."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: What containers do not do
+    paragraphs:
+      - "A container does not make an application secure, fast, or well designed. It only makes it portable and repeatable. A badly built container is just a portable problem."
+      - "We build images from trusted bases, keep them small, scan them for known flaws, and avoid putting secrets inside them."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build container images."
+    panels:
+      - title: Images
+        paragraphs:
+          - "We use multi-stage builds to keep final images small, pin base image versions, run as a non-root user, and scan images for known vulnerabilities in the pipeline."
+      - title: Configuration
+        items:
+          - "Settings through environment variables, and secrets from a secrets manager, never baked into images."
+          - "Health checks and graceful shutdown so releases do not drop requests."
+      - title: Delivery
+        items:
+          - "Images built once in a pipeline such as [GitHub Actions](ref:tool.github-actions), and promoted unchanged from testing to production."
+          - "Local environments with Compose so new developers are productive on the first day."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Docker
+    items:
+      - q: Is a container the same as a virtual machine?
+        a: "No. A virtual machine includes a whole operating system. Containers share the host's and are much lighter, which is why they start fast."
+      - q: Do we need Kubernetes as well?
+        a: "Not usually at first. Many applications run well on a managed container service. Kubernetes becomes useful at larger scale."
+      - q: Can you containerize our existing application?
+        a: "Usually, yes. We assess how it is built and configured, then package it and test it in a copy of your environment."
+      - q: Are containers secure?
+        a: "They help isolate applications, but security depends on how images are built and run. We follow practices that reduce risk and scan regularly."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Docker across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Related technologies
+        entityIds:
+          [tool.kubernetes, tool.terraform, tool.github-actions, plat.aws, plat.google-cloud]
+      - title: Related services
+        entityIds: [svc.software-development, svc.cybersecurity]
+      - title: Solutions
+        entityIds: [sol.cloud-migration, sol.legacy-system-modernization]
+      - title: Systems we build
+        entityIds: [workarea.devops-infrastructure, workarea.cloud-platforms]
+      - title: Where it applies
+        entityIds: [ind.saas, ind.technology, ind.telecommunications]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us how your software is released
+    body: "Describe how it runs and how a release happens today. We will say whether containers would help and how to adopt them without disruption."
+    primary: { label: Talk to DECHY about Docker, href: "/contact/?service=cloud" }

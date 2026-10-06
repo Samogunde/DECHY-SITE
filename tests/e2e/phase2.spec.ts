@@ -29,8 +29,8 @@ test.describe("phase 2 site-wide contract", () => {
     }
   });
 
-  test("there are 53 pages: 15 services, 4 hubs, 25 Work Areas, and the rest", async () => {
-    expect(PAGES).toHaveLength(53);
+  test("there are 85 pages: 15 services, 4 hubs, 25 Work Areas, 32 technology pages, and the rest", async () => {
+    expect(PAGES).toHaveLength(85);
     expect(PAGES.filter((p) => p.kind === "service")).toHaveLength(15);
     expect(areas).toHaveLength(25);
     expect(PAGES.filter((p) => p.kind === "hub" || p.kind === "work-hub")).toHaveLength(4);

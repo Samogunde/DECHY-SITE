@@ -1,0 +1,233 @@
+id: page.tech-postgresql
+kind: technology
+locale: en
+path: /data-analytics/postgresql/
+parent: /data-analytics/
+entityId: tech.postgresql
+title: "PostgreSQL Database Services | DECHY"
+description: "PostgreSQL from DECHY: designing, running, and tuning databases for applications and reporting, with sound structure, backups, and honest advice."
+breadcrumbLabel: PostgreSQL
+intent:
+  primary: postgresql database services
+  secondary:
+    - postgresql database design and tuning
+    - postgresql migration and operations
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "PostgreSQL is a free, open-source relational database known for reliability, rich features, and correctness, widely used behind business applications and reporting."
+  problem: "Databases that were never designed carefully become slow, inconsistent, and risky, and nobody is sure the backups work."
+  audience: "Teams building applications that need a dependable database, and owners of databases that have become slow or fragile."
+  choose: "Choose PostgreSQL as the default for most business applications. Choose something else when the data or workload clearly calls for it."
+  next: "Describe the data and what depends on it. We will review or design the database and say what to fix first."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Database
+    headline: PostgreSQL database services
+    lead: "PostgreSQL is our usual starting point for a business database. It is dependable, widely understood, and flexible enough to handle most applications and a good deal of reporting. We design it carefully, run it safely, and tell you when a different kind of database fits better."
+    support: "This page covers why PostgreSQL is a sound default, what good design involves, and when to look elsewhere."
+    ctas:
+      - { label: Talk to us about your database, href: "/contact/?service=data-analytics" }
+      - { label: When it is the right choice, href: "#choice" }
+    spec:
+      kind: hub
+      center:
+        title: PostgreSQL
+        text: One dependable database, many jobs.
+      spokes:
+        - title: Application data
+          text: Customers, orders, and records with strict rules.
+        - title: Reporting
+          text: Queries that answer business questions.
+        - title: Search
+          text: Built-in text search for many needs.
+        - title: Flexible data
+          text: Documents stored alongside tables.
+        - title: Location data
+          text: Maps and distances through extensions.
+        - title: Vectors
+          text: Search by meaning for AI features.
+    purpose: system
+    takeaway: "PostgreSQL covers application data, reporting, search, flexible documents, location data, and vector search in one dependable database."
+    visualTitle: "The jobs PostgreSQL can do"
+    figureCaption: "This diagram shows PostgreSQL at the center with six jobs around it: application data, reporting, search, flexible data, location data, and vector search."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A database that keeps its promises
+    answer: "PostgreSQL is an open-source relational database. It stores data in tables, enforces rules about what is allowed, and guarantees that a change is either fully saved or not saved at all, even if the server fails halfway."
+    paragraphs:
+      - "That strictness is the point. When money, orders, or customer records are involved, you want the database to refuse bad data and never leave things half-changed."
+      - "It is also unusually capable. Beyond tables, it can store documents, search text, handle location data, and support the vector search that AI features use, which often removes the need for a second database."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: Is PostgreSQL the right database?
+    intro: "It is a strong default, and not the answer to everything."
+    question: What does the data look like?
+    options:
+      - label: Structured business data
+        when: "Customers, orders, invoices, and records related to each other."
+        get: "PostgreSQL is usually the best starting point, with strong rules and mature tools."
+        watch: "Design the structure with care, since changing it later is harder."
+        cta: { label: Plan a database, href: "/contact/?service=data-analytics" }
+      - label: Very flexible documents
+        when: "Records that vary a lot, with little relation between them."
+        get: "A document database such as [MongoDB](ref:tech.mongodb) can suit, though PostgreSQL's document support is often enough."
+        watch: "Flexibility early can mean confusion later."
+        cta: { label: Compare document databases, href: "/contact/?service=data-analytics" }
+      - label: Huge analytical workloads
+        when: "Many terabytes queried for analysis, not for running an application."
+        get: "A data warehouse such as [BigQuery](ref:tech.bigquery) or [Snowflake](ref:plat.snowflake), fed from PostgreSQL."
+        watch: "Do not strain an application database with heavy reporting."
+        cta: { label: Plan a warehouse, href: "/contact/?service=data-analytics" }
+
+  - type: callout
+    id: managed
+    tone: white
+    variant: note
+    title: Managed or self-run?
+    paragraphs:
+      - "For most organizations a managed PostgreSQL service is the better choice. Backups, patches, and failover are handled for you, and the extra cost is usually less than the time it replaces."
+      - "Self-running makes sense when you need control the managed services do not offer, or when cost at scale justifies a team to run it. We say which case you are in."
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: PostgreSQL compared with other databases
+    caption: PostgreSQL compared with other databases
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - PostgreSQL
+        - "Most business applications, with strict rules and rich features."
+        - "Needs tuning at very large scale."
+      - - "[MySQL](ref:tech.mysql)"
+        - "Common web applications and many content platforms."
+        - "Fewer advanced features."
+      - - "[MongoDB](ref:tech.mongodb)"
+        - "Highly varied documents and rapid early changes."
+        - "Weaker guarantees on relationships between records."
+      - - "[SQL Server](ref:tech.sql-server)"
+        - "Organizations on Microsoft platforms."
+        - "Licensing cost and tighter platform ties."
+      - - "[SQLite](ref:tech.sqlite)"
+        - "Small, local, or embedded data."
+        - "Not designed for many users at once."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How we work
+    heading: Designing or fixing a database
+    steps:
+      - title: Understand the data
+        body: "We learn what the data represents, how it relates, and what the application does with it."
+        artifacts: [Data model sketch, Access patterns]
+      - title: Design the structure
+        body: "We define tables, keys, and rules that prevent bad data, and plan for how it will grow."
+        artifacts: [Schema, Constraints]
+      - title: Tune what is slow
+        body: "We find the slow queries, add indexes where they help, and rewrite what indexes cannot fix."
+        artifacts: [Query review, Performance results]
+      - title: Make it recoverable
+        body: "We set up backups and restore tests, so recovery is proven and not assumed."
+        artifacts: [Backup plan, Restore test]
+      - title: Keep it healthy
+        body: "We monitor size, speed, and errors, and plan upgrades."
+        artifacts: [Monitoring, Upgrade plan]
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with PostgreSQL
+    columns:
+      - title: Design
+        items:
+          - "Schemas that prevent bad data."
+          - "Models that fit how the application works."
+      - title: Tune
+        items:
+          - "Slow-query reviews and indexing."
+          - "Fixing locks and wasteful patterns."
+      - title: Run
+        items:
+          - "Managed and self-run set-ups."
+          - "Backups, restore tests, and monitoring."
+      - title: Move
+        items:
+          - "Migrations from other databases."
+          - "Upgrades with little downtime."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we design and run PostgreSQL."
+    panels:
+      - title: Design
+        paragraphs:
+          - "We normalize sensibly, use constraints and foreign keys, choose appropriate types, and use JSON columns for genuinely variable data, not as a shortcut around design."
+      - title: Performance
+        items:
+          - "Indexes chosen from real query plans, and statistics kept current."
+          - "Connection pooling, and read replicas for reporting load."
+          - "Partitioning for very large tables."
+      - title: Operations
+        items:
+          - "Managed services on [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud), or self-run with automated backups and point-in-time recovery."
+          - "Extensions such as PostGIS for location data and pgvector for vector search."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about PostgreSQL
+    items:
+      - q: Is PostgreSQL free?
+        a: "The software is free and open source. You pay for the servers or managed service that run it, and for the time to look after it."
+      - q: Should we run it ourselves or use a managed service?
+        a: "Managed services remove most of the routine work and are our usual choice. Self-running makes sense where control or cost requires it, and we plan it carefully."
+      - q: Can PostgreSQL handle our growth?
+        a: "It scales a long way with good design, indexing, and replicas. Very large analytical workloads are usually better in a warehouse."
+      - q: Can you migrate us from another database?
+        a: "Yes. We plan the move, test with copies of real data, and cut over with a way back."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: PostgreSQL across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.data-analytics]
+      - title: Alternatives
+        entityIds: [tech.mysql, tech.mongodb, tech.sql-server]
+      - title: Related technologies
+        entityIds: [tech.bigquery, plat.snowflake, lang.python, plat.aws]
+      - title: Related services
+        entityIds: [svc.software-development, svc.cloud]
+      - title: Solutions
+        entityIds: [sol.data-systems, sol.business-dashboards]
+      - title: Systems we build
+        entityIds: [workarea.data-analytics, workarea.custom-software-systems]
+      - title: Where it applies
+        entityIds: [ind.finance, ind.logistics, ind.healthcare]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the data
+    body: "Describe what the data represents and what depends on it. We will review or design the database and say what to fix first."
+    primary: { label: Talk to DECHY about PostgreSQL, href: "/contact/?service=data-analytics" }

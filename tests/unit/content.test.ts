@@ -101,7 +101,8 @@ describe("URL architecture", () => {
     );
     expect(publishedPath(node("svc.web-development"), registry)).toBe("/web-development/");
     expect(publishedPath(node("workarea.mobile-apps"), registry)).toBe("/work/areas/mobile-apps/");
-    expect(publishedPath(node("lang.python"), registry)).toBeNull();
+    expect(publishedPath(node("lang.python"), registry)).toBe("/software-development/python/");
+    expect(publishedPath(node("lang.go"), registry)).toBeNull();
     expect(publishedPath(node("sol.ai-agents"), registry)).toBeNull();
   });
 
@@ -124,9 +125,9 @@ describe("URL architecture", () => {
 });
 
 describe("pages and graph", () => {
-  it("has exactly the 53 pages of Phases 1 and 2", () => {
+  it("has exactly the 85 pages of Phases 1 to 3", () => {
     const paths = registry.pages.map((p) => p.path);
-    expect(paths).toHaveLength(53);
+    expect(paths).toHaveLength(85);
     for (const p of [
       "/",
       "/contact/",

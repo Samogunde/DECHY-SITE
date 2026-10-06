@@ -1,0 +1,225 @@
+id: page.tech-aws
+kind: technology
+locale: en
+path: /cloud/aws/
+parent: /cloud/
+entityId: plat.aws
+title: "AWS Cloud Services and Architecture | DECHY"
+description: "AWS work from DECHY: designing, building, and running applications on Amazon Web Services, with sensible structure, cost control, and security."
+breadcrumbLabel: AWS
+intent:
+  primary: aws cloud services
+  secondary:
+    - aws architecture and migration
+    - aws cost optimization
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "AWS, short for Amazon Web Services, is the largest cloud platform, offering rented servers, databases, storage, and hundreds of other services billed by use."
+  problem: "AWS offers so many services that projects get over-built, bills surprise people, and security settings are left too open."
+  audience: "Organizations moving to or already running on AWS, and teams whose bill, security, or structure has become hard to understand."
+  choose: "Pick a small set of services that fit the workload, separate environments, set budgets from the start, and review security before launch."
+  next: "Tell us what you run or plan to run. We will propose a simple AWS design, a rough monthly cost, and the risks to manage."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Cloud platform
+    headline: AWS cloud services
+    lead: "AWS has a service for almost everything, which is both its strength and its trap. We use it to build systems that are simple enough to understand, secured from the start, and watched for cost, and we say when another cloud or a simpler host would do."
+    support: "This page covers how we structure an AWS project, what drives the bill, and where AWS fits among the options."
+    ctas:
+      - { label: Talk to us about AWS, href: "/contact/?service=cloud" }
+      - { label: How we lay it out, href: "#layout" }
+    spec:
+      kind: layers
+      layerLabel: Layers of a typical AWS set-up
+      layers:
+        - title: Edge
+          text: Content delivery and protection in front of the site.
+        - title: Application
+          text: Servers, containers, or functions running your software.
+        - title: Data
+          text: Databases and storage, private and backed up.
+        - title: Network and access
+          text: Private networks and carefully limited permissions.
+        - title: Accounts and cost control
+          text: Separate accounts, budgets, and alerts.
+    purpose: architecture
+    takeaway: "A well-run AWS set-up puts protection at the edge, applications and data in private layers, and accounts and budgets around everything."
+    visualTitle: "The layers of a typical AWS set-up"
+    figureCaption: "This diagram shows five layers of a typical AWS set-up, from the edge down to the separate accounts and budgets that hold it together."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A very large menu
+    answer: "AWS is a cloud platform from Amazon. You rent computing, storage, databases, networking, and many specialist services, and pay for what you use instead of buying hardware."
+    paragraphs:
+      - "The breadth means there are several ways to do almost anything, such as running code on a server, in a container, or as a function triggered by an event. The right choice depends on the workload, the team, and the budget."
+      - "It also means the defaults are not always safe or cheap. Good AWS work is mostly about restraint: choosing few services, closing access by default, and watching the bill."
+
+  - type: chooser
+    id: layout
+    tone: paper
+    label: Where it fits
+    heading: Which way should this workload run on AWS?
+    intro: "The three common options trade control against effort. We recommend the simplest that fits."
+    question: How should the application run?
+    options:
+      - label: Managed platform
+        when: "A web app or API with ordinary needs, and a small team."
+        get: "A managed service that runs your code or container, with scaling and patching handled for you."
+        watch: "Less control over the underlying machines, which is usually fine."
+        cta: { label: Plan a managed set-up, href: "/contact/?service=cloud" }
+      - label: Functions on demand
+        when: "Spiky or event-driven work, such as processing uploads or running scheduled jobs."
+        get: "Code that runs only when triggered, and costs nothing when idle."
+        watch: "Long-running or latency-sensitive work can be awkward, and many small functions can be hard to follow."
+        cta: { label: Plan an event-driven set-up, href: "/contact/?service=cloud" }
+      - label: Containers at scale
+        when: "Many services, several teams, and a need for fine control."
+        get: "Containers run on a managed cluster service, with scaling and deployment under your control."
+        watch: "More to learn and run. Do not start here unless the scale demands it."
+        cta: { label: Plan a container platform, href: "/contact/?service=cloud" }
+
+  - type: table
+    id: compare
+    tone: white
+    label: Alternatives
+    heading: AWS compared with other clouds
+    caption: AWS compared with other cloud options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - AWS
+        - "Broad needs, mature tooling, and wide availability of skills."
+        - "Many choices, and pricing that needs watching."
+      - - "[Azure](ref:plat.azure)"
+        - "Organizations centered on Microsoft tools and identity."
+        - "Best value inside the Microsoft ecosystem."
+      - - "[Google Cloud](ref:plat.google-cloud)"
+        - "Data, analytics, and AI-heavy workloads."
+        - "Smaller range of services than AWS."
+      - - "Simpler hosts"
+        - "Small sites and applications with modest needs."
+        - "Fewer services if the project grows."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How we work
+    heading: Putting a workload on AWS
+    steps:
+      - title: Understand the workload
+        body: "We learn what runs, how much traffic it has, what data it holds, and what must never go down."
+        artifacts: [Workload summary, Risk notes]
+      - title: Design the smallest sound set-up
+        body: "We propose a simple design with a cost estimate and the security controls it needs."
+        artifacts: [Architecture sketch, Monthly cost range]
+      - title: Build as code
+        body: "We describe the infrastructure in code, so it can be reviewed, repeated, and restored."
+        artifacts: [Infrastructure code, Separate test and live environments]
+      - title: Migrate or launch
+        body: "We move in stages, test, and keep a way back until the new set-up has proved itself."
+        artifacts: [Migration plan, Cut-over checklist]
+      - title: Watch and tune
+        body: "We monitor performance and cost, and revisit the design as usage changes."
+        artifacts: [Dashboards, Monthly cost review]
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with AWS
+    columns:
+      - title: Design
+        items:
+          - "Architecture matched to the workload and team."
+          - "Cost estimates before you commit."
+      - title: Build and migrate
+        items:
+          - "New environments, built as code."
+          - "Staged moves from servers or other hosts."
+      - title: Secure
+        items:
+          - "Account structure, access limits, and encryption."
+          - "Backups that are tested by restoring."
+      - title: Run
+        items:
+          - "Monitoring, alerts, and on-call arrangements."
+          - "Regular reviews of cost and design."
+
+  - type: callout
+    id: bill
+    tone: white
+    variant: note
+    title: The bill is a design decision
+    paragraphs:
+      - "On AWS, most cost surprises trace back to design choices made early: always-on servers that could be switched off, data copied between regions, or storage that nobody cleans up. They are cheap to avoid at the start and expensive to untangle later."
+      - "We estimate cost during design, tag resources so spending can be traced to a project, and review the bill every month with the team that owns it."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the practices we apply on AWS."
+    panels:
+      - title: Accounts and access
+        paragraphs:
+          - "We use separate accounts for production and testing under an organization, single sign-on for people, roles instead of long-lived keys, and least-privilege policies reviewed regularly."
+      - title: Infrastructure as code
+        items:
+          - "Environments defined with [Terraform](ref:tool.terraform) or the platform's own tooling, reviewed like application code."
+          - "Containers built with [Docker](ref:tool.docker), on managed services before a full cluster."
+      - title: Cost and operations
+        items:
+          - "Budgets and alerts from the first day, and tagging so costs can be traced to a project."
+          - "Metrics, logs, and alarms for what users feel, such as errors and slow pages."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about AWS
+    items:
+      - q: Is AWS the best cloud?
+        a: "It is a strong, mature choice with a very wide range of services. Whether it is the best for you depends on your workload, your existing tools, and your team's skills."
+      - q: How do we avoid a surprise bill?
+        a: "Budgets and alerts from day one, right-sized resources, switching off what is idle, and a monthly review. We estimate cost before building."
+      - q: Can you move us from our own servers?
+        a: "Yes, in stages. We usually move the least risky parts first, test thoroughly, and keep the old system available until the move has proved itself."
+      - q: Who looks after it afterwards?
+        a: "That is agreed in advance. You, we, or a mix can handle monitoring, updates, and incident response."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: AWS across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Alternatives
+        entityIds: [plat.azure, plat.google-cloud, plat.digitalocean]
+      - title: Related technologies
+        entityIds: [tool.terraform, tool.docker, tool.kubernetes, tech.postgresql]
+      - title: Related services
+        entityIds: [svc.cybersecurity, svc.software-development]
+      - title: Solutions
+        entityIds: [sol.cloud-migration, sol.legacy-system-modernization]
+      - title: Systems we build
+        entityIds: [workarea.cloud-platforms, workarea.devops-infrastructure]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.media, ind.saas]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you run
+    body: "Describe the workload, the traffic, and what must never go down. We will propose a simple AWS design with a rough monthly cost and the risks to manage."
+    primary: { label: Talk to DECHY about AWS, href: "/contact/?service=cloud" }

@@ -197,7 +197,8 @@ sections:
       - title: Solutions
         entityIds: [sol.ai-knowledge-systems, sol.ai-agents]
       - title: Systems we build
-        entityIds: [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
+        entityIds:
+          [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
       - title: Where it applies
         entityIds: [ind.legal, ind.finance, ind.pharmaceuticals]
 

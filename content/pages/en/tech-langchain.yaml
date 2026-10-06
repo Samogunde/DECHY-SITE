@@ -193,13 +193,15 @@ sections:
       - title: The service behind this
         entityIds: [svc.ai]
       - title: Related technologies
-        entityIds: [prov.openai, prov.anthropic-claude, prov.google-gemini, lang.python, tech.pinecone]
+        entityIds:
+          [prov.openai, prov.anthropic-claude, prov.google-gemini, lang.python, tech.pinecone]
       - title: Alternatives
         entityIds: [fw.llamaindex, fw.semantic-kernel]
       - title: Solutions
         entityIds: [sol.ai-knowledge-systems, sol.ai-agents]
       - title: Systems we build
-        entityIds: [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
+        entityIds:
+          [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
       - title: Where it applies
         entityIds: [ind.legal, ind.professional-services, ind.insurance]
 

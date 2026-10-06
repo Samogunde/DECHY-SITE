@@ -207,8 +207,15 @@ sections:
         entityIds: [fw.nextjs, lang.typescript, tech.react-native, fw.vue, fw.angular]
       - title: Related services
         entityIds: [svc.ui-ux, svc.software-development]
+      - title: Solutions
+        entityIds: [sol.saas-platforms, sol.internal-business-software]
       - title: Systems we build
-        entityIds: [workarea.customer-portals, workarea.internal-business-tools, workarea.operations-platforms]
+        entityIds:
+          [
+            workarea.customer-portals,
+            workarea.internal-business-tools,
+            workarea.operations-platforms,
+          ]
       - title: Where it applies
         entityIds: [ind.logistics, ind.finance, ind.saas]
 

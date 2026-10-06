@@ -233,7 +233,12 @@ sections:
       - title: Solutions
         entityIds: [sol.internal-business-software, sol.workflow-automation]
       - title: Systems we build
-        entityIds: [workarea.internal-business-tools, workarea.workflow-automation, workarea.operations-platforms]
+        entityIds:
+          [
+            workarea.internal-business-tools,
+            workarea.workflow-automation,
+            workarea.operations-platforms,
+          ]
       - title: Where it applies
         entityIds: [ind.construction, ind.media, ind.nonprofits]
 

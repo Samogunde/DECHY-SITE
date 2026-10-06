@@ -1,0 +1,223 @@
+id: page.tech-mongodb
+kind: technology
+locale: en
+path: /data-analytics/mongodb/
+parent: /data-analytics/
+entityId: tech.mongodb
+title: "MongoDB Database Services | DECHY"
+description: "MongoDB from DECHY: document databases for flexible, fast-changing data, with honest advice on when MongoDB fits and when a relational database is safer."
+breadcrumbLabel: MongoDB
+intent:
+  primary: mongodb database services
+  secondary:
+    - mongodb data modeling
+    - mongodb performance and migration
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "MongoDB is a document database that stores each record as a flexible, self-contained document, which suits data whose shape varies or changes often."
+  problem: "Data that varies from record to record is awkward to force into fixed tables, but unstructured storage without design becomes a mess."
+  audience: "Teams building products with varied or fast-changing data, and owners of MongoDB systems that have become slow or inconsistent."
+  choose: "Choose MongoDB when records are naturally self-contained and vary in shape. Choose a relational database when data is highly connected and rules matter most."
+  next: "Describe the data and how the application reads it. We will say whether MongoDB suits it and how to model it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Database
+    headline: MongoDB database services
+    lead: "MongoDB stores each record as a document, with the details that belong together kept together. That suits data that varies in shape, or changes as a product evolves. It also demands good modeling, or flexibility turns into confusion. We help get that right."
+    support: "This page covers where MongoDB fits, how data is modeled in it, and when a relational database is safer."
+    ctas:
+      - { label: Talk to us about MongoDB, href: "/contact/?service=data-analytics" }
+      - { label: Document or relational?, href: "#choice" }
+    spec:
+      kind: before-after
+      before:
+        title: A relational design
+        text: A product with varied details is split across tables.
+        nodes:
+          - title: A products table with many empty columns
+          - title: Extra tables for each kind of detail
+          - title: Joins needed to show one product
+      after:
+        title: A document design
+        text: Each product is one document with its own details.
+        nodes:
+          - title: One document per product
+          - title: Different kinds have different fields
+          - title: One read returns the whole product
+      hubLabel: Fits the data
+    purpose: before-after
+    takeaway: "A document database can hold varied records as single documents, so one read returns a whole product without joining many tables."
+    visualTitle: "The same product catalog, modeled two ways"
+    figureCaption: "This diagram contrasts a catalog with varied details split across many tables with the same catalog stored as one document per product."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Records as documents
+    answer: "MongoDB is a document database. Instead of rows in tables, it stores documents, similar to JSON, which can contain nested details and lists. Documents in the same collection can have different fields."
+    paragraphs:
+      - "That fits data like product catalogs with different attributes per category, content with varied structure, or event records. A whole record can be read or written in one step."
+      - "The flexibility has a price. Relationships between records are looser than in a relational database, so consistency has to be designed for deliberately."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Systems that suit MongoDB
+    items:
+      - title: A catalog with varied product types
+        body: "Each category carries its own attributes, and a product page needs one read to show everything."
+      - title: Content and profile stores
+        body: "Articles, user profiles, and settings that differ from one record to the next."
+      - title: Event and activity records
+        body: "Logs of what happened, written quickly and read in bulk later."
+      - title: A product in early development
+        body: "Data shapes still changing week by week, where rigid tables would slow the team down."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: Is MongoDB the right database?
+    intro: "The question is about the shape of the data and what matters most."
+    question: What describes your data best?
+    options:
+      - label: Varied, self-contained records
+        when: "Catalogs, content, profiles, or events where records differ and are mostly read as a whole."
+        get: "MongoDB fits naturally, and development is quick."
+        watch: "Model for how the data is read, and keep documents to a sensible size."
+        cta: { label: Plan a document model, href: "/contact/?service=data-analytics" }
+      - label: Highly connected data with strict rules
+        when: "Orders, payments, and records that must always agree."
+        get: "A relational database such as [PostgreSQL](ref:tech.postgresql), which enforces relationships and rules."
+        watch: "Using a document database here shifts the burden of consistency to your code."
+        cta: { label: Compare with PostgreSQL, href: "/contact/?service=data-analytics" }
+      - label: A mix
+        when: "Core business records plus some flexible content."
+        get: "Often one relational database with document columns, or two databases with clear roles."
+        watch: "Two databases mean two things to run. Keep the split simple."
+        cta: { label: Plan a mixed design, href: "/contact/?service=data-analytics" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: MongoDB compared with other databases
+    caption: MongoDB compared with other databases
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - MongoDB
+        - "Varied documents, fast-changing structure, and read-whole-record patterns."
+        - "Looser relationships, so consistency needs design."
+      - - "[PostgreSQL](ref:tech.postgresql)"
+        - "Connected business data with strict rules, plus flexible columns when needed."
+        - "Less natural for very large, constantly changing documents."
+      - - "[Firestore](ref:tech.firestore)"
+        - "Apps needing live updates with little server work."
+        - "Tied to Google's platform, with its own limits and costs."
+      - - "[DynamoDB](ref:tech.dynamodb)"
+        - "Very high scale with simple access patterns on AWS."
+        - "Needs access patterns known in advance."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with MongoDB
+    columns:
+      - title: Model
+        items:
+          - "Document designs built around how data is read."
+          - "Rules for what goes inside a document and what stays outside."
+      - title: Tune
+        items:
+          - "Indexes and query reviews."
+          - "Fixes for oversized documents and slow aggregations."
+      - title: Run
+        items:
+          - "Managed clusters and self-run set-ups."
+          - "Backups, restore tests, and monitoring."
+      - title: Move
+        items:
+          - "Migrations to and from relational databases."
+          - "Careful cleaning of inconsistent data."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Flexible is not the same as unplanned
+    paragraphs:
+      - "The most common problem with MongoDB is a collection where every document has drifted into a slightly different shape, and no code can rely on any field. The flexibility was used as a reason to skip design."
+      - "We agree the shape of each kind of document, validate it in the database, and plan how it changes over time, so flexibility stays a feature."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we model and run MongoDB."
+    panels:
+      - title: Modeling
+        paragraphs:
+          - "We embed data that is read together and reference data that is shared or grows without bound, keep documents well under size limits, and add schema validation rules."
+      - title: Performance
+        items:
+          - "Indexes chosen from real query patterns, including compound and partial indexes."
+          - "Aggregation pipelines reviewed for memory use."
+          - "Replica sets for availability, and sharding only when data volume demands it."
+      - title: Operations
+        items:
+          - "A managed service in most cases, with encryption, access control, and tested point-in-time recovery."
+          - "Change tracking and migrations for evolving document shapes."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about MongoDB
+    items:
+      - q: Is MongoDB faster than a relational database?
+        a: "For reading whole documents it can be, and for some workloads it scales well. For connected data with rules, a relational database is often as fast and safer."
+      - q: Does MongoDB support transactions?
+        a: "Yes, across multiple documents. They exist, but heavy use of them is a sign that a relational database may suit the data better."
+      - q: Can we move from MongoDB to PostgreSQL or the reverse?
+        a: "Yes. We plan the mapping, test with real data, and cut over with a way back."
+      - q: Is our data safe?
+        a: "Safety depends on configuration. We set up authentication, network limits, encryption, and backups, and test recovery."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: MongoDB across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.data-analytics]
+      - title: Alternatives
+        entityIds: [tech.postgresql, tech.firestore, tech.dynamodb]
+      - title: Related technologies
+        entityIds: [fw.nextjs, lang.typescript, plat.aws]
+      - title: Related services
+        entityIds: [svc.software-development, svc.web-development]
+      - title: Solutions
+        entityIds: [sol.data-systems, sol.saas-platforms]
+      - title: Systems we build
+        entityIds: [workarea.data-analytics, workarea.digital-products]
+      - title: Where it applies
+        entityIds: [ind.media, ind.retail, ind.entertainment]
+
+  - type: cta
+    id: contact-cta
+    heading: Describe your records
+    body: "Describe the records and how the application reads them. We will say whether MongoDB suits them and how to model it."
+    primary: { label: Talk to DECHY about MongoDB, href: "/contact/?service=data-analytics" }

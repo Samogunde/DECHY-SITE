@@ -143,6 +143,25 @@ sections:
       - "Tax, invoicing rules, refund policy, and consumer rights depend on where you sell and what you sell. Stripe offers tools, but the decisions are yours, and your accountant or adviser should confirm them."
       - "Fees and features also change. We check the current terms when we plan, and design so the payment provider could be swapped."
 
+  - type: process
+    id: build
+    tone: white
+    label: How we work
+    heading: How a payment integration is built
+    steps:
+      - title: Map the money flow
+        body: "We trace how a sale should move from checkout to accounting, including refunds and failed payments."
+        artifacts: [Payment flow map, List of cases]
+      - title: Build in test mode
+        body: "We build against Stripe's test environment, with simulated cards and events."
+        artifacts: [Working checkout, Event handling]
+      - title: Reconcile
+        body: "We add a check that compares Stripe's records with yours and flags any difference."
+        artifacts: [Reconciliation job, Alerts]
+      - title: Go live carefully
+        body: "We switch to live mode with a small real transaction, watch the first day, and keep a way back."
+        artifacts: [Launch checklist, First-day review]
+
   - type: technical
     id: technology
     tone: paper
@@ -196,12 +215,13 @@ sections:
       - title: Solutions
         entityIds: [sol.payment-integration, sol.subscription-platforms]
       - title: Systems we build
-        entityIds: [workarea.commerce-systems, workarea.api-integrations, workarea.ecommerce-platforms]
+        entityIds:
+          [workarea.commerce-systems, workarea.api-integrations, workarea.ecommerce-platforms]
       - title: Where it applies
         entityIds: [ind.retail, ind.saas, ind.education]
 
   - type: cta
     id: contact-cta
-    heading: Tell us what you sell
+    heading: Tell us what you charge for
     body: "Describe your products or plans and the systems that need to know about a payment. We will map the flow and the failure cases before anything is built."
     primary: { label: Talk to DECHY about Stripe, href: "/contact/?service=api-integration" }

@@ -76,11 +76,11 @@ describe("similarity control on the shipped pages", () => {
 
 describe("clarity standard on the shipped pages", () => {
   const guided = registry.pages.filter((p) =>
-    ["service", "hub", "company", "work-hub", "work-area"].includes(p.kind),
+    ["service", "hub", "company", "work-hub", "work-area", "technology"].includes(p.kind),
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(47);
+    expect(guided.length).toBe(79);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(
@@ -126,14 +126,16 @@ describe("clarity standard on the shipped pages", () => {
   });
 });
 
-describe("phase 2 scope control", () => {
-  it("builds no pages outside the approved Phase 2 families", () => {
+describe("scope control", () => {
+  it("builds no pages outside the approved families", () => {
     const allowed = [
       /^\/$/,
       /^\/(contact|privacy|cookies|terms|accessibility|services|solutions|technologies|work|company)\/$/,
       /^\/company\/(how-we-work|who-we-work-with)\/$/,
       /^\/work\/areas\/[a-z0-9-]+\/$/,
       /^\/(software-development|ai|automation|api-integration|data-analytics|cloud|cybersecurity|web-development|mobile-app-development|ecommerce|ui-ux|branding|seo-aeo-geo|digital-marketing|consulting)\/$/,
+      // Phase 3: one page per approved technology, under its canonical service
+      /^\/(software-development|ai|automation|api-integration|data-analytics|cloud|web-development|mobile-app-development|ecommerce)\/[a-z0-9-]+\/$/,
     ];
     for (const p of registry.pages)
       expect(
@@ -142,15 +144,10 @@ describe("phase 2 scope control", () => {
       ).toBe(true);
   });
 
-  it("does not create technology, solution, industry, country, resource, or article pages", () => {
-    const forbidden = /^\/(industries|locations|resources|insights|articles|countries)\//;
+  it("does not create solution, industry, country, resource, or article pages", () => {
+    const forbidden =
+      /^\/(solutions|industries|locations|resources|insights|articles|countries)\/./;
     for (const p of registry.pages) expect(forbidden.test(p.path), p.path).toBe(false);
-    for (const s of registry.services)
-      expect(
-        registry.pages.filter((p) => p.path.startsWith(`/${s.slug}/`) && p.path !== `/${s.slug}/`)
-          .length,
-        s.id,
-      ).toBe(0);
   });
 
   it("states no client, metric, award, or office on a Work Area page", () => {

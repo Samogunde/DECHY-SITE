@@ -1,0 +1,229 @@
+id: page.tech-azure
+kind: technology
+locale: en
+path: /cloud/azure/
+parent: /cloud/
+entityId: plat.azure
+title: "Microsoft Azure Cloud Services | DECHY"
+description: "Azure work from DECHY: building and running applications on Microsoft Azure, with Microsoft identity and tools in mind, plus migration, security, and cost control."
+breadcrumbLabel: Azure
+intent:
+  primary: microsoft azure cloud services
+  secondary:
+    - azure migration and architecture
+    - azure for microsoft 365 organizations
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Azure is Microsoft's cloud platform, offering rented servers, databases, and many other services that work closely with Microsoft 365, Windows, and Microsoft's identity tools."
+  problem: "Organizations built around Microsoft tools want cloud applications that share sign-in, security, and data with what they already use."
+  audience: "Organizations that run on Microsoft 365, Windows servers, or Microsoft databases, and teams building on .NET or Microsoft's data tools."
+  choose: "Azure is a strong choice when your people, identity, and data already live in Microsoft's world. Compare it with others when they do not."
+  next: "Tell us which Microsoft tools you rely on and what you want to run in the cloud. We will propose an Azure design and a cost range."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Cloud platform
+    headline: Microsoft Azure
+    lead: "Azure is the cloud that fits most naturally into a Microsoft organization: the same sign-in, the same security tooling, and close ties to Microsoft 365 and Windows. We build and run applications on it, and we compare it with other clouds where the fit is less obvious."
+    support: "This page covers where Azure fits, how it connects to Microsoft's other tools, and how we run it."
+    ctas:
+      - { label: Talk to us about Azure, href: "/contact/?service=cloud" }
+      - { label: How it connects, href: "#connect" }
+    spec:
+      kind: hub
+      center:
+        title: Your Azure environment
+        text: Applications and data on Microsoft's cloud.
+      spokes:
+        - title: Microsoft Entra ID
+          text: One sign-in for staff and applications.
+        - title: Microsoft 365
+          text: Email, files, and teamwork tools your people use.
+        - title: Databases
+          text: SQL Server and other data services.
+        - title: Windows and servers
+          text: Existing systems moved or connected.
+        - title: Developer tools
+          text: Code, builds, and releases.
+        - title: Security and monitoring
+          text: Central visibility across the estate.
+    purpose: relationship
+    takeaway: "Azure connects to Microsoft's identity, productivity, database, server, developer, and security tools, which is the reason many organizations choose it."
+    visualTitle: "How Azure connects to the rest of a Microsoft organization"
+    figureCaption: "This diagram shows an Azure environment at the center with six connected areas: Entra ID, Microsoft 365, databases, Windows servers, developer tools, and security."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Microsoft's cloud, built to join its other tools
+    answer: "Azure is Microsoft's cloud platform. Like other clouds it rents computing, storage, and databases by use. Its distinctive strength is how closely it works with Microsoft's own identity, productivity, and developer tools."
+    paragraphs:
+      - "For an organization that already signs everyone in through Microsoft, applications on Azure can use the same accounts, groups, and security policies. That removes a whole layer of work and a whole class of mistakes."
+      - "It is also a natural home for applications built on Microsoft's own technologies. For other workloads it competes on price and features with the other large clouds, and we compare them honestly."
+
+  - type: diagram
+    id: connect
+    tone: paper
+    label: Where it fits
+    heading: Moving Windows-based systems to Azure
+    intro: "A common path for organizations with servers in an office or data centre."
+    spec:
+      kind: flow
+      steps:
+        - title: Inventory
+          text: Servers, databases, and who depends on them.
+        - title: Decide the route
+          text: Move as is, update, or replace each system.
+        - title: Prepare the foundation
+          text: Network, identity, and security set up first.
+        - title: Move in stages
+          text: Least risky first, testing each.
+        - title: Run and improve
+          text: Monitor, optimize cost, and retire the old servers.
+    purpose: process
+    takeaway: "A move to Azure takes stock first, decides a route per system, prepares the foundation, moves in stages, and then retires the old servers."
+    caption: "This diagram shows five steps in moving systems to Azure, from taking inventory to running the new set-up and retiring the old servers."
+
+  - type: table
+    id: compare
+    tone: white
+    label: Alternatives
+    heading: Azure compared with other clouds
+    caption: Azure compared with other cloud options
+    columns: [Consideration, Where Azure helps, Where to check]
+    rows:
+      - - Microsoft identity and tools
+        - "Native links to Entra ID and Microsoft 365."
+        - "Little advantage if you do not use them."
+      - - Windows and SQL Server workloads
+        - "Strong support, including licensing options."
+        - "Licensing can be complex, so we model the costs."
+      - - Other workloads
+        - "A broad range of services comparable to other clouds."
+        - "Compare price and skills against [AWS](ref:plat.aws) and [Google Cloud](ref:plat.google-cloud)."
+      - - Hybrid set-ups
+        - "Good tools for connecting offices and data centres."
+        - "Network design needs care."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Azure
+    columns:
+      - title: Design
+        items:
+          - "Architecture matched to your Microsoft estate."
+          - "Cost and licensing estimates."
+      - title: Build and migrate
+        items:
+          - "New applications on Azure services."
+          - "Staged moves of servers and databases."
+      - title: Secure
+        items:
+          - "Sign-in and access tied to your Microsoft accounts."
+          - "Policies and monitoring across subscriptions."
+      - title: Run
+        items:
+          - "Releases through [Azure DevOps](ref:tech.azure-devops) (Microsoft's tool for planning and releasing software) or [GitHub Actions](ref:tool.github-actions)."
+          - "Monitoring, alerts, and cost reviews."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Workloads that suit Azure
+    items:
+      - title: Business applications for Microsoft organizations
+        body: "Internal tools and portals that use staff sign-in and share data with Microsoft 365."
+      - title: Moving Windows and SQL Server systems
+        body: "Servers and databases lifted from an office or data centre, then improved in stages."
+      - title: Applications built on Microsoft technologies
+        body: "Software written in .NET, hosted with the tools its developers already know."
+      - title: Hybrid arrangements
+        body: "Some systems staying on site while others move, joined by a secure network."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Licensing needs attention
+    paragraphs:
+      - "Microsoft's licensing can make the same workload cost very different amounts depending on what you already own and how you run it. A design that ignores licensing can be wrong by a wide margin."
+      - "We model costs with your existing licences in mind, and confirm current terms with Microsoft or your reseller, since they change."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the practices we use on Azure."
+    panels:
+      - title: Structure and governance
+        paragraphs:
+          - "We organize subscriptions under management groups, apply policy and role-based access consistently, and describe environments in code with [Terraform](ref:tool.terraform) or Bicep."
+      - title: Running applications
+        items:
+          - "Managed app services and [Azure Functions](ref:tech.azure-functions) for most workloads, containers on a managed cluster when scale demands it."
+          - "Managed databases, including [Azure SQL](ref:tech.azure-sql), with backups and private networking."
+      - title: Operations
+        items:
+          - "Monitoring with metrics, logs, and alerts tied to what users feel."
+          - "Budgets and cost reviews by resource group."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Azure
+    items:
+      - q: Do we need Azure if we use Microsoft 365?
+        a: "Not necessarily. Microsoft 365 runs without it. Azure becomes worthwhile when you have applications, servers, or data to host and want them to share your Microsoft sign-in."
+      - q: Can you move our Windows servers?
+        a: "Yes, in stages, after an inventory. Some are best moved as they are, some updated, and some replaced."
+      - q: Is Azure only for .NET?
+        a: "No. It runs many languages and frameworks, including Python, Java, and JavaScript, as well as Microsoft's own."
+      - q: Who manages it day to day?
+        a: "That is agreed at the start. We can run it, support your team, or hand it over with documentation."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Azure across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Alternatives
+        entityIds: [plat.aws, plat.google-cloud]
+      - title: Related technologies
+        entityIds:
+          [
+            tech.azure-devops,
+            tech.azure-functions,
+            tech.azure-sql,
+            tech.entra-id,
+            plat.microsoft-365,
+          ]
+      - title: Related services
+        entityIds: [svc.cybersecurity, svc.data-analytics]
+      - title: Solutions
+        entityIds: [sol.cloud-migration, sol.legacy-system-modernization]
+      - title: Systems we build
+        entityIds: [workarea.cloud-platforms, workarea.cybersecurity-systems]
+      - title: Where it applies
+        entityIds: [ind.government, ind.healthcare, ind.manufacturing]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which Microsoft tools you rely on
+    body: "Describe your servers, your sign-in set-up, and what you want to run in the cloud. We will propose an Azure design and a cost range."
+    primary: { label: Talk to DECHY about Azure, href: "/contact/?service=cloud" }

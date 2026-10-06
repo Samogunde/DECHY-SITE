@@ -29,6 +29,12 @@
 .glance-next {
   border-top-color: var(--color-blue);
 }
+/* The action sits on its own line under the text, at every width. */
+.glance-next .btn {
+  display: flex;
+  width: fit-content;
+  margin-top: 1rem;
+}
 @media (min-width: 40rem) {
   .glance-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

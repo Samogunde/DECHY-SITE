@@ -1,0 +1,223 @@
+id: page.tech-kubernetes
+kind: technology
+locale: en
+path: /cloud/kubernetes/
+parent: /cloud/
+entityId: tool.kubernetes
+title: "Kubernetes Consulting and Implementation | DECHY"
+description: "Kubernetes from DECHY: an honest assessment of whether you need it, and where you do, a platform that is simple to run, secure, and affordable."
+breadcrumbLabel: Kubernetes
+intent:
+  primary: kubernetes consulting and implementation
+  secondary:
+    - kubernetes cluster setup
+    - kubernetes alternatives and assessment
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Kubernetes is a system for running many containers across many machines, handling scaling, restarts, and rollouts automatically."
+  problem: "Teams adopt Kubernetes because it is fashionable, then spend more time running the platform than building their product."
+  audience: "Teams running many services at scale, and technical leads deciding whether Kubernetes is worth its complexity."
+  choose: "Adopt Kubernetes when many services, several teams, and real scale need it. Otherwise a managed container service is simpler and cheaper."
+  next: "Describe the services you run and how they scale. We will assess honestly whether Kubernetes is justified, and what simpler options exist."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Tool
+    headline: Kubernetes
+    lead: "Kubernetes is powerful, and it is not small. It suits organizations running many services at scale. For everyone else it can be a costly detour. We begin by asking whether you need it, and build it carefully where you do."
+    support: "This page covers when Kubernetes pays for itself, what it costs to run, and what we do instead when it does not."
+    ctas:
+      - { label: Talk to us about Kubernetes, href: "/contact/?service=cloud" }
+      - { label: Do you need it?, href: "#need" }
+    spec:
+      kind: decision
+      question: Do you need Kubernetes?
+      branches:
+        - when: "One or two applications, a small team, steady traffic"
+          choose: A managed container service
+          text: Far less to run, and quicker to start.
+        - when: "A handful of services, with deployments that are getting hard to manage"
+          choose: A managed container platform first
+          text: Add structure before adding a cluster.
+        - when: "Many services, several teams, and strong scaling needs"
+          choose: Kubernetes
+          text: The complexity is repaid by the control it gives.
+        - when: "Strict rules on where workloads run, or a need to avoid one vendor"
+          choose: Kubernetes, with care
+          text: Portability is a real benefit, but it must be designed for.
+    purpose: decision
+    takeaway: "Kubernetes pays for itself with many services, several teams, and real scale, and until then a managed container service is simpler and cheaper."
+    visualTitle: "When Kubernetes is the right answer"
+    figureCaption: "This diagram shows four situations and the recommended approach for each, from a managed container service for small teams to Kubernetes for many services."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: An operating system for containers
+    answer: "Kubernetes is an open-source system for running containers across a group of machines. You describe what should be running, and Kubernetes keeps it that way: starting copies, restarting failures, spreading load, and rolling out new versions."
+    paragraphs:
+      - "That automation is valuable at scale, where nobody can manage hundreds of containers by hand. It comes with a lot of moving parts: networking, security, storage, upgrades, and tooling."
+      - "Most cloud providers offer managed Kubernetes, which takes away the hardest parts. It remains a platform your team must understand and look after."
+
+  - type: diagram
+    id: need
+    tone: paper
+    label: How it works
+    heading: What a Kubernetes cluster looks like
+    intro: "The pieces are many, but the idea is simple: you state what you want, and the cluster makes it so."
+    spec:
+      kind: layers
+      layerLabel: Layers of a Kubernetes platform
+      layers:
+        - title: Your services
+          text: Applications packaged as containers.
+        - title: Deployment rules
+          text: How many copies, what resources, how to roll out.
+        - title: The cluster
+          text: Machines that run the containers and replace failed ones.
+        - title: Platform services
+          text: Networking, secrets, storage, and monitoring.
+        - title: Cloud account
+          text: The provider's managed control layer and billing.
+    purpose: architecture
+    takeaway: "A Kubernetes platform runs your services under deployment rules, on a cluster supported by platform services and a cloud account."
+    caption: "This diagram shows five layers of a Kubernetes platform, from your services at the top to the cloud account at the bottom."
+
+  - type: table
+    id: compare
+    tone: white
+    label: Alternatives
+    heading: Kubernetes compared with simpler options
+    caption: Kubernetes compared with other ways of running containers
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Managed container service
+        - "A few applications, small teams, and steady or variable traffic."
+        - "Less control, but far less to look after."
+      - - Containers on a few servers
+        - "Small systems with simple deployment needs."
+        - "Manual scaling and recovery."
+      - - Functions on demand
+        - "Event-driven work with spiky use."
+        - "Awkward for long-running services."
+      - - Kubernetes
+        - "Many services, many teams, and strong scaling needs."
+        - "Highest effort to learn, secure, and run."
+
+  - type: process
+    id: assess
+    tone: white
+    label: How we assess it
+    heading: Deciding whether you need a cluster
+    steps:
+      - title: Count what you run
+        body: "We list services, deployment frequency, traffic patterns, and the number of teams involved."
+        artifacts: [Service inventory, Traffic profile]
+      - title: Try the simpler options on paper
+        body: "We estimate what a managed container service would cost and where it would struggle."
+        artifacts: [Option costs, Gaps]
+      - title: Price the platform
+        body: "If a cluster looks justified, we estimate the cloud bill and the people time to run it."
+        artifacts: [Cost and effort estimate]
+      - title: Recommend, with a way back
+        body: "We recommend one route, and design it so you can change course if the need turns out different."
+        artifacts: [Recommendation, Exit options]
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Kubernetes
+    columns:
+      - title: Assess
+        items:
+          - "An honest view of whether you need it."
+          - "Cost estimates against simpler options."
+      - title: Build
+        items:
+          - "Managed clusters on [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud)."
+          - "Deployment pipelines and standard configurations."
+      - title: Secure
+        items:
+          - "Access control, network rules, and secrets handling."
+          - "Image scanning and policy checks."
+      - title: Operate
+        items:
+          - "Monitoring, upgrades, and cost control."
+          - "Training and documentation for your team."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: The hidden cost is people
+    paragraphs:
+      - "A cluster does not run itself. Someone must upgrade it, secure it, understand its networking, and respond when it misbehaves. For a small team, that time is taken from building the product."
+      - "We make this cost explicit before you commit, including what it would take to run the platform in-house, with us, or on a managed service that removes most of it."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build and run clusters."
+    panels:
+      - title: Foundation
+        paragraphs:
+          - "We use a managed control plane, define the cluster and its networking in code with [Terraform](ref:tool.terraform), and keep node pools small, separate, and sized from measured use."
+      - title: Delivery and configuration
+        items:
+          - "Declarative manifests or packaged charts, applied through a pipeline or a GitOps tool."
+          - "Resource requests and limits on every workload, plus autoscaling where it helps."
+          - "Secrets from an external manager, not stored in plain manifests."
+      - title: Security and operations
+        items:
+          - "Role-based access with least privilege, network policies between workloads, and image scanning."
+          - "Metrics, logs, and alerts on what users feel, and a tested upgrade routine."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Kubernetes
+    items:
+      - q: Is Kubernetes the standard way to run containers?
+        a: "It is very common at scale, but not the only or the simplest way. Many organizations run well on managed container services without it."
+      - q: How much does it cost to run?
+        a: "The cloud bill is only part of it. People time often dominates. We estimate both, and compare with simpler options."
+      - q: Can you migrate us from a simpler set-up?
+        a: "Yes, in stages, one service at a time, if there is a clear reason to. We also advise when staying put is the better choice."
+      - q: Do we need Docker too?
+        a: "You need containers, which are commonly built with [Docker](ref:tool.docker). Kubernetes then runs them."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Kubernetes across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Related technologies
+        entityIds: [tool.docker, tool.terraform, tool.github-actions, tool.prometheus, tool.grafana]
+      - title: Related services
+        entityIds: [svc.software-development, svc.cybersecurity]
+      - title: Solutions
+        entityIds: [sol.cloud-migration, sol.legacy-system-modernization]
+      - title: Systems we build
+        entityIds: [workarea.devops-infrastructure, workarea.cloud-platforms]
+      - title: Where it applies
+        entityIds: [ind.saas, ind.finance, ind.telecommunications]
+
+  - type: cta
+    id: contact-cta
+    heading: Describe the services you run
+    body: "Tell us how many services you run, how they scale, and who looks after them. We will assess honestly whether Kubernetes is justified and what simpler options exist."
+    primary: { label: Talk to DECHY about Kubernetes, href: "/contact/?service=cloud" }

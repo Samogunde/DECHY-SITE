@@ -187,6 +187,8 @@ sections:
         entityIds: [plat.wordpress, fw.nextjs, plat.shopify, tech.zapier]
       - title: Related services
         entityIds: [svc.ui-ux, svc.branding, svc.seo-aeo-geo]
+      - title: Solutions
+        entityIds: [sol.customer-experience-systems, sol.saas-platforms]
       - title: Systems we build
         entityIds: [workarea.business-web-platforms, workarea.brand-systems]
       - title: Where it applies

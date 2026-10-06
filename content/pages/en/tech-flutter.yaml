@@ -1,0 +1,197 @@
+id: page.tech-flutter
+kind: technology
+locale: en
+path: /mobile-app-development/flutter/
+parent: /mobile-app-development/
+entityId: tech.flutter
+title: "Flutter App Development Services | DECHY"
+description: "Flutter development from DECHY: one codebase for iPhone and Android apps with a consistent look, and a clear view of what it suits and where native code is better."
+breadcrumbLabel: Flutter
+intent:
+  primary: flutter app development services
+  secondary:
+    - flutter cross-platform mobile apps
+    - flutter ios and android development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Flutter is Google's toolkit for building apps for iPhone, Android, and the web from a single codebase, with its own drawing engine for a consistent look everywhere."
+  problem: "Building two separate native apps doubles the cost and keeps the two versions out of step."
+  audience: "Teams launching a mobile product on both major platforms, and owners of a small team who need to reach everyone without two builds."
+  choose: "Choose Flutter when you want one team and one codebase to ship to both platforms with a designed, consistent interface."
+  next: "Describe the app and who will use it. We will say whether Flutter is the right route, and what would still need native code."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Mobile toolkit
+    headline: Flutter app development
+    lead: "Flutter lets one team build one app that runs on iPhone and Android, with an interface that looks the same on both. We use it for products where reaching both platforms quickly matters, and we use native code where an app needs it."
+    support: "This page covers what Flutter does well, where native is better, and how we build with it."
+    ctas:
+      - { label: Talk to us about a Flutter app, href: "/contact/?service=mobile-app-development" }
+      - { label: Flutter or native?, href: "#choice" }
+    spec:
+      kind: before-after
+      before:
+        title: Two native apps
+        text: Two teams, two codebases, two schedules.
+        nodes:
+          - title: An iPhone app in Swift
+          - title: An Android app in Kotlin
+          - title: Features land at different times
+      after:
+        title: One Flutter app
+        text: One team, one codebase.
+        nodes:
+          - title: A single app for both platforms
+          - title: Features arrive together
+          - title: Designs stay consistent
+      hubLabel: One codebase
+    purpose: before-after
+    takeaway: "Flutter replaces two native apps with one codebase, so features arrive on both platforms together and the design stays consistent."
+    visualTitle: "Two native apps compared with one Flutter app"
+    figureCaption: "This diagram contrasts separate iPhone and Android apps on different schedules with one Flutter app whose features arrive on both platforms together."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: One codebase, drawn by Flutter
+    answer: "Flutter is an open-source toolkit from Google for building apps from a single codebase, written in the Dart language. Instead of using each phone's built-in screen parts, Flutter draws its own, so the app looks and behaves the same on every device."
+    paragraphs:
+      - "That is the main difference from other cross-platform options. You get a consistent, designed interface and fast development, at the cost of an app that does not automatically take on each platform's native look."
+      - "Flutter can reach the phone's own features, such as the camera and notifications, through ready-made packages or small pieces of native code."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: Flutter, React Native, or native?
+    intro: "These are the three routes we compare most often."
+    question: What matters most for this app?
+    options:
+      - label: A designed, consistent interface on both platforms
+        when: "Brand and interface design are central, and you want them identical everywhere."
+        get: "Flutter, which draws everything itself and gives close control over every pixel."
+        watch: "The app will not automatically follow each platform's usual look, which some users notice."
+        cta: { label: Plan a Flutter app, href: "/contact/?service=mobile-app-development" }
+      - label: A team that already knows web technologies
+        when: "Your developers work in JavaScript or TypeScript and [React](ref:fw.react)."
+        get: "[React Native](ref:tech.react-native), which reuses those skills and some code."
+        watch: "Its native feel depends on how each screen is built."
+        cta: { label: Compare with React Native, href: "/contact/?service=mobile-app-development" }
+      - label: Deep use of the phone's features
+        when: "Heavy graphics, advanced camera work, or the newest platform features."
+        get: "Native code in [Swift](ref:tech.swift) and [Kotlin](ref:tech.kotlin), for full access and the best fit with each platform."
+        watch: "Two codebases and a larger budget."
+        cta: { label: Plan a native app, href: "/contact/?service=mobile-app-development" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: Flutter compared with the alternatives
+    caption: Flutter compared with other ways of building a mobile app
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Flutter
+        - "Designed, consistent apps for both platforms from one team."
+        - "A younger ecosystem, and a look that is Flutter's own."
+      - - "[React Native](ref:tech.react-native)"
+        - "Teams with web skills, and apps that should feel native."
+        - "More dependence on native modules for some features."
+      - - "Native ([Swift](ref:tech.swift) and [Kotlin](ref:tech.kotlin))"
+        - "Apps needing the deepest platform access and best fit."
+        - "Two codebases and two teams."
+      - - Progressive web app
+        - "Simple tools used occasionally, with no store listing needed."
+        - "Limited access to phone features."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Flutter
+    columns:
+      - title: Build
+        items:
+          - "Apps for iPhone and Android from one codebase."
+          - "A shared design system and component library."
+      - title: Connect
+        items:
+          - "Back ends, sign-in, and payments."
+          - "Push notifications and offline storage."
+      - title: Release
+        items:
+          - "App store listings and review handling."
+          - "Automated builds and testing."
+      - title: Maintain
+        items:
+          - "Updates for new phone and Flutter versions."
+          - "Crash reporting and improvements."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we structure a Flutter app."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We separate interface, business logic, and data access, choose one state management approach and use it consistently, and keep widgets small and testable."
+      - title: Platform features
+        items:
+          - "Maintained packages for common features, and platform channels for native code where none exists."
+          - "Secure storage for tokens, and careful handling of permissions."
+          - "Offline-first design for field and travel use, with sync rules for conflicts."
+      - title: Quality
+        items:
+          - "Widget, unit, and integration tests, run in a pipeline on every change."
+          - "Testing on a range of real devices, since emulators miss differences."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Flutter
+    items:
+      - q: Is Flutter as good as a native app?
+        a: "For most business apps, users will not notice a difference. For apps needing the deepest platform features or the very best fit with each system, native may be better."
+      - q: Can Flutter also build a website?
+        a: "It can, but we usually recommend building the website with web tools, since Flutter for the web suits some applications more than public sites."
+      - q: Is it expensive to maintain?
+        a: "One codebase is cheaper than two, but any app needs updates for new phone releases and dependency changes. We plan for this from the start."
+      - q: Can you take over an existing Flutter app?
+        a: "Yes. We review structure, dependencies, and tests first, then tell you what to improve."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Flutter across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.mobile-app-development]
+      - title: Alternatives
+        entityIds: [tech.react-native, tech.swift, tech.kotlin]
+      - title: Related services
+        entityIds: [svc.ui-ux, svc.api-integration]
+      - title: Solutions
+        entityIds: [sol.booking-platforms, sol.customer-experience-systems]
+      - title: Systems we build
+        entityIds: [workarea.mobile-apps, workarea.digital-products]
+      - title: Where it applies
+        entityIds: [ind.fitness, ind.travel, ind.retail]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the app
+    body: "Describe who will use it and what it needs to do. We will say whether Flutter is the right route and what would still need native code."
+    primary:
+      { label: Talk to DECHY about Flutter, href: "/contact/?service=mobile-app-development" }

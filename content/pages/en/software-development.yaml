@@ -354,6 +354,8 @@ sections:
             plat.aws,
             tool.docker,
           ]
+      - title: Technology pages
+        entityIds: [lang.java]
 
   - type: cta
     id: contact-cta

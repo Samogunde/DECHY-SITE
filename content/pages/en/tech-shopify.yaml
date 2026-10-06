@@ -1,0 +1,222 @@
+id: page.tech-shopify
+kind: technology
+locale: en
+path: /ecommerce/shopify/
+parent: /ecommerce/
+entityId: plat.shopify
+title: "Shopify Development Services | DECHY"
+description: "Shopify development from DECHY: new stores, redesigns, custom features, migrations, and connections to stock, accounting, and shipping."
+breadcrumbLabel: Shopify
+intent:
+  primary: shopify development services
+  secondary:
+    - shopify store build and migration
+    - shopify integrations and custom apps
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Shopify is a hosted platform for running an online store: it provides the catalog, checkout, payments, and order management, and extends through themes and apps."
+  problem: "Stores that grow outgrow their first set-up: slow pages, clashing apps, manual order handling, and a checkout that loses sales."
+  audience: "Businesses starting or running a Shopify store, and sellers moving from another platform or struggling with an overgrown store."
+  choose: "Use Shopify when standard selling covers your needs and you want a reliable, hosted store. Add custom work only where your model is unusual."
+  next: "Tell us what you sell and how orders are handled today. We will say what Shopify covers, what needs custom work, and what to connect."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Ecommerce platform
+    headline: Shopify development
+    lead: "Shopify handles the hard, dull parts of running a store: hosting, checkout, payments, and security. Our work is the rest: a store that fits your products, connections to your stock and accounts, and the custom features that set you apart."
+    support: "This page covers what Shopify covers for you, where custom work helps, and how we keep a store fast."
+    ctas:
+      - { label: Talk to us about Shopify, href: "/contact/?service=ecommerce" }
+      - { label: What Shopify covers, href: "#covers" }
+    spec:
+      kind: layers
+      layerLabel: Layers of a Shopify store
+      layers:
+        - title: Storefront
+          text: Theme, pages, and the shopping experience.
+        - title: Catalog and content
+          text: Products, collections, and descriptions.
+        - title: Apps and custom features
+          text: Extensions for needs beyond the basics.
+        - title: Checkout and payments
+          text: Handled by Shopify, with your chosen providers.
+        - title: Connections
+          text: Stock, accounting, shipping, and email.
+    purpose: architecture
+    takeaway: "A Shopify store has a storefront, a catalog, apps and custom features, checkout and payments handled by the platform, and connections to the rest of the business."
+    visualTitle: "The layers of a Shopify store"
+    figureCaption: "This diagram shows five layers of a Shopify store, from the storefront shoppers see to the connections with stock, accounting, shipping, and email."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A store you do not have to host
+    answer: "Shopify is a hosted ecommerce platform. It runs your store's servers, checkout, and payment handling, and you shape the look and features through themes, apps, and custom code."
+    paragraphs:
+      - "That takes away a lot of risk. You are not responsible for patching servers or protecting card data, and the checkout is among the most tested in the industry."
+      - "The trade-off is that you work within the platform's model. For most sellers that is a good bargain. For unusual products or pricing, it takes thought."
+
+  - type: table
+    id: covers
+    tone: paper
+    label: Where it fits
+    heading: What Shopify covers, and what we add
+    caption: What Shopify provides by default and what DECHY adds
+    columns: [Area, What Shopify provides, What we add]
+    rows:
+      - - Store and checkout
+        - "Hosting, catalog, basket, checkout, and payments."
+        - "A theme matched to your brand, and a faster, clearer checkout journey."
+      - - Products and stock
+        - "Product records, variants, and inventory tracking."
+        - "Links to your warehouse or stock system, and bulk tools for large catalogs."
+      - - Orders and shipping
+        - "Order handling and shipping label tools."
+        - "Connections to carriers and fulfilment partners."
+      - - Money
+        - "Payments and payouts."
+        - "Links to accounting, and handling of tax and refunds your way."
+      - - Custom needs
+        - "Apps and a developer platform."
+        - "Custom features and private apps for what the store cannot do."
+
+  - type: chooser
+    id: shape
+    tone: white
+    label: Options
+    heading: What kind of Shopify work do you need?
+    intro: "Most work falls into one of three shapes."
+    question: Where are you starting from?
+    options:
+      - label: A new store
+        when: "You are launching, or moving from a basic site or marketplace."
+        get: "A store with a theme, a clean catalog, shipping and tax settings, and tracking from the first day."
+        watch: "Start with fewer apps than you think you need. Each one adds weight."
+        cta: { label: Plan a new store, href: "/contact/?service=ecommerce" }
+      - label: A move from another platform
+        when: "You are leaving [WooCommerce](ref:plat.woocommerce), [Magento](ref:plat.magento-adobe-commerce), or another system."
+        get: "A planned migration of products, customers, and order history, with redirects that protect search traffic."
+        watch: "Some history and custom features do not move cleanly, so decide early what to keep."
+        cta: { label: Plan a migration, href: "/contact/?service=ecommerce" }
+      - label: A store to improve
+        when: "Pages are slow, apps clash, or the checkout loses people."
+        get: "An audit, then focused fixes to speed, apps, and the buying journey."
+        watch: "Measure before and after, so changes are judged on evidence."
+        cta: { label: Plan an audit, href: "/contact/?service=ecommerce" }
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Stores that suit Shopify
+    items:
+      - title: A direct-to-customer brand
+        body: "A focused catalog with a strong storefront, subscriptions or bundles, and email and advertising connected."
+      - title: A seller growing out of a marketplace
+        body: "Your own store alongside marketplace listings, with stock kept in step across them."
+      - title: A business that sells in person and online
+        body: "One catalog and one stock count shared between a shop, events, and the website."
+      - title: A wholesale and retail mix
+        body: "Separate prices and ordering rules for trade customers, with checkout rules that suit each."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Shopify
+    columns:
+      - title: Build
+        items:
+          - "Custom themes and store sections."
+          - "Product data structures that suit your catalog."
+      - title: Extend
+        items:
+          - "Custom features and private apps."
+          - "Special pricing, bundles, and rules."
+      - title: Connect
+        items:
+          - "Stock, accounting, shipping, and customer records."
+          - "Payments and subscription tools."
+      - title: Improve
+        items:
+          - "Speed and conversion audits."
+          - "Search-ready structure and tracking."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Where Shopify has limits
+    paragraphs:
+      - "Very large catalogs, complicated pricing, and unusual checkout flows can strain what a hosted platform allows. Some needs are met by apps or custom code. Others suggest a different platform or a custom commerce system."
+      - "We tell you early which category you are in. See also our page on [commerce systems](ref:workarea.commerce-systems)."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build on Shopify."
+    panels:
+      - title: Theme and performance
+        paragraphs:
+          - "We build themes with Shopify's templating language, keep scripts and apps to a minimum, optimize images, and measure real-user speed on product and collection pages."
+      - title: Apps and the platform
+        items:
+          - "The platform's APIs (the ways other programs read and change store data) and webhooks to connect stock, orders, and customer data to your other systems."
+          - "Private or custom apps where a public app would be too heavy or too generic."
+          - "Checkout customizations through the platform's supported extension points."
+      - title: Headless options
+        paragraphs:
+          - "Where a custom front end is justified, we can build one with [Next.js](ref:fw.nextjs) over Shopify's data. It costs more, so we recommend it only for stores where the storefront experience is a core part of the business."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Shopify
+    items:
+      - q: Is Shopify right for a large catalog?
+        a: "It can handle large catalogs, with design work for product data and speed. Very large or complex catalogs deserve a closer look, and we compare alternatives."
+      - q: Will our search traffic survive a migration?
+        a: "With planning, yes. We map old addresses to new ones, redirect them, and check search performance after launch."
+      - q: Can you connect Shopify to our stock and accounting?
+        a: "Yes. We link orders, stock levels, and payments so staff are not re-typing data."
+      - q: How are payments handled?
+        a: "Shopify provides its own payments and supports others. We help choose and connect them, including [Stripe](ref:int.stripe) where it fits."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Shopify across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ecommerce]
+      - title: Alternatives
+        entityIds: [plat.woocommerce, plat.bigcommerce, plat.magento-adobe-commerce]
+      - title: Related technologies
+        entityIds: [int.stripe, int.shopify-api, fw.nextjs]
+      - title: Related services
+        entityIds: [svc.api-integration, svc.seo-aeo-geo]
+      - title: Solutions
+        entityIds: [sol.ecommerce-systems, sol.payment-integration]
+      - title: Systems we build
+        entityIds: [workarea.ecommerce-platforms, workarea.commerce-systems]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.beauty, ind.fitness]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you sell
+    body: "Describe your products and how orders are handled today. We will say what Shopify covers, what needs custom work, and what to connect first."
+    primary: { label: Talk to DECHY about Shopify, href: "/contact/?service=ecommerce" }

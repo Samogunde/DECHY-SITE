@@ -1,0 +1,205 @@
+id: page.tech-swift
+kind: technology
+locale: en
+path: /mobile-app-development/swift/
+parent: /mobile-app-development/
+entityId: tech.swift
+title: "Swift and iOS App Development Services | DECHY"
+description: "Swift development from DECHY: native iPhone and iPad apps built for the best fit with Apple's platforms, with honest advice on when native iOS is worth it."
+breadcrumbLabel: Swift
+intent:
+  primary: swift ios app development services
+  secondary:
+    - native iphone app development
+    - swiftui app development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Swift is Apple's programming language for building native apps for iPhone, iPad, Apple Watch, and Mac, with full access to each device's features."
+  problem: "Some apps need the best possible fit with Apple's devices, deep use of their features, or early access to new ones, which cross-platform tools cannot always give."
+  audience: "Businesses whose customers are mostly on iPhone, and teams building apps that rely on Apple-specific features."
+  choose: "Choose native Swift for apps that depend on deep device features or an Apple-first audience. Choose cross-platform when reaching both platforms matters more."
+  next: "Describe the app and who uses it. We will say whether native iOS is justified, and what an Android version would involve."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Native language
+    headline: Swift and iOS development
+    lead: "Swift is the language Apple built for its own platforms. An app written in it gets the full range of iPhone and iPad features, and the look and feel that Apple users expect. We build native iOS apps where that depth matters, and say when a cross-platform tool is enough."
+    support: "This page covers what native iOS gives you, what it costs, and how it fits with an Android version."
+    ctas:
+      - { label: Talk to us about an iOS app, href: "/contact/?service=mobile-app-development" }
+      - { label: Is native iOS worth it?, href: "#worth" }
+    spec:
+      kind: decision
+      question: Does this app need to be native on iPhone?
+      branches:
+        - when: "Most of your users are on iPhone, or you launch there first"
+          choose: Native Swift
+          text: Best fit with the platform, from day one.
+        - when: "The app uses the camera, sensors, or health data deeply"
+          choose: Native Swift
+          text: Full access to device features and new releases.
+        - when: "You need iPhone and Android with one team and one budget"
+          choose: A cross-platform tool
+          text: One codebase, with some limits on depth.
+        - when: "The app is a simple tool used occasionally"
+          choose: A mobile web app
+          text: No store listing, and the lowest cost.
+    purpose: decision
+    takeaway: "Native Swift suits Apple-first audiences and apps that depend on deep device features, while cross-platform tools suit teams that need both platforms at once."
+    visualTitle: "When an app should be native on iPhone"
+    figureCaption: "This diagram shows four situations and the choice each suggests: native Swift for Apple-first or feature-heavy apps, cross-platform for both platforms, or a mobile web app."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Apple's own language for its own platforms
+    answer: "Swift is a programming language created by Apple for building apps on its devices. Apps are usually built with SwiftUI, Apple's framework for describing screens, together with Apple's other frameworks for cameras, location, payments, and health data."
+    paragraphs:
+      - "Working in Apple's own tools means new platform features are available as soon as Apple releases them, and the app follows Apple's design conventions without extra effort."
+      - "The cost is that an iPhone app is only an iPhone app. An Android version is a separate build, in a different language, unless you chose a cross-platform tool at the start."
+
+  - type: table
+    id: worth
+    tone: paper
+    label: Where it fits
+    heading: What native iOS gives you
+    caption: What native iOS development offers and what to weigh
+    columns: [Area, What native iOS gives you, What to weigh]
+    rows:
+      - - Look and feel
+        - "Apple's standard behavior, animations, and accessibility support."
+        - "A custom look takes more design effort."
+      - - Device features
+        - "Full access to the camera, sensors, health, payments, and widgets."
+        - "Each feature has review rules and privacy requirements."
+      - - New releases
+        - "New iOS features are available as soon as Apple ships them."
+        - "Apps need updating each year for new versions."
+      - - Performance
+        - "The best control over speed and battery use."
+        - "Rarely a deciding factor for ordinary business apps."
+      - - Reach
+        - "Excellent in markets where iPhone dominates."
+        - "No Android audience without a second build."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Swift
+    columns:
+      - title: Build
+        items:
+          - "Native iPhone and iPad apps in Swift and SwiftUI."
+          - "Interfaces that follow Apple's guidelines."
+      - title: Connect
+        items:
+          - "Back ends, sign-in, and push notifications."
+          - "Apple Pay and in-app purchases where relevant."
+      - title: Release
+        items:
+          - "App Store submission and review handling."
+          - "Test distribution and staged rollouts."
+      - title: Maintain
+        items:
+          - "Yearly updates for new iOS versions."
+          - "Crash reporting and improvements."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How we work
+    heading: From idea to the App Store
+    steps:
+      - title: Shape the app
+        body: "We agree who it is for, what it does first, and what can wait."
+        artifacts: [Scope, Screen map]
+      - title: Design and prototype
+        body: "We design the screens, and build a clickable prototype to test with real users."
+        artifacts: [Designs, Tested prototype]
+      - title: Build and test
+        body: "We build in short cycles, test on real devices, and distribute builds to your team."
+        artifacts: [Working builds, Test results]
+      - title: Prepare for review
+        body: "We prepare the store listing, privacy details, and the review submission."
+        artifacts: [Store listing, Review submission]
+      - title: Launch and support
+        body: "We release in stages, watch crashes and feedback, and plan updates."
+        artifacts: [Release, Update plan]
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: The App Store has rules
+    paragraphs:
+      - "Apple reviews every app, and has rules on payments, privacy, and content. An app can be delayed or rejected for reasons unrelated to its quality, and some business models face restrictions."
+      - "We check the rules against your plans early, so review is rarely a surprise."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we structure an iOS app."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We build with SwiftUI, organize code by feature, keep business logic apart from views, and use Swift's concurrency features for network and storage work."
+      - title: Data and security
+        items:
+          - "The Keychain for credentials, and local storage with clear rules for syncing."
+          - "Certificate checks and careful handling of permissions."
+          - "Offline behavior designed from the start where it matters."
+      - title: Quality
+        items:
+          - "Unit and interface tests in a pipeline, and testing on a range of real devices."
+          - "Accessibility checks with VoiceOver and larger text sizes."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Swift
+    items:
+      - q: Is Swift only for iPhone?
+        a: "It also builds apps for iPad, Apple Watch, Apple TV, and Mac, and parts of it can be used on servers."
+      - q: Should we build iPhone first and Android later?
+        a: "That is a sensible path if your audience leans to iPhone. We plan the back end so both apps can share it."
+      - q: What about cross-platform tools?
+        a: "[Flutter](ref:tech.flutter) and [React Native](ref:tech.react-native) can reach both platforms from one codebase, at some cost in depth. We compare them for your app."
+      - q: Do you handle the App Store submission?
+        a: "Yes. We prepare the listing, privacy details, and the submission, and respond to review feedback."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Swift across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.mobile-app-development]
+      - title: Related technologies
+        entityIds: [tech.kotlin, tech.flutter, tech.react-native, tech.swiftui, tech.ios-sdk]
+      - title: Related services
+        entityIds: [svc.ui-ux, svc.api-integration]
+      - title: Solutions
+        entityIds: [sol.customer-experience-systems, sol.booking-platforms]
+      - title: Systems we build
+        entityIds: [workarea.mobile-apps, workarea.digital-products]
+      - title: Where it applies
+        entityIds: [ind.healthcare, ind.fitness, ind.finance]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the app and your audience
+    body: "Describe what the app does and which devices your users have. We will say whether native iOS is justified and what an Android version would involve."
+    primary: { label: Talk to DECHY about Swift, href: "/contact/?service=mobile-app-development" }

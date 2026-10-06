@@ -201,7 +201,8 @@ sections:
       - title: Solutions
         entityIds: [sol.business-process-automation, sol.data-systems]
       - title: Systems we build
-        entityIds: [workarea.custom-software-systems, workarea.data-analytics, workarea.automation-systems]
+        entityIds:
+          [workarea.custom-software-systems, workarea.data-analytics, workarea.automation-systems]
       - title: Where it applies
         entityIds: [ind.finance, ind.healthcare, ind.logistics]
 

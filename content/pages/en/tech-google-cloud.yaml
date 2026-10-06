@@ -1,0 +1,206 @@
+id: page.tech-google-cloud
+kind: technology
+locale: en
+path: /cloud/google-cloud/
+parent: /cloud/
+entityId: plat.google-cloud
+title: "Google Cloud Services and Architecture | DECHY"
+description: "Google Cloud work from DECHY: applications, data platforms, and AI workloads on Google Cloud, with a clear view of cost, security, and when it is the right cloud."
+breadcrumbLabel: Google Cloud
+intent:
+  primary: google cloud services
+  secondary:
+    - google cloud data and analytics
+    - google cloud migration
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Google Cloud is Google's cloud platform, known for data and analytics tools, strong container support, and direct access to Google's AI models."
+  problem: "Organizations with large data sets or AI plans want a platform for analysis and models, without stitching together many separate tools."
+  audience: "Teams with data-heavy or AI-heavy workloads, organizations using Google Workspace, and companies building on containers."
+  choose: "Consider Google Cloud when data analysis, AI, or containers are central to the workload, or when you already use Google Workspace."
+  next: "Tell us about the data and workloads. We will propose a Google Cloud design, a cost range, and an honest comparison with the alternatives."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Cloud platform
+    headline: Google Cloud
+    lead: "Google Cloud is often the right home for data. Its analytics tools handle very large data sets, and it offers direct access to Google's AI models. We build applications and data platforms on it, and we compare it with other clouds where the case is less clear."
+    support: "This page covers where Google Cloud fits, what a data platform on it involves, and what to watch."
+    ctas:
+      - { label: Talk to us about Google Cloud, href: "/contact/?service=cloud" }
+      - { label: A data platform, step by step, href: "#platform" }
+    spec:
+      kind: flow
+      steps:
+        - title: Sources
+          text: Your apps, files, and outside data.
+        - title: Ingest
+          text: Bring data in on a schedule or as it happens.
+        - title: Warehouse
+          text: Store it in BigQuery for analysis.
+        - title: Model and serve
+          text: Prepare it, run analysis, and call AI models.
+        - title: Reports and applications
+          text: Dashboards, alerts, and features inside products.
+    purpose: workflow
+    takeaway: "A Google Cloud data platform brings data in from sources, stores it in a warehouse, prepares and analyzes it, and serves reports and applications."
+    visualTitle: "The steps of a data platform on Google Cloud"
+    figureCaption: "This diagram shows five steps of a data platform on Google Cloud, from sources and ingestion through the warehouse to reports and applications."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A cloud with data at its center
+    answer: "Google Cloud is Google's cloud platform. Like other clouds it rents servers, storage, and databases by use. It is best known for BigQuery, a data warehouse for fast analysis of large data sets, for container tooling, and for Google's AI models."
+    paragraphs:
+      - "For an organization whose main need is understanding data, this matters. Loading data into a warehouse and asking questions of it can be much quicker than building the same capability on servers."
+      - "For ordinary application hosting, it competes closely with the other large clouds, so we choose between them on price, skills, and what you already use."
+
+  - type: table
+    id: parts
+    tone: paper
+    label: Where it fits
+    heading: Google Cloud services we use most
+    caption: Common Google Cloud services and what each is used for
+    columns: [Service, What it does, When we use it]
+    rows:
+      - - "[BigQuery](ref:tech.bigquery)"
+        - "A data warehouse for fast analysis of large data sets."
+        - "Reporting, analytics, and data that outgrew a normal database."
+      - - Cloud Run
+        - "Runs containers without managing servers."
+        - "Web applications and APIs (the connections other programs use) with variable traffic."
+      - - Vertex AI
+        - "Access to Google's models and tools for building AI features."
+        - "AI features inside products or workflows."
+      - - Cloud Storage
+        - "Durable storage for files and data lakes."
+        - "Uploads, backups, and raw data."
+      - - Kubernetes engine
+        - "A managed cluster for many containers."
+        - "Larger platforms with several teams."
+
+  - type: chooser
+    id: platform
+    tone: white
+    label: Options
+    heading: What are you trying to do on Google Cloud?
+    intro: "Projects tend to fall into three kinds."
+    question: Which is closest to your project?
+    options:
+      - label: Understand large amounts of data
+        when: "Reports take too long, data lives in many places, and questions go unanswered."
+        get: "A data platform with a warehouse, regular loads, and dashboards."
+        watch: "Agree what the measures mean first, or the platform will faithfully compute the wrong numbers."
+        cta: { label: Plan a data platform, href: "/contact/?service=data-analytics" }
+      - label: Run an application
+        when: "A web application or API with variable traffic."
+        get: "A container-based service that scales up and down with demand."
+        watch: "Compare cost and effort with the alternatives before committing."
+        cta: { label: Plan an application, href: "/contact/?service=cloud" }
+      - label: Add AI to your data
+        when: "You want models that use your own information."
+        get: "Models and data in the same environment, with access controls you already use."
+        watch: "Test quality on your own examples, and plan what the model may see."
+        cta: { label: Plan AI on your data, href: "/contact/?service=ai" }
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Google Cloud
+    columns:
+      - title: Design
+        items:
+          - "Architecture and cost estimates."
+          - "Comparisons with AWS and Azure."
+      - title: Build
+        items:
+          - "Data platforms with warehouses and pipelines."
+          - "Applications on managed container services."
+      - title: Secure
+        items:
+          - "Project structure, access, and encryption."
+          - "Budgets and alerts."
+      - title: Run
+        items:
+          - "Monitoring and incident response."
+          - "Regular cost and design reviews."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: Query cost deserves attention
+    paragraphs:
+      - "In a warehouse, cost often follows how much data each query reads. A careless query over a huge table can cost real money, and dashboards that refresh often can quietly add up."
+      - "We design tables and queries to read less, set limits and alerts, and review the bill monthly, so analysis stays affordable."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we set up Google Cloud projects."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We use an organization with folders and separate projects for production and testing, with infrastructure described in code using [Terraform](ref:tool.terraform), and identity through groups, not individual grants."
+      - title: Data
+        items:
+          - "Partitioned and clustered tables to limit what each query scans."
+          - "Scheduled loads and transformations, with tests on data quality."
+          - "Access to sensitive columns restricted by policy."
+      - title: Running workloads
+        items:
+          - "Container services with [Docker](ref:tool.docker) images, autoscaling, and private connections to databases."
+          - "Logging and monitoring wired to alerts."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Google Cloud
+    items:
+      - q: Do we need Google Workspace to use Google Cloud?
+        a: "No. They are separate products, though they share sign-in and work well together."
+      - q: Is BigQuery right for our data?
+        a: "It suits analysis of large data sets. For small data or heavy transactional use, a normal database such as [PostgreSQL](ref:tech.postgresql) is often better. We choose by the workload."
+      - q: Can you add AI to our data on Google Cloud?
+        a: "Yes, using Google's models or others. We test quality on your examples and set limits on what the models can see."
+      - q: How do we keep costs predictable?
+        a: "Budgets, alerts, query limits, and a monthly review, with estimates before building."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Google Cloud across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Alternatives
+        entityIds: [plat.aws, plat.azure, plat.snowflake]
+      - title: Related technologies
+        entityIds: [tech.bigquery, tool.terraform, tool.docker, prov.google-gemini]
+      - title: Related services
+        entityIds: [svc.data-analytics, svc.ai]
+      - title: Solutions
+        entityIds: [sol.cloud-migration, sol.business-dashboards, sol.data-systems]
+      - title: Systems we build
+        entityIds: [workarea.cloud-platforms, workarea.data-analytics]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.media, ind.education]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the data and the workloads
+    body: "Describe what you want to analyze or run. We will propose a Google Cloud design, a cost range, and an honest comparison with the alternatives."
+    primary: { label: Talk to DECHY about Google Cloud, href: "/contact/?service=cloud" }

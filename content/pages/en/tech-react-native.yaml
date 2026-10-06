@@ -1,0 +1,209 @@
+id: page.tech-react-native
+kind: technology
+locale: en
+path: /mobile-app-development/react-native/
+parent: /mobile-app-development/
+entityId: tech.react-native
+title: "React Native App Development Services | DECHY"
+description: "React Native development from DECHY: iPhone and Android apps built with React skills, and an honest view of what it suits and where native code is better."
+breadcrumbLabel: React Native
+intent:
+  primary: react native app development services
+  secondary:
+    - react native cross-platform apps
+    - react native for web teams
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "React Native builds iPhone and Android apps using React and JavaScript, rendering real native screen parts so the app feels at home on each platform."
+  problem: "Companies with web developers need mobile apps, but hiring two native teams is slow and expensive."
+  audience: "Teams with web skills who want mobile apps, and businesses with a web product that needs a matching app."
+  choose: "Choose React Native when your team already works in React, or when the app should share logic with a web product and feel native."
+  next: "Describe the app and your current team. We will say whether React Native fits and how much could be shared with your web product."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Mobile framework
+    headline: React Native app development
+    lead: "React Native lets a team that knows React build apps for iPhone and Android. Screens are real native components, so the app feels like part of each phone. We use it where web skills and shared code make the project quicker and cheaper."
+    support: "This page covers where React Native fits, what can be shared with a web product, and where native code is still needed."
+    ctas:
+      - { label: Talk to us about React Native, href: "/contact/?service=mobile-app-development" }
+      - { label: What can be shared, href: "#share" }
+    spec:
+      kind: layers
+      layerLabel: How a React Native app is built
+      layers:
+        - title: Shared app logic
+          text: Written once in JavaScript or TypeScript.
+        - title: React components
+          text: Screens described in React, as on the web.
+        - title: Native bridge
+          text: Turns components into real native screen parts.
+        - title: Native modules
+          text: Small pieces of native code for special features.
+        - title: iPhone and Android
+          text: Each running a real native app.
+    purpose: architecture
+    takeaway: "A React Native app shares logic and React components, and a native layer turns them into real iPhone and Android screens."
+    visualTitle: "The layers of a React Native app"
+    figureCaption: "This diagram shows five layers of a React Native app, from shared logic and React components down to the native modules and the two platforms."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: React, with native screens
+    answer: "React Native is an open-source framework for building mobile apps with React and JavaScript. Unlike tools that draw their own interface, it turns your components into the phone's own screen elements."
+    paragraphs:
+      - "For a team that already builds web interfaces in React, the learning curve is gentler than starting native. Developers can move between the web product and the app, and some code can be shared."
+      - "It is not magic. Some features need native code, and performance-critical screens may need extra care. The framework has improved a lot, but this is the trade-off to keep in mind."
+
+  - type: diagram
+    id: share
+    tone: paper
+    label: Where it fits
+    heading: What a web product and an app can share
+    intro: "Sharing is the main economic argument for React Native, so it is worth being specific."
+    spec:
+      kind: hub
+      center:
+        title: Shared code
+        text: Written once, used by both.
+      spokes:
+        - title: Data rules
+          text: Validation and business logic.
+        - title: Data types
+          text: Definitions in TypeScript.
+        - title: Back-end connections
+          text: Calls to your back end.
+        - title: State handling
+          text: How the app remembers things.
+        - title: Design tokens
+          text: Colors, type, and spacing.
+        - title: Not shared
+          text: Screens and navigation, which differ by device.
+    purpose: relationship
+    takeaway: "A web product and a React Native app can share data rules, types, back-end connections, state handling, and design tokens, but their screens usually differ."
+    caption: "This diagram shows shared code at the center with five things shared, data rules, data types, back-end connections, state handling, and design tokens, and screens, which are not shared."
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: React Native compared with the alternatives
+    caption: React Native compared with other ways of building a mobile app
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - React Native
+        - "Teams with React skills, and apps that should feel native."
+        - "Some features need native code, and upgrades need care."
+      - - "[Flutter](ref:tech.flutter)"
+        - "Designed, consistent interfaces from one team."
+        - "A different language and a look of its own."
+      - - "Native ([Swift](ref:tech.swift) and [Kotlin](ref:tech.kotlin))"
+        - "The deepest platform access and best fit."
+        - "Two codebases and two teams."
+      - - Mobile-friendly web app
+        - "Occasional use, with no store listing needed."
+        - "Limited phone features and no offline depth."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with React Native
+    columns:
+      - title: Build
+        items:
+          - "Apps for iPhone and Android."
+          - "Shared code with your web product where it makes sense."
+      - title: Add native
+        items:
+          - "Native modules for cameras, sensors, and payments."
+          - "Careful handling of permissions."
+      - title: Release
+        items:
+          - "Store listings, builds, and test distribution."
+          - "Over-the-air updates for small fixes where allowed."
+      - title: Maintain
+        items:
+          - "Upgrades across framework and phone releases."
+          - "Crash reports and performance work."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: Upgrades need planning
+    paragraphs:
+      - "React Native and the phone systems it runs on change every year. Dependencies can fall behind, and an upgrade left too long becomes a project in itself."
+      - "We plan small, regular upgrades, keep dependencies few and well maintained, and test on real devices, so the app does not become hard to update."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we structure a React Native app."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We write in [TypeScript](ref:lang.typescript), organize code by feature, share types and back-end connections with the web product through a common package, and keep navigation and screens separate from logic."
+      - title: Native features
+        items:
+          - "Well-maintained libraries where they exist, and custom native modules where they do not."
+          - "Secure storage for credentials, and background tasks used sparingly."
+          - "Performance checks on lists and animations, since they run on a real device's limits."
+      - title: Delivery
+        items:
+          - "Automated builds and tests in a pipeline for both platforms."
+          - "Staged releases and crash reporting for each version."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about React Native
+    items:
+      - q: Will the app feel native?
+        a: "Largely, yes, because it uses real native components. Feel also depends on how each screen is built, and we test on real devices."
+      - q: Can we reuse our web code?
+        a: "Logic, data types, and back-end connections can often be shared. Screens usually cannot, since a phone and a browser need different layouts."
+      - q: Is it as fast as a native app?
+        a: "For most business apps, yes. Graphics-heavy or very demanding apps may need native code for those parts."
+      - q: Who owns the app code?
+        a: "You do, as agreed in writing before work starts. We hand over code and documentation."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: React Native across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.mobile-app-development]
+      - title: Alternatives
+        entityIds: [tech.flutter, tech.swift, tech.kotlin]
+      - title: Related technologies
+        entityIds: [fw.react, lang.typescript, fw.nextjs]
+      - title: Related services
+        entityIds: [svc.web-development, svc.ui-ux]
+      - title: Solutions
+        entityIds: [sol.saas-platforms, sol.customer-experience-systems]
+      - title: Systems we build
+        entityIds: [workarea.mobile-apps, workarea.digital-products]
+      - title: Where it applies
+        entityIds: [ind.logistics, ind.healthcare, ind.finance]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the app and your team
+    body: "Describe the app, and what your team already builds. We will say whether React Native fits and how much could be shared with your web product."
+    primary:
+      { label: Talk to DECHY about React Native, href: "/contact/?service=mobile-app-development" }

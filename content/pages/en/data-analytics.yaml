@@ -286,6 +286,8 @@ sections:
           ]
       - title: Systems we build
         entityIds: [workarea.data-analytics, workarea.integration-platforms]
+      - title: Technology pages
+        entityIds: [tech.mongodb]
 
   - type: cta
     id: contact-cta

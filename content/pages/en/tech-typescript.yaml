@@ -188,6 +188,8 @@ sections:
         entityIds: [fw.react, fw.nextjs, lang.javascript, lang.python]
       - title: Related services
         entityIds: [svc.software-development, svc.api-integration]
+      - title: Solutions
+        entityIds: [sol.saas-platforms, sol.internal-business-software]
       - title: Systems we build
         entityIds: [workarea.custom-software-systems, workarea.business-web-platforms]
       - title: Where it applies

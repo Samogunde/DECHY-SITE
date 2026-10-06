@@ -22,9 +22,9 @@ export const SERVICE_SIMILARITY: SimilarityConfig = {
   maxSharedHeadings: 1,
 };
 export const TECH_SIMILARITY: SimilarityConfig = {
-  maxSequence: 0.9,
+  maxSequence: 0.95,
   maxShingle: 0.05,
-  maxSharedHeadings: 1,
+  maxSharedHeadings: 2,
 };
 export const WORK_SIMILARITY: SimilarityConfig = {
   maxSequence: 0.92,

@@ -1,0 +1,219 @@
+id: page.tech-terraform
+kind: technology
+locale: en
+path: /cloud/terraform/
+parent: /cloud/
+entityId: tool.terraform
+title: "Terraform and Infrastructure as Code | DECHY"
+description: "Terraform from DECHY: describing cloud infrastructure in code so it can be reviewed, repeated, and restored, with safeguards that keep it manageable."
+breadcrumbLabel: Terraform
+intent:
+  primary: terraform infrastructure as code services
+  secondary:
+    - terraform cloud automation
+    - infrastructure as code adoption
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Terraform describes cloud infrastructure, such as servers, networks, and databases, in text files, so it can be created, changed, and rebuilt automatically and reviewed like code."
+  problem: "Infrastructure built by clicking through consoles cannot be reviewed, repeated, or restored, and nobody knows exactly what exists."
+  audience: "Teams running cloud systems built by hand, and organizations that want repeatable environments and a record of every change."
+  choose: "Adopt infrastructure as code when more than one person changes infrastructure, or when you need identical test and live environments."
+  next: "Tell us what you run and how it was built. We will map what exists and plan a safe move to code."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Tool
+    headline: Terraform and infrastructure as code
+    lead: "Terraform turns infrastructure into text that can be read, reviewed, and run. A network, a database, or a whole environment can be created the same way every time, and changes leave a record. We use it to make cloud systems repeatable and understandable."
+    support: "This page covers what infrastructure as code gives you, how a change flows through it, and how we adopt it without disruption."
+    ctas:
+      - { label: Talk to us about Terraform, href: "/contact/?service=cloud" }
+      - { label: How a change flows, href: "#flow" }
+    spec:
+      kind: flow
+      steps:
+        - title: Write the change
+          text: Describe the infrastructure in code.
+        - title: Review it
+          text: A colleague reads the change, as with any code.
+        - title: Plan
+          text: Terraform shows exactly what would be created, changed, or removed.
+        - title: Apply
+          text: The change is made, and recorded.
+        - title: Keep a record
+          text: The code shows what exists and why.
+    purpose: process
+    takeaway: "A Terraform change is written, reviewed, planned, applied, and recorded, so every change to infrastructure is visible before and after."
+    visualTitle: "How a change flows through Terraform"
+    figureCaption: "This diagram shows five steps in a Terraform change, from writing it in code to the record that remains afterwards."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Infrastructure you can read
+    answer: "Terraform is an open-source tool for infrastructure as code. You describe the resources you want, and it works out the steps to create them in a cloud provider, then keeps track of what it has built."
+    paragraphs:
+      - "The value is not only speed. It is that infrastructure becomes reviewable and repeatable. A test environment can match production, a lost environment can be rebuilt, and an unexpected change shows up as a difference."
+      - "It works across the major clouds with a common approach, though the details differ for each provider."
+
+  - type: table
+    id: compare
+    tone: paper
+    label: Alternatives
+    heading: Terraform compared with other ways of managing infrastructure
+    caption: Terraform compared with other ways of managing infrastructure
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Terraform
+        - "Teams using one or more clouds who want a common, widely known approach."
+        - "A state file to protect, and a new language to learn."
+      - - "Provider's own tools"
+        - "Teams committed to a single cloud."
+        - "Less portable, though well integrated."
+      - - "[Pulumi](ref:tool.pulumi)"
+        - "Teams who prefer writing infrastructure in a general-purpose language."
+        - "Smaller community."
+      - - "[Ansible](ref:tool.ansible)"
+        - "Configuring software on servers, more than creating infrastructure."
+        - "Not designed to track what exists."
+      - - Console clicks
+        - "A quick experiment."
+        - "No record, and no way to repeat or review."
+
+  - type: process
+    id: flow
+    tone: white
+    label: How we adopt it
+    heading: Moving existing infrastructure into code
+    steps:
+      - title: Map what exists
+        body: "We list the resources in your cloud accounts, who depends on them, and what is not documented."
+        artifacts: [Inventory, Dependency notes]
+      - title: Start with something new
+        body: "We build a new environment in code first, so the team learns the approach without touching live systems."
+        artifacts: [First environment in code]
+      - title: Bring existing resources under management
+        body: "We import resources a few at a time, checking that the plan shows no unexpected change."
+        artifacts: [Imported resources, Clean plans]
+      - title: Add review and safeguards
+        body: "We add a pipeline that plans on every change, and approvals before anything is applied."
+        artifacts: [Pipeline, Approval rules]
+      - title: Share and document
+        body: "We write the conventions down and train the team."
+        artifacts: [Guide, Training]
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: What teams describe in Terraform
+    items:
+      - title: Matching test and live environments
+        body: "The same definition builds both, so testing means something."
+      - title: A new environment for a new project
+        body: "Networks, databases, and permissions created in minutes and consistently."
+      - title: Disaster recovery
+        body: "Rebuilding a lost environment from code, alongside restored data."
+      - title: Controlled permissions and accounts
+        body: "Who can do what across cloud accounts, written down and reviewed."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Terraform
+    columns:
+      - title: Build
+        items:
+          - "New environments described in code."
+          - "Reusable modules for common patterns."
+      - title: Adopt
+        items:
+          - "Importing infrastructure built by hand."
+          - "Staged moves with checks at each step."
+      - title: Safeguard
+        items:
+          - "Remote, locked state and access control."
+          - "Review and approval pipelines."
+      - title: Hand over
+        items:
+          - "Conventions, documentation, and training."
+          - "Ongoing support if you want it."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Two things that go wrong
+    paragraphs:
+      - "The state file records what Terraform believes exists. If it is lost, corrupted, or edited carelessly, Terraform can act on the wrong picture. And if people keep changing things in the console, the code and the real system drift apart."
+      - "We store state remotely with locking, restrict console changes where we can, and run regular checks that flag drift."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the conventions we follow."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We separate environments, use small modules with clear inputs and outputs, and pin provider and module versions so a plan today matches a plan next month."
+      - title: State and secrets
+        items:
+          - "Remote state with encryption and locking, one state per environment or component."
+          - "Secrets kept out of code and state where possible, using the cloud provider's secret service."
+      - title: Pipelines
+        items:
+          - "A plan on every pull request, applied only after approval, from a controlled pipeline such as [GitHub Actions](ref:tool.github-actions)."
+          - "Policy checks and formatting enforced automatically."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Terraform
+    items:
+      - q: Is Terraform only for large teams?
+        a: "No. Even a small team gains repeatable environments and a record of changes. The setup effort is modest if started with new work."
+      - q: Can it manage infrastructure we already built?
+        a: "Yes, by importing existing resources. We do it gradually and check that nothing would change unexpectedly."
+      - q: Does it work with AWS, Azure, and Google Cloud?
+        a: "Yes. The approach is common, though the resources and settings differ between [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud)."
+      - q: What if our team prefers another tool?
+        a: "The idea matters more than the tool. We will work with what suits your team and say what we recommend and why."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Terraform across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Alternatives
+        entityIds: [tool.pulumi, tool.ansible]
+      - title: Related technologies
+        entityIds: [plat.aws, plat.azure, plat.google-cloud, tool.docker, tool.github-actions]
+      - title: Related services
+        entityIds: [svc.cybersecurity, svc.software-development]
+      - title: Solutions
+        entityIds: [sol.cloud-migration]
+      - title: Systems we build
+        entityIds: [workarea.devops-infrastructure, workarea.cloud-platforms]
+      - title: Where it applies
+        entityIds: [ind.finance, ind.saas, ind.technology]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you run and how it was built
+    body: "Describe your cloud set-up and who changes it. We will map what exists and plan a safe move to code."
+    primary: { label: Talk to DECHY about Terraform, href: "/contact/?service=cloud" }
