@@ -1,0 +1,165 @@
+id: page.work-integration-platforms
+kind: work-area
+locale: en
+path: /work/areas/integration-platforms/
+entityId: workarea.integration-platforms
+title: "Integration Platforms We Build | DECHY"
+description: "Integration platforms connect many tools through one hub, so each connects once and data stays consistent: how they are designed and when a simple link is enough."
+breadcrumbLabel: Integration Platforms
+parent: /work/
+intent:
+  primary: integration platforms
+  secondary:
+    - integration hub
+    - system integration architecture
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "An integration platform is a central hub that connects many tools, so each tool connects once to the hub instead of separately to every other tool."
+  problem: "As tools multiply, direct connections multiply faster, and each change to one tool breaks several links."
+  audience: "Organizations with five or more connected tools, and technical leads tired of fragile links between systems."
+  choose: "Use a hub when many tools share the same customers or orders. For two tools, a direct connection is enough."
+  next: "List the tools that need to share data. We will draw the connections and say whether a hub is justified."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Integration Platforms
+    lead: "When many tools must share data, connecting each to each becomes a tangle. An integration platform puts one hub in the middle, so every tool connects once. This page explains the idea, and when it is worth it."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about a hub, href: "/contact/?service=api-integration" }
+      - { label: See the difference, href: "#tangle" }
+    spec:
+      kind: before-after
+      before:
+        title: Tools connected to each other
+        text: Every new tool needs several new links.
+        nodes:
+          - title: Store linked to accounts, email, and stock
+          - title: Accounts linked to email and records
+          - title: Each link built and fixed separately
+      after:
+        title: Tools connected to a hub
+        text: Every new tool needs one link.
+        nodes:
+          - title: Each tool talks only to the hub
+          - title: The hub passes information on
+          - title: Changes are made in one place
+      hubLabel: One hub
+    purpose: before-after
+    takeaway: "A hub means each new tool needs one connection instead of several, and changes are made in one place."
+    visualTitle: "Tangled links compared with a hub"
+    figureCaption: "This diagram contrasts tools each linked to many others with the same tools each linked once to a central hub."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: A hub that tools share
+    answer: "An integration platform is a central layer that receives information from one tool and passes it to others, in an agreed form. Tools connect to the hub once, and the hub manages the rest."
+    paragraphs:
+      - "The benefit grows with the number of tools. With three tools, direct links are fine. With ten, the links number in the dozens, and no one knows which depend on which."
+      - "A hub also gives you one place to watch. You can see what was sent, what failed, and what is waiting, which is hard when each link is separate."
+
+  - type: diagram
+    id: tangle
+    tone: paper
+    label: Inside the hub
+    heading: What the hub does with a message
+    intro: "Each message passes through the same short series of steps."
+    spec:
+      kind: flow
+      steps:
+        - title: Receive
+          text: A tool reports a change.
+        - title: Translate
+          text: Convert it to the shared form.
+        - title: Decide
+          text: Which tools need to know?
+        - title: Deliver
+          text: Send it, and retry if a tool is down.
+        - title: Record
+          text: Log what happened.
+    purpose: sequence
+    takeaway: "A hub receives a change, translates it to a shared form, decides who needs it, delivers it, and records what happened."
+    caption: "This diagram shows five steps a hub takes with each message, from receiving a change to recording what happened."
+
+  - type: columns
+    id: qualities
+    tone: white
+    label: What we aim for
+    heading: Four qualities of a good hub
+    columns:
+      - title: Clear
+        items:
+          - "A shared description of each kind of record, such as a customer or order."
+      - title: Forgiving
+        items:
+          - "Retries when a tool is down."
+          - "Messages are never lost, only delayed."
+      - title: Visible
+        items:
+          - "A view of what moved, what failed, and what waits."
+      - title: Changeable
+        items:
+          - "Swapping a tool means changing one connection."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the patterns we use."
+    panels:
+      - title: Patterns
+        paragraphs:
+          - "We use an [event-driven](ref:tech.event-driven-architecture) design where it fits, with queues that hold messages until the receiving tool is ready, and a controlled front door, called a [gateway](ref:tech.api-gateway), for each connecting program."
+      - title: Operation
+        items:
+          - "Idempotent handling, so a repeated message has no repeated effect."
+          - "Dead-letter queues for messages that cannot be delivered."
+          - "Alerts when failures exceed a set rate."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: When a hub is too much
+    paragraphs:
+      - "A hub adds a component to run and understand. For two or three tools with simple links, a direct connection or an automation platform is cheaper and easier."
+      - "We recommend a hub only when the number of tools, or the cost of failures, makes it worthwhile."
+
+  - type: callout
+    id: scenario
+    tone: paper
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a business with an online store, accounting software, a warehouse system, a customer database, and an email tool, all connected pair by pair. Replacing the warehouse system would mean rebuilding four links."
+      - "A hub could hold one connection per tool. Replacing the warehouse system would then mean changing one connection, and the other tools would not notice."
+      - "This is an example of the kind of platform, not a real client or result."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Integration across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.api-integration]
+      - title: Related solutions
+        entityIds: [sol.api-integration, sol.crm-integration]
+      - title: Related work areas
+        entityIds: [workarea.api-integrations, workarea.automation-systems, workarea.data-analytics]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which tools must share data
+    body: "List the tools that need to share information. We will draw the connections and say whether a hub is justified."
+    primary: { label: Talk to DECHY about a hub, href: "/contact/?service=api-integration" }

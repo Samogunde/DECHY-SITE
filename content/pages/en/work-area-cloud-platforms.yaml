@@ -1,0 +1,194 @@
+id: page.work-cloud-platforms
+kind: work-area
+locale: en
+path: /work/areas/cloud-platforms/
+entityId: workarea.cloud-platforms
+title: "Cloud Platforms We Build | DECHY"
+description: "Cloud platforms host your software on rented infrastructure that grows with use: how they are laid out, what they cost, and when not to move."
+breadcrumbLabel: Cloud Platforms
+parent: /work/
+intent:
+  primary: cloud platforms
+  secondary:
+    - cloud migration
+    - cloud architecture
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "A cloud platform runs your software on computers rented from a provider, so you can add or remove capacity as needed instead of owning servers."
+  problem: "Servers in an office are costly to maintain, slow to grow, and a single point of failure when the building or the one person who understands them is unavailable."
+  audience: "Organizations running their own servers, and teams whose cloud bills or reliability have become a worry."
+  choose: "Move what benefits from flexibility and reliability first. Keep what is stable, cheap, and tightly controlled where it is."
+  next: "Tell us what runs where today, and what hurts. We will say what to move, what to leave, and roughly what it would cost to run."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Cloud Platforms
+    lead: "A cloud platform runs your software on rented computers that you can enlarge or shrink at will. This page explains how a cloud platform is laid out, what drives the cost, and when staying where you are is the better choice."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about the cloud, href: "/contact/?service=cloud" }
+      - { label: See the layout, href: "#layout" }
+    spec:
+      kind: before-after
+      before:
+        title: Your own servers
+        text: Fixed capacity that you maintain.
+        nodes:
+          - title: Bought in advance for peak use
+          - title: Maintained by one or two people
+          - title: Down if the building has a problem
+      after:
+        title: A cloud platform
+        text: Rented capacity that follows demand.
+        nodes:
+          - title: Capacity grows and shrinks
+          - title: Maintained largely by the provider
+          - title: Copies kept in separate locations
+      hubLabel: Flexible
+    purpose: before-after
+    takeaway: "A cloud platform replaces fixed, owned capacity with rented capacity that follows demand and survives local failures."
+    visualTitle: "Your own servers compared with a cloud platform"
+    figureCaption: "This diagram contrasts fixed servers you own and maintain with rented cloud capacity that grows and shrinks and is copied across locations."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Renting capacity instead of owning machines
+    answer: "A cloud platform is a set of computing services, such as servers, storage, and databases, rented from a provider and paid for by use. Your software runs there instead of on machines you own."
+    paragraphs:
+      - "This changes how costs work. You pay as you use, so a quiet month costs less. It also changes how risk works, since the provider keeps the hardware running."
+      - "The cloud is not automatically cheaper. A badly planned set-up can cost more than the servers it replaced. Planning, monitoring, and review are part of the work."
+
+  - type: diagram
+    id: layout
+    tone: paper
+    label: The layout
+    heading: How a cloud platform is arranged
+    intro: "A well-planned platform separates what the public sees from what must stay private."
+    spec:
+      kind: layers
+      layerLabel: Layers of a cloud platform
+      layers:
+        - title: Entry
+          text: Where visitors arrive, with protection from misuse.
+        - title: Application
+          text: Your software, running on several machines at once.
+        - title: Data
+          text: Databases and files, kept private and backed up.
+        - title: Operations
+          text: Monitoring, alerts, and cost control.
+    purpose: architecture
+    takeaway: "A cloud platform keeps the public entry, the application, and the private data in separate layers, with operations watching all of them."
+    caption: "This diagram shows four layers of a cloud platform, from the public entry down to private data, with operations watching over each layer."
+
+  - type: table
+    id: costs
+    tone: white
+    label: Cost
+    heading: What drives a cloud bill
+    caption: Main drivers of cloud cost
+    columns: [Driver, What it means, How we keep it in check]
+    rows:
+      - - Computing
+        - "The machines that run your software."
+        - "Size them to real use, and switch off what is idle."
+      - - Storage
+        - "Files and databases kept online."
+        - "Archive old data to cheaper storage."
+      - - Data transfer
+        - "Information leaving the provider's network."
+        - "Place things close together and cache what is reused."
+      - - Forgotten items
+        - "Test systems nobody remembers."
+        - "Label everything and review monthly."
+
+  - type: chooser
+    id: move
+    tone: paper
+    label: Moving
+    heading: What to move, and when
+    intro: "Not everything should move at once, or at all."
+    question: What are you running today?
+    options:
+      - label: A web application or website
+        when: "Traffic rises and falls, and downtime costs you."
+        get: "Good first candidates. The platform grows with demand."
+        watch: "Move in stages, and test before switching visitors."
+        cta: { label: Plan a first move, href: "/contact/?service=cloud" }
+      - label: Old software on old servers
+        when: "It works, but it is fragile and few people understand it."
+        get: "Move it as it is, first, and improve later. This reduces risk."
+        watch: "Do not rewrite and move at the same time."
+        cta: { label: Ask about old systems, href: "/contact/?service=cloud" }
+      - label: Stable systems that cost little
+        when: "Fixed workload, tight control, and low cost where it is."
+        get: "Often best left alone, or moved last."
+        watch: "Moving them may add cost and gain little."
+        cta: { label: Ask for an honest view, href: "/contact/?service=consulting" }
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine an organization whose application runs on a single server in an office cupboard. When it fails, the one person who understands it must fix it, and the business waits."
+      - "A cloud platform could run the application on several machines, keep backups in another location, and alert a team when something goes wrong. A failure would no longer stop everything."
+      - "This is an example of the kind of platform, not a real client or result."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the platforms and practices we use."
+    panels:
+      - title: Providers
+        paragraphs:
+          - "We work with [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud), and recommend the one that fits your needs, not the one we prefer."
+      - title: Practices
+        items:
+          - "Infrastructure described in code with [Terraform](ref:tool.terraform), so it can be reviewed and repeated."
+          - "Separate environments for testing and live use."
+          - "Budgets, alerts, and monthly cost reviews."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about cloud platforms
+    items:
+      - q: Is the cloud cheaper than our own servers?
+        a: "Sometimes. It is more flexible, and costs follow use. A steady, predictable workload can be cheaper on owned machines. We compare both honestly."
+      - q: Can we avoid being locked in to one provider?
+        a: "Partly. We favor common tools and clear documentation, so moving later is possible, though never free."
+      - q: Who looks after it once it is live?
+        a: "That is agreed in advance. You, we, or a mix can monitor it, apply updates, and respond to alerts."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Cloud across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Related solutions
+        entityIds: [sol.cloud-migration, sol.legacy-system-modernization]
+      - title: Related work areas
+        entityIds:
+          [workarea.devops-infrastructure, workarea.cybersecurity-systems, workarea.data-analytics]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what runs where today
+    body: "Describe your current set-up and what hurts. We will say what to move, what to leave, and roughly what it would cost to run."
+    primary: { label: Talk to DECHY about the cloud, href: "/contact/?service=cloud" }

@@ -1,0 +1,188 @@
+id: page.work-customer-portals
+kind: work-area
+locale: en
+path: /work/areas/customer-portals/
+entityId: workarea.customer-portals
+title: "Customer Portals We Build | DECHY"
+description: "Customer portals give clients a private place to see orders, documents, and messages: what they contain, how access is controlled, and what they save your staff."
+breadcrumbLabel: Customer Portals
+parent: /work/
+intent:
+  primary: customer portals
+  secondary:
+    - client portal development
+    - secure customer self-service
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "A customer portal is a private area of a website where signed-in customers can see their own orders, documents, messages, and account details, and act on them."
+  problem: "Customers phone or email to ask where things are, staff answer the same questions all day, and documents travel by unsafe attachments."
+  audience: "Organizations with repeat customers or clients, and service teams that spend time on status questions."
+  choose: "Offer the few self-service tasks that customers ask for most, and make signing in simple and safe."
+  next: "Tell us the questions customers ask most often. We will outline a portal that answers them without a call."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Customer Portals
+    lead: "A customer portal is a private place where clients sign in to see their own information and do things for themselves. This page explains what a portal contains, how access is controlled, and what it saves."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about a portal, href: "/contact/?service=web-development" }
+      - { label: What goes in a portal, href: "#contents" }
+    spec:
+      kind: hub
+      center:
+        title: One customer's private area
+        text: Visible only to that customer and your staff.
+      spokes:
+        - title: Orders and status
+          text: Where things stand.
+        - title: Documents
+          text: Invoices, contracts, and reports.
+        - title: Messages
+          text: A record of conversations.
+        - title: Requests
+          text: Ask for help or changes.
+        - title: Payments
+          text: Pay and see receipts.
+        - title: Account details
+          text: Keep information current.
+    purpose: relationship
+    takeaway: "A portal gathers one customer's orders, documents, messages, requests, payments, and details in a private area."
+    visualTitle: "What a customer sees in a portal"
+    figureCaption: "This diagram shows a customer's private area with six parts around it: orders, documents, messages, requests, payments, and account details."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Self-service that customers actually use
+    answer: "A customer portal is a secure area where customers sign in and see their own information. It answers common questions without a phone call, and gives staff and customers one shared record."
+    paragraphs:
+      - "Portals succeed when they answer the questions customers already ask: where is my order, can I have last month's invoice, who is working on my case?"
+      - "They fail when they are built around what the organization finds convenient. We start with the customer's most frequent questions and build only what answers them."
+
+  - type: chooser
+    id: contents
+    tone: paper
+    label: What goes in it
+    heading: Which kind of portal fits?
+    intro: "Portals differ by what customers need most."
+    question: What do your customers ask for most?
+    options:
+      - label: Status and updates
+        when: "Customers ask where an order, job, or case stands."
+        get: "A clear status view with notifications at each stage."
+        watch: "Statuses must be kept current, or customers lose trust."
+        cta: { label: Plan a status portal, href: "/contact/?service=web-development" }
+      - label: Documents and records
+        when: "Customers need invoices, contracts, or reports."
+        get: "A secure library, with search and download, replacing email attachments."
+        watch: "Decide how long documents stay available."
+        cta: { label: Plan a document portal, href: "/contact/?service=web-development" }
+      - label: Requests and changes
+        when: "Customers book, amend, or ask for help."
+        get: "Forms that create tracked tasks for your staff."
+        watch: "Promise only response times you can meet."
+        cta: { label: Plan a request portal, href: "/contact/?service=web-development" }
+
+  - type: table
+    id: access
+    tone: white
+    label: Access
+    heading: Who can see what
+    intro: "Control over access is what makes a portal safe. We plan it with you before building."
+    caption: Roles in a customer portal and what each can see
+    columns: [Role, Can see, Cannot see]
+    rows:
+      - - Customer
+        - "Their own orders, documents, and messages."
+        - "Any other customer's information."
+      - - Customer administrator
+        - "Their organization's users and records."
+        - "Other organizations."
+      - - Your staff
+        - "Records they are assigned to, and tools to reply."
+        - "Records outside their role."
+      - - Portal manager
+        - "Settings and the access log."
+        - "Nothing hidden from the log."
+
+  - type: diagram
+    id: sign-in
+    tone: paper
+    label: Signing in
+    heading: How a customer gets in safely
+    intro: "Signing in should be easy for customers and hard for everyone else."
+    spec:
+      kind: flow
+      steps:
+        - title: The customer is invited
+          text: By email, with a one-time link.
+        - title: They set a password
+          text: And add a second proof, such as a code.
+        - title: They sign in
+          text: Quickly, on any device.
+        - title: They see only their own records
+          text: Access is checked on every request.
+        - title: Activity is logged
+          text: So unusual access can be investigated.
+    purpose: sequence
+    takeaway: "A safe portal invites customers, adds a second proof, checks access on every request, and logs activity."
+    caption: "This diagram shows five steps in how a customer signs in safely, from an invitation to activity being logged."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a firm whose clients phone to ask for copies of documents and the state of their matter. Staff spend part of every day answering."
+      - "A portal could give each client a private area with their documents and a status view, and let them send a message. Most calls could be avoided, and staff would reply to messages in order."
+      - "This is an example of the kind of portal, not a real client or result."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the security and structure choices."
+    panels:
+      - title: Identity and access
+        paragraphs:
+          - "We use established sign-in methods, such as [OAuth](ref:con.oauth), and a second step for sensitive areas, instead of building our own."
+      - title: Data protection
+        items:
+          - "Each customer's records are separated and checked on every request."
+          - "Information is [encrypted](ref:con.encryption) in transit and at rest."
+          - "Access and changes are logged."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Portals across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related solutions
+        entityIds: [sol.customer-portal-development, sol.customer-experience-systems]
+      - title: Related work areas
+        entityIds:
+          [
+            workarea.business-web-platforms,
+            workarea.cybersecurity-systems,
+            workarea.operations-platforms,
+          ]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what customers ask most
+    body: "List the questions customers ask most often. We will outline a portal that answers them without a call."
+    primary: { label: Talk to DECHY about a portal, href: "/contact/?service=web-development" }

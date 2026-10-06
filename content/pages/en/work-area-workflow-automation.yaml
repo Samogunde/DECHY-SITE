@@ -1,0 +1,172 @@
+id: page.work-workflow-automation
+kind: work-area
+locale: en
+path: /work/areas/workflow-automation/
+entityId: workarea.workflow-automation
+title: "Workflow Automation We Build | DECHY"
+description: "Workflow automation moves a piece of work from person to person: requests, approvals, and hand-offs tracked from start to finish. See the parts and design."
+breadcrumbLabel: Workflow Automation
+parent: /work/
+intent:
+  primary: workflow automation
+  secondary:
+    - approval workflows
+    - request tracking systems
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "Workflow automation moves a piece of work, such as a request or an approval, from person to person in the right order, tracking each step."
+  problem: "Work gets stuck in inboxes, nobody knows who has it, and approvals depend on someone remembering."
+  audience: "Teams that handle requests, approvals, or hand-offs, and managers who need to see where each item stands."
+  choose: "Draw the real path of one request first. Automate the steps that wait for people, and add rules only where decisions are clear."
+  next: "Tell us about one request that moves through several people. We will map it and show where time is lost."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Workflow Automation
+    lead: "A workflow moves one piece of work through the people who handle it. Workflow automation makes each hand-off clear, timed, and visible. This page explains how it is designed and what it replaces."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about a workflow, href: "/contact/?service=automation" }
+      - { label: See a workflow, href: "#path" }
+    spec:
+      kind: flow
+      steps:
+        - title: A request is made
+          text: Through a simple form.
+        - title: It is routed
+          text: To the right person by rule.
+        - title: It is reviewed
+          text: With a clear deadline.
+        - title: It is approved or returned
+          text: With a reason recorded.
+        - title: It is completed and logged
+          text: And the requester is told.
+    purpose: workflow
+    takeaway: "A workflow routes a request through review and approval to completion, with every step timed and recorded."
+    visualTitle: "A request moving through a workflow"
+    figureCaption: "This diagram shows five steps in a workflow, from a request being made to it being completed and logged, with each step owned by someone."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Work with a clear path and an owner at each step
+    answer: "Workflow automation manages how one piece of work passes between people. It routes the item, reminds the person who has it, records decisions, and shows everyone where it stands."
+    paragraphs:
+      - "In many organizations, requests travel by email. Nobody can see where one is, approvals wait for someone to notice, and reasons for decisions disappear."
+      - "A workflow replaces this with one tracked item. The owner of each step is known, delays are visible, and the history is kept for later questions."
+
+  - type: diagram
+    id: path
+    tone: paper
+    label: The difference
+    heading: Where a request waits
+    intro: "Most of the time spent on a request is waiting, not working. Workflows reduce the waiting."
+    spec:
+      kind: before-after
+      before:
+        title: By email
+        text: Each hand-off depends on someone noticing.
+        nodes:
+          - title: Request sits in an inbox
+          - title: Approver is unsure who must sign
+          - title: Requester asks for an update
+      after:
+        title: In a workflow
+        text: Each hand-off is routed and timed.
+        nodes:
+          - title: Request goes straight to the owner
+          - title: The right approver is chosen by rule
+          - title: Status is visible to all
+      hubLabel: Clear path
+    purpose: before-after
+    takeaway: "A workflow removes waiting by routing each request to its owner and making the status visible."
+    caption: "This diagram contrasts a request that waits in inboxes with a request routed to the right owner with its status visible to everyone."
+
+  - type: columns
+    id: parts
+    tone: white
+    label: What we build
+    heading: Parts of a workflow system
+    columns:
+      - title: Intake
+        items:
+          - "A simple form that asks only what is needed."
+          - "Checks that catch missing details early."
+      - title: Routing
+        items:
+          - "Rules for who handles which request."
+          - "Fall-backs when someone is away."
+      - title: Decisions
+        items:
+          - "Approvals with deadlines and reminders."
+          - "Reasons recorded with each decision."
+      - title: Visibility
+        items:
+          - "A status for every item."
+          - "Reports on delays and workload."
+
+  - type: chooser
+    id: shape
+    tone: paper
+    label: Choosing
+    heading: How much structure does your workflow need?
+    intro: "Workflows range from simple to complex. Start with the lightest that solves the problem."
+    question: How does your work move today?
+    options:
+      - label: Simple requests with one approver
+        when: "Leave requests, purchases, access requests."
+        get: "A form, a routing rule, and an approval, running in a few days."
+        watch: "Keep it simple. More steps rarely mean better control."
+        cta: { label: Plan a simple workflow, href: "/contact/?service=automation" }
+      - label: Several teams and conditions
+        when: "Onboarding, contracts, and customer set-up, with different steps for different cases."
+        get: "A workflow with branches, deadlines, and a view of every case."
+        watch: "Map the real process first. Software cannot fix a process nobody agrees."
+        cta: { label: Map a complex workflow, href: "/contact/?service=automation" }
+      - label: Work that touches customers
+        when: "Service requests, orders, and claims."
+        get: "A workflow connected to customer records and messages."
+        watch: "Test changes carefully, because customers will notice mistakes."
+        cta: { label: Plan a customer workflow, href: "/contact/?service=automation" }
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine an organization where staff request equipment by email. A manager approves, finance orders, and the request is lost twice a month."
+      - "A workflow could take the request through a form, send it to the manager, then to finance, and tell the requester when the order is placed. Delays would be visible, and the history would be kept."
+      - "This is an example of the kind of workflow, not a real client or result."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Workflows across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Related solutions
+        entityIds: [sol.workflow-automation, sol.business-process-automation]
+      - title: Related work areas
+        entityIds:
+          [
+            workarea.automation-systems,
+            workarea.internal-business-tools,
+            workarea.operations-platforms,
+          ]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about a request that gets stuck
+    body: "Describe one request that moves through several people. We will map it and show where the time is lost."
+    primary: { label: Talk to DECHY about workflows, href: "/contact/?service=automation" }

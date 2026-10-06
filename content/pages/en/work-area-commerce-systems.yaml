@@ -1,0 +1,164 @@
+id: page.work-commerce-systems
+kind: work-area
+locale: en
+path: /work/areas/commerce-systems/
+entityId: workarea.commerce-systems
+title: "Commerce Systems We Build | DECHY"
+description: "Commerce systems handle what happens around the store: pricing, orders, subscriptions, payments, and fulfilment, for businesses that sell in more than a basic way."
+breadcrumbLabel: Commerce Systems
+parent: /work/
+intent:
+  primary: commerce systems
+  secondary:
+    - subscription and marketplace platforms
+    - order and pricing systems
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "A commerce system is the machinery behind selling when selling is not simple: complex pricing, repeating payments, many sellers, or orders that need several steps."
+  problem: "A standard store cannot handle quotes, subscriptions, multiple sellers, or custom prices, so staff manage these by hand."
+  audience: "Businesses whose selling model goes beyond a basket and a checkout, such as subscriptions, marketplaces, or made-to-order goods."
+  choose: "Name the selling model first, then check which parts a standard platform covers and which need custom work."
+  next: "Describe how a sale works in your business, from first request to payment. We will show which parts need a custom system."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Commerce Systems
+    lead: "Some businesses sell in ways a basic store cannot handle: repeating payments, many sellers, quotes, or made-to-order goods. A commerce system is the machinery for those cases. This page explains the common models and what each needs."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about commerce, href: "/contact/?service=ecommerce" }
+      - { label: Find your selling model, href: "#models" }
+    spec:
+      kind: decision
+      question: How does a sale work in your business?
+      branches:
+        - when: "Customers pay again on a schedule"
+          choose: A subscription system
+          text: Repeating payments, upgrades, and cancellations.
+        - when: "Many sellers sell through your site"
+          choose: A marketplace system
+          text: Seller accounts, commissions, and payouts.
+        - when: "Prices depend on the customer or the order"
+          choose: A pricing and quote system
+          text: Rules for prices, discounts, and approvals.
+        - when: "Goods are made after the order"
+          choose: A made-to-order system
+          text: Options, production steps, and lead times.
+    purpose: decision
+    takeaway: "The right commerce system depends on whether you sell by subscription, through other sellers, by quote, or made to order."
+    visualTitle: "Four selling models and what each needs"
+    figureCaption: "This diagram shows four ways of selling and the kind of commerce system each needs: subscription, marketplace, quote, or made-to-order."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: When selling is more than a basket
+    answer: "A commerce system supports ways of selling that a basic online store cannot: repeating payments, many sellers, prices that vary, or products made after the order. It joins the storefront to pricing, payment, and fulfilment."
+    paragraphs:
+      - "Standard platforms handle ordinary selling very well. Trouble begins at the edges, where staff keep spreadsheets of special prices or chase repeat payments by hand."
+      - "A commerce system takes on those edge cases. It can sit behind an existing store or run a new one, depending on how far your needs depart from the standard."
+
+  - type: table
+    id: models
+    tone: paper
+    label: Selling models
+    heading: What each model needs
+    caption: Commerce models and their main requirements
+    columns: [Model, Main parts, What to watch]
+    rows:
+      - - Subscriptions
+        - "Plans, repeating payments, upgrades, and cancellation."
+        - "Failed payments and tax across regions."
+      - - Marketplaces
+        - "Seller accounts, listings, commissions, and payouts."
+        - "Trust, disputes, and who is responsible."
+      - - Quotes and custom prices
+        - "Price rules, quote steps, and approvals."
+        - "Keeping prices consistent and auditable."
+      - - Made to order
+        - "Product options, production tracking, and lead times."
+        - "Setting expectations about delivery."
+
+  - type: chooser
+    id: build
+    tone: white
+    label: Build or extend
+    heading: Extend a platform, or build a system?
+    intro: "Many needs can be met by extending a standard platform. Others cannot."
+    question: How far is your model from the standard?
+    options:
+      - label: Close to standard
+        when: "An add-on or a setting covers most of it."
+        get: "Extend a platform with apps, and keep costs low."
+        watch: "Too many add-ons can slow the store and clash."
+        cta: { label: Ask about extending, href: "/contact/?service=ecommerce" }
+      - label: Partly different
+        when: "The storefront is standard, but pricing or fulfilment is not."
+        get: "A standard storefront with a custom system behind it."
+        watch: "Define the link between them carefully."
+        cta: { label: Ask about a custom back end, href: "/contact/?service=ecommerce" }
+      - label: Very different
+        when: "The model is the business, such as a new marketplace."
+        get: "A purpose-built system, planned in stages."
+        watch: "Start with one narrow offer to prove demand."
+        cta: { label: Discuss a new system, href: "/contact/?service=ecommerce" }
+
+  - type: columns
+    id: parts
+    tone: paper
+    label: What we build
+    heading: Common parts
+    columns:
+      - title: Selling
+        items:
+          - "Catalog, options, and prices."
+          - "Quotes, plans, and offers."
+      - title: Paying
+        items:
+          - "Payments through providers such as [Stripe](ref:int.stripe)."
+          - "Invoices, refunds, and receipts."
+      - title: Fulfilling
+        items:
+          - "Order routing and tracking."
+          - "Delivery and returns."
+      - title: Managing
+        items:
+          - "Customer and seller accounts."
+          - "Reports on sales and money owed."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a business that sells monthly supplies by subscription, with different prices for different customers. Staff set up each customer's plan by hand and chase failed payments."
+      - "A commerce system could hold each customer's plan and price, take payments on schedule, retry failures, and tell the customer. Staff would handle only exceptions."
+      - "This is an example of the kind of system, not a real client or result."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Commerce across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ecommerce]
+      - title: Related solutions
+        entityIds: [sol.subscription-platforms, sol.marketplace-platforms, sol.payment-integration]
+      - title: Related work areas
+        entityIds: [workarea.ecommerce-platforms, workarea.integration-platforms]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us how a sale works in your business
+    body: "Describe a sale from first request to payment. We will show which parts need a custom system and which a platform can cover."
+    primary: { label: Talk to DECHY about commerce, href: "/contact/?service=ecommerce" }

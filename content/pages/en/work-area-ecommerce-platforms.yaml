@@ -1,0 +1,175 @@
+id: page.work-ecommerce-platforms
+kind: work-area
+locale: en
+path: /work/areas/ecommerce-platforms/
+entityId: workarea.ecommerce-platforms
+title: "Ecommerce Platforms We Build | DECHY"
+description: "Ecommerce platforms for selling products and services online: catalog, checkout, payments, orders, and the systems behind them, and how to choose a foundation."
+breadcrumbLabel: Ecommerce Platforms
+parent: /work/
+intent:
+  primary: ecommerce platforms
+  secondary:
+    - online store development
+    - custom checkout and catalog
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "An ecommerce platform is the whole system that lets you sell online: a catalog, a basket, payment, order handling, and links to stock and delivery."
+  problem: "A store that looks fine but handles orders, stock, and payments badly loses sales and costs staff time."
+  audience: "Businesses starting to sell online, and sellers whose store has outgrown its first set-up."
+  choose: "Start from a proven platform when your selling is standard. Build custom parts only where your product or process is unusual."
+  next: "Tell us what you sell and how orders are handled today. We will suggest a foundation and what to connect to it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Ecommerce Platforms
+    lead: "An ecommerce platform is more than a shop window. It is a catalog, a basket, payment, order handling, and links to stock and delivery. This page shows how those parts fit, and how to pick a foundation."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about a store, href: "/contact/?service=ecommerce" }
+      - { label: See the order journey, href: "#journey" }
+    spec:
+      kind: funnel
+      stages:
+        - title: Shoppers arrive
+          text: From search, email, social media, and ads.
+        - title: They browse the catalog
+          text: Clear products, photos, and prices.
+        - title: They fill a basket
+          text: Choices stay saved and easy to change.
+        - title: They check out and pay
+          text: Few steps, trusted payment, clear costs.
+        - title: They receive and return
+          text: Delivery, updates, and easy returns.
+    purpose: transformation
+    takeaway: "Online selling is a path that narrows from many visitors to paying customers, and each stage can lose people if it is hard to use."
+    visualTitle: "The path from visitor to delivered order"
+    figureCaption: "This diagram shows five stages of online selling, from shoppers arriving to receiving and returning an order, each a place where sales can be lost."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: The store, and everything behind it
+    answer: "An ecommerce platform is the software and connections that let a business sell online: product listings, a basket and checkout, payment, order management, and links to stock, delivery, and accounting."
+    paragraphs:
+      - "The visible store is only part of the work. After a customer pays, someone must pick the item, send it, tell the customer, update stock, and record the sale. Platforms that connect these steps save staff hours every day."
+      - "The right amount of building depends on how ordinary your selling is. Many stores need no custom parts. Some, with unusual products or prices, do."
+
+  - type: columns
+    id: parts
+    tone: paper
+    label: What we build
+    heading: Parts of an ecommerce platform
+    columns:
+      - title: Front of store
+        items:
+          - "Catalog, search, and filters."
+          - "Product pages that answer real questions."
+          - "A fast, simple checkout."
+      - title: Back of store
+        items:
+          - "Order and stock management."
+          - "Prices, discounts, and tax rules."
+          - "Customer accounts and history."
+      - title: Connections
+        items:
+          - "Payment providers such as [Stripe](ref:int.stripe)."
+          - "Delivery services and warehouses."
+          - "Accounting and email."
+
+  - type: diagram
+    id: journey
+    tone: paper
+    label: Behind the checkout
+    heading: What happens after someone clicks Pay
+    intro: "A good platform handles the work after payment automatically."
+    spec:
+      kind: flow
+      steps:
+        - title: Payment is confirmed
+          text: The provider approves it and the order is recorded.
+        - title: Stock is updated
+          text: The item is reserved, and low stock is flagged.
+        - title: The order is packed and sent
+          text: Staff or a partner receives a pick list and labels.
+        - title: The customer is told
+          text: Confirmation and tracking arrive by email.
+        - title: The sale is recorded
+          text: Accounting and reports are updated.
+    purpose: workflow
+    takeaway: "After payment, a connected platform updates stock, triggers delivery, informs the customer, and records the sale without manual work."
+    caption: "This diagram follows an order through five steps after payment, from confirmation to the sale being recorded for accounting."
+
+  - type: chooser
+    id: foundation
+    tone: white
+    label: Choosing a foundation
+    heading: Which foundation suits you?
+    intro: "There are three ways to build a store. Each suits different needs."
+    question: How unusual is your selling?
+    options:
+      - label: A hosted platform
+        when: "Your products and prices are fairly standard, and you want to launch soon."
+        get: "A store on a service such as [Shopify](ref:plat.shopify), with themes, payments, and apps ready."
+        watch: "You work within the platform's rules, and pay monthly fees."
+        cta: { label: Ask about a hosted store, href: "/contact/?service=ecommerce" }
+      - label: An open platform
+        when: "You want more control, or already use [WordPress](ref:plat.wordpress)."
+        get: "A store such as [WooCommerce](ref:plat.woocommerce), which you host and can change freely."
+        watch: "You are responsible for hosting, updates, and security."
+        cta: { label: Ask about an open store, href: "/contact/?service=ecommerce" }
+      - label: A custom build
+        when: "Your products, prices, or rules are unusual, such as made-to-order goods."
+        get: "A store built around your process, connected to your systems."
+        watch: "It costs more and takes longer, so it should be justified."
+        cta: { label: Ask about custom, href: "/contact/?service=ecommerce" }
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a seller of specialty goods who takes orders by email and phone, and keeps stock in a spreadsheet. Orders are sometimes taken for items that have sold out."
+      - "A platform could show live stock, take payment at order time, and send each order to the packing list. Staff would stop re-typing orders, and customers would receive tracking by email."
+      - "This is an example of the kind of platform, not a real client or result."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about ecommerce platforms
+    items:
+      - q: Should we build custom or use a hosted platform?
+        a: "Start with a hosted or open platform unless your selling is unusual. Custom work is best kept for the parts that set you apart."
+      - q: Can the store connect to our stock and accounting?
+        a: "Yes. Most platforms can be connected, and we plan the connections so each sale is recorded once."
+      - q: Can we move from our current store?
+        a: "Yes. We move products, customers, and order history, and keep the addresses that matter."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Selling online across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ecommerce]
+      - title: Related solutions
+        entityIds: [sol.ecommerce-systems, sol.payment-integration, sol.subscription-platforms]
+      - title: Related work areas
+        entityIds: [workarea.commerce-systems, workarea.business-web-platforms]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you sell
+    body: "Describe your products and how orders are handled today. We will suggest a foundation and what to connect to it."
+    primary: { label: Talk to DECHY about a store, href: "/contact/?service=ecommerce" }

@@ -1,0 +1,154 @@
+id: page.work-ui-ux-product-design
+kind: work-area
+locale: en
+path: /work/areas/ui-ux-product-design/
+entityId: workarea.ui-ux-product-design
+title: "UI/UX and Product Design Systems | DECHY"
+description: "UI/UX and product design as a system: research, prototypes, tested screens, and a design system that keeps every screen consistent as a product grows."
+breadcrumbLabel: UI/UX and Product Design
+parent: /work/
+intent:
+  primary: ui ux and product design systems
+  secondary:
+    - design system development
+    - prototype and usability testing
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "UI/UX and product design here means the working system behind good screens: user research, prototypes, testing, and a shared kit of parts that keeps screens consistent."
+  problem: "Screens designed one at a time drift apart, new features look different from old ones, and design decisions are argued about, not tested."
+  audience: "Product teams whose screens have become inconsistent, and organizations about to build several related screens or apps."
+  choose: "Build a small design system when you have more than a handful of screens. Test with users before building."
+  next: "Show us a few screens that feel inconsistent or confusing. We will suggest how to bring them into one clear system."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: UI/UX and Product Design
+    lead: "Good screens come from a system, not from luck. UI (user interface) is what people see, and UX (user experience) is how it feels to get something done. This page shows the system behind both: research, testing, and a shared kit of parts."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about design, href: "/contact/?service=ui-ux" }
+      - { label: See the kit, href: "#kit" }
+    spec:
+      kind: hub
+      center:
+        title: A design system
+        text: One shared kit for every screen.
+      spokes:
+        - title: Principles
+          text: How the product should feel.
+        - title: Colors and type
+          text: The basic choices.
+        - title: Components
+          text: Buttons, forms, and menus.
+        - title: Patterns
+          text: Tested page layouts.
+        - title: Guidance
+          text: How and when to use each part.
+        - title: Code
+          text: Matching parts for developers.
+    purpose: system
+    takeaway: "A design system gathers principles, colors, components, patterns, guidance, and code into one shared kit."
+    visualTitle: "What a design system contains"
+    figureCaption: "This diagram shows a design system with six parts around it: principles, colors and type, components, patterns, guidance, and matching code."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: A shared kit that keeps screens consistent
+    answer: "A design system is a shared set of parts and rules for building screens: colors, type, components, and layouts, with guidance on using them. It lets many people make screens that look and behave alike."
+    paragraphs:
+      - "Without one, each new screen is invented fresh. The result is a product whose buttons differ, whose forms behave differently, and whose new features feel as if they came from elsewhere."
+      - "With one, new screens are quicker to make and easier to learn, because people meet the same parts in the same places."
+
+  - type: table
+    id: practice
+    tone: paper
+    label: The practice
+    heading: "Research, test, build: what each gives you"
+    caption: Design activities and what each gives
+    columns: [Activity, What happens, What you get]
+    rows:
+      - - User research
+        - "We talk to and watch real users."
+        - "A clear list of what people need and where they struggle."
+      - - Prototyping
+        - "We make clickable models of screens."
+        - "Ideas you can try before anything is built."
+      - - Usability testing
+        - "We watch people attempt real tasks."
+        - "A ranked list of what to fix."
+      - - Design system
+        - "We build the shared kit."
+        - "Faster, more consistent screens."
+
+  - type: diagram
+    id: kit
+    tone: white
+    label: How it fits
+    heading: From a design to a working screen
+    intro: "The design system sits between designers and developers, so both build from the same parts."
+    spec:
+      kind: layers
+      layerLabel: From principles to screens
+      layers:
+        - title: Principles
+          text: What the product should feel like.
+        - title: Basic choices
+          text: Colors, type, and spacing, held as shared values.
+        - title: Components
+          text: Ready-made parts, designed and built once.
+        - title: Screens
+          text: Assembled from components, tested with users.
+    purpose: architecture
+    takeaway: "Screens are assembled from components, which come from basic shared choices, which follow the principles."
+    caption: "This diagram shows four layers from principles down to finished screens, each assembled from the one above."
+
+  - type: callout
+    id: scenario
+    tone: paper
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a company with a website, a customer portal, and a staff tool, each designed by a different person. Buttons differ in all three, and users forget how to do things when they move between them."
+      - "A design system could unify them. Staff and customers would find the same buttons, forms, and messages everywhere, and new features would be quicker to add."
+      - "This is an example of the kind of system, not a real client or result."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about design systems
+    items:
+      - q: Is a design system only for large products?
+        a: "No. A small one, with colors, type, and a dozen components, helps as soon as you have more than a handful of screens."
+      - q: Who maintains it?
+        a: "It needs an owner. We can set it up and train your team, or continue to look after it with you."
+      - q: Will it slow us down?
+        a: "At first it adds work. After that, new screens are quicker, because parts are ready and decisions are already made."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Design across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ui-ux]
+      - title: Related tools
+        entityIds: [tool.figma, tool.adobe-xd]
+      - title: Related work areas
+        entityIds: [workarea.digital-products, workarea.brand-systems, workarea.mobile-apps]
+
+  - type: cta
+    id: contact-cta
+    heading: Show us the screens that feel inconsistent
+    body: "Share a few screens that confuse people or do not match. We will suggest how to bring them into one clear system."
+    primary: { label: Talk to DECHY about design, href: "/contact/?service=ui-ux" }

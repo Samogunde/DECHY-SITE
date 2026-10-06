@@ -1,0 +1,187 @@
+id: page.work-custom-software-systems
+kind: work-area
+locale: en
+path: /work/areas/custom-software-systems/
+entityId: workarea.custom-software-systems
+title: "Custom Software Systems We Build | DECHY"
+description: "Custom software systems built around how your organization actually works: what they are, what they contain, how they are built, and when custom is the right choice."
+breadcrumbLabel: Custom Software Systems
+parent: /work/
+intent:
+  primary: custom software systems
+  secondary:
+    - bespoke business software
+    - custom application development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "A custom software system is a program built for one organization's way of working, instead of a general product that everyone shares."
+  problem: "Off-the-shelf tools force your process to bend to them, and work ends up in spreadsheets, workarounds, and several half-fitting products."
+  audience: "Leaders whose process is unusual or central to the business, and teams that have outgrown spreadsheets and ready-made tools."
+  choose: "Choose custom when the process is your advantage, no product fits, or connecting several products costs more than building one system."
+  next: "Describe the process that does not fit your current tools. We will say whether custom is justified, and what a first version would contain."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Custom Software Systems
+    lead: "These are programs built around how one organization works. They hold your data, follow your rules, and connect to the tools you already use. This page explains what they contain, how we build them, and when they are worth it."
+    support: "The scenario on this page is an illustration of a typical system. It is not a client project."
+    ctas:
+      - { label: Talk to us about a system, href: "/contact/?service=software-development" }
+      - { label: See the build or buy choice, href: "#choice" }
+    spec:
+      kind: layers
+      layerLabel: What a custom system is made of
+      layers:
+        - title: The screens people use
+          text: Forms, lists, and dashboards shaped to each role.
+        - title: The rules of your business
+          text: Approvals, prices, checks, and steps, written once and applied every time.
+        - title: The stored information
+          text: Customers, orders, documents, and history, in one place.
+        - title: The connections
+          text: Links to your accounting, email, payments, and other tools.
+    purpose: architecture
+    takeaway: "A custom system is four layers working together: screens, business rules, stored information, and connections to other tools."
+    visualTitle: "The four layers of a custom system"
+    figureCaption: "This diagram shows a custom software system as four layers, from the screens people use down to its connections with other tools."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Software shaped like your organization
+    answer: "A custom software system is software built for one organization. It follows your process, uses your terms, and fits your data, instead of asking you to adapt to a product designed for everyone."
+    paragraphs:
+      - "Most organizations start with ready-made tools, which is sensible. The trouble comes later, when the process is unusual, or when five tools each hold part of the picture and people copy information between them by hand."
+      - "A custom system replaces that patchwork with one place where the work happens. It does not have to be large. Many useful systems do one job well, such as taking requests, tracking jobs, or managing stock."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Build or buy
+    heading: When is custom the right choice?
+    intro: "Custom software costs more at the start, so it should earn its place. These three situations show where it does."
+    question: Which sounds most like you?
+    options:
+      - label: Our process is our advantage
+        when: "How you work is part of why customers choose you, and no product does it the way you do."
+        get: "A system that protects and strengthens that process, and that competitors cannot simply buy."
+        watch: "Write down the process first. Software cannot improve a process nobody has agreed."
+        cta: { label: Discuss your process, href: "/contact/?service=software-development" }
+      - label: Our tools do not talk to each other
+        when: "Staff re-type the same information into several products every day."
+        get: "One system, or a thin layer, that holds the information once and shares it."
+        watch: "Sometimes connecting existing tools is cheaper than building. We check this first."
+        cta: { label: Ask about connecting tools, href: "/contact/?service=api-integration" }
+      - label: A product nearly fits
+        when: "A ready-made product covers about eighty percent of what you need."
+        get: "Usually, the advice is to buy it and adapt your process, or extend it modestly."
+        watch: "Choose custom only if the missing twenty percent is costly or central."
+        cta: { label: Ask for an honest view, href: "/contact/?service=consulting" }
+
+  - type: diagram
+    id: build
+    tone: white
+    label: How it is built
+    heading: From one small version to a growing system
+    intro: "We do not build everything at once. A first version covers the most valuable job, then the system grows from real use."
+    spec:
+      kind: flow
+      steps:
+        - title: Map the work
+          text: Who does what today, and where time is lost.
+        - title: Build the core
+          text: The one job that matters most, working end to end.
+        - title: Use it for real
+          text: A small group uses it daily and reports problems.
+        - title: Add and refine
+          text: More roles and jobs, guided by what people actually need.
+        - title: Look after it
+          text: Updates, backups, and support as the business changes.
+    purpose: process
+    takeaway: "A custom system starts with one valuable job working end to end, and then grows from real use."
+    caption: "This diagram shows five steps from mapping the work to looking after the finished system, with real use feeding each round of improvement."
+
+  - type: columns
+    id: parts
+    tone: paper
+    label: What is inside
+    heading: Typical parts of a custom system
+    columns:
+      - title: For the people doing the work
+        items:
+          - "Role-based screens, so each person sees what they need."
+          - "Search, filters, and saved views."
+          - "Alerts when something needs attention."
+      - title: For the people managing the work
+        items:
+          - "Dashboards of progress and workload."
+          - "Approvals and a clear record of who did what."
+          - "Reports that can be exported."
+      - title: For the organization
+        items:
+          - "Permissions, so people see only what they should."
+          - "Links to accounting, email, and payments."
+          - "Backups and a plan for recovery."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a company that installs equipment at customer sites. Quotes live in spreadsheets, job dates in a shared calendar, and parts orders in email. A manager spends part of each day reconciling them."
+      - "A custom system could hold each job in one record: the quote, the schedule, the parts, the photos, and the invoice. Installers would see their day on a phone. Managers would see every job's status at a glance."
+      - "This is an example of the kind of system, not a description of a real client or result."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the choices behind a typical system."
+    panels:
+      - title: Choosing the building blocks
+        paragraphs:
+          - "We choose common, well supported tools, such as [TypeScript](ref:lang.typescript), [Python](ref:lang.python), and [PostgreSQL](ref:tech.postgresql), so your system can be maintained by many teams, not only ours."
+      - title: Structure
+        items:
+          - "A clear separation between screens, business rules, and data, so each can change safely."
+          - "Automated tests around the rules that matter most."
+          - "Documentation written for the next person to read."
+      - title: Ownership
+        items:
+          - "Your code and data belong to you, as agreed in writing."
+          - "No hidden dependence on our tools to keep it running."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Custom systems across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.software-development]
+      - title: Related solutions
+        entityIds:
+          [sol.internal-business-software, sol.legacy-system-modernization, sol.saas-platforms]
+      - title: Related work areas
+        entityIds:
+          [
+            workarea.internal-business-tools,
+            workarea.operations-platforms,
+            workarea.integration-platforms,
+          ]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the process that does not fit
+    body: "Describe the work your current tools handle badly. We will say honestly whether custom software is justified and what a first version would contain."
+    primary: { label: Talk to DECHY about a system, href: "/contact/?service=software-development" }

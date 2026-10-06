@@ -1,0 +1,188 @@
+id: page.work-api-integrations
+kind: work-area
+locale: en
+path: /work/areas/api-integrations/
+entityId: workarea.api-integrations
+title: "API Integrations We Build | DECHY"
+description: "API integrations connect your tools so information flows between them: how they work, what can go wrong, and how to design connections that last."
+breadcrumbLabel: API Integrations
+parent: /work/
+intent:
+  primary: api integrations
+  secondary:
+    - software integration
+    - connecting business tools
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "An integration is a connection that lets two programs exchange information directly, through an API (a set of agreed requests one program can make of another)."
+  problem: "Information is typed into one tool, then again into another, and the copies drift apart."
+  audience: "Teams that use several tools for one process, and technical leads who need those tools to share data reliably."
+  choose: "Connect tools when the same data lives in two places. Build a shared record when many tools need to agree."
+  next: "List the two or three tools your team switches between most. We will say what can be connected and what it would take."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: API Integrations
+    lead: "An integration lets your tools share information directly, so nobody types it twice. This page explains how integrations work, what can go wrong, and how we build connections that last."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about connecting tools, href: "/contact/?service=api-integration" }
+      - { label: How a connection works, href: "#how" }
+    spec:
+      kind: hub
+      center:
+        title: Your connected tools
+        text: One agreed flow of information.
+      spokes:
+        - title: Customer records
+          text: Who your customers are.
+        - title: Accounting
+          text: Invoices and payments.
+        - title: Online store
+          text: Orders and stock.
+        - title: Email and messages
+          text: Notices and replies.
+        - title: Payments
+          text: Taking and recording money.
+        - title: Your own systems
+          text: Anything built for you.
+    purpose: relationship
+    takeaway: "Integrations connect customer records, accounting, stores, messaging, payments, and your own systems into one flow of information."
+    visualTitle: "Tools connected into one flow of information"
+    figureCaption: "This diagram shows six kinds of tool, such as customer records, accounting, and payments, connected through one agreed flow of information."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Programs that talk to each other
+    answer: "An API integration connects two programs so one can send or request information from the other automatically. The API is the agreed set of requests the programs use, a bit like a menu a kitchen accepts orders from."
+    paragraphs:
+      - "Most business tools offer an API. An integration uses it so that a sale in your store creates an invoice in your accounts, or a new customer in your records appears in your email tool."
+      - "The skill is not only making the connection. It is deciding which tool is the source of truth for each fact, and handling the cases where something fails."
+
+  - type: diagram
+    id: how
+    tone: paper
+    label: How it works
+    heading: What happens when one tool tells another
+    intro: "Every integration follows a similar short path, with checks along the way."
+    spec:
+      kind: flow
+      steps:
+        - title: Something changes
+          text: A sale is made or a record is edited.
+        - title: A message is sent
+          text: The first tool tells the second what happened.
+        - title: The message is checked
+          text: Is it valid, complete, and from a trusted sender?
+        - title: The second tool updates
+          text: It records the change.
+        - title: Success or failure is logged
+          text: Failures are retried or reported to a person.
+    purpose: sequence
+    takeaway: "A reliable integration sends, checks, applies, and logs each change, and reports failures instead of hiding them."
+    caption: "This diagram follows a change from one tool to another through five steps, from the change occurring to the result being logged."
+
+  - type: columns
+    id: risks
+    tone: white
+    label: What goes wrong
+    heading: Four problems we design against
+    columns:
+      - title: Duplicates
+        items:
+          - "The same sale recorded twice."
+          - "We make each message safe to receive again."
+      - title: Missed messages
+        items:
+          - "The other tool is down for an hour."
+          - "We retry, and alert if it keeps failing."
+      - title: Changing rules
+        items:
+          - "Tools change how their API works."
+          - "We watch for updates and test connections regularly."
+      - title: Disagreeing records
+        items:
+          - "Two tools hold different versions of a fact."
+          - "We decide the source of truth for each field."
+
+  - type: chooser
+    id: approach
+    tone: paper
+    label: Choosing
+    heading: Ready-made connector or custom integration?
+    intro: "Many tools can be connected without writing code. Others need custom work."
+    question: What do your tools offer?
+    options:
+      - label: Ready-made connectors exist
+        when: "Both tools are popular, and the connection you need is common."
+        get: "A connection set up in an automation platform, fast and inexpensive."
+        watch: "You depend on the connector's limits and pricing."
+        cta: { label: Ask about connectors, href: "/contact/?service=api-integration" }
+      - label: One tool has an API, the other does not
+        when: "A tool lacks a connector, or has special needs."
+        get: "A small custom integration, built and monitored by us."
+        watch: "It needs maintenance when either tool changes."
+        cta: { label: Ask about custom, href: "/contact/?service=api-integration" }
+      - label: Many tools must agree
+        when: "Five or more tools share the same customers or orders."
+        get: "A shared data layer, so each tool connects once instead of to every other."
+        watch: "It is a larger project, so plan it with care."
+        cta: { label: Plan a shared layer, href: "/contact/?service=api-integration" }
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a business whose online store, accounting software, and email tool each hold a list of customers. Staff update all three by hand, and the lists no longer match."
+      - "An integration could make the store the source for new customers, pass each sale to accounting, and add the customer to the email tool if they agree. The three lists would stay in step."
+      - "This is an example of the kind of integration, not a real client or result."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the techniques we use."
+    panels:
+      - title: Styles of connection
+        paragraphs:
+          - "We work with [REST](ref:tech.rest) and [GraphQL](ref:tech.graphql) interfaces, and with [webhooks](ref:tech.webhooks), which let one tool notify another the moment something changes."
+      - title: Reliability
+        items:
+          - "Retries with limits, and a queue for messages that cannot yet be delivered."
+          - "Each message carries an identifier, so repeats are ignored."
+          - "Logs and alerts that show what was sent and what failed."
+      - title: Security
+        items:
+          - "Keys are held in a secrets store and rotated."
+          - "Each connection has the minimum permissions it needs."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Integrations across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.api-integration]
+      - title: Related solutions
+        entityIds: [sol.api-integration, sol.crm-integration, sol.payment-integration]
+      - title: Related work areas
+        entityIds: [workarea.integration-platforms, workarea.automation-systems]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which tools should talk to each other
+    body: "List the two or three tools your team switches between most. We will say what can be connected and what it would take."
+    primary: { label: Talk to DECHY about integrations, href: "/contact/?service=api-integration" }

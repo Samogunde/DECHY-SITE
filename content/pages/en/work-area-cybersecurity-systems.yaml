@@ -1,0 +1,164 @@
+id: page.work-cybersecurity-systems
+kind: work-area
+locale: en
+path: /work/areas/cybersecurity-systems/
+entityId: workarea.cybersecurity-systems
+title: "Cybersecurity Systems We Build | DECHY"
+description: "Cybersecurity systems that control who can reach what, protect data, and detect problems early: the layers, how we test them, and what no system can promise."
+breadcrumbLabel: Cybersecurity Systems
+parent: /work/
+intent:
+  primary: cybersecurity systems
+  secondary:
+    - application security
+    - access control and monitoring
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "A cybersecurity system is the set of controls that decide who can reach your data and systems, protect them, and warn you when something looks wrong."
+  problem: "Weak passwords, old software, and broad access make a breach likely, and most organizations would not notice one quickly."
+  audience: "Organizations holding customer or financial data, and teams building software that must be safe to use."
+  choose: "Secure the most valuable data and the most exposed entry points first. Layer controls so no single failure is fatal."
+  next: "Tell us what you most need to protect. We will outline the layers that matter and what to test first."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Cybersecurity Systems
+    lead: "A security system works in layers: who may enter, what they can reach, how data is protected, and how problems are noticed. This page explains the layers and how we test them, and says plainly what no system can promise."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about security, href: "/contact/?service=cybersecurity" }
+      - { label: See the layers, href: "#layers" }
+    spec:
+      kind: layers
+      layerLabel: Layers of protection
+      layers:
+        - title: Identity
+          text: Prove who is signing in.
+        - title: Access
+          text: Allow only what each person needs.
+        - title: Application
+          text: Software built to resist misuse.
+        - title: Data
+          text: Information scrambled and backed up.
+        - title: Detection
+          text: Watch for signs of trouble.
+    purpose: system
+    takeaway: "Good security stacks five layers, identity, access, application, data, and detection, so one failure does not expose everything."
+    visualTitle: "Five layers of protection"
+    figureCaption: "This diagram shows five protective layers, from proving identity at the top to detecting trouble at the bottom, each guarding against different failures."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Controls that work together
+    answer: "A cybersecurity system is a set of controls that limit who can reach your systems, protect your data, and show when something is wrong. No single control is enough, so they are layered."
+    paragraphs:
+      - "Most breaches use ordinary weaknesses: a stolen password, software that was not updated, or an account with more access than it needed. Fixing these dull things is more valuable than buying exotic tools."
+      - "Security is also never finished. New software, new staff, and new threats change the picture, so we plan for regular review."
+
+  - type: table
+    id: layers
+    tone: paper
+    label: The layers
+    heading: What each layer does
+    caption: Layers of a security system and what each protects against
+    columns: [Layer, What it does, Protects against]
+    rows:
+      - - Identity
+        - "Checks who is signing in, with a second proof such as a code on a phone."
+        - "Stolen or guessed passwords."
+      - - Access
+        - "Gives each person only the access their job needs."
+        - "A single stolen account reaching everything."
+      - - Application
+        - "Builds software to refuse harmful input."
+        - "Attacks that exploit mistakes in the code."
+      - - Data
+        - "Scrambles information and keeps tested backups."
+        - "Data theft and loss."
+      - - Detection
+        - "Collects logs and alerts on unusual events."
+        - "Attacks that go unnoticed for weeks."
+
+  - type: diagram
+    id: testing
+    tone: white
+    label: Testing
+    heading: How we check that controls work
+    intro: "A control that has not been tested is a hope, not a protection."
+    spec:
+      kind: flow
+      steps:
+        - title: List what matters
+          text: Your valuable data and exposed entry points.
+        - title: Review the design
+          text: Look for weak points before building.
+        - title: Test the result
+          text: Try to break it, as an attacker would.
+        - title: Fix and retest
+          text: Repair findings, then check they are gone.
+        - title: Keep watching
+          text: Review regularly as things change.
+    purpose: sequence
+    takeaway: "Security is checked by listing what matters, reviewing the design, testing the result, fixing, and reviewing regularly."
+    caption: "This diagram shows five steps in checking security, from listing what matters to reviewing regularly as things change."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: What no one can promise
+    paragraphs:
+      - "No provider can promise that a breach will never happen. Anyone who does is guessing or selling comfort."
+      - "What we can do is reduce the chance, limit the damage, help you notice quickly, and plan how to recover. We also explain our findings in plain language, including what remains risky."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a company whose staff share one account for a customer system, and whose old software has not been updated for years. A single stolen password could expose every customer record."
+      - "A security review could give each person their own sign-in with a second proof, limit what each role can see, update the software, and add alerts for unusual activity. A stolen password would reach far less."
+      - "This is an example of the kind of work, not a real client or result."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: "Questions about security work"
+    items:
+      - q: "Do we need a full security review?"
+        a: "Not always. For many organizations a short review of sign-ins, access, updates, and backups finds the most important problems at modest cost."
+      - q: "Will you tell us about problems you find?"
+        a: "Yes. We explain each finding in plain language, rank it by risk, and say what we recommend, including what to leave alone."
+      - q: "Can you build security into our new software?"
+        a: "Yes. It is cheaper and more effective to design it in from the start than to add it afterwards."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Security across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cybersecurity]
+      - title: Related concepts
+        entityIds: [con.zero-trust, con.encryption, con.secure-coding]
+      - title: Related work areas
+        entityIds:
+          [workarea.cloud-platforms, workarea.devops-infrastructure, workarea.customer-portals]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you most need to protect
+    body: "Describe your most valuable data and where it lives. We will outline the layers that matter and what to test first."
+    primary: { label: Talk to DECHY about security, href: "/contact/?service=cybersecurity" }

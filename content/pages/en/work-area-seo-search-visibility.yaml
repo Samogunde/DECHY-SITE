@@ -1,0 +1,159 @@
+id: page.work-seo-search-visibility
+kind: work-area
+locale: en
+path: /work/areas/seo-search-visibility/
+entityId: workarea.seo-search-visibility
+title: "SEO and Search Visibility Systems | DECHY"
+description: "SEO and search visibility as a system: readable structure, clear answers, structured data, and measurement that help search engines and AI assistants understand you."
+breadcrumbLabel: SEO and Search Visibility
+parent: /work/
+intent:
+  primary: seo and search visibility systems
+  secondary:
+    - technical seo
+    - structured data and site structure
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "A search visibility system is the structure, content, and measurement built into a website so search engines and AI assistants can find, read, and describe it correctly."
+  problem: "A good site is invisible because it is hard to read, its pages overlap, or nobody can tell what it is about."
+  audience: "Teams that depend on being found, and sites that have grown over time with unclear structure."
+  choose: "Fix what blocks reading first, then clarify the content, then label the facts. Measure each step."
+  next: "Share your site and the questions you want to be found for. We will list what blocks you and what to do first."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: SEO and Search Visibility
+    lead: "A search visibility system is built into how a site is organized, written, and labeled. SEO (search engine optimization) is the practice of helping search engines find and rank pages. This page shows the parts of such a system."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about visibility, href: "/contact/?service=seo-aeo-geo" }
+      - { label: See the parts, href: "#parts" }
+    spec:
+      kind: hub
+      center:
+        title: A findable site
+        text: Clear to people, search engines, and AI assistants.
+      spokes:
+        - title: Structure
+          text: Logical pages and links.
+        - title: Speed
+          text: Quick on any device.
+        - title: Content
+          text: Answers to real questions.
+        - title: Labels
+          text: Structured data about the facts.
+        - title: Entities
+          text: Clear who and what you are.
+        - title: Measures
+          text: Tracking of what changes.
+    purpose: system
+    takeaway: "A findable site combines clear structure, speed, answering content, labeled facts, clear identity, and measurement."
+    visualTitle: "The parts of a findable site"
+    figureCaption: "This diagram shows six parts of a findable site around it: structure, speed, content, labels, entities, and measures."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Built in, not bolted on
+    answer: "A search visibility system treats being found as part of how a site is designed. Structure, content, labels, and measures are planned together instead of patched on after launch."
+    paragraphs:
+      - "Search engines and AI assistants read pages much as people do: they look for clear headings, direct answers, and trustworthy sources. They also read hidden labels, called structured data, that state facts in a standard form."
+      - "Because the same foundations help both, we plan them once and keep them in order as the site grows."
+
+  - type: diagram
+    id: order
+    tone: white
+    label: Where to start
+    heading: Work in the right order
+    intro: "Later steps work only if earlier ones are in place."
+    spec:
+      kind: flow
+      steps:
+        - title: Make it readable
+          text: Pages load, work, and can be reached.
+        - title: Make it clear
+          text: Each page has one purpose and a direct answer.
+        - title: Make it connected
+          text: Pages link to each other in a logical way.
+        - title: Make it labeled
+          text: Facts are marked up in a standard form.
+        - title: Measure and refine
+          text: Track results and adjust.
+    purpose: sequence
+    takeaway: "Visibility work should follow an order: readable, clear, connected, labeled, then measured."
+    caption: "This diagram shows five steps in the right order, from making pages readable to measuring and refining the results."
+
+  - type: table
+    id: parts
+    tone: paper
+    label: The parts
+    heading: What each part does
+    caption: Parts of a search visibility system
+    columns: [Part, What it does, Example]
+    rows:
+      - - Site structure
+        - "Groups pages so topics are clear."
+        - "Each service has one main page that others link to."
+      - - Page speed and access
+        - "Lets pages load quickly and be reached by search engines."
+        - "Images sized for the screen."
+      - - Answering content
+        - "Writes pages to answer a real question directly."
+        - "A short answer first, then the detail."
+      - - Structured data
+        - "Labels organizations, services, and questions."
+        - "Marking up a page as a service."
+      - - Measurement
+        - "Tracks which pages and questions bring people."
+        - "A monthly review of what changed."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: What no one can promise
+    paragraphs:
+      - "No one controls where a search engine ranks a page or what an AI assistant says. Anyone who guarantees a ranking is guessing."
+      - "We remove obstacles, make content clear, and measure honestly. That is a sound base that survives changes to the systems."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a site that has grown for years. Several pages cover the same topic, key pages are buried, and many load slowly on phones."
+      - "A visibility system could merge overlapping pages, give each topic one main page, speed up images, and add labels. Search engines would see a clear structure, and visitors would find answers sooner."
+      - "This is an example of the kind of work, not a real client or result."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Visibility across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.seo-aeo-geo]
+      - title: Related services
+        entityIds: [svc.web-development, svc.digital-marketing]
+      - title: Related work areas
+        entityIds:
+          [
+            workarea.business-web-platforms,
+            workarea.digital-marketing-systems,
+            workarea.knowledge-and-content-systems,
+          ]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us how you want to be found
+    body: "Share your site and the questions you want to be found for. We will list what blocks you and what to do first."
+    primary: { label: Talk to DECHY about visibility, href: "/contact/?service=seo-aeo-geo" }

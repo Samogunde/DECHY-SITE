@@ -1,0 +1,160 @@
+id: page.work-internal-business-tools
+kind: work-area
+locale: en
+path: /work/areas/internal-business-tools/
+entityId: workarea.internal-business-tools
+title: "Internal Business Tools We Build | DECHY"
+description: "Internal business tools replace spreadsheets and email chains with simple systems for your staff: what they look like, how they are scoped, and when not to build."
+breadcrumbLabel: Internal Business Tools
+parent: /work/
+intent:
+  primary: internal business tools
+  secondary:
+    - internal software for staff
+    - replace spreadsheets
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "An internal business tool is a simple system built for your own staff, such as a tracker, a request form, or a dashboard, replacing a spreadsheet or an email chain."
+  problem: "Important work runs on spreadsheets that break, are overwritten, or live on one person's computer."
+  audience: "Teams whose work depends on shared spreadsheets, and managers who want a record of who did what."
+  choose: "Replace a spreadsheet when several people edit it, mistakes are costly, or you need history. Keep it when one person uses it."
+  next: "Tell us which spreadsheet or email chain your team depends on. We will say what a tool would do better and what it would cost."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Internal Business Tools
+    lead: "An internal tool is a simple system for your own staff. It takes over from the spreadsheet or the email chain that the team has outgrown. This page explains what these tools look like and when to build one."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about a tool, href: "/contact/?service=software-development" }
+      - { label: Spreadsheet or tool?, href: "#examples" }
+    spec:
+      kind: decision
+      question: Should this spreadsheet become a tool?
+      branches:
+        - when: "One person uses it, and mistakes are cheap"
+          choose: Keep the spreadsheet
+          text: A tool would cost more than it saves.
+        - when: "Several people edit it, and versions clash"
+          choose: Build a shared tool
+          text: One record, with history and permissions.
+        - when: "Mistakes are costly or must be audited"
+          choose: Build a tool with checks
+          text: Required fields, approvals, and a log.
+        - when: "It feeds other systems by hand"
+          choose: Build a tool that connects
+          text: Information flows without copying.
+    purpose: decision
+    takeaway: "Keep a spreadsheet that one person uses, and build a tool when several people edit it, mistakes are costly, or it feeds other systems."
+    visualTitle: "When a spreadsheet should become a tool"
+    figureCaption: "This diagram shows four situations and whether to keep the spreadsheet or build a tool, depending on who edits it, the cost of mistakes, and links to other systems."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Small systems that fit one team
+    answer: "An internal business tool is a small piece of software for staff, such as a tracker or a request form. It does one job for one team, and can often be built quickly because the users are known."
+    paragraphs:
+      - "These tools are modest, but their effect is large. They replace the spreadsheet that breaks, the email thread nobody can find, and the status meeting that exists only to ask where things stand."
+      - "Because the users are colleagues, tools can be improved quickly. We often start with a first version in a few weeks, and refine it as the team uses it."
+
+  - type: columns
+    id: examples
+    tone: paper
+    label: Examples
+    heading: Tools we are often asked for
+    columns:
+      - title: Tracking
+        items:
+          - "Job, project, and case trackers."
+          - "Equipment and asset registers."
+      - title: Requests
+        items:
+          - "Purchase and leave requests."
+          - "Support and maintenance tickets."
+      - title: Overview
+        items:
+          - "Dashboards of workload and status."
+          - "Reports sent on a schedule."
+      - title: Records
+        items:
+          - "Client and supplier directories."
+          - "Document stores with search."
+
+  - type: diagram
+    id: how
+    tone: white
+    label: How it is built
+    heading: From a spreadsheet to a tool
+    intro: "We begin with what the team already does, and keep what works."
+    spec:
+      kind: flow
+      steps:
+        - title: Study the spreadsheet
+          text: What is recorded, and who uses it?
+        - title: Design the screens
+          text: Simple forms and lists for each role.
+        - title: Move the data
+          text: Carry the existing records across.
+        - title: Run alongside
+          text: Use both for a short time, then switch.
+        - title: Improve
+          text: Add what the team asks for.
+    purpose: process
+    takeaway: "A tool replaces a spreadsheet by studying how it is used, designing simple screens, moving the data, running both briefly, and improving."
+    caption: "This diagram shows five steps from studying a spreadsheet to improving the new tool after the team has switched."
+
+  - type: callout
+    id: scenario
+    tone: paper
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a team that tracks repairs in a shared spreadsheet. Two people edit it at once and overwrite each other, and a manager cannot see which repairs are overdue."
+      - "A small tool could give each repair a record with a status, an owner, and a due date, show overdue items at the top, and keep a history of changes. The spreadsheet could be retired."
+      - "This is an example of the kind of tool, not a real client or result."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about internal tools
+    items:
+      - q: Can we build this ourselves with a no-code tool?
+        a: "Sometimes, and it may be the right choice. We help you decide, and build with such tools ourselves when they fit. Custom code is better when you need more control or scale."
+      - q: How long does a first version take?
+        a: "Often a few weeks for a small tool. We agree a first version that does one job well, then build on it."
+      - q: What happens when the team's needs change?
+        a: "The tool changes with them. We plan for regular small improvements instead of one large rebuild."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Internal tools across DECHY
+    groups:
+      - title: The services behind this
+        entityIds: [svc.software-development, svc.automation]
+      - title: Related solutions
+        entityIds: [sol.internal-business-software, sol.workflow-automation]
+      - title: Related work areas
+        entityIds:
+          [
+            workarea.operations-platforms,
+            workarea.workflow-automation,
+            workarea.custom-software-systems,
+          ]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which spreadsheet your team depends on
+    body: "Describe the spreadsheet or email chain and who uses it. We will say what a tool would do better and roughly what it would cost."
+    primary: { label: Talk to DECHY about a tool, href: "/contact/?service=software-development" }

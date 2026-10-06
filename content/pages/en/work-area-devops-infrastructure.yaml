@@ -1,0 +1,170 @@
+id: page.work-devops-infrastructure
+kind: work-area
+locale: en
+path: /work/areas/devops-infrastructure/
+entityId: workarea.devops-infrastructure
+title: "DevOps and Infrastructure We Build | DECHY"
+description: "DevOps and infrastructure work makes releasing software routine: automated testing, safe releases, monitoring, and recovery, so changes reach users without drama."
+breadcrumbLabel: DevOps and Infrastructure
+parent: /work/
+intent:
+  primary: devops and infrastructure
+  secondary:
+    - release automation
+    - monitoring and recovery
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "DevOps is the practice of building, testing, releasing, and watching software in a steady, automated way, so changes reach users quickly and safely."
+  problem: "Releases are rare, stressful, and risky, problems are found by customers first, and nobody is sure how to recover when something breaks."
+  audience: "Teams that release software and dread it, and leaders who want faster change without more outages."
+  choose: "Automate testing and release first, add monitoring next, and rehearse recovery before you need it."
+  next: "Tell us how a release happens today and what went wrong last time. We will suggest the smallest changes that make releases safe."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: DevOps and Infrastructure
+    lead: "DevOps is the habit of testing, releasing, and watching software in a steady, automated way. This page explains the routine, the safety nets around it, and the smallest changes that make releases less stressful."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about releases, href: "/contact/?service=cloud" }
+      - { label: See the release path, href: "#path" }
+    spec:
+      kind: flow
+      steps:
+        - title: A change is made
+          text: A developer finishes a small piece of work.
+        - title: It is tested automatically
+          text: Checks run within minutes.
+        - title: It is released carefully
+          text: To a few users first, then to everyone.
+        - title: It is watched
+          text: Alerts show problems fast.
+        - title: It can be undone
+          text: A bad release is reversed quickly.
+    purpose: process
+    takeaway: "A safe release path tests every change automatically, releases it gradually, watches it, and can undo it quickly."
+    visualTitle: "How a change reaches users safely"
+    figureCaption: "This diagram shows five steps a change takes from being made to being watched and, if needed, undone, with automatic tests and gradual release between."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: Making release a routine
+    answer: "DevOps joins the work of building software with the work of running it. Its core is automation: tests, releases, and checks run the same way every time, so people can focus on the change itself."
+    paragraphs:
+      - "When releases are rare and manual, each one is large and risky. When they are small and automated, each one is boring, which is the point."
+      - "Infrastructure, meaning the servers, networks, and services your software runs on, is treated the same way. It is described in files that can be reviewed, repeated, and restored."
+
+  - type: diagram
+    id: path
+    tone: paper
+    label: The safety nets
+    heading: Four nets that catch problems
+    intro: "Each net catches a different kind of problem, at a different time."
+    spec:
+      kind: layers
+      layerLabel: Safety nets around a release
+      layers:
+        - title: Tests
+          text: Catch mistakes before release.
+        - title: Gradual release
+          text: Limit the number of people a mistake can reach.
+        - title: Monitoring
+          text: Notice problems within minutes.
+        - title: Recovery
+          text: Undo a release or restore from a backup.
+    purpose: system
+    takeaway: "Tests, gradual release, monitoring, and recovery each catch problems that the others miss."
+    caption: "This diagram shows four safety nets around a release, from tests that catch mistakes early to recovery that undoes a bad release."
+
+  - type: columns
+    id: parts
+    tone: white
+    label: What we build
+    heading: Parts of a delivery set-up
+    columns:
+      - title: Build and test
+        items:
+          - "Automatic checks on every change."
+          - "A record of what passed."
+      - title: Release
+        items:
+          - "One-step releases that anyone trained can run."
+          - "Separate test and live environments."
+      - title: Watch
+        items:
+          - "Dashboards of speed and errors."
+          - "Alerts to the right person, day or night."
+      - title: Recover
+        items:
+          - "Regular backups, tested by restoring them."
+          - "Written steps for common failures."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about DevOps
+    items:
+      - q: Do we need DevOps if we release rarely?
+        a: "Rare releases are often a sign that releasing is painful. Making it routine usually makes change safer, even for a small team."
+      - q: Does it mean everything is released immediately?
+        a: "No. You decide the pace. Automation makes releases safe and repeatable, and approvals can stay wherever you want them."
+      - q: Can you work with our existing team?
+        a: "Yes. We often set up the routine and train your team to run it."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a team that releases once a quarter, over a weekend, with a long checklist. After each release, small problems appear that customers report first."
+      - "Automated tests, a one-step release, and monitoring could allow small weekly releases during working hours. A problem would be seen within minutes and undone before most customers noticed."
+      - "This is an example of the kind of change, not a real client or result."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the tools and practices."
+    panels:
+      - title: Automation
+        paragraphs:
+          - "We build pipelines with tools such as [GitHub Actions](ref:tool.github-actions), and package software in containers with [Docker](ref:tool.docker), orchestrated by [Kubernetes](ref:tool.kubernetes) where scale justifies it."
+      - title: Infrastructure
+        items:
+          - "Servers and networks described in code, reviewed like any change."
+          - "Separate accounts for testing and live use."
+      - title: Observability
+        items:
+          - "Logs, measures, and traces collected in one place."
+          - "Alerts on what users feel, such as slow pages, not only on machines."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Delivery across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.cloud]
+      - title: Related services
+        entityIds: [svc.software-development, svc.cybersecurity]
+      - title: Related work areas
+        entityIds: [workarea.cloud-platforms, workarea.cybersecurity-systems]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us how a release happens today
+    body: "Describe a typical release and what went wrong last time. We will suggest the smallest changes that make releases safe."
+    primary: { label: Talk to DECHY about releases, href: "/contact/?service=cloud" }

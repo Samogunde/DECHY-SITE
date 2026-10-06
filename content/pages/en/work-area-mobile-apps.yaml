@@ -1,0 +1,165 @@
+id: page.work-mobile-apps
+kind: work-area
+locale: en
+path: /work/areas/mobile-apps/
+entityId: workarea.mobile-apps
+title: "Mobile Apps We Build | DECHY"
+description: "Mobile apps for customers, staff, and field teams: what they contain, how they work with a back end, and what to decide before building one."
+breadcrumbLabel: Mobile Apps
+parent: /work/
+intent:
+  primary: mobile apps
+  secondary:
+    - ios and android apps
+    - field team apps
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage]
+comprehension:
+  what: "A mobile app is a program installed on a phone or tablet, built for tasks that people do on the move or that need the device's camera, location, or notifications."
+  problem: "A website on a small screen is awkward for repeated or offline tasks, and staff in the field fall back on paper and messages."
+  audience: "Organizations whose customers or staff work mostly on phones, and teams that need photos, location, or offline use."
+  choose: "Build an app when the phone's features or repeated use justify it. Choose a mobile-friendly website when occasional visits are enough."
+  next: "Tell us who would use the app, and what they would do with it. We will suggest an app, a mobile website, or neither."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Work Area
+    headline: Mobile Apps
+    lead: "A mobile app does a job well on a phone. This page explains the kinds of app we build, what sits behind them, and how to decide whether you need one at all."
+    support: "The scenario on this page is an illustration, not a client project."
+    ctas:
+      - { label: Talk to us about an app, href: "/contact/?service=mobile-app-development" }
+      - { label: App or website?, href: "#choice" }
+    spec:
+      kind: decision
+      question: What will people do on their phones?
+      branches:
+        - when: "Read information or fill a form now and then"
+          choose: A mobile-friendly website
+          text: No download needed, and cheaper to build.
+        - when: "Use it every day, often with no signal"
+          choose: A mobile app
+          text: It works offline and stays one tap away.
+        - when: "Take photos, scan codes, or use location"
+          choose: A mobile app
+          text: It can use the phone's camera and sensors directly.
+        - when: "Receive timely alerts"
+          choose: An app or a site with alerts
+          text: Either can notify people. An app is more reliable.
+    purpose: decision
+    takeaway: "Choose an app for daily, offline, or camera-based use, and a mobile website for occasional visits."
+    visualTitle: "App or mobile website: how to choose"
+    figureCaption: "This diagram shows four ways people use their phones and whether an app or a mobile website suits each one."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: An app is the visible tip of a larger system
+    answer: "A mobile app is software installed on a phone. Most business apps are not alone: they send and receive information from a back end, which stores data and enforces your rules."
+    paragraphs:
+      - "People see the screens. Behind them, a server keeps the records, checks who is signed in, and sends updates to every device. Planning only the app, and not what sits behind it, is a common reason for projects that disappoint."
+      - "We design both together, so the app stays small and quick and the information stays correct."
+
+  - type: diagram
+    id: behind
+    tone: paper
+    label: What sits behind an app
+    heading: The app and the system behind it
+    intro: "An app talks to a back end, which talks to your other tools."
+    spec:
+      kind: layers
+      layerLabel: From the phone to your records
+      layers:
+        - title: The app on the phone
+          text: Screens, camera, location, and offline storage.
+        - title: The connection
+          text: A secure way to send and receive information.
+        - title: The back end
+          text: Accounts, rules, and a database of records.
+        - title: Your other tools
+          text: Accounting, email, payments, and customer records.
+    purpose: architecture
+    takeaway: "An app is the top of four layers: the phone, the connection, the back end, and your other tools."
+    caption: "This diagram shows an app on a phone connected through a secure link to a back end and then to your other business tools."
+
+  - type: chooser
+    id: choice
+    tone: white
+    label: Audiences
+    heading: Three common kinds of app
+    intro: "Most business apps serve one of three groups. Each has different needs."
+    question: Who is the app for?
+    options:
+      - label: Customers
+        when: "People who buy from you or use your service, often in their own time."
+        get: "Simple, polished screens, notifications, and quick sign-in."
+        watch: "It must be easy at first use, because customers rarely read instructions."
+        cta: { label: Plan a customer app, href: "/contact/?service=mobile-app-development" }
+      - label: Staff and field teams
+        when: "People doing jobs away from a desk, such as visits, deliveries, or inspections."
+        get: "Fast forms, photos, signatures, and work that continues without signal."
+        watch: "Offline work needs careful design, so changes sync without clashing."
+        cta: { label: Plan a field app, href: "/contact/?service=mobile-app-development" }
+      - label: Members or a community
+        when: "People who return often to read, message, or take part."
+        get: "Profiles, feeds, messages, and reminders."
+        watch: "Moderation and privacy need thought from the start."
+        cta: { label: Plan a community app, href: "/contact/?service=mobile-app-development" }
+
+  - type: columns
+    id: parts
+    tone: paper
+    label: What we build
+    heading: Typical parts of a mobile app
+    columns:
+      - title: On the phone
+        items:
+          - "Sign-in with fingerprint or face recognition where the phone supports it."
+          - "Camera, scanning, and location."
+          - "Offline storage that syncs when a signal returns."
+      - title: In the back end
+        items:
+          - "Accounts and permissions."
+          - "Records and business rules."
+          - "Push notifications."
+      - title: Around the app
+        items:
+          - "Listings and updates in the app stores."
+          - "Crash reports and usage measures."
+          - "A plan for new phone releases."
+
+  - type: callout
+    id: scenario
+    tone: white
+    variant: illustrative
+    title: An illustrative scenario
+    paragraphs:
+      - "Imagine a company that inspects equipment at customer sites. Inspectors fill in paper forms and type them up later, so reports arrive days after the visit."
+      - "A mobile app could let an inspector complete a checklist, take photos, and capture a signature on the spot, even without signal. The report would be ready as soon as the visit ended."
+      - "This is an example of the kind of app, not a real client or result."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Apps across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.mobile-app-development]
+      - title: Related services
+        entityIds: [svc.ui-ux, svc.api-integration]
+      - title: Related work areas
+        entityIds:
+          [workarea.digital-products, workarea.customer-portals, workarea.operations-platforms]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us who the app is for
+    body: "Describe who would use it and what they would do. We will suggest an app, a mobile website, or neither, and outline a first release."
+    primary: { label: Talk to DECHY about an app, href: "/contact/?service=mobile-app-development" }
