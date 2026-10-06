@@ -1,0 +1,213 @@
+id: page.tech-make
+kind: technology
+locale: en
+path: /automation/make/
+parent: /automation/
+entityId: tech.make
+title: "Make Automation Services | DECHY"
+description: "Make automation from DECHY: visual workflows with branching, loops, and data handling, for processes too involved for a simple connector."
+breadcrumbLabel: Make
+intent:
+  primary: make automation services
+  secondary:
+    - make.com scenario development
+    - visual workflow automation
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Make is a visual automation tool where workflows are drawn as diagrams, with branches, loops, and data handling that go beyond one-step connections."
+  problem: "Processes with several paths, repeated items, and data to reshape are awkward in simple tools and too small to justify custom code."
+  audience: "Operations and marketing teams with multi-step processes, and owners comparing automation tools on cost and control."
+  choose: "Choose Make when a process branches, loops over lists, or reshapes data. Choose Zapier for simple chains, and code when reliability or volume demand it."
+  next: "Describe the process and where it branches. We will draw the workflow and say whether Make is the right tool to run it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Automation platform
+    headline: Make automation
+    lead: "Make draws an automation as a diagram you can read: modules joined by lines, with routes that split and loops that repeat. It handles processes with real structure. We build them clearly, test them with awkward data, and monitor them."
+    support: "This page covers where Make fits between simple connectors and custom code, and how we keep scenarios maintainable."
+    ctas:
+      - { label: Talk to us about Make, href: "/contact/?service=automation" }
+      - { label: Zapier, Make, or code?, href: "#choice" }
+    spec:
+      kind: decision
+      question: Which tool fits this automation?
+      branches:
+        - when: "One trigger, one or two simple actions, common apps"
+          choose: Zapier
+          text: Fast to set up, and easy for non-developers to follow.
+        - when: "Several paths, repeated items, or data to reshape"
+          choose: Make
+          text: A visual diagram with branches, loops, and data tools.
+        - when: "You need control of where data runs, or very high volume"
+          choose: n8n or custom code
+          text: Self-hosting options and no per-task cost.
+        - when: "The process is critical and must never lose an item"
+          choose: Custom code with tests
+          text: Full control of error handling and checks.
+    purpose: decision
+    takeaway: "Make suits processes that branch, loop, or reshape data, sitting between one-step connectors and custom code."
+    visualTitle: "Which tool fits which automation"
+    figureCaption: "This diagram shows four kinds of automation and the tool each usually suits: Zapier, Make, n8n or custom code, and custom code with tests."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Automation you can see
+    answer: "Make is a visual automation platform. You build a scenario by placing modules for apps and actions on a canvas, connecting them, and mapping data between them. Routers split the flow, and iterators repeat steps for each item in a list."
+    paragraphs:
+      - "Seeing the whole process on one canvas is the main benefit. A manager can follow it, a colleague can fix it, and mistakes in the logic are easier to spot than in a list of steps."
+      - "It is more capable than a simple connector tool, and that capability needs discipline. Large scenarios become tangled just as large documents do."
+
+  - type: diagram
+    id: scenario
+    tone: paper
+    label: An example
+    heading: What a branching scenario looks like
+    intro: "Here is a typical order-handling scenario, described step by step."
+    spec:
+      kind: flow
+      steps:
+        - title: A new order arrives
+          text: From the online store.
+        - title: A router splits it
+          text: Digital goods one way, physical goods the other.
+        - title: Each path acts
+          text: Send a download link, or create a shipping task.
+        - title: Items are repeated
+          text: A loop adds each product to the stock sheet.
+        - title: Everything is logged
+          text: Errors go to a channel someone watches.
+    purpose: sequence
+    takeaway: "A Make scenario can split a flow by type, repeat steps for each item, and report errors, all on one readable canvas."
+    caption: "This diagram shows an order-handling scenario in five steps, from a new order arriving to a log with errors going to a monitored channel."
+
+  - type: table
+    id: choice
+    tone: white
+    label: Options
+    heading: Make compared with the alternatives
+    caption: Make compared with other automation options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Make
+        - "Multi-step, branching processes with data to reshape."
+        - "A learning curve, and large scenarios need discipline."
+      - - "[Zapier](ref:tech.zapier)"
+        - "Simple, linear tasks between common apps."
+        - "Less clear for branching, and costs rise with tasks."
+      - - "[n8n](ref:tech.n8n)"
+        - "Teams needing self-hosting or high volume."
+        - "You run and maintain it, or pay for hosting."
+      - - "[Power Automate](ref:tech.microsoft-power-automate)"
+        - "Organizations centered on Microsoft 365."
+        - "Best inside the Microsoft ecosystem."
+      - - Custom code
+        - "Critical processes with strict reliability needs."
+        - "Highest cost, and developers for every change."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Processes that suit Make
+    items:
+      - title: Order and fulfilment routing
+        body: "Different handling by product type, region, or customer, with the right people told."
+      - title: Content and approval pipelines
+        body: "Drafts moving through review steps, with reminders and a record of who approved what."
+      - title: Data clean-up between systems
+        body: "Reformatting, de-duplicating, and enriching records on their way from one tool to another."
+      - title: Reporting from many sources
+        body: "Pulling numbers from several apps, combining them, and posting a daily summary."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Make
+    columns:
+      - title: Design
+        items:
+          - "Mapping the process before building."
+          - "Splitting big processes into small scenarios."
+      - title: Build
+        items:
+          - "Scenarios with routers, loops, and error paths."
+          - "Connections to apps without ready modules."
+      - title: Test
+        items:
+          - "Runs with messy, real-world data."
+          - "Checks that compare the systems on each side."
+      - title: Look after
+        items:
+          - "Monitoring, alerts, and cost reviews."
+          - "Documentation for your team."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we keep scenarios maintainable."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We keep scenarios small and single-purpose, call shared logic through sub-scenarios, and use consistent names for modules and variables."
+      - title: Data and errors
+        items:
+          - "Explicit mapping and validation of incoming data, with defaults for missing fields."
+          - "Error-handling routes that retry, log, and alert, rather than stopping silently."
+          - "Operations budgeted against plan limits, since each module run counts."
+      - title: Connections
+        items:
+          - "HTTP modules and [webhooks](ref:tech.webhooks) for services without a ready module."
+          - "Secrets stored in the platform's connection settings, with least-privilege access."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Make
+    items:
+      - q: Is Make better than Zapier?
+        a: "For branching and data handling, often. For simple chains, Zapier can be quicker. We choose by the process."
+      - q: Who can maintain the scenarios?
+        a: "A technically comfortable team member can, with our documentation. We can also look after them for you."
+      - q: How do operations affect the price?
+        a: "Plans are based on operations, which are counted per module run. We estimate from real volumes before you commit."
+      - q: What happens if a scenario fails?
+        a: "Error routes log the problem and alert a person. For critical flows, a scheduled check compares both systems so nothing stays missing."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Make across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Alternatives
+        entityIds: [tech.zapier, tech.n8n, tech.microsoft-power-automate]
+      - title: Related technologies
+        entityIds: [tech.webhooks, plat.airtable, plat.hubspot]
+      - title: Solutions
+        entityIds: [sol.workflow-automation, sol.business-process-automation]
+      - title: Systems we build
+        entityIds: [workarea.workflow-automation, workarea.automation-systems, workarea.integration-platforms]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.logistics, ind.media]
+
+  - type: cta
+    id: contact-cta
+    heading: Describe the process and where it branches
+    body: "Tell us the steps, the tools, and the awkward cases. We will draw the workflow and say whether Make is the right tool to run it."
+    primary: { label: Talk to DECHY about Make, href: "/contact/?service=automation" }

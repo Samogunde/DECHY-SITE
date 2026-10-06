@@ -1,0 +1,208 @@
+id: page.tech-openai
+kind: technology
+locale: en
+path: /ai/openai/
+parent: /ai/
+entityId: prov.openai
+title: "OpenAI Integration and Development | DECHY"
+description: "OpenAI integration from DECHY: text, image, speech, and search features in your software, with cost control, testing, and clear data handling."
+breadcrumbLabel: OpenAI
+intent:
+  primary: openai integration services
+  secondary:
+    - openai api development
+    - gpt powered business applications
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "OpenAI provides language, image, speech, and search models that other software can call, so products and processes can read, write, summarize, and answer."
+  problem: "Teams want to use these models in their own systems, but are unsure how to connect them safely, keep costs in check, and know whether the answers are good."
+  audience: "Product teams and operations leaders planning an AI feature, and technical leads comparing model providers."
+  choose: "Pick the provider by the task, the data rules, and the cost, and design so that the choice can change. OpenAI is one strong option among several."
+  next: "Describe the task and the information involved. We will say whether OpenAI suits it, what it would cost to run, and how we would test it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: AI provider
+    headline: OpenAI integration
+    lead: "OpenAI's models can read, write, summarize, describe images, transcribe speech, and search by meaning. We connect them to real systems, with limits and checks, and we compare them with other providers so the choice fits the task."
+    support: "This page covers what the models are good for, how we connect them, and how we keep cost and quality under control."
+    ctas:
+      - { label: Talk to us about an OpenAI project, href: "/contact/?service=ai" }
+      - { label: Matching tasks to models, href: "#tasks" }
+    spec:
+      kind: hub
+      center:
+        title: Your system
+        text: Calls the models it needs, through one controlled connection.
+      spokes:
+        - title: Text
+          text: Summarize, classify, draft, and answer.
+        - title: Documents
+          text: Extract fields and compare versions.
+        - title: Search by meaning
+          text: Find related content, not just matching words.
+        - title: Images
+          text: Describe, read, and check pictures.
+        - title: Speech
+          text: Transcribe calls and meetings.
+        - title: Tools
+          text: Let the model look things up or trigger actions.
+    purpose: system
+    takeaway: "OpenAI's models give a system text, document, search, image, speech, and tool abilities through a single controlled connection."
+    visualTitle: "What a system can call OpenAI's models for"
+    figureCaption: "This diagram shows a business system at the center with six abilities it can call on: text, documents, search by meaning, images, speech, and tools."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Models you reach through an API
+    answer: "OpenAI is an AI company whose models can be used through an API, a set of agreed requests that software can make. Your system sends text, files, or audio, and receives a result."
+    paragraphs:
+      - "You do not host these models yourself. That makes starting easy, and it means decisions about data handling, cost, and reliability depend partly on the provider's terms."
+      - "Good integration is therefore less about calling the model and more about what surrounds the call: what is sent, what is checked, what is stored, and what happens when the answer is wrong."
+
+  - type: table
+    id: tasks
+    tone: paper
+    label: Where it fits
+    heading: Matching tasks to the kind of model
+    caption: Common business tasks and the kind of model capability each uses
+    columns: [Task, Capability used, What to check]
+    rows:
+      - - Sorting incoming requests
+        - "Text classification."
+        - "Accuracy on real examples, and what happens to doubtful ones."
+      - - Answering from your documents
+        - "Search by meaning plus text generation."
+        - "Sources shown, and the documents kept current."
+      - - Reading invoices or forms
+        - "Document and image understanding."
+        - "Field accuracy, and human review of low-confidence results."
+      - - Transcribing calls
+        - "Speech to text."
+        - "Names, terms, and privacy rules for recordings."
+      - - Drafting replies
+        - "Text generation."
+        - "Tone, correctness, and a person approving before sending."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with OpenAI
+    columns:
+      - title: Design
+        items:
+          - "Choosing which tasks suit a model and which do not."
+          - "Cost estimates before building."
+      - title: Build
+        items:
+          - "Features inside your product or workflow."
+          - "Search and question answering over your documents."
+      - title: Control
+        items:
+          - "Test sets and sampling of real results."
+          - "Limits on spend, data sent, and actions allowed."
+      - title: Stay flexible
+        items:
+          - "A design that lets the provider be swapped."
+          - "Comparisons with other providers on your own examples."
+
+  - type: diagram
+    id: control
+    tone: paper
+    label: Cost and risk
+    heading: What surrounds a model call
+    intro: "The call is the small part. The layers around it make it safe to use."
+    spec:
+      kind: layers
+      layerLabel: Layers around a model call
+      layers:
+        - title: Your rules
+          text: What the feature may do, and what needs approval.
+        - title: What is sent
+          text: Only the data the task needs, with private parts removed.
+        - title: The model call
+          text: A request to the provider, with limits on size and spend.
+        - title: Checks on the answer
+          text: Validation, source checks, and confidence limits.
+        - title: Records
+          text: Logs and samples, so quality can be reviewed.
+    purpose: system
+    takeaway: "A safe model call is wrapped in rules, a limit on what is sent, checks on the answer, and records that allow review."
+    caption: "This diagram shows five layers around a model call, from your rules at the top to records at the bottom, with the call itself in the middle."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we integrate the models."
+    panels:
+      - title: Integration
+        paragraphs:
+          - "We call the provider's API from your server, never from a browser, keep keys in a secrets store, and add timeouts, retries, and spend limits."
+      - title: Quality
+        items:
+          - "Structured outputs validated against a schema before anything uses them."
+          - "A test set of real examples run on every prompt or model change."
+          - "Embeddings and a vector store such as [Pinecone](ref:tech.pinecone) for search by meaning."
+      - title: Data handling
+        paragraphs:
+          - "We review the provider's data terms against your requirements, send the minimum data, and choose regions and retention settings where the provider offers them."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: What no model removes
+    paragraphs:
+      - "Language models can state wrong things with confidence. Careful design reduces this and testing measures it, but no setup removes it. Where a wrong answer is costly, a person should check it."
+      - "We will tell you which parts of your process can be automated safely and which should stay with people."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about OpenAI
+    items:
+      - q: Is our data used to train the models?
+        a: "That depends on the product, plan, and settings, and the terms change. We read the current terms against your requirements before building, and tell you what we find."
+      - q: Should we use OpenAI or another provider?
+        a: "It depends on the task and the rules you work under. We compare options on your own examples, including [Anthropic Claude](ref:prov.anthropic-claude) and [Google Gemini](ref:prov.google-gemini)."
+      - q: How do we control cost?
+        a: "By limiting what is sent, choosing the smallest model that does the job, caching repeat requests, and setting spend alerts. We estimate monthly cost before you commit."
+      - q: What if the provider changes a model?
+        a: "Our test set shows the effect, and the design lets us adjust or switch. That is why we keep the provider behind a clear boundary."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: OpenAI across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ai]
+      - title: Related technologies
+        entityIds: [fw.langchain, lang.python, tech.pinecone, tech.postgresql]
+      - title: Alternatives
+        entityIds: [prov.anthropic-claude, prov.google-gemini, prov.mistral]
+      - title: Solutions
+        entityIds: [sol.ai-customer-support, sol.ai-automation, sol.ai-knowledge-systems]
+      - title: Systems we build
+        entityIds: [workarea.ai-solutions, workarea.ai-agents]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.healthcare, ind.professional-services]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the task
+    body: "Describe what you want the AI to do and what information it would use. We will say whether OpenAI suits it, what it would cost to run, and how we would test it."
+    primary: { label: Talk to DECHY about OpenAI, href: "/contact/?service=ai" }

@@ -21,6 +21,11 @@ export const SERVICE_SIMILARITY: SimilarityConfig = {
   maxShingle: 0.06,
   maxSharedHeadings: 1,
 };
+export const TECH_SIMILARITY: SimilarityConfig = {
+  maxSequence: 0.9,
+  maxShingle: 0.05,
+  maxSharedHeadings: 1,
+};
 export const WORK_SIMILARITY: SimilarityConfig = {
   maxSequence: 0.92,
   maxShingle: 0.07,

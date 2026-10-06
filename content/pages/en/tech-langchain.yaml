@@ -1,0 +1,210 @@
+id: page.tech-langchain
+kind: technology
+locale: en
+path: /ai/langchain/
+parent: /ai/
+entityId: fw.langchain
+title: "LangChain Development Services | DECHY"
+description: "LangChain development from DECHY: AI features that retrieve information, call tools, and answer reliably, and a candid view of when a framework helps."
+breadcrumbLabel: LangChain
+intent:
+  primary: langchain development services
+  secondary:
+    - langchain ai application development
+    - llm application frameworks
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "LangChain is an open-source toolkit for building applications around language models, handling steps such as retrieving documents, calling tools, and chaining prompts."
+  problem: "An AI feature that answers from your own information needs more than a model: it needs retrieval, memory, tool use, and checks, and wiring these by hand is slow."
+  audience: "Teams building AI assistants, document search, or workflow agents, and technical leads deciding whether to use a framework."
+  choose: "Use a framework when the application has several moving parts. For a single model call, plain code is simpler and easier to maintain."
+  next: "Describe the AI feature and the information it should use. We will say whether a framework helps and how we would check the results."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Framework
+    headline: LangChain development
+    lead: "LangChain is a toolkit for assembling applications that use language models together with your own information and tools. We use it where it saves real work, and we write plain code where a framework would only add weight."
+    support: "This page covers what the toolkit does, when it earns its place, and how we check what we build."
+    ctas:
+      - { label: Talk to us about an AI application, href: "/contact/?service=ai" }
+      - { label: Framework or plain code?, href: "#choice" }
+    spec:
+      kind: flow
+      steps:
+        - title: A question arrives
+          text: From a person or another system.
+        - title: Relevant information is found
+          text: Searched in your documents or records.
+        - title: A prompt is assembled
+          text: The question plus what was found.
+        - title: The model responds
+          text: Using the provider that suits the task.
+        - title: The answer is checked
+          text: Against rules, sources, and limits.
+    purpose: workflow
+    takeaway: "A typical language-model application finds relevant information, builds a prompt, calls the model, and checks the answer before using it."
+    visualTitle: "The steps behind an AI answer"
+    figureCaption: "This diagram shows five steps in a language-model application, from a question arriving to the answer being checked before it is used."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Plumbing for language-model applications
+    answer: "LangChain is an open-source framework with ready-made parts for common steps in language-model applications: loading documents, searching them, building prompts, calling models, and using tools."
+    paragraphs:
+      - "A model alone only produces text. Useful applications surround it with your information and your rules. A framework supplies those pieces so a team does not write each from scratch."
+      - "The trade-off is that frameworks in this area change quickly and add layers between you and the model. Used carefully, they speed up the first version. Used everywhere, they can make later changes harder."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: Framework or plain code?
+    intro: "The honest answer depends on how many moving parts the application has."
+    question: How complex is the AI feature?
+    options:
+      - label: One model call
+        when: "Summarize a document, classify a message, or draft a reply."
+        get: "A few lines of plain code against the provider's own tools. Easier to read and to change."
+        watch: "A framework here is usually unnecessary weight."
+        cta: { label: Plan a simple feature, href: "/contact/?service=ai" }
+      - label: Search plus a model
+        when: "Answer questions from your own documents, with sources shown."
+        get: "Either approach works. A framework helps with loading, splitting, and searching documents."
+        watch: "Whatever is used, plan how answers are checked and how documents stay current."
+        cta: { label: Plan document search, href: "/contact/?service=ai" }
+      - label: Several steps and tools
+        when: "An assistant that looks up records, calls other systems, and decides what to do next."
+        get: "A framework's agent and tool support can save time, along with tools for tracing what happened."
+        watch: "Limit what the system may do, and keep a person in the loop for steps that matter."
+        cta: { label: Plan a multi-step assistant, href: "/contact/?service=ai" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Options
+    heading: LangChain compared with other approaches
+    caption: LangChain compared with other ways of building language-model applications
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - LangChain
+        - "Applications with several steps, tools, and models."
+        - "Fast-changing, with extra layers to learn."
+      - - "[LlamaIndex](ref:fw.llamaindex)"
+        - "Applications centered on searching your documents."
+        - "Narrower scope for general workflows."
+      - - "[Semantic Kernel](ref:fw.semantic-kernel)"
+        - "Teams working in Microsoft's ecosystem."
+        - "Smaller community outside it."
+      - - "Plain code against a provider"
+        - "Simple features and teams who want full control."
+        - "You write the plumbing yourself."
+
+  - type: process
+    id: build
+    tone: white
+    label: How we build it
+    heading: From idea to a checked AI feature
+    steps:
+      - title: Define what good looks like
+        body: "We write down example questions and the answers you would accept, before choosing any tool."
+        artifacts: [Example set, Acceptance rules]
+      - title: Build the simplest version
+        body: "We start with the least machinery that could work, and add framework parts only where they help."
+        artifacts: [First working version]
+      - title: Test and tighten
+        body: "We score results against the example set, fix the weakest cases, and add limits on what the system may do."
+        artifacts: [Test results, Limits]
+      - title: Release carefully
+        body: "We start with a small group, review real use, and widen as quality holds."
+        artifacts: [Pilot, Quality reports]
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with LangChain
+    columns:
+      - title: Build
+        items:
+          - "Document search and question answering with sources."
+          - "Assistants that use tools and your records."
+      - title: Check
+        items:
+          - "Test sets that measure answer quality."
+          - "Tracing, so every step can be reviewed."
+      - title: Control
+        items:
+          - "Limits on what the system may do."
+          - "Approval steps for sensitive actions."
+      - title: Keep flexible
+        items:
+          - "A design where the model provider can be changed."
+          - "Documentation of the choices and the reasons."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build language-model applications."
+    panels:
+      - title: Retrieval
+        paragraphs:
+          - "For document search we split content sensibly, create embeddings, store them in a vector database such as [Pinecone](ref:tech.pinecone) or [PostgreSQL](ref:tech.postgresql) with a vector extension, and test retrieval quality before tuning prompts."
+      - title: Models and providers
+        paragraphs:
+          - "We keep model calls behind a thin layer so [OpenAI](ref:prov.openai), [Anthropic Claude](ref:prov.anthropic-claude), [Google Gemini](ref:prov.google-gemini), or an open model can be swapped by configuration."
+      - title: Evaluation and safety
+        items:
+          - "A fixed set of example questions with expected answers, run on every change."
+          - "Tracing of prompts, tool calls, and outputs."
+          - "Guards against prompt injection and limits on tool permissions."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about LangChain
+    items:
+      - q: Do we need LangChain to build an AI feature?
+        a: "No. Many features are simpler and clearer in plain code. We recommend a framework only when the number of steps and tools justifies it."
+      - q: Will we be locked in to it?
+        a: "We keep the framework behind clear boundaries and document the design, so replacing it later is a contained job."
+      - q: How do you know the answers are right?
+        a: "We test against example questions, show sources with answers, and review samples of real use. No system is right every time, so doubtful cases go to people."
+      - q: Which model do you use?
+        a: "The one that suits the task, the data rules, and the cost. We design so the choice can change."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: LangChain across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ai]
+      - title: Related technologies
+        entityIds: [prov.openai, prov.anthropic-claude, prov.google-gemini, lang.python, tech.pinecone]
+      - title: Alternatives
+        entityIds: [fw.llamaindex, fw.semantic-kernel]
+      - title: Solutions
+        entityIds: [sol.ai-knowledge-systems, sol.ai-agents]
+      - title: Systems we build
+        entityIds: [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
+      - title: Where it applies
+        entityIds: [ind.legal, ind.professional-services, ind.insurance]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the AI feature
+    body: "Describe what it should do and which information it should use. We will say whether a framework helps and how we would check the results."
+    primary: { label: Talk to DECHY about LangChain, href: "/contact/?service=ai" }

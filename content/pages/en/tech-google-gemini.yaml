@@ -1,0 +1,207 @@
+id: page.tech-google-gemini
+kind: technology
+locale: en
+path: /ai/google-gemini/
+parent: /ai/
+entityId: prov.google-gemini
+title: "Google Gemini Integration Services | DECHY"
+description: "Gemini integration from DECHY: AI features on Google's models for text, images, audio, and video, especially where Google Cloud and Workspace are in use."
+breadcrumbLabel: Google Gemini
+intent:
+  primary: google gemini integration
+  secondary:
+    - gemini api development
+    - multimodal ai applications
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Gemini is Google's family of AI models, which can work with text, images, audio, and video, and is available through Google Cloud and Google's developer tools."
+  problem: "Organizations already on Google Cloud or Workspace want AI features that fit their existing data, security, and billing, without a separate set of vendors."
+  audience: "Teams using Google Cloud or Workspace, and anyone with image, audio, or video material that needs reading or describing."
+  choose: "Consider Gemini when your data and tools already sit in Google's ecosystem, or when the task mixes media types. Compare it on your own examples."
+  next: "Tell us where your data lives and what you want the AI to do. We will test Gemini and the alternatives and recommend one."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: AI provider
+    headline: Google Gemini integration
+    lead: "Gemini handles text, images, audio, and video, and sits close to Google Cloud and Workspace. We use it where that closeness helps, and compare it with other providers so the choice follows the task and not the brand."
+    support: "This page covers where Gemini tends to fit, what mixed-media work looks like, and how we decide between providers."
+    ctas:
+      - { label: Talk to us about a Gemini project, href: "/contact/?service=ai" }
+      - { label: Where it fits, href: "#fit" }
+    spec:
+      kind: flow
+      steps:
+        - title: Mixed material comes in
+          text: Text, scans, photos, audio, or video.
+        - title: The model reads it together
+          text: Understanding the pieces in context.
+        - title: Structure is extracted
+          text: Fields, summaries, and labels in a fixed format.
+        - title: Rules and checks apply
+          text: Validation and review of doubtful cases.
+        - title: Results reach your systems
+          text: Records, tickets, or reports.
+    purpose: workflow
+    takeaway: "A mixed-media workflow reads text, images, audio, and video together, extracts structured results, checks them, and passes them to your systems."
+    visualTitle: "A workflow for mixed-media material"
+    figureCaption: "This diagram shows five steps in a mixed-media workflow, from material arriving to structured results reaching your systems after checks."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Models that read more than text
+    answer: "Gemini is a family of AI models from Google. Several versions can take text, images, audio, and video as input, and software reaches them through an API, a set of agreed requests, using Google's cloud or developer services."
+    paragraphs:
+      - "Working across media matters for tasks like reading a scanned form with handwriting, describing a product photo, or summarizing a recorded call. One model can handle the whole item."
+      - "For organizations already on Google Cloud, there is a practical advantage: billing, access control, and data location can follow the rules they already use."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Work that suits mixed media
+    items:
+      - title: Reading scanned forms and receipts
+        body: "Extracting names, dates, and amounts from paper that was scanned or photographed, and flagging the unclear ones."
+      - title: Describing product and site images
+        body: "Writing descriptions and tags for large image libraries, with a person reviewing a sample."
+      - title: Summarizing recorded calls
+        body: "Turning audio into a short record of what was agreed and what needs follow-up."
+      - title: Answering questions across Workspace files
+        body: "Finding information in documents, sheets, and email, within each person's own permissions."
+
+  - type: chooser
+    id: fit
+    tone: paper
+    label: Where it fits
+    heading: When Gemini is worth testing first
+    intro: "These are the situations where we most often include it in a comparison."
+    question: Which sounds like your project?
+    options:
+      - label: We are already on Google Cloud
+        when: "Your data, identity, and billing are on Google Cloud."
+        get: "AI features that follow your existing access rules, regions, and billing, with less new vendor work."
+        watch: "Convenience is not quality. We still compare on your own examples."
+        cta: { label: Plan on Google Cloud, href: "/contact/?service=ai" }
+      - label: Our material is not just text
+        when: "Scans, photos, recordings, or video that people review by hand."
+        get: "A pipeline that reads the media, extracts the facts, and flags what needs a person."
+        watch: "Quality depends on the source. Poor scans and noisy audio need testing early."
+        cta: { label: Plan a media workflow, href: "/contact/?service=ai" }
+      - label: We use Google Workspace
+        when: "Your team works in Docs, Sheets, Gmail, and Drive."
+        get: "Assistants and automations that work with files and messages where your team already works."
+        watch: "Permissions need care. An assistant should see only what its user may see."
+        cta: { label: Plan Workspace automation, href: "/contact/?service=ai" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: Gemini compared with other providers
+    caption: What to weigh when choosing between language-model providers
+    columns: [Consideration, Where Gemini may help, Where to check]
+    rows:
+      - - Ecosystem
+        - "Close to [Google Cloud](ref:plat.google-cloud) and Google Workspace."
+        - "Less natural if your stack is elsewhere."
+      - - Media types
+        - "Built to take mixed input."
+        - "Quality on your particular media."
+      - - Alternatives
+        - "[OpenAI](ref:prov.openai) and [Anthropic Claude](ref:prov.anthropic-claude) are strong options."
+        - "Run the same examples through each."
+      - - Open models
+        - "Not applicable."
+        - "Open models can run in your own environment when data cannot leave it."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Gemini
+    columns:
+      - title: Assess
+        items:
+          - "Testing Gemini against your examples."
+          - "Comparing it with other providers."
+      - title: Build
+        items:
+          - "Document and image reading pipelines."
+          - "Assistants connected to Google Workspace and your systems."
+      - title: Control
+        items:
+          - "Access limits that follow your permissions."
+          - "Human review for low-confidence results."
+      - title: Run
+        items:
+          - "Deployment on Google Cloud, with cost alerts."
+          - "Re-testing as models change."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build with Gemini."
+    panels:
+      - title: Access routes
+        paragraphs:
+          - "Gemini can be reached through Google's developer service or through Vertex AI on [Google Cloud](ref:plat.google-cloud). We usually prefer the cloud route for business work because identity, regions, and billing follow your existing set-up."
+      - title: Pipeline design
+        items:
+          - "Structured output validated against a schema before use."
+          - "Queues for batch work such as scanning a backlog of documents."
+          - "Storage of originals alongside extracted results, so any result can be traced back."
+      - title: Evaluation
+        paragraphs:
+          - "We build a labeled sample of your real material, score each provider's output against it, and re-run the sample on every change."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Gemini
+    items:
+      - q: Do we need to be on Google Cloud to use Gemini?
+        a: "No. It can be called from anywhere. Being on Google Cloud makes identity, billing, and data location simpler."
+      - q: Can Gemini read handwriting and scanned forms?
+        a: "It can read many of them well. Quality depends on the scan, so we test early on your real examples."
+      - q: How do you keep data private?
+        a: "We review the provider's current terms, choose regions and settings that fit your rules, and send only the data the task needs."
+      - q: Can we combine Gemini with other models?
+        a: "Yes. Many systems use a smaller, cheaper model for simple steps and a stronger one for hard ones, sometimes from different providers."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Gemini across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ai]
+      - title: Related technologies
+        entityIds: [plat.google-cloud, fw.langchain, lang.python, plat.google-workspace]
+      - title: Alternatives
+        entityIds: [prov.openai, prov.anthropic-claude, prov.meta-llama]
+      - title: Solutions
+        entityIds: [sol.ai-automation, sol.ai-knowledge-systems]
+      - title: Systems we build
+        entityIds: [workarea.ai-solutions, workarea.knowledge-and-content-systems]
+      - title: Where it applies
+        entityIds: [ind.media, ind.insurance, ind.education]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us where your data lives
+    body: "Describe the material, the task, and the tools you already use. We will test Gemini and the alternatives and recommend one on the results."
+    primary: { label: Talk to DECHY about Gemini, href: "/contact/?service=ai" }

@@ -8,13 +8,29 @@ import fs from "node:fs";
 import path from "node:path";
 import { breadcrumbsFor } from "./breadcrumbs";
 import { diagramIssues, glossaryIssues, readabilityIssues } from "./clarity";
-import { SERVICE_SIMILARITY, WORK_SIMILARITY, similarityIssues } from "./similarity";
+import {
+  SERVICE_SIMILARITY,
+  TECH_SIMILARITY,
+  WORK_SIMILARITY,
+  similarityIssues,
+} from "./similarity";
 import { expandFacts, linkTargets, toPlainText } from "./inline";
 import type { Registry } from "./load";
 import type { Block, Page } from "./schema";
 import { entityPath, pathExists } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
+
+/** Entity types a technology page may belong to. */
+const TECHNOLOGY_TYPES = new Set([
+  "technology",
+  "platform",
+  "language",
+  "framework",
+  "provider",
+  "tool",
+  "integration",
+]);
 
 export type Issue = { level: "error" | "warn"; code: string; where: string; message: string };
 
@@ -338,7 +354,7 @@ export function validateRegistry(registry: Registry): Issue[] {
     if (photoRefs.length > 4)
       err("photo-count", where, `${photoRefs.length} photographs on one page; the limit is 4`);
     // Clarity and comprehension standard (ADR 0004).
-    const GUIDED = ["service", "hub", "company", "work-hub", "work-area"];
+    const GUIDED = ["service", "hub", "company", "work-hub", "work-area", "technology"];
     if (GUIDED.includes(page.kind)) {
       if (!page.comprehension)
         err("comprehension-missing", where, "A commercial page needs its comprehension record");
@@ -351,6 +367,25 @@ export function validateRegistry(registry: Registry): Issue[] {
       if (!page.sections.some((b) => b.type === "callout" && b.variant === "illustrative"))
         err("work-illustrative", where, "A Work Area needs a labeled illustrative scenario");
     }
+    if (page.kind === "technology") {
+      const node = page.entityId ? registry.nodes.get(page.entityId) : undefined;
+      if (!node || !TECHNOLOGY_TYPES.has(node.type))
+        err("tech-entity", where, "A technology page must belong to a technology-like entity");
+      const home = node?.primaryService ? registry.nodes.get(node.primaryService) : undefined;
+      if (home && page.parent !== `/${home.slug}/`)
+        err("tech-parent", where, `A technology page's parent must be its service (${home.slug})`);
+      const related = page.sections.flatMap((b) => (b.type === "related" ? b.groups : []));
+      if (node?.primaryService && !related.some((g) => g.entityIds.includes(node.primaryService!)))
+        err("tech-service-link", where, "A technology page must link to its canonical service");
+      if (page.sections.some((b) => b.type === "callout" && b.variant === "illustrative"))
+        err("tech-disclaimer", where, "Technology pages use natural wording, not disclaimer boxes");
+      const specs = page.sections.flatMap((b) =>
+        b.type === "hero" || b.type === "diagram" ? (b.spec ? [b.spec] : []) : [],
+      );
+      if (specs.length === 0) err("tech-diagram", where, "A technology page needs a diagram");
+      if (node?.type === "integration" && !specs.some((s) => s.kind === "flow"))
+        err("integration-flow", where, "An integration page needs a data-flow diagram (AGENTS 76)");
+    }
     if (page.kind !== "legal") {
       for (const m of glossaryIssues(page, registry.facts)) err("glossary", where, m);
       for (const m of readabilityIssues(page, registry.facts).errors) err("readability", where, m);
@@ -361,7 +396,9 @@ export function validateRegistry(registry: Registry): Issue[] {
         ? 8
         : page.kind === "work-area" || page.kind === "hub"
           ? 6
-          : 1;
+          : page.kind === "technology"
+            ? 7
+            : 1;
     if (blockTypes.size < minVariety)
       err(
         "template-sameness",
@@ -388,7 +425,9 @@ export function validateRegistry(registry: Registry): Issue[] {
           ? 1300
           : page.kind === "contact"
             ? 140
-            : 0;
+            : page.kind === "technology"
+              ? 900
+              : 0;
     if (words < min)
       err("thin-page", where, `${words} words; ${min} required for ${page.kind} pages`);
 
@@ -535,6 +574,7 @@ export function validateRegistry(registry: Registry): Issue[] {
   for (const [kind, config] of [
     ["service", SERVICE_SIMILARITY],
     ["work-area", WORK_SIMILARITY],
+    ["technology", TECH_SIMILARITY],
   ] as const) {
     const group = registry.pages.filter((p) => p.kind === kind);
     for (const i of similarityIssues(group, registry.facts, config))

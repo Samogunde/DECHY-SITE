@@ -1,0 +1,209 @@
+id: page.tech-hubspot
+kind: technology
+locale: en
+path: /automation/hubspot/
+parent: /automation/
+entityId: plat.hubspot
+title: "HubSpot Integration and Automation | DECHY"
+description: "HubSpot work from DECHY: setting up the CRM, connecting it to your website and tools, and automating follow-up so leads are tracked from click to customer."
+breadcrumbLabel: HubSpot
+intent:
+  primary: hubspot integration and automation
+  secondary:
+    - hubspot crm setup
+    - hubspot workflow automation
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "HubSpot is a customer platform that brings together a CRM (the record of every contact and deal), marketing tools, sales tools, and customer service in one system."
+  problem: "Leads sit in inboxes, follow-up depends on memory, and marketing, sales, and support each keep a different version of the customer."
+  audience: "Marketing and sales leaders who want one view of the customer, and teams whose HubSpot set-up has become messy."
+  choose: "Set HubSpot up around your real sales process, connect it to the website and your other systems, and automate only the follow-up that people forget."
+  next: "Tell us how an enquiry becomes a customer today. We will show where HubSpot would help and what to connect to it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: HubSpot integration and automation
+    lead: "HubSpot is where many teams keep the record of every customer and every conversation. The platform is easy to start and easy to leave in a mess. We set it up around how you actually sell, and connect it to everything that feeds it."
+    support: "This page covers what HubSpot does, how we set it up, and how it connects to the rest of your systems."
+    ctas:
+      - { label: Talk to us about HubSpot, href: "/contact/?service=automation" }
+      - { label: See the customer path, href: "#path" }
+    spec:
+      kind: funnel
+      stages:
+        - title: Visitors and contacts
+          text: People who find you and share their details.
+        - title: Qualified leads
+          text: Those who match who you want to serve.
+        - title: Opportunities
+          text: Conversations about a real purchase.
+        - title: Customers
+          text: Closed deals, with the history kept.
+        - title: Repeat customers
+          text: Support, renewals, and referrals.
+    purpose: transformation
+    takeaway: "A CRM, the shared customer record, follows a person from first contact through lead, opportunity, and customer to repeat business, keeping one record along the way."
+    visualTitle: "The customer path a CRM follows"
+    figureCaption: "This diagram shows the customer path narrowing from visitors and contacts to qualified leads, opportunities, customers, and repeat customers."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: One record for every customer
+    answer: "HubSpot is a platform built around a CRM, short for customer relationship management: the shared record of every contact, company, deal, and conversation. Marketing, sales, and service tools all read and write to it."
+    paragraphs:
+      - "Its value is joining things that usually stay apart. The form someone filled in, the email they opened, the call with sales, and the support ticket all appear on one timeline."
+      - "That only works if the data is clean and the process is agreed. A CRM that does not match how your team really sells becomes a place people avoid."
+
+  - type: table
+    id: parts
+    tone: paper
+    label: Where it fits
+    heading: What HubSpot covers, by team
+    caption: What HubSpot offers each team and what we set up for it
+    columns: [Team, What HubSpot offers, What we set up]
+    rows:
+      - - Marketing
+        - "Forms, email, landing pages, and campaign reports."
+        - "Forms on your site, lead scoring, and source tracking."
+      - - Sales
+        - "Deals, pipelines, meetings, and reminders."
+        - "A pipeline matching your real stages, and automatic task creation."
+      - - Service
+        - "Tickets, a shared inbox, and a knowledge base."
+        - "Ticket routing and customer-facing help pages."
+      - - Operations
+        - "Data sync and automation across systems."
+        - "Connections to accounting, billing, and other tools."
+      - - Website
+        - "A content system for pages and blogs."
+        - "Used when it fits. Otherwise we connect your existing site."
+
+  - type: chooser
+    id: shape
+    tone: white
+    label: Options
+    heading: What kind of HubSpot work do you need?
+    intro: "Teams usually come to us in one of three situations."
+    question: Where are you starting from?
+    options:
+      - label: A new set-up
+        when: "You are adopting HubSpot, or replacing a spreadsheet or a simpler tool."
+        get: "A pipeline, properties, and forms designed around your process, with the first automations in place."
+        watch: "Resist copying every field from the old system. Move only what is used."
+        cta: { label: Plan a new set-up, href: "/contact/?service=automation" }
+      - label: A move from another system
+        when: "You are leaving another CRM, such as [Salesforce](ref:plat.salesforce), or merging several."
+        get: "A planned migration with data cleaning, mapping, and a test run before cut-over."
+        watch: "History and attachments need decisions about what to bring across."
+        cta: { label: Plan a migration, href: "/contact/?service=automation" }
+      - label: A mess to fix
+        when: "HubSpot is in use, but data is duplicated, workflows conflict, and nobody trusts the reports."
+        get: "An audit, a clean-up plan, and simpler automations that people understand."
+        watch: "Cleaning data is wasted unless the entry habits behind it change."
+        cta: { label: Plan a clean-up, href: "/contact/?service=automation" }
+
+  - type: diagram
+    id: path
+    tone: paper
+    label: The connections
+    heading: What a HubSpot set-up connects to
+    intro: "HubSpot is most useful when the rest of the business feeds it and reads from it."
+    spec:
+      kind: hub
+      center:
+        title: HubSpot
+        text: The shared record of every customer.
+      spokes:
+        - title: Your website
+          text: Forms and tracking that capture the source.
+        - title: Email and calendar
+          text: Conversations logged automatically.
+        - title: Accounting and billing
+          text: Paid status and invoices on the deal.
+        - title: Your product
+          text: Sign-ups and usage added to the record.
+        - title: Support tools
+          text: Tickets visible to sales and success.
+        - title: Advertising
+          text: Campaigns tied to the leads they produced.
+    purpose: relationship
+    takeaway: "HubSpot works best as the center that your website, email, accounting, product, support, and advertising all share."
+    caption: "This diagram shows HubSpot at the center, linked to six systems around it: website, email and calendar, accounting, product, support, and advertising."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: A CRM is only as good as its data
+    paragraphs:
+      - "No tool fixes inconsistent habits. If deals are not updated or contacts are entered three ways, reports will mislead however well the system is configured."
+      - "We design to make the right behavior easy: required fields only where they matter, automatic logging where possible, and a short guide that people will actually read."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build and connect HubSpot."
+    panels:
+      - title: Data model
+        paragraphs:
+          - "We plan objects, properties, and associations before building, use dropdowns over free text, and keep naming consistent so reports and workflows stay reliable."
+      - title: Integration
+        items:
+          - "The [HubSpot API](ref:int.hubspot-api) (a way for other programs to read and change HubSpot records) and webhooks for syncs with your product, billing, and other systems."
+          - "Middleware or automation tools such as [Make](ref:tech.make) for simpler connections."
+          - "Care with rate limits, duplicates, and which system is the source of truth for each field."
+      - title: Governance
+        items:
+          - "A sandbox for testing workflow changes."
+          - "Documented workflows with owners, so changes do not cause surprises."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about HubSpot
+    items:
+      - q: Which HubSpot plan do we need?
+        a: "It depends on the features your process uses. We map your needs to the plans and tell you what you can skip, since plans and prices change."
+      - q: Can HubSpot work with our existing website?
+        a: "Yes. Forms and tracking can be added to most sites, so you do not have to rebuild the site to use the CRM."
+      - q: Can you connect HubSpot to our accounting or product?
+        a: "Yes. We connect them so billing status and usage appear on the customer record, and we agree which system owns each piece of data."
+      - q: How is HubSpot different from Salesforce?
+        a: "HubSpot is usually quicker to adopt and easier for smaller teams. [Salesforce](ref:plat.salesforce) offers deeper customization for complex organizations. The right choice depends on your process and size."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: HubSpot across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Related technologies
+        entityIds: [int.hubspot-api, plat.salesforce, plat.zoho, tech.zapier, tech.make]
+      - title: Related services
+        entityIds: [svc.digital-marketing, svc.api-integration]
+      - title: Solutions
+        entityIds: [sol.crm-integration, sol.workflow-automation]
+      - title: Systems we build
+        entityIds: [workarea.digital-marketing-systems, workarea.integration-platforms]
+      - title: Where it applies
+        entityIds: [ind.saas, ind.professional-services, ind.real-estate]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us how an enquiry becomes a customer
+    body: "Describe your sales process and the tools involved. We will show where HubSpot would help and what to connect to it first."
+    primary: { label: Talk to DECHY about HubSpot, href: "/contact/?service=automation" }

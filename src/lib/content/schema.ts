@@ -465,7 +465,17 @@ export type BlockType = Block["type"];
 
 export const Page = z.object({
   id: z.string(),
-  kind: z.enum(["home", "service", "hub", "company", "work-hub", "work-area", "contact", "legal"]),
+  kind: z.enum([
+    "home",
+    "service",
+    "hub",
+    "company",
+    "work-hub",
+    "work-area",
+    "technology",
+    "contact",
+    "legal",
+  ]),
   locale: z.literal("en"),
   path: z.string().regex(/^\/([a-z0-9-]+\/)*$/, "path needs leading and trailing slash"),
   entityId: z.string().optional(),

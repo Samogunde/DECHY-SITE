@@ -1,0 +1,203 @@
+id: page.tech-php
+kind: technology
+locale: en
+path: /web-development/php/
+parent: /web-development/
+entityId: lang.php
+title: "PHP Development Services | DECHY"
+description: "PHP development from DECHY: building, maintaining, and modernizing PHP sites and applications, and a clear view of when to keep PHP and when to move on."
+breadcrumbLabel: PHP
+intent:
+  primary: php development services
+  secondary:
+    - php website maintenance
+    - php application modernization
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "PHP is a long-established server language that runs a very large share of websites, including WordPress, and many custom business applications."
+  problem: "Many organizations depend on PHP code that is old, unmaintained, or understood by one person, and are unsure whether to fix it or replace it."
+  audience: "Owners of PHP websites and applications, and teams extending WordPress or a custom PHP system."
+  choose: "Keep and modernize PHP that works and can be understood. Replace it when it blocks change, is insecure, or has no maintainer."
+  next: "Tell us what the PHP system does and what worries you. We will review it and say whether to improve, extend, or replace it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Language
+    headline: PHP development
+    lead: "PHP runs a great deal of the web, from small business sites to large applications. We build with it, maintain it, and modernize it. Much of the work is deciding which PHP to keep and which to retire."
+    support: "This page covers where PHP fits today, how we assess an old system, and what the choices cost."
+    ctas:
+      - { label: Talk to us about a PHP system, href: "/contact/?service=web-development" }
+      - { label: Keep, modernize, or replace?, href: "#decide" }
+    spec:
+      kind: decision
+      question: What should happen to your PHP system?
+      branches:
+        - when: "It works, is understood, and is kept up to date"
+          choose: Keep it, and maintain it
+          text: Regular updates and a named person who looks after it.
+        - when: "It works, but it is old and hard to change"
+          choose: Modernize in stages
+          text: Update the language version, add tests, and replace parts step by step.
+        - when: "It is insecure, unmaintained, or blocks the business"
+          choose: Replace it
+          text: Plan a move, protect the data, and run both for a time.
+        - when: "It is a WordPress site with custom code"
+          choose: Review the custom parts
+          text: Keep what is sound and move the rest into maintainable plugins.
+    purpose: decision
+    takeaway: "A PHP system should be kept, modernized, or replaced depending on whether it works, can be changed, and is safe."
+    visualTitle: "What to do with a PHP system"
+    figureCaption: "This diagram shows four conditions of a PHP system and what to do with each: keep it, modernize it in stages, replace it, or review its custom parts."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A workhorse language with a reputation to match
+    answer: "PHP is a programming language designed for the web. It runs on the server, builds the page, and talks to the database. It powers WordPress and many other well-known systems."
+    paragraphs:
+      - "Its reputation is mixed because older PHP was often written without structure. Modern PHP, with current versions and good practice, is a sound choice for many business sites and applications."
+      - "The question is rarely whether PHP is good. It is whether this particular system is in good shape, and what it would cost to improve it against what it would cost to replace it."
+
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: PHP compared with the alternatives
+    caption: PHP compared with other server-side options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - PHP
+        - "Content sites, WordPress work, and applications already built in it."
+        - "Quality varies widely, so the state of the code matters."
+      - - "[TypeScript](ref:lang.typescript) on the server"
+        - "Teams who want one language for interface and server."
+        - "A younger ecosystem for some business needs."
+      - - "[Python](ref:lang.python)"
+        - "Applications with data processing or AI features."
+        - "Fewer ready-made content management options."
+      - - "[Java](ref:lang.java)"
+        - "Large, long-lived systems in enterprise settings."
+        - "Heavier to start and slower to change for small projects."
+
+  - type: process
+    id: decide
+    tone: white
+    label: How we assess it
+    heading: Reviewing an existing PHP system
+    steps:
+      - title: Read the system
+        body: "We look at the PHP version, the dependencies, the structure, and whether there are any tests."
+        artifacts: [Inventory, Version and dependency report]
+      - title: Check the risks
+        body: "We look for unpatched components, exposed data, and code that only one person understands."
+        artifacts: [Risk list]
+      - title: Price the options
+        body: "We estimate keeping, modernizing, and replacing, in plain terms, with what each leaves you with."
+        artifacts: [Options with rough cost]
+      - title: Recommend and plan
+        body: "We recommend one route and set out the first stage, so you can start without committing to all of it."
+        artifacts: [Recommendation, First-stage plan]
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Where PHP still makes sense
+    items:
+      - title: A WordPress site with custom features
+        body: "Themes and plugins written to your needs, kept apart from core code so updates are safe."
+      - title: A long-running business application
+        body: "A booking, membership, or ordering system that works well and needs steady care, not a rewrite."
+      - title: A content site on shared hosting
+        body: "A low-cost hosting arrangement that PHP supports almost everywhere."
+      - title: A system being moved off an old version
+        body: "Upgrading to a supported release, with tests added before the risky parts are touched."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with PHP
+    columns:
+      - title: Maintain
+        items:
+          - "Version updates and security patches."
+          - "Fixing faults and watching the site."
+      - title: Modernize
+        items:
+          - "Moving to a supported PHP version."
+          - "Adding tests and clearing dependency debt."
+      - title: Extend
+        items:
+          - "New features for an existing application."
+          - "Connections to payments, customer records, and other tools."
+      - title: Replace
+        items:
+          - "Moving content and data to a new platform."
+          - "Redirects that protect search visibility."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we handle PHP projects."
+    panels:
+      - title: Versions and dependencies
+        paragraphs:
+          - "We target a currently supported PHP release, manage packages through Composer, and watch for security advisories on dependencies."
+      - title: Structure
+        items:
+          - "Code organized into small, testable classes instead of long page scripts."
+          - "Database access through prepared statements to avoid injection flaws."
+          - "Configuration and secrets outside the code."
+      - title: WordPress
+        paragraphs:
+          - "For [WordPress](ref:plat.wordpress) sites we keep custom code in plugins and child themes, so core updates do not overwrite it."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about PHP
+    items:
+      - q: Is PHP outdated?
+        a: "The language is actively developed. Older systems running unsupported versions are the problem, not the language itself."
+      - q: Can you work on code we did not write?
+        a: "Yes. That is most of the work. We start with a review so we both know what is there."
+      - q: Should we rebuild in something newer?
+        a: "Only if the review shows a reason, such as security, cost of change, or lack of maintainers. A rebuild for its own sake is rarely worth it."
+      - q: Do you do WordPress work?
+        a: "Yes. See our [WordPress](ref:plat.wordpress) page."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: PHP across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related technologies
+        entityIds: [plat.wordpress, lang.python, lang.typescript, tech.mysql]
+      - title: Solutions
+        entityIds: [sol.legacy-system-modernization]
+      - title: Systems we build
+        entityIds: [workarea.business-web-platforms, workarea.custom-software-systems]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.media, ind.education]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your PHP system
+    body: "Describe what it does and what worries you about it. We will review it and say whether to improve, extend, or replace it."
+    primary: { label: Talk to DECHY about PHP, href: "/contact/?service=web-development" }

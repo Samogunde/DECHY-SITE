@@ -1,6 +1,6 @@
 /**
  * Derives typed graph edges from the `related` blocks on pages and from Work Area ownership, and
- * writes data/relations/phase-2.yaml. Each relationship is stored once; inverse edges are derived
+ * writes data/relations/derived.yaml. Each relationship is stored once; inverse edges are derived
  * when the graph is read. Edit a page's related block (or a Work Area's primaryService) and rerun:
  *   npx tsx scripts/derive-relations.ts
  * Edges already present in the hand-written files are not duplicated.
@@ -24,13 +24,13 @@ const TECH_LIKE = new Set([
   "concept",
 ]);
 
-const OUT = path.join(process.cwd(), "data/relations/phase-2.yaml");
+const OUT = path.join(process.cwd(), "data/relations/derived.yaml");
 const handWritten = registry.relations.filter(() => true);
 // Everything except the previous generated output counts as already present.
 const existing = new Set(
   fs
     .readdirSync(path.join(process.cwd(), "data/relations"))
-    .filter((f) => f.endsWith(".yaml") && f !== "phase-2.yaml")
+    .filter((f) => f.endsWith(".yaml") && f !== "derived.yaml")
     .flatMap((f) => {
       const parsed = YAML.parse(
         fs.readFileSync(path.join(process.cwd(), "data/relations", f), "utf8"),
@@ -71,6 +71,10 @@ for (const page of registry.pages) {
         else if (t === "industry") add(source.id, "appliesToIndustry", id);
         else if (t === "problem")
           add(source.id, s === "work-area" ? "solves" : "addressesProblem", id);
+        else if (TECH_LIKE.has(s) && t === "service") add(id, "usesTechnology", source.id);
+        else if (TECH_LIKE.has(s) && t === "work-area") add(id, "usesTechnology", source.id);
+        else if (TECH_LIKE.has(s) && TECH_LIKE.has(t))
+          add(source.id, /alternativ/i.test(g.title) ? "alternativeTo" : "integratesWith", id);
         else if (TECH_LIKE.has(t)) add(source.id, "usesTechnology", id);
       }
   }
@@ -84,4 +88,4 @@ const lines = [
   "",
 ];
 fs.writeFileSync(OUT, lines.join("\n"));
-console.log(`derived ${out.size} relations -> data/relations/phase-2.yaml`);
+console.log(`derived ${out.size} relations -> data/relations/derived.yaml`);

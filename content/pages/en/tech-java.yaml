@@ -1,0 +1,205 @@
+id: page.tech-java
+kind: technology
+locale: en
+path: /software-development/java/
+parent: /software-development/
+entityId: lang.java
+title: "Java Development Services | DECHY"
+description: "Java development from DECHY: dependable back-end systems, enterprise integrations, and care for existing Java applications, with a candid view of when Java fits."
+breadcrumbLabel: Java
+intent:
+  primary: java development services
+  secondary:
+    - java enterprise application development
+    - java application modernization
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Java is a mature, widely used language for large, long-lived back-end systems, and runs much of the software behind banks, insurers, and big organizations."
+  problem: "Organizations depend on Java systems that are hard to change, run on old versions, or have lost the people who built them."
+  audience: "Organizations that run Java systems, and teams building large back ends where stability and a deep talent pool matter."
+  choose: "Choose Java for large systems with long lives and many developers. Choose something lighter for small products and quick experiments."
+  next: "Tell us what the Java system does and what is hard about it. We will review it and recommend how to proceed."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Language
+    headline: Java development
+    lead: "Java is built for systems that must run for years and be understood by many people. We build new Java services, keep existing ones healthy, and help organizations decide when to modernize a system and when to leave it alone."
+    support: "This page covers where Java fits, how we approach older systems, and when a lighter option is better."
+    ctas:
+      - { label: Talk to us about a Java system, href: "/contact/?service=software-development" }
+      - { label: Build, keep, or modernize?, href: "#route" }
+    spec:
+      kind: layers
+      layerLabel: Layers of a typical Java system
+      layers:
+        - title: Clients
+          text: Websites, mobile apps, and partner systems calling in.
+        - title: Services
+          text: Business rules, written as separate, testable parts.
+        - title: Data access
+          text: A controlled path to databases and queues.
+        - title: Integration
+          text: Links to finance and operations systems, payments, and partners.
+        - title: Platform
+          text: Containers, monitoring, and release automation.
+    purpose: architecture
+    takeaway: "A Java system separates what calls it, the services holding business rules, data access, integration, and the platform it runs on."
+    visualTitle: "The layers of a typical Java system"
+    figureCaption: "This diagram shows five layers of a Java system, from the clients that call it down to the platform it runs on."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Built for the long haul
+    answer: "Java is a general-purpose language that runs on a virtual machine, which lets the same program run on different systems. It emphasizes stability, strong tooling, and compatibility across versions."
+    paragraphs:
+      - "That compatibility is why so many large organizations still run it. Systems written many years ago often keep working with modest changes."
+      - "The cost is ceremony. Java usually takes more code than lighter languages for the same job, and it suits systems with many contributors more than quick experiments."
+
+  - type: chooser
+    id: route
+    tone: paper
+    label: Options
+    heading: Which route fits your Java system?
+    intro: "Java projects tend to fall into three situations. The right advice differs in each."
+    question: What is your situation?
+    options:
+      - label: A new system
+        when: "You are building something that will run for years, with many developers, and tight rules on reliability."
+        get: "A Java service built in clear modules, with tests, monitoring, and a path for others to take over."
+        watch: "Check that the size of the project justifies it. A lighter language may do for a smaller one."
+        cta: { label: Plan a new service, href: "/contact/?service=software-development" }
+      - label: An existing system that works
+        when: "It runs, it earns its keep, and it is understood by at least a few people."
+        get: "Upkeep: version updates, security patches, and tests added around the riskiest parts."
+        watch: "Do not rewrite a working system for fashion. The savings rarely justify the risk."
+        cta: { label: Plan upkeep, href: "/contact/?service=software-development" }
+      - label: An old system that is stuck
+        when: "It runs on an unsupported version, nobody dares change it, or it blocks the business."
+        get: "A staged modernization: move to a supported version, carve out parts, and connect new work through clean interfaces."
+        watch: "Modernizing in stages is slower to show results but far less risky than a single cutover."
+        cta: { label: Plan modernization, href: "/contact/?service=software-development" }
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: When Java is more than you need
+    paragraphs:
+      - "For a small product, a prototype, or a team of two or three, Java's structure can slow you down. A lighter language gets you to a first version sooner."
+      - "We will say so. The point is to match the language to the life of the system, not to fit the system to the language."
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: Java compared with other languages
+    caption: Java compared with other languages for back-end systems
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Java
+        - "Large systems with long lives, many developers, and strict reliability needs."
+        - "More code and setup for smaller jobs."
+      - - "[Python](ref:lang.python)"
+        - "Data, automation, and AI-heavy work."
+        - "Slower for heavy computation."
+      - - "[C#](ref:lang.c-sharp)"
+        - "Organizations already invested in Microsoft tools."
+        - "Tied more closely to one vendor's ecosystem."
+      - - "[Go](ref:lang.go)"
+        - "Simple, fast network services."
+        - "A smaller library set for business applications."
+      - - "[Kotlin](ref:tech.kotlin)"
+        - "Teams who want a more concise language on the same platform."
+        - "Fewer developers than Java."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Java
+    columns:
+      - title: Build
+        items:
+          - "Services and back ends with clear module boundaries."
+          - "Integrations with enterprise systems and payment providers."
+      - title: Keep healthy
+        items:
+          - "Version upgrades and security patches."
+          - "Tests added around fragile areas."
+      - title: Modernize
+        items:
+          - "Staged replacement of aging parts."
+          - "Moves to containers and the cloud."
+      - title: Review
+        items:
+          - "Short assessments of structure, dependencies, and risk."
+          - "Plain recommendations, with costs."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the practices we use on Java projects."
+    panels:
+      - title: Platform and versions
+        paragraphs:
+          - "We target a current long-term-support release, keep dependencies patched, and build with a standard tool such as Maven or Gradle."
+      - title: Design
+        items:
+          - "Modular services with explicit interfaces, in a monolith or as separate services depending on the team."
+          - "A mainstream framework, so the code is familiar to other Java developers."
+          - "Database access through a mapping layer, with queries reviewed for performance."
+      - title: Operations
+        items:
+          - "Containers with [Docker](ref:tool.docker), and release pipelines that run tests on every change."
+          - "Metrics, logs, and alerts so problems are seen before users report them."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Java
+    items:
+      - q: Is Java still a good choice?
+        a: "Yes, for the right kind of system. It is actively developed, widely supported, and easy to hire for. It is a poor fit for small, fast-moving experiments."
+      - q: Should we rewrite our old Java system?
+        a: "Rarely all at once. We usually recommend upgrading the platform, adding tests, and replacing parts in stages."
+      - q: Can Java work with modern web and mobile apps?
+        a: "Yes. A Java back end can serve web and mobile clients through a clear set of requests, whatever they are built in."
+      - q: How is Java different from JavaScript?
+        a: "They are unrelated languages that share part of a name. Java is mostly used on servers, and JavaScript mostly in browsers."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Java across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.software-development]
+      - title: Related technologies
+        entityIds: [lang.python, lang.c-sharp, lang.go, tech.kotlin, tech.postgresql, tool.docker]
+      - title: Related services
+        entityIds: [svc.api-integration, svc.cloud]
+      - title: Solutions
+        entityIds: [sol.legacy-system-modernization, sol.cloud-migration]
+      - title: Systems we build
+        entityIds: [workarea.custom-software-systems, workarea.integration-platforms]
+      - title: Where it applies
+        entityIds: [ind.banking, ind.insurance, ind.telecommunications]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the Java system
+    body: "Describe what it does and what makes it hard to live with. We will review it and recommend whether to keep it, build around it, or modernize it."
+    primary: { label: Talk to DECHY about Java, href: "/contact/?service=software-development" }

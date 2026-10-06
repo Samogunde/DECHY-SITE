@@ -192,7 +192,7 @@ entities:
     primaryService: svc.ai
     group: AI frameworks
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 6
   - id: fw.lit
@@ -222,7 +222,7 @@ entities:
     primaryService: svc.web-development
     group: Frontend technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: fw.nuxt
@@ -262,7 +262,7 @@ entities:
     primaryService: svc.web-development
     group: Frontend technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: fw.remix
@@ -462,7 +462,7 @@ entities:
     primaryService: svc.api-integration
     group: Business/payment integrations
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 11
   - id: int.wix-apis
@@ -555,7 +555,7 @@ entities:
     slug: java
     primaryService: svc.software-development
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 18
   - id: lang.javascript
@@ -609,7 +609,7 @@ entities:
     slug: php
     primaryService: svc.web-development
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 18
   - id: lang.powershell
@@ -627,7 +627,7 @@ entities:
     slug: python
     primaryService: svc.software-development
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 18
   - id: lang.r
@@ -681,7 +681,7 @@ entities:
     slug: typescript
     primaryService: svc.web-development
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 18
   - id: lang.visual-basic
@@ -700,7 +700,7 @@ entities:
     primaryService: svc.automation
     group: Workflow/business platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: plat.appwrite
@@ -730,7 +730,7 @@ entities:
     primaryService: svc.cloud
     group: Cloud platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: plat.azure
@@ -740,7 +740,7 @@ entities:
     primaryService: svc.cloud
     group: Cloud platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: plat.bigcommerce
@@ -862,7 +862,7 @@ entities:
     primaryService: svc.cloud
     group: Cloud platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: plat.google-workspace
@@ -882,7 +882,7 @@ entities:
     primaryService: svc.automation
     group: Workflow/business platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: plat.hubspot-cms
@@ -1032,7 +1032,7 @@ entities:
     primaryService: svc.automation
     group: Workflow/business platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: plat.sanity
@@ -1054,7 +1054,7 @@ entities:
     alsoListedUnder:
       - svc.web-development
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.shopify-plus
@@ -1146,7 +1146,7 @@ entities:
     primaryService: svc.web-development
     group: Platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.webflow-ecommerce
@@ -1218,7 +1218,7 @@ entities:
     primaryService: svc.web-development
     group: Platforms
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.xano
@@ -1258,7 +1258,7 @@ entities:
     primaryService: svc.ai
     group: AI providers
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 6
   - id: prov.cohere
@@ -1278,7 +1278,7 @@ entities:
     primaryService: svc.ai
     group: AI providers
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 6
   - id: prov.groq
@@ -1338,7 +1338,7 @@ entities:
     primaryService: svc.ai
     group: AI providers
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 6
   - id: prov.together-ai
@@ -1828,7 +1828,7 @@ entities:
     primaryService: svc.mobile-app-development
     group: Technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 5
   - id: tech.flutterflow
@@ -1932,7 +1932,7 @@ entities:
     primaryService: svc.mobile-app-development
     group: Technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 5
   - id: tech.kotlin-multiplatform
@@ -1982,7 +1982,7 @@ entities:
     primaryService: svc.automation
     group: Automation platforms and technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: tech.mariadb
@@ -2054,7 +2054,7 @@ entities:
     primaryService: svc.data-analytics
     group: NoSQL/distributed systems
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 10
   - id: tech.monitor
@@ -2084,7 +2084,7 @@ entities:
     primaryService: svc.automation
     group: Automation platforms and technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: tech.neo4j
@@ -2144,7 +2144,7 @@ entities:
     primaryService: svc.data-analytics
     group: Relational databases
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 10
   - id: tech.pub-sub
@@ -2194,7 +2194,7 @@ entities:
     primaryService: svc.mobile-app-development
     group: Technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 5
   - id: tech.redis
@@ -2334,7 +2334,7 @@ entities:
     primaryService: svc.mobile-app-development
     group: Technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 5
   - id: tech.swiftui
@@ -2416,7 +2416,7 @@ entities:
     primaryService: svc.automation
     group: Automation platforms and technologies
     prominence: feature
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: tool.adobe-xd
@@ -2545,8 +2545,8 @@ entities:
     slug: docker
     primaryService: svc.cloud
     group: DevOps
-    prominence: reference
-    pagePolicy: REVIEW
+    prominence: feature
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: tool.elk
@@ -2665,8 +2665,8 @@ entities:
     slug: kubernetes
     primaryService: svc.cloud
     group: DevOps
-    prominence: reference
-    pagePolicy: REVIEW
+    prominence: feature
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: tool.linux
@@ -2815,8 +2815,8 @@ entities:
     slug: terraform
     primaryService: svc.cloud
     group: DevOps
-    prominence: reference
-    pagePolicy: REVIEW
+    prominence: feature
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: tool.travis-ci

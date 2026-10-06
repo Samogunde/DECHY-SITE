@@ -1,0 +1,212 @@
+id: page.tech-python
+kind: technology
+locale: en
+path: /software-development/python/
+parent: /software-development/
+entityId: lang.python
+title: "Python Development Services | DECHY"
+description: "Python development from DECHY: back ends, data pipelines, automation, and AI-connected systems, and an honest view of where Python is the right language."
+breadcrumbLabel: Python
+intent:
+  primary: python development services
+  secondary:
+    - python backend development
+    - python automation and data processing
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Python is a general-purpose language known for readable code and a huge library of tools for data, automation, and AI."
+  problem: "Teams need to process data, connect systems, or add AI to a product, and want a language with ready tools and many available developers."
+  audience: "Teams building back ends, data processing, automation, or AI features, and technical leads choosing a language."
+  choose: "Choose Python when the work centers on data, automation, or AI, or when readability and speed of development matter most."
+  next: "Describe what the system has to do. We will say whether Python is the right language and what else it needs around it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Language
+    headline: Python development
+    lead: "Python is the language many teams reach for when the work involves data, automation, or AI. It reads clearly, it has libraries for almost everything, and many developers know it. We use it where those strengths matter."
+    support: "This page covers where Python fits, what it does less well, and how we build with it."
+    ctas:
+      - { label: Talk to us about a Python project, href: "/contact/?service=software-development" }
+      - { label: Where Python fits, href: "#uses" }
+    spec:
+      kind: hub
+      center:
+        title: Python
+        text: One language with tools for many jobs.
+      spokes:
+        - title: Web back ends
+          text: Servers that power sites and apps.
+        - title: Data processing
+          text: Cleaning, joining, and analyzing information.
+        - title: Automation
+          text: Scripts that replace repeated manual work.
+        - title: AI and machine learning
+          text: Calling models and training your own.
+        - title: Integrations
+          text: Moving data between business systems.
+        - title: Internal tools
+          text: Small applications for staff.
+    purpose: system
+    takeaway: "Python covers back ends, data processing, automation, AI, integrations, and internal tools with one language and a large set of ready libraries."
+    visualTitle: "The kinds of work Python is used for"
+    figureCaption: "This diagram shows Python at the center with six kinds of work around it: web back ends, data processing, automation, AI, integrations, and internal tools."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A language people can read
+    answer: "Python is a general-purpose programming language designed for clear, readable code. It is widely used for server software, data work, scripting, and machine learning."
+    paragraphs:
+      - "Readable code is cheaper to maintain, because the next developer can follow it. That matters more over five years than raw speed, and it is a large part of why Python is so common."
+      - "Its weak spots are real. It is slower than some languages for heavy computation, and it is not the usual choice for phone apps or for interfaces in the browser."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Where it fits
+    heading: Work that suits Python
+    items:
+      - title: A back end for a web or mobile app
+        body: "Accounts, business rules, and a database behind an interface built in another tool, with a clear set of requests between them."
+      - title: Reporting and data pipelines
+        body: "Collecting data from several systems, cleaning it, and loading it somewhere people can analyze it."
+      - title: Automation of repeated work
+        body: "Reading files and emails, filling in systems, and producing reports that someone used to prepare by hand."
+      - title: AI features inside a product
+        body: "Sending text or documents to a model, checking what comes back, and storing the results."
+
+  - type: table
+    id: options
+    tone: white
+    label: Options
+    heading: Python compared with other languages
+    caption: Python compared with other common languages for business software
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Python
+        - "Data, automation, AI, and back ends where development speed matters."
+        - "Slower for heavy computation, and less natural for interfaces."
+      - - "[TypeScript](ref:lang.typescript)"
+        - "Teams who want one language across the interface and the server."
+        - "Fewer ready tools for data and machine learning."
+      - - "[Java](ref:lang.java)"
+        - "Large, long-lived enterprise systems."
+        - "More code for the same result, and slower to start."
+      - - "[Go](ref:lang.go)"
+        - "Fast, simple network services."
+        - "Fewer libraries for data and AI work."
+
+  - type: diagram
+    id: pipeline
+    tone: paper
+    label: A common pattern
+    heading: How a Python data pipeline is organized
+    intro: "Many Python projects follow the same shape, whatever the data is."
+    spec:
+      kind: flow
+      steps:
+        - title: Collect
+          text: Pull data from files, systems, and services.
+        - title: Check
+          text: Reject or flag anything incomplete or wrong.
+        - title: Transform
+          text: Join, clean, and reshape it.
+        - title: Store
+          text: Load it into a database or warehouse.
+        - title: Use
+          text: Feed reports, dashboards, or other systems.
+    purpose: process
+    takeaway: "A Python pipeline collects, checks, transforms, stores, and then uses data, with the checking step placed before anything is relied on."
+    caption: "This diagram shows five steps of a Python data pipeline, from collecting data to feeding reports and dashboards, with checking before use."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Python
+    columns:
+      - title: Build
+        items:
+          - "Back ends and services for web and mobile products."
+          - "Scheduled jobs and data pipelines."
+      - title: Connect
+        items:
+          - "Integrations with customer, accounting, and commerce systems."
+          - "AI features using the providers that suit the task."
+      - title: Improve
+        items:
+          - "Reviews of existing Python code."
+          - "Adding tests, packaging, and monitoring."
+      - title: Hand over
+        items:
+          - "Documentation and deployment steps."
+          - "A structure other Python developers can pick up."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we set up a typical Python project."
+    panels:
+      - title: Structure and tooling
+        paragraphs:
+          - "We pin dependencies, use virtual environments, and add type hints with a checker, so Python's flexibility does not turn into surprises."
+      - title: Serving requests
+        items:
+          - "A modern web framework with automatic validation of incoming data."
+          - "Background workers for slow jobs, so requests return quickly."
+          - "[PostgreSQL](ref:tech.postgresql) as the default database, unless the data suggests otherwise."
+      - title: Delivery
+        items:
+          - "Automated tests and linting on every change."
+          - "Packaging in containers with [Docker](ref:tool.docker) for repeatable releases."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Python
+    items:
+      - q: Is Python fast enough?
+        a: "For most business software, yes. The database and network are usually the limit, not the language. Where raw speed matters, heavy parts can be written in faster code or in another language."
+      - q: Can Python build the website too?
+        a: "It can serve pages, but we usually pair a Python back end with an interface built in another tool, since that is where each is strongest."
+      - q: Do you use Python for AI work?
+        a: "Often, because most AI libraries and provider tools support it well. See our [AI](ref:svc.ai) service."
+      - q: Can you take over a Python codebase?
+        a: "Yes. We begin with a short review of structure, dependencies, and tests, then recommend how to proceed."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Python across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.software-development]
+      - title: Related technologies
+        entityIds: [lang.typescript, lang.java, tech.postgresql, tool.docker, fw.langchain]
+      - title: Related services
+        entityIds: [svc.ai, svc.automation, svc.data-analytics]
+      - title: Solutions
+        entityIds: [sol.business-process-automation, sol.data-systems]
+      - title: Systems we build
+        entityIds: [workarea.custom-software-systems, workarea.data-analytics, workarea.automation-systems]
+      - title: Where it applies
+        entityIds: [ind.finance, ind.healthcare, ind.logistics]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what the system has to do
+    body: "Describe the data, the processes, and the people involved. We will say whether Python is the right language and what else the system needs."
+    primary: { label: Talk to DECHY about Python, href: "/contact/?service=software-development" }

@@ -1,0 +1,199 @@
+id: page.tech-webflow
+kind: technology
+locale: en
+path: /web-development/webflow/
+parent: /web-development/
+entityId: plat.webflow
+title: "Webflow Development Services | DECHY"
+description: "Webflow development from DECHY: designer-led marketing sites with a visual editor and content tools, and a clear view of what Webflow does well and where it stops."
+breadcrumbLabel: Webflow
+intent:
+  primary: webflow development services
+  secondary:
+    - webflow website design and build
+    - webflow cms development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Webflow is a visual website builder that outputs clean, fast pages and includes tools for managing content, forms, and hosting."
+  problem: "Marketing teams wait on developers for every page change, while template builders limit design and produce heavy pages."
+  audience: "Marketing and design teams planning a site they can change themselves, and owners comparing site builders."
+  choose: "Choose Webflow for design-led marketing sites with moderate content needs. Choose something else for complex logic, deep integrations, or large stores."
+  next: "Describe the site and who will keep it up. We will say whether Webflow fits and what would need custom work."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: Webflow development
+    lead: "Webflow lets designers build precise, fast marketing sites visually, and lets marketing teams change them without a developer. We build in it with care for structure, and say clearly where it reaches its limits."
+    support: "This page covers what Webflow suits, how a build is organized, and what falls outside it."
+    ctas:
+      - { label: Talk to us about Webflow, href: "/contact/?service=web-development" }
+      - { label: Webflow or something else?, href: "#choice" }
+    spec:
+      kind: flow
+      steps:
+        - title: Design the system
+          text: Layouts, type, and reusable sections.
+        - title: Build in Webflow
+          text: Visual build with clean, organized structure.
+        - title: Model the content
+          text: Collections for posts, cases, and listings.
+        - title: Hand over to editors
+          text: Marketing changes content and pages directly.
+        - title: Publish and measure
+          text: Fast hosting, forms, and analytics set up.
+    purpose: process
+    takeaway: "A Webflow build moves from a design system to a structured build and content model, then to editors who run the site themselves."
+    visualTitle: "How a Webflow site goes from design to the editors"
+    figureCaption: "This diagram shows five steps of a Webflow project, from designing the system and building it to handing it to editors and publishing."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Design and build in the same tool
+    answer: "Webflow is a visual site builder that generates standard, clean code from what a designer builds on screen, and hosts the result. It also includes a content system for blogs, listings, and similar pages."
+    paragraphs:
+      - "Compared with a template tool, you get much more control over layout and animation. Compared with a hand-coded site, you get editors who can change pages without developers."
+      - "Its limits come from being a platform. Custom logic, unusual data, and deep connections to other systems need workarounds, outside services, or a different tool."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: Is Webflow the right base for your site?
+    intro: "Three common situations, and what we usually advise in each."
+    question: What best describes the site?
+    options:
+      - label: A design-led marketing site
+        when: "Brand matters, pages change often, and a designer or marketer owns the site."
+        get: "Webflow is usually a strong fit. You get a precise design, fast pages, and editors who can work alone."
+        watch: "Agree the content structure early, or editors will build inconsistent pages."
+        cta: { label: Plan a marketing site, href: "/contact/?service=web-development" }
+      - label: A site with many content types
+        when: "Hundreds of pages, several kinds of record, and rules about who edits what."
+        get: "Possible, with careful content modeling. Compare it with a dedicated content platform."
+        watch: "Collection limits and the editing experience should be checked against your volumes."
+        cta: { label: Review the content model, href: "/contact/?service=web-development" }
+      - label: A product or application
+        when: "Accounts, dashboards, payments, or complex logic."
+        get: "Webflow can host the public site while an application runs separately."
+        watch: "Do not stretch a site builder into an application. It will cost more later."
+        cta: { label: Plan a split build, href: "/contact/?service=web-development" }
+
+  - type: table
+    id: compare
+    tone: white
+    label: Options
+    heading: Webflow compared with the alternatives
+    caption: Webflow compared with other ways of building a site
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Webflow
+        - "Designer-led sites that editors maintain."
+        - "Platform limits, and costs that scale with plans."
+      - - "[WordPress](ref:plat.wordpress)"
+        - "Editor-led sites needing many standard features."
+        - "More upkeep, and design control depends on the theme."
+      - - "[Next.js](ref:fw.nextjs) build"
+        - "Sites that are also applications."
+        - "Higher build cost, and developers in most changes."
+      - - "Other site builders"
+        - "Small sites with simple needs."
+        - "Less design control, and heavier pages."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Webflow
+    columns:
+      - title: Build
+        items:
+          - "Sites with a tidy class structure and reusable sections."
+          - "Content collections modeled for your editors."
+      - title: Connect
+        items:
+          - "Forms that reach your customer records."
+          - "Analytics, scheduling, and email tools."
+      - title: Extend
+        items:
+          - "Custom code where the platform needs it."
+          - "Search-ready structure and structured data."
+      - title: Hand over
+        items:
+          - "Training for editors."
+          - "A guide to the build and the rules for changing it."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: Where Webflow stops
+    paragraphs:
+      - "Webflow is a platform, and platforms set limits. Complex business logic, unusual data, member areas with detailed permissions, and large product catalogs are all better handled elsewhere."
+      - "We will say so early. A common answer is to keep the public site in Webflow and run the application part separately, joined by a sign-in and a shared design."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the practices that keep a Webflow site maintainable."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We use a consistent class naming scheme, shared components, and design variables, so changes happen in one place. Visual builders still need discipline."
+      - title: Extending the platform
+        items:
+          - "Custom code embeds for behavior the designer does not cover."
+          - "The platform's API (a way for other programs to read and change its content) and webhooks to link forms and content to other systems."
+          - "Automation tools such as [Zapier](ref:tech.zapier) or [Make](ref:tech.make) for simple workflows."
+      - title: Search and speed
+        items:
+          - "Clean headings, metadata, and structured data."
+          - "Optimized images and careful use of scripts and animation."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Webflow
+    items:
+      - q: Can we move our Webflow site elsewhere later?
+        a: "The design can be exported as code, but the content tools and forms need rebuilding. Plan for that if portability matters to you."
+      - q: Is Webflow good for search visibility?
+        a: "It produces clean markup and fast pages, and gives control over titles and structure. Results still depend on content and other factors."
+      - q: Can Webflow run a store?
+        a: "It has store features suited to smaller catalogs. For larger or more complex stores we compare it with [Shopify](ref:plat.shopify)."
+      - q: Who looks after the site after launch?
+        a: "Your editors handle content. We can look after the technical side, such as custom code and integrations, if you want us to."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Webflow across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related technologies
+        entityIds: [plat.wordpress, fw.nextjs, plat.shopify, tech.zapier]
+      - title: Related services
+        entityIds: [svc.ui-ux, svc.branding, svc.seo-aeo-geo]
+      - title: Systems we build
+        entityIds: [workarea.business-web-platforms, workarea.brand-systems]
+      - title: Where it applies
+        entityIds: [ind.professional-services, ind.saas, ind.travel]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the site
+    body: "Describe the site, who will edit it, and what it needs to connect to. We will say whether Webflow fits and what would need custom work."
+    primary: { label: Talk to DECHY about Webflow, href: "/contact/?service=web-development" }

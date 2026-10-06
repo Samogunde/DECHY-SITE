@@ -1,0 +1,200 @@
+id: page.tech-typescript
+kind: technology
+locale: en
+path: /web-development/typescript/
+parent: /web-development/
+entityId: lang.typescript
+title: "TypeScript Development Services | DECHY"
+description: "TypeScript development from DECHY: safer web and server code that catches mistakes as it is written, and a practical way to adopt it in an existing project."
+breadcrumbLabel: TypeScript
+intent:
+  primary: typescript development services
+  secondary:
+    - typescript migration
+    - typed javascript applications
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "TypeScript is JavaScript with a description of what each piece of data looks like, so many mistakes are caught while the code is written instead of after release."
+  problem: "JavaScript projects grow until nobody is sure what a function expects, and small mistakes reach customers."
+  audience: "Teams starting a web or server project, and owners of a JavaScript codebase that has become risky to change."
+  choose: "Use TypeScript for anything that will be changed by several people over several years. Skip it only for small, short-lived scripts."
+  next: "Tell us about the codebase or the new project. We will say whether to start in TypeScript or move to it in stages."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Language
+    headline: TypeScript development
+    lead: "TypeScript adds a description of the data to JavaScript, and checks the code against it before anything runs. We write most new web and server code in it, and we move older JavaScript across in stages."
+    support: "This page covers what the checking buys you, what it costs, and how an existing project can adopt it."
+    ctas:
+      - { label: Talk to us about TypeScript, href: "/contact/?service=web-development" }
+      - { label: Adopting it gradually, href: "#adopt" }
+    spec:
+      kind: before-after
+      before:
+        title: Plain JavaScript
+        text: Mistakes appear when the code runs.
+        nodes:
+          - title: A field is renamed in one place
+          - title: Other screens keep using the old name
+          - title: A customer finds the failure
+      after:
+        title: TypeScript
+        text: Mistakes appear while the code is written.
+        nodes:
+          - title: A field is renamed in one place
+          - title: The editor flags every place that used it
+          - title: The developer fixes them before release
+      hubLabel: Caught early
+    purpose: before-after
+    takeaway: "TypeScript turns a mistake that a customer would find into an error that a developer sees while writing."
+    visualTitle: "The same change, without and with TypeScript"
+    figureCaption: "This diagram contrasts a renamed field found by a customer in plain JavaScript with the same change flagged in the editor in TypeScript."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: JavaScript that knows what it is handling
+    answer: "TypeScript is JavaScript with types: a written description of what each value is. A checker reads those descriptions and reports where the code does not match, before it ever runs."
+    paragraphs:
+      - "That matters most where several people change the same code over time. The descriptions act as documentation that cannot go out of date, because the checker would complain."
+      - "It compiles to ordinary JavaScript, so it runs anywhere JavaScript does: in browsers, on servers, and in tools. Nothing about your hosting has to change."
+
+  - type: process
+    id: adopt
+    tone: paper
+    label: Adopting it
+    heading: Moving an existing project across
+    steps:
+      - title: Turn on the checker gently
+        body: "We add TypeScript to the project in a permissive mode, so existing files keep working while new files are checked."
+        artifacts: [Configuration, First typed files]
+      - title: Type the edges first
+        body: "We describe the data that enters and leaves the system, such as responses from an API (a way for programs to exchange data) and form input, because that is where mistakes begin."
+        artifacts: [Shared data types]
+      - title: Convert by importance
+        body: "We move the files that change most, or hurt most when they break, and leave stable code alone."
+        artifacts: [Converted modules, Fewer runtime errors]
+      - title: Tighten the rules
+        body: "As coverage grows, we turn on stricter checking, one rule at a time."
+        artifacts: [Stricter configuration]
+
+  - type: table
+    id: options
+    tone: white
+    label: Options
+    heading: TypeScript compared with other choices
+    caption: Comparison of TypeScript with other options for server and web code
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - TypeScript
+        - "Web interfaces and server code that several people maintain."
+        - "A setup step, and some learning for developers new to types."
+      - - "Plain [JavaScript](ref:lang.javascript)"
+        - "Small scripts and short-lived prototypes."
+        - "Fewer safety nets as the code grows."
+      - - "[Python](ref:lang.python)"
+        - "Data work, automation, and AI-related code."
+        - "Different language from the browser, so two skill sets."
+      - - "[Java](ref:lang.java)"
+        - "Large back-end systems in organizations already using it."
+        - "More ceremony for small projects."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Where TypeScript pays for itself
+    items:
+      - title: A web application that several people change
+        body: "Shared descriptions of the data keep one person's change from breaking another's screen."
+      - title: A back end that serves a web and a mobile app
+        body: "One set of data descriptions shared by every client, so the app and the site agree."
+      - title: Integrations with outside services
+        body: "Careful handling of data from payment, shipping, and customer-record systems, where surprises are expensive."
+      - title: A long-lived codebase
+        body: "Code that will be maintained for years by people who did not write it."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with TypeScript
+    columns:
+      - title: New projects
+        items:
+          - "Web applications and portals written in TypeScript from the first day."
+          - "Server code that shares data descriptions with the interface."
+      - title: Existing projects
+        items:
+          - "A staged move from JavaScript."
+          - "Reviews that show where the riskiest untyped code is."
+      - title: Team practice
+        items:
+          - "Conventions that keep types useful, not decorative."
+          - "Handover notes and developer guidance."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the practices that make types worth having."
+    panels:
+      - title: Strictness
+        paragraphs:
+          - "We aim for strict mode on new code. The checker finds more problems, and the cost of turning it on later is higher than starting with it."
+      - title: Types at the boundary
+        items:
+          - "Runtime validation of external data, since types disappear after compilation and cannot protect against a bad response."
+          - "Generated types from API descriptions where the provider offers them."
+      - title: Avoiding false confidence
+        items:
+          - "Few uses of the any type, and none without a comment saying why."
+          - "Code review that treats a forced type conversion as a flag."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about TypeScript
+    items:
+      - q: Does TypeScript make the site faster?
+        a: "No. It is removed before the code runs. The benefit is fewer mistakes and easier changes, not speed."
+      - q: Will it slow development down?
+        a: "A little at the start, and noticeably less later. Changes to shared code become safer, which is where time is usually lost."
+      - q: Can we mix TypeScript and JavaScript?
+        a: "Yes. That is how most migrations work, and it lets the move happen alongside normal feature work."
+      - q: Is it only for front-end code?
+        a: "No. It is used just as often on servers, including with frameworks such as [Next.js](ref:fw.nextjs)."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: TypeScript across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related technologies
+        entityIds: [fw.react, fw.nextjs, lang.javascript, lang.python]
+      - title: Related services
+        entityIds: [svc.software-development, svc.api-integration]
+      - title: Systems we build
+        entityIds: [workarea.custom-software-systems, workarea.business-web-platforms]
+      - title: Where it applies
+        entityIds: [ind.saas, ind.finance, ind.technology]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the codebase
+    body: "Describe the project, how many people change it, and what breaks most. We will say whether to start in TypeScript or move there in stages."
+    primary: { label: Talk to DECHY about TypeScript, href: "/contact/?service=web-development" }

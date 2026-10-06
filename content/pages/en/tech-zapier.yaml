@@ -1,0 +1,199 @@
+id: page.tech-zapier
+kind: technology
+locale: en
+path: /automation/zapier/
+parent: /automation/
+entityId: tech.zapier
+title: "Zapier Automation Services | DECHY"
+description: "Zapier automation from DECHY: connecting the apps your team uses so tasks move on their own, with sensible limits, monitoring, and a view of when to outgrow it."
+breadcrumbLabel: Zapier
+intent:
+  primary: zapier automation services
+  secondary:
+    - zapier workflow setup
+    - connecting apps with zapier
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Zapier connects web apps so that something happening in one, such as a new form entry, automatically triggers an action in another."
+  problem: "Staff copy information between tools by hand, and simple tasks stall because nobody remembers the next step."
+  audience: "Teams with repeated tasks across several web apps, and owners who want automation without a development project."
+  choose: "Use Zapier for simple, linear tasks between common apps. Choose a more capable tool when logic, volume, or cost grows."
+  next: "List the two or three tasks your team repeats between tools. We will say which suit Zapier and which need something stronger."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Automation platform
+    headline: Zapier automation
+    lead: "Zapier moves information between the apps your team already uses. When a form is submitted, a row is added; when a deal closes, a message is sent. We build these small automations tidily, monitor them, and say when a task has outgrown the tool."
+    support: "This page covers what Zapier does well, where it struggles, and how we keep automations dependable."
+    ctas:
+      - { label: Talk to us about Zapier, href: "/contact/?service=automation" }
+      - { label: Tasks that suit Zapier, href: "#tasks" }
+    spec:
+      kind: flow
+      steps:
+        - title: A trigger
+          text: Something happens in an app, such as a new form entry.
+        - title: A filter
+          text: Only continue if the entry meets your conditions.
+        - title: An action
+          text: Do something in another app, such as add a record.
+        - title: A follow-up
+          text: Notify someone, or update a third app.
+        - title: A record
+          text: Log what happened, so failures can be found.
+    purpose: workflow
+    takeaway: "A Zapier automation starts from a trigger, filters, acts in another app, follows up, and keeps a record of what it did."
+    visualTitle: "The steps of a typical Zapier automation"
+    figureCaption: "This diagram shows five steps of a Zapier automation, from a trigger in one app to an action in another, and a record of what happened."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Connectors between everyday apps
+    answer: "Zapier is a no-code automation service. You choose a trigger in one app and one or more actions in other apps, and Zapier runs them whenever the trigger happens. It supports a very large number of common business apps."
+    paragraphs:
+      - "It is popular because it is quick. A useful automation can be running in an hour, set up by someone who is not a developer."
+      - "That speed is also the risk. Automations multiply, nobody remembers what each does, and a change in one app silently breaks several. Good practice matters more than the tool."
+
+  - type: table
+    id: tasks
+    tone: paper
+    label: Where it fits
+    heading: Tasks that suit Zapier, and tasks that do not
+    caption: Typical tasks and whether Zapier suits them
+    columns: [Task, Suits Zapier?, Why]
+    rows:
+      - - Add new form entries to a spreadsheet or customer record
+        - "Yes."
+        - "A simple, linear step between common apps."
+      - - Send a message when a deal changes stage
+        - "Yes."
+        - "A clear trigger and a single action."
+      - - Create a task for each new customer across several tools
+        - "Yes, with care."
+        - "Several steps, but each is simple."
+      - - Branching rules based on many conditions
+        - "Sometimes."
+        - "Possible, but a visual tool such as [Make](ref:tech.make) is often clearer."
+      - - Heavy data processing or large volumes
+        - "No."
+        - "Per-task pricing and limits make it costly. Use code or a self-hosted tool."
+      - - A process that must never lose an item
+        - "Be careful."
+        - "Needs error handling and reconciliation, which we add."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: When Zapier has been outgrown
+    paragraphs:
+      - "Warning signs include a rising bill, long chains nobody can follow, tasks that fail without anyone noticing, and logic that needs the same condition repeated in many places."
+      - "At that point we move the busiest or most important flows to a tool with better control, and leave the simple ones where they are."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Automations we are often asked for
+    items:
+      - title: Lead capture
+        body: "A website form creates a contact, notifies the owner in a chat tool, and starts a follow-up task."
+      - title: Customer onboarding
+        body: "A closed deal triggers a welcome email, a project folder, and a checklist for the team."
+      - title: Reporting
+        body: "Numbers from several tools collected into one sheet each morning for review."
+      - title: Reminders and approvals
+        body: "Overdue items flagged to the right person, and approvals routed by chat or email."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Zapier
+    columns:
+      - title: Design
+        items:
+          - "Choosing which tasks are worth automating."
+          - "Naming and structure that keep automations understandable."
+      - title: Build
+        items:
+          - "Automations across your tools."
+          - "Error handling and alerts."
+      - title: Review
+        items:
+          - "Audits of an existing account."
+          - "Cost reviews and clean-up."
+      - title: Move on
+        items:
+          - "Migrating busy automations to [Make](ref:tech.make), [n8n](ref:tech.n8n), or custom code."
+          - "Keeping simple ones where they are."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we keep Zapier automations dependable."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We keep each automation to one job, use consistent names with an owner and purpose in the description, and store shared settings in one place."
+      - title: Reliability
+        items:
+          - "Checks for missing or malformed data before an action runs."
+          - "Failure alerts to a monitored channel, not a personal inbox."
+          - "Idempotent steps where possible, so a replay does not create duplicates."
+      - title: Extending it
+        items:
+          - "[Webhooks](ref:tech.webhooks) and custom requests for apps without a ready connector."
+          - "Code steps for small transformations."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Zapier
+    items:
+      - q: Is Zapier secure enough for business data?
+        a: "It offers security controls, and the plan matters. We review what data passes through, limit it to what is needed, and avoid routing highly sensitive data through any third-party tool without a reason."
+      - q: How much does it cost to run?
+        a: "Pricing is based on tasks, so cost follows volume. We estimate from your expected volumes and review it regularly."
+      - q: What if Zapier changes or an app breaks it?
+        a: "Alerts catch failures, and clear documentation makes repairs quick. For critical flows we add checks that compare the two systems."
+      - q: Can you take over automations our team built?
+        a: "Yes. We audit them, document them, and fix or retire what is not working."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Zapier across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Alternatives
+        entityIds: [tech.make, tech.n8n, tech.microsoft-power-automate]
+      - title: Related technologies
+        entityIds: [tech.webhooks, plat.airtable, plat.hubspot]
+      - title: Solutions
+        entityIds: [sol.workflow-automation, sol.business-process-automation]
+      - title: Systems we build
+        entityIds: [workarea.automation-systems, workarea.workflow-automation]
+      - title: Where it applies
+        entityIds: [ind.professional-services, ind.real-estate, ind.recruitment]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which tasks your team repeats
+    body: "List the two or three tasks that move between tools by hand. We will say which suit Zapier, which need something stronger, and what each would cost to run."
+    primary: { label: Talk to DECHY about Zapier, href: "/contact/?service=automation" }

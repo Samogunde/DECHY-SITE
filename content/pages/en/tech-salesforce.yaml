@@ -1,0 +1,200 @@
+id: page.tech-salesforce
+kind: technology
+locale: en
+path: /automation/salesforce/
+parent: /automation/
+entityId: plat.salesforce
+title: "Salesforce Integration and Automation | DECHY"
+description: "Salesforce work from DECHY: connecting Salesforce to your other systems, automating its processes, and keeping customization manageable as the organization grows."
+breadcrumbLabel: Salesforce
+intent:
+  primary: salesforce integration and automation
+  secondary:
+    - salesforce api integration
+    - salesforce workflow automation
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Salesforce is a customer platform used by larger and more complex organizations, with deep customization for sales, service, and custom business processes."
+  problem: "Salesforce implementations drift into complexity: custom fields nobody uses, overlapping automations, and integrations that break when either side changes."
+  audience: "Organizations that run Salesforce and need it connected to other systems, and teams whose set-up has become hard to change."
+  choose: "Keep Salesforce simple, document every customization, and connect it to other systems through a small number of well-owned integrations."
+  next: "Tell us which systems must share data with Salesforce and where the pain is. We will review it and recommend the smallest fix."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: Salesforce integration and automation
+    lead: "Salesforce can model almost any customer process, which is its strength and its risk. We connect Salesforce to the systems around it, automate what people repeat, and help organizations keep their set-up understandable."
+    support: "This page covers how Salesforce is structured, how we connect it, and how to keep customization under control."
+    ctas:
+      - { label: Talk to us about Salesforce, href: "/contact/?service=automation" }
+      - { label: How it fits together, href: "#layers" }
+    spec:
+      kind: layers
+      layerLabel: How a Salesforce set-up is organized
+      layers:
+        - title: Apps and screens
+          text: What each team sees and uses.
+        - title: Automation
+          text: Flows and rules that act when records change.
+        - title: Objects and fields
+          text: Accounts, contacts, deals, and custom records.
+        - title: Security model
+          text: Who can see and change which records.
+        - title: Integrations
+          text: Connections to finance, products, and marketing.
+    purpose: architecture
+    takeaway: "A Salesforce set-up stacks screens, automation, the data model, the security model, and integrations, and each layer needs an owner."
+    visualTitle: "The layers of a Salesforce set-up"
+    figureCaption: "This diagram shows five layers of a Salesforce set-up, from the apps people use down to the integrations that connect it to other systems."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A platform you shape to your process
+    answer: "Salesforce is a CRM (customer relationship management) platform, a shared record of customers and deals, that can be extended with custom objects, automation, and applications. Organizations use it for sales, service, and increasingly for processes that go beyond customer management."
+    paragraphs:
+      - "Its breadth suits complex organizations: many teams, regions, products, and approval steps. It is also why a Salesforce set-up needs governance. Anyone with access can add a field or a rule, and over the years those pile up."
+      - "Most of the problems we see are not about Salesforce itself. They are about customization nobody documented and integrations nobody owns."
+
+  - type: table
+    id: compare
+    tone: paper
+    label: Options
+    heading: Salesforce compared with other CRMs
+    caption: Salesforce compared with other customer platforms
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Salesforce
+        - "Complex organizations with many teams, custom processes, and a budget for administration."
+        - "Cost and complexity, and a need for skilled administration."
+      - - "[HubSpot](ref:plat.hubspot)"
+        - "Small and mid-sized teams who want to adopt quickly."
+        - "Less deep customization for unusual processes."
+      - - "[Zoho](ref:plat.zoho)"
+        - "Cost-conscious teams wanting a broad suite."
+        - "Smaller partner and talent ecosystem."
+      - - "Custom CRM"
+        - "Very unusual processes that no product fits."
+        - "Highest cost, and you maintain everything."
+
+  - type: process
+    id: layers
+    tone: white
+    label: How we work
+    heading: Connecting Salesforce to your other systems
+    steps:
+      - title: Map the data
+        body: "We list which system owns each piece of data, such as customer details, prices, and payment status, and where each must appear."
+        artifacts: [Data ownership map]
+      - title: Choose the connection
+        body: "We choose between built-in connectors, an automation platform, and a custom integration, based on volume and risk."
+        artifacts: [Integration design]
+      - title: Build with failure in mind
+        body: "We handle duplicates, retries, and limits, and decide what happens when one side is unavailable."
+        artifacts: [Working integration, Error handling]
+      - title: Test and monitor
+        body: "We test with realistic data, and set up alerts so a broken sync is noticed within hours."
+        artifacts: [Test results, Alerts]
+      - title: Document and hand over
+        body: "We document the integration and its owner, so it survives staff changes."
+        artifacts: [Integration guide]
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Salesforce
+    columns:
+      - title: Connect
+        items:
+          - "Links to finance, billing, products, and marketing tools."
+          - "Use of the [Salesforce API](ref:int.salesforce-api) (the way other programs read and change its records) and standard connectors."
+      - title: Automate
+        items:
+          - "Flows for approvals, hand-offs, and reminders."
+          - "Clean-up of overlapping automations."
+      - title: Review
+        items:
+          - "Audits of fields, rules, and permissions."
+          - "A plain list of what to remove, merge, or document."
+      - title: Migrate
+        items:
+          - "Moves from spreadsheets or other CRMs."
+          - "Data cleaning and mapping before cut-over."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Customization has a carrying cost
+    paragraphs:
+      - "Every custom field, rule, and integration is something to maintain, test at each platform release, and explain to new staff. The cheapest customization is the one you decide not to build."
+      - "We use standard features first, and add custom code only where the standard options would force a worse process."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we approach Salesforce integrations."
+    panels:
+      - title: Integration patterns
+        paragraphs:
+          - "We choose between request-and-response calls, event messages, and scheduled batch syncs depending on volume and how fresh the data must be, and respect API limits and bulk interfaces."
+      - title: Reliability
+        items:
+          - "External identifiers on records, so repeated messages update instead of duplicating."
+          - "Queues and retries for outages on either side."
+          - "A sandbox for testing, with a repeatable deployment process."
+      - title: Security
+        items:
+          - "Integration users with the minimum permissions they need."
+          - "Credentials held in a secrets store, and rotated."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Salesforce
+    items:
+      - q: Can you work with our Salesforce administrator?
+        a: "Yes, and we prefer to. We work alongside administrators, and leave documentation so the knowledge stays in your team."
+      - q: Can you connect Salesforce to our own software?
+        a: "Yes. We build integrations through the platform's standard interfaces, with clear ownership of each piece of data, tests with realistic data, and alerts when a connection fails."
+      - q: Should we change CRM?
+        a: "Only if the cost or complexity of the current set-up outweighs the cost of moving. We assess this honestly, and often recommend simplifying what you have."
+      - q: Do you resell Salesforce or hold certifications?
+        a: "We do not claim partner status or certification with Salesforce. We work with the platform as a technology, and recommend it only where it fits."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Salesforce across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Related technologies
+        entityIds: [int.salesforce-api, plat.hubspot, plat.zoho, tech.make, tech.rest]
+      - title: Related services
+        entityIds: [svc.api-integration, svc.data-analytics]
+      - title: Solutions
+        entityIds: [sol.crm-integration, sol.business-process-automation]
+      - title: Systems we build
+        entityIds: [workarea.integration-platforms, workarea.operations-platforms]
+      - title: Where it applies
+        entityIds: [ind.finance, ind.manufacturing, ind.telecommunications]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which systems must share data
+    body: "Describe your Salesforce set-up, the systems around it, and where the pain is. We will review it and recommend the smallest useful fix."
+    primary: { label: Talk to DECHY about Salesforce, href: "/contact/?service=automation" }

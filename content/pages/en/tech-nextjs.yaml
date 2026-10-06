@@ -1,0 +1,208 @@
+id: page.tech-nextjs
+kind: technology
+locale: en
+path: /web-development/nextjs/
+parent: /web-development/
+entityId: fw.nextjs
+title: "Next.js Development Services | DECHY"
+description: "Next.js development from DECHY: fast, search-friendly websites and web applications built on React, with the rendering and hosting choices explained plainly."
+breadcrumbLabel: Next.js
+intent:
+  primary: nextjs development services
+  secondary:
+    - next.js web application development
+    - react framework for business websites
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Next.js is a framework built on React that produces fast pages for visitors and search engines, and also runs the logic behind a web application."
+  problem: "Sites built only in the browser can load slowly, be hard for search engines to read, and need separate tools for the server side."
+  audience: "Teams planning a marketing site, a customer portal, or a web product, and technical leads comparing frameworks."
+  choose: "Choose Next.js when search visibility, speed, and a rich interface all matter, and when the team is comfortable with React."
+  next: "Tell us what the site or application must do. We will say whether Next.js fits, and what the alternatives would cost you."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Web framework
+    headline: Next.js development
+    lead: "Next.js lets one codebase produce pages that load fast, read well to search engines, and behave like an application once they open. We use it where a site has to be found, and also has to do real work."
+    support: "This page covers where Next.js fits, when it does not, and what building with it involves."
+    ctas:
+      - { label: Talk to us about a Next.js project, href: "/contact/?service=web-development" }
+      - { label: When Next.js fits, href: "#fit" }
+    spec:
+      kind: layers
+      layerLabel: Where Next.js sits in a web project
+      layers:
+        - title: The visitor's browser
+          text: Receives ready-made pages, then takes over for interaction.
+        - title: Next.js
+          text: Builds pages, handles routing, and runs server-side logic.
+        - title: React
+          text: The interface components Next.js is built on.
+        - title: Data and services
+          text: Content systems, databases, payments, and your other tools.
+        - title: Hosting
+          text: Where the built site and its server code run.
+    purpose: architecture
+    takeaway: "Next.js sits between the visitor's browser and your data, using React for the interface and preparing pages before they are requested."
+    visualTitle: "Where Next.js sits in a web project"
+    figureCaption: "This diagram shows five layers of a Next.js project, from the visitor's browser down to hosting, with Next.js and React in the middle."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A framework that decides how pages get built
+    answer: "Next.js is a framework for building websites and web applications with React. Its main job is deciding when and where each page is prepared, so visitors get content quickly and search engines can read it."
+    paragraphs:
+      - "A plain React app sends the browser a nearly empty page and builds everything on the visitor's device. That works for tools behind a sign-in. For a public site it costs speed and search visibility."
+      - "Next.js moves that work earlier. Pages can be built ahead of time, built on request, or mixed, page by page. That choice is most of what makes it useful."
+
+  - type: chooser
+    id: fit
+    tone: paper
+    label: Where it fits
+    heading: Which rendering approach does your project need?
+    intro: "Most of the design work in a Next.js project is choosing how each kind of page is prepared. The answer depends on how often the content changes."
+    question: How often does the page content change?
+    options:
+      - label: Rarely
+        when: "Marketing pages, documentation, and company information that changes a few times a month."
+        get: "Pages built ahead of time and served from a content network. They load almost instantly and cost little to run."
+        watch: "Editors need a way to trigger a rebuild when content changes, which we set up with the content system."
+        cta: { label: Plan a static site, href: "/contact/?service=web-development" }
+      - label: Regularly
+        when: "Product catalogs, listings, and news that update through the day but not every second."
+        get: "Pages that refresh in the background on a schedule, so visitors still get a fast page that is never very stale."
+        watch: "You decide how stale is acceptable, and the answer should be written down."
+        cta: { label: Plan a refreshed site, href: "/contact/?service=web-development" }
+      - label: Per visitor
+        when: "Dashboards, account pages, and anything that depends on who is signed in."
+        get: "Pages built on request using the visitor's details, with caching only where it is safe."
+        watch: "These pages cost more to run and need careful access control."
+        cta: { label: Plan a signed-in area, href: "/contact/?service=web-development" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Options
+    heading: Next.js and the alternatives
+    intro: "Next.js is one of several good choices. These are the ones we compare most often."
+    caption: Comparison of Next.js with other ways of building a site
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Next.js
+        - "Sites that need search visibility and application features in one codebase."
+        - "More moving parts than a simple site, and a framework that changes quickly."
+      - - "[Astro](ref:fw.astro)"
+        - "Content-heavy sites with little interactivity."
+        - "Less natural for application-style features."
+      - - "[Remix](ref:fw.remix)"
+        - "Data-driven applications built around forms and server logic."
+        - "Smaller ecosystem of ready-made examples."
+      - - "[WordPress](ref:plat.wordpress)"
+        - "Editor-led sites with many standard plugins."
+        - "Less control over speed and structure, and plugins need upkeep."
+      - - "Plain [React](ref:fw.react)"
+        - "Tools used behind a sign-in, where search visibility does not matter."
+        - "Public pages load slower and are harder to index."
+    note: "The best choice depends on your team and your content. We recommend on that basis, not on preference."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Systems that suit Next.js
+    items:
+      - title: A marketing site that also has accounts
+        body: "Public pages built for speed and search, with a sign-in area behind them, in one project instead of two."
+      - title: A product catalog
+        body: "Thousands of product pages that refresh on a schedule, with a basket and checkout connected to your store system."
+      - title: A customer portal
+        body: "Order history, documents, and messages for signed-in customers, with fast loading on phones."
+      - title: A documentation or knowledge site
+        body: "Searchable guides built from a content system, so editors publish without a developer."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Next.js
+    columns:
+      - title: Build
+        items:
+          - "Marketing sites, portals, and web applications."
+          - "Content connected to an editing tool your team can use."
+          - "Forms, payments, and sign-in connected to the services you already run."
+      - title: Improve
+        items:
+          - "Speed and search-readiness reviews of existing sites."
+          - "Moves from an older framework or a plain React app."
+      - title: Hand over
+        items:
+          - "Documentation and a structure other developers can follow."
+          - "Training for the people who edit content."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes the choices we make on a typical project."
+    panels:
+      - title: Rendering and caching
+        paragraphs:
+          - "We choose static generation, incremental regeneration, or server rendering per route, and set cache lifetimes deliberately so content changes appear when they should."
+      - title: Structure
+        items:
+          - "The App Router with server components for data-heavy pages, and client components only where interaction needs them."
+          - "[TypeScript](ref:lang.typescript) throughout, so changes to data shapes show up as errors before release."
+          - "Metadata, sitemaps, and structured data generated from the same content source as the pages."
+      - title: Hosting
+        paragraphs:
+          - "Next.js runs well on platforms such as [Vercel](ref:plat.vercel) and [Netlify](ref:plat.netlify), and on containers in [AWS](ref:plat.aws) or other clouds. The choice depends on cost, control, and where your data lives."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Next.js
+    items:
+      - q: Is Next.js good for search visibility?
+        a: "It gives you the foundations: pages that arrive complete, control over titles and structure, and good speed. Rankings still depend on content and many other factors that nobody controls."
+      - q: Do we need to know React?
+        a: "Your team does not need to. Anyone who edits content can work through a content tool. A developer who maintains the code will need React experience, which is widely available."
+      - q: Can we move an existing site to Next.js?
+        a: "Yes. We usually plan the move in stages, keep the addresses that matter, and redirect the rest so search visibility is protected."
+      - q: What does it cost to run?
+        a: "Statically built pages cost very little. Costs rise with pages built per visitor and with traffic. We estimate this before you commit."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Next.js across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related technologies
+        entityIds: [fw.react, lang.typescript, plat.vercel, plat.netlify, plat.contentful, plat.sanity]
+      - title: Solutions
+        entityIds: [sol.customer-portal-development, sol.saas-platforms]
+      - title: Systems we build
+        entityIds: [workarea.business-web-platforms, workarea.customer-portals, workarea.digital-products]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.professional-services, ind.saas]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what the site has to do
+    body: "Describe the pages, the people who edit them, and what visitors should be able to do. We will say whether Next.js fits and what the alternatives would mean for you."
+    primary: { label: Talk to DECHY about Next.js, href: "/contact/?service=web-development" }

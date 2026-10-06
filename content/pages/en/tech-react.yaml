@@ -1,0 +1,219 @@
+id: page.tech-react
+kind: technology
+locale: en
+path: /web-development/react/
+parent: /web-development/
+entityId: fw.react
+title: "React Development Services | DECHY"
+description: "React development from DECHY: interactive interfaces for applications, dashboards, and portals, and an honest view of when React is the right tool."
+breadcrumbLabel: React
+intent:
+  primary: react development services
+  secondary:
+    - react web application development
+    - react user interface development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "React is a widely used library for building interactive screens from small reusable parts, and it sits behind many web applications and dashboards."
+  problem: "Interfaces with many moving parts become hard to change and easy to break when they are built page by page."
+  audience: "Teams building an application with a lot of interaction, and technical leads choosing or inheriting a front-end stack."
+  choose: "Choose React when the interface is complex and will keep changing. Choose something lighter when the site is mostly reading."
+  next: "Describe the screens your users will work in. We will say whether React suits them and how we would structure the build."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Front-end library
+    headline: React development
+    lead: "React is where much modern interface work starts. It breaks a screen into reusable parts that update themselves when data changes. We use it for applications that people work in for hours, and we say so when a lighter tool would serve better."
+    support: "This page covers where React earns its place, what surrounds it, and how we build with it."
+    ctas:
+      - { label: Talk to us about a React project, href: "/contact/?service=web-development" }
+      - { label: React or something lighter?, href: "#choice" }
+    spec:
+      kind: hub
+      center:
+        title: A React application
+        text: Screens made from reusable parts.
+      spokes:
+        - title: Components
+          text: Buttons, forms, tables, and panels written once.
+        - title: State
+          text: What the screen remembers while someone works.
+        - title: Routing
+          text: Moving between screens without reloading.
+        - title: Data fetching
+          text: Loading and saving information safely.
+        - title: Styling
+          text: A shared look across every screen.
+        - title: Testing
+          text: Checks that protect screens as they change.
+    purpose: system
+    takeaway: "React supplies the components, but a working application also needs decisions about state, routing, data, styling, and testing."
+    visualTitle: "What a React application is made of"
+    figureCaption: "This diagram shows a React application at the center with six surrounding concerns: components, state, routing, data fetching, styling, and testing."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Interfaces built from parts
+    answer: "React is a JavaScript library for building user interfaces from components. You describe what a screen should look like for the current data, and React updates the page when the data changes."
+    paragraphs:
+      - "The practical benefit is reuse and predictability. A table or a form is built once and used everywhere, so a change in one place appears everywhere, and screens behave the same way."
+      - "React on its own handles only the interface. The decisions around it, such as routing, data, and hosting, are usually made by adding a framework like [Next.js](ref:fw.nextjs), or by assembling the pieces directly."
+
+  - type: table
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: React or something lighter?
+    caption: Situations and the front-end approach that usually fits
+    columns: [Your situation, Usually a good fit, Why]
+    rows:
+      - - A dashboard or tool people use all day
+        - "React."
+        - "Many interacting parts, and screens that update as data changes."
+      - - A public site with mostly reading
+        - "A framework that builds pages ahead, or a content platform."
+        - "Less code sent to the visitor, and simpler upkeep."
+      - - A mobile app that shares code with the web
+        - "[React Native](ref:tech.react-native) or React."
+        - "Shared skills and some shared logic."
+      - - A small team with no front-end developer
+        - "A hosted site builder."
+        - "Cheaper to run than a custom application."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Where we use React
+    columns:
+      - title: Applications
+        items:
+          - "Internal tools and operations screens."
+          - "Customer portals with accounts and history."
+      - title: Dashboards
+        items:
+          - "Live views of orders, jobs, and stock."
+          - "Tables with search, filters, and exports."
+      - title: Product interfaces
+        items:
+          - "The screens of a software product."
+          - "A design system built once and reused."
+      - title: Rescue work
+        items:
+          - "Untangling an application that is hard to change."
+          - "Adding tests where none exist."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Systems that suit React
+    items:
+      - title: An operations dashboard
+        body: "Jobs, stock, and schedules on live tables that update as work is done, used by staff all day."
+      - title: A booking or scheduling tool
+        body: "Calendars, availability, and forms that respond instantly as people choose."
+      - title: A customer account area
+        body: "Orders, invoices, and settings in a consistent, quick interface."
+      - title: The front end of a software product
+        body: "Screens built from a shared component library so new features look and behave like the rest."
+
+  - type: diagram
+    id: structure
+    tone: paper
+    label: How we structure it
+    heading: From design to working screens
+    intro: "A tidy React project starts from the design, not from the code."
+    spec:
+      kind: flow
+      steps:
+        - title: Design system
+          text: Agreed colors, type, and spacing.
+        - title: Component library
+          text: Reusable parts built once, in isolation.
+        - title: Screens
+          text: Assembled from those parts.
+        - title: Data connection
+          text: Screens linked to the services behind them.
+        - title: Checks
+          text: Automated tests, then review with real users.
+    purpose: process
+    takeaway: "A React project goes from a design system to reusable components to screens, and only then connects them to data."
+    caption: "This diagram shows five steps in a React build, from the design system to automated tests and review with real users."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: When React is more than you need
+    paragraphs:
+      - "React adds a build process, a set of conventions, and developers who know it. For a small brochure site or a form on a page, that is overhead you will pay for every year."
+      - "We will say so early. Sometimes the right answer is a content platform, or a lighter framework, and React earns its place only where the interface is genuinely complex."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we usually set a React project up."
+    panels:
+      - title: Language and tooling
+        paragraphs:
+          - "We write React in [TypeScript](ref:lang.typescript), so mistakes in how data is passed between components show up while writing, not in production."
+      - title: State and data
+        items:
+          - "Local state for what one component owns, and a shared store only where several screens genuinely need the same data."
+          - "A data-fetching layer that handles loading, errors, and caching in one place."
+          - "Forms with clear validation and helpful error messages."
+      - title: Quality
+        items:
+          - "Component tests for behavior, and a small number of end-to-end tests for the journeys that matter."
+          - "Keyboard and screen reader checks on every shared component."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about React
+    items:
+      - q: Is React a framework?
+        a: "Strictly it is a library for the interface. A framework such as Next.js adds routing, data loading, and page building around it. Most business projects use one."
+      - q: Will it work for search visibility?
+        a: "A React application built only in the browser can be hard for search engines to read. A framework that prepares pages ahead of time solves that, which is why we usually pair them."
+      - q: Can you take over our existing React code?
+        a: "Yes. We start with a short review of structure, tests, and dependencies, then tell you whether to improve it or rebuild parts of it."
+      - q: Do we get a design system?
+        a: "If you want one. We recommend a small one for any application with more than a handful of screens."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: React across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related technologies
+        entityIds: [fw.nextjs, lang.typescript, tech.react-native, fw.vue, fw.angular]
+      - title: Related services
+        entityIds: [svc.ui-ux, svc.software-development]
+      - title: Systems we build
+        entityIds: [workarea.customer-portals, workarea.internal-business-tools, workarea.operations-platforms]
+      - title: Where it applies
+        entityIds: [ind.logistics, ind.finance, ind.saas]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the screens
+    body: "Describe who will use the application and what they do in it all day. We will say whether React fits and how we would build it."
+    primary: { label: Talk to DECHY about React, href: "/contact/?service=web-development" }

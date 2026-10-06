@@ -22,7 +22,7 @@ Not built, by instruction: technology pages, solution pages, industry, country a
 - Guidance blocks: At a glance (from each page's `comprehension` record), On this page, pathfinder, chooser (native radio inputs, no script), technical panels (progressive depth), callouts (limits, illustrative, note).
 - Catch-all route `src/app/[...slug]/page.tsx` renders any registry page that has no dedicated route file.
 - New entity type `work-area` (25 entities) and relation types `hasWorkArea` and `relatedWork`.
-- Relations are derived from each page's `related` blocks by `scripts/derive-relations.ts` into `data/relations/phase-2.yaml`. Re-run it after editing a `related` block; the validator rejects a related link that has no graph edge.
+- Relations are derived from each page's `related` blocks by `scripts/derive-relations.ts` into `data/relations/derived.yaml`. Re-run it after editing a `related` block; the validator rejects a related link that has no graph edge.
 
 ## 3. Validation added (`npm run validate`)
 

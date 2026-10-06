@@ -1,0 +1,208 @@
+id: page.tech-anthropic-claude
+kind: technology
+locale: en
+path: /ai/anthropic-claude/
+parent: /ai/
+entityId: prov.anthropic-claude
+title: "Anthropic Claude Integration Services | DECHY"
+description: "Claude integration from DECHY: Anthropic's models for long documents, careful drafting, and tool-using assistants, with testing, limits, and provider comparison."
+breadcrumbLabel: Anthropic Claude
+intent:
+  primary: anthropic claude integration
+  secondary:
+    - claude api development
+    - claude for document analysis and assistants
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Claude is a family of language models from Anthropic that other software can call, often chosen for working with long documents, following detailed instructions, and using tools."
+  problem: "Teams need an assistant or document feature that handles long, detailed material accurately, and are unsure which model and set-up suits it."
+  audience: "Teams working with contracts, reports, or large bodies of text, and leaders comparing AI providers."
+  choose: "Compare Claude with other providers on your own documents and tasks. Claude is often a strong candidate for long, detailed material."
+  next: "Send us a description of the documents and the task. We will test it against your examples and recommend a provider on the results."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: AI provider
+    headline: Anthropic Claude integration
+    lead: "Claude is often chosen where the material is long and the instructions are detailed: contracts, reports, policies, and research. We build with it, and we test it against other providers on your own documents before recommending it."
+    support: "This page covers where Claude tends to fit, how we build with it, and how to decide between providers."
+    ctas:
+      - { label: Talk to us about a Claude project, href: "/contact/?service=ai" }
+      - { label: Compare providers on your documents, href: "#compare" }
+    spec:
+      kind: before-after
+      before:
+        title: Reading long documents by hand
+        text: People skim and miss details.
+        nodes:
+          - title: A long contract arrives
+          - title: Someone reads it over days
+          - title: Key terms are found late, or missed
+      after:
+        title: A reviewed assistant
+        text: The model reads it all, and people check the findings.
+        nodes:
+          - title: The contract is read in full
+          - title: Key terms and risks are listed with sources
+          - title: A person confirms what matters
+      hubLabel: Faster first pass
+    purpose: before-after
+    takeaway: "A model can read a long document in full and list findings with sources, so people spend their time on checking and judgment."
+    visualTitle: "Long documents, read by hand and with an assistant"
+    figureCaption: "This diagram contrasts a long contract read slowly by hand with the same contract read in full by a model, with findings checked by a person."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A model you call from your own software
+    answer: "Claude is a family of language models made by Anthropic. Software calls them through an API (a set of agreed requests that programs can make), sending text or files and receiving a response, and they can also be set up to use tools such as search or record lookups."
+    paragraphs:
+      - "Providers differ in how much text a model can take in at once, how it follows detailed instructions, how it handles images and documents, and what it costs. Those differences matter more in practice than any league table."
+      - "That is why we recommend testing on your own material. A provider that suits one company's documents may not suit another's."
+
+  - type: chooser
+    id: compare
+    tone: paper
+    label: Where it fits
+    heading: What are you asking the model to do?
+    intro: "Three common situations, and how we approach each."
+    question: What is the main task?
+    options:
+      - label: Reading long material
+        when: "Contracts, policies, reports, or research papers, often with many pages."
+        get: "A set-up where the model reads the whole document, answers specific questions, and cites where each answer came from."
+        watch: "Long input costs more, and details can still be missed. We test on real examples."
+        cta: { label: Plan document review, href: "/contact/?service=ai" }
+      - label: An assistant that uses tools
+        when: "Looking up records, drafting replies, and updating systems for a team."
+        get: "An assistant with narrow permissions, a log of every step, and approval where it matters."
+        watch: "Tool use needs limits on what the assistant may change."
+        cta: { label: Plan an assistant, href: "/contact/?service=ai" }
+      - label: Careful writing
+        when: "Drafts that must follow a house style or detailed rules."
+        get: "Drafts that follow written guidance, reviewed by a person before use."
+        watch: "Style is easier to check than facts, so check both."
+        cta: { label: Plan drafting support, href: "/contact/?service=ai" }
+
+  - type: table
+    id: options
+    tone: white
+    label: Alternatives
+    heading: How we compare providers
+    caption: Questions we ask when comparing language-model providers for a project
+    columns: [Question, Why it matters, How we test it]
+    rows:
+      - - Quality on your material
+        - "General rankings rarely match your documents."
+        - "A set of real examples with expected answers, scored the same way for each provider."
+      - - Handling of long input
+        - "Some tasks need whole documents, not extracts."
+        - "Questions whose answers sit deep in a long file."
+      - - Data terms
+        - "Your obligations may limit where data can go."
+        - "Reading the provider's current terms against your rules."
+      - - Cost at your volume
+        - "Prices differ, and small models can be enough."
+        - "Estimating from real document sizes and request counts."
+      - - Flexibility
+        - "You may want to switch later."
+        - "Keeping the provider behind a clear boundary."
+
+  - type: callout
+    id: note
+    tone: white
+    variant: note
+    title: Test before you commit to a provider
+    paragraphs:
+      - "Public comparisons of AI models change every few months and rarely match a particular company's documents. A day spent testing three providers on fifty of your real examples is worth more than any ranking."
+      - "We run that test as a first step, and the examples stay yours, so you can repeat it whenever the market changes."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Claude
+    columns:
+      - title: Assess
+        items:
+          - "Testing Claude against your documents and tasks."
+          - "Comparing it with other providers."
+      - title: Build
+        items:
+          - "Document review and question answering with sources."
+          - "Assistants connected to your systems."
+      - title: Control
+        items:
+          - "Limits on tools, data, and spend."
+          - "Human review where a mistake would be costly."
+      - title: Maintain
+        items:
+          - "Re-testing when models change."
+          - "Reports on quality and cost."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build with Claude."
+    panels:
+      - title: Prompting and structure
+        paragraphs:
+          - "We write instructions as clear, separate sections, ask for structured output validated against a schema, and keep prompts under version control with the tests that guard them."
+      - title: Tools and agents
+        items:
+          - "Tool definitions with narrow scope, such as read-only record lookups by default."
+          - "Step limits and approval gates before any action that changes data."
+          - "Full tracing of tool calls for review."
+      - title: Retrieval and cost
+        items:
+          - "For very large collections, retrieval of relevant passages with [LangChain](ref:fw.langchain) or custom code, instead of sending everything."
+          - "Caching repeated context, and choosing smaller models for simpler steps."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Claude
+    items:
+      - q: Is Claude better than the other models?
+        a: "Not in general. Which is best depends on the task and the material. We test on your examples, and often the answer is a mix of models."
+      - q: Can Claude read our whole document set?
+        a: "Within limits. Large collections are usually searched first, so the model reads only the relevant parts. We design this around your volumes."
+      - q: Is our data safe with a model provider?
+        a: "We review the provider's current data terms against your obligations, send only what the task needs, and avoid sending sensitive data unless it is required."
+      - q: Can we switch provider later?
+        a: "Yes, if the design allows it, which is why we keep the provider behind a clear boundary and keep your tests."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Claude across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ai]
+      - title: Related technologies
+        entityIds: [fw.langchain, lang.python, tech.pinecone]
+      - title: Alternatives
+        entityIds: [prov.openai, prov.google-gemini, prov.mistral]
+      - title: Solutions
+        entityIds: [sol.ai-knowledge-systems, sol.ai-agents]
+      - title: Systems we build
+        entityIds: [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
+      - title: Where it applies
+        entityIds: [ind.legal, ind.finance, ind.pharmaceuticals]
+
+  - type: cta
+    id: contact-cta
+    heading: Send us a sample of the material
+    body: "Describe the documents and the task. We will test Claude and other providers on your examples and recommend one on the results."
+    primary: { label: Talk to DECHY about Claude, href: "/contact/?service=ai" }

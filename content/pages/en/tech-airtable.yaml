@@ -1,0 +1,244 @@
+id: page.tech-airtable
+kind: technology
+locale: en
+path: /automation/airtable/
+parent: /automation/
+entityId: plat.airtable
+title: "Airtable Development and Automation | DECHY"
+description: "Airtable development from DECHY: turning spreadsheets into shared databases, forms, and automated workflows, and a clear view of when to outgrow it."
+breadcrumbLabel: Airtable
+intent:
+  primary: airtable development and automation
+  secondary:
+    - airtable database design
+    - airtable workflow automation
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Airtable is a tool that combines a spreadsheet's ease with a database's structure, so teams can track work, link records, and automate steps without writing code."
+  problem: "Teams run on spreadsheets that break, clash, and hide information, but a custom system feels like too much."
+  audience: "Operations, marketing, and project teams who need a shared system of record quickly, and owners who want to move past spreadsheets."
+  choose: "Use Airtable when a team needs a flexible shared record fast. Move to custom software when volume, rules, or access needs outgrow it."
+  next: "Tell us which spreadsheet your team depends on. We will say how it would look in Airtable and when you would need something more."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: Airtable development
+    lead: "Airtable lets a team build its own tracking system without waiting for software to be written. It sits between a spreadsheet and a database. We design the structure so it stays tidy as it grows, and we say honestly when a team has outgrown it."
+    support: "This page covers what Airtable is good for, how we set it up, and where its limits are."
+    ctas:
+      - { label: Talk to us about Airtable, href: "/contact/?service=automation" }
+      - { label: See where it fits, href: "#uses" }
+    spec:
+      kind: hub
+      center:
+        title: An Airtable base
+        text: One shared place for a team's records.
+      spokes:
+        - title: Tables
+          text: Customers, jobs, orders, or assets.
+        - title: Linked records
+          text: Connections between those tables.
+        - title: Views
+          text: Lists, boards, and calendars for each role.
+        - title: Forms
+          text: Clean data coming in from outside.
+        - title: Automations
+          text: Steps that run when something changes.
+        - title: Interfaces
+          text: Simple screens for people who only need part.
+    purpose: system
+    takeaway: "An Airtable base joins tables, linked records, views, forms, automations, and interfaces into one shared record for a team."
+    visualTitle: "What an Airtable base is made of"
+    figureCaption: "This diagram shows an Airtable base with six parts around it: tables, linked records, views, forms, automations, and interfaces."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A spreadsheet that understands relationships
+    answer: "Airtable stores information in tables like a spreadsheet, but lets records link to each other like a database. A customer can link to their orders, and each order to its tasks, so one change shows up everywhere."
+    paragraphs:
+      - "That structure is what removes the usual spreadsheet problems: the same name typed three ways, a copy that nobody updates, and a formula that someone overwrote."
+      - "It is also quick to change. Teams adjust fields and views themselves, which is the main reason it works so well as a first system, and the main reason it needs a clear structure from the start."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Where it fits
+    heading: Systems that suit Airtable
+    items:
+      - title: A content or campaign calendar
+        body: "Ideas, drafts, owners, and dates in one place, with a board for status and a calendar for timing."
+      - title: A client or project tracker
+        body: "Clients, projects, tasks, and hours linked together, with different views for managers and the team."
+      - title: An asset or equipment register
+        body: "What exists, where it is, who has it, and when it is next due for service."
+      - title: A lightweight customer record
+        body: "Contacts, deals, and activity for a small team, with forms feeding it from your website."
+
+  - type: chooser
+    id: choice
+    tone: white
+    label: Options
+    heading: Airtable, a spreadsheet, or custom software?
+    intro: "These are the three choices we weigh with teams."
+    question: What does your team need?
+    options:
+      - label: Stay with a spreadsheet
+        when: "One or two people use it, the data is simple, and mistakes are cheap."
+        get: "Nothing new to learn or pay for."
+        watch: "Revisit it when a second person starts editing."
+        cta: { label: Ask for an honest view, href: "/contact/?service=automation" }
+      - label: Move to Airtable
+        when: "Several people share the data, records relate to each other, and you want forms and automation without developers."
+        get: "A structured, shared system of record that your team can adjust itself."
+        watch: "Agree the structure first, or the base turns into a bigger spreadsheet."
+        cta: { label: Plan an Airtable base, href: "/contact/?service=automation" }
+      - label: Build custom software
+        when: "Rules are complex, volumes are high, or customers need accounts."
+        get: "A system built around your process, with full control over access and performance."
+        watch: "Higher cost and longer start, so earn it by outgrowing Airtable."
+        cta: { label: Plan a custom system, href: "/contact/?service=software-development" }
+
+  - type: table
+    id: limits
+    tone: paper
+    label: Limits
+    heading: Where Airtable stops
+    caption: Common limits of Airtable and how we deal with each
+    columns: [Limit, What it means, What we do]
+    rows:
+      - - Record limits per base
+        - "Large data sets will hit plan limits."
+        - "Split data across bases, archive old records, or move large data to a database."
+      - - Access control
+        - "Permissions are coarser than a custom system."
+        - "Use interfaces for restricted views, and keep sensitive data elsewhere."
+      - - Complex logic
+        - "Long chains of automations get hard to follow."
+        - "Move heavy logic to a workflow tool such as [n8n](ref:tech.n8n) or [Make](ref:tech.make)."
+      - - Cost with growth
+        - "Per-user pricing adds up as the team grows."
+        - "Review costs yearly against the alternatives."
+
+  - type: callout
+    id: tidy
+    tone: paper
+    variant: note
+    title: A base needs an owner
+    paragraphs:
+      - "The most common way an Airtable base goes wrong is that everyone can change its structure and nobody is responsible for it. Within a year there are duplicate fields, unused tables, and views that nobody understands."
+      - "We name an owner for each base and agree what members may change, so the system stays as clear as the day it was built."
+
+  - type: process
+    id: process
+    tone: white
+    label: How we work
+    heading: Moving a spreadsheet into Airtable
+    steps:
+      - title: Study how the spreadsheet is used
+        body: "We learn who edits it, what the columns really mean, and which mistakes happen."
+        artifacts: [Notes on current use, List of problems]
+      - title: Design the structure
+        body: "We split it into tables, define links between them, and choose field types that prevent bad data."
+        artifacts: [Table and link design]
+      - title: Build views and forms
+        body: "We create views for each role and forms for incoming data."
+        artifacts: [Working base, Forms]
+      - title: Move the data and run alongside
+        body: "We clean and import the records, and run the old and new together briefly."
+        artifacts: [Imported data, Check results]
+      - title: Automate and hand over
+        body: "We add the automations that save the most time, and train the team."
+        artifacts: [Automations, Guide and training]
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Airtable
+    columns:
+      - title: Design
+        items:
+          - "Base structure that stays tidy as it grows."
+          - "Field and permission rules."
+      - title: Build
+        items:
+          - "Views, forms, and interfaces for each role."
+          - "Automations for reminders, hand-offs, and updates."
+      - title: Connect
+        items:
+          - "Links to email, calendars, and customer records."
+          - "Syncs with other systems through [Zapier](ref:tech.zapier) or custom code."
+      - title: Look after
+        items:
+          - "Clean-ups of messy bases."
+          - "Training and ongoing support."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build Airtable systems that last."
+    panels:
+      - title: Data design
+        paragraphs:
+          - "We use linked records and lookups instead of copied values, choose single-purpose fields, and keep a clear primary field for every table."
+      - title: Integration
+        items:
+          - "The Airtable API (a way for other programs to read and change records) for syncs with other systems, with attention to rate limits."
+          - "Webhooks and scripts for events that built-in automations do not cover."
+          - "A separate production base and a test base for changes."
+      - title: Governance
+        items:
+          - "Named owners for each base and change history for structure."
+          - "Backups exported on a schedule."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Airtable
+    items:
+      - q: Is Airtable a database or a spreadsheet?
+        a: "A bit of both. It looks like a spreadsheet and behaves like a simple relational database. That blend is its strength and its limit."
+      - q: Can customers use it directly?
+        a: "Forms and shared views can collect and show data. For customer accounts with detailed access rules we usually recommend a different tool."
+      - q: How safe is our data?
+        a: "Airtable provides security features, and the plan you choose affects what is available. We review it against your requirements and keep truly sensitive data out when needed."
+      - q: What happens if we outgrow it?
+        a: "Data can be exported and moved. We design with that in mind so a later move to custom software is straightforward."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Airtable across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Related technologies
+        entityIds: [tech.zapier, tech.make, tech.n8n, plat.notion, plat.mondaycom]
+      - title: Related services
+        entityIds: [svc.software-development, svc.api-integration]
+      - title: Solutions
+        entityIds: [sol.internal-business-software, sol.workflow-automation]
+      - title: Systems we build
+        entityIds: [workarea.internal-business-tools, workarea.workflow-automation, workarea.operations-platforms]
+      - title: Where it applies
+        entityIds: [ind.construction, ind.media, ind.nonprofits]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which spreadsheet your team depends on
+    body: "Describe it and who uses it. We will say how it would look in Airtable, what it would cost to run, and when you would need something more."
+    primary: { label: Talk to DECHY about Airtable, href: "/contact/?service=automation" }

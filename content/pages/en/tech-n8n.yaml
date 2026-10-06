@@ -1,0 +1,222 @@
+id: page.tech-n8n
+kind: technology
+locale: en
+path: /automation/n8n/
+parent: /automation/
+entityId: tech.n8n
+title: "n8n Automation Services | DECHY"
+description: "n8n automation from DECHY: workflow automation you can host yourself, with code where you need it, for teams that want control of their data and no per-task pricing."
+breadcrumbLabel: n8n
+intent:
+  primary: n8n automation services
+  secondary:
+    - self-hosted workflow automation
+    - n8n workflow development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "n8n is a workflow automation tool that can run on your own servers, with a visual editor, many connectors, and the option to add code when a step needs it."
+  problem: "Hosted automation tools charge per task, send your data through a third party, and limit what you can customize."
+  audience: "Teams with high automation volumes, data-handling rules, or technical staff who want control, and AI-workflow builders."
+  choose: "Choose n8n when control, volume, or data location matter and someone can run it. Choose a hosted tool when you want zero upkeep."
+  next: "Tell us your volume, your data rules, and who would look after it. We will recommend hosted or self-hosted, and plan the workflows."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Automation platform
+    headline: n8n automation
+    lead: "n8n gives you visual workflow automation that you can run on your own infrastructure. That means your data stays where you decide, there is no charge per task, and a developer can add code when a connector falls short. We build and run n8n for teams that want that control."
+    support: "This page covers when self-hosting is worth the effort, what we build with n8n, and how it is kept reliable."
+    ctas:
+      - { label: Talk to us about n8n, href: "/contact/?service=automation" }
+      - { label: Hosted or self-hosted?, href: "#hosting" }
+    spec:
+      kind: before-after
+      before:
+        title: A hosted automation tool
+        text: Convenient, with limits you do not control.
+        nodes:
+          - title: Your data passes through a third party
+          - title: Cost rises with every task
+          - title: Custom logic is awkward
+      after:
+        title: n8n on your own server
+        text: More work to run, and more control.
+        nodes:
+          - title: Data stays in your environment
+          - title: Cost depends on your servers, not task counts
+          - title: Code steps handle special cases
+      hubLabel: Control
+    purpose: before-after
+    takeaway: "Self-hosting n8n trades some running effort for control of where data goes, what it costs at volume, and how far workflows can be customized."
+    visualTitle: "A hosted tool compared with n8n on your own server"
+    figureCaption: "This diagram contrasts a hosted automation tool with n8n on your own server, in terms of where data goes, what cost depends on, and customization."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: Visual workflows with an open door to code
+    answer: "n8n is a workflow automation tool with a visual editor. Its code is available to read, it can be hosted by you or by n8n, and workflows can include code steps and calls to any service that has an API (a set of agreed requests that programs can make)."
+    paragraphs:
+      - "For many teams the deciding factors are practical: workflows that process thousands of items would be costly on per-task pricing, or the data involved should not leave the company's own environment."
+      - "It also suits AI-related workflows, where steps call language models, search documents, and decide what to do next, because custom steps are easy to add."
+
+  - type: chooser
+    id: hosting
+    tone: paper
+    label: Options
+    heading: Hosted by n8n or run by you?
+    intro: "The tool is the same. What differs is who looks after it."
+    question: What matters most to you?
+    options:
+      - label: No upkeep
+        when: "You want it to work, and have no one to run servers."
+        get: "The hosted service, which handles updates and availability."
+        watch: "Data passes through the provider, and plans set limits."
+        cta: { label: Plan a hosted set-up, href: "/contact/?service=automation" }
+      - label: Control of data
+        when: "Rules or customers require that data stays in your environment or region."
+        get: "n8n on your own cloud or servers, with access controls you set."
+        watch: "Someone must patch, back up, and monitor it. We can do this for you."
+        cta: { label: Plan a self-hosted set-up, href: "/contact/?service=automation" }
+      - label: High volume
+        when: "Thousands of items a day make per-task pricing expensive."
+        get: "Self-hosting with queued workers, so cost follows servers instead of task counts."
+        watch: "Scale needs design, including queues and database sizing."
+        cta: { label: Plan for volume, href: "/contact/?service=automation" }
+
+  - type: diagram
+    id: shape
+    tone: white
+    label: How it runs
+    heading: What a self-hosted n8n set-up involves
+    intro: "Running it yourself means a small stack of parts, each with a job."
+    spec:
+      kind: layers
+      layerLabel: Parts of a self-hosted set-up
+      layers:
+        - title: Workflows
+          text: Built and reviewed in the visual editor.
+        - title: n8n service
+          text: Runs workflows, on a schedule or when triggered.
+        - title: Database and queue
+          text: Stores workflows, history, and waiting jobs.
+        - title: Hosting
+          text: A server or containers, with backups.
+        - title: Monitoring
+          text: Alerts when a workflow or the service fails.
+    purpose: architecture
+    takeaway: "A self-hosted n8n set-up runs workflows on a service backed by a database and queue, on hosting that is backed up and monitored."
+    caption: "This diagram shows five parts of a self-hosted n8n set-up, from workflows at the top to monitoring at the bottom."
+
+  - type: table
+    id: compare
+    tone: paper
+    label: Alternatives
+    heading: n8n compared with the alternatives
+    caption: n8n compared with other automation options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - n8n
+        - "Control, volume, and workflows that mix visual steps with code."
+        - "Needs someone to run it if self-hosted."
+      - - "[Zapier](ref:tech.zapier)"
+        - "Simple chains across common apps, with no upkeep."
+        - "Per-task pricing and fewer options for custom logic."
+      - - "[Make](ref:tech.make)"
+        - "Visual workflows with strong data tools, fully hosted."
+        - "Data runs through the provider."
+      - - "[Power Automate](ref:tech.microsoft-power-automate)"
+        - "Microsoft-centered organizations."
+        - "Strongest inside its own ecosystem."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with n8n
+    columns:
+      - title: Build
+        items:
+          - "Workflows connecting your tools, with code steps where needed."
+          - "AI-assisted workflows that read, sort, and draft."
+      - title: Host
+        items:
+          - "Set-up on your cloud, with access control."
+          - "Backups, updates, and monitoring."
+      - title: Scale
+        items:
+          - "Queued workers for high volume."
+          - "Cost reviews against hosted alternatives."
+      - title: Hand over
+        items:
+          - "Documentation and naming standards."
+          - "Training for your team."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we run n8n in practice."
+    panels:
+      - title: Deployment
+        paragraphs:
+          - "We run it in containers with [Docker](ref:tool.docker), use [PostgreSQL](ref:tech.postgresql) instead of the default file database, put it behind a reverse proxy with encryption, and keep workflows and credentials in version control and a secrets store."
+      - title: Reliability
+        items:
+          - "Queue mode with separate workers for heavier loads."
+          - "Error workflows that alert on failure and retry safely."
+          - "Pinned versions, tested upgrades, and tested backups."
+      - title: Security
+        items:
+          - "Single sign-on and role limits for editors."
+          - "Separate credentials per environment, with the least access needed."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about n8n
+    items:
+      - q: Is self-hosting n8n free?
+        a: "The software has a free self-hosted option with licence terms you should read for your use. The real cost is hosting and the time to run it, which we can handle."
+      - q: Can n8n use AI models?
+        a: "Yes. Workflows can call language models, search documents, and use the results in later steps. We add checks and limits around those steps."
+      - q: Is it harder to use than Zapier?
+        a: "A little, because it offers more control. Simple workflows are comparable. We build and document them so your team can follow along."
+      - q: Who fixes it when something breaks?
+        a: "That is agreed at the start. We can monitor and repair it, or train your team to."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: n8n across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Alternatives
+        entityIds: [tech.zapier, tech.make, tech.microsoft-power-automate]
+      - title: Related technologies
+        entityIds: [tool.docker, tech.postgresql, tech.webhooks, lang.python]
+      - title: Related services
+        entityIds: [svc.ai, svc.cloud]
+      - title: Solutions
+        entityIds: [sol.ai-automation, sol.workflow-automation]
+      - title: Systems we build
+        entityIds: [workarea.automation-systems, workarea.ai-agents, workarea.workflow-automation]
+      - title: Where it applies
+        entityIds: [ind.logistics, ind.healthcare, ind.technology]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us your volume and your data rules
+    body: "Describe the workflows, how many items they handle, and where data may go. We will recommend hosted or self-hosted and plan the build."
+    primary: { label: Talk to DECHY about n8n, href: "/contact/?service=automation" }

@@ -1,0 +1,213 @@
+id: page.tech-wordpress
+kind: technology
+locale: en
+path: /web-development/wordpress/
+parent: /web-development/
+entityId: plat.wordpress
+title: "WordPress Development Services | DECHY"
+description: "WordPress development from DECHY: new builds, redesigns, plugin work, speed and security reviews, and migration, with a candid view of when it is the right base."
+breadcrumbLabel: WordPress
+intent:
+  primary: wordpress development services
+  secondary:
+    - wordpress website redesign
+    - wordpress migration and maintenance
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "WordPress is a content platform that lets non-technical editors manage a website, extended by a large collection of themes and plugins."
+  problem: "WordPress sites often become slow, fragile, and hard to update because of piled-up plugins and no one responsible for upkeep."
+  audience: "Organizations running or planning a WordPress site, especially where editors need to publish without developers."
+  choose: "Choose WordPress when editors need independence and standard features cover most needs. Choose something else when the site is really an application."
+  next: "Tell us who edits the site and what it must do. We will say whether WordPress fits, and what upkeep it will need."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: WordPress development
+    lead: "WordPress gives editors control of their own content, and a very large range of extensions. It also needs care. We build WordPress sites that stay fast and tidy, rescue ones that have not, and say plainly when another route is better."
+    support: "This page covers where WordPress fits, how we build on it, and what looking after it involves."
+    ctas:
+      - { label: Talk to us about WordPress, href: "/contact/?service=web-development" }
+      - { label: WordPress or something else?, href: "#compare" }
+    spec:
+      kind: layers
+      layerLabel: A well-built WordPress site
+      layers:
+        - title: Content and editors
+          text: Pages, posts, and media managed by your team.
+        - title: Theme
+          text: The design and templates visitors see.
+        - title: Plugins
+          text: A short, chosen list of extensions.
+        - title: WordPress core
+          text: The platform, kept up to date.
+        - title: Hosting and backups
+          text: A server that is patched and recoverable.
+    purpose: architecture
+    takeaway: "A healthy WordPress site keeps a short list of plugins between the theme and the core, and treats hosting and backups as part of the site."
+    visualTitle: "The layers of a well-built WordPress site"
+    figureCaption: "This diagram shows five layers of a WordPress site, from content and editors down to hosting and backups, with plugins deliberately kept few."
+
+  - type: definition
+    id: what
+    tone: white
+    label: What it means
+    heading: A content platform, not a blank page
+    answer: "WordPress is an open-source content management system, or CMS: the tool editors use to create and change pages without touching code. Themes control the look and plugins add features such as forms or shops."
+    paragraphs:
+      - "It suits organizations that publish regularly and want their own people in control. Its strength is the ecosystem of ready-made parts."
+      - "The same ecosystem is its risk. Every plugin is someone else's code that must be kept updated and compatible, and a site with fifty of them is a maintenance burden."
+
+  - type: table
+    id: compare
+    tone: paper
+    label: Options
+    heading: WordPress compared with the alternatives
+    caption: WordPress compared with other ways of running a website
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - WordPress
+        - "Editor-led sites with standard features and a budget for upkeep."
+        - "Needs regular updates, and plugin choices affect speed and security."
+      - - "[Webflow](ref:plat.webflow)"
+        - "Designer-led marketing sites with a visual editor."
+        - "Less suited to complex features, and the platform sets the limits."
+      - - "Headless setup with [Contentful](ref:plat.contentful) or [Sanity](ref:plat.sanity)"
+        - "Content reused across a site, an app, and other channels."
+        - "More to build and run, and a developer is involved in most changes."
+      - - "[Shopify](ref:plat.shopify)"
+        - "Stores where selling is the main purpose."
+        - "Content features are lighter than WordPress."
+      - - "Custom build with [Next.js](ref:fw.nextjs)"
+        - "Sites that are really applications."
+        - "Highest cost, and editors depend on what is built for them."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Sites that suit WordPress
+    items:
+      - title: A publishing site
+        body: "News, articles, and resources with several authors and an editorial workflow."
+      - title: An organization's main website
+        body: "Services, people, events, and contact forms, edited by staff without developer help."
+      - title: A site with a shop alongside the content
+        body: "Products added to a content-led site, where selling is part of the picture and not all of it."
+      - title: A membership or learning site
+        body: "Gated content and sign-in, using well-supported extensions and a short plugin list."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with WordPress
+    columns:
+      - title: Build
+        items:
+          - "New sites with a custom theme and a short plugin list."
+          - "Editing screens built around how your team works."
+      - title: Rescue
+        items:
+          - "Speed and security reviews."
+          - "Removing plugins that are not earning their keep."
+      - title: Extend
+        items:
+          - "Custom plugins for needs that standard ones miss."
+          - "Connections to customer records, payments, and email."
+      - title: Look after
+        items:
+          - "Updates, backups, and monitoring."
+          - "A named contact when something breaks."
+
+  - type: process
+    id: migrate
+    tone: paper
+    label: Moving a site
+    heading: Redesigning or migrating a WordPress site
+    steps:
+      - title: Inventory what exists
+        body: "We list pages, plugins, forms, and integrations, and note what search engines already rank."
+        artifacts: [Page and plugin inventory, Address list]
+      - title: Decide what moves
+        body: "We keep what earns traffic or serves customers, merge duplicates, and drop what nobody uses."
+        artifacts: [Content plan]
+      - title: Build and test
+        body: "We build on a copy, test forms and payments, and check speed and accessibility."
+        artifacts: [Staging site, Test results]
+      - title: Launch with redirects
+        body: "We switch over with redirects from every old address that matters, and watch search and errors afterwards."
+        artifacts: [Redirect map, Post-launch report]
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: What WordPress needs from you
+    paragraphs:
+      - "A WordPress site is not finished at launch. Updates arrive every few weeks, and unpatched sites are a common target for attackers. Someone must own that, whether it is us, your team, or a hosting provider."
+      - "We agree who looks after what before the site goes live, so nothing is left to chance."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build and run WordPress sites."
+    panels:
+      - title: Build
+        paragraphs:
+          - "We build themes and plugins in [PHP](ref:lang.php), following WordPress coding standards, and keep custom code out of core files so updates are safe."
+      - title: Performance and security
+        items:
+          - "Page caching, image optimization, and a content network for static assets."
+          - "Limited login attempts, two-step sign-in for editors, and least-privilege roles."
+          - "Automated backups that are tested by restoring them."
+      - title: Content model
+        paragraphs:
+          - "Custom post types and fields give editors structured forms instead of one free-text box, which keeps pages consistent."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about WordPress
+    items:
+      - q: Is WordPress secure?
+        a: "The core is actively maintained. Most breaches come from outdated plugins, weak passwords, and neglected hosting. Good upkeep prevents most of it."
+      - q: Why is our WordPress site slow?
+        a: "Usually too many plugins, large images, or poor hosting. A review finds which, and the fixes are normally straightforward."
+      - q: Can we keep our content if we leave WordPress?
+        a: "Yes. Content can be exported and moved, and we plan the move so addresses and search visibility are protected."
+      - q: Can WordPress run a shop?
+        a: "It can, through plugins such as [WooCommerce](ref:plat.woocommerce). For stores where selling is the main purpose, we also compare it with [Shopify](ref:plat.shopify)."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: WordPress across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development]
+      - title: Related technologies
+        entityIds: [lang.php, plat.webflow, plat.woocommerce, tech.mysql, plat.shopify]
+      - title: Solutions
+        entityIds: [sol.legacy-system-modernization, sol.customer-experience-systems]
+      - title: Systems we build
+        entityIds: [workarea.business-web-platforms, workarea.seo-search-visibility]
+      - title: Where it applies
+        entityIds: [ind.nonprofits, ind.professional-services, ind.education]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us who edits the site
+    body: "Describe your content, your editors, and what the site must do. We will say whether WordPress fits and what its upkeep would involve."
+    primary: { label: Talk to DECHY about WordPress, href: "/contact/?service=web-development" }
