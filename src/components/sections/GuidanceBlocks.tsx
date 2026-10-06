@@ -164,7 +164,7 @@ export function ChooserBlock({ block }: { block: Of<"chooser"> }) {
           {block.options.map((o) => (
             <div key={o.label} className="chooser-panel">
               <p className="chooser-when t-body-lg m-0">
-                <strong>Choose this when</strong> <Inline text={o.when} />
+                <strong>Choose this when:</strong> <Inline text={o.when} />
               </p>
               <div className="chooser-cols">
                 <div>

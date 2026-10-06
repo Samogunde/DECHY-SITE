@@ -106,9 +106,7 @@ test("the homepage hero carries the exact descriptor and the approved company st
   ).toBeVisible();
 });
 
-test("the homepage shows all 15 service pillars, and only built ones are links", async ({
-  page,
-}) => {
+test("the homepage shows all 15 service pillars, each a link to its page", async ({ page }) => {
   await page.goto("/");
   const section = page.locator("#services");
   const names = [
@@ -132,11 +130,29 @@ test("the homepage shows all 15 service pillars, and only built ones are links",
   const links = await section
     .locator("a")
     .evaluateAll((as) => as.map((a) => a.getAttribute("href")));
-  expect(links).toEqual(["/software-development/"]);
+  expect([...links].sort()).toEqual(
+    [
+      "/software-development/",
+      "/web-development/",
+      "/mobile-app-development/",
+      "/ecommerce/",
+      "/ai/",
+      "/automation/",
+      "/data-analytics/",
+      "/api-integration/",
+      "/cloud/",
+      "/cybersecurity/",
+      "/ui-ux/",
+      "/branding/",
+      "/seo-aeo-geo/",
+      "/digital-marketing/",
+      "/consulting/",
+    ].sort(),
+  );
 });
 
 test("unknown URLs return a real 404 with noindex", async ({ page }) => {
-  const res = await page.goto("/web-development/");
+  const res = await page.goto("/industries/");
   expect(res?.status()).toBe(404);
   await expect(page.locator("h1")).toHaveText("That page does not exist.");
   expect(await page.locator('meta[name="robots"]').first().getAttribute("content")).toContain(

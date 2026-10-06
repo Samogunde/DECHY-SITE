@@ -18,13 +18,17 @@ test.describe("desktop navigation", () => {
     ]) {
       await expect(nav.getByText(label, { exact: true })).toBeVisible();
     }
-    // No primary item is a link: none of the hubs exist yet and Services is a menu button.
-    expect(await nav.locator("a").count()).toBe(0);
+    // Built hubs are links; Industries and Resources have no page yet, so they stay plain text.
+    expect(
+      await nav.locator("a").evaluateAll((as) => as.map((a) => a.getAttribute("href"))),
+    ).toEqual(["/solutions/", "/technologies/", "/work/", "/company/"]);
+    for (const label of ["Industries", "Resources"])
+      await expect(nav.getByRole("link", { name: label })).toHaveCount(0);
     const cta = page.locator("header").getByRole("link", { name: "Talk to DECHY" });
     await expect(cta).toHaveAttribute("href", "/contact/");
   });
 
-  test("Services menu lists all 15 services in five families; only Software Development is a link", async ({
+  test("Services menu lists all 15 services in five families, each a link to its page", async ({
     page,
   }) => {
     await page.goto("/");
@@ -47,7 +51,24 @@ test.describe("desktop navigation", () => {
     const links = await panel
       .locator("a")
       .evaluateAll((as) => as.map((a) => a.getAttribute("href")));
-    expect(links).toEqual(["/software-development/"]);
+    expect(links).toEqual([
+      "/software-development/",
+      "/web-development/",
+      "/mobile-app-development/",
+      "/ecommerce/",
+      "/ai/",
+      "/automation/",
+      "/data-analytics/",
+      "/api-integration/",
+      "/cloud/",
+      "/cybersecurity/",
+      "/ui-ux/",
+      "/branding/",
+      "/seo-aeo-geo/",
+      "/digital-marketing/",
+      "/consulting/",
+      "/services/",
+    ]);
   });
 
   test("Escape closes the Services menu and returns focus to its button", async ({ page }) => {
@@ -144,7 +165,31 @@ test.describe("mobile navigation", () => {
     await expect(dialog.getByText("Cybersecurity")).toBeVisible();
     expect(
       await dialog.locator("a[href]").evaluateAll((as) => as.map((a) => a.getAttribute("href"))),
-    ).toEqual(["/software-development/", "/contact/"]);
+    ).toEqual([
+      ...[
+        "/software-development/",
+        "/web-development/",
+        "/mobile-app-development/",
+        "/ecommerce/",
+        "/ai/",
+        "/automation/",
+        "/data-analytics/",
+        "/api-integration/",
+        "/cloud/",
+        "/cybersecurity/",
+        "/ui-ux/",
+        "/branding/",
+        "/seo-aeo-geo/",
+        "/digital-marketing/",
+        "/consulting/",
+      ],
+      "/solutions/",
+      "/technologies/",
+      "/work/",
+      "/company/",
+      "/services/",
+      "/contact/",
+    ]);
     await dialog.getByRole("link", { name: "Software Development" }).click();
     await expect(page).toHaveURL(/\/software-development\/$/);
     await expect(page.getByRole("dialog", { name: "Site menu" })).toBeHidden();

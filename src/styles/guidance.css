@@ -23,7 +23,7 @@
   color: var(--color-slate-text);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
-  font-size: var(--fs-eyebrow);
+  font-size: var(--fs-label);
   font-weight: 700;
 }
 .glance-next {

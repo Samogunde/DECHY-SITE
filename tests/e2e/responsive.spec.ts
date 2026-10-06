@@ -96,7 +96,7 @@ for (const width of WIDTHS) {
       const small = await page.evaluate(() => {
         const bad: string[] = [];
         const sel =
-          "a.btn, button, summary, select, input:not([type=hidden]):not(.hp-field input), textarea, header a, nav a, footer a";
+          "a.btn, button, summary, select, input:not([type=hidden]):not(.chooser-input):not(.hp-field input), textarea, .chooser-tab, header a, nav a, footer a";
         for (const el of Array.from(document.querySelectorAll<HTMLElement>(sel))) {
           const cs = getComputedStyle(el);
           if (

@@ -166,7 +166,7 @@ function BeforeAfter({ spec }: { spec: Extract<DiagramSpec, { kind: "before-afte
     <div className="ba">
       <section className="ba-panel ba-before" aria-label={spec.before.title}>
         <p className="dgm-label">Before</p>
-        <h3 className="dgm-title ba-title">{spec.before.title}</h3>
+        <p className="dgm-title ba-title">{spec.before.title}</p>
         {spec.before.text ? (
           <p className="dgm-text ba-lead">
             <Inline text={spec.before.text} />
@@ -197,7 +197,7 @@ function BeforeAfter({ spec }: { spec: Extract<DiagramSpec, { kind: "before-afte
       </span>
       <section className="ba-panel ba-after" aria-label={spec.after.title}>
         <p className="dgm-label">After</p>
-        <h3 className="dgm-title ba-title">{spec.after.title}</h3>
+        <p className="dgm-title ba-title">{spec.after.title}</p>
         {spec.after.text ? (
           <p className="dgm-text ba-lead">
             <Inline text={spec.after.text} />
