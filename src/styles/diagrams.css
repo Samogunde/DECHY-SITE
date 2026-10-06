@@ -1,0 +1,715 @@
+/* ------------------------------------------------------------------------------------------
+   DECHY diagram system. Rules every diagram follows (docs/design/layout-and-visual-quality-rules.md):
+
+   1. One parent container. A figure is  .figure > .figure-frame > diagram,  followed by the
+      caption inside the same .figure. The .figure owns the width (--fig-max); the diagram and its
+      caption can therefore never drift apart at any viewport.
+   2. Diagrams are built from real HTML text in grids, not scaled vector text, so type never
+      drops below the type system's floors and nothing is positioned by pixel offsets.
+   3. Layout responds to the diagram's own width (container queries on .figure-frame), not to the
+      viewport, so a diagram behaves the same in a narrow column and in a narrow window.
+   4. Related items share rows. Where one column supports another (for example layers and the
+      systems that support them), each supporting item sits in the same grid row as the item it
+      supports, and the connectors are drawn from that row.
+   5. One set of tokens: gap, padding, line weight, box style. Dark surfaces change tokens only.
+   ------------------------------------------------------------------------------------------ */
+
+.figure {
+  margin: 0;
+  width: 100%;
+  max-width: var(--fig-max, none);
+}
+.figure-frame {
+  container: dgm / inline-size;
+}
+.figure-caption {
+  margin-top: 0.75rem;
+  max-width: 62ch;
+}
+
+.dgm {
+  --dgm-ink: var(--color-ink);
+  --dgm-border: var(--color-ink);
+  --dgm-fill: var(--color-white);
+  --dgm-muted: var(--color-slate-text);
+  --dgm-accent: var(--color-blue);
+  --dgm-gap: clamp(0.625rem, 0.4rem + 1.4cqw, 1rem);
+  --dgm-pad-y: 0.85rem;
+  --dgm-pad-x: 1.05rem;
+  --dgm-line: 1.5px;
+  font-size: var(--fs-body-sm);
+  line-height: 1.4;
+  color: var(--dgm-ink);
+}
+.tone-ink .dgm {
+  --dgm-ink: var(--color-paper);
+  --dgm-border: var(--color-ink-line);
+  --dgm-fill: var(--color-ink-raised);
+  --dgm-muted: var(--color-slate-on-dark);
+  --dgm-accent: var(--color-blue-on-dark);
+}
+
+.dgm-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  min-width: 0;
+  padding: var(--dgm-pad-y) var(--dgm-pad-x);
+  background: var(--dgm-fill);
+  border: var(--dgm-line) solid var(--dgm-border);
+  border-radius: var(--radius-md);
+}
+.dgm-box-ink {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  --dgm-ink: var(--color-paper);
+  --dgm-muted: var(--color-slate-on-dark);
+}
+.tone-ink .dgm-box-ink {
+  background: var(--color-ink);
+}
+.dgm-box-dashed {
+  border-style: dashed;
+  background: var(--color-paper);
+}
+.dgm-box-accent {
+  border-color: var(--dgm-accent);
+}
+.dgm-box-open {
+  background: transparent;
+  border: 1.8px solid var(--dgm-accent);
+}
+.dgm-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-body);
+  line-height: 1.25;
+  color: var(--dgm-ink);
+}
+.dgm-text {
+  font-size: var(--fs-body-sm);
+  line-height: 1.4;
+  color: var(--dgm-muted);
+}
+.dgm-label {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--dgm-muted);
+}
+.dgm-note {
+  margin: 0.9rem 0 0;
+  font-size: var(--fs-body-sm);
+  color: var(--dgm-muted);
+}
+:where(.dgm) ol,
+:where(.dgm) ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dgm-badge {
+  position: relative;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--color-blue);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  line-height: 1;
+}
+.dgm-badge-ink {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* ---------------- System map: five layers joined by an integration bus ---------------- */
+.sysmap-body {
+  position: relative;
+}
+.sysmap-rows {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(1.25rem, 7cqw, 2.25rem) 4rem;
+}
+.sysmap-rows > li {
+  display: contents;
+}
+.sysmap-rows .dgm-box {
+  margin-block: calc(var(--dgm-gap) / 2);
+}
+.sysmap-link {
+  position: relative;
+  align-self: center;
+  border-top: var(--dgm-line) solid var(--dgm-ink);
+}
+.sysmap-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dgm-ink);
+  transform: translate(-50%, 0.5px);
+}
+.sysmap-bus {
+  position: relative;
+  background: var(--color-blue);
+}
+.sysmap-rows > li:first-child .sysmap-bus {
+  border-start-start-radius: var(--radius-md);
+  border-start-end-radius: var(--radius-md);
+}
+.sysmap-rows > li:last-child .sysmap-bus {
+  border-end-start-radius: var(--radius-md);
+  border-end-end-radius: var(--radius-md);
+}
+.sysmap-bus::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.9rem;
+  border-top: 2px solid #fff;
+  transform: translateY(-1px);
+}
+.sysmap-bus::after {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+}
+.sysmap-overlay {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 4rem;
+  pointer-events: none;
+}
+.sysmap-label {
+  position: absolute;
+  inset: 0;
+  padding-inline-start: 1.7rem;
+  display: grid;
+  place-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #fff;
+}
+.bus-packet {
+  position: absolute;
+  left: 0.9rem;
+  top: 2%;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: -0.375rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgb(255 255 255 / 0.25);
+  opacity: 0;
+  animation: bus-travel 7s var(--ease-in-out) 1.2s infinite;
+}
+@keyframes bus-travel {
+  0% {
+    top: 3%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    top: 94%;
+    opacity: 0;
+  }
+}
+
+/* ---------------- Anatomy: layers on the left, the systems that support each on the right ---------------- */
+.anatomy {
+  --anatomy-gap: 1.5rem;
+  --anatomy-link: clamp(1.25rem, 6cqw, 1.75rem);
+}
+.anatomy-heads {
+  display: none;
+}
+.anatomy-stack > li + li {
+  margin-top: var(--anatomy-gap);
+}
+.anatomy-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.anatomy-stage {
+  position: relative;
+}
+.anatomy-stage .dgm-box {
+  height: 100%;
+}
+/* Flow arrow from the layer above into this layer. */
+.anatomy-stack > li + li .anatomy-stage::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(var(--anatomy-gap) * -1);
+  height: calc(var(--anatomy-gap) - 2px);
+  border-left: var(--dgm-line) solid var(--dgm-ink);
+}
+.anatomy-stack > li + li .anatomy-stage::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: var(--dgm-line) solid var(--dgm-ink);
+  border-bottom: var(--dgm-line) solid var(--dgm-ink);
+  transform: translateX(-50%) rotate(45deg);
+}
+.anatomy-link {
+  display: none;
+}
+.anatomy-support-wrap {
+  min-width: 0;
+}
+/* Narrow: the supporting systems attach beneath their layer as one tray, so the layer and what
+   supports it read as a single unit and the flow arrow runs from unit to unit. */
+.anatomy-row.has-support .anatomy-stage .dgm-box {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+.anatomy-support-wrap {
+  padding: 0.55rem var(--dgm-pad-x) 0.75rem;
+  background: var(--color-paper);
+  border: var(--dgm-line) solid var(--dgm-border);
+  border-top: 2px dotted var(--dgm-accent);
+  border-end-start-radius: var(--radius-md);
+  border-end-end-radius: var(--radius-md);
+}
+.anatomy-support-label {
+  margin-bottom: 0.4rem;
+}
+.anatomy-support {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+}
+.anatomy-support > li {
+  display: flex;
+}
+.anatomy-support .dgm-box {
+  flex-direction: row;
+  padding: 0.3rem 0.7rem;
+}
+.anatomy-support .dgm-title {
+  font-size: var(--fs-body-sm);
+}
+.anatomy-pipeline {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: start;
+  gap: 0.4rem 0.5rem;
+  margin-top: calc(var(--anatomy-gap) * 1.25);
+  padding: 1rem var(--dgm-pad-x);
+  background: var(--color-ink);
+  border-radius: var(--radius-md);
+  color: var(--color-paper);
+}
+.anatomy-pipeline > li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  font-weight: 700;
+}
+.anatomy-pipeline > li:nth-child(2) .arrow {
+  display: none;
+}
+.anatomy-pipeline .arrow {
+  margin-inline: 0.4rem 0.5rem;
+  color: var(--color-blue-on-dark);
+}
+@container dgm (min-width: 26rem) {
+  .anatomy-pipeline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .anatomy-pipeline > li:nth-child(2) .arrow {
+    display: block;
+  }
+}
+@container dgm (min-width: 28rem) {
+  .anatomy-heads {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) var(--anatomy-link) minmax(0, 1fr);
+    margin-bottom: 0.6rem;
+  }
+  .anatomy-heads > :first-child {
+    grid-column: 1;
+  }
+  .anatomy-heads > :last-child {
+    grid-column: 3;
+  }
+  .anatomy-row {
+    grid-template-columns: minmax(0, 1.45fr) var(--anatomy-link) minmax(0, 1fr);
+  }
+  .anatomy-row.has-support .anatomy-stage .dgm-box {
+    border-radius: var(--radius-md);
+  }
+  .anatomy-link {
+    display: block;
+    position: relative;
+  }
+  /* Stub from the layer to the middle of its supporting systems, and a bracket joining them. */
+  .anatomy-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    top: 50%;
+    border-top: 2px dotted var(--dgm-accent);
+  }
+  .anatomy-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: calc(50% / var(--n, 1) - (var(--n, 1) - 1) * 0.25rem / var(--n, 1));
+    bottom: calc(50% / var(--n, 1) - (var(--n, 1) - 1) * 0.25rem / var(--n, 1));
+    border-left: 2px dotted var(--dgm-accent);
+  }
+  .anatomy-support-wrap {
+    display: flex;
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+  .anatomy-support-label {
+    display: none;
+  }
+  .anatomy-support {
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .anatomy-support > li {
+    position: relative;
+    flex: 1;
+  }
+  .anatomy-support > li::before {
+    content: "";
+    position: absolute;
+    left: calc(var(--anatomy-link) / -2);
+    width: calc(var(--anatomy-link) / 2);
+    top: 50%;
+    border-top: 2px dotted var(--dgm-accent);
+  }
+  .anatomy-support .dgm-box {
+    flex: 1;
+    flex-direction: column;
+    padding: var(--dgm-pad-y) var(--dgm-pad-x);
+  }
+  .anatomy-support .dgm-title {
+    font-size: var(--fs-body);
+  }
+}
+
+/* ---------------- Connected flow: steps, shared foundation, monitoring ---------------- */
+.flow {
+  --flow-gap: 1.25rem;
+}
+.flow-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--flow-gap);
+}
+.flow-step {
+  position: relative;
+}
+.flow-step .dgm-box {
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.9rem;
+}
+.flow-step .flow-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.flow-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: calc(var(--flow-gap) / -2 - 8px);
+  color: var(--dgm-accent);
+  transform: translateY(-50%);
+}
+/* Narrow: a vertical flow, connected by a line through the numbers. */
+.flow-step + .flow-step::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--dgm-pad-x) + 0.875rem - 1px);
+  top: calc(var(--flow-gap) * -1);
+  height: var(--flow-gap);
+  border-left: 2px solid var(--dgm-accent);
+}
+.flow-shared {
+  margin-top: 1.5rem;
+}
+.flow-monitor {
+  margin-top: var(--dgm-gap);
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  column-gap: 0.75rem;
+}
+.flow-num.fx-halo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--color-blue-on-dark);
+  opacity: 0;
+  animation: halo 7.2s var(--ease-in-out) infinite;
+  animation-delay: calc(1.4s + var(--i, 0) * 1s);
+}
+@keyframes halo {
+  0%,
+  18%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  6% {
+    opacity: 0.9;
+    transform: scale(1.35);
+  }
+  14% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+@container dgm (min-width: 40rem) {
+  .flow-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.75rem;
+    row-gap: var(--dgm-gap);
+  }
+  .flow-step .dgm-box {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .flow-step + .flow-step::before {
+    display: none;
+  }
+  .flow-arrow {
+    right: -1.375rem;
+  }
+  .flow-step:not(:nth-child(3n)) .flow-arrow {
+    display: block;
+  }
+}
+@container dgm (min-width: 62rem) {
+  .flow-steps {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 1.75rem;
+  }
+  .flow-step:not(:nth-child(3n)) .flow-arrow {
+    display: none;
+  }
+  .flow-step:not(:last-child) .flow-arrow {
+    display: block;
+  }
+  /* Dashed drop from each step to the shared foundation. */
+  .flow-step::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    height: 1.5rem;
+    border-left: var(--dgm-line) dashed var(--dgm-border);
+  }
+}
+
+/* ---------------- Quality: test pyramid beside release gates ---------------- */
+.quality {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.pyramid {
+  position: relative;
+  width: 100%;
+  max-width: 22rem;
+  aspect-ratio: 1 / 1;
+}
+.pyramid > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.pyramid .tier {
+  fill: var(--dgm-fill);
+  stroke: var(--dgm-border);
+  stroke-width: 1.5px;
+  vector-effect: non-scaling-stroke;
+}
+.pyramid .tier-top {
+  fill: var(--color-blue);
+  stroke: var(--color-blue);
+}
+.pyramid .tier-mid {
+  stroke: var(--dgm-accent);
+}
+.pyr-label {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  text-align: center;
+  transform: translateY(-50%);
+  text-wrap: balance;
+}
+.pyr-label .dgm-title {
+  font-size: var(--fs-body);
+}
+.pyr-label-top {
+  top: 18%;
+  left: 20%;
+  right: 20%;
+}
+.pyr-label-top .dgm-title {
+  color: #fff;
+  font-size: var(--fs-body-sm);
+}
+.pyr-label-mid {
+  top: 51%;
+  left: 16%;
+  right: 16%;
+}
+.pyr-label-base {
+  top: 85%;
+}
+.gates > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0 0.9rem;
+  padding-block: 0.6rem;
+}
+.gates > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.875rem;
+  top: calc(0.6rem + 1.75rem);
+  bottom: -0.6rem;
+  border-left: 2px solid var(--dgm-border);
+}
+.gate-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--dgm-accent);
+}
+.gate-text {
+  align-self: center;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--dgm-ink);
+}
+@container dgm (min-width: 44rem) {
+  .quality {
+    grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+    column-gap: clamp(2rem, 6cqw, 4rem);
+  }
+}
+
+/* ---------------- Modernization: four stages ---------------- */
+.modern-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem 2.5rem;
+}
+.modern-step {
+  position: relative;
+  min-width: 0;
+}
+.modern-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.modern-art {
+  position: relative;
+  margin-top: 0.9rem;
+  width: 100%;
+  max-width: 16rem;
+}
+.modern-art > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.modern-step .dgm-text {
+  margin: 0.75rem 0 0;
+  max-width: 26ch;
+  text-wrap: balance;
+}
+.modern-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: -1.8rem;
+  color: var(--dgm-ink);
+  transform: translateY(-50%);
+}
+@container dgm (min-width: 36rem) {
+  .modern-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container dgm (min-width: 62rem) {
+  .modern-steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .modern-art {
+    max-width: none;
+  }
+  .modern-step:not(:last-child) .modern-arrow {
+    display: block;
+  }
+}

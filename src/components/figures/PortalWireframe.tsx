@@ -229,7 +229,7 @@ export function PortalWireframe({ titleId }: { titleId: string }) {
         viewBox="0 0 320 470"
         role="img"
         aria-labelledby={`${titleId}-t2 ${titleId}-d2`}
-        className="mx-auto block h-auto w-full max-w-[24rem] min-[48rem]:hidden"
+        className="block h-auto w-full max-w-[24rem] min-[48rem]:hidden"
       >
         <title id={`${titleId}-t2`}>Conceptual wireframe of a customer portal on a phone</title>
         <desc id={`${titleId}-d2`}>

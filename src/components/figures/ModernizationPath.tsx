@@ -1,16 +1,16 @@
+import { Arrow } from "@/components/primitives/Arrow";
+import { DiagramRoot, step } from "./DiagramRoot";
+
 /**
  * Conceptual diagram: modernizing a legacy system in stages (a "strangler" approach). Original
- * artwork describing method. Wide screens show four panels across; narrow screens stack them.
+ * artwork describing method. Four stages in a grid: one column on narrow containers, two on
+ * medium, four across on wide, with the same schematic drawn for each stage.
  */
-import type { CSSProperties } from "react";
-
-const step = (i: number) => ({ "--i": i }) as CSSProperties;
-
 const STAGES = [
-  { n: "1", title: "Assess", body: ["Map the system,", "its data, and risks"] },
-  { n: "2", title: "Wrap", body: ["Put a new front", "layer in place"] },
-  { n: "3", title: "Replace", body: ["Move modules over", "one at a time"] },
-  { n: "4", title: "Retire", body: ["Switch off what is", "no longer used"] },
+  { title: "Assess", body: "Map the system, its data, and risks" },
+  { title: "Wrap", body: "Put a new front layer in place" },
+  { title: "Replace", body: "Move modules over one at a time" },
+  { title: "Retire", body: "Switch off what is no longer used" },
 ];
 
 function Legacy({
@@ -163,7 +163,7 @@ function Schematic({ stage }: { stage: number }) {
             x="30"
             y="106"
             textAnchor="middle"
-            fontSize="13"
+            fontSize="14"
             className="fig-body fill-slate-text"
           >
             retired
@@ -175,107 +175,36 @@ function Schematic({ stage }: { stage: number }) {
 }
 
 export function ModernizationPath({ titleId }: { titleId: string }) {
-  const desc = (
-    <desc id={`${titleId}-d`}>
-      Four stages of modernizing a legacy system without stopping the business. Assess: map the
-      system, its data and its risks. Wrap: put a new front layer in place. Replace: move modules
-      over one at a time while the legacy system shrinks. Retire: switch off what is no longer used.
-    </desc>
-  );
   return (
-    <>
-      <svg
-        viewBox="0 0 960 250"
-        role="img"
-        aria-labelledby={`${titleId}-t ${titleId}-d`}
-        className="hidden h-auto w-full min-[48rem]:block"
-      >
-        <title id={`${titleId}-t`}>Modernizing legacy software in four stages</title>
-        {desc}
-        {STAGES.map((s, i) => {
-          const x = i * 250;
-          return (
-            <g key={s.n} className="fx-step" style={step(i)} transform={`translate(${x} 0)`}>
-              <circle cx="14" cy="14" r="13" className="fill-ink" />
-              <text
-                x="14"
-                y="19.5"
-                textAnchor="middle"
-                fontSize="15"
-                fontWeight="700"
-                className="fig-text fill-paper"
-              >
-                {s.n}
-              </text>
-              <text x="38" y="20" fontSize="18" fontWeight="700" className="fig-text fill-ink">
-                {s.title}
-              </text>
-              <g transform="translate(0 36)">
-                <Schematic stage={i} />
-              </g>
-              {s.body.map((line, k) => (
-                <text
-                  key={line}
-                  x="0"
-                  y={206 + k * 19}
-                  fontSize="15"
-                  className="fig-body fill-slate-text"
-                >
-                  {line}
-                </text>
-              ))}
-              {i < 3 ? (
-                <path
-                  d="M222 111 h16 m-6 -6 l6 6 l-6 6"
-                  className="fill-none stroke-ink"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              ) : null}
-            </g>
-          );
-        })}
-      </svg>
-      <svg
-        viewBox="0 0 360 920"
-        role="img"
-        aria-labelledby={`${titleId}-t2 ${titleId}-d2`}
-        className="block h-auto w-full min-[48rem]:hidden"
-      >
-        <title id={`${titleId}-t2`}>Modernizing legacy software in four stages</title>
-        <desc id={`${titleId}-d2`}>
-          Four stages: assess, wrap with a new front layer, replace modules one at a time, and
-          retire what is no longer used.
-        </desc>
+    <DiagramRoot
+      titleId={titleId}
+      title="Modernizing legacy software in four stages"
+      description="Four stages of modernizing a legacy system without stopping the business. Assess: map the system, its data and its risks. Wrap: put a new front layer in place. Replace: move modules over one at a time while the legacy system shrinks. Retire: switch off what is no longer used."
+      className="modern"
+    >
+      <ol className="modern-steps">
         {STAGES.map((s, i) => (
-          <g key={s.n} className="fx-step" style={step(i)} transform={`translate(2 ${i * 230})`}>
-            <circle cx="14" cy="14" r="13" className="fill-ink" />
-            <text
-              x="14"
-              y="19.5"
-              textAnchor="middle"
-              fontSize="15"
-              fontWeight="700"
-              className="fig-text fill-paper"
-            >
-              {s.n}
-            </text>
-            <text x="38" y="20" fontSize="18" fontWeight="700" className="fig-text fill-ink">
-              {s.title}
-            </text>
-            <g transform="translate(0 36)">
-              <Schematic stage={i} />
-            </g>
-            <text x="0" y="206" fontSize="15" className="fig-body fill-slate-text">
-              {s.body[0]}
-            </text>
-            <text x="0" y="225" fontSize="15" className="fig-body fill-slate-text">
-              {s.body[1]}
-            </text>
-          </g>
+          <li key={s.title} className="modern-step fx-step" style={step(i)}>
+            <div className="modern-head">
+              <span className="dgm-badge dgm-badge-ink" aria-hidden="true">
+                {i + 1}
+              </span>
+              <span className="dgm-title">{s.title}</span>
+            </div>
+            <div className="modern-art">
+              <svg viewBox="0 0 210 150" aria-hidden="true" focusable="false">
+                <Schematic stage={i} />
+              </svg>
+              {i < STAGES.length - 1 ? (
+                <span className="modern-arrow" aria-hidden="true">
+                  <Arrow />
+                </span>
+              ) : null}
+            </div>
+            <p className="dgm-text">{s.body}</p>
+          </li>
         ))}
-      </svg>
-    </>
+      </ol>
+    </DiagramRoot>
   );
 }

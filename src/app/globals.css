@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../styles/typography-tokens.css";
+@import "../styles/diagrams.css" layer(components);
 
 /* ------------------------------------------------------------------------------------------
    DECHY design tokens.
@@ -507,10 +508,9 @@
   }
 
   /* ---------------- figures ---------------- */
-  .figure {
-    margin: 0;
-  }
-  .figure svg {
+  /* Figure container rules live in src/styles/diagrams.css. Raster-free SVG exhibits (the portal
+     wireframe) are direct children of the frame and fill it. */
+  .figure-frame > svg {
     display: block;
     width: 100%;
     height: auto;
@@ -766,28 +766,6 @@
       opacity: 0;
     }
   }
-  .bus-packet {
-    transform-box: fill-box;
-    animation: bus-travel 7s var(--ease-in-out) 1.2s infinite;
-    opacity: 0;
-  }
-  @keyframes bus-travel {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    8% {
-      opacity: 1;
-    }
-    88% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(var(--travel, 340px));
-      opacity: 0;
-    }
-  }
-
   /* Diagram motion. Steps appear in the order the process runs when a figure first scrolls in;
      the connected-flow numbers then take a gentle turn being active. Loops pause off screen. */
   [data-reveal="figure"][data-state="hidden"] .fx-step {
@@ -797,30 +775,7 @@
     transition: opacity var(--dur-slow) var(--ease-out);
     transition-delay: calc(var(--i, 0) * 90ms);
   }
-  .fx-halo {
-    transform-box: fill-box;
-    transform-origin: center;
-    opacity: 0;
-    animation: halo 7.2s var(--ease-in-out) infinite;
-    animation-delay: calc(1.4s + var(--i, 0) * 1s);
-  }
-  @keyframes halo {
-    0%,
-    18%,
-    100% {
-      opacity: 0;
-      transform: scale(1);
-    }
-    6% {
-      opacity: 0.9;
-      transform: scale(1.35);
-    }
-    14% {
-      opacity: 0;
-      transform: scale(1.7);
-    }
-  }
-  [data-reveal="figure"][data-inview="false"] .fx-halo,
+  [data-reveal="figure"][data-inview="false"] .fx-halo::after,
   [data-reveal="figure"][data-inview="false"] .bus-packet {
     animation-play-state: paused;
   }
@@ -927,7 +882,7 @@
       transform: none !important;
     }
     .bus-packet,
-    .fx-halo {
+    .fx-halo::after {
       opacity: 0 !important;
     }
     .btn:hover,

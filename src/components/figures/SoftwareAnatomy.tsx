@@ -1,145 +1,90 @@
+import type { CSSProperties } from "react";
+import { Arrow } from "@/components/primitives/Arrow";
+import { DiagramRoot } from "./DiagramRoot";
+
 /**
  * Conceptual diagram: anatomy of a custom business application. Original artwork. It shows the
  * parts a delivered system typically has; it is not a depiction of any client system.
+ *
+ * Layout rule: every supporting system sits in the same grid row as the layer it supports, so the
+ * relationship is read from the row. A layer with two supporting systems shares its row height
+ * between them. On narrow containers the supporting systems drop beneath their layer.
  */
+const LAYERS = [
+  { title: "People", body: "Customers, staff, partners", dashed: true, support: [] as string[] },
+  {
+    title: "Interfaces",
+    body: "Web app, mobile app, admin",
+    support: ["Identity and access"],
+  },
+  {
+    title: "Services and logic",
+    body: "Rules, workflows, APIs",
+    support: ["Background jobs", "Integrations and events"],
+  },
+  {
+    title: "Data",
+    body: "Database, search, files, reports",
+    support: ["Logs, metrics, alerts"],
+  },
+];
+const PIPELINE = ["Build", "Test", "Release", "Maintain"];
+
 export function SoftwareAnatomy({ titleId }: { titleId: string }) {
-  const rows = [
-    { y: 0, h: 64, title: "People", body: "Customers, staff, partners" },
-    { y: 82, h: 84, title: "Interfaces", body: "Web app, mobile app, admin" },
-    { y: 184, h: 84, title: "Services and logic", body: "Rules, workflows, APIs" },
-    { y: 286, h: 84, title: "Data", body: "Database, search, files, reports" },
-  ];
-  const modules = [
-    { y: 82, lines: ["Identity", "and access"] },
-    { y: 162, lines: ["Background", "jobs"] },
-    { y: 242, lines: ["Integrations", "and events"] },
-    { y: 322, lines: ["Logs, metrics,", "alerts"] },
-  ];
   return (
-    <svg
-      viewBox="0 0 480 450"
-      role="img"
-      aria-labelledby={`${titleId}-t ${titleId}-d`}
-      className="mx-auto w-full max-w-[30rem]"
+    <DiagramRoot
+      titleId={titleId}
+      title="Anatomy of a custom business application"
+      description="A layered diagram. People use interfaces (web app, mobile app, admin). Interfaces call services and business logic, which read and write data. Supporting systems sit beside the layer they support: identity and access beside interfaces; background jobs and integrations and events beside services and logic; logs, metrics and alerts beside data. A delivery pipeline along the bottom builds, tests, releases and maintains the whole system."
+      className="anatomy"
     >
-      <title id={`${titleId}-t`}>Anatomy of a custom business application</title>
-      <desc id={`${titleId}-d`}>
-        A layered diagram. People use interfaces (web app, mobile app, admin). Interfaces call
-        services and business logic, which read and write data. Four supporting modules sit beside
-        the stack: identity and access, background jobs, integrations and events, and logs, metrics
-        and alerts. A delivery pipeline along the bottom builds, tests, releases and maintains the
-        whole system.
-      </desc>
-
-      {rows.map((r, i) => (
-        <g key={r.title}>
-          <rect
-            x="1"
-            y={r.y + 1}
-            width="298"
-            height={r.h - 2}
-            rx="4"
-            className={i === 0 ? "fill-paper stroke-ink" : "fill-white stroke-ink"}
-            strokeWidth="1.5"
-            strokeDasharray={i === 0 ? "5 4" : undefined}
-          />
-          <text
-            x="20"
-            y={r.y + (r.h > 70 ? 34 : 28)}
-            fontSize="18"
-            fontWeight="700"
-            className="fig-text fill-ink"
+      <div className="anatomy-heads" aria-hidden="true">
+        <p className="dgm-label">Application layers</p>
+        <p className="dgm-label">Supporting systems</p>
+      </div>
+      <ol className="anatomy-stack">
+        {LAYERS.map((l) => (
+          <li
+            key={l.title}
+            className={`anatomy-row ${l.support.length > 0 ? "has-support" : ""}`.trim()}
+            style={{ "--n": l.support.length } as CSSProperties}
           >
-            {r.title}
-          </text>
-          <text
-            x="20"
-            y={r.y + (r.h > 70 ? 58 : 51)}
-            fontSize="15"
-            className="fig-body fill-slate-text"
-          >
-            {r.body}
-          </text>
-          {i < rows.length - 1 ? (
-            <g>
-              <line
-                x1="150"
-                y1={r.y + r.h}
-                x2="150"
-                y2={(rows[i + 1]?.y ?? 0) - 5}
-                className="stroke-ink"
-                strokeWidth="1.5"
-              />
-              <path
-                d={`M144 ${(rows[i + 1]?.y ?? 0) - 9} L150 ${(rows[i + 1]?.y ?? 0) - 2} L156 ${(rows[i + 1]?.y ?? 0) - 9}`}
-                className="fill-none stroke-ink"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </g>
-          ) : null}
-        </g>
-      ))}
-
-      {modules.map((m) => (
-        <g key={m.lines.join(" ")}>
-          <line
-            x1="299"
-            y1={m.y + 34}
-            x2="326"
-            y2={m.y + 34}
-            className="stroke-blue"
-            strokeWidth="1.5"
-            strokeDasharray="3 3"
-          />
-          <rect
-            x="327"
-            y={m.y}
-            width="152"
-            height="68"
-            rx="4"
-            className="fill-white stroke-blue"
-            strokeWidth="1.5"
-          />
-          {m.lines.map((line, i) => (
-            <text
-              key={line}
-              x="341"
-              y={m.y + 29 + i * 20}
-              fontSize="16"
-              fontWeight="700"
-              className="fig-text fill-ink"
-            >
-              {line}
-            </text>
-          ))}
-        </g>
-      ))}
-
-      <rect x="1" y="394" width="478" height="54" rx="4" className="fill-ink" />
-      {["Build", "Test", "Release", "Maintain"].map((step, i) => (
-        <g key={step}>
-          <text
-            x={20 + i * 118}
-            y="427"
-            fontSize="16"
-            fontWeight="700"
-            className="fig-text fill-paper"
-          >
-            {step}
-          </text>
-          {i < 3 ? (
-            <path
-              d={`M${96 + i * 118} 421 h16 m-5 -5 l5 5 l-5 5`}
-              className="fill-none stroke-blue-on-dark"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          ) : null}
-        </g>
-      ))}
-    </svg>
+            <div className="anatomy-stage">
+              <div className={`dgm-box ${l.dashed ? "dgm-box-dashed" : ""}`.trim()}>
+                <span className="dgm-title">{l.title}</span>
+                <span className="dgm-text">{l.body}</span>
+              </div>
+            </div>
+            {l.support.length > 0 ? (
+              <>
+                <span className="anatomy-link" aria-hidden="true" />
+                <div className="anatomy-support-wrap">
+                  <p className="dgm-label anatomy-support-label" aria-hidden="true">
+                    Supported by
+                  </p>
+                  <ul className="anatomy-support" aria-label={`Supports ${l.title}`}>
+                    {l.support.map((s) => (
+                      <li key={s}>
+                        <div className="dgm-box dgm-box-accent">
+                          <span className="dgm-title">{s}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            ) : null}
+          </li>
+        ))}
+      </ol>
+      <ol className="anatomy-pipeline" aria-label="Delivery pipeline">
+        {PIPELINE.map((p, i) => (
+          <li key={p}>
+            {p}
+            {i < PIPELINE.length - 1 ? <Arrow /> : null}
+          </li>
+        ))}
+      </ol>
+    </DiagramRoot>
   );
 }
