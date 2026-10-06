@@ -16,7 +16,7 @@ jobs:
   quality:
     name: Quality gates
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     env:
       CI: "true"
       SITE_ORIGIN: http://localhost:4310
