@@ -26,3 +26,5 @@ footer:
   legal:
     - { label: Privacy policy, path: /privacy/ }
     - { label: Cookie policy, path: /cookies/ }
+    - { label: Terms of use, path: /terms/ }
+    - { label: Accessibility, path: /accessibility/ }

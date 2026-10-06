@@ -1,0 +1,146 @@
+id: page.company
+kind: company
+locale: en
+path: /company/
+title: "About DECHY | Technology, Software, AI & Digital Solutions"
+description: "About DECHY, a global company for technology, software, AI, and digital solutions: who we help, how we think, and how to see what we do."
+breadcrumbLabel: Company
+intent:
+  primary: about dechy
+  secondary:
+    - dechy technology company
+    - who is dechy
+indexing: index
+claims:
+  [
+    company.name,
+    company.descriptor,
+    company.statement,
+    company.founded,
+    company.scope,
+    company.positioning,
+    company.breadth,
+  ]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, AboutPage, FAQPage]
+comprehension:
+  what: "DECHY is a global company for technology, software, AI, and digital solutions, operating since 2010 and working with clients remotely."
+  problem: "When you choose a technology partner you want to know who they are, what they do, how they think, and how they would work with you."
+  audience: "Buyers and partners checking who DECHY is before they get in touch."
+  choose: "Read how we work and who we work with, then judge the approach against your own needs and your questions."
+  next: "If the approach sounds right, tell us what you are trying to do and we will say honestly whether we are a good fit."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Company
+    headline: About DECHY
+    lead: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We help organizations build, connect, automate, and scale, working with clients remotely, around the world."
+    support: "This page says who we are in plain terms, and where to look next."
+    ctas:
+      - { label: Talk to us, href: "/contact/" }
+      - { label: How we work, href: "/company/how-we-work/" }
+    spec:
+      kind: hub
+      center:
+        title: DECHY
+        text: Technology, Software, AI & Digital Solutions.
+      spokes:
+        - title: Build
+          text: Software, websites, apps, and stores.
+        - title: Connect
+          text: Integration between your tools.
+        - title: Automate
+          text: Less manual work, more reliable processes.
+        - title: Run
+          text: Cloud, security, and data.
+        - title: Design
+          text: Interfaces, brands, and clear messages.
+        - title: Decide
+          text: Advice before you spend.
+    purpose: relationship
+    takeaway: "DECHY covers building, connecting, automating, running, designing, and deciding, so these parts can work as one system."
+    visualTitle: "What DECHY does, in six verbs"
+    figureCaption: "This diagram shows DECHY at the center with six areas of work around it: build, connect, automate, run, design, and decide."
+
+  - type: statement
+    id: since-2010
+    tone: white
+    label: About DECHY
+    factId: company.statement
+
+  - type: definition
+    id: what-is
+    tone: paper
+    label: Who we are
+    heading: A technology company that works as one team
+    answer: "{{fact:company.positioning}} We are a global company, and we work with clients remotely, in many time zones."
+    paragraphs:
+      - "{{fact:company.breadth}}"
+      - "We keep this breadth deliberately. Most real problems cross several kinds of work: a website needs design, a system needs security, an automation needs integration. Having these under one roof means fewer hand-offs and fewer gaps between them."
+      - "We are a global company. We do not claim offices, branches, or local teams, and we work with clients wherever they are."
+
+  - type: columns
+    id: principles
+    tone: white
+    label: How we think
+    heading: Four ideas behind our work
+    columns:
+      - title: Start from the problem
+        items:
+          - "We ask what you are trying to achieve before we suggest a tool."
+          - "We say when a smaller step, or no technology, would do."
+      - title: Say it plainly
+        items:
+          - "We explain options and costs in everyday words."
+          - "We explain technical terms the first time we use them."
+      - title: Build to last
+        items:
+          - "Tested, documented, and maintainable by other teams."
+          - "Your code and data belong to you."
+      - title: Be honest about limits
+        items:
+          - "We do not promise what nobody can promise, such as rankings or perfect security."
+          - "We state what we do not know."
+
+  - type: index
+    id: next
+    tone: paper
+    label: Where to look next
+    heading: Learn more about how we work
+    items:
+      - title: How we work
+        href: /company/how-we-work/
+        body: "The stages of a project, how we communicate, and the shapes an engagement can take."
+      - title: Who we work with
+        href: /company/who-we-work-with/
+        body: "The kinds of organization we help, and what each tends to need."
+      - title: Our services
+        href: /services/
+        body: "All fifteen services, in five groups."
+      - title: Our work
+        href: /work/
+        body: "The twenty-five kinds of system we build, each explained."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about DECHY
+    items:
+      - q: Where is DECHY based?
+        a: "DECHY is a global company that works remotely with clients worldwide. We do not operate public offices or branches."
+      - q: How long has DECHY been working?
+        a: "We have been operating since {{fact:company.founded}}. The statement above sets out the scale in the words we have approved."
+      - q: Do you work with small organizations?
+        a: "Yes. We help individuals and small teams as well as larger organizations. See [who we work with](/company/who-we-work-with/)."
+      - q: How do I start?
+        a: "Use the contact page to describe what you want to do. We reply with an honest view of whether and how we can help."
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you are trying to do
+    body: "Describe your situation in your own words. We will say honestly whether we are a good fit and what a first step could be."
+    primary: { label: Talk to DECHY, href: "/contact/" }

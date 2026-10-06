@@ -1,0 +1,185 @@
+id: page.solutions
+kind: hub
+locale: en
+path: /solutions/
+title: "Solutions by Problem and Goal | DECHY"
+description: "Find solutions by the problem you have: manual work, disconnected tools, old software, slow customer service, or an idea to turn into a product."
+breadcrumbLabel: Solutions
+intent:
+  primary: technology solutions by problem
+  secondary:
+    - business technology solutions
+    - solving business problems with software
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "A solution is a way of solving a particular business problem, often using several services together, such as automating an approval process or modernizing old software."
+  problem: "People describe their problem, not the technology, so a list of services does not show them what will help."
+  audience: "Leaders and teams who know what is going wrong but not what kind of technology fixes it."
+  choose: "Start from the problem you recognize, see the kind of solution that addresses it, and follow it to the services and work behind it."
+  next: "Choose the problem closest to yours below, or describe it to us and we will say what fits."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Solutions
+    headline: Start from the problem
+    lead: "At DECHY, a solution is a way of solving a particular problem, usually by combining several services. This page lists common problems and the kinds of solution that address them, so you can start from your own words."
+    support: "Each solution leads back to the services and work behind it."
+    ctas:
+      - { label: Describe your problem, href: "/contact/" }
+      - { label: Find your problem, href: "#problems" }
+    spec:
+      kind: flow
+      steps:
+        - title: A problem
+          text: Something slow, manual, broken, or missing.
+        - title: A solution
+          text: A pattern known to address it.
+        - title: Services
+          text: The kinds of work that build it.
+        - title: A result you can check
+          text: Measured against the problem you started with.
+    purpose: relationship
+    takeaway: "A solution connects a problem to the services that fix it, and to a result you can check against where you started."
+    visualTitle: "From a problem to a result you can check"
+    figureCaption: "This diagram shows a problem leading to a solution, then to the services that build it, and finally to a result checked against the original problem."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What a solution is
+    heading: A solution is not a service
+    answer: "A service is a kind of work, such as software development or integration. A solution is a way of solving a specific problem, which usually draws on several services."
+    paragraphs:
+      - "For example, moving your invoices from paper to a tracked, partly automatic process is a solution. It uses design to make the screens clear, software to hold the records, and integration to link accounts."
+      - "We describe solutions by the problem they solve because that is how people describe their needs."
+
+  - type: pathfinder
+    id: problems
+    tone: paper
+    label: Find your problem
+    heading: Which of these sounds like you?
+    intro: "Choose the closest match. Each leads to the service or the kind of system that deals with it."
+    paths:
+      - need: "We do the same tasks by hand, again and again"
+        text: "Copying, chasing, and reporting that tools could do."
+        href: /automation/
+        action: See automation
+      - need: "Our tools do not share information"
+        text: "People re-type data from one system to another."
+        href: /api-integration/
+        action: See integration
+      - need: "Our software is old and risky"
+        text: "It works, but it is hard to change and few people understand it."
+        href: /software-development/
+        action: See software development
+      - need: "Customers wait too long for answers"
+        text: "Support teams answer the same questions all day."
+        href: /work/areas/customer-portals/
+        action: See customer portals
+      - need: "We run on spreadsheets"
+        text: "Important work lives in files that break or clash."
+        href: /work/areas/internal-business-tools/
+        action: See internal tools
+      - need: "Our website does not bring enquiries"
+        text: "Visitors arrive but do not act."
+        href: /web-development/
+        action: See web development
+      - need: "We want to use AI but do not know where"
+        text: "Unsure which tasks suit it, and how to keep it safe."
+        href: /ai/
+        action: See AI
+      - need: "We have an idea for a product"
+        text: "A software offering you want to test and grow."
+        href: /work/areas/digital-products/
+        action: See digital products
+
+  - type: entities
+    id: list
+    tone: white
+    style: chips
+    label: Solution areas
+    heading: The solutions we describe
+    intro: "These are the kinds of solution we are asked for most, grouped by the problem they address."
+    groups:
+      - title: Work that repeats
+        note: "Reducing manual effort in everyday processes."
+        entityIds: [sol.business-process-automation, sol.workflow-automation, sol.ai-automation]
+      - title: Tools that need to agree
+        note: "Making systems share information."
+        entityIds: [sol.api-integration, sol.crm-integration, sol.payment-integration]
+      - title: Software that has aged
+        note: "Updating what exists without stopping the business."
+        entityIds:
+          [sol.legacy-system-modernization, sol.cloud-migration, sol.digital-transformation]
+      - title: Customers and service
+        note: "Helping customers help themselves, and helping staff respond."
+        entityIds:
+          [
+            sol.customer-portal-development,
+            sol.customer-experience-systems,
+            sol.ai-customer-support,
+            sol.booking-platforms,
+          ]
+      - title: Selling and subscriptions
+        note: "Ways of selling beyond a simple store."
+        entityIds: [sol.ecommerce-systems, sol.subscription-platforms, sol.marketplace-platforms]
+      - title: Information and decisions
+        note: "Making information findable and trustworthy."
+        entityIds:
+          [sol.business-dashboards, sol.data-systems, sol.ai-knowledge-systems, sol.ai-agents]
+      - title: Products and internal tools
+        note: "Software for your own staff, or offered to others."
+        entityIds: [sol.internal-business-software, sol.saas-platforms]
+
+  - type: diagram
+    id: example
+    tone: paper
+    label: An example
+    heading: One problem, several services
+    intro: "To show how services combine, here is the first problem above, repeated manual work, and how a solution is built."
+    spec:
+      kind: hub
+      center:
+        title: Repeated manual work
+        text: The problem to solve.
+      spokes:
+        - title: Consulting
+          text: Find the tasks worth automating.
+        - title: Automation
+          text: Build the rules that run by themselves.
+        - title: Integration
+          text: Connect the tools they use.
+        - title: Design
+          text: Make the screens clear for staff.
+        - title: Security
+          text: Protect what the automation can reach.
+        - title: Analytics
+          text: Show the time and errors saved.
+    purpose: relationship
+    takeaway: "A solution to repeated manual work draws on consulting, automation, integration, design, security, and analytics together."
+    caption: "This diagram shows repeated manual work at the center with six services around it that together form one solution."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about solutions
+    items:
+      - q: What if my problem is not listed?
+        a: "Describe it to us. The list shows common cases, and many problems are variations or mixtures of them."
+      - q: Are solutions products I can buy?
+        a: "No. They are patterns for solving a problem, which we build to fit you. Some use ready-made tools, and some need custom work."
+      - q: How do solutions relate to your work pages?
+        a: "Solutions describe the problem and the approach. Work pages describe the kinds of system that result. Each links to the other."
+
+  - type: cta
+    id: contact-cta
+    heading: Describe the problem in your own words
+    body: "Tell us what is going wrong and what it costs you. We will say what kind of solution fits and what a first step could be."
+    primary: { label: Talk to DECHY, href: "/contact/" }

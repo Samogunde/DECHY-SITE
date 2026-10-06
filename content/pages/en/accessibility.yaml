@@ -1,0 +1,54 @@
+id: page.accessibility
+kind: legal
+locale: en
+path: /accessibility/
+title: "Accessibility Statement | DECHY"
+description: "How the DECHY website aims to be usable by everyone: the standard we work to, what we check, known limits, and how to tell us about a barrier."
+breadcrumbLabel: Accessibility
+h1: Accessibility statement
+lead: "How this website aims to be usable by everyone. Last updated 5 October 2026."
+intent:
+  primary: read the website accessibility statement
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage]
+
+sections:
+  - type: legal
+    id: statement
+    tone: paper
+    sections:
+      - heading: Our aim
+        paragraphs:
+          - "We want everyone to be able to use this website, including people who use screen readers, keyboards, voice control, magnification, or other assistive technology, and people with different needs for reading, vision, hearing, movement, and attention."
+          - "We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA, the widely used standard for accessible websites."
+      - heading: What we do
+        paragraphs:
+          - "We build pages with meaningful structure, so headings, lists, and regions can be navigated by assistive technology. We make every interactive element reachable and usable with a keyboard, and show where the keyboard focus is."
+        items:
+          - "Text is set in a readable size and measure, and resizes with the browser settings."
+          - "Colors are chosen to give enough contrast, and meaning is never carried by color alone."
+          - "Images that carry meaning have text alternatives, and diagrams have captions that explain them."
+          - "Information is never available only on hover."
+          - "Animation is modest, and is switched off when your device asks for reduced motion."
+          - "Buttons and links are large enough to touch, and layouts adapt to small and large screens."
+      - heading: How we check
+        paragraphs:
+          - "We test pages with automated accessibility checks as part of each release, and with manual checks of keyboard use and layout at a range of screen sizes. Automated tools find only some problems, so manual checks matter."
+          - "We have not yet had the website independently audited. We will update this statement if that changes."
+      - heading: Known limitations
+        paragraphs:
+          - "We aim for full conformance, but we cannot promise that every page meets every requirement. Some content, such as diagrams, may be harder to use with some assistive technology than plain text, which is why each diagram is also described in a caption and in the surrounding text."
+          - "If we find a limitation we cannot fix quickly, we will describe it here."
+      - heading: Tell us about a barrier
+        paragraphs:
+          - "If you find something on this website that is hard to use, or if you need information in a different format, please tell us through the [contact page](/contact/). Say which page and what happened, and what technology you use if you are willing to share it."
+          - "We will take your report seriously, look into it, and reply to say what we can do."
+      - heading: Other rights
+        paragraphs:
+          - "Depending on where you live, you may have rights under accessibility or equality laws. If you are not satisfied with our reply, you may contact the body that enforces those laws where you live."
+      - heading: Related policies
+        paragraphs:
+          - "See also the [terms of use](/terms/), the [privacy policy](/privacy/), and the [cookie policy](/cookies/)."

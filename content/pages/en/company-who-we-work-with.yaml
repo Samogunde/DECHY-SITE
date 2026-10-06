@@ -1,0 +1,159 @@
+id: page.company-who-we-work-with
+kind: company
+locale: en
+path: /company/who-we-work-with/
+parent: /company/
+title: "Who DECHY Works With | Organizations We Help"
+description: "The kinds of organization DECHY helps, from individuals and startups to enterprises, what each tends to need, and an honest note on when we may not be the right fit."
+breadcrumbLabel: Who we work with
+intent:
+  primary: who dechy works with
+  secondary:
+    - clients dechy serves
+    - technology partner for small and large businesses
+indexing: index
+claims: [company.name, company.descriptor, company.statement]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, AboutPage, FAQPage]
+comprehension:
+  what: "DECHY works with many kinds of organization and individual, from startups and small businesses to enterprises, and adapts its approach to each."
+  problem: "Buyers worry that a provider is too big, too small, or too unfamiliar with organizations like theirs."
+  audience: "Leaders and individuals checking whether DECHY suits their size, sector, and situation."
+  choose: "Read what organizations like yours tend to need, and ask us about anything specific to your situation."
+  next: "Tell us who you are and what you need. We will say honestly whether we are a good fit, and what to expect."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Company
+    headline: Who we work with
+    lead: "At DECHY, we work with organizations of many sizes and kinds, and with individuals. This page describes what each tends to need, and says plainly when we may not be the right fit."
+    support: "We list kinds of organization, not client names."
+    ctas:
+      - { label: Talk to us, href: "/contact/" }
+      - { label: Find your kind, href: "#kinds" }
+    spec:
+      kind: funnel
+      stages:
+        - title: Individuals and professionals
+          text: A person with a project or a practice.
+        - title: Startups and small teams
+          text: Moving fast with limited resources.
+        - title: Growing businesses
+          text: Outgrowing the first set of tools.
+        - title: Established organizations
+          text: Many people, many systems, and risk to manage.
+        - title: Large and international groups
+          text: Complex structure and many stakeholders.
+    purpose: relationship
+    takeaway: "We work across the range of size, from individuals to large international groups, and adjust our approach to match."
+    visualTitle: "The range of organizations we work with"
+    figureCaption: "This diagram shows a range of five kinds of client, from individuals and professionals at one end to large international groups at the other."
+
+  - type: statement
+    id: since-2010
+    tone: white
+    label: About DECHY
+    factId: company.statement
+
+  - type: definition
+    id: what-is
+    tone: paper
+    label: How we adapt
+    heading: The same care, in a different shape
+    answer: "The approach is the same for everyone: understand the problem, recommend honestly, build carefully. What changes is the pace, the amount of process, and the kind of risk to manage."
+    paragraphs:
+      - "A small team may want something working in weeks, with little paperwork. A large organization may need approvals, security reviews, and documentation. We adapt to both, and say what each choice costs."
+      - "We also adapt to your knowledge. Some clients have technical teams and want a specialist partner. Others have none, and want us to explain every step."
+
+  - type: table
+    id: kinds
+    tone: white
+    label: What each tends to need
+    heading: Organizations like yours
+    caption: Kinds of organization and what each tends to need
+    columns: [Kind of organization, What it tends to need, How we adapt]
+    rows:
+      - - Individuals and professionals
+        - "A clear online presence, simple tools, and fair prices."
+        - "We keep things light, and explain every choice."
+      - - Startups
+        - "A first version quickly, which can grow."
+        - "We favor small steps, and flexible foundations."
+      - - Small and medium businesses
+        - "Tools that fit how they work, without a large team to run them."
+        - "We choose maintainable tools and train your people."
+      - - Professional services and agencies
+        - "Secure client work, clear delivery, and strong branding."
+        - "We build around your service model."
+      - - Online businesses and stores
+        - "Reliable selling, fast pages, and connected stock."
+        - "We start with what loses sales."
+      - - Enterprises and larger groups
+        - "Integration with many systems, security, and governance."
+        - "We work with your teams and your approval processes."
+      - - Nonprofits and public bodies
+        - "Careful use of limited budgets, accessibility, and accountability."
+        - "We explain costs and favor lasting tools."
+
+  - type: entities
+    id: types
+    tone: paper
+    style: chips
+    label: Kinds of organization
+    heading: A longer list
+    intro: "We have helped clients across many sectors and kinds of organization. These are common ones."
+    groups:
+      - title: By size
+        entityIds:
+          [bt.startups, bt.small-businesses, bt.smes, bt.enterprises, bt.multinational-companies]
+      - title: By model
+        entityIds:
+          [
+            bt.online-businesses,
+            bt.ecommerce-businesses,
+            bt.saas-companies,
+            bt.franchises,
+            bt.local-businesses,
+          ]
+      - title: By type
+        entityIds:
+          [
+            bt.professional-services,
+            bt.agencies,
+            bt.manufacturers,
+            bt.nonprofits,
+            bt.government-organizations,
+          ]
+
+  - type: callout
+    id: fit
+    tone: white
+    variant: limits
+    title: When we may not be the right fit
+    paragraphs:
+      - "We may not be the best choice if you need a team on your premises every day. The same goes if you want the lowest possible price over careful work. A narrow specialty that another provider does as their sole focus may also be better placed elsewhere."
+      - "We will say so honestly if we think another path would serve you better."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about who we work with
+    items:
+      - q: Do you have a minimum project size?
+        a: "No fixed minimum. We prefer to start with the smallest useful step, and we say if a project is too small to need us."
+      - q: Do you work in my industry?
+        a: "We work across many sectors. Most problems in software, automation, and design are similar across industries. We learn your specifics early, and ask where we do not know."
+      - q: Can you name clients?
+        a: "We do not list client names unless we have permission and can describe the work accurately. We would rather describe our approach and let you judge it."
+      - q: Do you work with organizations outside my country?
+        a: "Yes. We are a global company and work remotely, with agreed overlap hours."
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us who you are
+    body: "Describe your organization and what you need. We will say honestly whether we are a good fit, and what to expect."
+    primary: { label: Talk to DECHY, href: "/contact/" }

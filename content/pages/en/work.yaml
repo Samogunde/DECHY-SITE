@@ -1,0 +1,169 @@
+id: page.work
+kind: work-hub
+locale: en
+path: /work/
+title: "Work: What DECHY Builds | DECHY"
+description: "The kinds of system DECHY builds, as twenty-five work areas: what each is, how it is built, and an illustrative scenario, grouped by what you want to achieve."
+breadcrumbLabel: Work
+intent:
+  primary: what dechy builds
+  secondary:
+    - types of software systems we build
+    - work areas
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "This section describes the kinds of system DECHY builds, as twenty-five work areas, each explaining what the system is, how it is built, and what to decide first."
+  problem: "A list of services does not show what the finished result looks like, or whether it matches what you have in mind."
+  audience: "Buyers who want to picture the result before they commit, and teams comparing how different providers approach a problem."
+  choose: "Find the area closest to your goal, read how that kind of system works, and use the illustrative scenario to check it matches your situation."
+  next: "Choose a work area, or describe what you want to build and we will point you to the nearest one."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Work
+    headline: What we build, explained
+    lead: "At DECHY, our work falls into twenty-five areas, each a kind of system. Each page explains what the system is, how it is built, and what to decide first, so you can picture the result before you commit."
+    support: "The scenarios in this section are illustrations of typical systems. They are not client projects."
+    ctas:
+      - { label: Describe what you want to build, href: "/contact/" }
+      - { label: Browse the areas, href: "#areas" }
+    spec:
+      kind: layers
+      layerLabel: How work areas relate to services
+      layers:
+        - title: Services
+          text: The kinds of help we offer.
+        - title: Work areas
+          text: The kinds of system we build with them.
+        - title: Your system
+          text: Shaped to your situation.
+    purpose: relationship
+    takeaway: "Services are the kinds of help, work areas are the kinds of system they build, and your system is shaped to your situation."
+    visualTitle: "From services to a system shaped for you"
+    figureCaption: "This diagram shows three layers: services at the top, work areas below them, and your own system at the base, shaped to your situation."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: How to read this section
+    heading: Work areas describe kinds of system
+    answer: "A work area is a kind of system we build, such as a customer portal or an automation system. Each page explains the kind in plain language and shows a typical scenario, without naming any client."
+    paragraphs:
+      - "We describe work this way for a reason. A work area shows how we think and what the result looks like. It does not claim a particular client, result, or date."
+      - "Where a specific project can be described accurately, with the client's agreement, it will be shown separately and identified as a real project."
+
+  - type: entities
+    id: areas
+    tone: paper
+    style: lists
+    label: The twenty-five areas
+    heading: Browse by what you want to achieve
+    intro: "Each area links to the service behind it, and to related areas."
+    groups:
+      - title: Software and products
+        note: "Systems built around how you work, and products you offer."
+        entityIds:
+          [
+            workarea.custom-software-systems,
+            workarea.digital-products,
+            workarea.internal-business-tools,
+            workarea.operations-platforms,
+          ]
+      - title: Websites, apps, and portals
+        note: "Where customers and staff meet your organization online."
+        entityIds:
+          [workarea.business-web-platforms, workarea.mobile-apps, workarea.customer-portals]
+      - title: Selling online
+        note: "Stores and the machinery behind unusual ways of selling."
+        entityIds: [workarea.ecommerce-platforms, workarea.commerce-systems]
+      - title: AI and automation
+        note: "Systems that read, decide, and act."
+        entityIds:
+          [
+            workarea.ai-solutions,
+            workarea.ai-agents,
+            workarea.automation-systems,
+            workarea.workflow-automation,
+          ]
+      - title: Connection and data
+        note: "Making tools share information and turning it into insight."
+        entityIds:
+          [
+            workarea.api-integrations,
+            workarea.integration-platforms,
+            workarea.data-analytics,
+            workarea.knowledge-and-content-systems,
+          ]
+      - title: Infrastructure and security
+        note: "Running software reliably and protecting it."
+        entityIds:
+          [workarea.cloud-platforms, workarea.devops-infrastructure, workarea.cybersecurity-systems]
+      - title: Design, brand, and growth
+        note: "How you look, how you are found, and how you reach people."
+        entityIds:
+          [
+            workarea.ui-ux-product-design,
+            workarea.brand-systems,
+            workarea.seo-search-visibility,
+            workarea.digital-marketing-systems,
+          ]
+      - title: Change
+        note: "Planning and phasing how an organization changes."
+        entityIds: [workarea.digital-transformation]
+
+  - type: chooser
+    id: start
+    tone: white
+    label: Where to begin
+    heading: Which kind of reader are you?
+    intro: "Different readers want different things from this section."
+    question: What best describes you?
+    options:
+      - label: I know my problem but not the system
+        when: "You can describe what hurts, but not what to build."
+        get: "Start with the solutions page, which begins from problems, then follow the work area it points to."
+        watch: "A problem often needs more than one work area."
+        cta: { label: Browse by problem, href: "/solutions/" }
+      - label: I know the system I want
+        when: "You are fairly sure, for example, that you need a customer portal."
+        get: "Go straight to that work area and read what to decide first."
+        watch: "Use the illustrative scenario to check it matches your case."
+      - label: I am comparing providers
+        when: "You want to see how a provider thinks."
+        get: "Read two or three areas close to your needs, and compare the questions each asks."
+        watch: "Look for honesty about limits as well as promises."
+        cta: { label: See how we work, href: "/company/how-we-work/" }
+
+  - type: callout
+    id: honest
+    tone: paper
+    variant: note
+    title: What this section shows, and what it does not
+    paragraphs:
+      - "These pages describe kinds of system and typical approaches. They are written from our practice, and they say plainly when a different approach would serve you better."
+      - "They do not describe particular clients, projects, results, or dates. If you want to know whether we have built a particular kind of system, ask us directly."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about our work
+    items:
+      - q: Why are there no client names?
+        a: "Work areas describe kinds of system. They are not records of client projects. We do not name clients or claim results unless we can state them accurately and have permission."
+      - q: How does a work area differ from a service?
+        a: "A service is a kind of help, such as integration. A work area is a kind of system, such as an integration platform, which may draw on several services."
+      - q: Can you build something not listed here?
+        a: "Yes. The twenty-five areas cover what we are asked for most. Tell us what you need, and we will say how we would approach it."
+
+  - type: cta
+    id: contact-cta
+    heading: Describe what you want to build
+    body: "Tell us what you have in mind. We will point you to the nearest area, and say what we would decide first."
+    primary: { label: Talk to DECHY, href: "/contact/" }

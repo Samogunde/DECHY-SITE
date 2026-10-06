@@ -1,0 +1,227 @@
+id: page.technologies
+kind: hub
+locale: en
+path: /technologies/
+title: "Technologies We Use and How We Choose | DECHY"
+description: "The languages, frameworks, platforms, and tools DECHY works with, and how we choose among them: by fit, maintainability, cost, and risk, not by fashion or brand."
+breadcrumbLabel: Technologies
+intent:
+  primary: technologies we use
+  secondary:
+    - technology stack and tools
+    - how we choose technology
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "This page lists the kinds of technology DECHY works with and explains how we choose among them for a given project."
+  problem: "Technology choices are hard to judge from outside, and a wrong choice can lock you in, cost more, or be hard to maintain."
+  audience: "Leaders who want to understand the reasoning behind technology choices, and technical people checking whether we work with their tools."
+  choose: "Choose technology by what the project needs, who will maintain it, and what it will cost to change, and not by what is fashionable."
+  next: "Tell us what you already use and what you need. We will say which choices fit and which would be a risk."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Technologies
+    headline: Technology chosen for fit
+    lead: "At DECHY, we work with a wide range of languages, frameworks, platforms, and tools. What matters more than the list is how we choose among them. This page explains the reasoning and shows what we commonly use."
+    support: "We recommend what fits you, including tools you already own, and we explain why."
+    ctas:
+      - { label: Talk to us about your stack, href: "/contact/" }
+      - { label: How we choose, href: "#choose" }
+    spec:
+      kind: decision
+      question: What should drive the choice of technology?
+      branches:
+        - when: "Your team already knows a tool well"
+          choose: Prefer what they know
+          text: Skills matter more than small technical differences.
+        - when: "The tool must run for many years"
+          choose: Prefer widely used, stable tools
+          text: They are easier to maintain and hire for.
+        - when: "A ready-made platform covers the need"
+          choose: Buy before building
+          text: Build only what makes you different.
+        - when: "Regulation or sensitive data is involved"
+          choose: Prefer tools with strong controls
+          text: Security and audit needs come first.
+    purpose: decision
+    takeaway: "Technology should be chosen by team skills, longevity, whether a platform already fits, and security needs, and not by fashion."
+    visualTitle: "What should drive a technology choice"
+    figureCaption: "This diagram shows four situations and the technology choice each suggests: use known tools, prefer stable ones, buy before building, or prefer strong controls."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: How we think about it
+    heading: Tools serve the project, not the other way round
+    answer: "Technology is a means. The right tool is the one that fits the task, can be maintained by the people who will own it, and does not trap you. We recommend on those grounds, and we are open about trade-offs."
+    paragraphs:
+      - "Every tool has strengths and costs. A popular framework may have a large community and many people who know it. A newer one may be faster to work with but harder to staff. A ready-made platform may save months, with limits you must accept."
+      - "We lay these trade-offs out in plain language so the decision is yours, and we write down why we chose what we chose, so the reasoning survives after the project."
+
+  - type: table
+    id: choose
+    tone: paper
+    label: How we choose
+    heading: What we weigh
+    caption: Factors considered when choosing technology and why each matters
+    columns: [Factor, The question we ask, Why it matters]
+    rows:
+      - - Fit
+        - "Does it do what this project needs, without a struggle?"
+        - "A tool fighting its task wastes time."
+      - - Maintainability
+        - "Can other teams read, change, and support it?"
+        - "You should not depend on us to keep it running."
+      - - Longevity
+        - "Is it widely used, and will it still be supported in five years?"
+        - "Replacing a tool is costly."
+      - - Cost
+        - "What are the licence, hosting, and staffing costs over time?"
+        - "The cheapest start is not always the cheapest total."
+      - - Security
+        - "Does it have a good record and the controls we need?"
+        - "Weak tools make everything above them weaker."
+      - - Lock-in
+        - "How hard would it be to leave?"
+        - "Flexibility is worth paying a little for."
+
+  - type: entities
+    id: stack
+    tone: white
+    style: chips
+    label: What we work with
+    heading: Technologies we commonly use
+    intro: "This is a sample, grouped by the kind of job each does. We choose from it, and beyond it, to suit the project."
+    groups:
+      - title: Languages
+        note: "What software is written in."
+        entityIds:
+          [
+            lang.typescript,
+            lang.javascript,
+            lang.python,
+            lang.java,
+            lang.c-sharp,
+            lang.go,
+            lang.php,
+          ]
+      - title: Web frameworks
+        note: "What sites and web applications are built with."
+        entityIds: [fw.react, fw.nextjs, fw.vue, fw.angular, fw.svelte, fw.astro]
+      - title: Mobile
+        note: "For iPhone, Android, and both."
+        entityIds: [tech.react-native, tech.flutter, tech.swift, tech.kotlin]
+      - title: Content and store platforms
+        note: "Ready-made platforms for sites and selling."
+        entityIds:
+          [
+            plat.wordpress,
+            plat.shopify,
+            plat.woocommerce,
+            plat.webflow,
+            plat.contentful,
+            plat.sanity,
+          ]
+      - title: Databases
+        note: "Where information is kept."
+        entityIds: [tech.postgresql, tech.mysql, tech.mongodb, tech.redis, tech.sqlite]
+      - title: Cloud and hosting
+        note: "Where software runs."
+        entityIds:
+          [plat.aws, plat.azure, plat.google-cloud, plat.cloudflare, plat.vercel, plat.netlify]
+      - title: Delivery and operations
+        note: "How software is released and watched."
+        entityIds:
+          [
+            tool.docker,
+            tool.kubernetes,
+            tool.terraform,
+            tool.github-actions,
+            tool.prometheus,
+            tool.grafana,
+          ]
+      - title: AI and machine learning
+        note: "Models, libraries, and the stores that feed them."
+        entityIds:
+          [
+            prov.openai,
+            prov.anthropic-claude,
+            prov.google-gemini,
+            prov.mistral,
+            fw.pytorch,
+            fw.langchain,
+            tech.pinecone,
+          ]
+      - title: Automation and connection
+        note: "Moving information between tools."
+        entityIds:
+          [
+            tech.zapier,
+            tech.make,
+            tech.n8n,
+            tech.microsoft-power-automate,
+            plat.airtable,
+            int.stripe,
+          ]
+      - title: Design
+        note: "Tools used to design and prototype."
+        entityIds: [tool.figma, tool.adobe-xd, tool.illustrator, tool.photoshop]
+
+  - type: diagram
+    id: process
+    tone: paper
+    label: In practice
+    heading: How a technology recommendation is made
+    intro: "We follow a short process, and record the reasoning."
+    spec:
+      kind: flow
+      steps:
+        - title: Understand the need
+          text: What must the technology do, for whom, and how long?
+        - title: Check what you have
+          text: Existing tools, skills, and contracts.
+        - title: Compare options
+          text: Usually two or three, with trade-offs.
+        - title: Recommend
+          text: One choice, with the reasons written down.
+        - title: Review later
+          text: Revisit as needs change.
+    purpose: process
+    takeaway: "A recommendation follows from understanding the need, checking what you have, comparing a few options, and recording the reasons."
+    caption: "This diagram shows five steps in making a technology recommendation, from understanding the need to reviewing the choice later."
+
+  - type: callout
+    id: honest
+    tone: white
+    variant: note
+    title: A list of names is not expertise
+    paragraphs:
+      - "Anyone can list technologies. What matters is judgment: knowing which fits, which to avoid, and which to leave alone. Ask any provider why they would choose a tool for your project, and what its drawbacks are."
+      - "We welcome that question. If a tool you use is not listed, ask us. Our approach carries across tools, and we will say honestly where our experience is thinner."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about technology
+    items:
+      - q: Can you work with the technology we already use?
+        a: "Usually, yes. We start from what you have, and recommend changes only where they pay for themselves."
+      - q: Will we be locked in to your choices?
+        a: "We aim for the opposite. We favor common tools, keep your code and data yours, and document decisions, so another team could take over."
+      - q: Do you only use new technology?
+        a: "No. We prefer proven tools for most work, and use newer ones where they offer a clear benefit."
+      - q: What about AI tools?
+        a: "We use them where they help, and we check their output. See our [AI](ref:svc.ai) service for how."
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you use and what you need
+    body: "Describe your current tools and what you want to achieve. We will say which choices fit, which are risks, and why."
+    primary: { label: Talk to DECHY, href: "/contact/" }

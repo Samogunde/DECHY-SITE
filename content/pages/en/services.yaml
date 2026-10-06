@@ -1,0 +1,199 @@
+id: page.services
+kind: hub
+locale: en
+path: /services/
+title: "All DECHY Services | Software, AI and Digital"
+description: "All fifteen DECHY services in five groups: build, intelligence and automation, infrastructure and security, design and growth, and advisory, with a choosing guide."
+breadcrumbLabel: Services
+intent:
+  primary: dechy services
+  secondary:
+    - technology services overview
+    - software ai and digital services
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "DECHY offers fifteen services, in five groups, that cover building software, connecting and automating it, running it safely, designing and promoting it, and deciding what to do."
+  problem: "Technology needs rarely fit one service name, so it is hard to tell which kind of help to ask for."
+  audience: "Anyone choosing technology help, from a first-time buyer with a problem to a technical lead looking for a partner."
+  choose: "Start from what you want to achieve, not from a service name. Use the guide below, or read the five groups to see how the services connect."
+  next: "Pick the sentence that sounds like you, or describe your situation and we will say which services help and which do not."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Services
+    headline: Fifteen services, one team
+    lead: "At DECHY, our services cover building technology, connecting and automating it, running it safely, designing and promoting it, and deciding what to do about it. This page helps you find the one you need."
+    support: "Most projects use several services together. We say so when that is the case."
+    ctas:
+      - { label: Talk to us about your situation, href: "/contact/" }
+      - { label: Find the right service, href: "#paths" }
+    spec:
+      kind: layers
+      layerLabel: Five groups of service
+      layers:
+        - title: Advisory
+          text: Decide what to build, buy, or connect.
+        - title: Design and growth
+          text: Make it clear, recognizable, and found.
+        - title: Intelligence and automation
+          text: Make it smarter and less manual.
+        - title: Infrastructure and security
+          text: Run it reliably and safely.
+        - title: Build
+          text: Create the software, sites, and apps.
+    purpose: system
+    takeaway: "The fifteen services fall into five groups, from building technology to deciding what to do about it, and projects often use several."
+    visualTitle: "Five groups of service that work together"
+    figureCaption: "This diagram shows five groups of service stacked from advisory at the top to building at the base, which projects often combine."
+
+  - type: pathfinder
+    id: paths
+    tone: paper
+    label: Find your path
+    heading: Which service do you need?
+    intro: "Pick the sentence that sounds like you. Each leads to the service that fits, and each page explains the options in plain language."
+    paths:
+      - need: I need software built around how we work
+        text: "A system, portal, or tool that fits your process instead of bending it."
+        href: /software-development/
+        action: See software development
+      - need: I need a website that does more than inform
+        text: "A new site, a rebuild, or an online system customers and staff sign in to."
+        href: /web-development/
+        action: See web development
+      - need: I need an app for phones
+        text: "An app for customers or staff, from first idea to the app stores."
+        href: /mobile-app-development/
+        action: See mobile apps
+      - need: I want to sell online
+        text: "A store, subscriptions, or a custom way of selling."
+        href: /ecommerce/
+        action: See ecommerce
+      - need: I want to use AI sensibly
+        text: "Find where AI helps, how to check it, and where to avoid it."
+        href: /ai/
+        action: See AI and machine learning
+      - need: I want to stop doing repetitive work by hand
+        text: "Connect tools and automate the copying, chasing, and reporting."
+        href: /automation/
+        action: See automation
+      - need: My tools do not talk to each other
+        text: "Share information between your systems without re-typing it."
+        href: /api-integration/
+        action: See integration
+      - need: I need clear numbers
+        text: "Reports and dashboards your team trusts."
+        href: /data-analytics/
+        action: See data and analytics
+      - need: I need to run things reliably
+        text: "Hosting, releases, monitoring, and recovery."
+        href: /cloud/
+        action: See cloud and DevOps
+      - need: I need to protect our data
+        text: "Controls, testing, and safe software."
+        href: /cybersecurity/
+        action: See cybersecurity
+      - need: Our screens confuse people
+        text: "Research, design, and testing with real users."
+        href: /ui-ux/
+        action: See UI/UX design
+      - need: We do not look like one organization
+        text: "Identity, guidelines, and templates."
+        href: /branding/
+        action: See branding
+      - need: People cannot find us
+        text: "Be found in search and understood by AI assistants."
+        href: /seo-aeo-geo/
+        action: See search visibility
+      - need: We want more of the right customers
+        text: "Reach people, follow up quickly, measure results."
+        href: /digital-marketing/
+        action: See digital marketing
+      - need: I am not sure where to start
+        text: "A short, honest conversation about the decision in front of you."
+        href: /consulting/
+        action: See consulting
+
+  - type: service-index
+    id: services
+    tone: white
+    label: All services
+    heading: The fifteen services, in five groups
+    intro: "Every service has equal standing. The groups only help you see how they fit together."
+
+  - type: diagram
+    id: together
+    tone: paper
+    label: How they combine
+    heading: How services work together on one project
+    intro: "Real projects rarely use one service alone. Here is a typical example: a business that wants customers to order online."
+    spec:
+      kind: flow
+      steps:
+        - title: Consulting
+          text: Decide what to build and in what order.
+        - title: Design
+          text: Make the ordering path clear and recognizable.
+        - title: Web and ecommerce
+          text: Build the site and the store.
+        - title: Integration and automation
+          text: Connect orders to stock, accounts, and email.
+        - title: Cloud and security
+          text: Run it reliably and protect customer data.
+        - title: Search and marketing
+          text: Help customers find it.
+    purpose: process
+    takeaway: "One project often moves from consulting through design, building, connecting, and running to being found, using several services."
+    caption: "This diagram shows one online ordering project moving through six services, from deciding what to build to helping customers find it."
+
+  - type: table
+    id: compare
+    tone: white
+    label: Often confused
+    heading: Services that sound alike
+    intro: "A few services are easy to mix up. This table shows how they differ."
+    caption: Comparison of services that are often confused
+    columns: [If you are comparing, The first helps you, The second helps you]
+    rows:
+      - - "Automation and integration"
+        - "Make repeated work happen by itself."
+        - "Make tools share information."
+      - - "Design for ease of use, and branding"
+        - "Make a product easy to use."
+        - "Make an organization recognizable."
+      - - "Search visibility and digital marketing"
+        - "Be found when people search or ask AI."
+        - "Reach people across email, social, and ads."
+      - - "Software development and web development"
+        - "Build systems around your process."
+        - "Build sites and web applications."
+      - - "Data and analytics and AI"
+        - "See what has happened and why."
+        - "Read, sort, summarize, and predict."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about our services
+    items:
+      - q: Do we have to use several services?
+        a: "No. Many projects use one. We suggest more only when they help, and we say why."
+      - q: Which service should we ask for?
+        a: "Start with the problem. If you describe it to us, we will say which services fit. If you are unsure, [consulting](ref:svc.consulting) is a short way to find out."
+      - q: Do you work with organizations of any size?
+        a: "Yes. We work with individuals and small teams as well as larger organizations. The approach scales to suit."
+      - q: Where do you work?
+        a: "We are a global company and work with clients remotely, in many time zones."
+
+  - type: cta
+    id: contact-cta
+    heading: Describe your situation
+    body: "Tell us what you want to achieve. We will say which services help, which do not, and what a sensible first step would be."
+    primary: { label: Talk to DECHY, href: "/contact/" }

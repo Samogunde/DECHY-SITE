@@ -1,0 +1,63 @@
+id: page.terms
+kind: legal
+locale: en
+path: /terms/
+title: "Website Terms of Use | DECHY"
+description: "The terms for using the DECHY website: what the site is for, intellectual property, acceptable use, links, no warranty, and how services are agreed separately."
+breadcrumbLabel: Terms of use
+h1: Terms of use
+lead: "The terms for using this website. Last updated 5 October 2026."
+intent:
+  primary: read the website terms of use
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage]
+
+sections:
+  - type: legal
+    id: terms
+    tone: paper
+    sections:
+      - heading: About these terms
+        paragraphs:
+          - "These terms apply to your use of this website, which is operated by DECHY, a global technology company. In these terms, DECHY, we, and us mean the operator of this website. By using the website you agree to these terms. If you do not agree, please do not use it."
+          - "These terms cover the website only. Any services we provide are agreed separately, in writing, before work begins."
+      - heading: What the website is for
+        paragraphs:
+          - "The website describes what DECHY does and helps you contact us. Its content is general information. It is not professional advice for your particular situation, and it is not an offer that can be accepted by using the site."
+      - heading: Services are agreed separately
+        paragraphs:
+          - "A description of a service, work area, or approach on this website does not create an obligation to provide it. Scope, price, timing, ownership, and responsibilities for any project are set out in a separate written agreement."
+          - "Scenarios on this website are illustrations of typical systems. They are not descriptions of particular clients, projects, or results."
+      - heading: Intellectual property
+        paragraphs:
+          - "The text, diagrams, design, and other material on this website belong to DECHY or are used with permission. You may view the site, and share links to it. You may not copy, republish, or sell its content without our written permission, except where the law allows."
+          - "DECHY and its logo are identifiers of the company. Names of other products and companies mentioned on the site belong to their owners, and their appearance does not imply endorsement."
+      - heading: Acceptable use
+        paragraphs:
+          - "You agree not to misuse the website. In particular, you agree not to attempt to gain unauthorized access to it or its systems, introduce harmful code, overload it, or use automated means to extract its content in a way that harms its operation."
+          - "When you use the contact form, please give accurate information and do not send unlawful, abusive, or misleading messages."
+      - heading: Links to other websites
+        paragraphs:
+          - "The website may link to other sites. We do not control them and are not responsible for their content or practices. A link is not an endorsement."
+      - heading: Accuracy and changes
+        paragraphs:
+          - "We take care to keep the website accurate, but we do not promise that it is complete, current, or free of errors. We may change or remove content, and these terms, at any time. The date at the top of this page shows when the terms were last revised."
+      - heading: No warranty and limits of liability
+        paragraphs:
+          - "The website is provided as it is and as available. To the extent the law allows, we exclude warranties about it, and we are not liable for loss arising from your use of the website or reliance on its content."
+          - "Nothing in these terms limits liability that cannot lawfully be limited, such as liability for fraud or for death or personal injury caused by negligence."
+      - heading: Privacy and cookies
+        paragraphs:
+          - "How the website handles personal information is set out in the [privacy policy](/privacy/). What it stores in your browser is set out in the [cookie policy](/cookies/)."
+      - heading: Accessibility
+        paragraphs:
+          - "We aim for the website to be usable by everyone. See the [accessibility statement](/accessibility/), and tell us if you meet a barrier."
+      - heading: Governing law
+        paragraphs:
+          - "The law that governs a written services agreement, and the courts that deal with disputes, are set out in that agreement. For use of the website itself, the law that applies to you as a consumer, where there is one, is not affected by these terms."
+      - heading: Contact
+        paragraphs:
+          - "To ask about these terms, use the [contact page](/contact/)."

@@ -1,0 +1,167 @@
+id: page.company-how-we-work
+kind: company
+locale: en
+path: /company/how-we-work/
+parent: /company/
+title: "How DECHY Works With You | Process and Engagement"
+description: "How a DECHY project runs: the stages from first conversation to support, how we communicate, the shapes an engagement can take, and what we will not do."
+breadcrumbLabel: How we work
+intent:
+  primary: how dechy works
+  secondary:
+    - software project process
+    - working with a technology partner
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, AboutPage, FAQPage]
+comprehension:
+  what: "A DECHY project moves through five stages, from understanding the problem to supporting what was built, with regular, plain reports and clear decision points."
+  problem: "Technology projects fail from unclear goals, silent progress, and surprises about cost or timing."
+  audience: "Buyers deciding how to work with a technology partner, and teams who want to know what to expect."
+  choose: "Choose the shape of engagement by how well you know what you need: a defined project, an ongoing team, or advice first."
+  next: "Describe what you want to do, and we will propose the shape of engagement that fits, with the first step clearly stated."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Company
+    headline: How we work with you
+    lead: "At DECHY, a project follows a clear path, with plain reports and decisions kept in your hands. This page shows the stages, how we communicate, and the shapes an engagement can take."
+    support: "The details change with each project. The principles stay the same."
+    ctas:
+      - { label: Talk to us, href: "/contact/" }
+      - { label: See the stages, href: "#stages" }
+    spec:
+      kind: flow
+      steps:
+        - title: Understand
+          text: The problem, the people, and what success means.
+        - title: Plan
+          text: Options, a recommendation, and a first step.
+        - title: Build
+          text: In short cycles, with working results to see.
+        - title: Launch
+          text: Carefully, with training and a way back.
+        - title: Support
+          text: Look after it, and improve it.
+    purpose: process
+    takeaway: "A project moves through understanding, planning, building, launching, and support, with something to see and decide at each stage."
+    visualTitle: "The five stages of a project"
+    figureCaption: "This diagram shows a project in five stages, from understanding the problem to supporting what was built, with a result to see at each."
+
+  - type: process
+    id: stages
+    tone: white
+    label: The stages
+    heading: What happens at each stage
+    steps:
+      - title: Understand
+        body: "We listen first. We learn what you are trying to achieve, who will use the result, what exists today, and what constraints apply. You receive a short summary to confirm we understood."
+        artifacts: [Summary of the problem, Success measures]
+      - title: Plan
+        body: "We set out options in plain language, with trade-offs, rough costs, and risks. We recommend one, and propose a first step that is small enough to judge."
+        artifacts: [Options, Recommendation, First-step plan]
+      - title: Build
+        body: "We work in short cycles of a few weeks. At the end of each, you see working results and tell us what to change. Scope is agreed in writing, and changes are discussed before they happen."
+        artifacts: [Working increments, Regular reports]
+      - title: Launch
+        body: "We test thoroughly, release carefully, train the people who will use the result, and prepare a way back if something goes wrong."
+        artifacts: [Test results, Release plan, Training]
+      - title: Support
+        body: "We look after what we built, fix problems, and help it improve. Support is agreed in advance, so you know who to ask and how quickly we respond."
+        artifacts: [Support agreement, Improvement list]
+
+  - type: chooser
+    id: shape
+    tone: paper
+    label: Shapes of engagement
+    heading: Three ways to work together
+    intro: "The right shape depends on how well you know what you need."
+    question: How clear is your goal?
+    options:
+      - label: A defined project
+        when: "You know what you need, and it has a clear end."
+        get: "An agreed scope, timeline, and price range, with checkpoints."
+        watch: "Changes to scope are discussed and agreed before work continues."
+        cta: { label: Discuss a project, href: "/contact/" }
+      - label: An ongoing team
+        when: "You have continuing work, or a product that keeps changing."
+        get: "A steady team that knows your systems, working in regular cycles."
+        watch: "Priorities need a named person on your side to set them."
+        cta: { label: Discuss an ongoing team, href: "/contact/" }
+      - label: Advice first
+        when: "You face a decision and are not sure what to build."
+        get: "A short assessment or workshop, and a recommendation you can take anywhere."
+        watch: "Advice is separate from delivery, so you are free to choose."
+        cta: { label: Ask about advice, href: "/consulting/" }
+
+  - type: columns
+    id: communication
+    tone: white
+    label: Communication
+    heading: How we keep you informed
+    columns:
+      - title: Regular
+        items:
+          - "A short written update at an agreed rhythm."
+          - "A call at each checkpoint."
+      - title: Plain
+        items:
+          - "Reports say what was done, what comes next, and what is at risk."
+          - "Technical terms are explained."
+      - title: Visible
+        items:
+          - "You can see working results as they appear."
+          - "Decisions and changes are written down."
+      - title: Early
+        items:
+          - "Bad news is reported when it is known."
+          - "Risks are raised before they become problems."
+
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: What we will not do
+    paragraphs:
+      - "We will not promise outcomes that depend on things we do not control, such as search rankings or perfect security. We will not hide problems, pad estimates to look cautious, or push a larger project than you need."
+      - "We will tell you when a smaller step, a different tool, or no new technology would serve you better."
+    items:
+      - "No surprise costs: changes are agreed first."
+      - "No lock-in by design: your code and data are yours."
+      - "No jargon without explanation."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about working with us
+    items:
+      - q: How do you price work?
+        a: "We give a price range after the planning stage, and refine it as details become clear. Ongoing work is agreed by team size or by cycle. We discuss the model that suits you."
+      - q: Who owns what you build?
+        a: "That is agreed in writing before work starts. We aim for you to own your code and data and to receive the documentation needed to maintain them."
+      - q: Can we see progress during the project?
+        a: "Yes. You see working results at the end of each cycle, and receive regular written updates."
+      - q: What if we want to stop?
+        a: "You can. Each cycle ends with something usable, and we hand over what exists, with documentation."
+      - q: How do you work across time zones?
+        a: "We agree overlapping hours and a communication rhythm at the start, and use written updates to keep work moving."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Working with DECHY
+    groups:
+      - title: Related services
+        entityIds: [svc.consulting, svc.software-development]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you want to do
+    body: "Describe your situation. We will propose the shape of engagement that fits, with the first step clearly stated."
+    primary: { label: Talk to DECHY, href: "/contact/" }
