@@ -1,6 +1,6 @@
 # Phase 2 execution plan
 
-Status: PROPOSED. Awaiting the owner's review and approval. Nothing in this document has been implemented. Phase 2 implementation does not start until the owner approves.
+Status: APPROVED AND IMPLEMENTED by owner authorization on 5 October 2026 (see 11-phase-2-implementation-notes.md for what was built and any deviations from this plan).
 
 Sources: the approved master plan (sections 4 to 9, 13, 14, 20, 21, 27, 33, 36 and Appendices C to E), the decisions register, ADR 0001 to 0004, the Work, country and article architectures, `AGENTS.md`, the Content Master, and everything built and verified in Phase 1. Where this plan departs from the approved phase table, it says so and asks (section 16).
 

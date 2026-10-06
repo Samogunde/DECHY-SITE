@@ -135,7 +135,7 @@ export function glossaryIssues(page: Page, facts: Map<string, Fact>): string[] {
 
 function sentences(text: string): string[] {
   return text
-    .split(/(?<=[.!?])\s+(?=[A-Z0-9"'(])/)
+    .split(/(?<=[.!?]["')\]]*)\s+(?=[A-Z0-9"'(])/)
     .map((s) => s.trim())
     .filter(Boolean);
 }

@@ -1,0 +1,429 @@
+# Article briefs (data only)
+# The 53 launch articles from docs/planning/06-article-plan-53.md, kept as structured data.
+# No article pages exist yet: every brief is "planned". This file is not read by the site build; it
+# preserves the plan so a later phase can publish the articles in batch order without re-deriving it.
+briefs:
+  - number: 1
+    title: "What Is Custom Software Development and When Does a Business Need It"
+    type: "D, Pillar"
+    canonicalHome: software-development
+    question: "What is custom software and is it right for us"
+    relatedEntities: "Software Dev, SaaS, internal tools, build vs buy (#2)"
+    batch: 1
+    status: planned
+  - number: 2
+    title: "Build, Buy or Integrate: How to Choose Business Software"
+    type: "X"
+    canonicalHome: software-development
+    question: "Should we build, buy off the shelf, or connect existing tools"
+    relatedEntities: "Software Dev, API integration, Airtable, CRM"
+    batch: 1
+    status: planned
+  - number: 3
+    title: "How to Modernize Legacy Software Without Stopping the Business"
+    type: "G"
+    canonicalHome: software-development
+    question: "How do we replace old systems safely"
+    relatedEntities: "Legacy modernization, cloud migration (#32), integration"
+    batch: 2
+    status: planned
+  - number: 4
+    title: "SaaS Product Development: From MVP to Scalable Platform"
+    type: "G"
+    canonicalHome: software-development
+    question: "How is a SaaS product planned and built"
+    relatedEntities: "SaaS, MVP, multi-tenancy, cloud, startups"
+    batch: 3
+    status: planned
+  - number: 5
+    title: "Monolith or Microservices: Choosing a Software Architecture"
+    type: "C"
+    canonicalHome: software-development
+    question: "Which architecture fits our stage"
+    relatedEntities: "Architecture, microservices, serverless, DevOps"
+    batch: 2
+    status: planned
+  - number: 6
+    title: "Headless CMS or Traditional CMS: Which Fits Your Website"
+    type: "C"
+    canonicalHome: web-development
+    question: "Which CMS model should we use"
+    relatedEntities: "WordPress, Contentful, Sanity, Strapi, Next.js"
+    batch: 3
+    status: planned
+  - number: 7
+    title: "WordPress or a Custom Web Application: How to Decide"
+    type: "X"
+    canonicalHome: web-development
+    question: "When is WordPress enough"
+    relatedEntities: "WordPress, Next.js, React, performance"
+    batch: 3
+    status: planned
+  - number: 8
+    title: "Native or Cross-Platform Mobile Apps: Swift, Kotlin, Flutter and React Native Compared"
+    type: "C"
+    canonicalHome: mobile-app-development
+    question: "Which approach for our app"
+    relatedEntities: "Flutter, React Native, Swift, Kotlin"
+    batch: 3
+    status: planned
+  - number: 9
+    title: "How to Plan Internal Business Software People Will Actually Use"
+    type: "G"
+    canonicalHome: software-development
+    question: "How do we scope internal tools"
+    relatedEntities: "Internal tools, portals, UX, adoption"
+    batch: 5
+    status: planned
+  - number: 10
+    title: "What Are AI Agents and How Do They Differ from Chatbots and Automation"
+    type: "D, Pillar"
+    canonicalHome: ai
+    question: "What is an AI agent"
+    relatedEntities: "AI agents, LLMs, workflows, tools"
+    batch: 1
+    status: planned
+  - number: 11
+    title: "Retrieval-Augmented Generation (RAG) Explained for Business Teams"
+    type: "D"
+    canonicalHome: ai
+    question: "What is RAG and when is it useful"
+    relatedEntities: "RAG, vector databases, embeddings, knowledge systems"
+    batch: 2
+    status: planned
+  - number: 12
+    title: "OpenAI, Claude, Gemini or Open Models: How to Choose an AI Model Provider"
+    type: "C"
+    canonicalHome: ai
+    question: "Which model provider fits our use case"
+    relatedEntities: "OpenAI, Anthropic Claude, Gemini, Llama, Mistral, Bedrock"
+    batch: 2
+    status: planned
+  - number: 13
+    title: "AI Readiness Assessment: Questions to Answer Before You Start"
+    type: "X"
+    canonicalHome: consulting
+    question: "Are we ready for AI"
+    relatedEntities: "AI strategy, data, governance, consulting"
+    batch: 3
+    status: planned
+  - number: 14
+    title: "How to Add AI to an Existing Business Application"
+    type: "G"
+    canonicalHome: ai
+    question: "How do we integrate AI into what we have"
+    relatedEntities: "LLM integration, APIs, security, evaluation"
+    batch: 3
+    status: planned
+  - number: 15
+    title: "AI Customer Support: What to Automate and What to Keep Human"
+    type: "G"
+    canonicalHome: ai
+    question: "What can AI handle in support"
+    relatedEntities: "AI support, chatbots, voice agents, CRM"
+    batch: 3
+    status: planned
+  - number: 16
+    title: "How to Evaluate and Test an LLM Application"
+    type: "G"
+    canonicalHome: ai
+    question: "How do we know the AI works"
+    relatedEntities: "Evaluation, hallucination, guardrails"
+    batch: 4
+    status: planned
+  - number: 17
+    title: "AI Security and Governance for Business Applications"
+    type: "G"
+    canonicalHome: ai
+    question: "What are the risks and controls"
+    relatedEntities: "Prompt injection, data privacy, access, EU AI Act"
+    batch: 4
+    status: planned
+  - number: 18
+    title: "Fine-Tuning, RAG or Prompting: Which Approach to Use"
+    type: "C"
+    canonicalHome: ai
+    question: "Which technique should we use"
+    relatedEntities: "Fine-tuning, RAG, prompt design"
+    batch: 4
+    status: planned
+  - number: 19
+    title: "Document Intelligence: Automating Invoices, Contracts and Forms with OCR and AI"
+    type: "G"
+    canonicalHome: ai
+    question: "How do we automate document work"
+    relatedEntities: "OCR, NLP, workflows, finance automation"
+    batch: 4
+    status: planned
+  - number: 20
+    title: "Business Process Automation: What It Is and Where to Start"
+    type: "G, Pillar"
+    canonicalHome: automation
+    question: "Where should automation begin"
+    relatedEntities: "BPA, workflow, CRM, Airtable"
+    batch: 1
+    status: planned
+  - number: 21
+    title: "Workflow Automation, Business Process Automation and AI Automation: The Differences"
+    type: "D"
+    canonicalHome: automation
+    question: "How do these terms differ"
+    relatedEntities: "Workflow, BPA, AI automation"
+    batch: 1
+    status: planned
+  - number: 22
+    title: "Zapier, Make or n8n: How to Choose an Automation Platform"
+    type: "C"
+    canonicalHome: automation
+    question: "Which platform fits"
+    relatedEntities: "Zapier, Make, n8n, Power Automate"
+    batch: 2
+    status: planned
+  - number: 23
+    title: "Airtable as a Business Operating System: What It Can and Cannot Do"
+    type: "G"
+    canonicalHome: automation
+    question: "Can Airtable run our operations"
+    relatedEntities: "Airtable, CRM, interfaces, automation, integrations"
+    batch: 2
+    status: planned
+  - number: 24
+    title: "Automating Lead Management: From Web Form to CRM to Follow-Up"
+    type: "G"
+    canonicalHome: automation
+    question: "How do we automate lead handling"
+    relatedEntities: "CRM, HubSpot, Salesforce, Airtable, AI qualification"
+    batch: 2
+    status: planned
+  - number: 25
+    title: "How to Map a Workflow Before You Automate It"
+    type: "G"
+    canonicalHome: automation
+    question: "How do we prepare a process for automation"
+    relatedEntities: "Workflow design, approvals, data"
+    batch: 4
+    status: planned
+  - number: 26
+    title: "Error Handling, Monitoring and Maintenance for Automated Workflows"
+    type: "G"
+    canonicalHome: automation
+    question: "How do we keep automations reliable"
+    relatedEntities: "Monitoring, retries, webhooks, logging"
+    batch: 4
+    status: planned
+  - number: 27
+    title: "Too Many Spreadsheets: Replacing Spreadsheet Processes with a Real System"
+    type: "G"
+    canonicalHome: automation
+    question: "How do we move off spreadsheets"
+    relatedEntities: "Airtable, custom software, data migration"
+    batch: 4
+    status: planned
+  - number: 28
+    title: "What Is API Integration and How Do Systems Actually Connect"
+    type: "D, Pillar"
+    canonicalHome: api-integration
+    question: "How do systems exchange data"
+    relatedEntities: "REST, GraphQL, webhooks, OAuth"
+    batch: 1
+    status: planned
+  - number: 29
+    title: "REST, GraphQL, Webhooks and Events: Choosing an Integration Pattern"
+    type: "C"
+    canonicalHome: api-integration
+    question: "Which pattern fits"
+    relatedEntities: "REST, GraphQL, webhooks, event-driven"
+    batch: 3
+    status: planned
+  - number: 30
+    title: "CRM Integration: Connecting Salesforce or HubSpot to the Rest of Your Business"
+    type: "G"
+    canonicalHome: api-integration
+    question: "How do we integrate our CRM"
+    relatedEntities: "Salesforce API, HubSpot API, ERP, automation"
+    batch: 3
+    status: planned
+  - number: 31
+    title: "Payment Integration: Stripe, PayPal, Adyen, Paystack and Flutterwave Compared"
+    type: "C"
+    canonicalHome: api-integration
+    question: "Which payment provider fits our markets"
+    relatedEntities: "Stripe, PayPal, Adyen, Paystack, Flutterwave, ecommerce"
+    batch: 4
+    status: planned
+  - number: 32
+    title: "Cloud Migration: Planning, Risks and Sequence"
+    type: "G"
+    canonicalHome: cloud
+    question: "How do we move to the cloud"
+    relatedEntities: "AWS, Azure, Google Cloud, DevOps, security"
+    batch: 1
+    status: planned
+  - number: 33
+    title: "AWS, Azure or Google Cloud: A Practical Comparison for Business Applications"
+    type: "C"
+    canonicalHome: cloud
+    question: "Which cloud should we use"
+    relatedEntities: "AWS, Azure, GCP, cost, services"
+    batch: 2
+    status: planned
+  - number: 34
+    title: "CI/CD and DevOps Basics for Business Software Teams"
+    type: "G"
+    canonicalHome: cloud
+    question: "What is a good delivery pipeline"
+    relatedEntities: "GitHub Actions, Docker, Kubernetes, Terraform"
+    batch: 4
+    status: planned
+  - number: 35
+    title: "Application Security Basics: The OWASP Top 10 for Business Owners"
+    type: "G"
+    canonicalHome: cybersecurity
+    question: "What are the main app risks"
+    relatedEntities: "OWASP, secure coding, testing"
+    batch: 5
+    status: planned
+  - number: 36
+    title: "Zero Trust, MFA and Identity: A Practical Starting Guide"
+    type: "G"
+    canonicalHome: cybersecurity
+    question: "How do we improve access security"
+    relatedEntities: "Zero Trust, MFA, IAM, OAuth, Entra ID"
+    batch: 5
+    status: planned
+  - number: 37
+    title: "Data Analytics and BI: How to Build Dashboards People Trust"
+    type: "G"
+    canonicalHome: data-analytics
+    question: "How do we get reliable reporting"
+    relatedEntities: "BI, warehouses, BigQuery, Snowflake, data quality"
+    batch: 5
+    status: planned
+  - number: 38
+    title: "Shopify, WooCommerce, Magento or BigCommerce: How to Choose"
+    type: "C"
+    canonicalHome: ecommerce
+    question: "Which commerce platform fits"
+    relatedEntities: "Shopify, WooCommerce, Adobe Commerce, BigCommerce"
+    batch: 5
+    status: planned
+  - number: 39
+    title: "Website and Ecommerce Platform Migration Without Losing SEO or Sales"
+    type: "G"
+    canonicalHome: ecommerce
+    question: "How do we migrate safely"
+    relatedEntities: "Migration, redirects, indexation, SEO"
+    batch: 5
+    status: planned
+  - number: 40
+    title: "What Is a Design System and Why Product Teams Need One"
+    type: "D"
+    canonicalHome: ui-ux
+    question: "What is a design system"
+    relatedEntities: "Figma, components, tokens, handoff"
+    batch: 5
+    status: planned
+  - number: 41
+    title: "UX Research and Usability Testing: Methods and When to Use Each"
+    type: "G"
+    canonicalHome: ui-ux
+    question: "Which research method to use"
+    relatedEntities: "UX research, prototyping, testing"
+    batch: 5
+    status: planned
+  - number: 42
+    title: "Brand Strategy and Brand Identity: What a Business Needs First"
+    type: "D"
+    canonicalHome: branding
+    question: "What comes first in branding"
+    relatedEntities: "Brand strategy, identity, guidelines"
+    batch: 5
+    status: planned
+  - number: 43
+    title: "SEO, AEO and GEO: What Each One Means and How They Work Together"
+    type: "D, Pillar"
+    canonicalHome: seo-aeo-geo
+    question: "What is the difference"
+    relatedEntities: "SEO, AEO, GEO, entities, structured data"
+    batch: 1
+    status: planned
+  - number: 44
+    title: "How AI Search Engines Find, Summarize and Cite Sources"
+    type: "D"
+    canonicalHome: seo-aeo-geo
+    question: "How does AI search pick sources"
+    relatedEntities: "Google AI Overviews, ChatGPT, Perplexity, Gemini"
+    batch: 6
+    status: planned
+  - number: 45
+    title: "Entity SEO and Structured Data: A Practical Guide"
+    type: "G"
+    canonicalHome: seo-aeo-geo
+    question: "How do we use entities and schema"
+    relatedEntities: "Schema.org, Knowledge Graph, internal linking"
+    batch: 6
+    status: planned
+  - number: 46
+    title: "Technical SEO Checklist for Modern JavaScript Websites"
+    type: "G"
+    canonicalHome: seo-aeo-geo
+    question: "How do we make JS sites crawlable"
+    relatedEntities: "Next.js, React, rendering, Core Web Vitals"
+    batch: 6
+    status: planned
+  - number: 47
+    title: "International SEO: hreflang, URL Structure and Localization"
+    type: "G"
+    canonicalHome: seo-aeo-geo
+    question: "How do we run SEO across countries"
+    relatedEntities: "hreflang, subdirectories, localization"
+    batch: 6
+    status: planned
+  - number: 48
+    title: "Logistics and Operations Software: Where Integration and Automation Pay Off"
+    type: "I"
+    canonicalHome: software-development
+    question: "What software helps logistics operations"
+    relatedEntities: "Logistics, tracking, APIs, automation, analytics"
+    batch: 6
+    status: planned
+  - number: 49
+    title: "Software for Healthcare Organizations: Interoperability, Privacy and Where AI Fits"
+    type: "I"
+    canonicalHome: software-development
+    question: "What matters in health software"
+    relatedEntities: "Healthcare, HIPAA, FHIR, security, AI"
+    batch: 6
+    status: planned
+  - number: 50
+    title: "Digital Transformation: A Practical Roadmap That Is Not a Buzzword"
+    type: "G, Pillar"
+    canonicalHome: consulting
+    question: "How do we run a transformation"
+    relatedEntities: "Consulting, audits, architecture, automation"
+    batch: 1
+    status: planned
+  - number: 51
+    title: "CRM and Marketing Automation: Aligning Sales and Marketing Systems"
+    type: "G"
+    canonicalHome: digital-marketing
+    question: "How do sales and marketing share data"
+    relatedEntities: "HubSpot, Salesforce, email, lead nurturing"
+    batch: 6
+    status: planned
+  - number: 52
+    title: "How to Choose a Software Development Partner: Questions to Ask"
+    type: "X"
+    canonicalHome: consulting
+    question: "How do we evaluate a technology partner"
+    relatedEntities: "Discovery, contracts, delivery models"
+    batch: 2
+    status: planned
+  - number: 53
+    title: "Compliance-Aware Software: GDPR, HIPAA and SOC 2 Basics for Product Teams"
+    type: "G"
+    canonicalHome: cybersecurity
+    question: "How does compliance shape software"
+    relatedEntities: "GDPR, HIPAA, SOC 2, audits, cloud"
+    batch: 6
+    status: planned

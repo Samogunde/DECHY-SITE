@@ -80,7 +80,7 @@ describe("content validator: it rejects what the architecture forbids", () => {
   });
 
   it("internal links to pages that do not exist and unknown entity references", () => {
-    expect(codes(withPages((p) => (para(p).paragraphs[0] += " [x](/web-development/)")))).toContain(
+    expect(codes(withPages((p) => (para(p).paragraphs[0] += " [x](/industries/)")))).toContain(
       "link-path",
     );
     expect(codes(withPages((p) => (para(p).paragraphs[0] += " [x](ref:svc.nope)")))).toContain(

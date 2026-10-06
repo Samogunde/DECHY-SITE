@@ -99,8 +99,10 @@ describe("URL architecture", () => {
     expect(publishedPath(node("svc.software-development"), registry)).toBe(
       "/software-development/",
     );
-    expect(publishedPath(node("svc.web-development"), registry)).toBeNull();
+    expect(publishedPath(node("svc.web-development"), registry)).toBe("/web-development/");
+    expect(publishedPath(node("workarea.mobile-apps"), registry)).toBe("/work/areas/mobile-apps/");
     expect(publishedPath(node("lang.python"), registry)).toBeNull();
+    expect(publishedPath(node("sol.ai-agents"), registry)).toBeNull();
   });
 
   it("every URL is lowercase, hyphenated, and ends with a slash", () => {
@@ -122,14 +124,40 @@ describe("URL architecture", () => {
 });
 
 describe("pages and graph", () => {
-  it("has the five Phase 1 pages", () => {
-    expect(registry.pages.map((p) => p.path).sort()).toEqual([
+  it("has exactly the 53 pages of Phases 1 and 2", () => {
+    const paths = registry.pages.map((p) => p.path);
+    expect(paths).toHaveLength(53);
+    for (const p of [
       "/",
       "/contact/",
       "/cookies/",
       "/privacy/",
-      "/software-development/",
-    ]);
+      "/terms/",
+      "/accessibility/",
+      "/services/",
+      "/solutions/",
+      "/technologies/",
+      "/work/",
+      "/company/",
+      "/company/how-we-work/",
+      "/company/who-we-work-with/",
+    ])
+      expect(paths).toContain(p);
+  });
+
+  it("publishes all fifteen service pages", () => {
+    expect(registry.services).toHaveLength(15);
+    for (const s of registry.services)
+      expect(publishedPath(registry.nodes.get(s.id), registry), s.id).not.toBeNull();
+  });
+
+  it("publishes one page for each of the 25 Work Areas, at the owner's slugs", () => {
+    const areas = [...registry.nodes.values()].filter((n) => n.type === "work-area");
+    expect(areas).toHaveLength(25);
+    for (const a of areas) {
+      const path = `/work/areas/${a.slug}/`;
+      expect(registry.pageByPath.get(path)?.entityId, path).toBe(a.id);
+    }
   });
 
   it("builds breadcrumbs that mirror the information architecture", () => {

@@ -101,13 +101,13 @@ describe("robots.txt and sitemap", () => {
   it("lists only indexable pages, with trailing slashes and true modification dates", () => {
     vi.stubEnv("SITE_ORIGIN", "https://example.test");
     const entries = sitemap();
-    expect(entries.map((e) => e.url).sort()).toEqual([
-      "https://example.test/",
-      "https://example.test/contact/",
-      "https://example.test/cookies/",
-      "https://example.test/privacy/",
-      "https://example.test/software-development/",
-    ]);
+    const urls = entries.map((e) => e.url);
+    const expected = registry.pages
+      .filter((p) => p.indexing === "index")
+      .map((p) => `https://example.test${p.path}`);
+    expect(urls.sort()).toEqual(expected.sort());
+    expect(urls).toHaveLength(53);
+    expect(urls.every((u) => u.endsWith("/"))).toBe(true);
     for (const e of entries) expect(e.lastModified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 });
