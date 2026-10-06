@@ -3,6 +3,7 @@ import { JsonLd } from "@/components/primitives/JsonLd";
 import { Inline } from "@/components/primitives/Inline";
 import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import { getPage, getRegistry } from "@/lib/content/load";
+import { CONNECTS_KINDS } from "@/lib/connections";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { BlockRenderer } from "./BlockRenderer";
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
@@ -19,7 +20,13 @@ export function PageView({ path }: { path: string }) {
   const glanceCta = primaryCta && primaryCta.type === "cta" ? primaryCta.primary : undefined;
   const navItems = page.sections
     .filter((b) => b.type !== "hero" && b.type !== "cta" && "label" in b && b.label)
-    .map((b) => ({ id: b.id, label: (b as { label: string }).label }));
+    .map((b) => ({
+      id: b.id,
+      label:
+        b.type === "related" && CONNECTS_KINDS.has(page.kind)
+          ? "Where this connects"
+          : (b as { label: string }).label,
+    }));
   const showNav = guided && navItems.length >= 6;
   const first = page.sections[0];
   const rest = first?.type === "hero" ? page.sections.slice(1) : page.sections;
@@ -53,7 +60,7 @@ export function PageView({ path }: { path: string }) {
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
       {rest.map((block) => (
-        <BlockRenderer key={block.id} block={block} />
+        <BlockRenderer key={block.id} block={block} page={page} />
       ))}
     </>
   );

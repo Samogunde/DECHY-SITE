@@ -1,0 +1,326 @@
+/* ------------------------------------------------------------------------------------------
+   Navigation: mega-menu parts, the technology rail, and site search. The base panel transition
+   lives in globals.css (.nav-panel); reduced motion removes it there.
+   ------------------------------------------------------------------------------------------ */
+
+/* The chevron beside a top-level label: opens the menu without leaving the page. */
+.nav-chevron {
+  display: inline-flex;
+  min-width: 2rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+}
+.nav-chevron:hover {
+  color: var(--color-blue);
+}
+
+/* A short invisible bridge keeps a hover-opened panel open while the pointer crosses into it. */
+.nav-mega::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: -0.75rem;
+  height: 0.75rem;
+}
+.nav-mega {
+  max-height: calc(100vh - var(--header-h) - 1rem);
+  overflow-y: auto;
+}
+
+/* Technology rail: categories on the left, the selected category's pages on the right. */
+.tech-rail {
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+}
+.tech-tab {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-inline-start: 3px solid transparent;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  background: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: var(--fs-nav);
+  font-weight: 600;
+  text-align: start;
+  cursor: pointer;
+}
+.tech-tab:hover {
+  background: var(--color-paper);
+}
+.tech-tab[aria-selected="true"] {
+  border-inline-start-color: var(--color-blue);
+  background: var(--color-paper);
+}
+.tech-count {
+  color: var(--color-slate-text);
+  font-size: var(--fs-label);
+  font-weight: 400;
+}
+
+/* ---------------- Site search ---------------- */
+.search-dialog {
+  width: min(42rem, calc(100vw - 2rem));
+  max-height: min(34rem, calc(100vh - 4rem));
+  margin: 4rem auto auto;
+  padding: 0;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-white, #fff);
+  color: var(--color-ink);
+  box-shadow: 0 30px 70px -30px rgb(17 24 39 / 0.5);
+  overflow: hidden;
+}
+.search-dialog::backdrop {
+  background: rgb(17 24 39 / 0.45);
+}
+.search-panel {
+  display: flex;
+  max-height: inherit;
+  flex-direction: column;
+}
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.search-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: var(--fs-button);
+  outline-offset: 2px;
+}
+.search-close {
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-slate-text);
+  font: inherit;
+  font-size: var(--fs-label);
+  cursor: pointer;
+}
+.search-status {
+  padding: 0 1rem;
+  color: var(--color-slate-text);
+}
+.search-status:not(:empty) {
+  padding-block: 0.75rem;
+}
+.search-results {
+  margin: 0;
+  padding: 0.25rem 0;
+  list-style: none;
+  overflow-y: auto;
+}
+.search-results li a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.15rem 1rem;
+  padding: 0.65rem 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+.search-results li[data-active="true"] a,
+.search-results li a:hover {
+  background: var(--color-paper);
+}
+.search-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.search-kind {
+  color: var(--color-slate-text);
+  font-size: var(--fs-label);
+}
+.search-desc {
+  grid-column: 1 / -1;
+  color: var(--color-slate-text);
+  font-size: var(--fs-label);
+  line-height: 1.4;
+}
+.search-hint {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-slate-text);
+}
+.search-row {
+  display: flex;
+  min-height: 3rem;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 0.9rem;
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  color: var(--color-slate-text);
+  font: inherit;
+  font-size: var(--fs-body);
+  text-align: start;
+  cursor: pointer;
+}
+
+/* ---------------- Directory (technologies and Work Areas) ---------------- */
+.directory-filter {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.directory-filter > legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.dir-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.dir-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.dir-tab {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1.5px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.dir-tab:hover {
+  background: var(--color-line);
+}
+.dir-count {
+  color: inherit;
+  font-weight: 400;
+  opacity: 0.75;
+}
+/* The checked option's label is filled: input k is followed by the tabs, so match by position. */
+.dir-input:nth-of-type(1):checked ~ .dir-tabs .dir-tab:nth-child(1),
+.dir-input:nth-of-type(2):checked ~ .dir-tabs .dir-tab:nth-child(2),
+.dir-input:nth-of-type(3):checked ~ .dir-tabs .dir-tab:nth-child(3),
+.dir-input:nth-of-type(4):checked ~ .dir-tabs .dir-tab:nth-child(4),
+.dir-input:nth-of-type(5):checked ~ .dir-tabs .dir-tab:nth-child(5),
+.dir-input:nth-of-type(6):checked ~ .dir-tabs .dir-tab:nth-child(6),
+.dir-input:nth-of-type(7):checked ~ .dir-tabs .dir-tab:nth-child(7),
+.dir-input:nth-of-type(8):checked ~ .dir-tabs .dir-tab:nth-child(8),
+.dir-input:nth-of-type(9):checked ~ .dir-tabs .dir-tab:nth-child(9),
+.dir-input:nth-of-type(10):checked ~ .dir-tabs .dir-tab:nth-child(10),
+.dir-input:nth-of-type(11):checked ~ .dir-tabs .dir-tab:nth-child(11),
+.dir-input:nth-of-type(12):checked ~ .dir-tabs .dir-tab:nth-child(12) {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: #fff;
+}
+.dir-input:nth-of-type(1):focus-visible ~ .dir-tabs .dir-tab:nth-child(1),
+.dir-input:nth-of-type(2):focus-visible ~ .dir-tabs .dir-tab:nth-child(2),
+.dir-input:nth-of-type(3):focus-visible ~ .dir-tabs .dir-tab:nth-child(3),
+.dir-input:nth-of-type(4):focus-visible ~ .dir-tabs .dir-tab:nth-child(4),
+.dir-input:nth-of-type(5):focus-visible ~ .dir-tabs .dir-tab:nth-child(5),
+.dir-input:nth-of-type(6):focus-visible ~ .dir-tabs .dir-tab:nth-child(6),
+.dir-input:nth-of-type(7):focus-visible ~ .dir-tabs .dir-tab:nth-child(7),
+.dir-input:nth-of-type(8):focus-visible ~ .dir-tabs .dir-tab:nth-child(8),
+.dir-input:nth-of-type(9):focus-visible ~ .dir-tabs .dir-tab:nth-child(9),
+.dir-input:nth-of-type(10):focus-visible ~ .dir-tabs .dir-tab:nth-child(10),
+.dir-input:nth-of-type(11):focus-visible ~ .dir-tabs .dir-tab:nth-child(11),
+.dir-input:nth-of-type(12):focus-visible ~ .dir-tabs .dir-tab:nth-child(12) {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 2px;
+}
+/* Filtering: when a category is chosen, the other groups are hidden. The first input is "All". */
+.dir-input:nth-of-type(2):checked ~ .dir-groups .dir-group:not(:nth-child(1)),
+.dir-input:nth-of-type(3):checked ~ .dir-groups .dir-group:not(:nth-child(2)),
+.dir-input:nth-of-type(4):checked ~ .dir-groups .dir-group:not(:nth-child(3)),
+.dir-input:nth-of-type(5):checked ~ .dir-groups .dir-group:not(:nth-child(4)),
+.dir-input:nth-of-type(6):checked ~ .dir-groups .dir-group:not(:nth-child(5)),
+.dir-input:nth-of-type(7):checked ~ .dir-groups .dir-group:not(:nth-child(6)),
+.dir-input:nth-of-type(8):checked ~ .dir-groups .dir-group:not(:nth-child(7)),
+.dir-input:nth-of-type(9):checked ~ .dir-groups .dir-group:not(:nth-child(8)),
+.dir-input:nth-of-type(10):checked ~ .dir-groups .dir-group:not(:nth-child(9)),
+.dir-input:nth-of-type(11):checked ~ .dir-groups .dir-group:not(:nth-child(10)),
+.dir-input:nth-of-type(12):checked ~ .dir-groups .dir-group:not(:nth-child(11)) {
+  display: none;
+}
+.dir-groups {
+  margin-top: 2rem;
+}
+.dir-group {
+  padding-block: 1.75rem;
+  border-top: 1px solid var(--color-line);
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+.dir-head {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.dir-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.25rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 48rem) {
+  .dir-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.dir-link {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--color-line);
+  color: inherit;
+  text-decoration: none;
+}
+.dir-link:hover .dir-name {
+  text-decoration: underline;
+}
+.dir-name {
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+}
+.dir-desc {
+  max-width: 62ch;
+  color: var(--color-slate-text);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}

@@ -153,9 +153,13 @@ describe("phase 3 technology pages", () => {
 
   it("are all reachable from the Technologies hub and from their service page", () => {
     const hub = registry.pageByPath.get("/technologies/")!;
-    const hubIds = hub.sections.flatMap((b) =>
-      b.type === "entities" ? b.groups.flatMap((g) => g.entityIds) : [],
-    );
+    // The hub carries one directory generated from the navigation data, so the menu and the
+    // directory list exactly the same pages.
+    expect(
+      hub.sections.filter((b) => b.type === "directory" && b.source === "technologies"),
+    ).toHaveLength(1);
+    expect(hub.sections.some((b) => b.type === "entities")).toBe(false);
+    const hubIds = registry.nav.technologies.categories.flatMap((c) => c.items);
     for (const p of techPages) {
       expect(hubIds, `hub lists ${p.entityId}`).toContain(p.entityId);
       const node = registry.nodes.get(p.entityId!)!;

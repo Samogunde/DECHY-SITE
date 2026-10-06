@@ -1,0 +1,182 @@
+# Technology graph completion (ADR 0005), added 6 October 2026 after the Phase 3 inventory review.
+# These entities fill gaps inside capability categories that are already approved in
+# data/taxonomy/capabilities.yaml (Backend Development, Business Intelligence Systems, Data
+# Engineering, event-driven integration, observability). Node.js and .NET are also named in the
+# approved master plan (section 7, strategic technologies). Nothing here is a new capability and
+# nothing here has a public page: they are graph entities only, and they render nowhere until a page
+# is qualified and built. The owner confirms or trims this list at the next review.
+entities:
+  # Back end (runtime and frameworks)
+  - id: tech.nodejs
+    type: technology
+    name: Node.js
+    slug: nodejs
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+  - id: tech.dotnet
+    type: technology
+    name: .NET
+    slug: dotnet
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: feature
+    pagePolicy: CREATE LATER
+    evidenceLevel: none
+  - id: fw.express
+    type: framework
+    name: Express
+    slug: express
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.nestjs
+    type: framework
+    name: NestJS
+    slug: nestjs
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.django
+    type: framework
+    name: Django
+    slug: django
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.fastapi
+    type: framework
+    name: FastAPI
+    slug: fastapi
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.flask
+    type: framework
+    name: Flask
+    slug: flask
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.spring-boot
+    type: framework
+    name: Spring Boot
+    slug: spring-boot
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.rails
+    type: framework
+    name: Ruby on Rails
+    slug: ruby-on-rails
+    primaryService: svc.software-development
+    group: Backend frameworks
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: fw.laravel
+    type: framework
+    name: Laravel
+    slug: laravel
+    primaryService: svc.web-development
+    group: Backend frameworks
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  # Business intelligence
+  - id: plat.power-bi
+    type: platform
+    name: Power BI
+    slug: power-bi
+    primaryService: svc.data-analytics
+    group: Business intelligence
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.tableau
+    type: platform
+    name: Tableau
+    slug: tableau
+    primaryService: svc.data-analytics
+    group: Business intelligence
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.looker
+    type: platform
+    name: Looker
+    slug: looker
+    primaryService: svc.data-analytics
+    group: Business intelligence
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  # Messaging, search, observability
+  - id: tech.kafka
+    type: technology
+    name: Apache Kafka
+    slug: apache-kafka
+    primaryService: svc.api-integration
+    group: Messaging and streaming
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tech.rabbitmq
+    type: technology
+    name: RabbitMQ
+    slug: rabbitmq
+    primaryService: svc.api-integration
+    group: Messaging and streaming
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tech.elasticsearch
+    type: technology
+    name: Elasticsearch
+    slug: elasticsearch
+    primaryService: svc.data-analytics
+    group: Search technologies
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tech.opensearch
+    type: technology
+    name: OpenSearch
+    slug: opensearch
+    primaryService: svc.data-analytics
+    group: Search technologies
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.datadog
+    type: platform
+    name: Datadog
+    slug: datadog
+    primaryService: svc.cloud
+    group: Observability
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.sentry
+    type: platform
+    name: Sentry
+    slug: sentry
+    primaryService: svc.cloud
+    group: Observability
+    prominence: standard
+    pagePolicy: REVIEW
+    evidenceLevel: none

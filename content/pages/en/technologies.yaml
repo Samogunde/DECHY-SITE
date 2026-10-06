@@ -64,6 +64,22 @@ sections:
       - "Every tool has strengths and costs. A popular framework may have a large community and many people who know it. A newer one may be faster to work with but harder to staff. A ready-made platform may save months, with limits you must accept."
       - "We lay these trade-offs out in plain language so the decision is yours, and we write down why we chose what we chose, so the reasoning survives after the project."
 
+  - type: directory
+    id: directory
+    tone: white
+    label: Technology directory
+    heading: Every technology we explain, by category
+    intro: "Each page covers where the technology fits, when it is the right choice, what the alternatives are, and what we do with it. More are added as they earn a page."
+    source: technologies
+
+  - type: browse
+    id: ways
+    tone: paper
+    label: Four ways in
+    heading: Explore DECHY the way you think about it
+    intro: "Most visitors arrive with a problem, a system in mind, a tool, or a kind of help. Each way leads to the others."
+    current: technology
+
   - type: table
     id: choose
     tone: paper
@@ -90,122 +106,6 @@ sections:
       - - Lock-in
         - "How hard would it be to leave?"
         - "Flexibility is worth paying a little for."
-
-  - type: entities
-    id: stack
-    tone: white
-    style: chips
-    label: What we work with
-    heading: A wider sample of what we work with
-    intro: "This is a sample, grouped by the kind of job each does. We choose from it, and beyond it, to suit the project. Names that have their own page are linked."
-    groups:
-      - title: Languages
-        note: "What software is written in."
-        entityIds:
-          [
-            lang.typescript,
-            lang.javascript,
-            lang.python,
-            lang.java,
-            lang.c-sharp,
-            lang.go,
-            lang.php,
-          ]
-      - title: Web frameworks
-        note: "What sites and web applications are built with."
-        entityIds: [fw.react, fw.nextjs, fw.vue, fw.angular, fw.svelte, fw.astro]
-      - title: Mobile
-        note: "For iPhone, Android, and both."
-        entityIds: [tech.react-native, tech.flutter, tech.swift, tech.kotlin]
-      - title: Content and store platforms
-        note: "Ready-made platforms for sites and selling."
-        entityIds:
-          [
-            plat.wordpress,
-            plat.shopify,
-            plat.woocommerce,
-            plat.webflow,
-            plat.contentful,
-            plat.sanity,
-          ]
-      - title: Databases
-        note: "Where information is kept."
-        entityIds: [tech.postgresql, tech.mysql, tech.mongodb, tech.redis, tech.sqlite]
-      - title: Cloud and hosting
-        note: "Where software runs."
-        entityIds:
-          [plat.aws, plat.azure, plat.google-cloud, plat.cloudflare, plat.vercel, plat.netlify]
-      - title: Delivery and operations
-        note: "How software is released and watched."
-        entityIds:
-          [
-            tool.docker,
-            tool.kubernetes,
-            tool.terraform,
-            tool.github-actions,
-            tool.prometheus,
-            tool.grafana,
-          ]
-      - title: AI and machine learning
-        note: "Models, libraries, and the stores that feed them."
-        entityIds:
-          [
-            prov.openai,
-            prov.anthropic-claude,
-            prov.google-gemini,
-            prov.mistral,
-            fw.pytorch,
-            fw.langchain,
-            tech.pinecone,
-          ]
-      - title: Automation and connection
-        note: "Moving information between tools."
-        entityIds:
-          [
-            tech.zapier,
-            tech.make,
-            tech.n8n,
-            tech.microsoft-power-automate,
-            plat.airtable,
-            int.stripe,
-          ]
-      - title: Design
-        note: "Tools used to design and prototype."
-        entityIds: [tool.figma, tool.adobe-xd, tool.illustrator, tool.photoshop]
-
-  - type: entities
-    id: pages
-    tone: paper
-    style: lists
-    label: Technology pages
-    heading: Read about a technology in detail
-    intro: "These pages explain where each technology fits, when it is the right choice, what the alternatives are, and what we do with it. They sit under the service they belong to."
-    groups:
-      - title: Web development
-        note: "Frameworks, languages, and platforms for sites and web applications."
-        entityIds: [fw.nextjs, fw.react, lang.typescript, lang.php, plat.wordpress, plat.webflow]
-      - title: Software development
-        note: "Languages for back-end systems."
-        entityIds: [lang.python, lang.java]
-      - title: Mobile app development
-        note: "Native and cross-platform ways of building apps."
-        entityIds: [tech.flutter, tech.react-native, tech.swift, tech.kotlin]
-      - title: AI and machine learning
-        note: "Model providers and the framework that connects them."
-        entityIds: [prov.openai, prov.anthropic-claude, prov.google-gemini, fw.langchain]
-      - title: Automation and business platforms
-        note: "Workflow tools and customer platforms."
-        entityIds: [tech.zapier, tech.make, tech.n8n, plat.airtable, plat.hubspot, plat.salesforce]
-      - title: Cloud and DevOps
-        note: "Clouds, containers, and infrastructure as code."
-        entityIds:
-          [plat.aws, plat.azure, plat.google-cloud, tool.docker, tool.kubernetes, tool.terraform]
-      - title: Data and analytics
-        note: "Databases for applications and reporting."
-        entityIds: [tech.postgresql, tech.mongodb]
-      - title: Ecommerce and integration
-        note: "Selling online and taking payments."
-        entityIds: [plat.shopify, int.stripe]
 
   - type: diagram
     id: process

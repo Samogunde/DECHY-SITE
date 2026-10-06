@@ -97,16 +97,23 @@ test.describe("accessibility (axe, WCAG 2.2 AA)", () => {
     }
   }
 
-  test("the open desktop Services menu and the open mobile menu have no violations", async ({
+  test("the open desktop menus (Services, Technologies, Work) and the open mobile menu have no violations", async ({
     page,
   }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
-    await page.getByRole("button", { name: "Services" }).click();
-    let r = await new AxeBuilder({ page })
-      .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
-      .analyze();
-    expect(r.violations.map((v) => v.id)).toEqual([]);
+    let r;
+    for (const name of ["Services", "Technologies", "Work"]) {
+      await page.getByRole("button", { name: `${name} menu` }).click();
+      r = await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
+        .analyze();
+      expect(
+        r.violations.map((v) => v.id),
+        name,
+      ).toEqual([]);
+      await page.keyboard.press("Escape");
+    }
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
     await page.getByRole("button", { name: "Open menu" }).click();

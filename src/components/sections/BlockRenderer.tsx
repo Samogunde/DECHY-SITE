@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
 import { Photo } from "@/components/primitives/Photo";
 import { getRegistry } from "@/lib/content/load";
-import type { Block } from "@/lib/content/schema";
+import type { Block, Page } from "@/lib/content/schema";
+import { CONNECTS_KINDS } from "@/lib/connections";
 import { ContactForm } from "./ContactForm";
+import { BrowseBlock, ConnectsBlock, DirectoryBlock } from "./DiscoveryBlocks";
 import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./EditorialBlocks";
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
 import { CalloutBlock, ChooserBlock, PathFinderBlock, TechnicalBlock } from "./GuidanceBlocks";
@@ -33,7 +35,16 @@ function ContactFormBlock({ block }: { block: Extract<Block, { type: "contact-fo
   );
 }
 
-export function BlockRenderer({ block, breadcrumbs }: { block: Block; breadcrumbs?: ReactNode }) {
+export function BlockRenderer({
+  block,
+  breadcrumbs,
+  page,
+}: {
+  block: Block;
+  breadcrumbs?: ReactNode;
+  /** The page being rendered, for blocks that depend on it (the connections rails). */
+  page?: Page;
+}) {
   switch (block.type) {
     case "hero":
       return <Hero block={block} breadcrumbs={breadcrumbs} />;
@@ -60,7 +71,15 @@ export function BlockRenderer({ block, breadcrumbs }: { block: Block; breadcrumb
     case "faq":
       return <FaqBlock block={block} />;
     case "related":
-      return <RelatedBlock block={block} />;
+      return page && CONNECTS_KINDS.has(page.kind) ? (
+        <ConnectsBlock block={block} page={page} />
+      ) : (
+        <RelatedBlock block={block} />
+      );
+    case "browse":
+      return <BrowseBlock block={block} />;
+    case "directory":
+      return <DirectoryBlock block={block} />;
     case "cta":
       return <CtaBlock block={block} />;
     case "legal":

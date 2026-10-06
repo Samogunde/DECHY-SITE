@@ -120,7 +120,7 @@ test.describe("motion (no preference)", () => {
   }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto("/");
-    const toggle = page.getByRole("button", { name: "Services" });
+    const toggle = page.getByRole("button", { name: "Services menu" });
     const panel = page.locator(".nav-panel").first();
     await expect(panel).toHaveAttribute("data-open", "false");
     await toggle.click();

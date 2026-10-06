@@ -177,6 +177,14 @@ sections:
         - "See what has happened and why."
         - "Read, sort, summarize, and predict."
 
+  - type: browse
+    id: ways
+    tone: paper
+    label: Four ways in
+    heading: Explore DECHY the way you think about it
+    intro: "Services describe the kind of help we give. If you think in problems, systems, or tools instead, these routes lead to the same places."
+    current: discipline
+
   - type: faq
     id: faq
     tone: paper

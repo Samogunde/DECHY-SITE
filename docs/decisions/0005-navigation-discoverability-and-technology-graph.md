@@ -1,0 +1,26 @@
+# ADR 0005: Navigation, discoverability, and technology graph completion
+
+Date: 2026-10-06. Status: accepted by the owner (instruction following the Phase 3 architecture review).
+
+## Context
+
+The Phase 3 review found that the 25 Work Areas and 32 technology pages were two clicks from any header item and invisible from it; that the Services label was a button only; that the Technologies hub carried two overlapping lists; that Solutions and Work Areas overlap in intent; and that the technology graph had no back-end frameworks, Node.js, .NET, business intelligence, messaging, search, or observability entities.
+
+## Decisions
+
+1. **Menus.** Services, Technologies, and Work each get a menu. The label is a real link to its hub; a separate chevron opens the menu. Solutions, Company, Industries, and Resources stay plain links (or plain text until built). Locations never enters the header.
+2. **Disclosure pattern, not `role="menu"`.** Hover (mouse only) opens after about 100 ms and closes after about 250 ms, with no gap between the trigger and the panel. A click on the chevron pins a hover-opened menu. Enter, Space, or ArrowDown on the chevron open it; Escape closes it and returns focus. Tabbing across the header never opens a menu. Touch never depends on hover.
+3. **Technologies menu: category rail and panel.** Eight categories (Web & CMS, Languages & Backend, Mobile, AI & Machine Learning, Automation & Business Platforms, Cloud & DevOps, Data & Databases, Commerce & Payments). Order is editorial and lives in `data/navigation/nav.yaml`, never alphabetical. The panel shows at most `menuLimit` (8) published pages per category, then "All technologies in this category" and "View all technologies". Only public pages appear; entity-only technologies never do. A validator requires every technology page to be placed in exactly one category.
+4. **Work menu: "What we build".** Five groups holding all 25 canonical Work Areas, plus "All Work Areas". A validator requires every Work Area page to be placed in exactly one group.
+5. **One directory per hub.** `/technologies/` and `/work/` render a `directory` block generated from the same navigation data, so a menu and its directory cannot disagree. It has categories, counts, a concise description per page, and a filter that works without JavaScript.
+6. **Where this connects.** Service, technology, and Work Area pages render the same five rails (Services, Technologies, Systems we build, Business problems and solutions, Where it applies) from the page's relations and the entity graph. A published page is a link; an unbuilt solution or industry is plain text.
+7. **Four ways in.** The four hubs carry a strip: by problem (Solutions), by system (Work), by technology (Technologies), by discipline (Services). The working model is unchanged: Services are what DECHY does, Work Areas are the kinds of system DECHY builds, Solutions are the business problems addressed, Technologies are what systems can be built with. Solutions pages and any renaming of Work Areas wait for the Phase 4 qualification.
+8. **Mobile.** A full-screen sheet with a link plus a separate 48 px expander for each section, at most two levels (Technologies: category, then pages), a search row, and a pinned call to action.
+9. **Site search.** Implemented. A static index (`/search-index.json`, published indexable pages only) and a small client-side matcher in a native modal dialog. No cookies, no external service, no stored queries. Opened from the header, the mobile menu, "/" outside a field, or Ctrl/Cmd+K. The index is small now and the approach holds for several hundred pages; revisit the matcher (not the architecture) if the index grows beyond roughly two thousand entries.
+10. **Technology graph completion.** Nineteen entities are added in `data/taxonomy/technologies-completion.yaml`: Node.js and .NET (named in the master plan, section 7) and back-end frameworks, business intelligence tools, messaging, search, and observability tools within capabilities that were already approved (Backend Development, Business Intelligence Systems, Data Engineering, event-driven integration). They are graph entities only, have no pages, and render nowhere. The owner confirms or trims the list at the next review.
+
+## Consequences
+
+- No page was added or removed. The 32 technology pages, 25 Work Areas, and all Phase 2 content are unchanged except the two hubs' directories and a "Systems we build" group on the Software Development page.
+- Menus scale by data: a new published page appears when it is placed in a category or group; the visible count per category is capped.
+- Not decided here: the next technology wave, Solutions menu design, Industries and Resources menus (built when those sections have pages), and the Phase 4 qualification of Solutions against Work Areas.

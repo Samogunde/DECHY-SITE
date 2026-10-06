@@ -165,6 +165,14 @@ sections:
     takeaway: "A solution to repeated manual work draws on consulting, automation, integration, design, security, and analytics together."
     caption: "This diagram shows repeated manual work at the center with six services around it that together form one solution."
 
+  - type: browse
+    id: ways
+    tone: paper
+    label: Four ways in
+    heading: Explore DECHY the way you think about it
+    intro: "Solutions start from the business problem. If you know the system you want, the tool, or the kind of help, these routes lead to the same places."
+    current: problem
+
   - type: faq
     id: faq
     tone: white

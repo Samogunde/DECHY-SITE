@@ -17,7 +17,7 @@ import {
 import { expandFacts, linkTargets, toPlainText } from "./inline";
 import type { Registry } from "./load";
 import type { Block, Page } from "./schema";
-import { entityPath, pathExists } from "./urls";
+import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
 
@@ -557,6 +557,57 @@ export function validateRegistry(registry: Registry): Issue[] {
   for (const l of registry.nav.footer.explore)
     if (pathExists(l.path, registry)) link("footer", l.path);
   if (pathExists(registry.nav.cta.path, registry)) link("nav", registry.nav.cta.path);
+  // Menus: kinds match the approved structure; every technology and Work Area page is placed once.
+  const KIND_BY_LABEL: Record<string, string> = {
+    Services: "services",
+    Technologies: "technologies",
+    Work: "work",
+  };
+  for (const item of registry.nav.primary) {
+    const want = KIND_BY_LABEL[item.label] ?? "link";
+    if (item.kind !== want)
+      err("nav-kind", item.label, `Primary item ${item.label} must be of kind ${want}`);
+  }
+  const placed = new Map<string, string>();
+  const place = (id: string, where: string, expectTypes: string[]) => {
+    const node = registry.nodes.get(id);
+    if (!node) return err("nav-entity", where, `Unknown entity ${id}`);
+    if (!expectTypes.includes(node.type))
+      err(
+        "nav-entity-type",
+        where,
+        `${id} is a ${node.type}, not one of ${expectTypes.join(", ")}`,
+      );
+    if (placed.has(id)) err("nav-duplicate", where, `${id} is also placed in ${placed.get(id)}`);
+    placed.set(id, where);
+    const path = publishedPath(node, registry);
+    if (path) link("nav", path);
+  };
+  const TECH_TYPES = [
+    "technology",
+    "platform",
+    "language",
+    "framework",
+    "provider",
+    "tool",
+    "integration",
+  ];
+  for (const c of registry.nav.technologies.categories)
+    for (const id of c.items) place(id, `technologies/${c.id}`, TECH_TYPES);
+  for (const p of registry.pages.filter((x) => x.kind === "technology"))
+    if (!placed.has(p.entityId ?? ""))
+      err(
+        "nav-tech-missing",
+        p.path,
+        "Technology page is not placed in a Technologies menu category",
+      );
+  placed.clear();
+  for (const g of registry.nav.work.groups)
+    for (const id of g.items) place(id, `work/${g.id}`, ["work-area"]);
+  for (const p of registry.pages.filter((x) => x.kind === "work-area"))
+    if (!placed.has(p.entityId ?? ""))
+      err("nav-work-missing", p.path, "Work Area page is not placed in a Work menu group");
+
   for (const s of registry.services) {
     const p = entityPath(registry.nodes.get(s.id)!, registry);
     if (p && pathExists(p, registry)) {

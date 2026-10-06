@@ -356,6 +356,24 @@ export const Block = z.discriminatedUnion("type", [
     ),
   }),
   z.object({
+    type: z.literal("browse"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    /** The hub this block sits on, shown as "You are here". */
+    current: z.enum(["problem", "system", "technology", "discipline"]),
+  }),
+  z.object({
+    type: z.literal("directory"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    /** Generated from the navigation data, so the menu and the directory cannot disagree. */
+    source: z.enum(["technologies", "work"]),
+  }),
+  z.object({
     type: z.literal("service-index"),
     ...base,
     label: z.string(),

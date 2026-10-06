@@ -8,6 +8,7 @@ This file tells every Claude Code session how to work on DECHY. It adds no compa
 - Phase 1 (production implementation): **authorized, built, and refined (imagery, company voice, motion); Netlify authorization is the only open dependency.** The authoritative Phase 1 scope is "Phase 1 canonical scope" in `docs/planning/02-master-implementation-plan.md` section 36.
 - Phase 1 is accepted by the owner. Phase 2 (the 14 remaining service pillars, the /services/, /solutions/, /technologies/ and /work/ hubs, 25 Work Areas, three Company pages, Terms and Accessibility): **authorized by the owner and built (48 new routes, 53 pages in all)**. Plan and scope: `docs/planning/10-phase-2-plan.md`; implementation notes: `docs/planning/11-phase-2-implementation-notes.md`. Not in Phase 2 and not built: individual technology pages, solution pages, industry, country and resource families, the 53 articles (briefs kept as data in `data/articles/briefs.yaml`), people, city and problem pages. The owner reviews Phase 2 before Phase 3 is planned.
 - Phase 3 (technology pages): **authorized by the owner and built (32 pages, 85 pages in all)**. Scope, qualification table, and notes: `docs/planning/12-phase-3-plan-and-notes.md`. Phase 4 (solutions, industries, and the next approved expansion) needs the owner's authorization and has not started. The owner will direct a later refinement pass on Phase 2 content and diagrams; do not rewrite Phase 2 unprompted.
+- Navigation and discoverability pass (ADR 0005): **implemented**. Services, Technologies, and Work have menus (hover and chevron, disclosure pattern); one directory per hub; "Where this connects" rails; four-ways strip; mobile drill-down; static site search; technology graph completed (19 entities, no pages). Phase 4 remains blocked until the owner authorizes it.
 - Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (private; GitHub is the permanent source of truth). Never use or reference the abandoned Codex repository or its code.
 
 ## 2. Precedence model (which document governs what)
@@ -47,6 +48,8 @@ Rules for conflicts:
 | Colors and derived accessible variants | Plan section 23 |
 | Imagery and sourcing | Plan section 25; ADR 0002 section 2 item 1; ADR 0003 (quality gate, no visible credits) |
 | Clarity, comprehension, plain language, progressive depth, self-explanatory diagrams, solution guidance, the five-question page test | `docs/design/clarity-and-comprehension-standard.md`; ADR 0004 |
+| Navigation, discoverability, graph completion | `docs/decisions/0005-navigation-discoverability-and-technology-graph.md`; menus and categories in `data/navigation/nav.yaml` |
+| Technology master inventory | `docs/planning/13-phase-3-review-technology-inventory.md` |
 | Phase 3 plan, qualification, and notes | `docs/planning/12-phase-3-plan-and-notes.md` |
 | Phase 2 plan and notes | `docs/planning/10-phase-2-plan.md`; `docs/planning/11-phase-2-implementation-notes.md` |
 | Layout grid, diagrams, photography quality, captions, alignment | `docs/design/layout-and-visual-quality-rules.md`; ADR 0003 |

@@ -58,64 +58,21 @@ sections:
       - "We describe work this way for a reason. A work area shows how we think and what the result looks like. It does not claim a particular client, result, or date."
       - "Where a specific project can be described accurately, with the client's agreement, it will be shown separately and identified as a real project."
 
-  - type: entities
+  - type: directory
     id: areas
+    tone: white
+    label: What we build
+    heading: The twenty-five Work Areas, in five groups
+    intro: "Each area explains what the system is, how it is built, and what to decide first."
+    source: work
+
+  - type: browse
+    id: ways
     tone: paper
-    style: lists
-    label: The twenty-five areas
-    heading: Browse by what you want to achieve
-    intro: "Each area links to the service behind it, and to related areas."
-    groups:
-      - title: Software and products
-        note: "Systems built around how you work, and products you offer."
-        entityIds:
-          [
-            workarea.custom-software-systems,
-            workarea.digital-products,
-            workarea.internal-business-tools,
-            workarea.operations-platforms,
-          ]
-      - title: Websites, apps, and portals
-        note: "Where customers and staff meet your organization online."
-        entityIds:
-          [workarea.business-web-platforms, workarea.mobile-apps, workarea.customer-portals]
-      - title: Selling online
-        note: "Stores and the machinery behind unusual ways of selling."
-        entityIds: [workarea.ecommerce-platforms, workarea.commerce-systems]
-      - title: AI and automation
-        note: "Systems that read, decide, and act."
-        entityIds:
-          [
-            workarea.ai-solutions,
-            workarea.ai-agents,
-            workarea.automation-systems,
-            workarea.workflow-automation,
-          ]
-      - title: Connection and data
-        note: "Making tools share information and turning it into insight."
-        entityIds:
-          [
-            workarea.api-integrations,
-            workarea.integration-platforms,
-            workarea.data-analytics,
-            workarea.knowledge-and-content-systems,
-          ]
-      - title: Infrastructure and security
-        note: "Running software reliably and protecting it."
-        entityIds:
-          [workarea.cloud-platforms, workarea.devops-infrastructure, workarea.cybersecurity-systems]
-      - title: Design, brand, and growth
-        note: "How you look, how you are found, and how you reach people."
-        entityIds:
-          [
-            workarea.ui-ux-product-design,
-            workarea.brand-systems,
-            workarea.seo-search-visibility,
-            workarea.digital-marketing-systems,
-          ]
-      - title: Change
-        note: "Planning and phasing how an organization changes."
-        entityIds: [workarea.digital-transformation]
+    label: Four ways in
+    heading: Explore DECHY the way you think about it
+    intro: "Work Areas are the kinds of system we build. Start here if you know what you want, or enter by problem, technology, or discipline."
+    current: system
 
   - type: chooser
     id: start

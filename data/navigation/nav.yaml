@@ -1,17 +1,111 @@
-# Approved navigation (DEC-10). An item whose page does not exist yet renders as plain text, never
-# as a dead link, a fake route, or a "coming soon" page. When the page is built it becomes a link
-# automatically because the item's path matches a published page.
+# Approved navigation (DEC-10, extended by ADR 0005). An item whose page does not exist yet renders
+# as plain text, never as a dead link, a fake route, or a "coming soon" page. When the page is built
+# it becomes a link automatically because the item's path matches a published page.
+#
+# Item kinds
+#   services      label links to the Services hub; a chevron opens the grouped services menu
+#   technologies  label links to the directory; a chevron opens the category rail and panel
+#   work          label links to the Work hub; a chevron opens the grouped "What we build" menu
+#   link          a plain link
 primary:
-  - { label: Services, kind: menu }
+  - { label: Services, kind: services, path: /services/ }
   - { label: Solutions, kind: link, path: /solutions/ }
-  - { label: Technologies, kind: link, path: /technologies/ }
+  - { label: Technologies, kind: technologies, path: /technologies/ }
   - { label: Industries, kind: link, path: /industries/ }
-  - { label: Work, kind: link, path: /work/ }
+  - { label: Work, kind: work, path: /work/ }
   - { label: Resources, kind: link, path: /resources/ }
   - { label: Company, kind: link, path: /company/ }
 cta:
   label: Talk to DECHY
   path: /contact/
+
+# Technologies menu and directory. Order is editorial (commercial relevance, then search intent),
+# never alphabetical. Every technology page must appear in exactly one category (a validator
+# enforces it). The menu shows the first `menuLimit` published items of a category; the rest stay
+# reachable through "All technologies in this category" and the directory. Entity-only technologies
+# are never listed here: only public pages are destinations.
+technologies:
+  menuLimit: 8
+  categories:
+    - id: web
+      label: Web & CMS
+      summary: Frameworks, languages, and content platforms for sites and web applications.
+      items: [fw.nextjs, fw.react, lang.typescript, plat.wordpress, plat.webflow, lang.php]
+    - id: backend
+      label: Languages & Backend
+      summary: Languages and runtimes for servers, services, and data work.
+      items: [lang.python, lang.java]
+    - id: mobile
+      label: Mobile
+      summary: Native and cross-platform ways to build iPhone and Android apps.
+      items: [tech.flutter, tech.react-native, tech.swift, tech.kotlin]
+    - id: ai
+      label: AI & Machine Learning
+      summary: Model providers and the framework that connects them to your systems.
+      items: [prov.openai, prov.anthropic-claude, prov.google-gemini, fw.langchain]
+    - id: automation
+      label: Automation & Business Platforms
+      summary: Workflow tools and customer platforms that move work between systems.
+      items: [plat.hubspot, plat.salesforce, tech.zapier, tech.make, tech.n8n, plat.airtable]
+    - id: cloud
+      label: Cloud & DevOps
+      summary: Clouds, containers, and infrastructure as code.
+      items: [plat.aws, plat.azure, plat.google-cloud, tool.docker, tool.kubernetes, tool.terraform]
+    - id: data
+      label: Data & Databases
+      summary: Databases for applications and reporting.
+      items: [tech.postgresql, tech.mongodb]
+    - id: commerce
+      label: Commerce & Payments
+      summary: Platforms for selling online and taking payments.
+      items: [plat.shopify, int.stripe]
+
+# Work menu ("What we build"). Groups and order are editorial. Every Work Area page must appear in
+# exactly one group (a validator enforces it). Labels are the canonical Work Area names.
+work:
+  heading: What we build
+  groups:
+    - id: software
+      label: Software & Products
+      items:
+        - workarea.custom-software-systems
+        - workarea.digital-products
+        - workarea.internal-business-tools
+        - workarea.operations-platforms
+    - id: web-apps-commerce
+      label: Web, Apps & Commerce
+      items:
+        - workarea.business-web-platforms
+        - workarea.mobile-apps
+        - workarea.customer-portals
+        - workarea.ecommerce-platforms
+        - workarea.commerce-systems
+    - id: ai-automation-data
+      label: AI, Automation & Data
+      items:
+        - workarea.ai-solutions
+        - workarea.ai-agents
+        - workarea.automation-systems
+        - workarea.workflow-automation
+        - workarea.data-analytics
+        - workarea.knowledge-and-content-systems
+    - id: connect-run
+      label: Connect & Run
+      items:
+        - workarea.api-integrations
+        - workarea.integration-platforms
+        - workarea.cloud-platforms
+        - workarea.devops-infrastructure
+        - workarea.cybersecurity-systems
+    - id: design-growth-change
+      label: Design, Growth & Change
+      items:
+        - workarea.ui-ux-product-design
+        - workarea.brand-systems
+        - workarea.seo-search-visibility
+        - workarea.digital-marketing-systems
+        - workarea.digital-transformation
+
 footer:
   explore:
     - { label: All services, path: /services/ }

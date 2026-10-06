@@ -356,6 +356,15 @@ sections:
           ]
       - title: Technology pages
         entityIds: [lang.java]
+      - title: Systems we build
+        entityIds:
+          [
+            workarea.custom-software-systems,
+            workarea.digital-products,
+            workarea.internal-business-tools,
+            workarea.customer-portals,
+            workarea.operations-platforms,
+          ]
 
   - type: cta
     id: contact-cta

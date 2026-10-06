@@ -24,23 +24,33 @@ import {
   type ServiceFamily,
 } from "./schema";
 
-export type NavItem =
-  { label: string; kind: "menu" } | { label: string; kind: "link"; path: string };
+export const NAV_KINDS = ["services", "technologies", "work", "link"] as const;
 
 const NavFile = z.object({
-  primary: z.array(
-    z.union([
-      z.object({ label: z.string(), kind: z.literal("menu") }),
-      z.object({ label: z.string(), kind: z.literal("link"), path: z.string() }),
-    ]),
-  ),
+  primary: z.array(z.object({ label: z.string(), kind: z.enum(NAV_KINDS), path: z.string() })),
   cta: z.object({ label: z.string(), path: z.string() }),
+  technologies: z.object({
+    menuLimit: z.number().int().min(3).max(12),
+    categories: z.array(
+      z.object({
+        id: z.string(),
+        label: z.string(),
+        summary: z.string(),
+        items: z.array(z.string()),
+      }),
+    ),
+  }),
+  work: z.object({
+    heading: z.string(),
+    groups: z.array(z.object({ id: z.string(), label: z.string(), items: z.array(z.string()) })),
+  }),
   footer: z.object({
     explore: z.array(z.object({ label: z.string(), path: z.string() })),
     legal: z.array(z.object({ label: z.string(), path: z.string() })),
   }),
 });
 export type Nav = z.infer<typeof NavFile>;
+export type NavItem = Nav["primary"][number];
 
 /** Uniform lightweight view over every graph node, whatever file it came from. */
 export type Node = {
