@@ -128,57 +128,57 @@ assets:
     approval: approved
     acquired: "2026-10-04"
 
-  # ---- Photography (licensed stock, Unsplash License). Evidence: data/assets/licenses/ ----
-  - id: asset.photo-who-tailor
+  # ---- Photography (licensed stock, Unsplash License; no visible credit is shown on the site) ----
+  - id: asset.photo-who-port-operations
     kind: file
-    file: public/photos/who-tailor.jpg
+    file: public/photos/who-port-operations.jpg
     role: photograph
     source: licensed-stock
-    creator: Ali Mkumbwa
-    originalFilename: a-man-smiles-as-he-uses-a-sewing-machine-cU3xxfbB9Es
-    sourceUrl: https://unsplash.com/photos/a-man-smiles-as-he-uses-a-sewing-machine-cU3xxfbB9Es
+    creator: Haris Illahi
+    originalFilename: V89PqZteK-k
+    sourceUrl: https://unsplash.com/photos/V89PqZteK-k
     licenseUrl: https://unsplash.com/license
-    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-who-tailor.md.
-    sha256: 048fb3fd44d296fbb74da65983057920e867fce23d62cc4cae423b8d9f9cdd11
-    width: 1800
-    height: 1200
-    alt: A tailor in a small workshop smiling at his phone beside a sewing machine.
+    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-who-port-operations.md.
+    sha256: 10364487c1492b1258bd0b4e94fda081148cfd93954ba565de45f1aad1c34b97
+    width: 2880
+    height: 1920
+    alt: Two port workers in hard hats and high-visibility vests reviewing information on a tablet beside a gantry crane and stacked shipping containers.
     usage: [home]
     approval: approved
     acquired: "2026-10-05"
 
-  - id: asset.photo-problems-warehouse
+  - id: asset.photo-problems-warehouse-aisle
     kind: file
-    file: public/photos/problems-warehouse.jpg
+    file: public/photos/problems-warehouse-aisle.jpg
     role: photograph
     source: licensed-stock
-    creator: Centre for Ageing Better
-    originalFilename: ZlOlRnWk8zU
-    sourceUrl: https://unsplash.com/photos/ZlOlRnWk8zU
+    creator: Mauricio Gutiérrez
+    originalFilename: SoiVEdJKzhY
+    sourceUrl: https://unsplash.com/photos/SoiVEdJKzhY
     licenseUrl: https://unsplash.com/license
-    license: Unsplash License (also published as public domain by the creator). Free for commercial use. Evidence in data/assets/licenses/photo-problems-warehouse.md.
-    sha256: 866a7583fc7bdff4165316940f87f6a5deab332f948617bc8086c9530868ae1d
-    width: 1800
-    height: 1198
-    alt: Two warehouse colleagues in high-visibility jackets walking down a shelving aisle, one holding a clipboard.
+    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-problems-warehouse-aisle.md.
+    sha256: 3867566d704703d5aa7f5251bc554b3d1245542d86f0629770208b2dd9df2500
+    width: 2880
+    height: 1728
+    alt: A worker with a clipboard standing in a long warehouse aisle between tall racks of wrapped pallets.
     usage: [home]
     approval: approved
     acquired: "2026-10-05"
 
-  - id: asset.photo-work-vendor
+  - id: asset.photo-work-app-dashboard
     kind: file
-    file: public/photos/work-vendor.jpg
+    file: public/photos/work-app-dashboard.jpg
     role: photograph
     source: licensed-stock
-    creator: Ali Mkumbwa
-    originalFilename: a-man-in-an-apron-looking-at-a-cell-phone-uk3ey_vhDKA
-    sourceUrl: https://unsplash.com/photos/a-man-in-an-apron-looking-at-a-cell-phone-uk3ey_vhDKA
+    creator: Balázs Kétyi
+    originalFilename: sScmok4Iq1o
+    sourceUrl: https://unsplash.com/photos/sScmok4Iq1o
     licenseUrl: https://unsplash.com/license
-    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-work-vendor.md.
-    sha256: 0c77e44a831df359fd9985d645199f5069df3e0df323194771815ac819166cea
-    width: 1800
-    height: 1200
-    alt: A street food vendor in an apron checking his phone at his market stall.
+    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-work-app-dashboard.md.
+    sha256: 69feb37ddeb8323a34f7db6989902ea43855eda61bc6741638e980398a4d19ef
+    width: 2880
+    height: 2160
+    alt: A hand holding a smartphone that shows a data dashboard app, with a desktop monitor and laptop of interface designs blurred behind it.
     usage: [home]
     approval: approved
     acquired: "2026-10-05"
@@ -193,29 +193,29 @@ assets:
     sourceUrl: https://unsplash.com/photos/jJT2r2n7lYA
     licenseUrl: https://unsplash.com/license
     license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-interfaces-wireframes.md.
-    sha256: 7ec876ea11587854b0bb572e55dcc06d6612bbb88e8496605dda475f902804cd
-    width: 1800
-    height: 1201
+    sha256: 964ff5e53d832a44492125171e91842a4c94c82d07cc3d20e1a5a11a2debeb66
+    width: 2880
+    height: 1921
     alt: A desk seen from above with printed wireframes, a phone interface template, a monitor showing interface components, and a laptop.
     caption: Interface work starts with wireframes on paper and in design tools, long before any code.
     usage: [software-development]
     approval: approved
     acquired: "2026-10-05"
 
-  - id: asset.photo-contact-designer
+  - id: asset.photo-contact-notebook-desk
     kind: file
-    file: public/photos/contact-designer.jpg
+    file: public/photos/contact-notebook-desk.jpg
     role: photograph
     source: licensed-stock
-    creator: Vitaly Gariev
-    originalFilename: fashion-designer-on-the-phone-working-on-a-laptop-kk4J92iaSBk
-    sourceUrl: https://unsplash.com/photos/fashion-designer-on-the-phone-working-on-a-laptop-kk4J92iaSBk
+    creator: Vadim Bozhko
+    originalFilename: lbO1iCnbTW0
+    sourceUrl: https://unsplash.com/photos/lbO1iCnbTW0
     licenseUrl: https://unsplash.com/license
-    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-contact-designer.md.
-    sha256: 4123f26f96b50c6bd3acd897af8aa46db0a873668cdb371294e5b68eb03b7b2a
-    width: 1800
-    height: 1013
-    alt: A woman on a phone call at her workshop desk with a laptop open in front of her.
+    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-contact-notebook-desk.md.
+    sha256: 94008fa3837dbdfd7da3e4e350788d3da7ca5a65f93905e79a93e636f57d584c
+    width: 2880
+    height: 1925
+    alt: Hands writing in a notebook on a dark desk beside an open laptop, a coffee cup and a business card.
     usage: [contact]
     approval: approved
     acquired: "2026-10-05"

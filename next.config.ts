@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [75, 92],
-    deviceSizes: [320, 360, 390, 430, 640, 768, 1024, 1280, 1440, 1920, 2560],
+    deviceSizes: [320, 360, 390, 430, 640, 768, 1024, 1280, 1440, 1920, 2560, 2880],
     imageSizes: [16, 32, 64, 96, 128, 256, 384],
   },
   async headers() {

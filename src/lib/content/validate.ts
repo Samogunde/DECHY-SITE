@@ -94,6 +94,12 @@ const BANNED_PHRASES = [
   /\bplaceholder\b/i,
   /\bTODO\b/,
   /\bTBD\b/,
+  // Image source credits are never shown on the site (they live in the asset registry only).
+  /\bunsplash\b/i,
+  /\bpexels\b/i,
+  /\bphoto(?:graph)?s?\s+(?:by|credit|courtesy)\b/i,
+  /\bphoto:\s/i,
+  /\bimage\s+credits?\b/i,
 ];
 const WRONG_DESCRIPTOR = [
   /Technology\s*(?:&|and)\s*Digital Solutions/i,
@@ -417,10 +423,22 @@ export function validateRegistry(registry: Registry): Issue[] {
           "Licensed stock needs license evidence in data/assets/licenses/",
         );
     }
+    if (a.caption && /unsplash|pexels|photo:|credit|courtesy|\bby [A-Z]/i.test(a.caption))
+      err(
+        "asset-visible-credit",
+        a.id,
+        "A caption must describe the image; it must not carry a source credit",
+      );
     if (a.role === "photograph") {
       if (!a.width || !a.height || !a.sha256)
         err("asset-photo", a.id, "A photograph needs width, height, and sha256");
       if (a.alt.length < 20) err("asset-photo", a.id, "A photograph needs descriptive alt text");
+      if ((a.width ?? 0) < 2400)
+        err(
+          "asset-photo-resolution",
+          a.id,
+          "A photograph must be at least 2400 px wide so it stays sharp at 2x on large screens",
+        );
       if (a.source === "original")
         err("asset-photo", a.id, "A photograph must be licensed, supplied, or client-owned");
     }

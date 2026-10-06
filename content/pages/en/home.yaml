@@ -60,7 +60,7 @@ sections:
     id: who
     tone: white
     label: Who we help
-    photo: { asset: asset.photo-who-tailor, layout: rail, position: "28% 40%" }
+    photo: { asset: asset.photo-who-port-operations, layout: rail, position: "38% 50%" }
     heading: Teams of every size, in every industry
     intro: "We are a global company and work with clients remotely, across time zones and markets."
     items:
@@ -87,7 +87,7 @@ sections:
     numbered: true
     label: Problems we solve
     columns: 2
-    photo: { asset: asset.photo-problems-warehouse, layout: band, position: "50% 55%" }
+    photo: { asset: asset.photo-problems-warehouse-aisle, layout: band, position: "50% 52%" }
     heading: What usually brings people to us
     intro: "Projects usually begin with a problem, not a technology. These are the ones we see most."
     items:
@@ -288,7 +288,7 @@ sections:
     id: work
     tone: white
     label: What we build
-    photo: { asset: asset.photo-work-vendor, layout: split, position: "50% 38%" }
+    photo: { asset: asset.photo-work-app-dashboard, layout: split, position: "50% 50%" }
     heading: The kinds of systems we build and connect
     intro: "Our work ranges from focused tools to platforms that span several systems. These are the main kinds of system, each a practice area in its own right."
     items:

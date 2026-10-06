@@ -22,7 +22,7 @@ sections:
     id: form
     tone: white
     label: Send a message
-    photo: { asset: asset.photo-contact-designer, layout: rail, position: "55% 40%" }
+    photo: { asset: asset.photo-contact-notebook-desk, layout: rail, position: "55% 50%" }
     heading: Start the conversation
     intro: "Share the situation and what you would like to achieve. We reply to the email address you provide."
 
