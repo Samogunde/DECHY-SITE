@@ -1,5 +1,7 @@
 # Phase 3 review: technology inventory
 
+Superseded for dispositions by `14-technology-and-solutions-qualification.md` (the authoritative qualification gate); this file stays as the first-pass generated inventory.
+
 Status: REVIEW MATERIAL, kept as the technology master inventory. Generated from `data/taxonomy/` on 6 October 2026, after the graph completion in ADR 0005. Dispositions are recommendations, not decisions: a page is built only after qualification.
 
 Codes: BUILT (public page exists), NEXT (recommended public page in Phase 4), LATER (candidate once demand or evidence exists), MERGE (represented inside another page, with the page named), ENTITY (entity only), RESOURCE (concept: belongs in resources and articles, not a technology page).

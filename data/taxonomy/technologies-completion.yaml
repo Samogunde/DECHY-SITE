@@ -1,10 +1,11 @@
 # Technology graph completion (ADR 0005), added 6 October 2026 after the Phase 3 inventory review.
-# These entities fill gaps inside capability categories that are already approved in
-# data/taxonomy/capabilities.yaml (Backend Development, Business Intelligence Systems, Data
-# Engineering, event-driven integration, observability). Node.js and .NET are also named in the
-# approved master plan (section 7, strategic technologies). Nothing here is a new capability and
-# nothing here has a public page: they are graph entities only, and they render nowhere until a page
-# is qualified and built. The owner confirms or trims this list at the next review.
+# Dispositions below follow docs/planning/14-technology-and-solutions-qualification.md and are
+# recommendations pending the owner's confirmation. Only Node.js and .NET are named in approved
+# planning (master plan section 7) and stay CREATE LATER. The framework entities and Elasticsearch
+# are MERGE / CONSOLIDATE into their approved parent (language, runtime, or ELK). The nine entities
+# with no planning evidence are DO NOT CREATE. No entity has a public page, a menu entry, or copy,
+# and none is deleted here. The capability categories they sit in are approved in
+# data/taxonomy/capabilities.yaml; the named products are not.
 entities:
   # Back end (runtime and frameworks)
   - id: tech.nodejs
@@ -32,7 +33,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: fw.nestjs
     type: framework
@@ -41,7 +42,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: fw.django
     type: framework
@@ -50,7 +51,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: fw.fastapi
     type: framework
@@ -59,7 +60,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: fw.flask
     type: framework
@@ -68,7 +69,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: fw.spring-boot
     type: framework
@@ -77,7 +78,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: fw.rails
     type: framework
@@ -86,7 +87,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: fw.laravel
     type: framework
@@ -95,7 +96,7 @@ entities:
     primaryService: svc.web-development
     group: Backend frameworks
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   # Business intelligence
   - id: plat.power-bi
@@ -105,7 +106,7 @@ entities:
     primaryService: svc.data-analytics
     group: Business intelligence
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: plat.tableau
     type: platform
@@ -114,7 +115,7 @@ entities:
     primaryService: svc.data-analytics
     group: Business intelligence
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: plat.looker
     type: platform
@@ -123,7 +124,7 @@ entities:
     primaryService: svc.data-analytics
     group: Business intelligence
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   # Messaging, search, observability
   - id: tech.kafka
@@ -133,7 +134,7 @@ entities:
     primaryService: svc.api-integration
     group: Messaging and streaming
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: tech.rabbitmq
     type: technology
@@ -142,7 +143,7 @@ entities:
     primaryService: svc.api-integration
     group: Messaging and streaming
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: tech.elasticsearch
     type: technology
@@ -151,7 +152,7 @@ entities:
     primaryService: svc.data-analytics
     group: Search technologies
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
   - id: tech.opensearch
     type: technology
@@ -160,7 +161,7 @@ entities:
     primaryService: svc.data-analytics
     group: Search technologies
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: plat.datadog
     type: platform
@@ -169,7 +170,7 @@ entities:
     primaryService: svc.cloud
     group: Observability
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
   - id: plat.sentry
     type: platform
@@ -178,5 +179,5 @@ entities:
     primaryService: svc.cloud
     group: Observability
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
