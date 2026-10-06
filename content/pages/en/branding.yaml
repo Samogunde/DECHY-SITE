@@ -1,0 +1,278 @@
+id: page.branding
+kind: service
+locale: en
+path: /branding/
+entityId: svc.branding
+title: "Branding and Creative Services | DECHY"
+description: "Branding and creative from DECHY: brand strategy, identity, and guidelines that make an organization recognizable and consistent on every channel."
+breadcrumbLabel: Branding & Creative
+intent:
+  primary: branding and brand identity services
+  secondary:
+    - brand strategy
+    - logo and visual identity design
+    - brand guidelines
+    - presentation and pitch deck design
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, Service, FAQPage]
+comprehension:
+  what: "Branding is how an organization looks, sounds, and is remembered: its name, logo, colors, words, and the rules for using them everywhere."
+  problem: "The business looks different on every channel, feels forgettable, or no longer reflects what it has become, so customers neither recognize nor trust it."
+  audience: "Founders launching a brand, and established organizations that have outgrown their look, merged, or changed direction."
+  choose: "Refresh when the foundations are sound but the look is dated. Rebuild when your audience, offer, or position has changed. Define the system when you have a look but no rules for using it."
+  next: "Tell us about your brand today and what has changed. We will suggest whether to refresh it, rebuild it, or define the system around it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Service
+    headline: Branding & Creative
+    lead: "At DECHY, we help organizations look, sound, and feel like themselves everywhere. We start with who you are and who you serve, then design the identity and the rules that keep it consistent across your website, documents, and channels."
+    support: "Our design, web, and marketing teams work from the same brand, so what you launch matches what you promise."
+    ctas:
+      - { label: Talk to us about your brand, href: "/contact/?service=branding" }
+      - { label: See what you receive, href: "#deliverables" }
+    spec:
+      kind: layers
+      layerLabel: From idea to everyday use
+      layers:
+        - title: Strategy
+          text: Who you are, who you serve, and what makes you different.
+        - title: Identity
+          text: Name, logo, colors, type, and the way you write.
+        - title: System
+          text: Rules, templates, and examples for using the identity.
+        - title: Everyday use
+          text: Your website, documents, social media, and signs.
+    purpose: system
+    takeaway: "A brand starts with strategy, becomes an identity, and is held together by a system that people use every day."
+    visualTitle: "How a brand goes from idea to everyday use"
+    figureCaption: "This diagram shows four layers of a brand, from strategy at the top to everyday use at the bottom, each built on the one above."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: What a brand is, and is not
+    answer: "A brand is the picture people carry of an organization: what it stands for, how it looks, and how it feels to deal with. A logo is only one part. The rest is color, type, words, behavior, and consistency."
+    paragraphs:
+      - "People judge quickly. When your website, invoices, social media, and signs all look and sound alike, you seem more reliable. When they do not, you seem smaller and less sure, however good the work is."
+      - "Branding gives you a clear idea of who you are and a way of showing it that anyone on your team can follow."
+
+  - type: diagram
+    id: consistent
+    tone: paper
+    label: The difference
+    heading: Scattered versus consistent
+    intro: "Here is the same business with and without a brand system."
+    spec:
+      kind: before-after
+      before:
+        title: Without a system
+        text: Every channel is invented separately.
+        nodes:
+          - title: Website
+            text: One blue, one style.
+          - title: Documents
+            text: Another font and tone.
+          - title: Social media
+            text: Different colors, different voice.
+      after:
+        title: With a brand system
+        text: One identity, one set of rules.
+        nodes:
+          - title: Website
+            text: Follows the guidelines.
+          - title: Documents
+            text: Use the same templates.
+          - title: Social media
+            text: Same colors, same voice.
+      hubLabel: One identity
+    purpose: before-after
+    takeaway: "A brand system makes every channel look and sound like the same organization, which builds recognition and trust."
+    caption: "This diagram contrasts a website, documents, and social media that each look different with the same three following one shared set of brand rules."
+
+  - type: chooser
+    id: route
+    tone: white
+    label: Choosing the work
+    heading: Refresh, rebuild, or define the system?
+    intro: "Brand work comes in three shapes. The right one depends on what has changed."
+    question: What best describes your situation?
+    options:
+      - label: Refresh
+        when: "Your foundations are sound, but the look feels dated or has drifted."
+        get: "Updated visuals and clearer guidelines that keep what people already recognize."
+        watch: "A refresh will not fix a message that no longer fits your audience."
+        cta: { label: Ask about a refresh, href: "/contact/?service=branding" }
+      - label: Rebuild
+        when: "Your audience, offer, or direction has changed, or you are launching something new."
+        get: "Strategy, name or positioning where needed, a new identity, and a launch plan."
+        watch: "It takes the most time, and changes need to be carried through every channel."
+        cta: { label: Plan a new brand, href: "/contact/?service=branding" }
+      - label: Define the system
+        when: "You have a look, but no clear rules for using it, so everyone improvises."
+        get: "Guidelines, templates, and examples that make consistency easy."
+        watch: "The system only helps if people use it, so we plan how it reaches your team."
+        cta: { label: Define your brand system, href: "/contact/?service=branding" }
+
+  - type: index
+    id: deliverables
+    tone: paper
+    columns: 2
+    label: What you receive
+    heading: What you get from brand work
+    items:
+      - title: Brand strategy
+        ref: cap.brand-strategy
+        body: "A clear statement of who you serve, what you offer, and why you are different, in plain language."
+      - title: Logo and visual identity
+        ref: cap.visual-identity
+        body: "Your logo, colors, type, and image style, ready to use on every channel."
+      - title: Brand guidelines
+        ref: cap.brand-guidelines
+        body: "A guide that shows how to use the identity correctly, with examples."
+      - title: Marketing and social media design
+        ref: cap.marketing-design
+        body: "Templates and assets for campaigns, posts, and printed pieces."
+      - title: Presentations and pitch decks
+        ref: cap.pitch-deck-design
+        body: "Slides that explain your idea clearly and look like you."
+      - title: Creative direction
+        ref: cap.creative-direction
+        body: "Steady guidance so new work stays on brand, as your team and channels grow."
+
+  - type: process
+    id: process
+    tone: white
+    label: How a project runs
+    heading: How a brand project runs
+    steps:
+      - title: Listen and learn
+        body: "We learn about your organization, your customers, and your competitors, and what you want people to feel."
+        artifacts: [Discovery notes, Competitor review]
+      - title: Define the strategy
+        body: "We agree who you serve and what you stand for, in a short document everyone can use."
+        artifacts: [Brand strategy, Key messages]
+      - title: Design the identity
+        body: "We explore directions, refine the chosen one, and test it in real settings."
+        artifacts: [Identity options, Final identity]
+      - title: Build the system
+        body: "We create guidelines and templates for the places your brand appears."
+        artifacts: [Brand guidelines, Templates]
+      - title: Launch and support
+        body: "We help you roll it out, and stay available as your team uses it."
+        artifacts: [Launch plan, Updated assets]
+
+  - type: columns
+    id: holds
+    tone: paper
+    label: What holds a brand together
+    heading: Four things that make a brand work
+    columns:
+      - title: Clear
+        items:
+          - "People can say what you do in a sentence."
+          - "The message is the same across channels."
+      - title: Distinct
+        items:
+          - "You do not look or sound like everyone else."
+          - "You show what makes you different."
+      - title: Consistent
+        items:
+          - "Colors, type, and tone are used the same way."
+          - "Anyone on your team can follow the rules."
+      - title: Flexible
+        items:
+          - "It works on a business card and a billboard."
+          - "It can grow as your offer grows."
+
+  - type: callout
+    id: note
+    tone: white
+    variant: note
+    title: Brand work is a partnership
+    paragraphs:
+      - "We bring structure and craft, but you know your organization. The best results come when your team takes part early, shares what is true about the business, and tells us honestly what feels right."
+      - "We keep any existing brand assets you already have and want to keep, and build around them."
+
+  - type: prose
+    id: assets
+    tone: white
+    label: In practice
+    heading: Where a brand shows up
+    paragraphs:
+      - "People meet a brand in many small places: the sign on a door, an invoice, an email signature, a profile picture, a slide in a sales meeting, a delivery box. Each one is a chance to look consistent and professional, or to look as if several different organizations were involved."
+      - "A good brand system plans for these places in advance. It supplies a logo in the sizes and file types people actually need, a short list of colors with clear rules for which goes where, and fonts that are easy to install or already free to use. It also says what the brand sounds like: how formal, how warm, and which words you always use or never use."
+      - "The most useful part is often the simplest: example layouts that show the brand at work. A new colleague who needs a flyer or a proposal should be able to start from a template that is already correct, without asking anyone."
+      - "We also check the practical details that are easy to miss. Colors must have enough contrast to be read on screen and in print. Logos must still work in black and white and at small sizes. Names and descriptions must be written the same way everywhere, so people and search engines see one organization, not several. It also helps to name one person who owns the brand and answers questions, so decisions are made quickly and the rules do not drift."
+
+  - type: columns
+    id: team
+    tone: paper
+    label: Working together
+    heading: What we need from you, and what you get from us
+    columns:
+      - title: From you
+        items:
+          - "Honest answers about who your customers are and why they choose you."
+          - "Examples of work, brands, and styles you like or dislike."
+          - "Someone who can decide, so feedback is clear."
+      - title: From us
+        items:
+          - "Plain explanations of each design choice."
+          - "A small number of clear options instead of dozens."
+          - "Files and guidelines you can use without us."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about branding
+    items:
+      - q: Do we need a new logo?
+        a: "Not always. Sometimes a logo works and the rest of the identity needs attention. We look at what you have and recommend the lightest change that solves the problem."
+      - q: How long does a branding project take?
+        a: "A refresh can take a few weeks. A full new brand takes longer, because strategy and testing take time. We agree a timeline after discovery."
+      - q: Will you also design our website?
+        a: "Yes. Our [design](ref:svc.ui-ux) and [web development](ref:svc.web-development) teams can carry the brand through to your site, so it looks and works as one."
+      - q: Do we own the final designs?
+        a: "Ownership is agreed in writing before work begins. We aim for you to receive the files you need to use the brand freely."
+      - q: Can you help us write our message?
+        a: "Yes. A clear message is part of the strategy. We help you say what you do in plain words."
+      - q: How do we keep the brand consistent after launch?
+        a: "With guidelines, templates, and a person who owns it. We can provide ongoing creative direction if you want help."
+
+  - type: index
+    id: work
+    tone: white
+    label: What it looks like
+    heading: See the brand systems we build
+    items:
+      - title: Brand systems
+        href: /work/areas/brand-systems/
+        body: "Strategy, identity, guidelines, and templates that keep a brand consistent."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Branding across DECHY
+    groups:
+      - title: Related services
+        entityIds:
+          [svc.ui-ux, svc.web-development, svc.digital-marketing, svc.seo-aeo-geo, svc.consulting]
+      - title: Tools
+        entityIds: [tool.figma, tool.canva, tool.illustrator, tool.photoshop]
+      - title: Systems we build
+        entityIds: [workarea.brand-systems]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your brand
+    body: "Describe where your brand is today and what has changed. We will suggest whether to refresh it, rebuild it, or define the system around it."
+    primary: { label: Talk to DECHY about branding, href: "/contact/?service=branding" }

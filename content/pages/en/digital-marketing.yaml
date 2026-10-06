@@ -1,0 +1,283 @@
+id: page.digital-marketing
+kind: service
+locale: en
+path: /digital-marketing/
+entityId: svc.digital-marketing
+title: "Digital Marketing Services | DECHY"
+description: "Digital marketing from DECHY: reach the right people through search, email, social media, and ads, measure what works, and connect it to your customer records."
+breadcrumbLabel: Digital Marketing
+intent:
+  primary: digital marketing services
+  secondary:
+    - lead generation
+    - email marketing and automation
+    - conversion optimization
+    - paid advertising management
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, Service, FAQPage]
+comprehension:
+  what: "Digital marketing is using search, email, social media, ads, and content to reach the right people and turn their interest into enquiries and sales."
+  problem: "Money and time go into marketing, but it is hard to tell what works, leads go cold, and marketing, sales, and customer records do not share information."
+  audience: "Owners and marketing leads who want measurable growth, and teams whose campaigns run separately from sales."
+  choose: "Pick channels where your customers already are, measure each from first click to sale, and connect them to your customer records so nothing is lost."
+  next: "Tell us who you want to reach and how you measure success today. We will suggest where to focus and how to track it."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Service
+    headline: Digital Marketing
+    lead: "At DECHY, we help you reach the right people and turn their interest into enquiries and sales. We choose a small number of channels, track each one from first click to customer, and connect the results to your sales records."
+    support: "Marketing here is tied to measurement and to your systems, so you can see what works and act on it."
+    ctas:
+      - { label: Talk to us about marketing, href: "/contact/?service=digital-marketing" }
+      - { label: See the customer path, href: "#connected" }
+    spec:
+      kind: funnel
+      stages:
+        - title: People who could need you
+          text: Reached through search, email, social media, and ads.
+        - title: Visitors who show interest
+          text: They read, compare, and come back.
+        - title: Enquiries
+          text: They ask a question or request a quote.
+        - title: Customers
+          text: They buy, with the sale traced to its source.
+        - title: Customers who return
+          text: They buy again and recommend you.
+    purpose: transformation
+    takeaway: "Marketing is a path that narrows from many possible customers to the few who buy, so each stage can be measured and improved."
+    visualTitle: "The path from stranger to repeat customer"
+    figureCaption: "This diagram shows how a large audience narrows to enquiries, customers, and repeat customers, with each stage a point you can measure."
+
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: Why marketing often feels like guessing
+    paragraphs:
+      - "Many organizations run several marketing activities at once: a social account here, a newsletter there, a few ads. Each one reports its own numbers. Nobody can say which one produced a customer."
+      - "Leads then go cold because follow-up is slow, or sit in a tool the sales team does not use. Marketing looks like a cost, because its results are invisible."
+      - "The fix is not more activity. It is fewer, better-chosen channels, measured end to end, and connected to the place where your customer records live."
+
+  - type: diagram
+    id: connected
+    tone: paper
+    label: How it fits together
+    heading: Channels around one view of the customer
+    intro: "Channels work better when they share one set of customer records, instead of each keeping its own."
+    spec:
+      kind: hub
+      center:
+        title: One view of every customer
+        text: Who they are, how they found you, and what they have done.
+      spokes:
+        - title: Search
+          text: People who look for what you offer.
+        - title: Email
+          text: Messages to people who have said yes.
+        - title: Social media
+          text: Regular posts, replies, and community.
+        - title: Paid ads
+          text: Targeted adverts for a set budget.
+        - title: Content
+          text: Articles and guides that answer questions.
+        - title: Your website
+          text: Where interest becomes an enquiry.
+    purpose: relationship
+    takeaway: "Every channel feeds one set of customer records, so you can see which ones lead to sales."
+    caption: "This diagram shows six marketing channels all connected to one view of the customer, so results from each can be compared."
+
+  - type: table
+    id: channels
+    tone: white
+    label: Choosing channels
+    heading: Which channels suit which goal?
+    intro: "No channel suits everyone. The right mix depends on your customers, your budget, and how quickly you need results."
+    caption: Comparison of marketing channels
+    columns: [Channel, Good for, How quickly it works, Keep in mind]
+    rows:
+      - - Search and content
+        - "People already looking for what you offer, building lasting visibility."
+        - "Months, but it compounds."
+        - "It needs patience and steady, useful content."
+      - - Email
+        - "Staying in touch with customers and people who have asked to hear from you."
+        - "Quick, once you have a list."
+        - "It needs permission and a reason to read."
+      - - Social media
+        - "Showing who you are and building community."
+        - "Gradual."
+        - "It takes regular effort, and not every platform fits."
+      - - Paid ads on [Google](ref:cap.google-ads), [Meta](ref:cap.meta-ads), or [LinkedIn](ref:cap.linkedin-marketing)
+        - "Testing an offer or reaching a specific audience fast."
+        - "Fast, and it stops when you stop paying."
+        - "Costs can climb quickly without careful tracking."
+    note: "Platforms change their features and prices often. We confirm the current picture when we plan."
+
+  - type: chooser
+    id: start
+    tone: paper
+    label: Where to start
+    heading: Which first step fits you?
+    intro: "You do not need every channel. Start where the evidence points."
+    question: What is your situation?
+    options:
+      - label: I have customers but little contact with them
+        when: "You have a customer list or past buyers, and rarely talk to them."
+        get: "Simple email follow-up and reminders, often the cheapest source of repeat business."
+        watch: "You need permission to email, and a reason for people to open."
+        cta: { label: Plan customer email, href: "/contact/?service=digital-marketing" }
+      - label: People cannot find me
+        when: "Your site is quiet, and new customers should be searching for what you do."
+        get: "A site that search engines can read, with pages that answer real questions."
+        watch: "Results take months, so plan a steady effort. See our [search and AI visibility](ref:svc.seo-aeo-geo) service."
+        cta: { label: Talk about being found, href: "/contact/?service=digital-marketing" }
+      - label: I want to test an offer quickly
+        when: "You have something new to try, and need to know within weeks if people want it."
+        get: "A small paid campaign with careful tracking, to learn fast."
+        watch: "Without good tracking, money disappears. We set measurement up first."
+        cta: { label: Plan a test, href: "/contact/?service=digital-marketing" }
+
+  - type: columns
+    id: measure
+    tone: white
+    label: Measuring
+    heading: What we track, and why
+    columns:
+      - title: Reach
+        items:
+          - "How many of the right people see you."
+          - "Where they come from."
+      - title: Interest
+        items:
+          - "Which pages they read and how long they stay."
+          - "Which emails and posts they act on."
+      - title: Enquiries and sales
+        items:
+          - "Which channel produced each enquiry."
+          - "How quickly it was answered."
+      - title: Cost and return
+        items:
+          - "What each enquiry and customer costs."
+          - "Which activities to grow and which to stop."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How we work
+    heading: How a marketing project runs
+    steps:
+      - title: Understand your customers and goals
+        body: "We learn who you want to reach, what you sell, and how you measure success today."
+        artifacts: [Customer profiles, Goals and measures]
+      - title: Set up tracking and connections
+        body: "We make sure enquiries and sales can be traced back to their source, and linked to your customer records."
+        artifacts: [Tracking set-up, Connected records]
+      - title: Choose and launch channels
+        body: "We start with a few channels, with clear messages and a plan for each."
+        artifacts: [Channel plan, First campaigns]
+      - title: Follow up quickly
+        body: "We set up automatic follow-up, so interested people hear back fast."
+        artifacts: [Follow-up sequences, Alerts to your team]
+      - title: Review and improve
+        body: "We report on results, stop what does not work, and grow what does."
+        artifacts: [Regular reports, Next actions]
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Marketing cannot fix everything
+    paragraphs:
+      - "Marketing multiplies what is already there. If the offer is unclear, the site is slow, or enquiries go unanswered, more traffic will not help."
+      - "We will tell you if the best next step is improving the product, the site, or the follow-up before spending more on marketing."
+
+  - type: prose
+    id: message
+    tone: paper
+    label: The message
+    heading: Reaching people starts with saying something useful
+    paragraphs:
+      - "Channels only carry a message. If the message is vague, even the best channel will not help. Before choosing where to appear, we agree who we are speaking to, what problem they have, and why you are a sensible choice."
+      - "That usually produces a small set of plain statements: what you do, who it is for, and what happens next. Everything else, from an email subject line to an advert, is built from those statements, so people hear one consistent story wherever they meet you."
+      - "We also test. Two versions of a headline, an email, or a page are shown to similar people, and the one that works better is kept. Over time these small tests add up, and they replace opinions with evidence."
+      - "Good marketing is also respectful. We only email people who have agreed to hear from you, we keep clear records of that permission, and we make leaving a list easy. This protects your reputation and follows the privacy rules that apply to your customers."
+      - "Finally, we keep the follow-up human. Automated messages can answer the first question quickly, but a real person should handle conversations that matter. We plan which is which, so nobody feels processed."
+
+  - type: columns
+    id: roles
+    tone: white
+    label: Who does what
+    heading: Marketing is shared work
+    columns:
+      - title: What we usually do
+        items:
+          - "Plan channels and set up tracking."
+          - "Build pages, forms, and email sequences."
+          - "Report results in plain language."
+      - title: What your team usually does
+        items:
+          - "Share knowledge of customers and products."
+          - "Approve messages and offers."
+          - "Answer enquiries quickly and personally."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about digital marketing
+    items:
+      - q: How much should we spend on marketing?
+        a: "It depends on your margins, your goals, and how quickly you want results. We usually suggest starting with a small, measured test, then growing what works."
+      - q: How soon will we see results?
+        a: "Paid ads and email can show results in days or weeks. Search and content take months to build. We set expectations for each channel at the start."
+      - q: Can you manage our social media?
+        a: "We can plan and design for it, and help set up the process. Social media works best with someone close to your business, so we often work with your team."
+      - q: How do you connect marketing to our sales records?
+        a: "We link your forms, tools, and customer records, so each enquiry shows where it came from. See our [integration](ref:svc.api-integration) and [automation](ref:svc.automation) services."
+      - q: Will you guarantee leads or sales?
+        a: "No. No honest provider can. We guarantee clear tracking, careful work, and honest reports."
+      - q: How is this different from SEO?
+        a: "SEO (search engine optimization) is one channel, focused on being found in search. Digital marketing covers the wider mix, and how it connects to your customers."
+
+  - type: index
+    id: work
+    tone: white
+    label: What it looks like
+    heading: See the marketing systems we build
+    items:
+      - title: Digital marketing systems
+        href: /work/areas/digital-marketing-systems/
+        body: "Tracking, email, follow-up, and reporting connected to your customer records."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Marketing across DECHY
+    groups:
+      - title: Related services
+        entityIds:
+          [
+            svc.seo-aeo-geo,
+            svc.automation,
+            svc.api-integration,
+            svc.branding,
+            svc.web-development,
+            svc.data-analytics,
+          ]
+      - title: Tools and platforms
+        entityIds: [plat.hubspot, plat.salesforce, plat.zoho]
+      - title: Systems we build
+        entityIds: [workarea.digital-marketing-systems]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us who you want to reach
+    body: "Describe your customers and how you measure success today. We will suggest where to focus first and how to track the results."
+    primary: { label: Talk to DECHY about marketing, href: "/contact/?service=digital-marketing" }

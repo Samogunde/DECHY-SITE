@@ -1,0 +1,297 @@
+id: page.web-development
+kind: service
+locale: en
+path: /web-development/
+entityId: svc.web-development
+title: "Web Development Services | DECHY"
+description: "Web development from DECHY: business websites, web applications, and customer portals that are fast, easy to use, easy to edit, and built to last."
+breadcrumbLabel: Web Development
+intent:
+  primary: web development services
+  secondary:
+    - business website development
+    - custom web application development
+    - headless cms development
+    - website redesign and migration
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, Service, FAQPage]
+comprehension:
+  what: "Web development is building websites and online systems: from a business site people read, to an application customers and staff log in to."
+  problem: "The site is slow, hard to update, does not work well on phones, or does not turn visitors into customers. Or you need a web system and are not sure what kind."
+  audience: "Businesses launching or rebuilding a site, and teams that need an online system for customers, partners, or staff."
+  choose: "Choose by who edits it and how much it must do. A ready-made site builder suits simple needs, a content system suits editors, and a custom build suits systems with their own rules."
+  next: "Tell us what the site or system must do and who will use it. We will recommend the right kind of build and a first step."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Service
+    headline: Web Development
+    lead: "At DECHY, we build websites and web applications that load quickly, work on every screen, are easy for your team to edit, and are built to last. We help you choose the right kind of build, then deliver it."
+    support: "Our web work connects to design, search visibility, and the systems behind the site, so the whole experience works together."
+    ctas:
+      - { label: Talk to us about your site, href: "/contact/?service=web-development" }
+      - { label: Which kind of build?, href: "#kind" }
+    spec:
+      kind: layers
+      layerLabel: What a website is made of
+      supportLabel: What supports it
+      layers:
+        - title: Pages visitors see
+          text: Design, text, images, and forms on every screen size.
+          support:
+            - title: Content you can edit
+              text: A simple screen to change text and images.
+        - title: Behind-the-scenes logic
+          text: Forms, search, accounts, and payments.
+          support:
+            - title: Links to your other tools
+              text: Customer records, email, and stock.
+        - title: Hosting
+          text: Where the site lives and how fast it responds.
+          support:
+            - title: Backups and updates
+              text: Copies, fixes, and security patches.
+    purpose: system
+    takeaway: "A website is pages on top, logic in the middle, and hosting underneath, each with something supporting it."
+    visualTitle: "The parts of a website"
+    figureCaption: "This diagram shows a website as three layers, from the pages visitors see to the hosting underneath, with the supporting piece beside each layer."
+
+  - type: definition
+    id: what-is
+    tone: white
+    label: What it is
+    heading: What web development covers
+    answer: "Web development is designing and building websites and online systems. A website mostly shares information. A web application lets people do things, such as log in, book, pay, or manage their own records."
+    paragraphs:
+      - 'The line between them is blurry. A modern business site often has forms, bookings, accounts, or a shop. The useful question is not "which is it?" but "what must people be able to do here, and who looks after it?"'
+      - "We build both, and everything in between, from a clear business site to a secure customer portal."
+
+  - type: chooser
+    id: kind
+    tone: paper
+    label: Choosing a build
+    heading: Which kind of build fits you?
+    intro: "Three approaches cover most needs. They differ in who can edit content, how flexible the result is, and what it costs to run."
+    question: What matters most for your site?
+    options:
+      - label: A site builder or template
+        when: "You need a simple site soon, the layout can be standard, and few people will edit it."
+        get: "A fast start and low cost."
+        watch: "Limited flexibility, and you depend on the builder's features and prices."
+        cta: { label: Talk about a simple site, href: "/contact/?service=web-development" }
+      - label: A content management system
+        when: "A team publishes pages and news often and wants to do it themselves without a developer."
+        get: "A familiar editing screen, plus a design built for you. Common choices include [WordPress](ref:plat.wordpress) and [Webflow](ref:plat.webflow)."
+        watch: "Plug-ins and updates need care, or the site slows and weakens."
+        cta: { label: Plan an editable site, href: "/contact/?service=web-development" }
+      - label: A headless or custom build
+        when: "You need special features, strong performance, or one set of content shown on a website, an app, and more."
+        get: "Full control: editors work in a content system, while the site is built separately for speed and flexibility."
+        watch: "More upfront design and build effort, and a developer to look after it."
+        cta: { label: Scope a custom build, href: "/contact/?service=web-development" }
+
+  - type: index
+    id: types
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Sites and web systems we build
+    items:
+      - title: Business and content websites
+        ref: cap.website-development
+        body: "Clear, fast sites that explain what you do and make it easy to get in touch."
+      - title: Custom web applications
+        ref: cap.custom-web-applications
+        body: "Systems people log in to: dashboards, booking tools, and internal tools."
+      - title: Customer and partner portals
+        ref: cap.web-application-development
+        body: "A secure place for customers or partners to see records, documents, and orders."
+      - title: Apps that work like phone apps
+        ref: cap.progressive-web-applications
+        body: "Websites that can be added to a phone's home screen and work with a weak connection."
+      - title: Rebuilds and moves
+        ref: cap.website-migration
+        body: "Moving to a new design or platform while keeping your search rankings and content."
+      - title: Care after launch
+        ref: cap.website-maintenance
+        body: "Updates, fixes, backups, and improvements, so the site stays fast and safe."
+
+  - type: diagram
+    id: good
+    tone: paper
+    label: What good looks like
+    heading: Six things every site should get right
+    intro: "A site can look good and still fail. These are the qualities we build in and check."
+    spec:
+      kind: hub
+      center:
+        title: A site that works
+        text: For visitors, for your team, and for search engines.
+      spokes:
+        - title: Fast
+          text: Pages appear quickly, even on a phone.
+        - title: Easy to use
+          text: People find what they came for in seconds.
+        - title: Accessible
+          text: Usable with a keyboard, a screen reader, and clear contrast.
+        - title: Found in search
+          text: Built so search engines can read and understand it.
+        - title: Safe
+          text: Protected against common attacks, and kept updated.
+        - title: Easy to edit
+          text: Your team can update content without a developer.
+    purpose: relationship
+    takeaway: "A good website is judged by six qualities together: speed, ease of use, accessibility, search readiness, safety, and ease of editing."
+    caption: "This diagram shows six qualities that together make a site work, with the site at the center and one quality around it for each."
+
+  - type: columns
+    id: standards
+    tone: white
+    label: Standards we build to
+    heading: 'What "fast" and "accessible" mean in practice'
+    columns:
+      - title: Speed
+        items:
+          - "The main content appears in about two and a half seconds or less."
+          - "Pages do not jump around while loading."
+          - "Images are the right size for each screen."
+      - title: Accessibility
+        items:
+          - "Everything works with a keyboard."
+          - "Text is readable and has enough contrast."
+          - "Images have descriptions, and forms have clear labels."
+      - title: Phones first
+        items:
+          - "Designed for small screens, then widened."
+          - "Buttons are big enough to tap."
+          - "Text is never too small to read."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How a project runs
+    heading: From brief to launch, and beyond
+    steps:
+      - title: Understand the goal
+        body: "We learn what the site must achieve, who it is for, and what you have today."
+        artifacts: [Goals and audience, Content and page list]
+      - title: Design the experience
+        body: "We plan the pages and design how they look and behave, with your team reviewing."
+        artifacts: [Page plan, Designs for phone and desktop]
+      - title: Build and connect
+        body: "We build the site and connect it to your forms, email, customer records, and payments."
+        artifacts: [Working site, Connections to your tools]
+      - title: Test and prepare
+        body: "We test speed, accessibility, and security, and prepare redirects so nothing is lost."
+        artifacts: [Test results, Redirect plan]
+      - title: Launch and look after it
+        body: "We go live with care, then monitor, update, and improve."
+        artifacts: [Live site, Monitoring, Care plan]
+
+  - type: callout
+    id: when-not
+    tone: white
+    variant: limits
+    title: You may not need a custom build
+    paragraphs:
+      - "A well-chosen template or content system is often the right answer, and cheaper. A custom build pays off when you need special features, strong performance, or full control."
+      - "We will recommend the simpler option when it fits, and explain what you give up."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the tools we use."
+    panels:
+      - title: Front end
+        paragraphs:
+          - "For the pages people see, we use [React](ref:fw.react) and [Next.js](ref:fw.nextjs), and also [Vue](ref:fw.vue), [Angular](ref:fw.angular), [Svelte](ref:fw.svelte), and [Astro](ref:fw.astro) when they fit. We write in [TypeScript](ref:lang.typescript) for safety, and style with tools such as [Tailwind CSS](ref:tool.tailwind-css)."
+      - title: Content systems
+        paragraphs:
+          - "We build on [WordPress](ref:plat.wordpress), [Webflow](ref:plat.webflow), and [Shopify](ref:plat.shopify) when they suit, and on headless systems such as [Contentful](ref:plat.contentful), [Sanity](ref:plat.sanity), [Strapi](ref:plat.strapi), and [Storyblok](ref:plat.storyblok) when you need more flexibility."
+      - title: Back end and information
+        paragraphs:
+          - "Behind the scenes we use [TypeScript](ref:lang.typescript), [Python](ref:lang.python), or [PHP](ref:lang.php), with databases such as [PostgreSQL](ref:tech.postgresql) or [MySQL](ref:tech.mysql), chosen for your needs and your team."
+      - title: Quality checks
+        items:
+          - "Automated tests and accessibility checks on every change."
+          - "Speed budgets checked before release."
+          - "Security checks and dependency updates on a schedule."
+
+  - type: index
+    id: work
+    tone: white
+    label: What it looks like
+    heading: See the web systems we build
+    items:
+      - title: Business web platforms
+        href: /work/areas/business-web-platforms/
+        body: "Sites and web applications that run parts of a business."
+      - title: Customer portals
+        href: /work/areas/customer-portals/
+        body: "Secure places where customers and partners handle things themselves."
+      - title: Digital products
+        href: /work/areas/digital-products/
+        body: "Online products built, launched, and improved as a service."
+
+  - type: prose
+    id: handover
+    tone: paper
+    label: After launch
+    heading: Looking after a website
+    paragraphs:
+      - "A website needs care after it goes live: content changes, software updates, backups, and regular checks that forms and pages still work. We agree who does what before launch, and we write it down."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about websites and web systems
+    items:
+      - q: How much does a website cost?
+        a: "It depends on how many pages, what it must do, and whether it is built from a template or designed for you. We estimate after a short discovery and show what is included. Ask any provider what the price covers, including content, testing, and care after launch."
+      - q: How long does it take?
+        a: "A simple site can take a few weeks. A larger site or web application takes longer. The biggest factor is often how quickly content and decisions arrive, so we plan that with you."
+      - q: Will we be able to edit the site ourselves?
+        a: "Yes, if that is the goal. We choose or build an editing system suited to your team and train you to use it."
+      - q: Will we lose our search rankings if we rebuild?
+        a: "Not if it is planned well. We keep the addresses that matter, redirect the ones that change, and check search performance after launch. See our [search and AI visibility](ref:svc.seo-aeo-geo) service for more."
+      - q: Can you add online selling?
+        a: "Yes. See our [ecommerce](ref:svc.ecommerce) service for stores, payments, and stock."
+      - q: Who looks after the site after launch?
+        a: "You can, we can, or both. Sites need updates, backups, and security checks to stay fast and safe, so we agree who does what before launch."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Web development across DECHY
+    groups:
+      - title: Related services
+        entityIds:
+          [
+            svc.ui-ux,
+            svc.seo-aeo-geo,
+            svc.ecommerce,
+            svc.software-development,
+            svc.api-integration,
+            svc.cloud,
+          ]
+      - title: Technologies in this area
+        entityIds:
+          [fw.nextjs, fw.react, plat.wordpress, plat.webflow, plat.contentful, lang.typescript]
+      - title: Systems we build
+        entityIds:
+          [workarea.business-web-platforms, workarea.customer-portals, workarea.digital-products]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what your site must do
+    body: "Describe who will use it, what they need to do, and who will edit it. We will recommend the right kind of build and the first step."
+    primary: { label: Talk to DECHY about your site, href: "/contact/?service=web-development" }

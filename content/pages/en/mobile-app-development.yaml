@@ -1,0 +1,298 @@
+id: page.mobile-app-development
+kind: service
+locale: en
+path: /mobile-app-development/
+entityId: svc.mobile-app-development
+title: "Mobile App Development Services | DECHY"
+description: "Mobile app development from DECHY: iPhone, Android, and cross-platform apps, designed, built, tested, released to the app stores, and kept up to date."
+breadcrumbLabel: Mobile App Development
+intent:
+  primary: mobile app development services
+  secondary:
+    - ios and android app development
+    - cross platform app development
+    - mobile app mvp
+    - mobile app maintenance
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-05"
+dateModified: "2026-10-05"
+schemaTypes: [WebPage, Service, FAQPage]
+comprehension:
+  what: "Mobile app development is designing and building apps that run on phones and tablets, from the first idea through the app stores and ongoing updates."
+  problem: "Teams are unsure which approach to choose, how long it takes, what the app stores require, and how to keep an app working as phones and systems change."
+  audience: "Businesses launching a first app, and teams whose current app is slow, outdated, or hard to maintain."
+  choose: "Choose by audience and needs: a native app for the deepest phone features, a cross-platform app to cover both major phones at once, or a web app when an app store is not needed."
+  next: "Tell us who the app is for and what it must do. We will recommend an approach and a low-cost way to test the idea first."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Service
+    headline: Mobile App Development
+    lead: "At DECHY, we design and build mobile apps for iPhone, Android, or both at once. We help you decide what the first version should do, build it, release it to the app stores, and keep it working as phones and systems change."
+    support: "Apps rarely stand alone. We connect them to your website, customer records, and payments, so the app and the business work together."
+    ctas:
+      - { label: Talk to us about your app, href: "/contact/?service=mobile-app-development" }
+      - { label: Native or cross-platform?, href: "#approach" }
+    spec:
+      kind: flow
+      steps:
+        - title: Idea and scope
+          text: What the first version must do, and for whom.
+        - title: Design
+          text: Screens people can use with one hand.
+        - title: Build
+          text: The app and the system behind it.
+        - title: Test
+          text: On real phones, old and new.
+        - title: App stores
+          text: Review and release on Apple and Google.
+        - title: Updates
+          text: Fixes and features for years to come.
+    purpose: sequence
+    takeaway: "An app is never finished at launch. It moves from idea to design, build, test, and release, then keeps changing."
+    visualTitle: "The life of a mobile app"
+    figureCaption: "This diagram traces a mobile app through six stages, from the first idea to the app stores and the updates that follow."
+
+  - type: prose
+    id: problem
+    tone: white
+    label: The choice
+    heading: The first question is whether you need an app
+    paragraphs:
+      - "People carry their phones everywhere, so an app can feel like the obvious answer. Sometimes it is. An app can send notifications, work without a connection, use the camera or location, and sit on the home screen."
+      - "But an app is also a product to look after. It must be updated whenever phones change, reviewed by the app stores, and supported on many devices. A well-built mobile website, or an installable web app, is sometimes enough."
+      - "We help you decide honestly. If an app is right, we help you start small, learn from real users, and grow from there."
+
+  - type: chooser
+    id: approach
+    tone: paper
+    label: Choosing an approach
+    heading: Native, cross-platform, or web app?
+    intro: "There are three main ways to build for phones. They trade off depth, cost, and reach."
+    question: What matters most for your app?
+    options:
+      - label: Native app
+        when: "You need the best speed and the deepest use of phone features, or you are building only for iPhone or only for Android."
+        get: "The smoothest feel and full access to the phone. Typically built with [Swift](ref:tech.swift) for iPhone and [Kotlin](ref:tech.kotlin) for Android."
+        watch: "Two apps to build and maintain if you need both phones, so it costs more."
+        cta: { label: Discuss a native app, href: "/contact/?service=mobile-app-development" }
+      - label: Cross-platform app
+        when: "You want one app on both iPhone and Android, with a shared team and a shared plan."
+        get: "One build for both phones, quicker and cheaper to start. We use [Flutter](ref:tech.flutter) and [React Native](ref:tech.react-native)."
+        watch: "A few very specialist features may need extra native work."
+        cta: { label: Plan a cross-platform app, href: "/contact/?service=mobile-app-development" }
+      - label: Web app that installs
+        when: "You do not need the app stores, or want to test an idea quickly, and the features are modest."
+        get: "A website that can be added to the home screen, built once for every device."
+        watch: "Less access to phone features, and less presence in the app stores."
+        cta: { label: Explore a web app, href: "/contact/?service=mobile-app-development" }
+
+  - type: diagram
+    id: inside
+    tone: white
+    label: How it works
+    heading: What is inside a mobile app
+    intro: "An app is more than the screens. Most of the useful work happens behind the scenes."
+    spec:
+      kind: layers
+      layerLabel: Parts of an app
+      supportLabel: What supports it
+      layers:
+        - title: The app on the phone
+          text: Screens, buttons, and everything the person touches.
+          support:
+            - title: Notifications
+              text: Messages that reach the phone's lock screen.
+        - title: The system behind the app
+          text: Accounts, rules, and the information the app shows.
+          support:
+            - title: Sign-in
+              text: Safe login, including fingerprint or face.
+        - title: Your other tools
+          text: Payments, customer records, email, and maps.
+          support:
+            - title: Usage and crash reports
+              text: Show what people use and what breaks.
+    purpose: architecture
+    takeaway: "Most of an app lives behind the screens, in the system that stores information, signs people in, and talks to your other tools."
+    caption: "This diagram shows a mobile app as three layers, from the screens on the phone to the system behind it and your other tools, with what supports each."
+    points:
+      - title: Plan for both sides
+        body: "The phone app and the system behind it need to be designed together."
+      - title: Keep information safe
+        body: "Sign-in and permissions protect what the app shows and stores."
+      - title: Learn from use
+        body: "Reports on usage and crashes guide what to improve next."
+
+  - type: index
+    id: kinds
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Apps we build
+    items:
+      - title: Customer apps
+        ref: cap.mobile-product-development
+        body: "Apps for ordering, booking, tracking, or loyalty that make doing business with you easy."
+      - title: Staff and field apps
+        ref: cap.ios-app-development
+        body: "Apps that let teams work away from a desk: inspections, deliveries, and job updates."
+      - title: A first version to test an idea
+        ref: cap.mobile-mvp-development
+        body: "A small first version, often called an MVP (minimum viable product), to learn what people really use before you invest more."
+      - title: Apps for Android
+        ref: cap.android-app-development
+        body: "Apps designed for the range of Android phones and tablets."
+      - title: Apps on both phones at once
+        ref: cap.cross-platform-app-development
+        body: "One shared build that runs on iPhone and Android."
+      - title: Rescue and modernization
+        ref: cap.mobile-app-modernization
+        body: "Bringing an old, slow, or abandoned app up to date, or replacing it in stages."
+
+  - type: columns
+    id: after
+    tone: white
+    label: After launch
+    heading: Keeping an app healthy
+    intro: "Launch day is the start. These are the things that keep an app working."
+    columns:
+      - title: Keeping up with phones
+        items:
+          - "Apple and Google release new phone software every year."
+          - "We test and update so your app keeps working."
+      - title: Fixing and improving
+        items:
+          - "Crash reports show what breaks."
+          - "Usage data shows what people actually do."
+      - title: Store rules
+        items:
+          - "Both stores have review rules that change."
+          - "We prepare each release so it passes."
+      - title: Support
+        items:
+          - "A clear way for people to report problems."
+          - "Agreed response times for urgent fixes."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How a project runs
+    heading: From idea to the app stores
+    steps:
+      - title: Find the first version
+        body: "We decide the few things the first release must do well, and what can wait."
+        artifacts: [Scope of the first version, Success measures]
+      - title: Design
+        body: "We design screens and flows, and test them with real people on a clickable model."
+        artifacts: [Clickable design, Feedback from test users]
+      - title: Build in steps
+        body: "We build in short rounds, so you can try working versions early."
+        artifacts: [Working app each round, Connection to your systems]
+      - title: Test on real phones
+        body: "We test on a range of devices, including older ones, and check speed, safety, and accessibility."
+        artifacts: [Device test results, Security checks]
+      - title: Release and learn
+        body: "We prepare the store listings, release, and watch how people use it."
+        artifacts: [Store release, Usage and crash reports]
+
+  - type: callout
+    id: when-not
+    tone: white
+    variant: limits
+    title: When an app is not the answer
+    paragraphs:
+      - "If people will use your service once or rarely, a good website is easier for them and cheaper for you. An app earns its place when people return often or need the phone's features."
+    items:
+      - "Your visitors will rarely come back."
+      - "A mobile website would do the same job."
+      - "You have no one to look after the app after launch."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technology
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It outlines the tools we work with."
+    panels:
+      - title: Native
+        paragraphs:
+          - "For iPhone: [Swift](ref:tech.swift) with [SwiftUI](ref:tech.swiftui). For Android: [Kotlin](ref:tech.kotlin) with [Jetpack Compose](ref:tech.jetpack-compose). Native gives the best access to each platform's features."
+      - title: Cross-platform
+        paragraphs:
+          - "[Flutter](ref:tech.flutter) (written in [Dart](ref:lang.dart)) and [React Native](ref:tech.react-native) let one team build for both phones. We also use [Kotlin Multiplatform](ref:tech.kotlin-multiplatform) to share logic, and [Ionic](ref:tech.ionic) or [.NET MAUI](ref:tech.dotnet-maui) when they fit your team."
+      - title: Behind the app
+        items:
+          - "A secure back end, built with the tools in our software service, or a ready-made platform such as [Firebase](ref:plat.firebase)."
+          - "Sign-in, notifications, and offline use designed from the start."
+          - "Automated tests and a release pipeline for each store."
+
+  - type: index
+    id: work
+    tone: white
+    label: What it looks like
+    heading: See the mobile systems we build
+    items:
+      - title: Mobile apps
+        href: /work/areas/mobile-apps/
+        body: "Native and cross-platform apps, and the systems that support them."
+      - title: Digital products
+        href: /work/areas/digital-products/
+        body: "Online products designed, built, launched, and improved over time."
+
+  - type: prose
+    id: stores
+    tone: paper
+    label: After launch
+    heading: An app is never quite finished
+    paragraphs:
+      - "Phones and operating systems change every year, and an app that is not kept up to date will eventually stop working well. We plan for updates from the start, and agree who looks after the app once it is live."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about mobile apps
+    items:
+      - q: How much does an app cost?
+        a: "It depends on what the app does, how many screens it has, whether it connects to other systems, and whether you need one phone or both. We estimate after a short discovery and often suggest a small first version so you spend less while you learn."
+      - q: How long does it take?
+        a: "A focused first version can take a few months. Larger apps take longer. App store review adds a few days to a release, which we plan for."
+      - q: Do we need separate apps for iPhone and Android?
+        a: "Not always. A cross-platform app can cover both with one build. We recommend native apps when you need the deepest phone features."
+      - q: Who owns the app?
+        a: "Ownership and licensing are agreed in writing before work starts. We aim for you to hold the code and the store accounts, so you are never stuck."
+      - q: Can you fix or update our existing app?
+        a: "Yes. We review what exists, find what is wrong, and either repair it or replace it in stages."
+      - q: Will the app work with our other systems?
+        a: "Yes. We connect apps to your website, customer records, and payments. See our [integration](ref:svc.api-integration) service."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Mobile across DECHY
+    groups:
+      - title: Related services
+        entityIds:
+          [
+            svc.software-development,
+            svc.ui-ux,
+            svc.api-integration,
+            svc.web-development,
+            svc.cybersecurity,
+          ]
+      - title: Technologies in this area
+        entityIds: [tech.flutter, tech.react-native, tech.swift, tech.kotlin, plat.firebase]
+      - title: Systems we build
+        entityIds: [workarea.mobile-apps, workarea.digital-products]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your app idea
+    body: "Describe who the app is for and what it must do. We will recommend an approach and a low-cost way to test it."
+    primary:
+      { label: Talk to DECHY about your app, href: "/contact/?service=mobile-app-development" }
