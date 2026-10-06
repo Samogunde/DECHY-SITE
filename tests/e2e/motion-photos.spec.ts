@@ -45,7 +45,7 @@ test.describe("photography", () => {
         expect(await img.evaluate((e: HTMLImageElement) => e.complete && e.naturalWidth > 0)).toBe(
           true,
         );
-        await expect(fig.locator("figcaption")).toContainText("Unsplash");
+        // Source credits never appear on the page (covered in layout-alignment.spec.ts).
         // The frame reserves its space: the image never exceeds it.
         const [frame, image] = await Promise.all([
           fig.locator(".photo-frame").boundingBox(),
@@ -139,7 +139,7 @@ test.describe("motion (no preference)", () => {
     await flow.scrollIntoViewIfNeeded();
     await expect(flow).toHaveAttribute("data-state", /shown|hidden/);
     await expect.poll(() => flow.getAttribute("data-state")).toBe("shown");
-    const steps = flow.locator("svg:visible .fx-step");
+    const steps = flow.locator(".flow-steps .fx-step");
     expect(await steps.count()).toBe(6);
     await page.waitForTimeout(1200);
     for (let i = 0; i < 6; i++) await expect(steps.nth(i)).toHaveCSS("opacity", "1");
@@ -193,7 +193,13 @@ test.describe("motion (reduced)", () => {
         ).length;
         const lowOpacity = [...document.querySelectorAll("main *")].filter((e) => {
           const cs = getComputedStyle(e);
-          return cs.opacity !== "1" && !e.closest("svg") && !e.closest(".photo-frame");
+          // The looping bus packet is deliberately hidden under reduced motion.
+          return (
+            cs.opacity !== "1" &&
+            !e.closest("svg") &&
+            !e.closest(".photo-frame") &&
+            !e.classList.contains("bus-packet")
+          );
         }).length;
         return { animated, slowTransitions, lowOpacity };
       });

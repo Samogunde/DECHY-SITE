@@ -43,7 +43,8 @@ Rules for conflicts:
 | 53 launch articles, six batches | `docs/planning/06-article-plan-53.md` |
 | Typography and responsive type | `docs/planning/07-typography-system.md`, `docs/design/typography-tokens.css` |
 | Colors and derived accessible variants | Plan section 23 |
-| Imagery and sourcing | Plan section 25; ADR 0002 section 2 item 1 |
+| Imagery and sourcing | Plan section 25; ADR 0002 section 2 item 1; ADR 0003 (quality gate, no visible credits) |
+| Layout grid, diagrams, photography quality, captions, alignment | `docs/design/layout-and-visual-quality-rules.md`; ADR 0003 |
 | SEO, AEO, GEO | Plan sections 16 to 22 and Appendix E |
 | Testing and quality gates | Plan section 33; `AGENTS.md` section 80A |
 | Git, Netlify | This file section 6; plan sections 34 and 35 |
@@ -65,6 +66,7 @@ Reading guide: `AGENTS.md` is large (about 27k tokens) and is intentionally not 
 - Style: no em dashes, no en dashes, no emojis in DECHY content or docs. Use "to" for ranges.
 - Brand tokens are fixed: #111827, #2F6FED, #F7F6F2, #E5E7EB, #6B7280; Manrope headings, Source Sans 3 body, monospace only where technically useful. Use the supplied PNG logo as provided; never redraw, recolor, stretch, or regenerate it.
 - Typography follows the measured system: body 17 to 18.5px (never below 17px), reading text 17.5 to 20px, H1 32 to 52px, captions and labels 14px, buttons and inputs 16px, nothing important below 14px, measures 62ch (articles) and 64ch (service), touch targets at least 44px. Never fall back to tiny text.
+- Visual quality (permanent, ADR 0003): every visual lives in a frame that owns its width, with its caption inside it; diagrams are grid-based HTML with real type (never scaled vector text), laid out by their own container width, with supporting items in the same rows as what they support; photographs are sharp, high-resolution (source at least 2400 px), well composed, consistent, free of clichés, and are inspected at 100 percent and at rendered size on 1x and 2x before use; people are never chosen by demographic; no image source or credit is ever visible on the site (provenance only in the registry and license evidence; do not use assets that require visible attribution). Inspect alignment, spacing, grid, captions, wrapping and balance on every new page before calling it done.
 - Responsive design: mobile, tablet, laptop, desktop, and large desktop are all first-class; validate at 320, 360, 375, 390, 430, 768, 820, 1024, 1280, 1440, 1920, and 2560 px and check navigation, typography, spacing, grids, buttons, forms, images, diagrams, content width, stacking, cropping, density, overflow, and touch targets.
 - Company facts live only in the Approved Facts Register (created in Phase 1 under `data/facts/`). External technical research stays in the research log and never becomes a company fact or weakens a capability claim.
 
@@ -76,7 +78,7 @@ Normal implementation decisions (component structure, libraries within the appro
 
 ## 6. Working method, Git, and deployment
 
-- Method: plan, implement, test, inspect (in a real browser for UI), diagnose and fix, re-verify, commit, push. Follow `AGENTS.md` section 80A. Do not present knowingly broken work; report honestly what was and was not verified. Do not ask the owner to do work Claude can do; the owner never manually downloads or uploads project files.
+- Method: plan, implement, test, inspect (in a real browser for UI, at phone, tablet, and desktop widths and at every container-query switch), diagnose and fix, re-verify, commit, push. Run the checklist in `docs/design/layout-and-visual-quality-rules.md` before calling any page complete. Follow `AGENTS.md` section 80A. Do not present knowingly broken work; report honestly what was and was not verified. Do not ask the owner to do work Claude can do; the owner never manually downloads or uploads project files.
 - Flow: local implementation, tests, browser inspection, fixes, commit, push to GitHub, then Netlify deployment or preview.
 - Verify `git remote -v` shows `Samogunde/DECHY-SITE` before any push. The repository stays private. Never rewrite or force-push existing commits.
 - Commit identity for this repository: `Samogunde <102127730+Samogunde@users.noreply.github.com>` (set in the local repo config; verify with `git config user.email` before committing).

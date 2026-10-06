@@ -42,8 +42,9 @@ describe("photography: provenance is mandatory", () => {
   it("keeps stored photographs web-sized", () => {
     for (const a of photos) {
       const size = fs.statSync(path.join(process.cwd(), a.file)).size;
-      expect(size, `${a.file} is ${Math.round(size / 1024)} KB`).toBeLessThan(400 * 1024);
-      expect(a.width, a.id).toBeLessThanOrEqual(1800);
+      expect(size, `${a.file} is ${Math.round(size / 1024)} KB`).toBeLessThan(900 * 1024);
+      expect(a.width, a.id).toBeGreaterThanOrEqual(2400);
+      expect(a.width, a.id).toBeLessThanOrEqual(3200);
     }
   });
 

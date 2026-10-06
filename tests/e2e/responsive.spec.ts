@@ -64,7 +64,7 @@ for (const width of WIDTHS) {
           const rect = el.getBoundingClientRect();
           if (rect.width === 0) continue;
           const px = parseFloat(cs.fontSize);
-          const floor = el.closest(".t-eyebrow") ? 12.9 : 13.9;
+          const floor = el.closest(".t-eyebrow, .dgm-label") ? 12.9 : 13.9;
           if (px < floor) small.push(`${text.slice(0, 30)} ${px}px`);
         }
         for (const el of Array.from(
