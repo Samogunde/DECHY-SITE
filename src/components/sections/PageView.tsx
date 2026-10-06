@@ -5,6 +5,7 @@ import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import { getPage, getRegistry } from "@/lib/content/load";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { BlockRenderer } from "./BlockRenderer";
+import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
 export function PageView({ path }: { path: string }) {
@@ -13,6 +14,15 @@ export function PageView({ path }: { path: string }) {
   const crumbs = breadcrumbsFor(page, registry);
   const hasHero = page.sections.some((b) => b.type === "hero");
   const graph = buildGraph(page, registry);
+  const guided = page.kind !== "home" && page.kind !== "contact" && page.kind !== "legal";
+  const primaryCta = page.sections.find((b) => b.type === "cta");
+  const glanceCta = primaryCta && primaryCta.type === "cta" ? primaryCta.primary : undefined;
+  const navItems = page.sections
+    .filter((b) => b.type !== "hero" && b.type !== "cta" && "label" in b && b.label)
+    .map((b) => ({ id: b.id, label: (b as { label: string }).label }));
+  const showNav = guided && navItems.length >= 6;
+  const first = page.sections[0];
+  const rest = first?.type === "hero" ? page.sections.slice(1) : page.sections;
 
   return (
     <>
@@ -32,16 +42,18 @@ export function PageView({ path }: { path: string }) {
           </div>
         </header>
       ) : null}
-      {page.sections.map((block) => (
+      {first?.type === "hero" ? (
         <BlockRenderer
-          key={block.id}
-          block={block}
-          breadcrumbs={
-            block.type === "hero" && block.variant === "service" ? (
-              <Breadcrumbs crumbs={crumbs} />
-            ) : undefined
-          }
+          block={first}
+          breadcrumbs={first.variant !== "home" ? <Breadcrumbs crumbs={crumbs} /> : undefined}
         />
+      ) : null}
+      {guided && page.comprehension ? (
+        <AtAGlance comprehension={page.comprehension} cta={glanceCta} />
+      ) : null}
+      {showNav ? <SectionNav items={navItems} /> : null}
+      {rest.map((block) => (
+        <BlockRenderer key={block.id} block={block} />
       ))}
     </>
   );

@@ -31,6 +31,7 @@ export const ENTITY_TYPES = [
   "problem",
   "solution",
   "country",
+  "work-area",
 ] as const;
 export const EntityType = z.enum(ENTITY_TYPES);
 export type EntityTypeName = z.infer<typeof EntityType>;
@@ -103,6 +104,8 @@ export const RELATION_TYPES = [
   "integratesWith",
   "furtherReading",
   "alternativeTo",
+  "hasWorkArea",
+  "relatedWork",
 ] as const;
 export const Relation = z.object({
   from: z.string(),
@@ -155,18 +158,166 @@ export type PhotoRef = z.infer<typeof PhotoRef>;
 const tone = z.enum(["paper", "white", "ink"]).default("paper");
 const base = { id: z.string().regex(/^[a-z0-9-]+$/), tone };
 
+/* ---------- teaching diagrams (data-driven; see docs/design/clarity-and-comprehension-standard.md) ---------- */
+
+/** What the visitor should understand from a diagram (clarity standard, section 6). */
+export const DIAGRAM_PURPOSES = [
+  "process",
+  "system",
+  "relationship",
+  "workflow",
+  "comparison",
+  "sequence",
+  "architecture",
+  "decision",
+  "transformation",
+  "before-after",
+] as const;
+export const DiagramPurpose = z.enum(DIAGRAM_PURPOSES);
+export type DiagramPurpose = z.infer<typeof DiagramPurpose>;
+
+const Part = z.object({ title: z.string().min(1), text: z.string().optional() });
+
+export const DiagramSpec = z.discriminatedUnion("kind", [
+  /** Ordered steps. Horizontal when there is room, vertical otherwise. */
+  z.object({
+    kind: z.literal("flow"),
+    steps: z.array(Part).min(3).max(7),
+    note: z.string().optional(),
+  }),
+  /** A stack of layers, each optionally with the supporting parts that sit beside it. */
+  z.object({
+    kind: z.literal("layers"),
+    layers: z
+      .array(Part.extend({ support: z.array(Part).default([]) }))
+      .min(2)
+      .max(6),
+    supportLabel: z.string().default("Supporting parts"),
+    layerLabel: z.string().default("Layers"),
+    base: Part.optional(),
+  }),
+  /** The same situation without and with the solution. */
+  z.object({
+    kind: z.literal("before-after"),
+    before: z.object({
+      title: z.string(),
+      text: z.string().optional(),
+      nodes: z.array(Part).min(2).max(6),
+    }),
+    after: z.object({
+      title: z.string(),
+      text: z.string().optional(),
+      nodes: z.array(Part).min(2).max(6),
+    }),
+    hubLabel: z.string().optional(),
+  }),
+  /** One thing in the middle connected to the parts around it. */
+  z.object({
+    kind: z.literal("hub"),
+    center: Part,
+    spokes: z.array(Part).min(3).max(8),
+  }),
+  /** Stages that narrow, each a smaller group than the last. */
+  z.object({ kind: z.literal("funnel"), stages: z.array(Part).min(3).max(6) }),
+  /** A question with the answer that fits each situation. */
+  z.object({
+    kind: z.literal("decision"),
+    question: z.string(),
+    branches: z
+      .array(z.object({ when: z.string(), choose: z.string(), text: z.string().optional() }))
+      .min(2)
+      .max(6),
+  }),
+]);
+export type DiagramSpec = z.infer<typeof DiagramSpec>;
+
+/** Visitor-first summary of a page: the answers the page must make obvious (clarity standard). */
+export const Comprehension = z.object({
+  what: z.string().min(20),
+  problem: z.string().min(20),
+  audience: z.string().min(20),
+  choose: z.string().min(20),
+  next: z.string().min(10),
+});
+export type Comprehension = z.infer<typeof Comprehension>;
+
 export const Block = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("hero"),
     id: z.string(),
-    variant: z.enum(["home", "service"]),
+    variant: z.enum(["home", "service", "hub", "plain"]),
     eyebrow: z.string().optional(),
     headline: z.string(),
     lead: z.string(),
     support: z.string().optional(),
     ctas: z.array(Cta).min(1),
-    figure: FigureId,
-    figureCaption: z.string(),
+    figure: FigureId.optional(),
+    spec: DiagramSpec.optional(),
+    purpose: DiagramPurpose.optional(),
+    takeaway: z.string().optional(),
+    visualTitle: z.string().optional(),
+    figureCaption: z.string().optional(),
+  }),
+  z.object({
+    type: z.literal("pathfinder"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    paths: z
+      .array(
+        z.object({
+          need: z.string(),
+          text: z.string(),
+          href: z.string(),
+          action: z.string().optional(),
+        }),
+      )
+      .min(3),
+  }),
+  z.object({
+    type: z.literal("chooser"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    question: z.string(),
+    options: z
+      .array(
+        z.object({
+          label: z.string(),
+          when: z.string(),
+          get: z.string(),
+          watch: z.string().optional(),
+          cta: Cta.optional(),
+        }),
+      )
+      .min(2)
+      .max(6),
+  }),
+  z.object({
+    type: z.literal("technical"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string(),
+    panels: z
+      .array(
+        z.object({
+          title: z.string(),
+          paragraphs: z.array(z.string()).default([]),
+          items: z.array(z.string()).default([]),
+        }),
+      )
+      .min(2),
+  }),
+  z.object({
+    type: z.literal("callout"),
+    ...base,
+    variant: z.enum(["limits", "illustrative", "note"]),
+    title: z.string(),
+    paragraphs: z.array(z.string()).min(1),
+    items: z.array(z.string()).default([]),
   }),
   z.object({ type: z.literal("statement"), ...base, factId: z.string(), label: z.string() }),
   z.object({
@@ -194,7 +345,15 @@ export const Block = z.discriminatedUnion("type", [
     numbered: z.boolean().default(false),
     columns: z.union([z.literal(1), z.literal(2)]).default(1),
     photo: PhotoRef.optional(),
-    items: z.array(z.object({ title: z.string(), body: z.string(), ref: z.string().optional() })),
+    items: z.array(
+      z.object({
+        title: z.string(),
+        body: z.string(),
+        ref: z.string().optional(),
+        /** Internal path to a built page; the row becomes a link. */
+        href: z.string().optional(),
+      }),
+    ),
   }),
   z.object({
     type: z.literal("service-index"),
@@ -241,7 +400,11 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
     intro: z.string().optional(),
-    figure: FigureId,
+    figure: FigureId.optional(),
+    spec: DiagramSpec.optional(),
+    purpose: DiagramPurpose,
+    takeaway: z.string().min(20),
+    visualTitle: z.string().optional(),
     caption: z.string(),
     points: z.array(z.object({ title: z.string(), body: z.string() })).default([]),
     photo: PhotoRef.optional(),
@@ -302,7 +465,7 @@ export type BlockType = Block["type"];
 
 export const Page = z.object({
   id: z.string(),
-  kind: z.enum(["home", "service", "contact", "legal"]),
+  kind: z.enum(["home", "service", "hub", "company", "work-hub", "work-area", "contact", "legal"]),
   locale: z.literal("en"),
   path: z.string().regex(/^\/([a-z0-9-]+\/)*$/, "path needs leading and trailing slash"),
   entityId: z.string().optional(),
@@ -318,7 +481,11 @@ export const Page = z.object({
   datePublished: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   dateModified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   parent: z.string().optional(),
-  schemaTypes: z.array(z.enum(["WebPage", "Service", "ContactPage", "FAQPage", "AboutPage"])),
+  schemaTypes: z.array(
+    z.enum(["WebPage", "Service", "ContactPage", "FAQPage", "AboutPage", "CollectionPage"]),
+  ),
+  /** The five visitor answers the page must make obvious (required for commercial pages). */
+  comprehension: Comprehension.optional(),
   sections: z.array(Block).min(1),
 });
 export type Page = z.infer<typeof Page>;

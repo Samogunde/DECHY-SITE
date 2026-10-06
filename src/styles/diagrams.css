@@ -643,6 +643,13 @@
   height: 1.75rem;
   color: var(--dgm-accent);
 }
+.gate-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  align-self: center;
+}
 .gate-text {
   align-self: center;
   font-family: var(--font-heading);
@@ -711,5 +718,328 @@
   }
   .modern-step:not(:last-child) .modern-arrow {
     display: block;
+  }
+}
+
+/* ======================================================================================
+   Data-driven teaching diagrams (SpecDiagram). Each answers one visitor question.
+   ====================================================================================== */
+
+/* ---------------- Flow: what happens, in order ---------------- */
+.sflow {
+  --flow-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--flow-gap);
+}
+.sflow-step {
+  position: relative;
+}
+.sflow-step .dgm-box {
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.9rem;
+}
+.sflow-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.sflow-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: -1.375rem;
+  color: var(--dgm-accent);
+  transform: translateY(-50%);
+}
+.sflow-step + .sflow-step::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--dgm-pad-x) + 0.875rem - 1px);
+  top: calc(var(--flow-gap) * -1);
+  height: var(--flow-gap);
+  border-left: 2px solid var(--dgm-accent);
+}
+@container dgm (min-width: 36rem) {
+  .sflow {
+    grid-template-columns: repeat(var(--mid), minmax(0, 1fr));
+    column-gap: 1.75rem;
+    row-gap: var(--dgm-gap);
+  }
+  .sflow-step .dgm-box {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .sflow-step + .sflow-step::before {
+    display: none;
+  }
+  .sflow-step:not([data-end-mid]) .sflow-arrow {
+    display: block;
+  }
+}
+@container dgm (min-width: 62rem) {
+  .sflow {
+    grid-template-columns: repeat(var(--wide), minmax(0, 1fr));
+  }
+  .sflow-step .sflow-arrow {
+    display: none;
+  }
+  .sflow-step:not([data-end-wide]) .sflow-arrow {
+    display: block;
+  }
+}
+
+/* ---------------- Layers (generic anatomy) ---------------- */
+.anatomy-solo .anatomy-heads {
+  display: none;
+}
+.anatomy-solo .anatomy-row {
+  grid-template-columns: minmax(0, 1fr);
+}
+.anatomy-base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.9rem;
+  margin-top: calc(var(--anatomy-gap) * 1.1);
+  padding: 0.95rem var(--dgm-pad-x);
+  background: var(--color-ink);
+  border-radius: var(--radius-md);
+  color: var(--color-paper);
+}
+.anatomy-base .dgm-title {
+  color: var(--color-paper);
+}
+.anatomy-base .dgm-text {
+  color: var(--color-slate-on-dark);
+}
+
+/* ---------------- Before and after ---------------- */
+.ba {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.25rem;
+}
+.ba-panel {
+  min-width: 0;
+  padding: 1.1rem var(--dgm-pad-x) 1.25rem;
+  border: var(--dgm-line) solid var(--dgm-border);
+  border-radius: var(--radius-lg);
+}
+.ba-before {
+  border-style: dashed;
+}
+.ba-after {
+  border-color: var(--dgm-accent);
+  background: var(--dgm-fill);
+}
+.ba-title {
+  margin: 0.2rem 0 0;
+  font-size: var(--fs-h4);
+}
+.ba-lead {
+  margin: 0.4rem 0 0;
+}
+.ba-nodes {
+  display: grid;
+  gap: 0.15rem;
+  margin-top: 1rem;
+}
+.ba-nodes > li {
+  position: relative;
+}
+.ba-hand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.2rem 0;
+  font-size: var(--fs-caption);
+  font-style: italic;
+  color: var(--dgm-muted);
+}
+.ba-hand::before,
+.ba-hand::after {
+  content: "";
+  flex: 1;
+  border-top: 2px dotted var(--dgm-muted);
+}
+.ba-arrow {
+  display: grid;
+  place-items: center;
+  height: 1.75rem;
+  color: var(--dgm-accent);
+  transform: rotate(90deg);
+}
+.ba-connected {
+  margin-top: 1rem;
+  padding-left: 1.4rem;
+  border-left: 4px solid var(--color-blue);
+}
+.ba-connected .ba-nodes {
+  margin-top: 0;
+  gap: 0.6rem;
+}
+.ba-connected .ba-nodes > li::before {
+  content: "";
+  position: absolute;
+  left: -1.4rem;
+  top: 50%;
+  width: 1.4rem;
+  border-top: 2px solid var(--color-blue);
+}
+.ba-bus-label {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  color: var(--dgm-accent);
+}
+@container dgm (min-width: 40rem) {
+  .ba {
+    grid-template-columns: minmax(0, 1fr) 2.75rem minmax(0, 1fr);
+    align-items: start;
+  }
+  .ba-arrow {
+    height: auto;
+    align-self: center;
+    transform: none;
+  }
+}
+
+/* ---------------- Hub: one thing and what it connects to ---------------- */
+.hub {
+  display: grid;
+  justify-items: start;
+}
+.hub-center {
+  width: 100%;
+  max-width: 34rem;
+}
+.hub-stem {
+  position: relative;
+  margin-left: 1.75rem;
+  height: 1.75rem;
+  border-left: 2px solid var(--dgm-accent);
+}
+.hub-stem::after {
+  content: "";
+  position: absolute;
+  left: -0.3rem;
+  bottom: -0.05rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--dgm-accent);
+  border-bottom: 2px solid var(--dgm-accent);
+  transform: translateX(-0.12rem) rotate(45deg);
+}
+.hub-spokes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--dgm-gap);
+  width: 100%;
+  padding: 1.1rem;
+  border: var(--dgm-line) dashed var(--dgm-accent);
+  border-radius: var(--radius-lg);
+}
+.hub-spokes .dgm-box {
+  height: 100%;
+}
+@container dgm (min-width: 34rem) {
+  .hub-spokes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container dgm (min-width: 52rem) {
+  .hub-spokes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ---------------- Funnel: a large group narrows ---------------- */
+.funnel {
+  display: grid;
+  gap: 0.5rem;
+}
+.funnel-stage {
+  width: 100%;
+}
+.funnel-stage .dgm-box {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.9rem;
+}
+.funnel-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.funnel-stage:last-child .dgm-box {
+  border-color: var(--dgm-accent);
+  border-width: 2px;
+}
+@container dgm (min-width: 36rem) {
+  .funnel-stage {
+    width: var(--w);
+  }
+}
+
+/* ---------------- Decision: which answer fits which situation ---------------- */
+.decision {
+  display: grid;
+  gap: 1rem;
+}
+.decision-question {
+  width: 100%;
+  max-width: 38rem;
+}
+.decision-branches {
+  display: grid;
+  gap: 1.1rem;
+}
+.decision-branch {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.35rem;
+}
+.decision-when {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.decision-arrow {
+  display: grid;
+  place-items: center;
+  height: 1.25rem;
+  color: var(--dgm-accent);
+  transform: rotate(90deg);
+  justify-self: start;
+  margin-left: 0.5rem;
+}
+.decision-then {
+  height: 100%;
+}
+@container dgm (min-width: 44rem) {
+  .decision-branch {
+    grid-template-columns: minmax(0, 1fr) 2.75rem minmax(0, 1.35fr);
+    align-items: stretch;
+    gap: 0;
+  }
+  .decision-when {
+    justify-content: center;
+    padding-block: 0.4rem;
+  }
+  .decision-arrow {
+    height: auto;
+    transform: none;
+    justify-self: center;
+    margin-left: 0;
   }
 }

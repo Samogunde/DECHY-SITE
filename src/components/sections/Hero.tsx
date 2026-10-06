@@ -11,6 +11,7 @@ type HeroBlock = Extract<Block, { type: "hero" }>;
 export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: ReactNode }) {
   const registry = getRegistry();
   const isHome = block.variant === "home";
+  const hasVisual = Boolean(block.figure || block.spec);
   return (
     <section
       id={block.id}
@@ -24,7 +25,7 @@ export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: R
           <div className="h-4 min-[48rem]:h-8" />
         )}
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
-          <div className="lg:col-span-7">
+          <div className={hasVisual ? "lg:col-span-7" : "lg:col-span-9"}>
             {block.eyebrow ? <p className="t-eyebrow m-0">{block.eyebrow}</p> : null}
             <h1
               id={`${block.id}-h`}
@@ -67,9 +68,18 @@ export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: R
               })}
             </div>
           </div>
-          <div className="lg:col-span-5">
-            <Figure id={block.figure} uid={block.id} caption={block.figureCaption} />
-          </div>
+          {hasVisual ? (
+            <div className="lg:col-span-5">
+              <Figure
+                id={block.figure}
+                spec={block.spec}
+                title={block.visualTitle ?? block.headline}
+                uid={block.id}
+                caption={block.figureCaption ?? ""}
+                max="34rem"
+              />
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { Arrow } from "@/components/primitives/Arrow";
 
 export type NavService = { name: string; href: string | null; micro: string };
 export type NavFamily = { id: string; label: string; services: NavService[] };
@@ -12,6 +13,8 @@ type Props = {
   primary: NavPrimary[];
   families: NavFamily[];
   cta: { label: string; href: string };
+  /** The Services hub, when it exists: a guided way to the right service. */
+  allServices: string | null;
 };
 
 /** Items without a page render as plain text, never as links or placeholders. */
@@ -54,7 +57,7 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-export function HeaderNav({ primary, families, cta }: Props) {
+export function HeaderNav({ primary, families, cta, allServices }: Props) {
   const pathname = usePathname();
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -274,6 +277,18 @@ export function HeaderNav({ primary, families, cta }: Props) {
                 </div>
               ))}
             </div>
+            {allServices ? (
+              <div className="mt-6 border-t border-line pt-4">
+                <Link
+                  href={allServices}
+                  onClick={closeAll}
+                  className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
+                >
+                  Not sure which service you need? Find your service
+                  <Arrow />
+                </Link>
+              </div>
+            ) : null}
           </div>
         </div>
       }
@@ -339,6 +354,18 @@ export function HeaderNav({ primary, families, cta }: Props) {
                 ),
               )}
             </ul>
+            {allServices ? (
+              <div className="mt-6">
+                <Link
+                  href={allServices}
+                  onClick={closeAll}
+                  className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-body)] font-semibold text-ink"
+                >
+                  Not sure? Find your service
+                  <Arrow />
+                </Link>
+              </div>
+            ) : null}
             <div className="mt-8">
               <Link href={cta.href} onClick={closeAll} className="btn btn-primary w-full">
                 {cta.label}

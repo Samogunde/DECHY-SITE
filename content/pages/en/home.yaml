@@ -37,7 +37,10 @@ sections:
       - { label: Talk to DECHY, href: /contact/ }
       - { label: Explore our services, href: "#services" }
     figure: system-map
-    figureCaption: "Conceptual diagram: five layers of one system joined by an integration bus. Real engagements vary by organization."
+    purpose: system
+    takeaway: "Software, AI, automation and cloud work best when one connection layer joins them, instead of being separate tools."
+    visualTitle: "Five layers of technology joined into one system"
+    figureCaption: "This diagram shows five layers of technology, from what people see to the infrastructure underneath, joined by one connection layer. It is a conceptual picture; real systems vary."
 
   - type: statement
     id: since-2010
@@ -45,14 +48,66 @@ sections:
     label: About DECHY
     factId: company.statement
 
+  - type: pathfinder
+    id: paths
+    tone: paper
+    label: Find your path
+    heading: Where do you want to start?
+    intro: "Most visitors arrive with a goal, not a service name. Pick the sentence that sounds like you and we will take you to the right place."
+    paths:
+      - need: I need custom software
+        text: "A tool, portal, or system built around the way your organization really works."
+        href: /software-development/
+        action: See software development
+      - need: I need a website or web application
+        text: "A new site, a rebuild, or an online system that customers or staff log in to."
+        href: /web-development/
+        action: See web development
+      - need: I need a mobile app
+        text: "An app for phones and tablets, from first idea to the app stores and beyond."
+        href: /mobile-app-development/
+        action: See mobile apps
+      - need: I need to automate repetitive work
+        text: "Stop copying data, chasing approvals, and building reports by hand."
+        href: /automation/
+        action: See automation
+      - need: I need AI in our business
+        text: "Find out which kind of AI would actually help, and how to use it safely."
+        href: /ai/
+        action: See AI and machine learning
+      - need: I need our systems to share information
+        text: "Connect your website, customer records, payments, and internal tools so data moves on its own."
+        href: /api-integration/
+        action: See integration
+      - need: I need to move to the cloud or modernize
+        text: "Move to the cloud, or replace aging software without stopping the business."
+        href: /cloud/
+        action: See cloud and DevOps
+      - need: I need better security
+        text: "Understand what you need to protect, find weak spots, and strengthen them."
+        href: /cybersecurity/
+        action: See cybersecurity
+      - need: I need an online store
+        text: "Sell online, with payments, stock, and shipping connected."
+        href: /ecommerce/
+        action: See ecommerce
+      - need: I need to be found in search and in AI answers
+        text: "Help people, search engines, and AI assistants find and understand you."
+        href: /seo-aeo-geo/
+        action: See SEO, AEO and GEO
+      - need: I am not sure what I need
+        text: "Talk through the situation with us and decide the technology approach before spending money."
+        href: /consulting/
+        action: See consulting
+
   - type: prose
     id: connected
     tone: paper
     label: How we think
     heading: Technology works better when it is designed together
     paragraphs:
-      - "Most organizations do not have a technology problem in one place. They have a website that does not talk to the CRM, a spreadsheet that feeds three reports, an automation nobody monitors, and an AI pilot with no route into daily work. Each tool was a reasonable purchase. Together they are a system nobody designed."
-      - "At DECHY, we work across the full range of technology: software and web development, AI, automation, integration, cloud, security, data, design, and search visibility. The breadth matters for a practical reason. The hardest problems sit between disciplines. A good automation depends on clean data and reliable APIs. A good AI feature depends on the application around it, the permissions behind it, and the infrastructure under it."
+      - "Most organizations do not have a technology problem in one place. They have a website that does not talk to the CRM (the system where you keep track of customers and sales). They have a spreadsheet that feeds three reports, an automation nobody monitors, and an AI pilot with no route into daily work. Each tool was a reasonable purchase. Together they are a system nobody designed."
+      - "At DECHY, we work across the full range of technology: software and web development, AI, automation, integration, cloud, security, data, design, and search visibility. The breadth matters for a practical reason. The hardest problems sit between disciplines. A good automation depends on clean data and reliable APIs (the connections that let software share information). A good AI feature depends on the application around it, the permissions behind it, and the infrastructure under it."
       - "So we start from the outcome and the workflow, not from a product category. Sometimes the right answer is a custom application. Sometimes it is connecting the tools you already own. Sometimes it is telling you that something should not be built at all."
       - "That is what the line at the top of this page means: software, AI, automation, integration, and cloud, designed to work as one system, inside a wider practice that also covers design, security, data, growth, and strategy."
 
@@ -108,7 +163,7 @@ sections:
       - title: Integration challenges
         body: "Undocumented APIs, payment flows that fail quietly, legacy systems with no interface. We build integrations with monitoring and error handling."
       - title: Growth and search visibility
-        body: "A good business that people cannot find, in search or in AI answers. We work on technical SEO, structured content, and measurement."
+        body: "A good business that people cannot find, in search or in AI answers. We work on technical SEO (making a site easy for search engines to read), clear content, and measurement."
 
   - type: service-index
     id: services
@@ -223,7 +278,10 @@ sections:
     heading: Where AI and automation fit
     intro: "AI and automation are major parts of what we do, and they work best inside the system rather than beside it, connected to the software, data, and permissions around them. The diagram shows one illustrative pattern."
     figure: connected-flow
-    caption: "Illustrative architecture for lead handling. It describes a pattern we can design and build, not a specific delivered system."
+    purpose: workflow
+    takeaway: "Each step hands its result to the next automatically, on a shared foundation, with people checking the decisions that matter."
+    visualTitle: "One enquiry followed through six connected steps"
+    caption: "This diagram follows one customer enquiry through six connected steps, with the shared foundation and the safety checks underneath. It is an illustration of a pattern we can design and build, not a specific delivered system."
     points:
       - title: Automation is not always AI
         body: "Many workflows need clear rules, reliable integrations, and monitoring more than a model. We add AI where judgment, language, or unstructured documents justify the extra care."
@@ -305,7 +363,7 @@ sections:
       - title: Workflow and business process automation
         body: "CRM, sales, finance, support, and operations workflows on platforms such as Airtable, Zapier, Make, and n8n."
       - title: API and systems integration
-        body: "Reliable data flow between CRM, ERP, payments, commerce, and legacy systems."
+        body: "Reliable data flow between your customer system, your accounting and operations software (ERP), payments, online shop, and older systems."
       - title: Cloud, DevOps, and security programs
         body: "Migration, delivery pipelines, observability, identity, and assessments."
       - title: Data platforms and dashboards
@@ -344,7 +402,7 @@ sections:
     heading: Short answers about DECHY
     items:
       - q: What does DECHY do?
-        a: "DECHY is a global technology company. We cover software, web, and mobile development; AI and machine learning; automation and workflows; cloud and DevOps; cybersecurity; data and analytics; API and systems integration; ecommerce; UI/UX and product design; branding; SEO, AEO, and GEO; digital marketing; and technology consulting. Projects often combine several of these."
+        a: "DECHY is a global technology company. We build software, websites, and mobile apps. We add AI, automate repetitive work, and connect systems so they share information. We also handle cloud hosting, security, and data. On the design and growth side, we work on product design, branding, search visibility, and digital marketing. We also advise on technology decisions. Many projects combine several of these."
       - q: Is DECHY a web agency, an AI agency, or a software company?
         a: "None of those alone. Web, AI, and automation are major parts of our work, but DECHY is a broader technology company. What sets our approach apart is designing software, AI, automation, integration, and cloud as one system rather than as separate projects."
       - q: Who does DECHY work with?

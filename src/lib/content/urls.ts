@@ -14,6 +14,7 @@ const HUB: Partial<Record<Node["type"], string>> = {
 /** The path an entity would have if its page existed, or null if its type never has a page. */
 export function entityPath(node: Node, registry: Registry): string | null {
   if (node.type === "service") return `/${node.slug}/`;
+  if (node.type === "work-area") return `/work/areas/${node.slug}/`;
   const hub = HUB[node.type];
   if (hub) return `/${hub}/${node.slug}/`;
   // Business types and problems never get their own page family (DEC-07).

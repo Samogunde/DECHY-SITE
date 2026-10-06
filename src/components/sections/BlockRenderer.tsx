@@ -5,6 +5,7 @@ import type { Block } from "@/lib/content/schema";
 import { ContactForm } from "./ContactForm";
 import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./EditorialBlocks";
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
+import { CalloutBlock, ChooserBlock, PathFinderBlock, TechnicalBlock } from "./GuidanceBlocks";
 import { Hero } from "./Hero";
 import { ColumnsBlock, EntitiesBlock, RelatedBlock, ServiceIndexBlock } from "./ListBlocks";
 import { DiagramBlock, ProcessBlock, TableBlock } from "./ProcessTableBlocks";
@@ -64,6 +65,14 @@ export function BlockRenderer({ block, breadcrumbs }: { block: Block; breadcrumb
       return <CtaBlock block={block} />;
     case "legal":
       return <LegalBlock block={block} />;
+    case "pathfinder":
+      return <PathFinderBlock block={block} />;
+    case "chooser":
+      return <ChooserBlock block={block} />;
+    case "technical":
+      return <TechnicalBlock block={block} />;
+    case "callout":
+      return <CalloutBlock block={block} />;
     case "contact-form":
       return <ContactFormBlock block={block} />;
     default: {

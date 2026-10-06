@@ -9,6 +9,7 @@ import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import { toPlainText } from "@/lib/content/inline";
 import type { Registry } from "@/lib/content/load";
 import type { Page } from "@/lib/content/schema";
+import { entityPath } from "@/lib/content/urls";
 import {
   DESCRIPTOR,
   ORG_ID_FRAGMENT,
@@ -61,7 +62,13 @@ export function websiteNode(): Thing {
 export function buildGraph(page: Page, registry: Registry): Graph {
   const url = absoluteUrl(page.path);
   const crumbs = breadcrumbsFor(page, registry);
-  const pageType = page.schemaTypes.includes("ContactPage") ? "ContactPage" : "WebPage";
+  const pageType = page.schemaTypes.includes("ContactPage")
+    ? "ContactPage"
+    : page.schemaTypes.includes("AboutPage")
+      ? "AboutPage"
+      : page.schemaTypes.includes("CollectionPage")
+        ? "CollectionPage"
+        : "WebPage";
   const nodes: Thing[] = [organizationNode(registry), websiteNode()];
 
   nodes.push({
@@ -109,6 +116,24 @@ export function buildGraph(page: Page, registry: Registry): Graph {
     }
   }
 
+  if (page.schemaTypes.includes("CollectionPage")) {
+    const items = listedPages(page, registry);
+    if (items.length > 0) {
+      nodes.push({
+        "@type": "ItemList",
+        "@id": `${url}#list`,
+        isPartOf: { "@id": `${url}#webpage` },
+        numberOfItems: items.length,
+        itemListElement: items.map((it, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: it.name,
+          url: absoluteUrl(it.path),
+        })),
+      } as Thing);
+    }
+  }
+
   if (page.schemaTypes.includes("FAQPage")) {
     for (const block of page.sections) {
       if (block.type !== "faq") continue;
@@ -129,4 +154,31 @@ export function buildGraph(page: Page, registry: Registry): Graph {
   }
 
   return { "@context": "https://schema.org", "@graph": nodes } as Graph;
+}
+
+/** The built pages a hub page points to, in the order the page lists them (for ItemList). */
+export function listedPages(page: Page, registry: Registry): { name: string; path: string }[] {
+  const out = new Map<string, string>();
+  const add = (path: string | null | undefined, name: string) => {
+    if (!path || path === page.path) return;
+    const target = registry.pageByPath.get(path.split(/[?#]/)[0] ?? "");
+    if (target && !out.has(target.path)) out.set(target.path, name);
+  };
+  for (const b of page.sections) {
+    if (b.type === "pathfinder") for (const p of b.paths) add(p.href, p.need);
+    if (b.type === "index")
+      for (const i of b.items) {
+        if (i.href) add(i.href, i.title);
+        else if (i.ref) {
+          const node = registry.nodes.get(i.ref);
+          if (node) add(entityPath(node, registry), node.name);
+        }
+      }
+    if (b.type === "service-index")
+      for (const svc of registry.services) {
+        const node = registry.nodes.get(svc.id);
+        if (node) add(entityPath(node, registry), svc.name);
+      }
+  }
+  return [...out].map(([path, name]) => ({ path, name }));
 }

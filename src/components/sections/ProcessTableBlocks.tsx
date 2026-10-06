@@ -135,6 +135,8 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
       </div>
       <Figure
         id={block.figure}
+        spec={block.spec}
+        title={block.visualTitle ?? block.heading}
         uid={block.id}
         caption={block.caption}
         className="mt-10 min-[48rem]:mt-14"

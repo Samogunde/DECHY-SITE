@@ -1,0 +1,229 @@
+/* ------------------------------------------------------------------------------------------
+   Guidance components (clarity standard): At a glance, On this page, pathfinder, chooser,
+   technical detail, callouts. Everything works without JavaScript and without hover.
+   ------------------------------------------------------------------------------------------ */
+
+/* ---------------- At a glance ---------------- */
+.glance {
+  padding-block: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+}
+.glance-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem 2rem;
+  margin: 1.5rem 0 0;
+}
+.glance-item {
+  min-width: 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--color-line);
+}
+.glance-item dt {
+  margin-bottom: 0.4rem;
+  color: var(--color-slate-text);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+}
+.glance-next {
+  border-top-color: var(--color-blue);
+}
+@media (min-width: 40rem) {
+  .glance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 80rem) {
+  .glance-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* ---------------- On this page ---------------- */
+.section-nav {
+  padding-block: 1.25rem 0.25rem;
+}
+.section-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.section-nav-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+/* ---------------- Pathfinder ---------------- */
+.pathfinder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 3.5rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.path-row {
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--color-line);
+}
+.path-action {
+  display: block;
+  margin-top: 0.55rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--color-link);
+}
+@media (min-width: 48rem) {
+  .pathfinder {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------------- Chooser (native radio inputs; no JavaScript needed) ---------------- */
+.chooser {
+  min-width: 0;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  border: 0;
+}
+.chooser-question {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.chooser-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.chooser-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.chooser-tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-heading);
+  font-size: var(--fs-button);
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.chooser-tab:hover {
+  background: var(--color-line);
+}
+.chooser-panels {
+  margin-top: 1.25rem;
+}
+.chooser-panel {
+  display: none;
+  padding-top: 1.35rem;
+  border-top: 2px solid var(--color-ink);
+}
+.chooser-when {
+  max-width: var(--measure-service);
+}
+.chooser-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem 2.5rem;
+  margin-top: 1.25rem;
+  max-width: 52rem;
+}
+@media (min-width: 48rem) {
+  .chooser-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.chooser-input:nth-of-type(1):checked ~ .chooser-tabs .chooser-tab:nth-child(1),
+.chooser-input:nth-of-type(2):checked ~ .chooser-tabs .chooser-tab:nth-child(2),
+.chooser-input:nth-of-type(3):checked ~ .chooser-tabs .chooser-tab:nth-child(3),
+.chooser-input:nth-of-type(4):checked ~ .chooser-tabs .chooser-tab:nth-child(4),
+.chooser-input:nth-of-type(5):checked ~ .chooser-tabs .chooser-tab:nth-child(5),
+.chooser-input:nth-of-type(6):checked ~ .chooser-tabs .chooser-tab:nth-child(6) {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.chooser-input:nth-of-type(1):checked ~ .chooser-panels .chooser-panel:nth-child(1),
+.chooser-input:nth-of-type(2):checked ~ .chooser-panels .chooser-panel:nth-child(2),
+.chooser-input:nth-of-type(3):checked ~ .chooser-panels .chooser-panel:nth-child(3),
+.chooser-input:nth-of-type(4):checked ~ .chooser-panels .chooser-panel:nth-child(4),
+.chooser-input:nth-of-type(5):checked ~ .chooser-panels .chooser-panel:nth-child(5),
+.chooser-input:nth-of-type(6):checked ~ .chooser-panels .chooser-panel:nth-child(6) {
+  display: block;
+  animation: msg-in var(--dur-base) var(--ease-out) both;
+}
+.chooser-input:nth-of-type(1):focus-visible ~ .chooser-tabs .chooser-tab:nth-child(1),
+.chooser-input:nth-of-type(2):focus-visible ~ .chooser-tabs .chooser-tab:nth-child(2),
+.chooser-input:nth-of-type(3):focus-visible ~ .chooser-tabs .chooser-tab:nth-child(3),
+.chooser-input:nth-of-type(4):focus-visible ~ .chooser-tabs .chooser-tab:nth-child(4),
+.chooser-input:nth-of-type(5):focus-visible ~ .chooser-tabs .chooser-tab:nth-child(5),
+.chooser-input:nth-of-type(6):focus-visible ~ .chooser-tabs .chooser-tab:nth-child(6) {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+}
+
+/* ---------------- Technical detail ---------------- */
+.technical-list {
+  margin: 0.9rem 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.technical-list > li + li {
+  margin-top: 0.4rem;
+}
+
+/* ---------------- Callouts ---------------- */
+.callout-section {
+  padding-block: clamp(2rem, 1.2rem + 3vw, 4rem);
+}
+.callout {
+  display: grid;
+  gap: 1rem;
+  max-width: var(--measure-service);
+  padding: 1.5rem 1.6rem;
+  border-left: 3px solid var(--color-blue);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  background: var(--color-white);
+}
+.tone-white .callout {
+  background: var(--color-paper);
+}
+.callout-limits {
+  border-left-color: var(--color-ink);
+}
+.callout-illustrative {
+  border: 1.5px dashed var(--color-input-border);
+  border-left-width: 3px;
+  border-left-style: solid;
+  background: transparent;
+}
+.callout-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.callout-list > li + li {
+  margin-top: 0.45rem;
+}

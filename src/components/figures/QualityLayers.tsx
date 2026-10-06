@@ -9,12 +9,12 @@ import { DiagramRoot, step } from "./DiagramRoot";
  * HTML positioned inside that frame, so type stays at the type system's sizes.
  */
 const GATES = [
-  "Type checks and linting",
-  "Automated tests",
-  "Security and dependency scans",
-  "Accessibility and performance budgets",
-  "Review in a preview environment",
-  "Release, then monitoring",
+  { title: "Basic code checks", text: "Automatic checks that catch simple mistakes." },
+  { title: "Automated tests", text: "Programs that test the software on every change." },
+  { title: "Security and update scans", text: "Checks for known weaknesses and outdated parts." },
+  { title: "Accessibility and speed limits", text: "Keeps it usable by everyone, and fast." },
+  { title: "Try it in a preview copy", text: "People review the change somewhere safe first." },
+  { title: "Release, then watch", text: "Go live, then monitor for problems." },
 ];
 
 function CheckIcon() {
@@ -45,7 +45,7 @@ export function QualityLayers({ titleId }: { titleId: string }) {
     <DiagramRoot
       titleId={titleId}
       title="Engineering assurance: test pyramid and release gates"
-      description="Left: a test pyramid with many fast unit tests at the base, integration tests in the middle, and a few end to end tests at the top. Right: the six gates a change passes before release: type checks and linting, automated tests, security and dependency scans, accessibility and performance budgets, review in a preview environment, then release and monitoring."
+      description="Left: a pyramid of tests with many quick tests of small parts at the base, tests of parts working together in the middle, and a few full walk-throughs at the top. Right: the six checks a change passes before release: basic code checks, automated tests, security and update scans, accessibility and speed limits, a try-out in a preview copy, then release and monitoring."
       className="quality"
     >
       <div className="pyramid">
@@ -67,23 +67,26 @@ export function QualityLayers({ titleId }: { titleId: string }) {
           />
         </svg>
         <div className="pyr-label pyr-label-top fx-step" style={step(2)}>
-          <span className="dgm-title">End to end</span>
+          <span className="dgm-title">Full journeys</span>
         </div>
         <div className="pyr-label pyr-label-mid fx-step" style={step(1)}>
-          <span className="dgm-title">Integration</span>
+          <span className="dgm-title">Parts together</span>
         </div>
         <div className="pyr-label pyr-label-base fx-step" style={step(0)}>
-          <span className="dgm-title">Unit tests</span>
-          <span className="dgm-text">Many, fast, run on every change</span>
+          <span className="dgm-title">Small parts</span>
+          <span className="dgm-text">Many quick tests, run on every change</span>
         </div>
       </div>
       <div>
-        <p className="dgm-label">Release gates</p>
+        <p className="dgm-label">Checks before release</p>
         <ol className="gates" style={{ marginTop: "0.5rem" }}>
           {GATES.map((g, i) => (
-            <li key={g} className="fx-step" style={step(i + 3)}>
+            <li key={g.title} className="fx-step" style={step(i + 3)}>
               <CheckIcon />
-              <span className="gate-text">{g}</span>
+              <span className="gate-body">
+                <span className="gate-text">{g.title}</span>
+                <span className="dgm-text">{g.text}</span>
+              </span>
             </li>
           ))}
         </ol>

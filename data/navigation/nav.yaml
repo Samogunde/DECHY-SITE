@@ -14,6 +14,7 @@ cta:
   path: /contact/
 footer:
   explore:
+    - { label: All services, path: /services/ }
     - { label: Solutions, path: /solutions/ }
     - { label: Technologies, path: /technologies/ }
     - { label: Industries, path: /industries/ }

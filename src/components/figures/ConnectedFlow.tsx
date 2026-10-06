@@ -10,12 +10,12 @@ import { DiagramRoot, step } from "./DiagramRoot";
  * per row, and six across with a drop from each step to the shared foundation.
  */
 const STEPS = [
-  { title: "Web form", body: "Captures an inquiry" },
-  { title: "CRM record", body: "Stores the contact" },
-  { title: "Workflow", body: "Routes and enriches" },
-  { title: "AI step", body: "Scores fit; people review" },
-  { title: "Follow-up", body: "Email, calendar, alerts" },
-  { title: "Analytics", body: "Dashboards and reporting" },
+  { title: "Web form", body: "A visitor sends an enquiry" },
+  { title: "Customer record", body: "Saved in your customer system" },
+  { title: "Workflow", body: "Sent to the right person" },
+  { title: "AI step", body: "Suggests how good a fit it is; a person decides" },
+  { title: "Follow-up", body: "Email, calendar, and alerts go out" },
+  { title: "Reporting", body: "Dashboards show what happened" },
 ];
 
 export function ConnectedFlow({ titleId }: { titleId: string }) {
@@ -23,7 +23,7 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
     <DiagramRoot
       titleId={titleId}
       title="Illustrative connected system"
-      description="An illustrative flow in six steps: a web form captures an inquiry; a CRM record stores the contact; a workflow routes and enriches it; an AI step scores fit with people reviewing results; follow-up goes out by email, calendar and alerts; analytics dashboards report on the whole process. Shared APIs, data and authentication connect every step, and monitoring, retries and audit logs sit underneath."
+      description="An illustrative flow in six steps: a visitor sends an enquiry through a web form; it is saved as a customer record; a workflow sends it to the right person; an AI step suggests how good a fit it is while a person decides; follow-up goes out by email, calendar and alerts; and dashboards report on the whole process. One shared foundation connects every step, and safety checks sit underneath."
       className="flow"
     >
       <ol className="flow-steps">
@@ -47,15 +47,17 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
         ))}
       </ol>
       <div className="dgm-box dgm-box-open flow-shared">
-        <span className="dgm-title">Shared APIs, data, and authentication</span>
+        <span className="dgm-title">One shared foundation</span>
         <span className="dgm-text">
-          One set of integrations the whole flow relies on, not six separate connections.
+          Every step uses the same secure connections and the same information, so nothing is typed
+          twice.
         </span>
       </div>
       <div className="dgm-box flow-monitor">
-        <span className="dgm-title">Monitoring</span>
+        <span className="dgm-title">Safety checks</span>
         <span className="dgm-text">
-          Retries, error handling, audit logs, and alerts when a step fails.
+          Failed steps are retried, a record is kept, and a person is alerted if something goes
+          wrong.
         </span>
       </div>
     </DiagramRoot>

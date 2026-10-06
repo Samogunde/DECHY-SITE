@@ -7,6 +7,8 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { breadcrumbsFor } from "./breadcrumbs";
+import { diagramIssues, glossaryIssues, readabilityIssues } from "./clarity";
+import { SERVICE_SIMILARITY, WORK_SIMILARITY, similarityIssues } from "./similarity";
 import { expandFacts, linkTargets, toPlainText } from "./inline";
 import type { Registry } from "./load";
 import type { Block, Page } from "./schema";
@@ -201,6 +203,10 @@ export function validateRegistry(registry: Registry): Issue[] {
       err("relation-type", where, "relatedService must connect two services");
     if (r.type === "appliesToIndustry" && t !== "industry")
       err("relation-type", where, "appliesToIndustry must target an industry");
+    if (r.type === "hasWorkArea" && !(f === "service" && t === "work-area"))
+      err("relation-type", where, "hasWorkArea must connect a service to a work area");
+    if (r.type === "relatedWork" && !(f === "work-area" && t === "work-area"))
+      err("relation-type", where, "relatedWork must connect two work areas");
     if (r.type === "offersSolution" && t !== "solution")
       err("relation-type", where, "offersSolution must target a solution");
     if ((r.type === "addressesProblem" || r.type === "solves") && t !== "problem")
@@ -331,7 +337,31 @@ export function validateRegistry(registry: Registry): Issue[] {
     }
     if (photoRefs.length > 4)
       err("photo-count", where, `${photoRefs.length} photographs on one page; the limit is 4`);
-    const minVariety = page.kind === "home" || page.kind === "service" ? 8 : 1;
+    // Clarity and comprehension standard (ADR 0004).
+    const GUIDED = ["service", "hub", "company", "work-hub", "work-area"];
+    if (GUIDED.includes(page.kind)) {
+      if (!page.comprehension)
+        err("comprehension-missing", where, "A commercial page needs its comprehension record");
+      if (!page.sections.some((b) => b.type === "cta"))
+        err("next-step", where, "A commercial page needs a clear next step (a call to action)");
+    }
+    if (page.kind === "work-area") {
+      if (!page.entityId?.startsWith("workarea."))
+        err("work-entity", where, "A Work Area page must belong to a work-area entity");
+      if (!page.sections.some((b) => b.type === "callout" && b.variant === "illustrative"))
+        err("work-illustrative", where, "A Work Area needs a labeled illustrative scenario");
+    }
+    if (page.kind !== "legal") {
+      for (const m of glossaryIssues(page, registry.facts)) err("glossary", where, m);
+      for (const m of readabilityIssues(page, registry.facts).errors) err("readability", where, m);
+    }
+    for (const m of diagramIssues(page)) err("diagram-clarity", where, m);
+    const minVariety =
+      page.kind === "home" || page.kind === "service"
+        ? 8
+        : page.kind === "work-area" || page.kind === "hub"
+          ? 6
+          : 1;
     if (blockTypes.size < minVariety)
       err(
         "template-sameness",
@@ -501,6 +531,16 @@ export function validateRegistry(registry: Registry): Issue[] {
       err("orphan", page.path, "Page has no inbound internal link");
   }
 
+  /* ---- pages that must not be clones of each other ---- */
+  for (const [kind, config] of [
+    ["service", SERVICE_SIMILARITY],
+    ["work-area", WORK_SIMILARITY],
+  ] as const) {
+    const group = registry.pages.filter((p) => p.kind === kind);
+    for (const i of similarityIssues(group, registry.facts, config))
+      err("similarity", `${i.a} and ${i.b}`, i.message);
+  }
+
   /* ---- related blocks must be backed by graph edges ---- */
   for (const page of registry.pages) {
     if (!page.entityId) continue;
@@ -555,6 +595,31 @@ function checkBlock(
         err("cta-path", where, `CTA points to missing page ${c.href}`);
       else link(page.path, base);
     }
+  }
+  if (b.type === "pathfinder") {
+    for (const p of b.paths) {
+      const base = p.href.split(/[?#]/)[0] ?? "";
+      if (!pathExists(base, registry))
+        err("path-missing", where, `Pathway "${p.need}" points to missing page ${p.href}`);
+      else link(page.path, base);
+    }
+  }
+  if (b.type === "chooser") {
+    for (const o of b.options)
+      if (o.cta) {
+        const base = o.cta.href.split(/[?#]/)[0] ?? "";
+        if (!pathExists(base, registry))
+          err("cta-path", where, `Option CTA points to missing page ${o.cta.href}`);
+        else link(page.path, base);
+      }
+  }
+  if (b.type === "index") {
+    for (const i of b.items)
+      if (i.href) {
+        if (!pathExists(i.href, registry))
+          err("index-href", where, `Row "${i.title}" points to missing page ${i.href}`);
+        else link(page.path, i.href);
+      }
   }
   if (b.type === "hero") {
     for (const c of b.ctas) {

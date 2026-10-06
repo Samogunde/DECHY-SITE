@@ -1,0 +1,206 @@
+# work areas
+# The kinds of system DECHY builds, described in system terms (docs/planning/04-work-architecture.md,
+# layer 1). A Work Area is a capability description, never a client project: no client, project,
+# metric or date is implied. Specific Work Entries are added later from factual project intake.
+# Each Work Area has a canonical home service (primaryService) and a page at /work/areas/{slug}/.
+entities:
+  - id: workarea.custom-software-systems
+    type: work-area
+    name: Custom Software Systems
+    slug: custom-software-systems
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.business-web-platforms
+    type: work-area
+    name: Business Web Platforms
+    slug: business-web-platforms
+    primaryService: svc.web-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.mobile-apps
+    type: work-area
+    name: Mobile Apps
+    slug: mobile-apps
+    primaryService: svc.mobile-app-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.ecommerce-platforms
+    type: work-area
+    name: Ecommerce Platforms
+    slug: ecommerce-platforms
+    primaryService: svc.ecommerce
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.ai-solutions
+    type: work-area
+    name: AI Solutions
+    slug: ai-solutions
+    primaryService: svc.ai
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.ai-agents
+    type: work-area
+    name: AI Agents
+    slug: ai-agents
+    primaryService: svc.ai
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.automation-systems
+    type: work-area
+    name: Automation Systems
+    slug: automation-systems
+    primaryService: svc.automation
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.workflow-automation
+    type: work-area
+    name: Workflow Automation
+    slug: workflow-automation
+    primaryService: svc.automation
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.api-integrations
+    type: work-area
+    name: API Integrations
+    slug: api-integrations
+    primaryService: svc.api-integration
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.data-analytics
+    type: work-area
+    name: Data and Analytics Systems
+    slug: data-analytics
+    primaryService: svc.data-analytics
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.cloud-platforms
+    type: work-area
+    name: Cloud Platforms
+    slug: cloud-platforms
+    primaryService: svc.cloud
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.devops-infrastructure
+    type: work-area
+    name: DevOps and Infrastructure
+    slug: devops-infrastructure
+    primaryService: svc.cloud
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.cybersecurity-systems
+    type: work-area
+    name: Cybersecurity Systems
+    slug: cybersecurity-systems
+    primaryService: svc.cybersecurity
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.digital-products
+    type: work-area
+    name: Digital Products
+    slug: digital-products
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.ui-ux-product-design
+    type: work-area
+    name: UI/UX and Product Design
+    slug: ui-ux-product-design
+    primaryService: svc.ui-ux
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.brand-systems
+    type: work-area
+    name: Brand Systems
+    slug: brand-systems
+    primaryService: svc.branding
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.seo-search-visibility
+    type: work-area
+    name: SEO and Search Visibility
+    slug: seo-search-visibility
+    primaryService: svc.seo-aeo-geo
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.digital-marketing-systems
+    type: work-area
+    name: Digital Marketing Systems
+    slug: digital-marketing-systems
+    primaryService: svc.digital-marketing
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.digital-transformation
+    type: work-area
+    name: Digital Transformation
+    slug: digital-transformation
+    primaryService: svc.consulting
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.internal-business-tools
+    type: work-area
+    name: Internal Business Tools
+    slug: internal-business-tools
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.customer-portals
+    type: work-area
+    name: Customer Portals
+    slug: customer-portals
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.operations-platforms
+    type: work-area
+    name: Operations Platforms
+    slug: operations-platforms
+    primaryService: svc.software-development
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.integration-platforms
+    type: work-area
+    name: Integration Platforms
+    slug: integration-platforms
+    primaryService: svc.api-integration
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.commerce-systems
+    type: work-area
+    name: Commerce Systems
+    slug: commerce-systems
+    primaryService: svc.ecommerce
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area
+  - id: workarea.knowledge-and-content-systems
+    type: work-area
+    name: Knowledge and Content Systems
+    slug: knowledge-and-content-systems
+    primaryService: svc.ai
+    prominence: feature
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: work-area

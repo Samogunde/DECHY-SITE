@@ -1,10 +1,11 @@
 import type { CSSProperties } from "react";
-import type { FigureId } from "@/lib/content/schema";
+import type { DiagramSpec, FigureId } from "@/lib/content/schema";
 import { ConnectedFlow } from "./ConnectedFlow";
 import { ModernizationPath } from "./ModernizationPath";
 import { PortalWireframe } from "./PortalWireframe";
 import { QualityLayers } from "./QualityLayers";
 import { SoftwareAnatomy } from "./SoftwareAnatomy";
+import { SpecDiagram, defaultMax } from "./SpecDiagram";
 import { SystemMap } from "./SystemMap";
 
 /**
@@ -27,21 +28,35 @@ const FIGURES: Record<
 
 export function Figure({
   id,
+  spec,
+  title,
   uid,
   caption,
   className = "",
+  max,
 }: {
-  id: FigureId;
+  /** A named, bespoke diagram (Phase 1 diagrams). */
+  id?: FigureId;
+  /** A data-driven teaching diagram. Exactly one of id or spec is given. */
+  spec?: DiagramSpec;
+  title?: string;
   uid: string;
   caption: string;
   className?: string;
+  /** Override the widest the figure may be (for example in a narrow hero column). */
+  max?: string;
 }) {
-  const { Component, max } = FIGURES[id];
-  const style = max ? ({ "--fig-max": max } as CSSProperties) : undefined;
+  const named = id ? FIGURES[id] : undefined;
+  const widest = max ?? (spec ? defaultMax(spec) : named?.max);
+  const style = widest ? ({ "--fig-max": widest } as CSSProperties) : undefined;
   return (
     <figure className={`figure ${className}`.trim()} style={style} data-reveal="figure">
       <div className="figure-frame">
-        <Component titleId={`fig-${uid}`} />
+        {spec ? (
+          <SpecDiagram spec={spec} titleId={`fig-${uid}`} title={title ?? caption} />
+        ) : named ? (
+          <named.Component titleId={`fig-${uid}`} />
+        ) : null}
       </div>
       <figcaption className="figure-caption t-caption">{caption}</figcaption>
     </figure>

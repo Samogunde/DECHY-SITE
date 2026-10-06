@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { EntityLink, Inline } from "@/components/primitives/Inline";
 import { Photo } from "@/components/primitives/Photo";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
+import { pathExists } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
@@ -116,7 +118,13 @@ function IndexItems({ block, twoCol }: { block: Of<"index">; twoCol: boolean }) 
                 </span>
               ) : null}
               <span>
-                {item.ref ? <EntityLink id={item.ref}>{item.title}</EntityLink> : item.title}
+                {item.href && pathExists(item.href, getRegistry()) ? (
+                  <Link href={item.href}>{item.title}</Link>
+                ) : item.ref ? (
+                  <EntityLink id={item.ref}>{item.title}</EntityLink>
+                ) : (
+                  item.title
+                )}
               </span>
             </h3>
             <p className="t-body m-0 max-w-[60ch]">

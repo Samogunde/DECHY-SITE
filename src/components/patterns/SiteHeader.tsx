@@ -27,6 +27,7 @@ export function SiteHeader() {
       })),
   }));
   const cta = { label: registry.nav.cta.label, href: registry.nav.cta.path };
+  const allServices = registry.pageByPath.has("/services/") ? "/services/" : null;
   return (
     <header
       data-site-header
@@ -41,7 +42,7 @@ export function SiteHeader() {
             className="h-9 min-[30rem]:h-10 min-[74rem]:h-[3.25rem]"
           />
         </Link>
-        <HeaderNav primary={primary} families={families} cta={cta} />
+        <HeaderNav primary={primary} families={families} cta={cta} allServices={allServices} />
       </div>
     </header>
   );
