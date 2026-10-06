@@ -578,6 +578,8 @@ This reconciles AGENTS 60 and 95, the Handoff, the Content Master, and your inst
 | 5 | Country Waves 2 and 3 (DE, FR, NL, CH, BE, AT, ES, IT, SE, AE); article Batches 4 to 6; case studies as verified detail arrives | Per-batch review |
 | 6 | Language localization (locale versions of country and core pages); country x service intersections | Genuine localization and evidence per market |
 
+> **PROPOSED (not yet approved), 2026-10-05.** The detailed Phase 2 execution plan, with exact routes, build order, differentiation controls and decisions, is `docs/planning/10-phase-2-plan.md`. It keeps this table's Phase 2 scope and asks the owner to decide whether three guided hubs (`/services/`, `/solutions/`, `/technologies/`) ship in Phase 2.
+
 **Phase 1 canonical scope (APPROVED; authoritative list).**
 
 1. Application foundation on the current patched Next.js stack (React, TypeScript strict, App Router, Tailwind), at the repository root.
