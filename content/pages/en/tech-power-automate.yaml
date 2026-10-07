@@ -1,0 +1,207 @@
+id: page.tech-power-automate
+kind: technology
+locale: en
+path: /automation/microsoft-power-automate/
+parent: /automation/
+entityId: tech.microsoft-power-automate
+title: "Power Automate Consulting and Build | DECHY"
+description: "Microsoft Power Automate from DECHY: automating approvals, notices, and data entry across Microsoft 365, and when another automation tool fits better."
+breadcrumbLabel: Power Automate
+intent:
+  primary: power automate consulting
+  secondary:
+    - power automate development
+    - power automate vs zapier
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Power Automate is Microsoft's tool for automating routine work between the programs a business already uses, especially Microsoft 365."
+  problem: "Approvals sit in inboxes, files are copied by hand, and teams on Microsoft tools want automation without a custom build."
+  audience: "Organizations that run on Microsoft 365 and want to automate approvals, notifications, and data movement."
+  choose: "Choose Power Automate when most of your work already lives in Microsoft tools. Choose another platform when you connect many non-Microsoft systems or need more control."
+  next: "Tell us which process you want to automate and which tools it touches. We will say whether Power Automate fits and outline the first flow."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Automation platform
+    headline: Power Automate
+    lead: "Power Automate lets a business automate routine steps without writing a full application. It is strongest inside Microsoft 365. We design and build the flows, and we tell you when another tool would serve you better."
+    support: "This page covers what it does well, where it runs out of room, and how it compares with Zapier, Make, and n8n."
+    ctas:
+      - { label: Talk to us about Power Automate, href: "/contact/?service=automation" }
+      - { label: How a flow works, href: "#how" }
+    spec:
+      kind: flow
+      steps:
+        - title: Something happens
+          text: "A form is submitted, a file arrives, or a message is received."
+        - title: Rules check it
+          text: "The flow decides who needs to see it and what is missing."
+        - title: People are asked
+          text: "An approval goes to the right person in Teams or email."
+        - title: Systems are updated
+          text: "Records, files, and spreadsheets change without re-typing."
+        - title: A log is kept
+          text: "Every step is recorded, so you can see what happened."
+    purpose: workflow
+    takeaway: "A flow starts from an event, applies rules, asks people when needed, updates systems, and keeps a record."
+    visualTitle: "How an approval flow runs"
+    figureCaption: "This diagram follows one approval flow in five steps, from the event that starts it to the log that records what happened."
+
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: Automation that lives next to your documents
+    paragraphs:
+      - "Most office work is a chain: someone asks, someone approves, someone updates a record. Power Automate turns a chain like that into a flow that runs by itself. It watches for a trigger, such as a new form entry, and then performs the steps."
+      - "Its main advantage is where it sits. If your staff already use Outlook, Teams, SharePoint, and Excel, the flow can reach all of them with your existing sign-in. There is little to install and little new to learn."
+      - "It also has a second mode for software that has no connection to offer. A desktop flow can copy values between screens the way a person would. This is often called robotic process automation, or RPA, and it is best kept for cases where nothing better exists."
+    aside:
+      title: Good to know
+      items:
+        - "Strongest with Microsoft 365 and other Microsoft services"
+        - "Some connections need a higher-priced license"
+        - "Governance matters once many people build flows"
+
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Power Automate beside the other platforms
+    caption: Power Automate compared with the other common automation platforms
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Power Automate
+        - "Work inside Microsoft 365, approvals in Teams, and organizations with Microsoft licenses."
+        - "Connections outside the Microsoft world can be limited or need a premium license."
+      - - "[Zapier](ref:tech.zapier)"
+        - "Quick links between many popular web tools with little set-up."
+        - "Costs rise with volume, and complex logic gets awkward."
+      - - "[Make](ref:tech.make)"
+        - "Visual, multi-step flows with branching across many services."
+        - "More to learn than the simplest tools."
+      - - "[n8n](ref:tech.n8n)"
+        - "Teams that want control, self-hosting, and custom code in their flows."
+        - "You run and secure more of it yourself."
+
+  - type: chooser
+    id: how
+    tone: white
+    label: Choosing
+    heading: Which kind of flow do you need?
+    intro: "Power Automate covers several different jobs. The right one depends on what you are connecting."
+    question: What are you trying to automate?
+    options:
+      - label: An approval or notification
+        when: "A request needs a yes or no from a person, and the people use Teams or Outlook."
+        get: "A cloud flow with an approval step, reminders, and a record of the decision."
+        watch: "Define who approves when the first person is away."
+      - label: Moving data between Microsoft files and lists
+        when: "Values copied from forms, spreadsheets, or SharePoint lists into other places."
+        get: "A scheduled or triggered flow that keeps the places in step."
+        watch: "Keep one place as the source of truth to avoid conflicting copies."
+      - label: Connecting to a system with no connector
+        when: "An older program that offers nothing to connect to."
+        get: "A desktop flow that works through the screens, as a last resort."
+        watch: "It breaks when the screens change, so it needs upkeep."
+      - label: Joining many non-Microsoft tools
+        when: "Most of your systems are outside Microsoft 365."
+        get: "A comparison with other platforms before you commit."
+        watch: "The cheapest tool to start is not always the cheapest to run."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Power Automate
+    columns:
+      - title: Design
+        items:
+          - "Mapping the process, the people, and the exceptions before building."
+          - "Choosing between Power Automate and another platform on the facts."
+      - title: Build
+        items:
+          - "Approval, notification, and data-movement flows."
+          - "Connections to Microsoft 365 and to outside systems."
+      - title: Govern
+        items:
+          - "Naming, ownership, and review rules so flows stay manageable."
+          - "Limits on who can connect to company data."
+      - title: Look after
+        items:
+          - "Monitoring failed runs and fixing them."
+          - "Updating flows as your process changes."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we approach Power Automate projects."
+    panels:
+      - title: Flows and connections
+        paragraphs:
+          - "We separate flows by purpose, keep each one small, and use shared connections owned by a service account rather than a person's own sign-in, so a flow does not stop when someone leaves."
+      - title: Reliability
+        items:
+          - "Every flow handles failure: retries for temporary errors and an alert for the rest."
+          - "Run history is reviewed on a schedule, and fixes are tracked."
+          - "Limits on how often connections can be called are designed in, not discovered in production."
+      - title: Data and security
+        items:
+          - "Data policies decide which services may be combined, so company data does not flow to personal tools."
+          - "Secrets and keys are stored in the platform's secure store."
+      - title: When to build outside the platform
+        paragraphs:
+          - "Heavy logic, high volumes, or tight performance needs can be better served by a small custom service that the flow calls. We build those through our [automation](ref:svc.automation) and [software](ref:svc.software-development) work."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Power Automate
+    items:
+      - q: Is Power Automate included with Microsoft 365?
+        a: "Some use is included with certain Microsoft 365 plans, with limits. Premium connections and desktop flows usually need extra licenses, so we check this before we design."
+      - q: Power Automate or Zapier?
+        a: "If your work lives in Microsoft 365, Power Automate is usually the more natural fit. If you join many outside web tools quickly, Zapier or Make may be simpler."
+      - q: Can business staff build their own flows?
+        a: "Yes, and that is a strength. It is also why governance matters: a few rules about ownership and data keep it safe as the number of flows grows."
+      - q: Can you rescue flows that have grown messy?
+        a: "Yes. We review what exists, retire what is unused, and rebuild the fragile parts so they are documented and monitored."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Power Automate across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.automation]
+      - title: Related technologies
+        entityIds: [plat.microsoft-365, plat.azure, plat.airtable, plat.salesforce]
+      - title: Alternatives
+        entityIds: [tech.zapier, tech.make, tech.n8n]
+      - title: Solutions
+        entityIds: [sol.business-process-automation, sol.crm-integration]
+      - title: Systems we build
+        entityIds:
+          [
+            workarea.automation-systems,
+            workarea.workflow-automation,
+            workarea.internal-business-tools,
+          ]
+      - title: Where it applies
+        entityIds: [ind.professional-services, ind.finance, ind.education]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which process to automate
+    body: "Describe the steps, the people, and the tools involved. We will say whether Power Automate fits and outline a first flow."
+    primary: { label: Talk to DECHY about Power Automate, href: "/contact/?service=automation" }

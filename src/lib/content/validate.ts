@@ -9,7 +9,10 @@ import path from "node:path";
 import { breadcrumbsFor } from "./breadcrumbs";
 import { diagramIssues, glossaryIssues, readabilityIssues } from "./clarity";
 import {
+  INDUSTRY_SIMILARITY,
+  LOCATION_SIMILARITY,
   SERVICE_SIMILARITY,
+  SOLUTION_SIMILARITY,
   TECH_SIMILARITY,
   WORK_SIMILARITY,
   similarityIssues,
@@ -31,6 +34,29 @@ const TECHNOLOGY_TYPES = new Set([
   "tool",
   "integration",
 ]);
+
+/** Wording that would imply an office, branch, local team, or address (the company has none). */
+const PRESENCE_CLAIMS = [
+  /\b(local|regional|in-country|country|head) (office|branch|team|presence|address|staff)s?\b/i,
+  /\boffices? (in|across|near)\b/i,
+  /\bvisit (us|our)\b/i,
+  /\bheadquarter/i,
+  /\bon the ground\b/i,
+  /\blocal (employees|engineers|specialists|consultants)\b/i,
+];
+
+/** Named products whose capability the owner has not confirmed (doc 14, section 10.3). */
+const UNCONFIRMED_PRODUCTS = [
+  /\bpower ?bi\b/i,
+  /\btableau\b/i,
+  /\blooker\b/i,
+  /\bkafka\b/i,
+  /\brabbitmq\b/i,
+  /\bopensearch\b/i,
+  /\bdatadog\b/i,
+  /\bsentry\b/i,
+  /\bruby on rails\b/i,
+];
 
 export type Issue = { level: "error" | "warn"; code: string; where: string; message: string };
 
@@ -362,7 +388,17 @@ export function validateRegistry(registry: Registry): Issue[] {
     if (photoRefs.length > 4)
       err("photo-count", where, `${photoRefs.length} photographs on one page; the limit is 4`);
     // Clarity and comprehension standard (ADR 0004).
-    const GUIDED = ["service", "hub", "company", "work-hub", "work-area", "technology"];
+    const GUIDED = [
+      "service",
+      "hub",
+      "company",
+      "work-hub",
+      "work-area",
+      "technology",
+      "solution",
+      "industry",
+      "location",
+    ];
     if (GUIDED.includes(page.kind)) {
       if (!page.comprehension)
         err("comprehension-missing", where, "A commercial page needs its comprehension record");
@@ -394,6 +430,81 @@ export function validateRegistry(registry: Registry): Issue[] {
       if (node?.type === "integration" && !specs.some((s) => s.kind === "flow"))
         err("integration-flow", where, "An integration page needs a data-flow diagram (AGENTS 76)");
     }
+    if (page.kind === "solution") {
+      const node = page.entityId ? registry.nodes.get(page.entityId) : undefined;
+      if (!node || node.type !== "solution")
+        err("solution-entity", where, "A solution page must belong to a solution entity");
+      if (page.parent !== "/solutions/")
+        err("solution-parent", where, "A solution page's parent must be /solutions/");
+      const related = page.sections.flatMap((b) => (b.type === "related" ? b.groups : []));
+      const relatedTypes = (types: string[]) =>
+        related
+          .flatMap((g) => g.entityIds)
+          .filter((id) => types.includes(registry.nodes.get(id)?.type ?? "")).length;
+      if (relatedTypes(["service"]) < 1)
+        err("solution-service", where, "A solution page must link at least one service");
+      if (relatedTypes(["work-area"]) < 1)
+        err("solution-work-area", where, "A solution page must link at least one Work Area");
+      if (relatedTypes([...TECHNOLOGY_TYPES]) < 2)
+        err("solution-technology", where, "A solution page must link at least two technologies");
+      if (page.sections.some((b) => b.type === "callout" && b.variant === "illustrative"))
+        err(
+          "solution-disclaimer",
+          where,
+          "Solution pages use natural wording, not disclaimer boxes",
+        );
+      const first = page.sections[0];
+      if (first?.type !== "hero" || !first.spec)
+        err("solution-diagram", where, "A solution page opens with a hero that carries a diagram");
+    }
+    if (page.kind === "industry") {
+      const node = page.entityId ? registry.nodes.get(page.entityId) : undefined;
+      if (!node || node.type !== "industry")
+        err("industry-entity", where, "An industry page must belong to an industry entity");
+      if (page.parent !== "/industries/")
+        err("industry-parent", where, "An industry page's parent must be /industries/");
+      if (page.sections.some((b) => b.type === "callout" && b.variant === "illustrative"))
+        err(
+          "industry-disclaimer",
+          where,
+          "Industry pages use natural wording, not disclaimer boxes",
+        );
+    }
+    if (page.kind === "location") {
+      const node = page.entityId ? registry.nodes.get(page.entityId) : undefined;
+      if (!node || node.type !== "country")
+        err("location-entity", where, "A location page must belong to a country entity");
+      if (page.parent !== "/locations/")
+        err("location-parent", where, "A location page's parent must be /locations/");
+    }
+    if (page.kind === "article") {
+      if (!page.article) err("article-meta", where, "An article needs its article record");
+      if (page.parent !== "/resources/")
+        err("article-parent", where, "An article's parent must be /resources/");
+      if (!page.schemaTypes.includes("Article"))
+        err("article-schema", where, "An article page declares the Article schema type");
+    }
+    // Presence claims: DECHY is a global company with no offices, branches, local teams, or
+    // addresses. Location, industry, and solution pages never imply otherwise.
+    if (["location", "industry", "solution", "article"].includes(page.kind)) {
+      for (const s of strings)
+        for (const re of PRESENCE_CLAIMS)
+          if (re.test(s))
+            err(
+              "presence-claim",
+              `${where} :: ${s.slice(0, 50)}`,
+              `Implies a physical presence (${re})`,
+            );
+    }
+    // Capabilities awaiting the owner's confirmation are never named in page copy.
+    for (const s of strings)
+      for (const re of UNCONFIRMED_PRODUCTS)
+        if (re.test(s))
+          err(
+            "unconfirmed-capability",
+            `${where} :: ${s.slice(0, 50)}`,
+            `Names an unconfirmed product (${re})`,
+          );
     if (page.kind !== "legal") {
       for (const m of glossaryIssues(page, registry.facts)) err("glossary", where, m);
       for (const m of readabilityIssues(page, registry.facts).errors) err("readability", where, m);
@@ -404,9 +515,11 @@ export function validateRegistry(registry: Registry): Issue[] {
         ? 8
         : page.kind === "work-area" || page.kind === "hub"
           ? 6
-          : page.kind === "technology"
+          : page.kind === "technology" || page.kind === "industry" || page.kind === "location"
             ? 7
-            : 1;
+            : page.kind === "solution"
+              ? 8
+              : 1;
     if (blockTypes.size < minVariety)
       err(
         "template-sameness",
@@ -435,7 +548,15 @@ export function validateRegistry(registry: Registry): Issue[] {
             ? 140
             : page.kind === "technology"
               ? 900
-              : 0;
+              : page.kind === "solution"
+                ? 1100
+                : page.kind === "industry"
+                  ? 1000
+                  : page.kind === "location"
+                    ? 900
+                    : page.kind === "article"
+                      ? 1400
+                      : 0;
     if (words < min)
       err("thin-page", where, `${words} words; ${min} required for ${page.kind} pages`);
 
@@ -570,6 +691,8 @@ export function validateRegistry(registry: Registry): Issue[] {
     Services: "services",
     Technologies: "technologies",
     Work: "work",
+    Solutions: "solutions",
+    Industries: "industries",
   };
   for (const item of registry.nav.primary) {
     const want = KIND_BY_LABEL[item.label] ?? "link";
@@ -609,6 +732,24 @@ export function validateRegistry(registry: Registry): Issue[] {
         p.path,
         "Technology page is not placed in a Technologies menu category",
       );
+  for (const [key, type] of [
+    ["solutions", "solution"],
+    ["industries", "industry"],
+  ] as const) {
+    const seen = new Set<string>();
+    for (const i of registry.nav[key].items) {
+      const node = registry.nodes.get(i.id);
+      if (!node || node.type !== type)
+        err("nav-entity", `${key}/${i.id}`, `${i.id} is not a ${type} entity`);
+      if (seen.has(i.id)) err("nav-duplicate", `${key}/${i.id}`, "Placed twice");
+      seen.add(i.id);
+      const path = node ? publishedPath(node, registry) : null;
+      if (path) link("nav", path);
+    }
+    for (const p of registry.pages.filter((x) => x.kind === type))
+      if (!seen.has(p.entityId ?? ""))
+        err("nav-missing", p.path, `${type} page is not placed in the ${key} menu`);
+  }
   placed.clear();
   for (const g of registry.nav.work.groups)
     for (const id of g.items) place(id, `work/${g.id}`, ["work-area"]);
@@ -634,6 +775,9 @@ export function validateRegistry(registry: Registry): Issue[] {
     ["service", SERVICE_SIMILARITY],
     ["work-area", WORK_SIMILARITY],
     ["technology", TECH_SIMILARITY],
+    ["solution", SOLUTION_SIMILARITY],
+    ["industry", INDUSTRY_SIMILARITY],
+    ["location", LOCATION_SIMILARITY],
   ] as const) {
     const group = registry.pages.filter((p) => p.kind === kind);
     for (const i of similarityIssues(group, registry.facts, config))

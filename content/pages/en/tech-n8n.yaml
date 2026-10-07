@@ -186,7 +186,7 @@ sections:
     heading: Questions about n8n
     items:
       - q: Is self-hosting n8n free?
-        a: "The software has a free self-hosted option with licence terms you should read for your use. The real cost is hosting and the time to run it, which we can handle."
+        a: "The software has a free self-hosted option with license terms you should read for your use. The real cost is hosting and the time to run it, which we can handle."
       - q: Can n8n use AI models?
         a: "Yes. Workflows can call language models, search documents, and use the results in later steps. We add checks and limits around those steps."
       - q: Is it harder to use than Zapier?

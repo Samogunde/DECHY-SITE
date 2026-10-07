@@ -6,6 +6,7 @@ import { getPage, getRegistry } from "@/lib/content/load";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { BlockRenderer } from "./BlockRenderer";
+import { articlePages } from "./DiscoveryBlocks";
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
@@ -19,7 +20,14 @@ export function PageView({ path }: { path: string }) {
   const primaryCta = page.sections.find((b) => b.type === "cta");
   const glanceCta = primaryCta && primaryCta.type === "cta" ? primaryCta.primary : undefined;
   const navItems = page.sections
-    .filter((b) => b.type !== "hero" && b.type !== "cta" && "label" in b && b.label)
+    .filter(
+      (b) =>
+        b.type !== "hero" &&
+        b.type !== "cta" &&
+        "label" in b &&
+        b.label &&
+        (b.type !== "articles" || articlePages(registry).length > 0),
+    )
     .map((b) => ({
       id: b.id,
       label:

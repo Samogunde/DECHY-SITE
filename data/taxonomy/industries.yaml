@@ -74,7 +74,7 @@ entities:
     name: Education
     slug: education
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.energy
@@ -106,7 +106,7 @@ entities:
     name: Finance
     slug: finance
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.fitness
@@ -130,7 +130,7 @@ entities:
     name: Healthcare
     slug: healthcare
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.hospitality
@@ -170,7 +170,7 @@ entities:
     name: Logistics
     slug: logistics
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.manufacturing
@@ -178,7 +178,7 @@ entities:
     name: Manufacturing
     slug: manufacturing
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.media
@@ -210,7 +210,7 @@ entities:
     name: Professional Services
     slug: professional-services
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.property-management
@@ -226,7 +226,7 @@ entities:
     name: Real Estate
     slug: real-estate
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.recruitment
@@ -250,7 +250,7 @@ entities:
     name: Retail
     slug: retail
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.saas

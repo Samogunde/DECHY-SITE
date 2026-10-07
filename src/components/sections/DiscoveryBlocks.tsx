@@ -251,3 +251,62 @@ export function DirectoryBlock({ block }: { block: Of<"directory"> }) {
     </Section>
   );
 }
+
+const ARTICLE_CATEGORIES: Record<string, string> = {
+  guide: "Guides",
+  comparison: "Comparisons",
+  decision: "Decision frameworks",
+  explainer: "Explainers",
+  industry: "Industry notes",
+};
+
+/** Published articles in the resource library, grouped by kind. Renders nothing until one exists. */
+export function articlePages(registry: Registry): Page[] {
+  return registry.pages
+    .filter((p) => p.kind === "article" && p.indexing === "index")
+    .sort((a, b) => b.datePublished.localeCompare(a.datePublished) || a.path.localeCompare(b.path));
+}
+
+export function ArticlesBlock({ block }: { block: Of<"articles"> }) {
+  const registry = getRegistry();
+  const articles = articlePages(registry);
+  if (articles.length === 0) return null;
+  const groups = Object.entries(ARTICLE_CATEGORIES)
+    .map(([key, label]) => ({
+      key,
+      label,
+      items: articles.filter((p) => p.article?.category === key),
+    }))
+    .filter((g) => g.items.length > 0);
+  return (
+    <Section id={block.id} tone={block.tone}>
+      <div className="max-w-[48rem]">
+        <SectionHeader
+          id={block.id}
+          label={block.label}
+          heading={block.heading}
+          intro={block.intro}
+        />
+      </div>
+      <div className="mt-10 grid gap-10 min-[48rem]:grid-cols-2" data-reveal="group">
+        {groups.map((g) => (
+          <div key={g.key}>
+            <h3 className="t-h4 m-0">{g.label}</h3>
+            <ul className="t-body m-0 mt-3 list-none p-0">
+              {g.items.map((p) => (
+                <li key={p.path} className="rule-row py-3">
+                  <Link href={p.path} className="font-semibold">
+                    {p.breadcrumbLabel}
+                  </Link>
+                  <span className="mt-1 block text-slate-text">
+                    <Inline text={p.article?.summary ?? p.description} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+}

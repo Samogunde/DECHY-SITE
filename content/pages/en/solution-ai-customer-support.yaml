@@ -1,0 +1,238 @@
+id: page.solution-ai-customer-support
+kind: solution
+locale: en
+path: /solutions/ai-customer-support/
+parent: /solutions/
+entityId: sol.ai-customer-support
+title: AI Customer Support Solutions | DECHY
+description: "AI customer support from DECHY: answering routine questions quickly from your own content, handing the hard ones to your team, and keeping answers accurate."
+breadcrumbLabel: AI customer support
+intent:
+  primary: ai customer support
+  secondary:
+    - ai chatbot for customer service
+    - automate customer support
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: AI customer support uses a language model to answer routine customer questions from your own approved content, and passes anything it cannot handle to a person with the context attached.
+  problem: Support teams answer the same questions all day while customers wait, and urgent or sensitive cases get lost in the queue.
+  audience: Support leaders and owners whose teams are swamped by repeat questions, and businesses that want faster first answers without hiring for every peak.
+  choose: Automate the repeated, well-documented questions. Keep people for anything sensitive, unusual, or costly if wrong, and measure accuracy before you widen the scope.
+  next: Tell us the questions you answer most and where the answers live. We will outline what to automate, what to keep human, and a first pilot.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Solution
+    headline: AI customer support
+    lead: Most support questions are asked again and again, and most have an answer that already exists in your help pages, policies, or past replies. We build an assistant that answers those from your own content, and hands the rest to your team with the conversation attached.
+    support: This page explains what to automate, what to keep human, and how to keep the answers accurate.
+    ctas:
+      - label: Talk to us about support
+        href: /contact/?service=ai
+      - label: What the assistant should handle
+        href: "#scope"
+    spec:
+      kind: decision
+      question: Should the assistant answer this?
+      branches:
+        - when: A common question with a clear answer in your own content
+          choose: Let the assistant answer
+          text: Fast, consistent, and available at any hour, with a link to the source.
+        - when: The question needs an account lookup or a simple action
+          choose: Let it help, with checks
+          text: It can fetch an order status or start a return, within strict rules.
+        - when: The customer is upset, or the case involves money, health, or safety
+          choose: Hand to a person
+          text: A trained colleague takes over, with the history already in front of them.
+        - when: The answer is not in your content
+          choose: Say so, and hand over
+          text: The assistant admits it does not know and routes the case, instead of guessing.
+    purpose: decision
+    takeaway: An assistant answers common, well-documented questions, helps with simple account tasks, and hands everything sensitive or unknown to a person.
+    visualTitle: What the assistant answers and what it hands over
+    figureCaption: "This diagram shows four kinds of customer question and what happens to each: answer it, help with checks, hand it to a person, or admit it does not know and hand over."
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: The same questions, every day
+    paragraphs:
+      - Where is my order. How do I reset my password. What is your returns policy. These questions fill a large share of most support inboxes. Each is easy for a person to answer, and together they take the hours that the team needs for the cases that need thought.
+      - Customers feel the cost as waiting. A simple question sits behind a difficult one. After hours there is nobody. During a busy week the queue grows, and the first reply comes a day later.
+      - "An assistant fixes the routine part. It answers at once, at any hour, from content you control. It does not fix the hard part, which is why the design matters: what it may answer, how it hands over, and how you know it is right."
+  - type: chooser
+    id: scope
+    tone: paper
+    label: Scope
+    heading: What should it handle?
+    intro: The right scope starts small and widens as you see how it performs. Four starting points cover most businesses.
+    question: What is your biggest support burden?
+    options:
+      - label: Repeat questions about policies and products
+        when: Delivery times, returns, pricing rules, how-to steps, and opening hours.
+        get: An assistant that answers from your help pages and policies, and shows where each answer came from.
+        watch: Out-of-date content gives out-of-date answers, so someone must own it.
+      - label: Order and account questions
+        when: Customers ask for status, invoices, or changes to their own details.
+        get: An assistant connected to your systems, which looks up the answer after checking who is asking.
+        watch: Identity checks come first. It must never reveal one customer's data to another.
+      - label: Sorting and routing incoming messages
+        when: Messages arrive in one inbox and are sorted by hand.
+        get: Automatic tagging, priority, and routing to the right person, with a draft reply for review.
+        watch: Keep a person in the loop for urgent or sensitive messages.
+      - label: Out-of-hours cover
+        when: Questions arrive at night and at weekends, and wait until morning.
+        get: An assistant that answers what it can and takes details for the rest, so the team starts the day informed.
+        watch: Tell customers clearly when they are talking to an assistant.
+  - type: process
+    id: how
+    tone: white
+    label: How we do it
+    heading: From a pilot to a dependable assistant
+    steps:
+      - title: Study the questions
+        body: We analyze a sample of real support messages to see what is asked, how often, and what answers exist.
+        artifacts:
+          - Question analysis
+          - Content gaps
+      - title: Prepare the content
+        body: We gather the approved answers, fix gaps, and set rules for what the assistant may and may not say.
+        artifacts:
+          - Approved content set
+          - Answer rules
+      - title: Build and test against real cases
+        body: We build the assistant, test it on hundreds of past questions, and review every wrong or doubtful answer.
+        artifacts:
+          - Working assistant
+          - Test results
+      - title: Pilot, measure, and widen
+        body: A pilot runs on a slice of traffic with staff watching. We measure accuracy and hand-over quality, and widen the scope only when the numbers support it.
+        artifacts:
+          - Pilot report
+          - Scope decision
+  - type: columns
+    id: delivers
+    tone: white
+    label: What you get
+    heading: What the assistant comes with
+    columns:
+      - title: An assistant
+        items:
+          - Answers drawn from your approved content, with sources.
+          - Hand-over to your team with the conversation attached.
+      - title: Connections
+        items:
+          - Links to your help desk, order system, and customer records.
+          - "Channels you choose: your website, messaging, or email."
+      - title: Controls
+        items:
+          - Rules for what it may say and do, tested before release.
+          - Review of a sample of conversations every week at first.
+      - title: Measurement
+        items:
+          - Reports on questions answered, hand-overs, and accuracy checks.
+          - A list of content gaps found, so your documentation improves.
+  - type: table
+    id: control
+    tone: paper
+    label: Control
+    heading: How accuracy and safety are kept
+    caption: The main risks of an AI support assistant and how each is controlled
+    columns:
+      - Risk
+      - What can go wrong
+      - How we control it
+    rows:
+      - - Wrong answers
+        - The assistant states something that is not true.
+        - It answers only from approved content, shows its source, and says when it does not know.
+      - - Exposing private data
+        - One customer sees another's details.
+        - Identity checks before any lookup, and access limited to the asking customer's own records.
+      - - Bad hand-offs
+        - A customer is stuck in a loop with no person.
+        - A visible route to a person at any point, and the conversation passed on.
+      - - Content drifting out of date
+        - Policies change and the assistant keeps the old answer.
+        - A named owner, a review schedule, and alerts when answers stop matching sources.
+      - - Hidden use of AI
+        - Customers do not know they are talking to an assistant.
+        - Clear labeling in the conversation.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How the assistant is built
+    intro: Most visitors can skip this section. It notes how we build a support assistant.
+    panels:
+      - title: Answering from your content
+        paragraphs:
+          - "The assistant uses a technique called retrieval-augmented generation, or RAG: it first finds the relevant passages in your approved content, then asks a language model to write an answer using only those passages. The answer carries its sources."
+      - title: Models and orchestration
+        items:
+          - We choose among [OpenAI](ref:prov.openai), [Anthropic Claude](ref:prov.anthropic-claude), and [Google Gemini](ref:prov.google-gemini) on accuracy, cost, data handling terms, and where data may be processed.
+          - "[LangChain](ref:fw.langchain) or plain code coordinates retrieval, the model call, and the hand-over."
+      - title: Evaluation
+        items:
+          - A fixed set of real questions with approved answers is run on every change, so quality cannot slip unnoticed.
+          - Conversations are sampled and reviewed, and wrong answers feed back into content and rules.
+      - title: Privacy and security
+        items:
+          - Personal data is minimized before it is sent to a model, and retention is limited to what you need.
+          - Actions the assistant can take are limited to a short, audited list.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about AI in customer support
+    items:
+      - q: Will customers accept talking to an assistant?
+        a: Mostly, when it is quick, honest about being an assistant, and easy to leave for a person. Frustration comes from loops and wrong answers, which the design is meant to prevent.
+      - q: How do we stop it making things up?
+        a: By restricting it to approved content, showing sources, testing it against real questions, and having it say it does not know when the answer is missing.
+      - q: Will it replace our support team?
+        a: It takes the repetitive questions, so the team can spend its time on the cases that need judgment and care. We design it with your team, not around it.
+      - q: What do we need to start?
+        a: A sample of real support messages, your existing help content, and someone who owns the answers. We handle the rest, including the connections to your systems.
+      - q: Is our customers' data safe?
+        a: "We design for it: identity checks, minimal data sent to models, limited retention, and provider terms reviewed. We explain the choices so you can approve them."
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: AI support across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.ai
+          - svc.automation
+          - svc.api-integration
+      - title: Systems we build
+        entityIds:
+          - workarea.ai-solutions
+          - workarea.ai-agents
+          - workarea.knowledge-and-content-systems
+      - title: Technologies
+        entityIds:
+          - prov.openai
+          - prov.anthropic-claude
+          - prov.google-gemini
+          - fw.langchain
+          - plat.hubspot
+  - type: cta
+    id: contact-cta
+    heading: Tell us the questions you answer most
+    body: Describe your support volume and where the answers live. We will outline what to automate, what to keep human, and a first pilot.
+    primary:
+      label: Talk to DECHY about support
+      href: /contact/?service=ai

@@ -1,0 +1,250 @@
+id: page.solution-legacy-system-modernization
+kind: solution
+locale: en
+path: /solutions/legacy-system-modernization/
+parent: /solutions/
+entityId: sol.legacy-system-modernization
+title: Legacy System Modernization Services | DECHY
+description: "Legacy system modernization from DECHY: moving old business software to a supported, maintainable setup in safe stages, without stopping the business."
+breadcrumbLabel: Legacy system modernization
+intent:
+  primary: legacy system modernization
+  secondary:
+    - modernize legacy software
+    - replace outdated business software
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: Legacy system modernization is the work of updating or replacing old business software so that it can be changed safely, supported, and connected to the tools you use now.
+  problem: The software still runs the business, but it is hard to change, tied to old servers, understood by few people, and getting riskier every year.
+  audience: Owners and technology leads of long-running business systems, and teams told that a platform or server is reaching the end of its support.
+  choose: "Move in stages: first make the system safe and understood, then connect it, then replace it piece by piece. Choose a full rewrite only when the old system has nothing worth keeping."
+  next: Tell us what the system does and what worries you about it. We will review it and recommend a staged route with the first step costed.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Solution
+    headline: Legacy system modernization
+    lead: The old system still works, and the business depends on it. That is exactly why it is hard to touch. We modernize in stages, so each step leaves the business running and a little safer than before.
+    support: This page explains the routes open to you, how a staged move works, and how to tell which route fits your system.
+    ctas:
+      - label: Talk to us about your system
+        href: /contact/?service=software-development
+      - label: The routes open to you
+        href: "#routes"
+    spec:
+      kind: flow
+      steps:
+        - title: Understand it
+          text: Find out what it does, who depends on it, and where the risk lies.
+        - title: Make it safe
+          text: Back it up, patch it, and add tests around the parts that matter.
+        - title: Connect it
+          text: Put a clean interface in front, so new tools can use its data.
+        - title: Replace one slice
+          text: Rebuild one function at a time and switch over when it is proven.
+        - title: Retire the old parts
+          text: Switch off what has been replaced, and keep what still earns its place.
+    purpose: process
+    takeaway: Modernization moves in five stages, from understanding the old system to retiring its parts, with the business running throughout.
+    visualTitle: A staged route out of a legacy system
+    figureCaption: This diagram follows a staged modernization in five steps, from understanding the old system through making it safe, connecting it, and replacing it one slice at a time, to retiring the old parts.
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: Why old software becomes a risk
+    paragraphs:
+      - Software does not wear out, but its surroundings do. The language version stops receiving security fixes. The server is no longer sold. The person who understood the code leaves. A new tool cannot connect to it. Each year the cost of any change goes up, and each year the cost of a failure goes up too.
+      - The usual reaction is to put it off, because the system works and a replacement sounds like a large, risky project. That instinct is partly right. A full rewrite is slow and often fails to reproduce rules the old system carried silently.
+      - The better answer is neither to leave it nor to replace it in one go. It is to reduce the risk first, then change it a piece at a time.
+  - type: table
+    id: routes
+    tone: paper
+    label: Routes
+    heading: Five routes, and when each fits
+    caption: Five routes for an old system, what each suits, and what it costs you
+    columns:
+      - Route
+      - Suits
+      - Trade-off
+    rows:
+      - - Keep and look after it
+        - A stable system with few changes needed and a person who understands it.
+        - The risk stays, and the cost of change keeps rising.
+      - - Put a clean interface in front
+        - A system whose data is valuable but whose screens and rules are hard to change.
+        - The old core remains, so its age is hidden, not removed.
+      - - Move it piece by piece
+        - "Most business systems: the old and the new run side by side while functions move across."
+        - Takes longer than a switch, and needs discipline to finish.
+      - - Rebuild it
+        - A system whose design no longer fits the business at all.
+        - The largest cost and risk, since hidden rules must be rediscovered.
+      - - Replace it with a product
+        - Standard needs that a maintained product already meets.
+        - You adapt to the product, and data must be moved with care.
+  - type: callout
+    id: limits
+    tone: white
+    variant: note
+    title: What makes a modernization fail
+    paragraphs:
+      - Projects rarely fail on technology. They fail on what nobody wrote down, and on trying to do everything at once.
+    items:
+      - Rules that lived only in the code or in one person's head
+      - A switch-over date with no way back
+      - Data moved without checking it row by row
+      - A new system that copies the old problems
+  - type: chooser
+    id: fit
+    tone: paper
+    label: Which route
+    heading: Where does your system sit?
+    intro: These four situations cover most of the systems we are asked about.
+    question: Which describes your system best?
+    options:
+      - label: It works, but we cannot change it
+        when: Every change is slow and frightening, and only one or two people dare touch it.
+        get: A review, tests around the key parts, and a clean interface so new features can sit beside it.
+        watch: Plan to reduce the dependence on those one or two people at the same time.
+      - label: It runs on something that is being retired
+        when: An old server, database, or language version with a deadline.
+        get: A move to a supported platform, usually in stages, with the deadline respected.
+        watch: Start early. A forced move under deadline costs more than a planned one.
+      - label: It cannot connect to our other tools
+        when: Staff re-type data because the system has no way to share it.
+        get: An integration layer that exposes the data safely to the tools that need it.
+        watch: Fix the data quality as you connect, or you will share the errors.
+      - label: It no longer fits how we work
+        when: The business has changed and the software forces workarounds.
+        get: A redesign of the parts that matter, rebuilt a slice at a time.
+        watch: Agree what stays the same, so the move does not become a different project.
+  - type: process
+    id: how
+    tone: white
+    label: How we do it
+    heading: A staged modernization, step by step
+    steps:
+      - title: Review and risk
+        body: We read the system, list the dependencies, and rank the risks by how likely and how costly each is.
+        artifacts:
+          - System inventory
+          - Ranked risk list
+      - title: Stabilize
+        body: Backups, patches, monitoring, and tests around the parts that carry the most business weight.
+        artifacts:
+          - Test set
+          - Monitoring
+      - title: Connect and extend
+        body: A modern interface goes in front, so new features and new tools no longer need to change the old core.
+        artifacts:
+          - Interface layer
+          - Data checks
+      - title: Move slice by slice
+        body: Each function is rebuilt, run beside the old one, compared, and switched over only when the results match.
+        artifacts:
+          - Rebuilt slice
+          - Comparison report
+          - Switch plan
+  - type: columns
+    id: delivers
+    tone: paper
+    label: What you get
+    heading: What a modernization delivers
+    columns:
+      - title: Understanding
+        items:
+          - A written picture of what the system does and why.
+          - A ranked list of risks, with a cost for each route.
+      - title: Safety
+        items:
+          - Backups you have tested, patches applied, and monitoring that alerts.
+          - Tests that protect the behavior you rely on.
+      - title: Progress
+        items:
+          - Working slices delivered one at a time.
+          - A switch-over plan with a way back for each step.
+      - title: Independence
+        items:
+          - Documentation and handover, so you are not dependent on one person, or on us.
+          - A choice of ongoing care, at your discretion.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Techniques we use on old systems
+    intro: Most visitors can skip this section. It notes the techniques we use.
+    panels:
+      - title: Characterization tests
+        paragraphs:
+          - Before changing old code, we record what it does with real inputs and write tests that pin that behavior. The tests tell us when a change alters something it should not.
+      - title: Incremental replacement
+        items:
+          - A routing layer sends each function to the old or new implementation, so functions move one at a time.
+          - Old and new results are compared on live traffic before the switch.
+          - Each move can be reversed by changing the routing, not by redeploying.
+      - title: Data
+        items:
+          - Schemas are documented and migrated with scripts that can be re-run and checked.
+          - Row counts, totals, and sampled records are compared between old and new.
+      - title: Platforms
+        paragraphs:
+          - Typical starting points include older [PHP](ref:lang.php), [Java](ref:lang.java), and [.NET](ref:tech.dotnet) systems, which we move to supported versions or rebuild in [Python](ref:lang.python) or [TypeScript](ref:lang.typescript). Packaging in [Docker](ref:tool.docker) makes the result repeatable.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about modernizing old software
+    items:
+      - q: Do we need to rewrite the whole system?
+        a: Rarely. A staged move keeps what works and replaces what does not. A full rewrite is reserved for systems with nothing worth keeping.
+      - q: Can the business keep running during the move?
+        a: Yes. That is the point of a staged route. The old and new parts run side by side, and each function is switched over only when it has been proven.
+      - q: What if nobody understands the old code?
+        a: That is common. We start by recording what the system actually does, and we write tests that capture it, before we change anything.
+      - q: How do we know what it will cost?
+        a: After the review, we cost each route in plain terms, with the first stage priced separately so you can start without committing to all of it.
+      - q: Is it better to buy a product instead?
+        a: Sometimes. If your need is standard, a maintained product can be the cheapest answer. We say so when we see it.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Modernization across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.cloud
+          - svc.consulting
+      - title: Systems we build
+        entityIds:
+          - workarea.custom-software-systems
+          - workarea.operations-platforms
+          - workarea.integration-platforms
+      - title: Technologies
+        entityIds:
+          - lang.php
+          - lang.java
+          - tech.dotnet
+          - lang.python
+          - lang.typescript
+          - tool.docker
+          - plat.aws
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the system
+    body: Describe what it does, how old it is, and what worries you. We will review it and recommend a staged route, with the first step costed.
+    primary:
+      label: Talk to DECHY about your system
+      href: /contact/?service=software-development

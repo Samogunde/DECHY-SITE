@@ -1,0 +1,231 @@
+id: page.tech-vue
+kind: technology
+locale: en
+path: /web-development/vue/
+parent: /web-development/
+entityId: fw.vue
+title: Vue.js Development Services | DECHY
+description: "Vue development from DECHY: building web interfaces and dashboards, adding Vue to an existing site step by step, and choosing between Vue, React, and Angular."
+breadcrumbLabel: Vue
+intent:
+  primary: vue.js development services
+  secondary:
+    - vue developer
+    - vue vs react
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Vue is a framework for building the interactive parts of a website, from a single form to a full application, and it can be adopted a piece at a time.
+  problem: Teams want a more interactive, modern interface without rebuilding an existing site, and they are unsure which framework to choose.
+  audience: Owners and technical leads of websites and web applications that need richer screens, and teams already using Vue.
+  choose: Choose Vue when you want gradual adoption and a gentle learning curve. Choose React for the largest ecosystem, and Angular for large, strictly structured applications.
+  next: Tell us what the interface needs to do and what it sits on today. We will recommend a framework and a first step.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Framework
+    headline: Vue development
+    lead: Vue is a framework for building web interfaces. Its strength is that you can start small, with one interactive widget on an existing page, and grow into a full application. We build with Vue and we help you decide whether it is the right choice.
+    support: This page covers where Vue fits, how it differs from React and Angular, and how to adopt it without a rebuild.
+    ctas:
+      - label: Talk to us about a Vue project
+        href: /contact/?service=web-development
+      - label: Vue
+        React: null
+        or Angular?: null
+        href: "#options"
+    spec:
+      kind: funnel
+      stages:
+        - title: One widget on an existing page
+          text: A calculator, filter, or form added to the site you have.
+        - title: A section of the site
+          text: A whole area, such as an account page, rebuilt in Vue.
+        - title: A full single-page application
+          text: Screens that change without reloading, with their own routing.
+        - title: A full-stack application
+          text: Server-rendered pages for speed and search, plus rich screens.
+    purpose: transformation
+    takeaway: Vue can be adopted in stages, from one widget on an existing page to a full application, so the risk grows only as the commitment does.
+    visualTitle: How far Vue can go, one step at a time
+    figureCaption: This diagram shows four stages of Vue adoption, from a single widget on an existing page to a full application, each larger than the last.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A framework you can grow into
+    paragraphs:
+      - A web page that reacts to what people do, such as filtering a list, validating a form as they type, or updating a total, needs code in the browser. A framework gives that code a structure, so it stays manageable as it grows.
+      - Vue is one of the three most widely used choices, with [React](ref:fw.react) and [Angular](ref:fw.angular). It is known for being approachable. Its templates look like ordinary page markup, a small team can learn it quickly, and it works alongside an existing site instead of demanding a rewrite.
+      - "That makes it a good match for businesses that cannot stop and rebuild: a site with years of content, a back office that must keep running, a team that wants better screens without a new project every time."
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Where we use Vue
+    items:
+      - title: Interactive features on an existing site
+        body: Product finders, quote calculators, and booking widgets added without rebuilding the site around them.
+      - title: Internal tools and dashboards
+        body: Screens for staff that filter, sort, and update data without a page reload.
+      - title: Customer-facing application screens
+        body: Account areas and ordering flows that feel fast and respond as people type.
+      - title: Moving an old front end forward
+        body: Replacing tangled scripts section by section, so the site improves while it stays live.
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: How Vue compares
+    caption: Vue compared with the other two common front-end frameworks
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Vue
+        - Gradual adoption, small and medium teams, and sites that must keep working during the change.
+        - A smaller job market and ecosystem than React.
+      - - "[React](ref:fw.react)"
+        - The widest range of libraries and developers, and products expected to grow large.
+        - More choices to make yourself, so structure depends on team discipline.
+      - - "[Angular](ref:fw.angular)"
+        - Large organizations that want strict structure and consistency across many developers.
+        - A steeper learning curve and more ceremony.
+      - - No framework
+        - Content sites with little interaction, where plain pages are faster and simpler.
+        - Adding interaction later means starting a framework then.
+    note: All three build good interfaces. The deciding factors are usually the team you have, the people you can hire, and how much of the site must keep running unchanged.
+  - type: process
+    id: adopt
+    tone: paper
+    label: Adopting it
+    heading: Introducing Vue without a rebuild
+    steps:
+      - title: Pick the first piece
+        body: We choose one feature that is valuable, self-contained, and easy to measure.
+        artifacts:
+          - Chosen feature
+          - Success measure
+      - title: Build it beside the old page
+        body: The new part runs inside the existing page and talks to the same data.
+        artifacts:
+          - Working component
+      - title: Check it and release it
+        body: We test across devices, release behind a switch, and compare against the old behavior.
+        artifacts:
+          - Test results
+          - Release switch
+      - title: Repeat or stop
+        body: If it worked, we move to the next piece. If not, the rest of the site is untouched.
+        artifacts:
+          - Review
+          - Next step
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Vue
+    columns:
+      - title: Build
+        items:
+          - New interfaces, dashboards, and application screens.
+          - Reusable components so the design stays consistent.
+      - title: Add to what you have
+        items:
+          - Vue features inside a [WordPress](ref:plat.wordpress) or [PHP](ref:lang.php) site.
+          - Step-by-step replacement of older scripts.
+      - title: Connect
+        items:
+          - Screens that read and write to your back end and third-party systems.
+          - Sign-in and permissions that match your roles.
+      - title: Improve
+        items:
+          - Speed, accessibility, and search visibility reviews.
+          - Upgrades from older Vue versions.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we build with Vue.
+    panels:
+      - title: Structure
+        items:
+          - Single-file components with the interface, logic, and styling for one part kept together.
+          - "[TypeScript](ref:lang.typescript) throughout, so data shapes are checked as we build."
+          - Shared state kept small and explicit, with data fetched from the back end through one layer.
+      - title: Rendering and search
+        paragraphs:
+          - Pages that must rank in search are rendered on the server, so crawlers and visitors receive complete content. A full-stack framework built on Vue provides this, with the same components.
+      - title: Quality
+        items:
+          - Component tests for behavior and browser tests for the main journeys.
+          - Accessibility checks for keyboard use, labels, and contrast.
+          - Bundle size and load time watched against a budget.
+      - title: Upgrades
+        paragraphs:
+          - We keep to a supported major version of Vue and plan upgrades before support ends, since the older generation no longer receives fixes.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Vue
+    items:
+      - q: Is Vue a safe long-term choice?
+        a: It is mature, widely used, and actively maintained. As with any framework, the safest course is to keep to supported versions and avoid unusual add-ons.
+      - q: Vue or React?
+        a: Both are good. We lean to React for very large products and for teams that want the widest hiring pool, and to Vue where gradual adoption and approachability matter most.
+      - q: Can Vue sit inside an existing website?
+        a: Yes, and that is one of its main strengths. A single component can run in an existing page without changing the rest.
+      - q: Will a Vue site rank in search?
+        a: Yes, when it is rendered on the server so that complete pages reach search engines. We set that up for any page that needs to be found.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Vue across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.web-development
+      - title: Related technologies
+        entityIds:
+          - lang.typescript
+          - fw.nextjs
+          - plat.wordpress
+          - lang.php
+      - title: Alternatives
+        entityIds:
+          - fw.react
+          - fw.angular
+      - title: Solutions
+        entityIds:
+          - sol.legacy-system-modernization
+          - sol.business-dashboards
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.customer-portals
+          - workarea.internal-business-tools
+      - title: Where it applies
+        entityIds:
+          - ind.retail
+          - ind.education
+          - ind.professional-services
+  - type: cta
+    id: contact-cta
+    heading: Tell us what the interface needs to do
+    body: Describe the screens, the people who use them, and what they sit on today. We will recommend a framework and a first step.
+    primary:
+      label: Talk to DECHY about Vue
+      href: /contact/?service=web-development

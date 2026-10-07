@@ -4,7 +4,7 @@ import { getRegistry } from "@/lib/content/load";
 import type { Block, Page } from "@/lib/content/schema";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { ContactForm } from "./ContactForm";
-import { BrowseBlock, ConnectsBlock, DirectoryBlock } from "./DiscoveryBlocks";
+import { ArticlesBlock, BrowseBlock, ConnectsBlock, DirectoryBlock } from "./DiscoveryBlocks";
 import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./EditorialBlocks";
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
 import { CalloutBlock, ChooserBlock, PathFinderBlock, TechnicalBlock } from "./GuidanceBlocks";
@@ -80,6 +80,8 @@ export function BlockRenderer({
       return <BrowseBlock block={block} />;
     case "directory":
       return <DirectoryBlock block={block} />;
+    case "articles":
+      return <ArticlesBlock block={block} />;
     case "cta":
       return <CtaBlock block={block} />;
     case "legal":

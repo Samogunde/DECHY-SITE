@@ -1,0 +1,237 @@
+id: page.tech-dotnet
+kind: technology
+locale: en
+path: /software-development/dotnet/
+parent: /software-development/
+entityId: tech.dotnet
+title: .NET Development Services | DECHY
+description: ".NET development from DECHY: building business applications on Microsoft's platform, and moving older .NET systems to a supported, maintainable setup."
+breadcrumbLabel: .NET
+intent:
+  primary: .net development services
+  secondary:
+    - asp.net core development
+    - .net framework modernization
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: .NET is Microsoft's platform for building business software. Programs are usually written in C# and can run on Windows, Linux, and the cloud.
+  problem: Many organizations depend on older .NET systems that are hard to change, tied to old servers, or understood by one person, and they need a safe way forward.
+  audience: Organizations that run on Microsoft tools, and teams that maintain or extend a .NET application.
+  choose: Choose .NET when your people, identity, and hosting are already Microsoft-based. Modernize an old .NET system in stages rather than rewriting it in one go.
+  next: Tell us what the .NET system does and what worries you about it. We will review it and recommend whether to extend, modernize, or replace it.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: .NET development
+    lead: .NET is the platform behind a great deal of business software, especially in organizations that run on Microsoft tools. We build new applications on it and bring older ones up to date.
+    support: This page covers where .NET fits, how an old system is modernized, and how it compares with the other common choices.
+    ctas:
+      - label: Talk to us about a .NET system
+        href: /contact/?service=software-development
+      - label: Modernizing an old system
+        href: "#path"
+    spec:
+      kind: layers
+      layers:
+        - title: Applications
+          text: Web applications, services, and back-office tools.
+          support:
+            - title: Web and service apps
+            - title: Desktop and mobile apps
+        - title: Libraries
+          text: Ready-made building blocks for data, security, and messaging.
+          support:
+            - title: Data access
+            - title: Identity and sign-in
+        - title: Runtime
+          text: The engine that runs the code on a server or in the cloud.
+          support:
+            - title: Windows, Linux, containers
+        - title: Language
+          text: Most code is written in C#, a mature and readable language.
+          support:
+            - title: C# and its tooling
+      layerLabel: The .NET platform
+      supportLabel: What sits beside it
+    purpose: system
+    takeaway: The .NET platform stacks a language, a runtime, shared libraries, and your applications, so a team builds on proven parts.
+    visualTitle: What the .NET platform is made of
+    figureCaption: This diagram shows the .NET platform as four layers, from the C# language at the base to the applications on top, with the supporting parts beside each.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: Microsoft's platform for business software
+    paragraphs:
+      - .NET started on Windows and for years was tied to it. Today it is open source and runs on Windows, Linux, and in containers, so it is a normal choice for cloud systems as well as for the Windows servers of the past.
+      - The practical question is rarely whether .NET is good. It is whether a given system is in good shape, and whether the next change is cheaper on the platform you have or on a new one.
+  - type: callout
+    id: generations
+    tone: white
+    variant: note
+    title: Two generations of .NET
+    paragraphs:
+      - Older systems were written for .NET Framework, which only runs on Windows and is now maintained rather than developed. Current work uses modern .NET, which runs on Windows, Linux, and in containers.
+      - The distinction decides what a project involves. A system on the current platform is upgraded. A system on the older one is first moved across, in stages, and then upgraded.
+    items:
+      - Most older business systems are on .NET Framework
+      - The platform fits closely with Microsoft sign-in, databases, and hosting
+      - This is why .NET is common in finance, healthcare, and large organizations
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: How .NET compares
+    caption: .NET compared with the common alternatives for business applications
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - .NET
+        - Organizations on Microsoft tools, long-lived internal systems, and projects that need strong structure and tooling.
+        - Best value when the surrounding estate is Microsoft too.
+      - - "[Java](ref:lang.java)"
+        - Large enterprise systems on a mixed or non-Microsoft estate.
+        - Comparable strength; the choice often follows the skills you can hire.
+      - - "[Node.js](ref:tech.nodejs)"
+        - Connected, interactive products and teams that write JavaScript.
+        - Less structure by default, so discipline matters on large codebases.
+      - - "[Python](ref:lang.python)"
+        - Data work and AI features behind an application.
+        - Not the usual choice for the application core in a Microsoft estate.
+  - type: process
+    id: path
+    tone: white
+    label: Modernizing
+    heading: Moving an older .NET system forward
+    intro: A rewrite is rarely the right first step. We move in stages so the business keeps running.
+    steps:
+      - title: Inventory what exists
+        body: We list the projects, the framework version, the servers, the database, and the people who understand each part.
+        artifacts:
+          - System inventory
+          - Dependency report
+      - title: Find the real risks
+        body: Unsupported components, unpatched servers, and code nobody dares touch come first.
+        artifacts:
+          - Risk list
+      - title: Choose the route
+        body: Keep, upgrade in place, move piece by piece to modern .NET, or replace. We cost each in plain terms.
+        artifacts:
+          - Options with rough cost
+      - title: Move one slice at a time
+        body: The new and old parts run side by side while each slice is tested and switched over.
+        artifacts:
+          - Working slice
+          - Switch-over plan
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with .NET
+    columns:
+      - title: Build
+        items:
+          - New web applications, services, and internal tools.
+          - Back ends for web and mobile products.
+      - title: Modernize
+        items:
+          - Moving .NET Framework systems to current .NET.
+          - Adding tests and breaking up code that is hard to change.
+      - title: Connect
+        items:
+          - Links to your existing databases, identity, and business systems.
+          - Services that expose your data safely to other tools.
+      - title: Move to the cloud
+        items:
+          - Hosting on [Azure](ref:plat.azure) or another cloud.
+          - Containers and automated deployment for repeatable releases.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we approach .NET work.
+    panels:
+      - title: Versions and support
+        paragraphs:
+          - We build on a supported long-term release of modern .NET and plan upgrades before support ends. For older work we map which projects can move directly and which need their Windows-only parts replaced first.
+      - title: Structure
+        items:
+          - C# code organized into small, testable parts, with business rules kept apart from screens and storage.
+          - Data access through a mapping layer, with the database schema under version control.
+          - Configuration and secrets outside the code.
+      - title: Identity and security
+        items:
+          - Sign-in through your existing identity provider where one exists.
+          - Role-based access, input validation, and dependency checks on every build.
+      - title: Delivery
+        paragraphs:
+          - Services are packaged as [Docker](ref:tool.docker) containers or deployed to managed hosting through an automated pipeline, so each release is built and tested the same way.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about .NET
+    items:
+      - q: Is .NET still a good choice?
+        a: Yes. It is actively developed, runs on more than Windows, and is widely used for business systems. For a Microsoft-based organization it is often the lowest-risk choice.
+      - q: Do we have to rewrite our old .NET Framework application?
+        a: Not necessarily. We assess what can be upgraded in place, what can move piece by piece, and what is cheaper to replace. A staged move is usually safer than a rewrite.
+      - q: Can .NET run outside Windows?
+        a: Yes. Modern .NET runs on Linux and in containers, which often lowers hosting cost compared with Windows servers.
+      - q: What about C#?
+        a: C# is the main language used on .NET. See [C#](ref:lang.c-sharp) for the language itself; this page covers the platform.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: .NET across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.software-development
+      - title: Related technologies
+        entityIds:
+          - lang.c-sharp
+          - plat.azure
+          - tech.sql-server
+          - tool.docker
+          - lang.typescript
+      - title: Alternatives
+        entityIds:
+          - lang.java
+          - tech.nodejs
+          - lang.python
+      - title: Solutions
+        entityIds:
+          - sol.legacy-system-modernization
+          - sol.cloud-migration
+      - title: Systems we build
+        entityIds:
+          - workarea.operations-platforms
+          - workarea.custom-software-systems
+          - workarea.internal-business-tools
+      - title: Where it applies
+        entityIds:
+          - ind.finance
+          - ind.healthcare
+          - ind.manufacturing
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your .NET system
+    body: Describe what it does, how old it is, and what worries you. We will review it and say whether to extend, modernize, or replace it.
+    primary:
+      label: Talk to DECHY about .NET
+      href: /contact/?service=software-development

@@ -1,0 +1,216 @@
+id: page.tech-woocommerce
+kind: technology
+locale: en
+path: /ecommerce/woocommerce/
+parent: /ecommerce/
+entityId: plat.woocommerce
+title: "WooCommerce Development Services | DECHY"
+description: "WooCommerce development from DECHY: building and running an online store you own on WordPress, and a clear comparison with Shopify and a custom build."
+breadcrumbLabel: WooCommerce
+intent:
+  primary: woocommerce development services
+  secondary:
+    - woocommerce developer
+    - woocommerce vs shopify
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "WooCommerce is an online store that runs inside a WordPress website. You own the store and its data and extend it with add-ons."
+  problem: "Businesses want a store they control, with flexible products and checkout, without the monthly platform fees or limits of a hosted service."
+  audience: "Owners of WordPress sites who want to sell online, and stores deciding between owning their platform and renting one."
+  choose: "Choose WooCommerce when you want ownership, flexibility, and a content-led store. Choose a hosted platform when you want the least upkeep."
+  next: "Tell us what you sell and how you want to run it. We will compare the options and outline the build."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Platform
+    headline: WooCommerce development
+    lead: "WooCommerce turns a WordPress site into an online store that you own. We build, extend, and look after WooCommerce stores, and we help you decide whether owning your store or renting one is the better choice."
+    support: "This page covers how a WooCommerce store is put together, how it compares with Shopify, and what keeps it fast and safe."
+    ctas:
+      - { label: Talk to us about a WooCommerce store, href: "/contact/?service=ecommerce" }
+      - { label: WooCommerce or Shopify?, href: "#options" }
+    spec:
+      kind: layers
+      layers:
+        - title: The shop front
+          text: "Product pages, search, basket, and checkout that customers see."
+          support:
+            - title: Theme and design
+            - title: Product and category pages
+        - title: Extensions
+          text: "Add-ons for payments, shipping, tax, subscriptions, and more."
+          support:
+            - title: Payments and shipping
+            - title: Subscriptions and bookings
+        - title: WooCommerce
+          text: "The store engine: products, orders, customers, and stock."
+          support:
+            - title: Orders and stock
+        - title: WordPress and hosting
+          text: "The content system and the server it runs on."
+          support:
+            - title: Content pages and blog
+            - title: Hosting and backups
+      layerLabel: A WooCommerce store
+      supportLabel: What sits beside it
+    purpose: system
+    takeaway: "A WooCommerce store stacks a shop front, extensions, the store engine, and WordPress with its hosting, and you own every layer."
+    visualTitle: "What a WooCommerce store is made of"
+    figureCaption: "This diagram shows a WooCommerce store as four layers, from the shop front customers see down to the WordPress site and hosting that run it."
+
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A store you own, built on a site you already know
+    paragraphs:
+      - "WooCommerce is an extension for [WordPress](ref:plat.wordpress). Install it and the site gains products, a basket, checkout, orders, and customer accounts. Because the store and the content live together, it suits businesses that sell through articles, guides, and brand pages as much as through product listings."
+      - "The trade is ownership against upkeep. The software is free and the data is yours, and you can change almost anything. But you, or someone like us, must host it, keep it updated, and protect it. A hosted service such as [Shopify](ref:plat.shopify) takes that work away in return for a monthly fee and some limits."
+      - "Neither is better in general. The right one depends on how unusual your selling is, how much content you publish, and who will look after the store."
+
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Own it, rent it, or build it
+    caption: WooCommerce compared with a hosted platform and a custom-built store
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - WooCommerce
+        - "Content-led stores, unusual products or checkout, and owners who want control of the data."
+        - "You carry hosting, updates, and security, so quality depends on who looks after it."
+      - - "[Shopify](ref:plat.shopify)"
+        - "Stores that want the least upkeep and a fast, reliable checkout."
+        - "Monthly fees, and deep changes are limited to what the platform allows."
+      - - "Custom build"
+        - "Selling models that off-the-shelf stores cannot express, such as complex pricing or marketplaces."
+        - "The most flexible and the most expensive to build and maintain."
+
+  - type: process
+    id: build
+    tone: white
+    label: How we build it
+    heading: From plan to a store that stays fast
+    steps:
+      - title: Plan the catalogue and the checkout
+        body: "We map the products, variations, shipping, tax, and payment methods before choosing any add-on."
+        artifacts: [Store plan, Add-on list]
+      - title: Build on solid foundations
+        body: "A clean WordPress base, a fast theme, and a small set of well-chosen extensions rather than dozens."
+        artifacts: [Staging site, Theme]
+      - title: Connect the business
+        body: "Stock, accounting, shipping, and customer records are linked so orders do not need re-typing."
+        artifacts: [Connections, Test orders]
+      - title: Launch and look after it
+        body: "A planned launch, then updates, backups, and monitoring so the store keeps working and keeps its speed."
+        artifacts: [Launch checklist, Maintenance plan]
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Where WooCommerce fits well
+    items:
+      - title: A content-led brand that also sells
+        body: "Guides, stories, and products on one site, so the content brings buyers to the store."
+      - title: A catalogue with variations
+        body: "Products with sizes, colors, bundles, or made-to-order options."
+      - title: Subscriptions and memberships
+        body: "Recurring orders and member-only content, handled by well-tested extensions."
+      - title: A store moving off another platform
+        body: "Products, customers, and order history moved across, with redirects that protect search visibility."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with WooCommerce
+    columns:
+      - title: Build
+        items:
+          - "New stores with a fast, clear shopping path."
+          - "Custom features where an extension does not fit."
+      - title: Connect
+        items:
+          - "Payments through [Stripe](ref:int.stripe) and other providers."
+          - "Links to stock, accounting, and shipping systems."
+      - title: Migrate
+        items:
+          - "Moving a store to or from Shopify or another platform."
+          - "Preserving URLs, products, and customer accounts."
+      - title: Look after
+        items:
+          - "Updates, backups, and security monitoring."
+          - "Speed checks and tidying of unused extensions."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we keep WooCommerce stores healthy."
+    panels:
+      - title: Foundations
+        paragraphs:
+          - "The store runs on [PHP](ref:lang.php) and a [MySQL](ref:tech.mysql) database. We keep custom code in a plugin of its own, not in the theme, so a redesign does not remove it."
+      - title: Performance
+        items:
+          - "Page and object caching, optimized images, and a content delivery network for static files."
+          - "Database indexes and clean-up of old sessions and revisions."
+          - "A limit on extensions, because each one adds load and risk."
+      - title: Security and payments
+        items:
+          - "Card details never touch your server: payment is handled by the provider's hosted fields."
+          - "Automatic updates for security fixes, tested first on a staging copy."
+          - "Role-based admin access and two-step sign-in for staff."
+      - title: Data
+        paragraphs:
+          - "Orders and customers live in your database, so you can export them, report on them, and connect them to other systems."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about WooCommerce
+    items:
+      - q: Is WooCommerce cheaper than Shopify?
+        a: "The software costs less, but hosting, upkeep, and security are yours to pay for. Over time the totals can be close, so compare the whole cost of running the store, not only the license."
+      - q: Can WooCommerce handle a large catalogue?
+        a: "Yes, with good hosting and a clean build. Large catalogues need database tuning and caching, which we plan from the start."
+      - q: Can we move from Shopify to WooCommerce, or the other way?
+        a: "Yes. We move products, customers, and orders, and set up redirects so you keep your search visibility. The effort depends on how much custom behavior the old store had."
+      - q: Who looks after updates and security?
+        a: "You can, or we can. We offer ongoing care so extensions and WordPress stay current and the store is backed up."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: WooCommerce across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ecommerce]
+      - title: Related technologies
+        entityIds: [plat.wordpress, lang.php, tech.mysql, int.stripe]
+      - title: Alternatives
+        entityIds: [plat.shopify, plat.webflow]
+      - title: Solutions
+        entityIds: [sol.crm-integration, sol.business-process-automation]
+      - title: Systems we build
+        entityIds:
+          [workarea.ecommerce-platforms, workarea.commerce-systems, workarea.business-web-platforms]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.manufacturing, ind.logistics]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you sell
+    body: "Describe your products, how you ship, and how you want to run the store. We will compare WooCommerce with the alternatives and outline a build."
+    primary: { label: Talk to DECHY about WooCommerce, href: "/contact/?service=ecommerce" }

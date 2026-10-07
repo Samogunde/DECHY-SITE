@@ -273,6 +273,52 @@ function WorkPanel({
   );
 }
 
+function ListPanel({
+  item,
+  onNavigate,
+}: {
+  item: Extract<MenuItem, { kind: "solutions" | "industries" }>;
+  onNavigate: () => void;
+}) {
+  return (
+    <div className="container-site py-9">
+      <p className="t-eyebrow eyebrow-accent m-0 mb-5 uppercase">{item.heading}</p>
+      <ul className="m-0 grid list-none grid-cols-3 gap-x-8 gap-y-2 p-0">
+        {item.items.map((i) => (
+          <li key={i.id}>
+            <Link
+              prefetch={false}
+              href={i.href}
+              onClick={onNavigate}
+              className="menu-link block py-2 text-ink"
+            >
+              <span className="block font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold leading-snug">
+                {i.label}
+              </span>
+              <span className="mt-0.5 block text-[length:var(--fs-label)] font-normal leading-snug text-slate-text">
+                {i.summary}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {item.href ? (
+        <div className="mt-6 border-t border-line pt-4">
+          <Link
+            prefetch={false}
+            href={item.href}
+            onClick={onNavigate}
+            className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
+          >
+            {item.allLabel}
+            <Arrow />
+          </Link>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 /* ------------------------------ mobile sections ------------------------------ */
 
 function MobileLinks({
@@ -414,6 +460,23 @@ function MobileSection({
                     className="menu-link mt-2 inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-body)] font-semibold text-ink"
                   >
                     View all technologies
+                    <Arrow />
+                  </Link>
+                ) : null}
+              </>
+            ) : null}
+            {item.kind === "solutions" || item.kind === "industries" ? (
+              <>
+                <p className="t-eyebrow eyebrow-accent m-0 mb-3 uppercase">{item.heading}</p>
+                <MobileLinks links={item.items} onNavigate={onNavigate} />
+                {item.href ? (
+                  <Link
+                    prefetch={false}
+                    href={item.href}
+                    onClick={onNavigate}
+                    className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-body)] font-semibold text-ink"
+                  >
+                    {item.allLabel}
                     <Arrow />
                   </Link>
                 ) : null}
@@ -589,7 +652,8 @@ export function HeaderNav({ model }: Props) {
   const hasMenu = (item: NavItemModel): item is MenuItem =>
     item.kind !== "link" &&
     !(item.kind === "technologies" && item.categories.length === 0) &&
-    !(item.kind === "work" && item.groups.length === 0);
+    !(item.kind === "work" && item.groups.length === 0) &&
+    !((item.kind === "solutions" || item.kind === "industries") && item.items.length === 0);
 
   return (
     <>
@@ -693,8 +757,10 @@ export function HeaderNav({ model }: Props) {
                       <ServicesPanel item={item} onNavigate={closeAll} />
                     ) : item.kind === "technologies" ? (
                       <TechnologiesPanel item={item} uid={panelId} onNavigate={closeAll} />
-                    ) : (
+                    ) : item.kind === "work" ? (
                       <WorkPanel item={item} onNavigate={closeAll} />
+                    ) : (
+                      <ListPanel item={item} onNavigate={closeAll} />
                     )}
                   </div>
                 </li>

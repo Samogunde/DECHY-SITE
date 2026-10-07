@@ -1,0 +1,221 @@
+id: page.tech-firebase
+kind: technology
+locale: en
+path: /cloud/firebase/
+parent: /cloud/
+entityId: plat.firebase
+title: Firebase Development Services | DECHY
+description: "Firebase development from DECHY: launching apps quickly on Google's ready-made back end, knowing its limits and costs, and moving off it when needed."
+breadcrumbLabel: Firebase
+intent:
+  primary: firebase development services
+  secondary:
+    - firebase developer
+    - firebase vs supabase
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Firebase is a ready-made back end from Google. It gives an app sign-in, a database, file storage, hosting, and notifications without building a server.
+  problem: Teams want to launch a mobile or web app quickly without building and running their own back end, but worry about cost, limits, and being locked in.
+  audience: Founders and product teams building a mobile or web app, and owners of apps already running on Firebase.
+  choose: Choose Firebase to reach a working product fast and for real-time features. Choose a conventional back end when your data is highly relational or you need to control costs and hosting.
+  next: Tell us what the app does and how it will grow. We will say whether Firebase fits and how to set it up so you can leave later if you need to.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Back-end platform
+    headline: Firebase
+    lead: Firebase is a back end that Google has already built. Your app gets sign-in, a database, storage, and notifications as services. We use it to launch quickly, and we set it up so that a growing product is not trapped.
+    support: This page covers what Firebase provides, where it fits, what it costs you in flexibility, and how it compares with Supabase and a custom back end.
+    ctas:
+      - label: Talk to us about Firebase
+        href: /contact/?service=cloud
+      - label: What Firebase gives you
+        href: "#what"
+    spec:
+      kind: hub
+      center:
+        title: Your app
+        text: Web and mobile screens that talk to Firebase.
+      spokes:
+        - title: Sign-in
+          text: Accounts, passwords, and sign-in with other services.
+        - title: Database
+          text: Data that updates live on every device.
+        - title: File storage
+          text: Photos, documents, and uploads.
+        - title: Functions
+          text: Small pieces of server code that run on demand.
+        - title: Hosting
+          text: A fast home for the web version.
+        - title: Notifications
+          text: Messages to phones and browsers.
+    purpose: relationship
+    takeaway: Firebase supplies the common back-end parts an app needs, sign-in, database, storage, functions, hosting, and notifications, as ready-made services.
+    visualTitle: What Firebase provides to an app
+    figureCaption: "This diagram shows an app at the center with six Firebase services around it: sign-in, database, file storage, functions, hosting, and notifications."
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A back end you rent instead of build
+    paragraphs:
+      - "Every app needs a back end: somewhere to keep accounts, store data, and send messages. Building one takes months and needs people to run it. Firebase offers the common parts as services you switch on, which is why a small team can have a working product in weeks."
+      - Its database is built for live data. When one person changes something, other people's screens update without a refresh. That suits chat, collaboration, and field apps where a number on a phone must match the office.
+      - The trade is control. Your data sits in a Google-defined structure, the way you query it is limited, and bills grow with how often the app reads and writes. None of this is a reason to avoid Firebase. It is a reason to design with the limits in view.
+  - type: chooser
+    id: choice
+    tone: white
+    label: Where it fits
+    heading: Is Firebase right for this product?
+    intro: The answer usually depends on the shape of the data and on how fast you need a first version.
+    question: What describes your product best?
+    options:
+      - label: A new app that must launch quickly
+        when: A small team, a deadline, and data that is mostly simple records.
+        get: A working product on Firebase, with sign-in, data, and notifications in place early.
+        watch: Design the data for the questions you will ask later, not only for the first screen.
+      - label: A live, shared experience
+        when: Chat, shared lists, location tracking, or collaboration where screens must update at once.
+        get: Live data that reaches every device, with little server code.
+        watch: Read and write counts drive cost, so we design how often data is fetched.
+      - label: Data with many relationships
+        when: Orders, customers, products, and invoices that join in many ways, with reporting needs.
+        get: A comparison with a relational database before you commit.
+        watch: Joining and reporting across documents is awkward in Firebase.
+      - label: An app already on Firebase that has outgrown it
+        when: Bills have climbed, queries have become hard, or reporting cannot be done.
+        get: A plan to move to a relational database in stages, with the app kept running.
+        watch: Plan the data move before the app is large.
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Firebase compared with the alternatives
+    caption: Firebase compared with other ways to give an app a back end
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Firebase
+        - Fast launches, mobile apps, real-time features, and products whose data is simple documents.
+        - A fixed way of structuring and querying data, and costs that follow usage.
+      - - "[Supabase](ref:plat.supabase)"
+        - Products with relational data, and teams that want a standard database and the option to host it themselves.
+        - A younger platform with a smaller set of ready-made services.
+      - - Custom back end
+        - Complex rules, heavy reporting, unusual data, or strict control of hosting and cost.
+        - More to build and run, so slower to a first version.
+      - - "[MongoDB](ref:tech.mongodb)"
+        - Flexible documents with your own server code.
+        - You build sign-in, storage, and live updates yourself.
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Firebase
+    columns:
+      - title: Build
+        items:
+          - Apps on [Flutter](ref:tech.flutter), [React Native](ref:tech.react-native), or the web with Firebase behind them.
+          - Security rules that decide who can read and write what.
+      - title: Design
+        items:
+          - Data structures built for the questions you will ask.
+          - Cost estimates based on realistic read and write counts.
+      - title: Connect
+        items:
+          - Links from Firebase to your accounting, customer records, and other systems.
+          - Server functions for work the app should not do itself.
+      - title: Move
+        items:
+          - Migration from Firebase to PostgreSQL-based systems when a product outgrows it.
+          - Exporting data safely, with checks that nothing is lost.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we build on Firebase.
+    panels:
+      - title: Data model
+        items:
+          - "Data is shaped around reads: copies are held where a screen needs them, rather than joined at read time."
+          - Collections and documents are named and sized to keep queries cheap and indexes small.
+          - Counters and totals are maintained by functions, not computed on the fly.
+      - title: Security
+        items:
+          - Security rules are written and tested like code, because they are the only guard on the data.
+          - Sign-in is tied to roles, and sensitive actions run in server functions.
+          - Keys that identify the project are public by design, so protection comes from the rules, not from secrecy.
+      - title: Cost and limits
+        paragraphs:
+          - Billing follows reads, writes, storage, and function use. We estimate a month of expected use, set budget alerts, and review the heaviest queries after launch.
+      - title: Leaving
+        paragraphs:
+          - We keep business rules in code we own and avoid features that cannot be replaced, so moving to a relational database such as [PostgreSQL](ref:tech.postgresql) later is a planned task, not a rewrite.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Firebase
+    items:
+      - q: Is Firebase only for prototypes?
+        a: No. Many production apps run on it. It is best when the data is simple and live updates matter, and it needs care as data and traffic grow.
+      - q: Will we be locked in?
+        a: Some lock-in is real, since the database and rules are Google-specific. We reduce it by keeping logic in our own code and by planning an exit path from the start.
+      - q: Firebase or Supabase?
+        a: Firebase suits simple, live data and a quick start. Supabase suits relational data and teams that want a standard database. We compare them against your product.
+      - q: How do we avoid surprise bills?
+        a: By designing queries to read less, setting budgets and alerts, and reviewing usage after launch.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Firebase across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.cloud
+      - title: Related technologies
+        entityIds:
+          - tech.flutter
+          - tech.react-native
+          - tech.kotlin
+          - tech.swift
+          - plat.google-cloud
+      - title: Alternatives
+        entityIds:
+          - plat.supabase
+          - tech.mongodb
+          - tech.postgresql
+      - title: Solutions
+        entityIds:
+          - sol.cloud-migration
+          - sol.saas-platforms
+      - title: Systems we build
+        entityIds:
+          - workarea.mobile-apps
+          - workarea.digital-products
+          - workarea.cloud-platforms
+      - title: Where it applies
+        entityIds:
+          - ind.retail
+          - ind.education
+          - ind.logistics
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the app
+    body: Describe what the app does and how you expect it to grow. We will say whether Firebase fits and how to set it up so you can leave later if you need to.
+    primary:
+      label: Talk to DECHY about Firebase
+      href: /contact/?service=cloud

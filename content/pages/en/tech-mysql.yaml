@@ -1,0 +1,202 @@
+id: page.tech-mysql
+kind: technology
+locale: en
+path: /data-analytics/mysql/
+parent: /data-analytics/
+entityId: tech.mysql
+title: "MySQL Consulting and Migration | DECHY"
+description: "MySQL from DECHY: upgrading old versions, speeding up slow queries, running managed MySQL, and deciding when to stay or move to PostgreSQL."
+breadcrumbLabel: MySQL
+intent:
+  primary: mysql consulting
+  secondary:
+    - mysql to postgresql migration
+    - mysql performance and upgrade
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "MySQL is one of the most widely used databases. It stores the data behind WordPress, most online stores built on it, and a large number of PHP applications."
+  problem: "A MySQL database that has run for years can become slow, sit on an old version that no longer gets fixes, or be tied to a server nobody wants to touch."
+  audience: "Owners of WordPress or PHP systems, and teams responsible for a MySQL database they did not design."
+  choose: "Keep MySQL when it serves the application well and is kept up to date. Move only for a clear reason, such as features you need or an application being rebuilt."
+  next: "Tell us which application uses the database and what feels wrong. We will review it and recommend whether to tune, upgrade, host differently, or move."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Database
+    headline: MySQL
+    lead: "A lot of the web runs on MySQL, often without anyone having chosen it on purpose. We review, tune, upgrade, and move MySQL databases, and we say plainly when staying put is the sensible answer."
+    support: "This page is about living with MySQL: what to check, when to upgrade, and when a move to something else is worth the effort."
+    ctas:
+      - { label: Talk to us about your database, href: "/contact/?service=data-analytics" }
+      - { label: Stay, upgrade, or move?, href: "#state" }
+    spec:
+      kind: decision
+      question: What should happen to your MySQL database?
+      branches:
+        - when: "It is current, fast enough, and backed up"
+          choose: Leave it alone
+          text: Keep the routine care going and check it once a year.
+        - when: "It is slow, but the version is recent"
+          choose: Tune it
+          text: Better indexes and rewritten queries often fix most of the delay.
+        - when: "It runs an old version or an unmanaged server"
+          choose: Upgrade or host it properly
+          text: Move to a supported release, ideally on a managed service.
+        - when: "The application is being rebuilt or needs features MySQL lacks"
+          choose: Consider moving
+          text: A move to PostgreSQL can pay off, but only with a plan and a reason.
+    purpose: decision
+    takeaway: "A MySQL database should be left alone, tuned, upgraded or rehosted, or moved depending on its version, speed, and the plans for the application."
+    visualTitle: "What to do with a MySQL database"
+    figureCaption: "This diagram shows four conditions of a MySQL database and the action that fits each: leave it, tune it, upgrade or rehost it, or consider moving it."
+
+  - type: prose
+    id: what
+    tone: white
+    label: Why it matters
+    heading: The database nobody chose
+    paragraphs:
+      - "MySQL is rarely picked after a long comparison. It arrives with a platform. [WordPress](ref:plat.wordpress) uses it, and so does the store built on top of it. A great many [PHP](ref:lang.php) applications were written for it from the start."
+      - "That history shapes the decisions. The database is often older than anyone on the team, and it carries years of data. Changing it feels risky, so it is left until something forces the issue: a slow page, a security notice, a host that ends support."
+      - "Our job is to look before that happens. Most MySQL problems come from a small set of causes, and most can be fixed without replacing anything."
+
+  - type: process
+    id: state
+    tone: paper
+    label: How we review it
+    heading: Four checks on a MySQL database
+    steps:
+      - title: Version and support
+        body: "We confirm the release in use and whether it still receives security fixes. Old releases are the most common hidden risk."
+        artifacts: [Version report]
+      - title: Speed
+        body: "We find the slowest queries and the pages that wait on them. Missing indexes and oversized queries cause most delay."
+        artifacts: [Slow query list]
+      - title: Safety
+        body: "We test that backups can actually be restored, and that access to the database is limited to what needs it."
+        artifacts: [Restore test, Access review]
+      - title: Where it runs
+        body: "A single unmanaged server is a single point of failure. We compare it with a managed service."
+        artifacts: [Hosting options]
+
+  - type: table
+    id: situations
+    tone: white
+    label: Situations
+    heading: Common MySQL situations and what we do
+    caption: Four common MySQL situations, what is usually behind them, and the usual remedy
+    columns: [Situation, Usual cause, Usual remedy]
+    rows:
+      - - "A WordPress or online store has become slow"
+        - "Missing indexes, a bloated options table, or too many add-ons querying on every page."
+        - "Targeted indexes, clean-up of stored data, and fewer or lighter add-ons."
+      - - "The host says the database version will no longer be supported"
+        - "An old release that the host or the vendor is retiring."
+        - "A tested upgrade to a supported release, with the application checked first."
+      - - "Reports and the live site compete for the same database"
+        - "Heavy reporting queries run against the system that takes orders."
+        - "A read copy for reports, or data moved to a [warehouse](ref:tech.bigquery)."
+      - - "The team wants to leave MySQL"
+        - "A rebuild, a need for richer data types, or a standard on another database."
+        - "A planned move, usually to [PostgreSQL](ref:tech.postgresql), done in stages and checked row by row."
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with MySQL
+    columns:
+      - title: Review
+        items:
+          - "A short health check of version, speed, backups, and access."
+          - "A written list of what to fix first."
+      - title: Tune and upgrade
+        items:
+          - "Index and query work that makes pages load faster."
+          - "Version upgrades tested on a copy before they touch live data."
+      - title: Host well
+        items:
+          - "Moving to a managed MySQL service on [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud)."
+          - "Backups, failover, and monitoring that you can see."
+      - title: Move
+        items:
+          - "Migration to PostgreSQL when there is a clear reason."
+          - "Data checks that prove nothing was lost or changed."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes what we look at in a MySQL review."
+    panels:
+      - title: Engine and schema
+        items:
+          - "We confirm tables use the InnoDB engine, which supports transactions and recovery after a crash."
+          - "We check character sets and collations, because mixed settings cause subtle comparison and sorting faults."
+          - "We look for unused and duplicate indexes, which slow writes without helping reads."
+      - title: Performance
+        items:
+          - "The slow query log and the query plan show where time goes."
+          - "Buffer and connection settings are sized to the server's memory and the real number of connections."
+          - "Long-running transactions and lock waits are traced to the code that causes them."
+      - title: Availability
+        paragraphs:
+          - "Managed services provide automated backups, point-in-time recovery, and a standby copy in another zone. A read replica lets reports run without slowing the live database."
+      - title: MariaDB
+        paragraphs:
+          - "MariaDB began as a fork of MySQL and the two have drifted apart. Some hosts offer one or the other. We check compatibility before moving between them, because they are not drop-in replacements for each other in every case."
+      - title: Migrating away
+        paragraphs:
+          - "A move to PostgreSQL maps data types, rewrites queries that use MySQL-only behavior, runs both databases in parallel, and compares results before the switch."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about MySQL
+    items:
+      - q: Is MySQL outdated?
+        a: "No. It is actively maintained and widely used. The risk is an old release or an unmanaged server, not the product."
+      - q: Do we have to move to PostgreSQL?
+        a: "No. Move only if you have a reason, such as features you need or a rebuild under way. For many WordPress and PHP systems, a well-kept MySQL is the right choice."
+      - q: Will a version upgrade break our site?
+        a: "It can if untested. We upgrade a copy first, run the application against it, and only then touch live data."
+      - q: Why is our WordPress site slow when the server is large?
+        a: "Often the database is the bottleneck: missing indexes, large stored settings, or add-ons that query heavily. A review finds the cause."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: MySQL across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.data-analytics]
+      - title: Related technologies
+        entityIds: [lang.php, plat.wordpress, plat.woocommerce, plat.aws]
+      - title: Alternatives
+        entityIds: [tech.postgresql, tech.mongodb]
+      - title: Solutions
+        entityIds: [sol.legacy-system-modernization, sol.cloud-migration]
+      - title: Systems we build
+        entityIds:
+          [
+            workarea.business-web-platforms,
+            workarea.custom-software-systems,
+            workarea.data-analytics,
+          ]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.education, ind.real-estate]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your MySQL database
+    body: "Tell us which application uses it and what feels wrong. We will review it and recommend whether to tune, upgrade, rehost, or move."
+    primary: { label: Talk to DECHY about MySQL, href: "/contact/?service=data-analytics" }

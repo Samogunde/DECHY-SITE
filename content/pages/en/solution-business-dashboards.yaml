@@ -1,0 +1,237 @@
+id: page.solution-business-dashboards
+kind: solution
+locale: en
+path: /solutions/business-dashboards/
+parent: /solutions/
+entityId: sol.business-dashboards
+title: Business Dashboard Development | DECHY
+description: "Business dashboards from DECHY: one trusted, current view of the numbers that run your business, built from your own systems and shaped for each role."
+breadcrumbLabel: Business dashboards
+intent:
+  primary: business dashboard development
+  secondary:
+    - custom reporting dashboard
+    - automate management reports
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: A business dashboard is one screen that shows the few numbers a role needs to run its part of the business, taken straight from your own systems and always current.
+  problem: Reports are built by hand each week from several systems, the numbers disagree between teams, and decisions wait for someone to assemble the figures.
+  audience: Owners, finance and operations leaders, and managers who make decisions from numbers that are gathered by hand or not trusted.
+  choose: Start from the decisions people make, agree the definitions of each measure, and build one dashboard per role. Do not start by connecting every data source.
+  next: Tell us which decisions are waiting on numbers and where the figures come from. We will outline the measures, the data, and a first dashboard.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Solution
+    headline: Business dashboards
+    lead: A good dashboard answers a manager's morning questions without anyone building a report. We design dashboards around the decisions people make, connect them to your own systems, and settle what each number means so everyone trusts it.
+    support: This page explains how a dashboard is designed, what makes the numbers trustworthy, and what it takes to keep them current.
+    ctas:
+      - label: Talk to us about dashboards
+        href: /contact/?service=data-analytics
+      - label: What kind of dashboard
+        href: "#kind"
+    spec:
+      kind: funnel
+      stages:
+        - title: Everything you could measure
+          text: Hundreds of figures across many systems.
+        - title: The decisions people make
+          text: Each role asks a handful of recurring questions.
+        - title: Agreed measures
+          text: One written definition for each number that matters.
+        - title: A dashboard for each role
+          text: Few numbers, clearly shown, always current.
+    purpose: transformation
+    takeaway: A dashboard narrows everything you could measure to the decisions people make, then to agreed measures, then to a clear screen for each role.
+    visualTitle: From every figure to the few that matter
+    figureCaption: This diagram shows four stages that narrow, from everything you could measure through the decisions people make and the agreed measures to a dashboard for each role.
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: Numbers that take a week to get and an hour to argue about
+    paragraphs:
+      - On Friday someone exports sales from one tool, costs from another, and stock from a third. They paste them into a spreadsheet, fix the dates, and send it round. By Monday it is out of date. Two managers quote different revenue figures, because each counted a little differently.
+      - That is not a technology shortage. It is a definitions shortage. Until the business has agreed what counts as a sale, an active customer, or a late order, no dashboard can be trusted, however good it looks.
+      - "So the work has two halves. One is technical: connecting the sources and keeping the data current. The other is the harder one: agreeing the measures. We do both, and we start with the second."
+  - type: callout
+    id: trust
+    tone: white
+    variant: note
+    title: What makes a number trustworthy
+    paragraphs:
+      - A number is trustworthy when anyone can say where it came from, what it counts, and who owns it. A dashboard cannot supply that. The work around it does.
+    items:
+      - One written definition for each measure
+      - A named owner who can explain a change
+      - A check against a figure the business already knows
+      - A visible time of the last update
+  - type: table
+    id: options
+    tone: white
+    label: Routes
+    heading: Three ways to build a dashboard
+    caption: Three ways to build a business dashboard, what each suits, and what to watch for
+    columns:
+      - Route
+      - Suits
+      - Watch for
+    rows:
+      - - A reporting tool on your data
+        - Internal views for staff, quick to build, with standard charts.
+        - Per-user licensing, and limits when you need unusual layouts or sharing outside the business.
+      - - A custom-built dashboard
+        - Role-specific screens, customer-facing views, and dashboards inside a product.
+        - More to build, but full control of design, access, and cost at scale.
+      - - A spreadsheet connected to live data
+        - A first version or a small team with a few sources.
+        - Hard to secure and to share, and fragile as formulas multiply.
+  - type: chooser
+    id: kind
+    tone: paper
+    label: What to build
+    heading: Which kind of dashboard do you need?
+    intro: Dashboards differ by who uses them and how often. Four kinds cover most requests.
+    question: Who is the dashboard for?
+    options:
+      - label: Leaders, a weekly or monthly view
+        when: Owners and executives who want revenue, margin, cash, and pipeline on one page.
+        get: A short, stable set of measures with clear trends and comparisons.
+        watch: Keep it to a few numbers. Every addition dilutes the rest.
+      - label: Operations, a live view
+        when: "Teams running daily work: orders, deliveries, tickets, or production."
+        get: A screen that updates through the day and highlights what needs attention.
+        watch: Show exceptions, not just totals, or people stop looking.
+      - label: Customers or partners, a shared view
+        when: Clients who should see their own usage, orders, or results.
+        get: A secure, branded view limited to each customer's own data.
+        watch: Access control is the central requirement, not an extra.
+      - label: Inside your own product
+        when: Software you sell, where users expect charts and reports as part of it.
+        get: Reporting built into the product, in its look and feel.
+        watch: Plan for growth in data and users from the start.
+  - type: process
+    id: how
+    tone: paper
+    label: How we do it
+    heading: From questions to a dashboard people use
+    steps:
+      - title: Start from decisions
+        body: We ask each role which decisions they make and which numbers they would need to make them faster.
+        artifacts:
+          - Decision list
+          - Draft measures
+      - title: Agree the definitions
+        body: Each measure gets one written definition, an owner, and a source. Disagreements are settled here, not in the dashboard.
+        artifacts:
+          - Measure definitions
+      - title: Connect and clean the data
+        body: We connect the sources, check the data against known figures, and fix gaps. The data layer is built to refresh on its own.
+        artifacts:
+          - Data connections
+          - Reconciliation report
+      - title: Build, test with users, and release
+        body: We build the first dashboard, review it with the people who will use it, adjust it, and release it with training.
+        artifacts:
+          - Dashboard
+          - User feedback
+          - Training
+  - type: columns
+    id: delivers
+    tone: white
+    label: What you get
+    heading: What a dashboard project delivers
+    columns:
+      - title: Trusted numbers
+        items:
+          - A written definition and owner for every key measure.
+          - Checks that the dashboard matches your known figures.
+      - title: Current data
+        items:
+          - Automatic refresh from your own systems.
+          - Alerts when a number moves outside its normal range.
+      - title: Clear screens
+        items:
+          - A dashboard for each role, designed for quick reading.
+          - Views that work on a phone as well as a desk.
+      - title: Safe access
+        items:
+          - Each person sees only what their role allows.
+          - Logs of who looked at what.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build the data behind it
+    intro: Most visitors can skip this section. It notes how we build the data behind a dashboard.
+    panels:
+      - title: The data layer
+        items:
+          - Source data is copied on a schedule into a reporting store, so dashboards never slow the systems that run the business.
+          - Raw data is kept as received. Cleaned tables sit on top, and each measure is calculated in one place, as tested, version-controlled SQL.
+          - For larger volumes we use a warehouse such as [BigQuery](ref:tech.bigquery); for smaller ones, a well-designed [PostgreSQL](ref:tech.postgresql) database is enough.
+      - title: The dashboard itself
+        items:
+          - Custom dashboards are built in [React](ref:fw.react) with a charting library and a thin back end written in [Python](ref:lang.python).
+          - Slow queries are cached or pre-calculated, so screens load quickly.
+          - Layouts are tested at phone, tablet, and desktop widths, and for keyboard and screen-reader use.
+      - title: Access and audit
+        paragraphs:
+          - Row- and column-level rules limit data by role. Access is logged. Customer-facing dashboards enforce isolation between customers in the data layer, not only in the screen.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about business dashboards
+    items:
+      - q: How many numbers should a dashboard show?
+        a: Few. Most roles need between five and ten measures to run their part of the business. More than that and the important ones are lost.
+      - q: Can a dashboard use data from several systems?
+        a: Yes, and that is the usual case. The data is brought together in one place, matched, and checked before it is shown.
+      - q: Do we need a data warehouse?
+        a: Not always. A modest set of sources can sit in a well-designed database. A warehouse is worth it when volumes or the number of sources grow.
+      - q: Why do you insist on agreeing definitions first?
+        a: Because a dashboard shows numbers faster. If two teams count differently, it only makes the disagreement more visible.
+      - q: Can we keep our existing reporting tool?
+        a: Often, yes. We can build the data layer underneath it, so it shows trusted numbers, or recommend a change if it is the limit.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Dashboards across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.data-analytics
+          - svc.software-development
+          - svc.ui-ux
+      - title: Systems we build
+        entityIds:
+          - workarea.data-analytics
+          - workarea.operations-platforms
+          - workarea.integration-platforms
+      - title: Technologies
+        entityIds:
+          - tech.postgresql
+          - tech.bigquery
+          - plat.snowflake
+          - lang.python
+          - fw.react
+  - type: cta
+    id: contact-cta
+    heading: Tell us which decisions are waiting on numbers
+    body: Describe the decisions and where the figures come from today. We will outline the measures, the data, and a first dashboard.
+    primary:
+      label: Talk to DECHY about dashboards
+      href: /contact/?service=data-analytics

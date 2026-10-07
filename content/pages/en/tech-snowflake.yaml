@@ -1,0 +1,218 @@
+id: page.tech-snowflake
+kind: technology
+locale: en
+path: /data-analytics/snowflake/
+parent: /data-analytics/
+entityId: plat.snowflake
+title: Snowflake Consulting and Development | DECHY
+description: "Snowflake from DECHY: designing a cloud data platform, controlling its cost, sharing data safely, and choosing between Snowflake, BigQuery, and simpler options."
+breadcrumbLabel: Snowflake
+intent:
+  primary: snowflake consulting
+  secondary:
+    - snowflake data platform
+    - snowflake vs bigquery
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Snowflake is a cloud data platform. It holds a business's data in one place and lets many teams analyze it at the same time without slowing each other down.
+  problem: Different teams need the same data for different jobs, reports slow each other, and nobody is sure what the platform costs or who can see what.
+  audience: Organizations with many data users and sources, on any major cloud, and teams already using Snowflake.
+  choose: Choose Snowflake for many teams sharing governed data across clouds, or for sharing data with partners. Choose a simpler warehouse or a database when your needs are smaller.
+  next: Tell us who needs which data and what the current reports cost in time. We will outline a platform and a cost model.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Data platform
+    headline: Snowflake
+    lead: Snowflake is a platform for storing and analyzing large amounts of business data in the cloud. Its signature idea is that many teams can use the same data at once without getting in each other's way. We design, load, govern, and tune Snowflake, and we keep its cost visible.
+    support: This page covers how Snowflake works, where it fits against BigQuery and simpler options, and how to keep spending predictable.
+    ctas:
+      - label: Talk to us about Snowflake
+        href: /contact/?service=data-analytics
+      - label: Why separate storage and compute
+        href: "#what"
+    spec:
+      kind: hub
+      center:
+        title: One copy of the data
+        text: Stored once, governed once.
+      spokes:
+        - title: Finance reports
+          text: Month-end numbers, run without slowing others.
+        - title: Marketing analysis
+          text: Campaign data joined with sales.
+        - title: Data science
+          text: Large experiments on the same data.
+        - title: Operations dashboards
+          text: Live views for managers.
+        - title: Partner sharing
+          text: Selected data shared without copies.
+    purpose: system
+    takeaway: Snowflake keeps one governed copy of the data and lets each team run its own work against it, so one heavy job does not slow the rest.
+    visualTitle: Many teams, one copy of the data
+    figureCaption: "This diagram shows one governed copy of the data at the center with five uses around it: finance reports, marketing analysis, data science, operations dashboards, and partner sharing."
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: Separating where data lives from who computes on it
+    paragraphs:
+      - In a traditional warehouse, storing data and working on it share the same machines. When finance runs a month-end report and data science runs a large experiment, they compete for the same capacity, and everyone slows down.
+      - Snowflake separates the two. Data is stored once. Each team gets its own compute that starts when needed and stops when idle. Heavy jobs run in their own space, and the bill follows the compute actually used.
+      - "That design suits organizations where many groups share data, or where data must be shared with partners without sending copies. It also moves a skill from technology to management: the platform is easy to start, so spending needs rules from the first day."
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Snowflake compared with the alternatives
+    caption: Snowflake compared with other places to hold analytical data
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Snowflake
+        - Many teams sharing governed data, work across more than one cloud, and sharing data with partners.
+        - Spending needs active management; a separate platform to learn.
+      - - "[BigQuery](ref:tech.bigquery)"
+        - Organizations on Google Cloud, and very large queries with little infrastructure to run.
+        - Tied more closely to Google Cloud, and costs follow what each query scans.
+      - - "[PostgreSQL](ref:tech.postgresql)"
+        - Modest data volumes where one database can serve both applications and reports.
+        - Reporting load can slow the application, and it does not scale out as easily.
+      - - Spreadsheets and exports
+        - Early stages with a few sources and a few people.
+        - Version and trust problems grow with every added person.
+  - type: process
+    id: build
+    tone: white
+    label: How we set it up
+    heading: A Snowflake platform you can govern
+    steps:
+      - title: Map the users and the data
+        body: We list who needs which data, how fresh it must be, and what is sensitive.
+        artifacts:
+          - User and data map
+      - title: Design the layers
+        body: Raw data, cleaned data, and reporting data live in separate areas, each with an owner.
+        artifacts:
+          - Data layers
+          - Naming rules
+      - title: Set access and cost rules
+        body: Roles decide who sees which columns. Budgets, limits, and automatic suspension keep compute in check.
+        artifacts:
+          - Role design
+          - Cost guardrails
+      - title: Load, check, and hand over
+        body: Automated loads, quality checks, and a runbook so your team can operate it.
+        artifacts:
+          - Load jobs
+          - Runbook
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we run Snowflake projects.
+    panels:
+      - title: Compute
+        items:
+          - Separate warehouses for loading, transformation, and reporting, sized to the work and set to suspend when idle.
+          - Resource monitors cap spending per team and alert before the cap.
+          - Queries are reviewed for scans that read more than they need.
+      - title: Storage and structure
+        items:
+          - Tables are organized to match common filters, and very large ones are clustered where it helps.
+          - Historical versions allow recovery from mistakes for a defined period.
+      - title: Governance
+        items:
+          - Role-based access with least privilege, and masking policies on sensitive columns.
+          - Access is logged, and sharing with partners is limited to the named data.
+      - title: Pipelines
+        paragraphs:
+          - Transformations are written as version-controlled SQL, tested, and run on a schedule. Heavier processing can be written in [Python](ref:lang.python) close to the data.
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Snowflake
+    columns:
+      - title: Design
+        items:
+          - A platform layout built around your teams and questions.
+          - One definition for each key measure.
+      - title: Load
+        items:
+          - Pipelines from your applications, files, and cloud services.
+          - Quality checks that stop bad data early.
+      - title: Govern
+        items:
+          - Roles, masking of sensitive fields, and audit trails.
+          - Cost budgets with alerts that someone owns.
+      - title: Deliver
+        items:
+          - Reports and dashboards on top of the platform.
+          - Data shared with partners without copying it.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Snowflake
+    items:
+      - q: Snowflake or BigQuery?
+        a: Both are strong. BigQuery suits teams on Google Cloud who want little to manage. Snowflake suits many teams sharing data, work across clouds, and data sharing with partners. We compare them on your facts.
+      - q: How do we control the cost?
+        a: With separate compute for each job, automatic suspension, budgets with alerts, and a regular review of the heaviest queries. Someone should own the number.
+      - q: Do we need a warehouse at all?
+        a: Not always. If one database serves your reports without slowing the business, a warehouse can wait. We tell you honestly when it is premature.
+      - q: Can you work with the platform we already have?
+        a: Yes. We start with a review of design, access, and cost, and then recommend what to keep and what to change.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Snowflake across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.data-analytics
+      - title: Related technologies
+        entityIds:
+          - plat.aws
+          - plat.azure
+          - plat.google-cloud
+          - lang.python
+          - tech.postgresql
+      - title: Alternatives
+        entityIds:
+          - tech.bigquery
+      - title: Solutions
+        entityIds:
+          - sol.business-dashboards
+          - sol.cloud-migration
+      - title: Systems we build
+        entityIds:
+          - workarea.data-analytics
+          - workarea.integration-platforms
+          - workarea.ai-solutions
+      - title: Where it applies
+        entityIds:
+          - ind.finance
+          - ind.manufacturing
+          - ind.professional-services
+  - type: cta
+    id: contact-cta
+    heading: Tell us who needs which data
+    body: Describe your teams, your sources, and what the current reports cost in time. We will outline a platform and a cost model.
+    primary:
+      label: Talk to DECHY about Snowflake
+      href: /contact/?service=data-analytics

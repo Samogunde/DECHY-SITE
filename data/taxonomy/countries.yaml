@@ -11,7 +11,7 @@ countries:
       iso: US,
       wave: 1,
       presence: none,
-      pagePolicy: CREATE LATER,
+      pagePolicy: CREATE / INDEX,
     }
   - {
       id: loc.united-kingdom,
@@ -21,7 +21,7 @@ countries:
       iso: GB,
       wave: 1,
       presence: none,
-      pagePolicy: CREATE LATER,
+      pagePolicy: CREATE / INDEX,
     }
   - {
       id: loc.canada,
@@ -31,7 +31,7 @@ countries:
       iso: CA,
       wave: 1,
       presence: none,
-      pagePolicy: CREATE LATER,
+      pagePolicy: CREATE / INDEX,
     }
   - {
       id: loc.australia,
@@ -41,7 +41,7 @@ countries:
       iso: AU,
       wave: 1,
       presence: none,
-      pagePolicy: CREATE LATER,
+      pagePolicy: CREATE / INDEX,
     }
   - {
       id: loc.ireland,
@@ -51,7 +51,7 @@ countries:
       iso: IE,
       wave: 1,
       presence: none,
-      pagePolicy: CREATE LATER,
+      pagePolicy: CREATE / INDEX,
     }
   - {
       id: loc.germany,

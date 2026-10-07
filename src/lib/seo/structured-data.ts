@@ -82,6 +82,9 @@ export function buildGraph(page: Page, registry: Registry): Graph {
     datePublished: page.datePublished,
     dateModified: page.dateModified,
     ...(page.kind === "home" ? { about: { "@id": orgId() } } : {}),
+    ...(page.kind === "industry" && page.entityId && registry.nodes.get(page.entityId)
+      ? { about: { "@type": "Thing", name: registry.nodes.get(page.entityId)!.name } }
+      : {}),
     ...(crumbs.length > 1 ? { breadcrumb: { "@id": `${url}#breadcrumb` } } : {}),
   } as Thing);
 
@@ -114,6 +117,56 @@ export function buildGraph(page: Page, registry: Registry): Graph {
         mainEntityOfPage: { "@id": `${url}#webpage` },
       } as Thing);
     }
+  }
+
+  if (page.schemaTypes.includes("Service") && page.kind === "solution" && page.entityId) {
+    const entity = registry.nodes.get(page.entityId);
+    if (entity) {
+      nodes.push({
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: entity.name,
+        serviceType: entity.name,
+        description: page.description,
+        url,
+        provider: { "@id": orgId() },
+        areaServed: "Worldwide",
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+      } as Thing);
+    }
+  }
+
+  if (page.schemaTypes.includes("Service") && page.kind === "location" && page.entityId) {
+    const country = registry.nodes.get(page.entityId);
+    if (country) {
+      nodes.push({
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: `${SITE_NAME} technology services for clients in ${country.name}`,
+        serviceType: DESCRIPTOR,
+        description: page.description,
+        url,
+        provider: { "@id": orgId() },
+        areaServed: { "@type": "Country", name: country.name },
+        mainEntityOfPage: { "@id": `${url}#webpage` },
+      } as Thing);
+    }
+  }
+
+  if (page.schemaTypes.includes("Article") && page.kind === "article") {
+    nodes.push({
+      "@type": "Article",
+      "@id": `${url}#article`,
+      headline: page.h1 ?? page.title,
+      description: page.description,
+      url,
+      inLanguage: "en",
+      datePublished: page.datePublished,
+      dateModified: page.dateModified,
+      author: { "@id": orgId() },
+      publisher: { "@id": orgId() },
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+    } as Thing);
   }
 
   if (page.schemaTypes.includes("CollectionPage")) {

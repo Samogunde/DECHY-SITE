@@ -63,6 +63,22 @@ for (const page of registry.pages) {
         if (!target) continue;
         const s = source.type;
         const t = target.type;
+        // A Solution page lists the services, Work Areas, and technologies it connects to. The
+        // edge is stored from that party to the Solution, as the existing pages already do.
+        // Industries are never derived for a Solution (Solution to Industry mapping is deferred).
+        if (s === "solution") {
+          if (t === "service" || t === "work-area" || TECH_LIKE.has(t))
+            add(id, "offersSolution", source.id);
+          else if (t === "problem") add(source.id, "solves", id);
+          continue;
+        }
+        // An industry page lists the services, Work Areas, and technologies that apply to it.
+        // Solutions are linked in the text, never as a relation.
+        if (s === "industry") {
+          if (t === "service" || t === "work-area" || TECH_LIKE.has(t))
+            add(id, "appliesToIndustry", source.id);
+          continue;
+        }
         if (s === "service" && t === "service") add(source.id, "relatedService", id);
         else if (s === "service" && t === "work-area") add(source.id, "hasWorkArea", id);
         else if (s === "work-area" && t === "service") add(id, "hasWorkArea", source.id);

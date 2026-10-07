@@ -1,0 +1,239 @@
+id: page.solution-crm-integration
+kind: solution
+locale: en
+path: /solutions/crm-integration/
+parent: /solutions/
+entityId: sol.crm-integration
+title: CRM Integration Services | DECHY
+description: "CRM integration from DECHY: connecting your customer records to your website, billing, support, and marketing tools so everyone works from one current record."
+breadcrumbLabel: CRM integration
+intent:
+  primary: crm integration services
+  secondary:
+    - connect crm to other systems
+    - hubspot and salesforce integration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: CRM integration connects your customer relationship management (CRM) system, where customer records live, to the other tools that create or need those records.
+  problem: The customer record in the CRM disagrees with billing, the website, and support, so staff re-type details, chase the latest version, and trust none of them.
+  audience: Sales, service, and operations leaders whose teams work across a CRM and several other tools, and owners who want one reliable view of each customer.
+  choose: Decide which system owns each piece of data first. Then connect the systems so that each fact is entered once and flows to where it is needed.
+  next: Tell us which tools hold customer data today and where the records disagree. We will map the flows and outline the first connection.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Solution
+    headline: CRM integration
+    lead: A customer relationship management system, or CRM, is meant to be the one place that knows each customer. In practice the website, billing, support, and marketing tools each hold their own version. We connect them so that every fact is entered once and appears everywhere it is needed.
+    support: This page explains how CRM connections are designed, the patterns we use, and the decisions that matter more than the technology.
+    ctas:
+      - label: Talk to us about your CRM
+        href: /contact/?service=api-integration
+      - label: How data should flow
+        href: "#patterns"
+    spec:
+      kind: hub
+      center:
+        title: One customer record
+        text: The CRM holds the agreed, current version.
+      spokes:
+        - title: Website forms
+          text: Enquiries arrive as records, not emails.
+        - title: Billing
+          text: Invoices and payments update the account.
+        - title: Support
+          text: Agents see the full history.
+        - title: Marketing
+          text: Lists and campaigns use current data.
+        - title: Accounting
+          text: Customer and invoice details match.
+        - title: Reports
+          text: Pipeline and revenue come from one source.
+    purpose: relationship
+    takeaway: A connected CRM sits at the center of the tools that touch customers, so each fact is entered once and every tool sees the same current record.
+    visualTitle: One customer record, many connected tools
+    figureCaption: "This diagram shows one customer record at the center with six connected tools around it: website forms, billing, support, marketing, accounting, and reports."
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: When the customer record disagrees with itself
+    paragraphs:
+      - A customer rings support and gives a new phone number. The sales tool still has the old one. Billing has a third. Marketing writes to an address that was corrected a year ago. Everyone is working from a record, and the records do not match.
+      - The cost is not only wasted time. Wrong details lose sales, send invoices to the wrong person, and make a company look careless. Staff stop trusting the CRM, which makes the problem worse, because they keep private copies.
+      - Connecting the systems fixes the cause. Done well, it removes re-typing, keeps the records in step, and gives managers one source for pipeline and revenue figures.
+  - type: chooser
+    id: patterns
+    tone: paper
+    label: Patterns
+    heading: How should the data flow?
+    intro: There are a few standard ways to connect a CRM. The right one depends on how fresh the data must be and how many systems write to the same fact.
+    question: What do you need the connection to do?
+    options:
+      - label: Pass new records one way
+        when: Web forms, orders, or sign-ups should appear in the CRM, and nothing needs to flow back.
+        get: A simple, dependable one-way connection that creates or updates the record.
+        watch: Check for duplicates, or the same person will appear twice.
+      - label: Keep two systems in step
+        when: Both the CRM and another tool, such as billing, change the same customer details.
+        get: A two-way sync with a rule for which system wins when they disagree.
+        watch: Without a clear rule, changes overwrite each other in loops.
+      - label: React the moment something happens
+        when: A deal closing should start onboarding, or a payment should update the account at once.
+        get: Event-driven connections that act on the change as it occurs.
+        watch: Build in retries and alerts, because a missed event is a missed customer.
+      - label: Join several systems through one hub
+        when: Many tools need to share customer data, and point-to-point links would multiply.
+        get: A central integration layer that each tool connects to once.
+        watch: It becomes a critical system, so it needs an owner and monitoring.
+  - type: table
+    id: platforms
+    tone: white
+    label: Platforms
+    heading: Working with the CRM you have
+    caption: The CRM platforms we integrate, what they are known for, and what to watch for when connecting them
+    columns:
+      - Platform
+      - Suits
+      - Watch for
+    rows:
+      - - "[HubSpot](ref:plat.hubspot)"
+        - Marketing, sales, and service in one place, popular with growing businesses.
+        - Plan limits on connections and data volume, and costs that rise with contacts.
+      - - "[Salesforce](ref:plat.salesforce)"
+        - Large or complex sales processes and heavy customization.
+        - Strict limits on how often it can be called, and custom fields that need mapping.
+      - - Another CRM
+        - Industry-specific and smaller systems, many of which offer a standard interface.
+        - Check what the vendor allows before designing the connection.
+      - - No CRM yet
+        - Teams in spreadsheets who want to start with the connections in mind.
+        - Choose the CRM against the systems it must join, not only its features.
+  - type: process
+    id: how
+    tone: paper
+    label: How we do it
+    heading: From mismatched records to one connected system
+    steps:
+      - title: Map where the data lives
+        body: We list every tool that holds customer details and which fields each one owns.
+        artifacts:
+          - System map
+          - Field map
+      - title: Decide the rules
+        body: For each field, one system is the source of truth. We write down what happens when two disagree and how duplicates are matched.
+        artifacts:
+          - Ownership rules
+          - Matching rules
+      - title: Build and test the connection
+        body: We build the flows, test them with real examples, and check edge cases such as merged accounts and missing fields.
+        artifacts:
+          - Working connections
+          - Test cases
+      - title: Clean, switch on, and watch
+        body: Existing records are cleaned and matched, the connection is switched on, and failures raise an alert.
+        artifacts:
+          - Cleaned data
+          - Monitoring
+          - Runbook
+  - type: columns
+    id: delivers
+    tone: white
+    label: What you get
+    heading: What a connected CRM delivers
+    columns:
+      - title: One record
+        items:
+          - Agreed ownership of each customer field.
+          - Duplicate handling and a clean starting data set.
+      - title: Connections
+        items:
+          - Website forms, billing, [Stripe](ref:int.stripe) payments, support, and marketing linked to the CRM.
+          - Automation of follow-up from CRM events.
+      - title: Reliability
+        items:
+          - Retries, alerts, and logs for every flow.
+          - A way to replay a failed update.
+      - title: Reporting
+        items:
+          - Pipeline and revenue figures from a single source.
+          - Documentation your team can follow.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build CRM connections
+    intro: Most visitors can skip this section. It notes how we build CRM connections.
+    panels:
+      - title: Interfaces
+        paragraphs:
+          - Systems talk through an API, short for application programming interface, which is a defined way for one program to ask another for data or send it. We use each platform's supported interface and respect its call limits.
+      - title: Reliability
+        items:
+          - Updates are designed to be repeated safely, so a retry never creates a duplicate.
+          - Webhooks, which are automatic messages a system sends when something changes, are verified and queued, so a spike in traffic does not lose events.
+          - A dead-letter store keeps failed updates for inspection and replay.
+      - title: Identity and matching
+        items:
+          - A stable key links the same customer across systems, usually the CRM record identifier.
+          - Matching rules compare email, company, and other fields, and send doubtful matches to a person.
+      - title: Choosing the tool
+        paragraphs:
+          - Simple connections often suit a platform such as [Zapier](ref:tech.zapier) or [Make](ref:tech.make). Heavy volumes or complex rules call for custom services, which we write in [Python](ref:lang.python).
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about connecting a CRM
+    items:
+      - q: Which system should be the source of truth?
+        a: It varies by field. The CRM often owns contact and deal details, billing owns invoices, and support owns tickets. We agree this with you before we build.
+      - q: Can you connect the CRM we already use?
+        a: Usually, yes. Most CRMs offer a standard way to connect. We check the limits of your plan and the platform before we design.
+      - q: What about the duplicate records we already have?
+        a: We clean and match them as part of the work. Connecting a messy data set only spreads the mess faster.
+      - q: Do we need custom code, or will a no-code tool do?
+        a: Many connections are well served by a no-code platform. We recommend custom code only where volume, rules, or reliability need it.
+      - q: How do we know it keeps working?
+        a: Every flow logs its runs and raises an alert on failure, and we can review the logs with you on a schedule.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: CRM integration across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.api-integration
+          - svc.automation
+          - svc.software-development
+      - title: Systems we build
+        entityIds:
+          - workarea.integration-platforms
+          - workarea.api-integrations
+          - workarea.workflow-automation
+      - title: Technologies
+        entityIds:
+          - plat.hubspot
+          - plat.salesforce
+          - int.stripe
+          - tech.zapier
+          - tech.make
+          - lang.python
+  - type: cta
+    id: contact-cta
+    heading: Tell us where your customer records disagree
+    body: Describe the tools that hold customer data and where the details drift apart. We will map the flows and outline the first connection.
+    primary:
+      label: Talk to DECHY about CRM integration
+      href: /contact/?service=api-integration

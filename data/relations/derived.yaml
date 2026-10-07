@@ -176,6 +176,69 @@ relations:
   - { from: svc.seo-aeo-geo, type: usesTechnology, to: eco.perplexity }
   - { from: svc.seo-aeo-geo, type: usesTechnology, to: eco.gemini }
   - { from: svc.seo-aeo-geo, type: usesTechnology, to: eco.google-ai-overviews }
+  - { from: svc.automation, type: offersSolution, to: sol.ai-customer-support }
+  - { from: svc.api-integration, type: offersSolution, to: sol.ai-customer-support }
+  - { from: workarea.ai-solutions, type: offersSolution, to: sol.ai-customer-support }
+  - { from: workarea.ai-agents, type: offersSolution, to: sol.ai-customer-support }
+  - { from: workarea.knowledge-and-content-systems, type: offersSolution, to: sol.ai-customer-support }
+  - { from: prov.openai, type: offersSolution, to: sol.ai-customer-support }
+  - { from: prov.anthropic-claude, type: offersSolution, to: sol.ai-customer-support }
+  - { from: prov.google-gemini, type: offersSolution, to: sol.ai-customer-support }
+  - { from: fw.langchain, type: offersSolution, to: sol.ai-customer-support }
+  - { from: plat.hubspot, type: offersSolution, to: sol.ai-customer-support }
+  - { from: svc.ui-ux, type: offersSolution, to: sol.business-dashboards }
+  - { from: workarea.data-analytics, type: offersSolution, to: sol.business-dashboards }
+  - { from: workarea.operations-platforms, type: offersSolution, to: sol.business-dashboards }
+  - { from: workarea.integration-platforms, type: offersSolution, to: sol.business-dashboards }
+  - { from: tech.postgresql, type: offersSolution, to: sol.business-dashboards }
+  - { from: tech.bigquery, type: offersSolution, to: sol.business-dashboards }
+  - { from: plat.snowflake, type: offersSolution, to: sol.business-dashboards }
+  - { from: lang.python, type: offersSolution, to: sol.business-dashboards }
+  - { from: fw.react, type: offersSolution, to: sol.business-dashboards }
+  - { from: svc.software-development, type: offersSolution, to: sol.business-process-automation }
+  - { from: svc.consulting, type: offersSolution, to: sol.business-process-automation }
+  - { from: workarea.workflow-automation, type: offersSolution, to: sol.business-process-automation }
+  - { from: workarea.automation-systems, type: offersSolution, to: sol.business-process-automation }
+  - { from: workarea.internal-business-tools, type: offersSolution, to: sol.business-process-automation }
+  - { from: workarea.operations-platforms, type: offersSolution, to: sol.business-process-automation }
+  - { from: tech.zapier, type: offersSolution, to: sol.business-process-automation }
+  - { from: tech.make, type: offersSolution, to: sol.business-process-automation }
+  - { from: tech.n8n, type: offersSolution, to: sol.business-process-automation }
+  - { from: tech.microsoft-power-automate, type: offersSolution, to: sol.business-process-automation }
+  - { from: plat.airtable, type: offersSolution, to: sol.business-process-automation }
+  - { from: lang.python, type: offersSolution, to: sol.business-process-automation }
+  - { from: svc.cybersecurity, type: offersSolution, to: sol.cloud-migration }
+  - { from: svc.consulting, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.cloud-platforms, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.devops-infrastructure, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.integration-platforms, type: offersSolution, to: sol.cloud-migration }
+  - { from: plat.aws, type: offersSolution, to: sol.cloud-migration }
+  - { from: plat.azure, type: offersSolution, to: sol.cloud-migration }
+  - { from: plat.google-cloud, type: offersSolution, to: sol.cloud-migration }
+  - { from: tool.docker, type: offersSolution, to: sol.cloud-migration }
+  - { from: tool.kubernetes, type: offersSolution, to: sol.cloud-migration }
+  - { from: tool.terraform, type: offersSolution, to: sol.cloud-migration }
+  - { from: svc.automation, type: offersSolution, to: sol.crm-integration }
+  - { from: svc.software-development, type: offersSolution, to: sol.crm-integration }
+  - { from: workarea.integration-platforms, type: offersSolution, to: sol.crm-integration }
+  - { from: workarea.api-integrations, type: offersSolution, to: sol.crm-integration }
+  - { from: workarea.workflow-automation, type: offersSolution, to: sol.crm-integration }
+  - { from: plat.hubspot, type: offersSolution, to: sol.crm-integration }
+  - { from: plat.salesforce, type: offersSolution, to: sol.crm-integration }
+  - { from: int.stripe, type: offersSolution, to: sol.crm-integration }
+  - { from: tech.zapier, type: offersSolution, to: sol.crm-integration }
+  - { from: tech.make, type: offersSolution, to: sol.crm-integration }
+  - { from: lang.python, type: offersSolution, to: sol.crm-integration }
+  - { from: workarea.custom-software-systems, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: workarea.operations-platforms, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: workarea.integration-platforms, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: lang.php, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: lang.java, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: tech.dotnet, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: lang.python, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: lang.typescript, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: tool.docker, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: plat.aws, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: plat.airtable, type: integratesWith, to: tech.zapier }
   - { from: plat.airtable, type: integratesWith, to: tech.make }
   - { from: plat.airtable, type: integratesWith, to: tech.n8n }
@@ -191,6 +254,21 @@ relations:
   - { from: plat.airtable, type: appliesToIndustry, to: ind.construction }
   - { from: plat.airtable, type: appliesToIndustry, to: ind.media }
   - { from: plat.airtable, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: svc.web-development, type: usesTechnology, to: fw.angular }
+  - { from: fw.angular, type: integratesWith, to: lang.typescript }
+  - { from: fw.angular, type: integratesWith, to: lang.java }
+  - { from: fw.angular, type: integratesWith, to: tech.dotnet }
+  - { from: fw.angular, type: integratesWith, to: plat.azure }
+  - { from: fw.angular, type: alternativeTo, to: fw.react }
+  - { from: fw.angular, type: alternativeTo, to: fw.vue }
+  - { from: fw.angular, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: fw.angular, type: offersSolution, to: sol.business-dashboards }
+  - { from: workarea.operations-platforms, type: usesTechnology, to: fw.angular }
+  - { from: workarea.internal-business-tools, type: usesTechnology, to: fw.angular }
+  - { from: workarea.customer-portals, type: usesTechnology, to: fw.angular }
+  - { from: fw.angular, type: appliesToIndustry, to: ind.finance }
+  - { from: fw.angular, type: appliesToIndustry, to: ind.healthcare }
+  - { from: fw.angular, type: appliesToIndustry, to: ind.manufacturing }
   - { from: prov.anthropic-claude, type: integratesWith, to: fw.langchain }
   - { from: prov.anthropic-claude, type: integratesWith, to: lang.python }
   - { from: prov.anthropic-claude, type: integratesWith, to: tech.pinecone }
@@ -201,11 +279,7 @@ relations:
   - { from: prov.anthropic-claude, type: offersSolution, to: sol.ai-agents }
   - { from: workarea.ai-solutions, type: usesTechnology, to: prov.anthropic-claude }
   - { from: workarea.ai-agents, type: usesTechnology, to: prov.anthropic-claude }
-  - {
-      from: workarea.knowledge-and-content-systems,
-      type: usesTechnology,
-      to: prov.anthropic-claude,
-    }
+  - { from: workarea.knowledge-and-content-systems, type: usesTechnology, to: prov.anthropic-claude }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.legal }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.finance }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.pharmaceuticals }
@@ -217,8 +291,6 @@ relations:
   - { from: plat.aws, type: integratesWith, to: tool.kubernetes }
   - { from: plat.aws, type: integratesWith, to: tech.postgresql }
   - { from: svc.cybersecurity, type: usesTechnology, to: plat.aws }
-  - { from: plat.aws, type: offersSolution, to: sol.cloud-migration }
-  - { from: plat.aws, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: plat.aws }
   - { from: workarea.devops-infrastructure, type: usesTechnology, to: plat.aws }
   - { from: plat.aws, type: appliesToIndustry, to: ind.retail }
@@ -233,26 +305,69 @@ relations:
   - { from: plat.azure, type: integratesWith, to: plat.microsoft-365 }
   - { from: svc.cybersecurity, type: usesTechnology, to: plat.azure }
   - { from: svc.data-analytics, type: usesTechnology, to: plat.azure }
-  - { from: plat.azure, type: offersSolution, to: sol.cloud-migration }
   - { from: plat.azure, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: plat.azure }
   - { from: workarea.cybersecurity-systems, type: usesTechnology, to: plat.azure }
   - { from: plat.azure, type: appliesToIndustry, to: ind.government }
   - { from: plat.azure, type: appliesToIndustry, to: ind.healthcare }
   - { from: plat.azure, type: appliesToIndustry, to: ind.manufacturing }
+  - { from: tech.bigquery, type: integratesWith, to: plat.google-cloud }
+  - { from: tech.bigquery, type: integratesWith, to: tech.postgresql }
+  - { from: tech.bigquery, type: integratesWith, to: lang.python }
+  - { from: tech.bigquery, type: integratesWith, to: prov.google-gemini }
+  - { from: tech.bigquery, type: alternativeTo, to: plat.snowflake }
+  - { from: tech.bigquery, type: alternativeTo, to: tech.mongodb }
+  - { from: tech.bigquery, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.data-analytics, type: usesTechnology, to: tech.bigquery }
+  - { from: workarea.integration-platforms, type: usesTechnology, to: tech.bigquery }
+  - { from: workarea.ai-solutions, type: usesTechnology, to: tech.bigquery }
+  - { from: tech.bigquery, type: appliesToIndustry, to: ind.retail }
+  - { from: tech.bigquery, type: appliesToIndustry, to: ind.logistics }
+  - { from: tech.bigquery, type: appliesToIndustry, to: ind.finance }
   - { from: tool.docker, type: integratesWith, to: tool.kubernetes }
   - { from: tool.docker, type: integratesWith, to: tool.terraform }
   - { from: tool.docker, type: integratesWith, to: tool.github-actions }
   - { from: tool.docker, type: integratesWith, to: plat.aws }
   - { from: tool.docker, type: integratesWith, to: plat.google-cloud }
   - { from: svc.cybersecurity, type: usesTechnology, to: tool.docker }
-  - { from: tool.docker, type: offersSolution, to: sol.cloud-migration }
-  - { from: tool.docker, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.devops-infrastructure, type: usesTechnology, to: tool.docker }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: tool.docker }
   - { from: tool.docker, type: appliesToIndustry, to: ind.saas }
   - { from: tool.docker, type: appliesToIndustry, to: ind.technology }
   - { from: tool.docker, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: svc.software-development, type: usesTechnology, to: tech.dotnet }
+  - { from: tech.dotnet, type: integratesWith, to: lang.c-sharp }
+  - { from: tech.dotnet, type: integratesWith, to: plat.azure }
+  - { from: tech.dotnet, type: integratesWith, to: tech.sql-server }
+  - { from: tech.dotnet, type: integratesWith, to: tool.docker }
+  - { from: tech.dotnet, type: integratesWith, to: lang.typescript }
+  - { from: tech.dotnet, type: alternativeTo, to: lang.java }
+  - { from: tech.dotnet, type: alternativeTo, to: tech.nodejs }
+  - { from: tech.dotnet, type: alternativeTo, to: lang.python }
+  - { from: tech.dotnet, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.operations-platforms, type: usesTechnology, to: tech.dotnet }
+  - { from: workarea.custom-software-systems, type: usesTechnology, to: tech.dotnet }
+  - { from: workarea.internal-business-tools, type: usesTechnology, to: tech.dotnet }
+  - { from: tech.dotnet, type: appliesToIndustry, to: ind.finance }
+  - { from: tech.dotnet, type: appliesToIndustry, to: ind.healthcare }
+  - { from: tech.dotnet, type: appliesToIndustry, to: ind.manufacturing }
+  - { from: svc.cloud, type: usesTechnology, to: plat.firebase }
+  - { from: plat.firebase, type: integratesWith, to: tech.flutter }
+  - { from: plat.firebase, type: integratesWith, to: tech.react-native }
+  - { from: plat.firebase, type: integratesWith, to: tech.kotlin }
+  - { from: plat.firebase, type: integratesWith, to: tech.swift }
+  - { from: plat.firebase, type: integratesWith, to: plat.google-cloud }
+  - { from: plat.firebase, type: alternativeTo, to: plat.supabase }
+  - { from: plat.firebase, type: alternativeTo, to: tech.mongodb }
+  - { from: plat.firebase, type: alternativeTo, to: tech.postgresql }
+  - { from: plat.firebase, type: offersSolution, to: sol.cloud-migration }
+  - { from: plat.firebase, type: offersSolution, to: sol.saas-platforms }
+  - { from: workarea.mobile-apps, type: usesTechnology, to: plat.firebase }
+  - { from: workarea.digital-products, type: usesTechnology, to: plat.firebase }
+  - { from: workarea.cloud-platforms, type: usesTechnology, to: plat.firebase }
+  - { from: plat.firebase, type: appliesToIndustry, to: ind.retail }
+  - { from: plat.firebase, type: appliesToIndustry, to: ind.education }
+  - { from: plat.firebase, type: appliesToIndustry, to: ind.logistics }
   - { from: tech.flutter, type: alternativeTo, to: tech.react-native }
   - { from: tech.flutter, type: alternativeTo, to: tech.swift }
   - { from: tech.flutter, type: alternativeTo, to: tech.kotlin }
@@ -274,7 +389,6 @@ relations:
   - { from: plat.google-cloud, type: integratesWith, to: prov.google-gemini }
   - { from: svc.data-analytics, type: usesTechnology, to: plat.google-cloud }
   - { from: svc.ai, type: usesTechnology, to: plat.google-cloud }
-  - { from: plat.google-cloud, type: offersSolution, to: sol.cloud-migration }
   - { from: plat.google-cloud, type: offersSolution, to: sol.business-dashboards }
   - { from: plat.google-cloud, type: offersSolution, to: sol.data-systems }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: plat.google-cloud }
@@ -302,7 +416,6 @@ relations:
   - { from: plat.hubspot, type: integratesWith, to: tech.zapier }
   - { from: plat.hubspot, type: integratesWith, to: tech.make }
   - { from: svc.api-integration, type: usesTechnology, to: plat.hubspot }
-  - { from: plat.hubspot, type: offersSolution, to: sol.crm-integration }
   - { from: plat.hubspot, type: offersSolution, to: sol.workflow-automation }
   - { from: workarea.digital-marketing-systems, type: usesTechnology, to: plat.hubspot }
   - { from: workarea.integration-platforms, type: usesTechnology, to: plat.hubspot }
@@ -317,7 +430,6 @@ relations:
   - { from: lang.java, type: integratesWith, to: tool.docker }
   - { from: svc.api-integration, type: usesTechnology, to: lang.java }
   - { from: svc.cloud, type: usesTechnology, to: lang.java }
-  - { from: lang.java, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: lang.java, type: offersSolution, to: sol.cloud-migration }
   - { from: workarea.custom-software-systems, type: usesTechnology, to: lang.java }
   - { from: workarea.integration-platforms, type: usesTechnology, to: lang.java }
@@ -344,7 +456,6 @@ relations:
   - { from: tool.kubernetes, type: integratesWith, to: tool.prometheus }
   - { from: tool.kubernetes, type: integratesWith, to: tool.grafana }
   - { from: svc.cybersecurity, type: usesTechnology, to: tool.kubernetes }
-  - { from: tool.kubernetes, type: offersSolution, to: sol.cloud-migration }
   - { from: tool.kubernetes, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.devops-infrastructure, type: usesTechnology, to: tool.kubernetes }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: tool.kubernetes }
@@ -373,7 +484,6 @@ relations:
   - { from: tech.make, type: integratesWith, to: plat.airtable }
   - { from: tech.make, type: integratesWith, to: plat.hubspot }
   - { from: tech.make, type: offersSolution, to: sol.workflow-automation }
-  - { from: tech.make, type: offersSolution, to: sol.business-process-automation }
   - { from: workarea.workflow-automation, type: usesTechnology, to: tech.make }
   - { from: workarea.automation-systems, type: usesTechnology, to: tech.make }
   - { from: workarea.integration-platforms, type: usesTechnology, to: tech.make }
@@ -394,6 +504,20 @@ relations:
   - { from: tech.mongodb, type: appliesToIndustry, to: ind.media }
   - { from: tech.mongodb, type: appliesToIndustry, to: ind.retail }
   - { from: tech.mongodb, type: appliesToIndustry, to: ind.entertainment }
+  - { from: tech.mysql, type: integratesWith, to: lang.php }
+  - { from: tech.mysql, type: integratesWith, to: plat.wordpress }
+  - { from: tech.mysql, type: integratesWith, to: plat.woocommerce }
+  - { from: tech.mysql, type: integratesWith, to: plat.aws }
+  - { from: tech.mysql, type: alternativeTo, to: tech.postgresql }
+  - { from: tech.mysql, type: alternativeTo, to: tech.mongodb }
+  - { from: tech.mysql, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: tech.mysql, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.business-web-platforms, type: usesTechnology, to: tech.mysql }
+  - { from: workarea.custom-software-systems, type: usesTechnology, to: tech.mysql }
+  - { from: workarea.data-analytics, type: usesTechnology, to: tech.mysql }
+  - { from: tech.mysql, type: appliesToIndustry, to: ind.retail }
+  - { from: tech.mysql, type: appliesToIndustry, to: ind.education }
+  - { from: tech.mysql, type: appliesToIndustry, to: ind.real-estate }
   - { from: tech.n8n, type: alternativeTo, to: tech.zapier }
   - { from: tech.n8n, type: alternativeTo, to: tech.make }
   - { from: tech.n8n, type: alternativeTo, to: tech.microsoft-power-automate }
@@ -426,6 +550,25 @@ relations:
   - { from: fw.nextjs, type: appliesToIndustry, to: ind.retail }
   - { from: fw.nextjs, type: appliesToIndustry, to: ind.professional-services }
   - { from: fw.nextjs, type: appliesToIndustry, to: ind.saas }
+  - { from: svc.software-development, type: usesTechnology, to: tech.nodejs }
+  - { from: tech.nodejs, type: integratesWith, to: lang.typescript }
+  - { from: tech.nodejs, type: integratesWith, to: fw.react }
+  - { from: tech.nodejs, type: integratesWith, to: fw.nextjs }
+  - { from: tech.nodejs, type: integratesWith, to: tech.mongodb }
+  - { from: tech.nodejs, type: integratesWith, to: tech.postgresql }
+  - { from: tech.nodejs, type: integratesWith, to: tool.docker }
+  - { from: tech.nodejs, type: integratesWith, to: plat.aws }
+  - { from: tech.nodejs, type: alternativeTo, to: lang.python }
+  - { from: tech.nodejs, type: alternativeTo, to: lang.java }
+  - { from: tech.nodejs, type: alternativeTo, to: tech.dotnet }
+  - { from: tech.nodejs, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: tech.nodejs, type: offersSolution, to: sol.crm-integration }
+  - { from: workarea.custom-software-systems, type: usesTechnology, to: tech.nodejs }
+  - { from: workarea.api-integrations, type: usesTechnology, to: tech.nodejs }
+  - { from: workarea.integration-platforms, type: usesTechnology, to: tech.nodejs }
+  - { from: tech.nodejs, type: appliesToIndustry, to: ind.retail }
+  - { from: tech.nodejs, type: appliesToIndustry, to: ind.logistics }
+  - { from: tech.nodejs, type: appliesToIndustry, to: ind.professional-services }
   - { from: prov.openai, type: integratesWith, to: fw.langchain }
   - { from: prov.openai, type: integratesWith, to: lang.python }
   - { from: prov.openai, type: integratesWith, to: tech.pinecone }
@@ -433,7 +576,6 @@ relations:
   - { from: prov.openai, type: alternativeTo, to: prov.anthropic-claude }
   - { from: prov.openai, type: alternativeTo, to: prov.google-gemini }
   - { from: prov.openai, type: alternativeTo, to: prov.mistral }
-  - { from: prov.openai, type: offersSolution, to: sol.ai-customer-support }
   - { from: prov.openai, type: offersSolution, to: sol.ai-automation }
   - { from: prov.openai, type: offersSolution, to: sol.ai-knowledge-systems }
   - { from: workarea.ai-solutions, type: usesTechnology, to: prov.openai }
@@ -446,7 +588,6 @@ relations:
   - { from: lang.php, type: integratesWith, to: lang.python }
   - { from: lang.php, type: integratesWith, to: lang.typescript }
   - { from: lang.php, type: integratesWith, to: tech.mysql }
-  - { from: lang.php, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.business-web-platforms, type: usesTechnology, to: lang.php }
   - { from: workarea.custom-software-systems, type: usesTechnology, to: lang.php }
   - { from: lang.php, type: appliesToIndustry, to: ind.retail }
@@ -461,12 +602,25 @@ relations:
   - { from: tech.postgresql, type: integratesWith, to: plat.aws }
   - { from: svc.cloud, type: usesTechnology, to: tech.postgresql }
   - { from: tech.postgresql, type: offersSolution, to: sol.data-systems }
-  - { from: tech.postgresql, type: offersSolution, to: sol.business-dashboards }
   - { from: workarea.data-analytics, type: usesTechnology, to: tech.postgresql }
   - { from: workarea.custom-software-systems, type: usesTechnology, to: tech.postgresql }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.finance }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.logistics }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.healthcare }
+  - { from: tech.microsoft-power-automate, type: integratesWith, to: plat.microsoft-365 }
+  - { from: tech.microsoft-power-automate, type: integratesWith, to: plat.azure }
+  - { from: tech.microsoft-power-automate, type: integratesWith, to: plat.airtable }
+  - { from: tech.microsoft-power-automate, type: integratesWith, to: plat.salesforce }
+  - { from: tech.microsoft-power-automate, type: alternativeTo, to: tech.zapier }
+  - { from: tech.microsoft-power-automate, type: alternativeTo, to: tech.make }
+  - { from: tech.microsoft-power-automate, type: alternativeTo, to: tech.n8n }
+  - { from: tech.microsoft-power-automate, type: offersSolution, to: sol.crm-integration }
+  - { from: workarea.automation-systems, type: usesTechnology, to: tech.microsoft-power-automate }
+  - { from: workarea.workflow-automation, type: usesTechnology, to: tech.microsoft-power-automate }
+  - { from: workarea.internal-business-tools, type: usesTechnology, to: tech.microsoft-power-automate }
+  - { from: tech.microsoft-power-automate, type: appliesToIndustry, to: ind.professional-services }
+  - { from: tech.microsoft-power-automate, type: appliesToIndustry, to: ind.finance }
+  - { from: tech.microsoft-power-automate, type: appliesToIndustry, to: ind.education }
   - { from: lang.python, type: integratesWith, to: lang.typescript }
   - { from: lang.python, type: integratesWith, to: lang.java }
   - { from: lang.python, type: integratesWith, to: tech.postgresql }
@@ -475,7 +629,6 @@ relations:
   - { from: svc.ai, type: usesTechnology, to: lang.python }
   - { from: svc.automation, type: usesTechnology, to: lang.python }
   - { from: svc.data-analytics, type: usesTechnology, to: lang.python }
-  - { from: lang.python, type: offersSolution, to: sol.business-process-automation }
   - { from: lang.python, type: offersSolution, to: sol.data-systems }
   - { from: workarea.custom-software-systems, type: usesTechnology, to: lang.python }
   - { from: workarea.data-analytics, type: usesTechnology, to: lang.python }
@@ -520,7 +673,6 @@ relations:
   - { from: plat.salesforce, type: integratesWith, to: tech.rest }
   - { from: svc.api-integration, type: usesTechnology, to: plat.salesforce }
   - { from: svc.data-analytics, type: usesTechnology, to: plat.salesforce }
-  - { from: plat.salesforce, type: offersSolution, to: sol.crm-integration }
   - { from: plat.salesforce, type: offersSolution, to: sol.business-process-automation }
   - { from: workarea.integration-platforms, type: usesTechnology, to: plat.salesforce }
   - { from: workarea.operations-platforms, type: usesTechnology, to: plat.salesforce }
@@ -542,6 +694,19 @@ relations:
   - { from: plat.shopify, type: appliesToIndustry, to: ind.retail }
   - { from: plat.shopify, type: appliesToIndustry, to: ind.beauty }
   - { from: plat.shopify, type: appliesToIndustry, to: ind.fitness }
+  - { from: plat.snowflake, type: integratesWith, to: plat.aws }
+  - { from: plat.snowflake, type: integratesWith, to: plat.azure }
+  - { from: plat.snowflake, type: integratesWith, to: plat.google-cloud }
+  - { from: plat.snowflake, type: integratesWith, to: lang.python }
+  - { from: plat.snowflake, type: integratesWith, to: tech.postgresql }
+  - { from: plat.snowflake, type: alternativeTo, to: tech.bigquery }
+  - { from: plat.snowflake, type: offersSolution, to: sol.cloud-migration }
+  - { from: workarea.data-analytics, type: usesTechnology, to: plat.snowflake }
+  - { from: workarea.integration-platforms, type: usesTechnology, to: plat.snowflake }
+  - { from: workarea.ai-solutions, type: usesTechnology, to: plat.snowflake }
+  - { from: plat.snowflake, type: appliesToIndustry, to: ind.finance }
+  - { from: plat.snowflake, type: appliesToIndustry, to: ind.manufacturing }
+  - { from: plat.snowflake, type: appliesToIndustry, to: ind.professional-services }
   - { from: int.stripe, type: integratesWith, to: tech.webhooks }
   - { from: int.stripe, type: integratesWith, to: tech.rest }
   - { from: int.stripe, type: integratesWith, to: plat.shopify }
@@ -559,6 +724,22 @@ relations:
   - { from: int.stripe, type: appliesToIndustry, to: ind.retail }
   - { from: int.stripe, type: appliesToIndustry, to: ind.saas }
   - { from: int.stripe, type: appliesToIndustry, to: ind.education }
+  - { from: svc.cloud, type: usesTechnology, to: plat.supabase }
+  - { from: plat.supabase, type: integratesWith, to: tech.postgresql }
+  - { from: plat.supabase, type: integratesWith, to: fw.nextjs }
+  - { from: plat.supabase, type: integratesWith, to: fw.react }
+  - { from: plat.supabase, type: integratesWith, to: lang.typescript }
+  - { from: plat.supabase, type: integratesWith, to: tool.docker }
+  - { from: plat.supabase, type: alternativeTo, to: plat.firebase }
+  - { from: plat.supabase, type: alternativeTo, to: tech.mongodb }
+  - { from: plat.supabase, type: offersSolution, to: sol.cloud-migration }
+  - { from: plat.supabase, type: offersSolution, to: sol.saas-platforms }
+  - { from: workarea.digital-products, type: usesTechnology, to: plat.supabase }
+  - { from: workarea.business-web-platforms, type: usesTechnology, to: plat.supabase }
+  - { from: workarea.custom-software-systems, type: usesTechnology, to: plat.supabase }
+  - { from: plat.supabase, type: appliesToIndustry, to: ind.education }
+  - { from: plat.supabase, type: appliesToIndustry, to: ind.professional-services }
+  - { from: plat.supabase, type: appliesToIndustry, to: ind.retail }
   - { from: tech.swift, type: integratesWith, to: tech.kotlin }
   - { from: tech.swift, type: integratesWith, to: tech.flutter }
   - { from: tech.swift, type: integratesWith, to: tech.react-native }
@@ -582,7 +763,6 @@ relations:
   - { from: tool.terraform, type: integratesWith, to: tool.github-actions }
   - { from: svc.cybersecurity, type: usesTechnology, to: tool.terraform }
   - { from: svc.software-development, type: usesTechnology, to: tool.terraform }
-  - { from: tool.terraform, type: offersSolution, to: sol.cloud-migration }
   - { from: workarea.devops-infrastructure, type: usesTechnology, to: tool.terraform }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: tool.terraform }
   - { from: tool.terraform, type: appliesToIndustry, to: ind.finance }
@@ -601,6 +781,21 @@ relations:
   - { from: lang.typescript, type: appliesToIndustry, to: ind.saas }
   - { from: lang.typescript, type: appliesToIndustry, to: ind.finance }
   - { from: lang.typescript, type: appliesToIndustry, to: ind.technology }
+  - { from: svc.web-development, type: usesTechnology, to: fw.vue }
+  - { from: fw.vue, type: integratesWith, to: lang.typescript }
+  - { from: fw.vue, type: integratesWith, to: fw.nextjs }
+  - { from: fw.vue, type: integratesWith, to: plat.wordpress }
+  - { from: fw.vue, type: integratesWith, to: lang.php }
+  - { from: fw.vue, type: alternativeTo, to: fw.react }
+  - { from: fw.vue, type: alternativeTo, to: fw.angular }
+  - { from: fw.vue, type: offersSolution, to: sol.legacy-system-modernization }
+  - { from: fw.vue, type: offersSolution, to: sol.business-dashboards }
+  - { from: workarea.business-web-platforms, type: usesTechnology, to: fw.vue }
+  - { from: workarea.customer-portals, type: usesTechnology, to: fw.vue }
+  - { from: workarea.internal-business-tools, type: usesTechnology, to: fw.vue }
+  - { from: fw.vue, type: appliesToIndustry, to: ind.retail }
+  - { from: fw.vue, type: appliesToIndustry, to: ind.education }
+  - { from: fw.vue, type: appliesToIndustry, to: ind.professional-services }
   - { from: svc.web-development, type: usesTechnology, to: plat.webflow }
   - { from: plat.webflow, type: integratesWith, to: plat.wordpress }
   - { from: plat.webflow, type: integratesWith, to: fw.nextjs }
@@ -616,6 +811,20 @@ relations:
   - { from: plat.webflow, type: appliesToIndustry, to: ind.professional-services }
   - { from: plat.webflow, type: appliesToIndustry, to: ind.saas }
   - { from: plat.webflow, type: appliesToIndustry, to: ind.travel }
+  - { from: plat.woocommerce, type: integratesWith, to: plat.wordpress }
+  - { from: plat.woocommerce, type: integratesWith, to: lang.php }
+  - { from: plat.woocommerce, type: integratesWith, to: tech.mysql }
+  - { from: plat.woocommerce, type: integratesWith, to: int.stripe }
+  - { from: plat.woocommerce, type: alternativeTo, to: plat.shopify }
+  - { from: plat.woocommerce, type: alternativeTo, to: plat.webflow }
+  - { from: plat.woocommerce, type: offersSolution, to: sol.crm-integration }
+  - { from: plat.woocommerce, type: offersSolution, to: sol.business-process-automation }
+  - { from: workarea.ecommerce-platforms, type: usesTechnology, to: plat.woocommerce }
+  - { from: workarea.commerce-systems, type: usesTechnology, to: plat.woocommerce }
+  - { from: workarea.business-web-platforms, type: usesTechnology, to: plat.woocommerce }
+  - { from: plat.woocommerce, type: appliesToIndustry, to: ind.retail }
+  - { from: plat.woocommerce, type: appliesToIndustry, to: ind.manufacturing }
+  - { from: plat.woocommerce, type: appliesToIndustry, to: ind.logistics }
   - { from: svc.web-development, type: usesTechnology, to: plat.wordpress }
   - { from: plat.wordpress, type: integratesWith, to: lang.php }
   - { from: plat.wordpress, type: integratesWith, to: plat.webflow }
@@ -636,7 +845,6 @@ relations:
   - { from: tech.zapier, type: integratesWith, to: plat.airtable }
   - { from: tech.zapier, type: integratesWith, to: plat.hubspot }
   - { from: tech.zapier, type: offersSolution, to: sol.workflow-automation }
-  - { from: tech.zapier, type: offersSolution, to: sol.business-process-automation }
   - { from: workarea.automation-systems, type: usesTechnology, to: tech.zapier }
   - { from: workarea.workflow-automation, type: usesTechnology, to: tech.zapier }
   - { from: tech.zapier, type: appliesToIndustry, to: ind.professional-services }
@@ -670,16 +878,13 @@ relations:
   - { from: workarea.ai-agents, type: relatedWork, to: workarea.workflow-automation }
   - { from: workarea.ai-solutions, type: offersSolution, to: sol.ai-automation }
   - { from: workarea.ai-solutions, type: offersSolution, to: sol.ai-knowledge-systems }
-  - { from: workarea.ai-solutions, type: offersSolution, to: sol.ai-customer-support }
   - { from: workarea.ai-solutions, type: relatedWork, to: workarea.ai-agents }
   - { from: workarea.ai-solutions, type: relatedWork, to: workarea.knowledge-and-content-systems }
   - { from: workarea.ai-solutions, type: relatedWork, to: workarea.automation-systems }
   - { from: workarea.api-integrations, type: offersSolution, to: sol.api-integration }
-  - { from: workarea.api-integrations, type: offersSolution, to: sol.crm-integration }
   - { from: workarea.api-integrations, type: offersSolution, to: sol.payment-integration }
   - { from: workarea.api-integrations, type: relatedWork, to: workarea.integration-platforms }
   - { from: workarea.api-integrations, type: relatedWork, to: workarea.automation-systems }
-  - { from: workarea.automation-systems, type: offersSolution, to: sol.business-process-automation }
   - { from: workarea.automation-systems, type: offersSolution, to: sol.workflow-automation }
   - { from: workarea.automation-systems, type: relatedWork, to: workarea.workflow-automation }
   - { from: workarea.automation-systems, type: relatedWork, to: workarea.ai-agents }
@@ -688,17 +893,12 @@ relations:
   - { from: svc.digital-marketing, type: hasWorkArea, to: workarea.brand-systems }
   - { from: workarea.brand-systems, type: relatedWork, to: workarea.ui-ux-product-design }
   - { from: workarea.brand-systems, type: relatedWork, to: workarea.digital-marketing-systems }
-  - {
-      from: workarea.business-web-platforms,
-      type: offersSolution,
-      to: sol.customer-portal-development,
-    }
+  - { from: workarea.business-web-platforms, type: offersSolution, to: sol.customer-portal-development }
   - { from: workarea.business-web-platforms, type: offersSolution, to: sol.booking-platforms }
   - { from: workarea.business-web-platforms, type: offersSolution, to: sol.saas-platforms }
   - { from: workarea.business-web-platforms, type: relatedWork, to: workarea.customer-portals }
   - { from: workarea.business-web-platforms, type: relatedWork, to: workarea.digital-products }
   - { from: workarea.business-web-platforms, type: relatedWork, to: workarea.commerce-systems }
-  - { from: workarea.cloud-platforms, type: offersSolution, to: sol.cloud-migration }
   - { from: workarea.cloud-platforms, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.cloud-platforms, type: relatedWork, to: workarea.devops-infrastructure }
   - { from: workarea.cloud-platforms, type: relatedWork, to: workarea.cybersecurity-systems }
@@ -708,28 +908,11 @@ relations:
   - { from: workarea.commerce-systems, type: offersSolution, to: sol.payment-integration }
   - { from: workarea.commerce-systems, type: relatedWork, to: workarea.ecommerce-platforms }
   - { from: workarea.commerce-systems, type: relatedWork, to: workarea.integration-platforms }
-  - {
-      from: workarea.custom-software-systems,
-      type: offersSolution,
-      to: sol.internal-business-software,
-    }
-  - {
-      from: workarea.custom-software-systems,
-      type: offersSolution,
-      to: sol.legacy-system-modernization,
-    }
+  - { from: workarea.custom-software-systems, type: offersSolution, to: sol.internal-business-software }
   - { from: workarea.custom-software-systems, type: offersSolution, to: sol.saas-platforms }
-  - {
-      from: workarea.custom-software-systems,
-      type: relatedWork,
-      to: workarea.internal-business-tools,
-    }
+  - { from: workarea.custom-software-systems, type: relatedWork, to: workarea.internal-business-tools }
   - { from: workarea.custom-software-systems, type: relatedWork, to: workarea.operations-platforms }
-  - {
-      from: workarea.custom-software-systems,
-      type: relatedWork,
-      to: workarea.integration-platforms,
-    }
+  - { from: workarea.custom-software-systems, type: relatedWork, to: workarea.integration-platforms }
   - { from: workarea.customer-portals, type: offersSolution, to: sol.customer-portal-development }
   - { from: workarea.customer-portals, type: offersSolution, to: sol.customer-experience-systems }
   - { from: workarea.customer-portals, type: relatedWork, to: workarea.business-web-platforms }
@@ -741,7 +924,6 @@ relations:
   - { from: workarea.cybersecurity-systems, type: relatedWork, to: workarea.cloud-platforms }
   - { from: workarea.cybersecurity-systems, type: relatedWork, to: workarea.devops-infrastructure }
   - { from: workarea.cybersecurity-systems, type: relatedWork, to: workarea.customer-portals }
-  - { from: workarea.data-analytics, type: offersSolution, to: sol.business-dashboards }
   - { from: workarea.data-analytics, type: offersSolution, to: sol.data-systems }
   - { from: workarea.data-analytics, type: relatedWork, to: workarea.integration-platforms }
   - { from: workarea.data-analytics, type: relatedWork, to: workarea.operations-platforms }
@@ -753,125 +935,58 @@ relations:
   - { from: svc.automation, type: hasWorkArea, to: workarea.digital-marketing-systems }
   - { from: svc.api-integration, type: hasWorkArea, to: workarea.digital-marketing-systems }
   - { from: svc.data-analytics, type: hasWorkArea, to: workarea.digital-marketing-systems }
-  - {
-      from: workarea.digital-marketing-systems,
-      type: relatedWork,
-      to: workarea.seo-search-visibility,
-    }
-  - {
-      from: workarea.digital-marketing-systems,
-      type: relatedWork,
-      to: workarea.integration-platforms,
-    }
+  - { from: workarea.digital-marketing-systems, type: relatedWork, to: workarea.seo-search-visibility }
+  - { from: workarea.digital-marketing-systems, type: relatedWork, to: workarea.integration-platforms }
   - { from: workarea.digital-products, type: offersSolution, to: sol.saas-platforms }
   - { from: workarea.digital-products, type: offersSolution, to: sol.marketplace-platforms }
   - { from: workarea.digital-products, type: relatedWork, to: workarea.ui-ux-product-design }
   - { from: workarea.digital-products, type: relatedWork, to: workarea.mobile-apps }
   - { from: workarea.digital-products, type: relatedWork, to: workarea.custom-software-systems }
   - { from: workarea.digital-transformation, type: offersSolution, to: sol.digital-transformation }
-  - {
-      from: workarea.digital-transformation,
-      type: offersSolution,
-      to: sol.legacy-system-modernization,
-    }
+  - { from: workarea.digital-transformation, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.digital-transformation, type: relatedWork, to: workarea.operations-platforms }
-  - {
-      from: workarea.digital-transformation,
-      type: relatedWork,
-      to: workarea.internal-business-tools,
-    }
-  - {
-      from: workarea.digital-transformation,
-      type: relatedWork,
-      to: workarea.custom-software-systems,
-    }
+  - { from: workarea.digital-transformation, type: relatedWork, to: workarea.internal-business-tools }
+  - { from: workarea.digital-transformation, type: relatedWork, to: workarea.custom-software-systems }
   - { from: workarea.ecommerce-platforms, type: offersSolution, to: sol.ecommerce-systems }
   - { from: workarea.ecommerce-platforms, type: offersSolution, to: sol.payment-integration }
   - { from: workarea.ecommerce-platforms, type: offersSolution, to: sol.subscription-platforms }
   - { from: workarea.ecommerce-platforms, type: relatedWork, to: workarea.commerce-systems }
   - { from: workarea.ecommerce-platforms, type: relatedWork, to: workarea.business-web-platforms }
   - { from: workarea.integration-platforms, type: offersSolution, to: sol.api-integration }
-  - { from: workarea.integration-platforms, type: offersSolution, to: sol.crm-integration }
   - { from: workarea.integration-platforms, type: relatedWork, to: workarea.api-integrations }
   - { from: workarea.integration-platforms, type: relatedWork, to: workarea.automation-systems }
   - { from: workarea.integration-platforms, type: relatedWork, to: workarea.data-analytics }
-  - {
-      from: workarea.internal-business-tools,
-      type: offersSolution,
-      to: sol.internal-business-software,
-    }
+  - { from: workarea.internal-business-tools, type: offersSolution, to: sol.internal-business-software }
   - { from: workarea.internal-business-tools, type: offersSolution, to: sol.workflow-automation }
   - { from: workarea.internal-business-tools, type: relatedWork, to: workarea.operations-platforms }
   - { from: workarea.internal-business-tools, type: relatedWork, to: workarea.workflow-automation }
-  - {
-      from: workarea.internal-business-tools,
-      type: relatedWork,
-      to: workarea.custom-software-systems,
-    }
-  - {
-      from: svc.software-development,
-      type: hasWorkArea,
-      to: workarea.knowledge-and-content-systems,
-    }
-  - {
-      from: workarea.knowledge-and-content-systems,
-      type: offersSolution,
-      to: sol.ai-knowledge-systems,
-    }
+  - { from: workarea.internal-business-tools, type: relatedWork, to: workarea.custom-software-systems }
+  - { from: svc.software-development, type: hasWorkArea, to: workarea.knowledge-and-content-systems }
+  - { from: workarea.knowledge-and-content-systems, type: offersSolution, to: sol.ai-knowledge-systems }
   - { from: workarea.knowledge-and-content-systems, type: relatedWork, to: workarea.ai-solutions }
-  - {
-      from: workarea.knowledge-and-content-systems,
-      type: relatedWork,
-      to: workarea.seo-search-visibility,
-    }
-  - {
-      from: workarea.knowledge-and-content-systems,
-      type: relatedWork,
-      to: workarea.business-web-platforms,
-    }
+  - { from: workarea.knowledge-and-content-systems, type: relatedWork, to: workarea.seo-search-visibility }
+  - { from: workarea.knowledge-and-content-systems, type: relatedWork, to: workarea.business-web-platforms }
   - { from: svc.ui-ux, type: hasWorkArea, to: workarea.mobile-apps }
   - { from: svc.api-integration, type: hasWorkArea, to: workarea.mobile-apps }
   - { from: workarea.mobile-apps, type: relatedWork, to: workarea.digital-products }
   - { from: workarea.mobile-apps, type: relatedWork, to: workarea.customer-portals }
   - { from: workarea.mobile-apps, type: relatedWork, to: workarea.operations-platforms }
   - { from: svc.automation, type: hasWorkArea, to: workarea.operations-platforms }
-  - {
-      from: workarea.operations-platforms,
-      type: offersSolution,
-      to: sol.internal-business-software,
-    }
-  - {
-      from: workarea.operations-platforms,
-      type: offersSolution,
-      to: sol.business-process-automation,
-    }
+  - { from: workarea.operations-platforms, type: offersSolution, to: sol.internal-business-software }
   - { from: workarea.operations-platforms, type: relatedWork, to: workarea.internal-business-tools }
   - { from: workarea.operations-platforms, type: relatedWork, to: workarea.workflow-automation }
   - { from: workarea.operations-platforms, type: relatedWork, to: workarea.custom-software-systems }
   - { from: svc.web-development, type: hasWorkArea, to: workarea.seo-search-visibility }
   - { from: svc.digital-marketing, type: hasWorkArea, to: workarea.seo-search-visibility }
   - { from: workarea.seo-search-visibility, type: relatedWork, to: workarea.business-web-platforms }
-  - {
-      from: workarea.seo-search-visibility,
-      type: relatedWork,
-      to: workarea.digital-marketing-systems,
-    }
-  - {
-      from: workarea.seo-search-visibility,
-      type: relatedWork,
-      to: workarea.knowledge-and-content-systems,
-    }
+  - { from: workarea.seo-search-visibility, type: relatedWork, to: workarea.digital-marketing-systems }
+  - { from: workarea.seo-search-visibility, type: relatedWork, to: workarea.knowledge-and-content-systems }
   - { from: workarea.ui-ux-product-design, type: usesTechnology, to: tool.figma }
   - { from: workarea.ui-ux-product-design, type: usesTechnology, to: tool.adobe-xd }
   - { from: workarea.ui-ux-product-design, type: relatedWork, to: workarea.digital-products }
   - { from: workarea.ui-ux-product-design, type: relatedWork, to: workarea.brand-systems }
   - { from: workarea.ui-ux-product-design, type: relatedWork, to: workarea.mobile-apps }
   - { from: workarea.workflow-automation, type: offersSolution, to: sol.workflow-automation }
-  - {
-      from: workarea.workflow-automation,
-      type: offersSolution,
-      to: sol.business-process-automation,
-    }
   - { from: workarea.workflow-automation, type: relatedWork, to: workarea.automation-systems }
   - { from: workarea.workflow-automation, type: relatedWork, to: workarea.internal-business-tools }
   - { from: workarea.workflow-automation, type: relatedWork, to: workarea.operations-platforms }

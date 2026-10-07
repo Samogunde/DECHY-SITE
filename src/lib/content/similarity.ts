@@ -26,6 +26,22 @@ export const TECH_SIMILARITY: SimilarityConfig = {
   maxShingle: 0.05,
   maxSharedHeadings: 2,
 };
+export const SOLUTION_SIMILARITY: SimilarityConfig = {
+  maxSequence: 0.9,
+  maxShingle: 0.05,
+  maxSharedHeadings: 1,
+};
+export const INDUSTRY_SIMILARITY: SimilarityConfig = {
+  maxSequence: 0.92,
+  maxShingle: 0.05,
+  maxSharedHeadings: 2,
+};
+/** Country pages share a purpose, so their structure may match; their copy may not. */
+export const LOCATION_SIMILARITY: SimilarityConfig = {
+  maxSequence: 1,
+  maxShingle: 0.08,
+  maxSharedHeadings: 3,
+};
 export const WORK_SIMILARITY: SimilarityConfig = {
   maxSequence: 0.92,
   maxShingle: 0.07,

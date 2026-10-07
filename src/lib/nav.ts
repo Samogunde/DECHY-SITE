@@ -23,6 +23,8 @@ export type TechCategoryModel = {
   directoryHref: string;
 };
 
+export type NavSummaryLink = NavLinkModel & { summary: string };
+
 export type WorkGroupModel = { id: string; label: string; items: NavLinkModel[] };
 
 export type NavItemModel =
@@ -48,6 +50,14 @@ export type NavItemModel =
       href: string | null;
       heading: string;
       groups: WorkGroupModel[];
+    }
+  | {
+      kind: "solutions" | "industries";
+      label: string;
+      href: string | null;
+      heading: string;
+      allLabel: string;
+      items: NavSummaryLink[];
     }
   | { kind: "link"; label: string; href: string | null };
 
@@ -109,6 +119,23 @@ export function buildNavModel(registry: Registry): NavModel {
         .filter((g) => g.items.length > 0);
       return { kind: "work", label: item.label, href, heading: registry.nav.work.heading, groups };
     }
+    if (item.kind === "solutions" || item.kind === "industries") {
+      const list = registry.nav[item.kind];
+      const items = list.items
+        .map((i): NavSummaryLink | null => {
+          const link = published(i.id);
+          return link ? { ...link, summary: i.summary } : null;
+        })
+        .filter((x): x is NavSummaryLink => !!x);
+      return {
+        kind: item.kind,
+        label: item.label,
+        href,
+        heading: list.heading,
+        allLabel: list.allLabel,
+        items,
+      };
+    }
     return { kind: "link", label: item.label, href };
   });
 
@@ -126,6 +153,8 @@ export function navDestinations(model: NavModel): string[] {
       for (const c of item.categories) for (const i of c.all) out.push(i.href);
     if (item.kind === "work")
       for (const g of item.groups) for (const i of g.items) out.push(i.href);
+    if (item.kind === "solutions" || item.kind === "industries")
+      for (const i of item.items) out.push(i.href);
   }
   return out;
 }

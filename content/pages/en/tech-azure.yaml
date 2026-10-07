@@ -158,7 +158,7 @@ sections:
     title: Licensing needs attention
     paragraphs:
       - "Microsoft's licensing can make the same workload cost very different amounts depending on what you already own and how you run it. A design that ignores licensing can be wrong by a wide margin."
-      - "We model costs with your existing licences in mind, and confirm current terms with Microsoft or your reseller, since they change."
+      - "We model costs with your existing licenses in mind, and confirm current terms with Microsoft or your reseller, since they change."
 
   - type: technical
     id: technology

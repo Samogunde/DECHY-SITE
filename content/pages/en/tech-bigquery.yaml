@@ -1,0 +1,227 @@
+id: page.tech-bigquery
+kind: technology
+locale: en
+path: /data-analytics/bigquery/
+parent: /data-analytics/
+entityId: tech.bigquery
+title: BigQuery Consulting and Development | DECHY
+description: "BigQuery from DECHY: building a data warehouse on Google Cloud, keeping its cost in check, and connecting it to reports, dashboards, and AI."
+breadcrumbLabel: BigQuery
+intent:
+  primary: bigquery consulting
+  secondary:
+    - bigquery data warehouse
+    - google bigquery development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: "BigQuery is Google Cloud's data warehouse: a place to gather large amounts of business data and ask questions of it quickly."
+  problem: Data sits in many systems, reports are built by hand, and questions that span several sources take days to answer.
+  audience: Teams with growing data in several systems who want one trusted place to analyze it, and organizations already on Google Cloud.
+  choose: Choose BigQuery when you already use Google tools or have large, growing data and want little infrastructure to run. Compare it with Snowflake and a plain database first.
+  next: Tell us where your data lives and which questions you cannot answer today. We will outline a warehouse and what it would cost to run.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Data platform
+    headline: BigQuery
+    lead: BigQuery is a data warehouse that Google runs for you. You load your data into it and ask questions in a familiar query language, without managing servers. We design the warehouse, load it, keep its cost in check, and connect it to the reports people use.
+    support: This page covers how a BigQuery set-up works, how it compares with the alternatives, and where cost surprises come from.
+    ctas:
+      - label: Talk to us about BigQuery
+        href: /contact/?service=data-analytics
+      - label: How data reaches the warehouse
+        href: "#how"
+    spec:
+      kind: flow
+      steps:
+        - title: Your systems
+          text: Sales, finance, marketing, and product data in separate tools.
+        - title: Loaded on a schedule
+          text: Data is copied in regularly, with checks on the way.
+        - title: Organized in the warehouse
+          text: Tables are cleaned, joined, and named so people can trust them.
+        - title: Questions are asked
+          text: Analysts and reports query it in seconds.
+        - title: Results reach people
+          text: Dashboards, alerts, and exports in the tools your team uses.
+    purpose: process
+    takeaway: Data moves from your separate systems into one organized warehouse, where it is queried and delivered to the people who need it.
+    visualTitle: From scattered data to answers
+    figureCaption: This diagram follows data in five steps, from the systems where it starts, through loading and organizing, to the dashboards and alerts that deliver answers.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A warehouse you do not have to build
+    paragraphs:
+      - "An ordinary business database is built to run the business: take an order, update a record. A data warehouse is built to examine the business: how did sales by region change over three years. The two jobs strain each other, so serious reporting usually moves to a warehouse."
+      - BigQuery is a warehouse where Google handles the machines. There is no server to size, patch, or restart. You store data, run queries, and pay for what you use. That removes a great deal of set-up and is its main attraction.
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: BigQuery compared with the alternatives
+    caption: BigQuery compared with other places to hold analytical data
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - BigQuery
+        - Large or fast-growing data, teams on Google Cloud, and those who want little infrastructure to manage.
+        - Costs follow how much data each query scans, so design matters.
+      - - "[Snowflake](ref:plat.snowflake)"
+        - Organizations that want a cloud-neutral warehouse with strong data sharing.
+        - A separate platform and bill; the skills do not transfer automatically.
+      - - "[PostgreSQL](ref:tech.postgresql)"
+        - Smaller data, where one well-tuned database can serve reports too.
+        - Reporting load can slow the system that runs the business.
+      - - Spreadsheets and exports
+        - Early stages, with a few sources and one or two people.
+        - Breaks down as sources, people, and versions multiply.
+  - type: callout
+    id: cost
+    tone: white
+    variant: note
+    title: Where BigQuery costs surprise people
+    paragraphs:
+      - Cost follows how much data each query reads, not how long it runs. That makes a few habits matter more than any setting.
+    items:
+      - Asking for every column when two would do
+      - Querying a very large table without a date filter
+      - A dashboard that refreshes a heavy query every few minutes
+      - Repeating the same expensive calculation instead of saving its result
+  - type: process
+    id: how
+    tone: white
+    label: How we set it up
+    heading: Building a warehouse people trust
+    steps:
+      - title: Start from the questions
+        body: We list the ten questions the business most wants answered and the data each needs.
+        artifacts:
+          - Question list
+          - Source list
+      - title: Design the tables
+        body: Raw data is kept as it arrived. Clean, named tables sit on top, with one definition for each measure.
+        artifacts:
+          - Data model
+          - Measure definitions
+      - title: Load and check
+        body: Automated loads bring data in on a schedule, with checks that flag missing or odd values.
+        artifacts:
+          - Load jobs
+          - Quality checks
+      - title: Control cost and access
+        body: Partitioning, limits, and budgets keep spending predictable. Access follows roles.
+        artifacts:
+          - Cost guardrails
+          - Access rules
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with BigQuery
+    columns:
+      - title: Design
+        items:
+          - A warehouse model built around your questions.
+          - A single definition for each number leaders rely on.
+      - title: Load
+        items:
+          - Pipelines from your applications, spreadsheets, and web services.
+          - Checks that catch bad data before it reaches a report.
+      - title: Deliver
+        items:
+          - Dashboards and scheduled reports on top of the warehouse.
+          - Alerts when a number moves outside its range.
+      - title: Add intelligence
+        items:
+          - Forecasts and models using data already in the warehouse.
+          - A route into [AI](ref:svc.ai) features that use your own data.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we design for cost and clarity.
+    panels:
+      - title: Storage and structure
+        items:
+          - Tables are partitioned by date and clustered by common filters, so queries read less data.
+          - Raw, cleaned, and reporting layers are kept in separate datasets with clear ownership.
+          - Transformations are written as version-controlled SQL and run on a schedule.
+      - title: Cost control
+        items:
+          - Queries select only the columns they need and filter on the partition.
+          - Budgets and alerts warn before spending drifts.
+          - We choose between pay-per-query and reserved capacity once usage is known.
+      - title: Access and governance
+        paragraphs:
+          - Access is granted by role through [Google Cloud](ref:plat.google-cloud) identity. Sensitive columns can be hidden from people who do not need them.
+      - title: Loading
+        paragraphs:
+          - Batch loads cover most needs. Where freshness matters, streaming inserts or change capture from the source database keep the warehouse close to current.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about BigQuery
+    items:
+      - q: Do we need BigQuery, or will our database do?
+        a: If your data is modest and one database already serves reports quickly, you may not need a warehouse yet. When reports slow the live system or you need data from many sources together, a warehouse earns its place.
+      - q: How do we keep the bill predictable?
+        a: By partitioning tables, limiting what each query scans, and setting budgets with alerts. We also review the heaviest queries regularly.
+      - q: Can we use BigQuery if we are not on Google Cloud?
+        a: Yes. Data can be loaded from systems anywhere. Teams already on other clouds should still compare it with the warehouse options on their own platform.
+      - q: Can you connect our existing dashboards?
+        a: Usually, yes. Most reporting tools can read from BigQuery. We check yours during the first review.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: BigQuery across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.data-analytics
+      - title: Related technologies
+        entityIds:
+          - plat.google-cloud
+          - tech.postgresql
+          - lang.python
+          - prov.google-gemini
+      - title: Alternatives
+        entityIds:
+          - plat.snowflake
+          - tech.mongodb
+      - title: Solutions
+        entityIds:
+          - sol.business-dashboards
+          - sol.cloud-migration
+      - title: Systems we build
+        entityIds:
+          - workarea.data-analytics
+          - workarea.integration-platforms
+          - workarea.ai-solutions
+      - title: Where it applies
+        entityIds:
+          - ind.retail
+          - ind.logistics
+          - ind.finance
+  - type: cta
+    id: contact-cta
+    heading: Tell us which questions you cannot answer today
+    body: Describe where your data lives and what you want to know. We will outline a warehouse, how it would be loaded, and what it should cost to run.
+    primary:
+      label: Talk to DECHY about BigQuery
+      href: /contact/?service=data-analytics

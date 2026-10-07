@@ -1,0 +1,234 @@
+id: page.tech-nodejs
+kind: technology
+locale: en
+path: /software-development/nodejs/
+parent: /software-development/
+entityId: tech.nodejs
+title: "Node.js Development Services | DECHY"
+description: "Node.js development from DECHY: building fast back ends, APIs, and real-time features, and an honest view of when Node.js is the right server technology."
+breadcrumbLabel: Node.js
+intent:
+  primary: node.js development services
+  secondary:
+    - node.js backend development
+    - node.js api development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Node.js lets a server run JavaScript, the language of the browser, so one team can build both the screens people see and the back end that sits behind them."
+  problem: "Teams need a back end that is quick to build, handles many users at once, and connects to other systems, without hiring a separate team for every language."
+  audience: "Product owners and technical leads choosing a server technology for a new application, an integration layer, or a rebuild."
+  choose: "Choose Node.js for connected, interactive, many-user applications. Choose something else when the heavy work is number crunching or when your organization already runs on another stack."
+  next: "Tell us what the back end has to do and who will keep it running. We will say whether Node.js fits and what the first stage would be."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Runtime
+    headline: Node.js development
+    lead: "Node.js is a way to run JavaScript on a server. We use it for back ends, connections between systems, and features that update live. It suits some jobs very well and others poorly, and we say which."
+    support: "This page covers where Node.js fits, how it compares with the other common choices, and what we build with it."
+    ctas:
+      - {
+          label: Talk to us about a Node.js back end,
+          href: "/contact/?service=software-development",
+        }
+      - { label: Is Node.js right for you?, href: "#options" }
+    spec:
+      kind: decision
+      question: Is Node.js the right back end?
+      branches:
+        - when: "Many users at once, live updates, lots of connections to other systems"
+          choose: Node.js is a strong fit
+          text: Its design keeps waiting on other systems cheap, so one server handles a lot of traffic.
+        - when: "The team already writes JavaScript or TypeScript for the screens"
+          choose: Node.js saves effort
+          text: One language across the whole product means shared skills and shared code.
+        - when: "Heavy calculation, data science, or machine learning is the core"
+          choose: Look at Python first
+          text: Those jobs have deeper tooling elsewhere. Node.js can still serve the results.
+        - when: "The organization runs on Microsoft tools and .NET skills"
+          choose: Compare with .NET
+          text: Match the stack you can hire for and support for years.
+    purpose: decision
+    takeaway: "Node.js fits connected, many-user applications and teams that already work in JavaScript; heavy calculation and existing .NET estates point elsewhere."
+    visualTitle: "When Node.js is the right back end"
+    figureCaption: "This diagram shows four situations and the back end that fits each: Node.js for connected and live systems, the same language for teams that write JavaScript, Python for heavy calculation, and .NET for Microsoft estates."
+
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: One language from screen to server
+    paragraphs:
+      - "A website has two halves. The front is what people see in the browser. The back end stores data, applies rules, and talks to other systems. For years the front spoke JavaScript while the back end used something else."
+      - "Node.js took the engine that runs JavaScript in the browser and made it run on a server. That is the whole idea, and it has practical effects: developers move between front and back without changing language, and code for checking a form can be shared by both."
+      - "It also handles waiting well. A back end spends much of its time waiting for a database, a payment provider, or another service. Node.js carries on with other requests while it waits, so a modest server copes with many people at once."
+    aside:
+      title: At a glance
+      items:
+        - "Runs JavaScript, or TypeScript compiled to it, on the server"
+        - "Strong at connections, live features, and many users"
+        - "Less suited to heavy calculation inside one request"
+
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Node.js compared with the other server choices
+    caption: Node.js compared with the common alternatives for a business back end
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Node.js
+        - "Interactive products, integration layers, real-time features, and teams that write JavaScript."
+        - "Heavy computation blocks other requests unless it is moved elsewhere."
+      - - "[Python](ref:lang.python)"
+        - "Data processing, reporting, and AI features sitting behind the application."
+        - "Fewer ready-made tools for live, many-connection features."
+      - - "[Java](ref:lang.java)"
+        - "Large, long-lived systems with strict structure and many developers."
+        - "More ceremony to start, so slower for small products."
+      - - "[.NET](ref:tech.dotnet)"
+        - "Organizations built around Microsoft tools, identity, and hosting."
+        - "Best when the surrounding estate is Microsoft too."
+    note: "The best choice is the one your team can build, hire for, and support for years, not the one with the best benchmark."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: What Node.js is good for
+    items:
+      - title: A back end for a web or mobile app
+        body: "Accounts, orders, and content served to a website and a phone app from one place."
+      - title: Connecting systems to each other
+        body: "A service that listens to your shop, customer records, and accounts, and keeps them in step. See our [integration](ref:svc.api-integration) work."
+      - title: Live features
+        body: "Chat, notifications, shared editing, and dashboards that update without a refresh."
+      - title: Internal tools and automation scripts
+        body: "Small services and scheduled jobs that remove repeated work for your staff."
+
+  - type: process
+    id: build
+    tone: paper
+    label: How we build it
+    heading: From brief to a back end you can maintain
+    steps:
+      - title: Define what the back end must do
+        body: "We list the data it holds, the systems it talks to, and how many people use it at peak."
+        artifacts: [Scope, Data and systems map]
+      - title: Choose the shape
+        body: "One simple service, or several small ones, depending on how the product will grow. We prefer the simplest that works."
+        artifacts: [Architecture sketch]
+      - title: Build in small, tested pieces
+        body: "Each feature ships with automated tests, so later changes do not break earlier ones."
+        artifacts: [Working increments, Test suite]
+      - title: Run it and watch it
+        body: "Deployment, monitoring, and a plan for updates, so the service stays healthy after launch."
+        artifacts: [Deployment set-up, Monitoring]
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Node.js
+    columns:
+      - title: Build
+        items:
+          - "New back ends and services for web and mobile products."
+          - "Connection layers between your tools and your customers' systems."
+      - title: Connect
+        items:
+          - "Links to payment, customer, shipping, and accounting systems."
+          - "Webhooks and background jobs that keep data current."
+      - title: Modernize
+        items:
+          - "Moving an older server application to a current, supported setup."
+          - "Splitting a hard-to-change application into parts, stage by stage."
+      - title: Look after
+        items:
+          - "Updates, security patches, and dependency reviews."
+          - "Performance checks when traffic grows."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we run Node.js projects."
+    panels:
+      - title: Language and runtime
+        paragraphs:
+          - "We write in [TypeScript](ref:lang.typescript) so that data shapes are checked before the code runs. We target a long-term support release of Node.js and plan upgrades before a release reaches the end of its support."
+      - title: Handling load
+        items:
+          - "Work that waits, such as database and network calls, runs without blocking other requests."
+          - "Heavy calculation moves to worker processes or a separate service."
+          - "Slow tasks run in queues, so a request returns quickly."
+      - title: Security and dependencies
+        items:
+          - "Packages are pinned, audited on every build, and kept to a minimum."
+          - "Secrets stay in the environment, never in the code."
+          - "Input is validated on arrival, and the service runs with only the access it needs."
+      - title: Shipping
+        paragraphs:
+          - "Services are packaged in [Docker](ref:tool.docker) containers and deployed through an automated pipeline. A pipeline of this kind is called CI/CD, short for continuous integration and delivery: every change is built, tested, and released the same way."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Node.js
+    items:
+      - q: Is Node.js fast enough for a serious business application?
+        a: "Yes, for the work it is designed for. It serves many simultaneous users well. For long calculations we move the work off the main path so the application stays responsive."
+      - q: Should the back end use the same language as the front end?
+        a: "It helps when one team builds both, because skills and some code are shared. It is a convenience, not a rule. If another language suits the problem better, we use it."
+      - q: Can you take over a Node.js application someone else built?
+        a: "Yes. We start with a review of the code, the dependencies, and the tests, and then tell you what is sound and what needs work."
+      - q: How does Node.js relate to React or Next.js?
+        a: "React builds the screens in the browser. [Next.js](ref:fw.nextjs) builds on it and can also run on a Node.js server. Node.js is the server side they commonly sit on."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Node.js across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.software-development]
+      - title: Related technologies
+        entityIds:
+          [
+            lang.typescript,
+            fw.react,
+            fw.nextjs,
+            tech.mongodb,
+            tech.postgresql,
+            tool.docker,
+            plat.aws,
+          ]
+      - title: Alternatives
+        entityIds: [lang.python, lang.java, tech.dotnet]
+      - title: Solutions
+        entityIds: [sol.legacy-system-modernization, sol.crm-integration]
+      - title: Systems we build
+        entityIds:
+          [
+            workarea.custom-software-systems,
+            workarea.api-integrations,
+            workarea.integration-platforms,
+          ]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.logistics, ind.professional-services]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what the back end has to do
+    body: "Describe the product, the systems it connects to, and how many people will use it. We will say whether Node.js fits and what a first stage would look like."
+    primary: { label: Talk to DECHY about Node.js, href: "/contact/?service=software-development" }

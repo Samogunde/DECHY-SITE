@@ -1,0 +1,253 @@
+id: page.solution-cloud-migration
+kind: solution
+locale: en
+path: /solutions/cloud-migration/
+parent: /solutions/
+entityId: sol.cloud-migration
+title: Cloud Migration Services | DECHY
+description: "Cloud migration from DECHY: moving servers, applications, and data to the cloud with a clear plan, tested cut-over, and costs you can predict and control."
+breadcrumbLabel: Cloud migration
+intent:
+  primary: cloud migration services
+  secondary:
+    - migrate applications to the cloud
+    - move servers to aws azure or google cloud
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: Cloud migration is the planned move of your servers, applications, and data from your own equipment or a hosting provider to a cloud platform.
+  problem: Servers are costly, aging, or fragile, a data centre contract is ending, or the business needs capacity and resilience it cannot easily build for itself.
+  audience: Owners and technology leads whose systems run on their own servers or older hosting, and teams told to reduce risk or cost.
+  choose: Move what benefits first, in waves, with a way back at each step. Do not move everything the same way; some systems should be improved, replaced, or retired.
+  next: Tell us what you run and where. We will inventory it, recommend a route for each system, and plan the first move.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Solution
+    headline: Cloud migration
+    lead: Moving to the cloud is not one job. Every system has its own best route, and some should not move at all. We inventory what you run, choose a route for each part, and move it in waves, with a tested way back.
+    support: This page explains what a migration touches, the routes open to you, and how we keep risk and cost under control.
+    ctas:
+      - label: Talk to us about a migration
+        href: /contact/?service=cloud
+      - label: The routes for each system
+        href: "#routes"
+    spec:
+      kind: layers
+      layers:
+        - title: Applications
+          text: The programs your business runs, from websites to back-office tools.
+          support:
+            - title: Move as they are
+            - title: Improve for the cloud
+        - title: Data
+          text: Databases and files, moved with checks that nothing is lost.
+          support:
+            - title: Databases
+            - title: Files and backups
+        - title: Network and security
+          text: Who can reach what, and how it is protected.
+          support:
+            - title: Access and identity
+            - title: Encryption and monitoring
+        - title: Running it afterwards
+          text: Monitoring, cost control, and a plan for updates.
+          support:
+            - title: Cost and capacity
+      layerLabel: What a migration touches
+      supportLabel: What sits beside it
+    purpose: system
+    takeaway: A migration moves four things together, applications, data, network and security, and the way you run it afterwards, not just the servers.
+    visualTitle: What a cloud migration touches
+    figureCaption: This diagram shows four layers a cloud migration touches, from applications and data through network and security to the way the systems are run afterwards.
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: Why organizations move, and why moves go wrong
+    paragraphs:
+      - The reasons to move are practical. A data centre contract ends. A server is old enough that nobody wants to restart it. A business needs to scale for a busy season, or to recover quickly after a failure, without buying equipment it will use for a few weeks a year.
+      - Moves go wrong for equally practical reasons. Systems are moved without anyone knowing what depends on them. Costs are estimated from a brochure, not from how the system behaves. The cut-over date arrives, and there is no tested way back.
+      - A sound migration treats the move as a series of small, reversible steps, each tested, with the cost modeled before it starts and watched after it ends.
+  - type: table
+    id: routes
+    tone: paper
+    label: Routes
+    heading: Choosing a route for each system
+    caption: Five routes for moving a system to the cloud, what each suits, and what it costs
+    columns:
+      - Route
+      - Suits
+      - Trade-off
+    rows:
+      - - Lift and shift
+        - A system that works and must move quickly, such as before a contract ends.
+        - Fast, but it brings old inefficiency with it, and the cloud bill can be higher than expected.
+      - - Move and tidy
+        - A system where a small change, such as a managed database, removes a lot of upkeep.
+        - A little more work now for much less to run later.
+      - - Rebuild for the cloud
+        - A system that must scale or recover quickly, and whose design is holding it back.
+        - The largest effort, with the largest long-term gain.
+      - - Replace with a service
+        - A function such as email or file storage that a provider already does well.
+        - You adapt to the service, and data must be moved with care.
+      - - Retire it
+        - A system nobody uses any more.
+        - Needs confirmation that nothing depends on it before it is switched off.
+  - type: process
+    id: how
+    tone: paper
+    label: How we do it
+    heading: A migration in waves
+    steps:
+      - title: Inventory and map
+        body: We list every system, what it depends on, who uses it, and when it is busiest.
+        artifacts:
+          - System inventory
+          - Dependency map
+      - title: Choose the route and model the cost
+        body: Each system gets a route. The running cost is estimated from real usage, with a margin for error.
+        artifacts:
+          - Route per system
+          - Cost model
+      - title: Prepare the landing zone
+        body: Accounts, networks, access, and monitoring are set up first and tested, so the first system lands in a safe place.
+        artifacts:
+          - Environment set-up
+          - Security review
+      - title: Move in waves, with a way back
+        body: A low-risk system goes first as a pilot. Each wave is rehearsed, moved, checked, and either accepted or rolled back.
+        artifacts:
+          - Rehearsal
+          - Cut-over plan
+          - Rollback plan
+      - title: Tune and hand over
+        body: After the move we right-size resources, switch on cost alerts, and train your team to run it.
+        artifacts:
+          - Cost report
+          - Runbook
+  - type: chooser
+    id: fit
+    tone: white
+    label: Which cloud
+    heading: Which cloud suits you?
+    intro: The three large providers are all capable. The choice usually follows the tools and skills you already have.
+    question: What best describes your estate?
+    options:
+      - label: We run mostly on Microsoft tools
+        when: Windows servers, Microsoft sign-in, and Microsoft business software.
+        get: A move to [Azure](ref:plat.azure), which connects closely to the tools you have.
+        watch: Licensing rules can reduce or raise the cost, so we check them first.
+      - label: We want the widest choice of services
+        when: Varied workloads, and a wish for the largest ecosystem and hiring pool.
+        get: A move to [AWS](ref:plat.aws), with the broadest set of services.
+        watch: Breadth brings complexity, so cost and design need active care.
+      - label: We work heavily with data and Google tools
+        when: Analytics, machine learning, or a team already on Google tools.
+        get: A move to [Google Cloud](ref:plat.google-cloud), strong in data and containers.
+        watch: Check that the services you need are offered in your regions.
+      - label: We are unsure, or want to avoid dependence on one provider
+        when: A mixed estate, or a policy against single-provider reliance.
+        get: A design built on containers and open tools, so moving later is practical.
+        watch: Portability has a cost, so use it where it matters.
+  - type: columns
+    id: delivers
+    tone: white
+    label: What you get
+    heading: What a migration delivers
+    columns:
+      - title: A plan
+        items:
+          - An inventory and a route for every system.
+          - A cost model you can check against the bill.
+      - title: A safe landing
+        items:
+          - A secured cloud environment, built as code so it can be repeated.
+          - Access and monitoring in place before the first move.
+      - title: A tested move
+        items:
+          - Rehearsals before each cut-over and a rollback plan.
+          - Checks that data arrived complete and unchanged.
+      - title: Control afterwards
+        items:
+          - Budgets, alerts, and right-sizing reviews.
+          - Documentation and training, or ongoing care.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build and move
+    intro: Most visitors can skip this section. It notes how we build and move.
+    panels:
+      - title: Infrastructure as code
+        paragraphs:
+          - The target environment is written as code with [Terraform](ref:tool.terraform), reviewed like any other change, and rebuilt from scratch in rehearsal. That makes the environment repeatable and auditable.
+      - title: Containers
+        items:
+          - Applications that suit it are packaged in [Docker](ref:tool.docker) containers, and run on managed container services or on [Kubernetes](ref:tool.kubernetes) where scale demands it.
+          - Stateless parts are separated from data, so they can be replaced without loss.
+      - title: Data movement
+        items:
+          - Databases are replicated to the target and kept in step until the cut-over, which keeps downtime short.
+          - Row counts, totals, and sampled records are compared before the old system is retired.
+      - title: Security and cost
+        items:
+          - Least-privilege access, network segmentation, encryption at rest and in transit, and central logging from day one.
+          - Tagging, budgets, and scheduled right-sizing keep cost attributable and controlled.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about moving to the cloud
+    items:
+      - q: Will the cloud be cheaper?
+        a: Not automatically. It can be, especially when you stop paying for idle capacity or old equipment. It can also be dearer if systems are moved without being tuned. We model the cost first.
+      - q: How much downtime should we expect?
+        a: For most systems, a short, planned window at cut-over, and sometimes none, where data can be kept in step beforehand. We agree the window with you.
+      - q: Is the cloud less secure than our own servers?
+        a: Not if it is set up well. Large providers offer strong tools, but the set-up is yours to get right. We design access, encryption, and monitoring from the start.
+      - q: What if we want to leave the cloud provider later?
+        a: "We design to keep that option open where it is worth the cost: containers, open standards, and infrastructure written as code."
+      - q: Can we move only part of what we run?
+        a: Yes, and many organizations do. A mixed estate is common, and we plan the connections between the parts.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Cloud migration across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.cloud
+          - svc.cybersecurity
+          - svc.consulting
+      - title: Systems we build
+        entityIds:
+          - workarea.cloud-platforms
+          - workarea.devops-infrastructure
+          - workarea.integration-platforms
+      - title: Technologies
+        entityIds:
+          - plat.aws
+          - plat.azure
+          - plat.google-cloud
+          - tool.docker
+          - tool.kubernetes
+          - tool.terraform
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you run and where
+    body: Describe your systems, your servers, and any deadline. We will inventory them, recommend a route for each, and plan the first move.
+    primary:
+      label: Talk to DECHY about a migration
+      href: /contact/?service=cloud

@@ -132,7 +132,7 @@ entities:
     primaryService: svc.web-development
     group: Frontend technologies
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: fw.astro
@@ -342,7 +342,7 @@ entities:
     primaryService: svc.web-development
     group: Frontend technologies
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: int.adyen
@@ -842,7 +842,7 @@ entities:
     alsoListedUnder:
       - svc.data-analytics
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: plat.ghost
@@ -1074,7 +1074,7 @@ entities:
     primaryService: svc.data-analytics
     group: Analytics/data platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 10
   - id: plat.squarespace
@@ -1126,7 +1126,7 @@ entities:
     alsoListedUnder:
       - svc.data-analytics
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: plat.vercel
@@ -1208,7 +1208,7 @@ entities:
     alsoListedUnder:
       - svc.web-development
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.wordpress
@@ -1492,7 +1492,7 @@ entities:
     alsoListedUnder:
       - svc.cloud
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: tech.blob-storage
@@ -2014,7 +2014,7 @@ entities:
     primaryService: svc.automation
     group: Automation platforms and technologies
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: tech.milvus
@@ -2074,7 +2074,7 @@ entities:
     primaryService: svc.data-analytics
     group: Relational databases
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 10
   - id: tech.n8n

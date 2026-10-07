@@ -1,0 +1,248 @@
+id: page.solution-business-process-automation
+kind: solution
+locale: en
+path: /solutions/business-process-automation/
+parent: /solutions/
+entityId: sol.business-process-automation
+title: Business Process Automation Services | DECHY
+description: "Business process automation from DECHY: removing repeated manual work, slow approvals, and re-typed data by automating the steps that follow fixed rules."
+breadcrumbLabel: Business process automation
+intent:
+  primary: business process automation
+  secondary:
+    - automate repetitive tasks
+    - workflow and approval automation
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: Business process automation means letting software carry out the repeated steps of a process, such as collecting a request, checking it, routing it for approval, and updating records.
+  problem: Work moves by email and spreadsheet, details are typed more than once, approvals stall in inboxes, and nobody can see where a request has got to.
+  audience: Operations, finance, and service leaders whose teams spend hours on routine steps, and owners who feel the business is held back by manual work.
+  choose: Automate the steps that follow fixed rules and repeat often. Fix an unclear process before you automate it, and keep people in the steps that need judgment.
+  next: Tell us which process costs your team the most time. We will map it with you and outline what to automate first.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Solution
+    headline: Business process automation
+    lead: If your team spends its days re-typing details, chasing approvals, and updating the same record in three places, the process is doing work that software can do. We automate the repeated steps and leave the judgment to people.
+    support: This page explains how we decide what to automate, how a first automation is built, and what to watch for.
+    ctas:
+      - label: Talk to us about a process
+        href: /contact/?service=automation
+      - label: What kind of automation
+        href: "#kind"
+    spec:
+      kind: before-after
+      before:
+        title: Work moves by hand
+        text: Each request depends on someone remembering the next step.
+        nodes:
+          - title: Requests arrive by email
+          - title: Details are typed again
+          - title: Approvals wait in inboxes
+          - title: Status is a question
+      after:
+        title: Work moves by itself
+        text: The process carries each request to the next step.
+        nodes:
+          - title: One form collects the request
+          - title: Details reach every system
+          - title: Approvals are timed and tracked
+          - title: Status is always visible
+      hubLabel: A defined process
+    purpose: before-after
+    takeaway: Automation replaces manual hand-offs with a defined process that moves each request forward and shows where it stands.
+    visualTitle: Manual hand-offs and an automated process
+    figureCaption: This diagram contrasts work that moves by hand, with requests by email, repeated typing, and stalled approvals, with a process that collects, routes, and tracks each request.
+  - type: prose
+    id: problem
+    tone: white
+    label: The problem
+    heading: Where the hours go
+    paragraphs:
+      - Most businesses do not have one big inefficiency. They have dozens of small ones. A new customer is entered into the sales tool, then the accounts tool, then a spreadsheet. An invoice waits two days for a signature because the approver was away. A weekly report is rebuilt by hand every Friday.
+      - Each of these costs a few minutes, and none seems worth fixing. Together they cost whole working days, and they add errors, because every re-typed detail is a chance for a mistake. They also hide in people's habits, so the cost is rarely written down.
+      - Business process automation is the practice of finding these steps and making software do them. It is not about replacing people. It is about stopping skilled people from acting as couriers between systems.
+    aside:
+      title: Signs a process is ready
+      items:
+        - The same steps run again and again
+        - The rules can be written down
+        - Data is typed in more than one place
+        - People ask where a request has got to
+  - type: chooser
+    id: kind
+    tone: paper
+    label: What to automate
+    heading: Which kind of automation do you need?
+    intro: Processes differ, and so does the automation. Four kinds cover most of what businesses ask for.
+    question: What is the process doing today?
+    options:
+      - label: Collecting and approving requests
+        when: Leave, purchases, expenses, onboarding, or any request that needs a decision.
+        get: One form, rules that send it to the right approver, reminders, and a record.
+        watch: Decide who approves when the usual person is away, before you build.
+      - label: Moving data between systems
+        when: The same details are typed into the shop, the accounts, and the customer records.
+        get: Connections that carry data once, with checks for duplicates and gaps.
+        watch: Choose which system is the source of truth for each field.
+      - label: Reports and reminders
+        when: Numbers are gathered by hand and sent on a schedule, or follow-ups depend on memory.
+        get: Scheduled reports, alerts when a figure moves, and automatic follow-up.
+        watch: Agree the definitions first, or the report will be fast and disputed.
+      - label: Steps that need reading or judgment
+        when: Emails, documents, or forms must be read and sorted before anyone can act.
+        get: An AI step that reads and classifies, with a person checking the unclear cases.
+        watch: Keep a person in the loop wherever a wrong answer would be costly.
+  - type: process
+    id: how
+    tone: white
+    label: How we do it
+    heading: From a tangled process to a working automation
+    steps:
+      - title: Find where the time goes
+        body: We watch the process as it runs, count the hand-offs, and list the delays. The biggest, most repeated steps come first.
+        artifacts:
+          - Process list
+          - Time and delay notes
+      - title: Map and simplify
+        body: We write the process down as it really works, remove steps that need not exist, and settle the rules and the exceptions.
+        artifacts:
+          - Process map
+          - Rules and exceptions
+      - title: Build one automation end to end
+        body: We choose the tool that fits, build the first flow, and run it beside the manual process until it matches.
+        artifacts:
+          - Working automation
+          - Test results
+      - title: Hand over and extend
+        body: People are trained, monitoring is switched on, and the next process is chosen from what the first one taught.
+        artifacts:
+          - Runbook
+          - Monitoring
+          - Next-process list
+  - type: table
+    id: routes
+    tone: paper
+    label: Routes
+    heading: Four ways to automate a process
+    caption: Four routes to automating a process, what each suits, and what to watch for
+    columns:
+      - Route
+      - Suits
+      - Watch for
+    rows:
+      - - Fix the process first
+        - A process nobody can describe, or one that changes every week.
+        - Automating confusion makes it faster, not better.
+      - - A no-code platform
+        - Common steps between popular tools, such as [Zapier](ref:tech.zapier), [Make](ref:tech.make), or [Power Automate](ref:tech.microsoft-power-automate).
+        - Cost and limits grow with volume, and many unmanaged flows become a risk.
+      - - A self-hosted workflow engine
+        - Teams that want control, custom logic, and data kept on their own servers, such as [n8n](ref:tech.n8n).
+        - You run and secure it, so it needs an owner.
+      - - A small custom service
+        - High volumes, strict rules, or steps no platform handles well.
+        - More to build, but the most control and the lowest running cost at scale.
+  - type: columns
+    id: delivers
+    tone: white
+    label: What you get
+    heading: What an automation project delivers
+    columns:
+      - title: Clarity
+        items:
+          - A written map of the process and its exceptions.
+          - A list of what to automate first, and what to leave alone.
+      - title: Automation
+        items:
+          - Working flows for requests, approvals, data, and reports.
+          - Connections to the tools you already use, including [Airtable](ref:plat.airtable).
+      - title: Safety
+        items:
+          - Logs of every run, alerts for failures, and a way to stop a flow.
+          - Access rules, so automations reach only the data they need.
+      - title: Ownership
+        items:
+          - Documentation your team can follow.
+          - Training, or ongoing care if you prefer us to look after it.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: The engineering behind a dependable automation
+    intro: Most visitors can skip this section. It notes the engineering behind a dependable automation.
+    panels:
+      - title: Reliability
+        items:
+          - Every step is built to be repeated safely, so a retry after a failure cannot create a duplicate.
+          - Temporary errors are retried with increasing delays, and permanent ones raise an alert with the data needed to fix them.
+          - Each run leaves a log that shows what came in, what was decided, and what was changed.
+      - title: Connections
+        items:
+          - Connections to other systems use dedicated service accounts with limited permissions, not a person's login.
+          - Where a system offers an event feed, we use it instead of polling, which is faster and lighter.
+      - title: AI steps
+        paragraphs:
+          - Where a step must read or classify text, we call a language model and keep a confidence check and a human review for unclear cases. Details are on our [AI and machine learning](ref:svc.ai) page.
+      - title: Governance
+        paragraphs:
+          - Flows have named owners, naming standards, and a review date, so a growing set of automations does not turn into an unmanaged risk.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about automating a process
+    items:
+      - q: Which processes should we automate first?
+        a: Start with a process that repeats often, follows clear rules, and has an owner who wants it fixed. A small, visible win teaches more than a large project.
+      - q: Will automation replace our staff?
+        a: Its purpose is to remove the routine steps, so people can spend time on work that needs judgment. We design with the staff who run the process.
+      - q: What if our process has many exceptions?
+        a: Automate the common path and route the exceptions to a person with the facts attached. Trying to automate every exception is how projects stall.
+      - q: How is this different from AI automation?
+        a: AI is one tool inside automation. It suits steps that need reading or sorting. Most of a process follows fixed rules, which ordinary automation handles more cheaply and predictably.
+      - q: How long does a first automation take?
+        a: It depends on the process and the tools. A focused first flow is usually a matter of weeks, not months, and we agree the scope before we start.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Process automation across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.automation
+          - svc.software-development
+          - svc.consulting
+      - title: Systems we build
+        entityIds:
+          - workarea.workflow-automation
+          - workarea.automation-systems
+          - workarea.internal-business-tools
+          - workarea.operations-platforms
+      - title: Technologies
+        entityIds:
+          - tech.zapier
+          - tech.make
+          - tech.n8n
+          - tech.microsoft-power-automate
+          - plat.airtable
+          - lang.python
+  - type: cta
+    id: contact-cta
+    heading: Tell us which process costs the most time
+    body: Describe the process, who is involved, and where it slows down. We will map it with you and outline what to automate first.
+    primary:
+      label: Talk to DECHY about automation
+      href: /contact/?service=automation

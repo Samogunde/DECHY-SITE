@@ -1,0 +1,219 @@
+id: page.tech-angular
+kind: technology
+locale: en
+path: /web-development/angular/
+parent: /web-development/
+entityId: fw.angular
+title: Angular Development Services | DECHY
+description: "Angular development from DECHY: building large business applications, and moving older AngularJS systems to a supported version without stopping the business."
+breadcrumbLabel: Angular
+intent:
+  primary: angular development services
+  secondary:
+    - angular developer
+    - angularjs migration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Angular is a complete framework for building large web applications, with a strict structure that keeps many developers consistent over many years.
+  problem: Large business applications grow tangled over time, and teams with older AngularJS code face a framework that is no longer supported.
+  audience: Organizations building or maintaining substantial internal or customer applications, and owners of AngularJS systems.
+  choose: Choose Angular for large applications with many screens, many developers, and a long life. Choose something lighter for small sites and quick builds.
+  next: Tell us about the application and its users. We will review any existing code and recommend how to build or move forward.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Framework
+    headline: Angular development
+    lead: "Angular is a framework for large applications: many screens, many forms, many developers, and a long life. We build with it, and we move older AngularJS systems to a version that is still supported."
+    support: This page covers when Angular is worth its weight, how it compares with Vue and React, and how an old AngularJS system is moved forward.
+    ctas:
+      - label: Talk to us about an Angular application
+        href: /contact/?service=web-development
+      - label: Moving off AngularJS
+        href: "#move"
+    spec:
+      kind: before-after
+      before:
+        title: An application that has grown loose
+        text: Each team solved the same problem its own way.
+        nodes:
+          - title: Screens built differently
+          - title: Forms handled in several ways
+          - title: Rules repeated in places
+      after:
+        title: One structured application
+        text: A shared way of building keeps every part familiar.
+        nodes:
+          - title: One component pattern
+          - title: Forms built the same way
+          - title: Rules in one place
+      hubLabel: A common structure
+    purpose: before-after
+    takeaway: Angular gives a large application one shared structure, so screens, forms, and rules are built the same way by everyone.
+    visualTitle: What a shared structure changes
+    figureCaption: This diagram contrasts an application that has grown loose, with screens, forms, and rules built several ways, against one with a single shared structure.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A framework that makes decisions for you
+    paragraphs:
+      - "Most front-end tools leave you to assemble the pieces. Angular arrives with them chosen: how screens are built, how forms work, how data is fetched, how the application is tested. Everyone on a team therefore builds the same way, and a new developer finds familiar ground."
+      - That is its value on a large project and its cost on a small one. The structure takes time to learn and adds code that a simple site does not need. On an application with dozens of screens, hundreds of form fields, and ten developers over five years, the same structure saves far more than it costs.
+      - It also explains why Angular is common inside large organizations, in finance, healthcare, and manufacturing. Consistency across teams and over time is worth more to them than speed on day one.
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: When Angular beats the lighter choices
+    caption: Angular compared with the other common front-end frameworks by size of project
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Angular
+        - Large applications, forms-heavy business software, many developers, and long lives.
+        - More to learn, and more code than a small project needs.
+      - - "[React](ref:fw.react)"
+        - Products that need the widest ecosystem and a very large hiring pool.
+        - Consistency depends on the rules your team sets for itself.
+      - - "[Vue](ref:fw.vue)"
+        - Small and medium applications, and adding interactivity to existing sites.
+        - Less structure by default for very large teams.
+      - - Server-rendered pages
+        - Content-heavy sites where most pages need little interaction.
+        - Rich, app-like screens take more work.
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Angular
+    columns:
+      - title: Build
+        items:
+          - Large internal applications and customer portals.
+          - Forms-heavy tools with clear validation and saved progress.
+      - title: Move
+        items:
+          - AngularJS to current Angular, in stages.
+          - Older Angular versions brought up to a supported release.
+      - title: Connect
+        items:
+          - Screens driven by your back end, whether [Java](ref:lang.java), [.NET](ref:tech.dotnet), or another.
+          - Sign-in and roles that match your organization.
+      - title: Look after
+        items:
+          - Regular updates, as the framework releases on a fixed schedule.
+          - Performance and accessibility reviews.
+  - type: process
+    id: move
+    tone: white
+    label: Moving forward
+    heading: Moving an AngularJS application to a supported version
+    intro: AngularJS is the older generation of the framework and no longer receives updates. Moving off it is a project, not a patch.
+    steps:
+      - title: Inventory the application
+        body: We list the screens, the shared code, the libraries, and which parts are still used.
+        artifacts:
+          - Screen inventory
+          - Library list
+      - title: Choose the route
+        body: Run both generations side by side and move screen by screen, or rebuild areas that are cheaper to replace than to convert.
+        artifacts:
+          - Migration plan
+      - title: Move one area at a time
+        body: Each area is rebuilt, tested against the old behavior, and released while the rest stays live.
+        artifacts:
+          - Rebuilt area
+          - Test results
+      - title: Retire the old code
+        body: When the last screen has moved, the old framework and its libraries are removed.
+        artifacts:
+          - Clean codebase
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we build and maintain Angular applications.
+    panels:
+      - title: Architecture
+        items:
+          - Feature areas split into separate modules that load only when needed, which keeps the first screen quick.
+          - Services hold business logic and data access, so screens stay thin.
+          - Strict [TypeScript](ref:lang.typescript) settings catch mistakes before the application runs.
+      - title: Forms and data
+        items:
+          - Reactive forms with validation rules defined in code and tested.
+          - A single layer for calls to the back end, with consistent error handling.
+      - title: Quality
+        items:
+          - Unit tests for logic and end-to-end tests for the main journeys.
+          - Automated builds that fail on type errors, test failures, and accessibility regressions.
+      - title: Keeping current
+        paragraphs:
+          - Angular releases on a predictable schedule and supports each version for a limited time. We plan upgrades one major version at a time, so each step is small and reversible.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Angular
+    items:
+      - q: Is Angular too heavy for our project?
+        a: For a small site, probably. For a large application with many screens and developers, its structure usually pays for itself. We say honestly which you have.
+      - q: Do we have to rewrite our AngularJS application?
+        a: Not all at once. Running old and new together and moving area by area is usually safer, though some parts are cheaper to rebuild.
+      - q: Can Angular work with our existing back end?
+        a: Yes. It talks to any back end that offers a standard interface, so your existing services and databases can stay.
+      - q: Is Angular good for search visibility?
+        a: It can be, with server-side rendering for public pages. Internal applications behind a sign-in do not need it.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Angular across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.web-development
+      - title: Related technologies
+        entityIds:
+          - lang.typescript
+          - lang.java
+          - tech.dotnet
+          - plat.azure
+      - title: Alternatives
+        entityIds:
+          - fw.react
+          - fw.vue
+      - title: Solutions
+        entityIds:
+          - sol.legacy-system-modernization
+          - sol.business-dashboards
+      - title: Systems we build
+        entityIds:
+          - workarea.operations-platforms
+          - workarea.internal-business-tools
+          - workarea.customer-portals
+      - title: Where it applies
+        entityIds:
+          - ind.finance
+          - ind.healthcare
+          - ind.manufacturing
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the application
+    body: Describe what it does, who uses it, and any existing code. We will review it and recommend how to build or move forward.
+    primary:
+      label: Talk to DECHY about Angular
+      href: /contact/?service=web-development

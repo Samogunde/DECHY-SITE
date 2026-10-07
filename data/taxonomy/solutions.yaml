@@ -11,7 +11,7 @@ entities:
     slug: ai-agents
     primaryService: svc.ai
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.ai-automation
@@ -20,7 +20,7 @@ entities:
     slug: ai-automation
     primaryService: svc.automation
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.ai-customer-support
@@ -29,7 +29,7 @@ entities:
     slug: ai-customer-support
     primaryService: svc.ai
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 23
   - id: sol.ai-knowledge-systems
@@ -47,7 +47,7 @@ entities:
     slug: api-integration
     primaryService: svc.api-integration
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.booking-platforms
@@ -56,7 +56,7 @@ entities:
     slug: booking-platforms
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE LATER
     evidenceLevel: none
     sourceSection: 23
   - id: sol.business-dashboards
@@ -65,7 +65,7 @@ entities:
     slug: business-dashboards
     primaryService: svc.data-analytics
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 23
   - id: sol.business-process-automation
@@ -74,7 +74,7 @@ entities:
     slug: business-process-automation
     primaryService: svc.automation
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 23
   - id: sol.cloud-migration
@@ -83,7 +83,7 @@ entities:
     slug: cloud-migration
     primaryService: svc.cloud
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 23
   - id: sol.crm-integration
@@ -92,7 +92,7 @@ entities:
     slug: crm-integration
     primaryService: svc.api-integration
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 23
   - id: sol.customer-experience-systems
@@ -101,7 +101,7 @@ entities:
     slug: customer-experience-systems
     primaryService: svc.ui-ux
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: DO NOT CREATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.customer-portal-development
@@ -110,7 +110,7 @@ entities:
     slug: customer-portal-development
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.data-systems
@@ -119,7 +119,7 @@ entities:
     slug: data-systems
     primaryService: svc.data-analytics
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.digital-transformation
@@ -128,7 +128,7 @@ entities:
     slug: digital-transformation
     primaryService: svc.consulting
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.ecommerce-systems
@@ -137,7 +137,7 @@ entities:
     slug: ecommerce-systems
     primaryService: svc.ecommerce
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.internal-business-software
@@ -146,7 +146,7 @@ entities:
     slug: internal-business-software
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.legacy-system-modernization
@@ -155,7 +155,7 @@ entities:
     slug: legacy-system-modernization
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 23
   - id: sol.marketplace-platforms
@@ -164,7 +164,7 @@ entities:
     slug: marketplace-platforms
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE LATER
     evidenceLevel: none
     sourceSection: 23
   - id: sol.payment-integration
@@ -173,7 +173,7 @@ entities:
     slug: payment-integration
     primaryService: svc.api-integration
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE LATER
     evidenceLevel: none
     sourceSection: 23
   - id: sol.saas-platforms
@@ -182,7 +182,7 @@ entities:
     slug: saas-platforms
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE LATER
     evidenceLevel: none
     sourceSection: 23
   - id: sol.subscription-platforms
@@ -191,7 +191,7 @@ entities:
     slug: subscription-platforms
     primaryService: svc.software-development
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23
   - id: sol.workflow-automation
@@ -200,6 +200,6 @@ entities:
     slug: workflow-automation
     primaryService: svc.automation
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: MERGE / CONSOLIDATE
     evidenceLevel: none
     sourceSection: 23

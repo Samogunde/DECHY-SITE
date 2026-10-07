@@ -24,7 +24,20 @@ import {
   type ServiceFamily,
 } from "./schema";
 
-export const NAV_KINDS = ["services", "technologies", "work", "link"] as const;
+export const NAV_KINDS = [
+  "services",
+  "technologies",
+  "work",
+  "solutions",
+  "industries",
+  "link",
+] as const;
+
+const MenuList = z.object({
+  heading: z.string(),
+  allLabel: z.string(),
+  items: z.array(z.object({ id: z.string(), summary: z.string() })),
+});
 
 const NavFile = z.object({
   primary: z.array(z.object({ label: z.string(), kind: z.enum(NAV_KINDS), path: z.string() })),
@@ -44,6 +57,8 @@ const NavFile = z.object({
     heading: z.string(),
     groups: z.array(z.object({ id: z.string(), label: z.string(), items: z.array(z.string()) })),
   }),
+  solutions: MenuList,
+  industries: MenuList,
   footer: z.object({
     explore: z.array(z.object({ label: z.string(), path: z.string() })),
     legal: z.array(z.object({ label: z.string(), path: z.string() })),

@@ -66,11 +66,19 @@ export function connectionsFor(page: Page, registry: Registry): ConnectionRail[]
       });
     // Destinations first, then names that have no page yet, each in authored order.
     const linked = items.filter((i) => i.href);
-    const plain = items.filter((i) => !i.href);
+    // A Solution without a page (represented through a Work Area, deferred, or graph-only) is
+    // not offered as an inert name: the Systems we build rail already points to what answers it.
+    const plain = rail.id === "solutions" ? [] : items.filter((i) => !i.href);
     const all = [...linked, ...plain].slice(0, CONNECTION_RAIL_LIMIT);
     if (all.length) rails.push({ id: rail.id, title: rail.title, items: all });
   }
   return rails;
 }
 
-export const CONNECTS_KINDS = new Set(["service", "technology", "work-area"]);
+export const CONNECTS_KINDS = new Set([
+  "service",
+  "technology",
+  "work-area",
+  "solution",
+  "industry",
+]);

@@ -379,6 +379,13 @@ export const Block = z.discriminatedUnion("type", [
     source: z.enum(["technologies", "work"]),
   }),
   z.object({
+    type: z.literal("articles"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+  }),
+  z.object({
     type: z.literal("service-index"),
     ...base,
     label: z.string(),
@@ -496,6 +503,10 @@ export const Page = z.object({
     "work-hub",
     "work-area",
     "technology",
+    "solution",
+    "industry",
+    "location",
+    "article",
     "contact",
     "legal",
   ]),
@@ -515,10 +526,25 @@ export const Page = z.object({
   dateModified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   parent: z.string().optional(),
   schemaTypes: z.array(
-    z.enum(["WebPage", "Service", "ContactPage", "FAQPage", "AboutPage", "CollectionPage"]),
+    z.enum([
+      "WebPage",
+      "Service",
+      "ContactPage",
+      "FAQPage",
+      "AboutPage",
+      "CollectionPage",
+      "Article",
+    ]),
   ),
   /** The five visitor answers the page must make obvious (required for commercial pages). */
   comprehension: Comprehension.optional(),
+  /** Resource and article pages only: how the piece is classified. The author is always DECHY. */
+  article: z
+    .object({
+      category: z.enum(["guide", "comparison", "decision", "explainer", "industry"]),
+      summary: z.string().min(40),
+    })
+    .optional(),
   sections: z.array(Block).min(1),
 });
 export type Page = z.infer<typeof Page>;
