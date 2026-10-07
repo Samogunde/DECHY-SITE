@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for professional services firms
     lead: A professional firm sells time and judgment. Every hour spent on re-typing, chasing, or assembling reports is an hour not sold. We build and connect the systems that capture work, bill it, and share it with clients, so the firm spends its time on the work itself.
-    support: This page covers what firms ask for, where the leakage usually is, and how we approach it.
     ctas:
-      - label: Talk to us about a firm's systems
+      - label: Discuss a firm's systems
         href: /contact/?service=software-development
       - label: Where time leaks
         href: "#leaks"
@@ -83,7 +82,7 @@ sections:
     tone: white
     label: What it looks like
     heading: One client record across sales and delivery
-    intro: A firm gains most when sales, delivery, and billing share one client record. This sketch shows a pipeline and the shared record.
+    intro: A firm gains most when sales, delivery, and billing share one client record.
     figure: crm-ui
     purpose: relationship
     takeaway: A professional firm benefits when sales, delivery, and billing share one record for each client.
@@ -160,7 +159,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Client data and time capture notes
-    intro: Most visitors can skip this section. It notes the engineering choices we make for firms that hold client confidences.
+    intro: The engineering choices we make for firms that hold client confidences.
     panels:
       - title: Keeping clients apart
         items:
@@ -217,5 +216,5 @@ sections:
     heading: Tell us how work is tracked and billed today
     body: Describe how time, projects, and invoices are handled and where details are re-entered. We will outline a first stage.
     primary:
-      label: Talk to DECHY about professional services
+      label: Discuss your firm's systems
       href: /contact/?service=software-development

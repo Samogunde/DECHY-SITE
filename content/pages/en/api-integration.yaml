@@ -38,7 +38,7 @@ sections:
     lead: At DECHY, we connect the systems your business runs on, so a customer, an order, or a payment is entered once and appears everywhere it should. We build the connections, check them, and watch them so they keep working.
     support: Integration is the quiet foundation of automation, AI, and good reporting. Without it, each of those has to start from copies and guesses.
     ctas:
-      - label: Talk to us about integration
+      - label: Discuss your integrations
         href: /contact/?service=api-integration
       - label: See common connections
         href: "#connections"
@@ -46,7 +46,7 @@ sections:
       kind: hub
       center:
         title: One reliable connection layer
-        text: Moves information between your tools, checks it, and records what happened.
+        text: Moves, checks, and records the information.
       spokes:
         - title: Website
           text: Forms and orders arrive.
@@ -217,8 +217,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It explains how we build connections.
+    heading: Under the hood
+    intro: How we build connections.
     panels:
       - title: Styles of API
         paragraphs:
@@ -306,5 +306,5 @@ sections:
     heading: Tell us which tools should talk
     body: List the tools you use and what you wish moved between them. We will tell you what is possible, what to connect first, and how to keep it dependable.
     primary:
-      label: Talk to DECHY about integration
+      label: Discuss your integrations
       href: /contact/?service=api-integration

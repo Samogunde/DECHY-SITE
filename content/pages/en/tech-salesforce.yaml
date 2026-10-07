@@ -31,9 +31,8 @@ sections:
     eyebrow: Platform
     headline: Salesforce integration and automation
     lead: "Salesforce can model almost any customer process, which is its strength and its risk. We connect Salesforce to the systems around it, automate what people repeat, and help organizations keep their set-up understandable."
-    support: "This page covers how Salesforce is structured, how we connect it, and how to keep customization under control."
     ctas:
-      - { label: Talk to us about Salesforce, href: "/contact/?service=automation" }
+      - { label: Discuss your Salesforce project, href: "/contact/?service=automation" }
       - { label: How it fits together, href: "#layers" }
     spec:
       kind: layers
@@ -143,8 +142,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we approach Salesforce integrations."
+    heading: How we build with Salesforce
+    intro: "How we approach Salesforce integrations."
     panels:
       - title: Integration patterns
         paragraphs:
@@ -154,6 +153,7 @@ sections:
           - "External identifiers on records, so repeated messages update instead of duplicating."
           - "Queues and retries for outages on either side."
           - "A sandbox for testing, with a repeatable deployment process."
+          - "Every custom field and automation documented, so the next administrator knows why it exists."
       - title: Security
         items:
           - "Integration users with the minimum permissions they need."
@@ -197,4 +197,4 @@ sections:
     id: contact-cta
     heading: Tell us which systems must share data
     body: "Describe your Salesforce set-up, the systems around it, and where the pain is. We will review it and recommend the smallest useful fix."
-    primary: { label: Talk to DECHY about Salesforce, href: "/contact/?service=automation" }
+    primary: { label: Discuss your Salesforce project, href: "/contact/?service=automation" }

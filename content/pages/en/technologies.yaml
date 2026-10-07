@@ -31,7 +31,7 @@ sections:
     lead: "At DECHY, we work with a wide range of languages, frameworks, platforms, and tools. What matters more than the list is how we choose among them. This page explains the reasoning and shows what we commonly use."
     support: "We recommend what fits you, including tools you already own, and we explain why."
     ctas:
-      - { label: Talk to us about your stack, href: "/contact/" }
+      - { label: Discuss your stack, href: "/contact/" }
       - { label: How we choose, href: "#choose" }
     spec:
       kind: decision

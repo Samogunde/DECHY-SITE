@@ -34,7 +34,7 @@ const FIGURES: Record<
   "software-anatomy": { Component: SoftwareAnatomy, max: "34rem" },
   "quality-layers": { Component: QualityLayers },
   "modernization-path": { Component: ModernizationPath },
-  "portal-wireframe": { Component: PortalWireframe },
+  "portal-wireframe": { Component: PortalWireframe, max: "46rem" },
   // Conceptual interface mockups (Phase 5)
   "site-builder": { Component: SiteBuilder, max: "40rem" },
   "store-ui": { Component: StoreUi, max: "44rem" },
@@ -91,7 +91,8 @@ export function Figure({
           <named.Component titleId={`fig-${uid}`} />
         ) : null}
       </div>
-      <figcaption className="figure-caption t-caption">{caption}</figcaption>
+      {/* The caption stays in the markup for assistive technology and search; it is not shown. */}
+      <figcaption className="visually-hidden">{caption}</figcaption>
     </figure>
   );
 }

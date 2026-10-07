@@ -34,9 +34,8 @@ sections:
     eyebrow: Website platform
     headline: Wix website development
     lead: Wix gets a business online quickly, with hosting, security, and business tools included. We build Wix sites that look credible and load well, connect them to the rest of your business, and tell you honestly when a project has outgrown the platform.
-    support: This page covers what Wix does well, where its limits sit, and how it compares with other ways to build a site.
     ctas:
-      - label: Talk to us about a Wix site
+      - label: Discuss a Wix site
         href: /contact/?service=web-development
       - label: Wix or something else?
         href: "#options"
@@ -141,8 +140,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we approach Wix work.
+    heading: How we build with Wix
+    intro: How we approach Wix work.
     panels:
       - title: Custom code
         items:
@@ -211,5 +210,5 @@ sections:
     heading: Tell us what the Wix site has to do and connect to
     body: Describe the site, what it needs to connect to, and what frustrates you about it now. We will say whether to build on Wix, extend it, or move.
     primary:
-      label: Talk to DECHY about Wix
+      label: Discuss your Wix project
       href: /contact/?service=web-development

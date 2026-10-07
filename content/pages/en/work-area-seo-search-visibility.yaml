@@ -35,7 +35,7 @@ sections:
     headline: SEO and Search Visibility
     lead: A search visibility system is built into how a site is organized, written, and labeled. SEO (search engine optimization) is the practice of helping search engines find and rank pages. This page shows the parts of such a system.
     ctas:
-      - label: Talk to us about visibility
+      - label: Discuss your search visibility
         href: /contact/?service=seo-aeo-geo
       - label: See the parts
         href: "#parts"
@@ -157,5 +157,5 @@ sections:
     heading: Tell us how you want to be found
     body: Share your site and the questions you want to be found for. We will list what blocks you and what to do first.
     primary:
-      label: Talk to DECHY about visibility
+      label: Discuss your search visibility
       href: /contact/?service=seo-aeo-geo

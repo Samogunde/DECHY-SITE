@@ -35,7 +35,7 @@ sections:
     headline: Custom Software Systems
     lead: These are programs built around how one organization works. They hold your data, follow your rules, and connect to the tools you already use. This page explains what they contain, how we build them, and when they are worth it.
     ctas:
-      - label: Talk to us about a system
+      - label: Discuss a system
         href: /contact/?service=software-development
       - label: See the build or buy choice
         href: "#choice"
@@ -46,7 +46,7 @@ sections:
         - title: The screens people use
           text: Forms, lists, and dashboards shaped to each role.
         - title: The rules of your business
-          text: Approvals, prices, checks, and steps, written once and applied every time.
+          text: Approvals, prices, and checks, written once.
         - title: The stored information
           text: Customers, orders, documents, and history, in one place.
         - title: The connections
@@ -148,8 +148,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the choices behind a typical system.
+    heading: Under the hood
+    intro: The choices behind a typical system.
     panels:
       - title: Choosing the building blocks
         paragraphs:
@@ -187,5 +187,5 @@ sections:
     heading: Tell us about the process that does not fit
     body: Describe the work your current tools handle badly. We will say honestly whether custom software is justified and what a first version would contain.
     primary:
-      label: Talk to DECHY about a system
+      label: Discuss a system
       href: /contact/?service=software-development

@@ -35,9 +35,8 @@ sections:
     eyebrow: Solution
     headline: Cloud migration
     lead: Moving to the cloud is not one job. Every system has its own best route, and some should not move at all. We inventory what you run, choose a route for each part, and move it in waves, with a tested way back.
-    support: This page explains what a migration touches, the routes open to you, and how we keep risk and cost under control.
     ctas:
-      - label: Talk to us about a migration
+      - label: Discuss a migration
         href: /contact/?service=cloud
       - label: The routes for each system
         href: "#routes"
@@ -45,7 +44,7 @@ sections:
       kind: layers
       layers:
         - title: Applications
-          text: The programs your business runs, from websites to back-office tools.
+          text: The programs your business runs.
           support:
             - title: Move as they are
             - title: Improve for the cloud
@@ -187,7 +186,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How we build and move
-    intro: Most visitors can skip this section. It notes how we build and move.
+    intro: How we build and move.
     panels:
       - title: Infrastructure as code
         paragraphs:
@@ -249,5 +248,5 @@ sections:
     heading: Tell us what you run and where
     body: Describe your systems, your servers, and any deadline. We will inventory them, recommend a route for each, and plan the first move.
     primary:
-      label: Talk to DECHY about a migration
+      label: Discuss a migration
       href: /contact/?service=cloud

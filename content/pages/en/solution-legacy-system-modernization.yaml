@@ -35,9 +35,8 @@ sections:
     eyebrow: Solution
     headline: Legacy system modernization
     lead: The old system still works, and the business depends on it. That is exactly why it is hard to touch. We modernize in stages, so each step leaves the business running and a little safer than before.
-    support: This page explains the routes open to you, how a staged move works, and how to tell which route fits your system.
     ctas:
-      - label: Talk to us about your system
+      - label: Discuss your system
         href: /contact/?service=software-development
       - label: The routes open to you
         href: "#routes"
@@ -53,7 +52,7 @@ sections:
         - title: Replace one slice
           text: Rebuild one function at a time and switch over when it is proven.
         - title: Retire the old parts
-          text: Switch off what has been replaced, and keep what still earns its place.
+          text: Switch off what is replaced, keep what earns its place.
     purpose: process
     takeaway: Modernization moves in five stages, from understanding the old system to retiring its parts, with the business running throughout.
     visualTitle: A staged route out of a legacy system
@@ -183,7 +182,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Techniques we use on old systems
-    intro: Most visitors can skip this section. It notes the techniques we use.
+    intro: The techniques we use.
     panels:
       - title: Characterization tests
         paragraphs:
@@ -246,5 +245,5 @@ sections:
     heading: Tell us about the system
     body: Describe what it does, how old it is, and what worries you. We will review it and recommend a staged route, with the first step costed.
     primary:
-      label: Talk to DECHY about your system
+      label: Discuss your system
       href: /contact/?service=software-development

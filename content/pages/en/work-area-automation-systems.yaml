@@ -35,7 +35,7 @@ sections:
     headline: Automation Systems
     lead: An automation system connects your tools so that information moves and actions happen without manual effort. This page shows what these systems contain, how they are watched, and which tasks are worth automating.
     ctas:
-      - label: Talk to us about automation
+      - label: Discuss your automation project
         href: /contact/?service=automation
       - label: Is it worth automating?
         href: "#worth"
@@ -148,8 +148,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the tools we choose from.
+    heading: Under the hood
+    intro: The tools we choose from.
     panels:
       - title: Tools
         paragraphs:
@@ -182,5 +182,5 @@ sections:
     heading: Tell us the task your team repeats most
     body: Describe it and how often it happens. We will estimate the time it takes and say whether automating it is worthwhile.
     primary:
-      label: Talk to DECHY about automation
+      label: Discuss your automation project
       href: /contact/?service=automation

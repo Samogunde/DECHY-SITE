@@ -76,7 +76,7 @@ export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: R
                 title={block.visualTitle ?? block.headline}
                 uid={block.id}
                 caption={block.figureCaption ?? ""}
-                max="34rem"
+                max={block.spec ? "34rem" : undefined}
               />
             </div>
           ) : null}

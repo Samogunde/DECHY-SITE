@@ -36,7 +36,7 @@ sections:
     headline: Ecommerce Platforms
     lead: An ecommerce platform is more than a shop window. It is a catalog, a basket, payment, order handling, and links to stock and delivery. This page shows how those parts fit, and how to pick a foundation.
     ctas:
-      - label: Talk to us about a store
+      - label: Discuss a store
         href: /contact/?service=ecommerce
       - label: See the order journey
         href: "#journey"
@@ -92,7 +92,7 @@ sections:
     tone: white
     label: What it looks like
     heading: The store front and the engine behind it
-    intro: A platform is more than a shop window. This sketch shows the shop front linked to the engine that holds catalog, pricing, orders, and stock.
+    intro: A platform is more than a shop window.
     figure: store-ui
     purpose: architecture
     takeaway: An ecommerce platform joins a shop front to a commerce engine that holds the catalog, prices, orders, and stock.
@@ -192,5 +192,5 @@ sections:
     heading: Tell us what you sell
     body: Describe your products and how orders are handled today. We will suggest a foundation and what to connect to it.
     primary:
-      label: Talk to DECHY about a store
+      label: Discuss a store
       href: /contact/?service=ecommerce

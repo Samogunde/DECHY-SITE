@@ -31,9 +31,8 @@ sections:
     eyebrow: AI provider
     headline: Anthropic Claude integration
     lead: "Claude is often chosen where the material is long and the instructions are detailed: contracts, reports, policies, and research. We build with it, and we test it against other providers on your own documents before recommending it."
-    support: "This page covers where Claude tends to fit, how we build with it, and how to decide between providers."
     ctas:
-      - { label: Talk to us about a Claude project, href: "/contact/?service=ai" }
+      - { label: Discuss a Claude project, href: "/contact/?service=ai" }
       - { label: Compare providers on your documents, href: "#compare" }
     spec:
       kind: before-after
@@ -151,8 +150,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build with Claude."
+    heading: How we build with Anthropic Claude
+    intro: "How we build with Claude."
     panels:
       - title: Prompting and structure
         paragraphs:
@@ -206,4 +205,4 @@ sections:
     id: contact-cta
     heading: Send us a sample of the material
     body: "Describe the documents and the task. We will test Claude and other providers on your examples and recommend one on the results."
-    primary: { label: Talk to DECHY about Claude, href: "/contact/?service=ai" }
+    primary: { label: Discuss your Claude project, href: "/contact/?service=ai" }

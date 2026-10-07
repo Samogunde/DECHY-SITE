@@ -37,7 +37,7 @@ sections:
     lead: DECHY is a global technology company. We work with organizations in Australia remotely, across software, AI, automation, integration, cloud, and design. The main practical difference for Australian projects is the time difference, so this page explains how we handle it as well as the rules and systems.
     support: There is no Australian office. Work is remote, and we plan the rhythm of calls and updates around your day.
     ctas:
-      - label: Talk to DECHY about an Australian project
+      - label: Discuss an Australian project
         href: /contact/
       - label: Working across the time difference
         href: "#engagement"

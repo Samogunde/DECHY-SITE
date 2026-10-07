@@ -31,9 +31,8 @@ sections:
     eyebrow: Cloud platform
     headline: Google Cloud
     lead: "Google Cloud is often the right home for data. Its analytics tools handle very large data sets, and it offers direct access to Google's AI models. We build applications and data platforms on it, and we compare it with other clouds where the case is less clear."
-    support: "This page covers where Google Cloud fits, what a data platform on it involves, and what to watch."
     ctas:
-      - { label: Talk to us about Google Cloud, href: "/contact/?service=cloud" }
+      - { label: Discuss your Google Cloud project, href: "/contact/?service=cloud" }
       - { label: A data platform, step by step, href: "#platform" }
     spec:
       kind: flow
@@ -147,8 +146,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we set up Google Cloud projects."
+    heading: How we build with Google Cloud
+    intro: "How we set up Google Cloud projects."
     panels:
       - title: Structure
         paragraphs:
@@ -203,4 +202,4 @@ sections:
     id: contact-cta
     heading: Tell us about the data and the workloads
     body: "Describe what you want to analyze or run. We will propose a Google Cloud design, a cost range, and an honest comparison with the alternatives."
-    primary: { label: Talk to DECHY about Google Cloud, href: "/contact/?service=cloud" }
+    primary: { label: Discuss your Google Cloud project, href: "/contact/?service=cloud" }

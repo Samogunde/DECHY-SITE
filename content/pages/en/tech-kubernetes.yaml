@@ -31,9 +31,8 @@ sections:
     eyebrow: Tool
     headline: Kubernetes
     lead: "Kubernetes is powerful, and it is not small. It suits organizations running many services at scale. For everyone else it can be a costly detour. We begin by asking whether you need it, and build it carefully where you do."
-    support: "This page covers when Kubernetes pays for itself, what it costs to run, and what we do instead when it does not."
     ctas:
-      - { label: Talk to us about Kubernetes, href: "/contact/?service=cloud" }
+      - { label: Discuss your Kubernetes project, href: "/contact/?service=cloud" }
       - { label: Do you need it?, href: "#need" }
     spec:
       kind: decision
@@ -166,8 +165,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build and run clusters."
+    heading: How we build with Kubernetes
+    intro: "How we build and run clusters."
     panels:
       - title: Foundation
         paragraphs:
@@ -220,4 +219,4 @@ sections:
     id: contact-cta
     heading: Describe the services you run
     body: "Tell us how many services you run, how they scale, and who looks after them. We will assess honestly whether Kubernetes is justified and what simpler options exist."
-    primary: { label: Talk to DECHY about Kubernetes, href: "/contact/?service=cloud" }
+    primary: { label: Discuss your Kubernetes project, href: "/contact/?service=cloud" }

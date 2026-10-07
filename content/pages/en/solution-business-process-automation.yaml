@@ -35,9 +35,8 @@ sections:
     eyebrow: Solution
     headline: Business process automation
     lead: If your team spends its days re-typing details, chasing approvals, and updating the same record in three places, the process is doing work that software can do. We automate the repeated steps and leave the judgment to people.
-    support: This page explains how we decide what to automate, how a first automation is built, and what to watch for.
     ctas:
-      - label: Talk to us about a process
+      - label: Discuss a process
         href: /contact/?service=automation
       - label: What kind of automation
         href: "#kind"
@@ -192,7 +191,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: The engineering behind a dependable automation
-    intro: Most visitors can skip this section. It notes the engineering behind a dependable automation.
+    intro: The engineering behind a dependable automation.
     panels:
       - title: Reliability
         items:
@@ -255,5 +254,5 @@ sections:
     heading: Tell us which process costs the most time
     body: Describe the process, who is involved, and where it slows down. We will map it with you and outline what to automate first.
     primary:
-      label: Talk to DECHY about automation
+      label: Discuss your automation project
       href: /contact/?service=automation

@@ -12,29 +12,29 @@ const SPEC: DiagramSpec = {
   layerLabel: "Layers of the application",
   supportLabel: "Supporting parts",
   layers: [
-    { title: "People", text: "Customers, staff, and partners who use the system.", support: [] },
+    { title: "People", text: "Customers, staff, partners", support: [] },
     {
       title: "Screens",
-      text: "What people see and use: web, mobile, and admin.",
-      support: [{ title: "Sign-in and permissions", text: "Who is allowed to do what." }],
+      text: "Web, mobile, admin",
+      support: [{ title: "Access control", text: "Sign-in and permissions" }],
     },
     {
       title: "Rules and processes",
-      text: "The steps and rules working behind the screens.",
+      text: "The logic behind the screens",
       support: [
-        { title: "Background tasks", text: "Work that runs on its own, such as reminders." },
-        { title: "Links to other tools", text: "Sending and receiving information." },
+        { title: "Background tasks", text: "Reminders, scheduled jobs" },
+        { title: "Integrations", text: "APIs and other tools" },
       ],
     },
     {
-      title: "Stored information",
-      text: "Databases, search, files, and reports.",
-      support: [{ title: "Records and alerts", text: "A log of what happened, and warnings." }],
+      title: "Data",
+      text: "Databases, files, reports",
+      support: [{ title: "Logs and alerts", text: "What happened, and warnings" }],
     },
   ],
   base: {
-    title: "Build, test, release, look after",
-    text: "The delivery process that builds, checks, releases, and maintains the whole system.",
+    title: "Build, test, release, maintain",
+    text: "One delivery process for the whole system",
   },
 };
 

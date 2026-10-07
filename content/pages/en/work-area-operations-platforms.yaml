@@ -36,7 +36,7 @@ sections:
     headline: Operations Platforms
     lead: An operations platform is one place where a business plans, runs, and tracks its daily work. This page explains what such a platform joins, how it is built up in stages, and what managers see.
     ctas:
-      - label: Talk to us about operations
+      - label: Discuss your operations platform
         href: /contact/?service=software-development
       - label: See how it is staged
         href: "#stages"
@@ -182,5 +182,5 @@ sections:
     heading: Tell us how a job moves through your business
     body: Describe how a job or order moves from start to finish. We will show where information is lost and what a platform would join.
     primary:
-      label: Talk to DECHY about operations
+      label: Discuss your operations platform
       href: /contact/?service=software-development

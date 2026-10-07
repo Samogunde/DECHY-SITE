@@ -31,9 +31,8 @@ sections:
     eyebrow: Cloud platform
     headline: Microsoft Azure
     lead: "Azure is the cloud that fits most naturally into a Microsoft organization: the same sign-in, the same security tooling, and close ties to Microsoft 365 and Windows. We build and run applications on it, and we compare it with other clouds where the fit is less obvious."
-    support: "This page covers where Azure fits, how it connects to Microsoft's other tools, and how we run it."
     ctas:
-      - { label: Talk to us about Azure, href: "/contact/?service=cloud" }
+      - { label: Discuss your Azure project, href: "/contact/?service=cloud" }
       - { label: How it connects, href: "#connect" }
     spec:
       kind: hub
@@ -164,8 +163,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes the practices we use on Azure."
+    heading: How we build with Azure
+    intro: "The practices we use on Azure."
     panels:
       - title: Structure and governance
         paragraphs:
@@ -226,4 +225,4 @@ sections:
     id: contact-cta
     heading: Tell us which Microsoft tools you rely on
     body: "Describe your servers, your sign-in set-up, and what you want to run in the cloud. We will propose an Azure design and a cost range."
-    primary: { label: Talk to DECHY about Azure, href: "/contact/?service=cloud" }
+    primary: { label: Discuss your Azure project, href: "/contact/?service=cloud" }

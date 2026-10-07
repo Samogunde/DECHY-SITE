@@ -38,27 +38,15 @@ sections:
     lead: At DECHY, we help you turn scattered information into numbers you can rely on. We bring data together from your tools, clean it, agree what each figure means, and show it in dashboards and reports that update themselves.
     support: Good analytics rests on good connections and clear definitions. We work on both, together with our integration and automation teams.
     ctas:
-      - label: Talk to us about your data
+      - label: Discuss your data
         href: /contact/?service=data-analytics
       - label: See what we build
         href: "#work"
-    spec:
-      kind: flow
-      steps:
-        - title: Collect
-          text: Information is gathered from your tools.
-        - title: Clean
-          text: Duplicates and mistakes are fixed.
-        - title: Combine
-          text: Sources are joined into one picture.
-        - title: Agree the meaning
-          text: Each number gets one clear definition.
-        - title: Show
-          text: Dashboards and reports update themselves.
-    purpose: process
-    takeaway: Trusted numbers come from collecting, cleaning, combining, and defining data before anyone draws a chart.
-    visualTitle: From scattered information to a trusted dashboard
-    figureCaption: This diagram follows information through five steps, from your tools to a dashboard, and shows that cleaning and agreeing meaning come before charts.
+    visualTitle: What a useful report looks like
+    figureCaption: This sketch shows a conceptual analytics report with filters, a chart of two series by month, and a table with a trend label on each row. The chart carries no figures and is not a client report.
+    figure: analytics-ui
+    purpose: system
+    takeaway: A good report offers a few filters, one clear chart, and a short table that says which way each line is moving.
   - type: definition
     id: what-is
     tone: white
@@ -101,15 +89,28 @@ sections:
     takeaway: Numbers stop disagreeing once each measure has one written definition and one source.
     caption: This diagram contrasts three teams producing three different totals with one agreed definition feeding a single trusted dashboard.
   - type: diagram
-    id: report-view
+    id: report-view-map
     tone: white
-    label: What it looks like
-    heading: What a useful report looks like
-    intro: A report earns its place when a manager can read it in a minute. This sketch shows filters, one chart, and a short table with a clear trend on each line.
-    figure: analytics-ui
-    purpose: system
-    takeaway: A good report offers a few filters, one clear chart, and a short table that says which way each line is moving.
-    caption: This sketch shows a conceptual analytics report with filters, a chart of two series by month, and a table with a trend label on each row. The chart carries no figures and is not a client report.
+    label: The pipeline
+    heading: From scattered information to a trusted dashboard
+    intro: Trusted numbers come from collecting, cleaning, combining, and defining data before anyone draws a chart.
+    spec:
+      kind: flow
+      steps:
+        - title: Collect
+          text: Information is gathered from your tools.
+        - title: Clean
+          text: Duplicates and mistakes are fixed.
+        - title: Combine
+          text: Sources are joined into one picture.
+        - title: Agree the meaning
+          text: Each number gets one clear definition.
+        - title: Show
+          text: Dashboards and reports update themselves.
+    purpose: process
+    takeaway: Trusted numbers come from collecting, cleaning, combining, and defining data before anyone draws a chart.
+    visualTitle: From scattered information to a trusted dashboard
+    caption: This diagram follows information through five steps, from your tools to a dashboard, and shows that cleaning and agreeing meaning come before charts.
     points: []
   - type: columns
     id: trust
@@ -230,8 +231,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the building blocks.
+    heading: Under the hood
+    intro: The building blocks.
     panels:
       - title: Storing and organizing information
         paragraphs:
@@ -326,5 +327,5 @@ sections:
     heading: Tell us the questions you want answered
     body: Describe the decisions you want to make and where your information lives today. We will tell you what is possible, what to fix first, and the lightest setup that works.
     primary:
-      label: Talk to DECHY about data
+      label: Discuss your data
       href: /contact/?service=data-analytics

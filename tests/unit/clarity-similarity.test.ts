@@ -61,7 +61,7 @@ describe("similarity control on the shipped pages", () => {
   });
 
   it("flags two service pages that reuse the same diagram and takeaway", () => {
-    const a = service("/ai/");
+    const a = service("/seo-aeo-geo/");
     const b = clone(service("/cloud/"));
     const heroA = a.sections.find((s) => s.type === "hero");
     const heroB = b.sections.find((s) => s.type === "hero");

@@ -38,34 +38,15 @@ sections:
     lead: At DECHY, we build websites and web applications that load quickly, work on every screen, are easy for your team to edit, and are built to last. We help you choose the right kind of build, then deliver it.
     support: Our web work connects to design, search visibility, and the systems behind the site, so the whole experience works together.
     ctas:
-      - label: Talk to us about your site
+      - label: Discuss your site
         href: /contact/?service=web-development
       - label: Which kind of build?
         href: "#kind"
-    spec:
-      kind: layers
-      layerLabel: What a website is made of
-      supportLabel: What supports it
-      layers:
-        - title: Pages visitors see
-          text: Design, text, images, and forms on every screen size.
-          support:
-            - title: Content you can edit
-              text: A simple screen to change text and images.
-        - title: Behind-the-scenes logic
-          text: Forms, search, accounts, and payments.
-          support:
-            - title: Links to your other tools
-              text: Customer records, email, and stock.
-        - title: Hosting
-          text: Where the site lives and how fast it responds.
-          support:
-            - title: Backups and updates
-              text: Copies, fixes, and security patches.
+    visualTitle: A site your team can edit without a developer
+    figureCaption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and the hosting that comes with it. It illustrates a type of website and is not a client site.
+    figure: site-builder
     purpose: system
-    takeaway: A website is pages on top, logic in the middle, and hosting underneath, each with something supporting it.
-    visualTitle: The parts of a website
-    figureCaption: This diagram shows a website as three layers, from the pages visitors see to the hosting underneath, with the supporting piece beside each layer.
+    takeaway: A well-built website lets your team edit content safely while the design and structure stay intact.
   - type: definition
     id: what-is
     tone: white
@@ -105,15 +86,35 @@ sections:
           label: Scope a custom build
           href: /contact/?service=web-development
   - type: diagram
-    id: site-editor
+    id: site-editor-map
     tone: white
-    label: What it looks like
-    heading: A site your team can edit without a developer
-    intro: Many sites are built so that staff can change text and images safely. This sketch shows an editor with a page canvas and a tool panel.
-    figure: site-builder
+    label: How it is built
+    heading: What a website is made of
+    intro: "Pages sit on logic, and logic sits on hosting. Each layer has something that keeps it working: content your team can edit, links to your other tools, and backups and updates."
+    spec:
+      kind: layers
+      layerLabel: What a website is made of
+      supportLabel: What supports it
+      layers:
+        - title: Pages visitors see
+          text: Design, text, images, and forms on every screen size.
+          support:
+            - title: Content you can edit
+              text: A simple screen to change text and images.
+        - title: Behind-the-scenes logic
+          text: Forms, search, accounts, and payments.
+          support:
+            - title: Links to your other tools
+              text: Customer records, email, and stock.
+        - title: Hosting
+          text: Where the site lives and how fast it responds.
+          support:
+            - title: Backups and updates
+              text: Copies, fixes, and security patches.
     purpose: system
-    takeaway: A well-built website lets your team edit content safely while the design and structure stay intact.
-    caption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and the hosting that comes with it. It illustrates a type of website and is not a client site.
+    takeaway: A website is pages on top, logic in the middle, and hosting underneath, each with something supporting it.
+    visualTitle: The parts of a website
+    caption: This diagram shows a website as three layers, from the pages visitors see to the hosting underneath, with the supporting piece beside each layer.
     points: []
   - type: index
     id: types
@@ -232,8 +233,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the tools we use.
+    heading: Under the hood
+    intro: The tools we use.
     panels:
       - title: Front end
         paragraphs:
@@ -330,5 +331,5 @@ sections:
     heading: Tell us what your site must do
     body: Describe who will use it, what they need to do, and who will edit it. We will recommend the right kind of build and the first step.
     primary:
-      label: Talk to DECHY about your site
+      label: Discuss your site
       href: /contact/?service=web-development

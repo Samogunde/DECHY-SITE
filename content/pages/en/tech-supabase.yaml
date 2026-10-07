@@ -34,9 +34,8 @@ sections:
     eyebrow: Back-end platform
     headline: Supabase
     lead: Supabase gives an app a back end quickly, built on PostgreSQL, a standard and widely trusted database. We use it when a product needs structured data, fast delivery, and an easy way out if plans change.
-    support: This page covers what Supabase provides, how it protects data, and how it compares with Firebase and a custom back end.
     ctas:
-      - label: Talk to us about Supabase
+      - label: Discuss your Supabase project
         href: /contact/?service=cloud
       - label: How it is put together
         href: "#what"
@@ -164,8 +163,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build on Supabase.
+    heading: How we build with Supabase
+    intro: How we build on Supabase.
     panels:
       - title: Database
         items:
@@ -236,5 +235,5 @@ sections:
     heading: Tell us about the product
     body: Describe what it does and the data it holds. We will say whether Supabase fits and outline the set-up.
     primary:
-      label: Talk to DECHY about Supabase
+      label: Discuss your Supabase project
       href: /contact/?service=cloud

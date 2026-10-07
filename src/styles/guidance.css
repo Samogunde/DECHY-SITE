@@ -3,46 +3,300 @@
    technical detail, callouts. Everything works without JavaScript and without hover.
    ------------------------------------------------------------------------------------------ */
 
-/* ---------------- At a glance ---------------- */
+/* ---------------- At a glance (three forms of the same five answers) ---------------- */
 .glance {
-  padding-block: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
+  padding-block: clamp(2.25rem, 1.5rem + 3vw, 3.75rem);
 }
-.glance-grid {
+.glance-statement {
+  max-width: 46ch;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1875rem, 1.05rem + 0.55vw, 1.4375rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+.glance-next-label {
+  margin-bottom: 0.5rem !important;
+}
+.glance-next-text {
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.glance-next-btn {
+  margin-top: 1.1rem;
+  width: fit-content;
+}
+
+/* Tabs: a list of questions, one answer at a time, and the next step as an action panel. */
+.gt {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.25rem 2rem;
-  margin: 1.5rem 0 0;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
-.glance-item {
+.gt-main {
+  display: grid;
+  gap: 1.25rem;
   min-width: 0;
-  padding-top: 0.9rem;
+}
+.gt-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 0.25rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.gt-tab {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.5rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  font-family: var(--font-heading);
+  font-size: var(--fs-button);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--color-slate-text);
+  cursor: pointer;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+.gt-tab:hover {
+  color: var(--color-ink);
+}
+.gt-tab[aria-selected="true"] {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-blue);
+}
+.gt-n {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-blue-strong, var(--color-blue));
+}
+.gt-panels {
+  min-height: 6.5rem;
+}
+.gt-panel[hidden] {
+  display: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .gt-panel:not([hidden]) {
+    animation: glance-in 0.28s var(--ease-out);
+  }
+  @keyframes glance-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+}
+.gt-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.35rem 1.25rem 1.45rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.gt-action .glance-next-label {
+  color: var(--color-blue-on-dark);
+}
+.gt-action .glance-next-text {
+  color: var(--color-paper);
+}
+@media (min-width: 64rem) {
+  .gt {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 21rem);
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+  .gt-main {
+    grid-template-columns: 13.5rem minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+  .gt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 0;
+    border-left: 1px solid var(--color-line);
+  }
+  .gt-tab {
+    border-bottom: 0;
+    border-left: 3px solid transparent;
+    margin-left: -1px;
+    padding: 0.7rem 1rem;
+  }
+  .gt-tab[aria-selected="true"] {
+    border-left-color: var(--color-blue);
+  }
+  .gt-panels {
+    padding-top: 0.4rem;
+  }
+}
+
+/* Flow: four stages joined by a line, ending in an action bar. */
+.gf {
+  display: grid;
+  gap: 0;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.gf-step {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 1.5rem 3.1rem;
+}
+.gf-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 1.05rem;
+  top: 2.25rem;
+  bottom: 0.15rem;
+  width: 2px;
+  background: var(--color-line);
+}
+.gf-node {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+}
+.gf-step:last-child .gf-node {
+  background: var(--color-blue);
+}
+.gf-label {
+  margin: 0.2rem 0 0.35rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.gf-action {
+  display: grid;
+  gap: 0.25rem 2rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 1.3rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.gf-action .glance-next-label {
+  color: var(--color-blue-on-dark);
+}
+.gf-action .glance-next-btn {
+  margin-top: 0.9rem;
+}
+@media (min-width: 64rem) {
+  .gf {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 2rem;
+    margin-top: 2.25rem;
+  }
+  .gf-step {
+    padding: 3.4rem 0 0;
+  }
+  .gf-step:not(:last-child)::before {
+    left: 2.4rem;
+    right: -2rem;
+    top: 1.03rem;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+  }
+  .gf-action {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    margin-top: 2.25rem;
+    gap: 0 1.75rem;
+  }
+  .gf-action .glance-next-btn {
+    margin-top: 0;
+  }
+}
+
+/* Editorial: one statement set large, the rest as a ruled list, the action as a closing line. */
+.ge {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+.ge-statement {
+  margin-top: 0.6rem !important;
+  max-width: 34ch;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3125rem, 1.1rem + 0.9vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-ink);
+}
+.ge-list {
+  margin: 0;
+}
+.ge-row {
+  display: grid;
+  gap: 0.25rem 1.5rem;
+  padding-block: 1rem;
   border-top: 1px solid var(--color-line);
 }
-.glance-item dt {
-  margin-bottom: 0.4rem;
+.ge-row:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+.ge-row dt {
   color: var(--color-slate-text);
   text-transform: uppercase;
   letter-spacing: var(--ls-eyebrow);
   font-size: var(--fs-label);
   font-weight: 700;
 }
-.glance-next {
-  border-top-color: var(--color-blue);
+.ge-action {
+  display: grid;
+  gap: 0.35rem 1.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1.1rem 0 0;
 }
-/* The action sits on its own line under the text, at every width. */
-.glance-next .btn {
-  display: flex;
-  width: fit-content;
-  margin-top: 1rem;
+.ge-action .glance-next-btn {
+  margin-top: 0.6rem;
 }
-@media (min-width: 40rem) {
-  .glance-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 64rem) {
+  .ge {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 3.5rem;
+    align-items: start;
   }
-}
-@media (min-width: 80rem) {
-  .glance-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .ge-row {
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+  .ge-action {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    margin-top: 0;
+    padding: 1.25rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-paper);
+    border: 1px solid var(--color-line);
+  }
+  .ge-action .glance-next-btn {
+    margin-top: 0;
   }
 }
 
@@ -68,30 +322,71 @@
   color: var(--color-ink);
 }
 
-/* ---------------- Pathfinder ---------------- */
+/* ---------------- Pathfinder: the visitor's own sentences, set as tiles ---------------- */
 .pathfinder {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  column-gap: 3.5rem;
-  margin: 2.5rem 0 0;
+  gap: 0.85rem;
+  margin: 2.25rem 0 0;
   padding: 0;
   list-style: none;
 }
 .path-row {
-  padding-block: 1.25rem;
-  border-top: 1px solid var(--color-line);
+  display: flex;
+  min-width: 0;
+}
+.path-row > .row-link,
+.path-row > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.15rem 1.25rem 1.1rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  text-decoration: none;
+  color: inherit;
+}
+.tone-white .path-row > .row-link,
+.tone-white .path-row > div {
+  background: var(--color-paper);
+}
+.path-row .row-title {
+  font-size: calc(var(--fs-h4) * 0.96);
 }
 .path-action {
   display: block;
-  margin-top: 0.55rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
   font-family: var(--font-heading);
   font-size: var(--fs-label);
   font-weight: 600;
   color: var(--color-link);
 }
-@media (min-width: 48rem) {
+@media (hover: hover) {
+  .path-row > .row-link {
+    transition:
+      border-color var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out);
+  }
+  .path-row > .row-link:hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 10px 22px -16px rgb(17 24 39 / 0.45);
+    transform: translateY(-2px);
+  }
+}
+.path-row > .row-link:focus-visible {
+  border-color: var(--color-blue);
+}
+@media (min-width: 40rem) {
   .pathfinder {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 72rem) {
+  .pathfinder {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -232,4 +527,61 @@
 }
 .callout-list > li + li {
   margin-top: 0.45rem;
+}
+
+/* ---------------- Index tiles (long two-column lists) ---------------- */
+.index-tiles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.85rem;
+}
+.index-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+  padding: 1.1rem 1.2rem 1.15rem;
+  border: 1px solid var(--color-line);
+  border-top: 3px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+}
+.tone-white .index-tile {
+  background: var(--color-paper);
+}
+.index-tile-n {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-blue-strong);
+}
+@media (hover: hover) {
+  .index-tile {
+    transition:
+      border-color var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out);
+  }
+  .index-tile:hover {
+    border-top-color: var(--color-blue);
+    box-shadow: 0 10px 22px -18px rgb(17 24 39 / 0.5);
+  }
+}
+@media (min-width: 40rem) {
+  .index-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Pathfinder tiles: the arrow sits at the right edge of the title, never alone on a line. */
+.path-row .row-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.path-row .row-title .row-arrow {
+  flex: none;
+  margin: 0.4em 0 0;
 }

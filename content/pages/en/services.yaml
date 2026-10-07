@@ -31,7 +31,7 @@ sections:
     lead: "At DECHY, our services cover building technology, connecting and automating it, running it safely, designing and promoting it, and deciding what to do about it. This page helps you find the one you need."
     support: "Most projects use several services together. We say so when that is the case."
     ctas:
-      - { label: Talk to us about your situation, href: "/contact/" }
+      - { label: Discuss your situation, href: "/contact/" }
       - { label: Find the right service, href: "#paths" }
     spec:
       kind: layers

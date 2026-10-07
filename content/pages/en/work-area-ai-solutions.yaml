@@ -35,7 +35,7 @@ sections:
     headline: AI Solutions
     lead: An AI solution is software that reads, sorts, summarizes, or answers inside a real business process. This page explains what such systems contain, how they are checked, and where we advise against using them.
     ctas:
-      - label: Talk to us about AI
+      - label: Discuss your AI project
         href: /contact/?service=ai
       - label: How an AI task works
         href: "#how"
@@ -167,5 +167,5 @@ sections:
     heading: Tell us which task takes the most reading
     body: Describe the task and how many items it covers. We will say honestly whether AI helps, and how we would check its work.
     primary:
-      label: Talk to DECHY about AI
+      label: Discuss your AI project
       href: /contact/?service=ai

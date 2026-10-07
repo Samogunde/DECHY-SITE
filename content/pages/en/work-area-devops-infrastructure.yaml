@@ -36,7 +36,7 @@ sections:
     headline: DevOps and Infrastructure
     lead: DevOps is the habit of testing, releasing, and watching software in a steady, automated way. This page explains the routine, the safety nets around it, and the smallest changes that make releases less stressful.
     ctas:
-      - label: Talk to us about releases
+      - label: Discuss your release process
         href: /contact/?service=cloud
       - label: See the release path
         href: "#path"
@@ -133,8 +133,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the tools and practices.
+    heading: Under the hood
+    intro: The tools and practices.
     panels:
       - title: Automation
         paragraphs:
@@ -169,5 +169,5 @@ sections:
     heading: Tell us how a release happens today
     body: Describe a typical release and what went wrong last time. We will suggest the smallest changes that make releases safe.
     primary:
-      label: Talk to DECHY about releases
+      label: Discuss your release process
       href: /contact/?service=cloud

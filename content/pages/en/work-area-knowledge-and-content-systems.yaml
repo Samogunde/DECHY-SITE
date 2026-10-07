@@ -35,7 +35,7 @@ sections:
     headline: Knowledge and Content Systems
     lead: A knowledge and content system keeps what an organization knows in an organized, searchable, up-to-date form. This page explains how it is structured, how answers stay accurate, and how AI assistants can use it safely.
     ctas:
-      - label: Talk to us about knowledge
+      - label: Discuss your knowledge systems
         href: /contact/?service=software-development
       - label: See how it is organized
         href: "#structure"
@@ -143,8 +143,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines how content is prepared for search and AI.
+    heading: Under the hood
+    intro: How content is prepared for search and AI.
     panels:
       - title: Structure
         paragraphs:
@@ -177,5 +177,5 @@ sections:
     heading: Tell us the questions you answer most
     body: List the questions your team or customers ask most often. We will show how to organize the answers so they stay findable and current.
     primary:
-      label: Talk to DECHY about knowledge
+      label: Discuss your knowledge systems
       href: /contact/?service=software-development

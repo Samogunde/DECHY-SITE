@@ -34,9 +34,8 @@ sections:
     eyebrow: Edge platform
     headline: Cloudflare set-up and consulting
     lead: Cloudflare sits between your visitors and your site. Done well, pages arrive faster, attacks are stopped before they reach you, and a failure behind it is less visible. We set it up, tune it to your traffic, and keep its rules sensible.
-    support: This page covers what Cloudflare does, the settings that matter most, and where it is not enough on its own.
     ctas:
-      - label: Talk to us about Cloudflare
+      - label: Discuss your Cloudflare project
         href: /contact/?service=cloud
       - label: What it does for a site
         href: "#flow"
@@ -156,8 +155,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we configure Cloudflare.
+    heading: How we build with Cloudflare
+    intro: How we configure Cloudflare.
     panels:
       - title: Caching
         items:
@@ -225,5 +224,5 @@ sections:
     heading: Tell us about the site and what worries you
     body: Describe the site, its traffic, and any slowness or attacks. We will review the set-up and recommend what to switch on and how to tune it.
     primary:
-      label: Talk to DECHY about Cloudflare
+      label: Discuss your Cloudflare project
       href: /contact/?service=cloud

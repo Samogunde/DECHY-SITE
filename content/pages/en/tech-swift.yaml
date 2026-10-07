@@ -31,9 +31,8 @@ sections:
     eyebrow: Native language
     headline: Swift and iOS development
     lead: "Swift is the language Apple built for its own platforms. An app written in it gets the full range of iPhone and iPad features, and the look and feel that Apple users expect. We build native iOS apps where that depth matters, and say when a cross-platform tool is enough."
-    support: "This page covers what native iOS gives you, what it costs, and how it fits with an Android version."
     ctas:
-      - { label: Talk to us about an iOS app, href: "/contact/?service=mobile-app-development" }
+      - { label: Discuss an iOS app, href: "/contact/?service=mobile-app-development" }
       - { label: Is native iOS worth it?, href: "#worth" }
     spec:
       kind: decision
@@ -148,8 +147,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we structure an iOS app."
+    heading: How we build with Swift
+    intro: "How we structure an iOS app."
     panels:
       - title: Structure
         paragraphs:
@@ -202,4 +201,4 @@ sections:
     id: contact-cta
     heading: Tell us about the app and your audience
     body: "Describe what the app does and which devices your users have. We will say whether native iOS is justified and what an Android version would involve."
-    primary: { label: Talk to DECHY about Swift, href: "/contact/?service=mobile-app-development" }
+    primary: { label: Discuss your Swift project, href: "/contact/?service=mobile-app-development" }

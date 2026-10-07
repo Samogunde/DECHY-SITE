@@ -34,9 +34,8 @@ sections:
     eyebrow: Data platform
     headline: BigQuery
     lead: BigQuery is a data warehouse that Google runs for you. You load your data into it and ask questions in a familiar query language, without managing servers. We design the warehouse, load it, keep its cost in check, and connect it to the reports people use.
-    support: This page covers how a BigQuery set-up works, how it compares with the alternatives, and where cost surprises come from.
     ctas:
-      - label: Talk to us about BigQuery
+      - label: Discuss your BigQuery project
         href: /contact/?service=data-analytics
       - label: How data reaches the warehouse
         href: "#how"
@@ -93,7 +92,7 @@ sections:
     tone: white
     label: What it looks like
     heading: What the warehouse delivers to people
-    intro: A warehouse matters because of what people see from it. This sketch shows filters, a chart, and a short table of trends.
+    intro: A warehouse matters because of what people see from it.
     figure: analytics-ui
     purpose: system
     takeaway: "A warehouse is judged by the reports people read from it: a few filters, a chart, and a short table."
@@ -163,8 +162,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we design for cost and clarity.
+    heading: How we build with BigQuery
+    intro: How we design for cost and clarity.
     panels:
       - title: Storage and structure
         items:
@@ -234,5 +233,5 @@ sections:
     heading: Tell us which questions you cannot answer today
     body: Describe where your data lives and what you want to know. We will outline a warehouse, how it would be loaded, and what it should cost to run.
     primary:
-      label: Talk to DECHY about BigQuery
+      label: Discuss your BigQuery project
       href: /contact/?service=data-analytics

@@ -35,7 +35,7 @@ sections:
     headline: Digital Transformation
     lead: Digital transformation is changing how an organization works by using technology well. Done sensibly, it happens in small phases, each tied to a measured result. This page shows what such a program looks like.
     ctas:
-      - label: Talk to us about transformation
+      - label: Discuss your transformation
         href: /contact/?service=consulting
       - label: See the phases
         href: "#phases"
@@ -152,5 +152,5 @@ sections:
     heading: Tell us what you want to be different in a year
     body: Describe the change you want, and what is in the way. We will map a first phase and what it would involve.
     primary:
-      label: Talk to DECHY about transformation
+      label: Discuss your transformation
       href: /contact/?service=consulting

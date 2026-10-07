@@ -34,9 +34,8 @@ sections:
     eyebrow: Website platform
     headline: Squarespace development
     lead: Squarespace is the platform many studios, creators, and small brands choose when the look of the site matters. We design and build Squarespace sites that feel considered, load quickly, and show up in search, and we help you see where the platform stops.
-    support: This page covers where Squarespace fits, how to get the most from it, and how it compares with the alternatives.
     ctas:
-      - label: Talk to us about Squarespace
+      - label: Discuss your Squarespace project
         href: /contact/?service=web-development
       - label: Does it fit your site?
         href: "#fit"
@@ -144,8 +143,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we extend and tune Squarespace sites.
+    heading: How we build with Squarespace
+    intro: How we extend and tune Squarespace sites.
     panels:
       - title: Extending the platform
         items:
@@ -215,5 +214,5 @@ sections:
     heading: Tell us about the brand and what the site must do
     body: Describe the brand, the pages, and what you want to connect. We will say whether Squarespace fits and how to set it up well.
     primary:
-      label: Talk to DECHY about Squarespace
+      label: Discuss your Squarespace project
       href: /contact/?service=web-development

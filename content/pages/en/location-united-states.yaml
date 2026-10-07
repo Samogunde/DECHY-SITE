@@ -37,7 +37,7 @@ sections:
     lead: "DECHY is a global technology company. We serve organizations in the United States remotely, with the same services we provide everywhere: software, AI, automation, integration, cloud, and more. This page covers what is particular to working with US teams."
     support: DECHY works remotely and does not operate a US office. Clients reach us through the contact form, and work runs through written updates and scheduled calls.
     ctas:
-      - label: Talk to DECHY about a US project
+      - label: Discuss a US project
         href: /contact/
       - label: How an engagement runs
         href: "#engagement"

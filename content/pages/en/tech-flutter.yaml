@@ -34,9 +34,8 @@ sections:
     eyebrow: Mobile toolkit
     headline: Flutter app development
     lead: Flutter lets one team build one app that runs on iPhone and Android, with an interface that looks the same on both. We use it for products where reaching both platforms quickly matters, and we use native code where an app needs it.
-    support: This page covers what Flutter does well, where native is better, and how we build with it.
     ctas:
-      - label: Talk to us about a Flutter app
+      - label: Discuss a Flutter app
         href: /contact/?service=mobile-app-development
       - label: Flutter or native?
         href: "#choice"
@@ -148,8 +147,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we structure a Flutter app.
+    heading: How we build with Flutter
+    intro: How we structure a Flutter app.
     panels:
       - title: Structure
         paragraphs:
@@ -168,7 +167,7 @@ sections:
     tone: white
     label: What it looks like
     heading: One codebase, one screen design, two phones
-    intro: Cross-platform work succeeds when one screen design serves both platforms. This sketch shows a simple list screen.
+    intro: Cross-platform work succeeds when one screen design serves both platforms.
     figure: mobile-app-ui
     purpose: system
     takeaway: A cross-platform app shares one screen design across iPhone and Android.
@@ -224,5 +223,5 @@ sections:
     heading: Tell us about the app
     body: Describe who will use it and what it needs to do. We will say whether Flutter is the right route and what would still need native code.
     primary:
-      label: Talk to DECHY about Flutter
+      label: Discuss your Flutter project
       href: /contact/?service=mobile-app-development

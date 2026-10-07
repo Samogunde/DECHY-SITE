@@ -31,9 +31,8 @@ sections:
     eyebrow: Platform
     headline: Webflow development
     lead: "Webflow lets designers build precise, fast marketing sites visually, and lets marketing teams change them without a developer. We build in it with care for structure, and say clearly where it reaches its limits."
-    support: "This page covers what Webflow suits, how a build is organized, and what falls outside it."
     ctas:
-      - { label: Talk to us about Webflow, href: "/contact/?service=web-development" }
+      - { label: Discuss your Webflow project, href: "/contact/?service=web-development" }
       - { label: Webflow or something else?, href: "#choice" }
     spec:
       kind: flow
@@ -144,8 +143,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes the practices that keep a Webflow site maintainable."
+    heading: How we build with Webflow
+    intro: "The practices that keep a Webflow site maintainable."
     panels:
       - title: Structure
         paragraphs:
@@ -198,4 +197,4 @@ sections:
     id: contact-cta
     heading: Tell us about the site
     body: "Describe the site, who will edit it, and what it needs to connect to. We will say whether Webflow fits and what would need custom work."
-    primary: { label: Talk to DECHY about Webflow, href: "/contact/?service=web-development" }
+    primary: { label: Discuss your Webflow project, href: "/contact/?service=web-development" }

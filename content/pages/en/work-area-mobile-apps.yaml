@@ -35,7 +35,7 @@ sections:
     headline: Mobile Apps
     lead: A mobile app does a job well on a phone. This page explains the kinds of app we build, what sits behind them, and how to decide whether you need one at all.
     ctas:
-      - label: Talk to us about an app
+      - label: Discuss an app
         href: /contact/?service=mobile-app-development
       - label: App or website?
         href: "#choice"
@@ -94,7 +94,7 @@ sections:
     tone: white
     label: What it looks like
     heading: What a field or customer app screen looks like
-    intro: "The home screen of an app decides whether people keep using it. This sketch shows the pattern: what is due, its status, and one clear action."
+    intro: "The home screen of an app decides whether people keep using it."
     figure: mobile-app-ui
     purpose: system
     takeaway: An app earns daily use when its home screen shows what is due, its status, and the next action.
@@ -181,5 +181,5 @@ sections:
     heading: Tell us who the app is for
     body: Describe who would use it and what they would do. We will suggest an app, a mobile website, or neither, and outline a first release.
     primary:
-      label: Talk to DECHY about an app
+      label: Discuss an app
       href: /contact/?service=mobile-app-development

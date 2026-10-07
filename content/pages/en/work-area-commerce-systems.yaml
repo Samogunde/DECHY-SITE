@@ -35,7 +35,7 @@ sections:
     headline: Commerce Systems
     lead: "Some businesses sell in ways a basic store cannot handle: repeating payments, many sellers, quotes, or made-to-order goods. A commerce system is the machinery for those cases. This page explains the common models and what each needs."
     ctas:
-      - label: Talk to us about commerce
+      - label: Discuss your commerce setup
         href: /contact/?service=ecommerce
       - label: Find your selling model
         href: "#models"
@@ -173,5 +173,5 @@ sections:
     heading: Tell us how a sale works in your business
     body: Describe a sale from first request to payment. We will show which parts need a custom system and which a platform can cover.
     primary:
-      label: Talk to DECHY about commerce
+      label: Discuss your commerce setup
       href: /contact/?service=ecommerce

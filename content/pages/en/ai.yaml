@@ -38,33 +38,15 @@ sections:
     lead: "At DECHY, we help organizations use AI where it genuinely helps: assistants that answer from your own documents, tools that read and sort paperwork, agents that carry out routine tasks, and predictions that support decisions."
     support: AI is a major part of our work, alongside software, automation, integration, and cloud. We treat it as one tool among several, not the answer to everything.
     ctas:
-      - label: Talk to us about AI
+      - label: Discuss your AI project
         href: /contact/?service=ai
       - label: See more kinds of AI
         href: "#kinds"
-    spec:
-      kind: decision
-      question: What do you want AI to do for you?
-      branches:
-        - when: Answer questions from our own documents
-          choose: A knowledge assistant
-          text: Finds the right passage in your files and answers in plain language.
-        - when: Handle routine customer messages
-          choose: A support assistant
-          text: Replies to common questions and passes hard ones to a person.
-        - when: Carry out a task from start to finish
-          choose: An AI agent
-          text: Plans the steps and uses your tools to complete them.
-        - when: Read invoices, forms, or contracts
-          choose: Document processing
-          text: Pulls out the key details and files them correctly.
-        - when: Predict what is likely to happen
-          choose: A prediction model
-          text: Learns from past records to forecast or recommend.
-    purpose: decision
-    takeaway: The right kind of AI depends on the job you want done, so start with the job.
-    visualTitle: Which kind of AI fits which job
-    figureCaption: This diagram shows five common jobs people want AI to do and the kind of AI that fits each one, so you can start from your goal.
+    visualTitle: An assistant that shows its sources and hands over
+    figureCaption: This sketch shows a conceptual chat with a customer question, an answer that cites its source, and an offer to talk to a person. It illustrates a type of AI feature and is not a client's product.
+    figure: assistant-ui
+    purpose: system
+    takeaway: A dependable AI assistant answers from approved content, shows its source, and offers a hand-over to a person.
   - type: definition
     id: what-is
     tone: white
@@ -101,15 +83,34 @@ sections:
         ref: cap.computer-vision
         body: "Software that understands pictures, video, or spoken words: reading labels, checking quality, or turning calls into notes."
   - type: diagram
-    id: assistant-view
+    id: assistant-view-map
     tone: white
-    label: What it looks like
-    heading: An assistant that shows its sources and hands over
-    intro: A trustworthy assistant answers from approved content, shows where the answer came from, and passes the hard cases to a person.
-    figure: assistant-ui
-    purpose: system
-    takeaway: A dependable AI assistant answers from approved content, shows its source, and offers a hand-over to a person.
-    caption: This sketch shows a conceptual chat with a customer question, an answer that cites its source, and an offer to talk to a person. It illustrates a type of AI feature and is not a client's product.
+    label: Choosing
+    heading: Which kind of AI fits which job
+    intro: Start from the job you want done. The right kind of AI follows from it.
+    spec:
+      kind: decision
+      question: What do you want AI to do for you?
+      branches:
+        - when: Answer questions from our own documents
+          choose: A knowledge assistant
+          text: Finds the right passage in your files and answers in plain language.
+        - when: Handle routine customer messages
+          choose: A support assistant
+          text: Replies to common questions and passes hard ones to a person.
+        - when: Carry out a task from start to finish
+          choose: An AI agent
+          text: Plans the steps and uses your tools to complete them.
+        - when: Read invoices, forms, or contracts
+          choose: Document processing
+          text: Pulls out the key details and files them correctly.
+        - when: Predict what is likely to happen
+          choose: A prediction model
+          text: Learns from past records to forecast or recommend.
+    purpose: decision
+    takeaway: The right kind of AI depends on the job you want done, so start with the job.
+    visualTitle: Which kind of AI fits which job
+    caption: This diagram shows five common jobs people want AI to do and the kind of AI that fits each one, so you can start from your goal.
     points: []
   - type: diagram
     id: how-assistant-works
@@ -246,8 +247,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It explains the building blocks we work with.
+    heading: Under the hood
+    intro: The building blocks we work with.
     panels:
       - title: Models and providers
         paragraphs:
@@ -336,5 +337,5 @@ sections:
     heading: Tell us the job you want AI to do
     body: Describe the task, the information involved, and what a good result looks like. We will tell you which approach fits, what to try first, and whether AI is the right tool at all.
     primary:
-      label: Talk to DECHY about AI
+      label: Discuss your AI project
       href: /contact/?service=ai

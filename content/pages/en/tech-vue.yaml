@@ -34,9 +34,8 @@ sections:
     eyebrow: Framework
     headline: Vue development
     lead: Vue is a framework for building web interfaces. Its strength is that you can start small, with one interactive widget on an existing page, and grow into a full application. We build with Vue and we help you decide whether it is the right choice.
-    support: This page covers where Vue fits, how it differs from React and Angular, and how to adopt it without a rebuild.
     ctas:
-      - label: Talk to us about a Vue project
+      - label: Discuss a Vue project
         href: /contact/?service=web-development
       - label: Vue
         React: null
@@ -156,8 +155,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build with Vue.
+    heading: How we build with Vue
+    intro: How we build with Vue.
     panels:
       - title: Structure
         items:
@@ -227,5 +226,5 @@ sections:
     heading: Tell us what the interface needs to do
     body: Describe the screens, the people who use them, and what they sit on today. We will recommend a framework and a first step.
     primary:
-      label: Talk to DECHY about Vue
+      label: Discuss your Vue project
       href: /contact/?service=web-development

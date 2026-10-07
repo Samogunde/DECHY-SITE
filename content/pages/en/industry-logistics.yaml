@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for logistics and transport
     lead: In logistics, information has to travel as fast as the goods. We connect order, dispatch, warehouse, and carrier systems, automate the documents that slow them down, and give customers and managers one live view of where things stand.
-    support: This page covers what logistics firms ask for, where systems usually break down, and how we approach it.
     ctas:
-      - label: Talk to us about a logistics system
+      - label: Discuss a logistics system
         href: /contact/?service=software-development
       - label: Where information gets lost
         href: "#breaks"
@@ -54,7 +53,7 @@ sections:
             - title: Order and dispatch tools
             - title: Warehouse workflows
         - title: Data and connections
-          text: Links to carriers, accounting, and the systems that plan the business.
+          text: Carriers, accounting, and planning systems.
           support:
             - title: Carrier connections
             - title: Accounting and planning links
@@ -102,7 +101,7 @@ sections:
     tone: white
     label: What it looks like
     heading: An operations view of what needs attention
-    intro: Logistics managers need exceptions first. This sketch shows summary tiles, activity over time, and the shipments behind schedule.
+    intro: Logistics managers need exceptions first.
     figure: dashboard-ui
     purpose: system
     takeaway: A logistics operations view puts summary tiles first, then the trend, then the shipments behind schedule.
@@ -159,7 +158,7 @@ sections:
     tone: white
     label: Technical depth
     heading: Integration and reliability notes
-    intro: Most visitors can skip this section. It notes how we build for operations that run all day.
+    intro: How we build for operations that run all day.
     panels:
       - title: Events and status
         items:
@@ -214,5 +213,5 @@ sections:
     heading: Tell us where status gets lost
     body: Describe the systems that hold your order and shipment data and where information goes missing. We will outline the connections and a first stage.
     primary:
-      label: Talk to DECHY about logistics
+      label: Discuss a logistics project
       href: /contact/?service=software-development

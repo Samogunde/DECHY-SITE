@@ -35,7 +35,7 @@ sections:
     headline: Digital Products
     lead: A digital product is software that people use as the thing you offer. This page explains how a product is shaped, tested, launched, and improved, and why the smallest first version is usually the right one.
     ctas:
-      - label: Talk to us about a product
+      - label: Discuss a product
         href: /contact/?service=software-development
       - label: See the cycle
         href: "#cycle"
@@ -172,5 +172,5 @@ sections:
     heading: Tell us about the product idea
     body: Describe the idea and who it is for. We will suggest a first version that tests it before you invest further.
     primary:
-      label: Talk to DECHY about a product
+      label: Discuss a product
       href: /contact/?service=software-development

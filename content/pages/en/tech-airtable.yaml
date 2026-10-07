@@ -31,9 +31,8 @@ sections:
     eyebrow: Platform
     headline: Airtable development
     lead: "Airtable lets a team build its own tracking system without waiting for software to be written. It sits between a spreadsheet and a database. We design the structure so it stays tidy as it grows, and we say honestly when a team has outgrown it."
-    support: "This page covers what Airtable is good for, how we set it up, and where its limits are."
     ctas:
-      - { label: Talk to us about Airtable, href: "/contact/?service=automation" }
+      - { label: Discuss your Airtable project, href: "/contact/?service=automation" }
       - { label: See where it fits, href: "#uses" }
     spec:
       kind: hub
@@ -187,8 +186,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build Airtable systems that last."
+    heading: How we build with Airtable
+    intro: "How we build Airtable systems that last."
     panels:
       - title: Data design
         paragraphs:
@@ -246,4 +245,4 @@ sections:
     id: contact-cta
     heading: Tell us which spreadsheet your team depends on
     body: "Describe it and who uses it. We will say how it would look in Airtable, what it would cost to run, and when you would need something more."
-    primary: { label: Talk to DECHY about Airtable, href: "/contact/?service=automation" }
+    primary: { label: Discuss your Airtable project, href: "/contact/?service=automation" }

@@ -31,9 +31,8 @@ sections:
     eyebrow: Framework
     headline: LangChain development
     lead: "LangChain is a toolkit for assembling applications that use language models together with your own information and tools. We use it where it saves real work, and we write plain code where a framework would only add weight."
-    support: "This page covers what the toolkit does, when it earns its place, and how we check what we build."
     ctas:
-      - { label: Talk to us about an AI application, href: "/contact/?service=ai" }
+      - { label: Discuss an AI application, href: "/contact/?service=ai" }
       - { label: Framework or plain code?, href: "#choice" }
     spec:
       kind: flow
@@ -154,8 +153,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build language-model applications."
+    heading: How we build with LangChain
+    intro: "How we build language-model applications."
     panels:
       - title: Retrieval
         paragraphs:
@@ -209,4 +208,4 @@ sections:
     id: contact-cta
     heading: Tell us about the AI feature
     body: "Describe what it should do and which information it should use. We will say whether a framework helps and how we would check the results."
-    primary: { label: Talk to DECHY about LangChain, href: "/contact/?service=ai" }
+    primary: { label: Discuss your LangChain project, href: "/contact/?service=ai" }

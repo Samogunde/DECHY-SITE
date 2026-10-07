@@ -31,9 +31,8 @@ sections:
     eyebrow: Automation platform
     headline: n8n automation
     lead: "n8n gives you visual workflow automation that you can run on your own infrastructure. That means your data stays where you decide, there is no charge per task, and a developer can add code when a connector falls short. We build and run n8n for teams that want that control."
-    support: "This page covers when self-hosting is worth the effort, what we build with n8n, and how it is kept reliable."
     ctas:
-      - { label: Talk to us about n8n, href: "/contact/?service=automation" }
+      - { label: Discuss your n8n project, href: "/contact/?service=automation" }
       - { label: Hosted or self-hosted?, href: "#hosting" }
     spec:
       kind: before-after
@@ -163,8 +162,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we run n8n in practice."
+    heading: How we build with n8n
+    intro: "How we run n8n in practice."
     panels:
       - title: Deployment
         paragraphs:
@@ -219,4 +218,4 @@ sections:
     id: contact-cta
     heading: Tell us your volume and your data rules
     body: "Describe the workflows, how many items they handle, and where data may go. We will recommend hosted or self-hosted and plan the build."
-    primary: { label: Talk to DECHY about n8n, href: "/contact/?service=automation" }
+    primary: { label: Discuss your n8n project, href: "/contact/?service=automation" }

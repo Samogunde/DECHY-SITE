@@ -38,7 +38,6 @@ sections:
     eyebrow: Company
     headline: Who DECHY is
     lead: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We help organizations build, connect, automate, and scale, working with clients remotely, around the world."
-    support: "This page says who we are in plain terms, and where to look next."
     ctas:
       - { label: Talk to us, href: "/contact/" }
       - { label: How we work, href: "/company/how-we-work/" }

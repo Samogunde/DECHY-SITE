@@ -31,9 +31,8 @@ sections:
     eyebrow: Database
     headline: MySQL
     lead: "A lot of the web runs on MySQL, often without anyone having chosen it on purpose. We review, tune, upgrade, and move MySQL databases, and we say plainly when staying put is the sensible answer."
-    support: "This page is about living with MySQL: what to check, when to upgrade, and when a move to something else is worth the effort."
     ctas:
-      - { label: Talk to us about your database, href: "/contact/?service=data-analytics" }
+      - { label: Discuss your database, href: "/contact/?service=data-analytics" }
       - { label: Stay, upgrade, or move?, href: "#state" }
     spec:
       kind: decision
@@ -133,8 +132,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes what we look at in a MySQL review."
+    heading: How we build with MySQL
+    intro: "What we look at in a MySQL review."
     panels:
       - title: Engine and schema
         items:
@@ -199,4 +198,4 @@ sections:
     id: contact-cta
     heading: Tell us about your MySQL database
     body: "Tell us which application uses it and what feels wrong. We will review it and recommend whether to tune, upgrade, rehost, or move."
-    primary: { label: Talk to DECHY about MySQL, href: "/contact/?service=data-analytics" }
+    primary: { label: Discuss your MySQL project, href: "/contact/?service=data-analytics" }

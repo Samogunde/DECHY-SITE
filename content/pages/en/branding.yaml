@@ -34,7 +34,7 @@ sections:
     lead: "At DECHY, we help organizations look, sound, and feel like themselves everywhere. We start with who you are and who you serve, then design the identity and the rules that keep it consistent across your website, documents, and channels."
     support: "Our design, web, and marketing teams work from the same brand, so what you launch matches what you promise."
     ctas:
-      - { label: Talk to us about your brand, href: "/contact/?service=branding" }
+      - { label: Discuss your brand, href: "/contact/?service=branding" }
       - { label: See what you receive, href: "#deliverables" }
     spec:
       kind: layers
@@ -61,7 +61,7 @@ sections:
     answer: "A brand is the picture people carry of an organization: what it stands for, how it looks, and how it feels to deal with. A logo is only one part. The rest is color, type, words, behavior, and consistency."
     paragraphs:
       - "People judge quickly. When your website, invoices, social media, and signs all look and sound alike, you seem more reliable. When they do not, you seem smaller and less sure, however good the work is."
-      - "Branding gives you a clear idea of who you are and a way of showing it that anyone on your team can follow."
+      - "Branding gives you a clear idea of who you are and a way of showing it that anyone on your team can follow, from the first email to the biggest sign."
 
   - type: diagram
     id: consistent
@@ -275,4 +275,4 @@ sections:
     id: contact-cta
     heading: Tell us about your brand
     body: "Describe where your brand is today and what has changed. We will suggest whether to refresh it, rebuild it, or define the system around it."
-    primary: { label: Talk to DECHY about branding, href: "/contact/?service=branding" }
+    primary: { label: Discuss your brand, href: "/contact/?service=branding" }

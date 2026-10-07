@@ -34,9 +34,8 @@ sections:
     eyebrow: Platform
     headline: .NET development
     lead: .NET is the platform behind a great deal of business software, especially in organizations that run on Microsoft tools. We build new applications on it and bring older ones up to date.
-    support: This page covers where .NET fits, how an old system is modernized, and how it compares with the other common choices.
     ctas:
-      - label: Talk to us about a .NET system
+      - label: Discuss a .NET system
         href: /contact/?service=software-development
       - label: Modernizing an old system
         href: "#path"
@@ -161,8 +160,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we approach .NET work.
+    heading: How we build with .NET
+    intro: How we approach .NET work.
     panels:
       - title: Versions and support
         paragraphs:
@@ -233,5 +232,5 @@ sections:
     heading: Tell us about your .NET system
     body: Describe what it does, how old it is, and what worries you. We will review it and say whether to extend, modernize, or replace it.
     primary:
-      label: Talk to DECHY about .NET
+      label: Discuss your .NET project
       href: /contact/?service=software-development

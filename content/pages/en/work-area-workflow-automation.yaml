@@ -35,7 +35,7 @@ sections:
     headline: Workflow Automation
     lead: A workflow moves one piece of work through the people who handle it. Workflow automation makes each hand-off clear, timed, and visible. This page explains how it is designed and what it replaces.
     ctas:
-      - label: Talk to us about a workflow
+      - label: Discuss a workflow
         href: /contact/?service=automation
       - label: See a workflow
         href: "#path"
@@ -96,7 +96,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A request, its steps, and who owns each
-    intro: A workflow system is easiest to judge by one request. This sketch follows a request through four steps with an owner and a status on each.
+    intro: A workflow system is easiest to judge by one request.
     figure: workflow-ui
     purpose: workflow
     takeaway: A workflow system shows each step of a request, its owner, and its status, and records every one.
@@ -184,5 +184,5 @@ sections:
     heading: Tell us about a request that gets stuck
     body: Describe one request that moves through several people. We will map it and show where the time is lost.
     primary:
-      label: Talk to DECHY about workflows
+      label: Discuss your workflows
       href: /contact/?service=automation

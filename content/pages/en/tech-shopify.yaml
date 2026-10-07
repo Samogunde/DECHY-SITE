@@ -31,9 +31,8 @@ sections:
     eyebrow: Ecommerce platform
     headline: Shopify development
     lead: "Shopify handles the hard, dull parts of running a store: hosting, checkout, payments, and security. Our work is the rest: a store that fits your products, connections to your stock and accounts, and the custom features that set you apart."
-    support: "This page covers what Shopify covers for you, where custom work helps, and how we keep a store fast."
     ctas:
-      - { label: Talk to us about Shopify, href: "/contact/?service=ecommerce" }
+      - { label: Discuss your Shopify project, href: "/contact/?service=ecommerce" }
       - { label: What Shopify covers, href: "#covers" }
     spec:
       kind: layers
@@ -164,8 +163,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build on Shopify."
+    heading: How we build with Shopify
+    intro: "How we build on Shopify."
     panels:
       - title: Theme and performance
         paragraphs:
@@ -219,4 +218,4 @@ sections:
     id: contact-cta
     heading: Tell us what you sell
     body: "Describe your products and how orders are handled today. We will say what Shopify covers, what needs custom work, and what to connect first."
-    primary: { label: Talk to DECHY about Shopify, href: "/contact/?service=ecommerce" }
+    primary: { label: Discuss your Shopify project, href: "/contact/?service=ecommerce" }

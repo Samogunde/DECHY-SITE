@@ -103,6 +103,34 @@ export function ProseBlock({ block }: { block: Of<"prose"> }) {
 }
 
 function IndexItems({ block, twoCol }: { block: Of<"index">; twoCol: boolean }) {
+  // Longer two-column lists read better as a set of tiles than as a wall of ruled rows.
+  if (twoCol && block.items.length >= 6) {
+    return (
+      <ol data-reveal="group" className="index-tiles m-0 list-none p-0">
+        {block.items.map((item, i) => (
+          <li key={item.title} className="index-tile">
+            <h3 className="t-h4 m-0">
+              {block.numbered ? (
+                <span className="index-tile-n" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              ) : null}
+              {item.href && pathExists(item.href, getRegistry()) ? (
+                <Link href={item.href}>{item.title}</Link>
+              ) : item.ref ? (
+                <EntityLink id={item.ref}>{item.title}</EntityLink>
+              ) : (
+                item.title
+              )}
+            </h3>
+            <p className="t-body m-0">
+              <Inline text={item.body} />
+            </p>
+          </li>
+        ))}
+      </ol>
+    );
+  }
   return (
     <ol
       data-reveal="group"

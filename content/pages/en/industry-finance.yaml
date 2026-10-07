@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for finance, banking, and insurance
     lead: In financial services, accuracy and traceability matter as much as speed. We help firms connect their systems, move old ones forward, and build the portals, workflows, and reporting that sit around the core, with a record of every change.
-    support: This page covers the systems financial firms ask for, what makes the field exacting, and how we approach it.
     ctas:
-      - label: Talk to us about a financial system
+      - label: Discuss a financial system
         href: /contact/?service=software-development
       - label: Where firms start
         href: "#start"
@@ -95,7 +94,7 @@ sections:
     tone: white
     label: What it looks like
     heading: An approval flow with every step recorded
-    intro: Financial processes need each approval recorded. This sketch shows a request passing through checks with owners and statuses.
+    intro: Financial processes need each approval recorded.
     figure: workflow-ui
     purpose: workflow
     takeaway: A financial workflow shows each check, its owner, and its status, and records every decision.
@@ -158,7 +157,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Accuracy and audit notes
-    intro: Most visitors can skip this section. It notes how we build for exacting environments.
+    intro: How we build for exacting environments.
     panels:
       - title: Accuracy
         items:
@@ -213,5 +212,5 @@ sections:
     heading: Tell us which process is slowest or riskiest
     body: Describe the process and the systems it crosses. We will outline a staged route that keeps the business running.
     primary:
-      label: Talk to DECHY about financial systems
+      label: Discuss a financial system
       href: /contact/?service=software-development

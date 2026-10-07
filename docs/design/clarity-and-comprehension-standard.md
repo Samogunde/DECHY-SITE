@@ -58,7 +58,7 @@ Each diagram brief states (and the content file records) `purpose` (process, sys
 - Obvious relationships and direction: arrows only where flow is meant; numbered steps where order matters; visual emphasis on the one thing to notice.
 - No unexplained boxes, arrows or acronyms. A non-technical visitor can read the diagram at a glance; the surrounding text adds depth.
 - Enough spacing and readable text (the type floors apply). Simple and clear beats complicated and impressive. If it cannot communicate its purpose, redesign it.
-- Heading, intro, diagram and caption say the same thing. The caption starts with what the diagram shows and how to read it. Scan order: heading, short explanation, visual, practical meaning, next action.
+- Heading, intro, diagram and caption say the same thing. The caption starts with what the diagram shows and how to read it. AMENDED by ADR 0007 (7 October 2026): the caption is kept in the markup, visually hidden, and is not shown under the diagram; the diagram, heading, and surrounding copy carry the meaning on screen. Scan order: heading, short explanation, visual, practical meaning, next action.
 - Layout rules: `layout-and-visual-quality-rules.md`.
 
 ## 7. Interaction that helps understanding

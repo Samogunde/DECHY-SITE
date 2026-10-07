@@ -34,9 +34,8 @@ sections:
     eyebrow: Back-end platform
     headline: Firebase
     lead: Firebase is a back end that Google has already built. Your app gets sign-in, a database, storage, and notifications as services. We use it to launch quickly, and we set it up so that a growing product is not trapped.
-    support: This page covers what Firebase provides, where it fits, what it costs you in flexibility, and how it compares with Supabase and a custom back end.
     ctas:
-      - label: Talk to us about Firebase
+      - label: Discuss your Firebase project
         href: /contact/?service=cloud
       - label: What Firebase gives you
         href: "#what"
@@ -144,8 +143,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build on Firebase.
+    heading: How we build with Firebase
+    intro: How we build on Firebase.
     panels:
       - title: Data model
         items:
@@ -217,5 +216,5 @@ sections:
     heading: Tell us what the app does and how it will grow
     body: Describe what the app does and how you expect it to grow. We will say whether Firebase fits and how to set it up so you can leave later if you need to.
     primary:
-      label: Talk to DECHY about Firebase
+      label: Discuss your Firebase project
       href: /contact/?service=cloud

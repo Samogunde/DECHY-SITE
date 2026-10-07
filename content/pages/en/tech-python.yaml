@@ -31,9 +31,8 @@ sections:
     eyebrow: Language
     headline: Python development
     lead: "Python is the language many teams reach for when the work involves data, automation, or AI. It reads clearly, it has libraries for almost everything, and many developers know it. We use it where those strengths matter."
-    support: "This page covers where Python fits, what it does less well, and how we build with it."
     ctas:
-      - { label: Talk to us about a Python project, href: "/contact/?service=software-development" }
+      - { label: Discuss a Python project, href: "/contact/?service=software-development" }
       - { label: Where Python fits, href: "#uses" }
     spec:
       kind: hub
@@ -155,8 +154,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we set up a typical Python project."
+    heading: How we build with Python
+    intro: "How we set up a typical Python project."
     panels:
       - title: Structure and tooling
         paragraphs:
@@ -166,6 +165,7 @@ sections:
           - "A modern web framework with automatic validation of incoming data."
           - "Background workers for slow jobs, so requests return quickly."
           - "[PostgreSQL](ref:tech.postgresql) as the default database, unless the data suggests otherwise."
+          - "Structured logs and health checks, so a failing job is noticed before a customer reports it."
       - title: Delivery
         items:
           - "Automated tests and linting on every change."
@@ -210,4 +210,4 @@ sections:
     id: contact-cta
     heading: Tell us what the system has to do
     body: "Describe the data, the processes, and the people involved. We will say whether Python is the right language and what else the system needs."
-    primary: { label: Talk to DECHY about Python, href: "/contact/?service=software-development" }
+    primary: { label: Discuss your Python project, href: "/contact/?service=software-development" }

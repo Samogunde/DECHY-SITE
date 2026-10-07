@@ -36,7 +36,7 @@ sections:
     headline: Cybersecurity Systems
     lead: "A security system works in layers: who may enter, what they can reach, how data is protected, and how problems are noticed. This page explains the layers and how we test them, and says plainly what no system can promise."
     ctas:
-      - label: Talk to us about security
+      - label: Discuss your security
         href: /contact/?service=cybersecurity
       - label: See the layers
         href: "#layers"
@@ -167,5 +167,5 @@ sections:
     heading: Tell us what you most need to protect
     body: Describe your most valuable data and where it lives. We will outline the layers that matter and what to test first.
     primary:
-      label: Talk to DECHY about security
+      label: Discuss your security
       href: /contact/?service=cybersecurity

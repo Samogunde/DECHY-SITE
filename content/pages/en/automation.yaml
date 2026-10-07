@@ -38,33 +38,15 @@ sections:
     lead: At DECHY, we take repetitive work off your team. We map how work really flows, automate the steps that deserve it, and connect the tools involved, so approvals, updates, and reports happen on their own.
     support: Automation is a major part of our work, alongside software, AI, integration, and cloud. It does not always need AI.
     ctas:
-      - label: Talk to us about automation
+      - label: Discuss your automation project
         href: /contact/?service=automation
       - label: See what to automate first
         href: "#first"
-    spec:
-      kind: before-after
-      before:
-        title: A purchase request, by hand
-        text: Every step depends on someone remembering.
-        nodes:
-          - title: Request arrives by email
-          - title: Someone copies it into a spreadsheet
-          - title: The manager is chased for approval
-          - title: Accounting types it in again
-      after:
-        title: The same request, automated
-        text: It moves on its own. People only decide.
-        nodes:
-          - title: Request sent through a form
-          - title: Rules check the amount and route it
-          - title: The manager approves in one click
-          - title: The accounting record is created for you
-      hubLabel: Connected automatically
-    purpose: before-after
-    takeaway: Automation removes the waiting and re-typing between steps, and leaves people to make the decisions.
-    visualTitle: One purchase request, by hand and automated
-    figureCaption: This diagram contrasts one purchase request handled by hand with the same request automated, so you can see where the waiting and re-typing disappear.
+    visualTitle: A request moving through its steps
+    figureCaption: This sketch shows a conceptual workflow board with one request moving through four steps, each with an owner and a status label. It illustrates a type of system we build and is not a client's workflow.
+    figure: workflow-ui
+    purpose: workflow
+    takeaway: An automated process shows each step, who owns it, and where the request stands, so nothing waits unseen.
   - type: prose
     id: what-is
     tone: white
@@ -104,15 +86,34 @@ sections:
       - title: Failures are expected
         body: Connections drop and information arrives incomplete. A good automation retries, records what happened, and tells a person.
   - type: diagram
-    id: request-flow
+    id: request-flow-map
     tone: white
-    label: What it looks like
-    heading: A request moving through its steps
-    intro: Automation is easiest to understand as a request that moves by itself. This sketch shows each step with an owner and a status, so nothing waits unseen.
-    figure: workflow-ui
-    purpose: workflow
-    takeaway: An automated process shows each step, who owns it, and where the request stands, so nothing waits unseen.
-    caption: This sketch shows a conceptual workflow board with one request moving through four steps, each with an owner and a status label. It illustrates a type of system we build and is not a client's workflow.
+    label: Before and after
+    heading: One purchase request, by hand and automated
+    intro: Automation removes the waiting and re-typing between steps and leaves the decisions to people.
+    spec:
+      kind: before-after
+      before:
+        title: A purchase request, by hand
+        text: Every step depends on someone remembering.
+        nodes:
+          - title: Request arrives by email
+          - title: Someone copies it into a spreadsheet
+          - title: The manager is chased for approval
+          - title: Accounting types it in again
+      after:
+        title: The same request, automated
+        text: It moves on its own. People only decide.
+        nodes:
+          - title: Request sent through a form
+          - title: Rules check the amount and route it
+          - title: The manager approves in one click
+          - title: The accounting record is created for you
+      hubLabel: Connected automatically
+    purpose: before-after
+    takeaway: Automation removes the waiting and re-typing between steps, and leaves people to make the decisions.
+    visualTitle: One purchase request, by hand and automated
+    caption: This diagram contrasts one purchase request handled by hand with the same request automated, so you can see where the waiting and re-typing disappear.
     points: []
   - type: index
     id: first
@@ -267,7 +268,7 @@ sections:
     tone: white
     label: Technology
     heading: How automations are built
-    intro: Most visitors can skip this section. It is here for technical readers.
+    intro: It is here for technical readers.
     panels:
       - title: Triggers and connections
         paragraphs:
@@ -359,5 +360,5 @@ sections:
     heading: Tell us about one task you repeat
     body: Describe a task that eats your team's time, and the tools it touches. We will tell you whether to automate it, how, and what it might save.
     primary:
-      label: Talk to DECHY about automation
+      label: Discuss your automation project
       href: /contact/?service=automation

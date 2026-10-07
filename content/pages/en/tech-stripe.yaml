@@ -31,9 +31,8 @@ sections:
     eyebrow: Payment integration
     headline: Stripe integration
     lead: "Taking a payment is the easy part. The work is in what happens next: marking the order paid, starting the subscription, telling accounting, and handling the card that fails. We connect Stripe to your systems so each payment event is dealt with once, correctly."
-    support: "This page follows a payment through the connection, and covers the failure cases that are easy to miss."
     ctas:
-      - { label: Talk to us about Stripe, href: "/contact/?service=api-integration" }
+      - { label: Discuss your Stripe project, href: "/contact/?service=api-integration" }
       - { label: Follow a payment, href: "#flow" }
     spec:
       kind: flow
@@ -166,8 +165,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build and secure the connection."
+    heading: How we build with Stripe
+    intro: "How we build and secure the connection."
     panels:
       - title: Events and webhooks
         paragraphs:
@@ -224,4 +223,4 @@ sections:
     id: contact-cta
     heading: Tell us what you charge for
     body: "Describe your products or plans and the systems that need to know about a payment. We will map the flow and the failure cases before anything is built."
-    primary: { label: Talk to DECHY about Stripe, href: "/contact/?service=api-integration" }
+    primary: { label: Discuss your Stripe project, href: "/contact/?service=api-integration" }

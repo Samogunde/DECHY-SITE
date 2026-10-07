@@ -31,9 +31,8 @@ sections:
     eyebrow: Database
     headline: PostgreSQL database services
     lead: "PostgreSQL is our usual starting point for a business database. It is dependable, widely understood, and flexible enough to handle most applications and a good deal of reporting. We design it carefully, run it safely, and tell you when a different kind of database fits better."
-    support: "This page covers why PostgreSQL is a sound default, what good design involves, and when to look elsewhere."
     ctas:
-      - { label: Talk to us about your database, href: "/contact/?service=data-analytics" }
+      - { label: Discuss your database, href: "/contact/?service=data-analytics" }
       - { label: When it is the right choice, href: "#choice" }
     spec:
       kind: hub
@@ -174,8 +173,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we design and run PostgreSQL."
+    heading: How we build with PostgreSQL
+    intro: "How we design and run PostgreSQL."
     panels:
       - title: Design
         paragraphs:
@@ -230,4 +229,4 @@ sections:
     id: contact-cta
     heading: Tell us about the data
     body: "Describe what the data represents and what depends on it. We will review or design the database and say what to fix first."
-    primary: { label: Talk to DECHY about PostgreSQL, href: "/contact/?service=data-analytics" }
+    primary: { label: Discuss your PostgreSQL project, href: "/contact/?service=data-analytics" }

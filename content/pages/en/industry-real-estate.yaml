@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for real estate and property management
     lead: "Property businesses live on follow-up and paperwork: an enquiry answered quickly, a viewing booked, a lease signed, a repair logged and fixed. We build and connect the systems that keep that moving, so people spend their time with clients, not chasing."
-    support: This page covers what agencies and property managers ask for, how we connect the pieces, and where to start.
     ctas:
-      - label: Talk to us about a property system
+      - label: Discuss a property system
         href: /contact/?service=software-development
       - label: How the pieces connect
         href: "#journey"
@@ -104,7 +103,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A property site your team can keep current
-    intro: Listings and pages stay accurate when staff can edit them safely. This sketch shows an editor with a page canvas and a tool panel.
+    intro: Listings and pages stay accurate when staff can edit them safely.
     figure: site-builder
     purpose: system
     takeaway: A property site stays accurate when staff can edit listings and pages safely.
@@ -176,7 +175,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Documents, listings, and data notes
-    intro: Most visitors can skip this section. It notes the engineering choices we make for property systems.
+    intro: The engineering choices we make for property systems.
     panels:
       - title: Documents and signatures
         items:
@@ -234,5 +233,5 @@ sections:
     heading: Tell us where leads and requests get stuck
     body: Describe how enquiries, documents, and repairs move today. We will outline a first stage and the systems it should connect.
     primary:
-      label: Talk to DECHY about property systems
+      label: Discuss a property system
       href: /contact/?service=software-development

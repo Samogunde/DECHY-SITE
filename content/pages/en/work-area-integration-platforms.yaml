@@ -35,7 +35,7 @@ sections:
     headline: Integration Platforms
     lead: When many tools must share data, connecting each to each becomes a tangle. An integration platform puts one hub in the middle, so every tool connects once. This page explains the idea, and when it is worth it.
     ctas:
-      - label: Talk to us about a hub
+      - label: Discuss a hub
         href: /contact/?service=api-integration
       - label: See the difference
         href: "#tangle"
@@ -114,8 +114,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the patterns we use.
+    heading: Under the hood
+    intro: The patterns we use.
     panels:
       - title: Patterns
         paragraphs:
@@ -164,5 +164,5 @@ sections:
     heading: Tell us which tools must share data
     body: List the tools that need to share information. We will draw the connections and say whether a hub is justified.
     primary:
-      label: Talk to DECHY about a hub
+      label: Discuss a hub
       href: /contact/?service=api-integration

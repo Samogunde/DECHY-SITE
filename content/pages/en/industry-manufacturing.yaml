@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for manufacturers
     lead: A factory produces goods and data at the same time. When the data is on paper, in spreadsheets, or locked inside machines, planners work from yesterday and managers find problems late. We connect the systems, retire the spreadsheets, and give the business one live picture.
-    support: This page covers what manufacturers ask for, how we deal with older systems, and where to begin.
     ctas:
-      - label: Talk to us about a manufacturing system
+      - label: Discuss a manufacturing system
         href: /contact/?service=software-development
       - label: Where to begin
         href: "#start"
@@ -100,7 +99,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A production report built from connected data
-    intro: Manufacturers learn faster when output, scrap, and downtime come from one source. This sketch shows a report with filters and trends.
+    intro: Manufacturers learn faster when output, scrap, and downtime come from one source.
     figure: analytics-ui
     purpose: system
     takeaway: A production report built from one connected source shows output and trends without manual assembly.
@@ -180,7 +179,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Shop-floor integration notes
-    intro: Most visitors can skip this section. It notes how we build for environments that cannot stop.
+    intro: How we build for environments that cannot stop.
     panels:
       - title: Safe failure
         items:
@@ -235,5 +234,5 @@ sections:
     heading: Tell us where data is copied by hand
     body: Describe the systems that hold orders, stock, and production records. We will outline the connections and a first stage.
     primary:
-      label: Talk to DECHY about manufacturing
+      label: Discuss a manufacturing project
       href: /contact/?service=software-development

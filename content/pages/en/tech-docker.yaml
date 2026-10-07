@@ -31,9 +31,8 @@ sections:
     eyebrow: Tool
     headline: Docker and containers
     lead: "A container packages an application with everything it needs, so it behaves the same wherever it runs. It removes the 'works on my machine' problem and makes releases repeatable. We use Docker for most deployable software, and we say when it is not worth the trouble."
-    support: "This page covers what containers fix, how we use them, and what they do not do."
     ctas:
-      - { label: Talk to us about containers, href: "/contact/?service=cloud" }
+      - { label: Discuss your containers project, href: "/contact/?service=cloud" }
       - { label: What changes, href: "#difference" }
     spec:
       kind: before-after
@@ -164,8 +163,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build container images."
+    heading: How we build with Docker
+    intro: "How we build container images."
     panels:
       - title: Images
         paragraphs:
@@ -218,4 +217,4 @@ sections:
     id: contact-cta
     heading: Tell us how your software is released
     body: "Describe how it runs and how a release happens today. We will say whether containers would help and how to adopt them without disruption."
-    primary: { label: Talk to DECHY about Docker, href: "/contact/?service=cloud" }
+    primary: { label: Discuss your Docker project, href: "/contact/?service=cloud" }

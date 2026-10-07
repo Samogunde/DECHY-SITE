@@ -31,9 +31,8 @@ sections:
     eyebrow: Platform
     headline: WordPress development
     lead: "WordPress gives editors control of their own content, and a very large range of extensions. It also needs care. We build WordPress sites that stay fast and tidy, rescue ones that have not, and say plainly when another route is better."
-    support: "This page covers where WordPress fits, how we build on it, and what looking after it involves."
     ctas:
-      - { label: Talk to us about WordPress, href: "/contact/?service=web-development" }
+      - { label: Discuss your WordPress project, href: "/contact/?service=web-development" }
       - { label: WordPress or something else?, href: "#compare" }
     spec:
       kind: layers
@@ -159,8 +158,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build and run WordPress sites."
+    heading: How we build with WordPress
+    intro: "How we build and run WordPress sites."
     panels:
       - title: Build
         paragraphs:
@@ -210,4 +209,4 @@ sections:
     id: contact-cta
     heading: Tell us who edits the site
     body: "Describe your content, your editors, and what the site must do. We will say whether WordPress fits and what its upkeep would involve."
-    primary: { label: Talk to DECHY about WordPress, href: "/contact/?service=web-development" }
+    primary: { label: Discuss your WordPress project, href: "/contact/?service=web-development" }

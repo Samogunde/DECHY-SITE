@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for education and training
     lead: "Education organizations run many systems for one learner: enrolment, timetable, course platform, finance, and messages. We connect them, build the portals and workflows around them, and make the records easy for staff, learners, and families to use."
-    support: This page covers what education teams ask for, what to take care over with learner data, and how we begin.
     ctas:
-      - label: Talk to us about an education system
+      - label: Discuss an education system
         href: /contact/?service=software-development
       - label: Where staff re-type
         href: "#start"
@@ -148,7 +147,7 @@ sections:
     tone: white
     label: Technical depth
     heading: Learner data and accessibility notes
-    intro: Most visitors can skip this section. It notes the engineering choices we make for education systems.
+    intro: The engineering choices we make for education systems.
     panels:
       - title: Learner data
         items:
@@ -208,5 +207,5 @@ sections:
     heading: Tell us where staff re-enter the same details
     body: Describe the systems that hold learner, course, and finance data. We will outline the connections and a first stage.
     primary:
-      label: Talk to DECHY about education
+      label: Discuss an education project
       href: /contact/?service=software-development

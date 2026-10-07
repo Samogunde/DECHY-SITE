@@ -36,7 +36,7 @@ sections:
     headline: AI Agents
     lead: An AI agent works toward a goal in several steps, using tools along the way. It is more flexible than a fixed automation and needs more care. This page explains how agents work, how we limit them, and when not to use one.
     ctas:
-      - label: Talk to us about an agent
+      - label: Discuss an agent
         href: /contact/?service=ai
       - label: Agent or automation?
         href: "#compare"
@@ -99,7 +99,7 @@ sections:
     tone: white
     label: What it looks like
     heading: An agent that answers, cites, and hands over
-    intro: "An agent should be easy to supervise. This sketch shows the pattern: an answer from approved content, its source, and a hand-over to a person."
+    intro: "An agent should be easy to supervise."
     figure: assistant-ui
     purpose: system
     takeaway: A supervised AI agent answers from approved content, cites its source, and hands difficult cases to a person.
@@ -193,5 +193,5 @@ sections:
     heading: Tell us about the multi-step task
     body: Describe the task, where judgment is needed, and what could go wrong. We will say whether an agent, an automation, or a person fits best.
     primary:
-      label: Talk to DECHY about agents
+      label: Discuss your AI agents
       href: /contact/?service=ai

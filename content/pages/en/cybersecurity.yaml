@@ -34,7 +34,7 @@ sections:
     lead: "At DECHY, we help you protect what matters. We work out what you hold and who might want it, find the weak points, and build practical protection into your software, your systems, and your everyday habits."
     support: "Security is part of how we design and build everything, from software to cloud. It is also a service on its own, for systems you already run."
     ctas:
-      - { label: Talk to us about security, href: "/contact/?service=cybersecurity" }
+      - { label: Discuss your security, href: "/contact/?service=cybersecurity" }
       - { label: See how we prioritize, href: "#layers" }
     spec:
       kind: funnel
@@ -62,7 +62,7 @@ sections:
     answer: "Cybersecurity is the set of habits, tools, and design choices that keep your systems and information safe from theft, damage, and misuse. No one can promise zero risk. The aim is to make attacks hard, limit the harm if one succeeds, and recover quickly."
     paragraphs:
       - "People often picture hackers breaking through firewalls. In practice, most problems start with ordinary gaps: a reused password, an unpatched program, a file shared with the wrong person, or a former employee who still has access."
-      - "That is good news, because ordinary gaps can be fixed. A clear picture of what you hold, plus a handful of dependable habits, removes most of the risk."
+      - "That is good news, because ordinary gaps can be fixed. A clear picture of what you hold, plus a handful of dependable habits, removes most of the risk, and it does not need a large budget to start."
 
   - type: diagram
     id: layers
@@ -207,8 +207,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines our methods."
+    heading: Under the hood
+    intro: "Our methods."
     panels:
       - title: Application security
         paragraphs:
@@ -282,4 +282,4 @@ sections:
     id: contact-cta
     heading: Tell us what you need to protect
     body: "Describe your most important system or information and what worries you. We will suggest a practical first step and tell you honestly what it will and will not achieve."
-    primary: { label: Talk to DECHY about security, href: "/contact/?service=cybersecurity" }
+    primary: { label: Discuss your security, href: "/contact/?service=cybersecurity" }

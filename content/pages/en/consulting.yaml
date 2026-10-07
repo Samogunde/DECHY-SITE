@@ -34,7 +34,7 @@ sections:
     lead: "At DECHY, we help you decide what to do with your technology before you spend the money. We look at what you have, set out your options in plain language, and give you a roadmap you can follow, whether or not we build it."
     support: "We are a technology company that builds, so our advice comes from practical experience. We also tell you when the best answer is to build less."
     ctas:
-      - { label: Talk to us about a decision, href: "/contact/?service=consulting" }
+      - { label: Discuss a decision, href: "/contact/?service=consulting" }
       - { label: Which kind of help?, href: "#help" }
     spec:
       kind: decision
@@ -271,4 +271,4 @@ sections:
     id: contact-cta
     heading: Describe the decision you are facing
     body: "Tell us the question, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it."
-    primary: { label: Talk to DECHY about consulting, href: "/contact/?service=consulting" }
+    primary: { label: Discuss your decision, href: "/contact/?service=consulting" }

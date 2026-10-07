@@ -34,9 +34,8 @@ sections:
     eyebrow: Content platform
     headline: Drupal development
     lead: "Drupal is the content platform for sites that are too structured for a simple builder: many content types, many editors, many languages, and rules about who may publish what. We build on it, upgrade it, and move old Drupal sites forward."
-    support: This page covers where Drupal earns its complexity, how upgrades work, and when a lighter platform is the better choice.
     ctas:
-      - label: Talk to us about a Drupal site
+      - label: Discuss a Drupal site
         href: /contact/?service=web-development
       - label: Upgrading an old Drupal site
         href: "#upgrade"
@@ -171,8 +170,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we run Drupal projects.
+    heading: How we build with Drupal
+    intro: How we run Drupal projects.
     panels:
       - title: Structure
         items:
@@ -240,5 +239,5 @@ sections:
     heading: Tell us about the site and its editors
     body: Describe the site, how many people edit it, and any existing Drupal system. We will recommend whether to build, upgrade, or choose another platform.
     primary:
-      label: Talk to DECHY about Drupal
+      label: Discuss your Drupal project
       href: /contact/?service=web-development

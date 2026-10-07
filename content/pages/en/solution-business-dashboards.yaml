@@ -35,9 +35,8 @@ sections:
     eyebrow: Solution
     headline: Business dashboards
     lead: A good dashboard answers a manager's morning questions without anyone building a report. We design dashboards around the decisions people make, connect them to your own systems, and settle what each number means so everyone trusts it.
-    support: This page explains how a dashboard is designed, what makes the numbers trustworthy, and what it takes to keep them current.
     ctas:
-      - label: Talk to us about dashboards
+      - label: Discuss your dashboards
         href: /contact/?service=data-analytics
       - label: What kind of dashboard
         href: "#kind"
@@ -82,7 +81,7 @@ sections:
     tone: paper
     label: What it looks like
     heading: What a dashboard for one role looks like
-    intro: A dashboard for one role leads with a few tiles, one trend, and the items that need attention. This sketch shows the pattern.
+    intro: A dashboard for one role leads with a few tiles, one trend, and the items that need attention.
     figure: dashboard-ui
     purpose: system
     takeaway: A dashboard for one role leads with a few measures, one trend, and a short list of exceptions.
@@ -185,7 +184,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How we build the data behind it
-    intro: Most visitors can skip this section. It notes how we build the data behind a dashboard.
+    intro: How we build the data behind a dashboard.
     panels:
       - title: The data layer
         items:
@@ -244,5 +243,5 @@ sections:
     heading: Tell us which decisions are waiting on numbers
     body: Describe the decisions and where the figures come from today. We will outline the measures, the data, and a first dashboard.
     primary:
-      label: Talk to DECHY about dashboards
+      label: Discuss your dashboards
       href: /contact/?service=data-analytics

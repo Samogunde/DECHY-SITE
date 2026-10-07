@@ -35,7 +35,7 @@ sections:
     headline: Customer Portals
     lead: A customer portal is a private place where clients sign in to see their own information and do things for themselves. This page explains what a portal contains, how access is controlled, and what it saves.
     ctas:
-      - label: Talk to us about a portal
+      - label: Discuss a portal
         href: /contact/?service=web-development
       - label: What goes in a portal
         href: "#contents"
@@ -157,8 +157,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the security and structure choices.
+    heading: Under the hood
+    intro: The security and structure choices.
     panels:
       - title: Identity and access
         paragraphs:
@@ -191,5 +191,5 @@ sections:
     heading: Tell us what customers ask most
     body: List the questions customers ask most often. We will outline a portal that answers them without a call.
     primary:
-      label: Talk to DECHY about a portal
+      label: Discuss a portal
       href: /contact/?service=web-development

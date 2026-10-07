@@ -31,9 +31,8 @@ sections:
     eyebrow: Cloud platform
     headline: AWS cloud services
     lead: "AWS has a service for almost everything, which is both its strength and its trap. We use it to build systems that are simple enough to understand, secured from the start, and watched for cost, and we say when another cloud or a simpler host would do."
-    support: "This page covers how we structure an AWS project, what drives the bill, and where AWS fits among the options."
     ctas:
-      - { label: Talk to us about AWS, href: "/contact/?service=cloud" }
+      - { label: Discuss your AWS project, href: "/contact/?service=cloud" }
       - { label: How we lay it out, href: "#layout" }
     spec:
       kind: layers
@@ -167,8 +166,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes the practices we apply on AWS."
+    heading: How we build with AWS
+    intro: "The practices we apply on AWS."
     panels:
       - title: Accounts and access
         paragraphs:
@@ -222,4 +221,4 @@ sections:
     id: contact-cta
     heading: Tell us what you run
     body: "Describe the workload, the traffic, and what must never go down. We will propose a simple AWS design with a rough monthly cost and the risks to manage."
-    primary: { label: Talk to DECHY about AWS, href: "/contact/?service=cloud" }
+    primary: { label: Discuss your AWS project, href: "/contact/?service=cloud" }

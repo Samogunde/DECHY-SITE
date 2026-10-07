@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for retail and ecommerce
     lead: Selling is easy to start and hard to run well. As soon as there are several channels, the stock count, the orders, and the customer records have to agree. We build and connect the systems that make them agree, from the store to the warehouse door.
-    support: This page covers what retail teams ask for, where channels drift apart, and how we fix it.
     ctas:
-      - label: Talk to us about your store and systems
+      - label: Discuss your store and systems
         href: /contact/?service=ecommerce
       - label: Where channels drift apart
         href: "#drift"
@@ -177,7 +176,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Peak load and data notes
-    intro: Most visitors can skip this section. It notes the engineering choices we make for stores and their connections.
+    intro: The engineering choices we make for stores and their connections.
     panels:
       - title: Handling the busiest day
         items:
@@ -236,5 +235,5 @@ sections:
     heading: Tell us how you sell and what holds your stock
     body: Describe your channels and the tools that hold stock, orders, and customers. We will outline the connections and the first fix.
     primary:
-      label: Talk to DECHY about retail
+      label: Discuss a retail project
       href: /contact/?service=ecommerce

@@ -31,9 +31,8 @@ sections:
     eyebrow: Language
     headline: Java development
     lead: "Java is built for systems that must run for years and be understood by many people. We build new Java services, keep existing ones healthy, and help organizations decide when to modernize a system and when to leave it alone."
-    support: "This page covers where Java fits, how we approach older systems, and when a lighter option is better."
     ctas:
-      - { label: Talk to us about a Java system, href: "/contact/?service=software-development" }
+      - { label: Discuss a Java system, href: "/contact/?service=software-development" }
       - { label: Build, keep, or modernize?, href: "#route" }
     spec:
       kind: layers
@@ -148,8 +147,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes the practices we use on Java projects."
+    heading: How we build with Java
+    intro: "The practices we use on Java projects."
     panels:
       - title: Platform and versions
         paragraphs:
@@ -202,4 +201,4 @@ sections:
     id: contact-cta
     heading: Tell us about the Java system
     body: "Describe what it does and what makes it hard to live with. We will review it and recommend whether to keep it, build around it, or modernize it."
-    primary: { label: Talk to DECHY about Java, href: "/contact/?service=software-development" }
+    primary: { label: Discuss your Java project, href: "/contact/?service=software-development" }

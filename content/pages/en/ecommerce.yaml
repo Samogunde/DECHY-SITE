@@ -38,32 +38,15 @@ sections:
     lead: At DECHY, we build and improve online stores that are easy to run and easy to buy from. We choose the right platform, design the shopping experience, and connect the store to payments, stock, shipping, and accounting.
     support: A store is more than a website. It is a business system, so we build it together with our web, integration, and automation teams.
     ctas:
-      - label: Talk to us about your store
+      - label: Discuss your store
         href: /contact/?service=ecommerce
       - label: Compare platforms
         href: "#platforms"
-    spec:
-      kind: hub
-      center:
-        title: Your online store
-        text: Where customers browse, choose, and pay.
-      spokes:
-        - title: Payments
-          text: Cards and local methods, matched to orders.
-        - title: Stock
-          text: Quantities update after every sale.
-        - title: Shipping
-          text: Labels, rates, and tracking.
-        - title: Accounting
-          text: Sales, tax, and refunds recorded.
-        - title: Email and messages
-          text: Confirmations and follow-up.
-        - title: Customer service
-          text: Orders and questions in one place.
-    purpose: relationship
-    takeaway: A store works well when payments, stock, shipping, accounting, and messages are connected to it, not handled by hand.
-    visualTitle: An online store and the systems around it
-    figureCaption: This diagram shows an online store at the center and six systems it should be connected to, so an order reaches each one without re-typing.
+    visualTitle: A store front and the engine behind it
+    figureCaption: This sketch shows a conceptual store front with a product grid and basket, linked to a commerce engine that holds catalog, pricing, orders, and stock. It is an illustration, not a client store.
+    figure: store-ui
+    purpose: architecture
+    takeaway: A store is a customer-facing front connected to an engine that holds the catalog, prices, orders, and stock.
   - type: definition
     id: what-is
     tone: white
@@ -105,15 +88,33 @@ sections:
         - The largest build, and a long-term duty to maintain it.
     note: Platform features and prices change often. We confirm current details before you commit.
   - type: diagram
-    id: store-front
+    id: store-front-map
     tone: white
-    label: What it looks like
-    heading: A store front and the engine behind it
-    intro: The part customers see is only half of an online store. Behind it sits the engine that holds products, prices, orders, and stock.
-    figure: store-ui
-    purpose: architecture
-    takeaway: A store is a customer-facing front connected to an engine that holds the catalog, prices, orders, and stock.
-    caption: This sketch shows a conceptual store front with a product grid and basket, linked to a commerce engine that holds catalog, pricing, orders, and stock. It is an illustration, not a client store.
+    label: Connections
+    heading: An online store and the systems around it
+    intro: A store works when payments, stock, shipping, accounting, and messages are connected to it, not handled by hand.
+    spec:
+      kind: hub
+      center:
+        title: Your online store
+        text: Where customers browse, choose, and pay.
+      spokes:
+        - title: Payments
+          text: Cards and local methods, matched to orders.
+        - title: Stock
+          text: Quantities update after every sale.
+        - title: Shipping
+          text: Labels, rates, and tracking.
+        - title: Accounting
+          text: Sales, tax, and refunds recorded.
+        - title: Email and messages
+          text: Confirmations and follow-up.
+        - title: Customer service
+          text: Orders and questions in one place.
+    purpose: relationship
+    takeaway: A store works well when payments, stock, shipping, accounting, and messages are connected to it, not handled by hand.
+    visualTitle: An online store and the systems around it
+    caption: This diagram shows an online store at the center and six systems it should be connected to, so an order reaches each one without re-typing.
     points: []
   - type: diagram
     id: order
@@ -230,8 +231,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines how we connect and extend stores.
+    heading: Under the hood
+    intro: How we connect and extend stores.
     panels:
       - title: Platform connections
         paragraphs:
@@ -350,5 +351,5 @@ sections:
     heading: Tell us what you sell
     body: Describe your products, where you sell, and how orders are handled today. We will recommend a platform and the connections to set up first.
     primary:
-      label: Talk to DECHY about your store
+      label: Discuss your store
       href: /contact/?service=ecommerce

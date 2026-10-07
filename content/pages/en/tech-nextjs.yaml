@@ -31,9 +31,8 @@ sections:
     eyebrow: Web framework
     headline: Next.js development
     lead: "Next.js lets one codebase produce pages that load fast, read well to search engines, and behave like an application once they open. We use it where a site has to be found, and also has to do real work."
-    support: "This page covers where Next.js fits, when it does not, and what building with it involves."
     ctas:
-      - { label: Talk to us about a Next.js project, href: "/contact/?service=web-development" }
+      - { label: Discuss a Next.js project, href: "/contact/?service=web-development" }
       - { label: When Next.js fits, href: "#fit" }
     spec:
       kind: layers
@@ -154,8 +153,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes the choices we make on a typical project."
+    heading: How we build with Next.js
+    intro: "The choices we make on a typical project."
     panels:
       - title: Rendering and caching
         paragraphs:
@@ -207,4 +206,4 @@ sections:
     id: contact-cta
     heading: Tell us what the site has to do
     body: "Describe the pages, the people who edit them, and what visitors should be able to do. We will say whether Next.js fits and what the alternatives would mean for you."
-    primary: { label: Talk to DECHY about Next.js, href: "/contact/?service=web-development" }
+    primary: { label: Discuss your Next.js project, href: "/contact/?service=web-development" }

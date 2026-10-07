@@ -31,9 +31,8 @@ sections:
     eyebrow: Website platform
     headline: Wix Studio development
     lead: "Wix Studio is Wix for people who build sites professionally. It trades some of the standard editor's simplicity for control: how a layout behaves at every screen width, how content is structured, and how a finished site is handed over."
-    support: "This page explains who it is for, how it differs from standard Wix, and what we build with it."
     ctas:
-      - { label: Talk to us about a Wix Studio build, href: "/contact/?service=web-development" }
+      - { label: Discuss a Wix Studio build, href: "/contact/?service=web-development" }
       - { label: How it differs from Wix, href: "#compare" }
     spec:
       kind: decision
@@ -133,8 +132,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build on Wix Studio."
+    heading: How we build with Wix Studio
+    intro: "How we build on Wix Studio."
     panels:
       - title: Layout and responsiveness
         items:
@@ -189,4 +188,4 @@ sections:
     id: contact-cta
     heading: Tell us about the site and who will manage it
     body: "Describe the design, the content, and the people who will edit it. We will recommend the right Wix product, or another platform."
-    primary: { label: Talk to DECHY about Wix Studio, href: "/contact/?service=web-development" }
+    primary: { label: Discuss your Wix Studio project, href: "/contact/?service=web-development" }

@@ -34,9 +34,8 @@ sections:
     eyebrow: Industry
     headline: Software for healthcare organizations
     lead: "Healthcare runs on information that must be right, private, and available to the right person at the right moment. We build and connect the systems around that information: portals, booking, records, reporting, and the links between them."
-    support: This page covers the systems healthcare teams ask for, what makes this field different, and how we work within privacy rules.
     ctas:
-      - label: Talk to us about a healthcare system
+      - label: Discuss a healthcare system
         href: /contact/?service=software-development
       - label: What teams ask for
         href: "#needs"
@@ -95,7 +94,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A staff or patient app built for a busy day
-    intro: Healthcare screens must be quick to read between tasks. This sketch shows a short list, clear status, and one next action.
+    intro: Healthcare screens must be quick to read between tasks.
     figure: mobile-app-ui
     purpose: system
     takeaway: "A healthcare app screen must be quick to read between tasks: a short list, a clear status, one next action."
@@ -178,7 +177,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Privacy and integration notes
-    intro: Most visitors can skip this section. It notes the engineering choices we make on health data.
+    intro: The engineering choices we make on health data.
     panels:
       - title: Where data lives
         items:
@@ -233,5 +232,5 @@ sections:
     heading: Tell us which workflow causes the most friction
     body: Describe the workflow and the systems it touches. We will outline a first stage that respects the privacy rules you work under.
     primary:
-      label: Talk to DECHY about healthcare
+      label: Discuss a healthcare project
       href: /contact/?service=software-development

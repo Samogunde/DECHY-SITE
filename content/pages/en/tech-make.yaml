@@ -31,9 +31,8 @@ sections:
     eyebrow: Automation platform
     headline: Make automation
     lead: "Make draws an automation as a diagram you can read: modules joined by lines, with routes that split and loops that repeat. It handles processes with real structure. We build them clearly, test them with awkward data, and monitor them."
-    support: "This page covers where Make fits between simple connectors and custom code, and how we keep scenarios maintainable."
     ctas:
-      - { label: Talk to us about Make, href: "/contact/?service=automation" }
+      - { label: Discuss your Make project, href: "/contact/?service=automation" }
       - { label: Zapier, Make, or code?, href: "#choice" }
     spec:
       kind: decision
@@ -156,8 +155,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we keep scenarios maintainable."
+    heading: How we build with Make
+    intro: "How we keep scenarios maintainable."
     panels:
       - title: Structure
         paragraphs:
@@ -215,4 +214,4 @@ sections:
     id: contact-cta
     heading: Describe the process and where it branches
     body: "Tell us the steps, the tools, and the awkward cases. We will draw the workflow and say whether Make is the right tool to run it."
-    primary: { label: Talk to DECHY about Make, href: "/contact/?service=automation" }
+    primary: { label: Discuss your Make project, href: "/contact/?service=automation" }

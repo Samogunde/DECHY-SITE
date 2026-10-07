@@ -31,9 +31,8 @@ sections:
     eyebrow: Commerce platform
     headline: BigCommerce development
     lead: "BigCommerce is a hosted store platform built to be extended. Its interfaces are open, its B2B features are strong, and the shop front can be built separately from the store engine. We build, connect, and migrate BigCommerce stores, and we say when another platform is the better fit."
-    support: "This page covers what BigCommerce does well, how it compares with Shopify and WooCommerce, and what a headless build involves."
     ctas:
-      - { label: Talk to us about a BigCommerce store, href: "/contact/?service=ecommerce" }
+      - { label: Discuss a BigCommerce store, href: "/contact/?service=ecommerce" }
       - { label: Compare the platforms, href: "#compare" }
     figure: store-ui
     purpose: system
@@ -121,8 +120,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build on BigCommerce."
+    heading: How we build with BigCommerce
+    intro: "How we build on BigCommerce."
     panels:
       - title: Interfaces
         items:
@@ -132,6 +131,7 @@ sections:
         items:
           - "The storefront is a separate application that fetches data from the platform and renders pages on the server for speed and search."
           - "Checkout can stay on the platform's hosted checkout to reduce payment risk."
+          - "Preview builds of the storefront are reviewed against real catalog data before each release."
       - title: Performance and search
         paragraphs:
           - "Images are optimized, pages are cached at the edge, and structured data for products is generated from the catalog. We watch real-world speed after launch."
@@ -178,4 +178,4 @@ sections:
     id: contact-cta
     heading: Tell us what you sell and to whom
     body: "Describe your catalog, your buyers, and the systems the store must connect to. We will compare the platforms on your facts and outline the build."
-    primary: { label: Talk to DECHY about BigCommerce, href: "/contact/?service=ecommerce" }
+    primary: { label: Discuss your BigCommerce project, href: "/contact/?service=ecommerce" }

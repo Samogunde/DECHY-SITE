@@ -35,7 +35,7 @@ sections:
     headline: API Integrations
     lead: An integration lets your tools share information directly, so nobody types it twice. This page explains how integrations work, what can go wrong, and how we build connections that last.
     ctas:
-      - label: Talk to us about connecting tools
+      - label: Discuss connecting your tools
         href: /contact/?service=api-integration
       - label: How a connection works
         href: "#how"
@@ -166,8 +166,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the techniques we use.
+    heading: Under the hood
+    intro: The techniques we use.
     panels:
       - title: Styles of connection
         paragraphs:
@@ -204,5 +204,5 @@ sections:
     heading: Tell us which tools should talk to each other
     body: List the two or three tools your team switches between most. We will say what can be connected and what it would take.
     primary:
-      label: Talk to DECHY about integrations
+      label: Discuss your integrations
       href: /contact/?service=api-integration

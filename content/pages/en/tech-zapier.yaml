@@ -34,9 +34,8 @@ sections:
     eyebrow: Automation platform
     headline: Zapier automation
     lead: Zapier moves information between the apps your team already uses. When a form is submitted, a row is added; when a deal closes, a message is sent. We build these small automations tidily, monitor them, and say when a task has outgrown the tool.
-    support: This page covers what Zapier does well, where it struggles, and how we keep automations dependable.
     ctas:
-      - label: Talk to us about Zapier
+      - label: Discuss your Zapier project
         href: /contact/?service=automation
       - label: Tasks that suit Zapier
         href: "#tasks"
@@ -100,7 +99,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A request passing between tools
-    intro: A Zap is a request passing from one tool to the next. This sketch shows the pattern with owners and statuses.
+    intro: A Zap is a request passing from one tool to the next.
     figure: workflow-ui
     purpose: workflow
     takeaway: A Zapier workflow moves a request between tools, with each step owned and recorded.
@@ -155,8 +154,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we keep Zapier automations dependable.
+    heading: How we build with Zapier
+    intro: How we keep Zapier automations dependable.
     panels:
       - title: Structure
         paragraphs:
@@ -221,5 +220,5 @@ sections:
     heading: Tell us which tasks your team repeats
     body: List the two or three tasks that move between tools by hand. We will say which suit Zapier, which need something stronger, and what each would cost to run.
     primary:
-      label: Talk to DECHY about Zapier
+      label: Discuss your Zapier project
       href: /contact/?service=automation

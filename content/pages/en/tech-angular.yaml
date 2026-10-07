@@ -34,9 +34,8 @@ sections:
     eyebrow: Framework
     headline: Angular development
     lead: "Angular is a framework for large applications: many screens, many forms, many developers, and a long life. We build with it, and we move older AngularJS systems to a version that is still supported."
-    support: This page covers when Angular is worth its weight, how it compares with Vue and React, and how an old AngularJS system is moved forward.
     ctas:
-      - label: Talk to us about an Angular application
+      - label: Discuss an Angular application
         href: /contact/?service=web-development
       - label: Moving off AngularJS
         href: "#move"
@@ -144,8 +143,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build and maintain Angular applications.
+    heading: How we build with Angular
+    intro: How we build and maintain Angular applications.
     panels:
       - title: Architecture
         items:
@@ -215,5 +214,5 @@ sections:
     heading: Tell us about the application
     body: Describe what it does, who uses it, and any existing code. We will review it and recommend how to build or move forward.
     primary:
-      label: Talk to DECHY about Angular
+      label: Discuss your Angular project
       href: /contact/?service=web-development

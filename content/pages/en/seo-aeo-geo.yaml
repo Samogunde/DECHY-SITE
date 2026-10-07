@@ -34,7 +34,7 @@ sections:
     lead: "At DECHY, we help people, search engines, and AI assistants find and understand you. That covers SEO (search engine optimization, being found in search results), AEO (answer engine optimization, being the direct answer to a question), and GEO (generative engine optimization, being understood and described correctly by AI assistants)."
     support: "We build this into websites from the start, and we measure it honestly. We do not promise rankings or AI citations, because nobody can."
     ctas:
-      - { label: Talk to us about visibility, href: "/contact/?service=seo-aeo-geo" }
+      - { label: Discuss your search visibility, href: "/contact/?service=seo-aeo-geo" }
       - { label: Compare the three, href: "#compare" }
     spec:
       kind: layers
@@ -43,9 +43,9 @@ sections:
         - title: Be found
           text: Search engines can reach, read, and rank your pages. This is SEO.
         - title: Be answered
-          text: Your pages give clear, direct answers to real questions. This is AEO.
+          text: Clear, direct answers to real questions (AEO).
         - title: Be understood
-          text: AI assistants can tell who you are and what you do, and describe you accurately. This is GEO.
+          text: AI assistants describe you accurately (GEO).
     purpose: system
     takeaway: "Visibility works in three layers: being found, being answered, and being understood, and each builds on the one above."
     visualTitle: "The three layers of being found online"
@@ -59,7 +59,7 @@ sections:
     answer: "Visibility online now has three parts: ranking in search results, being quoted as the direct answer, and being correctly understood by AI assistants that summarize the web. Each one rewards clear, trustworthy, well-organized content."
     paragraphs:
       - "People still search the way they always have. But search engines also show direct answers, and people increasingly ask AI assistants instead. These systems read the web, decide which sources they understand and trust, and write a response."
-      - "So the goal widens. It is no longer enough to rank. You also want to be the clear source of a good answer, and to be described correctly when an assistant mentions you."
+      - "So the goal widens. It is no longer enough to rank. You also want to be the clear source of a good answer, and to be described correctly when an assistant mentions you. We shape your content so both people and machines can use it. We also check how assistants describe you today, so we know where to start."
 
   - type: diagram
     id: how
@@ -196,8 +196,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines the technical work."
+    heading: Under the hood
+    intro: "The technical work."
     panels:
       - title: Crawling and indexing
         paragraphs:
@@ -281,4 +281,4 @@ sections:
     id: contact-cta
     heading: Tell us how you want to be found
     body: "Share your website and the questions you want to be found for. We will tell you what to fix first, what to measure, and what we cannot promise."
-    primary: { label: Talk to DECHY about visibility, href: "/contact/?service=seo-aeo-geo" }
+    primary: { label: Discuss your search visibility, href: "/contact/?service=seo-aeo-geo" }

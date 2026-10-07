@@ -5,6 +5,7 @@ import { LinkButton } from "@/components/primitives/LinkButton";
 import { getRegistry } from "@/lib/content/load";
 import type { Block, Comprehension } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
+import { GlanceTabs } from "./GlanceTabs";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
@@ -12,48 +13,137 @@ type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 /**
  * "At a glance": the visitor's five answers (clarity standard section 1), shown right after the
  * hero. Rendered from the page's `comprehension` record so the summary and the review record
- * can never disagree.
+ * can never disagree. The same answers appear in three forms so pages do not all read alike:
+ * tabs with an action panel (services and hubs), a stepped flow ending in an action bar
+ * (solutions, work areas, industries), and an editorial layout (technologies, countries, others).
  */
+export type GlanceVariant = "tabs" | "flow" | "editorial";
+
+export function glanceVariantFor(kind: string): GlanceVariant {
+  switch (kind) {
+    case "service":
+    case "hub":
+    case "company":
+    case "work-hub":
+      return "tabs";
+    case "solution":
+    case "work-area":
+    case "industry":
+      return "flow";
+    default:
+      return "editorial";
+  }
+}
+
 export function AtAGlance({
   comprehension,
   cta,
+  variant = "tabs",
 }: {
   comprehension: Comprehension;
   cta?: { label: string; href: string };
+  variant?: GlanceVariant;
 }) {
-  const items: [string, string][] = [
-    ["What it is", comprehension.what],
-    ["The problem it solves", comprehension.problem],
-    ["Who it is for", comprehension.audience],
-    ["How to choose", comprehension.choose],
+  const items: { label: string; text: string }[] = [
+    { label: "What it is", text: comprehension.what },
+    { label: "The problem it solves", text: comprehension.problem },
+    { label: "Who it is for", text: comprehension.audience },
+    { label: "How to choose", text: comprehension.choose },
   ];
+  const showCta = cta && pathExists(cta.href.split(/[?#]/)[0] ?? "", getRegistry());
+  const next = (
+    <>
+      <p className="t-eyebrow glance-next-label m-0">Next step</p>
+      <p className="glance-next-text m-0">
+        <Inline text={comprehension.next} />
+      </p>
+      {showCta ? (
+        <LinkButton href={cta.href} className="glance-next-btn" arrow>
+          {cta.label}
+        </LinkButton>
+      ) : null}
+    </>
+  );
+
+  if (variant === "tabs") {
+    return (
+      <section aria-labelledby="glance-h" className="tone-white rule-top glance glance-v-tabs">
+        <div className="container-site">
+          <h2 id="glance-h" className="t-eyebrow eyebrow-accent m-0">
+            At a glance
+          </h2>
+          <GlanceTabs
+            items={items.map((it) => ({
+              label: it.label,
+              body: (
+                <p className="glance-statement m-0">
+                  <Inline text={it.text} />
+                </p>
+              ),
+            }))}
+            action={next}
+          />
+        </div>
+      </section>
+    );
+  }
+
+  if (variant === "flow") {
+    return (
+      <section aria-labelledby="glance-h" className="tone-white rule-top glance glance-v-flow">
+        <div className="container-site">
+          <h2 id="glance-h" className="t-eyebrow eyebrow-accent m-0">
+            At a glance
+          </h2>
+          <ol className="gf" data-reveal="group">
+            {items.map((it, i) => (
+              <li key={it.label} className="gf-step">
+                <span className="gf-node" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <h3 className="gf-label">{it.label}</h3>
+                <p className="t-body m-0">
+                  <Inline text={it.text} />
+                </p>
+              </li>
+            ))}
+          </ol>
+          <aside className="gf-action" aria-label="Next step">
+            {next}
+          </aside>
+        </div>
+      </section>
+    );
+  }
+
+  const [lead, ...others] = items;
   return (
-    <section aria-labelledby="glance-h" className="tone-white rule-top glance">
+    <section aria-labelledby="glance-h" className="tone-white rule-top glance glance-v-editorial">
       <div className="container-site">
         <h2 id="glance-h" className="t-eyebrow eyebrow-accent m-0">
           At a glance
         </h2>
-        <dl className="glance-grid" data-reveal="group">
-          {items.map(([k, v]) => (
-            <div key={k} className="glance-item">
-              <dt className="t-label">{k}</dt>
-              <dd className="t-body m-0">
-                <Inline text={v} />
-              </dd>
-            </div>
-          ))}
-          <div className="glance-item glance-next">
-            <dt className="t-label">Next step</dt>
-            <dd className="t-body m-0">
-              <Inline text={comprehension.next} />
-              {cta && pathExists(cta.href.split(/[?#]/)[0] ?? "", getRegistry()) ? (
-                <LinkButton href={cta.href} className="mt-4" arrow>
-                  {cta.label}
-                </LinkButton>
-              ) : null}
-            </dd>
+        <div className="ge" data-reveal="group">
+          <div className="ge-lead">
+            <p className="t-eyebrow m-0">{lead!.label}</p>
+            <p className="ge-statement m-0">
+              <Inline text={lead!.text} />
+            </p>
           </div>
-        </dl>
+          <dl className="ge-list">
+            {others.map((it) => (
+              <div key={it.label} className="ge-row">
+                <dt className="t-label">{it.label}</dt>
+                <dd className="t-body m-0">
+                  <Inline text={it.text} />
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <aside className="ge-action" aria-label="Next step">
+          {next}
+        </aside>
       </div>
     </section>
   );

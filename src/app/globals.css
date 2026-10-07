@@ -273,14 +273,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.625rem;
     min-height: 3rem;
-    padding: 0.5rem 1.375rem;
+    padding: 0.5rem 1.5rem;
     border-radius: var(--radius-lg);
     font-family: var(--font-heading);
     font-size: var(--fs-button);
     font-weight: 600;
     line-height: 1.2;
+    text-align: center;
+    /* A label never breaks across lines where it can fit; the arrow keeps its own flex slot. On
+       the narrowest phones (below) a long label may wrap, centred and balanced. */
+    white-space: nowrap;
+    max-width: 100%;
     text-decoration: none;
     border: 1.5px solid transparent;
     cursor: pointer;
@@ -290,6 +295,14 @@
       color var(--dur-fast) var(--ease-out),
       box-shadow var(--dur-base) var(--ease-out),
       transform var(--dur-fast) var(--ease-out);
+  }
+  @media (max-width: 29.99rem) {
+    .btn {
+      white-space: normal;
+      text-wrap: balance;
+      padding-inline: 1rem;
+      gap: 0.5rem;
+    }
   }
   .btn-primary {
     background: var(--color-blue);

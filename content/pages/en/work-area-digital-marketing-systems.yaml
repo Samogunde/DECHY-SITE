@@ -35,7 +35,7 @@ sections:
     headline: Digital Marketing Systems
     lead: A marketing system connects the places interest arrives to the people who follow it up, and to your customer records. This page shows what it contains and how it shows you which activity produces customers.
     ctas:
-      - label: Talk to us about marketing systems
+      - label: Discuss your marketing systems
         href: /contact/?service=digital-marketing
       - label: See the flow
         href: "#flow"
@@ -173,5 +173,5 @@ sections:
     heading: Tell us how enquiries reach you
     body: Describe how enquiries arrive and what happens next. We will show where leads are lost and how to track them.
     primary:
-      label: Talk to DECHY about marketing systems
+      label: Discuss your marketing systems
       href: /contact/?service=digital-marketing

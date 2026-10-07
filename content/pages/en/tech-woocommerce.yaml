@@ -31,9 +31,8 @@ sections:
     eyebrow: Platform
     headline: WooCommerce development
     lead: "WooCommerce turns a WordPress site into an online store that you own. We build, extend, and look after WooCommerce stores, and we help you decide whether owning your store or renting one is the better choice."
-    support: "This page covers how a WooCommerce store is put together, how it compares with Shopify, and what keeps it fast and safe."
     ctas:
-      - { label: Talk to us about a WooCommerce store, href: "/contact/?service=ecommerce" }
+      - { label: Discuss a WooCommerce store, href: "/contact/?service=ecommerce" }
       - { label: WooCommerce or Shopify?, href: "#options" }
     spec:
       kind: layers
@@ -154,8 +153,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we keep WooCommerce stores healthy."
+    heading: How we build with WooCommerce
+    intro: "How we keep WooCommerce stores healthy."
     panels:
       - title: Foundations
         paragraphs:
@@ -213,4 +212,4 @@ sections:
     id: contact-cta
     heading: Tell us what you sell and how you want to run the store
     body: "Describe your products, how you ship, and how you want to run the store. We will compare WooCommerce with the alternatives and outline a build."
-    primary: { label: Talk to DECHY about WooCommerce, href: "/contact/?service=ecommerce" }
+    primary: { label: Discuss your WooCommerce project, href: "/contact/?service=ecommerce" }

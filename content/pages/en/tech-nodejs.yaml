@@ -31,12 +31,8 @@ sections:
     eyebrow: Runtime
     headline: Node.js development
     lead: "Node.js is a way to run JavaScript on a server. We use it for back ends, connections between systems, and features that update live. It suits some jobs very well and others poorly, and we say which."
-    support: "This page covers where Node.js fits, how it compares with the other common choices, and what we build with it."
     ctas:
-      - {
-          label: Talk to us about a Node.js back end,
-          href: "/contact/?service=software-development",
-        }
+      - { label: Discuss a Node.js back end, href: "/contact/?service=software-development" }
       - { label: Is Node.js right for you?, href: "#options" }
     spec:
       kind: decision
@@ -159,8 +155,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we run Node.js projects."
+    heading: How we build with Node.js
+    intro: "How we run Node.js projects."
     panels:
       - title: Language and runtime
         paragraphs:
@@ -231,4 +227,4 @@ sections:
     id: contact-cta
     heading: Tell us what the back end has to do
     body: "Describe the product, the systems it connects to, and how many people will use it. We will say whether Node.js fits and what a first stage would look like."
-    primary: { label: Talk to DECHY about Node.js, href: "/contact/?service=software-development" }
+    primary: { label: Discuss your Node.js project, href: "/contact/?service=software-development" }

@@ -36,7 +36,7 @@ sections:
     headline: Internal Business Tools
     lead: An internal tool is a simple system for your own staff. It takes over from the spreadsheet or the email chain that the team has outgrown. This page explains what these tools look like and when to build one.
     ctas:
-      - label: Talk to us about a tool
+      - label: Discuss a tool
         href: /contact/?service=software-development
       - label: Spreadsheet or tool?
         href: "#examples"
@@ -96,7 +96,7 @@ sections:
     tone: white
     label: What it looks like
     heading: An internal tool built around one team's day
-    intro: Internal tools succeed when the main screen matches the team's morning questions. This sketch leads with tiles, a trend, and exceptions.
+    intro: Internal tools succeed when the main screen matches the team's morning questions.
     figure: dashboard-ui
     purpose: system
     takeaway: "An internal tool leads with what a team asks first thing: how things stand, the trend, and what needs attention."
@@ -168,5 +168,5 @@ sections:
     heading: Tell us which spreadsheet your team depends on
     body: Describe the spreadsheet or email chain and who uses it. We will say what a tool would do better and roughly what it would cost.
     primary:
-      label: Talk to DECHY about a tool
+      label: Discuss a tool
       href: /contact/?service=software-development

@@ -35,7 +35,7 @@ sections:
     headline: Brand Systems
     lead: A brand system is more than a logo. It is the rules, templates, and assets that let everyone in an organization produce work that looks and sounds the same. This page shows what a system contains and how it is put to work.
     ctas:
-      - label: Talk to us about your brand
+      - label: Discuss your brand
         href: /contact/?service=branding
       - label: See the parts
         href: "#parts"
@@ -168,5 +168,5 @@ sections:
     heading: Show us how your brand looks today
     body: Send a few samples of your materials. We will show where the brand drifts and what a lightweight system would fix.
     primary:
-      label: Talk to DECHY about your brand
+      label: Discuss your brand
       href: /contact/?service=branding

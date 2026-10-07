@@ -35,9 +35,8 @@ sections:
     eyebrow: Solution
     headline: AI customer support
     lead: Most support questions are asked again and again, and most have an answer that already exists in your help pages, policies, or past replies. We build an assistant that answers those from your own content, and hands the rest to your team with the conversation attached.
-    support: This page explains what to automate, what to keep human, and how to keep the answers accurate.
     ctas:
-      - label: Talk to us about support
+      - label: Discuss your support setup
         href: /contact/?service=ai
       - label: What the assistant should handle
         href: "#scope"
@@ -99,7 +98,7 @@ sections:
     tone: white
     label: What it looks like
     heading: What the assistant looks like to a customer
-    intro: A customer sees a short answer, the source it came from, and a way to reach a person. This sketch shows that exchange.
+    intro: A customer sees a short answer, the source it came from, and a way to reach a person.
     figure: assistant-ui
     purpose: system
     takeaway: A customer sees a short answer, the source it came from, and an easy route to a person.
@@ -184,7 +183,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How the assistant is built
-    intro: Most visitors can skip this section. It notes how we build a support assistant.
+    intro: How we build a support assistant.
     panels:
       - title: Answering from your content
         paragraphs:
@@ -245,5 +244,5 @@ sections:
     heading: Tell us the questions you answer most
     body: Describe your support volume and where the answers live. We will outline what to automate, what to keep human, and a first pilot.
     primary:
-      label: Talk to DECHY about support
+      label: Discuss your support setup
       href: /contact/?service=ai

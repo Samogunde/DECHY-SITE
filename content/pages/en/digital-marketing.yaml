@@ -34,7 +34,7 @@ sections:
     lead: "At DECHY, we help you reach the right people and turn their interest into enquiries and sales. We choose a small number of channels, track each one from first click to customer, and connect the results to your sales records."
     support: "Marketing here is tied to measurement and to your systems, so you can see what works and act on it."
     ctas:
-      - { label: Talk to us about marketing, href: "/contact/?service=digital-marketing" }
+      - { label: Discuss your marketing, href: "/contact/?service=digital-marketing" }
       - { label: See the customer path, href: "#connected" }
     spec:
       kind: funnel
@@ -280,4 +280,4 @@ sections:
     id: contact-cta
     heading: Tell us who you want to reach
     body: "Describe your customers and how you measure success today. We will suggest where to focus first and how to track the results."
-    primary: { label: Talk to DECHY about marketing, href: "/contact/?service=digital-marketing" }
+    primary: { label: Discuss your marketing, href: "/contact/?service=digital-marketing" }

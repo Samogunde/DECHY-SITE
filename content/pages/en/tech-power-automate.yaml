@@ -31,9 +31,8 @@ sections:
     eyebrow: Automation platform
     headline: Power Automate
     lead: "Power Automate lets a business automate routine steps without writing a full application. It is strongest inside Microsoft 365. We design and build the flows, and we tell you when another tool would serve you better."
-    support: "This page covers what it does well, where it runs out of room, and how it compares with Zapier, Make, and n8n."
     ctas:
-      - { label: Talk to us about Power Automate, href: "/contact/?service=automation" }
+      - { label: Discuss your Power Automate project, href: "/contact/?service=automation" }
       - { label: How a flow works, href: "#how" }
     spec:
       kind: flow
@@ -142,8 +141,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we approach Power Automate projects."
+    heading: How we build with Power Automate
+    intro: "How we approach Power Automate projects."
     panels:
       - title: Flows and connections
         paragraphs:
@@ -204,4 +203,4 @@ sections:
     id: contact-cta
     heading: Tell us which process to automate
     body: "Describe the steps, the people, and the tools involved. We will say whether Power Automate fits and outline a first flow."
-    primary: { label: Talk to DECHY about Power Automate, href: "/contact/?service=automation" }
+    primary: { label: Discuss your Power Automate project, href: "/contact/?service=automation" }

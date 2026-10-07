@@ -38,7 +38,7 @@ sections:
     lead: At DECHY, we help you run your software on the cloud in a way that is reliable, secure, and affordable. We plan the move, set up the infrastructure, and build the DevOps routines, which are the habits that let software be built, tested, and released safely.
     support: Cloud work sits next to our software, security, and integration teams, so hosting decisions are made together with the application.
     ctas:
-      - label: Talk to us about the cloud
+      - label: Discuss your cloud project
         href: /contact/?service=cloud
       - label: See the three paths
         href: "#paths"
@@ -50,7 +50,7 @@ sections:
         - title: Your software
           text: Your website, app, or business system.
         - title: Ready-made services
-          text: Databases, file storage, sign-in, and messaging you rent instead of building.
+          text: Databases, storage, sign-in, messaging.
         - title: Computing power
           text: Servers you switch on and off as needed, paid by use.
         - title: The provider's data centers
@@ -66,7 +66,7 @@ sections:
     heading: Why teams look at the cloud
     paragraphs:
       - Many organizations run software on servers they bought years ago or on hosting nobody has reviewed. It works until it does not. A disk fails on a Friday. An update has to wait for a weekend. A busy day slows everything down.
-      - The cloud changes the deal. You rent computing power and ready-made services. You pay for what you use, you add capacity in minutes, and the provider looks after the buildings and hardware.
+      - The cloud changes the deal. You rent computing power and ready-made services. You pay for what you use, you add capacity in minutes, and the provider looks after the buildings and hardware, so your team spends its time on the software instead.
       - It is not a magic fix. Without good design, cloud bills grow and systems stay fragile. The value comes from how things are set up and looked after.
   - type: diagram
     id: paths
@@ -102,7 +102,7 @@ sections:
     tone: white
     label: Where it can run
     heading: Hosting options compared
-    intro: Cloud is a family of options, not one thing. Here is how the main choices differ.
+    intro: Cloud is a family of options, not one thing.
     caption: Comparison of hosting options
     columns:
       - Option
@@ -212,8 +212,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines how we build and run cloud systems.
+    heading: Under the hood
+    intro: How we build and run cloud systems.
     panels:
       - title: Infrastructure written as code
         paragraphs:
@@ -299,5 +299,5 @@ sections:
     heading: Tell us where your software runs today
     body: Describe your current setup and what worries you most. We will recommend a path to the cloud, or tell you honestly if staying put is better.
     primary:
-      label: Talk to DECHY about the cloud
+      label: Discuss your cloud project
       href: /contact/?service=cloud

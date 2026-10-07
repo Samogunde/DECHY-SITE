@@ -35,7 +35,7 @@ sections:
     headline: Business Web Platforms
     lead: A business web platform is a website that does work. Visitors can book, apply, pay, or sign in. Staff can manage content and requests without a developer. This page shows what such platforms contain and how we build them.
     ctas:
-      - label: Talk to us about a platform
+      - label: Discuss a platform
         href: /contact/?service=web-development
       - label: See the difference
         href: "#difference"
@@ -99,7 +99,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A web platform your team can run
-    intro: A web platform is easier to own when its editing is simple. This sketch shows a page canvas, a tool panel, and included hosting.
+    intro: A web platform is easier to own when its editing is simple.
     figure: site-builder
     purpose: system
     takeaway: A business web platform lets staff edit pages safely, with hosting and updates looked after.
@@ -207,5 +207,5 @@ sections:
     heading: Tell us what your site should do
     body: Describe what visitors and staff should be able to do. We will outline the parts you need and a sensible first release.
     primary:
-      label: Talk to DECHY about a platform
+      label: Discuss a platform
       href: /contact/?service=web-development

@@ -36,7 +36,7 @@ sections:
     headline: UI/UX and Product Design
     lead: "Good screens come from a system, not from luck. UI (user interface) is what people see, and UX (user experience) is how it feels to get something done. This page shows the system behind both: research, testing, and a shared kit of parts."
     ctas:
-      - label: Talk to us about design
+      - label: Discuss your design project
         href: /contact/?service=ui-ux
       - label: See the kit
         href: "#kit"
@@ -158,5 +158,5 @@ sections:
     heading: Show us the screens that feel inconsistent
     body: Share a few screens that confuse people or do not match. We will suggest how to bring them into one clear system.
     primary:
-      label: Talk to DECHY about design
+      label: Discuss your design project
       href: /contact/?service=ui-ux

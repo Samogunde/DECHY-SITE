@@ -129,7 +129,7 @@ sections:
     tone: paper
     label: Interfaces
     heading: What a customer portal looks like on screen
-    intro: Most people judge a system by the screens they use. This sketch shows how a customer portal might organize its menu, a quick view of status, and the records people come for, on a desktop and on a phone.
+    intro: Most people judge a system by the screens they use.
     figure: portal-wireframe
     purpose: system
     takeaway: A well-designed portal shows each person what they came for first, on any screen size, and nothing they should not see.
@@ -222,7 +222,7 @@ sections:
     tone: paper
     label: Technology
     heading: How we choose technology
-    intro: Most visitors can skip this section. It is here for technical readers who want to know how choices are made.
+    intro: It is here for technical readers who want to know how choices are made.
     panels:
       - title: We are not tied to one set of tools
         paragraphs:
@@ -370,8 +370,8 @@ sections:
           - workarea.operations-platforms
   - type: cta
     id: contact-cta
-    heading: Discuss a software project
+    heading: Tell us what you want built, replaced, or connected
     body: Describe what you want to build, replace, or connect. We will tell you honestly whether building is the right approach and what the first step should be.
     primary:
-      label: Talk to DECHY about software
+      label: Discuss your software project
       href: /contact/?service=software-development

@@ -31,9 +31,8 @@ sections:
     eyebrow: Tool
     headline: Terraform and infrastructure as code
     lead: "Terraform turns infrastructure into text that can be read, reviewed, and run. A network, a database, or a whole environment can be created the same way every time, and changes leave a record. We use it to make cloud systems repeatable and understandable."
-    support: "This page covers what infrastructure as code gives you, how a change flows through it, and how we adopt it without disruption."
     ctas:
-      - { label: Talk to us about Terraform, href: "/contact/?service=cloud" }
+      - { label: Discuss your Terraform project, href: "/contact/?service=cloud" }
       - { label: How a change flows, href: "#flow" }
     spec:
       kind: flow
@@ -43,7 +42,7 @@ sections:
         - title: Review it
           text: A colleague reads the change, as with any code.
         - title: Plan
-          text: Terraform shows exactly what would be created, changed, or removed.
+          text: Shows what would be created, changed, or removed.
         - title: Apply
           text: The change is made, and recorded.
         - title: Keep a record
@@ -161,8 +160,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes the conventions we follow."
+    heading: How we build with Terraform
+    intro: "The conventions we follow."
     panels:
       - title: Structure
         paragraphs:
@@ -216,4 +215,4 @@ sections:
     id: contact-cta
     heading: Tell us what you run and how it was built
     body: "Describe your cloud set-up and who changes it. We will map what exists and plan a safe move to code."
-    primary: { label: Talk to DECHY about Terraform, href: "/contact/?service=cloud" }
+    primary: { label: Discuss your Terraform project, href: "/contact/?service=cloud" }

@@ -34,9 +34,8 @@ sections:
     eyebrow: Language
     headline: Go development
     lead: Go is a language chosen for software that has to be fast, steady, and cheap to run. We use it for back-end services, tools, and the plumbing that other systems depend on. It is not the answer to every problem, and we say where it is not.
-    support: This page covers what Go is good at, how it compares with other back-end languages, and what we build with it.
     ctas:
-      - label: Talk to us about a Go service
+      - label: Discuss a Go service
         href: /contact/?service=software-development
       - label: Is Go the right language?
         href: "#fit"
@@ -163,8 +162,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build in Go.
+    heading: How we build with Go
+    intro: How we build in Go.
     panels:
       - title: Concurrency
         items:
@@ -235,5 +234,5 @@ sections:
     heading: Tell us what the service must do and at what scale
     body: Describe the workload, the traffic you expect, and who will maintain it. We will say whether Go is the right language and outline how we would build it.
     primary:
-      label: Talk to DECHY about Go
+      label: Discuss your Go project
       href: /contact/?service=software-development

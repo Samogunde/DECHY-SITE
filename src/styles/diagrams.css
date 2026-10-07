@@ -33,9 +33,9 @@
   --dgm-fill: var(--color-white);
   --dgm-muted: var(--color-slate-text);
   --dgm-accent: var(--color-blue);
-  --dgm-gap: clamp(0.625rem, 0.4rem + 1.4cqw, 1rem);
-  --dgm-pad-y: 0.85rem;
-  --dgm-pad-x: 1.05rem;
+  --dgm-gap: clamp(0.5rem, 0.35rem + 1.2cqw, 0.85rem);
+  --dgm-pad-y: 0.6rem;
+  --dgm-pad-x: 0.9rem;
   --dgm-line: 1.5px;
   font-size: var(--fs-body-sm);
   line-height: 1.4;
@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.15rem;
+  gap: 0.05rem;
   min-width: 0;
   padding: var(--dgm-pad-y) var(--dgm-pad-x);
   background: var(--dgm-fill);
@@ -83,13 +83,13 @@
 .dgm-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: var(--fs-body);
+  font-size: calc(var(--fs-body) * 0.94);
   line-height: 1.25;
   color: var(--dgm-ink);
 }
 .dgm-text {
-  font-size: var(--fs-body-sm);
-  line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.35;
   color: var(--dgm-muted);
 }
 .dgm-label {
@@ -245,10 +245,16 @@
   }
 }
 
-/* ---------------- Anatomy: layers on the left, the systems that support each on the right ---------------- */
+/* ---------------- Anatomy: layers on the left, the parts that support each on the right ----------------
+   Connectors are built from the grid itself, never from guessed offsets: the stage reaches the
+   middle of the link column along the row's centre line, every supporting box has a stub from that
+   same line, and each stub carries the vertical bracket down to the next one. Supporting boxes in
+   a row have equal height, so the next centre is always exactly one box plus one gap away. */
 .anatomy {
-  --anatomy-gap: 1.5rem;
-  --anatomy-link: clamp(1.25rem, 6cqw, 1.75rem);
+  --anatomy-gap: 1.15rem;
+  --anatomy-link: clamp(1.5rem, 7cqw, 2.25rem);
+  --anatomy-support-gap: 0.5rem;
+  --anatomy-line: 2px;
 }
 .anatomy-heads {
   display: none;
@@ -266,25 +272,26 @@
 .anatomy-stage .dgm-box {
   height: 100%;
 }
-/* Flow arrow from the layer above into this layer. */
+/* The flow from the layer above into this layer: a line that ends exactly on the box edge. */
 .anatomy-stack > li + li .anatomy-stage::before {
   content: "";
   position: absolute;
-  left: 50%;
+  left: calc(50% - var(--anatomy-line) / 2);
   top: calc(var(--anatomy-gap) * -1);
-  height: calc(var(--anatomy-gap) - 2px);
-  border-left: var(--dgm-line) solid var(--dgm-ink);
+  width: var(--anatomy-line);
+  height: var(--anatomy-gap);
+  background: var(--dgm-ink);
 }
 .anatomy-stack > li + li .anatomy-stage::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: -0.55rem;
+  top: -0.2rem;
   width: 0.5rem;
   height: 0.5rem;
-  border-right: var(--dgm-line) solid var(--dgm-ink);
-  border-bottom: var(--dgm-line) solid var(--dgm-ink);
-  transform: translateX(-50%) rotate(45deg);
+  border-right: var(--anatomy-line) solid var(--dgm-ink);
+  border-bottom: var(--anatomy-line) solid var(--dgm-ink);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 .anatomy-link {
   display: none;
@@ -292,22 +299,22 @@
 .anatomy-support-wrap {
   min-width: 0;
 }
-/* Narrow: the supporting systems attach beneath their layer as one tray, so the layer and what
-   supports it read as a single unit and the flow arrow runs from unit to unit. */
+/* Narrow: the supporting parts attach beneath their layer as one tray, so the layer and what
+   supports it read as a single unit and the flow runs from unit to unit. */
 .anatomy-row.has-support .anatomy-stage .dgm-box {
   border-end-start-radius: 0;
   border-end-end-radius: 0;
 }
 .anatomy-support-wrap {
-  padding: 0.55rem var(--dgm-pad-x) 0.75rem;
+  padding: 0.5rem var(--dgm-pad-x) 0.65rem;
   background: var(--color-paper);
   border: var(--dgm-line) solid var(--dgm-border);
-  border-top: 2px dotted var(--dgm-accent);
+  border-top: var(--anatomy-line) solid var(--dgm-accent);
   border-end-start-radius: var(--radius-md);
   border-end-end-radius: var(--radius-md);
 }
 .anatomy-support-label {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 .anatomy-support {
   display: flex;
@@ -316,54 +323,25 @@
 }
 .anatomy-support > li {
   display: flex;
+  max-width: 100%;
 }
 .anatomy-support .dgm-box {
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0 0.5rem;
   padding: 0.3rem 0.7rem;
+  text-align: left;
 }
 .anatomy-support .dgm-title {
   font-size: var(--fs-body-sm);
 }
-.anatomy-pipeline {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  justify-content: start;
-  gap: 0.4rem 0.5rem;
-  margin-top: calc(var(--anatomy-gap) * 1.25);
-  padding: 1rem var(--dgm-pad-x);
-  background: var(--color-ink);
-  border-radius: var(--radius-md);
-  color: var(--color-paper);
-}
-.anatomy-pipeline > li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-heading);
-  font-size: var(--fs-body);
-  font-weight: 700;
-}
-.anatomy-pipeline > li:nth-child(2) .arrow {
-  display: none;
-}
-.anatomy-pipeline .arrow {
-  margin-inline: 0.4rem 0.5rem;
-  color: var(--color-blue-on-dark);
-}
-@container dgm (min-width: 26rem) {
-  .anatomy-pipeline {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .anatomy-pipeline > li:nth-child(2) .arrow {
-    display: block;
-  }
-}
 @container dgm (min-width: 28rem) {
   .anatomy-heads {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) var(--anatomy-link) minmax(0, 1fr);
-    margin-bottom: 0.6rem;
+    grid-template-columns: minmax(0, 1.2fr) var(--anatomy-link) minmax(0, 1fr);
+    margin-bottom: 0.5rem;
   }
   .anatomy-heads > :first-child {
     grid-column: 1;
@@ -372,7 +350,7 @@
     grid-column: 3;
   }
   .anatomy-row {
-    grid-template-columns: minmax(0, 1.45fr) var(--anatomy-link) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.2fr) var(--anatomy-link) minmax(0, 1fr);
   }
   .anatomy-row.has-support .anatomy-stage .dgm-box {
     border-radius: var(--radius-md);
@@ -381,22 +359,15 @@
     display: block;
     position: relative;
   }
-  /* Stub from the layer to the middle of its supporting systems, and a bracket joining them. */
+  /* Stage edge to the middle of the link column, on the row's centre line. */
   .anatomy-link::before {
     content: "";
     position: absolute;
     left: 0;
-    width: 50%;
-    top: 50%;
-    border-top: 2px dotted var(--dgm-accent);
-  }
-  .anatomy-link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: calc(50% / var(--n, 1) - (var(--n, 1) - 1) * 0.25rem / var(--n, 1));
-    bottom: calc(50% / var(--n, 1) - (var(--n, 1) - 1) * 0.25rem / var(--n, 1));
-    border-left: 2px dotted var(--dgm-accent);
+    width: calc(50% + var(--anatomy-line) / 2);
+    top: calc(50% - var(--anatomy-line) / 2);
+    height: var(--anatomy-line);
+    background: var(--dgm-accent);
   }
   .anatomy-support-wrap {
     display: flex;
@@ -409,35 +380,49 @@
   }
   .anatomy-support {
     flex: 1;
-    flex-direction: column;
+    display: grid;
+    grid-auto-rows: 1fr;
     flex-wrap: nowrap;
-    gap: 0.5rem;
+    gap: var(--anatomy-support-gap);
   }
   .anatomy-support > li {
     position: relative;
-    flex: 1;
   }
+  /* Stub from the bracket to this box, and the bracket down to the next box. */
   .anatomy-support > li::before {
     content: "";
     position: absolute;
     left: calc(var(--anatomy-link) / -2);
     width: calc(var(--anatomy-link) / 2);
+    top: calc(50% - var(--anatomy-line) / 2);
+    height: var(--anatomy-line);
+    background: var(--dgm-accent);
+  }
+  .anatomy-support > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--anatomy-link) / -2 - var(--anatomy-line) / 2);
     top: 50%;
-    border-top: 2px dotted var(--dgm-accent);
+    width: var(--anatomy-line);
+    height: calc(100% + var(--anatomy-support-gap));
+    background: var(--dgm-accent);
   }
   .anatomy-support .dgm-box {
     flex: 1;
     flex-direction: column;
-    padding: var(--dgm-pad-y) var(--dgm-pad-x);
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0.05rem;
+    padding: 0.5rem 0.8rem;
   }
   .anatomy-support .dgm-title {
-    font-size: var(--fs-body);
+    font-size: var(--fs-body-sm);
   }
 }
 
 /* ---------------- Connected flow: steps, shared foundation, monitoring ---------------- */
 .flow {
-  --flow-gap: 1.25rem;
+  --flow-gap: 0.95rem;
 }
 .flow-steps {
   display: grid;
@@ -808,7 +793,7 @@
   align-items: baseline;
   gap: 0.25rem 0.9rem;
   margin-top: calc(var(--anatomy-gap) * 1.1);
-  padding: 0.95rem var(--dgm-pad-x);
+  padding: 0.7rem var(--dgm-pad-x);
   background: var(--color-ink);
   border-radius: var(--radius-md);
   color: var(--color-paper);
@@ -828,7 +813,7 @@
 }
 .ba-panel {
   min-width: 0;
-  padding: 1.1rem var(--dgm-pad-x) 1.25rem;
+  padding: 0.8rem var(--dgm-pad-x) 0.95rem;
   border: var(--dgm-line) solid var(--dgm-border);
   border-radius: var(--radius-lg);
 }
@@ -840,16 +825,17 @@
   background: var(--dgm-fill);
 }
 .ba-title {
-  margin: 0.2rem 0 0;
-  font-size: var(--fs-h4);
+  margin: 0.15rem 0 0;
+  font-size: var(--fs-body);
+  line-height: 1.25;
 }
 .ba-lead {
-  margin: 0.4rem 0 0;
+  margin: 0.25rem 0 0;
 }
 .ba-nodes {
   display: grid;
-  gap: 0.15rem;
-  margin-top: 1rem;
+  gap: 0.1rem;
+  margin-top: 0.75rem;
 }
 .ba-nodes > li {
   position: relative;
@@ -858,7 +844,8 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.2rem 0;
+  padding: 0.05rem 0;
+  line-height: 1.1;
   font-size: var(--fs-caption);
   font-style: italic;
   color: var(--dgm-muted);
@@ -872,13 +859,13 @@
 .ba-arrow {
   display: grid;
   place-items: center;
-  height: 1.75rem;
+  height: 1.4rem;
   color: var(--dgm-accent);
   transform: rotate(90deg);
 }
 .ba-connected {
-  margin-top: 1rem;
-  padding-left: 1.4rem;
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
   border-left: 4px solid var(--color-blue);
 }
 .ba-connected .ba-nodes {
@@ -888,9 +875,9 @@
 .ba-connected .ba-nodes > li::before {
   content: "";
   position: absolute;
-  left: -1.4rem;
+  left: -1.2rem;
   top: 50%;
-  width: 1.4rem;
+  width: 1.2rem;
   border-top: 2px solid var(--color-blue);
 }
 .ba-bus-label {
@@ -899,6 +886,17 @@
   font-size: var(--fs-caption);
   font-weight: 700;
   color: var(--dgm-accent);
+}
+@container dgm (min-width: 28rem) {
+  .ba {
+    grid-template-columns: minmax(0, 1fr) 1.9rem minmax(0, 1fr);
+    align-items: start;
+  }
+  .ba-arrow {
+    height: auto;
+    align-self: center;
+    transform: none;
+  }
 }
 @container dgm (min-width: 40rem) {
   .ba {
@@ -943,14 +941,14 @@
   grid-template-columns: minmax(0, 1fr);
   gap: var(--dgm-gap);
   width: 100%;
-  padding: 1.1rem;
+  padding: 0.8rem;
   border: var(--dgm-line) dashed var(--dgm-accent);
   border-radius: var(--radius-lg);
 }
 .hub-spokes .dgm-box {
   height: 100%;
 }
-@container dgm (min-width: 34rem) {
+@container dgm (min-width: 27rem) {
   .hub-spokes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -964,7 +962,7 @@
 /* ---------------- Funnel: a large group narrows ---------------- */
 .funnel {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 .funnel-stage {
   width: 100%;
@@ -1002,29 +1000,35 @@
 }
 .decision-branches {
   display: grid;
-  gap: 1.1rem;
+  gap: 0.8rem;
 }
 .decision-branch {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0.35rem;
+  gap: 0;
 }
 .decision-when {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.05rem;
+  padding-bottom: 0.45rem;
 }
+/* Narrow: the situation sits above its answer and a short line joins them, edge to edge. */
 .decision-arrow {
-  display: grid;
-  place-items: center;
-  height: 1.25rem;
-  color: var(--dgm-accent);
-  transform: rotate(90deg);
-  justify-self: start;
-  margin-left: 0.5rem;
+  display: none;
 }
 .decision-then {
+  position: relative;
   height: 100%;
+}
+.decision-then::before {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: -0.45rem;
+  width: 2px;
+  height: 0.45rem;
+  background: var(--dgm-accent);
 }
 @container dgm (min-width: 44rem) {
   .decision-branch {
@@ -1037,9 +1041,100 @@
     padding-block: 0.4rem;
   }
   .decision-arrow {
+    display: grid;
+    place-items: center;
     height: auto;
-    transform: none;
-    justify-self: center;
-    margin-left: 0;
+    color: var(--dgm-accent);
+  }
+  .decision-then::before {
+    display: none;
+  }
+}
+
+/* ======================================================================================
+   Interaction and motion. Restrained and optional: nothing here carries information that is
+   not already visible, so touch and keyboard users lose nothing. Hovering a part lifts it and
+   its connected parts and quietens the rest.
+   ====================================================================================== */
+.dgm .dgm-box {
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out);
+}
+@media (hover: hover) {
+  /* Layers: a row (the layer and the parts that support it) lights up together. */
+  .anatomy-stack:has(.anatomy-row:hover) .anatomy-row:not(:hover) {
+    opacity: 0.5;
+  }
+  .anatomy-row {
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+  .anatomy-row:hover .dgm-box {
+    border-color: var(--dgm-accent);
+  }
+  .anatomy-row:hover .anatomy-stage .dgm-box {
+    box-shadow: 0 6px 16px -12px rgb(17 24 39 / 0.45);
+  }
+
+  /* Hub: pointing at a spoke highlights its connection to the centre. */
+  .hub:has(.hub-spokes li:hover) .hub-spokes li:not(:hover) {
+    opacity: 0.5;
+  }
+  .hub:has(.hub-spokes li:hover) .hub-center {
+    box-shadow: 0 6px 16px -10px rgb(17 24 39 / 0.6);
+  }
+  .hub-spokes li {
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+  .hub-spokes li:hover .dgm-box {
+    border-color: var(--dgm-accent);
+  }
+
+  /* Flow, funnel, before and after, and decision: the part under the pointer stands out. */
+  .sflow:has(.sflow-step:hover) .sflow-step:not(:hover),
+  .funnel:has(.funnel-stage:hover) .funnel-stage:not(:hover),
+  .decision-branches:has(.decision-branch:hover) .decision-branch:not(:hover),
+  .ba-nodes:has(li:hover) li:not(:hover) {
+    opacity: 0.55;
+  }
+  .sflow-step,
+  .funnel-stage,
+  .decision-branch,
+  .ba-nodes > li {
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+  .sflow-step:hover .dgm-box,
+  .funnel-stage:hover .dgm-box,
+  .decision-branch:hover .dgm-box,
+  .ba-nodes > li:hover .dgm-box {
+    border-color: var(--dgm-accent);
+  }
+}
+
+/* Connector lines draw in, in order, when a figure scrolls into view. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal="figure"][data-state="hidden"] .anatomy-link::before,
+  [data-reveal="figure"][data-state="hidden"] .anatomy-support > li::before {
+    transform: scaleX(0);
+  }
+  [data-reveal="figure"][data-state="hidden"] .anatomy-support > li::after,
+  [data-reveal="figure"][data-state="hidden"] .anatomy-stack > li + li .anatomy-stage::before {
+    transform: scaleY(0);
+  }
+  .anatomy-link::before,
+  .anatomy-support > li::before {
+    transform-origin: left center;
+  }
+  .anatomy-support > li::after,
+  .anatomy-stack > li + li .anatomy-stage::before {
+    transform-origin: top center;
+  }
+  [data-reveal="figure"][data-state="shown"] .anatomy-link::before,
+  [data-reveal="figure"][data-state="shown"] .anatomy-support > li::before,
+  [data-reveal="figure"][data-state="shown"] .anatomy-support > li::after,
+  [data-reveal="figure"][data-state="shown"] .anatomy-stack > li + li .anatomy-stage::before {
+    transition: transform 420ms var(--ease-out) 260ms;
   }
 }

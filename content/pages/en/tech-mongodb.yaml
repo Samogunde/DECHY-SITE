@@ -31,9 +31,8 @@ sections:
     eyebrow: Database
     headline: MongoDB database services
     lead: "MongoDB stores each record as a document, with the details that belong together kept together. That suits data that varies in shape, or changes as a product evolves. It also demands good modeling, or flexibility turns into confusion. We help get that right."
-    support: "This page covers where MongoDB fits, how data is modeled in it, and when a relational database is safer."
     ctas:
-      - { label: Talk to us about MongoDB, href: "/contact/?service=data-analytics" }
+      - { label: Discuss your MongoDB project, href: "/contact/?service=data-analytics" }
       - { label: Document or relational?, href: "#choice" }
     spec:
       kind: before-after
@@ -164,8 +163,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we model and run MongoDB."
+    heading: How we build with MongoDB
+    intro: "How we model and run MongoDB."
     panels:
       - title: Modeling
         paragraphs:
@@ -220,4 +219,4 @@ sections:
     id: contact-cta
     heading: Describe your records
     body: "Describe the records and how the application reads them. We will say whether MongoDB suits them and how to model it."
-    primary: { label: Talk to DECHY about MongoDB, href: "/contact/?service=data-analytics" }
+    primary: { label: Discuss your MongoDB project, href: "/contact/?service=data-analytics" }

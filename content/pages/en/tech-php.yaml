@@ -31,9 +31,8 @@ sections:
     eyebrow: Language
     headline: PHP development
     lead: "PHP runs a great deal of the web, from small business sites to large applications. We build with it, maintain it, and modernize it. Much of the work is deciding which PHP to keep and which to retire."
-    support: "This page covers where PHP fits today, how we assess an old system, and what the choices cost."
     ctas:
-      - { label: Talk to us about a PHP system, href: "/contact/?service=web-development" }
+      - { label: Discuss a PHP system, href: "/contact/?service=web-development" }
       - { label: Keep, modernize, or replace?, href: "#decide" }
     spec:
       kind: decision
@@ -149,8 +148,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we handle PHP projects."
+    heading: How we build with PHP
+    intro: "How we handle PHP projects."
     panels:
       - title: Versions and dependencies
         paragraphs:
@@ -160,6 +159,7 @@ sections:
           - "Code organized into small, testable classes instead of long page scripts."
           - "Database access through prepared statements to avoid injection flaws."
           - "Configuration and secrets outside the code."
+          - "Logs that show which request failed, so problems are traced in minutes, not days."
       - title: WordPress
         paragraphs:
           - "For [WordPress](ref:plat.wordpress) sites we keep custom code in plugins and child themes, so core updates do not overwrite it."
@@ -200,4 +200,4 @@ sections:
     id: contact-cta
     heading: Tell us about your PHP system
     body: "Describe what it does and what worries you about it. We will review it and say whether to improve, extend, or replace it."
-    primary: { label: Talk to DECHY about PHP, href: "/contact/?service=web-development" }
+    primary: { label: Discuss your PHP project, href: "/contact/?service=web-development" }

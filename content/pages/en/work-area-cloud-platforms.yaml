@@ -36,7 +36,7 @@ sections:
     headline: Cloud Platforms
     lead: A cloud platform runs your software on rented computers that you can enlarge or shrink at will. This page explains how a cloud platform is laid out, what drives the cost, and when staying where you are is the better choice.
     ctas:
-      - label: Talk to us about the cloud
+      - label: Discuss your cloud project
         href: /contact/?service=cloud
       - label: See the layout
         href: "#layout"
@@ -155,8 +155,8 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the platforms and practices we use.
+    heading: Under the hood
+    intro: The platforms and practices we use.
     panels:
       - title: Providers
         paragraphs:
@@ -201,5 +201,5 @@ sections:
     heading: Tell us what runs where today
     body: Describe your current set-up and what hurts. We will say what to move, what to leave, and roughly what it would cost to run.
     primary:
-      label: Talk to DECHY about the cloud
+      label: Discuss your cloud project
       href: /contact/?service=cloud

@@ -31,9 +31,11 @@ sections:
     eyebrow: Mobile framework
     headline: React Native app development
     lead: "React Native lets a team that knows React build apps for iPhone and Android. Screens are real native components, so the app feels like part of each phone. We use it where web skills and shared code make the project quicker and cheaper."
-    support: "This page covers where React Native fits, what can be shared with a web product, and where native code is still needed."
     ctas:
-      - { label: Talk to us about React Native, href: "/contact/?service=mobile-app-development" }
+      - {
+          label: Discuss your React Native project,
+          href: "/contact/?service=mobile-app-development",
+        }
       - { label: What can be shared, href: "#share" }
     spec:
       kind: layers
@@ -149,8 +151,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we structure a React Native app."
+    heading: How we build with React Native
+    intro: "How we structure a React Native app."
     panels:
       - title: Structure
         paragraphs:
@@ -206,4 +208,4 @@ sections:
     heading: Tell us about the app and your team
     body: "Describe the app, and what your team already builds. We will say whether React Native fits and how much could be shared with your web product."
     primary:
-      { label: Talk to DECHY about React Native, href: "/contact/?service=mobile-app-development" }
+      { label: Discuss your React Native project, href: "/contact/?service=mobile-app-development" }

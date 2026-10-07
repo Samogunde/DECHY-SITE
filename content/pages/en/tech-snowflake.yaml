@@ -34,9 +34,8 @@ sections:
     eyebrow: Data platform
     headline: Snowflake
     lead: Snowflake is a platform for storing and analyzing large amounts of business data in the cloud. Its signature idea is that many teams can use the same data at once without getting in each other's way. We design, load, govern, and tune Snowflake, and we keep its cost visible.
-    support: This page covers how Snowflake works, where it fits against BigQuery and simpler options, and how to keep spending predictable.
     ctas:
-      - label: Talk to us about Snowflake
+      - label: Discuss your Snowflake project
         href: /contact/?service=data-analytics
       - label: Why separate storage and compute
         href: "#what"
@@ -97,7 +96,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A governed dashboard built on shared data
-    intro: Shared data pays off when many teams read one governed source. This sketch shows a dashboard of the kind each team builds.
+    intro: Shared data pays off when many teams read one governed source.
     figure: dashboard-ui
     purpose: system
     takeaway: Shared, governed data lets each team build its own dashboard from one trusted source.
@@ -132,8 +131,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we run Snowflake projects.
+    heading: How we build with Snowflake
+    intro: How we run Snowflake projects.
     panels:
       - title: Compute
         items:
@@ -225,5 +224,5 @@ sections:
     heading: Tell us who needs which data
     body: Describe your teams, your sources, and what the current reports cost in time. We will outline a platform and a cost model.
     primary:
-      label: Talk to DECHY about Snowflake
+      label: Discuss your Snowflake project
       href: /contact/?service=data-analytics

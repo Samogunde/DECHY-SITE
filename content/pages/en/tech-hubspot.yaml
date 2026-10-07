@@ -34,9 +34,8 @@ sections:
     eyebrow: Platform
     headline: HubSpot integration and automation
     lead: HubSpot is where many teams keep the record of every customer and every conversation. The platform is easy to start and easy to leave in a mess. We set it up around how you actually sell, and connect it to everything that feeds it.
-    support: This page covers what HubSpot does, how we set it up, and how it connects to the rest of your systems.
     ctas:
-      - label: Talk to us about HubSpot
+      - label: Discuss your HubSpot project
         href: /contact/?service=automation
       - label: See the customer path
         href: "#path"
@@ -97,7 +96,7 @@ sections:
     tone: white
     label: What it looks like
     heading: A customer record that other tools keep current
-    intro: HubSpot becomes valuable when the record is fed by the tools that touch the customer. This sketch shows that idea.
+    intro: HubSpot becomes valuable when the record is fed by the tools that touch the customer.
     figure: crm-ui
     purpose: relationship
     takeaway: A customer platform is only as good as the tools that keep its record current.
@@ -193,8 +192,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build and connect HubSpot.
+    heading: How we build with HubSpot
+    intro: How we build and connect HubSpot.
     panels:
       - title: Data model
         paragraphs:
@@ -260,5 +259,5 @@ sections:
     heading: Tell us how an enquiry becomes a customer
     body: Describe your sales process and the tools involved. We will show where HubSpot would help and what to connect to it first.
     primary:
-      label: Talk to DECHY about HubSpot
+      label: Discuss your HubSpot project
       href: /contact/?service=automation

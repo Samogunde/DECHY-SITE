@@ -34,9 +34,8 @@ sections:
     eyebrow: Payment integration
     headline: PayPal integration
     lead: PayPal is a payment option many customers trust, and offering it can mean fewer abandoned checkouts among customers who prefer it. We integrate PayPal into stores and applications, so that every payment, refund, and dispute is recorded where your team looks.
-    support: This page follows a PayPal payment from click to ledger, and covers the choices that matter along the way.
     ctas:
-      - label: Talk to us about PayPal
+      - label: Discuss your PayPal project
         href: /contact/?service=api-integration
       - label: How a payment flows
         href: "#what"
@@ -128,8 +127,8 @@ sections:
     id: technology
     tone: paper
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build payment integrations.
+    heading: How we build with PayPal
+    intro: How we build payment integrations.
     panels:
       - title: Order and capture
         items:
@@ -139,6 +138,7 @@ sections:
         items:
           - Webhooks, which are automatic messages PayPal sends about payment events, are verified and queued, so a missed message cannot leave an order unpaid.
           - Refunds and disputes arrive as events and update the order, the customer record, and the accounts.
+          - Declined cards, abandoned checkouts, and refunds that arrive days later are tested on purpose, not left to chance.
       - title: Security
         paragraphs:
           - Card and account details never touch your servers, since PayPal hosts the sensitive parts. Keys are stored as secrets, and test and live environments are kept apart.
@@ -197,5 +197,5 @@ sections:
     heading: Tell us what you sell and how orders are recorded
     body: Describe your store or application and how payments are matched today. We will outline the integration and how payments will reach your accounts.
     primary:
-      label: Talk to DECHY about PayPal
+      label: Discuss your PayPal project
       href: /contact/?service=api-integration

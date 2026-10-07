@@ -38,27 +38,15 @@ sections:
     lead: At DECHY, we design software and websites that people understand at a glance. We work on UI (the user interface, what people see and touch) and UX (the user experience, how it feels to get something done), and we test our ideas with real people before anything is built.
     support: Design and engineering work as one team here, so what we design can be built well, and what we build matches what we designed.
     ctas:
-      - label: Talk to us about design
+      - label: Discuss your design project
         href: /contact/?service=ui-ux
       - label: See what you receive
         href: "#deliverables"
-    spec:
-      kind: flow
-      steps:
-        - title: Learn from users
-          text: Talk to people and watch how they work.
-        - title: Explore ideas
-          text: Sketch several ways to solve the problem.
-        - title: Prototype
-          text: Make a clickable model that feels real.
-        - title: Test with people
-          text: Watch real users try it, and fix what confuses them.
-        - title: Hand over
-          text: Give builders everything they need.
-    purpose: process
-    takeaway: Good design tests ideas with real people early, when changes are cheap, and only then hands them to builders.
-    visualTitle: From learning about users to a design ready to build
-    figureCaption: This diagram follows a design project through five steps, from learning about users to a tested design handed to the builders.
+    visualTitle: A dashboard designed to be read at a glance
+    figureCaption: This sketch shows a conceptual dashboard with three summary tiles, a bar chart without figures, and a short list of items that need attention. It illustrates our design approach and is not a client screen.
+    figure: dashboard-ui
+    purpose: system
+    takeaway: A well-designed dashboard puts the summary first, the trend next, and the items that need attention last.
   - type: prose
     id: why
     tone: white
@@ -95,15 +83,28 @@ sections:
     takeaway: Small design changes, such as shorter steps, plain words, and help where it is needed, can turn an abandoned form into a finished one.
     caption: This diagram contrasts a long, confusing form with the same form redesigned into short steps with plain labels and helpful errors.
   - type: diagram
-    id: screen-design
+    id: screen-design-map
     tone: white
-    label: What it looks like
-    heading: A dashboard designed to be read at a glance
-    intro: Good interface design decides what comes first. This sketch puts the summary tiles on top, one chart in the middle, and exceptions below.
-    figure: dashboard-ui
-    purpose: system
-    takeaway: A well-designed dashboard puts the summary first, the trend next, and the items that need attention last.
-    caption: This sketch shows a conceptual dashboard with three summary tiles, a bar chart without figures, and a short list of items that need attention. It illustrates our design approach and is not a client screen.
+    label: The process
+    heading: From learning about users to a design ready to build
+    intro: Good design tests ideas with real people early, when changes are cheap, and only then hands them to the builders.
+    spec:
+      kind: flow
+      steps:
+        - title: Learn from users
+          text: Talk to people and watch how they work.
+        - title: Explore ideas
+          text: Sketch several ways to solve the problem.
+        - title: Prototype
+          text: Make a clickable model that feels real.
+        - title: Test with people
+          text: Watch real users try it, and fix what confuses them.
+        - title: Hand over
+          text: Give builders everything they need.
+    purpose: process
+    takeaway: Good design tests ideas with real people early, when changes are cheap, and only then hands them to builders.
+    visualTitle: From learning about users to a design ready to build
+    caption: This diagram follows a design project through five steps, from learning about users to a tested design handed to the builders.
     points: []
   - type: table
     id: terms
@@ -236,8 +237,8 @@ sections:
     id: technology
     tone: white
     label: Technology
-    heading: For technical readers
-    intro: Most visitors can skip this section. It outlines the tools and standards we use.
+    heading: Under the hood
+    intro: The tools and standards we use.
     panels:
       - title: Design and prototyping tools
         paragraphs:
@@ -320,5 +321,5 @@ sections:
     heading: Show us what is not working
     body: Tell us about the screen or journey that causes trouble, or the product you want to create. We will suggest where design effort will pay off most.
     primary:
-      label: Talk to DECHY about design
+      label: Discuss your design project
       href: /contact/?service=ui-ux

@@ -31,9 +31,8 @@ sections:
     eyebrow: Native language
     headline: Kotlin and Android development
     lead: "Kotlin is the modern language of Android. Apps built in it have full access to Android's features and follow the platform's design. The main challenge is variety: so many devices, screens, and versions. We build and test for that range."
-    support: "This page covers what native Android gives you, how we handle the range of devices, and where Kotlin is also used beyond phones."
     ctas:
-      - { label: Talk to us about an Android app, href: "/contact/?service=mobile-app-development" }
+      - { label: Discuss an Android app, href: "/contact/?service=mobile-app-development" }
       - { label: Handling many devices, href: "#range" }
     spec:
       kind: funnel
@@ -138,8 +137,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we structure an Android app."
+    heading: How we build with Kotlin
+    intro: "How we structure an Android app."
     panels:
       - title: Structure
         paragraphs:
@@ -149,6 +148,7 @@ sections:
           - "A local database as the source of truth for offline use, with sync rules for conflicts."
           - "Background work through the platform's scheduler, which respects battery limits."
           - "Care with permissions, and secure storage for credentials."
+          - "Tested on a spread of real devices, including older and low-cost phones, before every release."
       - title: Quality
         items:
           - "Unit and interface tests in a pipeline, and tests on real devices of different makers."
@@ -199,4 +199,5 @@ sections:
     id: contact-cta
     heading: Tell us about the app and your users
     body: "Describe what the app does and where your users are. We will say whether native Android is justified and how to handle the range of devices."
-    primary: { label: Talk to DECHY about Kotlin, href: "/contact/?service=mobile-app-development" }
+    primary:
+      { label: Discuss your Kotlin project, href: "/contact/?service=mobile-app-development" }

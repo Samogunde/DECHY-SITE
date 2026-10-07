@@ -31,9 +31,8 @@ sections:
     eyebrow: AI provider
     headline: Google Gemini integration
     lead: "Gemini handles text, images, audio, and video, and sits close to Google Cloud and Workspace. We use it where that closeness helps, and compare it with other providers so the choice follows the task and not the brand."
-    support: "This page covers where Gemini tends to fit, what mixed-media work looks like, and how we decide between providers."
     ctas:
-      - { label: Talk to us about a Gemini project, href: "/contact/?service=ai" }
+      - { label: Discuss a Gemini project, href: "/contact/?service=ai" }
       - { label: Where it fits, href: "#fit" }
     spec:
       kind: flow
@@ -151,8 +150,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: "Most visitors can skip this section. It notes how we build with Gemini."
+    heading: How we build with Google Gemini
+    intro: "How we build with Gemini."
     panels:
       - title: Access routes
         paragraphs:
@@ -204,4 +203,4 @@ sections:
     id: contact-cta
     heading: Tell us where your data lives
     body: "Describe the material, the task, and the tools you already use. We will test Gemini and the alternatives and recommend one on the results."
-    primary: { label: Talk to DECHY about Gemini, href: "/contact/?service=ai" }
+    primary: { label: Discuss your Gemini project, href: "/contact/?service=ai" }

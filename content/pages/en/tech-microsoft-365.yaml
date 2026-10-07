@@ -34,9 +34,8 @@ sections:
     eyebrow: Business platform
     headline: Microsoft 365 consulting and integration
     lead: Most organizations pay for Microsoft 365 and use a small part of it. We organize it so people can find things, automate the approvals that clog email, and connect it to the systems where your business data lives.
-    support: This page covers what we do with SharePoint, Teams, and the automation tools, and how we decide between built-in features and custom work.
     ctas:
-      - label: Talk to us about Microsoft 365
+      - label: Discuss your Microsoft 365 project
         href: /contact/?service=automation
       - label: What gets built where
         href: "#layers"
@@ -161,8 +160,8 @@ sections:
     id: technology
     tone: white
     label: Technical depth
-    heading: For technical readers
-    intro: Most visitors can skip this section. It notes how we build on the platform.
+    heading: How we build with Microsoft 365
+    intro: How we build on the platform.
     panels:
       - title: Identity and access
         items:
@@ -230,5 +229,5 @@ sections:
     heading: Tell us how your team uses Microsoft 365 today
     body: Describe where files, approvals, and data live now and where it falls short. We will outline what to organize, automate, or build.
     primary:
-      label: Talk to DECHY about Microsoft 365
+      label: Discuss your Microsoft 365 project
       href: /contact/?service=automation

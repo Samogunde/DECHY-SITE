@@ -15,7 +15,7 @@ PAGE CONTAINER      .container-site       one max width, one gutter, one left ed
 
 A visual and everything that explains it (caption, labels, legend, annotations) belong to the same frame. The frame decides the width; children fill it. Nothing inside positions itself against the viewport.
 
-- A caption starts on the left edge of its diagram or image, and never extends past its right edge.
+- A caption starts on the left edge of its diagram or image, and never extends past its right edge. AMENDED by ADR 0007 (7 October 2026): diagram captions are no longer shown; they stay in the figure, visually hidden, for assistive technology and search. Photograph captions, where used, follow this rule.
 - Do not cap a diagram's width on the diagram and leave the caption on the column. Cap the figure (`--fig-max` on `.figure`); the diagram and caption then share the capped width. Capped figures align to the grid line (start), not centered.
 - Left edges inside one section land on a small set of grid lines. A block that starts 1 to 12 px from another block's edge reads as a mistake, so it fails the test.
 
