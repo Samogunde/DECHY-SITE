@@ -61,9 +61,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Controls that work together
-    answer: A cybersecurity system is a set of controls that limit who can reach your systems, protect your data, and show when something is wrong. No single control is enough, so they are layered.
+    answer: We layer the controls that limit who can reach your systems, protect your data, and show when something is wrong. No single control is enough, so we design them to work together.
     paragraphs:
       - "Most breaches use ordinary weaknesses: a stolen password, software that was not updated, or an account with more access than it needed. Fixing these dull things is more valuable than buying exotic tools."
       - Security is also never finished. New software, new staff, and new threats change the picture, so we plan for regular review.

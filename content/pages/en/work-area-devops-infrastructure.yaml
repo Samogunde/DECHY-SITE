@@ -60,9 +60,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Making release a routine
-    answer: "DevOps joins the work of building software with the work of running it. Its core is automation: tests, releases, and checks run the same way every time, so people can focus on the change itself."
+    answer: We join the work of building software with the work of running it, an approach called DevOps. Tests, releases, and checks run the same way every time, so your team can focus on the change itself.
     paragraphs:
       - When releases are rare and manual, each one is large and risky. When they are small and automated, each one is boring, which is the point.
       - Infrastructure, meaning the servers, networks, and services your software runs on, is treated the same way. It is described in files that can be reviewed, repeated, and restored.

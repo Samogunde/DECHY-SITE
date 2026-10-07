@@ -60,9 +60,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: The store, and everything behind it
-    answer: "An ecommerce platform is the software and connections that let a business sell online: product listings, a basket and checkout, payment, order management, and links to stock, delivery, and accounting."
+    answer: "We build the software and connections that let a business sell online: product listings, basket and checkout, payment, order management, and links to stock, delivery, and accounting."
     paragraphs:
       - The visible store is only part of the work. After a customer pays, someone must pick the item, send it, tell the customer, update stock, and record the sale. Platforms that connect these steps save staff hours every day.
       - The right amount of building depends on how ordinary your selling is. Many stores need no custom parts. Some, with unusual products or prices, do.

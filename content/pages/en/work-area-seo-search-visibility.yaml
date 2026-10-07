@@ -64,9 +64,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Built in, not bolted on
-    answer: A search visibility system treats being found as part of how a site is designed. Structure, content, labels, and measures are planned together instead of patched on after launch.
+    answer: We treat being found as part of how a site is designed. Structure, content, labels, and measures are planned together instead of patched on after launch.
     paragraphs:
       - "Search engines and AI assistants read pages much as people do: they look for clear headings, direct answers, and trustworthy sources. They also read hidden labels, called structured data, that state facts in a standard form."
       - Because the same foundations help both, we plan them once and keep them in order as the site grows.

@@ -63,9 +63,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Small systems that fit one team
-    answer: An internal business tool is a small piece of software for staff, such as a tracker or a request form. It does one job for one team, and can often be built quickly because the users are known.
+    answer: We build small pieces of software for staff, such as a tracker or a request form. Each does one job for one team, and because the users are known, a first version can be ready quickly.
     paragraphs:
       - These tools are modest, but their effect is large. They replace the spreadsheet that breaks, the email thread nobody can find, and the status meeting that exists only to ask where things stand.
       - Because the users are colleagues, tools can be improved quickly. We often start with a first version in a few weeks, and refine it as the team uses it.

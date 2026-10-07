@@ -2,6 +2,7 @@ import { Figure, MOCKUP_FIGURES } from "@/components/figures/Figure";
 import { Inline } from "@/components/primitives/Inline";
 import { Photo } from "@/components/primitives/Photo";
 import type { Block } from "@/lib/content/schema";
+import { SelectPanel } from "./SelectPanel";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
@@ -38,7 +39,7 @@ export function ProcessBlock({ block }: { block: Of<"process"> }) {
                   {s.artifacts.map((a) => (
                     <li
                       key={a}
-                      className="relative pl-4 before:absolute before:left-0 before:top-[0.65em] before:h-[2px] before:w-2 before:bg-blue before:content-['']"
+                      className="relative pl-4 before:absolute before:left-0 before:top-[0.65em] before:h-[2px] before:w-2 before:bg-slate-text before:content-['']"
                     >
                       {a}
                     </li>
@@ -53,8 +54,89 @@ export function ProcessBlock({ block }: { block: Of<"process"> }) {
   );
 }
 
-/** Semantic, scrollable comparison table (keyboard reachable when it overflows). */
+/** First-column headings that mean "pick one of these": such tables become a choice, not a grid. */
+const CHOICE_HEADERS = new Set([
+  "Option",
+  "Route",
+  "Approach",
+  "Way to connect",
+  "Tool",
+  "Platform",
+  "Model",
+  "Your situation",
+  "Situation",
+  "Language",
+  "Channel",
+]);
+
+const plain = (s: string) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+
+/**
+ * A comparison. Where the rows are options to choose between (build, buy, or connect; one hosting
+ * route or another), the visitor picks an option and sees what it suits and what to watch for.
+ * Other comparisons stay a table: on wide screens a grid, on narrow screens one card per row.
+ */
 export function TableBlock({ block }: { block: Of<"table"> }) {
+  const choice =
+    CHOICE_HEADERS.has(block.columns[0] ?? "") &&
+    block.columns.length >= 3 &&
+    block.rows.length >= 2 &&
+    block.rows.length <= 6;
+  if (choice) {
+    const [, lead, ...rest] = block.columns;
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="max-w-[48rem]">
+          <SectionHeader
+            id={block.id}
+            label={block.label}
+            heading={block.heading}
+            intro={block.intro}
+          />
+        </div>
+        <div className="chooser" data-reveal="block">
+          <SelectPanel
+            label={block.caption}
+            hint="Choose an option to compare"
+            numbered={false}
+            items={block.rows.map((row) => ({
+              label: plain(row[0] ?? ""),
+              body: (
+                <>
+                  {plain(row[0] ?? "") !== row[0] ? (
+                    <p className="t-body m-0 mb-3">
+                      <Inline text={row[0] ?? ""} />
+                    </p>
+                  ) : null}
+                  <p className="sp-kicker">{lead}</p>
+                  <p className="sp-statement">
+                    <Inline text={row[1] ?? ""} />
+                  </p>
+                  {rest.length > 0 ? (
+                    <dl className="sp-fields">
+                      {rest.map((h, k) => (
+                        <div key={h}>
+                          <dt>{h}</dt>
+                          <dd className="t-body">
+                            <Inline text={row[k + 2] ?? ""} />
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  ) : null}
+                </>
+              ),
+            }))}
+          />
+          {block.note ? (
+            <p className="t-caption mt-5 max-w-[60ch]">
+              <Inline text={block.note} />
+            </p>
+          ) : null}
+        </div>
+      </Section>
+    );
+  }
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
@@ -92,7 +174,7 @@ export function TableBlock({ block }: { block: Of<"table"> }) {
                           <Inline text={cell} />
                         </th>
                       ) : (
-                        <td key={k}>
+                        <td key={k} data-label={block.columns[k]}>
                           <Inline text={cell} />
                         </td>
                       ),

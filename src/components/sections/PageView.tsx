@@ -7,7 +7,7 @@ import { CONNECTS_KINDS } from "@/lib/connections";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { BlockRenderer } from "./BlockRenderer";
 import { articlePages } from "./DiscoveryBlocks";
-import { AtAGlance, SectionNav, glanceVariantFor } from "./GuidanceBlocks";
+import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
 export function PageView({ path }: { path: string }) {
@@ -64,11 +64,7 @@ export function PageView({ path }: { path: string }) {
         />
       ) : null}
       {guided && page.comprehension ? (
-        <AtAGlance
-          comprehension={page.comprehension}
-          cta={glanceCta}
-          variant={glanceVariantFor(page.kind)}
-        />
+        <AtAGlance comprehension={page.comprehension} cta={glanceCta} />
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
       {rest.map((block) => (

@@ -59,9 +59,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Work with a clear path and an owner at each step
-    answer: Workflow automation manages how one piece of work passes between people. It routes the item, reminds the person who has it, records decisions, and shows everyone where it stands.
+    answer: We build the path one piece of work takes between people. It routes the item, reminds whoever has it, records decisions, and shows everyone where it stands.
     paragraphs:
       - In many organizations, requests travel by email. Nobody can see where one is, approvals wait for someone to notice, and reasons for decisions disappear.
       - A workflow replaces this with one tracked item. The owner of each step is known, delays are visible, and the history is kept for later questions.

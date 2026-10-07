@@ -58,9 +58,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Software shaped like your organization
-    answer: A custom software system is software built for one organization. It follows your process, uses your terms, and fits your data, instead of asking you to adapt to a product designed for everyone.
+    answer: We build software for one organization. It follows your process, uses your terms, and fits your data, instead of asking you to adapt to a product designed for everyone.
     paragraphs:
       - Most organizations start with ready-made tools, which is sensible. The trouble comes later, when the process is unusual, or when five tools each hold part of the picture and people copy information between them by hand.
       - A custom system replaces that patchwork with one place where the work happens. It does not have to be large. Many useful systems do one job well, such as taking requests, tracking jobs, or managing stock.

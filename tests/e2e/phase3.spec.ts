@@ -70,12 +70,14 @@ test.describe("phase 3 technology pages", () => {
 
   test("the option chooser works with the keyboard", async ({ page }) => {
     await page.goto("/ai/langchain/");
-    const radios = page.locator("#choice input[type=radio]");
-    await radios.first().scrollIntoViewIfNeeded();
-    expect(await radios.count()).toBeGreaterThanOrEqual(2);
-    await radios.first().focus();
+    const options = page.locator("#choice .sp-opt");
+    await options.first().scrollIntoViewIfNeeded();
+    expect(await options.count()).toBeGreaterThanOrEqual(2);
+    await options.first().focus();
     await page.keyboard.press("ArrowDown");
-    await expect(radios.nth(1)).toBeChecked();
+    await expect(options.nth(1)).toHaveAttribute("aria-expanded", "true");
+    await page.keyboard.press("Enter");
+    await expect(options.nth(1)).toHaveAttribute("aria-expanded", "true");
   });
 
   test("technical panels open and close with the keyboard", async ({ page }) => {

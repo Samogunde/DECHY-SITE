@@ -59,9 +59,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Software that you offer, and keep improving
-    answer: A digital product is software offered to customers as a product. Unlike a one-off project, it has users, a roadmap, and an owner, and it keeps changing as people use it.
+    answer: We build software you offer to customers as a product. Unlike a one-off project, it has users, a roadmap, and an owner, and we design it to keep changing as people use it.
     paragraphs:
       - "Products fail less often from poor engineering than from solving the wrong problem. The early work is therefore about learning: who the users are, what they struggle with, and what they will pay for."
       - We shape the product with design and engineering together, so ideas are tested as real, usable screens before large amounts are built.

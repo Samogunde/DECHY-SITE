@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /consulting/
 entityId: svc.consulting
-title: "Technology Consulting and Digital Transformation | DECHY"
+title: Technology Consulting and Digital Transformation | DECHY
 description: "Technology consulting from DECHY: decide what to build, buy, or connect, with honest audits, clear roadmaps, and practical help from decision to delivery."
 breadcrumbLabel: Consulting & Digital Transformation
 intent:
@@ -14,94 +14,105 @@ intent:
     - ai readiness assessment
     - technical discovery
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
-  what: "Technology consulting helps you decide what technology to build, buy, connect, or leave alone, and plans the steps to get there before money is spent."
-  problem: "Technology decisions are large, expensive, and hard to reverse, and advice often comes from people who sell one answer."
-  audience: "Leaders facing a big technology decision, teams whose tools have grown messy, and organizations unsure where to start with AI or automation."
+  what: Technology consulting helps you decide what technology to build, buy, connect, or leave alone, and plans the steps to get there before money is spent.
+  problem: Technology decisions are large, expensive, and hard to reverse, and advice often comes from people who sell one answer.
+  audience: Leaders facing a big technology decision, teams whose tools have grown messy, and organizations unsure where to start with AI or automation.
   choose: "Start where you are: a short workshop to frame the problem, an assessment to see what you have, or a roadmap when you know the goal and need the route."
-  next: "Describe the decision you are facing, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it."
-
+  next: Describe the decision you are facing, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Consulting & Digital Transformation
-    lead: "At DECHY, we help you decide what to do with your technology before you spend the money. We look at what you have, set out your options in plain language, and give you a roadmap you can follow, whether or not we build it."
-    support: "We are a technology company that builds, so our advice comes from practical experience. We also tell you when the best answer is to build less."
+    lead: At DECHY, we help you decide what to do with your technology before you spend the money. We look at what you have, set out your options in plain language, and give you a roadmap you can follow, whether or not we build it.
+    support: We are a technology company that builds, so our advice comes from practical experience. We also tell you when the best answer is to build less.
     ctas:
-      - { label: Discuss a decision, href: "/contact/?service=consulting" }
-      - { label: Which kind of help?, href: "#help" }
+      - label: Discuss a decision
+        href: /contact/?service=consulting
+      - label: Which kind of help?
+        href: "#help"
     spec:
       kind: decision
       question: What are you trying to work out?
       branches:
-        - when: "We are not sure what technology problem to solve first"
+        - when: We are not sure what technology problem to solve first
           choose: A framing workshop
           text: A short session that turns a vague worry into a clear problem.
-        - when: "Our tools have grown messy and we need to see the whole picture"
+        - when: Our tools have grown messy and we need to see the whole picture
           choose: A technology assessment
           text: A review of what you have, what works, and what to fix.
-        - when: "We know where we want to go but not how to get there"
+        - when: We know where we want to go but not how to get there
           choose: A roadmap
           text: A step-by-step plan with priorities, costs, and risks.
-        - when: "We want to use AI but do not know where to begin"
+        - when: We want to use AI but do not know where to begin
           choose: An AI readiness review
           text: A check of your information, processes, and risks.
     purpose: decision
-    takeaway: "The right kind of consulting depends on whether you need to frame a problem, see what you have, plan a route, or prepare for AI."
-    visualTitle: "Which kind of consulting fits which question"
-    figureCaption: "This diagram shows four common questions people bring to technology consulting and the kind of help that answers each."
-
+    takeaway: The right kind of consulting depends on whether you need to frame a problem, see what you have, plan a route, or prepare for AI.
+    visualTitle: Which kind of consulting fits which question
+    figureCaption: This diagram shows four common questions people bring to technology consulting and the kind of help that answers each.
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What technology consulting is for
-    answer: "Technology consulting is independent, practical advice about technology decisions: what to build, buy, or connect; how to sequence the work; and what to avoid. Digital transformation means changing how an organization works by using technology well, not just buying new tools."
+    label: Our approach
+    heading: Clear advice before money is spent
+    answer: "We give independent, practical advice on technology decisions: what to build, buy, or connect, in what order, and what to avoid. When the answer is digital transformation, we mean changing how work gets done with technology, not buying more tools."
     paragraphs:
-      - "Most organizations do not lack tools. They lack a clear picture of what they have, what it costs, and what to do next. Advice that starts from that picture saves money, because the cheapest project is often the one you decide not to do."
-      - "We keep the advice plain. You should leave understanding the options, the trade-offs, and the reasons for our recommendation."
-
+      - Most organizations do not lack tools. They lack a clear picture of what they have, what it costs, and what to do next. Advice that starts from that picture saves money, because the cheapest project is often the one you decide not to do.
+      - We keep the advice plain. You should leave understanding the options, the trade-offs, and the reasons for our recommendation.
   - type: chooser
     id: help
     tone: paper
     label: Choosing help
     heading: Four ways we can help
-    intro: "Consulting can be a single conversation or a longer partnership. Choose the lightest shape that settles your question."
+    intro: Consulting can be a single conversation or a longer partnership. Choose the lightest shape that settles your question.
     question: How far along is your thinking?
     options:
       - label: Framing workshop
-        when: "You feel a problem but cannot yet describe it, or people disagree on what matters."
-        get: "A clear problem statement, options, and a recommended next step, usually in a day or two."
-        watch: "A workshop frames the problem. It does not replace deeper review."
-        cta: { label: Ask about a workshop, href: "/contact/?service=consulting" }
+        when: You feel a problem but cannot yet describe it, or people disagree on what matters.
+        get: A clear problem statement, options, and a recommended next step, usually in a day or two.
+        watch: A workshop frames the problem. It does not replace deeper review.
+        cta:
+          label: Ask about a workshop
+          href: /contact/?service=consulting
       - label: Technology assessment
-        when: "You have many systems and want to know what is healthy, risky, or wasted."
-        get: "A map of your systems, findings in plain language, and a ranked list of actions."
-        watch: "It needs access to people and systems, so plan time for it."
-        cta: { label: Ask about an assessment, href: "/contact/?service=consulting" }
+        when: You have many systems and want to know what is healthy, risky, or wasted.
+        get: A map of your systems, findings in plain language, and a ranked list of actions.
+        watch: It needs access to people and systems, so plan time for it.
+        cta:
+          label: Ask about an assessment
+          href: /contact/?service=consulting
       - label: Roadmap
-        when: "You know the goal, such as moving to the cloud or adding automation, and need the route."
-        get: "Phases, priorities, costs, risks, and who does what."
-        watch: "A roadmap is only useful if someone owns it, so we agree that early."
-        cta: { label: Plan a roadmap, href: "/contact/?service=consulting" }
+        when: You know the goal, such as moving to the cloud or adding automation, and need the route.
+        get: Phases, priorities, costs, risks, and who does what.
+        watch: A roadmap is only useful if someone owns it, so we agree that early.
+        cta:
+          label: Plan a roadmap
+          href: /contact/?service=consulting
       - label: Ongoing advisor
-        when: "You want a technical partner on call as decisions come up."
-        get: "A regular conversation, reviews of proposals, and help with suppliers."
-        watch: "It works best when you bring us in before decisions are made."
-        cta: { label: Discuss ongoing advice, href: "/contact/?service=consulting" }
-
+        when: You want a technical partner on call as decisions come up.
+        get: A regular conversation, reviews of proposals, and help with suppliers.
+        watch: It works best when you bring us in before decisions are made.
+        cta:
+          label: Discuss ongoing advice
+          href: /contact/?service=consulting
   - type: diagram
     id: path
     tone: white
     label: How it works
     heading: From a question to a decision
-    intro: "Most consulting work follows the same short path. Each step produces something you can use on its own."
+    intro: Most consulting work follows the same short path. Each step produces something you can use on its own.
     spec:
       kind: flow
       steps:
@@ -116,16 +127,15 @@ sections:
         - title: Hand over or deliver
           text: You take the plan, or we help build it.
     purpose: process
-    takeaway: "Consulting moves from the goal, to what you have, to options, to a recommendation, and ends with a plan you can use."
-    caption: "This diagram traces consulting work through five steps, from understanding the goal to a plan you can take elsewhere or have us deliver."
+    takeaway: Consulting moves from the goal, to what you have, to options, to a recommendation, and ends with a plan you can use.
+    caption: This diagram traces consulting work through five steps, from understanding the goal to a plan you can take elsewhere or have us deliver.
     points:
       - title: Useful at every step
-        body: "Each stage produces something you can use even if you stop there."
+        body: Each stage produces something you can use even if you stop there.
       - title: Independent of delivery
-        body: "You can take our roadmap to any team. We will not push you toward a build."
+        body: You can take our roadmap to any team. We will not push you toward a build.
       - title: In plain words
-        body: "Findings and options are written for decision makers, not only for engineers."
-
+        body: Findings and options are written for decision makers, not only for engineers.
   - type: index
     id: deliverables
     tone: paper
@@ -135,23 +145,22 @@ sections:
     items:
       - title: Technology audit
         ref: cap.technology-audits
-        body: "A clear review of your systems, with findings ranked by risk and cost."
+        body: A clear review of your systems, with findings ranked by risk and cost.
       - title: Technical discovery
         ref: cap.technical-discovery
-        body: "Framing a project before it starts, so it begins with the right scope."
+        body: Framing a project before it starts, so it begins with the right scope.
       - title: Digital transformation roadmap
         ref: cap.digital-transformation-strategy
-        body: "A phased plan for changing how you work using technology."
+        body: A phased plan for changing how you work using technology.
       - title: AI readiness review
         ref: cap.ai-readiness-assessment
-        body: "A check of your information, processes, and risks before you invest in AI."
+        body: A check of your information, processes, and risks before you invest in AI.
       - title: Solution design
         ref: cap.solution-architecture
-        body: "The overall shape of a system, before detailed work begins."
+        body: The overall shape of a system, before detailed work begins.
       - title: Technology and product strategy
         ref: cap.technology-strategy
-        body: "Where technology should support the business over the next few years."
-
+        body: Where technology should support the business over the next few years.
   - type: columns
     id: honest
     tone: white
@@ -160,21 +169,20 @@ sections:
     columns:
       - title: Honest
         items:
-          - "We recommend building less when that is right."
-          - "We say clearly what we do not know."
+          - We recommend building less when that is right.
+          - We say clearly what we do not know.
       - title: Practical
         items:
-          - "Advice you can act on within your budget and team."
-          - "Costs and risks stated plainly."
+          - Advice you can act on within your budget and team.
+          - Costs and risks stated plainly.
       - title: Independent of delivery
         items:
-          - "Our roadmap works with any provider."
-          - "We never make our own build look like the only choice."
+          - Our roadmap works with any provider.
+          - We never make our own build look like the only choice.
       - title: Clear
         items:
-          - "Written for decision makers."
-          - "Jargon explained, and decisions recorded."
-
+          - Written for decision makers.
+          - Jargon explained, and decisions recorded.
   - type: process
     id: process
     tone: paper
@@ -182,30 +190,37 @@ sections:
     heading: How an assessment runs
     steps:
       - title: Agree the question
-        body: "We confirm what you need to decide and by when."
-        artifacts: [Scope, Success measure]
+        body: We confirm what you need to decide and by when.
+        artifacts:
+          - Scope
+          - Success measure
       - title: Gather facts
-        body: "We talk to the people involved, review systems, and look at costs."
-        artifacts: [Interview notes, System and cost overview]
+        body: We talk to the people involved, review systems, and look at costs.
+        artifacts:
+          - Interview notes
+          - System and cost overview
       - title: Analyze and compare options
-        body: "We weigh options against your goals and constraints."
-        artifacts: [Options with trade-offs]
+        body: We weigh options against your goals and constraints.
+        artifacts:
+          - Options with trade-offs
       - title: Recommend and explain
-        body: "We present findings and a recommendation in plain language, and answer questions."
-        artifacts: [Report, Presentation]
+        body: We present findings and a recommendation in plain language, and answer questions.
+        artifacts:
+          - Report
+          - Presentation
       - title: Plan the next step
-        body: "We turn the recommendation into a simple plan, and stay available as you decide."
-        artifacts: [Roadmap, Follow-up support]
-
+        body: We turn the recommendation into a simple plan, and stay available as you decide.
+        artifacts:
+          - Roadmap
+          - Follow-up support
   - type: callout
     id: limits
     tone: white
     variant: limits
     title: When consulting is not needed
     paragraphs:
-      - "If the problem is clear, the solution is standard, and the risk is low, you may not need advice. You may only need a good provider and a short brief."
-      - "We will tell you if that is your situation, and point you to the right kind of help."
-
+      - If the problem is clear, the solution is standard, and the risk is low, you may not need advice. You may only need a good provider and a short brief.
+      - We will tell you if that is your situation, and point you to the right kind of help.
   - type: prose
     id: examples
     tone: paper
@@ -215,8 +230,7 @@ sections:
       - "Some decisions are about choosing: should we buy a ready-made product, build something of our own, or connect the tools we already have? The honest answer depends on how unusual your process is, how many people use it, and how much change you can absorb."
       - "Some are about order: we want a new website, better reporting, and automated invoicing. Which should come first, and what does each one depend on? A roadmap shows which pieces unlock others, so effort is not wasted."
       - "Some are about risk: our systems are old, one person understands them, and nobody knows what would happen if they failed. An assessment finds the weak points and puts a price on fixing them, so the risk can be weighed against other spending."
-      - "And some are about whether to start at all. Sometimes a process is better changed on paper before any software is involved. We say so when that is the case."
-
+      - And some are about whether to start at all. Sometimes a process is better changed on paper before any software is involved. We say so when that is the case.
   - type: faq
     id: faq
     tone: paper
@@ -224,18 +238,17 @@ sections:
     heading: Questions about consulting
     items:
       - q: Is consulting separate from building?
-        a: "Yes. You can take our advice to any provider. We can also build what we recommend, but we keep the two clearly separate so the advice is honest."
+        a: Yes. You can take our advice to any provider. We can also build what we recommend, but we keep the two clearly separate so the advice is honest.
       - q: How long does a consulting project take?
-        a: "A workshop can take a day or two. An assessment takes a few weeks, depending on the number of systems. We confirm timing after we hear your question."
+        a: A workshop can take a day or two. An assessment takes a few weeks, depending on the number of systems. We confirm timing after we hear your question.
       - q: What if we only want help with AI?
-        a: "We can focus on that. An AI readiness review looks at your information, processes, and risks, and suggests where AI can help and where it cannot. See our [AI](ref:svc.ai) service."
+        a: We can focus on that. An AI readiness review looks at your information, processes, and risks, and suggests where AI can help and where it cannot. See our [AI](ref:svc.ai) service.
       - q: Do you work with our existing suppliers?
-        a: "Yes. We review what they have built, and can help you ask better questions and compare proposals."
+        a: Yes. We review what they have built, and can help you ask better questions and compare proposals.
       - q: Will you give us a price for the work that follows?
-        a: "Yes. A roadmap includes rough costs for each phase, with ranges that narrow as details become clear."
+        a: Yes. A roadmap includes rough costs for each phase, with ranges that narrow as details become clear.
       - q: How is this different from a one-off audit?
-        a: "An audit tells you what is wrong. Consulting also sets out options and a route forward, and can continue while you act."
-
+        a: An audit tells you what is wrong. Consulting also sets out options and a route forward, and can continue while you act.
   - type: index
     id: work
     tone: white
@@ -244,8 +257,7 @@ sections:
     items:
       - title: Digital transformation
         href: /work/areas/digital-transformation/
-        body: "Assessments, roadmaps, and the phased work of changing how an organization runs."
-
+        body: Assessments, roadmaps, and the phased work of changing how an organization runs.
   - type: related
     id: related
     tone: paper
@@ -254,21 +266,23 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [
-            svc.software-development,
-            svc.ai,
-            svc.automation,
-            svc.cloud,
-            svc.cybersecurity,
-            svc.data-analytics,
-          ]
+          - svc.software-development
+          - svc.ai
+          - svc.automation
+          - svc.cloud
+          - svc.cybersecurity
+          - svc.data-analytics
       - title: Related solutions
-        entityIds: [sol.digital-transformation, sol.legacy-system-modernization]
+        entityIds:
+          - sol.digital-transformation
+          - sol.legacy-system-modernization
       - title: Systems we build
-        entityIds: [workarea.digital-transformation]
-
+        entityIds:
+          - workarea.digital-transformation
   - type: cta
     id: contact-cta
     heading: Describe the decision you are facing
-    body: "Tell us the question, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it."
-    primary: { label: Discuss your decision, href: "/contact/?service=consulting" }
+    body: Tell us the question, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it.
+    primary:
+      label: Discuss your decision
+      href: /contact/?service=consulting

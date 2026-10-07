@@ -50,9 +50,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What data and analytics means in practice
-    answer: Analytics is using your information to answer questions about the business, such as what sells, where time is lost, or which customers are likely to leave. Doing it well means getting the information in one place, making sure it is correct, and presenting it clearly.
+    label: Our approach
+    heading: Numbers your team can act on
+    answer: "We turn the information spread across your tools into answers: what sells, where time is lost, which customers are likely to leave. That means one place for the data, checks that it is correct, and reports people read in a minute."
     paragraphs:
       - "The charts are the visible part. Most of the work happens before them: finding where information lives, fixing mistakes, joining sources, and agreeing what each number means."
       - That is why analytics projects stall when they start with a dashboard tool. We start with the questions you need answered.

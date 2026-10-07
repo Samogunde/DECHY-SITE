@@ -430,12 +430,10 @@
   .table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    border-top: 2px solid var(--color-ink);
-    border-bottom: 1px solid var(--color-line);
+    border-top: 1px solid var(--color-ink);
   }
   .table-wrap table {
     width: 100%;
-    min-width: 36rem;
     border-collapse: collapse;
     font-size: var(--fs-body-sm);
     line-height: 1.5;
@@ -444,16 +442,84 @@
   .table-wrap td {
     text-align: start;
     vertical-align: top;
-    padding: 0.85rem 1rem 0.85rem 0;
+    padding: 1rem 1.25rem 1rem 0;
     border-bottom: 1px solid var(--color-line);
   }
-  .table-wrap th {
+  .table-wrap thead th {
+    padding-block: 0.85rem;
     font-family: var(--font-heading);
     font-size: var(--fs-label);
     font-weight: 700;
+    letter-spacing: var(--ls-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-slate-text);
   }
   .table-wrap tbody th {
+    font-family: var(--font-heading);
     font-size: var(--fs-body-sm);
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+  @media (hover: hover) {
+    .table-wrap tbody tr {
+      transition: background-color var(--dur-fast) var(--ease-out);
+    }
+    .table-wrap tbody tr:hover {
+      background: rgb(17 24 39 / 0.025);
+    }
+  }
+  /* Narrow screens: one card per row, each value with its column label, no sideways scrolling. */
+  @media (max-width: 47.99rem) {
+    .table-wrap {
+      overflow: visible;
+      border-top: 0;
+    }
+    .table-wrap thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    .table-wrap table,
+    .table-wrap tbody,
+    .table-wrap tr,
+    .table-wrap th,
+    .table-wrap td {
+      display: block;
+    }
+    .table-wrap tbody tr {
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      background: var(--color-white);
+    }
+    .tone-white .table-wrap tbody tr {
+      background: var(--color-paper);
+    }
+    .table-wrap tbody tr + tr {
+      margin-top: 0.6rem;
+    }
+    .table-wrap th,
+    .table-wrap td {
+      padding: 0;
+      border: 0;
+    }
+    .table-wrap tbody th {
+      font-size: var(--fs-body);
+    }
+    .table-wrap td {
+      margin-top: 0.65rem;
+    }
+    .table-wrap td::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.15rem;
+      font-family: var(--font-heading);
+      font-size: var(--fs-label);
+      font-weight: 700;
+      color: var(--color-slate-text);
+    }
   }
 
   /* ---------------- FAQ (native details, no JavaScript) ---------------- */

@@ -63,9 +63,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: A hub that tools share
-    answer: An integration platform is a central layer that receives information from one tool and passes it to others, in an agreed form. Tools connect to the hub once, and the hub manages the rest.
+    answer: We build a central layer that receives information from one tool and passes it to others in an agreed form. Each tool connects to the hub once, and the hub manages the rest.
     paragraphs:
       - The benefit grows with the number of tools. With three tools, direct links are fine. With ten, the links number in the dozens, and no one knows which depend on which.
       - A hub also gives you one place to watch. You can see what was sent, what failed, and what is waiting, which is hard when each link is separate.

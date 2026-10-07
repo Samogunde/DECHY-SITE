@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Arrow } from "@/components/primitives/Arrow";
 import { EntityName, Inline } from "@/components/primitives/Inline";
 import { getRegistry } from "@/lib/content/load";
-import type { Block } from "@/lib/content/schema";
-import { publishedPath } from "@/lib/content/urls";
+import type { Block, Page } from "@/lib/content/schema";
+import { publishedPath, representedPath } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
@@ -66,7 +66,25 @@ export function ServiceIndexBlock({ block }: { block: Of<"service-index"> }) {
   );
 }
 
-export function EntitiesBlock({ block }: { block: Of<"entities"> }) {
+/** An entity in a list: a link to its own page or to the page that represents it, else a tag. */
+function EntityChip({ id, here, chip }: { id: string; here?: string; chip: boolean }) {
+  const registry = getRegistry();
+  const node = registry.nodes.get(id)!;
+  const own = publishedPath(node, registry);
+  const rep = own ? null : representedPath(node, registry);
+  const href = own ?? (rep && rep !== here ? rep : null);
+  if (!chip) return href ? <Link href={href}>{node.name}</Link> : <span>{node.name}</span>;
+  return href ? (
+    <Link href={href} className="chip chip-link">
+      {node.name}
+      <Arrow className="chip-arrow" />
+    </Link>
+  ) : (
+    <span className="chip chip-tag">{node.name}</span>
+  );
+}
+
+export function EntitiesBlock({ block, page }: { block: Of<"entities">; page?: Page }) {
   const registry = getRegistry();
   for (const g of block.groups)
     for (const id of g.entityIds)
@@ -97,11 +115,8 @@ export function EntitiesBlock({ block }: { block: Of<"entities"> }) {
               {chips ? (
                 <ul className="m-0 mt-4 flex list-none flex-wrap gap-2 p-0">
                   {g.entityIds.map((id) => (
-                    <li
-                      key={id}
-                      className="chip t-small rounded-[4px] border border-line bg-white px-3 py-1.5 font-[family-name:var(--font-heading)] font-semibold"
-                    >
-                      <EntityName id={id} />
+                    <li key={id}>
+                      <EntityChip id={id} here={page?.path} chip />
                     </li>
                   ))}
                 </ul>
@@ -109,7 +124,7 @@ export function EntitiesBlock({ block }: { block: Of<"entities"> }) {
                 <ul className="inline-list t-small m-0 mt-3 flex list-none flex-wrap p-0">
                   {g.entityIds.map((id) => (
                     <li key={id}>
-                      <EntityName id={id} />
+                      <EntityChip id={id} here={page?.path} chip={false} />
                     </li>
                   ))}
                 </ul>
@@ -175,7 +190,7 @@ export function ColumnsBlock({ block }: { block: Of<"columns"> }) {
               {c.items.map((it) => (
                 <li
                   key={it}
-                  className="relative pl-5 before:absolute before:left-0 before:top-[0.7em] before:h-[2px] before:w-2.5 before:bg-blue before:content-['']"
+                  className="relative pl-5 before:absolute before:left-0.5 before:top-[0.62em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-ink before:content-['']"
                 >
                   <Inline text={it} />
                 </li>

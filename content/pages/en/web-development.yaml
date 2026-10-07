@@ -50,9 +50,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What web development covers
-    answer: Web development is designing and building websites and online systems. A website mostly shares information. A web application lets people do things, such as log in, book, pay, or manage their own records.
+    label: Our approach
+    heading: Sites that inform, and systems that do the work
+    answer: We design and build websites and the online systems behind them. A website mostly shares information. A web application lets people do things, such as sign in, book, pay, or manage their own records, and most business sites need a little of both.
     paragraphs:
       - The line between them is blurry. A modern business site often has forms, bookings, accounts, or a shop. The useful question is not "which is it?" but "what must people be able to do here, and who looks after it?"
       - We build both, and everything in between, from a clear business site to a secure customer portal.

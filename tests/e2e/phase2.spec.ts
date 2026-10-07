@@ -53,14 +53,17 @@ test.describe("phase 2 site-wide contract", () => {
 test.describe("phase 2 interactive blocks work without a mouse", () => {
   test("a chooser changes its answer with the keyboard", async ({ page }) => {
     await page.goto("/work/areas/ecommerce-platforms/");
-    const radios = page.locator("#foundation input[type=radio]");
-    await radios.first().scrollIntoViewIfNeeded();
-    expect(await radios.count()).toBeGreaterThanOrEqual(2);
-    await radios.first().focus();
+    const options = page.locator("#foundation .sp-opt");
+    await options.first().scrollIntoViewIfNeeded();
+    expect(await options.count()).toBeGreaterThanOrEqual(2);
+    await expect(options.first()).toHaveAttribute("aria-expanded", "true");
+    await options.first().focus();
     await page.keyboard.press("ArrowDown");
-    await expect(radios.nth(1)).toBeChecked();
+    await expect(options.nth(1)).toHaveAttribute("aria-expanded", "true");
+    await expect(options.nth(1)).toBeFocused();
     await page.keyboard.press("ArrowDown");
-    await expect(radios.nth(2)).toBeChecked();
+    await expect(options.nth(2)).toHaveAttribute("aria-expanded", "true");
+    await expect(options.first()).toHaveAttribute("aria-expanded", "false");
   });
 
   test("technical panels open and close with the keyboard", async ({ page }) => {

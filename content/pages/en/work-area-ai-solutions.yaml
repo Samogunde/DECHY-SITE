@@ -59,9 +59,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: AI as a part of a process, not a product on its own
-    answer: An AI solution uses machine learning to handle language, images, or patterns as one step in a business process. It works best on narrow tasks where results can be checked.
+    answer: We use machine learning as one step in a business process, where it reads language, images, or patterns. It works best on narrow tasks whose results can be checked, so that is where we put it.
     paragraphs:
       - "Language models are good at reading and drafting. They can also be confidently wrong. A solution therefore needs more than the model: it needs rules, checks, records, and a route to a person."
       - That is why we describe AI work in terms of the process it improves, such as sorting requests or finding answers in documents, and not in terms of the model name.

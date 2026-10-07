@@ -147,7 +147,19 @@ function Layers({ spec }: { spec: Extract<DiagramSpec, { kind: "layers" }> }) {
           </li>
         ))}
       </ol>
-      {spec.base ? (
+      {spec.base?.steps?.length ? (
+        <div className="anatomy-base anatomy-base-steps">
+          <span className="visually-hidden">{spec.base.title}</span>
+          <ol className="anatomy-pipe" aria-hidden="true">
+            {spec.base.steps.map((s, i) => (
+              <li key={s}>
+                {i > 0 ? <Arrow /> : null}
+                <span className="dgm-title">{s}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ) : spec.base ? (
         <div className="anatomy-base">
           <span className="dgm-title">{spec.base.title}</span>
           {spec.base.text ? (
@@ -292,18 +304,22 @@ function Decision({ spec }: { spec: Extract<DiagramSpec, { kind: "decision" }> }
       <div className="dgm-box dgm-box-ink decision-question">
         <span className="dgm-title">{spec.question}</span>
       </div>
+      <div className="decision-heads" aria-hidden="true">
+        <p className="dgm-label">If this sounds like you</p>
+        <p className="dgm-label">We would recommend</p>
+      </div>
       <ul className="decision-branches">
         {spec.branches.map((b, i) => (
           <li key={b.when} className="decision-branch fx-step" style={step(i)}>
-            <div className="decision-when">
-              <span className="dgm-label">If</span>
-              <span className="dgm-title">{b.when}</span>
-            </div>
+            <p className="decision-when">
+              <span className="visually-hidden">If: </span>
+              {b.when}
+            </p>
             <span className="decision-arrow" aria-hidden="true">
               <Arrow />
             </span>
-            <div className="dgm-box dgm-box-accent decision-then">
-              <span className="dgm-label">Choose</span>
+            <div className="decision-then">
+              <span className="visually-hidden">Choose: </span>
               <span className="dgm-title">{b.choose}</span>
               {b.text ? (
                 <span className="dgm-text">

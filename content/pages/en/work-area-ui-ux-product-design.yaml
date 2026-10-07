@@ -65,9 +65,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: A shared kit that keeps screens consistent
-    answer: "A design system is a shared set of parts and rules for building screens: colors, type, components, and layouts, with guidance on using them. It lets many people make screens that look and behave alike."
+    answer: "We build design systems: a shared set of parts and rules for screens, with colors, type, components, layouts, and guidance on using them, so many people can make screens that look and behave alike."
     paragraphs:
       - Without one, each new screen is invented fresh. The result is a product whose buttons differ, whose forms behave differently, and whose new features feel as if they came from elsewhere.
       - With one, new screens are quicker to make and easier to learn, because people meet the same parts in the same places.

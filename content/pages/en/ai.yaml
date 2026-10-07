@@ -50,9 +50,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What AI means for a business, in plain terms
-    answer: Artificial intelligence, or AI, is software that can do things that normally need human judgment, such as reading a document, writing a reply, finding the right answer, or spotting a pattern. Machine learning is the part of AI where software learns from examples instead of following only fixed rules.
+    label: Our approach
+    heading: Where AI earns its place in a business
+    answer: "We use artificial intelligence (AI) for work that normally needs human judgment: reading documents, drafting replies, finding the right answer, or spotting a pattern. Machine learning, the part of AI that learns from examples instead of fixed rules, is one of the tools we reach for, never the starting point."
     paragraphs:
       - In business, AI is useful when the work involves language, documents, images, or patterns that are too messy for simple rules. It is less useful when a clear rule already does the job. A rule that says "send invoices over a set amount to a manager" does not need AI.
       - So the first question is not "how do we use AI?" It is "what job do we want done, and is AI the best way to do it?" We help you answer that honestly, then build the part that is worth building.

@@ -5,44 +5,23 @@ import { LinkButton } from "@/components/primitives/LinkButton";
 import { getRegistry } from "@/lib/content/load";
 import type { Block, Comprehension } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
-import { GlanceTabs } from "./GlanceTabs";
+import { SelectPanel } from "./SelectPanel";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
 /**
- * "At a glance": the visitor's five answers (clarity standard section 1), shown right after the
- * hero. Rendered from the page's `comprehension` record so the summary and the review record
- * can never disagree. The same answers appear in three forms so pages do not all read alike:
- * tabs with an action panel (services and hubs), a stepped flow ending in an action bar
- * (solutions, work areas, industries), and an editorial layout (technologies, countries, others).
+ * "At a glance": the visitor's five answers (clarity standard section 1), right after the hero,
+ * rendered from the page's `comprehension` record so the summary and the review record can never
+ * disagree. One interaction on every page: four questions to choose from, the selected answer
+ * beside them, and the next step as a separate action.
  */
-export type GlanceVariant = "tabs" | "flow" | "editorial";
-
-export function glanceVariantFor(kind: string): GlanceVariant {
-  switch (kind) {
-    case "service":
-    case "hub":
-    case "company":
-    case "work-hub":
-      return "tabs";
-    case "solution":
-    case "work-area":
-    case "industry":
-      return "flow";
-    default:
-      return "editorial";
-  }
-}
-
 export function AtAGlance({
   comprehension,
   cta,
-  variant = "tabs",
 }: {
   comprehension: Comprehension;
   cta?: { label: string; href: string };
-  variant?: GlanceVariant;
 }) {
   const items: { label: string; text: string }[] = [
     { label: "What it is", text: comprehension.what },
@@ -51,99 +30,40 @@ export function AtAGlance({
     { label: "How to choose", text: comprehension.choose },
   ];
   const showCta = cta && pathExists(cta.href.split(/[?#]/)[0] ?? "", getRegistry());
-  const next = (
-    <>
-      <p className="t-eyebrow glance-next-label m-0">Next step</p>
-      <p className="glance-next-text m-0">
-        <Inline text={comprehension.next} />
-      </p>
-      {showCta ? (
-        <LinkButton href={cta.href} className="glance-next-btn" arrow>
-          {cta.label}
-        </LinkButton>
-      ) : null}
-    </>
-  );
-
-  if (variant === "tabs") {
-    return (
-      <section aria-labelledby="glance-h" className="tone-white rule-top glance glance-v-tabs">
-        <div className="container-site">
-          <h2 id="glance-h" className="t-eyebrow eyebrow-accent m-0">
-            At a glance
-          </h2>
-          <GlanceTabs
-            items={items.map((it) => ({
-              label: it.label,
-              body: (
-                <p className="glance-statement m-0">
-                  <Inline text={it.text} />
-                </p>
-              ),
-            }))}
-            action={next}
-          />
-        </div>
-      </section>
-    );
-  }
-
-  if (variant === "flow") {
-    return (
-      <section aria-labelledby="glance-h" className="tone-white rule-top glance glance-v-flow">
-        <div className="container-site">
-          <h2 id="glance-h" className="t-eyebrow eyebrow-accent m-0">
-            At a glance
-          </h2>
-          <ol className="gf" data-reveal="group">
-            {items.map((it, i) => (
-              <li key={it.label} className="gf-step">
-                <span className="gf-node" aria-hidden="true">
-                  {i + 1}
-                </span>
-                <h3 className="gf-label">{it.label}</h3>
-                <p className="t-body m-0">
-                  <Inline text={it.text} />
-                </p>
-              </li>
-            ))}
-          </ol>
-          <aside className="gf-action" aria-label="Next step">
-            {next}
-          </aside>
-        </div>
-      </section>
-    );
-  }
-
-  const [lead, ...others] = items;
   return (
-    <section aria-labelledby="glance-h" className="tone-white rule-top glance glance-v-editorial">
+    <section aria-labelledby="glance-h" className="tone-white rule-top glance">
       <div className="container-site">
         <h2 id="glance-h" className="t-eyebrow eyebrow-accent m-0">
           At a glance
         </h2>
-        <div className="ge" data-reveal="group">
-          <div className="ge-lead">
-            <p className="t-eyebrow m-0">{lead!.label}</p>
-            <p className="ge-statement m-0">
-              <Inline text={lead!.text} />
+        <div className="glance-layout">
+          <SelectPanel
+            label="At a glance"
+            hint="Choose a question to see the answer"
+            items={items.map((it) => ({
+              label: it.label,
+              body: (
+                <>
+                  <p className="sp-kicker">{it.label}</p>
+                  <p className="sp-statement">
+                    <Inline text={it.text} />
+                  </p>
+                </>
+              ),
+            }))}
+          />
+          <aside className="glance-action" aria-label="Next step">
+            <p className="t-eyebrow glance-next-label m-0">Next step</p>
+            <p className="glance-next-text m-0">
+              <Inline text={comprehension.next} />
             </p>
-          </div>
-          <dl className="ge-list">
-            {others.map((it) => (
-              <div key={it.label} className="ge-row">
-                <dt className="t-label">{it.label}</dt>
-                <dd className="t-body m-0">
-                  <Inline text={it.text} />
-                </dd>
-              </div>
-            ))}
-          </dl>
+            {showCta ? (
+              <LinkButton href={cta.href} className="glance-next-btn" arrow>
+                {cta.label}
+              </LinkButton>
+            ) : null}
+          </aside>
         </div>
-        <aside className="ge-action" aria-label="Next step">
-          {next}
-        </aside>
       </div>
     </section>
   );
@@ -215,12 +135,8 @@ export function PathFinderBlock({ block }: { block: Of<"pathfinder"> }) {
   );
 }
 
-/**
- * A guided decision. Built on native radio inputs so it works with no JavaScript, with the
- * keyboard, and on touch; every option's text is in the page for readers and crawlers.
- */
+/** A guided decision: the visitor picks the answer closest to their situation and sees the route. */
 export function ChooserBlock({ block }: { block: Of<"chooser"> }) {
-  const name = `chooser-${block.id}`;
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="max-w-[48rem]">
@@ -231,56 +147,46 @@ export function ChooserBlock({ block }: { block: Of<"chooser"> }) {
           intro={block.intro}
         />
       </div>
-      <fieldset className="chooser" data-reveal="block">
-        <legend className="chooser-question t-h4">{block.question}</legend>
-        {block.options.map((o, i) => (
-          <input
-            key={o.label}
-            id={`${name}-${i}`}
-            className="chooser-input"
-            type="radio"
-            name={name}
-            defaultChecked={i === 0}
-          />
-        ))}
-        <div className="chooser-tabs">
-          {block.options.map((o, i) => (
-            <label key={o.label} htmlFor={`${name}-${i}`} className="chooser-tab">
-              {o.label}
-            </label>
-          ))}
-        </div>
-        <div className="chooser-panels">
-          {block.options.map((o) => (
-            <div key={o.label} className="chooser-panel">
-              <p className="chooser-when t-body-lg m-0">
-                <strong>Choose this when:</strong> <Inline text={o.when} />
-              </p>
-              <div className="chooser-cols">
-                <div>
-                  <p className="t-label m-0">What you get</p>
-                  <p className="t-body m-0 mt-1">
-                    <Inline text={o.get} />
-                  </p>
-                </div>
-                {o.watch ? (
+      <div className="chooser" data-reveal="block">
+        <h3 className="chooser-question">{block.question}</h3>
+        <SelectPanel
+          label={block.question}
+          hint="Choose the answer closest to yours"
+          numbered={false}
+          items={block.options.map((o) => ({
+            label: o.label,
+            body: (
+              <>
+                <p className="sp-kicker">Choose this when</p>
+                <p className="sp-statement">
+                  <Inline text={o.when} />
+                </p>
+                <dl className="sp-fields">
                   <div>
-                    <p className="t-label m-0">Keep in mind</p>
-                    <p className="t-body m-0 mt-1">
-                      <Inline text={o.watch} />
-                    </p>
+                    <dt>What you get</dt>
+                    <dd className="t-body">
+                      <Inline text={o.get} />
+                    </dd>
                   </div>
+                  {o.watch ? (
+                    <div>
+                      <dt>Keep in mind</dt>
+                      <dd className="t-body">
+                        <Inline text={o.watch} />
+                      </dd>
+                    </div>
+                  ) : null}
+                </dl>
+                {o.cta && pathExists(o.cta.href.split(/[?#]/)[0] ?? "", getRegistry()) ? (
+                  <LinkButton href={o.cta.href} variant="secondary" className="mt-6" arrow>
+                    {o.cta.label}
+                  </LinkButton>
                 ) : null}
-              </div>
-              {o.cta && pathExists(o.cta.href.split(/[?#]/)[0] ?? "", getRegistry()) ? (
-                <LinkButton href={o.cta.href} variant="secondary" className="mt-5" arrow>
-                  {o.cta.label}
-                </LinkButton>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      </fieldset>
+              </>
+            ),
+          }))}
+        />
+      </div>
     </Section>
   );
 }

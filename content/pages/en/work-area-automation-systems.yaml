@@ -63,9 +63,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Rules that run on their own
-    answer: An automation system is a collection of rules that watch for an event, such as a new order or a late invoice, and then carry out actions, such as updating a record or sending a message.
+    answer: We build sets of rules that watch for an event, such as a new order or a late invoice, and then act on it, such as updating a record or sending a message, with nobody carrying the work between tools.
     paragraphs:
       - Each rule is simple. The value comes from joining them, so a task flows across tools without anyone carrying it.
       - Good automation also reports on itself. When something fails, the right person is told, so problems are found in minutes and not weeks.

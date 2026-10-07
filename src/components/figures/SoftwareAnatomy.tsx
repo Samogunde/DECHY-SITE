@@ -35,6 +35,7 @@ const SPEC: DiagramSpec = {
   base: {
     title: "Build, test, release, maintain",
     text: "One delivery process for the whole system",
+    steps: ["Build", "Test", "Release", "Maintain"],
   },
 };
 

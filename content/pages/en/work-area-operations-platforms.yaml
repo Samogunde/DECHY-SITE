@@ -59,9 +59,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: The business's daily work, in one place
-    answer: An operations platform is a system that holds the jobs, stock, schedules, and people a business coordinates every day, and shows their current state. It replaces many separate tools and sheets with one shared picture.
+    answer: We build one system for the jobs, stock, schedules, and people a business coordinates every day, showing their current state. It replaces many separate tools and sheets with one shared picture.
     paragraphs:
       - In many businesses, the real state of operations lives in people's heads and in messages. A platform moves it into one record, so that a manager can see which jobs are late, which stock is low, and who is free.
       - It does not have to be built at once. The most useful platforms start with one flow and grow.

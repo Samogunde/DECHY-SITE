@@ -58,9 +58,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Making consistency easy
-    answer: "A brand system is the set of identity elements, rules, and templates that lets many people produce consistent work. Its test is simple: can someone new make a correct flyer without asking anyone?"
+    answer: "We build the identity elements, rules, and templates that let many people produce consistent work. The test we design for is simple: can someone new make a correct flyer without asking anyone?"
     paragraphs:
       - "Consistency does not come from policing. It comes from making the right thing the easy thing: a template that is already correct, a color list with clear uses, a short guide to the voice."
       - A good system is also short. A long manual that nobody reads does less than one page of rules and a folder of templates that people actually use.

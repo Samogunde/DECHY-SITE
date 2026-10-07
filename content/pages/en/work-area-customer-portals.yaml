@@ -64,9 +64,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Self-service that customers actually use
-    answer: A customer portal is a secure area where customers sign in and see their own information. It answers common questions without a phone call, and gives staff and customers one shared record.
+    answer: We build secure areas where customers sign in and see their own information. A good portal answers common questions without a phone call and gives staff and customers one shared record.
     paragraphs:
       - "Portals succeed when they answer the questions customers already ask: where is my order, can I have last month's invoice, who is working on my case?"
       - They fail when they are built around what the organization finds convenient. We start with the customer's most frequent questions and build only what answers them.

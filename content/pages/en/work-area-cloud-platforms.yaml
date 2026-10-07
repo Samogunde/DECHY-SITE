@@ -64,9 +64,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Renting capacity instead of owning machines
-    answer: A cloud platform is a set of computing services, such as servers, storage, and databases, rented from a provider and paid for by use. Your software runs there instead of on machines you own.
+    answer: We set up your software on rented computing services, such as servers, storage, and databases, paid for by use, instead of on machines you own and look after.
     paragraphs:
       - This changes how costs work. You pay as you use, so a quiet month costs less. It also changes how risk works, since the provider keeps the hardware running.
       - The cloud is not automatically cheaper. A badly planned set-up can cost more than the servers it replaced. Planning, monitoring, and review are part of the work.

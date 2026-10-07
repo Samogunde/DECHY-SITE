@@ -50,9 +50,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What custom software is, and when it is the right answer
-    answer: Custom software is software made for one organization's own processes, information, and users, instead of a product built for the average customer. It is the right answer when your process gives you an edge, when ready-made tools force workarounds, or when several systems need to work as one.
+    label: Our approach
+    heading: Built around how you work, and only when building is right
+    answer: We build software for one organization's own processes, information, and users, instead of making you bend to a product designed for the average customer. We recommend it when your process gives you an edge, when ready-made tools force workarounds, or when several systems need to work as one.
     paragraphs:
       - "It is often the wrong answer too, and we will tell you when it is. A common spreadsheet process may be better served by a configured product. A generic need such as invoicing is usually better bought. We start by testing three options: build it, buy it, or connect what you already have. The cheapest software is the software you do not have to write."
       - When building is right, the work covers more than writing code. It includes understanding the process, planning the structure, building the application, testing it, securing it, putting it online, and keeping it healthy afterward. We treat these as one job. That is why [software architecture](ref:cap.software-architecture), [software testing](ref:cap.software-testing), and [software maintenance](ref:cap.software-maintenance) are part of every project, not extras.

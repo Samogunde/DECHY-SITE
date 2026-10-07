@@ -65,9 +65,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: A system that decides the next step
-    answer: An AI agent is software that pursues a goal over several steps. At each step it decides what to do next, such as looking something up or drafting a message, instead of following one fixed script.
+    answer: "We build AI agents: software that pursues a goal over several steps, deciding at each one what to do next, such as looking something up or drafting a message, instead of following one fixed script."
     paragraphs:
       - This makes agents useful for tasks that vary, like researching a new lead or sorting out a routine customer request. It also makes them harder to predict than a plain automation.
       - We therefore design agents with narrow permissions, a record of every step, and clear points where a person must approve. The goal is dependable help, not an unsupervised system.
@@ -99,7 +99,7 @@ sections:
     tone: white
     label: What it looks like
     heading: An agent that answers, cites, and hands over
-    intro: "An agent should be easy to supervise."
+    intro: An agent should be easy to supervise.
     figure: assistant-ui
     purpose: system
     takeaway: A supervised AI agent answers from approved content, cites its source, and hands difficult cases to a person.

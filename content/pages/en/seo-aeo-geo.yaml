@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /seo-aeo-geo/
 entityId: svc.seo-aeo-geo
-title: "SEO, AEO and GEO Services | DECHY"
+title: SEO, AEO and GEO Services | DECHY
 description: "SEO, AEO, and GEO from DECHY: help people, search engines, and AI assistants find, understand, and accurately describe your organization, with honest measurement."
 breadcrumbLabel: SEO, AEO & GEO
 intent:
@@ -14,28 +14,34 @@ intent:
     - technical seo
     - structured data and entity optimization
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
   what: "SEO, AEO, and GEO are three ways of being found: ranking in search results, being quoted as the direct answer, and being understood and cited by AI assistants."
-  problem: "A good business that people cannot find in search or in AI answers, because the site is hard to read, unclear, or does not answer real questions."
-  audience: "Owners and marketing teams who depend on being found online, and teams worried about how AI assistants describe them."
-  choose: "Fix the foundations first so search engines can read your site. Then make your answers clear. Then make your organization and its relationships easy to understand."
-  next: "Share your website and the questions you want to be found for. We will tell you what to fix first and what to measure."
-
+  problem: A good business that people cannot find in search or in AI answers, because the site is hard to read, unclear, or does not answer real questions.
+  audience: Owners and marketing teams who depend on being found online, and teams worried about how AI assistants describe them.
+  choose: Fix the foundations first so search engines can read your site. Then make your answers clear. Then make your organization and its relationships easy to understand.
+  next: Share your website and the questions you want to be found for. We will tell you what to fix first and what to measure.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: SEO, AEO & GEO
-    lead: "At DECHY, we help people, search engines, and AI assistants find and understand you. That covers SEO (search engine optimization, being found in search results), AEO (answer engine optimization, being the direct answer to a question), and GEO (generative engine optimization, being understood and described correctly by AI assistants)."
-    support: "We build this into websites from the start, and we measure it honestly. We do not promise rankings or AI citations, because nobody can."
+    lead: At DECHY, we help people, search engines, and AI assistants find and understand you. That covers SEO (search engine optimization, being found in search results), AEO (answer engine optimization, being the direct answer to a question), and GEO (generative engine optimization, being understood and described correctly by AI assistants).
+    support: We build this into websites from the start, and we measure it honestly. We do not promise rankings or AI citations, because nobody can.
     ctas:
-      - { label: Discuss your search visibility, href: "/contact/?service=seo-aeo-geo" }
-      - { label: Compare the three, href: "#compare" }
+      - label: Discuss your search visibility
+        href: /contact/?service=seo-aeo-geo
+      - label: Compare the three
+        href: "#compare"
     spec:
       kind: layers
       layerLabel: Three layers of being found
@@ -48,25 +54,23 @@ sections:
           text: AI assistants describe you accurately (GEO).
     purpose: system
     takeaway: "Visibility works in three layers: being found, being answered, and being understood, and each builds on the one above."
-    visualTitle: "The three layers of being found online"
-    figureCaption: "This diagram shows three layers of online visibility, from being found in search to giving direct answers to being understood by AI assistants."
-
+    visualTitle: The three layers of being found online
+    figureCaption: This diagram shows three layers of online visibility, from being found in search to giving direct answers to being understood by AI assistants.
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: Our approach
     heading: Search used to be ten links. Now it is also an answer.
-    answer: "Visibility online now has three parts: ranking in search results, being quoted as the direct answer, and being correctly understood by AI assistants that summarize the web. Each one rewards clear, trustworthy, well-organized content."
+    answer: "We make you visible in three places: ranked in search results, quoted as the direct answer, and correctly described by AI assistants that summarize the web. All three reward clear, trustworthy, well-organized content, which is what we build."
     paragraphs:
-      - "People still search the way they always have. But search engines also show direct answers, and people increasingly ask AI assistants instead. These systems read the web, decide which sources they understand and trust, and write a response."
-      - "So the goal widens. It is no longer enough to rank. You also want to be the clear source of a good answer, and to be described correctly when an assistant mentions you. We shape your content so both people and machines can use it. We also check how assistants describe you today, so we know where to start."
-
+      - People still search the way they always have. But search engines also show direct answers, and people increasingly ask AI assistants instead. These systems read the web, decide which sources they understand and trust, and write a response.
+      - So the goal widens. It is no longer enough to rank. You also want to be the clear source of a good answer, and to be described correctly when an assistant mentions you. We shape your content so both people and machines can use it. We also check how assistants describe you today, so we know where to start.
   - type: diagram
     id: how
     tone: paper
     label: How it works
     heading: What happens when someone asks a question
-    intro: "Whether it is a search engine or an AI assistant, the process is similar. Your content has to survive every step."
+    intro: Whether it is a search engine or an AI assistant, the process is similar. Your content has to survive every step.
     spec:
       kind: flow
       steps:
@@ -81,32 +85,34 @@ sections:
         - title: An answer is given
           text: You may be shown, quoted, or named.
     purpose: sequence
-    takeaway: "Your content must be reachable, readable, clear, and trustworthy at every step to be shown, quoted, or named."
-    caption: "This diagram traces a question from the person asking, through finding, reading, and choosing sources, to the answer they see."
-
+    takeaway: Your content must be reachable, readable, clear, and trustworthy at every step to be shown, quoted, or named.
+    caption: This diagram traces a question from the person asking, through finding, reading, and choosing sources, to the answer they see.
   - type: table
     id: compare
     tone: white
     label: Three terms
     heading: SEO, AEO, and GEO compared
-    intro: "The three overlap. The same good work helps all of them, but each asks a slightly different question."
+    intro: The three overlap. The same good work helps all of them, but each asks a slightly different question.
     caption: Comparison of SEO, AEO, and GEO
-    columns: [Term, Plain meaning, The question it answers, Where you see it]
+    columns:
+      - Term
+      - Plain meaning
+      - The question it answers
+      - Where you see it
     rows:
       - - SEO
-        - "Helping search engines find, read, and rank your pages."
-        - "Can people find us when they search?"
-        - "The list of results in a search engine."
+        - Helping search engines find, read, and rank your pages.
+        - Can people find us when they search?
+        - The list of results in a search engine.
       - - AEO
-        - "Writing pages that give clear, direct answers."
-        - "Are we the answer to the question?"
-        - "Featured answers and summaries above results."
+        - Writing pages that give clear, direct answers.
+        - Are we the answer to the question?
+        - Featured answers and summaries above results.
       - - GEO
-        - "Making your organization and its relationships clear to AI systems."
-        - "Do AI assistants understand and describe us correctly?"
-        - "Answers from tools such as [ChatGPT](ref:eco.chatgpt), [Perplexity](ref:eco.perplexity), [Gemini](ref:eco.gemini), and [Google AI Overviews](ref:eco.google-ai-overviews)."
-    note: "These systems change often. We focus on the lasting basics rather than tricks."
-
+        - Making your organization and its relationships clear to AI systems.
+        - Do AI assistants understand and describe us correctly?
+        - Answers from tools such as [ChatGPT](ref:eco.chatgpt), [Perplexity](ref:eco.perplexity), [Gemini](ref:eco.gemini), and [Google AI Overviews](ref:eco.google-ai-overviews).
+    note: These systems change often. We focus on the lasting basics rather than tricks.
   - type: columns
     id: foundations
     tone: paper
@@ -115,22 +121,21 @@ sections:
     columns:
       - title: A site that can be read
         items:
-          - "Fast pages that work on phones."
-          - "Clear page structure and working links."
-          - "Pages that search engines can reach."
+          - Fast pages that work on phones.
+          - Clear page structure and working links.
+          - Pages that search engines can reach.
       - title: Content that answers
         items:
-          - "Real questions answered directly, then explained."
-          - "Plain words, and the terms people actually use."
+          - Real questions answered directly, then explained.
+          - Plain words, and the terms people actually use.
       - title: Clear structure
         items:
-          - "Details marked up so machines can read them reliably."
-          - "Pages that link to each other in a logical way."
+          - Details marked up so machines can read them reliably.
+          - Pages that link to each other in a logical way.
       - title: Trust
         items:
-          - "Honest, accurate, up-to-date information."
-          - "Clear who is behind the content, and consistent facts about you."
-
+          - Honest, accurate, up-to-date information.
+          - Clear who is behind the content, and consistent facts about you.
   - type: index
     id: services
     tone: white
@@ -140,36 +145,34 @@ sections:
     items:
       - title: Technical SEO
         ref: cap.technical-seo
-        body: "Making sure your site is fast, reachable, and easy for search engines to read."
+        body: Making sure your site is fast, reachable, and easy for search engines to read.
       - title: Content that answers questions
         ref: cap.content-strategy
-        body: "Planning pages around the questions people ask, written in plain words."
+        body: Planning pages around the questions people ask, written in plain words.
       - title: Structured data
         ref: cap.structured-data
-        body: "Labeling your pages in a standard way that machines can understand."
+        body: Labeling your pages in a standard way that machines can understand.
       - title: Answer and AI visibility
         ref: cap.ai-visibility
-        body: "Making your content easy for answer engines and AI assistants to use and cite."
+        body: Making your content easy for answer engines and AI assistants to use and cite.
       - title: Entity clarity
         ref: cap.entity-optimization
-        body: "Making it unmistakable who you are, what you offer, and how your services relate."
+        body: Making it unmistakable who you are, what you offer, and how your services relate.
       - title: Site structure and linking
         ref: cap.internal-linking
-        body: "Organizing pages so visitors and search engines can follow the logic."
-
+        body: Organizing pages so visitors and search engines can follow the logic.
   - type: callout
     id: limits
     tone: paper
     variant: limits
     title: What no one can promise
     paragraphs:
-      - "No one controls search rankings or what an AI assistant says. Anyone who guarantees a first-page ranking or an AI citation is guessing, or selling a trick."
-      - "What we can do is remove obstacles, make your content clear and trustworthy, and measure what changes. That is a sound base that holds up as the systems evolve."
+      - No one controls search rankings or what an AI assistant says. Anyone who guarantees a first-page ranking or an AI citation is guessing, or selling a trick.
+      - What we can do is remove obstacles, make your content clear and trustworthy, and measure what changes. That is a sound base that holds up as the systems evolve.
     items:
-      - "We do not buy links or use spam methods."
-      - "We do not promise rankings, traffic, or citations."
-      - "We report results, including when they are flat."
-
+      - We do not buy links or use spam methods.
+      - We do not promise rankings, traffic, or citations.
+      - We report results, including when they are flat.
   - type: process
     id: process
     tone: white
@@ -177,55 +180,62 @@ sections:
     heading: How a visibility project runs
     steps:
       - title: Check where you stand
-        body: "We review how your site is read and what questions people ask in your field."
-        artifacts: [Site and search review, Question list]
+        body: We review how your site is read and what questions people ask in your field.
+        artifacts:
+          - Site and search review
+          - Question list
       - title: Fix the foundations
-        body: "We repair speed, structure, and reachability problems first."
-        artifacts: [Fix list, Improved pages]
+        body: We repair speed, structure, and reachability problems first.
+        artifacts:
+          - Fix list
+          - Improved pages
       - title: Make the answers clear
-        body: "We improve or write pages that answer real questions in plain words."
-        artifacts: [Page plan, New and improved content]
+        body: We improve or write pages that answer real questions in plain words.
+        artifacts:
+          - Page plan
+          - New and improved content
       - title: Make you easy to understand
-        body: "We add structure and consistent facts so machines can describe you correctly."
-        artifacts: [Structured data, Consistent information]
+        body: We add structure and consistent facts so machines can describe you correctly.
+        artifacts:
+          - Structured data
+          - Consistent information
       - title: Measure and refine
-        body: "We track what matters and adjust, with honest reports."
-        artifacts: [Regular reports, Next steps]
-
+        body: We track what matters and adjust, with honest reports.
+        artifacts:
+          - Regular reports
+          - Next steps
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: "The technical work."
+    intro: The technical work.
     panels:
       - title: Crawling and indexing
         paragraphs:
-          - "We check that search engines such as [Google](ref:eco.google-search) and [Bing](ref:eco.bing) can reach and index the right pages, using sitemaps, robots rules, canonical addresses, and clean redirects."
+          - We check that search engines such as [Google](ref:eco.google-search) and [Bing](ref:eco.bing) can reach and index the right pages, using sitemaps, robots rules, canonical addresses, and clean redirects.
       - title: Structured data
         paragraphs:
-          - "We use the schema.org vocabulary in JSON-LD to describe your organization, services, and pages. Only facts you can stand behind are marked up."
+          - We use the schema.org vocabulary in JSON-LD to describe your organization, services, and pages. Only facts you can stand behind are marked up.
       - title: Performance and page quality
         items:
           - "[Core Web Vitals](ref:cap.core-web-vitals): loading, responsiveness, and stability."
-          - "Accessible, semantic markup that machines and people can both read."
-          - "Internal linking that mirrors how your topics relate."
+          - Accessible, semantic markup that machines and people can both read.
+          - Internal linking that mirrors how your topics relate.
       - title: Measuring
         items:
-          - "Search console data, rather than guesses."
-          - "Tracking of the questions and pages that matter."
-          - "Testing how AI assistants describe you, over time, noting that answers vary."
-
+          - Search console data, rather than guesses.
+          - Tracking of the questions and pages that matter.
+          - Testing how AI assistants describe you, over time, noting that answers vary.
   - type: prose
     id: content
     tone: paper
     label: What good content looks like
     heading: Content that is easy to quote
     paragraphs:
-      - "Search engines and AI assistants prefer pages that answer a question clearly. The best pages open with the answer in a sentence or two, then explain, give examples, and say what to do next."
-      - "They also prefer pages that are honest about what they do not know. A page that states its limits, names who wrote it, and shows when it was last checked is easier to trust, for people and for machines."
-      - "We write and review pages in this way, and we avoid padding. A short page that answers one question well is better than a long page that wanders."
-
+      - Search engines and AI assistants prefer pages that answer a question clearly. The best pages open with the answer in a sentence or two, then explain, give examples, and say what to do next.
+      - They also prefer pages that are honest about what they do not know. A page that states its limits, names who wrote it, and shows when it was last checked is easier to trust, for people and for machines.
+      - We write and review pages in this way, and we avoid padding. A short page that answers one question well is better than a long page that wanders.
   - type: faq
     id: faq
     tone: white
@@ -233,18 +243,17 @@ sections:
     heading: Questions about SEO, AEO, and GEO
     items:
       - q: How long does SEO take to work?
-        a: "Fixes to reachability can show effects in weeks. Building authority and content that earns visibility usually takes months. We set expectations in the first review and report honestly."
+        a: Fixes to reachability can show effects in weeks. Building authority and content that earns visibility usually takes months. We set expectations in the first review and report honestly.
       - q: Can you get us into AI answers?
-        a: "We cannot control what an AI assistant says. We can make your content clear, accurate, and easy to cite, which gives you the best chance. We do not promise citations."
+        a: We cannot control what an AI assistant says. We can make your content clear, accurate, and easy to cite, which gives you the best chance. We do not promise citations.
       - q: Is AEO or GEO replacing SEO?
-        a: "No. The same foundations help all three. Many people still use search, and AI assistants often read the same web pages."
+        a: No. The same foundations help all three. Many people still use search, and AI assistants often read the same web pages.
       - q: Do you use AI to write our content?
-        a: "AI can help with drafts and research. People review everything, because accuracy and a real point of view matter more than volume."
+        a: AI can help with drafts and research. People review everything, because accuracy and a real point of view matter more than volume.
       - q: Will rebuilding our website hurt our rankings?
-        a: "Not if it is planned. We keep the addresses that matter, redirect the others, and monitor after launch. See our [web development](ref:svc.web-development) service."
+        a: Not if it is planned. We keep the addresses that matter, redirect the others, and monitor after launch. See our [web development](ref:svc.web-development) service.
       - q: How do you measure success?
         a: "By the things that matter to you: the right people finding you, the questions you answer, and enquiries. We agree the measures first."
-
   - type: related
     id: related
     tone: paper
@@ -253,20 +262,22 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [svc.web-development, svc.digital-marketing, svc.ui-ux, svc.ecommerce, svc.consulting]
+          - svc.web-development
+          - svc.digital-marketing
+          - svc.ui-ux
+          - svc.ecommerce
+          - svc.consulting
       - title: Search and AI platforms
         entityIds:
-          [
-            eco.google-search,
-            eco.bing,
-            eco.chatgpt,
-            eco.perplexity,
-            eco.gemini,
-            eco.google-ai-overviews,
-          ]
+          - eco.google-search
+          - eco.bing
+          - eco.chatgpt
+          - eco.perplexity
+          - eco.gemini
+          - eco.google-ai-overviews
       - title: Systems we build
-        entityIds: [workarea.seo-search-visibility]
-
+        entityIds:
+          - workarea.seo-search-visibility
   - type: index
     id: work
     tone: white
@@ -275,10 +286,11 @@ sections:
     items:
       - title: SEO and search visibility
         href: /work/areas/seo-search-visibility/
-        body: "Site structure, content, and structured data that help you be found and understood."
-
+        body: Site structure, content, and structured data that help you be found and understood.
   - type: cta
     id: contact-cta
     heading: Tell us how you want to be found
-    body: "Share your website and the questions you want to be found for. We will tell you what to fix first, what to measure, and what we cannot promise."
-    primary: { label: Discuss your search visibility, href: "/contact/?service=seo-aeo-geo" }
+    body: Share your website and the questions you want to be found for. We will tell you what to fix first, what to measure, and what we cannot promise.
+    primary:
+      label: Discuss your search visibility
+      href: /contact/?service=seo-aeo-geo

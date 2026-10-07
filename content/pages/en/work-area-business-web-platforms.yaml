@@ -64,9 +64,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: A website that carries the work
-    answer: A business web platform is a website built to do tasks as well as to inform. It can hold customer accounts, take bookings, process payments, and connect to your internal systems.
+    answer: "We build websites that do tasks as well as inform: customer accounts, bookings, payments, and connections to the systems you run inside the business."
     paragraphs:
       - "Many organizations begin with a simple site and add tools one by one: a booking plugin here, a payment page there. The pieces rarely share information, and nobody can see the whole picture."
       - A platform plans these parts together. A customer who books, pays, and returns sees one consistent experience, and staff see one record of what happened.

@@ -59,7 +59,7 @@ export function BlockRenderer({
     case "service-index":
       return <ServiceIndexBlock block={block} />;
     case "entities":
-      return <EntitiesBlock block={block} />;
+      return <EntitiesBlock block={block} page={page} />;
     case "process":
       return <ProcessBlock block={block} />;
     case "table":

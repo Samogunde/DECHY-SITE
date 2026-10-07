@@ -62,9 +62,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: An app is the visible tip of a larger system
-    answer: "A mobile app is software installed on a phone. Most business apps are not alone: they send and receive information from a back end, which stores data and enforces your rules."
+    answer: "We build apps installed on phones, together with the back end they depend on. Most business apps are not alone: they send and receive information from a server that stores the data and enforces your rules."
     paragraphs:
       - People see the screens. Behind them, a server keeps the records, checks who is signed in, and sends updates to every device. Planning only the app, and not what sits behind it, is a common reason for projects that disappoint.
       - We design both together, so the app stays small and quick and the information stays correct.
@@ -94,7 +94,7 @@ sections:
     tone: white
     label: What it looks like
     heading: What a field or customer app screen looks like
-    intro: "The home screen of an app decides whether people keep using it."
+    intro: The home screen of an app decides whether people keep using it.
     figure: mobile-app-ui
     purpose: system
     takeaway: An app earns daily use when its home screen shows what is due, its status, and the next action.

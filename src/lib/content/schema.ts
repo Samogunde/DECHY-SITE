@@ -208,7 +208,8 @@ export const DiagramSpec = z.discriminatedUnion("kind", [
       .max(6),
     supportLabel: z.string().default("Supporting parts"),
     layerLabel: z.string().default("Layers"),
-    base: Part.optional(),
+    /** A foundation under every layer; `steps` draws it as a short pipeline (A then B then C). */
+    base: Part.extend({ steps: z.array(z.string()).max(5).optional() }).optional(),
   }),
   /** The same situation without and with the solution. */
   z.object({

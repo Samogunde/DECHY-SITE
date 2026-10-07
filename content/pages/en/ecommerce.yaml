@@ -50,9 +50,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What an online store really involves
-    answer: "An online store is a website where people can choose products and pay, plus the systems that handle what happens after the click: payment, stock, packing, shipping, tax, and support. The shopfront is the easy part."
+    label: Our approach
+    heading: The store, and the work after the click
+    answer: "We build online stores together with the systems behind them: payment, stock, packing, shipping, tax, and support. The shopfront is the easy part. What makes a store grow is the work that happens after a customer pays."
     paragraphs:
       - Stores succeed or struggle on the work behind the scenes. If every order must be re-typed into three systems, growth makes things worse, not better.
       - We design the whole path, from the first visit to the delivered parcel and the repeat purchase, so the store can grow without a bigger back office.

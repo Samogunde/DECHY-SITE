@@ -59,9 +59,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Changing how work gets done
-    answer: Digital transformation means changing how an organization works by using technology, not only buying new tools. It covers processes, systems, information, and the habits of the people who use them.
+    answer: We help organizations change how work gets done with technology, not just buy new tools. That covers processes, systems, information, and the habits of the people who use them.
     paragraphs:
       - "The tools are the easy part. Most programs struggle with the human side: agreeing a process, moving people to a new way of working, and finishing the job of switching off the old one."
       - That is why we plan transformation as a series of small, owned changes, each with a measure of success, instead of one large program with a distant finish.

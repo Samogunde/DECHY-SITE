@@ -58,9 +58,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Answers that stay findable and true
-    answer: A knowledge and content system is a managed collection of the answers an organization needs, organized so they can be found, owned by named people, and reviewed regularly so they stay correct.
+    answer: We organize the answers your organization needs so they can be found, are owned by named people, and are reviewed regularly so they stay correct.
     paragraphs:
       - Most organizations have the knowledge. They lack the structure. Answers sit in old emails and in files named final-v3, and the person who knows retires or moves on.
       - A good system also prepares your content for AI assistants. They answer better, and more safely, when drawing from clear, current, well-labeled pages than from a heap of documents.

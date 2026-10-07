@@ -64,9 +64,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: Programs that talk to each other
-    answer: An API integration connects two programs so one can send or request information from the other automatically. The API is the agreed set of requests the programs use, a bit like a menu a kitchen accepts orders from.
+    answer: We connect two programs so one can send or request information from the other automatically. The API is the agreed set of requests the programs use, a bit like the menu a kitchen accepts orders from.
     paragraphs:
       - Most business tools offer an API. An integration uses it so that a sale in your store creates an invoice in your accounts, or a new customer in your records appears in your email tool.
       - The skill is not only making the connection. It is deciding which tool is the source of truth for each fact, and handling the cases where something fails.

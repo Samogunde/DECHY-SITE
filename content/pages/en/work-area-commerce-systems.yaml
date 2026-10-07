@@ -62,9 +62,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: When selling is more than a basket
-    answer: "A commerce system supports ways of selling that a basic online store cannot: repeating payments, many sellers, prices that vary, or products made after the order. It joins the storefront to pricing, payment, and fulfilment."
+    answer: "We build commerce for the ways of selling a basic online store cannot handle: repeating payments, many sellers, prices that vary, or products made after the order. The storefront is joined to pricing, payment, and fulfilment."
     paragraphs:
       - Standard platforms handle ordinary selling very well. Trouble begins at the edges, where staff keep spreadsheets of special prices or chase repeat payments by hand.
       - A commerce system takes on those edge cases. It can sit behind an existing store or run a new one, depending on how far your needs depart from the standard.

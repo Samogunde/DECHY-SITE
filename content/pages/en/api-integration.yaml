@@ -123,9 +123,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
-    heading: What integration and an API actually are
-    answer: Integration is making separate software systems share information and work together. An API is a defined way for one program to ask another for information or to send it some, much like a waiter carrying orders between a table and the kitchen.
+    label: Our approach
+    heading: Connecting the systems you already run
+    answer: We make separate systems share information and work as one. Most tools offer an API, a defined way for one program to request or send information to another, and we build the connections on top of it, then watch them so they keep working.
     paragraphs:
       - Most modern tools offer an API. Connecting two tools means using their APIs to send the right information, in the right format, at the right moment, with the right permissions.
       - Good integration is more than a link. It also decides what happens when something fails, how to avoid duplicates, who is allowed to see what, and how to know it is still working.

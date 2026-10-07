@@ -58,9 +58,9 @@ sections:
   - type: definition
     id: what-is
     tone: white
-    label: What it is
+    label: In practice
     heading: One trusted version of the numbers
-    answer: A data and analytics system gathers information from your tools, cleans it, stores it together, and presents it so people can answer questions. Its purpose is one agreed version of each figure.
+    answer: We gather information from your tools, clean it, store it together, and present it so people can answer their own questions. The goal is one agreed version of each figure.
     paragraphs:
       - Without it, each person builds their own spreadsheet, and meetings begin with arguments about whose numbers are right. With it, the discussion moves to what to do.
       - Dashboards are the visible part. The harder and more valuable work is agreeing what each measure means, and checking that the data is complete and correct.

@@ -251,7 +251,9 @@
    same line, and each stub carries the vertical bracket down to the next one. Supporting boxes in
    a row have equal height, so the next centre is always exactly one box plus one gap away. */
 .anatomy {
-  --anatomy-gap: 1.15rem;
+  --anatomy-gap: 1.4rem;
+  --anatomy-head: 0.42rem;
+  --anatomy-clear: 3px;
   --anatomy-link: clamp(1.5rem, 7cqw, 2.25rem);
   --anatomy-support-gap: 0.5rem;
   --anatomy-line: 2px;
@@ -272,26 +274,27 @@
 .anatomy-stage .dgm-box {
   height: 100%;
 }
-/* The flow from the layer above into this layer: a line that ends exactly on the box edge. */
+/* The flow from the layer above into this layer: a line leaves the box above, and a solid
+   arrowhead stops a fixed clearance short of the box below, centred on both. */
 .anatomy-stack > li + li .anatomy-stage::before {
   content: "";
   position: absolute;
   left: calc(50% - var(--anatomy-line) / 2);
   top: calc(var(--anatomy-gap) * -1);
   width: var(--anatomy-line);
-  height: var(--anatomy-gap);
+  height: calc(var(--anatomy-gap) - var(--anatomy-head) - var(--anatomy-clear) + 1px);
   background: var(--dgm-ink);
 }
 .anatomy-stack > li + li .anatomy-stage::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: -0.2rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-right: var(--anatomy-line) solid var(--dgm-ink);
-  border-bottom: var(--anatomy-line) solid var(--dgm-ink);
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  top: calc((var(--anatomy-head) + var(--anatomy-clear)) * -1);
+  width: 0.62rem;
+  height: var(--anatomy-head);
+  background: var(--dgm-ink);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform: translateX(-50%);
 }
 .anatomy-link {
   display: none;
@@ -542,111 +545,142 @@
   }
 }
 
-/* ---------------- Quality: test pyramid beside release gates ---------------- */
+/* ---------------- Quality: test layers beside the release pipeline ---------------- */
 .quality {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
+  gap: 2.5rem;
+  align-items: start;
 }
-.pyramid {
-  position: relative;
-  width: 100%;
-  max-width: 22rem;
-  aspect-ratio: 1 / 1;
+.q-stack {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
-.pyramid > svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-.pyramid .tier {
-  fill: var(--dgm-fill);
-  stroke: var(--dgm-border);
-  stroke-width: 1.5px;
-  vector-effect: non-scaling-stroke;
-}
-.pyramid .tier-top {
-  fill: var(--color-blue);
-  stroke: var(--color-blue);
-}
-.pyramid .tier-mid {
-  stroke: var(--dgm-accent);
-}
-.pyr-label {
-  position: absolute;
-  left: 8%;
-  right: 8%;
+.q-layer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.1rem;
-  text-align: center;
-  transform: translateY(-50%);
-  text-wrap: balance;
+  justify-content: center;
+  min-width: 12rem;
+  max-width: 100%;
+  min-height: 4.25rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--dgm-border);
+  border-left: 3px solid var(--dgm-accent);
+  border-radius: var(--radius-md);
+  background: var(--dgm-fill);
 }
-.pyr-label .dgm-title {
-  font-size: var(--fs-body);
+.q-layer-top {
+  border-color: var(--color-blue);
+  background: var(--color-blue);
 }
-.pyr-label-top {
-  top: 18%;
-  left: 20%;
-  right: 20%;
-}
-.pyr-label-top .dgm-title {
+.q-layer-top .dgm-title,
+.q-layer-top .dgm-text {
   color: #fff;
-  font-size: var(--fs-body-sm);
 }
-.pyr-label-mid {
-  top: 51%;
-  left: 16%;
-  right: 16%;
-}
-.pyr-label-base {
-  top: 85%;
-}
-.gates > li {
+.q-gates {
   position: relative;
-  display: grid;
-  grid-template-columns: 1.75rem minmax(0, 1fr);
-  align-items: start;
-  gap: 0 0.9rem;
-  padding-block: 0.6rem;
+  margin-top: 0.75rem;
 }
-.gates > li:not(:last-child)::after {
+.q-gate {
+  position: relative;
+  padding-left: 2.75rem;
+}
+/* The pipeline line runs from node centre to node centre, behind the nodes. */
+.q-gate:not(:last-child)::before {
   content: "";
   position: absolute;
-  left: 0.875rem;
-  top: calc(0.6rem + 1.75rem);
-  bottom: -0.6rem;
-  border-left: 2px solid var(--dgm-border);
+  left: calc(1rem - 1px);
+  top: 1.5rem;
+  bottom: -1.5rem;
+  width: 2px;
+  background: var(--dgm-border);
 }
-.gate-icon {
-  width: 1.75rem;
-  height: 1.75rem;
+.q-gate[data-state="done"]:not(:last-child)::before {
+  background: var(--dgm-accent);
+}
+.q-gate-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+  min-height: 3rem;
+  margin-left: -2.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--dgm-ink);
+  text-align: left;
+  cursor: pointer;
+}
+.q-gate-btn:focus-visible {
+  outline: 2px solid var(--dgm-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}
+.q-node {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--dgm-border);
+  border-radius: 50%;
+  background: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--dgm-muted);
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+.q-gate[data-state="done"] .q-node {
+  border-color: var(--dgm-accent);
   color: var(--dgm-accent);
 }
-.gate-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  min-width: 0;
-  align-self: center;
+.q-gate[data-state="on"] .q-node {
+  border-color: var(--color-blue);
+  background: var(--color-blue);
+  color: #fff;
 }
-.gate-text {
-  align-self: center;
+.q-gate-title {
   font-family: var(--font-heading);
   font-size: var(--fs-body);
   font-weight: 600;
   line-height: 1.3;
+  color: var(--dgm-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.q-gate[data-state="on"] .q-gate-title,
+.q-gate-btn:hover .q-gate-title {
   color: var(--dgm-ink);
+}
+.q-gate-text {
+  max-width: 40ch;
+  margin: 0 0 0.6rem;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  color: var(--dgm-muted);
+}
+.q-gate-text[hidden] {
+  display: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .q-gate-text:not([hidden]) {
+    animation: sp-in 0.28s var(--ease-out);
+  }
 }
 @container dgm (min-width: 44rem) {
   .quality {
-    grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
-    column-gap: clamp(2rem, 6cqw, 4rem);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(2.5rem, 7cqw, 5rem);
+  }
+  .q-stack {
+    margin-top: 1rem;
   }
 }
 
@@ -803,6 +837,20 @@
 }
 .anatomy-base .dgm-text {
   color: var(--color-slate-on-dark);
+}
+.anatomy-pipe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0;
+}
+.anatomy-pipe > li {
+  display: inline-flex;
+  align-items: center;
+}
+.anatomy-pipe .arrow {
+  margin-inline: 0.75rem;
+  color: var(--color-blue-on-dark);
 }
 
 /* ---------------- Before and after ---------------- */
@@ -989,65 +1037,68 @@
   }
 }
 
-/* ---------------- Decision: which answer fits which situation ---------------- */
+/* ---------------- Decision: which answer fits which situation ----------------
+   One question, then rows: the situation in the visitor's words, and the recommendation beside
+   it (below it on narrow widths, joined by an accent rule). Column labels appear once. */
 .decision {
   display: grid;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 .decision-question {
   width: 100%;
-  max-width: 38rem;
+}
+.decision-heads {
+  display: none;
 }
 .decision-branches {
   display: grid;
-  gap: 0.8rem;
 }
 .decision-branch {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0;
+  gap: 0.4rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.tone-ink .decision-branch {
+  border-bottom-color: var(--color-ink-line);
 }
 .decision-when {
-  display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
-  padding-bottom: 0.45rem;
+  margin: 0;
+  font-size: var(--fs-body-sm);
+  line-height: 1.45;
+  color: var(--dgm-muted);
 }
-/* Narrow: the situation sits above its answer and a short line joins them, edge to edge. */
 .decision-arrow {
   display: none;
 }
 .decision-then {
-  position: relative;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--dgm-accent);
 }
-.decision-then::before {
-  content: "";
-  position: absolute;
-  left: 1.1rem;
-  top: -0.45rem;
-  width: 2px;
-  height: 0.45rem;
-  background: var(--dgm-accent);
-}
-@container dgm (min-width: 44rem) {
-  .decision-branch {
-    grid-template-columns: minmax(0, 1fr) 2.75rem minmax(0, 1.35fr);
-    align-items: stretch;
-    gap: 0;
+@container dgm (min-width: 40rem) {
+  .decision-heads {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.5rem minmax(0, 1.25fr);
+    margin-top: 0.5rem;
   }
-  .decision-when {
-    justify-content: center;
-    padding-block: 0.4rem;
+  .decision-heads > :last-child {
+    grid-column: 3;
+  }
+  .decision-branch {
+    grid-template-columns: minmax(0, 1fr) 2.5rem minmax(0, 1.25fr);
+    align-items: center;
+    gap: 0;
+    padding: 0.9rem 0;
   }
   .decision-arrow {
     display: grid;
     place-items: center;
-    height: auto;
     color: var(--dgm-accent);
-  }
-  .decision-then::before {
-    display: none;
   }
 }
 
@@ -1105,9 +1156,11 @@
   .ba-nodes > li {
     transition: opacity var(--dur-base) var(--ease-out);
   }
+  .decision-branch:hover .decision-when {
+    color: var(--dgm-ink);
+  }
   .sflow-step:hover .dgm-box,
   .funnel-stage:hover .dgm-box,
-  .decision-branch:hover .dgm-box,
   .ba-nodes > li:hover .dgm-box {
     border-color: var(--dgm-accent);
   }
