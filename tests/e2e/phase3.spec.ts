@@ -4,8 +4,8 @@ import { PAGES, registry } from "./helpers";
 const techPages = registry.pages.filter((p) => p.kind === "technology");
 
 test.describe("phase 3 technology pages", () => {
-  test("there are 32, each reachable from the Technologies hub", async ({ page }) => {
-    expect(techPages).toHaveLength(32);
+  test("there are 43, each reachable from the Technologies hub", async ({ page }) => {
+    expect(techPages).toHaveLength(43);
     await page.goto("/technologies/");
     const hrefs = await page
       .locator("main a")

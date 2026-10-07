@@ -16,8 +16,8 @@ export function SiteHeader() {
         <Link href="/" aria-label="DECHY home" className="block shrink-0 py-1.5">
           <Logo
             priority
-            sizes="(min-width: 74rem) 220px, 180px"
-            className="h-9 min-[30rem]:h-10 min-[74rem]:h-[3.25rem]"
+            sizes="(min-width: 80rem) 220px, 180px"
+            className="h-9 min-[30rem]:h-10 min-[80rem]:h-[3.25rem]"
           />
         </Link>
         <HeaderNav model={model} />

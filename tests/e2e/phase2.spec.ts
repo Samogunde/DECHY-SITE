@@ -29,11 +29,11 @@ test.describe("phase 2 site-wide contract", () => {
     }
   });
 
-  test("there are 85 pages: 15 services, 4 hubs, 25 Work Areas, 32 technology pages, and the rest", async () => {
-    expect(PAGES).toHaveLength(85);
+  test("there are 118 pages: 15 services, 7 hubs, 25 Work Areas, 43 technology pages, and the rest", async () => {
+    expect(PAGES).toHaveLength(118);
     expect(PAGES.filter((p) => p.kind === "service")).toHaveLength(15);
     expect(areas).toHaveLength(25);
-    expect(PAGES.filter((p) => p.kind === "hub" || p.kind === "work-hub")).toHaveLength(4);
+    expect(PAGES.filter((p) => p.kind === "hub" || p.kind === "work-hub")).toHaveLength(7);
   });
 
   test("every Work Area labels its scenario as an illustration", async ({ page }) => {

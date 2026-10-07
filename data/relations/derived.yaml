@@ -210,8 +210,16 @@ relations:
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.professional-services }
   - { from: svc.data-analytics, type: appliesToIndustry, to: ind.professional-services }
   - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.professional-services }
-  - { from: workarea.internal-business-tools, type: appliesToIndustry, to: ind.professional-services }
-  - { from: workarea.knowledge-and-content-systems, type: appliesToIndustry, to: ind.professional-services }
+  - {
+      from: workarea.internal-business-tools,
+      type: appliesToIndustry,
+      to: ind.professional-services,
+    }
+  - {
+      from: workarea.knowledge-and-content-systems,
+      type: appliesToIndustry,
+      to: ind.professional-services,
+    }
   - { from: plat.hubspot, type: appliesToIndustry, to: ind.professional-services }
   - { from: plat.airtable, type: appliesToIndustry, to: ind.professional-services }
   - { from: tech.zapier, type: appliesToIndustry, to: ind.professional-services }
@@ -265,7 +273,11 @@ relations:
   - { from: svc.api-integration, type: offersSolution, to: sol.ai-customer-support }
   - { from: workarea.ai-solutions, type: offersSolution, to: sol.ai-customer-support }
   - { from: workarea.ai-agents, type: offersSolution, to: sol.ai-customer-support }
-  - { from: workarea.knowledge-and-content-systems, type: offersSolution, to: sol.ai-customer-support }
+  - {
+      from: workarea.knowledge-and-content-systems,
+      type: offersSolution,
+      to: sol.ai-customer-support,
+    }
   - { from: prov.openai, type: offersSolution, to: sol.ai-customer-support }
   - { from: prov.anthropic-claude, type: offersSolution, to: sol.ai-customer-support }
   - { from: prov.google-gemini, type: offersSolution, to: sol.ai-customer-support }
@@ -282,14 +294,30 @@ relations:
   - { from: fw.react, type: offersSolution, to: sol.business-dashboards }
   - { from: svc.software-development, type: offersSolution, to: sol.business-process-automation }
   - { from: svc.consulting, type: offersSolution, to: sol.business-process-automation }
-  - { from: workarea.workflow-automation, type: offersSolution, to: sol.business-process-automation }
+  - {
+      from: workarea.workflow-automation,
+      type: offersSolution,
+      to: sol.business-process-automation,
+    }
   - { from: workarea.automation-systems, type: offersSolution, to: sol.business-process-automation }
-  - { from: workarea.internal-business-tools, type: offersSolution, to: sol.business-process-automation }
-  - { from: workarea.operations-platforms, type: offersSolution, to: sol.business-process-automation }
+  - {
+      from: workarea.internal-business-tools,
+      type: offersSolution,
+      to: sol.business-process-automation,
+    }
+  - {
+      from: workarea.operations-platforms,
+      type: offersSolution,
+      to: sol.business-process-automation,
+    }
   - { from: tech.zapier, type: offersSolution, to: sol.business-process-automation }
   - { from: tech.make, type: offersSolution, to: sol.business-process-automation }
   - { from: tech.n8n, type: offersSolution, to: sol.business-process-automation }
-  - { from: tech.microsoft-power-automate, type: offersSolution, to: sol.business-process-automation }
+  - {
+      from: tech.microsoft-power-automate,
+      type: offersSolution,
+      to: sol.business-process-automation,
+    }
   - { from: plat.airtable, type: offersSolution, to: sol.business-process-automation }
   - { from: lang.python, type: offersSolution, to: sol.business-process-automation }
   - { from: svc.cybersecurity, type: offersSolution, to: sol.cloud-migration }
@@ -314,9 +342,21 @@ relations:
   - { from: tech.zapier, type: offersSolution, to: sol.crm-integration }
   - { from: tech.make, type: offersSolution, to: sol.crm-integration }
   - { from: lang.python, type: offersSolution, to: sol.crm-integration }
-  - { from: workarea.custom-software-systems, type: offersSolution, to: sol.legacy-system-modernization }
-  - { from: workarea.operations-platforms, type: offersSolution, to: sol.legacy-system-modernization }
-  - { from: workarea.integration-platforms, type: offersSolution, to: sol.legacy-system-modernization }
+  - {
+      from: workarea.custom-software-systems,
+      type: offersSolution,
+      to: sol.legacy-system-modernization,
+    }
+  - {
+      from: workarea.operations-platforms,
+      type: offersSolution,
+      to: sol.legacy-system-modernization,
+    }
+  - {
+      from: workarea.integration-platforms,
+      type: offersSolution,
+      to: sol.legacy-system-modernization,
+    }
   - { from: lang.php, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: lang.java, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: tech.dotnet, type: offersSolution, to: sol.legacy-system-modernization }
@@ -364,7 +404,11 @@ relations:
   - { from: prov.anthropic-claude, type: offersSolution, to: sol.ai-agents }
   - { from: workarea.ai-solutions, type: usesTechnology, to: prov.anthropic-claude }
   - { from: workarea.ai-agents, type: usesTechnology, to: prov.anthropic-claude }
-  - { from: workarea.knowledge-and-content-systems, type: usesTechnology, to: prov.anthropic-claude }
+  - {
+      from: workarea.knowledge-and-content-systems,
+      type: usesTechnology,
+      to: prov.anthropic-claude,
+    }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.legal }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.finance }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.pharmaceuticals }
@@ -688,7 +732,11 @@ relations:
   - { from: tech.microsoft-power-automate, type: offersSolution, to: sol.crm-integration }
   - { from: workarea.automation-systems, type: usesTechnology, to: tech.microsoft-power-automate }
   - { from: workarea.workflow-automation, type: usesTechnology, to: tech.microsoft-power-automate }
-  - { from: workarea.internal-business-tools, type: usesTechnology, to: tech.microsoft-power-automate }
+  - {
+      from: workarea.internal-business-tools,
+      type: usesTechnology,
+      to: tech.microsoft-power-automate,
+    }
   - { from: tech.microsoft-power-automate, type: appliesToIndustry, to: ind.professional-services }
   - { from: tech.microsoft-power-automate, type: appliesToIndustry, to: ind.finance }
   - { from: tech.microsoft-power-automate, type: appliesToIndustry, to: ind.education }
@@ -957,7 +1005,11 @@ relations:
   - { from: svc.digital-marketing, type: hasWorkArea, to: workarea.brand-systems }
   - { from: workarea.brand-systems, type: relatedWork, to: workarea.ui-ux-product-design }
   - { from: workarea.brand-systems, type: relatedWork, to: workarea.digital-marketing-systems }
-  - { from: workarea.business-web-platforms, type: offersSolution, to: sol.customer-portal-development }
+  - {
+      from: workarea.business-web-platforms,
+      type: offersSolution,
+      to: sol.customer-portal-development,
+    }
   - { from: workarea.business-web-platforms, type: offersSolution, to: sol.booking-platforms }
   - { from: workarea.business-web-platforms, type: offersSolution, to: sol.saas-platforms }
   - { from: workarea.business-web-platforms, type: relatedWork, to: workarea.customer-portals }
@@ -972,11 +1024,23 @@ relations:
   - { from: workarea.commerce-systems, type: offersSolution, to: sol.payment-integration }
   - { from: workarea.commerce-systems, type: relatedWork, to: workarea.ecommerce-platforms }
   - { from: workarea.commerce-systems, type: relatedWork, to: workarea.integration-platforms }
-  - { from: workarea.custom-software-systems, type: offersSolution, to: sol.internal-business-software }
+  - {
+      from: workarea.custom-software-systems,
+      type: offersSolution,
+      to: sol.internal-business-software,
+    }
   - { from: workarea.custom-software-systems, type: offersSolution, to: sol.saas-platforms }
-  - { from: workarea.custom-software-systems, type: relatedWork, to: workarea.internal-business-tools }
+  - {
+      from: workarea.custom-software-systems,
+      type: relatedWork,
+      to: workarea.internal-business-tools,
+    }
   - { from: workarea.custom-software-systems, type: relatedWork, to: workarea.operations-platforms }
-  - { from: workarea.custom-software-systems, type: relatedWork, to: workarea.integration-platforms }
+  - {
+      from: workarea.custom-software-systems,
+      type: relatedWork,
+      to: workarea.integration-platforms,
+    }
   - { from: workarea.customer-portals, type: offersSolution, to: sol.customer-portal-development }
   - { from: workarea.customer-portals, type: offersSolution, to: sol.customer-experience-systems }
   - { from: workarea.customer-portals, type: relatedWork, to: workarea.business-web-platforms }
@@ -999,18 +1063,38 @@ relations:
   - { from: svc.automation, type: hasWorkArea, to: workarea.digital-marketing-systems }
   - { from: svc.api-integration, type: hasWorkArea, to: workarea.digital-marketing-systems }
   - { from: svc.data-analytics, type: hasWorkArea, to: workarea.digital-marketing-systems }
-  - { from: workarea.digital-marketing-systems, type: relatedWork, to: workarea.seo-search-visibility }
-  - { from: workarea.digital-marketing-systems, type: relatedWork, to: workarea.integration-platforms }
+  - {
+      from: workarea.digital-marketing-systems,
+      type: relatedWork,
+      to: workarea.seo-search-visibility,
+    }
+  - {
+      from: workarea.digital-marketing-systems,
+      type: relatedWork,
+      to: workarea.integration-platforms,
+    }
   - { from: workarea.digital-products, type: offersSolution, to: sol.saas-platforms }
   - { from: workarea.digital-products, type: offersSolution, to: sol.marketplace-platforms }
   - { from: workarea.digital-products, type: relatedWork, to: workarea.ui-ux-product-design }
   - { from: workarea.digital-products, type: relatedWork, to: workarea.mobile-apps }
   - { from: workarea.digital-products, type: relatedWork, to: workarea.custom-software-systems }
   - { from: workarea.digital-transformation, type: offersSolution, to: sol.digital-transformation }
-  - { from: workarea.digital-transformation, type: offersSolution, to: sol.legacy-system-modernization }
+  - {
+      from: workarea.digital-transformation,
+      type: offersSolution,
+      to: sol.legacy-system-modernization,
+    }
   - { from: workarea.digital-transformation, type: relatedWork, to: workarea.operations-platforms }
-  - { from: workarea.digital-transformation, type: relatedWork, to: workarea.internal-business-tools }
-  - { from: workarea.digital-transformation, type: relatedWork, to: workarea.custom-software-systems }
+  - {
+      from: workarea.digital-transformation,
+      type: relatedWork,
+      to: workarea.internal-business-tools,
+    }
+  - {
+      from: workarea.digital-transformation,
+      type: relatedWork,
+      to: workarea.custom-software-systems,
+    }
   - { from: workarea.ecommerce-platforms, type: offersSolution, to: sol.ecommerce-systems }
   - { from: workarea.ecommerce-platforms, type: offersSolution, to: sol.payment-integration }
   - { from: workarea.ecommerce-platforms, type: offersSolution, to: sol.subscription-platforms }
@@ -1020,31 +1104,67 @@ relations:
   - { from: workarea.integration-platforms, type: relatedWork, to: workarea.api-integrations }
   - { from: workarea.integration-platforms, type: relatedWork, to: workarea.automation-systems }
   - { from: workarea.integration-platforms, type: relatedWork, to: workarea.data-analytics }
-  - { from: workarea.internal-business-tools, type: offersSolution, to: sol.internal-business-software }
+  - {
+      from: workarea.internal-business-tools,
+      type: offersSolution,
+      to: sol.internal-business-software,
+    }
   - { from: workarea.internal-business-tools, type: offersSolution, to: sol.workflow-automation }
   - { from: workarea.internal-business-tools, type: relatedWork, to: workarea.operations-platforms }
   - { from: workarea.internal-business-tools, type: relatedWork, to: workarea.workflow-automation }
-  - { from: workarea.internal-business-tools, type: relatedWork, to: workarea.custom-software-systems }
-  - { from: svc.software-development, type: hasWorkArea, to: workarea.knowledge-and-content-systems }
-  - { from: workarea.knowledge-and-content-systems, type: offersSolution, to: sol.ai-knowledge-systems }
+  - {
+      from: workarea.internal-business-tools,
+      type: relatedWork,
+      to: workarea.custom-software-systems,
+    }
+  - {
+      from: svc.software-development,
+      type: hasWorkArea,
+      to: workarea.knowledge-and-content-systems,
+    }
+  - {
+      from: workarea.knowledge-and-content-systems,
+      type: offersSolution,
+      to: sol.ai-knowledge-systems,
+    }
   - { from: workarea.knowledge-and-content-systems, type: relatedWork, to: workarea.ai-solutions }
-  - { from: workarea.knowledge-and-content-systems, type: relatedWork, to: workarea.seo-search-visibility }
-  - { from: workarea.knowledge-and-content-systems, type: relatedWork, to: workarea.business-web-platforms }
+  - {
+      from: workarea.knowledge-and-content-systems,
+      type: relatedWork,
+      to: workarea.seo-search-visibility,
+    }
+  - {
+      from: workarea.knowledge-and-content-systems,
+      type: relatedWork,
+      to: workarea.business-web-platforms,
+    }
   - { from: svc.ui-ux, type: hasWorkArea, to: workarea.mobile-apps }
   - { from: svc.api-integration, type: hasWorkArea, to: workarea.mobile-apps }
   - { from: workarea.mobile-apps, type: relatedWork, to: workarea.digital-products }
   - { from: workarea.mobile-apps, type: relatedWork, to: workarea.customer-portals }
   - { from: workarea.mobile-apps, type: relatedWork, to: workarea.operations-platforms }
   - { from: svc.automation, type: hasWorkArea, to: workarea.operations-platforms }
-  - { from: workarea.operations-platforms, type: offersSolution, to: sol.internal-business-software }
+  - {
+      from: workarea.operations-platforms,
+      type: offersSolution,
+      to: sol.internal-business-software,
+    }
   - { from: workarea.operations-platforms, type: relatedWork, to: workarea.internal-business-tools }
   - { from: workarea.operations-platforms, type: relatedWork, to: workarea.workflow-automation }
   - { from: workarea.operations-platforms, type: relatedWork, to: workarea.custom-software-systems }
   - { from: svc.web-development, type: hasWorkArea, to: workarea.seo-search-visibility }
   - { from: svc.digital-marketing, type: hasWorkArea, to: workarea.seo-search-visibility }
   - { from: workarea.seo-search-visibility, type: relatedWork, to: workarea.business-web-platforms }
-  - { from: workarea.seo-search-visibility, type: relatedWork, to: workarea.digital-marketing-systems }
-  - { from: workarea.seo-search-visibility, type: relatedWork, to: workarea.knowledge-and-content-systems }
+  - {
+      from: workarea.seo-search-visibility,
+      type: relatedWork,
+      to: workarea.digital-marketing-systems,
+    }
+  - {
+      from: workarea.seo-search-visibility,
+      type: relatedWork,
+      to: workarea.knowledge-and-content-systems,
+    }
   - { from: workarea.ui-ux-product-design, type: usesTechnology, to: tool.figma }
   - { from: workarea.ui-ux-product-design, type: usesTechnology, to: tool.adobe-xd }
   - { from: workarea.ui-ux-product-design, type: relatedWork, to: workarea.digital-products }

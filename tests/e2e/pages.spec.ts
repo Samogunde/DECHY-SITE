@@ -152,7 +152,7 @@ test("the homepage shows all 15 service pillars, each a link to its page", async
 });
 
 test("unknown URLs return a real 404 with noindex", async ({ page }) => {
-  const res = await page.goto("/industries/");
+  const res = await page.goto("/industries/aerospace/");
   expect(res?.status()).toBe(404);
   await expect(page.locator("h1")).toHaveText("That page does not exist.");
   expect(await page.locator('meta[name="robots"]').first().getAttribute("content")).toContain(

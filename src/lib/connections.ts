@@ -69,7 +69,15 @@ export function connectionsFor(page: Page, registry: Registry): ConnectionRail[]
     // A Solution without a page (represented through a Work Area, deferred, or graph-only) is
     // not offered as an inert name: the Systems we build rail already points to what answers it.
     const plain = rail.id === "solutions" ? [] : items.filter((i) => !i.href);
-    const all = [...linked, ...plain].slice(0, CONNECTION_RAIL_LIMIT);
+    // On a service page, every technology page that belongs to the service is always offered, first,
+    // even when the page lists more technologies than a rail normally shows.
+    const home =
+      rail.id === "technologies" && page.kind === "service"
+        ? linked.filter((i) => registry.nodes.get(i.id)?.primaryService === self)
+        : [];
+    const homeIds = new Set(home.map((i) => i.id));
+    const rest = [...linked.filter((i) => !homeIds.has(i.id)), ...plain];
+    const all = [...home, ...rest].slice(0, Math.max(CONNECTION_RAIL_LIMIT, home.length));
     if (all.length) rails.push({ id: rail.id, title: rail.title, items: all });
   }
   return rails;

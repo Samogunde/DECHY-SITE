@@ -636,7 +636,7 @@ export function HeaderNav({ model }: Props) {
       }
     };
     const onResize = () => {
-      if (window.matchMedia("(min-width: 74rem)").matches) setMobileOpen(false);
+      if (window.matchMedia("(min-width: 80rem)").matches) setMobileOpen(false);
     };
     document.addEventListener("keydown", onKey);
     window.addEventListener("resize", onResize);
@@ -659,9 +659,9 @@ export function HeaderNav({ model }: Props) {
     <>
       <div className="ml-auto flex h-full items-center">
         {/* Desktop navigation */}
-        <nav aria-label="Primary" className="hidden h-full min-[74rem]:block">
+        <nav aria-label="Primary" className="hidden h-full min-[80rem]:block">
           <ul
-            className="m-0 flex h-full list-none items-stretch gap-4 p-0 min-[80rem]:gap-6 font-[family-name:var(--font-heading)] font-semibold"
+            className="m-0 flex h-full list-none items-stretch gap-4 p-0 font-[family-name:var(--font-heading)] font-semibold"
             style={{ fontSize: "var(--fs-nav)" }}
           >
             {items.map((item) => {
@@ -769,12 +769,12 @@ export function HeaderNav({ model }: Props) {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-1 min-[74rem]:gap-0 min-[74rem]:pl-4">
+        <div className="flex items-center gap-1 min-[80rem]:gap-0 min-[80rem]:pl-4">
           <SiteSearch className="max-[29.99rem]:hidden" />
           <Link
             prefetch={false}
             href={cta.href}
-            className="btn btn-primary hidden min-h-11 whitespace-nowrap px-4 min-[23rem]:inline-flex min-[74rem]:ml-4 min-[74rem]:px-[1.25rem]"
+            className="btn btn-primary hidden min-h-11 whitespace-nowrap px-4 min-[23rem]:inline-flex min-[80rem]:ml-4 min-[80rem]:px-[1.25rem]"
           >
             {cta.label}
           </Link>
@@ -785,7 +785,7 @@ export function HeaderNav({ model }: Props) {
             aria-controls={mobilePanelId}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             onClick={() => setMobileOpen((v) => !v)}
-            className="ml-1 inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-ink bg-transparent px-3 font-[family-name:var(--font-heading)] text-[length:var(--fs-label)] font-semibold text-ink min-[74rem]:hidden"
+            className="ml-1 inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-ink bg-transparent px-3 font-[family-name:var(--font-heading)] text-[length:var(--fs-label)] font-semibold text-ink min-[80rem]:hidden"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
               {mobileOpen ? (
@@ -818,7 +818,7 @@ export function HeaderNav({ model }: Props) {
         aria-label="Site menu"
         data-open={mobileOpen}
         inert={!mobileOpen}
-        className="nav-panel fixed inset-x-0 bottom-0 top-[var(--header-h)] z-40 flex flex-col bg-paper min-[74rem]:hidden"
+        className="nav-panel fixed inset-x-0 bottom-0 top-[var(--header-h)] z-40 flex flex-col bg-paper min-[80rem]:hidden"
       >
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <div className="container-site py-4">

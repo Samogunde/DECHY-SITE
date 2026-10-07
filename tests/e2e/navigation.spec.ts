@@ -3,7 +3,6 @@ import { PAGES, registry, watchErrors } from "./helpers";
 
 const published = new Set(PAGES.map((p) => p.path));
 const SERVICES = registry.services.length;
-const TECH_PAGES = registry.pages.filter((p) => p.kind === "technology").length;
 const WORK_AREAS = registry.pages.filter((p) => p.kind === "work-area").length;
 
 const primary = (page: Page) => page.getByRole("navigation", { name: "Primary" });
@@ -23,22 +22,20 @@ async function panelHrefs(page: Page, name: string): Promise<string[]> {
 test.describe("desktop navigation", () => {
   test.use({ viewport: { width: 1440, height: 900 } });
 
-  test("approved items: hubs are links, unbuilt sections are plain text", async ({ page }) => {
+  test("approved items: every primary item is a link to its hub", async ({ page }) => {
     await page.goto("/");
     for (const [label, href] of [
       ["Services", "/services/"],
       ["Solutions", "/solutions/"],
       ["Technologies", "/technologies/"],
+      ["Industries", "/industries/"],
       ["Work", "/work/"],
+      ["Resources", "/resources/"],
       ["Company", "/company/"],
     ] as const)
       await expect(labelLink(page, label), label).toHaveAttribute("href", href);
-    for (const label of ["Industries", "Resources"]) {
-      await expect(primary(page).getByText(label, { exact: true })).toBeVisible();
-      await expect(primary(page).getByRole("link", { name: label, exact: true })).toHaveCount(0);
-    }
-    // Only the three sections with real children have a menu control
-    await expect(page.locator("[data-chevron]")).toHaveCount(3);
+    // Only the five sections with real children have a menu control
+    await expect(page.locator("[data-chevron]")).toHaveCount(5);
     const cta = page.locator("header").getByRole("link", { name: "Talk to DECHY" });
     await expect(cta).toHaveAttribute("href", "/contact/");
   });
@@ -195,15 +192,32 @@ test.describe("desktop navigation", () => {
     for (const h of hrefs) expect(published.has(h), h).toBe(true);
   });
 
+  test("Solutions and Industries menus list exactly the published Solution and industry pages", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const published = new Set(registry.pages.map((p) => p.path));
+    const solutions = await panelHrefs(page, "Solutions");
+    expect(
+      solutions.filter((h) => h.startsWith("/solutions/") && h !== "/solutions/"),
+    ).toHaveLength(registry.pages.filter((p) => p.kind === "solution").length);
+    expect(solutions).toContain("/solutions/");
+    const industries = await panelHrefs(page, "Industries");
+    expect(
+      industries.filter((h) => h.startsWith("/industries/") && h !== "/industries/"),
+    ).toHaveLength(registry.pages.filter((p) => p.kind === "industry").length);
+    for (const h of [...solutions, ...industries]) expect(published.has(h), h).toBe(true);
+  });
+
   test("every menu link resolves, and no category shows more than its menu limit", async ({
     page,
     request,
   }) => {
     await page.goto("/");
     const all = new Set<string>();
-    for (const name of ["Services", "Technologies", "Work"])
+    for (const name of ["Services", "Solutions", "Technologies", "Industries", "Work"])
       for (const h of await panelHrefs(page, name)) all.add(h);
-    expect(all.size).toBeGreaterThan(SERVICES + TECH_PAGES);
+    expect(all.size).toBeGreaterThan(SERVICES + WORK_AREAS + 6 + 8);
     for (const h of all) expect((await request.get(h)).status(), h).toBe(200);
     await chevron(page, "Technologies").click();
     const visible = await panelOf(page, "Technologies").getByRole("tabpanel").locator("li").count();
