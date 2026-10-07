@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A digital product is software that customers use as the thing you offer, such as an app, a platform, or an online service, and that you keep improving.
+  what: "We build digital products: software your customers use as the thing you offer, such as an app, a platform, or an online service, and we keep improving it with you."
   problem: Teams build too much before learning what people want, or launch and then have no plan to improve.
   audience: Founders and teams creating a software offering, and organizations turning an internal tool into a product.
   choose: Build the smallest version that tests your biggest assumption, learn from real use, and grow what people value.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Digital Products
-    lead: A digital product is software that people use as the thing you offer. This page explains how a product is shaped, tested, launched, and improved, and why the smallest first version is usually the right one.
+    lead: "We shape, build, launch, and improve digital products: software people use as the thing you offer. We start with the smallest version that proves the idea, put it in front of real users early, and grow it from what they do."
     ctas:
       - label: Discuss a product
         href: /contact/?service=software-development

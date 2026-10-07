@@ -23,7 +23,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Legacy system modernization is the work of updating or replacing old business software so that it can be changed safely, supported, and connected to the tools you use now.
+  what: "We update or replace old business software in stages, so it can be changed safely, supported, and connected to the tools you use now, while the business keeps running."
   problem: The software still runs the business, but it is hard to change, tied to old servers, understood by few people, and getting riskier every year.
   audience: Owners and technology leads of long-running business systems, and teams told that a platform or server is reaching the end of its support.
   choose: "Move in stages: first make the system safe and understood, then connect it, then replace it piece by piece. Choose a full rewrite only when the old system has nothing worth keeping."

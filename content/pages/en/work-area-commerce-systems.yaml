@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: "A commerce system is the machinery behind selling when selling is not simple: complex pricing, repeating payments, many sellers, or orders that need several steps."
+  what: "We build the machinery behind selling when selling is not simple: complex pricing, repeating payments, many sellers, or orders that need several steps."
   problem: A standard store cannot handle quotes, subscriptions, multiple sellers, or custom prices, so staff manage these by hand.
   audience: Businesses whose selling model goes beyond a basket and a checkout, such as subscriptions, marketplaces, or made-to-order goods.
   choose: Name the selling model first, then check which parts a standard platform covers and which need custom work.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Commerce Systems
-    lead: "Some businesses sell in ways a basic store cannot handle: repeating payments, many sellers, quotes, or made-to-order goods. A commerce system is the machinery for those cases. This page explains the common models and what each needs."
+    lead: "We build commerce systems for businesses that sell in ways a basic store cannot handle: repeating payments, many sellers, quotes, or made-to-order goods. We choose the model that fits how you sell, then build the billing, order handling, and connections behind it."
     ctas:
       - label: Discuss your commerce setup
         href: /contact/?service=ecommerce

@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: "An ecommerce platform is the whole system that lets you sell online: a catalog, a basket, payment, order handling, and links to stock and delivery."
+  what: "We build the whole system that lets you sell online: a catalog, a basket, payment, order handling, and links to stock and delivery."
   problem: A store that looks fine but handles orders, stock, and payments badly loses sales and costs staff time.
   audience: Businesses starting to sell online, and sellers whose store has outgrown its first set-up.
   choose: Start from a proven platform when your selling is standard. Build custom parts only where your product or process is unusual.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Ecommerce Platforms
-    lead: An ecommerce platform is more than a shop window. It is a catalog, a basket, payment, order handling, and links to stock and delivery. This page shows how those parts fit, and how to pick a foundation.
+    lead: "We build ecommerce platforms that do more than display products: the catalog, basket, payment, order handling, and the links to stock and delivery that keep them in step. We help you choose the right foundation first, then build on it."
     ctas:
       - label: Discuss a store
         href: /contact/?service=ecommerce

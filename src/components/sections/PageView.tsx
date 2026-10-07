@@ -5,8 +5,10 @@ import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import { getPage, getRegistry } from "@/lib/content/load";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { buildGraph } from "@/lib/seo/structured-data";
+import { Figure } from "@/components/figures/Figure";
 import { BlockRenderer } from "./BlockRenderer";
 import { articlePages } from "./DiscoveryBlocks";
+import { IndustryProfile, SolutionBlueprint, SystemFrame, TechProfile } from "./FamilyHero";
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
@@ -39,6 +41,36 @@ export function PageView({ path }: { path: string }) {
   const first = page.sections[0];
   const rest = first?.type === "hero" ? page.sections.slice(1) : page.sections;
 
+  // Each page family opens differently. Technology and industry pages show a profile beside the
+  // headline and move the hero's teaching diagram next to the opening text; solution pages show
+  // the answer as a blueprint.
+  const hero = first?.type === "hero" ? first : undefined;
+  const heroVisual = Boolean(hero && (hero.spec || hero.figure));
+  const aside =
+    hero && page.kind === "technology" ? (
+      <TechProfile page={page} registry={registry} />
+    ) : hero && page.kind === "industry" ? (
+      <IndustryProfile page={page} registry={registry} />
+    ) : hero && heroVisual && page.kind === "solution" ? (
+      <SolutionBlueprint page={page} registry={registry} hero={hero} />
+    ) : hero && hero.spec && page.kind === "work-area" ? (
+      <SystemFrame page={page} registry={registry} hero={hero} />
+    ) : undefined;
+  const opening =
+    hero && heroVisual && (page.kind === "technology" || page.kind === "industry")
+      ? rest.find((b) => b.type === "definition" || b.type === "prose")
+      : undefined;
+  const openingVisual =
+    opening && hero ? (
+      <Figure
+        id={hero.figure}
+        spec={hero.spec}
+        title={hero.visualTitle ?? hero.headline}
+        uid={`${hero.id}-open`}
+        caption={hero.figureCaption ?? ""}
+      />
+    ) : undefined;
+
   return (
     <>
       <JsonLd data={graph} />
@@ -61,6 +93,7 @@ export function PageView({ path }: { path: string }) {
         <BlockRenderer
           block={first}
           breadcrumbs={first.variant !== "home" ? <Breadcrumbs crumbs={crumbs} /> : undefined}
+          aside={aside}
         />
       ) : null}
       {guided && page.comprehension ? (
@@ -68,7 +101,12 @@ export function PageView({ path }: { path: string }) {
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
       {rest.map((block) => (
-        <BlockRenderer key={block.id} block={block} page={page} />
+        <BlockRenderer
+          key={block.id}
+          block={block}
+          page={page}
+          visual={block === opening ? openingVisual : undefined}
+        />
       ))}
     </>
   );

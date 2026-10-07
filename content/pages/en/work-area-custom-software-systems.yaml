@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A custom software system is a program built for one organization's way of working, instead of a general product that everyone shares.
+  what: "We build custom software systems: programs made for one organization's way of working, instead of a general product that everyone shares."
   problem: Off-the-shelf tools force your process to bend to them, and work ends up in spreadsheets, workarounds, and several half-fitting products.
   audience: Leaders whose process is unusual or central to the business, and teams that have outgrown spreadsheets and ready-made tools.
   choose: Choose custom when the process is your advantage, no product fits, or connecting several products costs more than building one system.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Custom Software Systems
-    lead: These are programs built around how one organization works. They hold your data, follow your rules, and connect to the tools you already use. This page explains what they contain, how we build them, and when they are worth it.
+    lead: "We build software around how one organization works: it holds your data, follows your rules, and connects to the tools you already use. We start with the workflow, deliver in stages you can use early, and recommend an existing product when one fits better."
     ctas:
       - label: Discuss a system
         href: /contact/?service=software-development

@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A customer portal is a private area of a website where signed-in customers can see their own orders, documents, messages, and account details, and act on them.
+  what: "We build customer portals: private areas of a website where signed-in customers see their own orders, documents, messages, and account details, and act on them."
   problem: Customers phone or email to ask where things are, staff answer the same questions all day, and documents travel by unsafe attachments.
   audience: Organizations with repeat customers or clients, and service teams that spend time on status questions.
   choose: Offer the few self-service tasks that customers ask for most, and make signing in simple and safe.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Customer Portals
-    lead: A customer portal is a private place where clients sign in to see their own information and do things for themselves. This page explains what a portal contains, how access is controlled, and what it saves.
+    lead: "We build customer portals: private, secure areas where your clients sign in to check an order, download an invoice, send a document, or ask for a change. Customers get answers without calling, and your staff work from the same record."
     ctas:
       - label: Discuss a portal
         href: /contact/?service=web-development

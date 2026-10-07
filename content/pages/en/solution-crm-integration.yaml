@@ -23,7 +23,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: CRM integration connects your customer relationship management (CRM) system, where customer records live, to the other tools that create or need those records.
+  what: "We connect your customer relationship management (CRM) system, where customer records live, to the other tools that create or need those records."
   problem: The customer record in the CRM disagrees with billing, the website, and support, so staff re-type details, chase the latest version, and trust none of them.
   audience: Sales, service, and operations leaders whose teams work across a CRM and several other tools, and owners who want one reliable view of each customer.
   choose: Decide which system owns each piece of data first. Then connect the systems so that each fact is entered once and flows to where it is needed.

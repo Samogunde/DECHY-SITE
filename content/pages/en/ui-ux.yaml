@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "UI/UX and product design is making software and websites easy to understand and pleasant to use: researching users, designing screens, testing them, and handing them to builders."
+  what: "We make software and websites easy to understand and pleasant to use: we research users, design the UI (user interface) and the UX (user experience), test them, and hand them to builders."
   problem: People cannot find things, abandon forms, or need training for tools that should be obvious. Teams argue about design because nothing has been tested.
   audience: Teams building a product or site, and organizations whose screens confuse customers or staff.
   choose: "Choose by what you have: research when you do not know what people need, design when you know but cannot show it, and testing when something exists but does not work well."

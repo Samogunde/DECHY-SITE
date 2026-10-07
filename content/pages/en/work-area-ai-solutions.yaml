@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: An AI solution is a system that uses machine learning, often a language model, to read, summarize, classify, predict, or answer as part of a business process.
+  what: "We build AI solutions that use machine learning, often a language model, to read, summarize, classify, predict, or answer as part of a business process."
   problem: Teams spend hours reading documents, sorting requests, and answering similar questions, and a chatbot added without care gives wrong answers.
   audience: Teams with large volumes of text or repeated judgments, and leaders who want AI used responsibly, not for show.
   choose: Start with a narrow, checkable task, keep people in control of decisions that matter, and measure the result before widening the scope.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: AI Solutions
-    lead: An AI solution is software that reads, sorts, summarizes, or answers inside a real business process. This page explains what such systems contain, how they are checked, and where we advise against using them.
+    lead: "We build AI into the processes you already run: reading documents, sorting requests, summarizing cases, and answering questions from your own information. Each system is checked against real examples before launch, and we tell you plainly where AI is not the right tool."
     ctas:
       - label: Discuss your AI project
         href: /contact/?service=ai

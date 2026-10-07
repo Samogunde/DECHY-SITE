@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: "UI/UX and product design here means the working system behind good screens: user research, prototypes, testing, and a shared kit of parts that keeps screens consistent."
+  what: "We build the working system behind good screens: user research, prototypes, testing, and a shared kit of parts that keeps every UI (user interface) and UX (user experience) consistent."
   problem: Screens designed one at a time drift apart, new features look different from old ones, and design decisions are argued about, not tested.
   audience: Product teams whose screens have become inconsistent, and organizations about to build several related screens or apps.
   choose: Build a small design system when you have more than a handful of screens. Test with users before building.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: UI/UX and Product Design
-    lead: "Good screens come from a system, not from luck. UI (user interface) is what people see, and UX (user experience) is how it feels to get something done. This page shows the system behind both: research, testing, and a shared kit of parts."
+    lead: "We design the screens people use, the UI (user interface), and how it feels to get something done on them, the UX (user experience). Our design work rests on a system: research with real users, testing before building, and a shared kit of parts so every screen stays consistent."
     ctas:
       - label: Discuss your design project
         href: /contact/?service=ui-ux

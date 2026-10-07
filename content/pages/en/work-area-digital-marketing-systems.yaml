@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A digital marketing system is the set of connected tools that capture interest, follow up, and measure results, linked to your customer records.
+  what: "We build digital marketing systems: connected tools that capture interest, follow it up, and measure results, linked to your customer records."
   problem: Leads arrive through many channels, follow-up is slow, and nobody can say which activity produced a customer.
   audience: Marketing and sales teams that want to see results by channel, and owners who suspect leads are being lost.
   choose: Connect capture, follow-up, and records first. Add channels only after the system can measure them.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Digital Marketing Systems
-    lead: A marketing system connects the places interest arrives to the people who follow it up, and to your customer records. This page shows what it contains and how it shows you which activity produces customers.
+    lead: "We build marketing systems that connect where interest arrives to the people who follow it up and to your customer records. Every form, campaign, and email is tracked through to the result, so you can see which activity actually produces customers."
     ctas:
       - label: Discuss your marketing systems
         href: /contact/?service=digital-marketing

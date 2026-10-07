@@ -17,7 +17,7 @@ datePublished: "2026-10-05"
 dateModified: "2026-10-05"
 schemaTypes: [WebPage, AboutPage, FAQPage]
 comprehension:
-  what: "A DECHY project moves through five stages, from understanding the problem to supporting what was built, with regular, plain reports and clear decision points."
+  what: "We run every project through five stages, from understanding the problem to supporting what we built, with regular, plain reports and clear decision points."
   problem: "Technology projects fail from unclear goals, silent progress, and surprises about cost or timing."
   audience: "Buyers deciding how to work with a technology partner, and teams who want to know what to expect."
   choose: "Choose the shape of engagement by how well you know what you need: a defined project, an ongoing team, or advice first."
@@ -29,7 +29,7 @@ sections:
     variant: hub
     eyebrow: Company
     headline: How we work with you
-    lead: "At DECHY, a project follows a clear path, with plain reports and decisions kept in your hands. This page shows the stages, how we communicate, and the shapes an engagement can take."
+    lead: "At DECHY, a project follows a clear path, with plain reports and decisions kept in your hands. You always know which stage the work is in, what it delivers, and what comes next."
     support: "The details change with each project. The principles stay the same."
     ctas:
       - { label: Talk to us, href: "/contact/" }

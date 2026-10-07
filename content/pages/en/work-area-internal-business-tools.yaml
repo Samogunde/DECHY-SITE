@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: An internal business tool is a simple system built for your own staff, such as a tracker, a request form, or a dashboard, replacing a spreadsheet or an email chain.
+  what: "We build simple systems for your own staff, such as a tracker, a request form, or a dashboard, to replace a spreadsheet or an email chain."
   problem: Important work runs on spreadsheets that break, are overwritten, or live on one person's computer.
   audience: Teams whose work depends on shared spreadsheets, and managers who want a record of who did what.
   choose: Replace a spreadsheet when several people edit it, mistakes are costly, or you need history. Keep it when one person uses it.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Internal Business Tools
-    lead: An internal tool is a simple system for your own staff. It takes over from the spreadsheet or the email chain that the team has outgrown. This page explains what these tools look like and when to build one.
+    lead: "We build internal tools for your own staff: simple systems that take over from the spreadsheet or email chain the team has outgrown. Each one fits a specific job, such as approvals, scheduling, or stock, and is quick to learn."
     ctas:
       - label: Discuss a tool
         href: /contact/?service=software-development

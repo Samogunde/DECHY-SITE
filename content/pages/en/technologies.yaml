@@ -16,7 +16,7 @@ datePublished: "2026-10-05"
 dateModified: "2026-10-05"
 schemaTypes: [WebPage, CollectionPage, FAQPage]
 comprehension:
-  what: "This page lists the kinds of technology DECHY works with and explains how we choose among them for a given project."
+  what: "We work with many kinds of technology and choose among them for each project, explaining why."
   problem: "Technology choices are hard to judge from outside, and a wrong choice can lock you in, cost more, or be hard to maintain."
   audience: "Leaders who want to understand the reasoning behind technology choices, and technical people checking whether we work with their tools."
   choose: "Choose technology by what the project needs, who will maintain it, and what it will cost to change, and not by what is fashionable."
@@ -28,7 +28,7 @@ sections:
     variant: hub
     eyebrow: Technologies
     headline: Technology chosen for fit
-    lead: "At DECHY, we work with a wide range of languages, frameworks, platforms, and tools. What matters more than the list is how we choose among them. This page explains the reasoning and shows what we commonly use."
+    lead: "At DECHY, we work with a wide range of languages, frameworks, platforms, and tools. What matters more than the list is how we choose among them. We choose for each project, not from habit, and explain the reasoning before you commit."
     support: "We recommend what fits you, including tools you already own, and we explain why."
     ctas:
       - { label: Discuss your stack, href: "/contact/" }

@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Integration connects separate business systems, such as your website, customer records, payments, and accounting, so information moves between them automatically.
+  what: "We connect your business systems, such as your website, customer records, payments, and accounting, so information moves between them automatically and nobody types it twice."
   problem: When systems do not share information, people type the same details more than once, numbers disagree between reports, and things get missed.
   audience: Teams that use several tools for one process, and owners who suspect they pay people to copy information between screens.
   choose: Connect systems when your tools are fine but separate. Choose the simplest connection that is reliable, and replace a tool only when it cannot be connected.

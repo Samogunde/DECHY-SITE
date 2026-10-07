@@ -23,7 +23,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Business process automation means letting software carry out the repeated steps of a process, such as collecting a request, checking it, routing it for approval, and updating records.
+  what: "We let software carry out the repeated steps of your processes, such as collecting a request, checking it, routing it for approval, and updating records."
   problem: Work moves by email and spreadsheet, details are typed more than once, approvals stall in inboxes, and nobody can see where a request has got to.
   audience: Operations, finance, and service leaders whose teams spend hours on routine steps, and owners who feel the business is held back by manual work.
   choose: Automate the steps that follow fixed rules and repeat often. Fix an unclear process before you automate it, and keep people in the steps that need judgment.

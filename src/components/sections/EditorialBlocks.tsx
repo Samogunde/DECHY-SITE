@@ -1,9 +1,11 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
+import { Arrow } from "@/components/primitives/Arrow";
 import { EntityLink, Inline } from "@/components/primitives/Inline";
 import { Photo } from "@/components/primitives/Photo";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
-import { pathExists } from "@/lib/content/urls";
+import { pathExists, publishedPath } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
@@ -32,11 +34,82 @@ export function StatementBlock({ block }: { block: Of<"statement"> }) {
   );
 }
 
+/** The opening text beside a visual: heading, the direct answer, then the supporting paragraphs. */
+function AnswerVisual({
+  block,
+  answer,
+  paragraphs,
+  visual,
+  aside,
+}: {
+  block: { id: string; tone: "paper" | "white" | "ink"; label: string; heading: string };
+  answer: string;
+  paragraphs: string[];
+  visual: ReactNode;
+  aside?: { title: string; items: string[] };
+}) {
+  return (
+    <Section id={block.id} tone={block.tone}>
+      <div className="answer-visual">
+        <div className="answer-visual-text">
+          <SectionHeader id={block.id} label={block.label} heading={block.heading} />
+          <p className="answer-lead" data-reveal="block">
+            <Inline text={answer} />
+          </p>
+          {paragraphs.length > 0 ? (
+            <div className="prose-service answer-visual-body" data-reveal="block">
+              {paragraphs.map((p, i) => (
+                <p key={i}>
+                  <Inline text={p} />
+                </p>
+              ))}
+            </div>
+          ) : null}
+          {aside ? <AsideCard aside={aside} /> : null}
+        </div>
+        <div className="answer-visual-figure" data-reveal="figure">
+          {visual}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+function AsideCard({ aside }: { aside: { title: string; items: string[] } }) {
+  return (
+    <aside className="aside-card" aria-label={aside.title}>
+      <p className="aside-card-title">{aside.title}</p>
+      <ul className="aside-card-list">
+        {aside.items.map((it) => (
+          <li key={it}>
+            <Inline text={it} />
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
+
 /**
  * Answer-first opening: the heading and the direct answer share the left column, so the answer is
  * read first and the column is never an empty rail; the supporting paragraphs sit beside it.
  */
-export function DefinitionBlock({ block }: { block: Of<"definition"> }) {
+export function DefinitionBlock({
+  block,
+  visual,
+}: {
+  block: Of<"definition">;
+  visual?: ReactNode;
+}) {
+  if (visual)
+    return (
+      <AnswerVisual
+        block={block}
+        answer={block.answer}
+        paragraphs={block.paragraphs}
+        visual={visual}
+      />
+    );
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="answer-split">
@@ -60,27 +133,48 @@ export function DefinitionBlock({ block }: { block: Of<"definition"> }) {
   );
 }
 
-export function ProseBlock({ block }: { block: Of<"prose"> }) {
+/**
+ * Running text. Its first paragraph is set as the answer under the heading and the rest sits
+ * beside it (or beside a visual), so prose never arrives as one undivided column.
+ */
+export function ProseBlock({ block, visual }: { block: Of<"prose">; visual?: ReactNode }) {
+  const [lead, ...more] = block.paragraphs;
+  if (visual && lead)
+    return (
+      <AnswerVisual
+        block={block}
+        answer={lead}
+        paragraphs={more}
+        visual={visual}
+        aside={block.aside}
+      />
+    );
+  if (lead && more.length > 0)
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="answer-split">
+          <div className="answer-split-lead">
+            <SectionHeader id={block.id} label={block.label} heading={block.heading} />
+            <p className="answer-lead" data-reveal="block">
+              <Inline text={lead} />
+            </p>
+          </div>
+          <div className="prose-service answer-split-body" data-reveal="block">
+            {more.map((p, i) => (
+              <p key={i}>
+                <Inline text={p} />
+              </p>
+            ))}
+            {block.aside ? <AsideCard aside={block.aside} /> : null}
+          </div>
+        </div>
+      </Section>
+    );
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
         <div className="rail">
           <SectionHeader id={block.id} label={block.label} heading={block.heading} />
-          {block.aside ? (
-            <aside
-              className="mt-8 hidden border-l-2 border-blue pl-4 lg:block"
-              aria-label={block.aside.title}
-            >
-              <p className="t-label m-0">{block.aside.title}</p>
-              <ul className="t-small m-0 mt-2 list-none space-y-1.5 p-0">
-                {block.aside.items.map((it) => (
-                  <li key={it}>
-                    <Inline text={it} />
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          ) : null}
         </div>
         <div className="prose-service" data-reveal="block">
           {block.paragraphs.map((p, i) => (
@@ -88,18 +182,7 @@ export function ProseBlock({ block }: { block: Of<"prose"> }) {
               <Inline text={p} />
             </p>
           ))}
-          {block.aside ? (
-            <aside className="border-l-2 border-blue pl-4 lg:hidden" aria-label={block.aside.title}>
-              <p className="t-label m-0">{block.aside.title}</p>
-              <ul className="t-small m-0 mt-2 list-none space-y-1.5 p-0">
-                {block.aside.items.map((it) => (
-                  <li key={it}>
-                    <Inline text={it} />
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          ) : null}
+          {block.aside ? <AsideCard aside={block.aside} /> : null}
         </div>
       </div>
     </Section>
@@ -107,6 +190,33 @@ export function ProseBlock({ block }: { block: Of<"prose"> }) {
 }
 
 function IndexItems({ block, twoCol }: { block: Of<"index">; twoCol: boolean }) {
+  const registry = getRegistry();
+  const target = (item: Of<"index">["items"][number]) =>
+    item.href && pathExists(item.href, registry)
+      ? item.href
+      : item.ref
+        ? publishedPath(registry.nodes.get(item.ref), registry)
+        : null;
+  // A short list where every entry leads somewhere is a set of destinations: show it as cards.
+  if (block.items.length <= 6 && block.items.every((i) => target(i))) {
+    return (
+      <ul data-reveal="group" className="dest-cards m-0 list-none p-0">
+        {block.items.map((item) => (
+          <li key={item.title}>
+            <Link href={target(item)!} className="dest-card">
+              <span className="dest-card-title">{item.title}</span>
+              <span className="dest-card-body">
+                <Inline text={item.body} />
+              </span>
+              <span className="dest-card-go" aria-hidden="true">
+                <Arrow />
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    );
+  }
   // Longer two-column lists read better as a set of tiles than as a wall of ruled rows.
   if (twoCol && block.items.length >= 6) {
     return (

@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: Workflow automation moves a piece of work, such as a request or an approval, from person to person in the right order, tracking each step.
+  what: "We automate workflows: each request or approval moves from person to person in the right order, and every step is tracked."
   problem: Work gets stuck in inboxes, nobody knows who has it, and approvals depend on someone remembering.
   audience: Teams that handle requests, approvals, or hand-offs, and managers who need to see where each item stands.
   choose: Draw the real path of one request first. Automate the steps that wait for people, and add rules only where decisions are clear.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Workflow Automation
-    lead: A workflow moves one piece of work through the people who handle it. Workflow automation makes each hand-off clear, timed, and visible. This page explains how it is designed and what it replaces.
+    lead: "We automate workflows: the path one piece of work takes through the people who handle it. Each hand-off becomes clear, timed, and visible, so requests stop waiting in inboxes and managers can see where everything stands."
     ctas:
       - label: Discuss a workflow
         href: /contact/?service=automation

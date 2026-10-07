@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: "Retail software covers the systems that sell and deliver products: the online store, stock, orders, payments, customer records, support, and the reports that tie them together."
+  what: "We build the systems that sell and deliver products: the online store, stock, orders, payments, customer records, support, and the reports that tie them together."
   problem: Stock, orders, and customers live in separate tools, so a product shows as available when it is not, orders are re-typed, and the numbers differ between teams.
   audience: Retailers, online stores, brands that sell direct, and the teams that run their operations and marketing.
   choose: Make stock and orders agree across every channel first, then automate the order path, then use the joined-up data for customers and reporting.

@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: A cloud platform runs your software on computers rented from a provider, so you can add or remove capacity as needed instead of owning servers.
+  what: "We build cloud platforms that run your software on computers rented from a provider, so you can add or remove capacity as needed instead of owning servers."
   problem: Servers in an office are costly to maintain, slow to grow, and a single point of failure when the building or the one person who understands them is unavailable.
   audience: Organizations running their own servers, and teams whose cloud bills or reliability have become a worry.
   choose: Move what benefits from flexibility and reliability first. Keep what is stable, cheap, and tightly controlled where it is.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Cloud Platforms
-    lead: A cloud platform runs your software on rented computers that you can enlarge or shrink at will. This page explains how a cloud platform is laid out, what drives the cost, and when staying where you are is the better choice.
+    lead: "We design, move, and run cloud platforms that grow and shrink with demand. We set them up so costs are visible, releases are routine, and recovery is tested, and we tell you when staying where you are is the better choice."
     ctas:
       - label: Discuss your cloud project
         href: /contact/?service=cloud

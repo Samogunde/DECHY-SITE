@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: An integration platform is a central hub that connects many tools, so each tool connects once to the hub instead of separately to every other tool.
+  what: "We build integration platforms: a central hub that connects many tools, so each tool connects once to the hub instead of separately to every other tool."
   problem: As tools multiply, direct connections multiply faster, and each change to one tool breaks several links.
   audience: Organizations with five or more connected tools, and technical leads tired of fragile links between systems.
   choose: Use a hub when many tools share the same customers or orders. For two tools, a direct connection is enough.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Integration Platforms
-    lead: When many tools must share data, connecting each to each becomes a tangle. An integration platform puts one hub in the middle, so every tool connects once. This page explains the idea, and when it is worth it.
+    lead: "When many tools must share data, connecting each one to every other becomes a tangle. We build integration platforms that put one hub in the middle, so every tool connects once, every message is logged, and a new system can join without rewiring the rest."
     ctas:
       - label: Discuss a hub
         href: /contact/?service=api-integration

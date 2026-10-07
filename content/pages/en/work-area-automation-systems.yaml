@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: An automation system is a set of connected rules that moves information and starts actions between your tools, so people no longer copy and chase it by hand.
+  what: "We build automation systems: connected rules that move information and start actions between your tools, so people no longer copy and chase it by hand."
   problem: Staff re-type data, forward emails, and remind each other of tasks, so work is slow and errors creep in.
   audience: Operations and finance teams with repeated manual tasks, and owners who want staff time spent on judgment, not copying.
   choose: Automate tasks that are frequent, rule-based, and well understood. Leave rare or judgment-heavy tasks to people.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Automation Systems
-    lead: An automation system connects your tools so that information moves and actions happen without manual effort. This page shows what these systems contain, how they are watched, and which tasks are worth automating.
+    lead: "We build automation systems that move information and trigger actions across your tools without manual effort. We start with the tasks worth automating, add checks and alerts around each one, and keep a record of every step so your team can see what happened."
     ctas:
       - label: Discuss your automation project
         href: /contact/?service=automation

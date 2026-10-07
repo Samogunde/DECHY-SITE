@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Mobile app development is designing and building apps that run on phones and tablets, from the first idea through the app stores and ongoing updates.
+  what: "We design and build apps for phones and tablets, from the first idea through the app stores and ongoing updates."
   problem: Teams are unsure which approach to choose, how long it takes, what the app stores require, and how to keep an app working as phones and systems change.
   audience: Businesses launching a first app, and teams whose current app is slow, outdated, or hard to maintain.
   choose: "Choose by audience and needs: a native app for the deepest phone features, a cross-platform app to cover both major phones at once, or a web app when an app store is not needed."

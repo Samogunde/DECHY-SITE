@@ -29,7 +29,7 @@ sections:
     variant: hub
     eyebrow: Company
     headline: Who we work with
-    lead: "At DECHY, we work with organizations of many sizes and kinds, and with individuals. This page describes what each tends to need, and says plainly when we may not be the right fit."
+    lead: "At DECHY, we work with organizations of many sizes and kinds, and with individuals. Each tends to need something different, and we say plainly when we may not be the right fit."
     support: "We list kinds of organization, not client names."
     ctas:
       - { label: Talk to us, href: "/contact/" }

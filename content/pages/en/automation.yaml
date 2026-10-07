@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "Automation uses software to do repetitive work for you: moving information between systems, sending reminders, routing approvals, and updating reports without manual steps."
+  what: "We take repetitive work off your team: software moves information between systems, sends reminders, routes approvals, and updates reports without manual steps."
   problem: People spend hours copying data, chasing approvals, and fixing small mistakes. Work waits on whoever remembers to do the next step.
   audience: Operations, finance, sales, support, and HR teams, and owners who feel too much of the week goes to repeating the same tasks.
   choose: Automate tasks that are frequent, follow clear rules, and are tedious by hand. Leave out rare tasks, work that needs judgment, and anything nobody can describe step by step.

@@ -321,6 +321,9 @@
   border-end-start-radius: var(--radius-md);
   border-end-end-radius: var(--radius-md);
 }
+.tone-ink .anatomy-support-wrap {
+  background: var(--color-ink);
+}
 .anatomy-support-label {
   margin-bottom: 0.35rem;
 }
@@ -963,52 +966,153 @@
   }
 }
 
-/* ---------------- Hub: one thing and what it connects to ---------------- */
+/* ---------------- Hub: one thing and what it connects to ----------------
+   Narrow: the core on top, the parts hanging from one line beneath it (a tree). Each part draws its
+   own segment of that line, so the line starts exactly at the core and ends exactly at the middle
+   of the last part. Wide: the core in the middle, parts on both sides, each joined to the core by a
+   straight connector that ends in a port on the core's edge. Nothing is offset by eye. */
 .hub {
+  --hub-line: 1.5px;
+  --hub-reach: 1.25rem;
+  --hub-port: 0.5rem;
   display: grid;
-  justify-items: start;
-}
-.hub-center {
-  width: 100%;
-  max-width: 34rem;
-}
-.hub-stem {
-  position: relative;
-  margin-left: 2.25rem;
-  height: 1.75rem;
-  border-left: 2px solid var(--dgm-accent);
-}
-.hub-stem::after {
-  content: "";
-  position: absolute;
-  left: -0.3rem;
-  bottom: -0.05rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-right: 2px solid var(--dgm-accent);
-  border-bottom: 2px solid var(--dgm-accent);
-  transform: translateX(-0.12rem) rotate(45deg);
-}
-.hub-spokes {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
   gap: var(--dgm-gap);
-  width: 100%;
-  padding: 0.8rem;
-  border: var(--dgm-line) dashed var(--dgm-accent);
-  border-radius: var(--radius-lg);
 }
-.hub-spokes .dgm-box {
+.hub-core {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 0.2rem;
+  padding: 1rem 1.15rem 1.05rem;
+  border-radius: calc(var(--radius-lg) * 1.4);
+  background: var(--color-ink);
+  --dgm-ink: var(--color-paper);
+  --dgm-muted: var(--color-slate-on-dark);
+  color: var(--color-paper);
+  box-shadow: 0 18px 36px -24px rgb(17 24 39 / 0.65);
+}
+.tone-ink .hub-core {
+  background: var(--color-ink-raised);
+  box-shadow: inset 0 0 0 1px var(--color-ink-line);
+}
+.hub-core .dgm-title {
+  font-size: var(--fs-body);
+}
+.hub-core-mark {
+  display: block;
+  width: 1.6rem;
+  height: 0.3rem;
+  margin-bottom: 0.45rem;
+  border-radius: 999px;
+  background: var(--color-blue-on-dark);
+}
+.hub-sides {
+  display: grid;
+  gap: var(--dgm-gap);
+  padding-left: calc(var(--hub-reach) + 0.75rem);
+}
+.hub-side {
+  display: grid;
+  gap: var(--dgm-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hub-spoke {
+  position: relative;
+}
+.hub-spoke .dgm-box {
   height: 100%;
 }
-@container dgm (min-width: 27rem) {
-  .hub-spokes {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* the vertical line: from the gap above this part down to the next one */
+.hub-spoke::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--hub-reach));
+  top: calc(-1 * var(--dgm-gap));
+  height: calc(100% + var(--dgm-gap));
+  border-left: var(--hub-line) solid var(--dgm-accent);
 }
-@container dgm (min-width: 52rem) {
-  .hub-spokes {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.hub-sides > .hub-side:last-child > .hub-spoke:last-child::before {
+  height: calc(50% + var(--dgm-gap));
+}
+/* the branch into each part */
+.hub-spoke::after {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--hub-reach));
+  top: 50%;
+  width: var(--hub-reach);
+  border-top: var(--hub-line) solid var(--dgm-accent);
+}
+
+@container dgm (min-width: 37rem) {
+  .hub {
+    --hub-reach: clamp(2rem, 1rem + 3cqw, 3.25rem);
+    grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.72fr) minmax(0, 1fr);
+    column-gap: var(--hub-reach);
+    row-gap: var(--dgm-gap);
+    align-items: stretch;
+  }
+  .hub-core {
+    grid-column: 2;
+    grid-row: 1 / span var(--rows);
+    padding: 1.4rem 1.3rem;
+    text-align: center;
+    justify-items: center;
+  }
+  .hub-core .dgm-title {
+    font-size: var(--fs-body-lg);
+  }
+  .hub-sides {
+    display: contents;
+  }
+  /* both sides share the grid rows, so facing parts always line up */
+  .hub-side {
+    display: contents;
+  }
+  .hub-left .hub-spoke {
+    grid-column: 1;
+    grid-row: var(--r);
+  }
+  .hub-right .hub-spoke {
+    grid-column: 3;
+    grid-row: var(--r);
+  }
+  /* a port on the core's edge where each connector lands */
+  .hub-spoke::before {
+    top: calc(50% - var(--hub-port) / 2);
+    height: var(--hub-port);
+    width: var(--hub-port);
+    border: 0;
+    border-radius: 50%;
+    background: var(--dgm-accent);
+    box-shadow: 0 0 0 3px var(--color-paper);
+  }
+  .hub-sides > .hub-side:last-child > .hub-spoke:last-child::before {
+    height: var(--hub-port);
+  }
+  .tone-white .hub-spoke::before {
+    box-shadow: 0 0 0 3px var(--color-white);
+  }
+  .tone-ink .hub-spoke::before {
+    box-shadow: 0 0 0 3px var(--color-ink);
+  }
+  .hub-left .hub-spoke::before {
+    left: calc(100% + var(--hub-reach) - var(--hub-port) / 2);
+  }
+  .hub-left .hub-spoke::after {
+    left: 100%;
+  }
+  .hub-right .hub-spoke::before {
+    left: calc(-1 * var(--hub-reach) - var(--hub-port) / 2);
+  }
+  .hub-right .hub-spoke::after {
+    left: calc(-1 * var(--hub-reach));
+  }
+  .hub-left .dgm-box {
+    text-align: right;
+    align-items: flex-end;
   }
 }
 
@@ -1134,17 +1238,14 @@
     box-shadow: 0 6px 16px -12px rgb(17 24 39 / 0.45);
   }
 
-  /* Hub: pointing at a spoke highlights its connection to the centre. */
-  .hub:has(.hub-spokes li:hover) .hub-spokes li:not(:hover) {
+  /* Hub: pointing at a part highlights it and its connector. */
+  .hub:has(.hub-spoke:hover) .hub-spoke:not(:hover) {
     opacity: 0.5;
   }
-  .hub:has(.hub-spokes li:hover) .hub-center {
-    box-shadow: 0 6px 16px -10px rgb(17 24 39 / 0.6);
-  }
-  .hub-spokes li {
+  .hub-spoke {
     transition: opacity var(--dur-base) var(--ease-out);
   }
-  .hub-spokes li:hover .dgm-box {
+  .hub-spoke:hover .dgm-box {
     border-color: var(--dgm-accent);
   }
 

@@ -239,10 +239,18 @@ function BeforeAfter({ spec }: { spec: Extract<DiagramSpec, { kind: "before-afte
   );
 }
 
+/**
+ * Hub and spokes: the core sits in the middle with its parts on both sides, each joined to it by a
+ * straight connector ending in a port. On narrow containers the core sits on top and the parts hang
+ * from one line beneath it, as a tree.
+ */
 function Hub({ spec }: { spec: Extract<DiagramSpec, { kind: "hub" }> }) {
+  const half = Math.ceil(spec.spokes.length / 2);
+  const sides = [spec.spokes.slice(0, half), spec.spokes.slice(half)].filter((s) => s.length > 0);
   return (
-    <div className="hub">
-      <div className="dgm-box dgm-box-ink hub-center hero-layer" style={step(0)}>
+    <div className="hub" style={{ "--rows": half } as CSSProperties}>
+      <div className="hub-core hero-layer" style={step(0)}>
+        <span className="hub-core-mark" aria-hidden="true" />
         <span className="dgm-title">{spec.center.title}</span>
         {spec.center.text ? (
           <span className="dgm-text">
@@ -250,21 +258,28 @@ function Hub({ spec }: { spec: Extract<DiagramSpec, { kind: "hub" }> }) {
           </span>
         ) : null}
       </div>
-      <span className="hub-stem" aria-hidden="true" />
-      <ul className="hub-spokes">
-        {spec.spokes.map((s, i) => (
-          <li key={s.title} className="fx-step" style={step(i + 1)}>
-            <div className="dgm-box">
-              <span className="dgm-title">{s.title}</span>
-              {s.text ? (
-                <span className="dgm-text">
-                  <Inline text={s.text} />
-                </span>
-              ) : null}
-            </div>
-          </li>
+      <div className="hub-sides">
+        {sides.map((side, k) => (
+          <ul key={k} className={`hub-side ${k === 0 ? "hub-left" : "hub-right"}`}>
+            {side.map((s, i) => (
+              <li
+                key={s.title}
+                className="hub-spoke fx-step"
+                style={{ ...step(k * half + i + 1), "--r": i + 1 } as CSSProperties}
+              >
+                <div className="dgm-box">
+                  <span className="dgm-title">{s.title}</span>
+                  {s.text ? (
+                    <span className="dgm-text">
+                      <Inline text={s.text} />
+                    </span>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

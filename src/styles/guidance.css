@@ -365,7 +365,7 @@
 /* ---------------- Where this connects: compact cards of link chips ---------------- */
 .connects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.75rem), 1fr));
   gap: 1rem;
   margin-top: 1.75rem;
 }
@@ -452,6 +452,7 @@
   }
   .compare-row {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
     gap: 0;
     padding: 0;
     border-top: 0;

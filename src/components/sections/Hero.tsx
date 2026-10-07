@@ -8,10 +8,19 @@ import { pathExists } from "@/lib/content/urls";
 
 type HeroBlock = Extract<Block, { type: "hero" }>;
 
-export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: ReactNode }) {
+export function Hero({
+  block,
+  breadcrumbs,
+  aside,
+}: {
+  block: HeroBlock;
+  breadcrumbs?: ReactNode;
+  /** A page family visual that replaces the hero figure (technology profile, solution blueprint). */
+  aside?: ReactNode;
+}) {
   const registry = getRegistry();
   const isHome = block.variant === "home";
-  const hasVisual = Boolean(block.figure || block.spec);
+  const hasVisual = Boolean(aside || block.figure || block.spec);
   return (
     <section
       id={block.id}
@@ -24,8 +33,8 @@ export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: R
         ) : (
           <div className="h-4 min-[48rem]:h-8" />
         )}
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
-          <div className={hasVisual ? "lg:col-span-7" : "lg:col-span-9"}>
+        <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
+          <div className={hasVisual ? "min-w-0 lg:col-span-7" : "min-w-0 lg:col-span-9"}>
             {block.eyebrow ? <p className="t-eyebrow m-0">{block.eyebrow}</p> : null}
             <h1
               id={`${block.id}-h`}
@@ -68,8 +77,10 @@ export function Hero({ block, breadcrumbs }: { block: HeroBlock; breadcrumbs?: R
               })}
             </div>
           </div>
-          {hasVisual ? (
-            <div className="lg:col-span-5">
+          {aside ? (
+            <div className="min-w-0 lg:col-span-5">{aside}</div>
+          ) : hasVisual ? (
+            <div className="min-w-0 lg:col-span-5">
               <Figure
                 id={block.figure}
                 spec={block.spec}

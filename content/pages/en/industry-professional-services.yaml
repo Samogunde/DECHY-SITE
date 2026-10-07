@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: Professional services software covers the systems that consultancies, agencies, accountancies, and other advisory firms use to win work, deliver it, record time, bill clients, and share documents.
+  what: "We build the systems consultancies, agencies, accountancies, and advisory firms use to win work, deliver it, record time, bill clients, and share documents."
   problem: Client details, time records, documents, and invoices sit in different tools, so partners chase information, billing is late, and clients email files for lack of a better place.
   audience: Consultancies, agencies, accountants, advisers, and other firms that sell expertise by the hour, the project, or the retainer.
   choose: Connect time, projects, and billing first, then give clients one place for documents and status, and report on utilization from the same data.

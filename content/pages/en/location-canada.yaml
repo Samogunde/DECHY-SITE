@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Locations
     headline: DECHY for organizations in Canada
-    lead: "DECHY is a global technology company. We work with organizations in Canada remotely, across software, AI, automation, integration, cloud, and design. This page covers what is particular to Canadian projects: privacy across federal and provincial lines, two official languages, and a country that spans six time zones."
+    lead: "DECHY is a global technology company. We work with organizations in Canada remotely, across software, AI, automation, integration, cloud, and design. Canadian projects bring their own particulars: privacy across federal and provincial lines, two official languages, and a country that spans six time zones."
     support: DECHY has no Canadian office. We work remotely and plan calls around your team's province and hours.
     ctas:
       - label: Discuss a Canadian project

@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: AI services help organizations use artificial intelligence, software that can read, write, search, and predict, inside real tools and processes.
+  what: "We put artificial intelligence (software that can read, write, search, and predict) to work inside your real tools and processes: assistants, document handling, search, and predictions, built with the checks that keep them dependable."
   problem: Many teams have tried AI tools but cannot get them into daily work. They are unsure which kind of AI fits, what it will cost, and how to keep it safe.
   audience: Leaders and teams who want AI to do one specific job, such as answering questions, handling routine requests, reading documents, or spotting patterns.
   choose: Start from the job you want done, not from the technology. The right kind of AI depends on whether you need answers, actions, document reading, or predictions.

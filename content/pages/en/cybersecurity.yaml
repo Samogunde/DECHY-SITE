@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Cybersecurity is protecting your systems, accounts, and information from being stolen, damaged, or misused, and being ready if something goes wrong.
+  what: "We protect your systems, accounts, and information from being stolen, damaged, or misused, and get you ready to respond if something goes wrong."
   problem: "Most breaches come from a small gap: a weak password, an old update, an account with too much access. Many organizations do not know where their gaps are."
   audience: Owners and leaders who hold customer or payment information, teams building software, and anyone who has been asked about security by a customer or insurer.
   choose: Start by finding out what you hold and what could go wrong. Then fix the gaps that matter most first, before buying any tools.

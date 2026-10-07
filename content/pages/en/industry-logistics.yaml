@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: "Logistics software covers the systems that move goods and information together: orders, dispatch, warehouse work, carrier connections, tracking, and the documents and reports around them."
+  what: "We build the systems that move goods and information together: orders, dispatch, warehouse work, carrier connections, tracking, and the documents and reports around them."
   problem: Orders, carriers, warehouses, and customers each use different systems, status is chased by phone, documents are re-typed, and nobody has one reliable view of where things are.
   audience: Logistics providers, transport and warehousing firms, and the supply chain teams of manufacturers and retailers.
   choose: Connect the systems that hold order and shipment status first, then automate documents and exceptions, then give customers and managers a live view.

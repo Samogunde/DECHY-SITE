@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A mobile app is a program installed on a phone or tablet, built for tasks that people do on the move or that need the device's camera, location, or notifications.
+  what: "We build apps installed on phones and tablets, for tasks people do on the move or that need the device's camera, location, or notifications."
   problem: A website on a small screen is awkward for repeated or offline tasks, and staff in the field fall back on paper and messages.
   audience: Organizations whose customers or staff work mostly on phones, and teams that need photos, location, or offline use.
   choose: Build an app when the phone's features or repeated use justify it. Choose a mobile-friendly website when occasional visits are enough.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Mobile Apps
-    lead: A mobile app does a job well on a phone. This page explains the kinds of app we build, what sits behind them, and how to decide whether you need one at all.
+    lead: "We design and build mobile apps that do one job well on a phone, for customers or for staff in the field. We also build what sits behind them, and we tell you when a well-built website would serve you better than an app."
     ctas:
       - label: Discuss an app
         href: /contact/?service=mobile-app-development

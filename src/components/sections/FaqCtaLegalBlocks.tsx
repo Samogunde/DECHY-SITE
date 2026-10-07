@@ -7,24 +7,33 @@ import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
+/**
+ * Common questions: numbered question cards that open in place, with a standing invitation to ask
+ * something else beside them.
+ */
 export function FaqBlock({ block }: { block: Of<"faq"> }) {
+  const contact = pathExists("/contact/", getRegistry());
   return (
     <Section id={block.id} tone={block.tone}>
-      <div className="editorial">
-        <SectionHeader
-          id={block.id}
-          label={block.label}
-          heading={block.heading}
-          intro={block.intro}
-          className="rail"
-        />
-        <div className="faq">
-          {block.items.map((item) => (
+      <div className="faq-layout">
+        <div className="faq-side">
+          <SectionHeader
+            id={block.id}
+            label={block.label}
+            heading={block.heading}
+            intro={block.intro}
+          />
+        </div>
+        <div className="faq faq-cards" data-reveal="group">
+          {block.items.map((item, i) => (
             <details key={item.q}>
               <summary>
-                <span>{item.q}</span>
+                <span className="faq-n" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="faq-q">{item.q}</span>
               </summary>
-              <div className="answer t-body-lg">
+              <div className="answer t-body">
                 {item.a.split("\n\n").map((para, k) => (
                   <p key={k}>
                     <Inline text={para} />
@@ -34,6 +43,17 @@ export function FaqBlock({ block }: { block: Of<"faq"> }) {
             </details>
           ))}
         </div>
+        {contact ? (
+          <div className="faq-ask" data-reveal="block">
+            <p className="faq-ask-title">Have a different question?</p>
+            <p className="faq-ask-text">
+              Tell us what you are weighing up and we will answer it plainly.
+            </p>
+            <LinkButton href="/contact/" variant="secondary" arrow>
+              Ask a question
+            </LinkButton>
+          </div>
+        ) : null}
       </div>
     </Section>
   );

@@ -1,14 +1,15 @@
 import { Figure, MOCKUP_FIGURES } from "@/components/figures/Figure";
 import { Inline } from "@/components/primitives/Inline";
 import { Photo } from "@/components/primitives/Photo";
-import type { Block } from "@/lib/content/schema";
+import type { Block, Page } from "@/lib/content/schema";
 import { SelectPanel } from "./SelectPanel";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
-/** Numbered delivery rail: each step with what it produces. */
+/** Numbered delivery path: connected step cards, each with what it produces. */
 export function ProcessBlock({ block }: { block: Of<"process"> }) {
+  const n = block.steps.length;
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="max-w-[48rem]">
@@ -19,40 +20,28 @@ export function ProcessBlock({ block }: { block: Of<"process"> }) {
           intro={block.intro}
         />
       </div>
-      <ol
-        data-reveal="group"
-        className={`process-steps m-0 mt-10 grid list-none gap-x-8 gap-y-10 p-0 min-[48rem]:mt-12 min-[48rem]:grid-cols-2 ${
-          block.steps.length === 4
-            ? "min-[64rem]:grid-cols-4"
-            : block.steps.length === 2
-              ? ""
-              : "min-[64rem]:grid-cols-3"
-        }`}
-      >
+      <ol data-reveal="group" className="steps" data-count={n}>
         {block.steps.map((s, i) => (
-          <li key={s.title} className="relative border-t-2 border-ink pt-5">
-            <span className="absolute -top-[0.9rem] left-0 inline-flex h-7 min-w-7 items-center justify-center bg-paper pr-3 font-[family-name:var(--font-heading)] text-[length:var(--fs-label)] font-bold tabular-nums text-link">
+          <li key={s.title} className="step">
+            <span className="step-n" aria-hidden="true">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="t-h4 m-0">{s.title}</h3>
-            <p className="t-body m-0 mt-3">
-              <Inline text={s.body} />
-            </p>
-            {s.artifacts.length > 0 ? (
-              <div className="mt-4">
-                <p className="t-eyebrow m-0">What it produces</p>
-                <ul className="t-small m-0 mt-2 list-none space-y-1 p-0">
-                  {s.artifacts.map((a) => (
-                    <li
-                      key={a}
-                      className="relative pl-4 before:absolute before:left-0 before:top-[0.65em] before:h-[2px] before:w-2 before:bg-slate-text before:content-['']"
-                    >
-                      {a}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+            <div className="step-card">
+              <h3 className="step-title">{s.title}</h3>
+              <p className="step-body">
+                <Inline text={s.body} />
+              </p>
+              {s.artifacts.length > 0 ? (
+                <div className="step-out">
+                  <p className="step-out-label">What it produces</p>
+                  <ul className="step-out-list">
+                    {s.artifacts.map((a) => (
+                      <li key={a}>{a}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
           </li>
         ))}
       </ol>
@@ -82,7 +71,7 @@ const plain = (s: string) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
  * route or another), the visitor picks an option and sees what it suits and what to watch for.
  * Other comparisons stay a table: on wide screens a grid, on narrow screens one card per row.
  */
-export function TableBlock({ block }: { block: Of<"table"> }) {
+export function TableBlock({ block, page }: { block: Of<"table">; page?: Page }) {
   if (block.display === "compare" && block.columns.length === 3) {
     const [rowHead, a, b] = block.columns;
     return (
@@ -98,8 +87,8 @@ export function TableBlock({ block }: { block: Of<"table"> }) {
           </div>
           <div className="compare" role="table" aria-label={block.caption} data-reveal="block">
             <div className="compare-row compare-head" role="row">
-              <span className="compare-q visually-hidden" role="columnheader">
-                {rowHead}
+              <span className="compare-q" role="columnheader">
+                <span className="visually-hidden">{rowHead}</span>
               </span>
               <span className="compare-a" role="columnheader">
                 {a}
@@ -132,6 +121,67 @@ export function TableBlock({ block }: { block: Of<"table"> }) {
     block.columns.length >= 3 &&
     block.rows.length >= 2 &&
     block.rows.length <= 6;
+  // A page that already asks the visitor to choose (a chooser block) shows its options as cards,
+  // so two identical select panels never follow each other.
+  const asCards = Boolean(page?.sections.some((b) => b.type === "chooser"));
+  if (choice && asCards) {
+    const [, lead, ...rest] = block.columns;
+    const selfName = page?.breadcrumbLabel?.toLowerCase();
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="max-w-[48rem]">
+          <SectionHeader
+            id={block.id}
+            label={block.label}
+            heading={block.heading}
+            intro={block.intro}
+          />
+        </div>
+        <ul
+          className="option-cards"
+          aria-label={block.caption}
+          data-count={block.rows.length}
+          data-reveal="group"
+        >
+          {block.rows.map((row) => {
+            const name = plain(row[0] ?? "");
+            const here = selfName !== undefined && name.toLowerCase() === selfName;
+            return (
+              <li key={name} className="option-card" data-here={here ? "true" : undefined}>
+                <div className="option-card-head">
+                  <h3 className="option-card-name">
+                    <Inline text={row[0] ?? ""} />
+                  </h3>
+                  {here ? <span className="option-card-badge">This page</span> : null}
+                </div>
+                <p className="option-card-kicker">{lead}</p>
+                <p className="option-card-lead">
+                  <Inline text={row[1] ?? ""} />
+                </p>
+                {rest.length > 0 ? (
+                  <dl className="option-card-fields">
+                    {rest.map((h, k) => (
+                      <div key={h}>
+                        <dt>{h}</dt>
+                        <dd>
+                          <Inline text={row[k + 2] ?? ""} />
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : null}
+              </li>
+            );
+          })}
+        </ul>
+        {block.note ? (
+          <p className="t-caption mt-5 max-w-[60ch]">
+            <Inline text={block.note} />
+          </p>
+        ) : null}
+      </Section>
+    );
+  }
   if (choice) {
     const [, lead, ...rest] = block.columns;
     return (
@@ -255,7 +305,18 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
       </p>
     </div>
   ));
-  if (block.layout === "split" || (block.figure && MOCKUP_FIGURES.has(block.figure))) {
+  // Compact diagrams (a hub, layers, a funnel, a decision) sit beside their heading rather than
+  // under it, so the section never leaves half its width empty. Flows and before-and-after need
+  // the full width and stay stacked unless a page asks otherwise.
+  const compact =
+    block.spec !== undefined &&
+    ["hub", "layers", "funnel", "decision"].includes(block.spec.kind) &&
+    !block.photo;
+  if (
+    block.layout === "split" ||
+    (block.layout !== "stack" && compact) ||
+    (block.figure && MOCKUP_FIGURES.has(block.figure))
+  ) {
     // The visual sits beside its heading and points, so the section reads as one composition
     // and the page has no empty half. Four or more points run in a row under both instead, so the
     // text column never outgrows the visual.

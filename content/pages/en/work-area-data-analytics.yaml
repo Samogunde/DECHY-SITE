@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A data and analytics system gathers information from your tools, cleans and stores it in one place, and presents it as reports and dashboards.
+  what: "We build data and analytics systems that gather information from your tools, clean and store it in one place, and present it as reports and dashboards."
   problem: Numbers live in many tools, reports are rebuilt by hand each month, and nobody is sure which figure is right.
   audience: Managers who need reliable figures, and teams that spend days assembling reports from several sources.
   choose: Decide the few questions the business must answer, then build only the data pipeline and views that answer them.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Data and Analytics Systems
-    lead: A data and analytics system collects information from your tools, checks and stores it in one place, and shows it clearly. This page explains each stage, and why trust in the numbers matters more than fancy charts.
+    lead: "We build data systems that collect information from your tools, check it, store it in one place, and show it clearly. Managers get figures they can trust, because every number on a dashboard can be traced back to where it came from."
     ctas:
       - label: Discuss your data
         href: /contact/?service=data-analytics

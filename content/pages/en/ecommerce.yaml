@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "Ecommerce services build and run online stores: product pages, checkout, payments, stock, shipping, and the systems behind them."
+  what: "We build and run online stores: product pages, checkout, payments, stock, shipping, and the systems behind them."
   problem: The store is hard to manage, orders and stock are re-typed between systems, checkout loses customers, or the platform no longer fits the business.
   audience: Businesses starting to sell online, and stores that have outgrown their platform or drown in manual order handling.
   choose: Choose the platform by your products, your team, and your growth plans. A hosted platform suits most stores, and a custom build suits unusual products or processes.

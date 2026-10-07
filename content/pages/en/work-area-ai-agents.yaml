@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: An AI agent is a system that works toward a goal in several steps, choosing which tool to use at each step, such as searching records, drafting a message, or updating a system.
+  what: "We build AI agents: systems that work toward a goal in several steps, choosing which tool to use at each step, such as searching records, drafting a message, or updating a system."
   problem: Some tasks are too varied for fixed rules, but too long and repetitive for people to do well, such as researching a lead or resolving a routine request.
   audience: Teams with multi-step tasks that need judgment, and leaders who want automation they can inspect and control.
   choose: Use an agent only when the steps vary. If the steps are always the same, a plain automation is cheaper and more reliable.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: AI Agents
-    lead: An AI agent works toward a goal in several steps, using tools along the way. It is more flexible than a fixed automation and needs more care. This page explains how agents work, how we limit them, and when not to use one.
+    lead: "We build AI agents that work toward a goal in several steps, using your tools along the way: looking up a record, drafting a reply, updating a system. Every agent we build has clear limits, a record of what it did, and a person who approves the steps that matter."
     ctas:
       - label: Discuss an agent
         href: /contact/?service=ai

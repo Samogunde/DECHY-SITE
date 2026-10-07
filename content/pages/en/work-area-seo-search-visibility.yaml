@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A search visibility system is the structure, content, and measurement built into a website so search engines and AI assistants can find, read, and describe it correctly.
+  what: "We build the structure, content, and measurement into your website so search engines and AI assistants can find, read, and describe it correctly. SEO (search engine optimization) is the practice behind it."
   problem: A good site is invisible because it is hard to read, its pages overlap, or nobody can tell what it is about.
   audience: Teams that depend on being found, and sites that have grown over time with unclear structure.
   choose: Fix what blocks reading first, then clarify the content, then label the facts. Measure each step.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: SEO and Search Visibility
-    lead: A search visibility system is built into how a site is organized, written, and labeled. SEO (search engine optimization) is the practice of helping search engines find and rank pages. This page shows the parts of such a system.
+    lead: "We build search visibility into how a site is organized, written, and labeled, so search engines and AI assistants can find, understand, and recommend it. That means technical foundations, structured content, and measurement, not one-off tweaks."
     ctas:
       - label: Discuss your search visibility
         href: /contact/?service=seo-aeo-geo

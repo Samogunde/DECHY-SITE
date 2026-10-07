@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Cloud services means running your software and information on rented computing power instead of your own servers. DevOps is the way software is built, tested, and released reliably.
+  what: "We move and run your software and information on rented computing power instead of your own servers, and set up DevOps: the routine that builds, tests, and releases software reliably."
   problem: Servers fail, updates are risky, costs are unpredictable, and releasing new features takes too long or breaks things.
   audience: Teams with their own servers or old hosting, fast-growing products, and anyone worried about downtime, cost, or slow releases.
   choose: Move as-is when speed matters, adjust for the cloud when you want savings and flexibility, and rebuild only when the old design is holding you back.

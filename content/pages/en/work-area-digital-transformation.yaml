@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: Digital transformation is changing how an organization works by using technology well, in phases, with each change tied to a result you can measure.
+  what: "We help you change how your organization works by using technology well, in phases, with each change tied to a result you can measure."
   problem: Large technology programs are costly and slow, and many end with new tools that nobody uses and no improvement in results.
   audience: Leaders planning a major change in how their organization works, and teams carrying out a multi-year technology program.
   choose: Change one area at a time, starting where the pain and the payoff are greatest, and measure each phase before the next.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Digital Transformation
-    lead: Digital transformation is changing how an organization works by using technology well. Done sensibly, it happens in small phases, each tied to a measured result. This page shows what such a program looks like.
+    lead: "We help organizations change how they work by using technology well, in small phases that each deliver a measured result. Each step replaces something that slows the business down, and its result decides the next one."
     ctas:
       - label: Discuss your transformation
         href: /contact/?service=consulting

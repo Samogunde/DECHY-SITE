@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: Healthcare software covers the systems that clinics, practices, care providers, and health companies use to book, record, communicate, and report, built so that sensitive information stays protected.
+  what: "We build the systems clinics, practices, care providers, and health companies use to book, record, communicate, and report, designed so sensitive information stays protected."
   problem: Information is spread across systems that do not talk to each other, staff re-enter the same details, patients phone for what they could see online, and privacy rules raise the stakes of every change.
   audience: Clinics, practices, care providers, health technology companies, and the teams that support them.
   choose: Start with the one workflow that costs staff and patients the most time, connect the systems it touches, and build in access control and audit trails from the first screen.

@@ -23,7 +23,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: A business dashboard is one screen that shows the few numbers a role needs to run its part of the business, taken straight from your own systems and always current.
+  what: "We build business dashboards: one screen per role showing the few numbers it needs to run its part of the business, taken straight from your own systems and always current."
   problem: Reports are built by hand each week from several systems, the numbers disagree between teams, and decisions wait for someone to assemble the figures.
   audience: Owners, finance and operations leaders, and managers who make decisions from numbers that are gathered by hand or not trusted.
   choose: Start from the decisions people make, agree the definitions of each measure, and build one dashboard per role. Do not start by connecting every data source.

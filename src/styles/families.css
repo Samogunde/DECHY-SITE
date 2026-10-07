@@ -1,0 +1,993 @@
+/* ------------------------------------------------------------------------------------------
+   Page family openings and the section types that used to look alike.
+   - Technology and industry profiles, the solution blueprint (beside the headline).
+   - The opening text beside a visual, and the aside card.
+   - Option cards (comparisons on a page that already has a chooser).
+   - Technical detail as dark topic tabs; common questions as numbered cards.
+   - Grouped lists as cards.
+   ------------------------------------------------------------------------------------------ */
+
+/* ---------------- Profile (technology, industry) ---------------- */
+.profile {
+  padding: 1.35rem 1.35rem 0.6rem;
+  border: 1px solid rgb(17 24 39 / 0.12);
+  border-radius: calc(var(--radius-lg) * 1.75);
+  background: var(--color-white);
+  box-shadow:
+    0 28px 56px -36px rgb(17 24 39 / 0.4),
+    0 2px 6px -2px rgb(17 24 39 / 0.06);
+}
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.profile-mark {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.8rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.profile-kind {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-blue-strong);
+}
+.profile-name {
+  margin: 0.1rem 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.profile-summary {
+  margin: 0.9rem 0 0;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  color: var(--color-slate-text);
+}
+.profile-rows {
+  margin: 1rem 0 0;
+}
+.profile-row {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-line);
+}
+.profile-row dt,
+.blueprint-foot dt {
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-slate-text);
+}
+.profile-row dd,
+.blueprint-foot dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0;
+}
+.profile .chip,
+.blueprint .chip {
+  min-height: 2.375rem;
+  padding: 0.3rem 0.7rem;
+}
+.profile .chip-link {
+  background: var(--color-paper);
+}
+
+/* ---------------- Solution blueprint ---------------- */
+.blueprint {
+  padding: 1.25rem;
+  border-radius: calc(var(--radius-lg) * 1.75);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  box-shadow: 0 30px 60px -36px rgb(17 24 39 / 0.7);
+}
+.blueprint-label {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-blue-on-dark);
+}
+.blueprint-foot {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-ink-line);
+}
+.blueprint-foot dt {
+  color: var(--color-slate-on-dark);
+}
+.tone-ink .chip-link {
+  border-color: var(--color-ink-line);
+  background: var(--color-ink-raised);
+  color: var(--color-paper);
+}
+.tone-ink .chip-link .chip-arrow {
+  color: var(--color-blue-on-dark);
+}
+.tone-ink .chip-link:hover,
+.tone-ink .chip-link:focus-visible {
+  border-color: var(--color-blue-on-dark);
+  color: var(--color-paper);
+}
+.tone-ink .chip-tag {
+  border-color: var(--color-ink-line);
+  color: var(--color-slate-on-dark);
+}
+
+/* ---------------- Opening text beside a visual ---------------- */
+.answer-visual {
+  display: grid;
+  gap: 2.5rem;
+}
+.answer-visual-body {
+  margin-top: 1.25rem;
+}
+@media (min-width: 80rem) {
+  .answer-visual {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: clamp(2.5rem, 4vw, 4.5rem);
+    align-items: center;
+  }
+}
+
+.aside-card {
+  margin-top: 1.75rem;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+}
+.tone-white .aside-card {
+  background: var(--color-paper);
+}
+.aside-card-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-slate-text);
+}
+.aside-card-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+}
+.aside-card-list > li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+.aside-card-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.62em;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: var(--color-ink);
+}
+
+/* ---------------- Option cards ---------------- */
+.option-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 48rem) {
+  .option-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 64rem) {
+  .option-cards:not([data-count="2"]):not([data-count="4"]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.option-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem 1.4rem 1.45rem;
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--radius-lg) * 1.5);
+  background: var(--color-white);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.tone-white .option-card {
+  background: var(--color-paper);
+}
+.option-card[data-here] {
+  border-color: var(--color-blue);
+  box-shadow: inset 0 3px 0 var(--color-blue);
+}
+@media (hover: hover) {
+  .option-card:hover {
+    border-color: rgb(17 24 39 / 0.3);
+    box-shadow: 0 18px 36px -28px rgb(17 24 39 / 0.45);
+  }
+  .option-card[data-here]:hover {
+    border-color: var(--color-blue);
+    box-shadow:
+      inset 0 3px 0 var(--color-blue),
+      0 18px 36px -28px rgb(17 24 39 / 0.45);
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .option-card:hover {
+    transform: translateY(-2px);
+  }
+}
+.option-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.option-card-name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.option-card-badge {
+  flex: none;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgb(47 111 237 / 0.1);
+  color: var(--color-blue-strong);
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+}
+.option-card-kicker {
+  margin: 1rem 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-slate-text);
+}
+.option-card-lead {
+  margin: 0.35rem 0 0;
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  font-weight: 600;
+}
+.option-card-fields {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--color-line);
+}
+.option-card-fields dt {
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-slate-text);
+}
+.option-card-fields dd {
+  margin: 0.2rem 0 0;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+}
+
+/* ---------------- Technical detail: dark topic tabs ---------------- */
+.technical-layout {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 64rem) {
+  .technical-layout {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    column-gap: clamp(2rem, 4vw, 4rem);
+    align-items: start;
+  }
+}
+.tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tabs-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-ink-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-slate-on-dark);
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.tabs-n {
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-blue-on-dark);
+  font-variant-numeric: tabular-nums;
+}
+.tabs-tab:hover {
+  border-color: var(--color-slate-on-dark);
+  color: var(--color-paper);
+}
+.tabs-tab[aria-selected="true"] {
+  border-color: var(--color-paper);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+.tabs-tab[aria-selected="true"] .tabs-n {
+  color: var(--color-blue-strong);
+}
+.tabs-tab:focus-visible {
+  outline: 2px solid var(--color-blue-on-dark);
+  outline-offset: 2px;
+}
+.tabs-panel {
+  margin-top: 1rem;
+  padding: 1.4rem 1.4rem 1.5rem;
+  border: 1px solid var(--color-ink-line);
+  border-radius: calc(var(--radius-lg) * 1.5);
+  background: var(--color-ink-raised);
+}
+.tabs-panel:focus-visible {
+  outline: 2px solid var(--color-blue-on-dark);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tabs-panel:not([hidden]) {
+    animation: tabs-in var(--dur-base) var(--ease-out);
+  }
+}
+@keyframes tabs-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+.technical-body {
+  display: grid;
+  gap: 1.25rem;
+}
+.technical-text {
+  display: grid;
+  gap: 0.85rem;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.technical-text p {
+  margin: 0;
+}
+.technical-points {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  color: var(--color-paper);
+}
+.technical-points > li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.2rem;
+  border-top: 1px solid var(--color-ink-line);
+}
+.technical-points > li::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: calc(0.6rem + 0.62em);
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: var(--color-slate-on-dark);
+}
+@media (min-width: 48rem) {
+  .technical-body:has(.technical-points) {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    column-gap: 2rem;
+  }
+  .technical-points > li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .technical-points > li:first-child::before {
+    top: 0.62em;
+  }
+}
+
+/* ---------------- Common questions: numbered cards ---------------- */
+.faq-layout {
+  display: grid;
+  gap: 2rem;
+}
+/* phones: heading, questions, then the invitation; wide: the invitation under the heading */
+@media (min-width: 64rem) {
+  .faq-layout {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(2rem, 4vw, 4rem);
+    align-items: start;
+  }
+  .faq-layout > .faq-cards {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .faq-layout > .faq-ask {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0;
+  }
+}
+.faq-ask {
+  display: grid;
+  justify-items: start;
+  align-self: start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 1.25rem 1.3rem 1.35rem;
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--radius-lg) * 1.5);
+  background: var(--color-white);
+}
+.tone-white .faq-ask {
+  background: var(--color-paper);
+}
+.faq-ask-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-weight: 700;
+}
+.faq-ask-text {
+  margin: 0 0 0.5rem;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  color: var(--color-slate-text);
+}
+.faq.faq-cards {
+  display: grid;
+  gap: 0.6rem;
+}
+.faq.faq-cards details,
+.faq.faq-cards details:last-child {
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--radius-lg) * 1.25);
+  background: var(--color-white);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+.tone-white .faq.faq-cards details {
+  background: var(--color-paper);
+}
+.faq.faq-cards details[open] {
+  border-color: rgb(17 24 39 / 0.3);
+  box-shadow: 0 16px 32px -28px rgb(17 24 39 / 0.45);
+}
+.faq.faq-cards summary {
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 1rem 1.15rem;
+  font-size: var(--fs-body-lg);
+}
+.faq.faq-cards summary::after {
+  margin-left: auto;
+  align-self: center;
+}
+.faq-n {
+  flex: none;
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-blue-strong);
+  font-variant-numeric: tabular-nums;
+}
+.faq-q {
+  min-width: 0;
+}
+.faq.faq-cards .answer {
+  padding: 0 1.15rem 1.15rem;
+  color: var(--color-ink);
+}
+@media (min-width: 48rem) {
+  .faq.faq-cards .answer {
+    padding-left: 3rem;
+    padding-right: 2.75rem;
+  }
+}
+
+/* ---------------- Grouped lists as cards ---------------- */
+.col-cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .col-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 64rem) {
+  .col-cards[data-count="3"],
+  .col-cards[data-count="5"],
+  .col-cards[data-count="6"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 80rem) {
+  .col-cards[data-count="4"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.col-card {
+  padding: 1.35rem 1.35rem 1.45rem;
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--radius-lg) * 1.5);
+  background: var(--color-white);
+}
+.tone-white .col-card {
+  background: var(--color-paper);
+}
+.col-card-n {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-blue-strong);
+  font-variant-numeric: tabular-nums;
+}
+.col-card-title {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.col-card-list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--color-line);
+  list-style: none;
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.col-card-list > li {
+  display: flex;
+  gap: 0.6rem;
+}
+.col-card-check {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2em;
+  color: var(--color-ink);
+}
+.profile-mark svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* ---------------- Destination cards (short lists where every entry is a page) ---------------- */
+.dest-cards {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 48rem) {
+  .dest-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.dest-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title go"
+    "body go";
+  align-items: center;
+  gap: 0.3rem 1rem;
+  height: 100%;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--radius-lg) * 1.4);
+  background: var(--color-white);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+.tone-white .dest-card {
+  background: var(--color-paper);
+}
+.dest-card-title {
+  grid-area: title;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.dest-card-body {
+  grid-area: body;
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  color: var(--color-slate-text);
+}
+.dest-card-go {
+  grid-area: go;
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-line);
+  color: var(--color-link);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.dest-card-go svg {
+  width: 1rem;
+  height: 1rem;
+}
+.dest-card:hover,
+.dest-card:focus-visible {
+  border-color: var(--color-blue);
+  text-decoration: none;
+}
+.dest-card:hover .dest-card-go,
+.dest-card:focus-visible .dest-card-go {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .dest-card:hover .dest-card-go {
+    transform: translateX(3px);
+  }
+}
+
+/* A limits card directly before the dark technical section turns light, so two dark bands never
+   meet. */
+.callout-section:has(+ .technical-section) .callout-limits {
+  border-color: var(--color-line);
+  background: var(--color-white) !important;
+  color: var(--color-ink);
+  box-shadow: inset 4px 0 0 var(--color-ink);
+}
+.tone-white.callout-section:has(+ .technical-section) .callout-limits {
+  background: var(--color-paper) !important;
+}
+.callout-section:has(+ .technical-section) .callout-limits .callout-eyebrow {
+  color: var(--color-blue-strong);
+}
+.callout-section:has(+ .technical-section) .callout-limits .callout-title {
+  color: var(--color-ink);
+}
+.callout-section:has(+ .technical-section) .callout-limits a {
+  color: var(--color-link);
+}
+.callout-section:has(+ .technical-section) .callout-limits .callout-list > li::marker {
+  color: var(--color-ink);
+}
+
+/* ---------------- Work Area system frame ---------------- */
+.sysframe {
+  overflow: hidden;
+  border: 1px solid rgb(17 24 39 / 0.14);
+  border-radius: calc(var(--radius-lg) * 1.75);
+  background: var(--color-white);
+  box-shadow:
+    0 30px 60px -36px rgb(17 24 39 / 0.45),
+    0 2px 6px -2px rgb(17 24 39 / 0.06);
+}
+.sysframe-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-paper);
+}
+.sysframe-dots {
+  display: inline-flex;
+  gap: 0.3rem;
+}
+.sysframe-dots i {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgb(17 24 39 / 0.16);
+}
+.sysframe-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+}
+.sysframe-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-slate-text);
+}
+.sysframe-body {
+  padding: 1.1rem;
+  background:
+    radial-gradient(circle at 1px 1px, rgb(17 24 39 / 0.07) 1px, transparent 0) 0 0 / 16px 16px,
+    var(--color-white);
+}
+.sysframe-foot {
+  padding: 0.85rem 1.1rem 1rem;
+  border-top: 1px solid var(--color-line);
+}
+.sysframe-foot-label {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-slate-text);
+}
+.sysframe-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.sysframe .chip {
+  min-height: 2.375rem;
+  padding: 0.3rem 0.7rem;
+}
+.sysframe .chip-link {
+  background: var(--color-paper);
+}
+
+/* ---------------- Delivery steps: connected cards ----------------
+   Narrow: a vertical path, the numbers joined by one line. Wide: one row of cards (up to five),
+   the numbers joined across the row. Each line segment belongs to a step, so it starts and ends
+   exactly at the numbers. */
+.steps {
+  --step-badge: 2.5rem;
+  display: grid;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--step-badge) minmax(0, 1fr);
+  column-gap: 1rem;
+}
+.step-n {
+  position: relative;
+  z-index: 1;
+  display: inline-grid;
+  place-items: center;
+  width: var(--step-badge);
+  height: var(--step-badge);
+  border: 1.5px solid var(--color-blue);
+  border-radius: 50%;
+  background: var(--color-paper);
+  color: var(--color-blue-strong);
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.tone-white .step-n {
+  background: var(--color-white);
+}
+/* the path to the next step */
+.step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--step-badge) / 2 - 0.75px);
+  top: var(--step-badge);
+  bottom: -1rem;
+  border-left: 1.5px solid rgb(47 111 237 / 0.35);
+}
+.step-card {
+  padding: 1.15rem 1.25rem 1.25rem;
+  border: 1px solid var(--color-line);
+  border-radius: calc(var(--radius-lg) * 1.5);
+  background: var(--color-white);
+}
+.tone-white .step-card {
+  background: var(--color-paper);
+}
+.step-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.step-body {
+  margin: 0.5rem 0 0;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+.step-out {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--color-line);
+}
+.step-out-label {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--color-slate-text);
+}
+.step-out-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.step-out-list > li {
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-md);
+  background: var(--color-paper);
+  font-size: var(--fs-label);
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+.tone-white .step-out-list > li {
+  background: var(--color-white);
+  box-shadow: inset 0 0 0 1px var(--color-line);
+}
+.step-card .step-out-list > li {
+  box-shadow: inset 0 0 0 1px var(--color-line);
+}
+@media (min-width: 64rem) {
+  .steps {
+    grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+  .steps[data-count="2"] {
+    --cols: 2;
+  }
+  .steps[data-count="4"] {
+    --cols: 4;
+  }
+  .steps[data-count="5"] {
+    --cols: 5;
+  }
+  /* six steps run in two rows of three; the path does not jump between rows */
+  .steps[data-count="6"] .step:nth-child(3n)::before {
+    display: none;
+  }
+  .steps .step {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--step-badge) 1fr;
+    row-gap: 0.85rem;
+  }
+  /* across the row: from this number to the next card's number */
+  .steps .step:not(:last-child)::before {
+    left: var(--step-badge);
+    right: calc(-1rem);
+    top: calc(var(--step-badge) / 2 - 0.75px);
+    bottom: auto;
+    border-left: 0;
+    border-top: 1.5px solid rgb(47 111 237 / 0.35);
+  }
+  .steps[data-count="5"] .step-card {
+    padding: 1rem 1rem 1.1rem;
+  }
+}
+@media (min-width: 64rem) and (prefers-reduced-motion: no-preference) {
+  .step-card {
+    transition:
+      border-color var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out);
+  }
+}
+@media (hover: hover) {
+  .step:hover .step-card {
+    border-color: rgb(17 24 39 / 0.3);
+    box-shadow: 0 16px 32px -28px rgb(17 24 39 / 0.45);
+  }
+  .step:hover .step-n {
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+}
+
+/* ---------------- Pathfinder: the arrow is its own control, never a stray line ---------------- */
+.path-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.path-go {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-link);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.path-go svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+.row-link:hover .path-go,
+.row-link:focus-visible .path-go {
+  border-color: var(--color-blue);
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .row-link:hover .path-go {
+    transform: translateX(3px);
+  }
+}
+@media (max-width: 29.99rem) {
+  .sysframe-body {
+    padding: 0.75rem;
+  }
+  .sysframe-foot {
+    padding-inline: 0.75rem;
+  }
+}

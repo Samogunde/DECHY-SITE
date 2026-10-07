@@ -3,6 +3,7 @@
 @import "../styles/diagrams.css" layer(components);
 @import "../styles/mockups.css" layer(components);
 @import "../styles/product-ui.css" layer(components);
+@import "../styles/families.css" layer(components);
 @import "../styles/guidance.css" layer(components);
 @import "../styles/navigation.css" layer(components);
 
@@ -193,7 +194,7 @@
   .tone-ink .t-caption {
     color: var(--color-slate-on-dark);
   }
-  .tone-ink a:not(.btn) {
+  .tone-ink a:not(.btn, .chip-link) {
     color: var(--color-blue-on-dark);
   }
 

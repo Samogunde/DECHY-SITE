@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: Education software covers the systems that schools, colleges, training providers, and education companies use to enrol learners, deliver courses, communicate, track progress, and report.
+  what: "We build the systems schools, colleges, training providers, and education companies use to enrol learners, deliver courses, communicate, track progress, and report."
   problem: Learner records, course platforms, finance, and communication tools are separate, staff re-enter the same details, and families and learners cannot see what they need in one place.
   audience: Schools, colleges, universities, training providers, and education technology companies.
   choose: Start where staff re-type the most, usually enrolment and records, then give learners and families one clear place to see their own information.

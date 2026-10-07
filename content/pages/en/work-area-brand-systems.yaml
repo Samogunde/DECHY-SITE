@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A brand system is the complete set of identity, rules, and templates that lets anyone in an organization produce work that looks and sounds consistent.
+  what: "We build brand systems: the complete set of identity, rules, and templates that lets anyone in your organization produce work that looks and sounds consistent."
   problem: A logo exists, but every document, slide, and post looks different, and new staff improvise.
   audience: Organizations whose materials look inconsistent, and teams that produce a lot of content with many hands.
   choose: Define the few rules that matter, provide ready templates, and name an owner. A short, used system beats a long, ignored one.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Brand Systems
-    lead: A brand system is more than a logo. It is the rules, templates, and assets that let everyone in an organization produce work that looks and sounds the same. This page shows what a system contains and how it is put to work.
+    lead: "We build brand systems your whole organization can use: the rules, templates, and assets that let every team produce work that looks and sounds the same. A logo is the start; the system is what keeps a website, a proposal, and a social post consistent."
     ctas:
       - label: Discuss your brand
         href: /contact/?service=branding

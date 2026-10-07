@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: DevOps is the practice of building, testing, releasing, and watching software in a steady, automated way, so changes reach users quickly and safely.
+  what: "We set up DevOps: building, testing, releasing, and watching software in a steady, automated way, so changes reach users quickly and safely."
   problem: Releases are rare, stressful, and risky, problems are found by customers first, and nobody is sure how to recover when something breaks.
   audience: Teams that release software and dread it, and leaders who want faster change without more outages.
   choose: Automate testing and release first, add monitoring next, and rehearse recovery before you need it.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: DevOps and Infrastructure
-    lead: DevOps is the habit of testing, releasing, and watching software in a steady, automated way. This page explains the routine, the safety nets around it, and the smallest changes that make releases less stressful.
+    lead: "We set up the routine that tests, releases, and watches your software automatically. Releases become small and frequent instead of rare and stressful, and when something goes wrong, it is noticed early and rolled back quickly."
     ctas:
       - label: Discuss your release process
         href: /contact/?service=cloud

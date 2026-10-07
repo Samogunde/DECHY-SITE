@@ -23,7 +23,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Cloud migration is the planned move of your servers, applications, and data from your own equipment or a hosting provider to a cloud platform.
+  what: "We plan and carry out the move of your servers, applications, and data from your own equipment or a hosting provider to a cloud platform, with a tested way back."
   problem: Servers are costly, aging, or fragile, a data centre contract is ending, or the business needs capacity and resilience it cannot easily build for itself.
   audience: Owners and technology leads whose systems run on their own servers or older hosting, and teams told to reduce risk or cost.
   choose: Move what benefits first, in waves, with a way back at each step. Do not move everything the same way; some systems should be improved, replaced, or retired.

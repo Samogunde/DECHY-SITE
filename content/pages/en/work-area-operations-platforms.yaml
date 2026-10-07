@@ -23,7 +23,7 @@ schemaTypes:
   - CollectionPage
   - FAQPage
 comprehension:
-  what: An operations platform is one system for planning, running, and tracking a business's daily work, such as jobs, stock, schedules, and people.
+  what: "We build one system for planning, running, and tracking your daily work, such as jobs, stock, schedules, and people."
   problem: Daily work is spread across spreadsheets, messages, and separate tools, so nobody sees the whole picture and managers act on old information.
   audience: Operations managers and owners of businesses with jobs, stock, or schedules to coordinate.
   choose: Start with the one flow that causes the most delay, such as job scheduling or stock, and connect the rest to it over time.
@@ -34,7 +34,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Operations Platforms
-    lead: An operations platform is one place where a business plans, runs, and tracks its daily work. This page explains what such a platform joins, how it is built up in stages, and what managers see.
+    lead: "We build operations platforms: one place where a business plans, runs, and tracks its daily work. Jobs, schedules, stock, and people sit in one system, built up in stages, and managers see what is happening without chasing updates."
     ctas:
       - label: Discuss your operations platform
         href: /contact/?service=software-development

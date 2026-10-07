@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "Web development is building websites and online systems: from a business site people read, to an application customers and staff log in to."
+  what: "We build websites and online systems: from a business site people read, to an application customers and staff log in to."
   problem: The site is slow, hard to update, does not work well on phones, or does not turn visitors into customers. Or you need a web system and are not sure what kind.
   audience: Businesses launching or rebuilding a site, and teams that need an online system for customers, partners, or staff.
   choose: Choose by who edits it and how much it must do. A ready-made site builder suits simple needs, a content system suits editors, and a custom build suits systems with their own rules.

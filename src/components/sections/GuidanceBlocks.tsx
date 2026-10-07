@@ -6,6 +6,7 @@ import { getRegistry } from "@/lib/content/load";
 import type { Block, Comprehension } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
 import { SelectPanel } from "./SelectPanel";
+import { Tabs } from "./Tabs";
 import { Section, SectionHeader } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
@@ -114,9 +115,13 @@ export function PathFinderBlock({ block }: { block: Of<"pathfinder"> }) {
           const live = pathExists(base, registry);
           const inner = (
             <>
-              <span className="row-title t-h4 block">
-                {p.need}
-                {live ? <Arrow className="row-arrow" /> : null}
+              <span className="path-head">
+                <span className="row-title t-h4">{p.need}</span>
+                {live ? (
+                  <span className="path-go" aria-hidden="true">
+                    <Arrow />
+                  </span>
+                ) : null}
               </span>
               <span className="t-small mt-1.5 block max-w-[46ch] text-slate-text">
                 <Inline text={p.text} />
@@ -197,42 +202,47 @@ export function ChooserBlock({ block }: { block: Of<"chooser"> }) {
   );
 }
 
-/** Level 4 of the progressive depth: technical detail, always in the page, opened on demand. */
+/**
+ * Level 4 of the progressive depth: technical detail, always in the page, opened on demand. Set on
+ * a dark surface as topic tabs, so it reads as a different kind of section from questions.
+ */
 export function TechnicalBlock({ block }: { block: Of<"technical"> }) {
   return (
-    <Section id={block.id} tone={block.tone}>
-      <div className="editorial">
+    <Section id={block.id} tone="ink" className="technical-section">
+      <div className="technical-layout">
         <SectionHeader
           id={block.id}
           label={block.label}
           heading={block.heading}
           intro={block.intro}
-          className="rail"
         />
-        <div className="faq technical" data-reveal="block">
-          {block.panels.map((p) => (
-            <details key={p.title}>
-              <summary>
-                <span>{p.title}</span>
-              </summary>
-              <div className="answer t-body-lg">
-                {p.paragraphs.map((para, k) => (
-                  <p key={k}>
-                    <Inline text={para} />
-                  </p>
-                ))}
-                {p.items.length > 0 ? (
-                  <ul className="technical-list">
-                    {p.items.map((it) => (
-                      <li key={it}>
-                        <Inline text={it} />
-                      </li>
+        <div className="technical-card" data-reveal="block">
+          <Tabs
+            label={block.heading}
+            items={block.panels.map((p) => ({
+              label: p.title,
+              body: (
+                <div className="technical-body">
+                  <div className="technical-text">
+                    {p.paragraphs.map((para, k) => (
+                      <p key={k}>
+                        <Inline text={para} />
+                      </p>
                     ))}
-                  </ul>
-                ) : null}
-              </div>
-            </details>
-          ))}
+                  </div>
+                  {p.items.length > 0 ? (
+                    <ul className="technical-points">
+                      {p.items.map((it) => (
+                        <li key={it}>
+                          <Inline text={it} />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+              ),
+            }))}
+          />
         </div>
       </div>
     </Section>

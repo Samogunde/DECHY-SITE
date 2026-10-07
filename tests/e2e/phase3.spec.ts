@@ -80,16 +80,18 @@ test.describe("phase 3 technology pages", () => {
     await expect(options.nth(1)).toHaveAttribute("aria-expanded", "true");
   });
 
-  test("technical panels open and close with the keyboard", async ({ page }) => {
+  test("technical topics switch with the keyboard", async ({ page }) => {
     await page.goto("/cloud/terraform/");
-    const summary = page.locator("#technology summary").first();
-    await summary.scrollIntoViewIfNeeded();
-    await summary.focus();
-    const details = summary.locator("xpath=..");
-    await page.keyboard.press("Enter");
-    await expect(details).toHaveAttribute("open", "");
-    await page.keyboard.press("Enter");
-    await expect(details).not.toHaveAttribute("open", "");
+    const tabs = page.locator("#technology").getByRole("tab");
+    await tabs.first().scrollIntoViewIfNeeded();
+    await tabs.first().focus();
+    await expect(tabs.first()).toHaveAttribute("aria-selected", "true");
+    await page.keyboard.press("ArrowRight");
+    await expect(tabs.nth(1)).toHaveAttribute("aria-selected", "true");
+    await expect(tabs.nth(1)).toBeFocused();
+    await expect(page.locator("#technology [role=tabpanel]:not([hidden])")).toHaveCount(1);
+    await page.keyboard.press("Home");
+    await expect(tabs.first()).toHaveAttribute("aria-selected", "true");
   });
 
   test("integration pages show a data-flow diagram", async ({ page }) => {

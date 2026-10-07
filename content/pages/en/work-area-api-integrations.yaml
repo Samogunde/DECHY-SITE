@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: An integration is a connection that lets two programs exchange information directly, through an API (a set of agreed requests one program can make of another).
+  what: "We build integrations that let two programs exchange information directly, through an API (a set of agreed requests one program can make of another)."
   problem: Information is typed into one tool, then again into another, and the copies drift apart.
   audience: Teams that use several tools for one process, and technical leads who need those tools to share data reliably.
   choose: Connect tools when the same data lives in two places. Build a shared record when many tools need to agree.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: API Integrations
-    lead: An integration lets your tools share information directly, so nobody types it twice. This page explains how integrations work, what can go wrong, and how we build connections that last.
+    lead: "We connect your tools so they share information directly and nobody types it twice. Your website, customer records, payments, and accounts stay in step, and every connection we build is monitored, so a failure is noticed and fixed instead of discovered weeks later."
     ctas:
       - label: Discuss connecting your tools
         href: /contact/?service=api-integration

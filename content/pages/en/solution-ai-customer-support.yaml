@@ -23,7 +23,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: AI customer support uses a language model to answer routine customer questions from your own approved content, and passes anything it cannot handle to a person with the context attached.
+  what: "We set up AI customer support that answers routine questions from your own approved content using a language model, and passes anything it cannot handle to a person with the context attached."
   problem: Support teams answer the same questions all day while customers wait, and urgent or sensitive cases get lost in the queue.
   audience: Support leaders and owners whose teams are swamped by repeat questions, and businesses that want faster first answers without hiring for every peak.
   choose: Automate the repeated, well-documented questions. Keep people for anything sensitive, unusual, or costly if wrong, and measure accuracy before you widen the scope.

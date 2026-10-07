@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: A knowledge and content system organizes what an organization knows, such as policies, guides, and articles, so people and AI assistants can find the right answer quickly.
+  what: "We organize what your organization knows, such as policies, guides, and articles, so people and AI assistants can find the right answer quickly."
   problem: Knowledge is scattered across documents, chats, and people's heads, so answers are hard to find and are often out of date.
   audience: Teams that answer the same questions repeatedly, and organizations publishing a lot of content or guidance.
   choose: Organize around the questions people ask, name an owner for each topic, and set a review date for every page.
@@ -33,7 +33,7 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Knowledge and Content Systems
-    lead: A knowledge and content system keeps what an organization knows in an organized, searchable, up-to-date form. This page explains how it is structured, how answers stay accurate, and how AI assistants can use it safely.
+    lead: "We build knowledge and content systems that keep what your organization knows organized, searchable, and current. Staff find the right answer quickly, and AI assistants can use the same source safely, with every answer traceable to its document."
     ctas:
       - label: Discuss your knowledge systems
         href: /contact/?service=software-development

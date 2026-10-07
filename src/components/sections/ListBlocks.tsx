@@ -67,7 +67,7 @@ export function ServiceIndexBlock({ block }: { block: Of<"service-index"> }) {
 }
 
 /** An entity in a list: a link to its own page or to the page that represents it, else a tag. */
-function EntityChip({ id, here, chip }: { id: string; here?: string; chip: boolean }) {
+export function EntityChip({ id, here, chip }: { id: string; here?: string; chip: boolean }) {
   const registry = getRegistry();
   const node = registry.nodes.get(id)!;
   const own = publishedPath(node, registry);
@@ -168,7 +168,9 @@ export function RelatedBlock({ block }: { block: Of<"related"> }) {
   );
 }
 
+/** Grouped lists as a set of cards: each group titled, its items checked off underneath. */
 export function ColumnsBlock({ block }: { block: Of<"columns"> }) {
+  const n = block.columns.length;
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="max-w-[48rem]">
@@ -179,20 +181,29 @@ export function ColumnsBlock({ block }: { block: Of<"columns"> }) {
           intro={block.intro}
         />
       </div>
-      <div
-        data-reveal="group"
-        className={`mt-10 grid gap-x-10 gap-y-10 min-[48rem]:mt-14 min-[48rem]:grid-cols-2 ${block.columns.length >= 3 ? "min-[64rem]:grid-cols-3" : ""} ${block.columns.length >= 4 ? "min-[80rem]:grid-cols-4" : ""}`}
-      >
-        {block.columns.map((c) => (
-          <div key={c.title} className="rule-top pt-5">
-            <h3 className="t-h4 m-0">{c.title}</h3>
-            <ul className="t-body m-0 mt-3 list-none space-y-2.5 p-0">
+      <div data-reveal="group" className="col-cards" data-count={n}>
+        {block.columns.map((c, i) => (
+          <div key={c.title} className="col-card">
+            <p className="col-card-n" aria-hidden="true">
+              {String(i + 1).padStart(2, "0")}
+            </p>
+            <h3 className="col-card-title">{c.title}</h3>
+            <ul className="col-card-list">
               {c.items.map((it) => (
-                <li
-                  key={it}
-                  className="relative pl-5 before:absolute before:left-0.5 before:top-[0.62em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-ink before:content-['']"
-                >
-                  <Inline text={it} />
+                <li key={it}>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" className="col-card-check">
+                    <path
+                      d="M3.5 8.5l3 3 6-7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span>
+                    <Inline text={it} />
+                  </span>
                 </li>
               ))}
             </ul>

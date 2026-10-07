@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: "Manufacturing software covers the systems that plan, run, and record production: orders, materials, schedules, quality checks, maintenance, supplier exchanges, and the reports that tie them together."
+  what: "We build the systems that plan, run, and record production: orders, materials, schedules, quality checks, maintenance, supplier exchanges, and the reports that tie them together."
   problem: Planning lives in spreadsheets, shop-floor data is on paper or in isolated machines, older systems cannot share data, and managers learn about problems after they have cost money.
   audience: Manufacturers, their operations and planning teams, and the suppliers and customers who exchange information with them.
   choose: Start by getting one reliable stream of production and quality data, connect it to planning, and retire spreadsheets one function at a time.

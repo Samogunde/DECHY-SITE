@@ -39,21 +39,27 @@ export function BlockRenderer({
   block,
   breadcrumbs,
   page,
+  aside,
+  visual,
 }: {
   block: Block;
   breadcrumbs?: ReactNode;
+  /** Hero only: the page family visual beside the headline. */
+  aside?: ReactNode;
+  /** Opening definition or prose only: a visual set beside the text. */
+  visual?: ReactNode;
   /** The page being rendered, for blocks that depend on it (the connections rails). */
   page?: Page;
 }) {
   switch (block.type) {
     case "hero":
-      return <Hero block={block} breadcrumbs={breadcrumbs} />;
+      return <Hero block={block} breadcrumbs={breadcrumbs} aside={aside} />;
     case "statement":
       return <StatementBlock block={block} />;
     case "definition":
-      return <DefinitionBlock block={block} />;
+      return <DefinitionBlock block={block} visual={visual} />;
     case "prose":
-      return <ProseBlock block={block} />;
+      return <ProseBlock block={block} visual={visual} />;
     case "index":
       return <IndexBlock block={block} />;
     case "service-index":
@@ -63,7 +69,7 @@ export function BlockRenderer({
     case "process":
       return <ProcessBlock block={block} />;
     case "table":
-      return <TableBlock block={block} />;
+      return <TableBlock block={block} page={page} />;
     case "diagram":
       return <DiagramBlock block={block} />;
     case "columns":

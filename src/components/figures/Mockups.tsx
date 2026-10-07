@@ -215,14 +215,14 @@ export function MobileAppUi({ titleId }: P) {
         <p className="mk-phone-title">Today</p>
         <ul className="mk-rows mk-rows-card">
           {[
-            ["Site visit", "Due 10:00", "blue"],
-            ["Deliver order", "In progress", "ink"],
-            ["Sign off report", "Waiting", "line"],
-          ].map(([t, s, tone]) => (
+            ["Site visit", "Due 10:00", "blue", "North depot"],
+            ["Deliver order", "In progress", "ink", "12 items"],
+            ["Sign off report", "Waiting", "line", "Two photos added"],
+          ].map(([t, s, tone, d]) => (
             <li key={t as string}>
               <span>
                 <b>{t}</b>
-                <small>Customer name</small>
+                <small>{d}</small>
               </span>
               <Chip tone={tone as "line" | "blue" | "ink"}>{s}</Chip>
             </li>
@@ -241,31 +241,53 @@ export function MobileAppUi({ titleId }: P) {
   );
 }
 
+/** Generic deals: kinds of work, never client names. */
+const CRM_PIPE: [string, [string, string][]][] = [
+  [
+    "Lead",
+    [
+      ["Website enquiry", "Today"],
+      ["Second location", "From a form"],
+      ["Training request", "By phone"],
+    ],
+  ],
+  [
+    "Qualified",
+    [
+      ["Annual support plan", "Call booked"],
+      ["Equipment order", "Needs quote"],
+    ],
+  ],
+  [
+    "Proposal",
+    [
+      ["Site rebuild", "Quote sent"],
+      ["Renewal", "Awaiting reply"],
+    ],
+  ],
+  ["Won", [["Office move", "Invoice raised"]]],
+];
+
 /** A customer system: pipeline columns and the shared record behind them. */
 export function CrmUi({ titleId }: P) {
   return (
     <DiagramRoot
       titleId={titleId}
       title="Conceptual customer system"
-      description="A customer system window. Four pipeline columns, named lead, qualified, proposal, and won, hold cards for companies. A side panel shows one customer record with contact, orders, support, and billing sections that stay in step with other tools."
+      description="A customer system window. Four pipeline columns, named lead, qualified, proposal, and won, hold cards for deals such as a website enquiry, a renewal, and an office move. A side panel shows one customer record with contact, orders, support, and billing sections that stay in step with other tools."
       className="mk mk-crm"
     >
       <div className="mk-window">
         <Chrome title="customers.example" />
         <div className="mk-crm-body" aria-hidden="true">
           <div className="mk-pipe">
-            {[
-              ["Lead", 3],
-              ["Qualified", 2],
-              ["Proposal", 2],
-              ["Won", 1],
-            ].map(([c, n]) => (
-              <div key={c as string} className="mk-col">
+            {CRM_PIPE.map(([c, cards]) => (
+              <div key={c} className="mk-col">
                 <p className="mk-label">{c}</p>
-                {Array.from({ length: n as number }).map((_, i) => (
-                  <div key={i} className="mk-card">
-                    <p className="mk-t">Company name</p>
-                    <p className="mk-p">Contact name</p>
+                {cards.map(([t, sub]) => (
+                  <div key={t} className="mk-card">
+                    <p className="mk-t">{t}</p>
+                    <p className="mk-p">{sub}</p>
                   </div>
                 ))}
               </div>
@@ -445,13 +467,13 @@ export function InterfaceSet({ titleId }: P) {
           <p className="mk-phone-title">Today</p>
           <ul className="mk-rows mk-rows-card">
             {[
-              ["Site visit", "Due 10:00", "blue"],
-              ["Deliver order", "In progress", "ink"],
-            ].map(([t, s, tone]) => (
+              ["Site visit", "Due 10:00", "blue", "North depot"],
+              ["Deliver order", "In progress", "ink", "12 items"],
+            ].map(([t, s, tone, d]) => (
               <li key={t as string}>
                 <span>
                   <b>{t}</b>
-                  <small>Customer name</small>
+                  <small>{d}</small>
                 </span>
                 <Chip tone={tone as "line" | "blue" | "ink"}>{s}</Chip>
               </li>

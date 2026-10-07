@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: Financial services software covers the systems that banks, lenders, insurers, advisers, and finance teams use to onboard customers, process transactions and claims, report, and keep records.
+  what: "We build the systems banks, lenders, insurers, advisers, and finance teams use to onboard customers, process transactions and claims, report, and keep records."
   problem: Core systems are old and closed, data is re-keyed between them, reports are assembled by hand, and every change must preserve accuracy and a record of who did what.
   audience: Finance, banking, lending, insurance, and advisory firms, and the finance and operations teams of other companies.
   choose: Connect and modernize in stages around the process that carries the most risk or manual effort, with accuracy checks and audit trails designed in from the start.

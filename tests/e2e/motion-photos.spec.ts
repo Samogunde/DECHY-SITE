@@ -14,7 +14,6 @@ async function scrollThrough(page: Page) {
 
 const PHOTO_COUNTS: Record<string, number> = {
   "/": 3,
-  "/software-development/": 1,
   "/contact/": 1,
 };
 

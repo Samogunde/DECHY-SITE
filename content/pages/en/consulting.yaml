@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Technology consulting helps you decide what technology to build, buy, connect, or leave alone, and plans the steps to get there before money is spent.
+  what: "We help you decide what technology to build, buy, connect, or leave alone, and plan the steps to get there before money is spent."
   problem: Technology decisions are large, expensive, and hard to reverse, and advice often comes from people who sell one answer.
   audience: Leaders facing a big technology decision, teams whose tools have grown messy, and organizations unsure where to start with AI or automation.
   choose: "Start where you are: a short workshop to frame the problem, an assessment to see what you have, or a roadmap when you know the goal and need the route."

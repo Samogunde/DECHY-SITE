@@ -16,7 +16,7 @@ datePublished: "2026-10-05"
 dateModified: "2026-10-06"
 schemaTypes: [WebPage, CollectionPage, FAQPage]
 comprehension:
-  what: "A solution is a way of solving a particular business problem, often using several services together, such as automating an approval process or modernizing old software."
+  what: "We start from the business problem, such as an approval process done by hand or software that is too old to change, and bring together the services that solve it."
   problem: "People describe their problem, not the technology, so a list of services does not show them what will help."
   audience: "Leaders and teams who know what is going wrong but not what kind of technology fixes it."
   choose: "Start from the problem you recognize, see the solution that addresses it, and follow it to the services, systems, and technologies behind it."
@@ -28,7 +28,7 @@ sections:
     variant: hub
     eyebrow: Solutions
     headline: Start from the problem
-    lead: "At DECHY, a solution is the answer to a business problem. This page lists the problems we are asked about most, the solution for each, and where to go when your need is better answered by a kind of system than by a single solution."
+    lead: "At DECHY, a solution is the answer to a business problem. Below are the problems we are asked about most and how we solve each one. Where a kind of system answers your need better than a single solution, we point you to it."
     support: "Each solution leads to the services, systems, and technologies behind it."
     ctas:
       - { label: Describe your problem, href: "/contact/" }
@@ -62,7 +62,7 @@ sections:
     rows:
       - - "Solutions"
         - "What is wrong, and what does fixing it look like?"
-        - "This page, and the solution pages below."
+        - "The solution pages below."
       - - "Services"
         - "What kind of work does DECHY do?"
         - "[Services](/services/) hub, one page for each of the 15."

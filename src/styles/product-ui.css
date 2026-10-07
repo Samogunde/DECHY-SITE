@@ -127,12 +127,10 @@
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 0.2rem;
-  background: currentColor;
-  opacity: 0.35;
+  background: rgb(17 24 39 / 0.22);
 }
 .pu-nav-on .pu-ico {
   background: var(--color-blue);
-  opacity: 1;
 }
 .pu-main {
   display: grid;

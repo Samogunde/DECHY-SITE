@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - FAQPage
 comprehension:
-  what: Real estate software covers the systems that agencies, developers, landlords, and property managers use to market properties, follow up leads, manage tenancies and owners, handle maintenance, and keep the accounts.
+  what: "We build the systems agencies, developers, landlords, and property managers use to market properties, follow up leads, manage tenancies and owners, handle maintenance, and keep the accounts."
   problem: Leads sit in inboxes, documents travel by email, maintenance requests get lost, and owners and tenants keep phoning for updates that the business already holds.
   audience: Estate agencies, property managers, landlords, developers, and property technology companies.
   choose: Fix the path from enquiry to follow-up first, then give tenants and owners a place to see their own information, and connect the back office behind them.

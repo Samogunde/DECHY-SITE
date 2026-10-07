@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: Data and analytics is collecting information from your tools, cleaning and combining it, and showing it in reports and dashboards you can trust.
+  what: "We collect information from your tools, clean and combine it, and show it in reports and dashboards you can trust."
   problem: Numbers differ from report to report, reports are built by hand, and nobody is sure which figure is right, so decisions rely on guesswork.
   audience: Owners, managers, and finance and operations teams who need clear numbers, and anyone buried in spreadsheets.
   choose: "Match the tool to the job: a spreadsheet for small, simple needs, a dashboard tool when several sources feed one view, and a data warehouse when information is large or many people rely on it."

@@ -107,7 +107,7 @@ sections:
       - Most organizations do not have a technology problem in one place. They have a website that does not talk to the CRM (the system where you keep track of customers and sales). They have a spreadsheet that feeds three reports, an automation nobody monitors, and an AI pilot with no route into daily work. Each tool was a reasonable purchase. Together they are a system nobody designed.
       - "At DECHY, we work across the full range of technology: software and web development, AI, automation, integration, cloud, security, data, design, and search visibility. The breadth matters for a practical reason. The hardest problems sit between disciplines. A good automation depends on clean data and reliable APIs (the connections that let software share information). A good AI feature depends on the application around it, the permissions behind it, and the infrastructure under it."
       - So we start from the outcome and the workflow, not from a product category. Sometimes the right answer is a custom application. Sometimes it is connecting the tools you already own. Sometimes it is telling you that something should not be built at all.
-      - "That is what the line at the top of this page means: software, AI, automation, integration, and cloud, designed to work as one system, inside a wider practice that also covers design, security, data, growth, and strategy."
+      - "That is what we mean by software, AI, automation, integration, and cloud, designed to work as one system, inside a wider practice that also covers design, security, data, growth, and strategy."
   - type: index
     id: who
     tone: white

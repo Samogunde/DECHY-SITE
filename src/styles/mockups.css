@@ -28,6 +28,7 @@
 /* window chrome */
 /* Product-screen finish: a soft frame with depth, not a heavy wireframe outline. */
 .mk-window {
+  overflow-wrap: normal;
   background: var(--color-white);
   border: 1px solid rgb(17 24 39 / 0.14);
   border-radius: 0.75rem;
@@ -283,7 +284,8 @@
 }
 .mk-cols3 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* tiles reflow instead of squeezing, so a word is never split across lines */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7.75rem), 1fr));
   gap: 0.6rem;
 }
 .mk-tile {
