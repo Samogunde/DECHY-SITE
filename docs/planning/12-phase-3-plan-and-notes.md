@@ -1,6 +1,6 @@
 # Phase 3: technology pages (plan, qualification, and implementation notes)
 
-Status: IMPLEMENTED. Authorized by the owner on 6 October 2026 as one continuous build. This file records the scope taken from the approved documents, the qualification outcome, and what was built. It adds no company facts.
+Status: IMPLEMENTED. Authorized by the owner on 6 October 2026 as one continuous build. This file records the scope taken from the approved documents, the qualification outcome, and what was built. It adds no company facts. The qualification of the remaining technologies and of the Solutions axis, and the ranked next technology wave, are in `14-technology-and-solutions-qualification.md`.
 
 ## 1. Scope source
 

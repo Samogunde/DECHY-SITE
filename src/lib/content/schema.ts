@@ -106,6 +106,11 @@ export const RELATION_TYPES = [
   "alternativeTo",
   "hasWorkArea",
   "relatedWork",
+  // Grouping inside the technology graph: a child technology is part of a parent technology or
+  // stack (Express partOf Node.js). It is stored once as partOf; hasPart is its derived inverse.
+  // It is semantic only: it never implies a page, a URL, a menu entry, or a public capability claim.
+  "partOf",
+  "hasPart",
 ] as const;
 export const Relation = z.object({
   from: z.string(),

@@ -7,6 +7,8 @@
 # OpenSearch, Datadog, Sentry) stay as entities with no page and no menu entry until the owner confirms
 # the factual capability; they are neither promoted nor removed. The capability categories they sit in
 # are approved in data/taxonomy/capabilities.yaml; the named products are not yet confirmed.
+# The grouping of the eight MERGE / CONSOLIDATE entities is stored as partOf relations in
+# data/relations/part-of.yaml (semantic only: no page, URL, link, or capability claim follows).
 entities:
   # Back end (runtime and frameworks)
   - id: tech.nodejs

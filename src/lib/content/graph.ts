@@ -8,6 +8,8 @@ import type { Relation } from "./schema";
 const INVERSE: Partial<Record<Relation["type"], Relation["type"]>> = {
   solves: "solvedBy",
   solvedBy: "solves",
+  partOf: "hasPart",
+  hasPart: "partOf",
 };
 
 export function outgoing(registry: Registry, fromId: string, type?: Relation["type"]): Node[] {

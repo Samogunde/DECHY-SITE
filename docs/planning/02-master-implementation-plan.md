@@ -163,7 +163,7 @@ Each entity carries organizing fields (never public disclaimers):
 Rules:
 1. Every listed capability is available to the content and entity architecture: it can appear in capability matrices, "technologies we work with" sections, relationship rails, schema `knowsAbout`, comparisons, and search/filter.
 2. `pagePolicy` is about search intent, not capability. A language such as Perl may remain a reference entity because no one searches for a Perl service; that is a page decision, not a statement about DECHY.
-3. Strategic technologies (feature prominence) get dedicated pages first, because their search demand is highest. Initial candidate list for Phase 3 (ASSUMPTION about demand; to be confirmed by the SERP review): Next.js, React, TypeScript, Python, Node.js, PHP, Java, .NET, WordPress, Shopify, Webflow, Airtable, Zapier, Make, n8n, OpenAI, Claude, Gemini, LangChain, AWS, Azure, Google Cloud, Flutter, React Native, Swift, Kotlin, PostgreSQL, MongoDB, Salesforce, HubSpot, Stripe, Docker, Kubernetes, Terraform.
+3. Strategic technologies (feature prominence) get dedicated pages first, because their search demand is highest. Initial candidate list for Phase 3 (ASSUMPTION about demand; to be confirmed by the SERP review; **CLARIFIED 2026-10-06:** Phase 3 built 32 of these 34; Node.js and .NET were not built and are the HIGH candidates of the next technology wave in `docs/planning/14-technology-and-solutions-qualification.md`, not omissions): Next.js, React, TypeScript, Python, Node.js, PHP, Java, .NET, WordPress, Shopify, Webflow, Airtable, Zapier, Make, n8n, OpenAI, Claude, Gemini, LangChain, AWS, Azure, Google Cloud, Flutter, React Native, Swift, Kotlin, PostgreSQL, MongoDB, Salesforce, HubSpot, Stripe, Docker, Kubernetes, Terraform.
 4. Third-party logos are not used by default (they imply partnership or certification). Technology names appear as text, which preserves the full breadth without implying a vendor relationship.
 5. Copy about any entity may describe what DECHY does with it (approved capability), without outcomes or client claims unless supplied.
 
@@ -184,6 +184,8 @@ Rules:
 ## 9. Solution architecture
 
 Solutions are the bridge between buyer language and DECHY services. A **Solution page begins with the business problem** (AGENTS 71) and connects problem, solution, technologies, services, workflow, outcome (qualitative only unless verified), implementation. The 22 solutions in AGENTS 23 are the candidate list; first wave (RECOMMENDED): Business Process Automation, Workflow Automation, Legacy System Modernization, Cloud Migration, API Integration, CRM Integration, Customer Portal Development, Internal Business Software, AI Customer Support, AI Agents, AI Knowledge Systems, Business Dashboards. Order and exact set to be finalized in Phase 3.
+
+> **SUPERSEDED (AMD-19), 2026-10-06.** The twelve-Solution first wave above is superseded. The canonical first-wave Solution architecture is **six standalone Solution pages**: Business Process Automation, Legacy System Modernization, Cloud Migration, CRM Integration, Business Dashboards, AI Customer Support. Of the twelve listed, five (Workflow Automation, API Integration, Customer Portal Development, Internal Business Software, AI Agents) are represented through existing Work Areas and one (AI Knowledge Systems) is deferred; AI Automation is merged into Business Process Automation; Booking, Marketplace, Payment Integration and SaaS Platforms are deferred; Customer Experience Systems is graph-only. Rationale: the five describe the same buyer intent and system as a published Work Area, and a second page would split one intent across two URLs. The 22 entities all stay in the graph. Current source: ADR 0006 and `docs/planning/14-technology-and-solutions-qualification.md`, sections 10 and 11. The text above is kept as the historical record.
 
 ## 10. Problem architecture
 
@@ -331,7 +333,7 @@ Rules (RECOMMENDED, extending AGENTS 29):
 
 ## 21. Internal-linking architecture
 
-- Links come from typed edges: parent, children, siblings, `relatedService`, `usesTechnology`, `appliesToIndustry`, `solves`, `integratesWith`, `alternativeTo`, `furtherReading`, `evidence`.
+- Links come from typed edges: parent, children, siblings, `relatedService`, `usesTechnology`, `appliesToIndustry`, `solves`, `integratesWith`, `alternativeTo`, `furtherReading`, `evidence`. **EXTENDED (AMD-20):** `partOf` (child to parent, inverse `hasPart`) groups technologies in the graph; it is semantic only and never produces a link, page or URL.
 - Each page template declares its required link slots (for example a service page: 3 to 6 technologies, 3 to 6 solutions, 2 to 4 related services, 2 to 4 resources, 1 proof or reference item when it exists).
 - Anchor text variants stored on the target entity (synonyms), rotated to read naturally; no exact-match repetition.
 - Validators: no orphans, no broken links, minimum inbound links (2), maximum outbound links per section to avoid link walls, no redirect links in navigation, no links to `noindex` pages from the sitemap.
@@ -577,6 +579,8 @@ This reconciles AGENTS 60 and 95, the Handoff, the Content Master, and your inst
 | 4 | Industries; solutions; qualified intersections; country Wave 1 (US, UK, Canada, Australia, Ireland); article Batches 2 to 3; Work Entries as you supply them | Per-batch review |
 | 5 | Country Waves 2 and 3 (DE, FR, NL, CH, BE, AT, ES, IT, SE, AE); article Batches 4 to 6; case studies as verified detail arrives | Per-batch review |
 | 6 | Language localization (locale versions of country and core pages); country x service intersections | Genuine localization and evidence per market |
+
+> **CLARIFIED (AMD-19), 2026-10-06.** In Phase 4, "solutions" means the six standalone Solution pages in section 9; the other Solutions are represented through Work Areas, merged, deferred, or graph-only. Phase 4 prerequisites are listed in `docs/planning/14-technology-and-solutions-qualification.md`, section 11.7. The next technology wave is scheduled by the owner separately and is not assigned a phase number.
 
 > **PROPOSED (not yet approved), 2026-10-05.** The detailed Phase 2 execution plan, with exact routes, build order, differentiation controls and decisions, is `docs/planning/10-phase-2-plan.md`. It keeps this table's Phase 2 scope and asks the owner to decide whether three guided hubs (`/services/`, `/solutions/`, `/technologies/`) ship in Phase 2.
 

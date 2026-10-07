@@ -38,9 +38,12 @@ export function connectionsFor(page: Page, registry: Registry): ConnectionRail[]
   for (const b of page.sections)
     if (b.type === "related") for (const g of b.groups) authored.push(...g.entityIds);
 
+  // Grouping edges (partOf, hasPart) are semantic only: they must never add a visible link or a name
+  // to a page, because a grouped technology has no page and is not a public capability claim.
   const inbound: string[] = [];
   if (self)
     for (const r of registry.relations) {
+      if (r.type === "partOf" || r.type === "hasPart") continue;
       if (r.from === self) inbound.push(r.to);
       else if (r.to === self) inbound.push(r.from);
     }

@@ -1,6 +1,6 @@
 # Technology and Solutions qualification
 
-Status: REVIEW AND RECOMMENDATION, with owner decisions recorded in section 10. Nothing here is implemented as a page. It is the planning gate between the navigation pass and Phase 4. Written 6 October 2026. Sections 1 to 9 are the qualification as submitted, updated only where an owner decision changed a disposition (the nine entities now read CONFIRMATION REQUIRED, and MySQL is requalified). Section 10, Decision Resolution, is the current record of what is approved, what awaits factual confirmation, what is deferred, and what still needs architectural review.
+Status: REVIEW AND RECOMMENDATION, with owner decisions recorded in section 10 and the architecture reconciliation (the current source of truth) in section 11. Nothing here is implemented as a page. It is the planning gate between the navigation pass and Phase 4. Written 6 October 2026. Sections 1 to 9 are the qualification as submitted, updated only where an owner decision changed a disposition (the nine entities now read CONFIRMATION REQUIRED, and MySQL is requalified). Section 10, Decision Resolution, is the current record of what is approved, what awaits factual confirmation, what is deferred, and what still needs architectural review.
 
 Evidence labels used throughout:
 
@@ -19,7 +19,7 @@ Evidence labels used throughout:
 
 **Next technology wave.** Eleven pages, ranked: four HIGH (Node.js, WooCommerce, .NET, Power Automate) and seven MEDIUM (BigQuery, MySQL, Vue, Angular, Firebase, Supabase, Snowflake), plus one grouped open-models page that needs a new group entity (MEDIUM, Samuel to decide). MySQL was first placed in LATER only because the PostgreSQL page exists; on requalification (section 4.3) it passes the standalone-page criteria and is MEDIUM.
 
-**Solutions versus Work Areas.** Of the 22 planned Solutions, 6 satisfy an intent that is meaningfully different from every Work Area and should become pages; 5 are plausible but should wait; 9 are the same intent as a Work Area and should be represented by it; 1 merges into another Solution; 1 stays graph-only. Nothing is removed. This is smaller than the first-wave 12 in the master plan, and deliberately so: nine of the twelve planned first-wave Solutions would otherwise be a second page for something a Work Area already explains.
+**Solutions versus Work Areas.** Of the 22 planned Solutions, 6 satisfy an intent that is meaningfully different from every Work Area and should become pages; 5 are plausible but should wait; 9 are the same intent as a Work Area and should be represented by it; 1 merges into another Solution; 1 stays graph-only. Nothing is removed. This is smaller than the first-wave 12 in the master plan, and deliberately so: five of the twelve planned first-wave Solutions (Workflow Automation, API Integration, Customer Portal Development, Internal Business Software, AI Agents) would otherwise be a second page for something a Work Area already explains, and nine of the 22 candidates in all are better served that way. The twelve are SUPERSEDED (section 11).
 
 **What this changes in the data.** The eight grouped entities carry `MERGE / CONSOLIDATE`; the nine confirmation-required entities keep `REVIEW` with a CONFIRMATION REQUIRED marker (section 3). Nineteen Problem to Solution edges were added to the graph (section 10.5). No Solution `pagePolicy` is changed and no page, route or copy changes.
 
@@ -573,10 +573,10 @@ Status: **Recommended**, to be confirmed with the wave. No page, entity or menu 
 | Not included | OpenAI, Anthropic Claude, Google Gemini, Cohere, which are not open-weight |
 | Why a group, not three pages | The buyer decision is "should we self-host an open model", which none of the three provider pages answers; Llama, Mistral and Hugging Face are options inside that decision |
 | Name note | "Open-weight" is the accurate term for models such as Llama whose weights are available but whose licence is not an open-source licence; the page title should say so plainly |
-| Relationships needed | Each member provider needs a link to the group. The relation types in the schema have no "part of" type, so this is an **architectural review** item: either add one relation type or use `alternativeTo` and `furtherReading` |
+| Relationships needed | Each member provider needs a link to the group. Use the `partOf` relation added in section 11.3 |
 | Existing provider entities | Remain; their current MERGE disposition becomes "named inside the group page" |
 
-Status: **Decision required.** The group entity is not created until Samuel approves it.
+Status: **Pending architecture decision** (section 11.5). The entity, page, route and navigation entry are not created until Samuel approves them. The grouping would use `partOf` (section 11.3).
 
 ## 5. Solutions versus Work Areas: qualification
 
@@ -864,7 +864,7 @@ The graph can now be followed as Problem, Solution, Service, Work Area, Technolo
 
 ### 10.6 Solution to Industry relationships
 
-**Finding.** No Solution-level industry mapping exists in the approved architecture, so no edge was added. Evidence reviewed:
+**Finding.** Status: DEFERRED / REQUIRES FUTURE QUALIFICATION (section 11.4). No Solution-level industry mapping exists in the approved architecture, so no edge was added. Evidence reviewed:
 
 - `AGENTS.md` section 3 lists 13 industry software opportunities, but only under **Software Development** (Healthcare, Real Estate, Construction, Finance, Education, Logistics, Retail, Ecommerce, Manufacturing, Hospitality, Legal, Government, Professional Services). That is an approved Service by Industry link, and the graph already carries it (the Software Development service has 13 `appliesToIndustry` edges). No other service has an approved industry list.
 - `AGENTS.md` section 26 names Service by Industry as a legitimate intersection to qualify, but it names no pairs.
@@ -893,9 +893,120 @@ The graph can now be followed as Problem, Solution, Service, Work Area, Technolo
 
 | Question | Why it is open |
 |---|---|
-| Plan section 9 still lists twelve first-wave Solutions; the approved set is six | The plan text needs an amendment note when the policies are applied, so the two documents do not disagree |
-| A "part of" relation for groups | The schema has no such type, and the open-model group, the headless CMS group and the machine-learning frameworks group would all need one |
-| How the Solutions hub should present six pages and sixteen concepts that route to Work Areas or stay deferred | The hub exists from Phase 2; its content is not changed here |
+| Plan section 9 still lists twelve first-wave Solutions; the approved set is six | **Resolved** (section 11.6): annotated SUPERSEDED in the plan and the Phase 2 plan; AMD-19 |
+| A "part of" relation for groups | **Resolved** (section 11.3): `partOf` with derived inverse `hasPart`; AMD-20 |
+| How the Solutions hub should present six pages and sixteen concepts that route to Work Areas or stay deferred | **Architecture resolved** (section 11.2); the hub itself is not changed until authorized |
 | Whether `solves` edges for interpretive links (the "requires confirmation" rows in 10.5) should ever be stored | Recorded only when Samuel confirms; the graph should not carry guessed edges |
 | Firebase and Supabase menu category | Recommended (section 4.4); decide at build |
 | Whether the Cloud and DevOps technology category needs a sub-grouping once Firebase and Supabase join | Menu width and clarity |
+
+## 11. Architecture reconciliation
+
+Recorded 6 October 2026 after the owner approved section 10 in principle. This section and ADR 0006 (`docs/decisions/0006-technology-and-solutions-architecture-reconciliation.md`) are the current source of truth for everything below. The purpose is to leave one answer to each question, not to change the site: no page, route, navigation entry, Work Area or copy was changed.
+
+### 11.1 Canonical Solution architecture
+
+**The canonical first-wave Solution architecture is six standalone Solution pages.** The earlier twelve are SUPERSEDED (see 11.5 for where that is marked).
+
+| Class | Solutions |
+|---|---|
+| Standalone first-wave (6) | Business Process Automation, Legacy System Modernization, Cloud Migration, CRM Integration, Business Dashboards, AI Customer Support |
+| Represented through existing Work Areas (9) | AI Agents, API Integration, Customer Portal Development, Data Systems, Digital Transformation, Ecommerce Systems, Internal Business Software, Subscription Platforms, Workflow Automation |
+| Merged (1) | AI Automation into Business Process Automation |
+| Deferred (5) | AI Knowledge Systems, Booking Platforms, Marketplace Platforms, Payment Integration, SaaS Platforms |
+| Graph-only (1) | Customer Experience Systems |
+
+No existing authoritative source conflicts with this classification. `AGENTS.md` section 23 lists the 22 as candidates and section 71 sets the Solution page principle (begin with the business problem); both stay in force and are consistent with it. Where the twelve appeared they were marked RECOMMENDED or "to be finalized", which is why they can be superseded without amending a governing instruction.
+
+The four axes, stated once: **Services** are what DECHY does; **Work Areas** are the kinds of system DECHY builds; **Solutions** are the business problem, need or outcome; **Technologies** are what a system can be built with. A Solution gets its own page only if it satisfies a meaningfully different user intent from its closest Work Area.
+
+### 11.2 `/solutions/` hub: approved information architecture
+
+The hub stays a real canonical hub at `/solutions/`, on the Solutions axis. It is not a collection of service or Work Area cards in another order. This is the intended architecture only; the hub is not redesigned or rebuilt here.
+
+| Part | Purpose | Content rule |
+|---|---|---|
+| 1. What a Solution means at DECHY | Explain the Solutions axis and keep it distinct from Services, Work Areas and Technologies | The four axes in plain words, with the one diagram that shows problem, solution, service, Work Area, technology |
+| 2. The six standalone Solutions | The only Solutions presented as destinations | One entry per Solution, led by the business problem in plain words, with the outcome and the Services, Work Areas and Technologies it connects to. A Solution without a built page is plain text, never a dead link |
+| 3. Other needs, answered through Work Areas | Make clear that some business needs are served by an existing Work Area and not by a separate Solution page | A problem-led finder: the need in the visitor's words, the Work Area or Service that answers it. Covers the nine represented concepts, the merged one, and the needs of the deferred and graph-only ones. It never presents a deferred, merged or graph-only Solution as a page |
+| 4. Where this connects | Connect each of the six to its Services, Work Areas and Technologies | The same rails used on service, technology and Work Area pages, driven by the graph |
+| 5. Next step | Help the visitor who has a problem but no label for it | Describe-your-problem call to action and questions |
+
+Not on the hub: a list of all 22 Solutions as equals; cards that repeat the Services or Work Areas hubs; an Industries section (Solution to Industry mapping is deferred, 11.4); any problem page family.
+
+**Intended relationships** (for the six standalone pages; section 6.2 holds the full mapping):
+
+| From | To | Direction and role |
+|---|---|---|
+| Problem entity | Solution | The problem opens the Solution page (`solves`); established edges are in `data/relations/problem-solution.yaml` |
+| Solution | Service | The Solution is offered by its owning Service (`offersSolution`) and draws on related Services |
+| Solution | Work Area | Links to the Work Areas that describe the systems it produces |
+| Solution | Technology | Links to the technology pages it commonly uses; unbuilt ones are plain text |
+| Hub | Work Area (for represented needs) | The finder sends the visitor to the Work Area, not to a Solution page that does not exist |
+| Hub | Services, Work, Technologies hubs | The four-ways strip that already exists |
+
+**Current hub versus this architecture.** The Phase 2 hub already has a problem-led finder with eight paths (not twelve) that point to services and Work Areas, which fits part 3, and an explanation of what a Solution is, which fits part 1. Its "Solution areas" list names all 22 Solutions as chips grouped by problem, which does not fit part 2 (it presents deferred, merged and graph-only Solutions as if equal). That block is to be revised when the hub implementation is authorized. It is not changed now.
+
+### 11.3 Grouped technologies: `partOf`
+
+**Resolved by adding a relation, not reusing one.** The existing vocabulary (`relatedService`, `offersSolution`, `addressesProblem`, `usesTechnology`, `appliesToIndustry`, `solves`, `solvedBy`, `integratesWith`, `furtherReading`, `alternativeTo`, `hasWorkArea`, `relatedWork`) has nothing for "belongs to". `integratesWith` and `alternativeTo` mean the opposite of grouping, so reusing them would have made the graph wrong. The smallest fit is **`partOf`** (child to parent), with **`hasPart`** as its derived inverse, in the same style as `solves` and `solvedBy`.
+
+| Child | `partOf` | Parent |
+|---|---|---|
+| Express | partOf | Node.js |
+| NestJS | partOf | Node.js |
+| Django | partOf | Python |
+| FastAPI | partOf | Python |
+| Flask | partOf | Python |
+| Spring Boot | partOf | Java |
+| Laravel | partOf | PHP |
+| Elasticsearch | partOf | ELK |
+
+Rules, enforced by the validator and a unit test: the edge connects two technology entities; there is no cycle; `hasPart` is never stored; and the edge never appears on a page. `partOf` is not evidence that the child needs a standalone URL: grouped technologies keep no page, no menu entry, no rail entry and no link, and naming a framework in copy remains a capability claim that needs Samuel's confirmation (section 10.3). The same relation will serve the open-model group and the headless CMS and machine-learning framework groups if they are ever approved.
+
+### 11.4 Solution to Industry: deferred
+
+**DEFERRED / REQUIRES FUTURE QUALIFICATION.** No Solution-level industry mapping is approved, so none is created, and no list of industries is invented per Solution. The legitimate service-level relationships stay as they are (Software Development has its 13 approved industries). The proposed industry shortlists in section 6.2 are inferences and have no standing as data. They become relationships only after Samuel confirms them per Solution; each confirmed pair is then one `appliesToIndustry` edge. No industry page or family is created.
+
+### 11.5 Open-model group, confirmation-required technologies, and next-wave candidates
+
+| Item | Status |
+|---|---|
+| Open-source and open-weight AI models (candidate members Meta Llama, Mistral, Hugging Face; possible hosting relationships Together AI and Groq) | **Pending architecture decision.** Not an entity, page, route or navigation entry. Documented in section 4.5 as a candidate only |
+| Ruby on Rails, Power BI, Tableau, Looker, Kafka, RabbitMQ, OpenSearch, Datadog, Sentry | **REVIEW / CONFIRMATION REQUIRED.** Not removed, not paged, not promoted; no capability evidence invented (section 10.3) |
+| Node.js, .NET | Next-wave public-page candidates, HIGH. Named in master plan section 7. Not built |
+| MySQL | MEDIUM next-wave candidate. Conditional on content genuinely different from the PostgreSQL page (section 4.3). Not built |
+
+### 11.6 Consistency audit
+
+The complete planning and governance set was searched for contradictions on: six versus twelve Solutions, Solution versus Work Area wording, technology page qualification, grouped technologies, Work Areas, technology navigation, Solution navigation, entity relationships, first-wave terminology, and Phase 4 prerequisites. Historical text was not rewritten; superseded statements were annotated in place.
+
+| Document and place | Finding | Action |
+|---|---|---|
+| Master plan section 9 (Solution architecture) | Lists a twelve-Solution first wave, "to be finalized in Phase 3" | Annotated SUPERSEDED (AMD-19); six are canonical; rationale kept |
+| Phase 2 plan, `/solutions/` row (first-wave situations (12)) | Twelve | Annotated SUPERSEDED; the hub that shipped has eight finder paths |
+| Phase 2 plan, "Solutions pages" row and "Not in Phase 2" list (first wave of 12) | Twelve | Annotated SUPERSEDED (AMD-19) |
+| Master plan section 7 (strategic technologies, 34) | 34 named, 32 built; Node.js and .NET not built in Phase 3 | Note added: they are the next-wave HIGH candidates, not omissions |
+| Master plan section 36 (phase table), Phase 4 row | "solutions" with no count | Note added: six standalone Solutions; Phase 4 prerequisites listed (11.7) |
+| Master plan section 15 and "Links come from typed edges" | Edge vocabulary without grouping | `partOf` added to the vocabulary note |
+| ADR 0005 "Not decided here" and decision 10 | Left the Solutions qualification and the 19 entities open | Annotated: decided in doc 14 and ADR 0006 |
+| Technology master inventory (doc 13) | Uses NEXT and "Phase 4 candidate"; first-pass dispositions | Annotated: doc 14 governs; "Phase 4" there means the next technology wave, which is not assigned a phase number |
+| Phase 3 plan (doc 12) | Complete and consistent; no conflict | Pointer to doc 14 added |
+| Handoff Phase 4 list ("problems", "business types") | "problems" as Phase 4 scope reads like a page family | No edit needed: AMD-05 and AMD-08 already govern (problems are entities; the handoff phases are superseded as sequencing) |
+| `AGENTS.md` sections 23 and 71 | Consistent: 22 candidates, problem-first principle | No edit; governing document untouched |
+| Master plan homepage hierarchy ("6 Solutions and use cases") | Different meaning (a homepage content row) | No conflict; no edit |
+| `CLAUDE.md` | State and source map lacked the qualification and the six | Updated |
+| `content/pages/en/solutions.yaml` (public hub) | The "Solution areas" chips name all 22 | Not changed (no implementation); recorded in 11.2 |
+
+After this pass there is no active statement that the first wave is twelve Solutions, other than inside annotations that mark it superseded.
+
+### 11.7 Phase 4 prerequisites
+
+Phase 4 (Industries, Solutions, qualified intersections, country Wave 1) does not start without the owner's authorization. Before the Solutions part is built:
+
+1. The owner authorizes Phase 4, or the Solutions part of it, in chat.
+2. The factual confirmations in section 10.3 that a Solution page would depend on are settled, in particular any named BI tools for Business Dashboards.
+3. The pending Solution `pagePolicy` values (section 10.2) are applied and the hub revision in 11.2 is authorized.
+4. The six pages are written problem-first under the clarity standard (ADR 0004) and the similarity validator, with Solution to Industry links only where Samuel has confirmed them.
+5. Recommended, not a gate: build the HIGH technology pages they link to first (Node.js, .NET, Power Automate), because an unbuilt link renders as plain text.
+6. The next technology wave is scheduled by the owner separately and is not assigned a phase number here.

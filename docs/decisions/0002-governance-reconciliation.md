@@ -41,6 +41,9 @@ Purpose: ensure no document in the repository can lead an implementation agent t
 | AMD-16 | Case studies as the proof surface (AGENTS 31 and 72) | Extended: Work (Work Areas and Work Entries) is the primary proof architecture; a case study is a verified, detailed Work Entry | `docs/planning/04-work-architecture.md` |
 | AMD-17 | Brand asset library under `brand/` (AGENTS 1A.22) | Clarified: `brand/` lives at the repository root; the supplied PNG stays unmodified and moves there in Phase 1 with an unchanged hash | Plan Appendix D item 7 |
 | AMD-18 | International expansion as the last phase (Handoff 23, Phase 6) | Amended: country pages (waves) start in Phase 4; language localization stays last | Plan section 36 |
+| AMD-19 | Plan section 9 and Phase 2 plan: first-wave Solutions are twelve | Superseded 2026-10-06: the canonical first-wave Solution architecture is six standalone pages; nine concepts are represented through Work Areas, one is merged, five deferred, one graph-only | ADR 0006; `docs/planning/14-technology-and-solutions-qualification.md` sections 10 and 11 |
+| AMD-20 | Entity relations had no grouping relation (plan sections 15 and 21) | Extended 2026-10-06: `partOf` (child to parent) with derived inverse `hasPart`, semantic only; never implies a page or a URL | ADR 0006; `src/lib/content/schema.ts`; `data/relations/part-of.yaml` |
+| AMD-21 | Technology entities seeded from capability categories (AGENTS 3 to 23; ADR 0005 decision 10) | Clarified 2026-10-06: a technology is a recognized entity only on named evidence or owner confirmation; the nine unconfirmed named products are REVIEW / CONFIRMATION REQUIRED; a recognized entity still earns a page only by the qualification standard | ADR 0006; doc 14 sections 2, 3 and 10.3 |
 
 ## 4. Intentionally unchanged
 

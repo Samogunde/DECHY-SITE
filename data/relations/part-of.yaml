@@ -1,0 +1,13 @@
+# Grouping inside the technology graph (qualification gate, docs/planning/14, section 10 and 11).
+# partOf runs from the child to the parent. It is semantic only: a child technology stays an entity,
+# gets no page, URL, menu entry, link, or named capability claim from this edge, and the Technology
+# rails ignore it. Naming a framework in page copy still needs the owner's confirmation.
+relations:
+  - { from: fw.express, type: partOf, to: tech.nodejs }
+  - { from: fw.nestjs, type: partOf, to: tech.nodejs }
+  - { from: fw.django, type: partOf, to: lang.python }
+  - { from: fw.fastapi, type: partOf, to: lang.python }
+  - { from: fw.flask, type: partOf, to: lang.python }
+  - { from: fw.spring-boot, type: partOf, to: lang.java }
+  - { from: fw.laravel, type: partOf, to: lang.php }
+  - { from: tech.elasticsearch, type: partOf, to: tool.elk }

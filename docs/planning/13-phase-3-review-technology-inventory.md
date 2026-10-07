@@ -4,6 +4,8 @@ Superseded for dispositions by `14-technology-and-solutions-qualification.md` (t
 
 Status: REVIEW MATERIAL, kept as the technology master inventory. Generated from `data/taxonomy/` on 6 October 2026, after the graph completion in ADR 0005. Dispositions are recommendations, not decisions: a page is built only after qualification.
 
+Terminology note (2026-10-06): where this file says NEXT or "Phase 4 candidate" for a technology page, read "next technology wave" (`14-technology-and-solutions-qualification.md`, section 4). The next technology wave is scheduled by the owner and is not assigned a phase number. Dispositions here are first-pass; doc 14 governs.
+
 Codes: BUILT (public page exists), NEXT (recommended public page in Phase 4), LATER (candidate once demand or evidence exists), MERGE (represented inside another page, with the page named), ENTITY (entity only), RESOURCE (concept: belongs in resources and articles, not a technology page).
 
 Entities in scope: 329 technology-like entities (of 774 taxonomy entities; a further 316 are capabilities). RESOURCE 28, NEXT 12, MERGE 102, ENTITY 131, LATER 24, BUILT 32.

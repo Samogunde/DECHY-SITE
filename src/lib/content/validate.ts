@@ -227,6 +227,14 @@ export function validateRegistry(registry: Registry): Issue[] {
       err("relation-type", where, "offersSolution must target a solution");
     if ((r.type === "addressesProblem" || r.type === "solves") && t !== "problem")
       err("relation-type", where, `${r.type} must target a problem`);
+    if (r.type === "hasPart")
+      err("relation-type", where, "hasPart is derived; store the edge as partOf (child to parent)");
+    if (r.type === "partOf") {
+      if (!(TECHNOLOGY_TYPES.has(f ?? "") && TECHNOLOGY_TYPES.has(t ?? "")))
+        err("relation-type", where, "partOf must connect two technology entities");
+      if (registry.relations.some((o) => o.type === "partOf" && o.from === r.to && o.to === r.from))
+        err("relation-type", where, "partOf must not form a cycle");
+    }
   }
 
   /* ---- pages ---- */

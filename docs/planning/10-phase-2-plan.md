@@ -50,7 +50,7 @@ New indexable pages: 48. With the five existing pages the sitemap holds 53.
 | Route | What it is |
 |---|---|
 | `/services/` | "Find your service": a guided chooser from the visitor's goal to the right pillar, plus all 15 in the five families |
-| `/solutions/` | "Start from your problem": the first-wave situations (12) each pointing to the best service and Work Area now; links to individual solution pages in Phase 4 |
+| `/solutions/` | "Start from your problem": the first-wave situations (12) each pointing to the best service and Work Area now; links to individual solution pages in Phase 4 (**SUPERSEDED (AMD-19):** the hub as built has eight finder paths, and the Phase 4 Solution pages are six, not twelve; ADR 0006) |
 | `/technologies/` | "What we work with, in plain English": the full approved technology architecture grouped by purpose, each group explained, every name present |
 
 ### Group D. Work
@@ -154,7 +154,7 @@ The risk is fourteen copies of Software Development with the nouns changed. Cont
 
 | Question | Phase 2 answer | Where the rest goes |
 |---|---|---|
-| Solutions pages | None. `/solutions/` is a guided finder (D1). The 22 solutions stay entities | Phase 4: individual `/solutions/{slug}/` pages, first wave of 12 |
+| Solutions pages | None. `/solutions/` is a guided finder (D1). The 22 solutions stay entities | Phase 4: individual `/solutions/{slug}/` pages, first wave of 12 (**SUPERSEDED (AMD-19):** first wave of six; ADR 0006) |
 | Technologies pages | `/technologies/` directory only (D1). Technologies are explained inside their pillar and Work Areas | Phase 3: dedicated technology and platform pages by search intent (the candidate list of 34 in master plan section 7) |
 | Industries pages | None. Industries appear as plain text and as "where this applies" content on service pages | Phase 4: first wave of 8 industry pages; the 37 industry entities stay |
 | Work | `/work/` and 25 Work Areas | Work Entries when the owner supplies project facts |
@@ -288,7 +288,7 @@ A page is complete only when all pass:
 
 - All individual technology, platform, language, AI-provider, automation-tool and integration pages (Phase 3, by search intent).
 - Industries hub and the 8 first-wave industry pages (Phase 4); the remaining 29 industry entities stay in the graph.
-- Individual solution pages (Phase 4, first wave of 12).
+- Individual solution pages (Phase 4, first wave of 12; **SUPERSEDED (AMD-19):** six standalone pages, see ADR 0006).
 - Country and location pages and the `/locations/` hub (Phase 4 Wave 1; Phase 5 Waves 2 and 3).
 - All 53 articles and the `/resources/` hub (Batch 1 in Phase 3; the rest in Phases 4 and 5).
 - Work Entries and case studies (when facts are supplied); people pages (when real profiles exist).
