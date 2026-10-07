@@ -98,27 +98,37 @@ export function SelectPanel({
               <div id={`${uid}-panel-${i}`} className="sp-panel" hidden={!on}>
                 {it.body}
                 {n > 1 ? (
-                  <button
-                    type="button"
-                    className="sp-next"
-                    onClick={() => {
-                      const next = (i + 1) % n;
-                      setActive(next);
-                      document.getElementById(`${uid}-opt-${next}`)?.focus();
-                    }}
-                  >
-                    Next: {items[(i + 1) % n]!.label}
-                    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                      <path
-                        d="M2.5 8h10.5M9 4l4 4-4 4"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
+                  <div className="sp-foot">
+                    <span className="sp-steps" aria-hidden="true">
+                      {items.map((_, k) => (
+                        <span key={k} className="sp-step" data-on={k === i ? "" : undefined} />
+                      ))}
+                      <span className="sp-count">
+                        {i + 1} of {n}
+                      </span>
+                    </span>
+                    <button
+                      type="button"
+                      className="sp-next"
+                      onClick={() => {
+                        const next = (i + 1) % n;
+                        setActive(next);
+                        document.getElementById(`${uid}-opt-${next}`)?.focus();
+                      }}
+                    >
+                      Next: {items[(i + 1) % n]!.label}
+                      <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                        <path
+                          d="M2.5 8h10.5M9 4l4 4-4 4"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 ) : null}
               </div>
             </div>

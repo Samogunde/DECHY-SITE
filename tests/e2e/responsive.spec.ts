@@ -41,7 +41,7 @@ for (const width of WIDTHS) {
       expect(overflow.scrollGap, "document wider than viewport").toBeLessThanOrEqual(0);
       expect(overflow.bad, "elements beyond the viewport").toEqual([]);
 
-      // 2. Type-size floors: nothing readable under 13px (eyebrows) / 14px, body copy at least 17px
+      // 2. Type-size floors: nothing readable under 13px (eyebrows) / 14px, body copy at least 16px
       const type = await page.evaluate(() => {
         const small: string[] = [];
         const bodyPx: number[] = [];
@@ -73,7 +73,7 @@ for (const width of WIDTHS) {
           if (el.getBoundingClientRect().width === 0 || el.closest(".t-small")) continue;
           const px = parseFloat(getComputedStyle(el).fontSize);
           bodyPx.push(px);
-          if (px < 16.95)
+          if (px < 15.95)
             smallBody.push(
               `${el.tagName.toLowerCase()}.${String(el.className).slice(0, 50)} ${px}px "${(el.textContent ?? "").trim().slice(0, 30)}"`,
             );
@@ -86,8 +86,9 @@ for (const width of WIDTHS) {
         };
       });
       expect(type.small, "text below the size floor").toEqual([]);
-      expect(type.smallBody, "body text below 17px").toEqual([]);
-      expect(type.minBody, "body text size").toBeGreaterThanOrEqual(16.95);
+      // Owner direction, 7 October 2026: normal body 16 to 17px.
+      expect(type.smallBody, "body text below 16px").toEqual([]);
+      expect(type.minBody, "body text size").toBeGreaterThanOrEqual(15.95);
       // Mobile must not be unnecessarily large; large desktop must grow.
       if (width <= 430) expect(type.maxBody).toBeLessThanOrEqual(24);
       if (width >= 1920) expect(type.minBody).toBeGreaterThanOrEqual(18);

@@ -29,14 +29,15 @@
 
 .dgm {
   --dgm-ink: var(--color-ink);
-  --dgm-border: var(--color-ink);
+  /* A quiet outline with a little depth reads as a designed visual, not a wireframe. */
+  --dgm-border: rgb(17 24 39 / 0.3);
   --dgm-fill: var(--color-white);
   --dgm-muted: var(--color-slate-text);
   --dgm-accent: var(--color-blue);
   --dgm-gap: clamp(0.5rem, 0.35rem + 1.2cqw, 0.85rem);
   --dgm-pad-y: 0.6rem;
   --dgm-pad-x: 0.9rem;
-  --dgm-line: 1.5px;
+  --dgm-line: 1px;
   font-size: var(--fs-body-sm);
   line-height: 1.4;
   color: var(--dgm-ink);
@@ -58,7 +59,11 @@
   padding: var(--dgm-pad-y) var(--dgm-pad-x);
   background: var(--dgm-fill);
   border: var(--dgm-line) solid var(--dgm-border);
-  border-radius: var(--radius-md);
+  border-radius: calc(var(--radius-md) * 1.4);
+  box-shadow: 0 1px 2px rgb(17 24 39 / 0.06);
+}
+.tone-ink .dgm-box {
+  box-shadow: none;
 }
 .dgm-box-ink {
   background: var(--color-ink);
@@ -1163,6 +1168,38 @@
   .funnel-stage:hover .dgm-box,
   .ba-nodes > li:hover .dgm-box {
     border-color: var(--dgm-accent);
+  }
+}
+
+/* Workflow progression: as a flow scrolls into view, each step's number lights up in the order
+   the work runs, once. Nothing loops. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal="figure"][data-state="shown"] .sflow-step .dgm-badge {
+    animation: step-on 0.7s var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 220ms + 350ms);
+  }
+  [data-reveal="figure"][data-state="shown"] .sflow-step .sflow-arrow {
+    animation: arrow-on 0.5s var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 220ms + 520ms);
+  }
+  @keyframes step-on {
+    0% {
+      transform: scale(0.6);
+      box-shadow: 0 0 0 0 rgb(47 111 237 / 0.5);
+    }
+    55% {
+      transform: scale(1.12);
+      box-shadow: 0 0 0 7px rgb(47 111 237 / 0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes arrow-on {
+    from {
+      opacity: 0;
+      transform: translate(-6px, -50%);
+    }
   }
 }
 

@@ -24,7 +24,7 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "Custom software is a system built for one organization: its own tools, portals, apps, and dashboards, designed around how that organization really works."
+  what: "We design and build software for one organization: its own tools, portals, apps, and dashboards, shaped around how it really works, then tested, secured, and looked after."
   problem: Ready-made software forces workarounds. Spreadsheets pile up, systems do not share information, and people lose time and make mistakes.
   audience: Founders, operations leaders, and teams whose process is too specific, or too important, for a ready-made product.
   choose: Build when your process is unique or gives you an edge. Buy when the need is common. Connect what you already have when the tools are fine but do not talk to each other.
@@ -128,16 +128,12 @@ sections:
     id: interfaces
     tone: paper
     label: Interfaces
-    heading: What a customer portal looks like on screen
-    intro: Most people judge a system by the screens they use.
+    heading: The screens your customers and staff use
+    intro: People judge a system by its screens. We design each one to show what a person came for first, on a desktop and on a phone.
     figure: portal-wireframe
     purpose: system
     takeaway: A well-designed portal shows each person what they came for first, on any screen size, and nothing they should not see.
-    photo:
-      asset: asset.photo-interfaces-wireframes
-      layout: aside
-      position: 50% 35%
-    caption: This sketch shows a customer portal on a desktop and on a phone, with a menu, status summaries, and a list of records. It illustrates a type of system we design and build. It is not a client's screen.
+    caption: This sketch shows a conceptual customer portal on a desktop and on a phone, with a menu, summary cards, and a list of orders with their status. It illustrates a type of system we design and build. It is not a client's screen.
     points:
       - title: Different views for different people
         body: Customers, staff, and administrators see what they need and nothing they should not. One set of access rules applies across the screens and the system behind them.

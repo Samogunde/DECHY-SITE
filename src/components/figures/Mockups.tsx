@@ -52,7 +52,7 @@ export function SiteBuilder({ titleId }: P) {
     <DiagramRoot
       titleId={titleId}
       title="Conceptual website builder"
-      description="A browser window showing a site editor. A page canvas holds a heading, an image block, and three feature blocks. A tool panel lists pages, design, store, bookings, and apps. A strip below shows that hosting, security, and backups are included."
+      description="A browser window showing a site editor. A page canvas holds a heading, a booking button, an image, and three service blocks: consultations, online booking, and a client area. A tool panel lists pages, design, store, bookings, and apps. A strip below shows that hosting, security, and backups are included."
       className="mk mk-site"
     >
       <div className="mk-window">
@@ -67,16 +67,23 @@ export function SiteBuilder({ titleId }: P) {
           </ul>
           <div className="mk-canvas" aria-hidden="true">
             <div className="mk-hero-block">
-              <p className="mk-h">Your business, clearly explained</p>
-              <p className="mk-p">A short line about what you offer and who it is for.</p>
-              <span className="mk-btn">Book a call</span>
+              <p className="mk-h">Care that fits around your week</p>
+              <p className="mk-p">
+                Book online, see your appointments, and send documents securely.
+              </p>
+              <span className="mk-btn">Book a consultation</span>
             </div>
             <div className="mk-img" />
             <div className="mk-cols3">
-              {["Service one", "Service two", "Service three"].map((s) => (
+              {[
+                ["Consultations", "In person or online"],
+                ["Online booking", "Live availability"],
+                ["Client area", "Documents and updates"],
+              ].map(([s, t]) => (
                 <div key={s} className="mk-tile">
                   <span className="mk-tile-bar" />
                   <p className="mk-t">{s}</p>
+                  <p className="mk-p">{t}</p>
                 </div>
               ))}
             </div>
@@ -111,11 +118,15 @@ export function StoreUi({ titleId }: P) {
               <span>Basket</span>
             </div>
             <div className="mk-products">
-              {["Product name", "Product name", "Product name"].map((n, i) => (
+              {[
+                ["Everyday tote", "In stock"],
+                ["Desk lamp", "Two colours"],
+                ["Ceramic mug set", "Back soon"],
+              ].map(([n, s], i) => (
                 <div key={i} className="mk-product">
-                  <span className="mk-img mk-img-sm" />
+                  <span className={`mk-img mk-img-sm mk-img-v${i}`} />
                   <p className="mk-t">{n}</p>
-                  <p className="mk-p">Price</p>
+                  <p className="mk-p">{s}</p>
                   <span className="mk-btn mk-btn-sm">Add to basket</span>
                 </div>
               ))}

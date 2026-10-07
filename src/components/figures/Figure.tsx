@@ -13,7 +13,7 @@ import {
   WorkflowUi,
 } from "./Mockups";
 import { ModernizationPath } from "./ModernizationPath";
-import { PortalWireframe } from "./PortalWireframe";
+import { PlatformUi, PortalUi } from "./ProductUi";
 import { QualityLayers } from "./QualityLayers";
 import { SoftwareAnatomy } from "./SoftwareAnatomy";
 import { SpecDiagram, defaultMax } from "./SpecDiagram";
@@ -34,7 +34,10 @@ const FIGURES: Record<
   "software-anatomy": { Component: SoftwareAnatomy, max: "34rem" },
   "quality-layers": { Component: QualityLayers },
   "modernization-path": { Component: ModernizationPath },
-  "portal-wireframe": { Component: PortalWireframe, max: "46rem" },
+  // The customer portal is a finished product interface (ProductUi.tsx); the id is kept so
+  // existing content keeps working.
+  "portal-wireframe": { Component: PortalUi, max: "48rem" },
+  "platform-ui": { Component: PlatformUi, max: "44rem" },
   // Conceptual interface mockups (Phase 5)
   "site-builder": { Component: SiteBuilder, max: "40rem" },
   "store-ui": { Component: StoreUi, max: "44rem" },
@@ -49,6 +52,8 @@ const FIGURES: Record<
 
 /** Conceptual interface mockups sit beside their text instead of under it (see DiagramBlock). */
 export const MOCKUP_FIGURES = new Set<FigureId>([
+  "portal-wireframe",
+  "platform-ui",
   "site-builder",
   "store-ui",
   "dashboard-ui",

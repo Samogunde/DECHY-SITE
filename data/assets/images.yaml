@@ -94,12 +94,12 @@ assets:
 
   - id: asset.fig-portal-wireframe
     kind: component
-    file: src/components/figures/PortalWireframe.tsx
+    file: src/components/figures/ProductUi.tsx
     role: interface-visual
     source: original
     creator: DECHY
-    license: Original DECHY artwork (SVG component). Conceptual wireframe; contains no client interface, data, or figures.
-    alt: Conceptual wireframe of a customer portal on desktop and phone
+    license: Original DECHY artwork (HTML and CSS component). Conceptual product interface; contains no client interface, data, brand, or figures.
+    alt: Conceptual customer portal on a desktop and a phone, with orders and their status
     usage: [software-development]
     approval: approved
     acquired: "2026-10-04"
@@ -233,6 +233,18 @@ assets:
     license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
     alt: "Conceptual set of interfaces: a dashboard, a phone screen, and a support assistant"
     usage: [home]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-platform-ui
+    kind: component
+    file: src/components/figures/ProductUi.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual product interface; contains no client interface, data, brand, or figures.
+    alt: Conceptual business web platform with a booking page and the staff view that receives the booking
+    usage: [work-area-business-web-platforms]
     approval: approved
     acquired: "2026-10-07"
 

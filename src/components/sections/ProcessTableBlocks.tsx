@@ -21,14 +21,20 @@ export function ProcessBlock({ block }: { block: Of<"process"> }) {
       </div>
       <ol
         data-reveal="group"
-        className="m-0 mt-12 grid list-none gap-x-10 gap-y-12 p-0 min-[48rem]:mt-16 min-[48rem]:grid-cols-2 min-[64rem]:grid-cols-3"
+        className={`process-steps m-0 mt-10 grid list-none gap-x-8 gap-y-10 p-0 min-[48rem]:mt-12 min-[48rem]:grid-cols-2 ${
+          block.steps.length === 4
+            ? "min-[64rem]:grid-cols-4"
+            : block.steps.length === 2
+              ? ""
+              : "min-[64rem]:grid-cols-3"
+        }`}
       >
         {block.steps.map((s, i) => (
           <li key={s.title} className="relative border-t-2 border-ink pt-5">
             <span className="absolute -top-[0.9rem] left-0 inline-flex h-7 min-w-7 items-center justify-center bg-paper pr-3 font-[family-name:var(--font-heading)] text-[length:var(--fs-label)] font-bold tabular-nums text-link">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="t-h3 m-0">{s.title}</h3>
+            <h3 className="t-h4 m-0">{s.title}</h3>
             <p className="t-body m-0 mt-3">
               <Inline text={s.body} />
             </p>
@@ -77,7 +83,51 @@ const plain = (s: string) => s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
  * Other comparisons stay a table: on wide screens a grid, on narrow screens one card per row.
  */
 export function TableBlock({ block }: { block: Of<"table"> }) {
+  if (block.display === "compare" && block.columns.length === 3) {
+    const [rowHead, a, b] = block.columns;
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="compare-wrap">
+          <div className="compare-intro">
+            <SectionHeader
+              id={block.id}
+              label={block.label}
+              heading={block.heading}
+              intro={block.intro}
+            />
+          </div>
+          <div className="compare" role="table" aria-label={block.caption} data-reveal="block">
+            <div className="compare-row compare-head" role="row">
+              <span className="compare-q visually-hidden" role="columnheader">
+                {rowHead}
+              </span>
+              <span className="compare-a" role="columnheader">
+                {a}
+              </span>
+              <span className="compare-b" role="columnheader">
+                {b}
+              </span>
+            </div>
+            {block.rows.map((row, i) => (
+              <div key={i} className="compare-row" role="row">
+                <span className="compare-q" role="rowheader">
+                  <Inline text={row[0] ?? ""} />
+                </span>
+                <span className="compare-a" role="cell" data-label={a}>
+                  <Inline text={row[1] ?? ""} />
+                </span>
+                <span className="compare-b" role="cell" data-label={b}>
+                  <Inline text={row[2] ?? ""} />
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+    );
+  }
   const choice =
+    block.display !== "table" &&
     CHOICE_HEADERS.has(block.columns[0] ?? "") &&
     block.columns.length >= 3 &&
     block.rows.length >= 2 &&
@@ -200,38 +250,47 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
   const points = block.points.map((p) => (
     <div key={p.title} className="rule-top pt-5">
       <h3 className="t-h4 m-0">{p.title}</h3>
-      <p className="t-body m-0 mt-2">
+      <p className="t-small m-0 mt-2">
         <Inline text={p.body} />
       </p>
     </div>
   ));
-  if (block.figure && MOCKUP_FIGURES.has(block.figure)) {
-    // An interface mockup sits beside its heading and text, so the page has no empty half.
+  if (block.layout === "split" || (block.figure && MOCKUP_FIGURES.has(block.figure))) {
+    // The visual sits beside its heading and points, so the section reads as one composition
+    // and the page has no empty half. Four or more points run in a row under both instead, so the
+    // text column never outgrows the visual.
+    const wide = points.length >= 4;
     return (
       <Section id={block.id} tone={block.tone}>
-        <div className="grid items-center gap-10 min-[64rem]:grid-cols-12 min-[64rem]:gap-14">
-          <div className="min-[64rem]:col-span-5">
+        <div className="split-visual">
+          <div className="split-visual-text">
             <SectionHeader
               id={block.id}
               label={block.label}
               heading={block.heading}
               intro={block.intro}
             />
-            {points.length > 0 ? (
-              <div className="mt-8 grid gap-6" data-reveal="group">
+            {points.length > 0 && !wide ? (
+              <div className="split-points" data-reveal="group">
                 {points}
               </div>
             ) : null}
           </div>
-          <div className="min-[64rem]:col-span-7">
+          <div className="split-visual-figure">
             <Figure
               id={block.figure}
+              spec={block.spec}
               title={block.visualTitle ?? block.heading}
               uid={block.id}
               caption={block.caption}
             />
           </div>
         </div>
+        {wide ? (
+          <div className="split-points-row" data-reveal="group">
+            {points}
+          </div>
+        ) : null}
       </Section>
     );
   }

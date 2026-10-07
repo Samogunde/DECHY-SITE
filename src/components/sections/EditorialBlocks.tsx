@@ -32,25 +32,29 @@ export function StatementBlock({ block }: { block: Of<"statement"> }) {
   );
 }
 
-/** Answer-first definition: a direct answer, then depth. */
+/**
+ * Answer-first opening: the heading and the direct answer share the left column, so the answer is
+ * read first and the column is never an empty rail; the supporting paragraphs sit beside it.
+ */
 export function DefinitionBlock({ block }: { block: Of<"definition"> }) {
   return (
     <Section id={block.id} tone={block.tone}>
-      <div className="editorial">
-        <SectionHeader id={block.id} label={block.label} heading={block.heading} className="rail" />
-        <div className="prose-service" data-reveal="block">
-          <p
-            className="answer-lead m-0 font-[family-name:var(--font-heading)] font-semibold"
-            style={{ fontSize: "var(--fs-lead)", lineHeight: 1.4 }}
-          >
+      <div className="answer-split">
+        <div className="answer-split-lead">
+          <SectionHeader id={block.id} label={block.label} heading={block.heading} />
+          <p className="answer-lead" data-reveal="block">
             <Inline text={block.answer} />
           </p>
-          {block.paragraphs.map((p, i) => (
-            <p key={i}>
-              <Inline text={p} />
-            </p>
-          ))}
         </div>
+        {block.paragraphs.length > 0 ? (
+          <div className="prose-service answer-split-body" data-reveal="block">
+            {block.paragraphs.map((p, i) => (
+              <p key={i}>
+                <Inline text={p} />
+              </p>
+            ))}
+          </div>
+        ) : null}
       </div>
     </Section>
   );
@@ -123,7 +127,7 @@ function IndexItems({ block, twoCol }: { block: Of<"index">; twoCol: boolean }) 
                 item.title
               )}
             </h3>
-            <p className="t-body m-0">
+            <p className="t-small m-0">
               <Inline text={item.body} />
             </p>
           </li>
@@ -204,6 +208,19 @@ export function IndexBlock({ block }: { block: Of<"index"> }) {
           </div>
         </div>
         <div className="mt-10 min-[48rem]:mt-14">
+          <IndexItems block={block} twoCol />
+        </div>
+      </Section>
+    );
+  }
+
+  // A long list of tiles takes the full width under its heading (three across on wide screens),
+  // instead of a narrow column beside an empty rail.
+  if (!photo && block.columns === 2 && block.items.length >= 6) {
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="index-tiles-head">{header()}</div>
+        <div className="mt-8 min-[48rem]:mt-10">
           <IndexItems block={block} twoCol />
         </div>
       </Section>

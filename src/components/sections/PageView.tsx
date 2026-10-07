@@ -64,7 +64,7 @@ export function PageView({ path }: { path: string }) {
         />
       ) : null}
       {guided && page.comprehension ? (
-        <AtAGlance comprehension={page.comprehension} cta={glanceCta} />
+        <AtAGlance comprehension={page.comprehension} cta={glanceCta} kind={page.kind} />
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
       {rest.map((block) => (

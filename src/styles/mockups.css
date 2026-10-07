@@ -26,27 +26,29 @@
 }
 
 /* window chrome */
+/* Product-screen finish: a soft frame with depth, not a heavy wireframe outline. */
 .mk-window {
   background: var(--color-white);
-  border: var(--dgm-line, 1.5px) solid var(--mk-ink);
-  border-radius: var(--radius-md, 0.5rem);
+  border: 1px solid rgb(17 24 39 / 0.14);
+  border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.04);
+  box-shadow:
+    0 28px 56px -32px rgb(17 24 39 / 0.38),
+    0 2px 6px -2px rgb(17 24 39 / 0.08);
 }
 .mk-chrome {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.5rem 0.75rem;
-  border-bottom: 1.5px solid var(--mk-ink);
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--mk-line);
   background: var(--mk-paper);
 }
 .mk-dot {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.55rem;
+  height: 0.55rem;
   border-radius: 50%;
-  background: var(--mk-line);
-  border: 1px solid #c9ced6;
+  background: #d9dce1;
 }
 .mk-url {
   margin-left: 0.5rem;
@@ -103,16 +105,53 @@
   display: block;
   text-align: center;
 }
+/* Image areas read as photographs or artwork, never as hatched placeholders: a soft sky, a sun,
+   and a horizon in the brand's blues, drawn in CSS so they stay sharp at any size. */
 .mk-img {
+  position: relative;
   display: block;
   min-height: 4.5rem;
-  border: 1px dashed #aeb4be;
-  border-radius: 0.4rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
   background:
-    linear-gradient(135deg, transparent 49%, #cfd4dc 49%, #cfd4dc 51%, transparent 51%), #f1f2f4;
+    radial-gradient(circle at 78% 34%, rgb(255 255 255 / 0.85) 0 9%, transparent 9.5%),
+    linear-gradient(180deg, #dbe5fb 0%, #bcd0f7 52%, #8fb0f2 52.5%, #5d8cf0 100%);
+}
+.mk-img::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% 0 -10%;
+  height: 46%;
+  background: radial-gradient(120% 90% at 30% 100%, #2f6fed 0 55%, transparent 56%);
+  opacity: 0.55;
 }
 .mk-img-sm {
   min-height: 3.25rem;
+}
+/* Product shots: one object on a soft studio backdrop, a different tint per product. */
+.mk-img-v0,
+.mk-img-v1,
+.mk-img-v2 {
+  background: linear-gradient(180deg, #f3f1ec 0 70%, #e7e4dc 70% 100%);
+}
+.mk-img-v0::after,
+.mk-img-v1::after,
+.mk-img-v2::after {
+  inset: 22% 34% 18% 34%;
+  height: auto;
+  border-radius: 0.35rem 0.35rem 0.5rem 0.5rem;
+  background: #2f6fed;
+  opacity: 0.85;
+}
+.mk-img-v1::after {
+  inset: 18% 40% 18% 40%;
+  border-radius: 999px 999px 0.25rem 0.25rem;
+  background: #111827;
+}
+.mk-img-v2::after {
+  inset: 34% 30% 18% 30%;
+  border-radius: 0.25rem 0.25rem 1rem 1rem;
+  background: #9db6f3;
 }
 .mk-chip {
   display: inline-block;
@@ -142,7 +181,7 @@
 }
 .mk-strip {
   padding: 0.55rem 0.9rem;
-  border-top: 1.5px solid var(--mk-ink);
+  border-top: 1px solid var(--mk-line);
   background: var(--mk-soft);
   color: var(--mk-ink);
   font-weight: 600;

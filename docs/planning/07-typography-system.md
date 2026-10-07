@@ -25,7 +25,7 @@ The earlier build used about 14px body text and read like documentation. Replaci
 3. **Fluid where it is smooth, stepped where ergonomics matter.** Reading and heading roles are fluid with `clamp()`. Controls and navigation are fixed sizes that change only at breakpoints.
 4. **Size and width are designed together.** Each reading role has its own measure in `ch`.
 5. **rem everywhere.** Respects the browser font-size preference and zoom.
-6. **A floor.** Nothing readable is below 14px. Body copy is never below 17px.
+6. **A floor.** Nothing readable is below 14px. Body copy is never below 17px. AMENDED by the owner on 7 October 2026: normal body is 16 to 17px, reading text 17 to 18px, lead 18 to 20px, and statements 19 to 22px (`--fs-statement`); body is never below 16px. The tokens in `src/styles/typography-tokens.css` and the browser and unit tests carry the new floors.
 
 ## 4. The scale
 

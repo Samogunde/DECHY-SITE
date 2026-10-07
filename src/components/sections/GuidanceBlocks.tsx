@@ -19,14 +19,20 @@ type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 export function AtAGlance({
   comprehension,
   cta,
+  kind,
 }: {
   comprehension: Comprehension;
   cta?: { label: string; href: string };
+  /** The page kind, so the first question fits the page: a technology is explained, a
+      commercial page says what we do or build. */
+  kind?: string;
 }) {
+  const first =
+    kind === "technology" ? "What it is" : kind === "work-area" ? "What we build" : "What we do";
   const items: { label: string; text: string }[] = [
-    { label: "What it is", text: comprehension.what },
+    { label: first, text: comprehension.what },
     { label: "The problem it solves", text: comprehension.problem },
-    { label: "Who it is for", text: comprehension.audience },
+    { label: "Who it helps", text: comprehension.audience },
     { label: "How to choose", text: comprehension.choose },
   ];
   const showCta = cta && pathExists(cta.href.split(/[?#]/)[0] ?? "", getRegistry());
@@ -243,16 +249,16 @@ export function CalloutBlock({ block }: { block: Of<"callout"> }) {
         : "Worth knowing";
   return (
     <Section id={block.id} tone={block.tone} ruled={false} className="callout-section">
-      <div className="editorial">
-        <div className="rail" data-reveal="block">
-          <p className="t-eyebrow eyebrow-accent m-0">{eyebrow}</p>
-          <h2 id={`${block.id}-h`} className="t-h3 mt-3 max-w-[22ch]">
+      <div className={`callout-card callout-${block.variant}`} data-reveal="block">
+        <div className="callout-head">
+          <p className="callout-eyebrow m-0">{eyebrow}</p>
+          <h2 id={`${block.id}-h`} className="callout-title">
             {block.title}
           </h2>
         </div>
-        <div className={`callout callout-${block.variant}`} data-reveal="block">
+        <div className="callout-body">
           {block.paragraphs.map((p, i) => (
-            <p key={i} className="t-body-lg m-0">
+            <p key={i} className="m-0">
               <Inline text={p} />
             </p>
           ))}

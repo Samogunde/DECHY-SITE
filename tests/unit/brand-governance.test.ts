@@ -50,10 +50,11 @@ describe("brand integrity", () => {
     );
   });
 
-  it("holds body text at or above 17px and nothing readable below 14px in the type tokens", () => {
+  it("holds body text at or above 16px and nothing readable below 14px in the type tokens", () => {
     const css = read("src/styles/typography-tokens.css");
-    expect(css).toMatch(/--fs-body: calc\(clamp\(1\.0625rem/); // 17px floor
-    expect(css).toMatch(/--fs-body-lg: calc\(clamp\(1\.0938rem/); // 17.5px floor
+    // Owner direction, 7 October 2026: normal body 16 to 17px.
+    expect(css).toMatch(/--fs-body: calc\(clamp\(1rem/); // 16px floor
+    expect(css).toMatch(/--fs-body-lg: calc\(clamp\(1\.0625rem/); // 17px floor
     expect(css).toMatch(/--fs-caption: 0\.875rem/); // 14px
     expect(css).toMatch(/--fs-input: 1rem/); // 16px, no iOS zoom
   });

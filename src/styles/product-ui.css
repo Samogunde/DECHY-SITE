@@ -1,0 +1,469 @@
+/* ------------------------------------------------------------------------------------------
+   Conceptual product interfaces (src/components/figures/ProductUi.tsx). Finished like real
+   product screens: soft frames with depth, real type at the type system's floors, brand colors
+   only, and compositions where a second screen overlaps the first. Layout answers to the figure's
+   own width (container queries on .figure-frame).
+   ------------------------------------------------------------------------------------------ */
+
+.pu {
+  font-size: var(--fs-label);
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+.pu p {
+  margin: 0;
+}
+.pu-stage {
+  position: relative;
+}
+.pu-strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+.pu-muted {
+  display: block;
+  color: var(--color-slate-text);
+}
+.pu-small {
+  font-size: var(--fs-label);
+}
+.pu-h {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.pu-brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--color-ink);
+}
+.pu-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.45rem;
+  background: var(--color-blue-strong);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pu-cta-block {
+  display: flex;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+.pu-status {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pu-status-ok {
+  background: var(--color-ink);
+  color: #fff;
+}
+.pu-status-new {
+  background: #e3ebfd;
+  color: var(--color-blue-strong);
+}
+.pu-status-info {
+  background: var(--color-line);
+  color: var(--color-ink);
+}
+.pu-status-wait {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--color-ink);
+  color: var(--color-ink);
+}
+
+/* ---------------- Customer portal ---------------- */
+.pu-portal .pu-stage {
+  padding: 0 0 2.5rem;
+}
+/* The phone overlaps only the desktop's right margin, which is kept clear for it. */
+.pu-desk {
+  width: calc(100% - 8.5rem);
+}
+.pu-desk .pu-main {
+  padding-right: 2.5rem;
+}
+.pu-app {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  min-height: 19rem;
+}
+.pu-side {
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+  padding: 0.9rem 0.6rem;
+  border-right: 1px solid var(--color-line);
+  background: var(--color-paper);
+}
+.pu-side .pu-brand {
+  padding: 0 0.5rem 0.6rem;
+}
+.pu-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.4rem;
+  color: var(--color-slate-text);
+  font-weight: 600;
+}
+.pu-nav-on {
+  background: var(--color-white);
+  color: var(--color-ink);
+  box-shadow: inset 3px 0 0 var(--color-blue);
+}
+.pu-ico {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.2rem;
+  background: currentColor;
+  opacity: 0.35;
+}
+.pu-nav-on .pu-ico {
+  background: var(--color-blue);
+  opacity: 1;
+}
+.pu-main {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem 1.1rem;
+  min-width: 0;
+}
+.pu-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.pu-top .pu-h {
+  flex: 1;
+}
+.pu-search {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.45rem;
+  color: var(--color-slate-text);
+  white-space: nowrap;
+}
+.pu-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+.pu-card {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+}
+.pu-card-t {
+  color: var(--color-slate-text);
+  font-weight: 600;
+}
+.pu-meter {
+  display: block;
+  height: 0.35rem;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-blue) var(--m), var(--color-line) var(--m));
+}
+.pu-meter-a {
+  --m: 42%;
+}
+.pu-meter-b {
+  --m: 68%;
+}
+.pu-meter-c {
+  --m: 88%;
+}
+.pu-table {
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.pu-tr {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-top: 1px solid var(--color-line);
+}
+.pu-tr > span {
+  min-width: 0;
+}
+.pu-th {
+  border-top: 0;
+  background: var(--color-paper);
+  color: var(--color-slate-text);
+  font-weight: 700;
+}
+.pu-phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10.75rem;
+  padding: 1.1rem 0.75rem 0;
+  border: 1px solid rgb(17 24 39 / 0.16);
+  border-radius: 1.6rem;
+  background: var(--color-white);
+  box-shadow:
+    0 30px 50px -28px rgb(17 24 39 / 0.45),
+    0 2px 6px -2px rgb(17 24 39 / 0.1);
+}
+.pu-notch {
+  display: block;
+  width: 2.75rem;
+  height: 0.35rem;
+  margin: -0.35rem auto 0.7rem;
+  border-radius: 999px;
+  background: var(--color-line);
+}
+.pu-mcard {
+  display: grid;
+  gap: 0.3rem;
+  justify-items: start;
+  margin-top: 0.5rem;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.55rem;
+}
+.pu-tabs {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  margin: 0.75rem -0.75rem 0;
+  padding: 0.55rem 0.75rem 0.7rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-slate-text);
+  font-weight: 600;
+}
+.pu-tab-on {
+  color: var(--color-blue-strong);
+}
+@container dgm (max-width: 40rem) {
+  .pu-app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pu-side {
+    display: none;
+  }
+  .pu-search {
+    display: none;
+  }
+}
+@container dgm (max-width: 30rem) {
+  .pu-portal .pu-stage {
+    padding: 0;
+  }
+  .pu-desk {
+    width: 100%;
+  }
+  .pu-desk .pu-main {
+    padding-right: 1rem;
+  }
+  .pu-phone {
+    display: none;
+  }
+  .pu-tr {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+  .pu-tr > :last-child {
+    display: none;
+  }
+}
+
+/* ---------------- Business web platform ---------------- */
+/* Grid composition, not guessed offsets: the staff view sits in the row below the page and
+   overlaps only the page's bottom margin, so it never covers the booking controls. */
+.pu-platform .pu-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+}
+.pu-site {
+  grid-column: 1 / -1;
+  width: calc(100% - 1.5rem);
+}
+.pu-site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-slate-text);
+  font-weight: 600;
+}
+.pu-site-nav .pu-brand {
+  margin-right: auto;
+}
+.pu-signin {
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--color-ink);
+  border-radius: 0.4rem;
+  color: var(--color-ink);
+}
+.pu-site-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 1.1rem 1rem 1.4rem;
+  background:
+    radial-gradient(140% 90% at 0% 0%, #eef3fe 0 40%, transparent 70%), var(--color-white);
+}
+.pu-kicker {
+  color: var(--color-blue-strong);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+.pu-display {
+  margin-top: 0.35rem !important;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+.pu-site-copy .pu-muted {
+  margin-top: 0.5rem;
+}
+.pu-book {
+  padding: 0.85rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.65rem;
+  background: var(--color-white);
+  box-shadow: 0 14px 30px -24px rgb(17 24 39 / 0.45);
+}
+.pu-days,
+.pu-times {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.6rem;
+}
+.pu-days {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.pu-times {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.pu-days > span,
+.pu-times > span {
+  padding: 0.3rem 0;
+  border: 1px solid var(--color-line);
+  border-radius: 0.4rem;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pu-days > .pu-on,
+.pu-times > .pu-on {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: #fff;
+}
+.pu-staff {
+  position: relative;
+  grid-column: 2;
+  grid-row: 2;
+  width: min(19rem, 34cqw + 6rem);
+  margin-top: -1.1rem;
+  padding: 0.8rem 0.85rem 0.5rem;
+  border: 1px solid rgb(17 24 39 / 0.14);
+  border-radius: 0.75rem;
+  background: var(--color-white);
+  box-shadow:
+    0 30px 50px -28px rgb(17 24 39 / 0.45),
+    0 2px 6px -2px rgb(17 24 39 / 0.1);
+}
+.pu-staff-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+.pu-req {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--color-line);
+}
+.pu-sync {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  margin: 0 1rem 0.6rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: #fff;
+  font-weight: 600;
+}
+.pu-sync-ico {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #7aa5f8;
+  box-shadow: 0 0 0 3px rgb(122 165 248 / 0.3);
+}
+@container dgm (max-width: 34rem) {
+  .pu-site-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pu-site-nav > span:not(.pu-brand):not(.pu-signin) {
+    display: none;
+  }
+}
+@container dgm (max-width: 28rem) {
+  .pu-platform .pu-stage {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+  .pu-site {
+    width: 100%;
+  }
+  .pu-staff {
+    grid-column: 1;
+    grid-row: 2;
+    width: auto;
+    margin-top: 0;
+  }
+  .pu-sync {
+    grid-row: 3;
+    margin: 0;
+  }
+}
+
+/* A booking arrives: the staff card and the sync note settle in after the page, once. */
+@media (prefers-reduced-motion: no-preference) {
+  .pu-staff,
+  .pu-sync {
+    animation: pu-arrive 0.6s var(--ease-out) both;
+    animation-delay: 0.35s;
+  }
+  .pu-sync {
+    animation-delay: 0.7s;
+  }
+  @keyframes pu-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}

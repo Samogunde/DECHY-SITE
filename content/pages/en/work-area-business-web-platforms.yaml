@@ -22,7 +22,7 @@ schemaTypes:
   - WebPage
   - CollectionPage
 comprehension:
-  what: "A business web platform is a website that does real work: it holds accounts, takes bookings or requests, manages content, and connects to your internal tools."
+  what: "We build websites that do real work: they hold customer accounts, take bookings and requests, let staff manage content, and connect to the tools you already run."
   problem: A plain brochure site cannot take payments, manage customers, or keep content current, so staff handle these tasks by email and phone.
   audience: Organizations whose website should do more than describe them, and teams that update content or serve customers online every day.
   choose: Decide how much of your work should happen on the site, then build the smallest platform that covers it and can grow.
@@ -33,46 +33,55 @@ sections:
     variant: service
     eyebrow: Work Area
     headline: Business Web Platforms
-    lead: A business web platform is a website that does work. Visitors can book, apply, pay, or sign in. Staff can manage content and requests without a developer. This page shows what such platforms contain and how we build them.
+    lead: We build websites that do the work. Visitors book, apply, pay, and sign in; your staff run content and requests without waiting on a developer; and every booking lands in the systems you already use.
     ctas:
       - label: Discuss a platform
         href: /contact/?service=web-development
       - label: See the difference
         href: "#difference"
+    figure: platform-ui
+    purpose: system
+    takeaway: A business web platform turns a visitor's booking into a request your staff see at once, saved to your own records.
+    visualTitle: A booking page and the staff view that receives it
+    figureCaption: This sketch shows a conceptual booking page where a visitor picks a day and time, with the staff view in front of it receiving the booking, the uploaded documents, and the payment. It is an illustration, not a client site.
+  - type: diagram
+    id: what-is
+    tone: white
+    layout: split
+    label: In practice
+    heading: One platform instead of a pile of plugins
+    intro: "We build websites that do tasks as well as inform: customer accounts, bookings, payments, and connections to the systems you run inside the business."
     spec:
       kind: hub
       center:
         title: The platform
-        text: One website, one set of accounts and content.
+        text: One site, one set of accounts
       spokes:
         - title: Public pages
-          text: What visitors read and search.
+          text: What visitors read
         - title: Accounts
-          text: Sign-in for customers, members, or staff.
-        - title: Bookings and requests
-          text: Forms that become tracked jobs.
+          text: Customers and staff
+        - title: Bookings
+          text: Requests become jobs
         - title: Payments
-          text: Taking money securely.
+          text: Taken securely
         - title: Content tools
-          text: Staff update pages themselves.
+          text: Staff edit pages
         - title: Connections
-          text: Links to your internal systems.
+          text: Your internal systems
     purpose: system
     takeaway: A business web platform is one website with public pages, accounts, requests, payments, content tools, and connections working together.
     visualTitle: What a business web platform contains
-    figureCaption: This diagram shows six parts of a business web platform, all connected to one shared site, accounts, and content.
-  - type: definition
-    id: what-is
-    tone: white
-    label: In practice
-    heading: A website that carries the work
-    answer: "We build websites that do tasks as well as inform: customer accounts, bookings, payments, and connections to the systems you run inside the business."
-    paragraphs:
-      - "Many organizations begin with a simple site and add tools one by one: a booking plugin here, a payment page there. The pieces rarely share information, and nobody can see the whole picture."
-      - A platform plans these parts together. A customer who books, pays, and returns sees one consistent experience, and staff see one record of what happened.
+    caption: This diagram shows six parts of a business web platform, all connected to one shared site, accounts, and content.
+    points:
+      - title: Pieces that never talk
+        body: "Many organizations begin with a simple site and add tools one by one: a booking plugin here, a payment page there. The pieces rarely share information, and nobody can see the whole picture."
+      - title: Planned as one
+        body: A platform plans these parts together. A customer who books, pays, and returns sees one consistent experience, and staff see one record of what happened.
   - type: table
     id: difference
     tone: paper
+    display: compare
     label: The difference
     heading: Brochure site or platform?
     intro: Both are useful. The right one depends on what you want the site to do.
@@ -97,14 +106,22 @@ sections:
   - type: diagram
     id: site-editor
     tone: white
-    label: What it looks like
-    heading: A web platform your team can run
-    intro: A web platform is easier to own when its editing is simple.
+    label: What we build
+    heading: A platform your team runs without a developer
+    intro: Staff update pages, answer requests, and see bookings from one place. Hosting, security updates, and backups are handled for them.
     figure: site-builder
     purpose: system
     takeaway: A business web platform lets staff edit pages safely, with hosting and updates looked after.
     caption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and the hosting that comes with it. It illustrates a kind of platform we build and is not a client site.
-    points: []
+    points:
+      - title: Customer areas
+        body: Secure sign-in and profiles, with order history, documents, and messages in one place.
+      - title: Staff tools
+        body: Pages edited without code, and every request seen and managed in one list.
+      - title: Business connections
+        body: New requests flow to your accounting or customer records, and live information such as availability shows on the site.
+      - title: Quality
+        body: Pages that load quickly on phones and work for people using keyboards and screen readers.
   - type: diagram
     id: journey
     tone: white
@@ -127,28 +144,6 @@ sections:
     purpose: workflow
     takeaway: A platform turns a visitor's click into a tracked job that staff handle and the visitor can follow.
     caption: This diagram follows a request through five steps, from a visitor arriving on the site to being kept informed of progress.
-  - type: columns
-    id: parts
-    tone: paper
-    label: What we build
-    heading: Common parts, and what each is for
-    columns:
-      - title: Customer areas
-        items:
-          - Secure sign-in and profiles.
-          - Order history, documents, and messages.
-      - title: Staff tools
-        items:
-          - Edit pages without code.
-          - See and manage requests in one list.
-      - title: Business connections
-        items:
-          - Send new requests to your accounting or customer records.
-          - Show live information, such as availability.
-      - title: Quality
-        items:
-          - Pages that load quickly on phones.
-          - Accessible to people using keyboards and screen readers.
   - type: callout
     id: scenario
     tone: white

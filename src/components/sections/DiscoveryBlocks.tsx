@@ -32,30 +32,27 @@ export function ConnectsBlock({ block, page }: { block: Of<"related">; page: Pag
   const rails = connectionsFor(page, registry);
   return (
     <Section id={block.id} tone={block.tone}>
-      <div className="editorial">
-        <SectionHeader
-          id={block.id}
-          label="Connections"
-          heading="Where this connects"
-          className="rail"
-        />
-        <div
-          data-reveal="group"
-          className="grid gap-10 min-[48rem]:grid-cols-2 min-[64rem]:grid-cols-3"
-        >
-          {rails.map((r) => (
-            <div key={r.id} data-rail={r.id}>
-              <h3 className="t-h4 m-0">{r.title}</h3>
-              <ul className="t-body m-0 mt-3 list-none p-0">
-                {r.items.map((i) => (
-                  <li key={i.id} className="rule-row py-2.5">
-                    {i.href ? <Link href={i.href}>{i.label}</Link> : <span>{i.label}</span>}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      <SectionHeader id={block.id} label="Connections" heading="Where this connects" />
+      <div data-reveal="group" className="connects">
+        {rails.map((r) => (
+          <div key={r.id} data-rail={r.id} className="connects-card">
+            <h3 className="connects-title">{r.title}</h3>
+            <ul className="connects-list">
+              {r.items.map((i) => (
+                <li key={i.id}>
+                  {i.href ? (
+                    <Link href={i.href} className="chip chip-link">
+                      {i.label}
+                      <Arrow className="chip-arrow" />
+                    </Link>
+                  ) : (
+                    <span className="chip chip-tag">{i.label}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </Section>
   );

@@ -678,6 +678,7 @@ export function validateRegistry(registry: Registry): Issue[] {
     "assistant-ui",
     "workflow-ui",
     "interface-set",
+    "platform-ui",
   ]) {
     if (!registry.assets.some((a) => a.id === `asset.fig-${figure}`))
       err("asset-figure", figure, "Diagram has no registry entry");

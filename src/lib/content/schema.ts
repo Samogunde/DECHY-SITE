@@ -154,6 +154,7 @@ export const FigureId = z.enum([
   "assistant-ui",
   "workflow-ui",
   "interface-set",
+  "platform-ui",
 ]);
 export type FigureId = z.infer<typeof FigureId>;
 
@@ -433,6 +434,8 @@ export const Block = z.discriminatedUnion("type", [
     columns: z.array(z.string()).min(2),
     rows: z.array(z.array(z.string())).min(1),
     note: z.string().optional(),
+    /** "compare" shows two options side by side, the last one emphasized. */
+    display: z.enum(["table", "compare"]).optional(),
   }),
   z.object({
     type: z.literal("diagram"),
@@ -448,6 +451,8 @@ export const Block = z.discriminatedUnion("type", [
     caption: z.string(),
     points: z.array(z.object({ title: z.string(), body: z.string() })).default([]),
     photo: PhotoRef.optional(),
+    /** "split" sets the visual beside the heading and points instead of below them. */
+    layout: z.enum(["stack", "split"]).optional(),
   }),
   z.object({
     type: z.literal("columns"),
