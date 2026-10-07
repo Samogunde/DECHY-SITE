@@ -1,0 +1,229 @@
+id: page.industry-retail
+kind: industry
+locale: en
+path: /industries/retail/
+parent: /industries/
+entityId: ind.retail
+title: Retail and Ecommerce Software | DECHY
+description: "Software for retail and ecommerce from DECHY: online stores, stock and order connections, customer records, support, and reporting that agree with each other."
+breadcrumbLabel: Retail
+intent:
+  primary: retail software development
+  secondary:
+    - ecommerce software solutions
+    - retail systems integration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: "Retail software covers the systems that sell and deliver products: the online store, stock, orders, payments, customer records, support, and the reports that tie them together."
+  problem: Stock, orders, and customers live in separate tools, so a product shows as available when it is not, orders are re-typed, and the numbers differ between teams.
+  audience: Retailers, online stores, brands that sell direct, and the teams that run their operations and marketing.
+  choose: Make stock and orders agree across every channel first, then automate the order path, then use the joined-up data for customers and reporting.
+  next: Tell us how you sell and which tools hold your stock and orders. We will outline the connections and the first fix.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for retail and ecommerce
+    lead: Selling is easy to start and hard to run well. As soon as there are several channels, the stock count, the orders, and the customer records have to agree. We build and connect the systems that make them agree, from the store to the warehouse door.
+    support: This page covers what retail teams ask for, where channels drift apart, and how we fix it.
+    ctas:
+      - label: Talk to us about your store and systems
+        href: /contact/?service=ecommerce
+      - label: Where channels drift apart
+        href: "#drift"
+    spec:
+      kind: hub
+      center:
+        title: One stock and order record
+        text: The numbers every channel must agree on.
+      spokes:
+        - title: Online store
+          text: Products, basket, and checkout.
+        - title: Marketplaces
+          text: Listings on other sites.
+        - title: Shop tills
+          text: In-person sales.
+        - title: Warehouse
+          text: Picking, packing, and shipping.
+        - title: Customer records
+          text: Accounts and history.
+        - title: Reporting
+          text: Sales, margin, and stock.
+    purpose: relationship
+    takeaway: Every selling channel reads and writes one stock and order record, so availability and orders stay true wherever people buy.
+    visualTitle: Many channels, one stock record
+    figureCaption: "This diagram shows one stock and order record at the center with six parts around it: the online store, marketplaces, shop tills, the warehouse, customer records, and reporting."
+  - type: table
+    id: drift
+    tone: white
+    label: Where it drifts
+    heading: Where channels drift apart
+    caption: Four common points where retail channels disagree, the usual cause, and the fix
+    columns:
+      - Symptom
+      - Usual cause
+      - Usual fix
+    rows:
+      - - A product sells that is out of stock
+        - Stock is updated by hand or on a delay between channels.
+        - Stock updates sent as events from the one place that owns the count.
+      - - Orders are re-typed into the warehouse or accounts
+        - The store and back office are not connected.
+        - An order connection with checks, so each order moves once.
+      - - The same customer appears several times
+        - Each channel creates its own record.
+        - Matching rules, one customer record, and a clean-up of the old ones.
+      - - Sales figures differ by team
+        - Each team counts returns, tax, and shipping in its own way.
+        - Agreed measures calculated in one place.
+  - type: prose
+    id: different
+    tone: paper
+    label: What is different
+    heading: A business of many small, repeated transactions
+    paragraphs:
+      - "Retail is high in volume and low in margin per order, so small inefficiencies are multiplied thousands of times. A minute of re-typing per order, a one per cent stock error, a delay in refunding a return: each is invisible on one order and decisive across a year."
+      - It is also seasonal. Systems that cope in March can fail in November, so the question is not only whether something works but whether it works on the busiest day.
+      - "The best returns come from the unglamorous parts: orders that flow without touching, stock that is true, and support that can see the order it is asked about."
+  - type: process
+    id: how
+    tone: white
+    label: How we work
+    heading: Making the channels agree
+    steps:
+      - title: Map the channels and the owners
+        body: We list every place you sell and every system that holds stock, orders, or customers, and decide which owns each fact.
+        artifacts:
+          - Channel map
+          - Ownership rules
+      - title: Connect stock and orders
+        body: Stock and order connections are built first, because they affect every sale. Each is tested with real products and returns.
+        artifacts:
+          - Connections
+          - Test cases
+      - title: Automate the order path
+        body: Confirmation, picking, shipping notices, and refunds run on rules, with exceptions sent to a person.
+        artifacts:
+          - Order workflow
+          - Exception rules
+      - title: Report and improve
+        body: Joined data feeds one set of figures, and we review slow or costly steps with you.
+        artifacts:
+          - Dashboard
+          - Review notes
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Typical systems for retailers
+    items:
+      - title: Online stores
+        body: Stores on [Shopify](ref:plat.shopify) or [WooCommerce](ref:plat.woocommerce), or custom builds where the selling model is unusual. See [commerce systems](/work/areas/commerce-systems/).
+      - title: Stock and order connections
+        body: Links between stores, marketplaces, tills, warehouses, and accounts.
+      - title: Customer records and loyalty
+        body: One customer record across channels, with segments and follow-up. See [connecting customer systems](/solutions/crm-integration/).
+      - title: Support that sees the order
+        body: Help desks connected to orders, with an assistant for routine questions. See [AI customer support](/solutions/ai-customer-support/).
+      - title: Reporting
+        body: Sales, margin, stock, and returns from one source. See [business dashboards](/solutions/business-dashboards/).
+      - title: Order automation
+        body: Orders, shipping, and refunds without re-typing. See [process automation](/solutions/business-process-automation/).
+  - type: columns
+    id: help
+    tone: white
+    label: What DECHY can do
+    heading: How we help retail teams
+    columns:
+      - title: Build
+        items:
+          - Stores, product pages, and checkout that load fast.
+          - Custom features where a standard store cannot express your model.
+      - title: Connect
+        items:
+          - Stock, orders, shipping, and accounting.
+          - Payments through [Stripe](ref:int.stripe) and other providers.
+      - title: Automate
+        items:
+          - Order confirmation, shipping notices, and refunds.
+          - Alerts for low stock and stuck orders.
+      - title: Prepare for peaks
+        items:
+          - Load testing before busy seasons.
+          - Monitoring and a plan for the busiest day.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Peak load and data notes
+    intro: Most visitors can skip this section. It notes the engineering choices we make for stores and their connections.
+    panels:
+      - title: Handling the busiest day
+        items:
+          - Product and category pages are served from a content delivery network, so a surge of browsers does not reach the store itself.
+          - Checkout, which cannot be cached, is load-tested ahead of seasonal peaks.
+          - Order and stock updates are queued, so a slow warehouse system cannot stall the store.
+        paragraphs: []
+      - title: Keeping stock true
+        items:
+          - One system owns the stock count, and every change is an event with a time and a source.
+          - A reservation holds an item during checkout, and releases it if the customer leaves.
+        paragraphs: []
+      - title: Customer data and payments
+        paragraphs:
+          - Card details are handled by the payment provider and never stored on your systems. Customer records follow the privacy rules of each market you sell in.
+        items: []
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about retail software
+    items:
+      - q: Should we use a hosted store or build our own?
+        a: A hosted or ready-made store suits most retailers. Build custom only where your selling model needs something it cannot do. We compare the options on your facts.
+      - q: Can you connect our shop tills and our online store?
+        a: Usually, yes. Many point-of-sale systems offer a way to connect. We check what yours allows and design around it.
+      - q: How do you keep stock accurate across channels?
+        a: By making one system own the count and sending changes as events to every channel, with checks that flag differences.
+      - q: Can you prepare us for a peak season?
+        a: Yes. We test the store and the connections under load before the season and set up monitoring for the busiest days.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Retail across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.ecommerce
+          - svc.web-development
+          - svc.api-integration
+          - svc.automation
+      - title: Systems we build
+        entityIds:
+          - workarea.ecommerce-platforms
+          - workarea.commerce-systems
+          - workarea.integration-platforms
+      - title: Technologies
+        entityIds:
+          - plat.shopify
+          - plat.woocommerce
+          - int.stripe
+          - tech.zapier
+  - type: cta
+    id: contact-cta
+    heading: Tell us how you sell and what holds your stock
+    body: Describe your channels and the tools that hold stock, orders, and customers. We will outline the connections and the first fix.
+    primary:
+      label: Talk to DECHY about retail
+      href: /contact/?service=ecommerce

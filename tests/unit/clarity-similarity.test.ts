@@ -76,11 +76,21 @@ describe("similarity control on the shipped pages", () => {
 
 describe("clarity standard on the shipped pages", () => {
   const guided = registry.pages.filter((p) =>
-    ["service", "hub", "company", "work-hub", "work-area", "technology"].includes(p.kind),
+    [
+      "service",
+      "hub",
+      "company",
+      "work-hub",
+      "work-area",
+      "technology",
+      "solution",
+      "industry",
+      "location",
+    ].includes(p.kind),
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(79);
+    expect(guided.length).toBe(112);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(
@@ -130,12 +140,14 @@ describe("scope control", () => {
   it("builds no pages outside the approved families", () => {
     const allowed = [
       /^\/$/,
-      /^\/(contact|privacy|cookies|terms|accessibility|services|solutions|technologies|work|company)\/$/,
+      /^\/(contact|privacy|cookies|terms|accessibility|services|solutions|technologies|industries|locations|resources|work|company)\/$/,
       /^\/company\/(how-we-work|who-we-work-with)\/$/,
       /^\/work\/areas\/[a-z0-9-]+\/$/,
       /^\/(software-development|ai|automation|api-integration|data-analytics|cloud|cybersecurity|web-development|mobile-app-development|ecommerce|ui-ux|branding|seo-aeo-geo|digital-marketing|consulting)\/$/,
       // Phase 3: one page per approved technology, under its canonical service
       /^\/(software-development|ai|automation|api-integration|data-analytics|cloud|web-development|mobile-app-development|ecommerce)\/[a-z0-9-]+\/$/,
+      // Phase 4: Solution pages, the first industry pages, and the first-wave country pages
+      /^\/(solutions|industries|locations)\/[a-z0-9-]+\/$/,
     ];
     for (const p of registry.pages)
       expect(
@@ -144,10 +156,37 @@ describe("scope control", () => {
       ).toBe(true);
   });
 
-  it("does not create solution, industry, country, resource, or article pages", () => {
-    const forbidden =
-      /^\/(solutions|industries|locations|resources|insights|articles|countries)\/./;
+  it("does not create article, resource, problem, or city pages", () => {
+    const forbidden = /^\/(resources|insights|articles|countries|problems|cities)\/./;
     for (const p of registry.pages) expect(forbidden.test(p.path), p.path).toBe(false);
+    expect(registry.pages.some((p) => p.kind === "article")).toBe(false);
+  });
+
+  it("builds only the approved Solution pages, and none for deferred or represented concepts", () => {
+    const solutions = registry.pages.filter((p) => p.kind === "solution").map((p) => p.entityId);
+    expect(solutions.sort()).toEqual(
+      [
+        "sol.ai-customer-support",
+        "sol.business-dashboards",
+        "sol.business-process-automation",
+        "sol.cloud-migration",
+        "sol.crm-integration",
+        "sol.legacy-system-modernization",
+      ].sort(),
+    );
+  });
+
+  it("builds country pages only for the first wave, and never claims a physical presence", () => {
+    const countries = registry.pages.filter((p) => p.kind === "location").map((p) => p.entityId);
+    expect(countries.sort()).toEqual(
+      [
+        "loc.australia",
+        "loc.canada",
+        "loc.ireland",
+        "loc.united-kingdom",
+        "loc.united-states",
+      ].sort(),
+    );
   });
 
   it("states no client, metric, award, or office on a Work Area page", () => {

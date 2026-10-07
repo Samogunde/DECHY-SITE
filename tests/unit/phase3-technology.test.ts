@@ -6,7 +6,7 @@ import { entityPath, publishedPath } from "@/lib/content/urls";
 const registry = buildRegistry();
 const techPages = registry.pages.filter((p) => p.kind === "technology");
 
-/** The approved Phase 3 set: one canonical page per strategic technology (plan section 7). */
+/** The approved set: Phase 3 (plan section 7) plus the Phase 4 technology wave (doc 14). */
 const APPROVED = [
   "fw.nextjs",
   "fw.react",
@@ -40,11 +40,23 @@ const APPROVED = [
   "tech.swift",
   "tech.postgresql",
   "tech.mongodb",
+  // Phase 4 wave
+  "tech.nodejs",
+  "tech.dotnet",
+  "tech.microsoft-power-automate",
+  "plat.woocommerce",
+  "tech.bigquery",
+  "tech.mysql",
+  "fw.vue",
+  "fw.angular",
+  "plat.firebase",
+  "plat.supabase",
+  "plat.snowflake",
 ];
 
 describe("phase 3 technology pages", () => {
-  it("are exactly the 32 approved technologies, each at its canonical URL", () => {
-    expect(techPages).toHaveLength(32);
+  it("are exactly the 43 approved technologies, each at its canonical URL", () => {
+    expect(techPages).toHaveLength(43);
     expect(techPages.map((p) => p.entityId).sort()).toEqual([...APPROVED].sort());
     for (const p of techPages) {
       const node = registry.nodes.get(p.entityId!)!;
@@ -147,7 +159,7 @@ describe("phase 3 technology pages", () => {
     const unbuilt = technologyEntities.filter((n) => !publishedPath(n, registry));
     expect(unbuilt.length).toBeGreaterThan(100);
     // Deferred entities have no page, and so no link target.
-    for (const id of ["lang.go", "tech.mysql", "plat.vercel", "fw.vue"])
+    for (const id of ["lang.go", "plat.vercel", "fw.rails", "tech.opensearch", "fw.django"])
       expect(publishedPath(registry.nodes.get(id), registry), id).toBeNull();
   });
 
@@ -170,8 +182,26 @@ describe("phase 3 technology pages", () => {
     }
   });
 
-  it("do not pull in later phases: no solution, industry, resource, or country pages", () => {
-    for (const p of registry.pages)
-      expect(p.path, p.path).not.toMatch(/^\/(solutions|industries|resources|locations)\/./);
+  it("never promote the entities that await confirmation, or the grouped frameworks", () => {
+    for (const id of [
+      "fw.rails",
+      "plat.power-bi",
+      "plat.tableau",
+      "plat.looker",
+      "tech.kafka",
+      "tech.rabbitmq",
+      "tech.opensearch",
+      "plat.datadog",
+      "plat.sentry",
+      "fw.express",
+      "fw.nestjs",
+      "fw.django",
+      "fw.fastapi",
+      "fw.flask",
+      "fw.spring-boot",
+      "fw.laravel",
+      "tech.elasticsearch",
+    ])
+      expect(publishedPath(registry.nodes.get(id), registry), id).toBeNull();
   });
 });

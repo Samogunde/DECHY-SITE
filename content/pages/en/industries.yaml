@@ -1,0 +1,143 @@
+id: page.industries
+kind: hub
+locale: en
+path: /industries/
+title: "Industries We Build Software For | DECHY"
+description: "How DECHY applies its services to healthcare, finance, real estate, logistics, retail, education, professional services, and manufacturing."
+breadcrumbLabel: Industries
+intent:
+  primary: industry software solutions
+  secondary:
+    - software development by industry
+    - technology services for specific industries
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "This page shows how DECHY's services apply to particular industries, and what is different about the systems each one runs."
+  problem: "Every industry has its own records, rules, and rhythms, and a supplier that ignores them builds software that does not fit."
+  audience: "Leaders choosing a technology partner who want to see that the work will fit the way their industry operates."
+  choose: "Pick the industry closest to yours to see the systems it usually needs, then follow the links to the services and solutions behind them."
+  next: "Choose your industry below, or tell us about yours if it is not listed."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Industries
+    headline: Technology that fits how your industry works
+    lead: "We build the same kinds of system for many fields, but no two fields use them the same way. These pages explain what is different in each, which systems teams in that field ask for most, and what to take care over."
+    support: "DECHY is a global company and works with clients remotely, in any of these fields and in others."
+    ctas:
+      - { label: Tell us about your industry, href: "/contact/" }
+      - { label: See the industries, href: "#industries" }
+    spec:
+      kind: layers
+      layers:
+        - title: Your industry
+          text: "Its records, rules, and rhythms."
+          support:
+            - title: Records and data
+            - title: Rules and risks
+        - title: Systems you need
+          text: "Portals, workflows, connections, and reports."
+          support:
+            - title: What we build
+        - title: Solutions
+          text: "The answers to common problems."
+          support:
+            - title: Problems and fixes
+        - title: Services and technologies
+          text: "The work and the tools behind it."
+          support:
+            - title: What we do and build with
+      layerLabel: From industry to technology
+      supportLabel: What sits beside it
+    purpose: relationship
+    takeaway: "Each industry page starts from how the field works, then leads to the systems, solutions, services, and technologies that fit it."
+    visualTitle: "How an industry page leads to the work"
+    figureCaption: "This diagram shows four layers from your industry at the top to systems, solutions, and finally the services and technologies behind them."
+
+  - type: index
+    id: industries
+    tone: white
+    label: The industries
+    heading: Eight fields, and what is different in each
+    intro: "Each page explains the field, lists the systems its teams ask for, and notes what to take care over."
+    columns: 2
+    items:
+      - title: Healthcare
+        body: "Records, privacy, and systems that must work together, with access control and audit trails from the start."
+        href: /industries/healthcare/
+      - title: Finance, banking, and insurance
+        body: "Accuracy, audit trails, onboarding, and connections between core systems and the tools around them."
+        href: /industries/finance/
+      - title: Real estate and property
+        body: "Leads, listings, tenant and owner portals, and maintenance requests that must not get lost."
+        href: /industries/real-estate/
+      - title: Logistics and transport
+        body: "Orders, shipments, carriers, and one reliable status for customers and managers."
+        href: /industries/logistics/
+      - title: Retail and ecommerce
+        body: "Stores, stock, orders, and customer records that agree across every channel."
+        href: /industries/retail/
+      - title: Education and training
+        body: "Learner portals, enrolment, records, and careful handling of data about young people."
+        href: /industries/education/
+      - title: Professional services
+        body: "Time, projects, billing, and client portals for firms that sell expertise."
+        href: /industries/professional-services/
+      - title: Manufacturing
+        body: "Planning, production, quality, and supplier data connected, with systems that must not stop the line."
+        href: /industries/manufacturing/
+
+  - type: table
+    id: same
+    tone: paper
+    label: What stays the same
+    heading: What changes between industries, and what does not
+    caption: What stays the same and what changes when DECHY works in a different industry
+    columns: [What stays the same, What changes]
+    rows:
+      - - "The kinds of system we build, such as portals, workflows, and connections."
+        - "Which of them matter most, and what the data inside them means."
+      - - "How we work: understand the process, build in small steps, test, hand over."
+        - "Who must be involved, and how carefully each step is checked."
+      - - "Our engineering standards for security and quality."
+        - "The rules, risks, and records that apply to the information."
+      - - "The same services and technologies."
+        - "The order in which they are used, and what a good first project is."
+
+  - type: callout
+    id: other
+    tone: white
+    variant: note
+    title: If your industry is not listed
+    paragraphs:
+      - "These eight are where we have written most. The same services apply across many more fields, such as hospitality, legal, government, construction, and others. Tell us how your field works and we will say how the work would apply."
+    items:
+      - "A short description of your organization and its systems is enough to start"
+      - "We will say plainly when a field has rules that need a specialist adviser"
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about industries
+    items:
+      - q: Do you only work in these eight industries?
+        a: "No. These are the fields we have written about first. The same services and technologies apply in many others, and we welcome conversations about them."
+      - q: Do you have an office near us?
+        a: "DECHY is a global company and works remotely with clients worldwide, so location is not a limit on who we can work with."
+      - q: How do you learn the rules of our industry?
+        a: "We ask you. You know which rules apply and which records matter. We build to the requirements you give us and suggest you confirm legal points with your own advisers."
+      - q: Where do I start?
+        a: "With the page for your field, then the solution that matches your most pressing problem. Or contact us with a short description and we will point you to the right place."
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your industry
+    body: "Describe your organization, its systems, and what you want to improve. We will say how our work applies and what a first step could be."
+    primary: { label: Talk to DECHY, href: "/contact/" }

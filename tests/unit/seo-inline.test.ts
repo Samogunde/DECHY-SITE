@@ -106,7 +106,7 @@ describe("robots.txt and sitemap", () => {
       .filter((p) => p.indexing === "index")
       .map((p) => `https://example.test${p.path}`);
     expect(urls.sort()).toEqual(expected.sort());
-    expect(urls).toHaveLength(85);
+    expect(urls).toHaveLength(118);
     expect(urls.every((u) => u.endsWith("/"))).toBe(true);
     for (const e of entries) expect(e.lastModified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });

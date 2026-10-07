@@ -14,12 +14,14 @@ describe("the 53 launch article briefs", () => {
     expect(briefs.map((b) => b.number)).toEqual(Array.from({ length: 53 }, (_, i) => i + 1));
   });
 
-  it("are all still planned, with no article page published in Phase 2", () => {
+  it("are all still planned, with no article page published yet", () => {
     const registry = buildRegistry();
     for (const b of briefs) expect(b.status).toBe("planned");
-    expect(registry.pages.some((p) => /^\/(articles|insights|resources)\//.test(p.path))).toBe(
+    // The Resources hub exists; no article or resource page beneath it does.
+    expect(registry.pages.some((p) => /^\/(articles|insights|resources)\/./.test(p.path))).toBe(
       false,
     );
+    expect(registry.pages.some((p) => p.kind === "article")).toBe(false);
   });
 
   it("report to an existing service and fall in batches 1 to 6", () => {

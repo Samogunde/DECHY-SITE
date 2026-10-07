@@ -211,6 +211,6 @@ sections:
 
   - type: cta
     id: contact-cta
-    heading: Tell us what you sell
+    heading: Tell us what you sell and how you want to run the store
     body: "Describe your products, how you ship, and how you want to run the store. We will compare WooCommerce with the alternatives and outline a build."
     primary: { label: Talk to DECHY about WooCommerce, href: "/contact/?service=ecommerce" }

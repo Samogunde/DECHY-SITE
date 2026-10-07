@@ -1,0 +1,159 @@
+id: page.resources
+kind: hub
+locale: en
+path: /resources/
+title: "Technology Guides and Decision Resources | DECHY"
+description: "Start with the technology decisions DECHY's pages already answer, such as which cloud, which store platform, or whether to modernize old software."
+breadcrumbLabel: Resources
+intent:
+  primary: technology decision guides for business
+  secondary:
+    - software and technology guides
+    - how to choose business software
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "Resources are DECHY's guides, comparisons, and decision aids that help a buyer choose between options and understand a technology before committing."
+  problem: "Technology choices are made with half the facts: which platform, which cloud, whether to rebuild or modernize, and what each option really costs in upkeep."
+  audience: "Owners and leaders who are comparing options and want a clear, balanced view before they speak to a supplier."
+  choose: "Start with the decision in front of you. The pages below already answer the most common ones, and the resource library will add longer guides."
+  next: "Pick the decision closest to yours, or ask us a question you cannot find answered."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Resources
+    headline: Make the decision with the facts in front of you
+    lead: "Most technology purchases fail on the choice, not the build: the wrong platform, the wrong scope, or a rebuild where a repair would do. These resources help you compare options and understand what each one involves, in plain language."
+    support: "Many of the decisions are already answered on our service, solution, and technology pages. The sections below show where."
+    ctas:
+      - { label: Ask us a question, href: "/contact/" }
+      - { label: Decisions already answered, href: "#decisions" }
+    spec:
+      kind: funnel
+      stages:
+        - title: A question you have
+          text: "Which platform, which cloud, build or buy."
+        - title: Options compared
+          text: "What each suits and what each costs you."
+        - title: A recommendation
+          text: "The option that fits your situation."
+        - title: A first step
+          text: "A small stage you can judge before committing further."
+    purpose: transformation
+    takeaway: "A good resource narrows a question to compared options, then to a recommendation, then to a small first step you can judge."
+    visualTitle: "From a question to a first step"
+    figureCaption: "This diagram shows four stages that narrow, from the question you have through compared options and a recommendation to a small first step."
+
+  - type: pathfinder
+    id: decisions
+    tone: white
+    label: Start here
+    heading: Decisions our pages already answer
+    intro: "Each of these is a common choice with a comparison, a decision guide, or both on a page you can read now."
+    paths:
+      - need: "Should we keep, modernize, or replace our old software?"
+        text: "Five routes compared, with what each suits and what it costs you."
+        href: /solutions/legacy-system-modernization/
+        action: Read the comparison
+      - need: "Which cloud should we move to?"
+        text: "A guide to matching the cloud to the tools and skills you already have."
+        href: /solutions/cloud-migration/
+        action: Read the guide
+      - need: "WordPress, or a custom web application?"
+        text: "When WordPress is enough and when it is not."
+        href: /web-development/wordpress/
+        action: Compare the options
+      - need: "WooCommerce or Shopify for our store?"
+        text: "Owning a store against renting one, with the upkeep each involves."
+        href: /ecommerce/woocommerce/
+        action: Compare the options
+      - need: "Zapier, Make, n8n, or Power Automate?"
+        text: "Which automation platform fits which kind of work."
+        href: /automation/microsoft-power-automate/
+        action: Compare the platforms
+      - need: "PostgreSQL, MySQL, or MongoDB?"
+        text: "How to choose a database, and when to move off the one you have."
+        href: /data-analytics/mysql/
+        action: Compare the databases
+      - need: "Which AI model provider should we use?"
+        text: "How the main providers compare and how to keep answers accurate."
+        href: /ai/
+        action: Read the guide
+      - need: "Which framework for our web interface?"
+        text: "Vue, React, or Angular, by team and project size."
+        href: /web-development/vue/
+        action: Compare the frameworks
+
+  - type: columns
+    id: types
+    tone: paper
+    label: How resources are organized
+    heading: Five kinds of resource
+    intro: "Resources are grouped by what they help you do, so you can tell at a glance whether a piece fits your question."
+    columns:
+      - title: Guides
+        items:
+          - "Step-by-step help with a task, such as moving to the cloud or choosing a platform."
+          - "Written for someone doing it for the first time."
+      - title: Comparisons
+        items:
+          - "Two or more options side by side."
+          - "What each suits and what each costs in upkeep."
+      - title: Decision frameworks
+        items:
+          - "Questions that lead you to the option that fits."
+          - "A way to decide, not just a list of facts."
+      - title: Explainers
+        items:
+          - "Plain-language definitions of a technology or a term."
+          - "What it is, why it matters, and where it fits."
+      - title: Industry notes
+        items:
+          - "How a technology applies in a particular field."
+          - "What to take care over in that field."
+
+  - type: articles
+    id: library
+    tone: white
+    label: The library
+    heading: Guides and articles
+    intro: "Published guides, comparisons, and explainers, newest first."
+
+  - type: callout
+    id: standards
+    tone: paper
+    variant: note
+    title: How we write resources
+    paragraphs:
+      - "Every resource is written by DECHY, dated, and kept to the same plain-language standard as our service pages."
+    items:
+      - "No invented experts, quotes, or statistics"
+      - "Balanced comparisons, including when an option is not right for you"
+      - "A clear statement when the answer depends on your situation"
+      - "Links to the page that explains how we would help"
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about resources
+    items:
+      - q: Are these resources written by named experts?
+        a: "They are published by DECHY. We do not attach invented names or credentials. If a piece draws on a specific person's work, we say so."
+      - q: Why are some decisions answered on service and technology pages?
+        a: "Because that is where the comparison is most useful, next to what we would do. The library adds longer guides for people who want depth."
+      - q: Can I ask for a guide on a topic?
+        a: "Yes. Tell us the decision you are facing through the contact page. A question we are asked often is a good candidate."
+      - q: Is the advice specific to my business?
+        a: "Resources give general guidance. For advice on your situation, talk to us and we will look at the facts."
+
+  - type: cta
+    id: contact-cta
+    heading: Ask us the question you cannot find answered
+    body: "Describe the decision you are facing. We will point you to the right page, or give you a straight answer."
+    primary: { label: Talk to DECHY, href: "/contact/" }

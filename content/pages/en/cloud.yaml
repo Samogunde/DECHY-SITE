@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /cloud/
 entityId: svc.cloud
-title: "Cloud and DevOps Services | DECHY"
+title: Cloud and DevOps Services | DECHY
 description: "Cloud and DevOps from DECHY: move to the cloud safely, keep systems reliable and affordable, and release new features without the risk and delay."
 breadcrumbLabel: Cloud & DevOps
 intent:
@@ -14,28 +14,34 @@ intent:
     - infrastructure as code
     - cloud cost optimization
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
-  what: "Cloud services means running your software and information on rented computing power instead of your own servers. DevOps is the way software is built, tested, and released reliably."
-  problem: "Servers fail, updates are risky, costs are unpredictable, and releasing new features takes too long or breaks things."
-  audience: "Teams with their own servers or old hosting, fast-growing products, and anyone worried about downtime, cost, or slow releases."
-  choose: "Move as-is when speed matters, adjust for the cloud when you want savings and flexibility, and rebuild only when the old design is holding you back."
-  next: "Tell us where your software runs today and what worries you. We will recommend a path and a first step."
-
+  what: Cloud services means running your software and information on rented computing power instead of your own servers. DevOps is the way software is built, tested, and released reliably.
+  problem: Servers fail, updates are risky, costs are unpredictable, and releasing new features takes too long or breaks things.
+  audience: Teams with their own servers or old hosting, fast-growing products, and anyone worried about downtime, cost, or slow releases.
+  choose: Move as-is when speed matters, adjust for the cloud when you want savings and flexibility, and rebuild only when the old design is holding you back.
+  next: Tell us where your software runs today and what worries you. We will recommend a path and a first step.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Cloud & DevOps
-    lead: "At DECHY, we help you run your software on the cloud in a way that is reliable, secure, and affordable. We plan the move, set up the infrastructure, and build the DevOps routines, which are the habits that let software be built, tested, and released safely."
-    support: "Cloud work sits next to our software, security, and integration teams, so hosting decisions are made together with the application."
+    lead: At DECHY, we help you run your software on the cloud in a way that is reliable, secure, and affordable. We plan the move, set up the infrastructure, and build the DevOps routines, which are the habits that let software be built, tested, and released safely.
+    support: Cloud work sits next to our software, security, and integration teams, so hosting decisions are made together with the application.
     ctas:
-      - { label: Talk to us about the cloud, href: "/contact/?service=cloud" }
-      - { label: See the three paths, href: "#paths" }
+      - label: Talk to us about the cloud
+        href: /contact/?service=cloud
+      - label: See the three paths
+        href: "#paths"
     spec:
       kind: layers
       layerLabel: What the cloud is made of
@@ -50,26 +56,24 @@ sections:
         - title: The provider's data centers
           text: Buildings, power, and networks run by the cloud provider.
     purpose: architecture
-    takeaway: "The cloud is rented layers, from ready-made services down to the provider's data centers, so you manage less hardware."
-    visualTitle: "The layers that make up the cloud"
-    figureCaption: "This diagram shows the layers of the cloud from your own software at the top down to the provider's data centers, so you can see what you rent and what you build."
-
+    takeaway: The cloud is rented layers, from ready-made services down to the provider's data centers, so you manage less hardware.
+    visualTitle: The layers that make up the cloud
+    figureCaption: This diagram shows the layers of the cloud from your own software at the top down to the provider's data centers, so you can see what you rent and what you build.
   - type: prose
     id: problem
     tone: white
     label: The problem
     heading: Why teams look at the cloud
     paragraphs:
-      - "Many organizations run software on servers they bought years ago or on hosting nobody has reviewed. It works until it does not. A disk fails on a Friday. An update has to wait for a weekend. A busy day slows everything down."
-      - "The cloud changes the deal. You rent computing power and ready-made services. You pay for what you use, you add capacity in minutes, and the provider looks after the buildings and hardware."
-      - "It is not a magic fix. Without good design, cloud bills grow and systems stay fragile. The value comes from how things are set up and looked after."
-
+      - Many organizations run software on servers they bought years ago or on hosting nobody has reviewed. It works until it does not. A disk fails on a Friday. An update has to wait for a weekend. A busy day slows everything down.
+      - The cloud changes the deal. You rent computing power and ready-made services. You pay for what you use, you add capacity in minutes, and the provider looks after the buildings and hardware.
+      - It is not a magic fix. Without good design, cloud bills grow and systems stay fragile. The value comes from how things are set up and looked after.
   - type: diagram
     id: paths
     tone: paper
     label: Choosing a path
     heading: Move, adjust, or rebuild?
-    intro: "There are three common ways to get to the cloud. The right one depends on how much you want to change and why you are moving."
+    intro: There are three common ways to get to the cloud. The right one depends on how much you want to change and why you are moving.
     spec:
       kind: decision
       question: How much do you want to change on the way?
@@ -84,44 +88,45 @@ sections:
           choose: Rebuild for the cloud
           text: Redesign the system to use cloud strengths. The most effort, and the most benefit.
     purpose: decision
-    takeaway: "How much you change on the way to the cloud decides how fast you move and how much you gain."
-    caption: "This diagram sets out three common paths to the cloud and the situation each one suits, from a quick move to a full rebuild."
+    takeaway: How much you change on the way to the cloud decides how fast you move and how much you gain.
+    caption: This diagram sets out three common paths to the cloud and the situation each one suits, from a quick move to a full rebuild.
     points:
       - title: Start with why
-        body: "Savings, reliability, speed, and growth point to different paths."
+        body: Savings, reliability, speed, and growth point to different paths.
       - title: Move in steps
-        body: "Moving one part at a time lowers risk. You can learn on a small system first."
+        body: Moving one part at a time lowers risk. You can learn on a small system first.
       - title: Plan the exit
-        body: "We design so you can change provider later if you need to."
-
+        body: We design so you can change provider later if you need to.
   - type: table
     id: hosting
     tone: white
     label: Where it can run
     heading: Hosting options compared
-    intro: "Cloud is a family of options, not one thing. Here is how the main choices differ."
+    intro: Cloud is a family of options, not one thing. Here is how the main choices differ.
     caption: Comparison of hosting options
-    columns: [Option, Good for, Keep in mind]
+    columns:
+      - Option
+      - Good for
+      - Keep in mind
     rows:
       - - Simple hosting platforms such as [Vercel](ref:plat.vercel) or [Netlify](ref:plat.netlify)
-        - "Websites and web apps that need to be fast and easy to publish."
-        - "Less control over the underlying setup."
+        - Websites and web apps that need to be fast and easy to publish.
+        - Less control over the underlying setup.
       - - Major cloud providers such as [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud)
-        - "Systems that need flexibility, scale, and a wide choice of services."
-        - "Many choices. Cost and security need careful design."
+        - Systems that need flexibility, scale, and a wide choice of services.
+        - Many choices. Cost and security need careful design.
       - - Backend platforms such as [Firebase](ref:plat.firebase) or [Supabase](ref:plat.supabase)
-        - "Apps that want ready-made sign-in, database, and storage."
-        - "Your design is shaped by the platform."
+        - Apps that want ready-made sign-in, database, and storage.
+        - Your design is shaped by the platform.
       - - Your own or rented servers
-        - "Special needs, fixed workloads, or strict rules about location."
-        - "You carry the cost and the work of looking after them."
-
+        - Special needs, fixed workloads, or strict rules about location.
+        - You carry the cost and the work of looking after them.
   - type: diagram
     id: release
     tone: paper
     label: DevOps in practice
     heading: From a change to a live update
-    intro: "DevOps turns releasing software from a nervous event into a routine one. This is the path every change takes."
+    intro: DevOps turns releasing software from a nervous event into a routine one. This is the path every change takes.
     spec:
       kind: flow
       steps:
@@ -136,9 +141,8 @@ sections:
         - title: It is watched
           text: Alerts tell the team at once if something is wrong.
     purpose: sequence
-    takeaway: "A routine, automated path from change to live update makes releases small, safe, and frequent."
-    caption: "This diagram traces one change from a developer's finished work through automatic checks and a safe preview to going live and being watched."
-
+    takeaway: A routine, automated path from change to live update makes releases small, safe, and frequent.
+    caption: This diagram traces one change from a developer's finished work through automatic checks and a safe preview to going live and being watched.
   - type: columns
     id: outcomes
     tone: white
@@ -147,25 +151,24 @@ sections:
     columns:
       - title: Reliability
         items:
-          - "Backups that are tested, not just taken."
-          - "Plans for failure, so one broken part does not stop everything."
-          - "Alerts that reach a person."
+          - Backups that are tested, not just taken.
+          - Plans for failure, so one broken part does not stop everything.
+          - Alerts that reach a person.
       - title: Cost
         items:
-          - "Costs estimated before you move."
-          - "Unused resources switched off."
-          - "Regular reviews, because cloud bills drift upward."
+          - Costs estimated before you move.
+          - Unused resources switched off.
+          - Regular reviews, because cloud bills drift upward.
       - title: Security
         items:
-          - "Access limited to the people who need it."
-          - "Information encrypted and logged."
-          - "Updates applied on a routine."
+          - Access limited to the people who need it.
+          - Information encrypted and logged.
+          - Updates applied on a routine.
       - title: Speed
         items:
-          - "Changes released in small steps."
-          - "Preview copies for safe testing."
-          - "Capacity that grows with demand."
-
+          - Changes released in small steps.
+          - Preview copies for safe testing.
+          - Capacity that grows with demand.
   - type: process
     id: migration
     tone: paper
@@ -173,52 +176,59 @@ sections:
     heading: How we move you to the cloud
     steps:
       - title: Understand what you have
-        body: "We list your systems, what depends on what, and what must not break."
-        artifacts: [System inventory, Dependency map]
+        body: We list your systems, what depends on what, and what must not break.
+        artifacts:
+          - System inventory
+          - Dependency map
       - title: Choose the path and the platform
-        body: "We pick the approach and provider, and estimate costs."
-        artifacts: [Recommendation, Cost estimate]
+        body: We pick the approach and provider, and estimate costs.
+        artifacts:
+          - Recommendation
+          - Cost estimate
       - title: Build the foundation
-        body: "We set up the cloud environment, security, and automatic deployment."
-        artifacts: [Cloud environment, Release pipeline]
+        body: We set up the cloud environment, security, and automatic deployment.
+        artifacts:
+          - Cloud environment
+          - Release pipeline
       - title: Move in stages
-        body: "We move one part at a time, with a rehearsed way back."
-        artifacts: [Staged migration plan, Rollback plan]
+        body: We move one part at a time, with a rehearsed way back.
+        artifacts:
+          - Staged migration plan
+          - Rollback plan
       - title: Tune and hand over
-        body: "We watch costs and performance, fix rough edges, and train your team or look after it for you."
-        artifacts: [Performance and cost review, Runbooks]
-
+        body: We watch costs and performance, fix rough edges, and train your team or look after it for you.
+        artifacts:
+          - Performance and cost review
+          - Runbooks
   - type: callout
     id: when-not
     tone: white
     variant: limits
     title: The cloud is not always cheaper or better
     paragraphs:
-      - "For steady, predictable workloads, owning hardware can cost less. Some rules about where information may be stored also limit the choices."
-      - "We compare honestly and tell you if staying where you are, or doing a smaller upgrade, makes more sense."
-
+      - For steady, predictable workloads, owning hardware can cost less. Some rules about where information may be stored also limit the choices.
+      - We compare honestly and tell you if staying where you are, or doing a smaller upgrade, makes more sense.
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines how we build and run cloud systems."
+    intro: Most visitors can skip this section. It outlines how we build and run cloud systems.
     panels:
       - title: Infrastructure written as code
         paragraphs:
-          - "We describe infrastructure in files using tools such as [Terraform](ref:tool.terraform), [Pulumi](ref:tool.pulumi), or [CloudFormation](ref:tech.cloudformation). This makes environments repeatable, reviewable, and easy to rebuild."
+          - We describe infrastructure in files using tools such as [Terraform](ref:tool.terraform), [Pulumi](ref:tool.pulumi), or [CloudFormation](ref:tech.cloudformation). This makes environments repeatable, reviewable, and easy to rebuild.
       - title: Containers and orchestration
         paragraphs:
-          - "Software is packaged with [Docker](ref:tool.docker) and, when scale demands it, run on [Kubernetes](ref:tool.kubernetes) or managed services such as [ECS](ref:tech.ecs), [Cloud Run](ref:tech.cloud-run), or [Azure Container Apps](ref:tech.container-apps). Many systems do not need Kubernetes, and we say so."
+          - Software is packaged with [Docker](ref:tool.docker) and, when scale demands it, run on [Kubernetes](ref:tool.kubernetes) or managed services such as [ECS](ref:tech.ecs), [Cloud Run](ref:tech.cloud-run), or [Azure Container Apps](ref:tech.container-apps). Many systems do not need Kubernetes, and we say so.
       - title: Release pipelines
         paragraphs:
-          - "The path from change to release is often called CI/CD (continuous integration and delivery). We build it with tools such as [GitHub Actions](ref:tool.github-actions), [GitLab CI/CD](ref:tool.gitlab-ci-cd), [Jenkins](ref:tool.jenkins), or [Azure DevOps](ref:tech.azure-devops)."
+          - The path from change to release is often called CI/CD (continuous integration and delivery). We build it with tools such as [GitHub Actions](ref:tool.github-actions), [GitLab CI/CD](ref:tool.gitlab-ci-cd), [Jenkins](ref:tool.jenkins), or [Azure DevOps](ref:tech.azure-devops).
       - title: Watching the system
         items:
-          - "Metrics, logs, and traces with tools such as [Prometheus](ref:tool.prometheus), [Grafana](ref:tool.grafana), and [OpenTelemetry](ref:tool.opentelemetry)."
-          - "Alerts tied to what users feel, such as slow pages or failed payments."
-          - "Cost reports by system, so spending is visible."
-
+          - Metrics, logs, and traces with tools such as [Prometheus](ref:tool.prometheus), [Grafana](ref:tool.grafana), and [OpenTelemetry](ref:tool.opentelemetry).
+          - Alerts tied to what users feel, such as slow pages or failed payments.
+          - Cost reports by system, so spending is visible.
   - type: index
     id: work
     tone: white
@@ -227,11 +237,10 @@ sections:
     items:
       - title: Cloud platforms
         href: /work/areas/cloud-platforms/
-        body: "Cloud environments designed for reliability, cost control, and growth."
+        body: Cloud environments designed for reliability, cost control, and growth.
       - title: DevOps and infrastructure
         href: /work/areas/devops-infrastructure/
-        body: "The automatic release pipelines and monitoring that keep software healthy."
-
+        body: The automatic release pipelines and monitoring that keep software healthy.
   - type: faq
     id: faq
     tone: paper
@@ -239,18 +248,17 @@ sections:
     heading: Questions about cloud and DevOps
     items:
       - q: Will moving to the cloud save us money?
-        a: "Often, but not automatically. Savings come from paying for what you use and from less hardware work. Costs can rise if the system is badly set up. We estimate before you move and review afterward."
+        a: Often, but not automatically. Savings come from paying for what you use and from less hardware work. Costs can rise if the system is badly set up. We estimate before you move and review afterward.
       - q: Which cloud provider should we use?
-        a: "It depends on your existing tools, your skills, the services you need, and where your information must be stored. We work with all the major providers and recommend the one that fits."
+        a: It depends on your existing tools, your skills, the services you need, and where your information must be stored. We work with all the major providers and recommend the one that fits.
       - q: Will there be downtime during the move?
-        a: "We plan moves to avoid it, using staged migration and a rehearsed way back. Some systems need a short switchover window, which we schedule with you."
+        a: We plan moves to avoid it, using staged migration and a rehearsed way back. Some systems need a short switchover window, which we schedule with you.
       - q: What if we want to change provider later?
-        a: "We design to keep that option open where it makes sense, by writing infrastructure as code and avoiding unnecessary lock-in."
+        a: We design to keep that option open where it makes sense, by writing infrastructure as code and avoiding unnecessary lock-in.
       - q: Do we need DevOps if we are small?
         a: "A light version helps almost everyone: automatic checks, a preview copy, and one-step releases. We match the effort to your size."
       - q: Can you look after our cloud after the move?
-        a: "Yes. We can monitor, update, and tune your environment, or train your team to do it. See also our [cybersecurity](ref:svc.cybersecurity) service for protection."
-
+        a: Yes. We can monitor, update, and tune your environment, or train your team to do it. See also our [cybersecurity](ref:svc.cybersecurity) service for protection.
   - type: related
     id: related
     tone: white
@@ -259,31 +267,36 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [
-            svc.cybersecurity,
-            svc.software-development,
-            svc.data-analytics,
-            svc.api-integration,
-            svc.consulting,
-          ]
+          - svc.cybersecurity
+          - svc.software-development
+          - svc.data-analytics
+          - svc.api-integration
+          - svc.consulting
       - title: Related solutions
-        entityIds: [sol.cloud-migration, sol.legacy-system-modernization]
+        entityIds:
+          - sol.cloud-migration
+          - sol.legacy-system-modernization
       - title: Technologies in this area
         entityIds:
-          [
-            plat.aws,
-            plat.azure,
-            plat.google-cloud,
-            tool.terraform,
-            tool.docker,
-            tool.kubernetes,
-            tool.github-actions,
-          ]
+          - plat.aws
+          - plat.azure
+          - plat.google-cloud
+          - tool.terraform
+          - tool.docker
+          - tool.kubernetes
+          - tool.github-actions
       - title: Systems we build
-        entityIds: [workarea.cloud-platforms, workarea.devops-infrastructure]
-
+        entityIds:
+          - workarea.cloud-platforms
+          - workarea.devops-infrastructure
+      - title: Technology pages
+        entityIds:
+          - plat.firebase
+          - plat.supabase
   - type: cta
     id: contact-cta
     heading: Tell us where your software runs today
-    body: "Describe your current setup and what worries you most. We will recommend a path to the cloud, or tell you honestly if staying put is better."
-    primary: { label: Talk to DECHY about the cloud, href: "/contact/?service=cloud" }
+    body: Describe your current setup and what worries you most. We will recommend a path to the cloud, or tell you honestly if staying put is better.
+    primary:
+      label: Talk to DECHY about the cloud
+      href: /contact/?service=cloud

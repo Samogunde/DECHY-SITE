@@ -28,9 +28,9 @@ describe("navigation model", () => {
     for (const i of model.items) {
       if (i.href) expect(paths.has(i.href), i.label).toBe(true);
     }
-    expect(model.items.find((i) => i.label === "Industries")!.href).toBeNull();
-    expect(model.items.find((i) => i.label === "Resources")!.href).toBeNull();
-    expect(model.items.find((i) => i.label === "Solutions")!.kind).toBe("link");
+    expect(model.items.find((i) => i.label === "Industries")!.href).toBe("/industries/");
+    expect(model.items.find((i) => i.label === "Resources")!.href).toBe("/resources/");
+    expect(model.items.find((i) => i.label === "Solutions")!.kind).toBe("solutions");
     expect(model.items.find((i) => i.label === "Company")!.kind).toBe("link");
   });
 
@@ -66,8 +66,9 @@ describe("navigation model", () => {
     expect(total).toBe(pages.length);
     const listed = new Set(t.categories.flatMap((c) => c.all.map((i) => i.id)));
     for (const p of pages) expect(listed.has(p.entityId!), p.path).toBe(true);
-    expect(listed.has("tech.nodejs")).toBe(false);
-    expect(listed.has("fw.vue")).toBe(false);
+    expect(listed.has("tech.nodejs")).toBe(true);
+    expect(listed.has("plat.vercel")).toBe(false);
+    expect(listed.has("fw.rails")).toBe(false);
   });
 
   it("Technologies ordering is editorial, not alphabetical", () => {
@@ -86,8 +87,8 @@ describe("navigation model", () => {
     if (t.kind !== "technologies") throw new Error("technologies expected");
     const cloud = t.categories.find((c) => c.id === "cloud")!;
     expect(cloud.items).toHaveLength(3);
-    expect(cloud.all).toHaveLength(6);
-    expect(cloud.more).toBe(3);
+    expect(cloud.all).toHaveLength(8);
+    expect(cloud.more).toBe(5);
   });
 
   it("a technology that loses its page disappears from the menu instead of becoming a dead link", () => {
@@ -125,21 +126,59 @@ describe("navigation model", () => {
     expect(s.families.flatMap((f) => f.services)).toHaveLength(15);
   });
 
-  it("does not create menus for Solutions, Company, Industries, or Resources, and none for Locations", () => {
+  it("has menus for Services, Solutions, Technologies, Industries, and Work only, and none for Locations", () => {
     expect(registry.nav.primary.filter((i) => i.kind !== "link").map((i) => i.label)).toEqual([
       "Services",
+      "Solutions",
       "Technologies",
+      "Industries",
       "Work",
     ]);
     expect(registry.nav.primary.map((i) => i.label)).not.toContain("Locations");
+  });
+
+  it("Solutions and Industries menus list only published pages, led by the problem", () => {
+    const s = item("solutions");
+    const i = item("industries");
+    if (s.kind !== "solutions" || i.kind !== "industries") throw new Error("lists expected");
+    expect(s.items.map((x) => x.id)).toEqual([
+      "sol.business-process-automation",
+      "sol.legacy-system-modernization",
+      "sol.cloud-migration",
+      "sol.crm-integration",
+      "sol.business-dashboards",
+      "sol.ai-customer-support",
+    ]);
+    expect(i.items).toHaveLength(8);
+    for (const x of [...s.items, ...i.items]) {
+      expect(paths.has(x.href), x.href).toBe(true);
+      expect(x.summary.length, x.id).toBeGreaterThan(10);
+    }
+  });
+
+  it("never lists a Solution that is represented by a Work Area, deferred, or graph-only", () => {
+    const s = item("solutions");
+    if (s.kind !== "solutions") throw new Error("solutions expected");
+    const listed = new Set(s.items.map((x) => x.id));
+    for (const id of [
+      "sol.customer-portal-development",
+      "sol.workflow-automation",
+      "sol.ai-automation",
+      "sol.saas-platforms",
+      "sol.customer-experience-systems",
+    ])
+      expect(listed.has(id), id).toBe(false);
   });
 });
 
 describe("technology graph completion (ADR 0005)", () => {
   it("adds the missing entities without adding pages", () => {
+    // Node.js and .NET were added as entities in ADR 0005 and are published in Phase 4.
+    for (const id of ["tech.nodejs", "tech.dotnet"]) {
+      expect(registry.nodes.has(id), id).toBe(true);
+      expect(publishedPath(registry.nodes.get(id), registry), id).not.toBeNull();
+    }
     for (const id of [
-      "tech.nodejs",
-      "tech.dotnet",
       "fw.django",
       "fw.laravel",
       "plat.power-bi",
@@ -166,7 +205,7 @@ describe("technology graph completion (ADR 0005)", () => {
       ].includes(n.type),
     );
     const withPage = tech.filter((n) => publishedPath(n, registry));
-    expect(withPage).toHaveLength(32);
+    expect(withPage).toHaveLength(43);
     expect(tech.length).toBeGreaterThan(280);
   });
 });
@@ -187,10 +226,10 @@ describe("Where this connects", () => {
     );
   });
 
-  it("links built pages and leaves unbuilt solutions and industries as plain text", () => {
+  it("links built pages, never lists a Solution without a page, and leaves unbuilt industries as plain text", () => {
     const r = rails("/cloud/kubernetes/");
-    const solutions = r.find((x) => x.id === "solutions")!;
-    expect(solutions.items.every((i) => i.href === null)).toBe(true);
+    const solutions = r.find((x) => x.id === "solutions");
+    for (const i of solutions?.items ?? []) expect(i.href && paths.has(i.href), i.id).toBeTruthy();
     const systems = r.find((x) => x.id === "systems")!;
     expect(systems.items.every((i) => i.href && paths.has(i.href))).toBe(true);
   });

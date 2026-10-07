@@ -1,0 +1,208 @@
+id: page.industry-logistics
+kind: industry
+locale: en
+path: /industries/logistics/
+parent: /industries/
+entityId: ind.logistics
+title: "Logistics and Transport Software | DECHY"
+description: "Software for logistics, transport, and warehousing from DECHY: order and shipment tracking, carrier connections, dispatch tools, and delivery reporting."
+breadcrumbLabel: Logistics
+intent:
+  primary: logistics software development
+  secondary:
+    - transportation software solutions
+    - shipment tracking software
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Logistics software covers the systems that move goods and information together: orders, dispatch, warehouse work, carrier connections, tracking, and the documents and reports around them."
+  problem: "Orders, carriers, warehouses, and customers each use different systems, status is chased by phone, documents are re-typed, and nobody has one reliable view of where things are."
+  audience: "Logistics providers, transport and warehousing firms, and the supply chain teams of manufacturers and retailers."
+  choose: "Connect the systems that hold order and shipment status first, then automate documents and exceptions, then give customers and managers a live view."
+  next: "Tell us which systems hold your order and shipment data and where status gets lost. We will outline the connections and a first stage."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for logistics and transport
+    lead: "In logistics, information has to travel as fast as the goods. We connect order, dispatch, warehouse, and carrier systems, automate the documents that slow them down, and give customers and managers one live view of where things stand."
+    support: "This page covers what logistics firms ask for, where systems usually break down, and how we approach it."
+    ctas:
+      - {
+          label: Talk to us about a logistics system,
+          href: "/contact/?service=software-development",
+        }
+      - { label: Where information gets lost, href: "#breaks" }
+    spec:
+      kind: layers
+      layers:
+        - title: Customers and partners
+          text: "Live tracking, notifications, and self-service."
+          support:
+            - title: Tracking page
+            - title: Customer alerts
+        - title: Operations
+          text: "Orders, dispatch, warehouse work, and exceptions."
+          support:
+            - title: Order and dispatch tools
+            - title: Warehouse workflows
+        - title: Data and connections
+          text: "Links to carriers, accounting, and the systems that plan the business."
+          support:
+            - title: Carrier connections
+            - title: Accounting and planning links
+        - title: Field and devices
+          text: "Drivers, scanners, and handheld apps feeding status in."
+          support:
+            - title: Driver app
+            - title: Scanning
+      layerLabel: A logistics system
+      supportLabel: What sits beside it
+    purpose: system
+    takeaway: "A logistics system stacks customer-facing tracking, operations tools, connections to carriers and accounts, and field devices that feed status in."
+    visualTitle: "The layers of a logistics system"
+    figureCaption: "This diagram shows a logistics system as four layers, from customer tracking at the top through operations and connections to the field devices that feed status in."
+
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: A business where the status is the product
+    paragraphs:
+      - "Customers rarely ask how a shipment is handled. They ask where it is. The value a logistics firm sells is reliable movement and reliable information, and the second is often what customers notice first."
+      - "The difficulty is that the information lives in many places. The order sits in the customer's system, the booking with a carrier, the loading in the warehouse tool, the proof of delivery on a driver's phone. The data exists. It does not meet."
+      - "Our work is largely to make it meet: to connect the sources, resolve the differences, and present one dependable status to the people who ask."
+
+  - type: index
+    id: breaks
+    tone: paper
+    columns: 2
+    label: Where it breaks
+    heading: Where information usually gets lost
+    items:
+      - title: Between the order and the booking
+        body: "Order details are re-typed into a carrier or planning tool, and mistakes follow."
+      - title: Between the warehouse and the customer
+        body: "Pick, pack, and dispatch happen, but the customer's status does not change until someone updates it."
+      - title: On the road
+        body: "Proof of delivery and exceptions stay on a driver's phone or paper until the end of the day."
+      - title: In the paperwork
+        body: "Invoices, delivery notes, and customs documents are assembled by hand from several systems."
+      - title: In the reports
+        body: "On-time and cost figures are built after the fact, so problems are seen late."
+      - title: In the old systems
+        body: "A planning or warehouse system that works but cannot share data, so everything around it is manual."
+
+  - type: chooser
+    id: start
+    tone: white
+    label: Where to start
+    heading: What should come first?
+    intro: "The first project is the one that removes the most re-typing or the most chasing."
+    question: Where is the most effort wasted?
+    options:
+      - label: Re-keying orders and bookings
+        when: "Staff copy order details between the customer's system, the booking, and the planning tool."
+        get: "Connections that carry each order once, with checks on addresses and quantities."
+        watch: "Agree which system owns each field, or changes overwrite each other."
+      - label: Chasing status
+        when: "Customers and staff phone to ask where a shipment is."
+        get: "A live tracking view and automatic notifications, fed by every system that knows."
+        watch: "Show status that is true. A wrong tracking page is worse than none."
+      - label: Paperwork
+        when: "Documents are produced by hand for each shipment."
+        get: "Documents generated from the order data and sent automatically."
+        watch: "Handle the exceptions, such as amended orders, without a manual restart."
+      - label: Blind spots in performance
+        when: "On-time rate, cost per delivery, and delays are not visible until the month ends."
+        get: "A dashboard fed by the same data that runs operations."
+        watch: "Define on-time carefully, and use the same definition everywhere."
+
+  - type: columns
+    id: help
+    tone: paper
+    label: What DECHY can do
+    heading: How we help logistics teams
+    columns:
+      - title: Connect
+        items:
+          - "Order systems, carriers, warehouse tools, and accounting."
+          - "Enterprise resource planning (ERP) systems, the core software that runs a firm's orders and accounts, linked to everything around them."
+      - title: Automate
+        items:
+          - "Document generation and sending."
+          - "Exception alerts and rule-based routing. See [process automation](/solutions/business-process-automation/)."
+      - title: Show
+        items:
+          - "Customer tracking pages and notifications."
+          - "Dashboards for managers. See [business dashboards](/solutions/business-dashboards/)."
+      - title: Modernize
+        items:
+          - "Staged moves away from old planning or warehouse systems. See [legacy system modernization](/solutions/legacy-system-modernization/)."
+          - "Mobile apps for drivers and warehouse staff."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: Integration and reliability notes
+    intro: "Most visitors can skip this section. It notes how we build for operations that run all day."
+    panels:
+      - title: Events and status
+        items:
+          - "Each shipment has a stable identifier that every system uses, so updates from different sources attach to the same record."
+          - "Status changes are recorded as events with a time and a source, which makes the history reliable and the current status a calculation, not a guess."
+      - title: Reliability
+        items:
+          - "Messages are queued and retried, so a carrier system that is briefly unavailable does not lose updates."
+          - "Duplicates are detected, so a repeated message cannot change a record twice."
+      - title: Field use
+        paragraphs:
+          - "Driver and warehouse apps work with poor or no signal and sync when connection returns. See our [mobile app](ref:svc.mobile-app-development) work."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about logistics software
+    items:
+      - q: Can you connect to our carriers?
+        a: "Usually, yes. Carriers and platforms vary in what they offer. We check each one and connect through whatever interface it provides."
+      - q: Can you work with our existing planning or warehouse system?
+        a: "Yes. We typically connect around it first, and replace parts only where it is the limit."
+      - q: How do you keep tracking accurate?
+        a: "By recording status as events from every source, with a time and origin, and by testing the common exceptions such as delays and amended orders."
+      - q: Do we need a mobile app for drivers?
+        a: "Only if drivers need to send information from the road. A simple, reliable app that works offline is often worth it, because proof of delivery arrives at once."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Logistics across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          [
+            svc.software-development,
+            svc.api-integration,
+            svc.mobile-app-development,
+            svc.data-analytics,
+          ]
+      - title: Systems we build
+        entityIds:
+          [workarea.operations-platforms, workarea.integration-platforms, workarea.mobile-apps]
+      - title: Technologies
+        entityIds: [lang.python, tech.nodejs, tech.postgresql, tech.flutter]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us where status gets lost
+    body: "Describe the systems that hold your order and shipment data and where information goes missing. We will outline the connections and a first stage."
+    primary:
+      { label: Talk to DECHY about logistics, href: "/contact/?service=software-development" }

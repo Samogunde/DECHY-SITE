@@ -1,0 +1,180 @@
+id: page.location-united-kingdom
+kind: location
+locale: en
+path: /locations/united-kingdom/
+parent: /locations/
+entityId: loc.united-kingdom
+title: Technology Services for the United Kingdom | DECHY
+description: "How DECHY works with organizations in the UK: software, AI, and automation delivered remotely, with UK data protection and payment practice in view."
+breadcrumbLabel: United Kingdom
+intent:
+  primary: software development services uk
+  secondary:
+    - technology partner for uk businesses
+    - remote software development uk
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: DECHY works with organizations in the United Kingdom on software, AI, automation, integration, and related services, delivered remotely.
+  problem: UK organizations need systems that respect UK data protection rules, connect to UK payment and accounting practice, and are delivered by a supplier that communicates clearly.
+  audience: UK startups, small and mid-sized businesses, enterprises, charities, and teams that want a remote technology partner.
+  choose: Tell us what you want to build and which data rules apply. We explain how we would build to them and how we would work with your team.
+  next: Describe the project and your team's working hours. We will propose how an engagement would run.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Locations
+    headline: DECHY for organizations in the United Kingdom
+    lead: DECHY is a global technology company. We work with organizations in the United Kingdom remotely, across software, AI, automation, integration, cloud, and design. This page covers what is particular to UK projects.
+    support: There is no UK office. DECHY works remotely, and we fix call times around your team's working day.
+    ctas:
+      - label: Talk to DECHY about a UK project
+        href: /contact/
+      - label: UK rules and practice
+        href: "#rules"
+    spec:
+      kind: decision
+      question: What does a UK project need to settle first?
+      branches:
+        - when: It handles personal data about people in the UK
+          choose: Design for UK data protection
+          text: Decide the lawful basis, who can see what, and how long data is kept before the build.
+        - when: It takes payments or connects to a bank
+          choose: Use UK payment routes
+          text: Plan for cards, bank transfers, and open banking connections where they apply.
+        - when: It feeds your accounts or tax records
+          choose: Connect to UK accounting
+          text: Match the packages your finance team uses and the digital records that tax rules expect.
+        - when: It sells to the public sector
+          choose: Plan for procurement
+          text: Public bodies often buy through frameworks, so allow time for their process.
+    purpose: decision
+    takeaway: "A UK project settles four things first: how personal data is handled, how payments flow, how accounts are fed, and whether public procurement applies."
+    visualTitle: What a UK project settles first
+    figureCaption: "This diagram shows four situations in a UK project and what to settle for each: data protection, payment routes, accounting links, and public procurement."
+  - type: table
+    id: rules
+    tone: white
+    label: Rules and practice
+    heading: Considerations that shape UK software projects
+    caption: Four UK considerations that commonly affect software and data projects and how they shape what we build
+    columns:
+      - Consideration
+      - Why it matters
+      - What it means for the build
+    rows:
+      - - UK data protection
+        - Personal data is governed by UK data protection law, which is based on the General Data Protection Regulation (GDPR), together with the Data Protection Act 2018. The regulator is the Information Commissioner's Office.
+        - We build for lawful handling, access requests, limited retention, and clear records of what is held and why.
+      - - Moving data between the UK and elsewhere
+        - Transfers of personal data out of the UK carry conditions, and so do transfers from the European Economic Area into it.
+        - We record where data is stored and processed, and choose hosting regions to match.
+      - - Digital tax records
+        - Many businesses must keep and submit certain tax records digitally, for example for value added tax.
+        - We connect sales and invoicing systems to accounting software so records flow without re-typing.
+      - - Accessibility
+        - Public bodies must meet accessibility standards, and private organizations are expected to serve all users.
+        - We build to the web accessibility guidelines and test with assistive technology.
+    note: Treat these as prompts for a conversation with your adviser, not as legal advice.
+  - type: prose
+    id: market
+    tone: paper
+    label: The market
+    heading: What UK buyers tend to ask for
+    paragraphs:
+      - UK organizations range from startups in the technology sector to long-established firms in finance, professional services, retail, and the public and charitable sectors. Requests we see most often are portals and internal tools, connections between systems, automation of repetitive work, and modernizing older systems.
+      - "Buyers value clear scope and plain pricing, and often want a first stage they can judge before committing further. We work that way: a defined first piece, reviewed with you, then extended."
+      - Because the UK sits in a single time zone with long overlap with Europe, communication is usually straightforward. For teams in other time zones we agree meeting times at the start.
+  - type: index
+    id: integrations
+    tone: white
+    columns: 2
+    label: Systems in use
+    heading: Payments, banking, and accounting in the UK
+    items:
+      - title: Cards and bank payments
+        body: Cards are the usual online route, with bank transfers through the UK's faster payment and bulk payment systems for invoices and payroll-style payments.
+      - title: Open banking
+        body: The UK has an established open banking framework that lets, with consent, an application read account data or start a payment. It suits payment, reconciliation, and affordability tools.
+      - title: Accounting software
+        body: Small and mid-sized businesses commonly use cloud accounting packages. We connect orders, invoices, and payments to the one you use.
+      - title: Customer and marketing systems
+        body: "[HubSpot](ref:plat.hubspot) and [Salesforce](ref:plat.salesforce) are widely used. See [connecting customer systems](/solutions/crm-integration/)."
+      - title: Cloud hosting
+        body: "[AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) all offer UK regions, which matters for data location."
+      - title: Online stores
+        body: "[Shopify](ref:plat.shopify) and [WooCommerce](ref:plat.woocommerce) stores connected to UK shipping and tax."
+  - type: columns
+    id: services
+    tone: paper
+    label: Most relevant
+    heading: Where UK teams usually start
+    columns:
+      - title: Modernize
+        items:
+          - "[Software development](/software-development/) to replace or extend older systems."
+          - "[Cloud services](/cloud/) to move to supported hosting."
+      - title: Connect
+        items:
+          - "[Systems integration](/api-integration/) between finance, sales, and operations."
+          - "[Automation](/automation/) of manual steps."
+      - title: Serve customers
+        items:
+          - "[Web development](/web-development/) and [ecommerce](/ecommerce/)."
+          - "[AI and machine learning](/ai/) for support and search."
+      - title: Decide with data
+        items:
+          - "[Data and analytics](/data-analytics/) dashboards."
+          - "[Cybersecurity](/cybersecurity/) reviews."
+  - type: index
+    id: industries
+    tone: white
+    columns: 2
+    label: Industries
+    heading: Industries we write about that are active in the UK
+    items:
+      - title: Finance
+        body: Onboarding, reporting, and connected core systems.
+        href: /industries/finance/
+      - title: Professional services
+        body: Client portals, time, and billing.
+        href: /industries/professional-services/
+      - title: Retail and ecommerce
+        body: Stores, stock, and customer records that agree.
+        href: /industries/retail/
+      - title: Real estate and property
+        body: Leads, tenant portals, and maintenance requests.
+        href: /industries/real-estate/
+      - title: Education
+        body: Learner portals and records.
+        href: /industries/education/
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions from UK organizations
+    items:
+      - q: Do you have a UK office?
+        a: No. DECHY is a global company that works remotely with clients worldwide. We arrange calls at times that suit your team.
+      - q: Will our data stay in the UK?
+        a: It can. We choose hosting regions to match your requirements and write down where data is stored and processed.
+      - q: Can you work with public-sector buyers?
+        a: Public bodies have their own procurement rules and often buy through frameworks. Tell us about the project and we will say whether and how we can take part.
+      - q: Are your systems accessible?
+        a: Accessibility is part of how we build and test every screen, not a later add-on.
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your project
+    body: Describe what you want to build or fix, and when your team works. We will propose how an engagement would run.
+    primary:
+      label: Talk to DECHY
+      href: /contact/

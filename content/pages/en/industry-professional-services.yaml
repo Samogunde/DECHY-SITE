@@ -1,0 +1,210 @@
+id: page.industry-professional-services
+kind: industry
+locale: en
+path: /industries/professional-services/
+parent: /industries/
+entityId: ind.professional-services
+title: Professional Services Software | DECHY
+description: "Software for consultancies, agencies, accountants, and other professional firms from DECHY: client portals, time and billing, document workflows, and reporting."
+breadcrumbLabel: Professional services
+intent:
+  primary: professional services software development
+  secondary:
+    - client portal for professional firms
+    - practice management automation
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Professional services software covers the systems that consultancies, agencies, accountancies, and other advisory firms use to win work, deliver it, record time, bill clients, and share documents.
+  problem: Client details, time records, documents, and invoices sit in different tools, so partners chase information, billing is late, and clients email files for lack of a better place.
+  audience: Consultancies, agencies, accountants, advisers, and other firms that sell expertise by the hour, the project, or the retainer.
+  choose: Connect time, projects, and billing first, then give clients one place for documents and status, and report on utilization from the same data.
+  next: Tell us how work is tracked and billed today and where information is re-entered. We will outline a first stage.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for professional services firms
+    lead: A professional firm sells time and judgment. Every hour spent on re-typing, chasing, or assembling reports is an hour not sold. We build and connect the systems that capture work, bill it, and share it with clients, so the firm spends its time on the work itself.
+    support: This page covers what firms ask for, where the leakage usually is, and how we approach it.
+    ctas:
+      - label: Talk to us about a firm's systems
+        href: /contact/?service=software-development
+      - label: Where time leaks
+        href: "#leaks"
+    spec:
+      kind: funnel
+      stages:
+        - title: Hours worked
+          text: All the time the firm's people spend.
+        - title: Hours recorded
+          text: Time captured in the system, on the right project.
+        - title: Hours billable
+          text: Time that matches the agreement and can be invoiced.
+        - title: Hours invoiced and paid
+          text: Time turned into issued, collected income.
+    purpose: process
+    takeaway: Income narrows from hours worked to hours recorded, billable, and paid, and every stage where time drops out is a place to improve.
+    visualTitle: How hours become income
+    figureCaption: This diagram shows hours narrowing in four stages, from time worked through time recorded and time billable to time invoiced and paid.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: A business where information is the stock
+    paragraphs:
+      - A professional firm has no warehouse. Its stock is knowledge, time, and client trust, and all of it lives in documents, calendars, inboxes, and heads. That makes it hard to see where value leaks, and easy to lose it.
+      - "Most firms started small and added tools as they grew: one for time, one for projects, one for the client list, one for invoices. Each is sensible. Together they require someone to carry information between them, usually a skilled person on a busy day."
+      - The aim is not to turn a firm into a factory. It is to let people record what they did once, and have the rest follow.
+      - There is a second difference, which is confidentiality. A firm holds its clients' draft accounts, contracts, strategies, and personal details, often for competitors at the same time. A system that mixes them, or lets the wrong colleague see a file, damages trust that took years to build.
+  - type: callout
+    id: leakage
+    tone: paper
+    variant: note
+    title: Where income quietly escapes
+    paragraphs:
+      - Most firms lose income in the same few places, rarely through one large failure.
+    items:
+      - Time worked but never recorded
+      - Recorded time on the wrong project or at the wrong rate
+      - Work done outside the scope that is never billed
+      - Invoices sent late, so payment is late
+      - Reminders that depend on someone's memory
+  - type: index
+    id: leaks
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Typical systems for professional firms
+    items:
+      - title: Client portals
+        body: A private place to share documents, see status, and approve work, in place of email attachments. See [customer portals](/work/areas/customer-portals/).
+      - title: Time and billing connections
+        body: Time, projects, and invoices linked, so billable work reaches the invoice.
+      - title: Proposal and onboarding workflows
+        body: From enquiry to signed engagement with the right steps and records. See [process automation](/solutions/business-process-automation/).
+      - title: Customer records
+        body: One client record across sales, delivery, and billing. See [connecting customer systems](/solutions/crm-integration/).
+      - title: Management reporting
+        body: Utilization, margin, and pipeline from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
+      - title: Knowledge and document search
+        body: Finding past work and approved templates quickly. See [knowledge and content systems](/work/areas/knowledge-and-content-systems/).
+  - type: process
+    id: how
+    tone: paper
+    label: How we work
+    heading: Closing the leaks, one at a time
+    steps:
+      - title: Trace the path of an hour
+        body: We follow a few real engagements from time worked to cash received and note where information is copied or lost.
+        artifacts:
+          - Path map
+          - Leak list
+      - title: Fix the largest leak first
+        body: Often it is time capture or the link between time and the invoice. We fix that before adding anything else.
+        artifacts:
+          - Connection
+          - Rules
+      - title: Give clients a better channel
+        body: A portal replaces email attachments with a shared, tracked place for documents and approvals.
+        artifacts:
+          - Client portal
+      - title: Report from the same data
+        body: Utilization and margin come from the records you already keep, with definitions the partners agree.
+        artifacts:
+          - Dashboard
+          - Definitions
+  - type: columns
+    id: help
+    tone: white
+    label: What DECHY can do
+    heading: How we help professional firms
+    columns:
+      - title: Build
+        items:
+          - Client portals and internal tools.
+          - Approval and engagement workflows.
+      - title: Connect
+        items:
+          - Time, projects, client records, accounting, and documents.
+          - A single client record across them.
+      - title: Automate
+        items:
+          - Reminders, onboarding steps, and recurring invoices.
+          - Alerts for work nearing its budget.
+      - title: Report
+        items:
+          - Utilization, margin, and pipeline dashboards.
+          - Month-end figures that need less assembly.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Client data and time capture notes
+    intro: Most visitors can skip this section. It notes the engineering choices we make for firms that hold client confidences.
+    panels:
+      - title: Keeping clients apart
+        items:
+          - Each client's documents and records are separated in the data layer, not only hidden in the screen.
+          - "Access follows the engagement: a colleague sees a client's files only while they are on that client's team."
+          - Every view and download of a sensitive document is logged.
+        paragraphs: []
+      - title: Capturing time reliably
+        items:
+          - Time entry takes a few seconds from a phone or a calendar entry, so it is recorded the same day.
+          - Rates and billing rules live in one place, so the invoice follows the agreement.
+        paragraphs: []
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about software for professional firms
+    items:
+      - q: Should we buy a practice management product?
+        a: For standard needs, a product is often the quickest route. We help when your way of working is distinct, or when the tools you have need to be connected.
+      - q: Can you keep client documents secure?
+        a: Yes. We design role-based access, encryption, and logs, and limit what each person and system can reach.
+      - q: Can you connect our time recording to billing?
+        a: Usually, yes. Most time and accounting tools offer a way to connect. We check yours and design around it.
+      - q: Will staff accept a new way of recording time?
+        a: They do when it is quicker than what they do now. We design for the fewest clicks and test it with the people who will use it.
+      - q: Can you build something for a small firm with a small budget?
+        a: Yes. A small firm usually gains most from one or two connections, such as time to invoice, and a simple client area. We start there and add only what the firm will actually use.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Professional services across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.automation
+          - svc.api-integration
+          - svc.data-analytics
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.internal-business-tools
+          - workarea.knowledge-and-content-systems
+      - title: Technologies
+        entityIds:
+          - plat.hubspot
+          - plat.airtable
+          - tech.zapier
+          - lang.typescript
+  - type: cta
+    id: contact-cta
+    heading: Tell us how work is tracked and billed today
+    body: Describe how time, projects, and invoices are handled and where details are re-entered. We will outline a first stage.
+    primary:
+      label: Talk to DECHY about professional services
+      href: /contact/?service=software-development

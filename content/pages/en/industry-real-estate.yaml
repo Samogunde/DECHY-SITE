@@ -1,0 +1,227 @@
+id: page.industry-real-estate
+kind: industry
+locale: en
+path: /industries/real-estate/
+parent: /industries/
+entityId: ind.real-estate
+title: Real Estate and Property Software | DECHY
+description: "Software for real estate and property management from DECHY: lead follow-up, tenant and owner portals, maintenance requests, and connected back-office systems."
+breadcrumbLabel: Real estate
+intent:
+  primary: real estate software development
+  secondary:
+    - property management software
+    - tenant portal development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Real estate software covers the systems that agencies, developers, landlords, and property managers use to market properties, follow up leads, manage tenancies and owners, handle maintenance, and keep the accounts.
+  problem: Leads sit in inboxes, documents travel by email, maintenance requests get lost, and owners and tenants keep phoning for updates that the business already holds.
+  audience: Estate agencies, property managers, landlords, developers, and property technology companies.
+  choose: Fix the path from enquiry to follow-up first, then give tenants and owners a place to see their own information, and connect the back office behind them.
+  next: Tell us where leads and requests get stuck today. We will outline a first stage and the systems it should connect.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for real estate and property management
+    lead: "Property businesses live on follow-up and paperwork: an enquiry answered quickly, a viewing booked, a lease signed, a repair logged and fixed. We build and connect the systems that keep that moving, so people spend their time with clients, not chasing."
+    support: This page covers what agencies and property managers ask for, how we connect the pieces, and where to start.
+    ctas:
+      - label: Talk to us about a property system
+        href: /contact/?service=software-development
+      - label: How the pieces connect
+        href: "#journey"
+    spec:
+      kind: before-after
+      before:
+        title: Property work in scattered tools
+        text: Each step depends on someone remembering.
+        nodes:
+          - title: Enquiries arrive in several inboxes
+          - title: Documents travel by email
+          - title: Repairs are logged by phone
+          - title: Owners ask for updates
+      after:
+        title: Property work in one connected flow
+        text: Each step starts the next and leaves a record.
+        nodes:
+          - title: Every enquiry becomes a lead
+          - title: Documents live in one place
+          - title: Repairs are tracked to done
+          - title: Owners see their own figures
+      hubLabel: Connected systems
+    purpose: before-after
+    takeaway: Connected property systems turn scattered enquiries, documents, and repair calls into one flow that records every step.
+    visualTitle: Scattered property work and a connected flow
+    figureCaption: This diagram contrasts property work spread across inboxes, email, and phone calls with a connected flow where each enquiry, document, and repair is tracked.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: A business of small deadlines
+    paragraphs:
+      - "In most industries a slow reply loses a sale. In property it also loses a tenancy, a viewing slot, or an owner's trust. The work is made of small deadlines: a lead answered within the hour, a repair confirmed within the day, a statement sent on the first of the month."
+      - It is also a relationship business with several parties. A single property involves the owner, the tenant, the agent, tradespeople, and the accounts. Each needs a different view of the same facts, and each is quick to phone if the view is missing.
+      - "Systems that serve it well do three things: they capture every enquiry and request, they hold the documents and history in one place, and they give each party a view of what concerns them."
+  - type: process
+    id: journey
+    tone: paper
+    label: The journey
+    heading: From enquiry to a managed tenancy
+    steps:
+      - title: Capture the enquiry
+        body: Every enquiry from the website, portals, and phone becomes a lead with its source recorded.
+        artifacts:
+          - Lead record
+          - Source tracking
+      - title: Follow up and book
+        body: Replies, reminders, and viewing bookings are timed, so no lead waits and none is forgotten.
+        artifacts:
+          - Follow-up rules
+          - Booking
+      - title: Sign and onboard
+        body: Documents, checks, and signatures are collected in one place, and the tenancy or sale record is created from them.
+        artifacts:
+          - Document set
+          - Tenancy record
+      - title: Manage and report
+        body: Repairs, payments, and statements run through tracked workflows, and each party sees its own view.
+        artifacts:
+          - Maintenance log
+          - Statements
+          - Portal views
+  - type: index
+    id: needs
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Typical systems for property businesses
+    items:
+      - title: Lead capture and follow-up
+        body: Enquiries from every source into one customer record, with reminders. See [connecting customer systems](/solutions/crm-integration/).
+      - title: Tenant and owner portals
+        body: A private place for statements, documents, and requests. See [customer portals](/work/areas/customer-portals/).
+      - title: Maintenance and task workflows
+        body: Repair requests routed, scheduled, and tracked to completion. See [process automation](/solutions/business-process-automation/).
+      - title: Listings and website
+        body: Property listings kept in step across your site and the portals you advertise on. See [business web platforms](/work/areas/business-web-platforms/).
+      - title: Reporting for owners and managers
+        body: Occupancy, arrears, and income on one screen. See [business dashboards](/solutions/business-dashboards/).
+      - title: Connected accounts
+        body: Rent, fees, and invoices passed to accounting without re-keying.
+  - type: table
+    id: platforms
+    tone: paper
+    label: Choices
+    heading: Buy, connect, or build
+    caption: Three ways property businesses meet a need, what each suits, and what to watch for
+    columns:
+      - Route
+      - Suits
+      - Watch for
+    rows:
+      - - Use a property management product
+        - "Standard needs: rent collection, statements, and basic maintenance."
+        - Your process bends to the product, and data export can be limited.
+      - - Connect the tools you have
+        - A business that already uses several tools and needs them to agree.
+        - Choose the system of record for each fact first.
+      - - Build a custom system
+        - A distinct way of working, a portfolio of unusual properties, or a product you sell to others.
+        - More to build, with the most control and fit.
+  - type: columns
+    id: help
+    tone: white
+    label: What DECHY can do
+    heading: How we help property teams
+    columns:
+      - title: Capture
+        items:
+          - Lead forms and integrations from every source.
+          - Automatic assignment and reminders.
+      - title: Serve
+        items:
+          - Tenant and owner portals.
+          - Maintenance request tracking from report to completion.
+      - title: Connect
+        items:
+          - Your customer records, accounts, and listing sources.
+          - Document storage and signatures.
+      - title: Report
+        items:
+          - Dashboards for owners and managers.
+          - Scheduled statements and alerts.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Documents, listings, and data notes
+    intro: Most visitors can skip this section. It notes the engineering choices we make for property systems.
+    panels:
+      - title: Documents and signatures
+        items:
+          - Leases, inspection reports, and certificates are stored once, linked to the property and the tenancy, and versioned.
+          - Electronic signatures are collected through a provider you choose, and the signed copy returns to the record.
+        paragraphs: []
+      - title: Listings
+        items:
+          - A listing is edited in one place and published to your site and to the portals you use, so details never drift.
+          - Images are optimized for fast loading on phones, where most searches begin.
+        paragraphs: []
+      - title: Personal data
+        paragraphs:
+          - Tenant and owner records contain identity documents and financial details. Access is limited by role, records are kept only as long as needed, and rules vary by country, so we ask which apply to you.
+        items: []
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about property software
+    items:
+      - q: Should we buy a property management product or build one?
+        a: If your needs are standard, a product is usually the cheapest route. Build when your way of working is distinct, or when the product limits what you can do. We help you weigh it.
+      - q: Can you connect the tools we already use?
+        a: Usually, yes. Most property and accounting tools offer a way to connect. We check what each allows before we design.
+      - q: Can tenants and owners really use a portal?
+        a: "Yes, when it covers what they ask for most: statements, documents, and repair requests. We keep it simple and test it with real users."
+      - q: How do you handle personal data?
+        a: With access limited by role, secure storage, and minimal retention. Rules differ by country, so we ask which apply and build to them.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Property across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.web-development
+          - svc.api-integration
+          - svc.automation
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.business-web-platforms
+          - workarea.operations-platforms
+      - title: Technologies
+        entityIds:
+          - plat.hubspot
+          - plat.salesforce
+          - fw.nextjs
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us where leads and requests get stuck
+    body: Describe how enquiries, documents, and repairs move today. We will outline a first stage and the systems it should connect.
+    primary:
+      label: Talk to DECHY about property systems
+      href: /contact/?service=software-development

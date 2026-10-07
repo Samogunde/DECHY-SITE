@@ -1,0 +1,215 @@
+id: page.industry-healthcare
+kind: industry
+locale: en
+path: /industries/healthcare/
+parent: /industries/
+entityId: ind.healthcare
+title: "Healthcare Software and Systems | DECHY"
+description: "Software for healthcare organizations from DECHY: patient portals, connected systems, booking, and reporting, built with privacy and access control first."
+breadcrumbLabel: Healthcare
+intent:
+  primary: healthcare software development
+  secondary:
+    - healthcare software company
+    - patient portal development
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Healthcare software covers the systems that clinics, practices, care providers, and health companies use to book, record, communicate, and report, built so that sensitive information stays protected."
+  problem: "Information is spread across systems that do not talk to each other, staff re-enter the same details, patients phone for what they could see online, and privacy rules raise the stakes of every change."
+  audience: "Clinics, practices, care providers, health technology companies, and the teams that support them."
+  choose: "Start with the one workflow that costs staff and patients the most time, connect the systems it touches, and build in access control and audit trails from the first screen."
+  next: "Tell us which workflow causes the most friction and which systems it touches. We will outline a first stage that respects the privacy rules you work under."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for healthcare organizations
+    lead: "Healthcare runs on information that must be right, private, and available to the right person at the right moment. We build and connect the systems around that information: portals, booking, records, reporting, and the links between them."
+    support: "This page covers the systems healthcare teams ask for, what makes this field different, and how we work within privacy rules."
+    ctas:
+      - {
+          label: Talk to us about a healthcare system,
+          href: "/contact/?service=software-development",
+        }
+      - { label: What teams ask for, href: "#needs" }
+    spec:
+      kind: hub
+      center:
+        title: Each patient's record
+        text: "One protected view, shared only with those who need it."
+      spokes:
+        - title: Booking
+          text: "Appointments and reminders."
+        - title: Records
+          text: "Notes, results, and history."
+        - title: Patient portal
+          text: "Patients see their own information."
+        - title: Referrals
+          text: "Hand-offs between teams."
+        - title: Billing
+          text: "Invoices and claims."
+        - title: Reporting
+          text: "Activity and quality figures."
+    purpose: relationship
+    takeaway: "Healthcare systems revolve around a protected patient record that booking, portals, referrals, billing, and reporting must share safely."
+    visualTitle: "The systems around a patient record"
+    figureCaption: "This diagram shows a protected patient record at the center with six connected parts around it: booking, records, a patient portal, referrals, billing, and reporting."
+
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why healthcare is not like other software
+    paragraphs:
+      - "Three things set healthcare apart. The information is among the most sensitive that exists, so a careless screen can do real harm. The work is interrupted and urgent, so a system that is slow or awkward is not merely irritating, it takes time from care. And the estate is old and varied, with systems bought years apart that were never designed to share data."
+      - "Good healthcare software therefore does less than it could and does it reliably. It shows each person only what they need. It records who looked at what. It connects to the systems already in place without asking staff to change how they work for the sake of the software."
+      - "We approach it as a connection and protection problem first, and a features problem second."
+
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What teams ask for
+    heading: Common needs in healthcare
+    items:
+      - title: Booking and reminders
+        body: "Patients choose a time online and get reminders, which reduces missed appointments and phone traffic."
+      - title: A patient portal
+        body: "Patients see their appointments, documents, and messages, and complete forms before they arrive. See [customer portals](/work/areas/customer-portals/)."
+      - title: Connected systems
+        body: "Records, scheduling, and billing share data through the interfaces your systems offer, so details are entered once. See [connecting customer systems](/solutions/crm-integration/) for the pattern."
+      - title: Referral and task workflows
+        body: "A referral moves through its steps with owners and deadlines, in place of email chains. See [process automation](/solutions/business-process-automation/)."
+      - title: Reporting for managers
+        body: "Activity, waiting times, and quality figures on one screen, from agreed definitions. See [business dashboards](/solutions/business-dashboards/)."
+      - title: Moving off an old system
+        body: "An older records or booking system brought forward in stages. See [legacy system modernization](/solutions/legacy-system-modernization/)."
+
+  - type: table
+    id: care
+    tone: white
+    label: Care points
+    heading: What we design in from the start
+    caption: Four protections we design into healthcare systems from the start and what each looks like in practice
+    columns: [Protection, What it means, In practice]
+    rows:
+      - - "Access control"
+        - "Each person sees only what their role needs."
+        - "Roles, least-privilege defaults, and review of who has access."
+      - - "Audit trail"
+        - "A record of who viewed or changed information."
+        - "Logs that cannot be edited by the people they describe."
+      - - "Data protection"
+        - "Information is protected when stored and when moved."
+        - "Encryption, secure backups, and limits on where data is kept."
+      - - "Consent and minimal data"
+        - "Only the data that is needed is collected and kept."
+        - "Clear consent steps, retention rules, and deletion routines."
+    note: "Rules differ by country and by the kind of data. We ask early which apply to you and suggest you confirm requirements with your own compliance adviser."
+
+  - type: process
+    id: how
+    tone: paper
+    label: How we work
+    heading: Working with a healthcare team
+    steps:
+      - title: Understand the workflow and its risks
+        body: "We follow one workflow end to end with the people who run it, noting where information is copied, delayed, or exposed."
+        artifacts: [Workflow map, Risk notes]
+      - title: Agree what to build and what to connect
+        body: "We separate what needs new software from what needs a connection between existing systems."
+        artifacts: [Scope, Connection plan]
+      - title: Build with protection first
+        body: "Access rules, logging, and data handling are built before features, and tested with the people who will use them."
+        artifacts: [Working increment, Access tests]
+      - title: Release carefully and measure
+        body: "We release to a small group, watch for problems, and widen when staff and patients are comfortable."
+        artifacts: [Pilot, Review]
+
+  - type: columns
+    id: help
+    tone: white
+    label: What DECHY can do
+    heading: How we help healthcare teams
+    columns:
+      - title: Build
+        items:
+          - "Portals, booking, and internal tools for staff."
+          - "Interfaces designed for busy, interrupted use."
+      - title: Connect
+        items:
+          - "Links between your existing systems through the interfaces they offer."
+          - "Data checks that stop mismatches early."
+      - title: Modernize
+        items:
+          - "Staged moves away from systems that are hard to change."
+          - "Cloud hosting with a clear data location policy."
+      - title: Look after
+        items:
+          - "Monitoring, updates, and security reviews."
+          - "Support for the staff who use the systems."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Privacy and integration notes
+    intro: "Most visitors can skip this section. It notes the engineering choices we make on health data."
+    panels:
+      - title: Where data lives
+        items:
+          - "Data location is chosen to meet the rules that apply to you, and written down."
+          - "Environments for development and testing never hold real patient data."
+      - title: Connecting systems
+        items:
+          - "We use standards-based interfaces where your systems offer them, and a thin adapter where they do not."
+          - "Messages are validated, logged, and retried safely, so a failure does not lose or duplicate a record."
+      - title: Using AI carefully
+        paragraphs:
+          - "Where AI can help, for example sorting incoming messages, we avoid sending identifiable information to outside models unless the provider's terms and your policy allow it. A person reviews anything that affects care. See our [AI work](ref:svc.ai)."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about healthcare software
+    items:
+      - q: Do you hold health data on your own systems?
+        a: "We design so that your data stays in environments you control or approve. During a project we work with the minimum access needed, and development uses test data, not real records."
+      - q: Can you work with the systems we already have?
+        a: "Usually, yes. We connect through the interfaces they offer and build adapters where they offer none. We start with a short review of what is there."
+      - q: Which privacy rules apply to us?
+        a: "That depends on your country and the kind of data. We ask at the start, build to the standards you tell us apply, and suggest you confirm the details with your own compliance adviser."
+      - q: Can patients really use a portal?
+        a: "Yes, when it is simple and covers what they ask for most: appointments, documents, and messages. We design for people who are unwell, tired, or unfamiliar with technology."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Healthcare across DECHY
+    groups:
+      - title: Services
+        entityIds: [svc.software-development, svc.api-integration, svc.cybersecurity, svc.ui-ux]
+      - title: Systems we build
+        entityIds:
+          [
+            workarea.customer-portals,
+            workarea.internal-business-tools,
+            workarea.integration-platforms,
+          ]
+      - title: Technologies
+        entityIds: [lang.python, lang.typescript, plat.azure, tech.postgresql]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which workflow causes the most friction
+    body: "Describe the workflow and the systems it touches. We will outline a first stage that respects the privacy rules you work under."
+    primary:
+      { label: Talk to DECHY about healthcare, href: "/contact/?service=software-development" }

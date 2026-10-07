@@ -1,0 +1,221 @@
+id: page.industry-manufacturing
+kind: industry
+locale: en
+path: /industries/manufacturing/
+parent: /industries/
+entityId: ind.manufacturing
+title: "Manufacturing Software and Systems | DECHY"
+description: "Software for manufacturers from DECHY: connecting planning, production, quality, and supplier systems, replacing spreadsheets, and giving managers a live view."
+breadcrumbLabel: Manufacturing
+intent:
+  primary: manufacturing software development
+  secondary:
+    - manufacturing systems integration
+    - production reporting software
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Manufacturing software covers the systems that plan, run, and record production: orders, materials, schedules, quality checks, maintenance, supplier exchanges, and the reports that tie them together."
+  problem: "Planning lives in spreadsheets, shop-floor data is on paper or in isolated machines, older systems cannot share data, and managers learn about problems after they have cost money."
+  audience: "Manufacturers, their operations and planning teams, and the suppliers and customers who exchange information with them."
+  choose: "Start by getting one reliable stream of production and quality data, connect it to planning, and retire spreadsheets one function at a time."
+  next: "Tell us which systems hold orders, stock, and production records and where data is copied by hand. We will outline the connections and a first stage."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for manufacturers
+    lead: "A factory produces goods and data at the same time. When the data is on paper, in spreadsheets, or locked inside machines, planners work from yesterday and managers find problems late. We connect the systems, retire the spreadsheets, and give the business one live picture."
+    support: "This page covers what manufacturers ask for, how we deal with older systems, and where to begin."
+    ctas:
+      - {
+          label: Talk to us about a manufacturing system,
+          href: "/contact/?service=software-development",
+        }
+      - { label: Where to begin, href: "#start" }
+    spec:
+      kind: before-after
+      before:
+        title: Production data scattered
+        text: "Planners work from yesterday's numbers."
+        nodes:
+          - title: Schedules in spreadsheets
+          - title: Quality checks on paper
+          - title: Machine data stays in the machine
+          - title: Suppliers chased by phone
+      after:
+        title: Production data connected
+        text: "Planners and managers see the same, current picture."
+        nodes:
+          - title: One schedule everyone shares
+          - title: Quality checks recorded at the line
+          - title: Machine data flowing in
+          - title: Supplier updates tracked
+      hubLabel: One live picture
+    purpose: before-after
+    takeaway: "Connecting schedules, quality records, machine data, and supplier updates replaces yesterday's scattered numbers with one live picture."
+    visualTitle: "Scattered production data and a connected picture"
+    figureCaption: "This diagram contrasts production data held in spreadsheets, on paper, in machines, and by phone with a connected picture of schedules, quality, machine data, and suppliers."
+
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Systems that must not stop the line
+    paragraphs:
+      - "A factory cannot pause for an upgrade. Systems here are chosen for dependability and tend to stay a long time, so a manufacturer often runs equipment and software from several decades. New software has to work alongside the old, and has to fail safely."
+      - "The data is also physical. A count, a temperature, or a measurement originates at a machine or a person at the line, not in an office, so capturing it cleanly is half the problem."
+      - "The best projects begin small and close to the floor: one line, one process, one report. When that works, the approach spreads."
+
+  - type: table
+    id: legacy
+    tone: paper
+    label: Old and new
+    heading: Working with the systems already on the floor
+    caption: Four kinds of existing system on a manufacturing floor and how we usually work with each
+    columns: [What exists, The usual problem, What we usually do]
+    rows:
+      - - "Spreadsheets for planning and tracking"
+        - "Easy to start, fragile at scale, and understood by one person."
+        - "Replace in stages with a shared tool, keeping the same logic."
+      - - "An older planning or production system"
+        - "Reliable, but closed and hard to change."
+        - "Connect around it first, then move parts forward. See [legacy system modernization](/solutions/legacy-system-modernization/)."
+      - - "Machines and sensors"
+        - "Useful data that stays in the machine."
+        - "Collect it through the interfaces machines offer, and store it safely."
+      - - "Supplier and customer exchanges"
+        - "Orders and updates by email and phone."
+        - "A shared portal or connection, with clear status. See [customer portals](/work/areas/customer-portals/)."
+
+  - type: chooser
+    id: start
+    tone: white
+    label: Where to begin
+    heading: What is the first thing to fix?
+    intro: "The first project should remove a daily nuisance and produce a number leaders care about."
+    question: Which problem is most costly?
+    options:
+      - label: Planning in spreadsheets
+        when: "Schedules and material needs are kept in files that one or two people maintain."
+        get: "A shared planning tool fed by orders and stock, with the same rules planners use."
+        watch: "Capture the planners' rules in writing before building."
+      - label: Quality and traceability on paper
+        when: "Checks are written down, then typed later, and problems are traced slowly."
+        get: "Checks recorded at the line, linked to batches, and searchable."
+        watch: "Make the screens fast to use with gloves and in noise."
+      - label: Problems seen too late
+        when: "Output, scrap, and downtime are reported after the shift or the week."
+        get: "A live view of production and downtime. See [business dashboards](/solutions/business-dashboards/)."
+        watch: "Agree what counts as downtime before measuring it."
+      - label: Disconnected systems
+        when: "Orders, stock, production, and accounts are in different systems."
+        get: "Connections that carry each fact once. See [process automation](/solutions/business-process-automation/)."
+        watch: "Test with real exceptions such as amended orders and scrap."
+
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Typical systems for manufacturers
+    items:
+      - title: Production and quality tracking
+        body: "Screens at the line that record output, checks, and downtime."
+      - title: Planning and scheduling tools
+        body: "Shared schedules fed by orders and stock, replacing spreadsheets. See [operations platforms](/work/areas/operations-platforms/)."
+      - title: Connections between systems
+        body: "Orders, materials, production, and accounts kept in step. See [integration platforms](/work/areas/integration-platforms/)."
+      - title: Supplier and customer portals
+        body: "Orders, forecasts, and delivery status shared in one place."
+      - title: Maintenance workflows
+        body: "Requests, schedules, and records for equipment care."
+      - title: Management reporting
+        body: "Output, quality, and cost figures from one source."
+
+  - type: columns
+    id: help
+    tone: white
+    label: What DECHY can do
+    heading: How we help manufacturers
+    columns:
+      - title: Build
+        items:
+          - "Line-side tools and management screens."
+          - "Portals for suppliers and customers."
+      - title: Connect
+        items:
+          - "Planning, stock, production, and accounting systems."
+          - "Machine and sensor data where the equipment offers an interface."
+      - title: Modernize
+        items:
+          - "Staged moves away from old or spreadsheet-based systems."
+          - "Hosting on [Azure](ref:plat.azure) or another platform, on site or in the cloud."
+      - title: Look after
+        items:
+          - "Monitoring, backups, and updates scheduled around production."
+          - "Support for the people who use the tools."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Shop-floor integration notes
+    intro: "Most visitors can skip this section. It notes how we build for environments that cannot stop."
+    panels:
+      - title: Safe failure
+        items:
+          - "Line-side tools keep working when the network drops and sync when it returns."
+          - "A fault in a reporting or planning system never blocks the line."
+      - title: Data capture
+        items:
+          - "Machine data is read through the interfaces the equipment offers and stored with time, source, and unit."
+          - "Readings are validated and flagged when they fall outside plausible ranges."
+      - title: Deployment
+        paragraphs:
+          - "Updates are scheduled outside production hours, tested on a copy first, and reversible. Systems that must stay on site are packaged so they can be rebuilt quickly from code."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about manufacturing software
+    items:
+      - q: Can you work with equipment that is decades old?
+        a: "Often, through whatever interface it offers, or by adding a small reader. We assess each machine before promising anything."
+      - q: Do we need to replace our existing planning system?
+        a: "Not necessarily. We usually connect around it first, and replace parts only where it limits you."
+      - q: Will new software disrupt production?
+        a: "We design to avoid it: changes are tested on a copy, released outside production hours, and reversible."
+      - q: How do we start?
+        a: "With one line or one process and one useful number, such as downtime. When that works, the approach extends."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Manufacturing across DECHY
+    groups:
+      - title: Services
+        entityIds: [svc.software-development, svc.api-integration, svc.data-analytics, svc.cloud]
+      - title: Systems we build
+        entityIds:
+          [
+            workarea.operations-platforms,
+            workarea.integration-platforms,
+            workarea.internal-business-tools,
+          ]
+      - title: Technologies
+        entityIds: [lang.python, tech.dotnet, tech.postgresql, plat.azure]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us where data is copied by hand
+    body: "Describe the systems that hold orders, stock, and production records. We will outline the connections and a first stage."
+    primary:
+      { label: Talk to DECHY about manufacturing, href: "/contact/?service=software-development" }

@@ -1,0 +1,179 @@
+id: page.location-australia
+kind: location
+locale: en
+path: /locations/australia/
+parent: /locations/
+entityId: loc.australia
+title: Technology Services for Australia | DECHY
+description: "How DECHY works with organizations in Australia: software, AI, and automation delivered remotely, with local privacy, payments, and time zones in view."
+breadcrumbLabel: Australia
+intent:
+  primary: software development services australia
+  secondary:
+    - technology partner for australian businesses
+    - remote software development australia
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: DECHY works with organizations in Australia on software, AI, automation, integration, and related services, delivered remotely.
+  problem: Australian organizations work many hours ahead of Europe and the Americas, face their own privacy and data-sharing rules, and use local payment and tax systems.
+  audience: Australian startups, small and mid-sized businesses, enterprises, and teams that want a remote technology partner.
+  choose: Tell us where your team works and which data rules apply. We explain how we would build to them and how we would make remote work practical across the time difference.
+  next: Describe the project and your team's working hours. We will propose how an engagement would run.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Locations
+    headline: DECHY for organizations in Australia
+    lead: DECHY is a global technology company. We work with organizations in Australia remotely, across software, AI, automation, integration, cloud, and design. The main practical difference for Australian projects is the time difference, so this page explains how we handle it as well as the rules and systems.
+    support: There is no Australian office. Work is remote, and we plan the rhythm of calls and updates around your day.
+    ctas:
+      - label: Talk to DECHY about an Australian project
+        href: /contact/
+      - label: Working across the time difference
+        href: "#engagement"
+    spec:
+      kind: before-after
+      before:
+        title: Remote work across a large time gap
+        text: Questions wait overnight and decisions slip.
+        nodes:
+          - title: Updates arrive after your day ends
+          - title: Questions wait a full day
+          - title: Calls at awkward hours
+      after:
+        title: Remote work planned around the gap
+        text: Each side's working day produces something the other can use.
+        nodes:
+          - title: A written update waiting each morning
+          - title: Questions answered in batches
+          - title: One shared call window
+      hubLabel: A planned rhythm
+    purpose: before-after
+    takeaway: A planned rhythm turns a large time difference into a steady cycle, with a written update waiting each morning and one shared call window.
+    visualTitle: Working across a large time difference
+    figureCaption: This diagram contrasts remote work that stalls across a large time gap with a planned rhythm of morning updates, batched questions, and one shared call window.
+  - type: prose
+    id: market
+    tone: white
+    label: The market
+    heading: What Australian buyers tend to ask for
+    paragraphs:
+      - Australia has a mature economy with strong finance, resources, property, health, education, and retail sectors, and a large base of small and medium businesses. Requests we see most often are modernizing older systems, building customer portals, connecting finance and operations tools, and automating manual back-office work.
+      - Distance shapes expectations. Buyers value suppliers who are explicit about how and when they communicate, and who do not leave them waiting a day for every answer.
+      - We therefore start by agreeing the working rhythm, before agreeing the work, and we keep both written down.
+  - type: process
+    id: engagement
+    tone: paper
+    label: Working together
+    heading: Making the time difference work for the project
+    steps:
+      - title: Agree a shared window
+        body: Even across a large gap there is usually one hour that suits both sides. We fix it, and use it for decisions that need a conversation.
+        artifacts:
+          - Call window
+      - title: Leave a written update each cycle
+        body: At the end of our working day we post what was done, what is blocked, and what we need from you, so your morning starts with the answer.
+        artifacts:
+          - Daily update
+      - title: Batch the questions
+        body: Questions are collected and sent together with the options, so one answer unblocks several tasks.
+        artifacts:
+          - Question list with options
+      - title: Release so there is always something to review
+        body: Small, regular releases give you something to check in your day, with notes on what changed.
+        artifacts:
+          - Release notes
+  - type: table
+    id: rules
+    tone: white
+    label: Rules and practice
+    heading: Considerations that shape Australian software projects
+    caption: Four Australian considerations that commonly affect software and data projects and how they shape what we build
+    columns:
+      - Consideration
+      - Why it matters
+      - What it means for the build
+    rows:
+      - - The Privacy Act
+        - Personal information is regulated under a national privacy law with a set of privacy principles, and organizations must report certain data breaches.
+        - We design for limited collection and access, clear records, and a plan for responding to a breach.
+      - - Data-sharing rights in banking and other sectors
+        - A national consumer data right lets people share their data with accredited providers in some sectors.
+        - Where a project touches those sectors, we ask early which rules apply and design connections to them.
+      - - Data location
+        - Government, health, and some corporate customers prefer or require that data stays in Australia.
+        - We choose Australian hosting regions on request, and record where data is stored and processed.
+      - - Goods and services tax
+        - A single national goods and services tax applies to many sales, with rules for invoices and for overseas buyers.
+        - We connect stores and invoicing to accounting tools that calculate and report it.
+    note: Use this as orientation only. It is not legal advice, and an Australian adviser should confirm the detail.
+  - type: index
+    id: integrations
+    tone: paper
+    columns: 2
+    label: Systems in use
+    heading: Payments and platforms in Australia
+    items:
+      - title: Cards and instant bank payments
+        body: Cards are the usual online route. Australia also has an instant bank payment network and a payment alias service that lets customers pay using an email or phone number, and a long-established bill payment service.
+      - title: Accounting
+        body: Cloud accounting packages are common among small and mid-sized businesses. We connect orders, invoices, and payments to the one you use.
+      - title: Customer systems
+        body: "[HubSpot](ref:plat.hubspot) and [Salesforce](ref:plat.salesforce) are widely used. See [connecting customer systems](/solutions/crm-integration/)."
+      - title: Cloud hosting
+        body: "[AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) all offer Australian regions."
+      - title: Online stores
+        body: "[Shopify](ref:plat.shopify) and [WooCommerce](ref:plat.woocommerce) stores connected to local carriers and tax."
+  - type: index
+    id: industries
+    tone: white
+    columns: 2
+    label: Industries
+    heading: Industries we write about that are active in Australia
+    items:
+      - title: Real estate and property
+        body: Leads, portals, and maintenance requests.
+        href: /industries/real-estate/
+      - title: Finance
+        body: Onboarding, reporting, and connected systems.
+        href: /industries/finance/
+      - title: Healthcare
+        body: Portals, connected records, and privacy-first design.
+        href: /industries/healthcare/
+      - title: Education
+        body: Learner portals and records.
+        href: /industries/education/
+      - title: Retail and ecommerce
+        body: Stores and stock across channels.
+        href: /industries/retail/
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions from Australian organizations
+    items:
+      - q: Do you have an Australian office?
+        a: No. DECHY is a global company that works remotely with clients worldwide. We plan the working rhythm around your time zone.
+      - q: How do you cope with the time difference?
+        a: With one agreed call window, a written update waiting each morning, batched questions, and small regular releases.
+      - q: Can the data stay in Australia?
+        a: It can. We choose Australian hosting regions on request and record where data is stored and processed.
+      - q: Can you support the system after launch?
+        a: Yes. We agree what is covered, how urgent issues reach us, and how quickly we respond, so you know what to expect.
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your project
+    body: Describe what you want to build or fix, and when your team works. We will propose how an engagement would run.
+    primary:
+      label: Talk to DECHY
+      href: /contact/

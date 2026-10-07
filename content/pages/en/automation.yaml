@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /automation/
 entityId: svc.automation
-title: "Automation and Workflow Services | DECHY"
+title: Automation and Workflow Services | DECHY
 description: "Business automation from DECHY: we map how work flows, then automate approvals, data entry, reports, and follow-up so your team can focus on work that needs people."
 breadcrumbLabel: Automation & Workflows
 intent:
@@ -14,28 +14,34 @@ intent:
     - ai workflow automation
     - automate repetitive tasks
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
   what: "Automation uses software to do repetitive work for you: moving information between systems, sending reminders, routing approvals, and updating reports without manual steps."
-  problem: "People spend hours copying data, chasing approvals, and fixing small mistakes. Work waits on whoever remembers to do the next step."
-  audience: "Operations, finance, sales, support, and HR teams, and owners who feel too much of the week goes to repeating the same tasks."
-  choose: "Automate tasks that are frequent, follow clear rules, and are tedious by hand. Leave out rare tasks, work that needs judgment, and anything nobody can describe step by step."
-  next: "Describe one task you do again and again. We will help you decide whether to automate it, and with which tool."
-
+  problem: People spend hours copying data, chasing approvals, and fixing small mistakes. Work waits on whoever remembers to do the next step.
+  audience: Operations, finance, sales, support, and HR teams, and owners who feel too much of the week goes to repeating the same tasks.
+  choose: Automate tasks that are frequent, follow clear rules, and are tedious by hand. Leave out rare tasks, work that needs judgment, and anything nobody can describe step by step.
+  next: Describe one task you do again and again. We will help you decide whether to automate it, and with which tool.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Automation, Workflows & AI Solutions
-    lead: "At DECHY, we take repetitive work off your team. We map how work really flows, automate the steps that deserve it, and connect the tools involved, so approvals, updates, and reports happen on their own."
-    support: "Automation is a major part of our work, alongside software, AI, integration, and cloud. It does not always need AI."
+    lead: At DECHY, we take repetitive work off your team. We map how work really flows, automate the steps that deserve it, and connect the tools involved, so approvals, updates, and reports happen on their own.
+    support: Automation is a major part of our work, alongside software, AI, integration, and cloud. It does not always need AI.
     ctas:
-      - { label: Talk to us about automation, href: "/contact/?service=automation" }
-      - { label: See what to automate first, href: "#first" }
+      - label: Talk to us about automation
+        href: /contact/?service=automation
+      - label: See what to automate first
+        href: "#first"
     spec:
       kind: before-after
       before:
@@ -56,26 +62,24 @@ sections:
           - title: The accounting record is created for you
       hubLabel: Connected automatically
     purpose: before-after
-    takeaway: "Automation removes the waiting and re-typing between steps, and leaves people to make the decisions."
-    visualTitle: "One purchase request, by hand and automated"
-    figureCaption: "This diagram contrasts one purchase request handled by hand with the same request automated, so you can see where the waiting and re-typing disappear."
-
+    takeaway: Automation removes the waiting and re-typing between steps, and leaves people to make the decisions.
+    visualTitle: One purchase request, by hand and automated
+    figureCaption: This diagram contrasts one purchase request handled by hand with the same request automated, so you can see where the waiting and re-typing disappear.
   - type: prose
     id: what-is
     tone: white
     label: What it is
     heading: Why so much work is still done by hand
     paragraphs:
-      - "In most organizations, work moves between people and tools by copy, paste, and email. A request arrives in one place. Someone re-types it into another. A reminder lives in a person's head. Each step is small. Together they eat hours every week and cause errors."
-      - "Automation means using software to carry out those repeating steps by following rules you set. A workflow is the path a piece of work takes, from the first request to the finished result. Automating a workflow means the work moves along by itself and people step in only where judgment is needed."
-      - "Automation is not one product. It can be a simple link between two tools, a process with approvals and reminders, or a system that runs a whole department's routine. It is also not the same as AI. Most automation follows clear rules. AI is added only where a step needs reading, language, or judgment."
-
+      - In most organizations, work moves between people and tools by copy, paste, and email. A request arrives in one place. Someone re-types it into another. A reminder lives in a person's head. Each step is small. Together they eat hours every week and cause errors.
+      - Automation means using software to carry out those repeating steps by following rules you set. A workflow is the path a piece of work takes, from the first request to the finished result. Automating a workflow means the work moves along by itself and people step in only where judgment is needed.
+      - Automation is not one product. It can be a simple link between two tools, a process with approvals and reminders, or a system that runs a whole department's routine. It is also not the same as AI. Most automation follows clear rules. AI is added only where a step needs reading, language, or judgment.
   - type: diagram
     id: anatomy
     tone: paper
     label: How it works
     heading: The five parts of every reliable automation
-    intro: "Whatever tool is used, a dependable automation has the same five parts. The last one matters most, and it is the one people forget."
+    intro: Whatever tool is used, a dependable automation has the same five parts. The last one matters most, and it is the one people forget.
     spec:
       kind: flow
       steps:
@@ -90,178 +94,185 @@ sections:
         - title: It is recorded and watched
           text: A log, automatic retries, and alerts when something fails.
     purpose: workflow
-    takeaway: "A trustworthy automation starts on a trigger, follows rules, hands off to people when needed, and has a safety net for failures."
-    caption: "This diagram walks through the five parts of an automated workflow, from the event that starts it to the record and alerts that keep it safe."
+    takeaway: A trustworthy automation starts on a trigger, follows rules, hands off to people when needed, and has a safety net for failures.
+    caption: This diagram walks through the five parts of an automated workflow, from the event that starts it to the record and alerts that keep it safe.
     points:
       - title: A trigger starts the work
-        body: "Nobody has to remember to begin. The event itself starts the process."
+        body: Nobody has to remember to begin. The event itself starts the process.
       - title: People stay where judgment matters
-        body: "We design approval steps so a person sees what they need and decides quickly."
+        body: We design approval steps so a person sees what they need and decides quickly.
       - title: Failures are expected
-        body: "Connections drop and information arrives incomplete. A good automation retries, records what happened, and tells a person."
-
+        body: Connections drop and information arrives incomplete. A good automation retries, records what happened, and tells a person.
   - type: index
     id: first
     tone: white
     columns: 2
     label: Where to start
     heading: Good first tasks to automate
-    intro: "The best first automations are frequent, follow clear rules, and are tedious by hand. These are the ones we see most often."
+    intro: The best first automations are frequent, follow clear rules, and are tedious by hand. These are the ones we see most often.
     items:
       - title: Moving information between tools
         ref: cap.data-automation
-        body: "A new order, enquiry, or booking appears in one tool and needs to appear in two more. Automation copies it, every time, without mistakes."
+        body: A new order, enquiry, or booking appears in one tool and needs to appear in two more. Automation copies it, every time, without mistakes.
       - title: Approvals and sign-offs
         ref: cap.approval-workflows
-        body: "Requests go to the right person, with reminders, and the decision is recorded. Nobody has to chase."
+        body: Requests go to the right person, with reminders, and the decision is recorded. Nobody has to chase.
       - title: Reports and updates
         ref: cap.financial-reporting-automation
-        body: "Weekly numbers collected from several tools and sent to the people who need them, on time."
+        body: Weekly numbers collected from several tools and sent to the people who need them, on time.
       - title: Customer follow-up
         ref: cap.email-automation
-        body: "Confirmation, reminders, and next steps go out when they should, in your own words."
+        body: Confirmation, reminders, and next steps go out when they should, in your own words.
       - title: Onboarding new customers and staff
         ref: cap.customer-onboarding-automation
-        body: "Accounts, welcome messages, and checklists are created in one go instead of across a dozen manual tasks."
+        body: Accounts, welcome messages, and checklists are created in one go instead of across a dozen manual tasks.
       - title: Invoices, payments, and paperwork
         ref: cap.document-automation
-        body: "Documents are created, filed, and matched with payments without someone retyping the details."
-
+        body: Documents are created, filed, and matched with payments without someone retyping the details.
   - type: table
     id: tools
     tone: paper
     label: Choosing a tool
     heading: Which automation tool fits?
-    intro: "There are many good tools. The right one depends on how complex the work is, how much you want to own, and what you already use."
+    intro: There are many good tools. The right one depends on how complex the work is, how much you want to own, and what you already use.
     caption: Comparison of common automation tools
-    columns: [Tool, Good for, Keep in mind, Often chosen when]
+    columns:
+      - Tool
+      - Good for
+      - Keep in mind
+      - Often chosen when
     rows:
       - - "[Zapier](ref:tech.zapier)"
-        - "Quick connections between popular apps, with little setup."
-        - "Costs rise as the number of tasks grows, and complex logic gets awkward."
-        - "A simple, well-defined link is needed fast."
+        - Quick connections between popular apps, with little setup.
+        - Costs rise as the number of tasks grows, and complex logic gets awkward.
+        - A simple, well-defined link is needed fast.
       - - "[Make](ref:tech.make)"
-        - "Visual, multi-step workflows with branching and more control than simple links."
-        - "It takes more care to design and maintain."
-        - "The process has several steps and conditions."
+        - Visual, multi-step workflows with branching and more control than simple links.
+        - It takes more care to design and maintain.
+        - The process has several steps and conditions.
       - - "[n8n](ref:tech.n8n)"
-        - "Flexible workflows you can host yourself, with room for custom code."
-        - "You, or we, need to look after where it runs."
-        - "You want control over where information goes, or very custom logic."
+        - Flexible workflows you can host yourself, with room for custom code.
+        - You, or we, need to look after where it runs.
+        - You want control over where information goes, or very custom logic.
       - - "[Microsoft Power Automate](ref:tech.microsoft-power-automate)"
         - "Automation inside the Microsoft 365 world: Outlook, Teams, SharePoint, and Excel."
-        - "It is strongest within Microsoft tools."
-        - "Your team already lives in Microsoft 365."
+        - It is strongest within Microsoft tools.
+        - Your team already lives in Microsoft 365.
       - - "[Airtable](ref:plat.airtable) automations"
-        - "A shared database with built-in automation, good for teams that run on structured records."
-        - "It suits workflows built around the records stored in it."
-        - "Your process centers on a table of projects, requests, or customers."
-      - - "Custom software"
-        - "High volume, special security needs, or logic that tools cannot express."
-        - "More effort to build and a long-term duty to maintain it."
-        - "Ready-made tools stop being enough."
-    note: "Tools change their features and prices often. We confirm current limits and costs during planning."
-
+        - A shared database with built-in automation, good for teams that run on structured records.
+        - It suits workflows built around the records stored in it.
+        - Your process centers on a table of projects, requests, or customers.
+      - - Custom software
+        - High volume, special security needs, or logic that tools cannot express.
+        - More effort to build and a long-term duty to maintain it.
+        - Ready-made tools stop being enough.
+    note: Tools change their features and prices often. We confirm current limits and costs during planning.
   - type: columns
     id: teams
     tone: white
     label: Across the business
     heading: Where automation shows up in a business
-    intro: "The same ideas apply in every department. Here is what that looks like."
+    intro: The same ideas apply in every department. Here is what that looks like.
     columns:
       - title: Sales and customers
         items:
-          - "New enquiries are logged and assigned automatically."
-          - "Follow-up emails go out on schedule."
-          - "Quotes and contracts are created from a template."
+          - New enquiries are logged and assigned automatically.
+          - Follow-up emails go out on schedule.
+          - Quotes and contracts are created from a template.
       - title: Finance
         items:
-          - "Invoices are created and sent from approved work."
-          - "Payments are matched to records."
-          - "Month-end reports build themselves."
+          - Invoices are created and sent from approved work.
+          - Payments are matched to records.
+          - Month-end reports build themselves.
       - title: People and HR
         items:
-          - "New-starter tasks and accounts are created in one go."
-          - "Leave and expense requests go to the right approver."
-          - "Reminders for reviews and renewals."
+          - New-starter tasks and accounts are created in one go.
+          - Leave and expense requests go to the right approver.
+          - Reminders for reviews and renewals.
       - title: Operations and support
         items:
-          - "Orders and tickets are routed to the right team."
-          - "Customers get status updates without asking."
-          - "Stock and delivery changes update every tool."
-
+          - Orders and tickets are routed to the right team.
+          - Customers get status updates without asking.
+          - Stock and delivery changes update every tool.
   - type: callout
     id: not-ai
     tone: paper
     variant: note
     title: Not every automation needs AI
     paragraphs:
-      - "Many workflows need clear rules, dependable connections, and good monitoring far more than they need AI. Rules are cheaper, faster, and easier to explain."
+      - Many workflows need clear rules, dependable connections, and good monitoring far more than they need AI. Rules are cheaper, faster, and easier to explain.
       - "We add [AI](ref:svc.ai) where a step really needs it: reading an unstructured email, summarizing a long document, or deciding which category a request belongs to. Even then, a person can review the result."
     items:
-      - "Use rules when the decision can be written as if-this-then-that."
-      - "Use AI when the input is messy text, images, or speech."
-      - "Use a person when the cost of a wrong answer is high."
-
+      - Use rules when the decision can be written as if-this-then-that.
+      - Use AI when the input is messy text, images, or speech.
+      - Use a person when the cost of a wrong answer is high.
   - type: process
     id: project
     tone: white
     label: How we do it
     heading: From idea to a running automation
-    intro: "We start with how work really flows, because automating a confusing process only makes the confusion faster."
+    intro: We start with how work really flows, because automating a confusing process only makes the confusion faster.
     steps:
       - title: Map how the work flows
-        body: "We follow a real example from start to finish and note every step, handoff, and delay."
-        artifacts: [Process map, List of pain points]
+        body: We follow a real example from start to finish and note every step, handoff, and delay.
+        artifacts:
+          - Process map
+          - List of pain points
       - title: Choose what to automate
-        body: "We pick the steps that are frequent, rule-based, and worth the effort, and leave the rest."
-        artifacts: [Short list with expected time saved, Tool recommendation]
+        body: We pick the steps that are frequent, rule-based, and worth the effort, and leave the rest.
+        artifacts:
+          - Short list with expected time saved
+          - Tool recommendation
       - title: Build and test
-        body: "We build the workflow and test it with real cases, including unusual ones."
-        artifacts: [Working automation, Test results]
+        body: We build the workflow and test it with real cases, including unusual ones.
+        artifacts:
+          - Working automation
+          - Test results
       - title: Switch on with a safety net
-        body: "We go live with alerts, a record of every run, and a clear way to pause it."
-        artifacts: [Live automation, Alerts and logs, Hand-over notes]
+        body: We go live with alerts, a record of every run, and a clear way to pause it.
+        artifacts:
+          - Live automation
+          - Alerts and logs
+          - Hand-over notes
       - title: Improve it
-        body: "We watch how it performs, fix rough edges, and extend it to the next process."
-        artifacts: [Review of results, Next candidates]
-
+        body: We watch how it performs, fix rough edges, and extend it to the next process.
+        artifacts:
+          - Review of results
+          - Next candidates
   - type: callout
     id: when-not
     tone: paper
     variant: limits
     title: When not to automate yet
     paragraphs:
-      - "Automation locks in a process. If the process is unclear or changes every week, automating it creates problems."
+      - Automation locks in a process. If the process is unclear or changes every week, automating it creates problems.
     items:
-      - "Nobody agrees how the work should be done."
-      - "The task happens rarely, so the effort will not pay back."
-      - "Every case is different and needs a person's judgment."
-      - "The tools involved are about to be replaced."
-
+      - Nobody agrees how the work should be done.
+      - The task happens rarely, so the effort will not pay back.
+      - Every case is different and needs a person's judgment.
+      - The tools involved are about to be replaced.
   - type: technical
     id: technology
     tone: white
     label: Technology
     heading: How automations are built
-    intro: "Most visitors can skip this section. It is here for technical readers."
+    intro: Most visitors can skip this section. It is here for technical readers.
     panels:
       - title: Triggers and connections
         paragraphs:
-          - "Most automations start from a webhook (a message one system sends when something happens) or from a schedule. They then talk to other tools through an API (a way for programs to share information). When a tool offers no connection, we can use browser-based or file-based methods, or recommend a different approach."
+          - Most automations start from a webhook (a message one system sends when something happens) or from a schedule. They then talk to other tools through an API (a way for programs to share information). When a tool offers no connection, we can use browser-based or file-based methods, or recommend a different approach.
       - title: Handling errors
         items:
-          - "Automatic retries with increasing waits."
-          - "A queue for work that cannot be processed right away."
-          - "Alerts to a named person when manual action is needed."
-          - "Each run logged, so any result can be traced."
+          - Automatic retries with increasing waits.
+          - A queue for work that cannot be processed right away.
+          - Alerts to a named person when manual action is needed.
+          - Each run logged, so any result can be traced.
       - title: Keeping credentials and information safe
         paragraphs:
-          - "Passwords and access keys are stored in a secure store, never inside the workflow itself. Each connection gets only the permissions it needs."
+          - Passwords and access keys are stored in a secure store, never inside the workflow itself. Each connection gets only the permissions it needs.
       - title: Where automations run
         paragraphs:
-          - "Some run in a vendor's cloud, such as Zapier or Make. Others run on infrastructure we set up for you, using tools like n8n. Larger systems may be custom software. We recommend what suits your volume, security needs, and budget."
-
+          - Some run in a vendor's cloud, such as Zapier or Make. Others run on infrastructure we set up for you, using tools like n8n. Larger systems may be custom software. We recommend what suits your volume, security needs, and budget.
   - type: faq
     id: faq
     tone: paper
@@ -269,35 +280,33 @@ sections:
     heading: Questions about automation
     items:
       - q: What should we automate first?
-        a: "Start with a task that happens often, follows clear rules, and annoys people. Copying data between tools and chasing approvals are common first choices. We will help you rank your options by time saved and risk."
+        a: Start with a task that happens often, follows clear rules, and annoys people. Copying data between tools and chasing approvals are common first choices. We will help you rank your options by time saved and risk.
       - q: Will automation replace jobs?
-        a: "Our aim is to remove repetitive work so people can spend time on work that needs judgment and care. In practice, teams usually keep their roles and gain time for the work that matters."
+        a: Our aim is to remove repetitive work so people can spend time on work that needs judgment and care. In practice, teams usually keep their roles and gain time for the work that matters.
       - q: What happens when an automation breaks?
-        a: "Well-built automations expect failures. They retry, keep a record, and alert a named person. We design the safety net as carefully as the workflow itself."
+        a: Well-built automations expect failures. They retry, keep a record, and alert a named person. We design the safety net as carefully as the workflow itself.
       - q: Do we have to change our tools?
-        a: "Usually not. Most automation works with the tools you already use. If a tool cannot connect, we will say so and suggest options."
+        a: Usually not. Most automation works with the tools you already use. If a tool cannot connect, we will say so and suggest options.
       - q: How is this different from integration?
-        a: "Integration connects systems so information moves between them. Automation uses those connections to run a whole process, with rules and approvals. They often go together. See [integration](ref:svc.api-integration)."
+        a: Integration connects systems so information moves between them. Automation uses those connections to run a whole process, with rules and approvals. They often go together. See [integration](ref:svc.api-integration).
       - q: Can you use AI inside an automation?
-        a: "Yes, where it helps. For example, AI can read an incoming email and decide which team should handle it. We keep people in the loop for decisions that matter."
-
+        a: Yes, where it helps. For example, AI can read an incoming email and decide which team should handle it. We keep people in the loop for decisions that matter.
   - type: index
     id: work
     tone: white
     label: What it looks like
     heading: See the automation systems we build
-    intro: "These pages describe the systems in more detail and the choices involved."
+    intro: These pages describe the systems in more detail and the choices involved.
     items:
       - title: Automation systems
         href: /work/areas/automation-systems/
-        body: "Connected sets of automations that run a team's routine work."
+        body: Connected sets of automations that run a team's routine work.
       - title: Workflow automation
         href: /work/areas/workflow-automation/
-        body: "Single processes, such as approvals or onboarding, turned into dependable workflows."
+        body: Single processes, such as approvals or onboarding, turned into dependable workflows.
       - title: Internal business tools
         href: /work/areas/internal-business-tools/
-        body: "Custom tools that replace spreadsheets and email chains for one team."
-
+        body: Custom tools that replace spreadsheets and email chains for one team.
   - type: related
     id: related
     tone: paper
@@ -306,29 +315,37 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [
-            svc.ai,
-            svc.api-integration,
-            svc.software-development,
-            svc.data-analytics,
-            svc.consulting,
-          ]
+          - svc.ai
+          - svc.api-integration
+          - svc.software-development
+          - svc.data-analytics
+          - svc.consulting
       - title: Related solutions
-        entityIds: [sol.business-process-automation, sol.workflow-automation, sol.ai-automation]
+        entityIds:
+          - sol.business-process-automation
+          - sol.workflow-automation
+          - sol.ai-automation
       - title: Tools and platforms
-        entityIds: [tech.zapier, tech.make, tech.n8n, tech.microsoft-power-automate, plat.airtable]
+        entityIds:
+          - tech.zapier
+          - tech.make
+          - tech.n8n
+          - tech.microsoft-power-automate
+          - plat.airtable
       - title: Systems we build
         entityIds:
-          [
-            workarea.automation-systems,
-            workarea.workflow-automation,
-            workarea.internal-business-tools,
-          ]
+          - workarea.automation-systems
+          - workarea.workflow-automation
+          - workarea.internal-business-tools
       - title: Technology pages
-        entityIds: [plat.hubspot, plat.salesforce]
-
+        entityIds:
+          - plat.hubspot
+          - plat.salesforce
+          - tech.microsoft-power-automate
   - type: cta
     id: contact-cta
     heading: Tell us about one task you repeat
-    body: "Describe a task that eats your team's time, and the tools it touches. We will tell you whether to automate it, how, and what it might save."
-    primary: { label: Talk to DECHY about automation, href: "/contact/?service=automation" }
+    body: Describe a task that eats your team's time, and the tools it touches. We will tell you whether to automate it, how, and what it might save.
+    primary:
+      label: Talk to DECHY about automation
+      href: /contact/?service=automation

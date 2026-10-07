@@ -214,7 +214,7 @@ sections:
           - ind.logistics
   - type: cta
     id: contact-cta
-    heading: Tell us about the app
+    heading: Tell us what the app does and how it will grow
     body: Describe what the app does and how you expect it to grow. We will say whether Firebase fits and how to set it up so you can leave later if you need to.
     primary:
       label: Talk to DECHY about Firebase

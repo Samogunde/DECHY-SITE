@@ -125,9 +125,9 @@ describe("URL architecture", () => {
 });
 
 describe("pages and graph", () => {
-  it("has exactly the 85 pages of Phases 1 to 3", () => {
+  it("has exactly the 118 pages of Phases 1 to 4", () => {
     const paths = registry.pages.map((p) => p.path);
-    expect(paths).toHaveLength(85);
+    expect(paths).toHaveLength(118);
     for (const p of [
       "/",
       "/contact/",

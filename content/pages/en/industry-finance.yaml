@@ -1,0 +1,206 @@
+id: page.industry-finance
+kind: industry
+locale: en
+path: /industries/finance/
+parent: /industries/
+entityId: ind.finance
+title: "Financial Services Software and Systems | DECHY"
+description: "Software for finance, banking, and insurance teams from DECHY: connected systems, onboarding workflows, reporting, and portals with audit trails."
+breadcrumbLabel: Finance
+intent:
+  primary: financial services software development
+  secondary:
+    - banking software development
+    - insurance software solutions
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Financial services software covers the systems that banks, lenders, insurers, advisers, and finance teams use to onboard customers, process transactions and claims, report, and keep records."
+  problem: "Core systems are old and closed, data is re-keyed between them, reports are assembled by hand, and every change must preserve accuracy and a record of who did what."
+  audience: "Finance, banking, lending, insurance, and advisory firms, and the finance and operations teams of other companies."
+  choose: "Connect and modernize in stages around the process that carries the most risk or manual effort, with accuracy checks and audit trails designed in from the start."
+  next: "Tell us which process is slowest or riskiest and which systems it crosses. We will outline a staged route that keeps the business running."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for finance, banking, and insurance
+    lead: "In financial services, accuracy and traceability matter as much as speed. We help firms connect their systems, move old ones forward, and build the portals, workflows, and reporting that sit around the core, with a record of every change."
+    support: "This page covers the systems financial firms ask for, what makes the field exacting, and how we approach it."
+    ctas:
+      - {
+          label: Talk to us about a financial system,
+          href: "/contact/?service=software-development",
+        }
+      - { label: Where firms start, href: "#start" }
+    spec:
+      kind: flow
+      steps:
+        - title: Application
+          text: "A customer applies through a clear, guided form."
+        - title: Checks
+          text: "Identity and eligibility checks run, and exceptions are flagged."
+        - title: Review
+          text: "A person reviews only the cases that need judgment."
+        - title: Decision
+          text: "The outcome is recorded with the reasons."
+        - title: Activation
+          text: "Accounts, billing, and records are set up from the same data."
+    purpose: workflow
+    takeaway: "A well-built financial workflow checks automatically, sends only exceptions to people, and records each decision with its reasons."
+    visualTitle: "An onboarding flow with checks built in"
+    figureCaption: "This diagram follows a customer onboarding flow in five steps, from the application through automatic checks and human review to the recorded decision and account activation."
+
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Where a small mistake becomes a large one
+    paragraphs:
+      - "A wrong figure in a marketing report is embarrassing. A wrong figure in a ledger, a policy record, or a regulatory return can be costly and hard to undo. Financial software is therefore built around checks: totals that must match, steps that must be approved, and records that must show who did what and when."
+      - "The second difference is history. Many firms run on core systems that are decades old, reliable in their narrow job and closed to everything else. New tools sit around them, connected by exports and re-typing. That is where errors and delay creep in."
+      - "Our work is mostly at that edge: connecting the core to the tools around it, automating the manual steps, and moving old components forward one at a time."
+
+  - type: chooser
+    id: start
+    tone: paper
+    label: Where to start
+    heading: Which problem comes first?
+    intro: "Firms usually start in one of four places. The right first project is the one where manual effort or risk is highest."
+    question: What is your most pressing problem?
+    options:
+      - label: Onboarding and applications take too long
+        when: "Customers wait while documents and checks move between people and systems."
+        get: "A guided application, automatic checks, and routing of exceptions to reviewers."
+        watch: "Keep a person in the decision for anything that carries judgment or risk."
+      - label: Reports are assembled by hand
+        when: "Month-end and regulatory figures are built from several systems in spreadsheets."
+        get: "Data brought together and checked, with measures defined once."
+        watch: "Agree definitions first; a faster wrong figure is worse than a slow right one."
+      - label: Systems do not share data
+        when: "The same customer details are held in the core, the CRM, and billing."
+        get: "Connections that carry each fact once, with a rule for which system owns it."
+        watch: "Test with real edge cases such as merged accounts and corrections."
+      - label: The core system holds us back
+        when: "Every change is slow, risky, or impossible, and few people understand it."
+        get: "A staged route that surrounds, then replaces, parts of it."
+        watch: "Plan data checks and a way back for every step."
+
+  - type: index
+    id: needs
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Typical systems for financial firms
+    items:
+      - title: Customer and client portals
+        body: "Secure places for customers to see accounts, documents, and requests. See [customer portals](/work/areas/customer-portals/)."
+      - title: Workflow and approvals
+        body: "Applications, claims, and requests routed with owners, deadlines, and records. See [process automation](/solutions/business-process-automation/)."
+      - title: Integration between systems
+        body: "Links between the core, the CRM, billing, and reporting. See [connecting customer systems](/solutions/crm-integration/)."
+      - title: Management and regulatory reporting
+        body: "Figures from agreed definitions, with a trail from number to source. See [business dashboards](/solutions/business-dashboards/)."
+      - title: Modernizing old components
+        body: "Staged moves that keep the business running. See [legacy system modernization](/solutions/legacy-system-modernization/)."
+      - title: Secure hosting and operations
+        body: "Cloud environments with strong access control and monitoring. See [cloud migration](/solutions/cloud-migration/)."
+
+  - type: callout
+    id: standards
+    tone: paper
+    variant: note
+    title: A note on regulation
+    paragraphs:
+      - "Financial firms operate under rules that differ by country and by activity. We build to the requirements you give us, and we are not your compliance adviser."
+    items:
+      - "Requirements come from you and your regulator, and we design to them"
+      - "We suggest you confirm legal and regulatory points with your own advisers"
+      - "We keep an audit trail of changes and access, whatever the rules"
+
+  - type: columns
+    id: help
+    tone: white
+    label: What DECHY can do
+    heading: How we help financial teams
+    columns:
+      - title: Build
+        items:
+          - "Portals, workflows, and internal tools."
+          - "Calculation and reporting services with tests that prove the figures."
+      - title: Connect
+        items:
+          - "Links between core systems, customer records, billing, and reporting."
+          - "Reconciliation checks that flag differences early."
+      - title: Secure
+        items:
+          - "Role-based access, encryption, and detailed logs."
+          - "Security reviews of new and existing systems."
+      - title: Modernize
+        items:
+          - "Moving components forward without stopping service."
+          - "Cloud hosting with a documented data location."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Accuracy and audit notes
+    intro: "Most visitors can skip this section. It notes how we build for exacting environments."
+    panels:
+      - title: Accuracy
+        items:
+          - "Money is handled in exact decimal types, never in floating-point numbers, and rounding rules are written down and tested."
+          - "Totals are reconciled between systems automatically, and differences raise an alert."
+      - title: Audit and access
+        items:
+          - "Every change to a record is logged with who, when, and what changed, in a form that cannot be quietly altered."
+          - "Duties are separated, so the person who requests a change is not the person who approves it."
+      - title: Integration
+        paragraphs:
+          - "Messages between systems carry identifiers that make each action repeatable without duplicating it. See our [integration](ref:svc.api-integration) work."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about financial software
+    items:
+      - q: Can you work around our old core system?
+        a: "Yes. We usually build around it first, connecting it to the tools that need its data, and then move parts of it forward in stages."
+      - q: How do you protect sensitive financial data?
+        a: "With role-based access, encryption in storage and in transit, detailed logs, and minimal access for anyone working on the system. Development and testing use test data."
+      - q: Are you able to guarantee regulatory compliance?
+        a: "Compliance is your responsibility and your regulator's judgment. We build to the requirements you give us and design for traceability, and we suggest you confirm points with your own advisers."
+      - q: Can automation make decisions for us?
+        a: "It can apply fixed rules and flag exceptions. We keep a person in the decision wherever judgment or risk is involved."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Financial services across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          [svc.software-development, svc.api-integration, svc.cybersecurity, svc.data-analytics]
+      - title: Systems we build
+        entityIds:
+          [workarea.operations-platforms, workarea.integration-platforms, workarea.customer-portals]
+      - title: Technologies
+        entityIds: [tech.dotnet, lang.java, plat.azure, tech.postgresql]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us which process is slowest or riskiest
+    body: "Describe the process and the systems it crosses. We will outline a staged route that keeps the business running."
+    primary:
+      {
+        label: Talk to DECHY about financial systems,
+        href: "/contact/?service=software-development",
+      }

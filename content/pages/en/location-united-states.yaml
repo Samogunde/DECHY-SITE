@@ -1,0 +1,199 @@
+id: page.location-united-states
+kind: location
+locale: en
+path: /locations/united-states/
+parent: /locations/
+entityId: loc.united-states
+title: Technology Services for the United States | DECHY
+description: "How DECHY works with organizations in the US: software, AI, and automation delivered remotely, with US privacy and security expectations in view."
+breadcrumbLabel: United States
+intent:
+  primary: software development services united states
+  secondary:
+    - technology services for us companies
+    - remote software development partner usa
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: DECHY works with organizations in the United States on software, AI, automation, integration, and related services, delivered remotely.
+  problem: US buyers face a patchwork of state privacy rules, sector rules, and supplier security questions, and need a partner who works clearly across time zones.
+  audience: US startups, small businesses, enterprises, and teams that want a remote technology partner, from a single project to ongoing care.
+  choose: Describe the project and the rules that apply to your data. We tell you how we would build to them and how we would work around your time zone.
+  next: Tell us about the project and where your team sits. We will propose how an engagement would run.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Locations
+    headline: DECHY for organizations in the United States
+    lead: "DECHY is a global technology company. We serve organizations in the United States remotely, with the same services we provide everywhere: software, AI, automation, integration, cloud, and more. This page covers what is particular to working with US teams."
+    support: DECHY works remotely and does not operate a US office. Clients reach us through the contact form, and work runs through written updates and scheduled calls.
+    ctas:
+      - label: Talk to DECHY about a US project
+        href: /contact/
+      - label: How an engagement runs
+        href: "#engagement"
+    spec:
+      kind: flow
+      steps:
+        - title: A first conversation
+          text: We learn the project and the rules that apply to your data.
+        - title: A proposal
+          text: Scope, plan, and cost in clear terms.
+        - title: Build in small steps
+          text: Regular releases you can see and test.
+        - title: Written updates
+          text: Progress you can read when it suits your day.
+        - title: Handover and care
+          text: Documentation, training, and optional ongoing support.
+    purpose: process
+    takeaway: A remote engagement runs from a first conversation to a handover through small releases and written updates that fit your working day.
+    visualTitle: How a remote engagement runs
+    figureCaption: This diagram follows a remote engagement in five steps, from the first conversation and proposal through small releases and written updates to handover and care.
+  - type: prose
+    id: market
+    tone: white
+    label: The market
+    heading: What US technology buyers usually ask for
+    paragraphs:
+      - "The United States is a very large and varied market, from startups building a first product to enterprises modernizing systems that are decades old. The work we are asked for most often falls into a few groups: custom software and portals, connecting systems, automating manual processes, and adding AI to existing applications."
+      - Buyers here often compare several suppliers and ask for evidence of how a supplier handles security and delivery. They may send a security questionnaire before a project starts. We answer these plainly, describing what we do, without claiming certifications we do not hold.
+      - Speed to a first working version matters, and so does a path to scale. We usually agree a small first stage that proves the idea, then extend it.
+  - type: table
+    id: rules
+    tone: paper
+    label: Rules and expectations
+    heading: Considerations that shape US software projects
+    caption: Four US considerations that commonly affect software and data projects and how they shape what we build
+    columns:
+      - Consideration
+      - Why it matters
+      - What it means for the build
+    rows:
+      - - State privacy laws
+        - There is no single national privacy law for most businesses. Several states, including California, have their own rules on personal data.
+        - We design for consent, access, and deletion requests, so the system can meet the strictest rules that apply to you.
+      - - Sector rules
+        - Health, finance, and education data carry specific requirements, for example health information handled by healthcare organizations.
+        - We ask which apply, limit access by role, keep audit logs, and build to the requirements you give us.
+      - - Supplier security reviews
+        - Larger buyers often ask suppliers to describe their security practices, and may expect independent audit reports.
+        - We document how we handle access, secrets, and testing, and answer questionnaires directly.
+      - - Accessibility
+        - Websites and applications are expected to work for people with disabilities.
+        - We build to the web accessibility guidelines and test with keyboard and screen reader.
+    note: These points are a starting list, not legal advice. Your own adviser can confirm what applies to your organization.
+  - type: index
+    id: integrations
+    tone: white
+    columns: 2
+    label: Systems in use
+    heading: Tools and payment methods we connect to in the US
+    items:
+      - title: Card payments and bank transfers
+        body: Cards and ACH bank transfers are the usual ways to pay online, through providers such as [Stripe](ref:int.stripe).
+      - title: Sales tax
+        body: Sales tax rules differ by state and can depend on where the customer is. We connect stores to tax calculation services instead of coding rates by hand.
+      - title: Customer systems
+        body: "[Salesforce](ref:plat.salesforce) and [HubSpot](ref:plat.hubspot) are widely used. See [connecting customer systems](/solutions/crm-integration/)."
+      - title: Accounting
+        body: Small and mid-sized businesses commonly use QuickBooks or similar tools. We connect orders and invoices to the books.
+      - title: Sign-in
+        body: Single sign-on through the identity provider your organization already uses, so staff sign in once.
+      - title: Cloud platforms
+        body: "[AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) are all in common use, with regions across the country."
+  - type: columns
+    id: services
+    tone: paper
+    label: Most relevant
+    heading: Where US teams usually start
+    columns:
+      - title: Build
+        items:
+          - "[Software development](/software-development/) and [web development](/web-development/) for products and portals."
+          - "[Mobile apps](/mobile-app-development/) for customers and staff."
+      - title: Connect and automate
+        items:
+          - "[Systems integration](/api-integration/) between your tools."
+          - "[Automation](/automation/) for repeated manual work."
+      - title: Add intelligence
+        items:
+          - "[AI and machine learning](/ai/) features and assistants."
+          - "[Data and analytics](/data-analytics/) for decisions."
+      - title: Run safely
+        items:
+          - "[Cloud services](/cloud/) for reliable hosting."
+          - "[Cybersecurity](/cybersecurity/) reviews and hardening."
+  - type: process
+    id: engagement
+    tone: white
+    label: Working together
+    heading: Working across US time zones
+    intro: The continental United States spans four time zones, so we agree how to work at the start.
+    steps:
+      - title: Set the rhythm
+        body: We agree a regular call, with times that suit your team's day, and a place where written updates are posted.
+        artifacts:
+          - Meeting schedule
+          - Update channel
+      - title: Keep decisions in writing
+        body: Decisions, questions, and next steps are written down, so a team in one zone is never waiting for a call in another.
+        artifacts:
+          - Decision log
+      - title: Release often
+        body: Small, frequent releases let you check progress when it suits you.
+        artifacts:
+          - Release notes
+          - Demo access
+      - title: Plan for support hours
+        body: For systems that must be watched, we agree what is covered and how urgent issues reach us.
+        artifacts:
+          - Support terms
+  - type: index
+    id: industries
+    tone: paper
+    columns: 2
+    label: Industries
+    heading: Industries we write about that are active in the US
+    items:
+      - title: Healthcare
+        body: Portals, connected records, and privacy-first design.
+        href: /industries/healthcare/
+      - title: Finance
+        body: Onboarding, reporting, and connected core systems.
+        href: /industries/finance/
+      - title: Retail and ecommerce
+        body: Stores, stock, orders, and customer records that agree.
+        href: /industries/retail/
+      - title: Professional services
+        body: Client portals, time, and billing.
+        href: /industries/professional-services/
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions from US organizations
+    items:
+      - q: Do you have a US office?
+        a: No. DECHY is a global company and works remotely. Clients reach us through the contact form, and we arrange calls at times that suit your team.
+      - q: How do you handle the time difference?
+        a: We agree meeting windows, keep decisions in writing, and release in small steps, so work continues whichever zone you are in.
+      - q: Can you meet our company's security questionnaire?
+        a: We answer it honestly, describing what we do. We do not claim certifications we do not hold, and we say if a requirement is beyond what we can offer.
+      - q: Do you work with state or federal agencies?
+        a: Public-sector projects have their own procurement rules. Tell us about the project and we will say whether and how we can take part.
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your project
+    body: Describe what you want to build or fix, and where your team works. We will propose how an engagement would run.
+    primary:
+      label: Talk to DECHY
+      href: /contact/

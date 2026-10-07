@@ -1,0 +1,182 @@
+id: page.location-ireland
+kind: location
+locale: en
+path: /locations/ireland/
+parent: /locations/
+entityId: loc.ireland
+title: Technology Services for Ireland | DECHY
+description: "How DECHY works with organizations in Ireland: software, AI, and automation delivered remotely, with EU data protection and single-market rules in view."
+breadcrumbLabel: Ireland
+intent:
+  primary: software development services ireland
+  secondary:
+    - technology partner for irish businesses
+    - remote software development ireland
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: DECHY works with organizations in Ireland on software, AI, automation, integration, and related services, delivered remotely.
+  problem: Irish organizations operate under European Union rules on data, security, and artificial intelligence, often serve customers across several countries, and need systems that work across borders.
+  audience: Irish startups, small and mid-sized businesses, enterprises, and teams that sell into the European single market.
+  choose: Tell us which countries your users and data are in and which sector rules apply. We explain how we would build to them and how we would work with your team.
+  next: Describe the project and the markets you serve. We will propose how an engagement would run.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Locations
+    headline: DECHY for organizations in Ireland
+    lead: DECHY is a global technology company. We work with organizations in Ireland remotely, across software, AI, automation, integration, cloud, and design. Irish teams often build for customers across Europe, so this page covers the European rules that travel with the work.
+    support: DECHY has no Irish office and works remotely, with calls arranged to fit your team's day.
+    ctas:
+      - label: Talk to DECHY about an Irish project
+        href: /contact/
+      - label: European rules that apply
+        href: "#rules"
+    spec:
+      kind: hub
+      center:
+        title: An Irish organization
+        text: Selling and working across the European single market.
+      spokes:
+        - title: Data protection
+          text: One set of rules across the European Union.
+        - title: Euro payments
+          text: Cards and euro bank transfers.
+        - title: Security rules
+          text: Network and information security duties for some sectors.
+        - title: AI rules
+          text: New obligations phasing in for AI systems.
+        - title: Accessibility
+          text: Expectations for websites and services.
+        - title: Customers abroad
+          text: Users in other member states.
+    purpose: relationship
+    takeaway: An Irish organization selling across Europe works under shared rules on data, payments, security, AI, and accessibility, so one build can serve every member state.
+    visualTitle: The European rules around an Irish project
+    figureCaption: "This diagram shows an Irish organization at the center with six areas around it: data protection, euro payments, security rules, AI rules, accessibility, and customers in other member states."
+  - type: prose
+    id: market
+    tone: white
+    label: The market
+    heading: What Irish buyers tend to ask for
+    paragraphs:
+      - Ireland has a large technology and international services sector alongside a broad base of small and medium businesses in retail, agriculture and food, professional services, and construction. Requests we see most often are connecting systems, replacing spreadsheets with proper tools, building customer portals, and adding automation.
+      - Many Irish organizations serve customers beyond the island, in the United Kingdom and across Europe. A product built once has to be right for several sets of rules, which is why we ask early where users and data will sit.
+      - Ireland shares a time zone with the United Kingdom, so calls are easy to arrange with teams in both, and usually in the same working day as the rest of Europe.
+  - type: table
+    id: rules
+    tone: paper
+    label: Rules and practice
+    heading: European considerations that shape Irish software projects
+    caption: Four European considerations that commonly affect software and data projects in Ireland and how they shape what we build
+    columns:
+      - Consideration
+      - Why it matters
+      - What it means for the build
+    rows:
+      - - Data protection
+        - Personal data is governed by the European General Data Protection Regulation (GDPR), enforced in Ireland by the Data Protection Commission. Many global technology firms are based in Ireland, so the regulator is active.
+        - We build for lawful handling, access and deletion requests, limited retention, and clear records of processing.
+      - - Security duties for some sectors
+        - European rules on network and information security apply to operators in sectors such as energy, transport, health, and digital services. Financial firms have their own resilience rules.
+        - Where your sector is covered, we design for incident reporting, access control, and supplier oversight.
+      - - Artificial intelligence rules
+        - A European regulation on artificial intelligence is being phased in, with duties that grow with how risky a system's use is.
+        - For AI features, we record what the system does, keep a person in the loop for important decisions, and document its data.
+      - - Accessibility
+        - European accessibility requirements are extending to more products and services.
+        - We build to the web accessibility guidelines and test with assistive technology.
+    note: These are pointers rather than legal advice. Please take your own advice on how the rules apply to you.
+  - type: chooser
+    id: start
+    tone: white
+    label: Where to start
+    heading: What do Irish teams usually start with?
+    intro: These four starting points cover most of the requests we see.
+    question: Which is closest to your situation?
+    options:
+      - label: Replace spreadsheets and email with a proper tool
+        when: A growing business whose key processes live in files and inboxes.
+        get: An internal tool or workflow built around how you work. See [process automation](/solutions/business-process-automation/).
+        watch: Agree the process before the screens, or the tool copies the mess.
+      - label: Connect finance, sales, and operations
+        when: The same details are re-typed between the CRM, accounts, and store.
+        get: Connections that carry each fact once. See [connecting customer systems](/solutions/crm-integration/).
+        watch: Decide which system owns each fact.
+      - label: Sell across Europe
+        when: Customers in several member states, each with local payment habits.
+        get: A store and checkout that handles euro payments, tax by country, and several languages.
+        watch: Tax and consumer rules differ by country, so check each market.
+      - label: Add AI to an existing product
+        when: A team wants an assistant or smarter search inside its application.
+        get: A focused AI feature built to current European expectations.
+        watch: Document the data used and keep people in the loop for decisions that matter.
+  - type: index
+    id: integrations
+    tone: paper
+    columns: 2
+    label: Systems in use
+    heading: Payments and platforms in Ireland
+    items:
+      - title: Cards and euro bank transfers
+        body: Cards are the usual online route, and euro bank transfers run through the single euro payments area. We connect through providers such as [Stripe](ref:int.stripe).
+      - title: Accounting
+        body: Cloud accounting packages are common among small and mid-sized businesses. We connect orders, invoices, and payments to the one you use.
+      - title: Customer systems
+        body: "[HubSpot](ref:plat.hubspot) and [Salesforce](ref:plat.salesforce) are widely used. See [connecting customer systems](/solutions/crm-integration/)."
+      - title: Cloud hosting
+        body: "[AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) all offer regions in Ireland and elsewhere in the European Union."
+      - title: Online stores
+        body: "[Shopify](ref:plat.shopify) and [WooCommerce](ref:plat.woocommerce) stores connected to European carriers and tax."
+  - type: index
+    id: industries
+    tone: white
+    columns: 2
+    label: Industries
+    heading: Industries we write about that are active in Ireland
+    items:
+      - title: Professional services
+        body: Client portals, time, and billing.
+        href: /industries/professional-services/
+      - title: Finance
+        body: Onboarding, reporting, and connected systems.
+        href: /industries/finance/
+      - title: Retail and ecommerce
+        body: Stores and stock across channels.
+        href: /industries/retail/
+      - title: Manufacturing
+        body: Planning, production, and supplier connections.
+        href: /industries/manufacturing/
+      - title: Healthcare
+        body: Portals, connected records, and privacy-first design.
+        href: /industries/healthcare/
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions from Irish organizations
+    items:
+      - q: Do you have an Irish office?
+        a: No. DECHY is a global company that works remotely with clients worldwide. We arrange calls at times that suit your team.
+      - q: Can the data stay in the European Union?
+        a: It can. We choose European hosting regions on request and record where data is stored and processed.
+      - q: Can you help us prepare for the AI rules?
+        a: We build AI features with documentation of their data and purpose, and with people in the loop for important decisions. For legal interpretation we suggest your own adviser.
+      - q: Can you serve customers in several countries from one product?
+        a: Yes. We design for several languages, currencies, and tax rules from the start, and test each market.
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your project
+    body: Describe what you want to build or fix, and which countries your users are in. We will propose how an engagement would run.
+    primary:
+      label: Talk to DECHY
+      href: /contact/

@@ -1,0 +1,185 @@
+id: page.location-canada
+kind: location
+locale: en
+path: /locations/canada/
+parent: /locations/
+entityId: loc.canada
+title: Technology Services for Canada | DECHY
+description: "How DECHY works with organizations in Canada: software, AI, and automation delivered remotely, with Canadian privacy rules and bilingual needs in view."
+breadcrumbLabel: Canada
+intent:
+  primary: software development services canada
+  secondary:
+    - technology partner for canadian businesses
+    - bilingual software development canada
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
+comprehension:
+  what: DECHY works with organizations in Canada on software, AI, automation, integration, and related services, delivered remotely.
+  problem: Canadian projects often have to respect federal and provincial privacy rules, serve English and French users, and handle sales tax that differs by province.
+  audience: Canadian startups, small and mid-sized businesses, enterprises, and teams that want a remote technology partner.
+  choose: Tell us where your users are and which language and privacy rules apply. We explain how we would build to them and how we would work across Canada's time zones.
+  next: Describe the project and where your team and users sit. We will propose how an engagement would run.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Locations
+    headline: DECHY for organizations in Canada
+    lead: "DECHY is a global technology company. We work with organizations in Canada remotely, across software, AI, automation, integration, cloud, and design. This page covers what is particular to Canadian projects: privacy across federal and provincial lines, two official languages, and a country that spans six time zones."
+    support: DECHY has no Canadian office. We work remotely and plan calls around your team's province and hours.
+    ctas:
+      - label: Talk to DECHY about a Canadian project
+        href: /contact/
+      - label: Language and privacy
+        href: "#rules"
+    spec:
+      kind: layers
+      layers:
+        - title: Who uses it
+          text: Users across provinces, in English, in French, or both.
+          support:
+            - title: English and French
+        - title: What it must respect
+          text: Federal and provincial privacy rules, and Quebec's language rules.
+          support:
+            - title: Privacy rules
+            - title: Language rules
+        - title: How it connects
+          text: Canadian payments, taxes, and accounting.
+          support:
+            - title: Payments and tax
+        - title: How we deliver
+          text: Remote work planned around the time zone of your team.
+          support:
+            - title: Meeting windows
+      layerLabel: A Canadian project
+      supportLabel: What sits beside it
+    purpose: system
+    takeaway: A Canadian project has to serve users in two languages, respect federal and provincial rules, connect to Canadian payments and tax, and work across time zones.
+    visualTitle: What a Canadian project has to consider
+    figureCaption: This diagram shows four layers of a Canadian project, from the users and their languages through the rules and the payment and tax connections to how the work is delivered.
+  - type: prose
+    id: market
+    tone: white
+    label: The market
+    heading: What Canadian buyers tend to ask for
+    paragraphs:
+      - Canada combines a strong technology sector, large resource, finance, and public-sector organizations, and many small and mid-sized businesses. Requests we see most often are customer portals and booking tools, connections between older systems and cloud services, and automation of manual back-office work.
+      - Language shapes many projects. Federal bodies and many national brands serve customers in English and French, and the design has to allow for text that is longer in French and for content that stays accurate in both.
+      - Time zones matter too. A team in Atlantic Canada and a team on the Pacific coast are separated by several hours, so we agree meeting windows, and keep decisions in writing.
+  - type: table
+    id: rules
+    tone: paper
+    label: Rules and practice
+    heading: Considerations that shape Canadian software projects
+    caption: Four Canadian considerations that commonly affect software and data projects and how they shape what we build
+    columns:
+      - Consideration
+      - Why it matters
+      - What it means for the build
+    rows:
+      - - Federal and provincial privacy law
+        - A federal law covers many private-sector organizations, while some provinces have their own rules, and Quebec's are among the strictest.
+        - We design for consent, access requests, and clear records of what is held, to the standard the strictest applicable rule sets.
+      - - French-language requirements
+        - Organizations doing business in Quebec are expected to serve customers in French, including websites and software.
+        - We build interfaces that support both languages from the start, rather than adding French late.
+      - - Where data is stored
+        - Some customers and public bodies prefer or require that data stays in Canada.
+        - We choose Canadian hosting regions where asked, and record where data is stored and processed.
+      - - Sales tax by province
+        - Sales tax differs by province, and rates and rules change.
+        - We connect stores and invoicing to tax services in place of hard-coding rates.
+    note: This is a summary for orientation and not legal advice. Check the details with a qualified Canadian adviser.
+  - type: process
+    id: engagement
+    tone: white
+    label: Working together
+    heading: Working across six Canadian time zones
+    steps:
+      - title: Find the overlap
+        body: We list where your people work and agree one or two windows when everyone can talk.
+        artifacts:
+          - Meeting windows
+      - title: Write decisions down
+        body: A team on one coast should never wait for a call on the other. Decisions and questions are written and answered in order.
+        artifacts:
+          - Decision log
+          - Question list
+      - title: Release in small steps
+        body: Frequent releases mean there is always something to review in your working day.
+        artifacts:
+          - Release notes
+      - title: Test in both languages
+        body: Where a product serves English and French users, both are checked at every release.
+        artifacts:
+          - Language checks
+  - type: index
+    id: integrations
+    tone: paper
+    columns: 2
+    label: Systems in use
+    heading: Payments and platforms in Canada
+    items:
+      - title: Cards and bank transfers
+        body: Cards are the usual online route. Many Canadian consumers also use a common interbank e-transfer service.
+      - title: Accounting and tax
+        body: Sales tax calculation and filing differ by province, so orders connect to accounting tools that handle it.
+      - title: Customer systems
+        body: "[HubSpot](ref:plat.hubspot) and [Salesforce](ref:plat.salesforce) are widely used. See [connecting customer systems](/solutions/crm-integration/)."
+      - title: Cloud hosting
+        body: "[AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud) offer Canadian regions."
+      - title: Online stores
+        body: "[Shopify](ref:plat.shopify), which has strong roots in Canada, and [WooCommerce](ref:plat.woocommerce) stores connected to Canadian carriers."
+  - type: index
+    id: industries
+    tone: white
+    columns: 2
+    label: Industries
+    heading: Industries we write about that are active in Canada
+    items:
+      - title: Finance
+        body: Reporting, onboarding, and connected systems.
+        href: /industries/finance/
+      - title: Retail and ecommerce
+        body: Stores and stock across channels.
+        href: /industries/retail/
+      - title: Logistics and transport
+        body: Orders, shipments, and live status across long distances.
+        href: /industries/logistics/
+      - title: Manufacturing
+        body: Planning, production, and supplier connections.
+        href: /industries/manufacturing/
+      - title: Education
+        body: Learner portals and records.
+        href: /industries/education/
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions from Canadian organizations
+    items:
+      - q: Do you have a Canadian office?
+        a: No. DECHY is a global company that works remotely with clients worldwide. We arrange calls at times that suit your team.
+      - q: Can you build a product in English and French?
+        a: Yes. We design for both languages from the start, including longer French text, and test both at every release.
+      - q: Can the data stay in Canada?
+        a: It can. We choose Canadian hosting regions on request and record where data is stored and processed.
+      - q: Which services do Canadian teams ask for most?
+        a: Software and portals, connections between systems, and automation of manual work. See the [services](/services/) page for the full range.
+  - type: cta
+    id: contact-cta
+    heading: Tell us about your project
+    body: Describe what you want to build or fix, and where your team and users are. We will propose how an engagement would run.
+    primary:
+      label: Talk to DECHY
+      href: /contact/

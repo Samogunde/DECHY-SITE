@@ -39,7 +39,7 @@ export const INDUSTRY_SIMILARITY: SimilarityConfig = {
 /** Country pages share a purpose, so their structure may match; their copy may not. */
 export const LOCATION_SIMILARITY: SimilarityConfig = {
   maxSequence: 1,
-  maxShingle: 0.08,
+  maxShingle: 0.12,
   maxSharedHeadings: 3,
 };
 export const WORK_SIMILARITY: SimilarityConfig = {

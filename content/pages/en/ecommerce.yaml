@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /ecommerce/
 entityId: svc.ecommerce
-title: "Ecommerce Development Services | DECHY"
+title: Ecommerce Development Services | DECHY
 description: "Ecommerce from DECHY: online stores on the right platform, connected to payments, stock, shipping, and accounting, with a clear path from first sale to growth."
 breadcrumbLabel: Ecommerce Solutions
 intent:
@@ -14,28 +14,34 @@ intent:
     - subscription ecommerce
     - ecommerce integration
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
   what: "Ecommerce services build and run online stores: product pages, checkout, payments, stock, shipping, and the systems behind them."
-  problem: "The store is hard to manage, orders and stock are re-typed between systems, checkout loses customers, or the platform no longer fits the business."
-  audience: "Businesses starting to sell online, and stores that have outgrown their platform or drown in manual order handling."
-  choose: "Choose the platform by your products, your team, and your growth plans. A hosted platform suits most stores, and a custom build suits unusual products or processes."
-  next: "Tell us what you sell, where, and how orders are handled today. We will recommend a platform and the connections to set up first."
-
+  problem: The store is hard to manage, orders and stock are re-typed between systems, checkout loses customers, or the platform no longer fits the business.
+  audience: Businesses starting to sell online, and stores that have outgrown their platform or drown in manual order handling.
+  choose: Choose the platform by your products, your team, and your growth plans. A hosted platform suits most stores, and a custom build suits unusual products or processes.
+  next: Tell us what you sell, where, and how orders are handled today. We will recommend a platform and the connections to set up first.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Ecommerce Solutions
-    lead: "At DECHY, we build and improve online stores that are easy to run and easy to buy from. We choose the right platform, design the shopping experience, and connect the store to payments, stock, shipping, and accounting."
-    support: "A store is more than a website. It is a business system, so we build it together with our web, integration, and automation teams."
+    lead: At DECHY, we build and improve online stores that are easy to run and easy to buy from. We choose the right platform, design the shopping experience, and connect the store to payments, stock, shipping, and accounting.
+    support: A store is more than a website. It is a business system, so we build it together with our web, integration, and automation teams.
     ctas:
-      - { label: Talk to us about your store, href: "/contact/?service=ecommerce" }
-      - { label: Compare platforms, href: "#platforms" }
+      - label: Talk to us about your store
+        href: /contact/?service=ecommerce
+      - label: Compare platforms
+        href: "#platforms"
     spec:
       kind: hub
       center:
@@ -55,10 +61,9 @@ sections:
         - title: Customer service
           text: Orders and questions in one place.
     purpose: relationship
-    takeaway: "A store works well when payments, stock, shipping, accounting, and messages are connected to it, not handled by hand."
-    visualTitle: "An online store and the systems around it"
-    figureCaption: "This diagram shows an online store at the center and six systems it should be connected to, so an order reaches each one without re-typing."
-
+    takeaway: A store works well when payments, stock, shipping, accounting, and messages are connected to it, not handled by hand.
+    visualTitle: An online store and the systems around it
+    figureCaption: This diagram shows an online store at the center and six systems it should be connected to, so an order reaches each one without re-typing.
   - type: definition
     id: what-is
     tone: white
@@ -66,44 +71,45 @@ sections:
     heading: What an online store really involves
     answer: "An online store is a website where people can choose products and pay, plus the systems that handle what happens after the click: payment, stock, packing, shipping, tax, and support. The shopfront is the easy part."
     paragraphs:
-      - "Stores succeed or struggle on the work behind the scenes. If every order must be re-typed into three systems, growth makes things worse, not better."
-      - "We design the whole path, from the first visit to the delivered parcel and the repeat purchase, so the store can grow without a bigger back office."
-
+      - Stores succeed or struggle on the work behind the scenes. If every order must be re-typed into three systems, growth makes things worse, not better.
+      - We design the whole path, from the first visit to the delivered parcel and the repeat purchase, so the store can grow without a bigger back office.
   - type: table
     id: platforms
     tone: paper
     label: Choosing a platform
     heading: Which platform fits your business?
-    intro: "There is no single best platform. The right choice depends on what you sell and how you work."
+    intro: There is no single best platform. The right choice depends on what you sell and how you work.
     caption: Comparison of ecommerce platforms by business type
-    columns: [Platform, Fits best, Keep in mind]
+    columns:
+      - Platform
+      - Fits best
+      - Keep in mind
     rows:
       - - "[Shopify](ref:plat.shopify) and [Shopify Plus](ref:plat.shopify-plus)"
-        - "Most product stores, from small to large, that want a dependable hosted platform."
-        - "Monthly fees and platform rules, but little to maintain."
+        - Most product stores, from small to large, that want a dependable hosted platform.
+        - Monthly fees and platform rules, but little to maintain.
       - - "[WooCommerce](ref:plat.woocommerce)"
-        - "Stores already on WordPress, or those that want more control and a lower platform fee."
-        - "You, or we, look after hosting, updates, and security."
+        - Stores already on WordPress, or those that want more control and a lower platform fee.
+        - You, or we, look after hosting, updates, and security.
       - - "[BigCommerce](ref:plat.bigcommerce)"
-        - "Growing stores with many products and complex catalogs."
-        - "Fewer ready-made themes and add-ons."
+        - Growing stores with many products and complex catalogs.
+        - Fewer ready-made themes and add-ons.
       - - "[Adobe Commerce (Magento)](ref:plat.magento-adobe-commerce)"
-        - "Large or complex stores with special business rules."
-        - "A bigger build and more upkeep."
+        - Large or complex stores with special business rules.
+        - A bigger build and more upkeep.
       - - "[Wix](ref:plat.wix-ecommerce), [Squarespace](ref:plat.squarespace-commerce), and [Webflow](ref:plat.webflow-ecommerce)"
-        - "Small stores and design-led brands with a modest catalog."
-        - "Limited flexibility as needs grow."
+        - Small stores and design-led brands with a modest catalog.
+        - Limited flexibility as needs grow.
       - - Custom store
-        - "Unusual products, subscriptions, marketplaces, or rules that platforms cannot handle."
-        - "The largest build, and a long-term duty to maintain it."
-    note: "Platform features and prices change often. We confirm current details before you commit."
-
+        - Unusual products, subscriptions, marketplaces, or rules that platforms cannot handle.
+        - The largest build, and a long-term duty to maintain it.
+    note: Platform features and prices change often. We confirm current details before you commit.
   - type: diagram
     id: order
     tone: white
     label: How it works
     heading: What happens to one order
-    intro: "A good store handles each order the same way every time. Here is the path of one sale."
+    intro: A good store handles each order the same way every time. Here is the path of one sale.
     spec:
       kind: flow
       steps:
@@ -120,9 +126,8 @@ sections:
         - title: The books are updated
           text: Sale, tax, and fees are recorded in accounting.
     purpose: sequence
-    takeaway: "Every sale should trigger the same chain, from payment to shipping and accounting, with no one re-typing."
-    caption: "This diagram traces one online order through six steps, from the customer's payment to the entry in your accounts."
-
+    takeaway: Every sale should trigger the same chain, from payment to shipping and accounting, with no one re-typing.
+    caption: This diagram traces one online order through six steps, from the customer's payment to the entry in your accounts.
   - type: index
     id: build
     tone: paper
@@ -132,23 +137,22 @@ sections:
     items:
       - title: New stores
         ref: cap.ecommerce-development
-        body: "Setting up a store on the right platform, with products, shipping, tax, and payments configured properly."
+        body: Setting up a store on the right platform, with products, shipping, tax, and payments configured properly.
       - title: Redesign and improvement
         ref: cap.ecommerce-redesign
-        body: "Making an existing store faster and easier to buy from, using what visitors actually do."
+        body: Making an existing store faster and easier to buy from, using what visitors actually do.
       - title: Moving to a new platform
         ref: cap.ecommerce-migration
-        body: "Moving products, customers, and orders, and keeping your search visibility."
+        body: Moving products, customers, and orders, and keeping your search visibility.
       - title: Connecting your systems
         ref: cap.ecommerce-integration
-        body: "Linking payments, stock, shipping, accounting, and customer records to the store."
+        body: Linking payments, stock, shipping, accounting, and customer records to the store.
       - title: Subscriptions and repeat orders
         ref: cap.subscription-ecommerce
         body: "Selling on a schedule: regular deliveries, memberships, and renewals."
       - title: Automation and reporting
         ref: cap.ecommerce-automation
-        body: "Order handling, reminders, and reports that run on their own."
-
+        body: Order handling, reminders, and reports that run on their own.
   - type: columns
     id: growth
     tone: white
@@ -157,21 +161,20 @@ sections:
     columns:
       - title: Make buying easy
         items:
-          - "Fast pages, clear prices, and honest delivery information."
-          - "A short checkout with the payment methods your customers use."
+          - Fast pages, clear prices, and honest delivery information.
+          - A short checkout with the payment methods your customers use.
       - title: Handle growth without extra work
         items:
-          - "Orders and stock that update on their own."
-          - "Reports that show what sells and what is returned."
+          - Orders and stock that update on their own.
+          - Reports that show what sells and what is returned.
       - title: Keep customers
         items:
-          - "Useful emails after purchase."
-          - "Easy returns and clear support."
+          - Useful emails after purchase.
+          - Easy returns and clear support.
       - title: Be found
         items:
-          - "Clear product pages that search engines can read."
-          - "Product details structured so shopping tools can use them."
-
+          - Clear product pages that search engines can read.
+          - Product details structured so shopping tools can use them.
   - type: process
     id: process
     tone: paper
@@ -179,85 +182,94 @@ sections:
     heading: From plan to a working store
     steps:
       - title: Understand your products and customers
-        body: "We learn what you sell, to whom, and how orders are handled today."
-        artifacts: [Product and order overview, Requirements]
+        body: We learn what you sell, to whom, and how orders are handled today.
+        artifacts:
+          - Product and order overview
+          - Requirements
       - title: Choose the platform and plan the connections
-        body: "We recommend a platform and list the systems it must connect to."
-        artifacts: [Platform recommendation, Connection plan]
+        body: We recommend a platform and list the systems it must connect to.
+        artifacts:
+          - Platform recommendation
+          - Connection plan
       - title: Design and build
-        body: "We design the shopping experience and build the store, with real products."
-        artifacts: [Store design, Working store]
+        body: We design the shopping experience and build the store, with real products.
+        artifacts:
+          - Store design
+          - Working store
       - title: Test the whole order path
-        body: "We place test orders and check payment, stock, shipping, tax, and email."
-        artifacts: [Order test results, Checklist for launch]
+        body: We place test orders and check payment, stock, shipping, tax, and email.
+        artifacts:
+          - Order test results
+          - Checklist for launch
       - title: Launch and improve
-        body: "We launch with care, watch results, and make improvements."
-        artifacts: [Live store, Reports, Improvement list]
-
+        body: We launch with care, watch results, and make improvements.
+        artifacts:
+          - Live store
+          - Reports
+          - Improvement list
   - type: callout
     id: when-not
     tone: white
     variant: limits
     title: You may not need a custom store
     paragraphs:
-      - "A well-set-up hosted platform handles most businesses well, and costs less to run. Custom builds make sense only when a platform truly cannot do what you need."
-      - "We will say so when a platform fits, and explain what a custom build would add."
-
+      - A well-set-up hosted platform handles most businesses well, and costs less to run. Custom builds make sense only when a platform truly cannot do what you need.
+      - We will say so when a platform fits, and explain what a custom build would add.
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines how we connect and extend stores."
+    intro: Most visitors can skip this section. It outlines how we connect and extend stores.
     panels:
       - title: Platform connections
         paragraphs:
-          - "We build on platform APIs (the ways programs share information) such as the [Shopify](ref:int.shopify-api) and [WooCommerce](ref:int.woocommerce-api) APIs, and extend platforms with custom apps or plug-ins when needed."
+          - We build on platform APIs (the ways programs share information) such as the [Shopify](ref:int.shopify-api) and [WooCommerce](ref:int.woocommerce-api) APIs, and extend platforms with custom apps or plug-ins when needed.
       - title: Payments
         paragraphs:
-          - "We integrate [Stripe](ref:int.stripe), [PayPal](ref:int.paypal), [Paystack](ref:int.paystack), [Flutterwave](ref:int.flutterwave), and other providers, taking care with refunds, failed payments, and records that match."
+          - We integrate [Stripe](ref:int.stripe), [PayPal](ref:int.paypal), [Paystack](ref:int.paystack), [Flutterwave](ref:int.flutterwave), and other providers, taking care with refunds, failed payments, and records that match.
       - title: Reliability
         items:
-          - "Stock updates that avoid overselling."
-          - "Duplicate protection on orders and payments."
-          - "Monitoring and alerts for checkout problems."
-          - "Staging copies for safe testing of changes."
-
+          - Stock updates that avoid overselling.
+          - Duplicate protection on orders and payments.
+          - Monitoring and alerts for checkout problems.
+          - Staging copies for safe testing of changes.
   - type: table
     id: costs
     tone: white
     label: Ongoing costs
     heading: What running a store costs after launch
-    intro: "The build is only part of the cost. Plan for the running costs too, so there are no surprises."
+    intro: The build is only part of the cost. Plan for the running costs too, so there are no surprises.
     caption: Ongoing costs of running an online store
-    columns: [Cost, What it covers, Who usually pays]
+    columns:
+      - Cost
+      - What it covers
+      - Who usually pays
     rows:
       - - Platform fees
-        - "The monthly or yearly charge for the store software, if it is a hosted platform."
-        - "You, directly to the platform."
+        - The monthly or yearly charge for the store software, if it is a hosted platform.
+        - You, directly to the platform.
       - - Payment fees
-        - "A small share of each sale taken by the payment provider."
-        - "You, taken from each sale."
+        - A small share of each sale taken by the payment provider.
+        - You, taken from each sale.
       - - Hosting and security
-        - "Keeping the store online, fast, and protected."
-        - "You, or included in the platform fee."
+        - Keeping the store online, fast, and protected.
+        - You, or included in the platform fee.
       - - Updates and fixes
-        - "Keeping the store working as browsers, payment rules, and add-ons change."
-        - "You, with our help if you want it."
+        - Keeping the store working as browsers, payment rules, and add-ons change.
+        - You, with our help if you want it.
       - - Marketing
-        - "Bringing buyers to the store."
-        - "You, at the level you choose."
-    note: "Fees differ by provider and change over time. We confirm the current figures when we plan."
-
+        - Bringing buyers to the store.
+        - You, at the level you choose.
+    note: Fees differ by provider and change over time. We confirm the current figures when we plan.
   - type: prose
     id: details
     tone: paper
     label: Small things that matter
     heading: The details that decide whether people buy
     paragraphs:
-      - "Shoppers decide quickly. They want to see the price, the delivery cost, and the return rules before they commit, and they will leave if they are surprised at the last step. We put that information where people look for it."
+      - Shoppers decide quickly. They want to see the price, the delivery cost, and the return rules before they commit, and they will leave if they are surprised at the last step. We put that information where people look for it.
       - "We also plan for the unglamorous cases: an item that is out of stock, an address that does not fit the form, a payment that is declined, and a customer who writes to ask where an order is. A store that handles these well earns trust, and trust brings people back."
-
   - type: faq
     id: faq
     tone: white
@@ -265,18 +277,17 @@ sections:
     heading: Questions about online stores
     items:
       - q: How much does an online store cost?
-        a: "It depends on the platform, the number of products, the design, and the connections you need. We estimate after a short discovery. Remember to include ongoing costs such as platform fees, payment fees, and care after launch."
+        a: It depends on the platform, the number of products, the design, and the connections you need. We estimate after a short discovery. Remember to include ongoing costs such as platform fees, payment fees, and care after launch.
       - q: Can you move our store to a new platform?
-        a: "Yes. We move products, customers, and orders, set up redirects so you keep your search visibility, and test before switching over."
+        a: Yes. We move products, customers, and orders, set up redirects so you keep your search visibility, and test before switching over.
       - q: Which payment methods should we offer?
-        a: "Offer the ones your customers already use in each market. We help you choose and connect them, including local methods where relevant."
+        a: Offer the ones your customers already use in each market. We help you choose and connect them, including local methods where relevant.
       - q: Can the store connect to our accounting and stock systems?
-        a: "Usually, yes. This is some of the most useful work, because it removes re-typing. See our [integration](ref:svc.api-integration) service."
+        a: Usually, yes. This is some of the most useful work, because it removes re-typing. See our [integration](ref:svc.api-integration) service.
       - q: Can you set up subscriptions?
-        a: "Yes. We build regular deliveries, memberships, and renewals, with clear billing and easy cancellation."
+        a: Yes. We build regular deliveries, memberships, and renewals, with clear billing and easy cancellation.
       - q: Will the store appear in search?
-        a: "We build stores that search engines can read, with clear product pages and structured details. Rankings depend on many factors and cannot be promised. See our [search and AI visibility](ref:svc.seo-aeo-geo) service."
-
+        a: We build stores that search engines can read, with clear product pages and structured details. Rankings depend on many factors and cannot be promised. See our [search and AI visibility](ref:svc.seo-aeo-geo) service.
   - type: index
     id: work
     tone: paper
@@ -285,11 +296,10 @@ sections:
     items:
       - title: Ecommerce platforms
         href: /work/areas/ecommerce-platforms/
-        body: "Stores built or improved on the right platform."
+        body: Stores built or improved on the right platform.
       - title: Commerce systems
         href: /work/areas/commerce-systems/
         body: "The connected systems behind selling: payments, stock, orders, and subscriptions."
-
   - type: related
     id: related
     tone: white
@@ -298,23 +308,35 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [
-            svc.web-development,
-            svc.api-integration,
-            svc.automation,
-            svc.ui-ux,
-            svc.seo-aeo-geo,
-            svc.digital-marketing,
-          ]
+          - svc.web-development
+          - svc.api-integration
+          - svc.automation
+          - svc.ui-ux
+          - svc.seo-aeo-geo
+          - svc.digital-marketing
       - title: Related solutions
-        entityIds: [sol.ecommerce-systems, sol.subscription-platforms, sol.payment-integration]
+        entityIds:
+          - sol.ecommerce-systems
+          - sol.subscription-platforms
+          - sol.payment-integration
       - title: Technologies in this area
-        entityIds: [plat.shopify, plat.woocommerce, plat.bigcommerce, int.stripe, int.paypal]
+        entityIds:
+          - plat.shopify
+          - plat.woocommerce
+          - plat.bigcommerce
+          - int.stripe
+          - int.paypal
       - title: Systems we build
-        entityIds: [workarea.ecommerce-platforms, workarea.commerce-systems]
-
+        entityIds:
+          - workarea.ecommerce-platforms
+          - workarea.commerce-systems
+      - title: Technology pages
+        entityIds:
+          - plat.woocommerce
   - type: cta
     id: contact-cta
     heading: Tell us what you sell
-    body: "Describe your products, where you sell, and how orders are handled today. We will recommend a platform and the connections to set up first."
-    primary: { label: Talk to DECHY about your store, href: "/contact/?service=ecommerce" }
+    body: Describe your products, where you sell, and how orders are handled today. We will recommend a platform and the connections to set up first.
+    primary:
+      label: Talk to DECHY about your store
+      href: /contact/?service=ecommerce

@@ -1,0 +1,123 @@
+id: page.locations
+kind: hub
+locale: en
+path: /locations/
+title: "Where DECHY Works: Markets We Serve | DECHY"
+description: "DECHY is a global company that works remotely with clients worldwide. See how we work with organizations in the US, UK, Canada, Australia, and Ireland."
+breadcrumbLabel: Locations
+intent:
+  primary: remote software development partner worldwide
+  secondary:
+    - global technology company
+    - software development services by country
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-06"
+dateModified: "2026-10-06"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "DECHY is a global technology company that works remotely with clients in many countries. These pages describe how we work with organizations in particular markets."
+  problem: "A buyer in another country needs to know that a supplier understands local rules, payments, and working hours, and will not leave them waiting across a time difference."
+  audience: "Organizations outside the places where a supplier happens to sit, looking for a remote technology partner who works clearly across distance."
+  choose: "Find your country below to see the rules, systems, and working rhythm that matter there. If it is not listed, we still work with you."
+  next: "Choose your country, or contact us and we will explain how an engagement would run for your team."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Locations
+    headline: A global company that works where you are
+    lead: "DECHY works remotely with organizations around the world. Distance is not a barrier to the work, but local rules, payment systems, and working hours do shape it. These pages explain how we work with clients in particular markets."
+    support: "DECHY has no offices, branches, or local teams. The country pages describe the markets we serve, not places we are based."
+    ctas:
+      - { label: Talk to DECHY, href: "/contact/" }
+      - { label: See the markets, href: "#markets" }
+    spec:
+      kind: flow
+      steps:
+        - title: You describe the project
+          text: "Where your team and users are, and what must be built."
+        - title: We learn the local rules
+          text: "Data, payments, tax, and accessibility for your market."
+        - title: We plan the rhythm
+          text: "Meeting windows and written updates across time zones."
+        - title: We build and release
+          text: "Small, regular releases you can check in your day."
+    purpose: process
+    takeaway: "A remote engagement starts from your market's rules and your team's time zone, then runs on a planned rhythm of written updates and small releases."
+    visualTitle: "How we work with clients in another country"
+    figureCaption: "This diagram follows four steps of a remote engagement, from describing the project and learning the local rules to planning the rhythm and building in small releases."
+
+  - type: index
+    id: markets
+    tone: white
+    label: The markets
+    heading: Five markets, and what is particular to each
+    intro: "Each page covers the rules, payment and accounting systems, and working rhythm that matter for that market."
+    columns: 2
+    items:
+      - title: United States
+        body: "State privacy rules, sector rules, supplier security reviews, and working across four time zones."
+        href: /locations/united-states/
+      - title: United Kingdom
+        body: "UK data protection, open banking, digital tax records, and public-sector procurement."
+        href: /locations/united-kingdom/
+      - title: Canada
+        body: "Federal and provincial privacy law, English and French, and six time zones."
+        href: /locations/canada/
+      - title: Australia
+        body: "The Privacy Act, data sharing rights, local payments, and a large time difference."
+        href: /locations/australia/
+      - title: Ireland
+        body: "European data protection, security and AI rules, and customers across the single market."
+        href: /locations/ireland/
+
+  - type: table
+    id: meaning
+    tone: paper
+    label: What this means
+    heading: What a country page does and does not say
+    caption: What a country page says about how DECHY works and what it does not claim
+    columns: [A country page says, A country page does not say]
+    rows:
+      - - "DECHY works with organizations in this market."
+        - "That DECHY has an office, branch, or team there."
+      - - "These are the rules and systems that commonly shape projects here."
+        - "That we give legal advice or guarantee compliance."
+      - - "This is how we run an engagement across your time zone."
+        - "That this is the only market we serve."
+      - - "These are the industries we write about that are active here."
+        - "That we have a track record to quote in each industry."
+
+  - type: callout
+    id: other
+    tone: white
+    variant: note
+    title: If your country is not listed
+    paragraphs:
+      - "We work with organizations in many more countries than these pages describe. If yours is not here, the same services and the same way of working apply."
+    items:
+      - "Tell us where your team and users are"
+      - "We will say what we would check first for your market"
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about working across countries
+    items:
+      - q: Does DECHY have offices in these countries?
+        a: "No. DECHY is a global company that works remotely. The country pages describe the markets we serve, not places we are based."
+      - q: Are these the only countries you work in?
+        a: "No. These are the markets we have written about first. We work with clients in many others."
+      - q: Do you give legal or compliance advice?
+        a: "No. We build to the requirements you give us and point out considerations we know of. Please confirm legal points with your own advisers."
+      - q: How do you handle time zones?
+        a: "By agreeing meeting windows at the start, keeping decisions in writing, and releasing in small steps, so progress does not depend on being online together."
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us where you are
+    body: "Describe your project and where your team and users sit. We will explain how an engagement would run for you."
+    primary: { label: Talk to DECHY, href: "/contact/" }

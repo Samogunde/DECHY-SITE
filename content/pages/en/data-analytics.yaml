@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /data-analytics/
 entityId: svc.data-analytics
-title: "Data and Analytics Services | DECHY"
+title: Data and Analytics Services | DECHY
 description: "Data and analytics from DECHY: bring your information together, clean it, and turn it into dashboards and reports your team can trust and act on."
 breadcrumbLabel: Data & Analytics
 intent:
@@ -14,28 +14,34 @@ intent:
     - reporting automation
     - data integration
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
-  what: "Data and analytics is collecting information from your tools, cleaning and combining it, and showing it in reports and dashboards you can trust."
-  problem: "Numbers differ from report to report, reports are built by hand, and nobody is sure which figure is right, so decisions rely on guesswork."
-  audience: "Owners, managers, and finance and operations teams who need clear numbers, and anyone buried in spreadsheets."
+  what: Data and analytics is collecting information from your tools, cleaning and combining it, and showing it in reports and dashboards you can trust.
+  problem: Numbers differ from report to report, reports are built by hand, and nobody is sure which figure is right, so decisions rely on guesswork.
+  audience: Owners, managers, and finance and operations teams who need clear numbers, and anyone buried in spreadsheets.
   choose: "Match the tool to the job: a spreadsheet for small, simple needs, a dashboard tool when several sources feed one view, and a data warehouse when information is large or many people rely on it."
-  next: "Tell us the questions you wish you could answer and where the information lives today. We will show what is possible and what to fix first."
-
+  next: Tell us the questions you wish you could answer and where the information lives today. We will show what is possible and what to fix first.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Data & Analytics
-    lead: "At DECHY, we help you turn scattered information into numbers you can rely on. We bring data together from your tools, clean it, agree what each figure means, and show it in dashboards and reports that update themselves."
-    support: "Good analytics rests on good connections and clear definitions. We work on both, together with our integration and automation teams."
+    lead: At DECHY, we help you turn scattered information into numbers you can rely on. We bring data together from your tools, clean it, agree what each figure means, and show it in dashboards and reports that update themselves.
+    support: Good analytics rests on good connections and clear definitions. We work on both, together with our integration and automation teams.
     ctas:
-      - { label: Talk to us about your data, href: "/contact/?service=data-analytics" }
-      - { label: See what we build, href: "#work" }
+      - label: Talk to us about your data
+        href: /contact/?service=data-analytics
+      - label: See what we build
+        href: "#work"
     spec:
       kind: flow
       steps:
@@ -50,26 +56,24 @@ sections:
         - title: Show
           text: Dashboards and reports update themselves.
     purpose: process
-    takeaway: "Trusted numbers come from collecting, cleaning, combining, and defining data before anyone draws a chart."
-    visualTitle: "From scattered information to a trusted dashboard"
-    figureCaption: "This diagram follows information through five steps, from your tools to a dashboard, and shows that cleaning and agreeing meaning come before charts."
-
+    takeaway: Trusted numbers come from collecting, cleaning, combining, and defining data before anyone draws a chart.
+    visualTitle: From scattered information to a trusted dashboard
+    figureCaption: This diagram follows information through five steps, from your tools to a dashboard, and shows that cleaning and agreeing meaning come before charts.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: What data and analytics means in practice
-    answer: "Analytics is using your information to answer questions about the business, such as what sells, where time is lost, or which customers are likely to leave. Doing it well means getting the information in one place, making sure it is correct, and presenting it clearly."
+    answer: Analytics is using your information to answer questions about the business, such as what sells, where time is lost, or which customers are likely to leave. Doing it well means getting the information in one place, making sure it is correct, and presenting it clearly.
     paragraphs:
       - "The charts are the visible part. Most of the work happens before them: finding where information lives, fixing mistakes, joining sources, and agreeing what each number means."
-      - "That is why analytics projects stall when they start with a dashboard tool. We start with the questions you need answered."
-
+      - That is why analytics projects stall when they start with a dashboard tool. We start with the questions you need answered.
   - type: diagram
     id: one-number
     tone: paper
     label: The problem
     heading: Why numbers disagree
-    intro: 'If two people measure "sales" differently, they will always get different answers. Agreeing the meaning once solves it for good.'
+    intro: If two people measure "sales" differently, they will always get different answers. Agreeing the meaning once solves it for good.
     spec:
       kind: before-after
       before:
@@ -94,63 +98,66 @@ sections:
             text: It updates on its own.
       hubLabel: Agreed and shared
     purpose: before-after
-    takeaway: "Numbers stop disagreeing once each measure has one written definition and one source."
-    caption: "This diagram contrasts three teams producing three different totals with one agreed definition feeding a single trusted dashboard."
-
+    takeaway: Numbers stop disagreeing once each measure has one written definition and one source.
+    caption: This diagram contrasts three teams producing three different totals with one agreed definition feeding a single trusted dashboard.
   - type: columns
     id: trust
     tone: white
     label: Data you can trust
     heading: What makes information trustworthy
-    intro: "Before any chart, we check the information against four simple tests."
+    intro: Before any chart, we check the information against four simple tests.
     columns:
       - title: Complete
         items:
-          - "Nothing important is missing."
-          - "Gaps are found and either filled or flagged."
+          - Nothing important is missing.
+          - Gaps are found and either filled or flagged.
       - title: Consistent
         items:
-          - "The same thing is recorded the same way everywhere."
-          - "Duplicates and spelling variations are merged."
+          - The same thing is recorded the same way everywhere.
+          - Duplicates and spelling variations are merged.
       - title: Current
         items:
-          - "Information updates on a schedule you can rely on."
-          - "Each report says when it was last refreshed."
+          - Information updates on a schedule you can rely on.
+          - Each report says when it was last refreshed.
       - title: Owned
         items:
-          - "A named person is responsible for each source."
-          - "Changes to definitions are written down."
-
+          - A named person is responsible for each source.
+          - Changes to definitions are written down.
   - type: chooser
     id: tools
     tone: paper
     label: Choosing a setup
     heading: Spreadsheet, dashboard tool, or data warehouse?
-    intro: "You do not need a large system to get good numbers. Pick the lightest setup that does the job."
+    intro: You do not need a large system to get good numbers. Pick the lightest setup that does the job.
     question: How much information do you have, and how many people rely on it?
     options:
       - label: A well-built spreadsheet
-        when: "The information is small, comes from one or two places, and a few people use it."
-        get: "Quick results and no new tools to learn."
-        watch: "It gets fragile as it grows, and errors are easy to introduce."
-        cta: { label: Talk about a lighter setup, href: "/contact/?service=data-analytics" }
+        when: The information is small, comes from one or two places, and a few people use it.
+        get: Quick results and no new tools to learn.
+        watch: It gets fragile as it grows, and errors are easy to introduce.
+        cta:
+          label: Talk about a lighter setup
+          href: /contact/?service=data-analytics
       - label: A dashboard tool on connected sources
-        when: "Several tools feed one view, and managers want live numbers without asking someone to build a report."
-        get: "Automatic updates and shared dashboards, usually in days or weeks."
-        watch: "Without clean definitions, the dashboards can still disagree."
-        cta: { label: Plan a dashboard, href: "/contact/?service=data-analytics" }
+        when: Several tools feed one view, and managers want live numbers without asking someone to build a report.
+        get: Automatic updates and shared dashboards, usually in days or weeks.
+        watch: Without clean definitions, the dashboards can still disagree.
+        cta:
+          label: Plan a dashboard
+          href: /contact/?service=data-analytics
       - label: A data warehouse
-        when: "The information is large, comes from many systems, and many people or processes depend on it."
-        get: "One organized home for all your information, ready for reports, dashboards, and AI."
-        watch: "It needs planning, ownership, and ongoing care."
-        cta: { label: Scope a warehouse, href: "/contact/?service=data-analytics" }
-
+        when: The information is large, comes from many systems, and many people or processes depend on it.
+        get: One organized home for all your information, ready for reports, dashboards, and AI.
+        watch: It needs planning, ownership, and ongoing care.
+        cta:
+          label: Scope a warehouse
+          href: /contact/?service=data-analytics
   - type: diagram
     id: few-numbers
     tone: white
     label: Focus
     heading: From many numbers to the few that matter
-    intro: "A good dashboard is not the one with the most charts. It is the one that helps people decide."
+    intro: A good dashboard is not the one with the most charts. It is the one that helps people decide.
     spec:
       kind: funnel
       stages:
@@ -165,9 +172,8 @@ sections:
         - title: Decisions
           text: What to change, start, or stop.
     purpose: transformation
-    takeaway: "Useful analytics narrows a mass of information to a few agreed numbers that drive decisions."
-    caption: "This diagram shows how a large body of information narrows to a handful of agreed measures and then to decisions."
-
+    takeaway: Useful analytics narrows a mass of information to a few agreed numbers that drive decisions.
+    caption: This diagram shows how a large body of information narrows to a handful of agreed measures and then to decisions.
   - type: process
     id: project
     tone: paper
@@ -175,53 +181,62 @@ sections:
     heading: How a data project runs
     steps:
       - title: Start with the questions
-        body: "We list the decisions you want to make and the numbers you would need to make them."
-        artifacts: [List of questions, Measures and definitions]
+        body: We list the decisions you want to make and the numbers you would need to make them.
+        artifacts:
+          - List of questions
+          - Measures and definitions
       - title: Find and check the information
-        body: "We locate where each piece lives, and check its quality and gaps."
-        artifacts: [Source map, Quality findings]
+        body: We locate where each piece lives, and check its quality and gaps.
+        artifacts:
+          - Source map
+          - Quality findings
       - title: Bring it together
-        body: "We connect the sources and clean the information, on a schedule that suits you."
-        artifacts: [Connected sources, Cleaning rules]
+        body: We connect the sources and clean the information, on a schedule that suits you.
+        artifacts:
+          - Connected sources
+          - Cleaning rules
       - title: Build the views
-        body: "We create dashboards and reports with the people who will use them, and test them against known answers."
-        artifacts: [Dashboards, Reports, Test against known figures]
+        body: We create dashboards and reports with the people who will use them, and test them against known answers.
+        artifacts:
+          - Dashboards
+          - Reports
+          - Test against known figures
       - title: Keep it healthy
-        body: "We monitor updates, fix breaks, and adjust as your questions change."
-        artifacts: [Monitoring, Change log, Regular reviews]
-
+        body: We monitor updates, fix breaks, and adjust as your questions change.
+        artifacts:
+          - Monitoring
+          - Change log
+          - Regular reviews
   - type: callout
     id: when-not
     tone: white
     variant: limits
     title: What dashboards cannot fix
     paragraphs:
-      - "Dashboards show what is recorded. If nobody enters information consistently, or teams cannot agree on a definition, a new tool will only display the confusion more clearly."
-      - "We will tell you if the first job is tidying how information is recorded, not building charts."
-
+      - Dashboards show what is recorded. If nobody enters information consistently, or teams cannot agree on a definition, a new tool will only display the confusion more clearly.
+      - We will tell you if the first job is tidying how information is recorded, not building charts.
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines the building blocks."
+    intro: Most visitors can skip this section. It outlines the building blocks.
     panels:
       - title: Storing and organizing information
         paragraphs:
-          - "For many businesses a well-designed database such as [PostgreSQL](ref:tech.postgresql) or [MySQL](ref:tech.mysql) is enough. As volume grows we use data warehouses such as [Snowflake](ref:plat.snowflake), [BigQuery](ref:tech.bigquery), [Redshift](ref:plat.redshift), or [Databricks](ref:plat.databricks), chosen for cost, scale, and the tools you already use."
+          - For many businesses a well-designed database such as [PostgreSQL](ref:tech.postgresql) or [MySQL](ref:tech.mysql) is enough. As volume grows we use data warehouses such as [Snowflake](ref:plat.snowflake), [BigQuery](ref:tech.bigquery), [Redshift](ref:plat.redshift), or [Databricks](ref:plat.databricks), chosen for cost, scale, and the tools you already use.
       - title: Moving information
         paragraphs:
-          - "Data is pulled from source systems, cleaned, and loaded on a schedule or as changes happen, a process often called ETL (extract, transform, load). We build these pipelines with monitoring, so failures are caught and fixed."
+          - Data is pulled from source systems, cleaned, and loaded on a schedule or as changes happen, a process often called ETL (extract, transform, load). We build these pipelines with monitoring, so failures are caught and fixed.
       - title: Modeling and definitions
         paragraphs:
-          - "We create a clear structure for your information, with each measure defined once in code, so every report draws from the same logic."
+          - We create a clear structure for your information, with each measure defined once in code, so every report draws from the same logic.
       - title: Reporting and data quality
         items:
-          - "Dashboards and reports in the tools your team prefers."
-          - "Automatic checks for missing, late, or unusual information."
-          - "Access rules, so people see only what they should."
-          - "Documentation of sources and definitions."
-
+          - Dashboards and reports in the tools your team prefers.
+          - Automatic checks for missing, late, or unusual information.
+          - Access rules, so people see only what they should.
+          - Documentation of sources and definitions.
   - type: index
     id: work
     tone: white
@@ -230,20 +245,18 @@ sections:
     items:
       - title: Data and analytics systems
         href: /work/areas/data-analytics/
-        body: "Dashboards, reports, and the information structure behind them."
+        body: Dashboards, reports, and the information structure behind them.
       - title: Integration platforms
         href: /work/areas/integration-platforms/
-        body: "The connections that bring information from many systems into one place."
-
+        body: The connections that bring information from many systems into one place.
   - type: prose
     id: numbers
     tone: paper
     label: Trusting the numbers
     heading: Why people stop trusting a dashboard
     paragraphs:
-      - "A dashboard is trusted only while its numbers match what people already know. When two reports disagree, or a figure changes without explanation, people go back to their own spreadsheets and the dashboard is forgotten."
-      - "We prevent this by agreeing the definition of each measure in writing, showing where every figure comes from, and displaying when the data was last updated. We also check results against a source people already trust, before anyone relies on them."
-
+      - A dashboard is trusted only while its numbers match what people already know. When two reports disagree, or a figure changes without explanation, people go back to their own spreadsheets and the dashboard is forgotten.
+      - We prevent this by agreeing the definition of each measure in writing, showing where every figure comes from, and displaying when the data was last updated. We also check results against a source people already trust, before anyone relies on them.
   - type: faq
     id: faq
     tone: paper
@@ -251,18 +264,17 @@ sections:
     heading: Questions about data and analytics
     items:
       - q: Where do we start if our data is a mess?
-        a: "Start with one question that matters and the few numbers needed to answer it. We then trace where those numbers come from and fix those sources first. You do not have to clean everything at once."
+        a: Start with one question that matters and the few numbers needed to answer it. We then trace where those numbers come from and fix those sources first. You do not have to clean everything at once.
       - q: Do we need a data warehouse?
-        a: "Not always. A warehouse helps when information is large, comes from many systems, or many people rely on it. For smaller needs, a connected dashboard tool or a well-built spreadsheet can be enough. We recommend the lightest setup that works."
+        a: Not always. A warehouse helps when information is large, comes from many systems, or many people rely on it. For smaller needs, a connected dashboard tool or a well-built spreadsheet can be enough. We recommend the lightest setup that works.
       - q: Can dashboards update automatically?
-        a: "Yes. Once your sources are connected, dashboards can refresh on a schedule or as changes happen. Each view should show when it was last updated."
+        a: Yes. Once your sources are connected, dashboards can refresh on a schedule or as changes happen. Each view should show when it was last updated.
       - q: How do you keep our information secure?
-        a: "We limit who can see what, protect access keys, and keep a record of who looked at what. Sensitive information is handled with extra care, including whether it should be copied at all."
+        a: We limit who can see what, protect access keys, and keep a record of who looked at what. Sensitive information is handled with extra care, including whether it should be copied at all.
       - q: Can you add AI to our analytics?
-        a: "Yes, where it helps, such as predicting demand or explaining a change in a number in plain language. It works best on top of clean information. See our [AI](ref:svc.ai) service."
+        a: Yes, where it helps, such as predicting demand or explaining a change in a number in plain language. It works best on top of clean information. See our [AI](ref:svc.ai) service.
       - q: How is this different from integration?
         a: "[Integration](ref:svc.api-integration) moves information between systems as work happens. Analytics collects it over time, organizes it, and helps you understand what it says. Many projects use both."
-
   - type: related
     id: related
     tone: white
@@ -271,26 +283,37 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [svc.api-integration, svc.automation, svc.ai, svc.software-development, svc.cloud]
+          - svc.api-integration
+          - svc.automation
+          - svc.ai
+          - svc.software-development
+          - svc.cloud
       - title: Related solutions
-        entityIds: [sol.business-dashboards, sol.data-systems]
+        entityIds:
+          - sol.business-dashboards
+          - sol.data-systems
       - title: Technologies in this area
         entityIds:
-          [
-            tech.postgresql,
-            plat.snowflake,
-            tech.bigquery,
-            plat.databricks,
-            plat.redshift,
-            tech.mysql,
-          ]
+          - tech.postgresql
+          - plat.snowflake
+          - tech.bigquery
+          - plat.databricks
+          - plat.redshift
+          - tech.mysql
       - title: Systems we build
-        entityIds: [workarea.data-analytics, workarea.integration-platforms]
+        entityIds:
+          - workarea.data-analytics
+          - workarea.integration-platforms
       - title: Technology pages
-        entityIds: [tech.mongodb]
-
+        entityIds:
+          - tech.mongodb
+          - tech.bigquery
+          - tech.mysql
+          - plat.snowflake
   - type: cta
     id: contact-cta
     heading: Tell us the questions you want answered
-    body: "Describe the decisions you want to make and where your information lives today. We will tell you what is possible, what to fix first, and the lightest setup that works."
-    primary: { label: Talk to DECHY about data, href: "/contact/?service=data-analytics" }
+    body: Describe the decisions you want to make and where your information lives today. We will tell you what is possible, what to fix first, and the lightest setup that works.
+    primary:
+      label: Talk to DECHY about data
+      href: /contact/?service=data-analytics

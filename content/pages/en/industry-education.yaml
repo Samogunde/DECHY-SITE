@@ -1,0 +1,201 @@
+id: page.industry-education
+kind: industry
+locale: en
+path: /industries/education/
+parent: /industries/
+entityId: ind.education
+title: Education Software and Systems | DECHY
+description: "Software for schools, colleges, and training providers from DECHY: learner portals, enrolment, communication, reporting, and connected systems."
+breadcrumbLabel: Education
+intent:
+  primary: education software development
+  secondary:
+    - learner portal development
+    - student information system integration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Education software covers the systems that schools, colleges, training providers, and education companies use to enrol learners, deliver courses, communicate, track progress, and report.
+  problem: Learner records, course platforms, finance, and communication tools are separate, staff re-enter the same details, and families and learners cannot see what they need in one place.
+  audience: Schools, colleges, universities, training providers, and education technology companies.
+  choose: Start where staff re-type the most, usually enrolment and records, then give learners and families one clear place to see their own information.
+  next: Tell us which systems hold learner, course, and finance data and where staff re-enter details. We will outline the connections and a first stage.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Software for education and training
+    lead: "Education organizations run many systems for one learner: enrolment, timetable, course platform, finance, and messages. We connect them, build the portals and workflows around them, and make the records easy for staff, learners, and families to use."
+    support: This page covers what education teams ask for, what to take care over with learner data, and how we begin.
+    ctas:
+      - label: Talk to us about an education system
+        href: /contact/?service=software-development
+      - label: Where staff re-type
+        href: "#start"
+    spec:
+      kind: flow
+      steps:
+        - title: Enquiry
+          text: A learner or family asks about a course.
+        - title: Enrolment
+          text: Details and documents are collected once.
+        - title: Learning
+          text: Timetable, materials, and progress.
+        - title: Support and communication
+          text: Messages and help reach the right person.
+        - title: Records and reporting
+          text: Results, attendance, and finance are reported.
+    purpose: process
+    takeaway: A learner's journey, from enquiry through enrolment and learning to records, should run on data entered once and shared by every system.
+    visualTitle: A learner's journey through the systems
+    figureCaption: This diagram follows a learner's journey in five steps, from the first enquiry through enrolment, learning, and support to records and reporting.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Many users, many roles, one learner
+    paragraphs:
+      - An education system serves more kinds of user than most. Learners, parents or guardians, teachers, administrators, and funders each need a different view of the same learner, and each has different rights over the data.
+      - Rhythm matters too. Demand arrives in surges at enrolment, at the start of term, and at results. A system that is fine on an ordinary Tuesday can fail on the day that counts.
+      - And much of the data concerns children or young people, which raises the standard of care. Access has to be tightly limited, and every system that touches the data must be able to explain why it does.
+      - Funding and inspection add a final layer. Many education bodies must report attendance, results, and spending to outside parties, in set formats and on set dates, so the numbers have to be right the first time and traceable afterwards.
+  - type: chooser
+    id: start
+    tone: paper
+    label: Where to start
+    heading: What causes the most re-typing?
+    intro: Start with the place where staff copy the most details between systems.
+    question: Where is effort being lost?
+    options:
+      - label: Enquiries and enrolment
+        when: Applications arrive by form, email, and phone, and are re-entered into the records system.
+        get: A single enrolment path that creates the learner record once and starts the follow-up.
+        watch: "Peak days: test with realistic numbers before the enrolment period."
+      - label: Communication with families and learners
+        when: Messages go out by several tools, and replies are lost.
+        get: A shared place for notices, messages, and forms, tied to the learner record.
+        watch: Respect consent and contact preferences, especially for minors.
+      - label: Records and reporting
+        when: Attendance, results, and funding returns are assembled by hand.
+        get: Data joined and checked, with reports produced from it.
+        watch: Agree each definition, such as attendance, before building the report.
+      - label: Course delivery and platforms
+        when: Learning platforms, timetables, and records do not share information.
+        get: Connections so enrolments and results flow between them.
+        watch: Pick one system as the source of truth for each learner fact.
+  - type: index
+    id: needs
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Typical systems for education teams
+    items:
+      - title: Learner and family portals
+        body: A private place for timetable, results, documents, and messages. See [customer portals](/work/areas/customer-portals/).
+      - title: Enrolment and admissions workflows
+        body: Applications routed to the right staff, with reminders and checks. See [process automation](/solutions/business-process-automation/).
+      - title: Connected records and platforms
+        body: Learner data shared between the records system, learning platform, and finance. See [integrations](/work/areas/api-integrations/).
+      - title: Reporting and dashboards
+        body: Attendance, progress, and funding figures from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
+      - title: Websites and course catalogues
+        body: Clear course pages that lead to enrolment. See [business web platforms](/work/areas/business-web-platforms/).
+      - title: Answering routine questions
+        body: An assistant for common enquiries, handing over the rest. See [AI customer support](/solutions/ai-customer-support/).
+  - type: columns
+    id: help
+    tone: paper
+    label: What DECHY can do
+    heading: How we help education teams
+    columns:
+      - title: Build
+        items:
+          - Portals, enrolment paths, and internal tools.
+          - Accessible designs that work for all learners.
+      - title: Connect
+        items:
+          - Records, learning, finance, and communication systems.
+          - Data checks that catch mismatches.
+      - title: Report
+        items:
+          - Dashboards for leaders and teachers.
+          - Scheduled returns built from the same data.
+      - title: Protect
+        items:
+          - Role-based access and activity logs.
+          - Careful handling of data about minors.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: Learner data and accessibility notes
+    intro: Most visitors can skip this section. It notes the engineering choices we make for education systems.
+    panels:
+      - title: Learner data
+        items:
+          - "Access is limited by role and by relationship: a family sees only its own learner."
+          - Retention rules are written down, and old records are removed or archived on schedule.
+          - Rules for children's data differ by country, so we ask which apply and build to them.
+      - title: Peak load
+        items:
+          - Enrolment, results, and start-of-term days are load-tested ahead of time.
+          - Static pages are served from a content delivery network, so heavy traffic does not reach the application.
+      - title: Accessibility
+        paragraphs:
+          - Public services in education carry high expectations for accessibility. We build to the web accessibility guidelines, test with keyboard and screen reader, and check contrast and text size on every screen.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about education software
+    items:
+      - q: Can you work with our existing records system?
+        a: Usually, yes. We connect through the interfaces it offers and avoid changing what already works.
+      - q: How do you protect learners' data?
+        a: With role-based access, encryption, minimal data collection, and logs. Development uses test data, not real learner records.
+      - q: Can you build accessible systems?
+        a: Yes. Accessibility is part of how we build and test every screen, not a later add-on.
+      - q: Will it cope with enrolment day?
+        a: We test with realistic peak numbers before the period and keep monitoring during it.
+      - q: Can you support online and in-person learning together?
+        a: Yes. We connect the learning platform, the timetable, and the records, so a learner's enrolment, attendance, and results look the same whichever way they study.
+      - q: What about tools staff already like?
+        a: We keep what works. If staff like a tool, we connect it to the rest instead of replacing it, and we only replace what causes re-typing or errors.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Education across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.web-development
+          - svc.api-integration
+          - svc.ui-ux
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.business-web-platforms
+          - workarea.integration-platforms
+      - title: Technologies
+        entityIds:
+          - fw.react
+          - lang.typescript
+          - tech.mysql
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us where staff re-enter the same details
+    body: Describe the systems that hold learner, course, and finance data. We will outline the connections and a first stage.
+    primary:
+      label: Talk to DECHY about education
+      href: /contact/?service=software-development
