@@ -96,6 +96,17 @@ sections:
         when: Many tools need to share customer data, and point-to-point links would multiply.
         get: A central integration layer that each tool connects to once.
         watch: It becomes a critical system, so it needs an owner and monitoring.
+  - type: diagram
+    id: shared-record
+    tone: white
+    label: What it looks like
+    heading: What a connected customer system looks like
+    intro: After integration, a customer's record is fed by every tool that touches them, and the CRM view shows one current picture.
+    figure: crm-ui
+    purpose: relationship
+    takeaway: A connected customer system shows one current record, fed by the website, billing, and support.
+    caption: This sketch shows a conceptual customer system with a lead pipeline and a customer record whose sections show they are in sync with other tools. It is an illustration, not a client system.
+    points: []
   - type: table
     id: platforms
     tone: white

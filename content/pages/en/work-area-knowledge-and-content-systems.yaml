@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/knowledge-and-content-systems/
 entityId: workarea.knowledge-and-content-systems
-title: "Knowledge and Content Systems We Build | DECHY"
+title: Knowledge and Content Systems We Build | DECHY
 description: "Knowledge and content systems organize what your organization knows so people and AI assistants can find and use it: structure, search, and accuracy over time."
 breadcrumbLabel: Knowledge and Content Systems
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - knowledge base development
     - content management systems
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "A knowledge and content system organizes what an organization knows, such as policies, guides, and articles, so people and AI assistants can find the right answer quickly."
-  problem: "Knowledge is scattered across documents, chats, and people's heads, so answers are hard to find and are often out of date."
-  audience: "Teams that answer the same questions repeatedly, and organizations publishing a lot of content or guidance."
-  choose: "Organize around the questions people ask, name an owner for each topic, and set a review date for every page."
-  next: "List the questions your team or customers ask most. We will show how to organize the answers so they stay findable and current."
-
+  what: A knowledge and content system organizes what an organization knows, such as policies, guides, and articles, so people and AI assistants can find the right answer quickly.
+  problem: Knowledge is scattered across documents, chats, and people's heads, so answers are hard to find and are often out of date.
+  audience: Teams that answer the same questions repeatedly, and organizations publishing a lot of content or guidance.
+  choose: Organize around the questions people ask, name an owner for each topic, and set a review date for every page.
+  next: List the questions your team or customers ask most. We will show how to organize the answers so they stay findable and current.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Knowledge and Content Systems
-    lead: "A knowledge and content system keeps what an organization knows in an organized, searchable, up-to-date form. This page explains how it is structured, how answers stay accurate, and how AI assistants can use it safely."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: A knowledge and content system keeps what an organization knows in an organized, searchable, up-to-date form. This page explains how it is structured, how answers stay accurate, and how AI assistants can use it safely.
     ctas:
-      - { label: Talk to us about knowledge, href: "/contact/?service=software-development" }
-      - { label: See how it is organized, href: "#structure" }
+      - label: Talk to us about knowledge
+        href: /contact/?service=software-development
+      - label: See how it is organized
+        href: "#structure"
     spec:
       kind: layers
       layerLabel: Layers of a knowledge system
@@ -48,26 +52,24 @@ sections:
         - title: Sources
           text: Documents, policies, and expert knowledge.
     purpose: system
-    takeaway: "A knowledge system starts from the questions people ask, supported by search, organized pages, and trusted sources."
-    visualTitle: "The layers of a knowledge system"
-    figureCaption: "This diagram shows four layers of a knowledge system, from the questions people ask at the top to the trusted sources at the base."
-
+    takeaway: A knowledge system starts from the questions people ask, supported by search, organized pages, and trusted sources.
+    visualTitle: The layers of a knowledge system
+    figureCaption: This diagram shows four layers of a knowledge system, from the questions people ask at the top to the trusted sources at the base.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: Answers that stay findable and true
-    answer: "A knowledge and content system is a managed collection of the answers an organization needs, organized so they can be found, owned by named people, and reviewed regularly so they stay correct."
+    answer: A knowledge and content system is a managed collection of the answers an organization needs, organized so they can be found, owned by named people, and reviewed regularly so they stay correct.
     paragraphs:
-      - "Most organizations have the knowledge. They lack the structure. Answers sit in old emails and in files named final-v3, and the person who knows retires or moves on."
-      - "A good system also prepares your content for AI assistants. They answer better, and more safely, when drawing from clear, current, well-labeled pages than from a heap of documents."
-
+      - Most organizations have the knowledge. They lack the structure. Answers sit in old emails and in files named final-v3, and the person who knows retires or moves on.
+      - A good system also prepares your content for AI assistants. They answer better, and more safely, when drawing from clear, current, well-labeled pages than from a heap of documents.
   - type: diagram
     id: structure
     tone: paper
     label: How it is organized
     heading: How knowledge is organized
-    intro: "Each page has one job, one owner, and one review date."
+    intro: Each page has one job, one owner, and one review date.
     spec:
       kind: flow
       steps:
@@ -82,9 +84,8 @@ sections:
         - title: Review
           text: Owners check each page on schedule.
     purpose: process
-    takeaway: "Knowledge is collected, organized by question, written one topic per page, published with search, and reviewed on a schedule."
-    caption: "This diagram shows five steps in building a knowledge system, from collecting what exists to reviewing each page on a schedule."
-
+    takeaway: Knowledge is collected, organized by question, written one topic per page, published with search, and reviewed on a schedule.
+    caption: This diagram shows five steps in building a knowledge system, from collecting what exists to reviewing each page on a schedule.
   - type: process
     id: process
     tone: white
@@ -92,62 +93,67 @@ sections:
     heading: How a knowledge project runs
     steps:
       - title: Find the top questions
-        body: "We listen to support, sales, and staff to learn what people ask most."
-        artifacts: [Question list]
+        body: We listen to support, sales, and staff to learn what people ask most.
+        artifacts:
+          - Question list
       - title: Design the structure
-        body: "We organize topics and agree who owns each."
-        artifacts: [Structure, Owners]
+        body: We organize topics and agree who owns each.
+        artifacts:
+          - Structure
+          - Owners
       - title: Build the system
-        body: "We set up the pages, search, and review reminders."
-        artifacts: [Working system, Review schedule]
+        body: We set up the pages, search, and review reminders.
+        artifacts:
+          - Working system
+          - Review schedule
       - title: Hand over and keep fresh
-        body: "We train owners and measure which answers are used and which are missing."
-        artifacts: [Training, Usage reports]
-
+        body: We train owners and measure which answers are used and which are missing.
+        artifacts:
+          - Training
+          - Usage reports
   - type: table
     id: ai
     tone: paper
     label: With AI
     heading: How AI assistants use a knowledge system
     caption: Ways AI assistants can use a knowledge system and what keeps them accurate
-    columns: [Use, What happens, What keeps it accurate]
+    columns:
+      - Use
+      - What happens
+      - What keeps it accurate
     rows:
       - - Answering staff questions
-        - "The assistant finds relevant pages and summarizes them."
-        - "It shows its sources, and staff can check."
+        - The assistant finds relevant pages and summarizes them.
+        - It shows its sources, and staff can check.
       - - Helping customers
-        - "The assistant answers common questions from public pages."
-        - "It is limited to approved content, and hands off when unsure."
+        - The assistant answers common questions from public pages.
+        - It is limited to approved content, and hands off when unsure.
       - - Drafting replies
-        - "It drafts from past answers for a person to review."
-        - "A person approves every reply."
-
+        - It drafts from past answers for a person to review.
+        - A person approves every reply.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: One current page for every procedure
     paragraphs:
-      - "Imagine a team whose procedures are spread across shared folders, with several versions of each. New staff ask colleagues, and answers differ."
-      - "A knowledge system could hold one current page per procedure, with an owner and a review date, and search that finds it. An assistant could answer questions from those pages and show where the answer came from."
-      - "This is an example of the kind of system, not a real client or result."
-
+      - A typical case is a team whose procedures are spread across shared folders, with several versions of each. New staff ask colleagues, and answers differ.
+      - A knowledge system could hold one current page per procedure, with an owner and a review date, and search that finds it. An assistant could answer questions from those pages and show where the answer came from.
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines how content is prepared for search and AI."
+    intro: Most visitors can skip this section. It outlines how content is prepared for search and AI.
     panels:
       - title: Structure
         paragraphs:
-          - "Content is stored in a content management system with consistent fields, so it can be shown on a site, searched, and supplied to other tools."
+          - Content is stored in a content management system with consistent fields, so it can be shown on a site, searched, and supplied to other tools.
       - title: Search and AI
         items:
-          - "Full-text search tuned to the words people use."
+          - Full-text search tuned to the words people use.
           - "[Retrieval-augmented generation](ref:cap.retrieval-augmented-generation), which lets an AI assistant draw on your pages and cite them."
-          - "Permissions, so private content is never shown to the wrong person."
-
+          - Permissions, so private content is never shown to the wrong person.
   - type: related
     id: related
     tone: white
@@ -155,16 +161,21 @@ sections:
     heading: Knowledge across DECHY
     groups:
       - title: The services behind this
-        entityIds: [svc.software-development, svc.ai]
+        entityIds:
+          - svc.software-development
+          - svc.ai
       - title: Related solutions
-        entityIds: [sol.ai-knowledge-systems]
+        entityIds:
+          - sol.ai-knowledge-systems
       - title: Related work areas
         entityIds:
-          [workarea.ai-solutions, workarea.seo-search-visibility, workarea.business-web-platforms]
-
+          - workarea.ai-solutions
+          - workarea.seo-search-visibility
+          - workarea.business-web-platforms
   - type: cta
     id: contact-cta
     heading: Tell us the questions you answer most
-    body: "List the questions your team or customers ask most often. We will show how to organize the answers so they stay findable and current."
+    body: List the questions your team or customers ask most often. We will show how to organize the answers so they stay findable and current.
     primary:
-      { label: Talk to DECHY about knowledge, href: "/contact/?service=software-development" }
+      label: Talk to DECHY about knowledge
+      href: /contact/?service=software-development

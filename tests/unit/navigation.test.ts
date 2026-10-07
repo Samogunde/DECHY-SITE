@@ -87,8 +87,8 @@ describe("navigation model", () => {
     if (t.kind !== "technologies") throw new Error("technologies expected");
     const cloud = t.categories.find((c) => c.id === "cloud")!;
     expect(cloud.items).toHaveLength(3);
-    expect(cloud.all).toHaveLength(8);
-    expect(cloud.more).toBe(5);
+    expect(cloud.all).toHaveLength(9);
+    expect(cloud.more).toBe(6);
   });
 
   it("a technology that loses its page disappears from the menu instead of becoming a dead link", () => {
@@ -205,7 +205,7 @@ describe("technology graph completion (ADR 0005)", () => {
       ].includes(n.type),
     );
     const withPage = tech.filter((n) => publishedPath(n, registry));
-    expect(withPage).toHaveLength(43);
+    expect(withPage).toHaveLength(52);
     expect(tech.length).toBeGreaterThan(280);
   });
 });
@@ -252,8 +252,16 @@ describe("Where this connects", () => {
       ["service", "technology", "work-area"].includes(x.kind),
     )) {
       const seen = new Set<string>();
+      // A service page always offers every technology page that belongs to it, even beyond the cap.
+      const home = [...registry.nodes.values()].filter(
+        (n) => n.primaryService === p.entityId && publishedPath(n, registry),
+      ).length;
       for (const r of rails(p.path)) {
-        expect(r.items.length, `${p.path} ${r.id}`).toBeLessThanOrEqual(CONNECTION_RAIL_LIMIT);
+        const cap =
+          p.kind === "service" && r.id === "technologies"
+            ? Math.max(CONNECTION_RAIL_LIMIT, home)
+            : CONNECTION_RAIL_LIMIT;
+        expect(r.items.length, `${p.path} ${r.id}`).toBeLessThanOrEqual(cap);
         for (const i of r.items) {
           expect(seen.has(i.id), `${p.path} repeats ${i.id}`).toBe(false);
           seen.add(i.id);

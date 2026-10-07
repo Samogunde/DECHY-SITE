@@ -94,6 +94,17 @@ sections:
         when: Questions arrive at night and at weekends, and wait until morning.
         get: An assistant that answers what it can and takes details for the rest, so the team starts the day informed.
         watch: Tell customers clearly when they are talking to an assistant.
+  - type: diagram
+    id: assistant-view
+    tone: white
+    label: What it looks like
+    heading: What the assistant looks like to a customer
+    intro: A customer sees a short answer, the source it came from, and a way to reach a person. This sketch shows that exchange.
+    figure: assistant-ui
+    purpose: system
+    takeaway: A customer sees a short answer, the source it came from, and an easy route to a person.
+    caption: This sketch shows a conceptual chat with a return-policy question, an answer that cites its source, and an offer to talk to a person. It is an illustration, not a client's assistant.
+    points: []
   - type: process
     id: how
     tone: white

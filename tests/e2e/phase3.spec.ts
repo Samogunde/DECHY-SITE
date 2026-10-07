@@ -4,8 +4,8 @@ import { PAGES, registry } from "./helpers";
 const techPages = registry.pages.filter((p) => p.kind === "technology");
 
 test.describe("phase 3 technology pages", () => {
-  test("there are 43, each reachable from the Technologies hub", async ({ page }) => {
-    expect(techPages).toHaveLength(43);
+  test("there are 52, each reachable from the Technologies hub", async ({ page }) => {
+    expect(techPages).toHaveLength(52);
     await page.goto("/technologies/");
     const hrefs = await page
       .locator("main a")
@@ -64,7 +64,7 @@ test.describe("phase 3 technology pages", () => {
       for (const h of hrefs) expect(built.has(h!), `${p.path} -> ${h}`).toBe(true);
     }
     // a later-phase technology has no page yet
-    const res = await request.get("/software-development/go/", { maxRedirects: 0 });
+    const res = await request.get("/software-development/rust/", { maxRedirects: 0 });
     expect(res.status()).toBe(404);
   });
 

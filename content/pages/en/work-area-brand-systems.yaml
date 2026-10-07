@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/brand-systems/
 entityId: workarea.brand-systems
-title: "Brand Systems We Build | DECHY"
+title: Brand Systems We Build | DECHY
 description: "Brand systems turn a logo and a few colors into rules, templates, and assets that keep every channel consistent: what they contain and how they are put to work."
 breadcrumbLabel: Brand Systems
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - brand guidelines and templates
     - visual identity system
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "A brand system is the complete set of identity, rules, and templates that lets anyone in an organization produce work that looks and sounds consistent."
-  problem: "A logo exists, but every document, slide, and post looks different, and new staff improvise."
-  audience: "Organizations whose materials look inconsistent, and teams that produce a lot of content with many hands."
-  choose: "Define the few rules that matter, provide ready templates, and name an owner. A short, used system beats a long, ignored one."
-  next: "Send us a few samples of your materials. We will show where the brand drifts and what a lightweight system would fix."
-
+  what: A brand system is the complete set of identity, rules, and templates that lets anyone in an organization produce work that looks and sounds consistent.
+  problem: A logo exists, but every document, slide, and post looks different, and new staff improvise.
+  audience: Organizations whose materials look inconsistent, and teams that produce a lot of content with many hands.
+  choose: Define the few rules that matter, provide ready templates, and name an owner. A short, used system beats a long, ignored one.
+  next: Send us a few samples of your materials. We will show where the brand drifts and what a lightweight system would fix.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Brand Systems
-    lead: "A brand system is more than a logo. It is the rules, templates, and assets that let everyone in an organization produce work that looks and sounds the same. This page shows what a system contains and how it is put to work."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: A brand system is more than a logo. It is the rules, templates, and assets that let everyone in an organization produce work that looks and sounds the same. This page shows what a system contains and how it is put to work.
     ctas:
-      - { label: Talk to us about your brand, href: "/contact/?service=branding" }
-      - { label: See the parts, href: "#parts" }
+      - label: Talk to us about your brand
+        href: /contact/?service=branding
+      - label: See the parts
+        href: "#parts"
     spec:
       kind: layers
       layerLabel: Parts of a brand system
@@ -48,10 +52,9 @@ sections:
         - title: Templates and assets
           text: Ready files for the things people make most.
     purpose: system
-    takeaway: "A brand system layers purpose and voice, identity, rules, and ready templates, so consistency is the easy choice."
-    visualTitle: "The layers of a brand system"
-    figureCaption: "This diagram shows four layers of a brand system, from purpose and voice at the top to ready templates and assets at the bottom."
-
+    takeaway: A brand system layers purpose and voice, identity, rules, and ready templates, so consistency is the easy choice.
+    visualTitle: The layers of a brand system
+    figureCaption: This diagram shows four layers of a brand system, from purpose and voice at the top to ready templates and assets at the bottom.
   - type: definition
     id: what-is
     tone: white
@@ -60,8 +63,7 @@ sections:
     answer: "A brand system is the set of identity elements, rules, and templates that lets many people produce consistent work. Its test is simple: can someone new make a correct flyer without asking anyone?"
     paragraphs:
       - "Consistency does not come from policing. It comes from making the right thing the easy thing: a template that is already correct, a color list with clear uses, a short guide to the voice."
-      - "A good system is also short. A long manual that nobody reads does less than one page of rules and a folder of templates that people actually use."
-
+      - A good system is also short. A long manual that nobody reads does less than one page of rules and a folder of templates that people actually use.
   - type: columns
     id: parts
     tone: paper
@@ -70,27 +72,26 @@ sections:
     columns:
       - title: For leaders
         items:
-          - "A short statement of purpose and positioning."
-          - "Rules for naming and describing the organization."
+          - A short statement of purpose and positioning.
+          - Rules for naming and describing the organization.
       - title: For designers
         items:
-          - "Logo files, color values, and type choices."
-          - "Image style and examples."
+          - Logo files, color values, and type choices.
+          - Image style and examples.
       - title: For everyone else
         items:
-          - "Templates for documents, slides, and email."
-          - "A one-page quick guide."
+          - Templates for documents, slides, and email.
+          - A one-page quick guide.
       - title: For the website
         items:
-          - "Components in the design system that match the brand."
-          - "Rules for headings, buttons, and images."
-
+          - Components in the design system that match the brand.
+          - Rules for headings, buttons, and images.
   - type: diagram
     id: drift
     tone: white
     label: The difference
     heading: Drift and discipline
-    intro: "Without a system, materials drift apart over time."
+    intro: Without a system, materials drift apart over time.
     spec:
       kind: before-after
       before:
@@ -109,9 +110,8 @@ sections:
           - title: One written form of the name
       hubLabel: One system
     purpose: before-after
-    takeaway: "A brand system gives each element one source, so materials stop drifting apart."
-    caption: "This diagram contrasts several slightly different logos, colors, and spellings with one folder, one named palette, and one written name."
-
+    takeaway: A brand system gives each element one source, so materials stop drifting apart.
+    caption: This diagram contrasts several slightly different logos, colors, and spellings with one folder, one named palette, and one written name.
   - type: process
     id: process
     tone: paper
@@ -119,28 +119,33 @@ sections:
     heading: How a brand system is made
     steps:
       - title: Audit what exists
-        body: "We collect what you already use and note where it differs."
-        artifacts: [Audit, Gaps]
+        body: We collect what you already use and note where it differs.
+        artifacts:
+          - Audit
+          - Gaps
       - title: Decide the essentials
-        body: "We agree the few rules and elements that matter most."
-        artifacts: [Core rules]
+        body: We agree the few rules and elements that matter most.
+        artifacts:
+          - Core rules
       - title: Build the kit
-        body: "We create the guide, files, and templates."
-        artifacts: [Guide, Templates, Asset folder]
+        body: We create the guide, files, and templates.
+        artifacts:
+          - Guide
+          - Templates
+          - Asset folder
       - title: Put it to work
-        body: "We train the people who will use it, and name an owner."
-        artifacts: [Training, Owner]
-
+        body: We train the people who will use it, and name an owner.
+        artifacts:
+          - Training
+          - Owner
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: Staff material that matches without review
     paragraphs:
-      - "Imagine an organization whose staff make their own slides, proposals, and social posts. Each looks a little different, and the logo appears in four versions."
-      - "A brand system could give staff slide and proposal templates, one logo folder, and a one-page guide. New material would match without extra review."
-      - "This is an example of the kind of system, not a real client or result."
-
+      - A typical case is an organization whose staff make their own slides, proposals, and social posts. Each looks a little different, and the logo appears in four versions.
+      - A brand system could give staff slide and proposal templates, one logo folder, and a one-page guide. New material would match without extra review.
   - type: related
     id: related
     tone: paper
@@ -148,14 +153,20 @@ sections:
     heading: Brand across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.branding]
+        entityIds:
+          - svc.branding
       - title: Related services
-        entityIds: [svc.ui-ux, svc.digital-marketing]
+        entityIds:
+          - svc.ui-ux
+          - svc.digital-marketing
       - title: Related work areas
-        entityIds: [workarea.ui-ux-product-design, workarea.digital-marketing-systems]
-
+        entityIds:
+          - workarea.ui-ux-product-design
+          - workarea.digital-marketing-systems
   - type: cta
     id: contact-cta
     heading: Show us how your brand looks today
-    body: "Send a few samples of your materials. We will show where the brand drifts and what a lightweight system would fix."
-    primary: { label: Talk to DECHY about your brand, href: "/contact/?service=branding" }
+    body: Send a few samples of your materials. We will show where the brand drifts and what a lightweight system would fix.
+    primary:
+      label: Talk to DECHY about your brand
+      href: /contact/?service=branding

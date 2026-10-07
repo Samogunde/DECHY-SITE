@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/operations-platforms/
 entityId: workarea.operations-platforms
-title: "Operations Platforms We Build | DECHY"
+title: Operations Platforms We Build | DECHY
 description: "Operations platforms give a business one place to plan, run, and track its daily work: jobs, stock, people, and reports, joined instead of spread across tools."
 breadcrumbLabel: Operations Platforms
 parent: /work/
@@ -13,28 +13,33 @@ intent:
     - business operations software
     - job and inventory management
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
+  - FAQPage
 comprehension:
-  what: "An operations platform is one system for planning, running, and tracking a business's daily work, such as jobs, stock, schedules, and people."
-  problem: "Daily work is spread across spreadsheets, messages, and separate tools, so nobody sees the whole picture and managers act on old information."
-  audience: "Operations managers and owners of businesses with jobs, stock, or schedules to coordinate."
-  choose: "Start with the one flow that causes the most delay, such as job scheduling or stock, and connect the rest to it over time."
-  next: "Describe how a job or order moves through your business. We will show where information is lost and what a platform would join."
-
+  what: An operations platform is one system for planning, running, and tracking a business's daily work, such as jobs, stock, schedules, and people.
+  problem: Daily work is spread across spreadsheets, messages, and separate tools, so nobody sees the whole picture and managers act on old information.
+  audience: Operations managers and owners of businesses with jobs, stock, or schedules to coordinate.
+  choose: Start with the one flow that causes the most delay, such as job scheduling or stock, and connect the rest to it over time.
+  next: Describe how a job or order moves through your business. We will show where information is lost and what a platform would join.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Operations Platforms
-    lead: "An operations platform is one place where a business plans, runs, and tracks its daily work. This page explains what such a platform joins, how it is built up in stages, and what managers see."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: An operations platform is one place where a business plans, runs, and tracks its daily work. This page explains what such a platform joins, how it is built up in stages, and what managers see.
     ctas:
-      - { label: Talk to us about operations, href: "/contact/?service=software-development" }
-      - { label: See how it is staged, href: "#stages" }
+      - label: Talk to us about operations
+        href: /contact/?service=software-development
+      - label: See how it is staged
+        href: "#stages"
     spec:
       kind: layers
       layerLabel: How operations fit together
@@ -48,20 +53,18 @@ sections:
         - title: Records
           text: Customers, suppliers, and history.
     purpose: architecture
-    takeaway: "An operations platform stacks records, resources, daily work, and an overview, so managers see current information."
-    visualTitle: "The layers of an operations platform"
-    figureCaption: "This diagram shows four layers of an operations platform, from records at the base through resources and daily work to the manager's overview."
-
+    takeaway: An operations platform stacks records, resources, daily work, and an overview, so managers see current information.
+    visualTitle: The layers of an operations platform
+    figureCaption: This diagram shows four layers of an operations platform, from records at the base through resources and daily work to the manager's overview.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: The business's daily work, in one place
-    answer: "An operations platform is a system that holds the jobs, stock, schedules, and people a business coordinates every day, and shows their current state. It replaces many separate tools and sheets with one shared picture."
+    answer: An operations platform is a system that holds the jobs, stock, schedules, and people a business coordinates every day, and shows their current state. It replaces many separate tools and sheets with one shared picture.
     paragraphs:
-      - "In many businesses, the real state of operations lives in people's heads and in messages. A platform moves it into one record, so that a manager can see which jobs are late, which stock is low, and who is free."
-      - "It does not have to be built at once. The most useful platforms start with one flow and grow."
-
+      - In many businesses, the real state of operations lives in people's heads and in messages. A platform moves it into one record, so that a manager can see which jobs are late, which stock is low, and who is free.
+      - It does not have to be built at once. The most useful platforms start with one flow and grow.
   - type: columns
     id: parts
     tone: paper
@@ -70,21 +73,20 @@ sections:
     columns:
       - title: Jobs and schedules
         items:
-          - "Create, assign, and track work."
-          - "Calendars that show who is free."
+          - Create, assign, and track work.
+          - Calendars that show who is free.
       - title: Stock and supplies
         items:
-          - "Levels, locations, and reorder alerts."
-          - "Purchase orders and receipts."
+          - Levels, locations, and reorder alerts.
+          - Purchase orders and receipts.
       - title: People and equipment
         items:
-          - "Skills, shifts, and availability."
-          - "Maintenance schedules."
+          - Skills, shifts, and availability.
+          - Maintenance schedules.
       - title: Reports
         items:
-          - "Late jobs, workload, and costs."
-          - "Exports for finance."
-
+          - Late jobs, workload, and costs.
+          - Exports for finance.
   - type: process
     id: stages
     tone: white
@@ -92,24 +94,30 @@ sections:
     heading: Building up a platform in stages
     steps:
       - title: Pick the flow that hurts most
-        body: "We study one flow, such as scheduling or stock, and agree how it should work."
-        artifacts: [Flow map, Goals]
+        body: We study one flow, such as scheduling or stock, and agree how it should work.
+        artifacts:
+          - Flow map
+          - Goals
       - title: Build it and use it
-        body: "We build a working version for that flow, and your team uses it for real."
-        artifacts: [First version, Feedback]
+        body: We build a working version for that flow, and your team uses it for real.
+        artifacts:
+          - First version
+          - Feedback
       - title: Connect the neighbours
-        body: "We link the flow to the ones it touches, such as invoicing or purchasing."
-        artifacts: [Connections]
+        body: We link the flow to the ones it touches, such as invoicing or purchasing.
+        artifacts:
+          - Connections
       - title: Add the overview
-        body: "We add dashboards once the data underneath is trusted."
-        artifacts: [Dashboards, Reports]
-
+        body: We add dashboards once the data underneath is trusted.
+        artifacts:
+          - Dashboards
+          - Reports
   - type: diagram
     id: picture
     tone: paper
     label: The difference
     heading: Seeing the whole picture
-    intro: "A platform changes what a manager can see, and when."
+    intro: A platform changes what a manager can see, and when.
     spec:
       kind: before-after
       before:
@@ -128,19 +136,16 @@ sections:
           - title: One schedule for people and equipment
       hubLabel: One picture
     purpose: before-after
-    takeaway: "A platform replaces scattered, out-of-date information with a shared, current picture."
-    caption: "This diagram contrasts jobs, stock, and schedules held in separate places with the same three joined into one live picture."
-
+    takeaway: A platform replaces scattered, out-of-date information with a shared, current picture.
+    caption: This diagram contrasts jobs, stock, and schedules held in separate places with the same three joined into one live picture.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: Late jobs visible before the customer calls
     paragraphs:
-      - "Imagine a services business whose jobs are in a spreadsheet, whose schedule is in a calendar, and whose parts are counted by hand. A manager learns that a job is late only when the customer calls."
-      - "A platform could show each job's status, its assigned team, and the parts reserved for it. Late jobs would stand out the day before, not after the call."
-      - "This is an example of the kind of platform, not a real client or result."
-
+      - A typical case is a services business whose jobs are in a spreadsheet, whose schedule is in a calendar, and whose parts are counted by hand. A manager learns that a job is late only when the customer calls.
+      - A platform could show each job's status, its assigned team, and the parts reserved for it. Late jobs would stand out the day before, not after the call.
   - type: faq
     id: faq
     tone: paper
@@ -148,12 +153,11 @@ sections:
     heading: Questions about operations platforms
     items:
       - q: Should we buy a product or build one?
-        a: "Buy when your operations are common and a product fits. Build when your process is unusual or when connecting several products costs more than one system."
+        a: Buy when your operations are common and a product fits. Build when your process is unusual or when connecting several products costs more than one system.
       - q: Will staff use it?
-        a: "They do when it makes their day easier. We design with the people who will use it and keep screens simple."
+        a: They do when it makes their day easier. We design with the people who will use it and keep screens simple.
       - q: Can we start small?
-        a: "Yes. We recommend it. One flow working well earns the trust needed to add the next."
-
+        a: Yes. We recommend it. One flow working well earns the trust needed to add the next.
   - type: related
     id: related
     tone: white
@@ -161,20 +165,22 @@ sections:
     heading: Operations across DECHY
     groups:
       - title: The services behind this
-        entityIds: [svc.software-development, svc.automation]
+        entityIds:
+          - svc.software-development
+          - svc.automation
       - title: Related solutions
-        entityIds: [sol.internal-business-software, sol.business-process-automation]
+        entityIds:
+          - sol.internal-business-software
+          - sol.business-process-automation
       - title: Related work areas
         entityIds:
-          [
-            workarea.internal-business-tools,
-            workarea.workflow-automation,
-            workarea.custom-software-systems,
-          ]
-
+          - workarea.internal-business-tools
+          - workarea.workflow-automation
+          - workarea.custom-software-systems
   - type: cta
     id: contact-cta
     heading: Tell us how a job moves through your business
-    body: "Describe how a job or order moves from start to finish. We will show where information is lost and what a platform would join."
+    body: Describe how a job or order moves from start to finish. We will show where information is lost and what a platform would join.
     primary:
-      { label: Talk to DECHY about operations, href: "/contact/?service=software-development" }
+      label: Talk to DECHY about operations
+      href: /contact/?service=software-development

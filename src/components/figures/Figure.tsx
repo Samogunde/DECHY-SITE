@@ -6,6 +6,7 @@ import {
   AssistantUi,
   CrmUi,
   DashboardUi,
+  InterfaceSet,
   MobileAppUi,
   SiteBuilder,
   StoreUi,
@@ -43,7 +44,20 @@ const FIGURES: Record<
   "analytics-ui": { Component: AnalyticsUi, max: "38rem" },
   "assistant-ui": { Component: AssistantUi, max: "28rem" },
   "workflow-ui": { Component: WorkflowUi, max: "42rem" },
+  "interface-set": { Component: InterfaceSet },
 };
+
+/** Conceptual interface mockups sit beside their text instead of under it (see DiagramBlock). */
+export const MOCKUP_FIGURES = new Set<FigureId>([
+  "site-builder",
+  "store-ui",
+  "dashboard-ui",
+  "mobile-app-ui",
+  "crm-ui",
+  "analytics-ui",
+  "assistant-ui",
+  "workflow-ui",
+]);
 
 export function Figure({
   id,

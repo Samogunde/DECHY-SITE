@@ -104,6 +104,17 @@ sections:
         cta:
           label: Scope a custom build
           href: /contact/?service=web-development
+  - type: diagram
+    id: site-editor
+    tone: white
+    label: What it looks like
+    heading: A site your team can edit without a developer
+    intro: Many sites are built so that staff can change text and images safely. This sketch shows an editor with a page canvas and a tool panel.
+    figure: site-builder
+    purpose: system
+    takeaway: A well-built website lets your team edit content safely while the design and structure stay intact.
+    caption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and the hosting that comes with it. It illustrates a type of website and is not a client site.
+    points: []
   - type: index
     id: types
     tone: white
@@ -310,6 +321,10 @@ sections:
           - lang.php
           - fw.vue
           - fw.angular
+          - plat.wix
+          - plat.wix-studio
+          - plat.squarespace
+          - plat.drupal
   - type: cta
     id: contact-cta
     heading: Tell us what your site must do

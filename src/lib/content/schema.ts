@@ -153,6 +153,7 @@ export const FigureId = z.enum([
   "analytics-ui",
   "assistant-ui",
   "workflow-ui",
+  "interface-set",
 ]);
 export type FigureId = z.infer<typeof FigureId>;
 

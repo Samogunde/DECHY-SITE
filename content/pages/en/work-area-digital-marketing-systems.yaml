@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/digital-marketing-systems/
 entityId: workarea.digital-marketing-systems
-title: "Digital Marketing Systems We Build | DECHY"
+title: Digital Marketing Systems We Build | DECHY
 description: "Digital marketing systems connect tracking, email, forms, and follow-up to your customer records so you can see what works: what they contain and how they are built."
 breadcrumbLabel: Digital Marketing Systems
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - marketing automation
     - lead tracking and follow-up
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "A digital marketing system is the set of connected tools that capture interest, follow up, and measure results, linked to your customer records."
-  problem: "Leads arrive through many channels, follow-up is slow, and nobody can say which activity produced a customer."
-  audience: "Marketing and sales teams that want to see results by channel, and owners who suspect leads are being lost."
-  choose: "Connect capture, follow-up, and records first. Add channels only after the system can measure them."
-  next: "Tell us how enquiries reach you and what happens next. We will show where leads are lost and how to track them."
-
+  what: A digital marketing system is the set of connected tools that capture interest, follow up, and measure results, linked to your customer records.
+  problem: Leads arrive through many channels, follow-up is slow, and nobody can say which activity produced a customer.
+  audience: Marketing and sales teams that want to see results by channel, and owners who suspect leads are being lost.
+  choose: Connect capture, follow-up, and records first. Add channels only after the system can measure them.
+  next: Tell us how enquiries reach you and what happens next. We will show where leads are lost and how to track them.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Digital Marketing Systems
-    lead: "A marketing system connects the places interest arrives to the people who follow it up, and to your customer records. This page shows what it contains and how it shows you which activity produces customers."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: A marketing system connects the places interest arrives to the people who follow it up, and to your customer records. This page shows what it contains and how it shows you which activity produces customers.
     ctas:
-      - { label: Talk to us about marketing systems, href: "/contact/?service=digital-marketing" }
-      - { label: See the flow, href: "#flow" }
+      - label: Talk to us about marketing systems
+        href: /contact/?service=digital-marketing
+      - label: See the flow
+        href: "#flow"
     spec:
       kind: flow
       steps:
@@ -49,44 +53,47 @@ sections:
         - title: The outcome is recorded
           text: Sale, or lost, with a reason.
     purpose: workflow
-    takeaway: "A marketing system records every lead with its source, follows up quickly, and records the outcome, so results can be traced."
-    visualTitle: "How a lead moves through a marketing system"
-    figureCaption: "This diagram follows a lead through five steps, from interest being captured to the outcome being recorded, with the source kept throughout."
-
+    takeaway: A marketing system records every lead with its source, follows up quickly, and records the outcome, so results can be traced.
+    visualTitle: How a lead moves through a marketing system
+    figureCaption: This diagram follows a lead through five steps, from interest being captured to the outcome being recorded, with the source kept throughout.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: Marketing you can trace
-    answer: "A digital marketing system joins forms, email, tracking, and customer records so each lead is captured with its source, followed up quickly, and followed through to the sale. Marketing results then become measurable."
+    answer: A digital marketing system joins forms, email, tracking, and customer records so each lead is captured with its source, followed up quickly, and followed through to the sale. Marketing results then become measurable.
     paragraphs:
-      - "Many organizations run campaigns without this link. Leads go into an inbox, follow-up depends on memory, and the question of which campaign worked cannot be answered."
-      - "The system is mostly plumbing. It is not glamorous, but it is what turns marketing from a cost into something that can be judged."
-
+      - Many organizations run campaigns without this link. Leads go into an inbox, follow-up depends on memory, and the question of which campaign worked cannot be answered.
+      - The system is mostly plumbing. It is not glamorous, but it is what turns marketing from a cost into something that can be judged.
   - type: chooser
     id: start
     tone: paper
     label: Where to begin
     heading: What to connect first
-    intro: "Start with the link that loses you the most."
+    intro: Start with the link that loses you the most.
     question: Where do you lose people?
     options:
       - label: Between interest and reply
-        when: "Enquiries wait hours or days for a response."
-        get: "Instant acknowledgments, alerts to the right person, and reminders."
-        watch: "Speed helps only if a person actually follows up."
-        cta: { label: Speed up replies, href: "/contact/?service=digital-marketing" }
+        when: Enquiries wait hours or days for a response.
+        get: Instant acknowledgments, alerts to the right person, and reminders.
+        watch: Speed helps only if a person actually follows up.
+        cta:
+          label: Speed up replies
+          href: /contact/?service=digital-marketing
       - label: Between reply and sale
-        when: "Leads respond, then go quiet."
-        get: "Planned follow-up and a clear view of each lead's stage."
-        watch: "Too many messages annoy people. We set sensible limits."
-        cta: { label: Plan follow-up, href: "/contact/?service=digital-marketing" }
+        when: Leads respond, then go quiet.
+        get: Planned follow-up and a clear view of each lead's stage.
+        watch: Too many messages annoy people. We set sensible limits.
+        cta:
+          label: Plan follow-up
+          href: /contact/?service=digital-marketing
       - label: Between channels and results
-        when: "You cannot tell which activity works."
-        get: "Source tracking and one report across channels."
-        watch: "Tracking has limits, such as privacy settings, so we explain what can be measured."
-        cta: { label: Set up tracking, href: "/contact/?service=digital-marketing" }
-
+        when: You cannot tell which activity works.
+        get: Source tracking and one report across channels.
+        watch: Tracking has limits, such as privacy settings, so we explain what can be measured.
+        cta:
+          label: Set up tracking
+          href: /contact/?service=digital-marketing
   - type: columns
     id: parts
     tone: paper
@@ -95,27 +102,26 @@ sections:
     columns:
       - title: Capture
         items:
-          - "Forms and landing pages that record the source."
-          - "Call and message tracking."
+          - Forms and landing pages that record the source.
+          - Call and message tracking.
       - title: Follow-up
         items:
-          - "Instant replies and reminders."
-          - "Sequences that stop when someone answers."
+          - Instant replies and reminders.
+          - Sequences that stop when someone answers.
       - title: Records
         items:
-          - "A customer record for every lead."
-          - "Links to tools such as [HubSpot](ref:plat.hubspot)."
+          - A customer record for every lead.
+          - Links to tools such as [HubSpot](ref:plat.hubspot).
       - title: Reporting
         items:
-          - "Results by channel, from first click to sale."
-          - "Cost per enquiry and per customer."
-
+          - Results by channel, from first click to sale.
+          - Cost per enquiry and per customer.
   - type: diagram
     id: flow
     tone: white
     label: The difference
     heading: Leads lost and leads kept
-    intro: "Most lost leads are lost to slow or missing follow-up, not to poor products."
+    intro: Most lost leads are lost to slow or missing follow-up, not to poor products.
     spec:
       kind: before-after
       before:
@@ -134,19 +140,16 @@ sections:
           - title: Results are shown by channel
       hubLabel: Traceable
     purpose: before-after
-    takeaway: "A marketing system turns enquiries from messages that wait into records that are followed and measured."
-    caption: "This diagram contrasts enquiries that wait in an inbox with enquiries that become records, receive quick follow-up, and are measured by channel."
-
+    takeaway: A marketing system turns enquiries from messages that wait into records that are followed and measured.
+    caption: This diagram contrasts enquiries that wait in an inbox with enquiries that become records, receive quick follow-up, and are measured by channel.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: Enquiries traced back to their source
     paragraphs:
-      - "Imagine a firm that gets enquiries from its website, a directory, and a newsletter. They all land in one inbox, and the team cannot tell which source brings customers."
-      - "A marketing system could record each enquiry's source, send a prompt reply, alert the right person, and report on results by channel. The firm could then spend more where customers actually come from."
-      - "This is an example of the kind of system, not a real client or result."
-
+      - A typical case is a firm that gets enquiries from its website, a directory, and a newsletter. They all land in one inbox, and the team cannot tell which source brings customers.
+      - A marketing system could record each enquiry's source, send a prompt reply, alert the right person, and report on results by channel. The firm could then spend more where customers actually come from.
   - type: related
     id: related
     tone: paper
@@ -154,15 +157,21 @@ sections:
     heading: Marketing across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.digital-marketing]
+        entityIds:
+          - svc.digital-marketing
       - title: Related services
-        entityIds: [svc.automation, svc.api-integration, svc.data-analytics]
+        entityIds:
+          - svc.automation
+          - svc.api-integration
+          - svc.data-analytics
       - title: Related work areas
-        entityIds: [workarea.seo-search-visibility, workarea.integration-platforms]
-
+        entityIds:
+          - workarea.seo-search-visibility
+          - workarea.integration-platforms
   - type: cta
     id: contact-cta
     heading: Tell us how enquiries reach you
-    body: "Describe how enquiries arrive and what happens next. We will show where leads are lost and how to track them."
+    body: Describe how enquiries arrive and what happens next. We will show where leads are lost and how to track them.
     primary:
-      { label: Talk to DECHY about marketing systems, href: "/contact/?service=digital-marketing" }
+      label: Talk to DECHY about marketing systems
+      href: /contact/?service=digital-marketing

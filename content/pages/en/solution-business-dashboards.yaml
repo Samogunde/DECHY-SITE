@@ -77,6 +77,17 @@ sections:
       - A named owner who can explain a change
       - A check against a figure the business already knows
       - A visible time of the last update
+  - type: diagram
+    id: dashboard-view
+    tone: paper
+    label: What it looks like
+    heading: What a dashboard for one role looks like
+    intro: A dashboard for one role leads with a few tiles, one trend, and the items that need attention. This sketch shows the pattern.
+    figure: dashboard-ui
+    purpose: system
+    takeaway: A dashboard for one role leads with a few measures, one trend, and a short list of exceptions.
+    caption: This sketch shows a conceptual dashboard with three summary tiles, a bar chart without figures, and a list of items that need attention. It is an illustration, not a client dashboard.
+    points: []
   - type: table
     id: options
     tone: white

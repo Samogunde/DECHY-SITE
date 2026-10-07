@@ -558,3 +558,40 @@
 .tone-ink .mk-window {
   border-color: var(--color-ink-line);
 }
+
+/* interface set: a dashboard, a phone, and an assistant side by side */
+.mk-set-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr);
+  grid-template-areas:
+    "dash phone"
+    "dash chat";
+  gap: 1rem;
+  align-items: start;
+}
+.mk-set-dash {
+  grid-area: dash;
+}
+.mk-set-phone {
+  grid-area: phone;
+  width: 100%;
+}
+.mk-set-chat {
+  grid-area: chat;
+  max-width: none;
+}
+@container dgm (max-width: 40rem) {
+  .mk-set-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "dash" "phone" "chat";
+  }
+  .mk-set-phone {
+    justify-self: center;
+    max-width: 17rem;
+  }
+}
+
+/* Secondary lines inside mockups still honour the 14px floor. */
+.mk small {
+  font-size: 0.875rem;
+}

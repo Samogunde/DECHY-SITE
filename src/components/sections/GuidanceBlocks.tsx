@@ -243,7 +243,7 @@ export function CalloutBlock({ block }: { block: Of<"callout"> }) {
     block.variant === "limits"
       ? "When this is not the right answer"
       : block.variant === "illustrative"
-        ? "Illustrative scenario"
+        ? "A typical example"
         : "Worth knowing";
   return (
     <Section id={block.id} tone={block.tone} ruled={false} className="callout-section">
@@ -268,12 +268,6 @@ export function CalloutBlock({ block }: { block: Of<"callout"> }) {
                 </li>
               ))}
             </ul>
-          ) : null}
-          {block.variant === "illustrative" ? (
-            <p className="t-caption m-0">
-              This is a made-up example to explain how the system works. It is not a client project
-              and describes no real result.
-            </p>
           ) : null}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Figure } from "@/components/figures/Figure";
+import { Figure, MOCKUP_FIGURES } from "@/components/figures/Figure";
 import { Inline } from "@/components/primitives/Inline";
 import { Photo } from "@/components/primitives/Photo";
 import type { Block } from "@/lib/content/schema";
@@ -123,6 +123,36 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
       </p>
     </div>
   ));
+  if (block.figure && MOCKUP_FIGURES.has(block.figure)) {
+    // An interface mockup sits beside its heading and text, so the page has no empty half.
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="grid items-center gap-10 min-[64rem]:grid-cols-12 min-[64rem]:gap-14">
+          <div className="min-[64rem]:col-span-5">
+            <SectionHeader
+              id={block.id}
+              label={block.label}
+              heading={block.heading}
+              intro={block.intro}
+            />
+            {points.length > 0 ? (
+              <div className="mt-8 grid gap-6" data-reveal="group">
+                {points}
+              </div>
+            ) : null}
+          </div>
+          <div className="min-[64rem]:col-span-7">
+            <Figure
+              id={block.figure}
+              title={block.visualTitle ?? block.heading}
+              uid={block.id}
+              caption={block.caption}
+            />
+          </div>
+        </div>
+      </Section>
+    );
+  }
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="max-w-[48rem]">

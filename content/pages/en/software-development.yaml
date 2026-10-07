@@ -360,6 +360,7 @@ sections:
           - lang.java
           - tech.nodejs
           - tech.dotnet
+          - lang.go
       - title: Systems we build
         entityIds:
           - workarea.custom-software-systems

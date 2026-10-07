@@ -2,8 +2,8 @@ id: page.home
 kind: home
 locale: en
 path: /
-title: "DECHY | Technology, Software, AI & Digital Solutions"
-description: "DECHY is a global technology company. Software, AI, automation, integration, and cloud, designed to work as one system, across fifteen service areas."
+title: DECHY | Technology, Software, AI & Digital Solutions
+description: DECHY is a global technology company. Software, AI, automation, integration, and cloud, designed to work as one system, across fifteen service areas.
 breadcrumbLabel: Home
 intent:
   primary: understand what DECHY is and which technology services it provides
@@ -12,389 +12,390 @@ intent:
     - technology partner for software automation integration and cloud
 indexing: index
 claims:
-  [
-    company.name,
-    company.descriptor,
-    company.statement,
-    company.founded,
-    company.scope,
-    company.positioning,
-    company.breadth,
-  ]
-datePublished: "2026-10-04"
-dateModified: "2026-10-04"
-schemaTypes: [WebPage, FAQPage]
-
+  - company.name
+  - company.descriptor
+  - company.statement
+  - company.founded
+  - company.scope
+  - company.positioning
+  - company.breadth
+datePublished: 2026-10-04
+dateModified: 2026-10-04
+schemaTypes:
+  - WebPage
+  - FAQPage
 sections:
   - type: hero
     id: hero
     variant: home
-    eyebrow: "Technology, Software, AI & Digital Solutions"
-    headline: "Software, AI, automation, integration, and cloud, designed to work as one system."
-    lead: "From custom software and AI to cloud, security, data, design, and search visibility, we help organizations build, connect, automate, and scale."
-    support: "We are a global technology company. We work with startups, small and medium-sized businesses, enterprises, agencies, and professional teams, from a first product to a platform that spans many systems."
+    eyebrow: Technology, Software, AI & Digital Solutions
+    headline: Software, AI, automation, integration, and cloud, designed to work as one system.
+    lead: From custom software and AI to cloud, security, data, design, and search visibility, we help organizations build, connect, automate, and scale.
+    support: We are a global technology company. We work with startups, small and medium-sized businesses, enterprises, agencies, and professional teams, from a first product to a platform that spans many systems.
     ctas:
-      - { label: Talk to DECHY, href: /contact/ }
-      - { label: Explore our services, href: "#services" }
+      - label: Talk to DECHY
+        href: /contact/
+      - label: Explore our services
+        href: "#services"
     figure: system-map
     purpose: system
-    takeaway: "Software, AI, automation and cloud work best when one connection layer joins them, instead of being separate tools."
-    visualTitle: "Five layers of technology joined into one system"
-    figureCaption: "This diagram shows five layers of technology, from what people see to the infrastructure underneath, joined by one connection layer. It is a conceptual picture; real systems vary."
-
+    takeaway: Software, AI, automation and cloud work best when one connection layer joins them, instead of being separate tools.
+    visualTitle: Five layers of technology joined into one system
+    figureCaption: This diagram shows five layers of technology, from what people see to the infrastructure underneath, joined by one connection layer. It is a conceptual picture; real systems vary.
   - type: statement
     id: since-2010
     tone: white
     label: About DECHY
     factId: company.statement
-
   - type: pathfinder
     id: paths
     tone: paper
     label: Find your path
     heading: Where do you want to start?
-    intro: "Most visitors arrive with a goal, not a service name. Pick the sentence that sounds like you and we will take you to the right place."
+    intro: Most visitors arrive with a goal, not a service name. Pick the sentence that sounds like you and we will take you to the right place.
     paths:
       - need: I need custom software
-        text: "A tool, portal, or system built around the way your organization really works."
+        text: A tool, portal, or system built around the way your organization really works.
         href: /software-development/
         action: See software development
       - need: I need a website or web application
-        text: "A new site, a rebuild, or an online system that customers or staff log in to."
+        text: A new site, a rebuild, or an online system that customers or staff log in to.
         href: /web-development/
         action: See web development
       - need: I need a mobile app
-        text: "An app for phones and tablets, from first idea to the app stores and beyond."
+        text: An app for phones and tablets, from first idea to the app stores and beyond.
         href: /mobile-app-development/
         action: See mobile apps
       - need: I need to automate repetitive work
-        text: "Stop copying data, chasing approvals, and building reports by hand."
+        text: Stop copying data, chasing approvals, and building reports by hand.
         href: /automation/
         action: See automation
       - need: I need AI in our business
-        text: "Find out which kind of AI would actually help, and how to use it safely."
+        text: Find out which kind of AI would actually help, and how to use it safely.
         href: /ai/
         action: See AI and machine learning
       - need: I need our systems to share information
-        text: "Connect your website, customer records, payments, and internal tools so data moves on its own."
+        text: Connect your website, customer records, payments, and internal tools so data moves on its own.
         href: /api-integration/
         action: See integration
       - need: I need to move to the cloud or modernize
-        text: "Move to the cloud, or replace aging software without stopping the business."
+        text: Move to the cloud, or replace aging software without stopping the business.
         href: /cloud/
         action: See cloud and DevOps
       - need: I need better security
-        text: "Understand what you need to protect, find weak spots, and strengthen them."
+        text: Understand what you need to protect, find weak spots, and strengthen them.
         href: /cybersecurity/
         action: See cybersecurity
       - need: I need an online store
-        text: "Sell online, with payments, stock, and shipping connected."
+        text: Sell online, with payments, stock, and shipping connected.
         href: /ecommerce/
         action: See ecommerce
       - need: I need to be found in search and in AI answers
-        text: "Help people, search engines, and AI assistants find and understand you."
+        text: Help people, search engines, and AI assistants find and understand you.
         href: /seo-aeo-geo/
         action: See SEO, AEO and GEO
       - need: I am not sure what I need
-        text: "Talk through the situation with us and decide the technology approach before spending money."
+        text: Talk through the situation with us and decide the technology approach before spending money.
         href: /consulting/
         action: See consulting
-
   - type: prose
     id: connected
     tone: paper
     label: How we think
     heading: Technology works better when it is designed together
     paragraphs:
-      - "Most organizations do not have a technology problem in one place. They have a website that does not talk to the CRM (the system where you keep track of customers and sales). They have a spreadsheet that feeds three reports, an automation nobody monitors, and an AI pilot with no route into daily work. Each tool was a reasonable purchase. Together they are a system nobody designed."
+      - Most organizations do not have a technology problem in one place. They have a website that does not talk to the CRM (the system where you keep track of customers and sales). They have a spreadsheet that feeds three reports, an automation nobody monitors, and an AI pilot with no route into daily work. Each tool was a reasonable purchase. Together they are a system nobody designed.
       - "At DECHY, we work across the full range of technology: software and web development, AI, automation, integration, cloud, security, data, design, and search visibility. The breadth matters for a practical reason. The hardest problems sit between disciplines. A good automation depends on clean data and reliable APIs (the connections that let software share information). A good AI feature depends on the application around it, the permissions behind it, and the infrastructure under it."
-      - "So we start from the outcome and the workflow, not from a product category. Sometimes the right answer is a custom application. Sometimes it is connecting the tools you already own. Sometimes it is telling you that something should not be built at all."
+      - So we start from the outcome and the workflow, not from a product category. Sometimes the right answer is a custom application. Sometimes it is connecting the tools you already own. Sometimes it is telling you that something should not be built at all.
       - "That is what the line at the top of this page means: software, AI, automation, integration, and cloud, designed to work as one system, inside a wider practice that also covers design, security, data, growth, and strategy."
-
   - type: index
     id: who
     tone: white
     label: Who we help
-    photo: { asset: asset.photo-who-port-operations, layout: rail, position: "38% 50%" }
+    photo:
+      asset: asset.photo-who-port-operations
+      layout: rail
+      position: 38% 50%
     heading: Teams of every size, in every industry
-    intro: "We are a global company and work with clients remotely, across time zones and markets."
+    intro: We are a global company and work with clients remotely, across time zones and markets.
     items:
       - title: Startups
         ref: bt.startups
-        body: "From a first product to the platform behind a growing company. We design architecture that survives the first hundred customers and give you an honest view of what to build now and what to defer."
+        body: From a first product to the platform behind a growing company. We design architecture that survives the first hundred customers and give you an honest view of what to build now and what to defer.
       - title: Small and medium-sized businesses
         ref: bt.smes
         body: "Practical systems that replace spreadsheets and manual handoffs: portals, automations, integrations, and websites that fit the way your business already works."
       - title: Enterprises
         ref: bt.enterprises
-        body: "Integration across existing systems, modernization of aging software, cloud migration, security reviews, and AI introduced with governance rather than around it. We work alongside your internal teams."
+        body: Integration across existing systems, modernization of aging software, cloud migration, security reviews, and AI introduced with governance rather than around it. We work alongside your internal teams.
       - title: Agencies
         ref: bt.agencies
-        body: "A technical partner for web, software, automation, or integration work that sits beyond what your agency delivers in house."
+        body: A technical partner for web, software, automation, or integration work that sits beyond what your agency delivers in house.
       - title: Professionals and teams
-        body: "Independent professionals, practices, and internal teams that need a dependable site, a better booking or client workflow, or a tool built around their process."
+        body: Independent professionals, practices, and internal teams that need a dependable site, a better booking or client workflow, or a tool built around their process.
       - title: Organizations in every sector
-        body: "Nonprofits, public bodies, and organizations in regulated industries, where privacy, accessibility, and auditability shape the design from the start."
-
+        body: Nonprofits, public bodies, and organizations in regulated industries, where privacy, accessibility, and auditability shape the design from the start.
   - type: index
     id: problems
     tone: paper
     numbered: true
     label: Problems we solve
     columns: 2
-    photo: { asset: asset.photo-problems-warehouse-aisle, layout: band, position: "50% 52%" }
+    photo:
+      asset: asset.photo-problems-warehouse-aisle
+      layout: band
+      position: 50% 52%
     heading: What usually brings people to us
-    intro: "Projects usually begin with a problem, not a technology. These are the ones we see most."
+    intro: Projects usually begin with a problem, not a technology. These are the ones we see most.
     items:
       - title: Manual work that should not be manual
-        body: "Re-keying data between systems, chasing approvals by email, assembling reports by hand. We automate the repetition and keep a record of what happened."
+        body: Re-keying data between systems, chasing approvals by email, assembling reports by hand. We automate the repetition and keep a record of what happened.
       - title: Disconnected systems
-        body: "A CRM, accounting, ecommerce, support, and internal tools that each hold part of the truth. We connect them so data flows once instead of through exports and copy-paste."
+        body: A CRM, accounting, ecommerce, support, and internal tools that each hold part of the truth. We connect them so data flows once instead of through exports and copy-paste.
       - title: Outdated software
-        body: "Systems that are slow to change, hard to hire for, or no longer supported. We replace or wrap them in stages, so the business keeps running."
+        body: Systems that are slow to change, hard to hire for, or no longer supported. We replace or wrap them in stages, so the business keeps running.
       - title: Poor customer experiences
         body: "Clumsy portals, slow sites, and forms that lose people. We fix what visitors actually feel: design, performance, and accessibility."
       - title: Fragmented data
-        body: "Numbers that differ from report to report. We build clean pipelines, a shared data model, and dashboards people trust."
+        body: Numbers that differ from report to report. We build clean pipelines, a shared data model, and dashboards people trust.
       - title: Inefficient workflows
-        body: "Processes that depend on one person's memory. We map the workflow first, then automate the parts that deserve it."
+        body: Processes that depend on one person's memory. We map the workflow first, then automate the parts that deserve it.
       - title: AI that never reaches daily use
-        body: "Pilots with no route into the work. We connect assistants and agents to your data and permissions, with evaluation and human review built in."
+        body: Pilots with no route into the work. We connect assistants and agents to your data and permissions, with evaluation and human review built in.
       - title: Integration challenges
-        body: "Undocumented APIs, payment flows that fail quietly, legacy systems with no interface. We build integrations with monitoring and error handling."
+        body: Undocumented APIs, payment flows that fail quietly, legacy systems with no interface. We build integrations with monitoring and error handling.
       - title: Growth and search visibility
-        body: "A good business that people cannot find, in search or in AI answers. We work on technical SEO (making a site easy for search engines to read), clear content, and measurement."
-
+        body: A good business that people cannot find, in search or in AI answers. We work on technical SEO (making a site easy for search engines to read), clear content, and measurement.
+  - type: diagram
+    id: screens
+    tone: ink
+    label: What people see
+    heading: The screens are the visible part of connected systems
+    intro: "What a customer or a colleague sees is a screen: a dashboard, a phone app, an assistant. What makes it useful is the connected system behind it, which is where most of our work goes."
+    figure: interface-set
+    purpose: relationship
+    takeaway: Dashboards, phone apps, and assistants are screens on top of connected systems, and each depends on the data and rules behind it.
+    caption: This sketch shows a conceptual dashboard, a phone app screen, and a support assistant side by side, as examples of the screens that sit on top of connected systems. They are illustrations, not client interfaces.
+    points:
+      - title: One system, several screens
+        body: A manager, a field worker, and a customer each see the same facts in the form they need.
+      - title: Built to be read quickly
+        body: Each screen leads with what needs attention, then the detail.
+      - title: Connected underneath
+        body: The same data feeds all three, so they never disagree.
   - type: service-index
     id: services
     tone: white
     label: Services
     heading: Fifteen disciplines, one practice
-    intro: "Every service is a full practice area, and when a project needs several, we plan them together."
-
+    intro: Every service is a full practice area, and when a project needs several, we plan them together.
   - type: entities
     id: technology
     tone: paper
     style: lists
     label: Technology depth
     heading: The tools and platforms we work with
-    intro: "A representative view. The range is broad on purpose, and each project uses only what it needs."
+    intro: A representative view. The range is broad on purpose, and each project uses only what it needs.
     groups:
       - title: Languages and frameworks
         entityIds:
-          [
-            lang.python,
-            lang.typescript,
-            lang.javascript,
-            lang.java,
-            lang.c-sharp,
-            lang.go,
-            lang.php,
-            fw.react,
-            fw.nextjs,
-            fw.vue,
-            fw.angular,
-            fw.svelte,
-          ]
+          - lang.python
+          - lang.typescript
+          - lang.javascript
+          - lang.java
+          - lang.c-sharp
+          - lang.go
+          - lang.php
+          - fw.react
+          - fw.nextjs
+          - fw.vue
+          - fw.angular
+          - fw.svelte
       - title: Web and ecommerce platforms
         entityIds:
-          [
-            plat.wordpress,
-            plat.shopify,
-            plat.webflow,
-            plat.woocommerce,
-            plat.bigcommerce,
-            plat.wix,
-            plat.squarespace,
-            plat.drupal,
-          ]
+          - plat.wordpress
+          - plat.shopify
+          - plat.webflow
+          - plat.woocommerce
+          - plat.bigcommerce
+          - plat.wix
+          - plat.squarespace
+          - plat.drupal
       - title: Mobile
         entityIds:
-          [
-            tech.flutter,
-            tech.react-native,
-            tech.swift,
-            tech.kotlin,
-            tech.swiftui,
-            tech.jetpack-compose,
-          ]
+          - tech.flutter
+          - tech.react-native
+          - tech.swift
+          - tech.kotlin
+          - tech.swiftui
+          - tech.jetpack-compose
       - title: AI and data
         entityIds:
-          [
-            prov.openai,
-            prov.anthropic-claude,
-            prov.google-gemini,
-            fw.langchain,
-            tech.pinecone,
-            tech.postgresql,
-            tech.mongodb,
-            plat.snowflake,
-            tech.bigquery,
-            plat.databricks,
-          ]
+          - prov.openai
+          - prov.anthropic-claude
+          - prov.google-gemini
+          - fw.langchain
+          - tech.pinecone
+          - tech.postgresql
+          - tech.mongodb
+          - plat.snowflake
+          - tech.bigquery
+          - plat.databricks
       - title: Automation and business platforms
         entityIds:
-          [
-            plat.airtable,
-            tech.zapier,
-            tech.make,
-            tech.n8n,
-            tech.microsoft-power-automate,
-            plat.hubspot,
-            plat.salesforce,
-            plat.notion,
-          ]
+          - plat.airtable
+          - tech.zapier
+          - tech.make
+          - tech.n8n
+          - tech.microsoft-power-automate
+          - plat.hubspot
+          - plat.salesforce
+          - plat.notion
       - title: Cloud and delivery
         entityIds:
-          [
-            plat.aws,
-            plat.azure,
-            plat.google-cloud,
-            tool.docker,
-            tool.kubernetes,
-            tool.terraform,
-            tool.github-actions,
-            plat.cloudflare,
-          ]
+          - plat.aws
+          - plat.azure
+          - plat.google-cloud
+          - tool.docker
+          - tool.kubernetes
+          - tool.terraform
+          - tool.github-actions
+          - plat.cloudflare
       - title: Integration and payments
         entityIds:
-          [
-            tech.rest,
-            tech.graphql,
-            tech.webhooks,
-            int.stripe,
-            int.paypal,
-            int.paystack,
-            int.flutterwave,
-            int.adyen,
-          ]
+          - tech.rest
+          - tech.graphql
+          - tech.webhooks
+          - int.stripe
+          - int.paypal
+          - int.paystack
+          - int.flutterwave
+          - int.adyen
       - title: Design and brand tools
-        entityIds: [tool.figma, tool.photoshop, tool.illustrator, tool.canva]
-
+        entityIds:
+          - tool.figma
+          - tool.photoshop
+          - tool.illustrator
+          - tool.canva
   - type: diagram
     id: connected-systems
     tone: ink
     label: AI, automation, and integration
     heading: Where AI and automation fit
-    intro: "AI and automation are major parts of what we do, and they work best inside the system rather than beside it, connected to the software, data, and permissions around them. The diagram shows one illustrative pattern."
+    intro: AI and automation are major parts of what we do, and they work best inside the system rather than beside it, connected to the software, data, and permissions around them. The diagram shows one illustrative pattern.
     figure: connected-flow
     purpose: workflow
-    takeaway: "Each step hands its result to the next automatically, on a shared foundation, with people checking the decisions that matter."
-    visualTitle: "One enquiry followed through six connected steps"
-    caption: "This diagram follows one customer enquiry through six connected steps, with the shared foundation and the safety checks underneath. It is an illustration of a pattern we can design and build, not a specific delivered system."
+    takeaway: Each step hands its result to the next automatically, on a shared foundation, with people checking the decisions that matter.
+    visualTitle: One enquiry followed through six connected steps
+    caption: This diagram follows one customer enquiry through six connected steps, with the shared foundation and the safety checks underneath. It is an illustration of a pattern we can design and build, not a specific delivered system.
     points:
       - title: Automation is not always AI
-        body: "Many workflows need clear rules, reliable integrations, and monitoring more than a model. We add AI where judgment, language, or unstructured documents justify the extra care."
+        body: Many workflows need clear rules, reliable integrations, and monitoring more than a model. We add AI where judgment, language, or unstructured documents justify the extra care.
       - title: Integration is the foundation
-        body: "Every step depends on stable APIs, clean data, and authentication. Getting that layer right keeps an automation or an AI feature running long after launch."
+        body: Every step depends on stable APIs, clean data, and authentication. Getting that layer right keeps an automation or an AI feature running long after launch.
       - title: People stay in the loop
-        body: "Where decisions matter, we design in review, approvals, and audit logs, so the system is explainable and your team stays in control."
-
+        body: Where decisions matter, we design in review, approvals, and audit logs, so the system is explainable and your team stays in control.
   - type: entities
     id: sectors
     tone: paper
     style: chips
     label: Industries and business types
     heading: Technology that adapts to the sector it serves
-    intro: "We work with organizations across industries. These are some of the sectors in scope; each sector's data, regulation, and customers shape the work."
+    intro: We work with organizations across industries. These are some of the sectors in scope; each sector's data, regulation, and customers shape the work.
     groups:
       - title: Industries
         entityIds:
-          [
-            ind.healthcare,
-            ind.finance,
-            ind.banking,
-            ind.insurance,
-            ind.real-estate,
-            ind.construction,
-            ind.logistics,
-            ind.transportation,
-            ind.manufacturing,
-            ind.retail,
-            ind.ecommerce,
-            ind.education,
-            ind.legal,
-            ind.government,
-            ind.hospitality,
-            ind.travel,
-            ind.energy,
-            ind.telecommunications,
-            ind.media,
-            ind.nonprofits,
-            ind.professional-services,
-            ind.saas,
-            ind.technology,
-          ]
+          - ind.healthcare
+          - ind.finance
+          - ind.banking
+          - ind.insurance
+          - ind.real-estate
+          - ind.construction
+          - ind.logistics
+          - ind.transportation
+          - ind.manufacturing
+          - ind.retail
+          - ind.ecommerce
+          - ind.education
+          - ind.legal
+          - ind.government
+          - ind.hospitality
+          - ind.travel
+          - ind.energy
+          - ind.telecommunications
+          - ind.media
+          - ind.nonprofits
+          - ind.professional-services
+          - ind.saas
+          - ind.technology
       - title: Business types
         entityIds:
-          [
-            bt.startups,
-            bt.small-businesses,
-            bt.smes,
-            bt.enterprises,
-            bt.agencies,
-            bt.saas-companies,
-            bt.ecommerce-businesses,
-            bt.franchises,
-            bt.nonprofits,
-            bt.government-organizations,
-            bt.online-businesses,
-            bt.multinational-companies,
-          ]
-
+          - bt.startups
+          - bt.small-businesses
+          - bt.smes
+          - bt.enterprises
+          - bt.agencies
+          - bt.saas-companies
+          - bt.ecommerce-businesses
+          - bt.franchises
+          - bt.nonprofits
+          - bt.government-organizations
+          - bt.online-businesses
+          - bt.multinational-companies
   - type: index
     id: work
     tone: white
     label: What we build
-    photo: { asset: asset.photo-work-app-dashboard, layout: split, position: "50% 50%" }
+    photo:
+      asset: asset.photo-work-app-dashboard
+      layout: split
+      position: 50% 50%
     heading: The kinds of systems we build and connect
-    intro: "Our work ranges from focused tools to platforms that span several systems. These are the main kinds of system, each a practice area in its own right."
+    intro: Our work ranges from focused tools to platforms that span several systems. These are the main kinds of system, each a practice area in its own right.
     items:
       - title: Custom business applications and portals
-        body: "Internal tools, customer and employee portals, and management systems built around a specific process."
+        body: Internal tools, customer and employee portals, and management systems built around a specific process.
       - title: SaaS platforms and marketplaces
-        body: "Multi-tenant products with billing, permissions, and operations designed for growth."
+        body: Multi-tenant products with billing, permissions, and operations designed for growth.
       - title: Websites, web applications, and online stores
-        body: "Fast, accessible, search-ready sites and commerce platforms, with the integrations behind them."
+        body: Fast, accessible, search-ready sites and commerce platforms, with the integrations behind them.
       - title: Mobile applications
-        body: "iOS, Android, and cross-platform apps with secure APIs, notifications, and release routines."
+        body: iOS, Android, and cross-platform apps with secure APIs, notifications, and release routines.
       - title: AI assistants, retrieval systems, and agents
-        body: "Applications that answer from your knowledge, act inside your tools, and are evaluated before and after launch."
+        body: Applications that answer from your knowledge, act inside your tools, and are evaluated before and after launch.
       - title: Workflow and business process automation
-        body: "CRM, sales, finance, support, and operations workflows on platforms such as Airtable, Zapier, Make, and n8n."
+        body: CRM, sales, finance, support, and operations workflows on platforms such as Airtable, Zapier, Make, and n8n.
       - title: API and systems integration
-        body: "Reliable data flow between your customer system, your accounting and operations software (ERP), payments, online shop, and older systems."
+        body: Reliable data flow between your customer system, your accounting and operations software (ERP), payments, online shop, and older systems.
       - title: Cloud, DevOps, and security programs
-        body: "Migration, delivery pipelines, observability, identity, and assessments."
+        body: Migration, delivery pipelines, observability, identity, and assessments.
       - title: Data platforms and dashboards
-        body: "Pipelines, warehouses, and reporting that replace manual spreadsheets."
+        body: Pipelines, warehouses, and reporting that replace manual spreadsheets.
       - title: Design systems, brand, and growth programs
-        body: "Product design, brand identity, SEO, and marketing systems connected to measurement."
-
+        body: Product design, brand identity, SEO, and marketing systems connected to measurement.
   - type: columns
     id: why
     tone: paper
     label: How we work
     heading: How we approach the work
-    intro: "These are working principles, not slogans. They describe how we plan engagements and what you can expect from us."
+    intro: These are working principles, not slogans. They describe how we plan engagements and what you can expect from us.
     columns:
       - title: Systems thinking
         items:
-          - "We consider the surrounding systems, data, and people, not only the deliverable."
-          - "We plan disciplines together, so authentication, data, and infrastructure are decided once."
+          - We consider the surrounding systems, data, and people, not only the deliverable.
+          - We plan disciplines together, so authentication, data, and infrastructure are decided once.
       - title: Honest recommendations
         items:
-          - "We decide build, buy, or integrate on the merits, including advising against a build."
-          - "We propose AI and automation where they help and leave them out where they do not."
+          - We decide build, buy, or integrate on the merits, including advising against a build.
+          - We propose AI and automation where they help and leave them out where they do not.
       - title: Engineering discipline
         items:
-          - "Testing, security, and performance are part of delivery, not extras."
-          - "We document decisions and architecture so the system can outlive the project."
+          - Testing, security, and performance are part of delivery, not extras.
+          - We document decisions and architecture so the system can outlive the project.
       - title: Clear communication
         items:
-          - "Plain language, visible progress, and no jargon for its own sake."
-          - "We work remotely across time zones, with shared tools and written decisions."
-
+          - Plain language, visible progress, and no jargon for its own sake.
+          - We work remotely across time zones, with shared tools and written decisions.
   - type: faq
     id: questions
     tone: white
@@ -402,20 +403,21 @@ sections:
     heading: Short answers about DECHY
     items:
       - q: What does DECHY do?
-        a: "DECHY is a global technology company. We build software, websites, and mobile apps. We add AI, automate repetitive work, and connect systems so they share information. We also handle cloud hosting, security, and data. On the design and growth side, we work on product design, branding, search visibility, and digital marketing. We also advise on technology decisions. Many projects combine several of these."
+        a: DECHY is a global technology company. We build software, websites, and mobile apps. We add AI, automate repetitive work, and connect systems so they share information. We also handle cloud hosting, security, and data. On the design and growth side, we work on product design, branding, search visibility, and digital marketing. We also advise on technology decisions. Many projects combine several of these.
       - q: Is DECHY a web agency, an AI agency, or a software company?
-        a: "None of those alone. Web, AI, and automation are major parts of our work, but DECHY is a broader technology company. What sets our approach apart is designing software, AI, automation, integration, and cloud as one system rather than as separate projects."
+        a: None of those alone. Web, AI, and automation are major parts of our work, but DECHY is a broader technology company. What sets our approach apart is designing software, AI, automation, integration, and cloud as one system rather than as separate projects.
       - q: Who does DECHY work with?
-        a: "Startups, small and medium-sized businesses, enterprises, agencies, organizations, professionals, and teams, across a wide range of industries and business types."
+        a: Startups, small and medium-sized businesses, enterprises, agencies, organizations, professionals, and teams, across a wide range of industries and business types.
       - q: Does DECHY work internationally?
-        a: "Yes. We are a global company and work with clients remotely, across time zones and markets, with engagements planned around clear communication, documentation, and shared tooling."
+        a: Yes. We are a global company and work with clients remotely, across time zones and markets, with engagements planned around clear communication, documentation, and shared tooling.
       - q: How does an engagement start?
-        a: "With a conversation about the outcome you want and the systems you already have. From there we recommend an approach, which may be to build, to buy and configure, or to integrate what exists, and we agree a scope before work begins. You can start through the [contact page](/contact/)."
+        a: With a conversation about the outcome you want and the systems you already have. From there we recommend an approach, which may be to build, to buy and configure, or to integrate what exists, and we agree a scope before work begins. You can start through the [contact page](/contact/).
       - q: Does DECHY only build new systems?
         a: "No. A large share of useful work is improving what already exists: modernizing legacy software, integrating tools, automating manual steps, tightening security, and fixing performance."
-
   - type: cta
     id: contact-cta
-    heading: "Tell us what you are trying to build, connect, or fix."
-    body: "A short conversation is enough to find out whether and how we can help. There is no obligation, and you do not need a finished brief."
-    primary: { label: Talk to DECHY, href: /contact/ }
+    heading: Tell us what you are trying to build, connect, or fix.
+    body: A short conversation is enough to find out whether and how we can help. There is no obligation, and you do not need a finished brief.
+    primary:
+      label: Talk to DECHY
+      href: /contact/

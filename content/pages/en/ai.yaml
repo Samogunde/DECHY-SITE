@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /ai/
 entityId: svc.ai
-title: "AI and Machine Learning Services | DECHY"
+title: AI and Machine Learning Services | DECHY
 description: "AI and machine learning from DECHY: assistants that answer from your own documents, document processing, AI agents, and predictions, built to be safe and useful."
 breadcrumbLabel: AI & Machine Learning
 intent:
@@ -14,17 +14,21 @@ intent:
     - machine learning development
     - ai integration services
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, Service, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - Service
+  - FAQPage
 comprehension:
-  what: "AI services help organizations use artificial intelligence, software that can read, write, search, and predict, inside real tools and processes."
-  problem: "Many teams have tried AI tools but cannot get them into daily work. They are unsure which kind of AI fits, what it will cost, and how to keep it safe."
-  audience: "Leaders and teams who want AI to do one specific job, such as answering questions, handling routine requests, reading documents, or spotting patterns."
-  choose: "Start from the job you want done, not from the technology. The right kind of AI depends on whether you need answers, actions, document reading, or predictions."
-  next: "Tell us the job you want AI to do and what information is involved. We will say which approach fits, and whether AI is the right tool at all."
-
+  what: AI services help organizations use artificial intelligence, software that can read, write, search, and predict, inside real tools and processes.
+  problem: Many teams have tried AI tools but cannot get them into daily work. They are unsure which kind of AI fits, what it will cost, and how to keep it safe.
+  audience: Leaders and teams who want AI to do one specific job, such as answering questions, handling routine requests, reading documents, or spotting patterns.
+  choose: Start from the job you want done, not from the technology. The right kind of AI depends on whether you need answers, actions, document reading, or predictions.
+  next: Tell us the job you want AI to do and what information is involved. We will say which approach fits, and whether AI is the right tool at all.
 sections:
   - type: hero
     id: hero
@@ -32,10 +36,12 @@ sections:
     eyebrow: Service
     headline: AI and Machine Learning
     lead: "At DECHY, we help organizations use AI where it genuinely helps: assistants that answer from your own documents, tools that read and sort paperwork, agents that carry out routine tasks, and predictions that support decisions."
-    support: "AI is a major part of our work, alongside software, automation, integration, and cloud. We treat it as one tool among several, not the answer to everything."
+    support: AI is a major part of our work, alongside software, automation, integration, and cloud. We treat it as one tool among several, not the answer to everything.
     ctas:
-      - { label: Talk to us about AI, href: "/contact/?service=ai" }
-      - { label: See more kinds of AI, href: "#kinds" }
+      - label: Talk to us about AI
+        href: /contact/?service=ai
+      - label: See more kinds of AI
+        href: "#kinds"
     spec:
       kind: decision
       question: What do you want AI to do for you?
@@ -56,53 +62,61 @@ sections:
           choose: A prediction model
           text: Learns from past records to forecast or recommend.
     purpose: decision
-    takeaway: "The right kind of AI depends on the job you want done, so start with the job."
-    visualTitle: "Which kind of AI fits which job"
-    figureCaption: "This diagram shows five common jobs people want AI to do and the kind of AI that fits each one, so you can start from your goal."
-
+    takeaway: The right kind of AI depends on the job you want done, so start with the job.
+    visualTitle: Which kind of AI fits which job
+    figureCaption: This diagram shows five common jobs people want AI to do and the kind of AI that fits each one, so you can start from your goal.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: What AI means for a business, in plain terms
-    answer: "Artificial intelligence, or AI, is software that can do things that normally need human judgment, such as reading a document, writing a reply, finding the right answer, or spotting a pattern. Machine learning is the part of AI where software learns from examples instead of following only fixed rules."
+    answer: Artificial intelligence, or AI, is software that can do things that normally need human judgment, such as reading a document, writing a reply, finding the right answer, or spotting a pattern. Machine learning is the part of AI where software learns from examples instead of following only fixed rules.
     paragraphs:
-      - 'In business, AI is useful when the work involves language, documents, images, or patterns that are too messy for simple rules. It is less useful when a clear rule already does the job. A rule that says "send invoices over a set amount to a manager" does not need AI.'
-      - 'So the first question is not "how do we use AI?" It is "what job do we want done, and is AI the best way to do it?" We help you answer that honestly, then build the part that is worth building.'
-
+      - In business, AI is useful when the work involves language, documents, images, or patterns that are too messy for simple rules. It is less useful when a clear rule already does the job. A rule that says "send invoices over a set amount to a manager" does not need AI.
+      - So the first question is not "how do we use AI?" It is "what job do we want done, and is AI the best way to do it?" We help you answer that honestly, then build the part that is worth building.
   - type: index
     id: kinds
     tone: paper
     columns: 2
     label: Kinds of AI
     heading: The kinds of AI work we do
-    intro: "Most business AI falls into a few kinds. Each one suits a different job."
+    intro: Most business AI falls into a few kinds. Each one suits a different job.
     items:
       - title: Knowledge assistants
         ref: cap.ai-knowledge-systems
-        body: "An assistant that answers questions using your own handbooks, contracts, and files. Staff stop searching folders and get an answer with the source shown."
+        body: An assistant that answers questions using your own handbooks, contracts, and files. Staff stop searching folders and get an answer with the source shown.
       - title: Support assistants and chatbots
         ref: cap.ai-chatbots
-        body: "A helper for your website or inbox that answers common questions at any hour. It hands anything difficult or sensitive to a person."
+        body: A helper for your website or inbox that answers common questions at any hour. It hands anything difficult or sensitive to a person.
       - title: AI agents
         ref: cap.ai-agent-development
-        body: "Software that can plan steps and use other tools to finish a task, such as checking an order, updating a record, and sending a reply."
+        body: Software that can plan steps and use other tools to finish a task, such as checking an order, updating a record, and sending a reply.
       - title: Document processing
         ref: cap.document-intelligence
-        body: "Tools that read invoices, forms, contracts, and scans, pull out the details that matter, and send them where they belong."
+        body: Tools that read invoices, forms, contracts, and scans, pull out the details that matter, and send them where they belong.
       - title: Predictions and recommendations
         ref: cap.predictive-analytics
-        body: "Models that learn from past records to forecast demand, flag risks, or suggest what a customer may want next."
+        body: Models that learn from past records to forecast demand, flag risks, or suggest what a customer may want next.
       - title: Image, video, and speech AI
         ref: cap.computer-vision
         body: "Software that understands pictures, video, or spoken words: reading labels, checking quality, or turning calls into notes."
-
+  - type: diagram
+    id: assistant-view
+    tone: white
+    label: What it looks like
+    heading: An assistant that shows its sources and hands over
+    intro: A trustworthy assistant answers from approved content, shows where the answer came from, and passes the hard cases to a person.
+    figure: assistant-ui
+    purpose: system
+    takeaway: A dependable AI assistant answers from approved content, shows its source, and offers a hand-over to a person.
+    caption: This sketch shows a conceptual chat with a customer question, an answer that cites its source, and an offer to talk to a person. It illustrates a type of AI feature and is not a client's product.
+    points: []
   - type: diagram
     id: how-assistant-works
     tone: white
     label: How it works
     heading: How an assistant answers from your own documents
-    intro: "Many useful business assistants work the same way. They look up the right pages first and only then write an answer. This keeps the answer tied to your real information."
+    intro: Many useful business assistants work the same way. They look up the right pages first and only then write an answer. This keeps the answer tied to your real information.
     spec:
       kind: flow
       steps:
@@ -117,127 +131,139 @@ sections:
         - title: The sources are shown
           text: A person can open the original and check.
     purpose: process
-    takeaway: "A good assistant looks up your documents first, answers from them, and shows where the answer came from."
-    caption: "This diagram follows one question through a knowledge assistant, from your prepared documents to an answer with its sources shown."
+    takeaway: A good assistant looks up your documents first, answers from them, and shows where the answer came from.
+    caption: This diagram follows one question through a knowledge assistant, from your prepared documents to an answer with its sources shown.
     points:
       - title: It uses your information
-        body: "The answer comes from your approved documents, not from the AI guessing."
+        body: The answer comes from your approved documents, not from the AI guessing.
       - title: It shows its sources
-        body: "People can check the original page, which builds trust and catches mistakes."
+        body: People can check the original page, which builds trust and catches mistakes.
       - title: It knows when to stop
-        body: "If the documents do not contain the answer, a well-built assistant says so instead of inventing one."
-
+        body: If the documents do not contain the answer, a well-built assistant says so instead of inventing one.
   - type: chooser
     id: route
     tone: paper
     label: Choosing a route
     heading: Which route fits you?
-    intro: "There are three ways to bring AI into a business. They differ in cost, control, and effort."
+    intro: There are three ways to bring AI into a business. They differ in cost, control, and effort.
     question: How much do you need the AI to fit your own systems and information?
     options:
       - label: Use a ready-made AI tool
-        when: "Your need is general, such as drafting emails or summarizing meetings, and it does not touch sensitive or specialist information."
-        get: "A quick start and low cost, with the tool's features as they are."
-        watch: "You have limited control over where your information goes, and the tool will not know your processes."
-        cta: { label: Talk about your options, href: "/contact/?service=ai" }
+        when: Your need is general, such as drafting emails or summarizing meetings, and it does not touch sensitive or specialist information.
+        get: A quick start and low cost, with the tool's features as they are.
+        watch: You have limited control over where your information goes, and the tool will not know your processes.
+        cta:
+          label: Talk about your options
+          href: /contact/?service=ai
       - label: Connect an AI model to your systems
-        when: "You want AI to work with your own documents, records, or software, but the job is well defined."
-        get: "An assistant or helper wired to your information, with your rules, permissions, and a record of what it did."
-        watch: "It needs clean, organized information and someone to check quality over time."
-        cta: { label: Plan a connected AI helper, href: "/contact/?service=ai" }
+        when: You want AI to work with your own documents, records, or software, but the job is well defined.
+        get: An assistant or helper wired to your information, with your rules, permissions, and a record of what it did.
+        watch: It needs clean, organized information and someone to check quality over time.
+        cta:
+          label: Plan a connected AI helper
+          href: /contact/?service=ai
       - label: Build a custom AI application
-        when: "AI is central to your product or process, or you need behavior and controls no ready-made tool offers."
-        get: "A system designed around your job, with testing, monitoring, and clear human oversight built in."
-        watch: "It is the largest investment. Start with a small, measurable version before committing."
-        cta: { label: Scope a custom AI project, href: "/contact/?service=ai" }
-
+        when: AI is central to your product or process, or you need behavior and controls no ready-made tool offers.
+        get: A system designed around your job, with testing, monitoring, and clear human oversight built in.
+        watch: It is the largest investment. Start with a small, measurable version before committing.
+        cta:
+          label: Scope a custom AI project
+          href: /contact/?service=ai
   - type: callout
     id: when-not
     tone: white
     variant: limits
     title: AI is not always the right tool
     paragraphs:
-      - "If a simple rule, a better form, or a connection between two systems solves the problem, use that. It is cheaper, easier to explain, and easier to keep working."
-      - "We will tell you when AI is not the best answer. Sometimes that saves you the most money."
+      - If a simple rule, a better form, or a connection between two systems solves the problem, use that. It is cheaper, easier to explain, and easier to keep working.
+      - We will tell you when AI is not the best answer. Sometimes that saves you the most money.
     items:
-      - "The task follows clear, fixed rules."
-      - "A wrong answer would be costly and no person will check it."
-      - "You do not yet have the information the AI would need."
-      - "Nobody can say what a good result looks like, so it cannot be measured."
-
+      - The task follows clear, fixed rules.
+      - A wrong answer would be costly and no person will check it.
+      - You do not yet have the information the AI would need.
+      - Nobody can say what a good result looks like, so it cannot be measured.
   - type: columns
     id: safe
     tone: paper
     label: Safe and useful
     heading: Making AI safe, accurate, and under control
-    intro: "A useful AI system is one people can trust. These are the four things we design for."
+    intro: A useful AI system is one people can trust. These are the four things we design for.
     columns:
       - title: Your information
         items:
-          - "We decide what the AI may see, and who may see its answers."
-          - "Sensitive information stays within your rules for privacy and access."
+          - We decide what the AI may see, and who may see its answers.
+          - Sensitive information stays within your rules for privacy and access.
       - title: Accuracy
         items:
-          - "We test the system on real examples before it goes live."
-          - "We keep measuring quality afterward, because models and information change."
+          - We test the system on real examples before it goes live.
+          - We keep measuring quality afterward, because models and information change.
       - title: People in control
         items:
-          - "A person reviews decisions that matter."
-          - "Every action is recorded, so you can see what happened and why."
+          - A person reviews decisions that matter.
+          - Every action is recorded, so you can see what happened and why.
       - title: Cost and change
         items:
-          - "We estimate running costs before you commit."
-          - "We plan for change, so a better model can be swapped in without a rebuild."
-
+          - We estimate running costs before you commit.
+          - We plan for change, so a better model can be swapped in without a rebuild.
   - type: process
     id: project
     tone: white
     label: How a project runs
     heading: How an AI project runs
-    intro: "We start small, measure early, and grow only what works."
+    intro: We start small, measure early, and grow only what works.
     steps:
       - title: Pick one job
-        body: "We choose a single, specific job with a clear measure of success, such as time saved or questions answered correctly."
-        artifacts: [One-page goal, How success will be measured]
+        body: We choose a single, specific job with a clear measure of success, such as time saved or questions answered correctly.
+        artifacts:
+          - One-page goal
+          - How success will be measured
       - title: Check the information
-        body: "We look at the documents or records the AI would use, and fix gaps before building."
-        artifacts: [Information review, List of what the AI may use]
+        body: We look at the documents or records the AI would use, and fix gaps before building.
+        artifacts:
+          - Information review
+          - List of what the AI may use
       - title: Build a small version
-        body: "We build a working version for a few people, using real examples."
-        artifacts: [Working prototype, Test results]
+        body: We build a working version for a few people, using real examples.
+        artifacts:
+          - Working prototype
+          - Test results
       - title: Measure honestly
-        body: "We compare results with the goal, including where it fails, and decide whether to continue."
-        artifacts: [Quality report, Go or stop recommendation]
+        body: We compare results with the goal, including where it fails, and decide whether to continue.
+        artifacts:
+          - Quality report
+          - Go or stop recommendation
       - title: Release with safeguards
-        body: "We roll it out with review steps, limits, and monitoring in place."
-        artifacts: [Live system, Monitoring and alerts]
+        body: We roll it out with review steps, limits, and monitoring in place.
+        artifacts:
+          - Live system
+          - Monitoring and alerts
       - title: Improve and look after it
-        body: "We keep checking quality and cost, and update the system as your needs and the technology change."
-        artifacts: [Regular quality checks, Updates and fixes]
-
+        body: We keep checking quality and cost, and update the system as your needs and the technology change.
+        artifacts:
+          - Regular quality checks
+          - Updates and fixes
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: For technical readers
-    intro: "Most visitors can skip this section. It explains the building blocks we work with."
+    intro: Most visitors can skip this section. It explains the building blocks we work with.
     panels:
       - title: Models and providers
         paragraphs:
-          - "We work with leading AI model providers, including [OpenAI](ref:prov.openai), [Anthropic Claude](ref:prov.anthropic-claude), and [Google Gemini](ref:prov.google-gemini), and with open models such as [Meta Llama](ref:prov.meta-llama) and [Mistral](ref:prov.mistral). The right model depends on the task, the cost, the speed needed, and where your information may be processed."
+          - We work with leading AI model providers, including [OpenAI](ref:prov.openai), [Anthropic Claude](ref:prov.anthropic-claude), and [Google Gemini](ref:prov.google-gemini), and with open models such as [Meta Llama](ref:prov.meta-llama) and [Mistral](ref:prov.mistral). The right model depends on the task, the cost, the speed needed, and where your information may be processed.
       - title: Giving a model your information
         paragraphs:
-          - "The assistant pattern shown above is often called RAG (retrieval-augmented generation). Documents are split into passages and turned into numbers that capture meaning. These are stored in a [vector database](ref:tech.vector-databases) such as [Pinecone](ref:tech.pinecone), [Qdrant](ref:tech.qdrant), or [Weaviate](ref:tech.weaviate). At question time the closest passages are retrieved and passed to the model."
+          - The assistant pattern shown above is often called RAG (retrieval-augmented generation). Documents are split into passages and turned into numbers that capture meaning. These are stored in a [vector database](ref:tech.vector-databases) such as [Pinecone](ref:tech.pinecone), [Qdrant](ref:tech.qdrant), or [Weaviate](ref:tech.weaviate). At question time the closest passages are retrieved and passed to the model.
       - title: Orchestration and tools
         paragraphs:
-          - "Frameworks such as [LangChain](ref:fw.langchain) and [LlamaIndex](ref:fw.llamaindex) help connect models, search, and tools. For agents, we define exactly which tools an agent may use, with limits and approval steps."
+          - Frameworks such as [LangChain](ref:fw.langchain) and [LlamaIndex](ref:fw.llamaindex) help connect models, search, and tools. For agents, we define exactly which tools an agent may use, with limits and approval steps.
       - title: Evaluation and monitoring
         items:
-          - "A test set of real questions with approved answers."
-          - "Automatic checks for accuracy, unsafe output, and cost per answer."
-          - "Logs of inputs, sources, and outputs, with sensitive details protected."
-          - "Alerts when quality drops or costs rise."
-
+          - A test set of real questions with approved answers.
+          - Automatic checks for accuracy, unsafe output, and cost per answer.
+          - Logs of inputs, sources, and outputs, with sensitive details protected.
+          - Alerts when quality drops or costs rise.
   - type: index
     id: work
     tone: white
@@ -247,14 +273,13 @@ sections:
     items:
       - title: AI solutions
         href: /work/areas/ai-solutions/
-        body: "Assistants, document readers, and prediction tools built around a specific business job."
+        body: Assistants, document readers, and prediction tools built around a specific business job.
       - title: AI agents
         href: /work/areas/ai-agents/
-        body: "Software that plans and completes multi-step tasks using your tools, with people in control."
+        body: Software that plans and completes multi-step tasks using your tools, with people in control.
       - title: Knowledge and content systems
         href: /work/areas/knowledge-and-content-systems/
-        body: "Systems that organize your documents and make them searchable, answerable, and up to date."
-
+        body: Systems that organize your documents and make them searchable, answerable, and up to date.
   - type: faq
     id: faq
     tone: paper
@@ -262,18 +287,17 @@ sections:
     heading: Questions about AI projects
     items:
       - q: Do we need a lot of data to use AI?
-        a: "Not always. Assistants that answer from your documents need good documents, not huge amounts of data. Prediction models do need enough past records to learn from. We check this in the first step, before anyone builds anything."
+        a: Not always. Assistants that answer from your documents need good documents, not huge amounts of data. Prediction models do need enough past records to learn from. We check this in the first step, before anyone builds anything.
       - q: Is our information safe if we use AI?
-        a: "It can be, if the system is designed for it. We decide what the AI may see, where information is processed, who may use it, and what is recorded. For sensitive information we choose providers and settings that fit your rules, and we say clearly when a use is not appropriate."
+        a: It can be, if the system is designed for it. We decide what the AI may see, where information is processed, who may use it, and what is recorded. For sensitive information we choose providers and settings that fit your rules, and we say clearly when a use is not appropriate.
       - q: Will AI replace our staff?
-        a: "Our approach is to take over repetitive work and support people, with a person reviewing decisions that matter. The goal is to give your team time for work that needs judgment."
+        a: Our approach is to take over repetitive work and support people, with a person reviewing decisions that matter. The goal is to give your team time for work that needs judgment.
       - q: Can AI make mistakes?
-        a: "Yes. AI can be wrong or sound confident when it is not. That is why we test on real examples, show sources, keep people in the loop, and monitor quality after launch."
+        a: Yes. AI can be wrong or sound confident when it is not. That is why we test on real examples, show sources, keep people in the loop, and monitor quality after launch.
       - q: How long does an AI project take?
-        a: "A focused first version, such as an assistant for one set of documents, can often be tried by a small group within weeks. Larger systems take longer. Starting small lets you see real results early and decide what to grow."
+        a: A focused first version, such as an assistant for one set of documents, can often be tried by a small group within weeks. Larger systems take longer. Starting small lets you see real results early and decide what to grow.
       - q: How is AI different from automation?
         a: "Automation follows fixed rules to do repetitive work. AI handles work that needs reading, language, or judgment. Many projects use both: automation moves the work along, and AI handles the steps that need understanding. See our [automation](ref:svc.automation) service."
-
   - type: related
     id: related
     tone: white
@@ -282,33 +306,35 @@ sections:
     groups:
       - title: Related services
         entityIds:
-          [
-            svc.automation,
-            svc.api-integration,
-            svc.data-analytics,
-            svc.software-development,
-            svc.cybersecurity,
-            svc.consulting,
-          ]
+          - svc.automation
+          - svc.api-integration
+          - svc.data-analytics
+          - svc.software-development
+          - svc.cybersecurity
+          - svc.consulting
       - title: Related solutions
         entityIds:
-          [sol.ai-agents, sol.ai-knowledge-systems, sol.ai-customer-support, sol.ai-automation]
+          - sol.ai-agents
+          - sol.ai-knowledge-systems
+          - sol.ai-customer-support
+          - sol.ai-automation
       - title: Technologies in this area
         entityIds:
-          [
-            prov.openai,
-            prov.anthropic-claude,
-            prov.google-gemini,
-            fw.langchain,
-            tech.vector-databases,
-            tech.pinecone,
-          ]
+          - prov.openai
+          - prov.anthropic-claude
+          - prov.google-gemini
+          - fw.langchain
+          - tech.vector-databases
+          - tech.pinecone
       - title: Systems we build
         entityIds:
-          [workarea.ai-solutions, workarea.ai-agents, workarea.knowledge-and-content-systems]
-
+          - workarea.ai-solutions
+          - workarea.ai-agents
+          - workarea.knowledge-and-content-systems
   - type: cta
     id: contact-cta
     heading: Tell us the job you want AI to do
-    body: "Describe the task, the information involved, and what a good result looks like. We will tell you which approach fits, what to try first, and whether AI is the right tool at all."
-    primary: { label: Talk to DECHY about AI, href: "/contact/?service=ai" }
+    body: Describe the task, the information involved, and what a good result looks like. We will tell you which approach fits, what to try first, and whether AI is the right tool at all.
+    primary:
+      label: Talk to DECHY about AI
+      href: /contact/?service=ai

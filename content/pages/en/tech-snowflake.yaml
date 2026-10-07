@@ -92,6 +92,17 @@ sections:
       - - Spreadsheets and exports
         - Early stages with a few sources and a few people.
         - Version and trust problems grow with every added person.
+  - type: diagram
+    id: dashboard-view
+    tone: white
+    label: What it looks like
+    heading: A governed dashboard built on shared data
+    intro: Shared data pays off when many teams read one governed source. This sketch shows a dashboard of the kind each team builds.
+    figure: dashboard-ui
+    purpose: system
+    takeaway: Shared, governed data lets each team build its own dashboard from one trusted source.
+    caption: This sketch shows a conceptual dashboard with three summary tiles, a bar chart without figures, and a list of items that need attention. It is an illustration and not a client dashboard.
+    points: []
   - type: process
     id: build
     tone: white

@@ -99,6 +99,17 @@ sections:
           - Maintenance log
           - Statements
           - Portal views
+  - type: diagram
+    id: site-editor
+    tone: white
+    label: What it looks like
+    heading: A property site your team can keep current
+    intro: Listings and pages stay accurate when staff can edit them safely. This sketch shows an editor with a page canvas and a tool panel.
+    figure: site-builder
+    purpose: system
+    takeaway: A property site stays accurate when staff can edit listings and pages safely.
+    caption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and included hosting. It is an illustration, not a client site.
+    points: []
   - type: index
     id: needs
     tone: white

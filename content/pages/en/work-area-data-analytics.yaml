@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/data-analytics/
 entityId: workarea.data-analytics
-title: "Data and Analytics Systems We Build | DECHY"
+title: Data and Analytics Systems We Build | DECHY
 description: "Data and analytics systems that bring your information together, check it, and turn it into reports and dashboards people trust: parts, process, and honest limits."
 breadcrumbLabel: Data and Analytics Systems
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - business dashboards
     - data warehouse and reporting
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "A data and analytics system gathers information from your tools, cleans and stores it in one place, and presents it as reports and dashboards."
-  problem: "Numbers live in many tools, reports are rebuilt by hand each month, and nobody is sure which figure is right."
-  audience: "Managers who need reliable figures, and teams that spend days assembling reports from several sources."
-  choose: "Decide the few questions the business must answer, then build only the data pipeline and views that answer them."
-  next: "List the three questions you most want answered from your data. We will show what is needed to answer them reliably."
-
+  what: A data and analytics system gathers information from your tools, cleans and stores it in one place, and presents it as reports and dashboards.
+  problem: Numbers live in many tools, reports are rebuilt by hand each month, and nobody is sure which figure is right.
+  audience: Managers who need reliable figures, and teams that spend days assembling reports from several sources.
+  choose: Decide the few questions the business must answer, then build only the data pipeline and views that answer them.
+  next: List the three questions you most want answered from your data. We will show what is needed to answer them reliably.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Data and Analytics Systems
-    lead: "A data and analytics system collects information from your tools, checks and stores it in one place, and shows it clearly. This page explains each stage, and why trust in the numbers matters more than fancy charts."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: A data and analytics system collects information from your tools, checks and stores it in one place, and shows it clearly. This page explains each stage, and why trust in the numbers matters more than fancy charts.
     ctas:
-      - { label: Talk to us about your data, href: "/contact/?service=data-analytics" }
-      - { label: See the pipeline, href: "#pipeline" }
+      - label: Talk to us about your data
+        href: /contact/?service=data-analytics
+      - label: See the pipeline
+        href: "#pipeline"
     spec:
       kind: layers
       layerLabel: From raw information to decisions
@@ -48,26 +52,24 @@ sections:
         - title: Sources
           text: Your store, accounts, customer records, and files.
     purpose: system
-    takeaway: "Good decisions rest on clear reports, which rest on clean shared data, which comes from your everyday tools."
-    visualTitle: "From your tools to better decisions"
-    figureCaption: "This diagram shows four layers, from your everyday tools at the bottom through clean shared data and dashboards up to the decisions people make."
-
+    takeaway: Good decisions rest on clear reports, which rest on clean shared data, which comes from your everyday tools.
+    visualTitle: From your tools to better decisions
+    figureCaption: This diagram shows four layers, from your everyday tools at the bottom through clean shared data and dashboards up to the decisions people make.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: One trusted version of the numbers
-    answer: "A data and analytics system gathers information from your tools, cleans it, stores it together, and presents it so people can answer questions. Its purpose is one agreed version of each figure."
+    answer: A data and analytics system gathers information from your tools, cleans it, stores it together, and presents it so people can answer questions. Its purpose is one agreed version of each figure.
     paragraphs:
-      - "Without it, each person builds their own spreadsheet, and meetings begin with arguments about whose numbers are right. With it, the discussion moves to what to do."
-      - "Dashboards are the visible part. The harder and more valuable work is agreeing what each measure means, and checking that the data is complete and correct."
-
+      - Without it, each person builds their own spreadsheet, and meetings begin with arguments about whose numbers are right. With it, the discussion moves to what to do.
+      - Dashboards are the visible part. The harder and more valuable work is agreeing what each measure means, and checking that the data is complete and correct.
   - type: diagram
     id: pipeline
     tone: paper
     label: The pipeline
     heading: How information reaches a dashboard
-    intro: "Data passes through a small number of stages, each with a clear job."
+    intro: Data passes through a small number of stages, each with a clear job.
     spec:
       kind: flow
       steps:
@@ -82,9 +84,19 @@ sections:
         - title: Present
           text: Show clear charts, tables, and alerts.
     purpose: sequence
-    takeaway: "Data is collected, cleaned and checked, stored together, calculated, and only then presented."
-    caption: "This diagram shows data passing through five stages, from collection to presentation, with cleaning and checking before anything is shown."
-
+    takeaway: Data is collected, cleaned and checked, stored together, calculated, and only then presented.
+    caption: This diagram shows data passing through five stages, from collection to presentation, with cleaning and checking before anything is shown.
+  - type: diagram
+    id: report-view
+    tone: white
+    label: What it looks like
+    heading: A report built to answer one question
+    intro: A reporting system is judged by how fast a manager gets an answer. This sketch shows filters, a chart, and a table with trends.
+    figure: analytics-ui
+    purpose: system
+    takeaway: "A reporting system gives a manager an answer in a minute: a few filters, one chart, and a short table."
+    caption: This sketch shows a conceptual analytics report with filters, a two-series chart by month, and a table with trend labels. It carries no figures and is not a client report.
+    points: []
   - type: columns
     id: views
     tone: white
@@ -93,51 +105,50 @@ sections:
     columns:
       - title: Leaders
         items:
-          - "A few headline figures and trends."
-          - "Alerts when something moves unexpectedly."
+          - A few headline figures and trends.
+          - Alerts when something moves unexpectedly.
       - title: Managers
         items:
-          - "Workload, targets, and exceptions."
-          - "Drill-down to the detail behind a figure."
+          - Workload, targets, and exceptions.
+          - Drill-down to the detail behind a figure.
       - title: Analysts
         items:
-          - "Clean tables for their own questions."
-          - "Definitions of every measure."
+          - Clean tables for their own questions.
+          - Definitions of every measure.
       - title: Everyone
         items:
-          - "Plain labels, and notes on when data was updated."
-
+          - Plain labels, and notes on when data was updated.
   - type: table
     id: sources
     tone: paper
     label: Common sources
     heading: Where the data often comes from
     caption: Common data sources and what they provide
-    columns: [Source, What it provides, Watch for]
+    columns:
+      - Source
+      - What it provides
+      - Watch for
     rows:
       - - Online store
-        - "Orders, products, and customers."
-        - "Refunds and cancelled orders."
+        - Orders, products, and customers.
+        - Refunds and cancelled orders.
       - - Accounting
-        - "Invoices, payments, and costs."
-        - "Different dates for the same event."
+        - Invoices, payments, and costs.
+        - Different dates for the same event.
       - - Customer records
-        - "Leads, deals, and activity."
-        - "Duplicate customers and missing fields."
+        - Leads, deals, and activity.
+        - Duplicate customers and missing fields.
       - - Website and marketing
-        - "Visits and campaign results."
-        - "Different counting rules between tools."
-
+        - Visits and campaign results.
+        - Different counting rules between tools.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: A two-day report ready by morning
     paragraphs:
-      - "Imagine a company whose monthly report takes two days to prepare. Someone exports sales, accounts, and enquiry lists, combines them, and fixes mismatches by hand."
-      - "A data system could collect each source overnight, check it, and update a dashboard by morning. The two days could go to reading the figures and acting on them."
-      - "This is an example of the kind of system, not a real client or result."
-
+      - A typical case is a company whose monthly report takes two days to prepare. Someone exports sales, accounts, and enquiry lists, combines them, and fixes mismatches by hand.
+      - A data system could collect each source overnight, check it, and update a dashboard by morning. The two days could go to reading the figures and acting on them.
   - type: related
     id: related
     tone: paper
@@ -145,15 +156,21 @@ sections:
     heading: Data across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.data-analytics]
+        entityIds:
+          - svc.data-analytics
       - title: Related solutions
-        entityIds: [sol.business-dashboards, sol.data-systems]
+        entityIds:
+          - sol.business-dashboards
+          - sol.data-systems
       - title: Related work areas
         entityIds:
-          [workarea.integration-platforms, workarea.operations-platforms, workarea.cloud-platforms]
-
+          - workarea.integration-platforms
+          - workarea.operations-platforms
+          - workarea.cloud-platforms
   - type: cta
     id: contact-cta
     heading: Tell us the questions you want answered
-    body: "List the three questions you most want your data to answer. We will show what is needed to answer them reliably."
-    primary: { label: Talk to DECHY about data, href: "/contact/?service=data-analytics" }
+    body: List the three questions you most want your data to answer. We will show what is needed to answer them reliably.
+    primary:
+      label: Talk to DECHY about data
+      href: /contact/?service=data-analytics

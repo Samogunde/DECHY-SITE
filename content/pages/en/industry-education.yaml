@@ -91,6 +91,17 @@ sections:
         when: Learning platforms, timetables, and records do not share information.
         get: Connections so enrolments and results flow between them.
         watch: Pick one system as the source of truth for each learner fact.
+  - type: diagram
+    id: assistant-view
+    tone: white
+    label: What it looks like
+    heading: An assistant for routine questions from learners
+    intro: Routine enquiries can be answered quickly from approved content, with a person for anything more.
+    figure: assistant-ui
+    purpose: system
+    takeaway: An education assistant answers routine enquiries from approved content and hands the rest to a person.
+    caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It is an illustration, not a client's product.
+    points: []
   - type: index
     id: needs
     tone: white

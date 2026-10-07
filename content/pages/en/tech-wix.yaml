@@ -208,7 +208,7 @@ sections:
           - ind.education
   - type: cta
     id: contact-cta
-    heading: Tell us what the site has to do
+    heading: Tell us what the Wix site has to do and connect to
     body: Describe the site, what it needs to connect to, and what frustrates you about it now. We will say whether to build on Wix, extend it, or move.
     primary:
       label: Talk to DECHY about Wix

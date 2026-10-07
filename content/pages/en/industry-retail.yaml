@@ -94,6 +94,17 @@ sections:
       - "Retail is high in volume and low in margin per order, so small inefficiencies are multiplied thousands of times. A minute of re-typing per order, a one per cent stock error, a delay in refunding a return: each is invisible on one order and decisive across a year."
       - It is also seasonal. Systems that cope in March can fail in November, so the question is not only whether something works but whether it works on the busiest day.
       - "The best returns come from the unglamorous parts: orders that flow without touching, stock that is true, and support that can see the order it is asked about."
+  - type: diagram
+    id: store-front
+    tone: white
+    label: What it looks like
+    heading: A store front joined to the engine behind it
+    intro: Retail systems agree when the shop front and the engine behind it share one catalog, price, and stock record.
+    figure: store-ui
+    purpose: architecture
+    takeaway: A retail store joins a shop front to an engine holding the one catalog, price, and stock record.
+    caption: This sketch shows a conceptual store front beside a commerce engine panel listing catalog, pricing, orders, and stock. It is an illustration, not a client store.
+    points: []
   - type: process
     id: how
     tone: white

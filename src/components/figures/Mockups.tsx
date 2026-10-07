@@ -382,3 +382,89 @@ export function WorkflowUi({ titleId }: P) {
     </DiagramRoot>
   );
 }
+
+/** A composition of three interfaces: a dashboard, a phone screen, and an assistant. */
+export function InterfaceSet({ titleId }: P) {
+  return (
+    <DiagramRoot
+      titleId={titleId}
+      title="Conceptual set of interfaces"
+      description="Three conceptual interfaces side by side: a management dashboard with summary tiles and a bar chart, a phone showing a short list of jobs with status labels, and a support assistant answering a customer question with a source. They stand for the screens that sit on top of connected systems."
+      className="mk mk-set"
+    >
+      <div className="mk-set-grid" aria-hidden="true">
+        <div className="mk-window mk-set-dash">
+          <Chrome title="dashboard.example" />
+          <div className="mk-dash-body">
+            <div className="mk-tiles">
+              {[
+                ["Open requests", 62],
+                ["On time", 84],
+                ["Needs attention", 28],
+              ].map(([l, w]) => (
+                <div key={l as string} className="mk-kpi">
+                  <p className="mk-label">{l}</p>
+                  <span className="mk-meter">
+                    <span style={{ width: `${w}%` }} />
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mk-panel">
+              <p className="mk-label">Activity by week</p>
+              <Bars values={[38, 52, 46, 64, 58, 72, 66, 80]} accent={7} />
+            </div>
+            <div className="mk-panel">
+              <p className="mk-label">Needs attention</p>
+              <ul className="mk-rows">
+                {[
+                  ["Order waiting for approval", "Review", "blue"],
+                  ["Delivery behind schedule", "Late", "ink"],
+                ].map(([t, s, tone]) => (
+                  <li key={t as string}>
+                    <span>{t}</span>
+                    <Chip tone={tone as "line" | "blue" | "ink"}>{s}</Chip>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="mk-phone mk-set-phone">
+          <p className="mk-phone-title">Today</p>
+          <ul className="mk-rows mk-rows-card">
+            {[
+              ["Site visit", "Due 10:00", "blue"],
+              ["Deliver order", "In progress", "ink"],
+            ].map(([t, s, tone]) => (
+              <li key={t as string}>
+                <span>
+                  <b>{t}</b>
+                  <small>Customer name</small>
+                </span>
+                <Chip tone={tone as "line" | "blue" | "ink"}>{s}</Chip>
+              </li>
+            ))}
+          </ul>
+          <ul className="mk-tabs">
+            {["Today", "Jobs", "Map", "Profile"].map((t, i) => (
+              <li key={t} className={i === 0 ? "mk-tab-on" : ""}>
+                {t}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mk-window mk-chat mk-set-chat">
+          <Chrome title="help.example" />
+          <div className="mk-chat-body">
+            <p className="mk-msg mk-msg-user">How do I return an item?</p>
+            <div className="mk-msg mk-msg-bot">
+              <p>Start from your order page and choose Return.</p>
+              <Chip tone="blue">Source: Returns policy</Chip>
+            </div>
+          </div>
+        </div>
+      </div>
+    </DiagramRoot>
+  );
+}

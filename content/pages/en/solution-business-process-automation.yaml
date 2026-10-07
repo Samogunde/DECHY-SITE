@@ -104,6 +104,17 @@ sections:
         when: Emails, documents, or forms must be read and sorted before anyone can act.
         get: An AI step that reads and classifies, with a person checking the unclear cases.
         watch: Keep a person in the loop wherever a wrong answer would be costly.
+  - type: diagram
+    id: request-flow
+    tone: white
+    label: What it looks like
+    heading: What an automated request looks like
+    intro: The easiest way to see automation is to follow one request. Each step has an owner and a status, and every step is recorded.
+    figure: workflow-ui
+    purpose: workflow
+    takeaway: An automated process moves a request through timed, owned steps and records each one.
+    caption: This sketch shows a conceptual workflow board with a new-supplier request moving through four steps with owners and status labels. It is an illustration, not a client's workflow.
+    points: []
   - type: process
     id: how
     tone: white

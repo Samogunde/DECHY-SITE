@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/ai-agents/
 entityId: workarea.ai-agents
-title: "AI Agents We Build | DECHY"
+title: AI Agents We Build | DECHY
 description: "AI agents that carry out multi-step tasks with tools, limits, and human oversight: what they are, how they are controlled, and where a simpler automation is better."
 breadcrumbLabel: AI Agents
 parent: /work/
@@ -13,28 +13,33 @@ intent:
     - business ai agents
     - multi-step ai workflows
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage, FAQPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
+  - FAQPage
 comprehension:
-  what: "An AI agent is a system that works toward a goal in several steps, choosing which tool to use at each step, such as searching records, drafting a message, or updating a system."
-  problem: "Some tasks are too varied for fixed rules, but too long and repetitive for people to do well, such as researching a lead or resolving a routine request."
-  audience: "Teams with multi-step tasks that need judgment, and leaders who want automation they can inspect and control."
-  choose: "Use an agent only when the steps vary. If the steps are always the same, a plain automation is cheaper and more reliable."
-  next: "Describe a multi-step task and where judgment is needed. We will say whether an agent, an automation, or a person is the better fit."
-
+  what: An AI agent is a system that works toward a goal in several steps, choosing which tool to use at each step, such as searching records, drafting a message, or updating a system.
+  problem: Some tasks are too varied for fixed rules, but too long and repetitive for people to do well, such as researching a lead or resolving a routine request.
+  audience: Teams with multi-step tasks that need judgment, and leaders who want automation they can inspect and control.
+  choose: Use an agent only when the steps vary. If the steps are always the same, a plain automation is cheaper and more reliable.
+  next: Describe a multi-step task and where judgment is needed. We will say whether an agent, an automation, or a person is the better fit.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: AI Agents
-    lead: "An AI agent works toward a goal in several steps, using tools along the way. It is more flexible than a fixed automation and needs more care. This page explains how agents work, how we limit them, and when not to use one."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: An AI agent works toward a goal in several steps, using tools along the way. It is more flexible than a fixed automation and needs more care. This page explains how agents work, how we limit them, and when not to use one.
     ctas:
-      - { label: Talk to us about an agent, href: "/contact/?service=ai" }
-      - { label: Agent or automation?, href: "#compare" }
+      - label: Talk to us about an agent
+        href: /contact/?service=ai
+      - label: Agent or automation?
+        href: "#compare"
     spec:
       kind: hub
       center:
@@ -54,47 +59,58 @@ sections:
         - title: A person
           text: Approves the steps that matter.
     purpose: relationship
-    takeaway: "An agent chooses among tools such as records, documents, messaging, and systems, within limits, and with a person approving key steps."
-    visualTitle: "What an AI agent connects to"
-    figureCaption: "This diagram shows an AI agent in the middle, connected to records, documents, messaging, systems, limits, and a person who approves key steps."
-
+    takeaway: An agent chooses among tools such as records, documents, messaging, and systems, within limits, and with a person approving key steps.
+    visualTitle: What an AI agent connects to
+    figureCaption: This diagram shows an AI agent in the middle, connected to records, documents, messaging, systems, limits, and a person who approves key steps.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: A system that decides the next step
-    answer: "An AI agent is software that pursues a goal over several steps. At each step it decides what to do next, such as looking something up or drafting a message, instead of following one fixed script."
+    answer: An AI agent is software that pursues a goal over several steps. At each step it decides what to do next, such as looking something up or drafting a message, instead of following one fixed script.
     paragraphs:
-      - "This makes agents useful for tasks that vary, like researching a new lead or sorting out a routine customer request. It also makes them harder to predict than a plain automation."
-      - "We therefore design agents with narrow permissions, a record of every step, and clear points where a person must approve. The goal is dependable help, not an unsupervised system."
-
+      - This makes agents useful for tasks that vary, like researching a new lead or sorting out a routine customer request. It also makes them harder to predict than a plain automation.
+      - We therefore design agents with narrow permissions, a record of every step, and clear points where a person must approve. The goal is dependable help, not an unsupervised system.
   - type: table
     id: compare
     tone: paper
     label: Choosing
     heading: Agent, automation, or person?
     caption: Comparison of an AI agent, a fixed automation, and a person
-    columns: [Situation, Best fit, Why]
+    columns:
+      - Situation
+      - Best fit
+      - Why
     rows:
       - - The steps are always the same
-        - "A fixed automation."
-        - "It is cheaper, faster, and predictable."
+        - A fixed automation.
+        - It is cheaper, faster, and predictable.
       - - The steps vary, but each is low risk
-        - "An AI agent."
-        - "It can adapt, and mistakes are easy to undo."
+        - An AI agent.
+        - It can adapt, and mistakes are easy to undo.
       - - The steps vary and mistakes are costly
-        - "An agent that proposes, and a person who approves."
-        - "Judgment stays with a person."
+        - An agent that proposes, and a person who approves.
+        - Judgment stays with a person.
       - - The task is rare or highly sensitive
-        - "A person."
-        - "Building a system costs more than doing it."
-
+        - A person.
+        - Building a system costs more than doing it.
+  - type: diagram
+    id: assistant-view
+    tone: white
+    label: What it looks like
+    heading: An agent that answers, cites, and hands over
+    intro: "An agent should be easy to supervise. This sketch shows the pattern: an answer from approved content, its source, and a hand-over to a person."
+    figure: assistant-ui
+    purpose: system
+    takeaway: A supervised AI agent answers from approved content, cites its source, and hands difficult cases to a person.
+    caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It illustrates a kind of system we build and is not a client's product.
+    points: []
   - type: diagram
     id: loop
     tone: white
     label: How it works
     heading: The agent's loop
-    intro: "An agent repeats a short loop until the goal is met or it needs help."
+    intro: An agent repeats a short loop until the goal is met or it needs help.
     spec:
       kind: flow
       steps:
@@ -109,9 +125,8 @@ sections:
         - title: Continue, ask, or stop
           text: Repeat, ask a person, or finish and report.
     purpose: process
-    takeaway: "An agent repeats a loop of choosing a step, acting within limits, and checking the result until it finishes or asks for help."
-    caption: "This diagram shows an agent's loop through five stages, from understanding the goal to continuing, asking a person, or stopping."
-
+    takeaway: An agent repeats a loop of choosing a step, acting within limits, and checking the result until it finishes or asks for help.
+    caption: This diagram shows an agent's loop through five stages, from understanding the goal to continuing, asking a person, or stopping.
   - type: columns
     id: controls
     tone: paper
@@ -120,31 +135,28 @@ sections:
     columns:
       - title: Narrow permissions
         items:
-          - "It can use only the tools and records the task needs."
-          - "It cannot spend money or delete records on its own."
+          - It can use only the tools and records the task needs.
+          - It cannot spend money or delete records on its own.
       - title: Human approval
         items:
-          - "Steps that affect customers or money wait for a person."
-          - "Doubtful cases are passed up."
+          - Steps that affect customers or money wait for a person.
+          - Doubtful cases are passed up.
       - title: Records
         items:
-          - "Every step and reason is logged."
-          - "Samples are reviewed regularly."
+          - Every step and reason is logged.
+          - Samples are reviewed regularly.
       - title: Testing
         items:
-          - "It is tested on past cases before it goes live."
-          - "It starts in a small area and widens as trust grows."
-
+          - It is tested on past cases before it goes live.
+          - It starts in a small area and widens as trust grows.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: An agent handling inbound enquiries
     paragraphs:
-      - "Imagine a sales team that receives enquiries from a form. Someone must look up the company, check whether it is already a customer, and write a first reply."
-      - "An agent could do the lookups, draft the reply, and file the enquiry in the customer records. A salesperson would read each draft and press send. Anything unclear would be flagged."
-      - "This is an example of the kind of agent, not a real client or result."
-
+      - A typical case is a sales team that receives enquiries from a form. Someone must look up the company, check whether it is already a customer, and write a first reply.
+      - An agent could do the lookups, draft the reply, and file the enquiry in the customer records. A salesperson would read each draft and press send. Anything unclear would be flagged.
   - type: faq
     id: faq
     tone: paper
@@ -152,12 +164,11 @@ sections:
     heading: Questions about AI agents
     items:
       - q: Can an agent act without asking?
-        a: "Only for low-risk steps you have approved. Anything touching customers, money, or sensitive records waits for a person."
+        a: Only for low-risk steps you have approved. Anything touching customers, money, or sensitive records waits for a person.
       - q: What if the agent is wrong?
-        a: "Steps are logged and reviewable, mistakes are easy to reverse by design, and we measure error rates before widening the agent's role."
+        a: Steps are logged and reviewable, mistakes are easy to reverse by design, and we measure error rates before widening the agent's role.
       - q: Which AI model does it use?
-        a: "We choose among several providers based on the task, cost, and your data rules. The agent is built so a model can be changed later."
-
+        a: We choose among several providers based on the task, cost, and your data rules. The agent is built so a model can be changed later.
   - type: related
     id: related
     tone: white
@@ -165,15 +176,22 @@ sections:
     heading: Agents across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.ai, svc.automation]
+        entityIds:
+          - svc.ai
+          - svc.automation
       - title: Related solutions
-        entityIds: [sol.ai-agents, sol.ai-automation]
+        entityIds:
+          - sol.ai-agents
+          - sol.ai-automation
       - title: Related work areas
         entityIds:
-          [workarea.ai-solutions, workarea.automation-systems, workarea.workflow-automation]
-
+          - workarea.ai-solutions
+          - workarea.automation-systems
+          - workarea.workflow-automation
   - type: cta
     id: contact-cta
     heading: Tell us about the multi-step task
-    body: "Describe the task, where judgment is needed, and what could go wrong. We will say whether an agent, an automation, or a person fits best."
-    primary: { label: Talk to DECHY about agents, href: "/contact/?service=ai" }
+    body: Describe the task, where judgment is needed, and what could go wrong. We will say whether an agent, an automation, or a person fits best.
+    primary:
+      label: Talk to DECHY about agents
+      href: /contact/?service=ai

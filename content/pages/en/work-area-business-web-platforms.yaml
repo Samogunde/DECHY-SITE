@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/business-web-platforms/
 entityId: workarea.business-web-platforms
-title: "Business Web Platforms We Build | DECHY"
+title: Business Web Platforms We Build | DECHY
 description: "Business web platforms go beyond a brochure site: accounts, content, bookings, and tools in one place. Learn what they contain and how they are built."
 breadcrumbLabel: Business Web Platforms
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - web application development
     - corporate website platform
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
   what: "A business web platform is a website that does real work: it holds accounts, takes bookings or requests, manages content, and connects to your internal tools."
-  problem: "A plain brochure site cannot take payments, manage customers, or keep content current, so staff handle these tasks by email and phone."
-  audience: "Organizations whose website should do more than describe them, and teams that update content or serve customers online every day."
-  choose: "Decide how much of your work should happen on the site, then build the smallest platform that covers it and can grow."
-  next: "Tell us what visitors and staff should be able to do on your site. We will outline the parts needed and a sensible first release."
-
+  problem: A plain brochure site cannot take payments, manage customers, or keep content current, so staff handle these tasks by email and phone.
+  audience: Organizations whose website should do more than describe them, and teams that update content or serve customers online every day.
+  choose: Decide how much of your work should happen on the site, then build the smallest platform that covers it and can grow.
+  next: Tell us what visitors and staff should be able to do on your site. We will outline the parts needed and a sensible first release.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Business Web Platforms
-    lead: "A business web platform is a website that does work. Visitors can book, apply, pay, or sign in. Staff can manage content and requests without a developer. This page shows what such platforms contain and how we build them."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: A business web platform is a website that does work. Visitors can book, apply, pay, or sign in. Staff can manage content and requests without a developer. This page shows what such platforms contain and how we build them.
     ctas:
-      - { label: Talk to us about a platform, href: "/contact/?service=web-development" }
-      - { label: See the difference, href: "#difference" }
+      - label: Talk to us about a platform
+        href: /contact/?service=web-development
+      - label: See the difference
+        href: "#difference"
     spec:
       kind: hub
       center:
@@ -54,48 +58,59 @@ sections:
         - title: Connections
           text: Links to your internal systems.
     purpose: system
-    takeaway: "A business web platform is one website with public pages, accounts, requests, payments, content tools, and connections working together."
-    visualTitle: "What a business web platform contains"
-    figureCaption: "This diagram shows six parts of a business web platform, all connected to one shared site, accounts, and content."
-
+    takeaway: A business web platform is one website with public pages, accounts, requests, payments, content tools, and connections working together.
+    visualTitle: What a business web platform contains
+    figureCaption: This diagram shows six parts of a business web platform, all connected to one shared site, accounts, and content.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: A website that carries the work
-    answer: "A business web platform is a website built to do tasks as well as to inform. It can hold customer accounts, take bookings, process payments, and connect to your internal systems."
+    answer: A business web platform is a website built to do tasks as well as to inform. It can hold customer accounts, take bookings, process payments, and connect to your internal systems.
     paragraphs:
       - "Many organizations begin with a simple site and add tools one by one: a booking plugin here, a payment page there. The pieces rarely share information, and nobody can see the whole picture."
-      - "A platform plans these parts together. A customer who books, pays, and returns sees one consistent experience, and staff see one record of what happened."
-
+      - A platform plans these parts together. A customer who books, pays, and returns sees one consistent experience, and staff see one record of what happened.
   - type: table
     id: difference
     tone: paper
     label: The difference
     heading: Brochure site or platform?
-    intro: "Both are useful. The right one depends on what you want the site to do."
+    intro: Both are useful. The right one depends on what you want the site to do.
     caption: Comparison of a brochure website and a business web platform
-    columns: [Question, Brochure site, Business platform]
+    columns:
+      - Question
+      - Brochure site
+      - Business platform
     rows:
       - - What is it for?
-        - "Telling people who you are and how to reach you."
+        - Telling people who you are and how to reach you.
         - "Letting people do things: book, pay, apply, sign in."
       - - Who updates it?
-        - "Often a developer, or occasional staff."
-        - "Staff, through content tools built for them."
+        - Often a developer, or occasional staff.
+        - Staff, through content tools built for them.
       - - How does it connect to the business?
-        - "Mostly it does not."
-        - "It shares information with your internal systems."
+        - Mostly it does not.
+        - It shares information with your internal systems.
       - - How much does it cost?
-        - "Lower to build."
-        - "Higher to build, with savings in staff time."
-
+        - Lower to build.
+        - Higher to build, with savings in staff time.
+  - type: diagram
+    id: site-editor
+    tone: white
+    label: What it looks like
+    heading: A web platform your team can run
+    intro: A web platform is easier to own when its editing is simple. This sketch shows a page canvas, a tool panel, and included hosting.
+    figure: site-builder
+    purpose: system
+    takeaway: A business web platform lets staff edit pages safely, with hosting and updates looked after.
+    caption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and the hosting that comes with it. It illustrates a kind of platform we build and is not a client site.
+    points: []
   - type: diagram
     id: journey
     tone: white
     label: A visitor's journey
     heading: How one request moves through a platform
-    intro: "A good platform follows each request from the first click to the finished job."
+    intro: A good platform follows each request from the first click to the finished job.
     spec:
       kind: flow
       steps:
@@ -110,9 +125,8 @@ sections:
         - title: The visitor is kept informed
           text: They see status and receive updates.
     purpose: workflow
-    takeaway: "A platform turns a visitor's click into a tracked job that staff handle and the visitor can follow."
-    caption: "This diagram follows a request through five steps, from a visitor arriving on the site to being kept informed of progress."
-
+    takeaway: A platform turns a visitor's click into a tracked job that staff handle and the visitor can follow.
+    caption: This diagram follows a request through five steps, from a visitor arriving on the site to being kept informed of progress.
   - type: columns
     id: parts
     tone: paper
@@ -121,31 +135,28 @@ sections:
     columns:
       - title: Customer areas
         items:
-          - "Secure sign-in and profiles."
-          - "Order history, documents, and messages."
+          - Secure sign-in and profiles.
+          - Order history, documents, and messages.
       - title: Staff tools
         items:
-          - "Edit pages without code."
-          - "See and manage requests in one list."
+          - Edit pages without code.
+          - See and manage requests in one list.
       - title: Business connections
         items:
-          - "Send new requests to your accounting or customer records."
-          - "Show live information, such as availability."
+          - Send new requests to your accounting or customer records.
+          - Show live information, such as availability.
       - title: Quality
         items:
-          - "Pages that load quickly on phones."
-          - "Accessible to people using keyboards and screen readers."
-
+          - Pages that load quickly on phones.
+          - Accessible to people using keyboards and screen readers.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: A practice website that takes bookings
     paragraphs:
-      - "Imagine a professional practice whose website lists services and a phone number. Appointments are made by phone, and clients email documents that staff file by hand."
-      - "A platform could let clients book online, upload documents to a private area, and see the status of their matter. Staff would receive each booking as a task, with the documents attached."
-      - "This is an example of the kind of platform, not a real client or result."
-
+      - A typical case is a professional practice whose website lists services and a phone number. Appointments are made by phone, and clients email documents that staff file by hand.
+      - A platform could let clients book online, upload documents to a private area, and see the status of their matter. Staff would receive each booking as a task, with the documents attached.
   - type: process
     id: process
     tone: paper
@@ -153,18 +164,25 @@ sections:
     heading: How a platform is delivered
     steps:
       - title: Define what people must be able to do
-        body: "We list the tasks for visitors and staff, and rank them by value."
-        artifacts: [Task list, Priorities]
+        body: We list the tasks for visitors and staff, and rank them by value.
+        artifacts:
+          - Task list
+          - Priorities
       - title: Design the journeys
-        body: "We sketch each journey and test it with a few real users."
-        artifacts: [Journey maps, Tested designs]
+        body: We sketch each journey and test it with a few real users.
+        artifacts:
+          - Journey maps
+          - Tested designs
       - title: Build and connect
-        body: "We build the site, the accounts, and the links to your systems."
-        artifacts: [Working platform, Connections]
+        body: We build the site, the accounts, and the links to your systems.
+        artifacts:
+          - Working platform
+          - Connections
       - title: Launch and train
-        body: "We move content across, check search visibility, and train your staff."
-        artifacts: [Launch plan, Training notes]
-
+        body: We move content across, check search visibility, and train your staff.
+        artifacts:
+          - Launch plan
+          - Training notes
   - type: related
     id: related
     tone: white
@@ -172,14 +190,22 @@ sections:
     heading: Platforms across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.web-development]
+        entityIds:
+          - svc.web-development
       - title: Related solutions
-        entityIds: [sol.customer-portal-development, sol.booking-platforms, sol.saas-platforms]
+        entityIds:
+          - sol.customer-portal-development
+          - sol.booking-platforms
+          - sol.saas-platforms
       - title: Related work areas
-        entityIds: [workarea.customer-portals, workarea.digital-products, workarea.commerce-systems]
-
+        entityIds:
+          - workarea.customer-portals
+          - workarea.digital-products
+          - workarea.commerce-systems
   - type: cta
     id: contact-cta
     heading: Tell us what your site should do
-    body: "Describe what visitors and staff should be able to do. We will outline the parts you need and a sensible first release."
-    primary: { label: Talk to DECHY about a platform, href: "/contact/?service=web-development" }
+    body: Describe what visitors and staff should be able to do. We will outline the parts you need and a sensible first release.
+    primary:
+      label: Talk to DECHY about a platform
+      href: /contact/?service=web-development

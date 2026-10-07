@@ -100,6 +100,17 @@ sections:
     purpose: before-after
     takeaway: Numbers stop disagreeing once each measure has one written definition and one source.
     caption: This diagram contrasts three teams producing three different totals with one agreed definition feeding a single trusted dashboard.
+  - type: diagram
+    id: report-view
+    tone: white
+    label: What it looks like
+    heading: What a useful report looks like
+    intro: A report earns its place when a manager can read it in a minute. This sketch shows filters, one chart, and a short table with a clear trend on each line.
+    figure: analytics-ui
+    purpose: system
+    takeaway: A good report offers a few filters, one clear chart, and a short table that says which way each line is moving.
+    caption: This sketch shows a conceptual analytics report with filters, a chart of two series by month, and a table with a trend label on each row. The chart carries no figures and is not a client report.
+    points: []
   - type: columns
     id: trust
     tone: white

@@ -90,7 +90,7 @@ describe("clarity standard on the shipped pages", () => {
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(112);
+    expect(guided.length).toBe(121);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(

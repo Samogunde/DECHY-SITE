@@ -103,6 +103,17 @@ sections:
         body: We design approval steps so a person sees what they need and decides quickly.
       - title: Failures are expected
         body: Connections drop and information arrives incomplete. A good automation retries, records what happened, and tells a person.
+  - type: diagram
+    id: request-flow
+    tone: white
+    label: What it looks like
+    heading: A request moving through its steps
+    intro: Automation is easiest to understand as a request that moves by itself. This sketch shows each step with an owner and a status, so nothing waits unseen.
+    figure: workflow-ui
+    purpose: workflow
+    takeaway: An automated process shows each step, who owns it, and where the request stands, so nothing waits unseen.
+    caption: This sketch shows a conceptual workflow board with one request moving through four steps, each with an owner and a status label. It illustrates a type of system we build and is not a client's workflow.
+    points: []
   - type: index
     id: first
     tone: white
@@ -342,6 +353,7 @@ sections:
           - plat.hubspot
           - plat.salesforce
           - tech.microsoft-power-automate
+          - plat.microsoft-365
   - type: cta
     id: contact-cta
     heading: Tell us about one task you repeat

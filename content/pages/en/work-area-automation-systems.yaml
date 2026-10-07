@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/automation-systems/
 entityId: workarea.automation-systems
-title: "Automation Systems We Build | DECHY"
+title: Automation Systems We Build | DECHY
 description: "Automation systems that move information and trigger actions between your tools without re-entry: what they contain, how they are watched, and when to avoid them."
 breadcrumbLabel: Automation Systems
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - business process automation
     - automated back office
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "An automation system is a set of connected rules that moves information and starts actions between your tools, so people no longer copy and chase it by hand."
-  problem: "Staff re-type data, forward emails, and remind each other of tasks, so work is slow and errors creep in."
-  audience: "Operations and finance teams with repeated manual tasks, and owners who want staff time spent on judgment, not copying."
-  choose: "Automate tasks that are frequent, rule-based, and well understood. Leave rare or judgment-heavy tasks to people."
-  next: "Describe the task your team repeats most. We will estimate the time it takes and whether automating it is worthwhile."
-
+  what: An automation system is a set of connected rules that moves information and starts actions between your tools, so people no longer copy and chase it by hand.
+  problem: Staff re-type data, forward emails, and remind each other of tasks, so work is slow and errors creep in.
+  audience: Operations and finance teams with repeated manual tasks, and owners who want staff time spent on judgment, not copying.
+  choose: Automate tasks that are frequent, rule-based, and well understood. Leave rare or judgment-heavy tasks to people.
+  next: Describe the task your team repeats most. We will estimate the time it takes and whether automating it is worthwhile.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Automation Systems
-    lead: "An automation system connects your tools so that information moves and actions happen without manual effort. This page shows what these systems contain, how they are watched, and which tasks are worth automating."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: An automation system connects your tools so that information moves and actions happen without manual effort. This page shows what these systems contain, how they are watched, and which tasks are worth automating.
     ctas:
-      - { label: Talk to us about automation, href: "/contact/?service=automation" }
-      - { label: Is it worth automating?, href: "#worth" }
+      - label: Talk to us about automation
+        href: /contact/?service=automation
+      - label: Is it worth automating?
+        href: "#worth"
     spec:
       kind: before-after
       before:
@@ -53,48 +57,48 @@ sections:
           - title: A reminder is sent if it is late
       hubLabel: Automated
     purpose: before-after
-    takeaway: "Automation replaces copying and reminding by hand with tools that pass work to each other."
-    visualTitle: "The same task, by hand and automated"
-    figureCaption: "This diagram contrasts a task handled by people copying and reminding with the same task handled by connected tools."
-
+    takeaway: Automation replaces copying and reminding by hand with tools that pass work to each other.
+    visualTitle: The same task, by hand and automated
+    figureCaption: This diagram contrasts a task handled by people copying and reminding with the same task handled by connected tools.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: Rules that run on their own
-    answer: "An automation system is a collection of rules that watch for an event, such as a new order or a late invoice, and then carry out actions, such as updating a record or sending a message."
+    answer: An automation system is a collection of rules that watch for an event, such as a new order or a late invoice, and then carry out actions, such as updating a record or sending a message.
     paragraphs:
-      - "Each rule is simple. The value comes from joining them, so a task flows across tools without anyone carrying it."
-      - "Good automation also reports on itself. When something fails, the right person is told, so problems are found in minutes and not weeks."
-
+      - Each rule is simple. The value comes from joining them, so a task flows across tools without anyone carrying it.
+      - Good automation also reports on itself. When something fails, the right person is told, so problems are found in minutes and not weeks.
   - type: table
     id: worth
     tone: paper
     label: Is it worth it?
     heading: Which tasks to automate first
-    intro: "A quick test helps. Rank each task by how often it happens, how clear the rules are, and how costly mistakes are."
+    intro: A quick test helps. Rank each task by how often it happens, how clear the rules are, and how costly mistakes are.
     caption: How to judge whether a task suits automation
-    columns: [Question, Automate when, Keep manual when]
+    columns:
+      - Question
+      - Automate when
+      - Keep manual when
     rows:
       - - How often does it happen?
-        - "Daily or weekly."
-        - "A few times a year."
+        - Daily or weekly.
+        - A few times a year.
       - - How clear are the rules?
-        - "Anyone could follow them from a written list."
-        - "It depends on judgment and context."
+        - Anyone could follow them from a written list.
+        - It depends on judgment and context.
       - - What if a mistake happens?
-        - "It is small and easy to correct."
-        - "It is costly or hard to undo."
+        - It is small and easy to correct.
+        - It is costly or hard to undo.
       - - How long does it take today?
-        - "Hours each week."
-        - "Minutes each month."
-
+        - Hours each week.
+        - Minutes each month.
   - type: diagram
     id: stack
     tone: white
     label: What is inside
     heading: The layers of an automation system
-    intro: "Even a small system has the same layers. Larger ones add more of each."
+    intro: Even a small system has the same layers. Larger ones add more of each.
     spec:
       kind: layers
       layerLabel: Layers of an automation system
@@ -108,9 +112,8 @@ sections:
         - title: Monitoring
           text: Alerts and logs when something fails.
     purpose: system
-    takeaway: "An automation system is built from triggers, rules, actions, and monitoring, and the monitoring is what keeps it trustworthy."
-    caption: "This diagram shows four layers of an automation system, from triggers that start work to monitoring that reports failures."
-
+    takeaway: An automation system is built from triggers, rules, actions, and monitoring, and the monitoring is what keeps it trustworthy.
+    caption: This diagram shows four layers of an automation system, from triggers that start work to monitoring that reports failures.
   - type: columns
     id: examples
     tone: paper
@@ -119,47 +122,43 @@ sections:
     columns:
       - title: Sales and customers
         items:
-          - "New enquiries logged and assigned."
-          - "Follow-up reminders and welcome emails."
+          - New enquiries logged and assigned.
+          - Follow-up reminders and welcome emails.
       - title: Finance
         items:
-          - "Invoices created and chased."
-          - "Receipts matched to payments."
+          - Invoices created and chased.
+          - Receipts matched to payments.
       - title: Operations
         items:
-          - "Requests routed and tracked."
-          - "Stock alerts and purchase orders."
+          - Requests routed and tracked.
+          - Stock alerts and purchase orders.
       - title: People
         items:
-          - "Onboarding checklists."
-          - "Leave requests and approvals."
-
+          - Onboarding checklists.
+          - Leave requests and approvals.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: A new client set up from one form
     paragraphs:
-      - "Imagine a small firm where each new client triggers a dozen small tasks: a folder, a contract, an invoice, a welcome email, and a calendar reminder. Staff sometimes forget one."
-      - "An automation could create all of them from one form and tell the owner if any step fails. New clients would start the same way every time."
-      - "This is an example of the kind of system, not a real client or result."
-
+      - "A typical case is a small firm where each new client triggers a dozen small tasks: a folder, a contract, an invoice, a welcome email, and a calendar reminder. Staff sometimes forget one."
+      - An automation could create all of them from one form and tell the owner if any step fails. New clients would start the same way every time.
   - type: technical
     id: technology
     tone: paper
     label: Technology
     heading: For technical readers
-    intro: "Most visitors can skip this section. It outlines the tools we choose from."
+    intro: Most visitors can skip this section. It outlines the tools we choose from.
     panels:
       - title: Tools
         paragraphs:
-          - "We use automation platforms such as [Zapier](ref:tech.zapier), [Make](ref:tech.make), and [n8n](ref:tech.n8n) for many jobs, and custom code where a platform would be limiting or costly."
+          - We use automation platforms such as [Zapier](ref:tech.zapier), [Make](ref:tech.make), and [n8n](ref:tech.n8n) for many jobs, and custom code where a platform would be limiting or costly.
       - title: Reliability
         items:
-          - "Each step is checked, and failures raise an alert."
-          - "Steps can be retried safely without duplicating work."
-          - "Sensitive keys are stored in a secure vault, not in the rules."
-
+          - Each step is checked, and failures raise an alert.
+          - Steps can be retried safely without duplicating work.
+          - Sensitive keys are stored in a secure vault, not in the rules.
   - type: related
     id: related
     tone: white
@@ -167,15 +166,21 @@ sections:
     heading: Automation across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.automation]
+        entityIds:
+          - svc.automation
       - title: Related solutions
-        entityIds: [sol.business-process-automation, sol.workflow-automation]
+        entityIds:
+          - sol.business-process-automation
+          - sol.workflow-automation
       - title: Related work areas
         entityIds:
-          [workarea.workflow-automation, workarea.ai-agents, workarea.integration-platforms]
-
+          - workarea.workflow-automation
+          - workarea.ai-agents
+          - workarea.integration-platforms
   - type: cta
     id: contact-cta
     heading: Tell us the task your team repeats most
-    body: "Describe it and how often it happens. We will estimate the time it takes and say whether automating it is worthwhile."
-    primary: { label: Talk to DECHY about automation, href: "/contact/?service=automation" }
+    body: Describe it and how often it happens. We will estimate the time it takes and say whether automating it is worthwhile.
+    primary:
+      label: Talk to DECHY about automation
+      href: /contact/?service=automation

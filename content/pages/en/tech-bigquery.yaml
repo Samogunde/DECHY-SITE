@@ -88,6 +88,17 @@ sections:
       - - Spreadsheets and exports
         - Early stages, with a few sources and one or two people.
         - Breaks down as sources, people, and versions multiply.
+  - type: diagram
+    id: report-view
+    tone: white
+    label: What it looks like
+    heading: What the warehouse delivers to people
+    intro: A warehouse matters because of what people see from it. This sketch shows filters, a chart, and a short table of trends.
+    figure: analytics-ui
+    purpose: system
+    takeaway: "A warehouse is judged by the reports people read from it: a few filters, a chart, and a short table."
+    caption: This sketch shows a conceptual analytics report with filters, a two-series chart by month, and a table with trend labels. It carries no figures and is not a client report.
+    points: []
   - type: callout
     id: cost
     tone: white

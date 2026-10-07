@@ -224,6 +224,18 @@ assets:
     approval: approved
     acquired: "2026-10-07"
 
+  - id: asset.fig-interface-set
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: "Conceptual set of interfaces: a dashboard, a phone screen, and a support assistant"
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-07"
+
   # ---- Photography (licensed stock, Unsplash License; no visible credit is shown on the site) ----
   - id: asset.photo-who-port-operations
     kind: file
@@ -315,3 +327,21 @@ assets:
     usage: [contact]
     approval: approved
     acquired: "2026-10-05"
+
+  - id: asset.photo-industries-manufacturing-line
+    kind: file
+    file: public/photos/industries-manufacturing-line.jpg
+    role: photograph
+    source: licensed-stock
+    creator: Homa Appliances
+    originalFilename: 5hPe-Tr2wog
+    sourceUrl: https://unsplash.com/photos/5hPe-Tr2wog
+    licenseUrl: https://unsplash.com/license
+    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-industries-manufacturing-line.md.
+    sha256: 5dbecf25d8e39381f44b67f14be6bf087e1bceefb2fc4586a1bea3fc0afa277a
+    width: 2880
+    height: 1921
+    alt: A long automated production line in a bright factory hall, with white machine frames, black cable guides, and yellow safety rails running toward the far end.
+    usage: [industriesmanufacturing]
+    approval: approved
+    acquired: "2026-10-06"

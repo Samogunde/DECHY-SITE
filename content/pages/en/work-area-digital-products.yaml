@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/digital-products/
 entityId: workarea.digital-products
-title: "Digital Products We Build | DECHY"
+title: Digital Products We Build | DECHY
 description: "Digital products are software offered to customers as a product in its own right: how one is shaped, tested with users, launched, and improved over time."
 breadcrumbLabel: Digital Products
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - software product development
     - mvp and product launch
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "A digital product is software that customers use as the thing you offer, such as an app, a platform, or an online service, and that you keep improving."
-  problem: "Teams build too much before learning what people want, or launch and then have no plan to improve."
-  audience: "Founders and teams creating a software offering, and organizations turning an internal tool into a product."
-  choose: "Build the smallest version that tests your biggest assumption, learn from real use, and grow what people value."
-  next: "Describe the product idea and who it is for. We will suggest a first version that tests it."
-
+  what: A digital product is software that customers use as the thing you offer, such as an app, a platform, or an online service, and that you keep improving.
+  problem: Teams build too much before learning what people want, or launch and then have no plan to improve.
+  audience: Founders and teams creating a software offering, and organizations turning an internal tool into a product.
+  choose: Build the smallest version that tests your biggest assumption, learn from real use, and grow what people value.
+  next: Describe the product idea and who it is for. We will suggest a first version that tests it.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Digital Products
-    lead: "A digital product is software that people use as the thing you offer. This page explains how a product is shaped, tested, launched, and improved, and why the smallest first version is usually the right one."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: A digital product is software that people use as the thing you offer. This page explains how a product is shaped, tested, launched, and improved, and why the smallest first version is usually the right one.
     ctas:
-      - { label: Talk to us about a product, href: "/contact/?service=software-development" }
-      - { label: See the cycle, href: "#cycle" }
+      - label: Talk to us about a product
+        href: /contact/?service=software-development
+      - label: See the cycle
+        href: "#cycle"
     spec:
       kind: funnel
       stages:
@@ -49,20 +53,18 @@ sections:
         - title: A growing product
           text: Features added because people asked.
     purpose: transformation
-    takeaway: "A product narrows from many ideas to one testable first version, then grows from what real users show."
-    visualTitle: "From many ideas to a growing product"
-    figureCaption: "This diagram shows a product idea narrowing from many possible features to one first version, then growing as real users show what they value."
-
+    takeaway: A product narrows from many ideas to one testable first version, then grows from what real users show.
+    visualTitle: From many ideas to a growing product
+    figureCaption: This diagram shows a product idea narrowing from many possible features to one first version, then growing as real users show what they value.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: Software that you offer, and keep improving
-    answer: "A digital product is software offered to customers as a product. Unlike a one-off project, it has users, a roadmap, and an owner, and it keeps changing as people use it."
+    answer: A digital product is software offered to customers as a product. Unlike a one-off project, it has users, a roadmap, and an owner, and it keeps changing as people use it.
     paragraphs:
       - "Products fail less often from poor engineering than from solving the wrong problem. The early work is therefore about learning: who the users are, what they struggle with, and what they will pay for."
-      - "We shape the product with design and engineering together, so ideas are tested as real, usable screens before large amounts are built."
-
+      - We shape the product with design and engineering together, so ideas are tested as real, usable screens before large amounts are built.
   - type: columns
     id: parts
     tone: paper
@@ -71,29 +73,28 @@ sections:
     columns:
       - title: Shape
         items:
-          - "Research with users."
-          - "A clear statement of the problem."
-          - "A ranked list of what to build first."
+          - Research with users.
+          - A clear statement of the problem.
+          - A ranked list of what to build first.
       - title: Build
         items:
-          - "Design and engineering as one team."
-          - "Working software every few weeks."
-          - "Tests that protect what already works."
+          - Design and engineering as one team.
+          - Working software every few weeks.
+          - Tests that protect what already works.
       - title: Launch
         items:
-          - "A small, watched release."
-          - "Measures of use, not only of sign-ups."
+          - A small, watched release.
+          - Measures of use, not only of sign-ups.
       - title: Improve
         items:
-          - "A regular rhythm of changes."
-          - "Support for users."
-
+          - A regular rhythm of changes.
+          - Support for users.
   - type: diagram
     id: cycle
     tone: paper
     label: The cycle
     heading: Learn, build, measure, repeat
-    intro: "Products improve through short cycles, not through one big release."
+    intro: Products improve through short cycles, not through one big release.
     spec:
       kind: flow
       steps:
@@ -108,43 +109,45 @@ sections:
         - title: Learn and decide
           text: Grow it, change it, or stop.
     purpose: process
-    takeaway: "A product improves through short cycles of understanding, testing, building, launching to a few users, and deciding."
-    caption: "This diagram shows five steps in a product cycle, from understanding the problem to deciding whether to grow, change, or stop."
-
+    takeaway: A product improves through short cycles of understanding, testing, building, launching to a few users, and deciding.
+    caption: This diagram shows five steps in a product cycle, from understanding the problem to deciding whether to grow, change, or stop.
   - type: chooser
     id: first
     tone: white
     label: First version
     heading: What should the first version be?
-    intro: "There is more than one way to test an idea. Choose by what you most need to learn."
+    intro: There is more than one way to test an idea. Choose by what you most need to learn.
     question: What is your biggest uncertainty?
     options:
       - label: Will anyone want it?
-        when: "You are not sure the problem is real or common."
-        get: "A clickable prototype shown to real people, before any code."
-        watch: "Interest is not payment. Ask what they would give up or pay."
-        cta: { label: Test the idea, href: "/contact/?service=ui-ux" }
+        when: You are not sure the problem is real or common.
+        get: A clickable prototype shown to real people, before any code.
+        watch: Interest is not payment. Ask what they would give up or pay.
+        cta:
+          label: Test the idea
+          href: /contact/?service=ui-ux
       - label: Will they pay for it?
-        when: "People like the idea, but you need to know about price and value."
-        get: "A narrow working product, offered to a small group."
-        watch: "Keep it small, but make the core job work well."
-        cta: { label: Plan a first release, href: "/contact/?service=software-development" }
+        when: People like the idea, but you need to know about price and value.
+        get: A narrow working product, offered to a small group.
+        watch: Keep it small, but make the core job work well.
+        cta:
+          label: Plan a first release
+          href: /contact/?service=software-development
       - label: Can it grow?
-        when: "The idea works, and you need it to serve more people reliably."
+        when: The idea works, and you need it to serve more people reliably.
         get: "Stronger foundations: performance, security, and support."
-        watch: "Do not do this before you have evidence the idea works."
-        cta: { label: Plan for growth, href: "/contact/?service=software-development" }
-
+        watch: Do not do this before you have evidence the idea works.
+        cta:
+          label: Plan for growth
+          href: /contact/?service=software-development
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: An internal tool becoming a product
     paragraphs:
-      - "Imagine a firm that built an internal tool for scheduling inspections, and finds that other firms ask to use it. Turning it into a product means adding accounts, billing, help for new users, and a way to handle many customers safely."
-      - "A first step could be a small group of outside firms using a cleaned-up version, while the team learns what they need. Features would follow actual use."
-      - "This is an example of the kind of product, not a real client or result."
-
+      - A typical case is a firm that built an internal tool for scheduling inspections, and finds that other firms ask to use it. Turning it into a product means adding accounts, billing, help for new users, and a way to handle many customers safely.
+      - A first step could be a small group of outside firms using a cleaned-up version, while the team learns what they need. Features would follow actual use.
   - type: related
     id: related
     tone: paper
@@ -152,16 +155,22 @@ sections:
     heading: Products across DECHY
     groups:
       - title: The services behind this
-        entityIds: [svc.software-development, svc.ui-ux]
+        entityIds:
+          - svc.software-development
+          - svc.ui-ux
       - title: Related solutions
-        entityIds: [sol.saas-platforms, sol.marketplace-platforms]
+        entityIds:
+          - sol.saas-platforms
+          - sol.marketplace-platforms
       - title: Related work areas
         entityIds:
-          [workarea.ui-ux-product-design, workarea.mobile-apps, workarea.custom-software-systems]
-
+          - workarea.ui-ux-product-design
+          - workarea.mobile-apps
+          - workarea.custom-software-systems
   - type: cta
     id: contact-cta
     heading: Tell us about the product idea
-    body: "Describe the idea and who it is for. We will suggest a first version that tests it before you invest further."
+    body: Describe the idea and who it is for. We will suggest a first version that tests it before you invest further.
     primary:
-      { label: Talk to DECHY about a product, href: "/contact/?service=software-development" }
+      label: Talk to DECHY about a product
+      href: /contact/?service=software-development

@@ -78,6 +78,17 @@ sections:
       - Work done outside the scope that is never billed
       - Invoices sent late, so payment is late
       - Reminders that depend on someone's memory
+  - type: diagram
+    id: client-record
+    tone: white
+    label: What it looks like
+    heading: One client record across sales and delivery
+    intro: A firm gains most when sales, delivery, and billing share one client record. This sketch shows a pipeline and the shared record.
+    figure: crm-ui
+    purpose: relationship
+    takeaway: A professional firm benefits when sales, delivery, and billing share one record for each client.
+    caption: This sketch shows a conceptual client system with a pipeline of prospects and a client record whose sections are in sync with other tools. It is not a client system.
+    points: []
   - type: index
     id: leaks
     tone: white

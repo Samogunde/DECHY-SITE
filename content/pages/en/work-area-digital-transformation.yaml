@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/digital-transformation/
 entityId: workarea.digital-transformation
-title: "Digital Transformation Work We Do | DECHY"
+title: Digital Transformation Work We Do | DECHY
 description: "Digital transformation as practical, phased change: assess what you have, set priorities, change one area at a time, and measure whether it helped."
 breadcrumbLabel: Digital Transformation
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - digital transformation roadmap
     - phased technology change
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "Digital transformation is changing how an organization works by using technology well, in phases, with each change tied to a result you can measure."
-  problem: "Large technology programs are costly and slow, and many end with new tools that nobody uses and no improvement in results."
-  audience: "Leaders planning a major change in how their organization works, and teams carrying out a multi-year technology program."
-  choose: "Change one area at a time, starting where the pain and the payoff are greatest, and measure each phase before the next."
-  next: "Tell us what you want to be different in a year. We will map a first phase and what it would involve."
-
+  what: Digital transformation is changing how an organization works by using technology well, in phases, with each change tied to a result you can measure.
+  problem: Large technology programs are costly and slow, and many end with new tools that nobody uses and no improvement in results.
+  audience: Leaders planning a major change in how their organization works, and teams carrying out a multi-year technology program.
+  choose: Change one area at a time, starting where the pain and the payoff are greatest, and measure each phase before the next.
+  next: Tell us what you want to be different in a year. We will map a first phase and what it would involve.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: Digital Transformation
-    lead: "Digital transformation is changing how an organization works by using technology well. Done sensibly, it happens in small phases, each tied to a measured result. This page shows what such a program looks like."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: Digital transformation is changing how an organization works by using technology well. Done sensibly, it happens in small phases, each tied to a measured result. This page shows what such a program looks like.
     ctas:
-      - { label: Talk to us about transformation, href: "/contact/?service=consulting" }
-      - { label: See the phases, href: "#phases" }
+      - label: Talk to us about transformation
+        href: /contact/?service=consulting
+      - label: See the phases
+        href: "#phases"
     spec:
       kind: funnel
       stages:
@@ -49,50 +53,50 @@ sections:
         - title: The next phase
           text: Chosen with what was learned.
     purpose: transformation
-    takeaway: "Transformation narrows from the whole organization to one contained phase, then widens as results are proven."
-    visualTitle: "From the whole organization to one proven phase"
-    figureCaption: "This diagram shows a transformation narrowing from the whole organization to one first phase with a clear measure, then widening as results are proven."
-
+    takeaway: Transformation narrows from the whole organization to one contained phase, then widens as results are proven.
+    visualTitle: From the whole organization to one proven phase
+    figureCaption: This diagram shows a transformation narrowing from the whole organization to one first phase with a clear measure, then widening as results are proven.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: Changing how work gets done
-    answer: "Digital transformation means changing how an organization works by using technology, not only buying new tools. It covers processes, systems, information, and the habits of the people who use them."
+    answer: Digital transformation means changing how an organization works by using technology, not only buying new tools. It covers processes, systems, information, and the habits of the people who use them.
     paragraphs:
       - "The tools are the easy part. Most programs struggle with the human side: agreeing a process, moving people to a new way of working, and finishing the job of switching off the old one."
-      - "That is why we plan transformation as a series of small, owned changes, each with a measure of success, instead of one large program with a distant finish."
-
+      - That is why we plan transformation as a series of small, owned changes, each with a measure of success, instead of one large program with a distant finish.
   - type: table
     id: areas
     tone: white
     label: Where change happens
     heading: Common areas of change
     caption: Common areas of digital transformation and what they involve
-    columns: [Area, What changes, A sign you need it]
+    columns:
+      - Area
+      - What changes
+      - A sign you need it
     rows:
       - - Customer experience
-        - "How people find, buy from, and get help from you."
-        - "Customers complain about effort or delays."
+        - How people find, buy from, and get help from you.
+        - Customers complain about effort or delays.
       - - Operations
-        - "How work moves between people and systems."
-        - "Staff re-type data and chase approvals."
+        - How work moves between people and systems.
+        - Staff re-type data and chase approvals.
       - - Information
-        - "How data is stored, shared, and used for decisions."
-        - "Reports disagree or take days."
+        - How data is stored, shared, and used for decisions.
+        - Reports disagree or take days.
       - - Systems
-        - "Which software runs the business."
-        - "Old software holds back change."
+        - Which software runs the business.
+        - Old software holds back change.
       - - People and habits
-        - "How teams work with the new tools."
-        - "New tools sit unused."
-
+        - How teams work with the new tools.
+        - New tools sit unused.
   - type: diagram
     id: phases
     tone: paper
     label: The phases
     heading: How a program is staged
-    intro: "Staging keeps risk small and lets you learn along the way."
+    intro: Staging keeps risk small and lets you learn along the way.
     spec:
       kind: flow
       steps:
@@ -107,28 +111,24 @@ sections:
         - title: Decide the next step
           text: Continue, adjust, or stop.
     purpose: process
-    takeaway: "A staged program assesses, prioritizes, changes one area, measures, and then decides what to do next."
-    caption: "This diagram shows five steps of a staged program, from assessing what exists to deciding the next step after measuring."
-
+    takeaway: A staged program assesses, prioritizes, changes one area, measures, and then decides what to do next.
+    caption: This diagram shows five steps of a staged program, from assessing what exists to deciding the next step after measuring.
   - type: callout
     id: limits
     tone: paper
     variant: limits
     title: What this is not
     paragraphs:
-      - "Transformation is not buying software and hoping. Without a clear process and an owner, new tools usually reproduce old problems at greater cost."
-      - "We say so early, and often recommend smaller changes than clients first expect."
-
+      - Transformation is not buying software and hoping. Without a clear process and an owner, new tools usually reproduce old problems at greater cost.
+      - We say so early, and often recommend smaller changes than clients first expect.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: A staged plan that starts with one process
     paragraphs:
-      - "Imagine an organization with paper forms, several spreadsheets, and a twenty-year-old system that only one person understands. Leadership wants to modernize everything."
-      - "A staged plan could start with the one process that wastes the most time and replace its paper forms with a tracked workflow. It would then measure the saving, and use that evidence to plan the next phase and the eventual retirement of the old system."
-      - "This is an example of the kind of program, not a real client or result."
-
+      - A typical case is an organization with paper forms, several spreadsheets, and a twenty-year-old system that only one person understands. Leadership wants to modernize everything.
+      - A staged plan could start with the one process that wastes the most time and replace its paper forms with a tracked workflow. It would then measure the saving, and use that evidence to plan the next phase and the eventual retirement of the old system.
   - type: related
     id: related
     tone: paper
@@ -136,19 +136,21 @@ sections:
     heading: Transformation across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.consulting]
+        entityIds:
+          - svc.consulting
       - title: Related solutions
-        entityIds: [sol.digital-transformation, sol.legacy-system-modernization]
+        entityIds:
+          - sol.digital-transformation
+          - sol.legacy-system-modernization
       - title: Related work areas
         entityIds:
-          [
-            workarea.operations-platforms,
-            workarea.internal-business-tools,
-            workarea.custom-software-systems,
-          ]
-
+          - workarea.operations-platforms
+          - workarea.internal-business-tools
+          - workarea.custom-software-systems
   - type: cta
     id: contact-cta
     heading: Tell us what you want to be different in a year
-    body: "Describe the change you want, and what is in the way. We will map a first phase and what it would involve."
-    primary: { label: Talk to DECHY about transformation, href: "/contact/?service=consulting" }
+    body: Describe the change you want, and what is in the way. We will map a first phase and what it would involve.
+    primary:
+      label: Talk to DECHY about transformation
+      href: /contact/?service=consulting

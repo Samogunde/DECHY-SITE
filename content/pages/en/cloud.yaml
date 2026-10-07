@@ -293,6 +293,7 @@ sections:
         entityIds:
           - plat.firebase
           - plat.supabase
+          - plat.cloudflare
   - type: cta
     id: contact-cta
     heading: Tell us where your software runs today

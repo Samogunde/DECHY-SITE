@@ -6,7 +6,7 @@ import { entityPath, publishedPath } from "@/lib/content/urls";
 const registry = buildRegistry();
 const techPages = registry.pages.filter((p) => p.kind === "technology");
 
-/** The approved set: Phase 3 (plan section 7) plus the Phase 4 technology wave (doc 14). */
+/** The approved set: Phase 3 (plan section 7), the Phase 4 technology wave (doc 14), and Phase 5 platform coverage. */
 const APPROVED = [
   "fw.nextjs",
   "fw.react",
@@ -52,11 +52,21 @@ const APPROVED = [
   "plat.firebase",
   "plat.supabase",
   "plat.snowflake",
+  // Phase 5 platform coverage
+  "plat.wix",
+  "plat.wix-studio",
+  "plat.squarespace",
+  "plat.drupal",
+  "plat.bigcommerce",
+  "int.paypal",
+  "lang.go",
+  "plat.microsoft-365",
+  "plat.cloudflare",
 ];
 
 describe("phase 3 technology pages", () => {
-  it("are exactly the 43 approved technologies, each at its canonical URL", () => {
-    expect(techPages).toHaveLength(43);
+  it("are exactly the 52 approved technologies, each at its canonical URL", () => {
+    expect(techPages).toHaveLength(52);
     expect(techPages.map((p) => p.entityId).sort()).toEqual([...APPROVED].sort());
     for (const p of techPages) {
       const node = registry.nodes.get(p.entityId!)!;
@@ -159,7 +169,7 @@ describe("phase 3 technology pages", () => {
     const unbuilt = technologyEntities.filter((n) => !publishedPath(n, registry));
     expect(unbuilt.length).toBeGreaterThan(100);
     // Deferred entities have no page, and so no link target.
-    for (const id of ["lang.go", "plat.vercel", "fw.rails", "tech.opensearch", "fw.django"])
+    for (const id of ["lang.rust", "plat.vercel", "fw.rails", "tech.opensearch", "fw.django"])
       expect(publishedPath(registry.nodes.get(id), registry), id).toBeNull();
   });
 

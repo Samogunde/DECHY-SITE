@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/ai-solutions/
 entityId: workarea.ai-solutions
-title: "AI Solutions We Build | DECHY"
+title: AI Solutions We Build | DECHY
 description: "AI solutions that read, summarize, classify, and answer within real business processes: what they contain, how they are checked, and where they should not be used."
 breadcrumbLabel: AI Solutions
 parent: /work/
@@ -13,28 +13,32 @@ intent:
     - business ai applications
     - ai integration
 indexing: index
-claims: [company.name, company.descriptor]
-datePublished: "2026-10-05"
-dateModified: "2026-10-05"
-schemaTypes: [WebPage, CollectionPage]
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-05
+dateModified: 2026-10-05
+schemaTypes:
+  - WebPage
+  - CollectionPage
 comprehension:
-  what: "An AI solution is a system that uses machine learning, often a language model, to read, summarize, classify, predict, or answer as part of a business process."
-  problem: "Teams spend hours reading documents, sorting requests, and answering similar questions, and a chatbot added without care gives wrong answers."
-  audience: "Teams with large volumes of text or repeated judgments, and leaders who want AI used responsibly, not for show."
-  choose: "Start with a narrow, checkable task, keep people in control of decisions that matter, and measure the result before widening the scope."
-  next: "Tell us the task that takes the most reading or sorting. We will say whether AI helps, and how we would check it."
-
+  what: An AI solution is a system that uses machine learning, often a language model, to read, summarize, classify, predict, or answer as part of a business process.
+  problem: Teams spend hours reading documents, sorting requests, and answering similar questions, and a chatbot added without care gives wrong answers.
+  audience: Teams with large volumes of text or repeated judgments, and leaders who want AI used responsibly, not for show.
+  choose: Start with a narrow, checkable task, keep people in control of decisions that matter, and measure the result before widening the scope.
+  next: Tell us the task that takes the most reading or sorting. We will say whether AI helps, and how we would check it.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Work Area
     headline: AI Solutions
-    lead: "An AI solution is software that reads, sorts, summarizes, or answers inside a real business process. This page explains what such systems contain, how they are checked, and where we advise against using them."
-    support: "The scenario on this page is an illustration, not a client project."
+    lead: An AI solution is software that reads, sorts, summarizes, or answers inside a real business process. This page explains what such systems contain, how they are checked, and where we advise against using them.
     ctas:
-      - { label: Talk to us about AI, href: "/contact/?service=ai" }
-      - { label: How an AI task works, href: "#how" }
+      - label: Talk to us about AI
+        href: /contact/?service=ai
+      - label: How an AI task works
+        href: "#how"
     spec:
       kind: flow
       steps:
@@ -49,20 +53,18 @@ sections:
         - title: The result is used
           text: A reply, a record, or a routed task.
     purpose: workflow
-    takeaway: "A reliable AI task passes information through reading, rules, and human review before the result is used."
-    visualTitle: "How an AI task moves through a process"
-    figureCaption: "This diagram shows five steps of an AI task, from information arriving to the result being used, with people reviewing doubtful cases."
-
+    takeaway: A reliable AI task passes information through reading, rules, and human review before the result is used.
+    visualTitle: How an AI task moves through a process
+    figureCaption: This diagram shows five steps of an AI task, from information arriving to the result being used, with people reviewing doubtful cases.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: AI as a part of a process, not a product on its own
-    answer: "An AI solution uses machine learning to handle language, images, or patterns as one step in a business process. It works best on narrow tasks where results can be checked."
+    answer: An AI solution uses machine learning to handle language, images, or patterns as one step in a business process. It works best on narrow tasks where results can be checked.
     paragraphs:
       - "Language models are good at reading and drafting. They can also be confidently wrong. A solution therefore needs more than the model: it needs rules, checks, records, and a route to a person."
-      - "That is why we describe AI work in terms of the process it improves, such as sorting requests or finding answers in documents, and not in terms of the model name."
-
+      - That is why we describe AI work in terms of the process it improves, such as sorting requests or finding answers in documents, and not in terms of the model name.
   - type: columns
     id: tasks
     tone: paper
@@ -71,26 +73,25 @@ sections:
     columns:
       - title: Reading and summarizing
         items:
-          - "Pulling key facts from contracts, forms, and reports."
-          - "Summarizing long messages or cases."
+          - Pulling key facts from contracts, forms, and reports.
+          - Summarizing long messages or cases.
       - title: Sorting and routing
         items:
-          - "Classifying requests by topic and urgency."
-          - "Sending each to the right person."
+          - Classifying requests by topic and urgency.
+          - Sending each to the right person.
       - title: Finding answers
         items:
-          - "Answering questions from your own documents, with sources shown."
-          - "Helping staff find policies and past decisions."
+          - Answering questions from your own documents, with sources shown.
+          - Helping staff find policies and past decisions.
       - title: Drafting
         items:
-          - "First drafts of replies and reports, for a person to review."
-
+          - First drafts of replies and reports, for a person to review.
   - type: diagram
     id: how
     tone: white
     label: Keeping it honest
     heading: Where checks fit around the AI
-    intro: "The model is one part. The checks around it make the system trustworthy."
+    intro: The model is one part. The checks around it make the system trustworthy.
     spec:
       kind: layers
       layerLabel: Layers of a trustworthy AI system
@@ -106,43 +107,42 @@ sections:
         - title: Records and measures
           text: Every result is logged and sampled for quality.
     purpose: architecture
-    takeaway: "A trustworthy AI system wraps the model in rules, human review, and records, so errors are caught and learned from."
-    caption: "This diagram shows five layers of an AI system, with the model in the middle and rules, human review, and records around it."
-
+    takeaway: A trustworthy AI system wraps the model in rules, human review, and records, so errors are caught and learned from.
+    caption: This diagram shows five layers of an AI system, with the model in the middle and rules, human review, and records around it.
   - type: table
     id: limits
     tone: paper
     label: Fit
     heading: Where AI helps, and where to be careful
     caption: Tasks suited and unsuited to AI
-    columns: [Task, Suits AI?, Why]
+    columns:
+      - Task
+      - Suits AI?
+      - Why
     rows:
       - - Sorting incoming messages
-        - "Usually yes."
-        - "Mistakes are easy to spot and fix."
+        - Usually yes.
+        - Mistakes are easy to spot and fix.
       - - Drafting replies for review
-        - "Usually yes."
-        - "A person approves before anything is sent."
+        - Usually yes.
+        - A person approves before anything is sent.
       - - Answering from your documents
-        - "Yes, with sources."
-        - "People can check the answer against the source."
+        - Yes, with sources.
+        - People can check the answer against the source.
       - - Final decisions about people, money, or safety
-        - "Not alone."
-        - "A person must decide, with AI as an aid at most."
+        - Not alone.
+        - A person must decide, with AI as an aid at most.
       - - Tasks with no way to check the result
-        - "Be careful."
-        - "Without checks, errors go unnoticed."
-
+        - Be careful.
+        - Without checks, errors go unnoticed.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: An illustrative scenario
+    title: AI sorting a busy support inbox
     paragraphs:
-      - "Imagine a team that receives hundreds of support emails a day. Staff read each one to decide who should handle it, and urgent messages are sometimes found late."
-      - "An AI step could read each email, label its topic and urgency, and route it. Anything it is unsure about would go to a person. Staff would start each day with the urgent messages at the top."
-      - "This is an example of the kind of solution, not a real client or result."
-
+      - A typical case is a team that receives hundreds of support emails a day. Staff read each one to decide who should handle it, and urgent messages are sometimes found late.
+      - An AI step could read each email, label its topic and urgency, and route it. Anything it is unsure about would go to a person. Staff would start each day with the urgent messages at the top.
   - type: related
     id: related
     tone: paper
@@ -150,15 +150,22 @@ sections:
     heading: AI across DECHY
     groups:
       - title: The service behind this
-        entityIds: [svc.ai]
+        entityIds:
+          - svc.ai
       - title: Related solutions
-        entityIds: [sol.ai-automation, sol.ai-knowledge-systems, sol.ai-customer-support]
+        entityIds:
+          - sol.ai-automation
+          - sol.ai-knowledge-systems
+          - sol.ai-customer-support
       - title: Related work areas
         entityIds:
-          [workarea.ai-agents, workarea.knowledge-and-content-systems, workarea.automation-systems]
-
+          - workarea.ai-agents
+          - workarea.knowledge-and-content-systems
+          - workarea.automation-systems
   - type: cta
     id: contact-cta
     heading: Tell us which task takes the most reading
-    body: "Describe the task and how many items it covers. We will say honestly whether AI helps, and how we would check its work."
-    primary: { label: Talk to DECHY about AI, href: "/contact/?service=ai" }
+    body: Describe the task and how many items it covers. We will say honestly whether AI helps, and how we would check its work.
+    primary:
+      label: Talk to DECHY about AI
+      href: /contact/?service=ai

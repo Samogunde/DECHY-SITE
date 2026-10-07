@@ -29,17 +29,17 @@ test.describe("phase 2 site-wide contract", () => {
     }
   });
 
-  test("there are 118 pages: 15 services, 7 hubs, 25 Work Areas, 43 technology pages, and the rest", async () => {
-    expect(PAGES).toHaveLength(118);
+  test("there are 127 pages: 15 services, 7 hubs, 25 Work Areas, 52 technology pages, and the rest", async () => {
+    expect(PAGES).toHaveLength(127);
     expect(PAGES.filter((p) => p.kind === "service")).toHaveLength(15);
     expect(areas).toHaveLength(25);
     expect(PAGES.filter((p) => p.kind === "hub" || p.kind === "work-hub")).toHaveLength(7);
   });
 
-  test("every Work Area labels its scenario as an illustration", async ({ page }) => {
+  test("every Work Area presents a typical example without a client claim", async ({ page }) => {
     for (const a of areas.slice(0, 6)) {
       await page.goto(a.path);
-      await expect(page.getByText("An illustrative scenario").first()).toBeVisible();
+      await expect(page.getByText("A typical example", { exact: true }).first()).toBeVisible();
     }
   });
 

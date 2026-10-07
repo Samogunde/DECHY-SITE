@@ -105,6 +105,17 @@ sections:
         - The largest build, and a long-term duty to maintain it.
     note: Platform features and prices change often. We confirm current details before you commit.
   - type: diagram
+    id: store-front
+    tone: white
+    label: What it looks like
+    heading: A store front and the engine behind it
+    intro: The part customers see is only half of an online store. Behind it sits the engine that holds products, prices, orders, and stock.
+    figure: store-ui
+    purpose: architecture
+    takeaway: A store is a customer-facing front connected to an engine that holds the catalog, prices, orders, and stock.
+    caption: This sketch shows a conceptual store front with a product grid and basket, linked to a commerce engine that holds catalog, pricing, orders, and stock. It is an illustration, not a client store.
+    points: []
+  - type: diagram
     id: order
     tone: white
     label: How it works
@@ -333,6 +344,7 @@ sections:
       - title: Technology pages
         entityIds:
           - plat.woocommerce
+          - plat.bigcommerce
   - type: cta
     id: contact-cta
     heading: Tell us what you sell
