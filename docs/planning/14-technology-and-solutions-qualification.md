@@ -998,6 +998,8 @@ The complete planning and governance set was searched for contradictions on: six
 | `CLAUDE.md` | State and source map lacked the qualification and the six | Updated |
 | `content/pages/en/solutions.yaml` (public hub) | The "Solution areas" chips name all 22 | Not changed (no implementation); recorded in 11.2 |
 
+The readiness audit that follows this reconciliation is `15-phase-4-readiness-audit.md`.
+
 After this pass there is no active statement that the first wave is twelve Solutions, other than inside annotations that mark it superseded.
 
 ### 11.7 Phase 4 prerequisites
