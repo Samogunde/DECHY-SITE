@@ -145,6 +145,14 @@ export const FigureId = z.enum([
   "quality-layers",
   "modernization-path",
   "portal-wireframe",
+  "site-builder",
+  "store-ui",
+  "dashboard-ui",
+  "mobile-app-ui",
+  "crm-ui",
+  "analytics-ui",
+  "assistant-ui",
+  "workflow-ui",
 ]);
 export type FigureId = z.infer<typeof FigureId>;
 

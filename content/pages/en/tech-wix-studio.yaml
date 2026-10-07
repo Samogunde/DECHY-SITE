@@ -1,0 +1,192 @@
+id: page.tech-wix-studio
+kind: technology
+locale: en
+path: /web-development/wix-studio/
+parent: /web-development/
+entityId: plat.wix-studio
+title: "Wix Studio Development for Agencies | DECHY"
+description: "Wix Studio development from DECHY: design-led builds with finer layout control and structured content, and when to choose it over standard Wix."
+breadcrumbLabel: Wix Studio
+intent:
+  primary: wix studio development
+  secondary:
+    - wix studio developer
+    - wix studio vs wix
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-07"
+dateModified: "2026-10-07"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "Wix Studio is the Wix platform made for professionals who build sites for others. It gives finer control of layout, richer content structures, and tools for handing a site to a client."
+  problem: "The standard Wix editor is quick but limited. Teams building more demanding or design-led sites want precise responsive layouts and structured content without leaving a hosted platform."
+  audience: "Agencies, freelancers, and in-house teams building client or brand sites, and businesses who want a more capable site than the standard editor allows."
+  choose: "Choose Wix Studio for design-led sites that need precise responsive control and structured content on a hosted platform. Choose standard Wix for simple sites and a custom build when logic or performance is the constraint."
+  next: "Tell us about the site, who will manage it, and what it must connect to. We will recommend the right Wix product, or another platform."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Website platform
+    headline: Wix Studio development
+    lead: "Wix Studio is Wix for people who build sites professionally. It trades some of the standard editor's simplicity for control: how a layout behaves at every screen width, how content is structured, and how a finished site is handed over."
+    support: "This page explains who it is for, how it differs from standard Wix, and what we build with it."
+    ctas:
+      - { label: Talk to us about a Wix Studio build, href: "/contact/?service=web-development" }
+      - { label: How it differs from Wix, href: "#compare" }
+    spec:
+      kind: decision
+      question: Which Wix product fits this site?
+      branches:
+        - when: "A simple business site, built and edited by the owner"
+          choose: Standard Wix
+          text: Quick to set up, easy to edit, and enough for many small businesses.
+        - when: "A design-led site that must look exactly right at every width"
+          choose: Wix Studio
+          text: Precise responsive controls and design systems for repeated styles.
+        - when: "Hundreds of similar pages, such as listings or articles"
+          choose: Wix Studio with structured content
+          text: Content collections with fields, so pages follow one strict pattern.
+        - when: "Custom logic, heavy integrations, or very large catalogs"
+          choose: Look at a custom build
+          text: A hosted builder has limits that a custom system does not.
+    purpose: decision
+    takeaway: "Standard Wix suits simple sites, Wix Studio suits design-led and structured sites, and a custom build suits sites with unusual logic or scale."
+    visualTitle: "Which Wix product fits"
+    figureCaption: "This diagram shows four kinds of site and the product that fits each: standard Wix for simple sites, Wix Studio for design-led or structured sites, and a custom build for unusual logic or scale."
+
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A builder aimed at the people who build
+    paragraphs:
+      - "Standard Wix hides complexity so that a business owner can make a site. Wix Studio exposes more of it so that a professional can make a better one. You decide how sections stack, reflow, and resize at each width, rather than accepting one automatic behavior."
+      - "It also thinks in systems. Styles can be defined once and reused, and content can live in collections with defined fields, so a hundred team profiles or product pages follow one pattern."
+      - "For a business that is not a design team, the real benefit is indirect. A site built carefully on Studio is faster to extend later, and a good agency can hand it over so that your staff change the text and images without breaking the layout."
+
+  - type: table
+    id: compare
+    tone: paper
+    label: Compared
+    heading: Wix Studio next to standard Wix
+    caption: Wix Studio compared with standard Wix on the points that decide which to use
+    columns: [Point, Standard Wix, Wix Studio]
+    rows:
+      - - "Layout control"
+        - "Automatic behavior across devices, with limited adjustment."
+        - "Fine control of how each section responds at each width."
+      - - "Content structure"
+        - "Simple content collections."
+        - "Richer collections with defined fields and reusable layouts."
+      - - "Reuse"
+        - "Per-page styling."
+        - "Shared styles and components across the site."
+      - - "Handover"
+        - "The owner usually edits everything."
+        - "Roles and permissions that separate design from editing."
+      - - "Learning curve"
+        - "Gentle."
+        - "Steeper; built for people who work in it daily."
+
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Wix Studio
+    columns:
+      - title: Design and build
+        items:
+          - "Responsive layouts checked at every width that matters."
+          - "A reusable set of styles and components."
+      - title: Structure content
+        items:
+          - "Collections for listings, articles, profiles, and products."
+          - "Templates that generate consistent pages."
+      - title: Connect
+        items:
+          - "Forms, bookings, and stores linked to your other systems."
+          - "Custom behavior where the editor falls short."
+      - title: Hand over
+        items:
+          - "A site your team can edit safely."
+          - "Short training and a written guide."
+
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Where Studio earns its learning curve
+    items:
+      - title: A brand site with exacting design
+        body: "Layouts that must hold their composition from a large screen to a phone."
+      - title: A directory or catalog of similar items
+        body: "Dozens or hundreds of profiles, locations, or listings built from one template."
+      - title: A site managed by a client team
+        body: "Designers keep control of the layout while staff update the content."
+      - title: An agency building for many clients
+        body: "A repeatable approach, with shared components and a consistent handover."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build on Wix Studio."
+    panels:
+      - title: Layout and responsiveness
+        items:
+          - "Sections are built with a grid-based approach, with breakpoints set deliberately instead of left to automatic scaling."
+          - "Text, images, and spacing use a defined scale, so the design holds together across the site."
+      - title: Data and code
+        items:
+          - "Content collections have typed fields and references between them, such as authors linked to articles."
+          - "Custom code in the platform's developer environment handles logic the editor cannot, kept in small, documented modules."
+      - title: Performance and search
+        paragraphs:
+          - "We keep scripts and heavy media to a minimum, set image sizes explicitly, and check pages on a mid-range phone. Titles, descriptions, and structured data are set per page."
+      - title: Limits
+        paragraphs:
+          - "As on any hosted builder, the design cannot be exported as code. If the site outgrows the platform, we rebuild on another one and carry the content across. See [Wix](ref:plat.wix) for the standard product."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Wix Studio
+    items:
+      - q: Is Wix Studio only for agencies?
+        a: "It is built for professionals, but a business can use it too, usually through a designer or agency. Choose it when the design or content structure demands more control than standard Wix gives."
+      - q: Can we move from standard Wix to Wix Studio?
+        a: "They are separate products, so a site is rebuilt in Studio rather than switched. We carry content across and keep addresses."
+      - q: Is it better than WordPress or Webflow?
+        a: "It depends on the project. Studio suits hosted, design-led sites with low upkeep. WordPress suits content-heavy and custom builds, and [Webflow](ref:plat.webflow) suits design-led builds that need clean exported structure."
+      - q: Who looks after the site afterwards?
+        a: "Your team can, using the editing role we set up. We can also provide ongoing care."
+
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Wix Studio across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.web-development, svc.ui-ux]
+      - title: Related technologies
+        entityIds: [tool.figma, int.stripe, tech.zapier]
+      - title: Alternatives
+        entityIds: [plat.wix, plat.webflow, plat.squarespace, plat.wordpress]
+      - title: Solutions
+        entityIds: [sol.crm-integration, sol.legacy-system-modernization]
+      - title: Systems we build
+        entityIds: [workarea.business-web-platforms, workarea.brand-systems]
+      - title: Where it applies
+        entityIds: [ind.professional-services, ind.real-estate, ind.education]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the site and who will manage it
+    body: "Describe the design, the content, and the people who will edit it. We will recommend the right Wix product, or another platform."
+    primary: { label: Talk to DECHY about Wix Studio, href: "/contact/?service=web-development" }

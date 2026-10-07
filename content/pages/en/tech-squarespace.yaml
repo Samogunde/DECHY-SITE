@@ -1,0 +1,219 @@
+id: page.tech-squarespace
+kind: technology
+locale: en
+path: /web-development/squarespace/
+parent: /web-development/
+entityId: plat.squarespace
+title: Squarespace Website Design and Development | DECHY
+description: "Squarespace development from DECHY: polished, design-led sites with scheduling, memberships, and simple stores, and what the platform will not do."
+breadcrumbLabel: Squarespace
+intent:
+  primary: squarespace website development
+  secondary:
+    - squarespace developer
+    - squarespace design services
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-07
+dateModified: 2026-10-07
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Squarespace is an all-in-one website platform known for polished templates. Design, hosting, and features such as scheduling, memberships, and a simple store come together in one subscription.
+  problem: Creators, studios, and small brands want a site that looks excellent without a development project, but find that custom needs and integrations are hard to add.
+  audience: Designers, studios, consultants, small brands, and service businesses who care about how the site looks and want low upkeep.
+  choose: Choose Squarespace when design quality and simplicity matter most and your needs are standard. Choose another platform when the site needs custom logic, large catalogs, or deep integrations.
+  next: Tell us about the brand, what the site must do, and what you want to connect. We will say whether Squarespace fits and how to set it up well.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Website platform
+    headline: Squarespace development
+    lead: Squarespace is the platform many studios, creators, and small brands choose when the look of the site matters. We design and build Squarespace sites that feel considered, load quickly, and show up in search, and we help you see where the platform stops.
+    support: This page covers where Squarespace fits, how to get the most from it, and how it compares with the alternatives.
+    ctas:
+      - label: Talk to us about Squarespace
+        href: /contact/?service=web-development
+      - label: Does it fit your site?
+        href: "#fit"
+    purpose: system
+    takeaway: A Squarespace site combines a designed template, the platform's built-in business features, and hosting in one subscription.
+    visualTitle: What a Squarespace site is made of
+    figureCaption: "This diagram shows a Squarespace site as three layers: a designed template with your brand and pages, built-in features such as scheduling and a store, and the one subscription that includes hosting and backups."
+    spec:
+      kind: layers
+      layers:
+        - title: A designed template
+          text: Typography, spacing, and image handling set the look.
+          support:
+            - title: Your brand
+            - title: Your pages
+        - title: Built-in features
+          text: Scheduling, a store, memberships, and email.
+          support:
+            - title: Bookings and payments
+        - title: One subscription
+          text: Hosting, security updates, and support included.
+          support:
+            - title: Hosting and backups
+      layerLabel: A Squarespace site
+      supportLabel: What sits beside it
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: Design quality as the starting point
+    paragraphs:
+      - Squarespace began with a belief that a website should look good by default. Its templates carry strong typography, spacing, and image handling, so even a first draft looks professional. That is why it is popular with photographers, studios, restaurants, and consultants.
+      - Behind the design is a single subscription that covers hosting, security, a store, scheduling, newsletters, and member areas. There is little to assemble and nothing to patch.
+      - The matching limit is flexibility. You work within the structure the templates give you. Unusual layouts and custom behavior take effort, and some things cannot be done.
+  - type: chooser
+    id: fit
+    tone: paper
+    label: Fit
+    heading: Is Squarespace the right choice?
+    intro: The answer depends on what the site must do, more than on how it should look.
+    question: Which describes your site?
+    options:
+      - label: A portfolio, studio, or brand site
+        when: Visual work or a clear offer is the point, and the content changes occasionally.
+        get: A refined site that you can edit, with strong image handling and clean typography.
+        watch: Plan the structure before the design, so pages are easy to find.
+      - label: A service business with bookings
+        when: Clients book calls or sessions, and you send invoices and reminders.
+        get: Scheduling, payments, and email in one place.
+        watch: Check that the scheduling rules match how you really work.
+      - label: A small store
+        when: A modest catalogue with simple shipping and tax.
+        get: A tidy store with the basics handled.
+        watch: Larger catalogs and complex rules strain it, so compare with [Shopify](ref:plat.shopify).
+      - label: Custom logic or deep integrations
+        when: Accounts, pricing rules, or data that other systems must read.
+        get: An honest comparison with platforms that allow more.
+        watch: Squarespace can be extended, but not without limits.
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Squarespace
+    columns:
+      - title: Design and build
+        items:
+          - Sites shaped around your brand, not left in a default template.
+          - Content structure planned before pages are built.
+      - title: Improve
+        items:
+          - Speed, mobile layout, and search visibility.
+          - Clean-up of sites that have grown messy.
+      - title: Connect
+        items:
+          - Forms, bookings, and orders sent to your other tools.
+          - Newsletters and analytics set up correctly.
+      - title: Move
+        items:
+          - Moving content to or from Squarespace, with address redirects.
+          - A plan for when the site needs a different platform.
+  - type: process
+    id: build
+    tone: paper
+    label: How we build it
+    heading: A Squarespace project from first sketch to launch
+    steps:
+      - title: Set the structure
+        body: We list the pages, what each must achieve, and how visitors will find them, before touching a template.
+        artifacts:
+          - Page map
+      - title: Shape the design
+        body: "We adapt the template to your brand: type, color, spacing, and image style, kept consistent across pages."
+        artifacts:
+          - Styled template
+      - title: Add the features
+        body: Scheduling, a store, forms, and email are configured and tested end to end, including the confirmation messages.
+        artifacts:
+          - Working features
+          - Test log
+      - title: Prepare for search and launch
+        body: Titles, descriptions, image text, and redirects are set. The site is checked on phones and common browsers, then launched.
+        artifacts:
+          - Launch checklist
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we extend and tune Squarespace sites.
+    panels:
+      - title: Extending the platform
+        items:
+          - Custom styles and small scripts can be added to refine layout and behavior, and are kept in one documented place.
+          - Heavier needs are met by connecting outside services through [automation](ref:svc.automation), not by bending the template.
+      - title: Performance
+        items:
+          - Images are sized before upload, and large galleries are loaded as people scroll.
+          - Third-party scripts are limited to those that earn their cost.
+      - title: Search and analytics
+        items:
+          - Page titles, descriptions, and headings are written per page, and structure is kept simple and consistent.
+          - Analytics and tag settings are set up once and checked for consent handling.
+      - title: Leaving
+        paragraphs:
+          - Content can be exported in a limited form, but the design cannot. A move means rebuilding the layout and carrying the content across.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Squarespace
+    items:
+      - q: Is Squarespace good for search visibility?
+        a: It can be. The platform handles the basics, and the results depend on structure, content, and speed, which is where the work lies.
+      - q: Can Squarespace run a serious online store?
+        a: A small one, yes. For larger catalogs, complex shipping, or custom rules, a store platform such as Shopify is usually a better fit.
+      - q: Can we add custom features?
+        a: Some, through added styles, small scripts, and connected services. Anything that needs custom logic or a database of your own points to another platform.
+      - q: Squarespace or Wix?
+        a: Squarespace leads on design polish and simplicity. [Wix](ref:plat.wix) offers more built-in features and flexibility in the editor. We compare them against your site.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Squarespace across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.web-development
+      - title: Related technologies
+        entityIds:
+          - int.stripe
+          - tech.zapier
+          - plat.hubspot
+      - title: Alternatives
+        entityIds:
+          - plat.wix
+          - plat.wix-studio
+          - plat.wordpress
+          - plat.webflow
+          - plat.shopify
+      - title: Solutions
+        entityIds:
+          - sol.crm-integration
+          - sol.business-process-automation
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.brand-systems
+      - title: Where it applies
+        entityIds:
+          - ind.professional-services
+          - ind.real-estate
+          - ind.retail
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the brand and what the site must do
+    body: Describe the brand, the pages, and what you want to connect. We will say whether Squarespace fits and how to set it up well.
+    primary:
+      label: Talk to DECHY about Squarespace
+      href: /contact/?service=web-development

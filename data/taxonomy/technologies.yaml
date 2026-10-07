@@ -412,7 +412,7 @@ entities:
     primaryService: svc.api-integration
     group: Business/payment integrations
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 11
   - id: int.paystack
@@ -546,7 +546,7 @@ entities:
     slug: go
     primaryService: svc.software-development
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 18
   - id: lang.java
@@ -750,7 +750,7 @@ entities:
     primaryService: svc.ecommerce
     group: Platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 12
   - id: plat.clickhouse
@@ -780,7 +780,7 @@ entities:
     primaryService: svc.cloud
     group: Cloud platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 8
   - id: plat.contentful
@@ -830,7 +830,7 @@ entities:
     primaryService: svc.web-development
     group: Platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.firebase
@@ -922,7 +922,7 @@ entities:
     primaryService: svc.automation
     group: Workflow/business platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 7
   - id: plat.mondaycom
@@ -1084,7 +1084,7 @@ entities:
     primaryService: svc.web-development
     group: Platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.squarespace-commerce
@@ -1166,7 +1166,7 @@ entities:
     primaryService: svc.web-development
     group: Platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.wix-ecommerce
@@ -1186,7 +1186,7 @@ entities:
     primaryService: svc.web-development
     group: Platforms
     prominence: reference
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 4
   - id: plat.wix-velo

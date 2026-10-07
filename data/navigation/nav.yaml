@@ -25,7 +25,7 @@ cta:
 # reachable through "All technologies in this category" and the directory. Entity-only technologies
 # are never listed here: only public pages are destinations.
 technologies:
-  menuLimit: 8
+  menuLimit: 10
   categories:
     - id: web
       label: Web & CMS
@@ -37,6 +37,10 @@ technologies:
           lang.typescript,
           plat.wordpress,
           plat.webflow,
+          plat.wix,
+          plat.wix-studio,
+          plat.squarespace,
+          plat.drupal,
           lang.php,
           fw.vue,
           fw.angular,
@@ -44,7 +48,7 @@ technologies:
     - id: backend
       label: Languages & Backend
       summary: Languages and runtimes for servers, services, and data work.
-      items: [lang.python, tech.nodejs, lang.java, tech.dotnet]
+      items: [lang.python, tech.nodejs, lang.java, tech.dotnet, lang.go]
     - id: mobile
       label: Mobile
       summary: Native and cross-platform ways to build iPhone and Android apps.
@@ -65,6 +69,7 @@ technologies:
           tech.n8n,
           plat.airtable,
           tech.microsoft-power-automate,
+          plat.microsoft-365,
         ]
     - id: cloud
       label: Cloud & DevOps
@@ -79,6 +84,7 @@ technologies:
           tool.terraform,
           plat.firebase,
           plat.supabase,
+          plat.cloudflare,
         ]
     - id: data
       label: Data & Databases
@@ -87,7 +93,7 @@ technologies:
     - id: commerce
       label: Commerce & Payments
       summary: Platforms for selling online and taking payments.
-      items: [plat.shopify, plat.woocommerce, int.stripe]
+      items: [plat.shopify, plat.woocommerce, plat.bigcommerce, int.stripe, int.paypal]
 
 # Solutions menu: the standalone Solution pages, led by the business problem. Only published pages
 # appear. Needs that are answered through a Work Area are reached from the hub, not listed here.

@@ -1,0 +1,215 @@
+id: page.tech-wix
+kind: technology
+locale: en
+path: /web-development/wix/
+parent: /web-development/
+entityId: plat.wix
+title: Wix Website Development Services | DECHY
+description: "Wix website development from DECHY: building, extending, and connecting Wix sites for small businesses, and knowing when to outgrow the platform."
+breadcrumbLabel: Wix
+intent:
+  primary: wix website development
+  secondary:
+    - wix developer
+    - wix website design services
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-07
+dateModified: 2026-10-07
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Wix is a hosted website builder. You assemble pages in a visual editor, and Wix supplies the hosting, security, and many business features such as stores and bookings.
+  problem: Small businesses want a professional site quickly without a developer on staff, but often hit limits in design control, speed, search visibility, and connections to other systems.
+  audience: Owners of small and growing businesses who run or are considering a Wix site, and teams who need it to do more than it does today.
+  choose: Choose Wix when speed, low upkeep, and built-in business features matter more than total control. Move to another platform when the site needs custom logic, deeper integrations, or full ownership of the code.
+  next: Tell us what the site must do and what frustrates you about the current one. We will say whether to build on Wix, extend it, or move.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Website platform
+    headline: Wix website development
+    lead: Wix gets a business online quickly, with hosting, security, and business tools included. We build Wix sites that look credible and load well, connect them to the rest of your business, and tell you honestly when a project has outgrown the platform.
+    support: This page covers what Wix does well, where its limits sit, and how it compares with other ways to build a site.
+    ctas:
+      - label: Talk to us about a Wix site
+        href: /contact/?service=web-development
+      - label: Wix or something else?
+        href: "#options"
+    figure: site-builder
+    purpose: system
+    takeaway: A Wix site is built in a visual editor on top of included hosting and business tools, and it can be connected to your other systems.
+    visualTitle: How a Wix site is put together
+    figureCaption: This diagram shows a conceptual site editor with a page layout, a panel of business tools such as bookings and a store, and the hosting that Wix includes. It is an illustration, not a client site.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A site builder that runs the site for you
+    paragraphs:
+      - With Wix you do not rent a server, install software, or apply security updates. You design pages in an editor, add features from a library, and publish. Wix keeps the site online and patched.
+      - That trade is the whole point. You give up some control, such as the ability to move the finished design to another host, and in return you avoid most of the work of running a website. For many small businesses that is the right bargain.
+      - "Trouble starts when the site is asked to do work that the platform was not built for: unusual logic, heavy integrations, very fast pages on large catalogs, or content that must follow a strict structure."
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Wix beside the other ways to build a site
+    caption: Wix compared with other common ways to build a business website
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Wix
+        - Small businesses that want a good-looking site fast, with bookings, a small store, or events built in.
+        - Limited control of code and structure, and the design cannot be moved to another platform.
+      - - "[Squarespace](ref:plat.squarespace)"
+        - Design-led brands, portfolios, and simple stores that value polished templates.
+        - Fewer ways to add custom behavior.
+      - - "[Wix Studio](ref:plat.wix-studio)"
+        - Agencies and teams that need finer layout control, richer content structures, and client handover.
+        - A steeper learning curve than the standard editor.
+      - - "[WordPress](ref:plat.wordpress)"
+        - Content-heavy sites, custom features, and owners who want to hold the code.
+        - You carry hosting, updates, and security.
+      - - A custom build
+        - Unusual functions, strict performance targets, or a product the site is part of.
+        - The highest cost and the most control.
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Wix
+    columns:
+      - title: Build
+        items:
+          - New Wix sites designed around your offer, not a template's layout.
+          - Stores, bookings, and events set up and tested.
+      - title: Extend
+        items:
+          - Custom behavior using the platform's developer tools.
+          - Forms and data connected to your other systems.
+      - title: Improve
+        items:
+          - Speed and search visibility reviews.
+          - Mobile layouts that are designed, not merely shrunk.
+      - title: Move
+        items:
+          - A planned move off Wix when the site outgrows it, keeping addresses and search visibility.
+          - Content and product data carried across.
+  - type: callout
+    id: tradeoff
+    tone: paper
+    variant: note
+    title: What you give up for the convenience
+    paragraphs:
+      - A hosted builder removes work, and the price of that is control. Knowing the limits before you start avoids a rebuild later.
+    items:
+      - The design cannot be exported as code and used elsewhere
+      - Custom logic is limited to what the platform's developer tools allow
+      - Page speed depends partly on the platform's own overhead
+      - Your site depends on the platform's pricing and product decisions
+  - type: process
+    id: path
+    tone: paper
+    label: Where it stops fitting
+    heading: Signs a Wix site has outgrown the platform
+    intro: None of these means Wix was the wrong choice. Each is a signal to check whether a different platform now serves you better.
+    steps:
+      - title: Workarounds pile up
+        body: Features are faked with several add-ons, and each change risks breaking another.
+        artifacts:
+          - List of workarounds
+      - title: Pages feel slow
+        body: Speed reports are poor even after tuning, and the cause is the platform's own overhead.
+        artifacts:
+          - Speed report
+      - title: Data has no home
+        body: Orders, bookings, and leads sit in the platform with no clean way to feed other systems.
+        artifacts:
+          - Data map
+      - title: Growth needs structure
+        body: Hundreds of similar pages need strict templates and fields the editor cannot enforce.
+        artifacts:
+          - Content model
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we approach Wix work.
+    panels:
+      - title: Custom code
+        items:
+          - The platform's developer tools let us add front-end code and server functions for logic the editor cannot express.
+          - Custom pieces are kept small and documented, because they are the part you cannot move elsewhere.
+      - title: Data and connections
+        items:
+          - Site collections hold structured content, and external systems connect through the platform's interfaces.
+          - Form and order data is passed to your customer system such as [HubSpot](ref:plat.hubspot), or your accounts, through [automation](ref:svc.automation) so nothing is re-typed.
+      - title: Performance and search
+        items:
+          - Images are sized and compressed, heavy widgets are removed, and pages are checked on a mid-range phone.
+          - Titles, descriptions, headings, and structured data are set page by page.
+      - title: Leaving
+        paragraphs:
+          - A Wix design cannot be exported as code. Moving means rebuilding the layout on a new platform and carrying content, addresses, and data across.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Wix
+    items:
+      - q: Is Wix good enough for a serious business?
+        a: "Yes, for many. It suits businesses whose needs are common: a clear site, bookings, a small shop. It is a poor fit where the site needs custom logic or very large catalogs."
+      - q: Can a Wix site rank well in search?
+        a: Yes, with sound structure, page-level titles and descriptions, fast pages, and good content. The platform allows what search engines need; the work is in doing it well.
+      - q: Can we move our Wix site to another platform?
+        a: Yes, but the design is rebuilt, not copied. We move the content, set redirects so addresses keep their value, and carry over data.
+      - q: What is the difference between Wix and Wix Studio?
+        a: Wix Studio is the version aimed at agencies and advanced builders, with finer layout control and richer content structures. See [Wix Studio](ref:plat.wix-studio).
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Wix across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.web-development
+      - title: Related technologies
+        entityIds:
+          - plat.hubspot
+          - tech.zapier
+          - int.stripe
+      - title: Alternatives
+        entityIds:
+          - plat.squarespace
+          - plat.wix-studio
+          - plat.wordpress
+          - plat.webflow
+      - title: Solutions
+        entityIds:
+          - sol.crm-integration
+          - sol.legacy-system-modernization
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.ecommerce-platforms
+      - title: Where it applies
+        entityIds:
+          - ind.retail
+          - ind.professional-services
+          - ind.education
+  - type: cta
+    id: contact-cta
+    heading: Tell us what the site has to do
+    body: Describe the site, what it needs to connect to, and what frustrates you about it now. We will say whether to build on Wix, extend it, or move.
+    primary:
+      label: Talk to DECHY about Wix
+      href: /contact/?service=web-development

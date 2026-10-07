@@ -1,0 +1,244 @@
+id: page.tech-drupal
+kind: technology
+locale: en
+path: /web-development/drupal/
+parent: /web-development/
+entityId: plat.drupal
+title: Drupal Development and Migration Services | DECHY
+description: "Drupal development from DECHY: building and upgrading content-rich sites with many editors and strict permissions, and moving old Drupal versions forward."
+breadcrumbLabel: Drupal
+intent:
+  primary: drupal development services
+  secondary:
+    - drupal migration
+    - drupal developer
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-07
+dateModified: 2026-10-07
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Drupal is an open-source content management system built for sites with complex content, many editors, several languages, and strict control over who can do what.
+  problem: Organizations with large or regulated websites run old Drupal versions that are costly to maintain, or need a platform that can model complicated content without custom code everywhere.
+  audience: Universities, public bodies, publishers, large organizations, and teams that already run Drupal or need a structured, permission-heavy content platform.
+  choose: Choose Drupal for large, structured, multi-editor sites with strict permissions. Choose a lighter platform for smaller sites, and plan a staged upgrade for old Drupal systems.
+  next: Tell us about the site, its editors, and any existing Drupal system. We will recommend whether to build, upgrade, or choose another platform.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Content platform
+    headline: Drupal development
+    lead: "Drupal is the content platform for sites that are too structured for a simple builder: many content types, many editors, many languages, and rules about who may publish what. We build on it, upgrade it, and move old Drupal sites forward."
+    support: This page covers where Drupal earns its complexity, how upgrades work, and when a lighter platform is the better choice.
+    ctas:
+      - label: Talk to us about a Drupal site
+        href: /contact/?service=web-development
+      - label: Upgrading an old Drupal site
+        href: "#upgrade"
+    spec:
+      kind: layers
+      layers:
+        - title: Content model
+          text: Types of content with their own fields and links between them.
+          support:
+            - title: Articles, events, people
+            - title: Taxonomies and references
+        - title: Editing and workflow
+          text: Who may create, review, approve, and publish.
+          support:
+            - title: Roles and permissions
+            - title: Review and approval steps
+        - title: Presentation
+          text: Themes that turn structured content into pages, in every language.
+          support:
+            - title: Themes and layouts
+            - title: Multilingual output
+        - title: Platform and hosting
+          text: The core, its modules, and the secure, updated server beneath.
+          support:
+            - title: Core and modules
+            - title: Hosting and updates
+      layerLabel: A Drupal site
+      supportLabel: What sits beside it
+    purpose: architecture
+    takeaway: A Drupal site separates structured content, editing rules, presentation, and platform, so large teams can publish safely.
+    visualTitle: The layers of a Drupal site
+    figureCaption: This diagram shows a Drupal site as four layers, from the content model and editing workflow to presentation and the platform beneath, with the supporting parts beside each.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A platform that models your content, not just your pages
+    paragraphs:
+      - Most website tools start from pages. Drupal starts from content. You define what kinds of thing the organization publishes, such as courses, events, staff, reports, and policies, and what each one contains. Pages are then assembled from that structure.
+      - That investment pays when the site is large or heavily governed. A university with thousands of course pages, a public body with strict review rules, or a publisher with many editors needs one source for each fact, and a clear record of who approved it.
+      - The cost is complexity. Drupal needs experienced developers, careful hosting, and regular upgrades. For a small brochure site it is more than is needed.
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Drupal beside the other content platforms
+    caption: Drupal compared with other content platforms by the kind of site each suits
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Drupal
+        - Large, structured, multilingual sites with many editors and strict permissions.
+        - Needs skilled developers and regular upgrades, so it costs more to run.
+      - - "[WordPress](ref:plat.wordpress)"
+        - Most business sites, blogs, and stores, with the largest range of ready-made add-ons.
+        - Complex content structures and permissions need more custom work.
+      - - "[Webflow](ref:plat.webflow)"
+        - Design-led marketing sites managed by a small team.
+        - Less suited to heavy workflows or very large content models.
+      - - A headless set-up
+        - Content served to several websites and apps from one structured source.
+        - More moving parts, and the front end must be built separately.
+  - type: process
+    id: upgrade
+    tone: white
+    label: Upgrading
+    heading: Moving an old Drupal site forward
+    intro: Older Drupal versions no longer receive security fixes. Upgrading is a rebuild of parts, not a button, and it is best done in stages.
+    steps:
+      - title: Audit what is there
+        body: We list the content types, custom modules, themes, and integrations, and which are still used.
+        artifacts:
+          - Site inventory
+          - Module list
+      - title: Decide what to keep
+        body: Unused content and modules are dropped. Needed ones are replaced by supported equivalents or rebuilt.
+        artifacts:
+          - Keep
+          - replace
+          - or drop list
+      - title: Rebuild and migrate content
+        body: The structure is rebuilt on a current version, and content is moved by repeatable scripts that can be re-run and checked.
+        artifacts:
+          - New site
+          - Migration scripts
+          - Check reports
+      - title: Test, switch, and watch
+        body: Editors and visitors test it, addresses are redirected, and search performance is watched after the switch.
+        artifacts:
+          - Test results
+          - Redirect map
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Drupal
+    columns:
+      - title: Build
+        items:
+          - Content models designed with your editors.
+          - Themes that are fast, accessible, and consistent.
+      - title: Upgrade
+        items:
+          - Version upgrades and migrations in stages.
+          - Replacement of unsupported custom code.
+      - title: Govern
+        items:
+          - Roles, permissions, and review workflows.
+          - Audit trails for who changed what.
+      - title: Look after
+        items:
+          - Security updates applied promptly.
+          - Monitoring, backups, and performance tuning.
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical sites
+    heading: Where Drupal is the right tool
+    items:
+      - title: A university or school group
+        body: Course, department, and staff pages built from one structure, in more than one language.
+      - title: A public body or regulated organization
+        body: Strict roles, review steps, and an audit trail of who published what.
+      - title: A publisher with many editors
+        body: Workflows for drafting, review, and scheduled release across large teams.
+      - title: A content hub feeding several channels
+        body: One structured source that serves a website, an app, and partner sites.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we run Drupal projects.
+    panels:
+      - title: Structure
+        items:
+          - Configuration is exported to code and versioned, so changes move through environments in a controlled way.
+          - Custom functionality lives in small, documented modules built on supported interfaces, never by editing core.
+      - title: Content and delivery
+        items:
+          - Structured content can also be served as data to other websites and apps.
+          - Caching at several levels and a content delivery network keep pages quick under load.
+      - title: Security and maintenance
+        paragraphs:
+          - Security releases are applied on a defined schedule, dependencies are managed with a package tool, and the platform runs on [PHP](ref:lang.php) with a [MySQL](ref:tech.mysql) or [PostgreSQL](ref:tech.postgresql) database.
+      - title: Accessibility
+        paragraphs:
+          - Public bodies and universities carry high accessibility expectations. We build themes to the web accessibility guidelines and test with assistive technology.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Drupal
+    items:
+      - q: Is Drupal still a good choice?
+        a: For the right site, yes. It is actively developed and well suited to large, structured, governed sites. For small sites it is more platform than you need.
+      - q: Is our old Drupal site safe to leave as it is?
+        a: Versions that are no longer supported do not receive security fixes, which is a growing risk. We assess the site and recommend an upgrade route.
+      - q: Drupal or WordPress?
+        a: WordPress suits most sites and is simpler to run. Drupal suits sites with complex content models, many editors, and strict permissions. We compare them on your needs.
+      - q: Can you migrate us to another platform?
+        a: Yes. We move content with repeatable scripts, redirect addresses, and check that nothing is lost, whichever platform you move to.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Drupal across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.web-development
+      - title: Related technologies
+        entityIds:
+          - lang.php
+          - tech.mysql
+          - tech.postgresql
+          - tool.docker
+      - title: Alternatives
+        entityIds:
+          - plat.wordpress
+          - plat.webflow
+          - plat.contentful
+      - title: Solutions
+        entityIds:
+          - sol.legacy-system-modernization
+          - sol.cloud-migration
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.knowledge-and-content-systems
+      - title: Where it applies
+        entityIds:
+          - ind.education
+          - ind.healthcare
+          - ind.professional-services
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the site and its editors
+    body: Describe the site, how many people edit it, and any existing Drupal system. We will recommend whether to build, upgrade, or choose another platform.
+    primary:
+      label: Talk to DECHY about Drupal
+      href: /contact/?service=web-development

@@ -1,0 +1,229 @@
+id: page.tech-cloudflare
+kind: technology
+locale: en
+path: /cloud/cloudflare/
+parent: /cloud/
+entityId: plat.cloudflare
+title: Cloudflare Setup and Consulting Services | DECHY
+description: "Cloudflare services from DECHY: faster pages, DNS, firewall rules, and attack protection, set up and tuned so your site stays quick and available."
+breadcrumbLabel: Cloudflare
+intent:
+  primary: cloudflare consulting
+  secondary:
+    - cloudflare setup services
+    - cloudflare waf configuration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-07
+dateModified: 2026-10-07
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: Cloudflare is a network that sits in front of your website. It serves pages from servers close to the visitor, filters out attacks, and manages your domain's addresses.
+  problem: Sites are slow for distant visitors, exposed to attacks and bad traffic, and fragile when something in the domain set-up goes wrong.
+  audience: Owners and technical teams of websites, stores, and applications that need better speed, availability, and protection.
+  choose: Put Cloudflare in front of a site that needs speed and protection, and tune it to your traffic. Do not rely on its defaults for anything sensitive, and keep your own backups and access controls.
+  next: Tell us about the site, its traffic, and what worries you. We will review the set-up and recommend what to switch on and how to tune it.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Edge platform
+    headline: Cloudflare set-up and consulting
+    lead: Cloudflare sits between your visitors and your site. Done well, pages arrive faster, attacks are stopped before they reach you, and a failure behind it is less visible. We set it up, tune it to your traffic, and keep its rules sensible.
+    support: This page covers what Cloudflare does, the settings that matter most, and where it is not enough on its own.
+    ctas:
+      - label: Talk to us about Cloudflare
+        href: /contact/?service=cloud
+      - label: What it does for a site
+        href: "#flow"
+    spec:
+      kind: flow
+      steps:
+        - title: A visitor requests a page
+          text: From anywhere in the world.
+        - title: Cloudflare answers first
+          text: A nearby server checks the request and the visitor.
+        - title: Bad traffic is filtered
+          text: Attacks, abusive bots, and blocked countries are stopped.
+        - title: Cached pages are served
+          text: Stored copies are returned without troubling your site.
+        - title: Your site handles the rest
+          text: Only requests that need it reach your server.
+    purpose: process
+    takeaway: Cloudflare answers requests first, stops bad traffic, serves stored pages, and sends only what is needed to your site.
+    visualTitle: How Cloudflare sits in front of a site
+    figureCaption: This diagram follows a visitor's request in five steps, from the first answer by a nearby Cloudflare server through filtering and cached pages to the few requests that reach your own site.
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A shield and a shortcut in one
+    paragraphs:
+      - A website normally answers every visitor from one place. A visitor on the far side of the world waits for the round trip, and every attacker, scraper, and broken bot reaches the same server as real customers.
+      - Cloudflare changes that. It holds copies of your static content in many places, answers many requests itself, and screens the rest. Real visitors get faster pages, and your server sees less traffic, and less of the harmful kind.
+      - It also manages the domain's addresses, which is where many outages begin. A mistake in one record can take a site offline, so moving this to a well-run service with a record of changes is itself a gain.
+  - type: callout
+    id: limits
+    tone: paper
+    variant: note
+    title: What Cloudflare will not fix
+    paragraphs:
+      - An edge network improves delivery and filtering. It does not repair a site that is slow or unsafe at the source.
+    items:
+      - Slow database queries and heavy application code
+      - Outdated plugins and unpatched software on your own server
+      - Weak passwords and over-broad access for staff
+      - Missing backups
+  - type: table
+    id: options
+    tone: paper
+    label: Settings
+    heading: The settings that matter most
+    caption: The main Cloudflare features, what each protects or improves, and what to watch for
+    columns:
+      - Feature
+      - What it does
+      - Watch for
+    rows:
+      - - Caching
+        - Serves stored copies of pages and files close to visitors.
+        - Dynamic and logged-in pages must not be cached by mistake.
+      - - Firewall rules
+        - Blocks or challenges traffic by country, address, and request pattern.
+        - Too strict a rule blocks real customers, so rules need monitoring.
+      - - Attack and bot protection
+        - Absorbs floods of traffic and filters automated abuse.
+        - Tune it to your traffic, or it will block useful bots such as search crawlers.
+      - - DNS
+        - Manages the domain's addresses with change history.
+        - Record changes can break mail and verification, so they are planned.
+      - - Edge code
+        - Runs small programs near visitors for redirects, headers, and light logic.
+        - Keep it small. Heavy logic belongs on your own servers.
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Cloudflare
+    columns:
+      - title: Set up
+        items:
+          - Moving DNS safely, with mail and verification records preserved.
+          - Secure connections end to end.
+      - title: Speed up
+        items:
+          - Caching rules suited to your pages.
+          - Image and file delivery tuned for phones.
+      - title: Protect
+        items:
+          - Firewall and bot rules based on your real traffic.
+          - Rate limits on sign-in and forms.
+      - title: Extend
+        items:
+          - Redirects, security headers, and light logic at the edge.
+          - Monitoring and alerts for rule changes and attacks.
+  - type: process
+    id: flow
+    tone: paper
+    label: How we do it
+    heading: Putting Cloudflare in front of a live site
+    steps:
+      - title: Review the site and its traffic
+        body: We check what the site serves, how it is hosted, and what the traffic looks like, including legitimate bots.
+        artifacts:
+          - Traffic review
+          - Risk list
+      - title: Plan the move
+        body: We copy the domain's records, plan the switch time, and prepare a way back.
+        artifacts:
+          - DNS plan
+          - Rollback plan
+      - title: Switch and verify
+        body: The site is switched over, mail, forms, and sign-in are tested, and speed is compared with before.
+        artifacts:
+          - Test log
+          - Speed comparison
+      - title: Tune and watch
+        body: Caching and rules are adjusted from real data, and alerts tell us when something needs attention.
+        artifacts:
+          - Tuned rules
+          - Alerts
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we configure Cloudflare.
+    panels:
+      - title: Caching
+        items:
+          - Static assets are cached with long lifetimes and versioned names, and HTML is cached only where it is safe.
+          - Cache rules respect cookies and headers, so personalized pages are never shared between users.
+      - title: Security
+        items:
+          - Traffic between visitors, Cloudflare, and your server is encrypted, and your server accepts connections only from Cloudflare where that is appropriate.
+          - Rules are built in stages, observed in log mode first, and then enforced.
+      - title: DNS and mail
+        paragraphs:
+          - Records are kept in code where possible, with change review. Mail authentication records are checked before and after every change.
+      - title: Limits
+        paragraphs:
+          - An edge network does not replace patching, backups, or access control on your own systems. We treat it as one layer in a wider [security](ref:svc.cybersecurity) approach.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Cloudflare
+    items:
+      - q: Will Cloudflare make our site faster?
+        a: Usually, for visitors far from your server and for pages that can be cached. It does little for slow application code, which needs fixing at the source.
+      - q: Is it enough to protect us from attacks?
+        a: It stops a great deal, especially floods and automated abuse. It is one layer. Keep your software updated, back up, and control access.
+      - q: Will switching break our email?
+        a: Not if the records are copied and checked first. We plan the move so mail and verification records are preserved.
+      - q: Can it block the search crawlers we want?
+        a: Poorly tuned rules can. We allow the crawlers you want and test the result.
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: Cloudflare across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.cloud
+          - svc.cybersecurity
+      - title: Related technologies
+        entityIds:
+          - plat.aws
+          - plat.azure
+          - plat.wordpress
+          - plat.shopify
+      - title: Alternatives
+        entityIds:
+          - plat.google-cloud
+      - title: Solutions
+        entityIds:
+          - sol.cloud-migration
+          - sol.legacy-system-modernization
+      - title: Systems we build
+        entityIds:
+          - workarea.cloud-platforms
+          - workarea.cybersecurity-systems
+          - workarea.devops-infrastructure
+      - title: Where it applies
+        entityIds:
+          - ind.retail
+          - ind.finance
+          - ind.education
+  - type: cta
+    id: contact-cta
+    heading: Tell us about the site and what worries you
+    body: Describe the site, its traffic, and any slowness or attacks. We will review the set-up and recommend what to switch on and how to tune it.
+    primary:
+      label: Talk to DECHY about Cloudflare
+      href: /contact/?service=cloud

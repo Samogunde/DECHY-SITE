@@ -1,6 +1,16 @@
 import type { CSSProperties } from "react";
 import type { DiagramSpec, FigureId } from "@/lib/content/schema";
 import { ConnectedFlow } from "./ConnectedFlow";
+import {
+  AnalyticsUi,
+  AssistantUi,
+  CrmUi,
+  DashboardUi,
+  MobileAppUi,
+  SiteBuilder,
+  StoreUi,
+  WorkflowUi,
+} from "./Mockups";
 import { ModernizationPath } from "./ModernizationPath";
 import { PortalWireframe } from "./PortalWireframe";
 import { QualityLayers } from "./QualityLayers";
@@ -24,6 +34,15 @@ const FIGURES: Record<
   "quality-layers": { Component: QualityLayers },
   "modernization-path": { Component: ModernizationPath },
   "portal-wireframe": { Component: PortalWireframe },
+  // Conceptual interface mockups (Phase 5)
+  "site-builder": { Component: SiteBuilder, max: "40rem" },
+  "store-ui": { Component: StoreUi, max: "44rem" },
+  "dashboard-ui": { Component: DashboardUi, max: "40rem" },
+  "mobile-app-ui": { Component: MobileAppUi, max: "20rem" },
+  "crm-ui": { Component: CrmUi, max: "42rem" },
+  "analytics-ui": { Component: AnalyticsUi, max: "38rem" },
+  "assistant-ui": { Component: AssistantUi, max: "28rem" },
+  "workflow-ui": { Component: WorkflowUi, max: "42rem" },
 };
 
 export function Figure({

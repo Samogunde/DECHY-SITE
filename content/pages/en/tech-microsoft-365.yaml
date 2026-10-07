@@ -1,0 +1,234 @@
+id: page.tech-microsoft-365
+kind: technology
+locale: en
+path: /automation/microsoft-365/
+parent: /automation/
+entityId: plat.microsoft-365
+title: Microsoft 365 Consulting and Integration | DECHY
+description: "Microsoft 365 consulting from DECHY: SharePoint sites, Teams apps, automation, and integrations that make the tools you already pay for work as one system."
+breadcrumbLabel: Microsoft 365
+intent:
+  primary: microsoft 365 consulting
+  secondary:
+    - sharepoint development
+    - microsoft 365 integration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-07
+dateModified: 2026-10-07
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: "Microsoft 365 is the suite many organizations already run on: email, files, meetings, and collaboration, with tools to build workflows and apps on top."
+  problem: Most organizations use a fraction of what they pay for, with files scattered, approvals in email, and business data that never reaches the tools staff open every day.
+  audience: Organizations on Microsoft 365 who want to organize their documents, automate routine work, and connect the suite to their business systems.
+  choose: "Use what the suite already offers first: structured sites, flows, and forms. Add custom development only where the built-in tools run out, and connect outside systems carefully."
+  next: Tell us how your team uses Microsoft 365 and where it falls short. We will outline what to organize, automate, or build.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Business platform
+    headline: Microsoft 365 consulting and integration
+    lead: Most organizations pay for Microsoft 365 and use a small part of it. We organize it so people can find things, automate the approvals that clog email, and connect it to the systems where your business data lives.
+    support: This page covers what we do with SharePoint, Teams, and the automation tools, and how we decide between built-in features and custom work.
+    ctas:
+      - label: Talk to us about Microsoft 365
+        href: /contact/?service=automation
+      - label: What gets built where
+        href: "#layers"
+    spec:
+      kind: hub
+      center:
+        title: Your Microsoft 365 tenant
+        text: One sign-in, one set of permissions.
+      spokes:
+        - title: SharePoint
+          text: Sites, libraries, and the intranet.
+        - title: Teams
+          text: Conversation, meetings, and apps.
+        - title: Outlook and calendar
+          text: Mail and scheduling, with rules.
+        - title: Power Automate
+          text: Flows between tools.
+        - title: Forms and Lists
+          text: Simple data capture and tracking.
+        - title: Your business systems
+          text: Customer records, accounts, and line-of-business tools.
+    purpose: system
+    takeaway: Microsoft 365 works best when SharePoint, Teams, mail, automation, forms, and your business systems share one sign-in and one set of permissions.
+    visualTitle: How the parts of Microsoft 365 connect
+    figureCaption: "This diagram shows a Microsoft 365 tenant at the center with six parts around it: SharePoint, Teams, mail and calendar, Power Automate, Forms and Lists, and your business systems."
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A platform people already know
+    paragraphs:
+      - The advantage of Microsoft 365 is that staff already use it. A form in Teams, a document library in SharePoint, or an approval in Outlook meets people where they are, with no new tool to learn and no new password.
+      - The difficulty is structure. Without a plan, SharePoint becomes a pile of folders, Teams becomes a hundred channels, and automation grows as scattered flows that nobody owns.
+      - "Our work is to give it shape: a sensible site and permission structure, a small number of well-built flows, and clean connections to the systems the suite does not replace."
+  - type: process
+    id: layers
+    tone: paper
+    label: Built-in or custom
+    heading: Choosing the right layer for each need
+    intro: We work from the lightest tool to the heaviest, and stop at the first one that does the job well.
+    steps:
+      - title: Configure what is there
+        body: Libraries, lists, forms, and permissions set up well solve more than people expect.
+        artifacts:
+          - Site structure
+          - Permission model
+      - title: Automate between the tools
+        body: Approvals, reminders, and data movement built as flows with an owner and monitoring. See [Power Automate](ref:tech.microsoft-power-automate).
+        artifacts:
+          - Flows
+          - Run monitoring
+      - title: Build an app on the platform
+        body: Where a list and a flow are not enough, a small app or a Teams extension gives staff a proper screen.
+        artifacts:
+          - Working app
+      - title: Connect outside systems
+        body: Customer, finance, and operations systems are joined to the suite through its interfaces, so data is entered once.
+        artifacts:
+          - Connections
+          - Data map
+  - type: table
+    id: options
+    tone: white
+    label: Options
+    heading: Microsoft 365 beside the alternatives
+    caption: Microsoft 365 compared with other business platforms for the same jobs
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Microsoft 365
+        - Organizations on Microsoft tools, with Windows users and Office documents at the center.
+        - Powerful but sprawling; it needs structure and ownership.
+      - - "[Google Workspace](ref:plat.google-workspace)"
+        - Organizations that work mainly in a browser and favor simple sharing.
+        - Different automation and permission models, so skills do not transfer.
+      - - "[Airtable](ref:plat.airtable)"
+        - Teams that want a flexible database with light workflows.
+        - A separate platform to learn, pay for, and secure.
+      - - A custom system
+        - Processes that need a dedicated application and its own rules.
+        - The most flexible and the most expensive to build.
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Microsoft 365
+    columns:
+      - title: Organize
+        items:
+          - SharePoint sites and libraries that people can find things in.
+          - Teams and channels with a clear purpose, and a plan to retire the rest.
+      - title: Automate
+        items:
+          - Approvals, notices, and data movement as managed flows.
+          - Forms that feed lists, flows, and reports.
+      - title: Build
+        items:
+          - Small apps and Teams extensions for specific jobs.
+          - Custom parts where the built-in tools run out.
+      - title: Connect and move
+        items:
+          - Links to your customer records, accounting, and operations systems.
+          - Migrations from file servers and other suites.
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: What we are usually asked to do
+    items:
+      - title: Tidy a sprawling SharePoint
+        body: A simple structure, clear permissions, and the old content retired or archived.
+      - title: Replace email approvals
+        body: Requests that move through forms and flows, with a record of each decision.
+      - title: Build an intranet people use
+        body: News, policies, and tools in one place, found by search, not by asking.
+      - title: Move off file servers
+        body: Files migrated in waves, with permissions mapped and old links redirected.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: For technical readers
+    intro: Most visitors can skip this section. It notes how we build on the platform.
+    panels:
+      - title: Identity and access
+        items:
+          - Sign-in and roles come from the tenant's identity service, and permissions follow groups, not individuals.
+          - Sharing links, guest access, and external sharing are set by policy and reviewed.
+      - title: Data and interfaces
+        items:
+          - We use the platform's data interface, Microsoft Graph, to read and write mail, files, calendars, and lists from other systems.
+          - Solutions that need custom code run as small services on [Azure](ref:plat.azure), called by flows or apps.
+      - title: Governance
+        paragraphs:
+          - Naming rules, owners for every site and flow, retention settings, and data policies keep a growing tenant manageable and prevent company data flowing to personal tools.
+      - title: Migration
+        paragraphs:
+          - Moves from file servers or another suite are planned by content type, tested on a sample, and run in waves, with permissions mapped and links redirected.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Microsoft 365
+    items:
+      - q: Do we need custom development, or is the suite enough?
+        a: Often the suite is enough if it is set up well. We start with configuration and flows and recommend custom work only for what they cannot do.
+      - q: Why has our SharePoint become a mess?
+        a: Usually because no one owned the structure. We map what exists, agree a simple structure and permissions, and move content in stages, retiring what nobody uses.
+      - q: Can you connect Microsoft 365 to our CRM or accounts?
+        a: Usually, yes, through the interfaces on both sides. We check the limits of your plans and design connections that retry and report failures.
+      - q: Do you handle migrations to Microsoft 365?
+        a: Yes. We migrate by content type, in waves, with permissions mapped and a rollback plan, from file servers or other suites.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Microsoft 365 across DECHY
+    groups:
+      - title: The service behind this
+        entityIds:
+          - svc.automation
+          - svc.cloud
+      - title: Related technologies
+        entityIds:
+          - tech.microsoft-power-automate
+          - plat.azure
+          - plat.salesforce
+      - title: Alternatives
+        entityIds:
+          - plat.google-workspace
+          - plat.airtable
+      - title: Solutions
+        entityIds:
+          - sol.business-process-automation
+          - sol.cloud-migration
+      - title: Systems we build
+        entityIds:
+          - workarea.workflow-automation
+          - workarea.internal-business-tools
+          - workarea.knowledge-and-content-systems
+      - title: Where it applies
+        entityIds:
+          - ind.professional-services
+          - ind.education
+          - ind.finance
+  - type: cta
+    id: contact-cta
+    heading: Tell us how your team uses Microsoft 365 today
+    body: Describe where files, approvals, and data live now and where it falls short. We will outline what to organize, automate, or build.
+    primary:
+      label: Talk to DECHY about Microsoft 365
+      href: /contact/?service=automation

@@ -128,6 +128,102 @@ assets:
     approval: approved
     acquired: "2026-10-04"
 
+  - id: asset.fig-site-builder
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual website builder with a page canvas, tool panel, and included hosting
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-store-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual online store front beside its commerce engine
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-dashboard-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual business dashboard with tiles, a chart, and an exceptions list
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-mobile-app-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual mobile app with a job list and a tab bar
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-crm-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual customer system with a pipeline and a shared customer record
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-analytics-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual analytics report with filters, a chart, and a table
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-assistant-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual support assistant answering with a source and handing over to a person
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.fig-workflow-ui
+    kind: component
+    file: src/components/figures/Mockups.tsx
+    role: interface-visual
+    source: original
+    creator: DECHY
+    license: Original DECHY artwork (HTML and CSS component). Conceptual mockup; contains no client interface, data, brand, or figures.
+    alt: Conceptual workflow board showing a request moving through approval steps
+    usage: [web-development, software-development]
+    approval: approved
+    acquired: "2026-10-07"
+
   # ---- Photography (licensed stock, Unsplash License; no visible credit is shown on the site) ----
   - id: asset.photo-who-port-operations
     kind: file

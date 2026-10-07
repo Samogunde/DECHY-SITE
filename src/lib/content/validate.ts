@@ -426,7 +426,11 @@ export function validateRegistry(registry: Registry): Issue[] {
       const specs = page.sections.flatMap((b) =>
         b.type === "hero" || b.type === "diagram" ? (b.spec ? [b.spec] : []) : [],
       );
-      if (specs.length === 0) err("tech-diagram", where, "A technology page needs a diagram");
+      const figures = page.sections.filter(
+        (b) => (b.type === "hero" || b.type === "diagram") && b.figure,
+      ).length;
+      if (specs.length + figures === 0)
+        err("tech-diagram", where, "A technology page needs a diagram");
       if (node?.type === "integration" && !specs.some((s) => s.kind === "flow"))
         err("integration-flow", where, "An integration page needs a data-flow diagram (AGENTS 76)");
     }
@@ -665,6 +669,14 @@ export function validateRegistry(registry: Registry): Issue[] {
     "quality-layers",
     "modernization-path",
     "portal-wireframe",
+    "site-builder",
+    "store-ui",
+    "dashboard-ui",
+    "mobile-app-ui",
+    "crm-ui",
+    "analytics-ui",
+    "assistant-ui",
+    "workflow-ui",
   ]) {
     if (!registry.assets.some((a) => a.id === `asset.fig-${figure}`))
       err("asset-figure", figure, "Diagram has no registry entry");

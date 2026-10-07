@@ -1,0 +1,181 @@
+id: page.tech-bigcommerce
+kind: technology
+locale: en
+path: /ecommerce/bigcommerce/
+parent: /ecommerce/
+entityId: plat.bigcommerce
+title: "BigCommerce Development Services | DECHY"
+description: "BigCommerce development from DECHY: building stores with open interfaces, B2B pricing, and headless front ends, and choosing it over Shopify or WooCommerce."
+breadcrumbLabel: BigCommerce
+intent:
+  primary: bigcommerce development services
+  secondary:
+    - bigcommerce developer
+    - bigcommerce vs shopify
+indexing: index
+claims: [company.name, company.descriptor]
+datePublished: "2026-10-07"
+dateModified: "2026-10-07"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "BigCommerce is a hosted online store platform known for open interfaces, strong support for business-to-business selling, and the option to run the shop front separately from the store engine."
+  problem: "Growing stores outgrow simple platforms: catalogs get large, buyers need account pricing, and the shop front must connect to other systems and look the way the brand wants."
+  audience: "Merchants with growing or complex catalogs, B2B sellers, and brands that want a custom storefront on a hosted commerce engine."
+  choose: "Choose BigCommerce when you need open interfaces, B2B features, or a headless storefront on a hosted engine. Choose Shopify for the largest app ecosystem and simplicity, or WooCommerce for ownership."
+  next: "Tell us what you sell, to whom, and what the store must connect to. We will compare the platforms on your facts and outline the build."
+
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Commerce platform
+    headline: BigCommerce development
+    lead: "BigCommerce is a hosted store platform built to be extended. Its interfaces are open, its B2B features are strong, and the shop front can be built separately from the store engine. We build, connect, and migrate BigCommerce stores, and we say when another platform is the better fit."
+    support: "This page covers what BigCommerce does well, how it compares with Shopify and WooCommerce, and what a headless build involves."
+    ctas:
+      - { label: Talk to us about a BigCommerce store, href: "/contact/?service=ecommerce" }
+      - { label: Compare the platforms, href: "#compare" }
+    figure: store-ui
+    purpose: system
+    takeaway: "A BigCommerce store separates the shop front customers see from the commerce engine that holds products, prices, and orders."
+    visualTitle: "A store front and the engine behind it"
+    figureCaption: "This diagram shows a conceptual store front with a product grid and basket beside the commerce engine that holds catalog, pricing, and orders. It is an illustration, not a client store."
+
+  - type: prose
+    id: what
+    tone: white
+    label: What it means
+    heading: A hosted engine designed to be built on
+    paragraphs:
+      - "Like other hosted platforms, BigCommerce runs the store for you: hosting, security, payments, and uptime. What sets it apart is how much it exposes. Almost everything a store does can be read or changed through interfaces, which makes it comfortable to connect to stock systems, accounting, and custom front ends."
+      - "It also takes business buyers seriously. Customer groups, price lists, quotes, and account-based ordering are part of the platform, which matters when a wholesaler sells to trade customers at agreed prices."
+      - "That openness is useful only if someone builds on it. A simple store gains little over its competitors. A store with unusual needs gains a great deal."
+
+  - type: table
+    id: compare
+    tone: paper
+    label: Compared
+    heading: BigCommerce, Shopify, and WooCommerce
+    caption: BigCommerce compared with Shopify and WooCommerce on the points that usually decide the choice
+    columns: [Point, BigCommerce, Shopify and WooCommerce]
+    rows:
+      - - "Ecosystem"
+        - "A growing set of apps and integrations; fewer than the largest."
+        - "[Shopify](ref:plat.shopify) has the largest app store. [WooCommerce](ref:plat.woocommerce) has the widest range of plugins."
+      - - "B2B selling"
+        - "Customer groups, price lists, and quotes are built in."
+        - "Possible on both, usually with extra apps or plugins."
+      - - "Custom storefronts"
+        - "Designed to work headless, with the engine reached through interfaces."
+        - "Shopify supports headless too. WooCommerce can, with more assembly."
+      - - "Ownership and upkeep"
+        - "Hosted; little to maintain, with platform fees."
+        - "Shopify is hosted. WooCommerce is yours to host and maintain."
+      - - "Fit"
+        - "Complex catalogs, B2B, and brands that want a custom front."
+        - "Shopify suits the simplest start. WooCommerce suits content-led, owned stores."
+
+  - type: process
+    id: build
+    tone: white
+    label: How we build it
+    heading: From catalog to a store that connects
+    steps:
+      - title: Model the catalog and the buyers
+        body: "Products, variations, price lists, and customer groups are laid out before any design."
+        artifacts: [Catalog model, Pricing rules]
+      - title: Build or adapt the store front
+        body: "A theme for a conventional store, or a custom front end for a headless one, built to load quickly."
+        artifacts: [Store front, Performance budget]
+      - title: Connect stock, orders, and accounts
+        body: "Stock, orders, and customer records move between the store and your other systems without re-typing."
+        artifacts: [Connections, Test orders]
+      - title: Launch and tune
+        body: "Search, speed, checkout, and tax are tested, and the store is watched after launch."
+        artifacts: [Launch checklist, Review notes]
+
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with BigCommerce
+    columns:
+      - title: Build
+        items:
+          - "Stores for B2B and consumer selling, with the pricing each needs."
+          - "Headless storefronts on [Next.js](ref:fw.nextjs) or similar."
+      - title: Connect
+        items:
+          - "Stock, shipping, accounting, and customer systems."
+          - "Payments through [Stripe](ref:int.stripe) and [PayPal](ref:int.paypal)."
+      - title: Migrate
+        items:
+          - "Moving a store to or from BigCommerce."
+          - "Preserving products, customers, and search visibility."
+      - title: Look after
+        items:
+          - "Updates, monitoring, and speed reviews."
+          - "Support for the team that runs the store."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: For technical readers
+    intro: "Most visitors can skip this section. It notes how we build on BigCommerce."
+    panels:
+      - title: Interfaces
+        items:
+          - "We use the platform's interfaces to read and write catalog, price, order, and customer data, within the call limits it sets."
+          - "Changes in the store are delivered to other systems as events, so stock and orders stay in step."
+      - title: Headless builds
+        items:
+          - "The storefront is a separate application that fetches data from the platform and renders pages on the server for speed and search."
+          - "Checkout can stay on the platform's hosted checkout to reduce payment risk."
+      - title: Performance and search
+        paragraphs:
+          - "Images are optimized, pages are cached at the edge, and structured data for products is generated from the catalog. We watch real-world speed after launch."
+      - title: Data
+        paragraphs:
+          - "Product and customer data stays portable. We keep a clean export so a later platform move is a plan, not a rescue."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about BigCommerce
+    items:
+      - q: Is BigCommerce better than Shopify?
+        a: "Neither is better in general. BigCommerce often suits B2B selling, complex catalogs, and custom storefronts. Shopify suits the simplest start and the largest ecosystem. We compare them on your needs."
+      - q: What does headless mean for us?
+        a: "The shop front is built separately from the store engine, so the design and speed are fully under your control. It costs more to build and to maintain, so it is worth it only when the brand or scale demands it."
+      - q: Can you move our store to BigCommerce?
+        a: "Yes. We move products, customers, and order history, and set up redirects so you keep your search visibility."
+      - q: Will it work with our accounting and stock systems?
+        a: "Usually, through interfaces on both sides. We check what your systems allow before designing the connection."
+
+  - type: related
+    id: related
+    tone: paper
+    label: Related
+    heading: BigCommerce across DECHY
+    groups:
+      - title: The service behind this
+        entityIds: [svc.ecommerce]
+      - title: Related technologies
+        entityIds: [fw.nextjs, int.stripe, int.paypal, plat.hubspot]
+      - title: Alternatives
+        entityIds: [plat.shopify, plat.woocommerce]
+      - title: Solutions
+        entityIds: [sol.crm-integration, sol.business-process-automation]
+      - title: Systems we build
+        entityIds:
+          [workarea.ecommerce-platforms, workarea.commerce-systems, workarea.integration-platforms]
+      - title: Where it applies
+        entityIds: [ind.retail, ind.manufacturing, ind.logistics]
+
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you sell and to whom
+    body: "Describe your catalog, your buyers, and the systems the store must connect to. We will compare the platforms on your facts and outline the build."
+    primary: { label: Talk to DECHY about BigCommerce, href: "/contact/?service=ecommerce" }
