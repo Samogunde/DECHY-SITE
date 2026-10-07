@@ -49,6 +49,7 @@ Rules for conflicts:
 | Imagery and sourcing | Plan section 25; ADR 0002 section 2 item 1; ADR 0003 (quality gate, no visible credits) |
 | Clarity, comprehension, plain language, progressive depth, self-explanatory diagrams, solution guidance, the five-question page test | `docs/design/clarity-and-comprehension-standard.md`; ADR 0004 |
 | Navigation, discoverability, graph completion | `docs/decisions/0005-navigation-discoverability-and-technology-graph.md`; menus and categories in `data/navigation/nav.yaml` |
+| Technology and Solutions qualification (authoritative dispositions, Decision Resolution) | `docs/planning/14-technology-and-solutions-qualification.md` |
 | Technology master inventory | `docs/planning/13-phase-3-review-technology-inventory.md` |
 | Phase 3 plan, qualification, and notes | `docs/planning/12-phase-3-plan-and-notes.md` |
 | Phase 2 plan and notes | `docs/planning/10-phase-2-plan.md`; `docs/planning/11-phase-2-implementation-notes.md` |

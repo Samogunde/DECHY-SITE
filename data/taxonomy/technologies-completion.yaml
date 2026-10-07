@@ -1,11 +1,12 @@
 # Technology graph completion (ADR 0005), added 6 October 2026 after the Phase 3 inventory review.
-# Dispositions below follow docs/planning/14-technology-and-solutions-qualification.md and are
-# recommendations pending the owner's confirmation. Only Node.js and .NET are named in approved
-# planning (master plan section 7) and stay CREATE LATER. The framework entities and Elasticsearch
-# are MERGE / CONSOLIDATE into their approved parent (language, runtime, or ELK). The nine entities
-# with no planning evidence are DO NOT CREATE. No entity has a public page, a menu entry, or copy,
-# and none is deleted here. The capability categories they sit in are approved in
-# data/taxonomy/capabilities.yaml; the named products are not.
+# Dispositions follow docs/planning/14-technology-and-solutions-qualification.md (section 10, Decision
+# Resolution). Node.js and .NET are named in approved planning (master plan section 7) and are approved
+# page candidates (CREATE LATER). Express, NestJS, Django, FastAPI, Flask, Spring Boot, Laravel, and
+# Elasticsearch are MERGE / CONSOLIDATE into their approved parent: a relationship, not a deletion.
+# The nine entries marked CONFIRMATION REQUIRED (Rails, Power BI, Tableau, Looker, Kafka, RabbitMQ,
+# OpenSearch, Datadog, Sentry) stay as entities with no page and no menu entry until the owner confirms
+# the factual capability; they are neither promoted nor removed. The capability categories they sit in
+# are approved in data/taxonomy/capabilities.yaml; the named products are not yet confirmed.
 entities:
   # Back end (runtime and frameworks)
   - id: tech.nodejs
@@ -87,7 +88,7 @@ entities:
     primaryService: svc.software-development
     group: Backend frameworks
     prominence: reference
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: fw.laravel
     type: framework
@@ -106,7 +107,7 @@ entities:
     primaryService: svc.data-analytics
     group: Business intelligence
     prominence: standard
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: plat.tableau
     type: platform
@@ -115,7 +116,7 @@ entities:
     primaryService: svc.data-analytics
     group: Business intelligence
     prominence: standard
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: plat.looker
     type: platform
@@ -124,7 +125,7 @@ entities:
     primaryService: svc.data-analytics
     group: Business intelligence
     prominence: reference
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   # Messaging, search, observability
   - id: tech.kafka
@@ -134,7 +135,7 @@ entities:
     primaryService: svc.api-integration
     group: Messaging and streaming
     prominence: standard
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: tech.rabbitmq
     type: technology
@@ -143,7 +144,7 @@ entities:
     primaryService: svc.api-integration
     group: Messaging and streaming
     prominence: reference
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: tech.elasticsearch
     type: technology
@@ -161,7 +162,7 @@ entities:
     primaryService: svc.data-analytics
     group: Search technologies
     prominence: reference
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: plat.datadog
     type: platform
@@ -170,7 +171,7 @@ entities:
     primaryService: svc.cloud
     group: Observability
     prominence: standard
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none
   - id: plat.sentry
     type: platform
@@ -179,5 +180,5 @@ entities:
     primaryService: svc.cloud
     group: Observability
     prominence: standard
-    pagePolicy: DO NOT CREATE
+    pagePolicy: REVIEW # CONFIRMATION REQUIRED
     evidenceLevel: none

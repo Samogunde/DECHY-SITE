@@ -1,6 +1,6 @@
 # Technology and Solutions qualification
 
-Status: REVIEW AND RECOMMENDATION. Nothing here is implemented as a page. It is the planning gate between the navigation pass and Phase 4. Written 6 October 2026. Where a decision is not already approved, it is marked and left for Samuel.
+Status: REVIEW AND RECOMMENDATION, with owner decisions recorded in section 10. Nothing here is implemented as a page. It is the planning gate between the navigation pass and Phase 4. Written 6 October 2026. Sections 1 to 9 are the qualification as submitted, updated only where an owner decision changed a disposition (the nine entities now read CONFIRMATION REQUIRED, and MySQL is requalified). Section 10, Decision Resolution, is the current record of what is approved, what awaits factual confirmation, what is deferred, and what still needs architectural review.
 
 Evidence labels used throughout:
 
@@ -13,15 +13,15 @@ Evidence labels used throughout:
 
 **What was reviewed.** All 329 technology-like entities in the graph (the 310 seeded from `AGENTS.md`, plus the 19 added in ADR 0005), the 32 published technology pages, the 22 Solution entities, the 25 Work Areas, the 30 problem entities, the 15 services, and the navigation data.
 
-**Technology inventory.** Of 329 entities: 32 already have pages and stay; 10 more qualify for a page in a next wave; 22 are legitimate later candidates; 103 are better represented inside another page or group; 153 stay in the graph without a page; 9 are not supported by any planning evidence and are recommended for removal. No approved entity is recommended for removal. No entity is removed by this document.
+**Technology inventory.** Of 329 entities: 32 already have pages and stay; 11 more qualify for a page in a next wave; 21 are legitimate later candidates; 103 are better represented inside another page or group; 153 stay in the graph without a page; 9 are CONFIRMATION REQUIRED (no planning evidence for the named product, so no page and no promotion until the capability is confirmed). Nothing is removed and no approved entity is recommended for removal.
 
-**The 19 added entities.** Two are verified and kept (Node.js and .NET are named in the approved master plan). Eight are grouped under an approved parent (the Node.js, Python, Java and PHP frameworks, and Elasticsearch under the approved ELK entity). Nine have no planning support and are recommended for removal until Samuel confirms them: Ruby on Rails, Power BI, Tableau, Looker, Kafka, RabbitMQ, OpenSearch, Datadog and Sentry. I added all 19 in the previous pass on my own reading of capability categories. That was a stretch for the 17 without named evidence, and this review corrects it.
+**The 19 added entities.** Two are verified and kept (Node.js and .NET are named in the approved master plan). Eight are grouped under an approved parent (the Node.js, Python, Java and PHP frameworks, and Elasticsearch under the approved ELK entity). Nine have no planning evidence for the named product and are held as CONFIRMATION REQUIRED, neither promoted nor removed: Ruby on Rails, Power BI, Tableau, Looker, Kafka, RabbitMQ, OpenSearch, Datadog and Sentry. I added all 19 in the previous pass on my own reading of capability categories. For the 17 without named evidence the category is approved but the named product is not, and the review treats that as an open fact to confirm, not as a finding that DECHY does not support them.
 
-**Next technology wave.** Ten pages, ranked: four HIGH (Node.js, WooCommerce, .NET, Power Automate), six MEDIUM (BigQuery, Vue, Angular, Firebase, Supabase, Snowflake), plus one grouped open-models page that needs a new group entity (MEDIUM, Samuel to decide). MySQL moves to LATER because it largely repeats the PostgreSQL page.
+**Next technology wave.** Eleven pages, ranked: four HIGH (Node.js, WooCommerce, .NET, Power Automate) and seven MEDIUM (BigQuery, MySQL, Vue, Angular, Firebase, Supabase, Snowflake), plus one grouped open-models page that needs a new group entity (MEDIUM, Samuel to decide). MySQL was first placed in LATER only because the PostgreSQL page exists; on requalification (section 4.3) it passes the standalone-page criteria and is MEDIUM.
 
 **Solutions versus Work Areas.** Of the 22 planned Solutions, 6 satisfy an intent that is meaningfully different from every Work Area and should become pages; 5 are plausible but should wait; 9 are the same intent as a Work Area and should be represented by it; 1 merges into another Solution; 1 stays graph-only. Nothing is removed. This is smaller than the first-wave 12 in the master plan, and deliberately so: nine of the twelve planned first-wave Solutions would otherwise be a second page for something a Work Area already explains.
 
-**What this changes in the data.** Only the 17 unsupported or grouped entities have their `pagePolicy` set to record the disposition (section 3). Everything else is documentation until Samuel approves.
+**What this changes in the data.** The eight grouped entities carry `MERGE / CONSOLIDATE`; the nine confirmation-required entities keep `REVIEW` with a CONFIRMATION REQUIRED marker (section 3). Nineteen Problem to Solution edges were added to the graph (section 10.5). No Solution `pagePolicy` is changed and no page, route or copy changes.
 
 ## 2. Current technology inventory disposition
 
@@ -41,11 +41,11 @@ Evidence classes: **A** the approved lists in `AGENTS.md`; **B** another approve
 
 | Disposition | Count | Meaning here |
 |---|---|---|
-| APPROVED PUBLIC PAGE | 42 | 32 published, plus 10 qualified for the next wave and not yet built |
-| LATER | 22 | Legitimate future candidates; no commitment |
+| APPROVED PUBLIC PAGE | 43 | 32 published, plus 11 qualified for the next wave and not yet built |
+| LATER | 21 | Legitimate future candidates; no commitment |
 | MERGE / GROUP | 103 | Named inside another page or a group page; no page of their own |
 | GRAPH-ONLY ENTITY | 153 | Stay in the graph; includes 28 concepts that suit articles in Phase 5 |
-| REMOVE / NOT CURRENTLY SUPPORTED | 9 | Recommended for removal on approval |
+| CONFIRMATION REQUIRED | 9 | Kept as entities, no page, not promoted; the owner confirms the factual capability before a final disposition |
 | **Total** | **329** | |
 
 The 28 concepts (OAuth, Zero Trust, microservices, serverless and similar) are counted under GRAPH-ONLY. They are article candidates, not technology pages.
@@ -54,7 +54,7 @@ The 28 concepts (OAuth, Zero Trust, microservices, serverless and similar) are c
 
 Every one of the 329 entities is below, grouped by its canonical service. "Intent" is the search or buyer intent for the technology as a page of its own. "Relevance" is the entity's approved `prominence` (feature, standard, reference). "Capability support" names where the entity is approved.
 
-Counts (329 technology-like entities): GRAPH-ONLY ENTITY 153; APPROVED PUBLIC PAGE 42; MERGE / GROUP 103; REMOVE / NOT CURRENTLY SUPPORTED 9; LATER 22.
+Counts (329 technology-like entities): GRAPH-ONLY ENTITY 153; APPROVED PUBLIC PAGE 43; MERGE / GROUP 103; CONFIRMATION REQUIRED 9; LATER 21.
 
 Method: dispositions come from the first-pass rules in `13-phase-3-review-technology-inventory.md`, re-run under the five-way standard and corrected where this review disagreed (MySQL, the open-models group, and the 19 added entities). Intent is the search or buyer intent for the technology as a standalone page; relevance is the entity's `prominence` in the approved taxonomy; support names the document that approves the entity.
 
@@ -123,8 +123,8 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | Webhooks | technology | REVIEW | GRAPH-ONLY ENTITY | API & Systems Integration | Low | Low | No | AGENTS s7 | Keep in the graph | Covered by service content |
 | WebSockets | technology | REVIEW | GRAPH-ONLY ENTITY | API & Systems Integration | Low | Low | No | AGENTS s11 | Keep in the graph | Covered by service content |
 | Wix APIs | integration | REVIEW | GRAPH-ONLY ENTITY | API & Systems Integration | Low | Low | No | AGENTS s11 | Keep in the graph | Narrow intent |
-| Apache Kafka | technology | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | API & Systems Integration | Low | Medium | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | Event-driven architecture is approved as a concept; Kafka is in no planning document |
-| RabbitMQ | technology | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | API & Systems Integration | Low | Low | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | Event-driven architecture is approved as a concept; RabbitMQ is in no planning document |
+| Apache Kafka | technology | DO NOT CREATE | CONFIRMATION REQUIRED | API & Systems Integration | Low | Medium | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | Event-driven architecture is approved as a concept; Kafka is in no planning document |
+| RabbitMQ | technology | DO NOT CREATE | CONFIRMATION REQUIRED | API & Systems Integration | Low | Low | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | Event-driven architecture is approved as a concept; RabbitMQ is in no planning document |
 
 #### Automation, Workflows & AI Solutions (21)
 
@@ -159,10 +159,10 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | AWS | platform | Published `/cloud/aws/` | APPROVED PUBLIC PAGE | Cloud & DevOps | High | High | Yes | AGENTS s8 | Keep (published) | Built in Phase 3 |
 | Azure | platform | Published `/cloud/azure/` | APPROVED PUBLIC PAGE | Cloud & DevOps | High | High | Yes | AGENTS s8 | Keep (published) | Built in Phase 3 |
 | Docker | tool | Published `/cloud/docker/` | APPROVED PUBLIC PAGE | Cloud & DevOps | High | High | Yes | AGENTS s8 | Keep (published) | Built in Phase 3 |
-| Firebase | platform | REVIEW | APPROVED PUBLIC PAGE | Cloud & DevOps | Medium | Low | Yes | AGENTS s8 | Next wave, rank 8 (MEDIUM); not built | Popular back-end platform for mobile and web; distinct intent |
+| Firebase | platform | REVIEW | APPROVED PUBLIC PAGE | Cloud & DevOps | Medium | Low | Yes | AGENTS s8 | Next wave, rank 9 (MEDIUM); not built | Popular back-end platform for mobile and web; distinct intent |
 | Google Cloud | platform | Published `/cloud/google-cloud/` | APPROVED PUBLIC PAGE | Cloud & DevOps | High | High | Yes | AGENTS s8 | Keep (published) | Built in Phase 3 |
 | Kubernetes | tool | Published `/cloud/kubernetes/` | APPROVED PUBLIC PAGE | Cloud & DevOps | High | High | Yes | AGENTS s8 | Keep (published) | Built in Phase 3 |
-| Supabase | platform | REVIEW | APPROVED PUBLIC PAGE | Cloud & DevOps | Medium | Low | Yes | AGENTS s8 | Next wave, rank 9 (MEDIUM); not built | Popular back-end platform; distinct intent from AWS or Firebase |
+| Supabase | platform | REVIEW | APPROVED PUBLIC PAGE | Cloud & DevOps | Medium | Low | Yes | AGENTS s8 | Next wave, rank 10 (MEDIUM); not built | Popular back-end platform; distinct intent from AWS or Firebase |
 | Terraform | tool | Published `/cloud/terraform/` | APPROVED PUBLIC PAGE | Cloud & DevOps | High | High | Yes | AGENTS s8 | Keep (published) | Built in Phase 3 |
 | Cloudflare | platform | REVIEW | LATER | Cloud & DevOps | Medium | Low | Probably | AGENTS s8 | Revisit when demand or evidence exists | Network and edge platform; moderate intent |
 | AKS | technology | REVIEW | MERGE / GROUP | Cloud & DevOps | Low alone | Low | Only inside the target | AGENTS s8 | No own page; named inside the target above | Represented inside the Azure page (a named service of that cloud) |
@@ -235,8 +235,8 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | Rocky Linux | tool | REVIEW | GRAPH-ONLY ENTITY | Cloud & DevOps | Low | Low | No | AGENTS s8 | Keep in the graph | Infrastructure tool or operating system; covered by DevOps content |
 | Travis CI | tool | REVIEW | GRAPH-ONLY ENTITY | Cloud & DevOps | Low | Low | No | AGENTS s8 | Keep in the graph | Infrastructure tool or operating system; covered by DevOps content |
 | Ubuntu | tool | REVIEW | GRAPH-ONLY ENTITY | Cloud & DevOps | Low | Low | No | AGENTS s8 | Keep in the graph | Infrastructure tool or operating system; covered by DevOps content |
-| Datadog | platform | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Cloud & DevOps | Low | Medium | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | Observability is approved through Prometheus, Grafana, OpenTelemetry and ELK; Datadog is in no planning document |
-| Sentry | platform | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Cloud & DevOps | Low | Medium | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | Observability is approved through Prometheus, Grafana, OpenTelemetry and ELK; Sentry is in no planning document |
+| Datadog | platform | DO NOT CREATE | CONFIRMATION REQUIRED | Cloud & DevOps | Low | Medium | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | Observability is approved through Prometheus, Grafana, OpenTelemetry and ELK; Datadog is in no planning document |
+| Sentry | platform | DO NOT CREATE | CONFIRMATION REQUIRED | Cloud & DevOps | Low | Medium | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | Observability is approved through Prometheus, Grafana, OpenTelemetry and ELK; Sentry is in no planning document |
 
 #### Cybersecurity (11)
 
@@ -260,13 +260,13 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 |---|---|---|---|---|---|---|---|---|---|---|
 | BigQuery | technology | REVIEW | APPROVED PUBLIC PAGE | Data & Analytics | Medium | Low | Yes | AGENTS s8 | Next wave, rank 5 (MEDIUM); not built | Data warehouse; strong data and AI intent |
 | MongoDB | technology | Published `/data-analytics/mongodb/` | APPROVED PUBLIC PAGE | Data & Analytics | High | High | Yes | AGENTS s10 | Keep (published) | Built in Phase 3 |
+| MySQL | technology | REVIEW | APPROVED PUBLIC PAGE | Data & Analytics | Medium | Low | Yes | AGENTS s10 | Next wave, rank 6 (MEDIUM); not built | Requalified: distinct database ecosystem (WordPress, WooCommerce, PHP, migration); medium priority |
 | PostgreSQL | technology | Published `/data-analytics/postgresql/` | APPROVED PUBLIC PAGE | Data & Analytics | High | High | Yes | AGENTS s10 | Keep (published) | Built in Phase 3 |
-| Snowflake | platform | REVIEW | APPROVED PUBLIC PAGE | Data & Analytics | Medium | Low | Yes | AGENTS s10 | Next wave, rank 10 (MEDIUM); not built | Data warehouse; strong enterprise intent |
+| Snowflake | platform | REVIEW | APPROVED PUBLIC PAGE | Data & Analytics | Medium | Low | Yes | AGENTS s10 | Next wave, rank 11 (MEDIUM); not built | Data warehouse; strong enterprise intent |
 | Databricks | platform | REVIEW | LATER | Data & Analytics | Medium | Low | Probably | AGENTS s10 | Revisit when demand or evidence exists | Specialist data platform; build when data work is evidenced |
-| MySQL | technology | REVIEW | LATER | Data & Analytics | Medium | Low | Probably | AGENTS s10 | Revisit when demand or evidence exists | Strong overlap with the PostgreSQL page; the distinct intents (WordPress back end, migration to or from MySQL) are narrow |
 | Redis | technology | REVIEW | LATER | Data & Analytics | Medium | Low | Probably | AGENTS s10 | Revisit when demand or evidence exists | Caching and data store; moderate intent |
 | DynamoDB | technology | REVIEW | MERGE / GROUP | Data & Analytics | Low alone | Low | Only inside the target | AGENTS s8 | No own page; named inside the target above | Represented inside the AWS page |
-| Elasticsearch | technology | REVIEW | MERGE / GROUP | Data & Analytics | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the approved ELK entity (Elasticsearch is the E in ELK) |
+| Elasticsearch | technology | MERGE / CONSOLIDATE | MERGE / GROUP | Data & Analytics | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the approved ELK entity (Elasticsearch is the E in ELK) |
 | Firestore | technology | REVIEW | MERGE / GROUP | Data & Analytics | Low alone | Low | Only inside the target | AGENTS s8 | No own page; named inside the target above | Represented inside the Firebase page |
 | Appwrite | platform | REVIEW | GRAPH-ONLY ENTITY | Data & Analytics | Low | Low | No | AGENTS s10 | Keep in the graph | Narrow intent |
 | Cassandra | technology | REVIEW | GRAPH-ONLY ENTITY | Data & Analytics | Low | Low | No | AGENTS s10 | Keep in the graph | Covered by the database and data-platform pages |
@@ -281,10 +281,10 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | SQL Server | technology | REVIEW | GRAPH-ONLY ENTITY | Data & Analytics | Low | Low | No | AGENTS s10 | Keep in the graph | Covered by the database and data-platform pages |
 | SQLite | technology | REVIEW | GRAPH-ONLY ENTITY | Data & Analytics | Low | Low | No | AGENTS s10 | Keep in the graph | Covered by the database and data-platform pages |
 | Xano | platform | REVIEW | GRAPH-ONLY ENTITY | Data & Analytics | Low | Low | No | AGENTS s10 | Keep in the graph | Narrow intent |
-| Looker | platform | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Data & Analytics | Low | Low | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | The BI capability is approved but this named tool is in no planning document |
-| OpenSearch | technology | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Data & Analytics | Low | Low | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | No planning evidence; Elasticsearch is grouped under ELK |
-| Power BI | platform | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Data & Analytics | Low | Medium | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | The BI capability is approved but this named tool is in no planning document |
-| Tableau | platform | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Data & Analytics | Low | Medium | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | The BI capability is approved but this named tool is in no planning document |
+| Looker | platform | DO NOT CREATE | CONFIRMATION REQUIRED | Data & Analytics | Low | Low | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | The BI capability is approved but this named tool is in no planning document |
+| OpenSearch | technology | DO NOT CREATE | CONFIRMATION REQUIRED | Data & Analytics | Low | Low | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | No planning evidence; Elasticsearch is grouped under ELK |
+| Power BI | platform | DO NOT CREATE | CONFIRMATION REQUIRED | Data & Analytics | Low | Medium | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | The BI capability is approved but this named tool is in no planning document |
+| Tableau | platform | DO NOT CREATE | CONFIRMATION REQUIRED | Data & Analytics | Low | Medium | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | The BI capability is approved but this named tool is in no planning document |
 
 #### Ecommerce Solutions (10)
 
@@ -346,12 +346,12 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | Python | language | Published `/software-development/python/` | APPROVED PUBLIC PAGE | Software Development | High | High | Yes | AGENTS s18 | Keep (published) | Built in Phase 3 |
 | Go | language | REVIEW | LATER | Software Development | Medium | Low | Probably | AGENTS s18 | Revisit when demand or evidence exists | Moderate intent; build when back-end work is evidenced |
 | C# | language | REVIEW | MERGE / GROUP | Software Development | Low alone | Low | Only inside the target | AGENTS s18 | No own page; named inside the target above | Represented inside the .NET page (Phase 4 candidate) |
-| Django | framework | REVIEW | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Python page, only after Samuel confirms Python frameworks as a capability |
-| Express | framework | REVIEW | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Node.js page, only after Samuel confirms Node.js frameworks as a capability |
-| FastAPI | framework | REVIEW | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Python page, only after Samuel confirms Python frameworks as a capability |
-| Flask | framework | REVIEW | MERGE / GROUP | Software Development | Low alone | Low | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Python page, only after Samuel confirms Python frameworks as a capability |
-| NestJS | framework | REVIEW | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Node.js page, only after Samuel confirms Node.js frameworks as a capability |
-| Spring Boot | framework | REVIEW | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Java page, only after Samuel confirms Java frameworks as a capability |
+| Django | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Python page, only after Samuel confirms Python frameworks as a capability |
+| Express | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Node.js page, only after Samuel confirms Node.js frameworks as a capability |
+| FastAPI | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Python page, only after Samuel confirms Python frameworks as a capability |
+| Flask | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Software Development | Low alone | Low | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Python page, only after Samuel confirms Python frameworks as a capability |
+| NestJS | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Node.js page, only after Samuel confirms Node.js frameworks as a capability |
+| Spring Boot | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Software Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the Java page, only after Samuel confirms Java frameworks as a capability |
 | API Architecture | concept | REVIEW | GRAPH-ONLY ENTITY | Software Development | Concept | Low | As an article | AGENTS s19 | Keep; article candidate (Phase 5) | Concept: explained in resources and in service pages, not as a technology page |
 | Bash | language | REVIEW | GRAPH-ONLY ENTITY | Software Development | Low | Low | No | AGENTS s18 | Keep in the graph | Language with limited standalone service intent |
 | C | language | REVIEW | GRAPH-ONLY ENTITY | Software Development | Low | Low | No | AGENTS s18 | Keep in the graph | Language with limited standalone service intent |
@@ -379,7 +379,7 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | Serverless | concept | REVIEW | GRAPH-ONLY ENTITY | Software Development | Concept | Low | As an article | AGENTS s19 | Keep; article candidate (Phase 5) | Concept: explained in resources and in service pages, not as a technology page |
 | SQL | language | REVIEW | GRAPH-ONLY ENTITY | Software Development | Low | Low | As an article | AGENTS s18 | Keep; article candidate (Phase 5) | A skill and concept more than a service; suits resources |
 | Visual Basic | language | REVIEW | GRAPH-ONLY ENTITY | Software Development | Low | Low | No | AGENTS s18 | Keep in the graph | Language with limited standalone service intent |
-| Ruby on Rails | framework | REVIEW | REMOVE / NOT CURRENTLY SUPPORTED | Software Development | Low | Low | No | Category only (inferred) | Remove on Samuel's approval; reinstate if he confirms the capability | No planning evidence; its language (Ruby) is itself entity-only with no page, so a framework adds nothing |
+| Ruby on Rails | framework | DO NOT CREATE | CONFIRMATION REQUIRED | Software Development | Low | Low | Not assessed until confirmed | Category only (inferred) | Keep as entity; no page; Samuel confirms the capability before a final disposition | No planning evidence; its language (Ruby) is itself entity-only with no page, so a framework adds nothing |
 
 #### UI/UX & Product Design (5)
 
@@ -395,12 +395,12 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 
 | Name | Type | Current status | Disposition | Service | Intent | Relevance | Unique page content | Capability support | Recommended action | Reason |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Angular | framework | REVIEW | APPROVED PUBLIC PAGE | Web Development | Medium | Low | Yes | AGENTS s4 | Next wave, rank 7 (MEDIUM); not built | High-intent front-end framework; common in enterprise work |
+| Angular | framework | REVIEW | APPROVED PUBLIC PAGE | Web Development | Medium | Low | Yes | AGENTS s4 | Next wave, rank 8 (MEDIUM); not built | High-intent front-end framework; common in enterprise work |
 | Next.js | framework | Published `/web-development/nextjs/` | APPROVED PUBLIC PAGE | Web Development | High | High | Yes | AGENTS s4 | Keep (published) | Built in Phase 3 |
 | PHP | language | Published `/web-development/php/` | APPROVED PUBLIC PAGE | Web Development | High | High | Yes | AGENTS s18 | Keep (published) | Built in Phase 3 |
 | React | framework | Published `/web-development/react/` | APPROVED PUBLIC PAGE | Web Development | High | High | Yes | AGENTS s4 | Keep (published) | Built in Phase 3 |
 | TypeScript | language | Published `/web-development/typescript/` | APPROVED PUBLIC PAGE | Web Development | High | High | Yes | AGENTS s18 | Keep (published) | Built in Phase 3 |
-| Vue | framework | REVIEW | APPROVED PUBLIC PAGE | Web Development | Medium | Low | Yes | AGENTS s4 | Next wave, rank 6 (MEDIUM); not built | High-intent front-end framework; entity exists; not in the plan's 34 |
+| Vue | framework | REVIEW | APPROVED PUBLIC PAGE | Web Development | Medium | Low | Yes | AGENTS s4 | Next wave, rank 7 (MEDIUM); not built | High-intent front-end framework; entity exists; not in the plan's 34 |
 | Webflow | platform | Published `/web-development/webflow/` | APPROVED PUBLIC PAGE | Web Development | High | High | Yes | AGENTS s4 | Keep (published) | Built in Phase 3 |
 | WordPress | platform | Published `/web-development/wordpress/` | APPROVED PUBLIC PAGE | Web Development | High | High | Yes | AGENTS s4 | Keep (published) | Built in Phase 3 |
 | Drupal | platform | REVIEW | LATER | Web Development | Medium | Low | Probably | AGENTS s4 | Revisit when demand or evidence exists | CMS with migration and enterprise intent |
@@ -409,7 +409,7 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | Contentful | platform | REVIEW | MERGE / GROUP | Web Development | Low alone | Low | Only inside the target | AGENTS s4 | No own page; named inside the target above | Represented inside one headless CMS page (a later group candidate) with Sanity and Strapi |
 | HubSpot CMS | platform | REVIEW | MERGE / GROUP | Web Development | Low alone | Low | Only inside the target | AGENTS s4 | No own page; named inside the target above | Represented inside the HubSpot page |
 | JavaScript | language | REVIEW | MERGE / GROUP | Web Development | Low alone | Low | Only inside the target | AGENTS s18 | No own page; named inside the target above | Represented inside the TypeScript and React pages |
-| Laravel | framework | REVIEW | MERGE / GROUP | Web Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the PHP page, only after Samuel confirms PHP frameworks as a capability |
+| Laravel | framework | MERGE / CONSOLIDATE | MERGE / GROUP | Web Development | Low alone | Medium | Only inside the target | Category only (inferred) | No own page; named inside the target above | Represented inside the PHP page, only after Samuel confirms PHP frameworks as a capability |
 | Sanity | platform | REVIEW | MERGE / GROUP | Web Development | Low alone | Low | Only inside the target | AGENTS s4 | No own page; named inside the target above | Represented inside one headless CMS page (a later group candidate) |
 | Strapi | platform | REVIEW | MERGE / GROUP | Web Development | Low alone | Low | Only inside the target | AGENTS s4 | No own page; named inside the target above | Represented inside one headless CMS page (a later group candidate) |
 | Alpine.js | framework | REVIEW | GRAPH-ONLY ENTITY | Web Development | Low | Low | No | AGENTS s4 | Keep in the graph | Alternative front-end framework; named on the Next.js and React pages |
@@ -448,6 +448,7 @@ Method: dispositions come from the first-pass rules in `13-phase-3-review-techno
 | Wix Velo | platform | REVIEW | GRAPH-ONLY ENTITY | Web Development | Low | Low | No | AGENTS s4 | Keep in the graph | Platform with limited standalone intent |
 | Yarn | tool | REVIEW | GRAPH-ONLY ENTITY | Web Development | Low | Low | No | AGENTS s4 | Keep in the graph | Developer tooling; no buyer intent of its own |
 
+
 ## 3. The 19 entities added in ADR 0005
 
 I added these in the previous pass. Samuel's instruction is not to approve them automatically. The standard in section 2.1 is applied to each, and the evidence searched was `AGENTS.md`, the master plan, the Content Master, the handoff, every decision record, and the capability and concept taxonomy.
@@ -468,20 +469,20 @@ What the evidence says overall:
 | Flask | None | D | **MERGE / GROUP** into Python | As above | As above |
 | Spring Boot | None (parent language Java is approved) | D | **MERGE / GROUP** into Java | As above | Samuel confirms Java frameworks |
 | Laravel | None (parent language PHP is approved) | D | **MERGE / GROUP** into PHP | As above | Samuel confirms PHP frameworks |
-| Ruby on Rails | None; Ruby itself is entity-only with no page | D | **REMOVE / NOT CURRENTLY SUPPORTED** | No evidence, and its language has no page for it to attach to | Samuel confirms Ruby work |
+| Ruby on Rails | None; Ruby itself is entity-only with no page | D | **CONFIRMATION REQUIRED** | No evidence, and its language has no page for it to attach to | Samuel confirms Ruby work |
 | Elasticsearch | `AGENTS.md` lists ELK (the "E" is Elasticsearch) | A, by ELK | **MERGE / GROUP** into the approved ELK entity | It is part of an approved entity already; a second entity is a duplicate | Nothing |
-| OpenSearch | None | D | **REMOVE / NOT CURRENTLY SUPPORTED** | A fork of Elasticsearch with no evidence of its own | Samuel confirms |
-| Power BI | Category only (Business Intelligence capabilities are approved) | C | **REMOVE / NOT CURRENTLY SUPPORTED** | The category is approved; this product is in no document | Samuel names the BI tools DECHY works with |
-| Tableau | Category only | C | **REMOVE / NOT CURRENTLY SUPPORTED** | As above | As above |
-| Looker | Category only | C | **REMOVE / NOT CURRENTLY SUPPORTED** | As above | As above |
-| Apache Kafka | Category only (event-driven architecture is an approved concept) | C | **REMOVE / NOT CURRENTLY SUPPORTED** | The concept is approved; this product is in no document | Samuel confirms |
-| RabbitMQ | Category only | C | **REMOVE / NOT CURRENTLY SUPPORTED** | As above | As above |
-| Datadog | Category only (observability is approved through Prometheus, Grafana, OpenTelemetry and ELK) | C | **REMOVE / NOT CURRENTLY SUPPORTED** | Not named in any document | Samuel confirms |
-| Sentry | Category only | C | **REMOVE / NOT CURRENTLY SUPPORTED** | As above | As above |
+| OpenSearch | None | D | **CONFIRMATION REQUIRED** | A fork of Elasticsearch with no evidence of its own | Samuel confirms |
+| Power BI | Category only (Business Intelligence capabilities are approved) | C | **CONFIRMATION REQUIRED** | The category is approved; this product is in no document | Samuel names the BI tools DECHY works with |
+| Tableau | Category only | C | **CONFIRMATION REQUIRED** | As above | As above |
+| Looker | Category only | C | **CONFIRMATION REQUIRED** | As above | As above |
+| Apache Kafka | Category only (event-driven architecture is an approved concept) | C | **CONFIRMATION REQUIRED** | The concept is approved; this product is in no document | Samuel confirms |
+| RabbitMQ | Category only | C | **CONFIRMATION REQUIRED** | As above | As above |
+| Datadog | Category only (observability is approved through Prometheus, Grafana, OpenTelemetry and ELK) | C | **CONFIRMATION REQUIRED** | Not named in any document | Samuel confirms |
+| Sentry | Category only | C | **CONFIRMATION REQUIRED** | As above | As above |
 
-Result: 2 approved, 8 grouped, 9 recommended for removal. None of the 19 becomes a page in this document, and the 8 grouped entities are not promoted to pages either.
+Result: 2 approved, 8 grouped, 9 CONFIRMATION REQUIRED. None of the 19 becomes a page in this document, and the 8 grouped entities are not promoted to pages either. "Not named in planning" is not evidence that DECHY lacks the capability; it is only the absence of evidence that it has it, so the nine are held, not removed.
 
-**Data change made (minimum and reversible).** In `data/taxonomy/technologies-completion.yaml`, the 8 grouped entities now carry `pagePolicy: MERGE / CONSOLIDATE` and the 9 unsupported entities carry `pagePolicy: DO NOT CREATE`, with a header that says the dispositions are recommendations pending Samuel's confirmation. Node.js and .NET keep `CREATE LATER`. No entity is deleted: deleting is Samuel's call, and the entities are inert (no page, no relation, no menu entry, no copy).
+**Data change made (minimum and reversible).** In `data/taxonomy/technologies-completion.yaml`, the 8 grouped entities carry `pagePolicy: MERGE / CONSOLIDATE`. The 9 confirmation-required entities keep their original `pagePolicy: REVIEW` and carry a `CONFIRMATION REQUIRED` marker in the file; an earlier version of this change set them to `DO NOT CREATE` and was corrected after the owner's review (section 10). Node.js and .NET keep `CREATE LATER`. No entity is deleted, and none has a page, a menu entry or copy.
 
 ## 4. Recommended next technology wave
 
@@ -496,21 +497,22 @@ Ranked, using the same standard for every candidate. Priority combines search an
 | 3 | .NET | `/software-development/dotnet/` | Software Development | Enterprise runtime absent from the site; C# grouped into it; legacy .NET Framework modernization is a real buyer problem | ".NET development services", "ASP.NET Core", "migrate .NET Framework" | High | Modernizing old .NET systems, fit with Azure and Microsoft identity, comparison with Java | Java, Azure, Docker, TypeScript, Angular | Custom Software Systems, Operations Platforms, Integration Platforms | Partial with Java (comparison), separable | HIGH |
 | 4 | Power Automate | `/automation/microsoft-power-automate/` | Automation | The default automation choice inside Microsoft 365; three Phase 3 pages already name it as an alternative | "Power Automate consultant", "Power Automate vs Zapier" | High | Licensing and connector limits, governance, desktop flows, when Make or n8n is the better tool | Zapier, Make, n8n, Airtable, Azure | Automation Systems, Workflow Automation, Internal Business Tools | Moderate with the other three automation pages; differs by Microsoft ecosystem | HIGH |
 | 5 | BigQuery | `/data-analytics/bigquery/` | Data and Analytics | Google Cloud's warehouse; strong data and AI intent; the Google Cloud page covers it only in part | "BigQuery consulting", "BigQuery data warehouse" | Medium to high | Cost control by partitioning and query design, ingestion, BI on top, AI integration | Google Cloud, PostgreSQL, Google Gemini | Data and Analytics Systems, Integration Platforms | Overlaps Snowflake (compare) and the Google Cloud page | MEDIUM |
-| 6 | Vue | `/web-development/vue/` | Web Development | A distinct framework and talent pool; Nuxt for search-friendly sites | "Vue.js development" | Medium | Progressive adoption, Vue versus React and Angular, Nuxt | React, Next.js, TypeScript | Business Web Platforms, Customer Portals | Overlaps React's comparison table and Angular | MEDIUM |
-| 7 | Angular | `/web-development/angular/` | Web Development | Enterprise front-end intent and AngularJS migrations | "Angular development company" | Medium | Opinionated structure, long-term support, forms-heavy business software | React, TypeScript, Java, .NET | Operations Platforms, Internal Business Tools, Customer Portals | Overlaps Vue and React | MEDIUM |
-| 8 | Firebase | `/cloud/firebase/` | Cloud and DevOps (as seeded) | Back-end platform for mobile and web; distinct from AWS or Google Cloud pages | "Firebase developer", "Firebase vs Supabase" | Medium | When a ready-made back end beats a custom one, lock-in, security rules, cost surprises | Flutter, React Native, Kotlin, Swift, Google Cloud, MongoDB (alternative) | Mobile Apps, Digital Products | Overlaps Supabase (comparison) | MEDIUM |
-| 9 | Supabase | `/cloud/supabase/` | Cloud and DevOps (as seeded) | PostgreSQL-based alternative to Firebase with its own intent | "Supabase development", "Firebase alternative" | Medium | Postgres foundation, row-level security, moving from Firebase | PostgreSQL, Next.js, React | Digital Products, Business Web Platforms | Overlaps Firebase | MEDIUM |
-| 10 | Snowflake | `/data-analytics/snowflake/` | Data and Analytics | Enterprise warehouse with strong consulting intent | "Snowflake consulting" | Medium | Workload and cost model, data sharing, Snowflake versus BigQuery | BigQuery, AWS, Azure, PostgreSQL | Data and Analytics Systems | Overlaps BigQuery | MEDIUM |
-| 11 | Open models (grouped: Llama, Mistral, Hugging Face) | `/ai/open-models/` (needs a new group entity) | AI and Machine Learning | A real buyer decision (self-hosting) that the three provider pages cannot answer | "open source LLM development", "self-hosted LLM" | Medium | When self-hosting is worth it (data rules, cost at volume), evaluation, hardware and operations | OpenAI, Anthropic Claude, Google Gemini, LangChain, Docker, Kubernetes, n8n | AI Solutions, AI Agents | Touches the alternatives lists on the three provider pages | MEDIUM, needs Samuel |
+| 6 | MySQL (requalified, section 4.3) | `/data-analytics/mysql/` | Data and Analytics | A separate database ecosystem: the default back end of WordPress, WooCommerce and much PHP software, with its own migration and upgrade decisions | "MySQL development", "MySQL to PostgreSQL migration", "MySQL vs PostgreSQL" | Medium | When MySQL is the right choice (WordPress and PHP estates, existing systems) and when to move; upgrades, replication and managed options; the MariaDB question | PostgreSQL (alternative, already links it), PHP, WordPress, WooCommerce (next wave), AWS | Business Web Platforms, Custom Software Systems, Data and Analytics Systems, Commerce Systems | Real overlap with PostgreSQL on the comparison table; the unique content is the MySQL-specific decisions | MEDIUM |
+| 7 | Vue | `/web-development/vue/` | Web Development | A distinct framework and talent pool; Nuxt for search-friendly sites | "Vue.js development" | Medium | Progressive adoption, Vue versus React and Angular, Nuxt | React, Next.js, TypeScript | Business Web Platforms, Customer Portals | Overlaps React's comparison table and Angular | MEDIUM |
+| 8 | Angular | `/web-development/angular/` | Web Development | Enterprise front-end intent and AngularJS migrations | "Angular development company" | Medium | Opinionated structure, long-term support, forms-heavy business software | React, TypeScript, Java, .NET | Operations Platforms, Internal Business Tools, Customer Portals | Overlaps Vue and React | MEDIUM |
+| 9 | Firebase | `/cloud/firebase/` | Cloud and DevOps (as seeded) | Back-end platform for mobile and web; distinct from AWS or Google Cloud pages | "Firebase developer", "Firebase vs Supabase" | Medium | When a ready-made back end beats a custom one, lock-in, security rules, cost surprises | Flutter, React Native, Kotlin, Swift, Google Cloud, MongoDB (alternative) | Mobile Apps, Digital Products | Overlaps Supabase (comparison) | MEDIUM |
+| 10 | Supabase | `/cloud/supabase/` | Cloud and DevOps (as seeded) | PostgreSQL-based alternative to Firebase with its own intent | "Supabase development", "Firebase alternative" | Medium | Postgres foundation, row-level security, moving from Firebase | PostgreSQL, Next.js, React | Digital Products, Business Web Platforms | Overlaps Firebase | MEDIUM |
+| 11 | Snowflake | `/data-analytics/snowflake/` | Data and Analytics | Enterprise warehouse with strong consulting intent | "Snowflake consulting" | Medium | Workload and cost model, data sharing, Snowflake versus BigQuery | BigQuery, AWS, Azure, PostgreSQL | Data and Analytics Systems | Overlaps BigQuery | MEDIUM |
+| 12 | Open models (grouped: Llama, Mistral, Hugging Face) | `/ai/open-models/` (needs a new group entity) | AI and Machine Learning | A real buyer decision (self-hosting) that the three provider pages cannot answer | "open source LLM development", "self-hosted LLM" | Medium | When self-hosting is worth it (data rules, cost at volume), evaluation, hardware and operations | OpenAI, Anthropic Claude, Google Gemini, LangChain, Docker, Kubernetes, n8n | AI Solutions, AI Agents | Touches the alternatives lists on the three provider pages | MEDIUM, needs Samuel |
 
 Notes:
 
-- **Why ten and not more.** Each of the ten passes all five tests in section 2.1. The 22 LATER candidates fail on intent or distinctness today, not on legitimacy.
+- **Why eleven and not more.** Each of the eleven passes all five tests in section 2.1. The 21 LATER candidates fail on intent or distinctness today, not on legitimacy.
 - **C# is not a separate page.** It is grouped into the .NET page.
 - **Open models need a decision** (section 8): a page about three providers needs a group entity such as `tech.open-models` with the slug `open-models`. Without it, the page would sit at `/ai/meta-llama/`, which is the wrong name for what it says.
-- **Firebase and Supabase** have the parent service Cloud and DevOps in the seeded data, although a visitor may expect them with mobile or back-end work. The menu category is editorial (Languages and Backend), so the URL and the menu can differ. Flagged in section 8.
+- **Firebase and Supabase** have the parent service Cloud and DevOps in the seeded data. The recommended menu category is also Cloud and DevOps (section 4.4); this reverses the first recommendation.
 - **Power Automate's slug** is the seeded `microsoft-power-automate`. A shorter slug would need a data change.
-- **Recommended order.** Node.js, .NET, Power Automate, WooCommerce first (HIGH; also the dependencies of the first Solutions, section 9). Then BigQuery, Firebase, Supabase, Vue, Angular, Snowflake.
+- **Recommended order.** Node.js, .NET, Power Automate, WooCommerce first (HIGH; also the dependencies of the first Solutions, section 9). Then BigQuery, MySQL (after WooCommerce, which it supports), Firebase, Supabase, Vue, Angular, Snowflake.
 
 ### 4.2 Later candidates (not part of the next wave)
 
@@ -518,7 +520,7 @@ These are legitimate. Each needs evidence (search data, a client request, or a r
 
 | Group | Entities | Trigger to promote |
 |---|---|---|
-| Databases | MySQL, Redis, Databricks | A WordPress or migration project; data-platform demand |
+| Databases | Redis, Databricks | Data-platform demand |
 | Ecommerce platforms | BigCommerce, Magento / Adobe Commerce | Migration demand after WooCommerce |
 | Builders and CMS | Wix, Squarespace, Drupal | Migration intent; consider one "website platforms" comparison |
 | Business platforms | Microsoft 365, Google Workspace, Notion, Zoho | Power Automate or Gemini pages performing; CRM demand |
@@ -530,6 +532,51 @@ These are legitimate. Each needs evidence (search data, a client request, or a r
 | Design | Figma | A UI/UX technology page, if the service evidence grows |
 
 Group candidates: headless CMS (Contentful, Sanity, Strapi), project-management platforms (Asana, ClickUp, Monday.com), machine-learning frameworks, and open models are better built as one page each than as many.
+
+### 4.3 MySQL requalification
+
+MySQL was first placed in LATER only because the PostgreSQL page already exists. That is not a standalone-page criterion, so it was requalified against the full set. Evidence: MySQL is on the approved relational-database list (`AGENTS.md` section 10); the PostgreSQL, PHP and WordPress pages already name it as an alternative or companion; the Data and Analytics, Web Development and Software Development service pages name it as a database DECHY uses. No search-volume data was available in this pass, so the intent findings are **Inferred** from how people phrase these decisions, not measured.
+
+| Criterion | Finding | Status |
+|---|---|---|
+| Legitimate search intent | Real, narrower than PostgreSQL: "MySQL development", "MySQL to PostgreSQL migration", "MySQL vs PostgreSQL", upgrade and performance help. Many MySQL searches are tutorial or administrator queries, which are not a services intent | Inferred |
+| Commercial relevance | Medium. Rarely bought on its own; usually part of a WordPress, WooCommerce, PHP or existing-system decision. Rises when WooCommerce is built | Inferred |
+| Distinct technology or ecosystem | Yes: a separate engine with its own replication, managed offerings (cloud-hosted MySQL) and the MariaDB fork question | Approved list; distinction inferred |
+| Meaningful unique content | Yes, if written around the MySQL-specific decisions (stay, upgrade, migrate), not as a restatement of the PostgreSQL page | Inferred |
+| Legitimate DECHY capability | Approved: on the `AGENTS.md` relational-database list and named by existing service pages | Approved |
+| Relationship to services | Data and Analytics (canonical home), Software Development, Web Development | Established |
+| Relationship to Work Areas | Business Web Platforms, Custom Software Systems, Data and Analytics Systems, Commerce Systems | Inferred from the service pages |
+| Artificial duplication | Overlap with the PostgreSQL comparison table is real but bounded; the distinct intents (WordPress and WooCommerce back end, migration to or from MySQL, version upgrades) are not answered by the PostgreSQL page | Inferred |
+
+**Outcome: MEDIUM, rank 6** (`/data-analytics/mysql/`), sequenced after WooCommerce so that it supports a live page. It would drop to LATER if, at build time, the page cannot be written around those distinct decisions without repeating the PostgreSQL page. The build gate is the existing technology similarity validator. Not built.
+
+### 4.4 Firebase and Supabase: parent service and navigation category
+
+**Recommendation.** Parent service **Cloud and DevOps** for both, with URLs `/cloud/firebase/` and `/cloud/supabase/`, and the **Cloud and DevOps** category in the Technologies menu.
+
+- Both are listed under Cloud platforms in the approved Cloud and DevOps section of `AGENTS.md` (section 8), and they are also listed under backend and database platforms in the data section. The seeded canonical home is Cloud and DevOps, and the Cloud service page already names both as "backend platforms".
+- Putting the menu category in the same place as the parent service keeps the URL, the breadcrumb and the menu in agreement, so a visitor has one home to learn, not two.
+- Visitors who think "mobile back end" or "database" still reach them through the "Where this connects" rails (the Mobile Apps service already links Firebase), the Mobile and Languages and Backend pages, and site search.
+- **This reverses my first recommendation** (Languages and Backend category). I changed it because an editorial category that disagrees with the URL and breadcrumb costs more in clarity than the extra placement helps. Samuel can still choose otherwise at build time; the menu is data-driven and the change is one line in `data/navigation/nav.yaml`.
+
+Status: **Recommended**, to be confirmed with the wave. No page, entity or menu change is made now.
+
+### 4.5 Open-model group: proposed entity (not created)
+
+| Field | Proposal |
+|---|---|
+| Entity name | Open-source and open-weight AI models (short name: Open Models) |
+| Proposed id and slug | `tech.open-models`, `open-models`, type technology |
+| Parent service and URL | AI and Machine Learning; `/ai/open-models/` |
+| Included technologies (approved providers, `AGENTS.md` section 7) | Meta Llama, Mistral, Hugging Face |
+| Candidate additions, need Samuel's confirmation | Together AI and Groq, which host and serve open models; both are on the approved provider list. They would be mentioned as hosting options, not as members of the group |
+| Not included | OpenAI, Anthropic Claude, Google Gemini, Cohere, which are not open-weight |
+| Why a group, not three pages | The buyer decision is "should we self-host an open model", which none of the three provider pages answers; Llama, Mistral and Hugging Face are options inside that decision |
+| Name note | "Open-weight" is the accurate term for models such as Llama whose weights are available but whose licence is not an open-source licence; the page title should say so plainly |
+| Relationships needed | Each member provider needs a link to the group. The relation types in the schema have no "part of" type, so this is an **architectural review** item: either add one relation type or use `alternativeTo` and `furtherReading` |
+| Existing provider entities | Remain; their current MERGE disposition becomes "named inside the group page" |
+
+Status: **Decision required.** The group entity is not created until Samuel approves it.
 
 ## 5. Solutions versus Work Areas: qualification
 
@@ -666,6 +713,8 @@ No page needs to be added to close any of these. The fixes are relations and cop
 
 ## 8. Decisions requiring Samuel's approval
 
+Status after the owner's review: see section 10. Decisions 4, 5 and 6 are partly settled (the wave is under consideration; the open-model group and the Firebase and Supabase category are documented as recommendations), 7 is approved in principle, and 8 is held. The table below is as originally submitted.
+
 | # | Decision | My recommendation |
 |---|---|---|
 | 1 | Confirm the final dispositions of the 19 entities (section 3) | Approve: keep Node.js and .NET; group the 8; remove the 9 |
@@ -683,7 +732,7 @@ No page needs to be added to close any of these. The fixes are relations and cop
 ## 9. Recommended sequence for the next implementation phase
 
 1. **Samuel reviews this document** and answers section 8.
-2. **Apply the approved data changes** (entity removals, `pagePolicy` for the Solutions, problem and Solution relations from section 6.3). No pages.
+2. **Apply the approved data changes** (resolve the nine confirmation-required entities, apply `pagePolicy` for the Solutions as listed in section 10.2, and add the confirmed industry relations). The problem and Solution relations from section 10.5 are already recorded. No pages.
 3. **Technology wave A (four pages):** Node.js, .NET, Power Automate, WooCommerce. These are also the dependencies of the first Solutions: Legacy System Modernization links Java, PHP and .NET; Business Process Automation links Power Automate with Zapier, Make and n8n.
 4. **Technology wave B (six pages, plus open models if approved):** BigQuery before the Business Dashboards Solution; then Firebase, Supabase, Vue, Angular, Snowflake.
 5. **Phase 4, Solutions first wave:** the six pages, written problem-first and linking to Work Areas and technology pages; then the first-wave industries.
@@ -691,3 +740,162 @@ No page needs to be added to close any of these. The fixes are relations and cop
 7. **Content refinement pass** (already planned) runs alongside. It decides AI Knowledge Systems, and tidies Phase 2 wording that overlaps the new Solution pages.
 
 Dependencies to respect: a Solution page should not be built before the technology pages it links to exist, because an unbuilt link renders as plain text. The sequence above builds the technology pages first for that reason.
+
+## 10. Decision Resolution
+
+Recorded 6 October 2026 after Samuel's review of sections 1 to 9. Sections 1 to 9 stay the source of the recommendations; this section records what the review decided. The status words are exact: **approved** is Samuel's decision, **confirmation required** needs a fact only Samuel can supply, **deferred** is parked on purpose, **architectural review** is a design question that must be settled before it is built.
+
+### 10.1 Decisions now approved
+
+| Decision | Detail | Effect on data |
+|---|---|---|
+| Six Solutions approved in principle as the first standalone Solution-page candidates | Business Process Automation, Legacy System Modernization, Cloud Migration, CRM Integration, Business Dashboards, AI Customer Support | None. No page is created |
+| Nine Solutions represented primarily through existing Work Areas | AI Agents, API Integration, Customer Portal Development, Data Systems, Digital Transformation, Ecommerce Systems, Internal Business Software, Subscription Platforms, Workflow Automation | None yet. Their `pagePolicy` change is held |
+| AI Automation stays merged into Business Process Automation | | None yet |
+| Customer Experience Systems stays graph-only | | None yet |
+| Eight groupings accepted in principle | Express and NestJS to Node.js; Django, FastAPI and Flask to Python; Spring Boot to Java; Laravel to PHP; Elasticsearch to the approved search and log-stack relationship (ELK). They remain non-standalone-page relationships; the underlying entities are not deleted | `MERGE / CONSOLIDATE` kept on the eight entities |
+| Node.js and .NET confirmed as approved public-page candidates | Already in approved technology planning; part of the next wave | `CREATE LATER` kept; not built |
+| The nine confirmation-required entities are not removed, promoted or paged | See 10.3 | Their `pagePolicy` is back to `REVIEW`, marked CONFIRMATION REQUIRED |
+| The next-wave candidates stay under consideration | See 10.4 | None |
+| No Solution `pagePolicy` change is applied now | The recommendation stays in this document | None |
+| No routes, pages, copy, navigation or Work Areas change | | None |
+
+### 10.2 The 22 Solutions: current and pending policy
+
+The pending column is what the recommendation would set when Samuel authorizes it. Nothing in this column is applied.
+
+| Solution | Decision | Status | `pagePolicy` today | `pagePolicy` when applied |
+|---|---|---|---|---|
+| Business Process Automation | Standalone page candidate (absorbs AI Automation) | Approved in principle | CREATE LATER | No change |
+| Legacy System Modernization | Standalone page candidate | Approved in principle | CREATE LATER | No change |
+| Cloud Migration | Standalone page candidate | Approved in principle | CREATE LATER | No change |
+| CRM Integration | Standalone page candidate | Approved in principle | CREATE LATER | No change |
+| Business Dashboards | Standalone page candidate | Approved in principle | CREATE LATER | No change |
+| AI Customer Support | Standalone page candidate | Approved in principle | CREATE LATER | No change |
+| AI Agents | Through the AI Agents Work Area | Approved | CREATE LATER | MERGE / CONSOLIDATE |
+| API Integration | Through API Integrations and Integration Platforms | Approved | CREATE LATER | MERGE / CONSOLIDATE |
+| Customer Portal Development | Through Customer Portals | Approved | CREATE LATER | MERGE / CONSOLIDATE |
+| Data Systems | Through Data and Analytics Systems | Approved | REVIEW | MERGE / CONSOLIDATE |
+| Digital Transformation | Through the Digital Transformation Work Area | Approved | REVIEW | MERGE / CONSOLIDATE |
+| Ecommerce Systems | Through Ecommerce Platforms and Commerce Systems | Approved | REVIEW | MERGE / CONSOLIDATE |
+| Internal Business Software | Through Internal Business Tools | Approved | CREATE LATER | MERGE / CONSOLIDATE |
+| Subscription Platforms | Through Commerce Systems | Approved | REVIEW | MERGE / CONSOLIDATE |
+| Workflow Automation | Through the Workflow Automation Work Area | Approved | CREATE LATER | MERGE / CONSOLIDATE |
+| AI Automation | Merged into Business Process Automation | Approved | REVIEW | MERGE / CONSOLIDATE |
+| AI Knowledge Systems | Deferred | Deferred | CREATE LATER | No change |
+| Booking Platforms | Deferred | Deferred | REVIEW | CREATE LATER |
+| Marketplace Platforms | Deferred | Deferred | REVIEW | CREATE LATER |
+| Payment Integration | Deferred | Deferred | REVIEW | CREATE LATER |
+| SaaS Platforms | Deferred | Deferred | REVIEW | CREATE LATER |
+| Customer Experience Systems | Graph-only | Approved | REVIEW | DO NOT CREATE |
+
+Fifteen entities would change policy and seven stay as they are (the six page candidates and AI Knowledge Systems). "Represented through a Work Area" does not delete the entity or its relations: the Solutions finder and the graph keep sending visitors to the right Work Area page.
+
+### 10.3 Decisions requiring factual confirmation
+
+The nine entities below are approved only as far as their **capability category** is approved. Whether DECHY actually supports and may name the specific product is a fact for Samuel. Until then they are kept as entities: not paged, not promoted, not deleted. Capability recognition and page qualification are separate steps: confirming a capability makes it a recognized entity and an allowed name in copy; it does not by itself earn a page.
+
+| Entity | Approved category | Question for Samuel | If confirmed | If not confirmed |
+|---|---|---|---|---|
+| Ruby on Rails | Backend Development | Does DECHY build with Rails? | Recognized entity under Software Development; no page (Ruby itself has none) | Remove the entity |
+| Power BI | Business Intelligence Systems | Does DECHY build or deliver on Power BI? | Recognized entity; named in the Business Dashboards Solution and data pages; page only if it later qualifies | Remove |
+| Tableau | Business Intelligence Systems | As above | As above | Remove |
+| Looker | Business Intelligence Systems | As above | As above | Remove |
+| Apache Kafka | Event-driven architecture (concept) | Does DECHY build with Kafka? | Recognized entity under API and Systems Integration; no page | Remove |
+| RabbitMQ | Event-driven architecture (concept) | Does DECHY build with RabbitMQ? | As above | Remove |
+| OpenSearch | Search technologies | Does DECHY work with OpenSearch as well as the ELK stack? | Recognized entity beside ELK; no page | Remove |
+| Datadog | Observability (approved through Prometheus, Grafana, OpenTelemetry, ELK) | Does DECHY set up Datadog? | Recognized entity under Cloud and DevOps; no page | Remove |
+| Sentry | Observability | Does DECHY set up Sentry? | As above | Remove |
+
+Other facts that need confirmation:
+
+| Item | Why it matters |
+|---|---|
+| Whether the grouped frameworks (Express, NestJS, Django, FastAPI, Flask, Spring Boot, Laravel) may be named as DECHY capabilities inside the language pages | The grouping is accepted in principle, but naming a framework in copy is a capability claim. No page copy changes until confirmed |
+| Whether Together AI and Groq may be named as hosting options on the open-models page | They are on the approved provider list, but the page does not exist yet |
+| Industry relationships for each Solution (10.6) | No Solution-level industry mapping is approved |
+
+### 10.4 Next technology wave after the decisions
+
+All candidates stay under consideration. Nothing is built.
+
+| Priority | Technologies |
+|---|---|
+| HIGH | Node.js, WooCommerce, .NET, Power Automate |
+| MEDIUM | BigQuery, MySQL (requalified, section 4.3), Vue, Angular, Firebase, Supabase, Snowflake |
+| Grouped, decision required | Open models (section 4.5) |
+
+Firebase and Supabase: parent service Cloud and DevOps, menu category Cloud and DevOps (section 4.4). Open-model group: proposed entity `tech.open-models`, members Llama, Mistral and Hugging Face (section 4.5). Both are recommendations only.
+
+### 10.5 Problem to Solution relationships
+
+**Rule applied.** An edge is recorded only if the problem names the same need as the Solution and the Solution's own service already addresses that problem in the approved Phase 1 edges. Anything interpretive is documented here, marked "requires confirmation", and not stored. No new problem entity and no problem page was created, and no Solution was given an invented problem.
+
+**Result.** Solutions with at least one problem relationship: 5 before, 14 after. Nineteen edges were added in `data/relations/problem-solution.yaml`: 18 `solves` edges, plus one service edge for the one problem that had no relation at all ("Need AI automation", which Automation, Workflows and AI Solutions now addresses). Every one of the 30 problems still has a service; 8 problems have no Solution and open a service or Work Area instead (listed below).
+
+| Solution | Primary problem | Secondary problems | Status |
+|---|---|---|---|
+| AI Agents | Need an AI agent | Need to automate repetitive work (requires confirmation) | Primary established, recorded |
+| AI Automation | Need AI automation | The Business Process Automation problems, through the merge | Primary established, recorded |
+| AI Customer Support | Slow customer support | Need an AI chatbot (established, recorded); Poor customer experience (requires confirmation) | Established, recorded |
+| AI Knowledge Systems | **Gap**: no problem entity says "staff cannot find answers" | Closest: Need to adopt AI (requires confirmation) | Gap; nothing recorded |
+| API Integration | Need API integration | Disconnected systems; Need software integration; Need to connect business tools | Established, recorded |
+| Booking Platforms | **Gap**: no problem entity | Closest: Need custom software (requires confirmation) | Gap; nothing recorded |
+| Business Dashboards | Manual reporting | None | Established earlier |
+| Business Process Automation | Slow business processes | Need business automation; Need to automate repetitive work; Manual data entry (established, recorded); Poor lead management (requires confirmation) | Established, recorded |
+| Cloud Migration | Need cloud migration | None | Established, recorded |
+| CRM Integration | Need CRM integration | Disconnected systems; Need to connect business tools | Established, recorded |
+| Customer Experience Systems | Poor customer experience | None | Established, recorded |
+| Customer Portal Development | Poor customer experience | Need custom software (requires confirmation) | Existing edge kept; broad, flagged |
+| Data Systems | **Gap**: no direct problem entity | Closest: Manual reporting (requires confirmation) | Gap; nothing recorded |
+| Digital Transformation | **Gap**: no direct problem entity | Closest: Legacy software, Outdated software, Slow business processes (require confirmation) | Gap; nothing recorded |
+| Ecommerce Systems | Need ecommerce automation (requires confirmation: the problem names automation, the Solution is wider) | None | Requires confirmation; nothing recorded |
+| Internal Business Software | Too many spreadsheets | Need custom software; Manual data entry | Established earlier |
+| Legacy System Modernization | Legacy software | Outdated software; Need to replace legacy systems | Established earlier |
+| Marketplace Platforms | **Gap**: no problem entity | Closest: Need custom software (requires confirmation) | Gap; nothing recorded |
+| Payment Integration | **Gap**: no direct problem entity | Closest: Need API integration (requires confirmation) | Gap; nothing recorded |
+| SaaS Platforms | Need custom software | None | Existing edge kept; broad, flagged |
+| Subscription Platforms | **Gap**: no problem entity | None justified | Gap; nothing recorded |
+| Workflow Automation | Need workflow automation | Slow business processes (requires confirmation) | Established, recorded |
+
+Problems with no Solution (they open a service or Work Area, as plan section 10 allows): Need AI implementation, Need AI integration and Need to adopt AI (AI Solutions Work Area); Need mobile application (Mobile Apps); Outdated website and Website not converting (Business Web Platforms); Need ecommerce automation (Commerce Systems and Automation Systems); Poor lead management (Automation). None of these should become a Solution page to fill the graph.
+
+The graph can now be followed as Problem, Solution, Service, Work Area, Technology for the 14 connected Solutions. The Industry end is the open item below.
+
+### 10.6 Solution to Industry relationships
+
+**Finding.** No Solution-level industry mapping exists in the approved architecture, so no edge was added. Evidence reviewed:
+
+- `AGENTS.md` section 3 lists 13 industry software opportunities, but only under **Software Development** (Healthcare, Real Estate, Construction, Finance, Education, Logistics, Retail, Ecommerce, Manufacturing, Hospitality, Legal, Government, Professional Services). That is an approved Service by Industry link, and the graph already carries it (the Software Development service has 13 `appliesToIndustry` edges). No other service has an approved industry list.
+- `AGENTS.md` section 26 names Service by Industry as a legitimate intersection to qualify, but it names no pairs.
+- The industries on the technology pages were chosen when those pages were written. They are technology to industry links, not Solution to industry links, and are not approved as such.
+
+| Solutions | Position |
+|---|---|
+| The seven owned by Software Development (Booking Platforms, Customer Portal Development, Internal Business Software, Legacy System Modernization, Marketplace Platforms, SaaS Platforms, Subscription Platforms) | Inherit the service's 13 industries at service level. Copying 13 edges onto each Solution would add no information, so none are stored. A Solution page should name industries only where it can say something specific, and that needs confirmation |
+| The other 15 Solutions | No approved industry list for their services. Nothing established |
+| The first-wave six | The proposed shortlists in section 6.2 are **Inferred** from the approved industry list and **require confirmation** |
+
+**What would establish them.** Samuel confirms, per first-wave Solution, a short industry list (three to six). Each confirmed pair is then recorded as one `appliesToIndustry` edge. No industry page is created and no industry family is started.
+
+### 10.7 Deferred
+
+| Item | Parked until |
+|---|---|
+| Booking Platforms, Marketplace Platforms, Payment Integration, SaaS Platforms, AI Knowledge Systems | Evidence of demand, or a client need; AI Knowledge Systems after the content refinement pass |
+| Open-model group entity | Samuel's decision (10.4) |
+| Applying any Solution `pagePolicy` change | Authorization of the next implementation phase |
+| The `/solutions/` hub treatment | The Solutions architecture is applied |
+| LATER technologies (21) | Evidence per section 4.2 |
+| All technology and Solution pages | The next build authorization |
+
+### 10.8 Still requiring architectural review
+
+| Question | Why it is open |
+|---|---|
+| Plan section 9 still lists twelve first-wave Solutions; the approved set is six | The plan text needs an amendment note when the policies are applied, so the two documents do not disagree |
+| A "part of" relation for groups | The schema has no such type, and the open-model group, the headless CMS group and the machine-learning frameworks group would all need one |
+| How the Solutions hub should present six pages and sixteen concepts that route to Work Areas or stay deferred | The hub exists from Phase 2; its content is not changed here |
+| Whether `solves` edges for interpretive links (the "requires confirmation" rows in 10.5) should ever be stored | Recorded only when Samuel confirms; the graph should not carry guessed edges |
+| Firebase and Supabase menu category | Recommended (section 4.4); decide at build |
+| Whether the Cloud and DevOps technology category needs a sub-grouping once Firebase and Supabase join | Menu width and clarity |

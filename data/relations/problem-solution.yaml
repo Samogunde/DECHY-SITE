@@ -1,0 +1,29 @@
+# Problem to Solution edges added at the qualification gate (docs/planning/14, section 10).
+# Only relationships established by the approved architecture are recorded here: the problem names the
+# same need as the Solution, and the Solution's own service already addresses that problem in the
+# approved Phase 1 edges. Interpretive or uncertain links are documented in doc 14 and are NOT stored.
+# No problem pages are created; a problem opens its Solution or Work Area (plan section 10).
+relations:
+  - { from: svc.automation, type: addressesProblem, to: prob.need-ai-automation }
+  - { from: sol.ai-agents, type: solves, to: prob.need-ai-agent }
+  - { from: sol.ai-automation, type: solves, to: prob.need-ai-automation }
+  - { from: sol.ai-customer-support, type: solves, to: prob.slow-customer-support }
+  - { from: sol.ai-customer-support, type: solves, to: prob.need-ai-chatbot }
+  - { from: sol.api-integration, type: solves, to: prob.need-api-integration }
+  - { from: sol.api-integration, type: solves, to: prob.disconnected-systems }
+  - { from: sol.api-integration, type: solves, to: prob.need-software-integration }
+  - { from: sol.api-integration, type: solves, to: prob.need-to-connect-business-tools }
+  - { from: sol.business-process-automation, type: solves, to: prob.slow-business-processes }
+  - { from: sol.business-process-automation, type: solves, to: prob.need-business-automation }
+  - {
+      from: sol.business-process-automation,
+      type: solves,
+      to: prob.need-to-automate-repetitive-work,
+    }
+  - { from: sol.business-process-automation, type: solves, to: prob.manual-data-entry }
+  - { from: sol.cloud-migration, type: solves, to: prob.need-cloud-migration }
+  - { from: sol.crm-integration, type: solves, to: prob.need-crm-integration }
+  - { from: sol.crm-integration, type: solves, to: prob.disconnected-systems }
+  - { from: sol.crm-integration, type: solves, to: prob.need-to-connect-business-tools }
+  - { from: sol.customer-experience-systems, type: solves, to: prob.poor-customer-experience }
+  - { from: sol.workflow-automation, type: solves, to: prob.need-workflow-automation }
