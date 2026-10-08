@@ -78,6 +78,7 @@ type Payload = {
   humanRequested: boolean;
   handoffRef: string | null;
   handoff?: ReturnType<typeof prefill>;
+  suggestions: string[];
 };
 
 /** One visitor message in, one reply out. Streams (server-sent events) when the client asks. */
@@ -127,6 +128,7 @@ export async function POST(request: Request) {
       offerHuman: true,
       humanRequested: false,
       handoffRef: conv?.supportRef ?? null,
+      suggestions: [],
     });
 
   const allowAI = aiConfigured() && (await aiAllowed(store, client));
@@ -160,6 +162,7 @@ export async function POST(request: Request) {
       offerHuman: result.offerHuman,
       humanRequested: result.humanRequested,
       handoffRef: conv?.supportRef ?? null,
+      suggestions: result.suggestions,
       ...(result.humanRequested ? { handoff: prefill(conv) } : {}),
     };
   };
@@ -168,6 +171,8 @@ export async function POST(request: Request) {
     page: pageContext(page),
     handoffRef: conv?.supportRef ?? null,
     allowAI,
+    // What earlier turns established (never the current page).
+    known: conv ? { service: conv.recommendedService, need: conv.detectedNeed } : null,
     onUsage: (u: { input: number; output: number }) => {
       pending.push(recordUsage(store, client, u));
     },

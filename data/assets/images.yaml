@@ -345,13 +345,13 @@ assets:
   # ---- Photography (licensed stock, Unsplash License; no visible credit is shown on the site) ----
   - id: asset.photo-contact-consultation-conversation
     kind: file
-    file: public/photos/contact-consultation-conversation.jpg
+    file: public/photos/contact-consultation-conversation.png
     role: photograph
     source: owner-supplied
     creator: Supplied by DECHY
     license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-contact-consultation-conversation.md.
     originalFilename: "Collaborative Office Consultation.png"
-    sha256: bdded49337f08dac52dcb9229fa0c994821cb664165d8cefb8901e69706a6d67
+    sha256: b3f7166dacdb87f4c203df3bb49f932cc62150c2a85572a00884ef4e971d55af
     width: 1122
     height: 1402
     alt: Two people talking through a project at a shared desk with a laptop, notebooks, and printed notes.
@@ -425,13 +425,13 @@ assets:
 
   - id: asset.photo-company-team-working-session
     kind: file
-    file: public/photos/company-team-working-session.jpg
+    file: public/photos/company-team-working-session.png
     role: photograph
     source: owner-supplied
     creator: Supplied by DECHY
     license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-company-team-working-session.md.
     originalFilename: "Collaborative Teamwork in a Modern Workspace.png"
-    sha256: 72518922a29b1a3d18986e590a21b19ffcf8659e3c2615fcdce4077d81f738d8
+    sha256: 6b6b30fa663d9255061008cd155cf899c9c962c25a742d297958fb76daeae74f
     width: 1254
     height: 1254
     alt: Three colleagues working through a problem together at a laptop and tablet in a busy open workspace.
@@ -441,13 +441,13 @@ assets:
 
   - id: asset.photo-team-reviewing-process-workflows
     kind: file
-    file: public/photos/team-reviewing-process-workflows.jpg
+    file: public/photos/team-reviewing-process-workflows.png
     role: photograph
     source: owner-supplied
     creator: Supplied by DECHY
     license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-reviewing-process-workflows.md.
     originalFilename: "L2NdH4CDZLljMJoigOTSu_WsI....jpg (supplied without a descriptive name)"
-    sha256: 89e2b61d8076ec242c66039df4f06231c575a87e543d12c9e08bef6375013650
+    sha256: b331f7b0b0e351a32f9102b22a8282b8142d266d0f6fbd3ced4a877234620d73
     width: 940
     height: 832
     alt: A team reviewing process diagrams and interface layouts across several monitors, one colleague pointing at a step in the flow.

@@ -48,8 +48,15 @@ const nextConfig: NextConfig = {
   agentRules: false,
   reactStrictMode: true,
   images: {
-    formats: ["image/avif", "image/webp"],
-    qualities: [75, 92],
+    // WebP only: at the same visual budget AVIF measurably softened photographic detail (hair,
+    // fabric, on-screen text). Photographs use quality 85, the logo 92.
+    formats: ["image/webp"],
+    qualities: [85, 92],
+    // On Netlify, request the Image CDN directly with an explicit WebP format (it would otherwise
+    // pick AVIF from the Accept header). Local and test builds use the built-in optimizer.
+    ...(process.env.NETLIFY === "true"
+      ? { loader: "custom" as const, loaderFile: "./src/lib/netlify-image-loader.ts" }
+      : {}),
     deviceSizes: [320, 360, 390, 430, 640, 768, 1024, 1280, 1440, 1920, 2560, 2880],
     imageSizes: [16, 32, 64, 96, 128, 256, 384],
   },

@@ -64,7 +64,7 @@ test.describe("website assistant", () => {
     // Guided mode (no AI key in tests): the label never claims AI.
     const launcher = page.getByRole("button", { name: "Ask DECHY", exact: true });
     await launcher.click();
-    const panel = page.getByRole("dialog", { name: "DECHY assistant" });
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
     await expect(panel).toBeVisible();
     await expect(panel).toContainText("Automated assistant, not a person.");
     await expect(panel).not.toContainText("DECHY AI");
@@ -74,7 +74,7 @@ test.describe("website assistant", () => {
       panel.getByRole("button", { name: /Questions about Cloud & DevOps/ }),
     ).toBeVisible();
     await expect(
-      panel.getByRole("list", { name: "Common starting points" }).getByRole("button"),
+      panel.getByRole("list", { name: "Starting points" }).getByRole("button"),
     ).toHaveCount(4);
 
     // Free text, answered with recommendation cards that say why.
@@ -84,7 +84,7 @@ test.describe("website assistant", () => {
     );
     await input.press("Enter");
     const log = panel.getByRole("log");
-    await expect(log).toContainText(/closest fit/i);
+    await expect(log).toContainText(/sounds like/i);
     const cards = panel.getByRole("list", { name: "Suggested pages" }).first().getByRole("link");
     await expect(cards.first()).toHaveAttribute("href", /^\/[a-z0-9/-]+\/$/);
     await expect(panel.locator(".assist-rec-why").first()).not.toBeEmpty();
@@ -98,7 +98,7 @@ test.describe("website assistant", () => {
 
     // A reload restores the same conversation from the server.
     await page.reload();
-    const again = page.getByRole("dialog", { name: "DECHY assistant" });
+    const again = page.getByRole("dialog", { name: "Ask DECHY" });
     await expect(again.getByRole("log")).toContainText("Northfield Supply");
 
     // Asking for a person opens a card in the thread, filled in from the conversation.
@@ -106,21 +106,25 @@ test.describe("website assistant", () => {
     await again.getByLabel("Your message").press("Enter");
     const card = again.locator("form.assist-card");
     await expect(card).toBeVisible();
-    await expect(card.getByLabel("Name")).toHaveValue("Dana");
-    await expect(card.getByLabel(/Organization/)).toHaveValue("Northfield Supply");
-    await expect(card.getByLabel("Email")).toHaveValue("");
-    await card.getByRole("button", { name: "Send to the team" }).click();
+    // What the visitor already said is shown, not asked again; only the email is missing.
+    const facts = card.locator(".assist-card-facts");
+    await expect(facts).toContainText("Dana");
+    await expect(facts).toContainText("Northfield Supply");
+    await expect(card.getByLabel("Your name")).toHaveCount(0);
+    await expect(card.getByLabel(/Best email/)).toHaveValue("");
+    await expect(card.getByLabel(/Best email/)).toBeFocused();
+    await card.getByRole("button", { name: "Send to DECHY" }).click();
     await expect(card).toContainText("Please enter a valid email address.");
     await expect(card).toContainText("Please choose one.");
-    await card.getByLabel("Email").fill("dana@example.test");
+    await card.getByLabel(/Best email/).fill("dana@example.test");
     await card.getByLabel("A new project").check();
-    await card.getByRole("button", { name: "Send to the team" }).click();
+    await card.getByRole("button", { name: "Send to DECHY" }).click();
     const sent = again.locator(".assist-sent");
     await expect(sent).toContainText("Sent to the DECHY team.");
     await expect(sent).toContainText(REF);
     await expect(sent).toContainText("A person will reply by email.");
     const ref = (await sent.textContent())!.match(REF)![0];
-    await expect(again.getByRole("button", { name: "Start a new topic" })).toBeVisible();
+    await expect(again.getByRole("button", { name: "Start a new chat" })).toBeVisible();
 
     // The visitor can keep writing; it is added to the same request.
     await again.getByLabel("Your message").fill("We also take orders by phone.");
@@ -153,6 +157,58 @@ test.describe("website assistant", () => {
     await expect(page.locator(".admin-notes")).toContainText("Called back; sending a proposal.");
   });
 
+  test("greets on any page, and follows the visitor's words rather than the page", async ({
+    page,
+  }) => {
+    await page.goto("/ai/");
+    await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
+    const input = panel.getByLabel("Your message");
+    await input.fill("Hello");
+    await input.press("Enter");
+    const log = panel.getByRole("log");
+    await expect(log).toContainText("Hello. I'm DECHY's assistant. What are you working on?");
+    await expect(panel.getByRole("list", { name: "Suggested pages" })).toHaveCount(0);
+    await expect(panel.locator("form.assist-card")).toHaveCount(0);
+    await expect(
+      panel.getByRole("list", { name: "Suggested replies" }).getByRole("button"),
+    ).toHaveCount(4);
+    await input.fill("Who are you?");
+    await input.press("Enter");
+    await expect(log).toContainText("DECHY's website assistant");
+    await input.fill("I need a mobile app");
+    await input.press("Enter");
+    await expect(log).toContainText("iPhone, Android, or both?");
+    await expect(log).not.toContainText("AI & Machine Learning is");
+  });
+
+  test("New chat starts a fresh conversation and asks first when there is a draft", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
+    await panel.getByRole("button", { name: "Build something new" }).click();
+    await expect(panel.getByRole("log")).toContainText("What would you like to build?");
+    // The reply streams in before the conversation id arrives with the final event.
+    await expect
+      .poll(() => page.evaluate(() => sessionStorage.getItem("dechy-assistant-conversation")))
+      .toMatch(/^[0-9a-f-]{36}$/);
+    const first = await page.evaluate(() => sessionStorage.getItem("dechy-assistant-conversation"));
+    await panel.getByLabel("Your message").fill("not sent yet");
+    await panel.getByRole("button", { name: "New chat" }).click();
+    await expect(panel.getByRole("alert")).toContainText("Start a new chat?");
+    await panel.getByRole("button", { name: "Start new chat" }).click();
+    await expect(panel.getByText("What are you working on?")).toBeVisible();
+    await expect(panel.getByLabel("Your message")).toHaveValue("");
+    expect(
+      await page.evaluate(() => sessionStorage.getItem("dechy-assistant-conversation")),
+    ).toBeNull();
+    // The earlier conversation is kept on the server.
+    const kept = await page.request.get(`/api/assistant/?conversationId=${first}`);
+    expect(((await kept.json()) as { conversation: unknown }).conversation).not.toBeNull();
+  });
+
   test("the contact page offers three paths, and the third opens the team card", async ({
     page,
   }) => {
@@ -163,25 +219,25 @@ test.describe("website assistant", () => {
     await expect(paths.getByRole("button")).toHaveCount(2);
     await expect(paths.getByRole("link")).toHaveCount(1);
     await paths.getByRole("button", { name: /speak to someone/ }).click();
-    const panel = page.getByRole("dialog", { name: "DECHY assistant" });
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
     const card = panel.locator("form.assist-card");
-    await expect(card.getByLabel("Name")).toBeFocused();
+    await expect(card.getByLabel("Your name")).toBeFocused();
     await expect(card).toContainText(
       "Is this about a new project or something we're already working on together?",
     );
-    await card.getByLabel("Name").fill("Grace Example");
-    await card.getByLabel("Email").fill("grace@example.test");
-    await card.getByLabel("Something we're already working on").check();
-    await card.getByRole("button", { name: "Send to the team" }).click();
+    await card.getByLabel("Your name").fill("Grace Example");
+    await card.getByLabel(/Best email/).fill("grace@example.test");
+    await card.getByLabel("Work already under way").check();
+    await card.getByRole("button", { name: "Send to DECHY" }).click();
     await expect(panel.locator(".assist-sent")).toContainText(REF);
   });
 
   test("minimizing keeps a draft, and closing keeps the conversation", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
-    const panel = page.getByRole("dialog", { name: "DECHY assistant" });
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
     await panel.getByRole("button", { name: "Connect our systems" }).click();
-    await expect(panel.getByRole("log")).toContainText(/fit/i);
+    await expect(panel.getByRole("log")).toContainText(/systems need to share information/i);
     await panel.getByLabel("Your message").fill("a draft");
     await panel.getByRole("button", { name: "Minimize the assistant" }).click();
     await expect(panel).toBeHidden();
@@ -189,31 +245,33 @@ test.describe("website assistant", () => {
     await expect(panel.getByLabel("Your message")).toHaveValue("a draft");
     await panel.getByRole("button", { name: "Close the assistant" }).click();
     await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
-    await expect(
-      page.getByRole("dialog", { name: "DECHY assistant" }).getByRole("log"),
-    ).toContainText("We need our systems to work together.");
+    await expect(page.getByRole("dialog", { name: "Ask DECHY" }).getByRole("log")).toContainText(
+      "Connect our systems",
+    );
   });
 
   test("is accessible open, and fits every phone width without horizontal scrolling", async ({
     page,
   }) => {
+    // Seven widths, each with an accessibility scan.
+    test.setTimeout(240_000);
     for (const width of [320, 360, 375, 390, 430, 768, 1440]) {
       await page.setViewportSize({ width, height: 800 });
       await page.goto("/");
       await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
-      const panel = page.getByRole("dialog", { name: "DECHY assistant" });
+      const panel = page.getByRole("dialog", { name: "Ask DECHY" });
       await expect(panel).toBeVisible();
-      await expect(panel.getByRole("list", { name: "Common starting points" })).toBeVisible();
+      await expect(panel.getByRole("list", { name: "Starting points" })).toBeVisible();
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
       expect(overflow, `${width}px`).toBeLessThanOrEqual(0);
       const box = (await panel.boundingBox())!;
       expect(box.x).toBeGreaterThanOrEqual(0);
       expect(box.x + box.width).toBeLessThanOrEqual(width + 1);
       if (width < 640) {
-        // Full screen on phones, with the input pinned to the bottom.
+        // Full screen on phones, with the input and its footer line pinned to the bottom.
         expect(Math.round(box.width)).toBe(width);
-        const input = (await panel.locator(".assist-input").boundingBox())!;
-        expect(input.y + input.height).toBeGreaterThan(box.y + box.height - 2);
+        const foot = (await panel.locator(".assist-foot").boundingBox())!;
+        expect(foot.y + foot.height).toBeGreaterThan(box.y + box.height - 2);
       } else {
         expect(box.width).toBeLessThanOrEqual(421);
       }

@@ -1,48 +1,30 @@
 import Image from "next/image";
 import { getRegistry } from "@/lib/content/load";
+import { frameRatio, photoSizes, ratioCss } from "@/lib/content/photo-geometry";
 import type { PhotoRef } from "@/lib/content/schema";
 
-/** Aspect ratios per breakpoint class; the frame reserves space so photographs never shift layout. */
-const RATIOS = {
-  rail: {
-    sm: "4 / 3",
-    md: "16 / 10",
-    lg: "1 / 1",
-    sizes: "(min-width: 90rem) 26.5rem, (min-width: 64rem) 29vw, 100vw",
-  },
-  band: {
-    sm: "4 / 3",
-    md: "16 / 9",
-    lg: "21 / 9",
-    sizes: "(min-width: 90rem) 84rem, 100vw",
-  },
-  split: {
-    sm: "4 / 3",
-    md: "16 / 10",
-    lg: "3 / 2",
-    sizes: "(min-width: 90rem) 48rem, (min-width: 64rem) 52vw, 100vw",
-  },
-  aside: {
-    sm: "16 / 10",
-    lg: "16 / 10",
-    sizes: "(min-width: 90rem) 35rem, (min-width: 64rem) 36vw, 100vw",
-  },
-} as const;
+export { photoSizes };
+
+/** Photographs are delivered as WebP at this quality: measured to keep 94 to 100 percent of the
+ *  source's fine detail, where AVIF at the highest allowed setting kept about 85 percent. */
+export const PHOTO_QUALITY = 85;
 
 /**
  * A registered photograph. Alt text, dimensions and any descriptive caption come from the asset
  * registry (data/assets/images.yaml), so a photograph cannot be shown without provenance.
- * Framing is CSS only; the stored file is never cropped.
+ * Framing is CSS only; the stored file is never cropped. `sizes` describes the width the photograph
+ * is actually painted at (see src/lib/content/photo-geometry.ts), so the browser never downloads a
+ * copy that is then stretched.
  */
 export function Photo({ photo, className = "" }: { photo: PhotoRef; className?: string }) {
   const asset = getRegistry().assets.find((a) => a.id === photo.asset);
   if (!asset || !asset.width || !asset.height) throw new Error(`Unknown photograph ${photo.asset}`);
-  const r = RATIOS[photo.layout];
+  const ratio = asset.width / asset.height;
   const src = `/${asset.file.replace(/^public\//, "")}`;
   const style = {
-    "--ar-sm": r.sm,
-    "--ar-md": "md" in r ? r.md : r.sm,
-    "--ar-lg": r.lg,
+    "--ar-sm": ratioCss(frameRatio(photo.layout, "sm", ratio)),
+    "--ar-md": ratioCss(frameRatio(photo.layout, "md", ratio)),
+    "--ar-lg": ratioCss(frameRatio(photo.layout, "lg", ratio)),
   } as React.CSSProperties;
   return (
     <figure className={`photo ${className}`.trim()} data-reveal="image">
@@ -52,8 +34,8 @@ export function Photo({ photo, className = "" }: { photo: PhotoRef; className?: 
           alt={asset.alt}
           width={asset.width}
           height={asset.height}
-          sizes={r.sizes}
-          quality={75}
+          sizes={photoSizes(photo.layout, ratio)}
+          quality={PHOTO_QUALITY}
           className="photo-img"
           style={{ objectPosition: photo.position }}
         />

@@ -91,19 +91,26 @@ export function tokens(text: string): string[] {
     .filter((t) => t.length > 1 && !STOP.has(t));
 }
 
+/** Singular and plural count as the same word ("agent", "agents"). */
+const stem = (w: string) =>
+  w.length > 3 && w.endsWith("s") && !w.endsWith("ss") ? w.slice(0, -1) : w;
+
 /** Simple, explainable relevance: phrase matches on keywords, then word overlap. */
 export function rank(
   text: string,
   kinds?: KnowledgeKind[],
 ): { item: KnowledgeItem; score: number }[] {
   const lower = ` ${text.toLowerCase()} `;
-  const words = new Set(tokens(text));
+  const words = new Set(tokens(text).map(stem));
   const out: { item: KnowledgeItem; score: number }[] = [];
   for (const item of knowledge()) {
     if (kinds && !kinds.includes(item.kind)) continue;
     let score = 0;
-    for (const k of item.keywords) if (k.length > 3 && lower.includes(` ${k} `)) score += 6;
-    const vocab = new Set(tokens(`${item.keywords.join(" ")} ${item.problem} ${item.what}`));
+    for (const k of item.keywords)
+      if (k.length > 3 && (lower.includes(` ${k} `) || lower.includes(` ${stem(k)} `))) score += 6;
+    const vocab = new Set(
+      tokens(`${item.keywords.join(" ")} ${item.problem} ${item.what}`).map(stem),
+    );
     for (const w of words)
       if (vocab.has(w)) score += item.keywords.some((k) => k.includes(w)) ? 2 : 1;
     for (const cue of CUES) if (cue.pattern.test(text)) score += cue.boost[item.id] ?? 0;

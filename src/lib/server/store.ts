@@ -169,7 +169,8 @@ export function getStore(env: Env = process.env): Store {
     kind === "netlify-blobs"
       ? new BlobsStore(env.DATA_STORE_NAME?.trim() || "dechy-admin")
       : kind === "file"
-        ? new FileStore(path.resolve(env.DATA_DIR?.trim() || ".data"))
+        ? // The local data folder is never part of the server bundle (and is unused on Netlify).
+          new FileStore(path.resolve(/*turbopackIgnore: true*/ env.DATA_DIR?.trim() || ".data"))
         : kind === "memory"
           ? new MemoryStore()
           : new NoStore();

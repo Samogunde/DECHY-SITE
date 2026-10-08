@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
+import { photoSizes } from "@/components/primitives/Photo";
 import { buildRegistry, type Registry } from "@/lib/content/load";
 import type { Page } from "@/lib/content/schema";
 import { validateRegistry } from "@/lib/content/validate";
@@ -45,12 +46,37 @@ describe("photography: provenance is mandatory", () => {
   it("keeps stored photographs web-sized", () => {
     for (const a of photos) {
       const size = fs.statSync(path.join(process.cwd(), a.file)).size;
-      expect(size, `${a.file} is ${Math.round(size / 1024)} KB`).toBeLessThan(900 * 1024);
+      // Lossless PNG masters (kept as supplied, so no lossy step comes before the optimizer) are
+      // never sent to browsers; only their WebP derivatives are. Lossy files must already be small.
+      const limit = a.file.endsWith(".png") ? 3 * 1024 * 1024 : 900 * 1024;
+      expect(size, `${a.file} is ${Math.round(size / 1024)} KB`).toBeLessThan(limit);
       // The minimum depends on the layout it is placed in (twice its widest rendered width);
       // the content validator enforces that per placement.
       expect(a.width, a.id).toBeGreaterThanOrEqual(848);
       expect(a.width, a.id).toBeLessThanOrEqual(3200);
     }
+  });
+
+  it("never serves a stored photograph directly, and sizes it by its painted width", () => {
+    const src = fs.readFileSync(
+      path.join(process.cwd(), "src/components/primitives/Photo.tsx"),
+      "utf8",
+    );
+    expect(src).toContain('from "next/image"');
+    expect(src).not.toMatch(/unoptimized/);
+    // A 3:2 photograph in a desktop rail (frame clamped to 4:3) is painted 1.125 times the frame
+    // width at every container stage, and 1.125 times the screen width in a 4:3 phone frame.
+    expect(photoSizes("rail", 1.5)).toBe(
+      "(min-width: 160rem) 33.84rem, (min-width: 120rem) 30.24rem, (min-width: 80rem) 26.64rem, (min-width: 64rem) 32.63vw, (min-width: 48rem) 100vw, 112.5vw",
+    );
+    // A square photograph in the same rail is painted exactly at the frame width.
+    expect(photoSizes("rail", 1)).toBe(
+      "(min-width: 160rem) 30.08rem, (min-width: 120rem) 26.88rem, (min-width: 80rem) 23.68rem, (min-width: 64rem) 29vw, (min-width: 48rem) 100vw, 100vw",
+    );
+    // An aside keeps its 35rem cap on large screens.
+    expect(photoSizes("aside", 1.6)).toMatch(
+      /^\(min-width: 160rem\) 35rem, \(min-width: 120rem\) 35rem/,
+    );
   });
 
   it("uses photographs only on the pages named in their registry usage", () => {

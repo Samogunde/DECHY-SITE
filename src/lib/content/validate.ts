@@ -19,16 +19,10 @@ import {
 } from "./similarity";
 import { expandFacts, linkTargets, toPlainText } from "./inline";
 import type { Registry } from "./load";
+import { requiredPhotoWidth } from "./photo-geometry";
 import type { Block, Page, PhotoRef } from "./schema";
 
 type PhotoLayout = PhotoRef["layout"];
-/** Stored width needed for each layout: twice its widest rendered width (src/components/primitives/Photo.tsx). */
-const PHOTO_MIN_WIDTH: Record<PhotoLayout, number> = {
-  rail: 848, // 26.5rem
-  aside: 1120, // 35rem
-  split: 1536, // 48rem
-  band: 2400, // 84rem and full-bleed on large screens
-};
 import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
@@ -653,9 +647,13 @@ export function validateRegistry(registry: Registry): Issue[] {
       if (!a.width || !a.height || !a.sha256)
         err("asset-photo", a.id, "A photograph needs width, height, and sha256");
       if (a.alt.length < 20) err("asset-photo", a.id, "A photograph needs descriptive alt text");
-      // Sharp at 2x: the stored width must be at least twice the widest the photograph renders
-      // in any layout it is placed in (a full-width band keeps the 2400 px floor).
-      const need = Math.max(0, ...[...(photoUse.get(a.id) ?? [])].map((l) => PHOTO_MIN_WIDTH[l]));
+      // Sharp at 2x: the stored width must be at least twice the widest the photograph is painted
+      // at in any layout it is placed in, crop included (a full-width band keeps a 2400 px floor).
+      const ratio = (a.width ?? 1) / (a.height ?? 1);
+      const need = Math.max(
+        0,
+        ...[...(photoUse.get(a.id) ?? [])].map((l) => requiredPhotoWidth(l, ratio)),
+      );
       if ((a.width ?? 0) < need)
         err(
           "asset-photo-resolution",

@@ -12,6 +12,7 @@ type Msg = {
   kind?: "message" | "handoff";
   recs?: Rec[];
   sources?: SourceLink[];
+  suggestions?: string[];
   pending?: boolean;
 };
 type Extracted = { value: string; source: string } | null;
@@ -35,22 +36,22 @@ type Done = {
   mode: "ai" | "guided";
   recommendations: Rec[];
   sources: SourceLink[];
+  suggestions?: string[];
   offerHuman: boolean;
   humanRequested: boolean;
   handoffRef: string | null;
   handoff?: Prefill;
 };
+type Via = "header" | "offer" | "message" | "contact";
 
 const CONV_KEY = "dechy-assistant-conversation";
 
-const INTENTS: { label: string; message: string }[] = [
-  { label: "Build something new", message: "We want to build something new." },
-  { label: "Add AI or automation", message: "We want to add AI or automation to how we work." },
-  { label: "Connect our systems", message: "We need our systems to work together." },
-  {
-    label: "Improve or modernize what we have",
-    message: "We want to improve or modernize a system we already have.",
-  },
+/** The four starting points; tapping one sends its label as the visitor's message. */
+const STARTERS = [
+  "Build something new",
+  "Add AI or automation",
+  "Connect our systems",
+  "Improve or modernize what we have",
 ];
 
 const KIND_LABEL: Record<string, string> = {
@@ -62,6 +63,14 @@ const KIND_LABEL: Record<string, string> = {
 };
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMPTY_PREFILL: Prefill = {
+  name: null,
+  email: null,
+  organization: null,
+  need: "",
+  service: "",
+  intent: "unclear",
+};
 
 function stored(): string | undefined {
   try {
@@ -107,11 +116,87 @@ async function readEvents(res: Response, on: (event: string, data: unknown) => v
   }
 }
 
+/* Small inline icons (stroke, currentColor). */
+const Icon = {
+  newChat: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M10 4.5v11M4.5 10h11"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
+  minimize: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M5.5 8l4.5 4.5L14.5 8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  close: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M5.5 5.5l9 9M14.5 5.5l-9 9"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
+  expand: (wide: boolean) => (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <rect
+        x="3"
+        y="4"
+        width="14"
+        height="12"
+        rx="2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path d={wide ? "M12 4v12" : "M8 4v12"} stroke="currentColor" strokeWidth="1.6" />
+    </svg>
+  ),
+  send: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M4 10h11M11 5.5 15.5 10 11 14.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  check: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M5 10.5l3.2 3L15 6.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+};
+
 /**
- * The assistant panel. Floating on larger screens (with a wider side-drawer option), full screen on
- * phones. Not modal: the page stays usable. Replies are plain text; every link comes from the
- * server's catalog. A person is one step away, and asking for one keeps the visitor here: a short
- * card, filled in from the conversation, that they check and confirm.
+ * The DECHY assistant panel. Floating on larger screens (with a wider side-panel option), full
+ * screen on phones. Not modal: the page stays usable. Conversation first: replies are plain text,
+ * pages are offered only when a need is understood, and every link comes from the server's catalog.
+ * Header controls: New chat (a fresh conversation; the old one stays on the server), Minimize (hide,
+ * keep the draft), Close (hide; the conversation continues when reopened in this session).
  */
 export default function AssistantPanel({
   ai,
@@ -133,7 +218,9 @@ export default function AssistantPanel({
   const [mode, setMode] = useState<"ai" | "guided">(ai ? "ai" : "guided");
   const [messages, setMessages] = useState<Msg[]>([]);
   const [conversationId, setConversationId] = useState<string | undefined>(undefined);
-  const [restoring, setRestoring] = useState(true);
+  // Wait for the server only when there is a conversation to restore; a new visitor sees the
+  // first state at once. (The panel renders only in the browser, after the visitor opens it.)
+  const [restoring, setRestoring] = useState(() => Boolean(stored()));
   const [pageCtx, setPageCtx] = useState<PageCtx>(null);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -141,14 +228,16 @@ export default function AssistantPanel({
   const [offerHuman, setOfferHuman] = useState(false);
   const [handoffRef, setHandoffRef] = useState<string | null>(null);
   const [card, setCard] = useState<Prefill | null>(null);
-  const [via, setVia] = useState<"header" | "offer" | "message" | "contact">("header");
+  const [via, setVia] = useState<Via>("header");
+  const [editName, setEditName] = useState(false);
   const [cardErrors, setCardErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [wide, setWide] = useState(false);
+  const [confirmNew, setConfirmNew] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const log = useRef<HTMLDivElement>(null);
-  const cardFirst = useRef<HTMLInputElement>(null);
   const cardRef = useRef<HTMLFormElement>(null);
+  const cardFirst = useRef<HTMLInputElement>(null);
   const handledRequest = useRef(0);
   const panel = useRef<HTMLDivElement>(null);
 
@@ -198,7 +287,7 @@ export default function AssistantPanel({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  /* Page awareness: refresh the suggestion when the visitor moves to another page. */
+  /* Page awareness: refresh the optional suggestion when the visitor moves to another page. */
   const firstPage = useRef(page);
   useEffect(() => {
     if (page === firstPage.current) return;
@@ -218,7 +307,7 @@ export default function AssistantPanel({
     if (el) el.scrollTo({ top: el.scrollHeight });
   }, [messages, busy]);
 
-  // The card opens at its top, so the details filled in from the conversation are seen first.
+  // The card opens at its top, so what will be passed on is seen first.
   const cardOpen = Boolean(card);
   useEffect(() => {
     const l = log.current;
@@ -252,41 +341,25 @@ export default function AssistantPanel({
   }, [hidden, card]);
 
   const openCard = useCallback(
-    async (from: "header" | "offer" | "contact" = "header") => {
+    async (from: Via = "header") => {
       if (handoffRef) return;
       setVia(from);
+      let prefill = EMPTY_PREFILL;
       try {
         const res = await fetch("/api/assistant/handoff/", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ action: "prepare", conversationId, page }),
         });
-        const b = (await res.json().catch(() => null)) as {
-          ok?: boolean;
-          prefill?: Prefill;
-        } | null;
-        setError("");
-        setCard(
-          b?.prefill ?? {
-            name: null,
-            email: null,
-            organization: null,
-            need: "",
-            service: "",
-            intent: "unclear",
-          },
-        );
+        const b = (await res.json().catch(() => null)) as { prefill?: Prefill } | null;
+        prefill = b?.prefill ?? EMPTY_PREFILL;
       } catch {
-        setCard({
-          name: null,
-          email: null,
-          organization: null,
-          need: "",
-          service: "",
-          intent: "unclear",
-        });
+        // the card still works; the details are typed instead
       }
+      setError("");
+      setEditName(!prefill.name);
       setCardErrors({});
+      setCard(prefill);
       requestAnimationFrame(() => cardFirst.current?.focus({ preventScroll: true }));
     },
     [conversationId, handoffRef, page],
@@ -304,6 +377,7 @@ export default function AssistantPanel({
     if (!message || busy) return;
     setError("");
     setInput("");
+    setConfirmNew(false);
     setBusy(true);
     setMessages((m) => [
       ...m,
@@ -329,22 +403,16 @@ export default function AssistantPanel({
         text: b.reply,
         recs: b.recommendations,
         sources: b.sources,
+        suggestions: b.suggestions,
       }));
       if (b.handoffRef) setHandoffRef(b.handoffRef);
       if (b.offerHuman) setOfferHuman(true);
       if (b.humanRequested && !b.handoffRef) {
+        const prefill = b.handoff ?? EMPTY_PREFILL;
         setVia("message");
-        setCard(
-          b.handoff ?? {
-            name: null,
-            email: null,
-            organization: null,
-            need: "",
-            service: "",
-            intent: "unclear",
-          },
-        );
+        setEditName(!prefill.name);
         setCardErrors({});
+        setCard(prefill);
         requestAnimationFrame(() => cardFirst.current?.focus({ preventScroll: true }));
       }
     };
@@ -401,16 +469,19 @@ export default function AssistantPanel({
     if (submitting || !card) return;
     const fd = new FormData(ev.currentTarget);
     const values = {
-      name: String(fd.get("name") ?? "").trim(),
+      name: String(fd.get("name") ?? card.name?.value ?? "").trim(),
       email: String(fd.get("email") ?? "").trim(),
-      organization: String(fd.get("organization") ?? "").trim(),
+      organization: String(fd.get("organization") ?? card.organization?.value ?? "").trim(),
       note: String(fd.get("note") ?? "").trim(),
       timeSensitive: fd.get("timeSensitive") === "on",
       kind: (fd.get("kind") as "new" | "existing" | null) ?? undefined,
       website: String(fd.get("website") ?? ""),
     };
     const errs: Record<string, string> = {};
-    if (values.name.length < 2) errs.name = "Please enter your name.";
+    if (values.name.length < 2) {
+      errs.name = "Please enter your name.";
+      setEditName(true);
+    }
     if (!EMAIL.test(values.email)) errs.email = "Please enter a valid email address.";
     if (card.intent === "unclear" && !values.kind) errs.kind = "Please choose one.";
     setCardErrors(errs);
@@ -461,7 +532,12 @@ export default function AssistantPanel({
     }
   }
 
-  function newTopic() {
+  /** New chat: a fresh conversation. The previous one stays on the server (and with any record). */
+  function startNewChat(force = false) {
+    if (!force && (input.trim() || card)) {
+      setConfirmNew(true);
+      return;
+    }
     store(null);
     setConversationId(undefined);
     setMessages([]);
@@ -469,6 +545,8 @@ export default function AssistantPanel({
     setCard(null);
     setOfferHuman(false);
     setError("");
+    setInput("");
+    setConfirmNew(false);
     requestAnimationFrame(() => inputRef.current?.focus());
   }
 
@@ -479,7 +557,7 @@ export default function AssistantPanel({
 
   const isAI = mode === "ai";
   const empty = messages.length === 0 && !restoring;
-  const showSuggestion = pageCtx && empty;
+  const lastIndex = messages.length - 1;
   const lastHandoff = messages.at(-1)?.kind === "handoff";
 
   return (
@@ -492,87 +570,86 @@ export default function AssistantPanel({
       aria-labelledby={fid("title")}
       aria-describedby={fid("disclosure")}
       data-wide={wide ? "true" : undefined}
+      data-mode={mode}
       hidden={hidden}
     >
       <div className="assist-head">
-        <div className="assist-head-row">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/brand/dechy-monogram.png"
-            alt=""
-            width={32}
-            height={32}
-            className="assist-head-mark"
-          />
-          <p id={fid("title")} className="assist-title">
-            {isAI ? "DECHY AI" : "DECHY assistant"}
-          </p>
-          <div className="assist-head-actions">
-            <button
-              type="button"
-              className="assist-icon assist-only-wide"
-              onClick={() => setWide((w) => !w)}
-              aria-pressed={wide}
-              aria-label={wide ? "Use the smaller panel" : "Expand to a side panel"}
-            >
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <rect
-                  x="3"
-                  y="4"
-                  width="14"
-                  height="12"
-                  rx="2"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                />
-                <path d={wide ? "M12 4v12" : "M8 4v12"} stroke="currentColor" strokeWidth="1.7" />
-              </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/brand/dechy-monogram.png"
+          alt=""
+          width={32}
+          height={32}
+          className="assist-head-mark"
+        />
+        <p id={fid("title")} className="assist-title">
+          {isAI ? (
+            <>
+              DECHY <span className="assist-title-ai">AI</span>
+            </>
+          ) : (
+            "Ask DECHY"
+          )}
+        </p>
+        <div className="assist-head-actions">
+          <button
+            type="button"
+            className="assist-tool assist-tool-new"
+            onClick={() => startNewChat()}
+            title="Start a new chat"
+          >
+            {Icon.newChat}
+            <span>New chat</span>
+          </button>
+          <button
+            type="button"
+            className="assist-tool assist-only-wide"
+            onClick={() => setWide((w) => !w)}
+            aria-pressed={wide}
+            aria-label={wide ? "Use the smaller panel" : "Expand to a side panel"}
+            title={wide ? "Smaller panel" : "Expand"}
+          >
+            {Icon.expand(wide)}
+          </button>
+          <button
+            type="button"
+            className="assist-tool assist-tool-min"
+            onClick={onMinimize}
+            aria-label="Minimize the assistant"
+            title="Minimize (keeps the conversation)"
+          >
+            {Icon.minimize}
+            <span className="assist-only-phone">Back to site</span>
+          </button>
+          <button
+            type="button"
+            className="assist-tool assist-tool-close"
+            onClick={onClose}
+            aria-label="Close the assistant"
+            title="Close (the conversation stays for this visit)"
+          >
+            {Icon.close}
+          </button>
+        </div>
+      </div>
+
+      {confirmNew ? (
+        <div className="assist-confirm" role="alert">
+          <p>Start a new chat? What you have typed here will be cleared.</p>
+          <div>
+            <button type="button" className="assist-btn-sm" onClick={() => startNewChat(true)}>
+              Start new chat
             </button>
             <button
               type="button"
-              className="assist-icon"
-              onClick={onMinimize}
-              aria-label="Minimize the assistant"
+              className="assist-link-button"
+              onClick={() => setConfirmNew(false)}
             >
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M5 10h10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              className="assist-icon"
-              onClick={onClose}
-              aria-label="Close the assistant"
-            >
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path
-                  d="M5.5 5.5l9 9M14.5 5.5l-9 9"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                />
-              </svg>
+              Keep this chat
             </button>
           </div>
         </div>
-        <div className="assist-head-bar">
-          <p id={fid("disclosure")} className="assist-disclosure">
-            {isAI
-              ? "AI, not a person. Check important details with the team."
-              : "Automated assistant, not a person."}
-          </p>
-          {handoffRef ? (
-            <span className="assist-head-ref">
-              Sent · <span className="ref-code">{handoffRef}</span>
-            </span>
-          ) : !card ? (
-            <button type="button" className="assist-team" onClick={() => void openCard()}>
-              Talk to the team
-            </button>
-          ) : null}
-        </div>
-      </div>
+      ) : null}
 
       <div
         ref={log}
@@ -584,83 +661,77 @@ export default function AssistantPanel({
       >
         {empty ? (
           <div className="assist-hello">
-            <p className="assist-hello-title">{isAI ? "DECHY AI" : "Ask DECHY"}</p>
+            <p className="assist-hello-title">What are you working on?</p>
             <p className="assist-hello-text">
-              Tell me what you&apos;re trying to do. I&apos;ll point you to the right part of DECHY.
+              Tell me what you&apos;re trying to do. I&apos;ll help you work it out, and point you
+              to the right part of DECHY when it helps.
             </p>
-            {showSuggestion ? (
+            <ul className="assist-starters" aria-label="Starting points">
+              {STARTERS.map((s) => (
+                <li key={s}>
+                  <button type="button" className="assist-starter" onClick={() => void send(s)}>
+                    {s}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            {pageCtx ? (
               <button
                 type="button"
                 className="assist-suggest"
                 onClick={() => void send(pageCtx.suggestion.message)}
               >
-                <span className="assist-suggest-k">On this page</span>
+                <span className="assist-suggest-k">About this page</span>
                 <span>{pageCtx.suggestion.label}</span>
               </button>
             ) : null}
-            <ul className="assist-intents" aria-label="Common starting points">
-              {INTENTS.map((s) => (
-                <li key={s.label}>
-                  <button
-                    type="button"
-                    className="assist-intent"
-                    onClick={() => void send(s.message)}
-                  >
-                    {s.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
           </div>
         ) : null}
 
         {messages.map((m, i) => {
-          const recPaths = new Set((m.recs ?? []).map((r) => r.path));
-          const extraSources = (m.sources ?? []).filter((s) => !recPaths.has(s.path));
           if (m.kind === "handoff")
             return (
               <div key={i} className="assist-sent" role="status">
-                <svg viewBox="0 0 20 20" aria-hidden="true">
-                  <path
-                    d="M5 10.5l3.2 3L15 6.5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                {Icon.check}
                 <p>
-                  Sent to the DECHY team. Reference:{" "}
-                  <strong className="ref-code">
+                  <strong>Sent to the DECHY team.</strong> Reference:{" "}
+                  <span className="ref-code">
                     {/DECHY-[A-Z0-9]{6}/.exec(m.text)?.[0] ?? handoffRef}
-                  </strong>
+                  </span>
                   . A person will reply by email.
                 </p>
               </div>
             );
+          const recPaths = new Set((m.recs ?? []).map((r) => r.path));
+          const extraSources = (m.sources ?? []).filter((s) => !recPaths.has(s.path));
+          const showChips = i === lastIndex && !busy && !card && (m.suggestions?.length ?? 0) > 0;
           return (
             <div key={i} className={`assist-msg assist-msg-${m.role}`}>
               {m.pending && !m.text ? (
                 <div className="assist-thinking" role="status">
                   <span className="assist-progress" aria-hidden="true" />
-                  <span>Reading DECHY&apos;s pages…</span>
+                  <span>{isAI ? "Thinking with DECHY's pages…" : "Reading DECHY's pages…"}</span>
                 </div>
               ) : (
                 <p className="assist-bubble">{m.text}</p>
               )}
               {m.recs && m.recs.length > 0 ? (
-                <ul className="assist-recs" aria-label="Suggested pages">
-                  {m.recs.map((r) => (
-                    <li key={r.id}>
-                      <Link href={r.path} className="assist-rec" onClick={followed}>
-                        <span className="assist-rec-kind">{KIND_LABEL[r.kind] ?? "Page"}</span>
-                        <span className="assist-rec-name">{r.name}</span>
-                        {r.reason ? <span className="assist-rec-why">{r.reason}</span> : null}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <div className="assist-related">
+                  <p className="assist-related-k">Where this fits</p>
+                  <ul className="assist-recs" aria-label="Suggested pages">
+                    {m.recs.slice(0, 2).map((r) => (
+                      <li key={r.id}>
+                        <Link href={r.path} className="assist-rec" onClick={followed}>
+                          <span className="assist-rec-top">
+                            <span className="assist-rec-name">{r.name}</span>
+                            <span className="assist-rec-kind">{KIND_LABEL[r.kind] ?? "Page"}</span>
+                          </span>
+                          {r.reason ? <span className="assist-rec-why">{r.reason}</span> : null}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ) : null}
               {extraSources.length > 0 ? (
                 <p className="assist-sources">
@@ -675,6 +746,17 @@ export default function AssistantPanel({
                   ))}
                 </p>
               ) : null}
+              {showChips ? (
+                <ul className="assist-chips" aria-label="Suggested replies">
+                  {m.suggestions!.map((s) => (
+                    <li key={s}>
+                      <button type="button" className="assist-chip" onClick={() => void send(s)}>
+                        {s}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           );
         })}
@@ -682,7 +764,11 @@ export default function AssistantPanel({
         {offerHuman && !card && !handoffRef && !busy ? (
           <div className="assist-offer">
             <p>A person on the team can take this further.</p>
-            <button type="button" className="assist-team" onClick={() => void openCard("offer")}>
+            <button
+              type="button"
+              className="assist-btn-sm assist-btn-quiet"
+              onClick={() => void openCard("offer")}
+            >
               Talk to the team
             </button>
           </div>
@@ -696,44 +782,72 @@ export default function AssistantPanel({
             noValidate
             aria-labelledby={fid("card-title")}
           >
-            <p id={fid("card-title")} className="assist-card-title">
-              Talk to the DECHY team
-            </p>
-            <p className="assist-card-note">
-              {card.name || card.email || card.need
-                ? "We'll pass on this conversation so you don't have to repeat yourself. Check the details, then send."
-                : "A person will reply by email."}
-            </p>
-            {card.need ? (
-              <div className="assist-card-need">
-                <span className="assist-card-k">What we&apos;ll pass on</span>
-                <span>{card.need}</span>
-                {card.service && card.service !== card.need ? (
-                  <span className="assist-card-k2">Likely fit: {card.service}</span>
+            <div className="assist-card-head">
+              <p id={fid("card-title")} className="assist-card-title">
+                Talk to the DECHY team
+              </p>
+              <p className="assist-card-note">
+                I&apos;ll pass along this conversation so you don&apos;t have to repeat yourself.
+              </p>
+            </div>
+            <dl className="assist-card-facts">
+              {editName ? null : (
+                <div>
+                  <dt>Name</dt>
+                  <dd>
+                    {card.name?.value}
+                    <button
+                      type="button"
+                      className="assist-link-button assist-inline-edit"
+                      onClick={() => {
+                        setEditName(true);
+                        requestAnimationFrame(() => document.getElementById(fid("name"))?.focus());
+                      }}
+                    >
+                      Change
+                    </button>
+                  </dd>
+                </div>
+              )}
+              {card.need ? (
+                <div>
+                  <dt>Request</dt>
+                  <dd>{card.need}</dd>
+                </div>
+              ) : null}
+              {card.organization?.value ? (
+                <div>
+                  <dt>Organization</dt>
+                  <dd>{card.organization.value}</dd>
+                </div>
+              ) : null}
+            </dl>
+            {editName ? (
+              <div className="field">
+                <label htmlFor={fid("name")}>Your name</label>
+                <input
+                  ref={cardFirst}
+                  id={fid("name")}
+                  name="name"
+                  autoComplete="name"
+                  defaultValue={card.name?.value ?? ""}
+                  required
+                  aria-invalid={cardErrors.name ? "true" : undefined}
+                  aria-describedby={cardErrors.name ? fid("name-err") : undefined}
+                />
+                {cardErrors.name ? (
+                  <p id={fid("name-err")} className="error">
+                    {cardErrors.name}
+                  </p>
                 ) : null}
               </div>
-            ) : null}
+            ) : (
+              <input type="hidden" name="name" value={card.name?.value ?? ""} />
+            )}
             <div className="field">
-              <label htmlFor={fid("name")}>Name</label>
+              <label htmlFor={fid("email")}>Best email for the team to reach you</label>
               <input
-                ref={cardFirst}
-                id={fid("name")}
-                name="name"
-                autoComplete="name"
-                defaultValue={card.name?.value ?? ""}
-                required
-                aria-invalid={cardErrors.name ? "true" : undefined}
-                aria-describedby={cardErrors.name ? fid("name-err") : undefined}
-              />
-              {cardErrors.name ? (
-                <p id={fid("name-err")} className="error">
-                  {cardErrors.name}
-                </p>
-              ) : null}
-            </div>
-            <div className="field">
-              <label htmlFor={fid("email")}>Email</label>
-              <input
+                ref={editName ? undefined : cardFirst}
                 id={fid("email")}
                 name="email"
                 type="email"
@@ -750,34 +864,24 @@ export default function AssistantPanel({
                 </p>
               ) : null}
             </div>
-            <div className="field">
-              <label htmlFor={fid("org")}>
-                Organization <span className="assist-opt">(optional)</span>
-              </label>
-              <input
-                id={fid("org")}
-                name="organization"
-                autoComplete="organization"
-                defaultValue={card.organization?.value ?? ""}
-              />
-            </div>
             {card.intent === "unclear" ? (
               <fieldset
                 className="assist-choice"
-                aria-invalid={cardErrors.kind ? "true" : undefined}
                 aria-describedby={cardErrors.kind ? fid("kind-err") : undefined}
               >
                 <legend>
                   Is this about a new project or something we&apos;re already working on together?
                 </legend>
-                <label className="assist-check">
-                  <input type="radio" name="kind" value="new" />
-                  <span>A new project</span>
-                </label>
-                <label className="assist-check">
-                  <input type="radio" name="kind" value="existing" />
-                  <span>Something we&apos;re already working on</span>
-                </label>
+                <div className="assist-segment">
+                  <label>
+                    <input type="radio" name="kind" value="new" />
+                    <span>A new project</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="kind" value="existing" />
+                    <span>Work already under way</span>
+                  </label>
+                </div>
                 {cardErrors.kind ? (
                   <p id={fid("kind-err")} className="error">
                     {cardErrors.kind}
@@ -787,16 +891,27 @@ export default function AssistantPanel({
             ) : (
               <input type="hidden" name="kind" value={card.intent} />
             )}
-            <div className="field">
-              <label htmlFor={fid("note")}>
-                Anything else? <span className="assist-opt">(optional)</span>
-              </label>
-              <textarea id={fid("note")} name="note" rows={2} maxLength={2000} />
-            </div>
-            <label className="assist-check">
-              <input type="checkbox" name="timeSensitive" />
-              <span>This is time-sensitive</span>
-            </label>
+            <details className="assist-more">
+              <summary>Add details (optional)</summary>
+              <div className="assist-more-body">
+                {card.organization?.value ? (
+                  <input type="hidden" name="organization" value={card.organization.value} />
+                ) : (
+                  <div className="field">
+                    <label htmlFor={fid("org")}>Organization</label>
+                    <input id={fid("org")} name="organization" autoComplete="organization" />
+                  </div>
+                )}
+                <div className="field">
+                  <label htmlFor={fid("note")}>Anything else the team should know</label>
+                  <textarea id={fid("note")} name="note" rows={2} maxLength={2000} />
+                </div>
+                <label className="assist-check">
+                  <input type="checkbox" name="timeSensitive" />
+                  <span>This is time-sensitive</span>
+                </label>
+              </div>
+            </details>
             <div className="hp-field" aria-hidden="true">
               <label htmlFor={fid("website")}>Leave this field empty</label>
               <input id={fid("website")} name="website" tabIndex={-1} autoComplete="off" />
@@ -804,18 +919,18 @@ export default function AssistantPanel({
             <div className="assist-card-actions">
               <button
                 type="submit"
-                className="btn btn-primary"
+                className="assist-btn-sm"
                 disabled={submitting}
                 aria-busy={submitting}
               >
-                {submitting ? "Sending" : "Send to the team"}
+                {submitting ? "Sending" : "Send to DECHY"}
               </button>
               <button type="button" className="assist-link-button" onClick={() => setCard(null)}>
                 Not now
               </button>
             </div>
             <p className="assist-fine">
-              We use these details only to reply. <Link href="/privacy/">Privacy</Link>
+              Used only to reply to you. <Link href="/privacy/">Privacy</Link>
             </p>
           </form>
         ) : null}
@@ -824,8 +939,8 @@ export default function AssistantPanel({
           <div className="assist-after">
             <p>You can keep writing here; anything you add goes to the same request.</p>
             <div className="assist-after-actions">
-              <button type="button" className="assist-link-button" onClick={newTopic}>
-                Start a new topic
+              <button type="button" className="assist-link-button" onClick={() => startNewChat()}>
+                Start a new chat
               </button>
               <button type="button" className="assist-link-button" onClick={onClose}>
                 Close
@@ -841,45 +956,58 @@ export default function AssistantPanel({
         </p>
       ) : null}
 
-      <form
-        className="assist-input"
-        onSubmit={(e) => {
-          e.preventDefault();
-          void send(input);
-        }}
-      >
-        <label htmlFor={fid("input")} className="visually-hidden">
-          Your message
-        </label>
-        <textarea
-          id={fid("input")}
-          ref={inputRef}
-          value={input}
-          maxLength={1000}
-          rows={1}
-          placeholder={handoffRef ? "Add to your request" : "Describe what you need"}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault();
-              void send(input);
-            }
+      <div className="assist-foot">
+        <form
+          className="assist-input"
+          onSubmit={(e) => {
+            e.preventDefault();
+            void send(input);
           }}
-        />
-        <button type="submit" className="assist-send" disabled={busy || !input.trim()}>
-          <span className="visually-hidden">Send</span>
-          <svg viewBox="0 0 20 20" aria-hidden="true">
-            <path
-              d="M4 10h11M11 5.5 15.5 10 11 14.5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </form>
+        >
+          <label htmlFor={fid("input")} className="visually-hidden">
+            Your message
+          </label>
+          <textarea
+            id={fid("input")}
+            ref={inputRef}
+            value={input}
+            maxLength={1000}
+            rows={1}
+            placeholder={handoffRef ? "Add to your request" : "Message DECHY"}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                void send(input);
+              }
+            }}
+          />
+          <button type="submit" className="assist-send" disabled={busy || !input.trim()}>
+            <span className="visually-hidden">Send</span>
+            {Icon.send}
+          </button>
+        </form>
+        <div className="assist-foot-row">
+          <p id={fid("disclosure")} className="assist-disclosure">
+            {isAI
+              ? "AI can make mistakes. Check important details."
+              : "Automated assistant, not a person."}
+          </p>
+          {handoffRef ? (
+            <span className="assist-foot-ref">
+              Request <span className="ref-code">{handoffRef}</span>
+            </span>
+          ) : !card ? (
+            <button
+              type="button"
+              className="assist-team-link"
+              onClick={() => void openCard("header")}
+            >
+              Talk to the team
+            </button>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 }

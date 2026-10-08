@@ -796,27 +796,13 @@
       transform var(--dur-slow) var(--ease-out);
     transition-delay: calc(var(--i) * var(--stagger));
   }
-  /* Photographs: the frame fades in while the image settles from a slight zoom. */
-  [data-reveal="image"] .photo-img {
-    transform: scale(1);
-  }
+  /* Photographs: the frame fades in. The photograph itself is never scaled, so it is always
+     painted at its true resolution (scaling resamples it and softens detail). */
   [data-reveal="image"][data-state="hidden"] .photo-frame {
     opacity: 0;
   }
-  [data-reveal="image"][data-state="hidden"] .photo-img {
-    transform: scale(1.05);
-  }
   [data-reveal="image"][data-state="shown"] .photo-frame {
     transition: opacity var(--dur-slow) var(--ease-out);
-  }
-  [data-reveal="image"][data-state="shown"] .photo-img {
-    transition: transform 900ms var(--ease-out);
-  }
-  @media (hover: hover) {
-    [data-reveal="image"] .photo-frame:hover .photo-img {
-      transform: scale(1.025);
-      transition: transform 700ms var(--ease-out);
-    }
   }
 
   /* Section header accent: a short blue bar draws in beside the eyebrow. */
@@ -977,8 +963,7 @@
     .btn:active,
     .btn:hover .arrow,
     a:hover > .arrow,
-    .row-link:hover .arrow,
-    .photo-frame:hover .photo-img {
+    .row-link:hover .arrow {
       transform: none !important;
     }
     .eyebrow-accent::before {

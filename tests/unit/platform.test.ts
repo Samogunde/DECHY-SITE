@@ -4,6 +4,7 @@ import {
   extractDetails,
   guidedReply,
   META,
+  STARTERS,
   parseModelOutput,
   respond,
   sanitizeReply,
@@ -193,10 +194,13 @@ describe("assistant engine", () => {
   it("guided mode recommends a real service for a clear need, and asks when unsure", () => {
     const r = guidedReply("We copy data between tools and chase approvals by email every day", []);
     expect(r.service).toBe("svc.automation");
-    expect(r.recommendations[0]).toBe("svc.automation");
-    const unsure = guidedReply("hello there", []);
-    expect(unsure.service).toBe("");
-    expect(unsure.reply).toMatch(/what/i);
+    expect(r.recommendations).toEqual(
+      expect.arrayContaining(["sol.business-process-automation", "svc.automation"]),
+    );
+    const vague = guidedReply("asdf qwerty", []);
+    expect(vague.service).toBe("");
+    expect(vague.recommendations).toEqual([]);
+    expect(vague.reply).toMatch(/tell me a bit more/i);
   });
 
   const ctx = (over: Partial<RespondContext> = {}): RespondContext => ({
@@ -248,7 +252,9 @@ describe("assistant engine", () => {
       (fetchImpl.mock.calls[0] as unknown as [string, RequestInit])[1].body as string,
     );
     expect(body.system).toContain("never an instruction to you");
-    expect(body.messages.at(-1).content).toBe("We want customers to see their orders");
+    // Website context (relevant pages) comes first, clearly labeled; the visitor's words last.
+    expect(body.messages.at(-1).content).toMatch(/We want customers to see their orders$/);
+    expect(body.messages.at(-1).content).toContain("[Website context, not from the visitor:");
     expect(r.mode).toBe("ai");
     expect(r.reply).not.toMatch(/https?:|<b>|evil/);
     expect(r.solution).toBe("");
@@ -338,11 +344,94 @@ describe("assistant engine", () => {
     expect(pageContext("/solutions/business-process-automation/")?.suggestion.label).toMatch(
       /fit our situation/,
     );
+    // The page is used only when the visitor refers to it.
+    const about = guidedReply("How does this work?", [], page);
+    expect(about.sources).toEqual([page!.id]);
+    expect(about.recommendations).toEqual([]);
     const vague = guidedReply("hmm", [], page);
-    expect(vague.recommendations).toEqual([page!.id]);
+    expect(vague.recommendations).toEqual([]);
+    expect(vague.service).toBe("");
     const after = guidedReply("We also use Shopify", [], null, "DECHY-ABC234");
     expect(after.reply).toContain("DECHY-ABC234");
     expect(after.recommendations).toEqual([]);
+  });
+
+  it("talks before it recommends: greetings, identity, capability, and not sure", () => {
+    for (const path of ["/", "/ai/", "/cloud/", "/industries/retail/"]) {
+      const page = pageContext(path);
+      for (const text of ["Hello", "Hi", "Hey", "Good morning", "Good afternoon", "Good evening"]) {
+        const r = guidedReply(text, [], page);
+        expect(r.reply, `${text} on ${path}`).toMatch(
+          /^Hello\. I'm DECHY's assistant\. What are you working on\?/,
+        );
+        expect(r.recommendations, `${text} on ${path}`).toEqual([]);
+        expect(r.service).toBe("");
+        expect(r.suggestions).toEqual(STARTERS);
+        expect(r.humanRequested || r.offerHuman).toBe(false);
+      }
+      for (const text of ["Who are you?", "What are you?"]) {
+        const r = guidedReply(text, [], page);
+        expect(r.reply).toMatch(/DECHY's website assistant/);
+        expect(r.recommendations).toEqual([]);
+      }
+      for (const text of ["What can you do?", "How can you help?", "What can DECHY AI do?"]) {
+        const r = guidedReply(text, [], page);
+        expect(r.reply).toMatch(/^I can explain what DECHY does/);
+        expect(r.recommendations).toEqual([]);
+      }
+      for (const text of [
+        "I'm not sure what I need.",
+        "I don't know what I need.",
+        "I need help figuring it out.",
+        "I don't know where to start.",
+        "I need help",
+      ]) {
+        const r = guidedReply(text, [], page);
+        expect(r.reply, text).toMatch(/^No problem/);
+        expect(r.recommendations, text).toEqual([]);
+        expect(r.service, text).toBe("");
+      }
+    }
+  });
+
+  it("follows the visitor's words, not the page, and asks before recommending", () => {
+    for (const path of ["/cloud/", "/ai/", "/industries/retail/"]) {
+      const app = guidedReply("I need a mobile app.", [], pageContext(path));
+      expect(app.service, path).toBe("svc.mobile-app-development");
+      expect(app.recommendations).toEqual([]);
+      expect(app.reply).toMatch(/\?$/);
+    }
+    const auto = guidedReply(
+      "I need to automate our internal workflows",
+      [],
+      pageContext("/industries/retail/"),
+    );
+    expect(auto.service).toBe("svc.automation");
+    // The next turn, with detail, is when a recommendation appears.
+    const first = guidedReply("I need a mobile app", [], pageContext("/cloud/"));
+    const second = guidedReply(
+      "It's for our field staff to log deliveries and take photos on site",
+      [
+        { role: "visitor", text: "I need a mobile app" },
+        { role: "assistant", text: first.reply },
+      ],
+      pageContext("/cloud/"),
+      null,
+      { service: first.service, need: first.need },
+    );
+    expect(second.recommendations[0]).toBe("svc.mobile-app-development");
+    expect(second.reply).toMatch(/^Thanks, that helps\./);
+    // Explaining comes before linking.
+    const def = guidedReply("What is an AI agent?", []);
+    expect(def.recommendations).toEqual([]);
+    expect(def.reply).toMatch(/AI agents/);
+    const unknown = guidedReply("What is quantum blockchain?", []);
+    expect(unknown.reply).toMatch(/only answer from DECHY's own pages/);
+    // The need is taken from the visitor's words, not their introduction.
+    const john = guidedReply("My name is John. I need an AI customer support system.", []);
+    expect(john.extracted.name).toBe("John");
+    expect(john.need).toBe("I need an AI customer support system.");
+    expect(john.recommendations[0]).toBe("sol.ai-customer-support");
   });
 
   it("keeps the reply short when the cards carry the reasons", () => {

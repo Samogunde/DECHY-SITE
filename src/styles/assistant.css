@@ -99,7 +99,14 @@
 }
 
 /* ---------------- panel ---------------- */
+/* Fixed, panel-scoped type: the panel is about 420 px wide at every viewport, so the page's fluid
+   scale (which grows with the window) would make it feel oversized on large screens. */
 .assist-panel {
+  --a-body: 1rem; /* 16px: the conversation */
+  --a-small: 0.9375rem; /* 15px: cards, chips, supporting text */
+  --a-label: 0.875rem; /* 14px: labels, meta */
+  --a-title: 1.125rem; /* 18px */
+  --a-hello: 1.25rem; /* 20px */
   position: fixed;
   z-index: 61;
   top: 0;
@@ -113,6 +120,7 @@
   padding-right: env(safe-area-inset-right);
   background: var(--color-white);
   color: var(--color-ink);
+  font-size: var(--a-body);
 }
 .assist-panel[hidden] {
   display: none;
@@ -130,7 +138,7 @@
     border-radius: calc(var(--radius-lg) * 1.75);
     overflow: hidden;
     box-shadow:
-      0 30px 70px -36px rgb(17 24 39 / 0.6),
+      0 30px 70px -36px rgb(17 24 39 / 0.55),
       0 2px 8px -2px rgb(17 24 39 / 0.08);
   }
   .assist-panel[data-wide] {
@@ -151,131 +159,183 @@
 }
 @media (prefers-reduced-motion: no-preference) {
   .assist-panel {
-    animation: assist-in 240ms var(--ease-out);
+    animation: assist-in 220ms var(--ease-out);
   }
   @keyframes assist-in {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(8px);
     }
   }
 }
 
+/* Header: identity on the left, labelled controls on the right. */
 .assist-head {
-  border-bottom: 1px solid var(--color-line);
-  background: var(--color-white);
-}
-.assist-head-row {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.35rem 0.4rem 0 0.9rem;
+  min-height: 3.75rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.85rem;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-white);
 }
 .assist-head-mark {
   flex: none;
   width: 2rem;
   height: 2rem;
 }
-.assist-title {
+.assist-head-text {
   flex: 1;
   min-width: 0;
+}
+.assist-title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
   margin: 0;
+  white-space: nowrap;
   font-family: var(--font-heading);
-  font-size: var(--fs-body);
+  font-size: var(--a-title);
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.assist-title-ai {
+  padding: 0.05rem 0.4rem;
+  border-radius: 0.375rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.assist-subtitle {
+  margin: 0.1rem 0 0;
+  overflow: hidden;
+  font-size: var(--a-label);
+  line-height: 1.3;
+  color: var(--color-slate-text);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .assist-head-actions {
   display: flex;
   flex: none;
   align-items: center;
+  gap: 0.15rem;
 }
-.assist-head-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  min-height: 3rem;
-  padding: 0 0.75rem 0.35rem 0.9rem;
-}
-.assist-disclosure {
-  margin: 0;
-  min-width: 0;
-  font-size: var(--fs-label);
-  line-height: 1.35;
-  color: var(--color-slate-text);
-}
-.assist-head-ref {
+.assist-tool {
+  display: inline-flex;
   flex: none;
-  font-size: var(--fs-label);
-  color: var(--color-slate-text);
-}
-.assist-team {
-  min-height: 2.75rem;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid var(--color-ink);
-  border-radius: 999px;
-  background: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  padding: 0 0.6rem;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: transparent;
   color: var(--color-ink);
   font-family: var(--font-heading);
-  font-size: var(--fs-label);
+  font-size: var(--a-label);
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
-  transition:
-    background-color var(--dur-fast) var(--ease-out),
-    color var(--dur-fast) var(--ease-out);
+  transition: background-color var(--dur-fast) var(--ease-out);
 }
-.assist-head .assist-team {
+.assist-tool svg {
   flex: none;
-}
-.assist-team:hover {
-  background: var(--color-ink);
-  color: var(--color-paper);
-}
-.assist-icon {
-  display: inline-grid;
-  flex: none;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--color-ink);
-  cursor: pointer;
-}
-.assist-icon svg {
   width: 1.15rem;
   height: 1.15rem;
 }
-.assist-icon:hover {
+.assist-tool:hover {
   background: var(--color-paper);
+}
+.assist-tool-new {
+  border: 1px solid var(--color-line);
+  padding-inline: 0.7rem 0.8rem;
 }
 .assist-only-wide {
   display: none;
 }
+.assist-only-phone {
+  display: inline;
+}
 @media (min-width: 40rem) {
   .assist-only-wide {
-    display: inline-grid;
+    display: inline-flex;
+  }
+  .assist-only-phone {
+    display: none;
+  }
+  .assist-tool-min {
+    padding: 0;
   }
 }
-.assist-team:focus-visible,
-.assist-icon:focus-visible,
+/* Phones: two rows so every control keeps its label. Top: identity and Close. Below: Back to site
+   (minimize, keeps the conversation) and New chat. */
+@media (max-width: 39.99rem) {
+  .assist-head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "mark title close"
+      "min min new";
+    row-gap: 0.1rem;
+    padding: 0.35rem 0.4rem 0.3rem 0.75rem;
+  }
+  .assist-head-mark {
+    grid-area: mark;
+  }
+  .assist-title {
+    grid-area: title;
+  }
+  .assist-head-actions {
+    display: contents;
+  }
+  .assist-tool-close {
+    grid-area: close;
+  }
+  .assist-tool-min {
+    grid-area: min;
+    justify-self: start;
+    margin-left: -0.6rem;
+  }
+  .assist-tool-new {
+    grid-area: new;
+    justify-self: end;
+  }
+}
+.assist-tool:focus-visible,
 .assist-link-button:focus-visible,
-.assist-intent:focus-visible,
-.assist-suggest:focus-visible {
+.assist-starter:focus-visible,
+.assist-chip:focus-visible,
+.assist-suggest:focus-visible,
+.assist-team-link:focus-visible,
+.assist-btn-sm:focus-visible {
   outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
-@media (max-width: 22.5rem) {
-  .assist-head-row,
-  .assist-head-bar {
-    padding-left: 0.75rem;
-  }
-  .assist-team {
-    padding-inline: 0.65rem;
-  }
+
+.assist-confirm {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--color-line);
+  background: #fff8ea;
+  font-size: var(--a-small);
+}
+.assist-confirm p {
+  margin: 0;
+}
+.assist-confirm div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
 }
 
 /* ---------------- conversation ---------------- */
@@ -285,58 +345,39 @@
   overscroll-behavior: contain;
   display: grid;
   align-content: start;
-  gap: 0.85rem;
-  padding: 1rem 1rem 1.25rem;
+  gap: 0.9rem;
+  padding: 1.1rem 1rem 1.25rem;
   background: var(--color-paper);
 }
 
 .assist-hello {
   display: grid;
-  gap: 0.75rem;
-  padding: 0.5rem 0.15rem 0;
+  gap: 0.7rem;
+  padding: 0.35rem 0.1rem 0;
 }
 .assist-hello-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--fs-h4);
+  font-size: var(--a-hello);
   font-weight: 800;
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 .assist-hello-text {
   margin: 0;
-  font-size: var(--fs-body);
+  font-size: var(--a-body);
   line-height: 1.5;
-}
-.assist-suggest {
-  display: grid;
-  gap: 0.1rem;
-  min-height: 2.75rem;
-  padding: 0.6rem 0.85rem;
-  border: 1px solid var(--color-blue);
-  border-radius: var(--radius-lg);
-  background: var(--color-white);
   color: var(--color-ink);
-  font: inherit;
-  font-family: var(--font-heading);
-  font-size: var(--fs-body-sm);
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
 }
-.assist-suggest-k {
-  font-size: var(--fs-label);
-  font-weight: 600;
-  color: var(--color-blue-strong);
-}
-.assist-intents {
+.assist-starters {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.5rem;
-  margin: 0;
+  margin: 0.15rem 0 0;
   padding: 0;
   list-style: none;
 }
-.assist-intent {
+.assist-starter {
   width: 100%;
   height: 100%;
   min-height: 3.25rem;
@@ -347,7 +388,7 @@
   color: var(--color-ink);
   font: inherit;
   font-family: var(--font-heading);
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
   font-weight: 700;
   line-height: 1.3;
   text-align: left;
@@ -356,14 +397,34 @@
     border-color var(--dur-fast) var(--ease-out),
     transform var(--dur-fast) var(--ease-out);
 }
-.assist-intent:hover,
-.assist-suggest:hover {
+.assist-starter:hover,
+.assist-suggest:hover,
+.assist-chip:hover {
   border-color: var(--color-ink);
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .assist-intent:hover {
+  .assist-starter:hover {
     transform: translateY(-1px);
   }
+}
+.assist-suggest {
+  display: grid;
+  gap: 0.1rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-lg);
+  background: transparent;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: var(--a-small);
+  text-align: left;
+  cursor: pointer;
+}
+.assist-suggest-k {
+  font-size: var(--a-label);
+  font-weight: 600;
+  color: var(--color-slate-text);
 }
 
 .assist-msg {
@@ -380,7 +441,7 @@
   .assist-msg,
   .assist-card,
   .assist-sent {
-    animation: assist-msg-in 200ms var(--ease-out);
+    animation: assist-msg-in 180ms var(--ease-out);
   }
   @keyframes assist-msg-in {
     from {
@@ -391,10 +452,10 @@
 }
 .assist-bubble {
   margin: 0;
-  padding: 0.7rem 0.9rem;
+  padding: 0.65rem 0.85rem;
   border-radius: calc(var(--radius-lg) * 1.25);
-  font-size: var(--fs-body);
-  line-height: 1.55;
+  font-size: var(--a-body);
+  line-height: 1.5;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
@@ -414,12 +475,12 @@
   display: grid;
   gap: 0.45rem;
   min-width: 13rem;
-  padding: 0.75rem 0.9rem;
+  padding: 0.7rem 0.85rem;
   border: 1px solid var(--color-line);
   border-radius: calc(var(--radius-lg) * 1.25);
   border-top-left-radius: 0.35rem;
   background: var(--color-white);
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
   color: var(--color-slate-text);
 }
 .assist-progress {
@@ -454,62 +515,93 @@
   }
 }
 
-/* Recommendations: a few cards, each with one line on why. */
+/* Quick replies: small, optional, only under the latest message. */
+.assist-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.assist-chip {
+  min-height: 2.75rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: var(--a-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+/* Where this fits: secondary to the answer. */
+.assist-related {
+  display: grid;
+  gap: 0.35rem;
+}
+.assist-related-k {
+  margin: 0;
+  font-size: var(--a-label);
+  font-weight: 600;
+  color: var(--color-slate-text);
+}
 .assist-recs {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.4rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .assist-rec {
   display: grid;
-  gap: 0.1rem;
+  gap: 0.15rem;
   min-height: 2.75rem;
-  padding: 0.6rem 0.85rem;
+  padding: 0.55rem 0.75rem;
   border: 1px solid var(--color-line);
-  border-left: 3px solid var(--color-blue);
   border-radius: var(--radius-md);
   background: var(--color-white);
   color: var(--color-ink);
   text-decoration: none;
-  transition:
-    border-color var(--dur-fast) var(--ease-out),
-    transform var(--dur-fast) var(--ease-out);
+  transition: border-color var(--dur-fast) var(--ease-out);
 }
 .assist-rec:hover,
 .assist-rec:focus-visible {
-  border-color: var(--color-ink);
-  border-left-color: var(--color-blue);
+  border-color: var(--color-blue);
   text-decoration: none;
 }
 .assist-rec:focus-visible {
   outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .assist-rec:hover {
-    transform: translateX(2px);
-  }
-}
-.assist-rec-kind {
-  font-size: var(--fs-label);
-  color: var(--color-slate-text);
+.assist-rec-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 0.5rem;
 }
 .assist-rec-name {
   font-family: var(--font-heading);
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
   font-weight: 700;
   color: var(--color-link);
 }
+.assist-rec-kind {
+  font-size: var(--a-label);
+  color: var(--color-slate-text);
+}
 .assist-rec-why {
-  font-size: var(--fs-label);
+  font-size: var(--a-label);
   line-height: 1.45;
   color: var(--color-ink);
 }
 .assist-sources {
   margin: 0;
-  font-size: var(--fs-label);
+  font-size: var(--a-label);
   color: var(--color-slate-text);
 }
 .assist-sources a {
@@ -522,7 +614,7 @@
   display: grid;
   gap: 0.35rem;
   justify-items: start;
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
 }
 .assist-offer p,
 .assist-after p {
@@ -539,11 +631,11 @@
   display: flex;
   gap: 0.6rem;
   align-items: flex-start;
-  padding: 0.75rem 0.9rem;
+  padding: 0.7rem 0.85rem;
   border: 1px solid #b9d4c3;
   border-radius: var(--radius-lg);
   background: #f1f8f3;
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
   line-height: 1.5;
 }
 .assist-sent svg {
@@ -557,76 +649,155 @@
   margin: 0;
 }
 
-/* The inline handoff card. */
+/* The handoff: a compact confirmation in the conversation, not a form page. */
 .assist-card {
   display: grid;
-  gap: 0.85rem;
-  padding: 1rem;
-  border: 1px solid var(--color-ink);
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border: 1px solid var(--color-line);
+  border-left: 3px solid var(--color-blue);
   border-radius: calc(var(--radius-lg) * 1.25);
   background: var(--color-white);
+  font-size: var(--a-small);
+}
+.assist-card-head {
+  display: grid;
+  gap: 0.15rem;
 }
 .assist-card-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--fs-body-lg);
+  font-size: var(--a-body);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 .assist-card-note,
 .assist-fine {
   margin: 0;
-  font-size: var(--fs-label);
-  line-height: 1.5;
+  font-size: var(--a-label);
+  line-height: 1.45;
   color: var(--color-slate-text);
 }
-.assist-card-need {
+.assist-card-facts {
   display: grid;
-  gap: 0.15rem;
-  padding: 0.6rem 0.75rem;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0.55rem 0.7rem;
   border-radius: var(--radius-md);
   background: var(--color-paper);
-  font-size: var(--fs-body-sm);
-  line-height: 1.45;
 }
-.assist-card-k {
-  font-family: var(--font-heading);
-  font-size: var(--fs-label);
-  font-weight: 700;
+.assist-card-facts:empty {
+  display: none;
+}
+.assist-card-facts > div {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.assist-card-facts dt {
+  font-size: var(--a-label);
   color: var(--color-slate-text);
 }
-.assist-card-k2 {
-  font-size: var(--fs-label);
-  color: var(--color-slate-text);
+.assist-card-facts dd {
+  margin: 0;
+  font-size: var(--a-small);
+  overflow-wrap: anywhere;
+}
+.assist-inline-edit {
+  min-height: auto;
+  margin-left: 0.5rem;
+  font-size: var(--a-label);
+}
+.assist-card .field {
+  gap: 0.3rem;
+}
+.assist-card .field label {
+  font-size: var(--a-label);
 }
 .assist-card textarea {
-  min-height: 4.5rem;
-}
-.assist-opt {
-  font-weight: 400;
-  color: var(--color-slate-text);
+  min-height: 4rem;
 }
 .assist-choice {
   display: grid;
-  gap: 0.1rem;
+  gap: 0.35rem;
   margin: 0;
   padding: 0;
   border: 0;
 }
 .assist-choice legend {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
   padding: 0;
   font-family: var(--font-heading);
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-label);
   font-weight: 700;
   line-height: 1.4;
+}
+.assist-segment {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+.assist-segment label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  font-size: var(--a-label);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+.assist-segment input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+.assist-segment label:has(input:checked) {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.assist-segment label:has(input:focus-visible) {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+.assist-more > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  font-size: var(--a-label);
+  font-weight: 600;
+  color: var(--color-link);
+  cursor: pointer;
+  list-style: none;
+}
+.assist-more > summary::-webkit-details-marker {
+  display: none;
+}
+.assist-more > summary::before {
+  content: "+";
+  font-weight: 700;
+}
+.assist-more[open] > summary::before {
+  content: "\2212";
+}
+.assist-more-body {
+  display: grid;
+  gap: 0.6rem;
 }
 .assist-check {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   min-height: 2.75rem;
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
   cursor: pointer;
 }
 .assist-check input {
@@ -641,6 +812,37 @@
   align-items: center;
   gap: 0.5rem 1.25rem;
 }
+.assist-btn-sm {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-blue-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-blue-strong);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--a-small);
+  font-weight: 700;
+  cursor: pointer;
+}
+.assist-btn-sm:hover {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+.assist-btn-sm:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.assist-btn-quiet {
+  background: var(--color-white);
+  color: var(--color-ink);
+  border-color: var(--color-line);
+}
+.assist-btn-quiet:hover {
+  background: var(--color-paper);
+  border-color: var(--color-ink);
+}
 .assist-link-button {
   display: inline-flex;
   align-items: center;
@@ -649,7 +851,7 @@
   background: none;
   padding: 0;
   font: inherit;
-  font-size: var(--fs-body-sm);
+  font-size: var(--a-small);
   color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -658,28 +860,31 @@
 
 .assist-error {
   margin: 0;
-  padding: 0.6rem 1rem;
-  font-size: var(--fs-body-sm);
+  padding: 0.55rem 1rem;
+  font-size: var(--a-small);
   color: var(--color-error-text);
   background: var(--color-white);
   border-top: 1px solid var(--color-line);
 }
 
-/* The input stays pinned to the bottom, above the keyboard and the home indicator. */
+/* Footer: the input stays pinned above the keyboard and the home indicator; the quiet line below
+   carries the disclosure and the always-available way to the team. */
+.assist-foot {
+  padding: 0.6rem 0.75rem max(0.35rem, env(safe-area-inset-bottom)) 0.85rem;
+  border-top: 1px solid var(--color-line);
+  background: var(--color-white);
+}
 .assist-input {
   display: flex;
   align-items: flex-end;
   gap: 0.5rem;
-  padding: 0.65rem 0.75rem max(0.75rem, env(safe-area-inset-bottom)) 0.9rem;
-  border-top: 1px solid var(--color-line);
-  background: var(--color-white);
 }
 .assist-input textarea {
   flex: 1;
   min-width: 0;
-  min-height: 3rem;
+  min-height: 2.875rem;
   max-height: 8rem;
-  padding: 0.7rem 0.8rem;
+  padding: 0.65rem 0.8rem;
   border: 1.5px solid var(--color-input-border);
   border-radius: var(--radius-lg);
   font: inherit;
@@ -699,8 +904,8 @@
   display: inline-grid;
   flex: none;
   place-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.875rem;
+  height: 2.875rem;
   border: 0;
   border-radius: var(--radius-lg);
   background: var(--color-blue-strong);
@@ -723,6 +928,44 @@
 .assist-send:focus-visible {
   outline: 2px solid var(--color-ink);
   outline-offset: 2px;
+}
+.assist-foot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+}
+.assist-disclosure {
+  margin: 0;
+  min-width: 0;
+  font-size: var(--a-label);
+  line-height: 1.3;
+  color: var(--color-slate-text);
+}
+.assist-team-link {
+  flex: none;
+  min-height: 2.75rem;
+  padding: 0 0.15rem;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-family: var(--font-heading);
+  font-size: var(--a-label);
+  font-weight: 700;
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.assist-team-link:hover {
+  text-decoration-color: var(--color-ink);
+}
+.assist-foot-ref {
+  flex: none;
+  font-size: var(--a-label);
+  color: var(--color-slate-text);
 }
 
 /* ---------------- Contact page: three paths ---------------- */
