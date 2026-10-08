@@ -104,7 +104,7 @@ sections:
     points: []
   - type: process
     id: build
-    tone: white
+    tone: paper
     label: How we set it up
     heading: A Snowflake platform you can govern
     steps:
@@ -127,32 +127,9 @@ sections:
         artifacts:
           - Load jobs
           - Runbook
-  - type: technical
-    id: technology
-    tone: white
-    label: Technical depth
-    heading: How we build with Snowflake
-    intro: How we run Snowflake projects.
-    panels:
-      - title: Compute
-        items:
-          - Separate warehouses for loading, transformation, and reporting, sized to the work and set to suspend when idle.
-          - Resource monitors cap spending per team and alert before the cap.
-          - Queries are reviewed for scans that read more than they need.
-      - title: Storage and structure
-        items:
-          - Tables are organized to match common filters, and very large ones are clustered where it helps.
-          - Historical versions allow recovery from mistakes for a defined period.
-      - title: Governance
-        items:
-          - Role-based access with least privilege, and masking policies on sensitive columns.
-          - Access is logged, and sharing with partners is limited to the named data.
-      - title: Pipelines
-        paragraphs:
-          - Transformations are written as version-controlled SQL, tested, and run on a schedule. Heavier processing can be written in [Python](ref:lang.python) close to the data.
   - type: columns
     id: dechy
-    tone: paper
+    tone: white
     label: What DECHY can do
     heading: Working with Snowflake
     columns:
@@ -186,9 +163,32 @@ sections:
         a: Not always. If one database serves your reports without slowing the business, a warehouse can wait. We tell you honestly when it is premature.
       - q: Can you work with the platform we already have?
         a: Yes. We start with a review of design, access, and cost, and then recommend what to keep and what to change.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: How we build with Snowflake
+    intro: "For your developers and IT lead: our Snowflake choices on compute, storage and structure, governance, and pipelines, and the reasoning behind each."
+    panels:
+      - title: Compute
+        items:
+          - Separate warehouses for loading, transformation, and reporting, sized to the work and set to suspend when idle.
+          - Resource monitors cap spending per team and alert before the cap.
+          - Queries are reviewed for scans that read more than they need.
+      - title: Storage and structure
+        items:
+          - Tables are organized to match common filters, and very large ones are clustered where it helps.
+          - Historical versions allow recovery from mistakes for a defined period.
+      - title: Governance
+        items:
+          - Role-based access with least privilege, and masking policies on sensitive columns.
+          - Access is logged, and sharing with partners is limited to the named data.
+      - title: Pipelines
+        paragraphs:
+          - Transformations are written as version-controlled SQL, tested, and run on a schedule. Heavier processing can be written in [Python](ref:lang.python) close to the data.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Snowflake across DECHY
     groups:

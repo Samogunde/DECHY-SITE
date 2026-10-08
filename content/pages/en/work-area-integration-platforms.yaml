@@ -115,7 +115,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The patterns we use.
+    intro: "What we settle early: patterns and operation, so nothing surprises your team later."
     panels:
       - title: Patterns
         paragraphs:

@@ -39,6 +39,17 @@ Every Work Area opening, the five country openings, and the hub and company open
 - **Software Development:** At a glance in DECHY's voice; "Our approach" in the answer split; build, buy, or connect as the selectable comparison; the ten system types as full-width tiles; the interfaces section around the customer portal interface; callouts as cards; connections as chip cards.
 - **Business Web Platforms:** new hero copy and the booking platform interface; "In practice" with the platform hub beside two points; "Brochure site or platform?" as a side-by-side comparison; one site-editor section with four points; four delivery steps in one row; the example as a card.
 
-## 5. Next
+## 5. Motion, interaction, and the second rollout pass
+
+- **Home hero (owner direction):** the display size now tops out at 56px, so the headline sits on four lines at desktop widths instead of five, and the supporting paragraph runs wider, on three lines. Nothing was cut.
+- **Motion layer** (`src/styles/motion.css`, documented in `docs/design/motion-system.md`): interface mockups come alive once as they scroll in (bars grow, meters fill, rows and cards arrive, a phone settles in, a booking arrives); hub connectors draw out to the core; the path between delivery steps draws in. Every reveal plays once and stays. Reduced motion shows everything still. The existing small loops (hero bus packet, connected-flow halo) stay, as the owner asked.
+- **Interaction:** links move (lift, arrow fills and nudges, pressed state); information cards only acknowledge the pointer with an outline, so nothing pretends to be clickable; rows and cards inside mockups light under the pointer. No custom cursor.
+- **No orphaned cards:** a last card alone on its row spans the row; a last card that would leave one empty slot spans two columns (home pathfinder, tiles, option and grouped cards). Four tiles run two by two, then four across.
+- **Section order:** 63 technology, solution, and industry pages were reordered by what each needs first (builder languages lead with what we build; platforms with the choice; infrastructure with the comparison and trade-offs; AI providers with what we build), with per-page variation so no two pages in a family share a sequence (the content validator's similarity rule enforces it). Section tones were re-alternated.
+- **Copy:** every technical section intro (86) now names its topics instead of repeating the heading; the Cybersecurity and Work openings rewritten in DECHY's voice.
+- **Photography:** three approved photographs placed where they fit (port operations on Logistics, the warehouse aisle on Retail, the wireframes desk on UI/UX).
+- **Technical panels:** two columns only when a topic has both text and points.
+
+## 6. Next
 
 Continue page by page across every family (content voice inside sections, section order variety within families, photography where it helps), then a full-site QA pass at every required width.

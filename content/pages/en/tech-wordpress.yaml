@@ -87,22 +87,6 @@ sections:
         - "Sites that are really applications."
         - "Highest cost, and editors depend on what is built for them."
 
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical uses
-    heading: Sites that suit WordPress
-    items:
-      - title: A publishing site
-        body: "News, articles, and resources with several authors and an editorial workflow."
-      - title: An organization's main website
-        body: "Services, people, events, and contact forms, edited by staff without developer help."
-      - title: A site with a shop alongside the content
-        body: "Products added to a content-led site, where selling is part of the picture and not all of it."
-      - title: A membership or learning site
-        body: "Gated content and sign-in, using well-supported extensions and a short plugin list."
-
   - type: columns
     id: dechy
     tone: white
@@ -126,9 +110,25 @@ sections:
           - "Updates, backups, and monitoring."
           - "A named contact when something breaks."
 
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical uses
+    heading: Sites that suit WordPress
+    items:
+      - title: A publishing site
+        body: "News, articles, and resources with several authors and an editorial workflow."
+      - title: An organization's main website
+        body: "Services, people, events, and contact forms, edited by staff without developer help."
+      - title: A site with a shop alongside the content
+        body: "Products added to a content-led site, where selling is part of the picture and not all of it."
+      - title: A membership or learning site
+        body: "Gated content and sign-in, using well-supported extensions and a short plugin list."
+
   - type: process
     id: migrate
-    tone: paper
+    tone: white
     label: Moving a site
     heading: Redesigning or migrating a WordPress site
     steps:
@@ -147,7 +147,7 @@ sections:
 
   - type: callout
     id: limits
-    tone: white
+    tone: paper
     variant: limits
     title: What WordPress needs from you
     paragraphs:
@@ -159,7 +159,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How we build with WordPress
-    intro: "How we build and run WordPress sites."
+    intro: "For your developers and IT lead: our WordPress choices on build, performance and security, and content model, and the reasoning behind each."
     panels:
       - title: Build
         paragraphs:
@@ -175,7 +175,7 @@ sections:
 
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about WordPress
     items:
@@ -190,7 +190,7 @@ sections:
 
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: WordPress across DECHY
     groups:

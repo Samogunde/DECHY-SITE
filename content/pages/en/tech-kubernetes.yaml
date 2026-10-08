@@ -65,6 +65,36 @@ sections:
       - "That automation is valuable at scale, where nobody can manage hundreds of containers by hand. It comes with a lot of moving parts: networking, security, storage, upgrades, and tooling."
       - "Most cloud providers offer managed Kubernetes, which takes away the hardest parts. It remains a platform your team must understand and look after."
 
+  - type: table
+    id: compare
+    tone: paper
+    label: Alternatives
+    heading: Kubernetes compared with simpler options
+    caption: Kubernetes compared with other ways of running containers
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Managed container service
+        - "A few applications, small teams, and steady or variable traffic."
+        - "Less control, but far less to look after."
+      - - Containers on a few servers
+        - "Small systems with simple deployment needs."
+        - "Manual scaling and recovery."
+      - - Functions on demand
+        - "Event-driven work with spiky use."
+        - "Awkward for long-running services."
+      - - Kubernetes
+        - "Many services, many teams, and strong scaling needs."
+        - "Highest effort to learn, secure, and run."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: The hidden cost is people
+    paragraphs:
+      - "A cluster does not run itself. Someone must upgrade it, secure it, understand its networking, and respond when it misbehaves. For a small team, that time is taken from building the product."
+      - "We make this cost explicit before you commit, including what it would take to run the platform in-house, with us, or on a managed service that removes most of it."
+
   - type: diagram
     id: need
     tone: paper
@@ -88,27 +118,6 @@ sections:
     purpose: architecture
     takeaway: "A Kubernetes platform runs your services under deployment rules, on a cluster supported by platform services and a cloud account."
     caption: "This diagram shows five layers of a Kubernetes platform, from your services at the top to the cloud account at the bottom."
-
-  - type: table
-    id: compare
-    tone: white
-    label: Alternatives
-    heading: Kubernetes compared with simpler options
-    caption: Kubernetes compared with other ways of running containers
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - Managed container service
-        - "A few applications, small teams, and steady or variable traffic."
-        - "Less control, but far less to look after."
-      - - Containers on a few servers
-        - "Small systems with simple deployment needs."
-        - "Manual scaling and recovery."
-      - - Functions on demand
-        - "Event-driven work with spiky use."
-        - "Awkward for long-running services."
-      - - Kubernetes
-        - "Many services, many teams, and strong scaling needs."
-        - "Highest effort to learn, secure, and run."
 
   - type: process
     id: assess
@@ -152,35 +161,6 @@ sections:
           - "Monitoring, upgrades, and cost control."
           - "Training and documentation for your team."
 
-  - type: callout
-    id: limits
-    tone: paper
-    variant: limits
-    title: The hidden cost is people
-    paragraphs:
-      - "A cluster does not run itself. Someone must upgrade it, secure it, understand its networking, and respond when it misbehaves. For a small team, that time is taken from building the product."
-      - "We make this cost explicit before you commit, including what it would take to run the platform in-house, with us, or on a managed service that removes most of it."
-
-  - type: technical
-    id: technology
-    tone: white
-    label: Technical depth
-    heading: How we build with Kubernetes
-    intro: "How we build and run clusters."
-    panels:
-      - title: Foundation
-        paragraphs:
-          - "We use a managed control plane, define the cluster and its networking in code with [Terraform](ref:tool.terraform), and keep node pools small, separate, and sized from measured use."
-      - title: Delivery and configuration
-        items:
-          - "Declarative manifests or packaged charts, applied through a pipeline or a GitOps tool."
-          - "Resource requests and limits on every workload, plus autoscaling where it helps."
-          - "Secrets from an external manager, not stored in plain manifests."
-      - title: Security and operations
-        items:
-          - "Role-based access with least privilege, network policies between workloads, and image scanning."
-          - "Metrics, logs, and alerts on what users feel, and a tested upgrade routine."
-
   - type: faq
     id: faq
     tone: white
@@ -195,6 +175,26 @@ sections:
         a: "Yes, in stages, one service at a time, if there is a clear reason to. We also advise when staying put is the better choice."
       - q: Do we need Docker too?
         a: "You need containers, which are commonly built with [Docker](ref:tool.docker). Kubernetes then runs them."
+
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: How we build with Kubernetes
+    intro: "The detail a technical reviewer will ask about: foundation, delivery and configuration, and security and operations."
+    panels:
+      - title: Foundation
+        paragraphs:
+          - "We use a managed control plane, define the cluster and its networking in code with [Terraform](ref:tool.terraform), and keep node pools small, separate, and sized from measured use."
+      - title: Delivery and configuration
+        items:
+          - "Declarative manifests or packaged charts, applied through a pipeline or a GitOps tool."
+          - "Resource requests and limits on every workload, plus autoscaling where it helps."
+          - "Secrets from an external manager, not stored in plain manifests."
+      - title: Security and operations
+        items:
+          - "Role-based access with least privilege, network policies between workloads, and image scanning."
+          - "Metrics, logs, and alerts on what users feel, and a tested upgrade routine."
 
   - type: related
     id: related

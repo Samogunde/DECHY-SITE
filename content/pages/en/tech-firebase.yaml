@@ -72,7 +72,7 @@ sections:
       - The trade is control. Your data sits in a Google-defined structure, the way you query it is limited, and bills grow with how often the app reads and writes. None of this is a reason to avoid Firebase. It is a reason to design with the limits in view.
   - type: chooser
     id: choice
-    tone: white
+    tone: paper
     label: Where it fits
     heading: Is Firebase right for this product?
     intro: The answer usually depends on the shape of the data and on how fast you need a first version.
@@ -96,7 +96,7 @@ sections:
         watch: Plan the data move before the app is large.
   - type: table
     id: options
-    tone: paper
+    tone: white
     label: Options
     heading: Firebase compared with the alternatives
     caption: Firebase compared with other ways to give an app a back end
@@ -144,7 +144,7 @@ sections:
     tone: white
     label: Technical depth
     heading: How we build with Firebase
-    intro: How we build on Firebase.
+    intro: "The detail a technical reviewer will ask about: data model, security, cost and limits, and leaving."
     panels:
       - title: Data model
         items:

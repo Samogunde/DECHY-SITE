@@ -142,7 +142,7 @@ sections:
     tone: white
     label: Technical depth
     heading: How we build with Power Automate
-    intro: "How we approach Power Automate projects."
+    intro: "What we settle early on Power Automate work: flows and connections, reliability, data and security, and when to build outside the platform, so nothing surprises your team later."
     panels:
       - title: Flows and connections
         paragraphs:

@@ -218,7 +218,7 @@ sections:
     tone: paper
     label: Technology
     heading: How we choose technology
-    intro: It is here for technical readers who want to know how choices are made.
+    intro: "For your technical team: how we pick a stack, the choices we make most often, how we weigh one option against another, and the architecture styles we consider."
     panels:
       - title: We are not tied to one set of tools
         paragraphs:

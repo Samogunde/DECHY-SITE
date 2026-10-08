@@ -90,9 +90,30 @@ sections:
         watch: "Scale needs design, including queues and database sizing."
         cta: { label: Plan for volume, href: "/contact/?service=automation" }
 
+  - type: table
+    id: compare
+    tone: white
+    label: Alternatives
+    heading: n8n compared with the alternatives
+    caption: n8n compared with other automation options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - n8n
+        - "Control, volume, and workflows that mix visual steps with code."
+        - "Needs someone to run it if self-hosted."
+      - - "[Zapier](ref:tech.zapier)"
+        - "Simple chains across common apps, with no upkeep."
+        - "Per-task pricing and fewer options for custom logic."
+      - - "[Make](ref:tech.make)"
+        - "Visual workflows with strong data tools, fully hosted."
+        - "Data runs through the provider."
+      - - "[Power Automate](ref:tech.microsoft-power-automate)"
+        - "Microsoft-centered organizations."
+        - "Strongest inside its own ecosystem."
+
   - type: diagram
     id: shape
-    tone: white
+    tone: paper
     label: How it runs
     heading: What a self-hosted n8n set-up involves
     intro: "Running it yourself means a small stack of parts, each with a job."
@@ -113,27 +134,6 @@ sections:
     purpose: architecture
     takeaway: "A self-hosted n8n set-up runs workflows on a service backed by a database and queue, on hosting that is backed up and monitored."
     caption: "This diagram shows five parts of a self-hosted n8n set-up, from workflows at the top to monitoring at the bottom."
-
-  - type: table
-    id: compare
-    tone: paper
-    label: Alternatives
-    heading: n8n compared with the alternatives
-    caption: n8n compared with other automation options
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - n8n
-        - "Control, volume, and workflows that mix visual steps with code."
-        - "Needs someone to run it if self-hosted."
-      - - "[Zapier](ref:tech.zapier)"
-        - "Simple chains across common apps, with no upkeep."
-        - "Per-task pricing and fewer options for custom logic."
-      - - "[Make](ref:tech.make)"
-        - "Visual workflows with strong data tools, fully hosted."
-        - "Data runs through the provider."
-      - - "[Power Automate](ref:tech.microsoft-power-automate)"
-        - "Microsoft-centered organizations."
-        - "Strongest inside its own ecosystem."
 
   - type: columns
     id: dechy
@@ -163,7 +163,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How we build with n8n
-    intro: "How we run n8n in practice."
+    intro: "Our engineering choices on deployment, reliability, and security, written for the people who will own the system after launch."
     panels:
       - title: Deployment
         paragraphs:
@@ -180,7 +180,7 @@ sections:
 
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about n8n
     items:
@@ -195,7 +195,7 @@ sections:
 
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: n8n across DECHY
     groups:

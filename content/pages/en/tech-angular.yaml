@@ -69,29 +69,6 @@ sections:
       - "Most front-end tools leave you to assemble the pieces. Angular arrives with them chosen: how screens are built, how forms work, how data is fetched, how the application is tested. Everyone on a team therefore builds the same way, and a new developer finds familiar ground."
       - That is its value on a large project and its cost on a small one. The structure takes time to learn and adds code that a simple site does not need. On an application with dozens of screens, hundreds of form fields, and ten developers over five years, the same structure saves far more than it costs.
       - It also explains why Angular is common inside large organizations, in finance, healthcare, and manufacturing. Consistency across teams and over time is worth more to them than speed on day one.
-  - type: table
-    id: options
-    tone: paper
-    label: Options
-    heading: When Angular beats the lighter choices
-    caption: Angular compared with the other common front-end frameworks by size of project
-    columns:
-      - Option
-      - Suits
-      - Trade-off
-    rows:
-      - - Angular
-        - Large applications, forms-heavy business software, many developers, and long lives.
-        - More to learn, and more code than a small project needs.
-      - - "[React](ref:fw.react)"
-        - Products that need the widest ecosystem and a very large hiring pool.
-        - Consistency depends on the rules your team sets for itself.
-      - - "[Vue](ref:fw.vue)"
-        - Small and medium applications, and adding interactivity to existing sites.
-        - Less structure by default for very large teams.
-      - - Server-rendered pages
-        - Content-heavy sites where most pages need little interaction.
-        - Rich, app-like screens take more work.
   - type: columns
     id: dechy
     tone: paper
@@ -139,12 +116,49 @@ sections:
         body: When the last screen has moved, the old framework and its libraries are removed.
         artifacts:
           - Clean codebase
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: When Angular beats the lighter choices
+    caption: Angular compared with the other common front-end frameworks by size of project
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Angular
+        - Large applications, forms-heavy business software, many developers, and long lives.
+        - More to learn, and more code than a small project needs.
+      - - "[React](ref:fw.react)"
+        - Products that need the widest ecosystem and a very large hiring pool.
+        - Consistency depends on the rules your team sets for itself.
+      - - "[Vue](ref:fw.vue)"
+        - Small and medium applications, and adding interactivity to existing sites.
+        - Less structure by default for very large teams.
+      - - Server-rendered pages
+        - Content-heavy sites where most pages need little interaction.
+        - Rich, app-like screens take more work.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Angular
+    items:
+      - q: Is Angular too heavy for our project?
+        a: For a small site, probably. For a large application with many screens and developers, its structure usually pays for itself. We say honestly which you have.
+      - q: Do we have to rewrite our AngularJS application?
+        a: Not all at once. Running old and new together and moving area by area is usually safer, though some parts are cheaper to rebuild.
+      - q: Can Angular work with our existing back end?
+        a: Yes. It talks to any back end that offers a standard interface, so your existing services and databases can stay.
+      - q: Is Angular good for search visibility?
+        a: It can be, with server-side rendering for public pages. Internal applications behind a sign-in do not need it.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Angular
-    intro: How we build and maintain Angular applications.
+    intro: "Our engineering choices on architecture, forms and data, quality, and keeping current, written for the people who will own the system after launch."
     panels:
       - title: Architecture
         items:
@@ -162,23 +176,9 @@ sections:
       - title: Keeping current
         paragraphs:
           - Angular releases on a predictable schedule and supports each version for a limited time. We plan upgrades one major version at a time, so each step is small and reversible.
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about Angular
-    items:
-      - q: Is Angular too heavy for our project?
-        a: For a small site, probably. For a large application with many screens and developers, its structure usually pays for itself. We say honestly which you have.
-      - q: Do we have to rewrite our AngularJS application?
-        a: Not all at once. Running old and new together and moving area by area is usually safer, though some parts are cheaper to rebuild.
-      - q: Can Angular work with our existing back end?
-        a: Yes. It talks to any back end that offers a standard interface, so your existing services and databases can stay.
-      - q: Is Angular good for search visibility?
-        a: It can be, with server-side rendering for public pages. Internal applications behind a sign-in do not need it.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Angular across DECHY
     groups:

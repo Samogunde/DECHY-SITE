@@ -79,44 +79,9 @@ sections:
         - The rules can be written down
         - Data is typed in more than one place
         - People ask where a request has got to
-  - type: chooser
-    id: kind
-    tone: paper
-    label: What to automate
-    heading: Which kind of automation do you need?
-    intro: Processes differ, and so does the automation. Four kinds cover most of what businesses ask for.
-    question: What is the process doing today?
-    options:
-      - label: Collecting and approving requests
-        when: Leave, purchases, expenses, onboarding, or any request that needs a decision.
-        get: One form, rules that send it to the right approver, reminders, and a record.
-        watch: Decide who approves when the usual person is away, before you build.
-      - label: Moving data between systems
-        when: The same details are typed into the shop, the accounts, and the customer records.
-        get: Connections that carry data once, with checks for duplicates and gaps.
-        watch: Choose which system is the source of truth for each field.
-      - label: Reports and reminders
-        when: Numbers are gathered by hand and sent on a schedule, or follow-ups depend on memory.
-        get: Scheduled reports, alerts when a figure moves, and automatic follow-up.
-        watch: Agree the definitions first, or the report will be fast and disputed.
-      - label: Steps that need reading or judgment
-        when: Emails, documents, or forms must be read and sorted before anyone can act.
-        get: An AI step that reads and classifies, with a person checking the unclear cases.
-        watch: Keep a person in the loop wherever a wrong answer would be costly.
-  - type: diagram
-    id: request-flow
-    tone: white
-    label: What it looks like
-    heading: What an automated request looks like
-    intro: The easiest way to see automation is to follow one request. Each step has an owner and a status, and every step is recorded.
-    figure: workflow-ui
-    purpose: workflow
-    takeaway: An automated process moves a request through timed, owned steps and records each one.
-    caption: This sketch shows a conceptual workflow board with a new-supplier request moving through four steps with owners and status labels. It is an illustration, not a client's workflow.
-    points: []
   - type: process
     id: how
-    tone: white
+    tone: paper
     label: How we do it
     heading: From a tangled process to a working automation
     steps:
@@ -141,6 +106,17 @@ sections:
           - Runbook
           - Monitoring
           - Next-process list
+  - type: diagram
+    id: request-flow
+    tone: white
+    label: What it looks like
+    heading: What an automated request looks like
+    intro: The easiest way to see automation is to follow one request. Each step has an owner and a status, and every step is recorded.
+    figure: workflow-ui
+    purpose: workflow
+    takeaway: An automated process moves a request through timed, owned steps and records each one.
+    caption: This sketch shows a conceptual workflow board with a new-supplier request moving through four steps with owners and status labels. It is an illustration, not a client's workflow.
+    points: []
   - type: table
     id: routes
     tone: paper
@@ -164,9 +140,33 @@ sections:
       - - A small custom service
         - High volumes, strict rules, or steps no platform handles well.
         - More to build, but the most control and the lowest running cost at scale.
+  - type: chooser
+    id: kind
+    tone: white
+    label: What to automate
+    heading: Which kind of automation do you need?
+    intro: Processes differ, and so does the automation. Four kinds cover most of what businesses ask for.
+    question: What is the process doing today?
+    options:
+      - label: Collecting and approving requests
+        when: Leave, purchases, expenses, onboarding, or any request that needs a decision.
+        get: One form, rules that send it to the right approver, reminders, and a record.
+        watch: Decide who approves when the usual person is away, before you build.
+      - label: Moving data between systems
+        when: The same details are typed into the shop, the accounts, and the customer records.
+        get: Connections that carry data once, with checks for duplicates and gaps.
+        watch: Choose which system is the source of truth for each field.
+      - label: Reports and reminders
+        when: Numbers are gathered by hand and sent on a schedule, or follow-ups depend on memory.
+        get: Scheduled reports, alerts when a figure moves, and automatic follow-up.
+        watch: Agree the definitions first, or the report will be fast and disputed.
+      - label: Steps that need reading or judgment
+        when: Emails, documents, or forms must be read and sorted before anyone can act.
+        get: An AI step that reads and classifies, with a person checking the unclear cases.
+        watch: Keep a person in the loop wherever a wrong answer would be costly.
   - type: columns
     id: delivers
-    tone: white
+    tone: paper
     label: What you get
     heading: What an automation project delivers
     columns:
@@ -191,7 +191,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: The engineering behind a dependable automation
-    intro: The engineering behind a dependable automation.
+    intro: "What we settle early: reliability, connections, AI steps, and governance, so nothing surprises your team later."
     panels:
       - title: Reliability
         items:
@@ -210,7 +210,7 @@ sections:
           - Flows have named owners, naming standards, and a review date, so a growing set of automations does not turn into an unmanaged risk.
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about automating a process
     items:
@@ -226,7 +226,7 @@ sections:
         a: It depends on the process and the tools. A focused first flow is usually a matter of weeks, not months, and we agree the scope before we start.
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: Process automation across DECHY
     groups:

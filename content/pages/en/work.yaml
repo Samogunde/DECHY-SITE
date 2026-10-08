@@ -53,7 +53,7 @@ sections:
     tone: white
     label: How to read this section
     heading: Work areas describe kinds of system
-    answer: "A work area is a kind of system we build, such as a customer portal or an automation system. Each page explains the kind in plain language and shows a typical scenario, without naming any client."
+    answer: "Each work area is a kind of system we build, such as a customer portal or an automation system. For each one we show what it contains, how we build it, and a typical scenario in plain language, without naming any client."
     paragraphs:
       - "We describe work this way for a reason. A work area shows how we think and what the result looks like. It does not claim a particular client, result, or date."
       - "Where a specific project can be described accurately, with the client's agreement, it will be shown separately and identified as a real project."

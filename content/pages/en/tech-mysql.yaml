@@ -65,28 +65,9 @@ sections:
       - "That history shapes the decisions. The database is often older than anyone on the team, and it carries years of data. Changing it feels risky, so it is left until something forces the issue: a slow page, a security notice, a host that ends support."
       - "Our job is to look before that happens. Most MySQL problems come from a small set of causes, and most can be fixed without replacing anything."
 
-  - type: process
-    id: state
-    tone: paper
-    label: How we review it
-    heading: Four checks on a MySQL database
-    steps:
-      - title: Version and support
-        body: "We confirm the release in use and whether it still receives security fixes. Old releases are the most common hidden risk."
-        artifacts: [Version report]
-      - title: Speed
-        body: "We find the slowest queries and the pages that wait on them. Missing indexes and oversized queries cause most delay."
-        artifacts: [Slow query list]
-      - title: Safety
-        body: "We test that backups can actually be restored, and that access to the database is limited to what needs it."
-        artifacts: [Restore test, Access review]
-      - title: Where it runs
-        body: "A single unmanaged server is a single point of failure. We compare it with a managed service."
-        artifacts: [Hosting options]
-
   - type: table
     id: situations
-    tone: white
+    tone: paper
     label: Situations
     heading: Common MySQL situations and what we do
     caption: Four common MySQL situations, what is usually behind them, and the usual remedy
@@ -104,6 +85,25 @@ sections:
       - - "The team wants to leave MySQL"
         - "A rebuild, a need for richer data types, or a standard on another database."
         - "A planned move, usually to [PostgreSQL](ref:tech.postgresql), done in stages and checked row by row."
+
+  - type: process
+    id: state
+    tone: white
+    label: How we review it
+    heading: Four checks on a MySQL database
+    steps:
+      - title: Version and support
+        body: "We confirm the release in use and whether it still receives security fixes. Old releases are the most common hidden risk."
+        artifacts: [Version report]
+      - title: Speed
+        body: "We find the slowest queries and the pages that wait on them. Missing indexes and oversized queries cause most delay."
+        artifacts: [Slow query list]
+      - title: Safety
+        body: "We test that backups can actually be restored, and that access to the database is limited to what needs it."
+        artifacts: [Restore test, Access review]
+      - title: Where it runs
+        body: "A single unmanaged server is a single point of failure. We compare it with a managed service."
+        artifacts: [Hosting options]
 
   - type: columns
     id: dechy
@@ -128,12 +128,27 @@ sections:
           - "Migration to PostgreSQL when there is a clear reason."
           - "Data checks that prove nothing was lost or changed."
 
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about MySQL
+    items:
+      - q: Is MySQL outdated?
+        a: "No. It is actively maintained and widely used. The risk is an old release or an unmanaged server, not the product."
+      - q: Do we have to move to PostgreSQL?
+        a: "No. Move only if you have a reason, such as features you need or a rebuild under way. For many WordPress and PHP systems, a well-kept MySQL is the right choice."
+      - q: Will a version upgrade break our site?
+        a: "It can if untested. We upgrade a copy first, run the application against it, and only then touch live data."
+      - q: Why is our WordPress site slow when the server is large?
+        a: "Often the database is the bottleneck: missing indexes, large stored settings, or add-ons that query heavily. A review finds the cause."
+
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with MySQL
-    intro: "What we look at in a MySQL review."
+    intro: "What we settle early on MySQL work: engine and schema, performance, availability, MariaDB, and migrating away, so nothing surprises your team later."
     panels:
       - title: Engine and schema
         items:
@@ -155,24 +170,9 @@ sections:
         paragraphs:
           - "A move to PostgreSQL maps data types, rewrites queries that use MySQL-only behavior, runs both databases in parallel, and compares results before the switch."
 
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about MySQL
-    items:
-      - q: Is MySQL outdated?
-        a: "No. It is actively maintained and widely used. The risk is an old release or an unmanaged server, not the product."
-      - q: Do we have to move to PostgreSQL?
-        a: "No. Move only if you have a reason, such as features you need or a rebuild under way. For many WordPress and PHP systems, a well-kept MySQL is the right choice."
-      - q: Will a version upgrade break our site?
-        a: "It can if untested. We upgrade a copy first, run the application against it, and only then touch live data."
-      - q: Why is our WordPress site slow when the server is large?
-        a: "Often the database is the bottleneck: missing indexes, large stored settings, or add-ons that query heavily. A review finds the cause."
-
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: MySQL across DECHY
     groups:

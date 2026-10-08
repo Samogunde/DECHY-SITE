@@ -62,6 +62,48 @@ sections:
       - "A model alone only produces text. Useful applications surround it with your information and your rules. A framework supplies those pieces so a team does not write each from scratch."
       - "The trade-off is that frameworks in this area change quickly and add layers between you and the model. Used carefully, they speed up the first version. Used everywhere, they can make later changes harder."
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with LangChain
+    columns:
+      - title: Build
+        items:
+          - "Document search and question answering with sources."
+          - "Assistants that use tools and your records."
+      - title: Check
+        items:
+          - "Test sets that measure answer quality."
+          - "Tracing, so every step can be reviewed."
+      - title: Control
+        items:
+          - "Limits on what the system may do."
+          - "Approval steps for sensitive actions."
+      - title: Keep flexible
+        items:
+          - "A design where the model provider can be changed."
+          - "Documentation of the choices and the reasons."
+
+  - type: process
+    id: build
+    tone: white
+    label: How we build it
+    heading: From idea to a checked AI feature
+    steps:
+      - title: Define what good looks like
+        body: "We write down example questions and the answers you would accept, before choosing any tool."
+        artifacts: [Example set, Acceptance rules]
+      - title: Build the simplest version
+        body: "We start with the least machinery that could work, and add framework parts only where they help."
+        artifacts: [First working version]
+      - title: Test and tighten
+        body: "We score results against the example set, fix the weakest cases, and add limits on what the system may do."
+        artifacts: [Test results, Limits]
+      - title: Release carefully
+        body: "We start with a small group, review real use, and widen as quality holds."
+        artifacts: [Pilot, Quality reports]
+
   - type: chooser
     id: choice
     tone: paper
@@ -107,67 +149,6 @@ sections:
         - "Simple features and teams who want full control."
         - "You write the plumbing yourself."
 
-  - type: process
-    id: build
-    tone: white
-    label: How we build it
-    heading: From idea to a checked AI feature
-    steps:
-      - title: Define what good looks like
-        body: "We write down example questions and the answers you would accept, before choosing any tool."
-        artifacts: [Example set, Acceptance rules]
-      - title: Build the simplest version
-        body: "We start with the least machinery that could work, and add framework parts only where they help."
-        artifacts: [First working version]
-      - title: Test and tighten
-        body: "We score results against the example set, fix the weakest cases, and add limits on what the system may do."
-        artifacts: [Test results, Limits]
-      - title: Release carefully
-        body: "We start with a small group, review real use, and widen as quality holds."
-        artifacts: [Pilot, Quality reports]
-
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with LangChain
-    columns:
-      - title: Build
-        items:
-          - "Document search and question answering with sources."
-          - "Assistants that use tools and your records."
-      - title: Check
-        items:
-          - "Test sets that measure answer quality."
-          - "Tracing, so every step can be reviewed."
-      - title: Control
-        items:
-          - "Limits on what the system may do."
-          - "Approval steps for sensitive actions."
-      - title: Keep flexible
-        items:
-          - "A design where the model provider can be changed."
-          - "Documentation of the choices and the reasons."
-
-  - type: technical
-    id: technology
-    tone: white
-    label: Technical depth
-    heading: How we build with LangChain
-    intro: "How we build language-model applications."
-    panels:
-      - title: Retrieval
-        paragraphs:
-          - "For document search we split content sensibly, create embeddings, store them in a vector database such as [Pinecone](ref:tech.pinecone) or [PostgreSQL](ref:tech.postgresql) with a vector extension, and test retrieval quality before tuning prompts."
-      - title: Models and providers
-        paragraphs:
-          - "We keep model calls behind a thin layer so [OpenAI](ref:prov.openai), [Anthropic Claude](ref:prov.anthropic-claude), [Google Gemini](ref:prov.google-gemini), or an open model can be swapped by configuration."
-      - title: Evaluation and safety
-        items:
-          - "A fixed set of example questions with expected answers, run on every change."
-          - "Tracing of prompts, tool calls, and outputs."
-          - "Guards against prompt injection and limits on tool permissions."
-
   - type: faq
     id: faq
     tone: paper
@@ -183,9 +164,28 @@ sections:
       - q: Which model do you use?
         a: "The one that suits the task, the data rules, and the cost. We design so the choice can change."
 
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: How we build with LangChain
+    intro: "What we settle early on LangChain work: retrieval, models and providers, and evaluation and safety, so nothing surprises your team later."
+    panels:
+      - title: Retrieval
+        paragraphs:
+          - "For document search we split content sensibly, create embeddings, store them in a vector database such as [Pinecone](ref:tech.pinecone) or [PostgreSQL](ref:tech.postgresql) with a vector extension, and test retrieval quality before tuning prompts."
+      - title: Models and providers
+        paragraphs:
+          - "We keep model calls behind a thin layer so [OpenAI](ref:prov.openai), [Anthropic Claude](ref:prov.anthropic-claude), [Google Gemini](ref:prov.google-gemini), or an open model can be swapped by configuration."
+      - title: Evaluation and safety
+        items:
+          - "A fixed set of example questions with expected answers, run on every change."
+          - "Tracing of prompts, tool calls, and outputs."
+          - "Guards against prompt injection and limits on tool permissions."
+
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: LangChain across DECHY
     groups:

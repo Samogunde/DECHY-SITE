@@ -1,6 +1,6 @@
 # Motion system
 
-Status: implemented in the Phase 1 refinement pass. Source of truth for tokens: `src/app/globals.css` (`:root` and the "motion" section). Driver: `src/components/primitives/MotionProvider.tsx`.
+Status: implemented in the Phase 1 refinement pass and extended in the site-wide refinement (7 October 2026). Source of truth for tokens: `src/app/globals.css` (`:root` and the "motion" section). Figure and card motion: `src/styles/motion.css`. Driver: `src/components/primitives/MotionProvider.tsx`. Every reveal plays once: content that has appeared stays visible when the visitor scrolls back up.
 
 ## Principles
 
@@ -36,7 +36,15 @@ Purposeful, subtle, fast, consistent, accessible, performance-conscious. Motion 
 | Connected-flow diagram | Steps appear in order when the figure scrolls in; step numbers take turns glowing | Explanation |
 | Engineering and modernization diagrams | Steps appear in the order the process runs | Explanation |
 
-Still by design: the hero text, the company statement, FAQ text, tables, footer, legal pages.
+| Interface mockups (site-wide refinement, 7 October 2026) | Once, as the figure scrolls in: chart bars grow from the baseline in order, progress meters fill, cards and rows arrive in a short sequence, a phone settles in front of its desktop window, and a booking arrives in the staff view. Pointing at a row or card inside a mockup lights it | Explanation, and the feeling of a real product without pretending to be one |
+| Hub diagram | Parts arrive in order and their connectors draw out to the core; pointing at a part highlights it and dims the rest | Explanation |
+| Delivery steps | Cards arrive in sequence and the path between the numbers draws in after them; pointing at a step lights its number | Explanation |
+| Technical detail tabs | The new panel fades and rises 4 px when a topic is chosen | State |
+| At a glance and choosers | The answer panel fades in; options lift on hover; a progress bar and "next" link show where you are | State and orientation |
+| Destination, pathfinder, and chip links | Lift with a shadow, and the arrow circle fills and nudges; a pressed state on click | Feedback; only things that are links move. Information cards acknowledge the pointer with an outline only |
+| Home hero bus packet and connected-flow halo | Small loops, kept on the owner's instruction; they pause off screen and are hidden under reduced motion | Explanation |
+
+Still by design: the hero text, the company statement, FAQ text, tables, footer, legal pages. There is no custom cursor; feedback comes from hover, focus, and pressed states.
 
 ## Rules
 

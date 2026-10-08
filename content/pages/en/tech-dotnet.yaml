@@ -74,18 +74,6 @@ sections:
     paragraphs:
       - .NET started on Windows and for years was tied to it. Today it is open source and runs on Windows, Linux, and in containers, so it is a normal choice for cloud systems as well as for the Windows servers of the past.
       - The practical question is rarely whether .NET is good. It is whether a given system is in good shape, and whether the next change is cheaper on the platform you have or on a new one.
-  - type: callout
-    id: generations
-    tone: white
-    variant: note
-    title: Two generations of .NET
-    paragraphs:
-      - Older systems were written for .NET Framework, which only runs on Windows and is now maintained rather than developed. Current work uses modern .NET, which runs on Windows, Linux, and in containers.
-      - The distinction decides what a project involves. A system on the current platform is upgraded. A system on the older one is first moved across, in stages, and then upgraded.
-    items:
-      - Most older business systems are on .NET Framework
-      - The platform fits closely with Microsoft sign-in, databases, and hosting
-      - This is why .NET is common in finance, healthcare, and large organizations
   - type: table
     id: options
     tone: paper
@@ -109,9 +97,31 @@ sections:
       - - "[Python](ref:lang.python)"
         - Data work and AI features behind an application.
         - Not the usual choice for the application core in a Microsoft estate.
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with .NET
+    columns:
+      - title: Build
+        items:
+          - New web applications, services, and internal tools.
+          - Back ends for web and mobile products.
+      - title: Modernize
+        items:
+          - Moving .NET Framework systems to current .NET.
+          - Adding tests and breaking up code that is hard to change.
+      - title: Connect
+        items:
+          - Links to your existing databases, identity, and business systems.
+          - Services that expose your data safely to other tools.
+      - title: Move to the cloud
+        items:
+          - Hosting on [Azure](ref:plat.azure) or another cloud.
+          - Containers and automated deployment for repeatable releases.
   - type: process
     id: path
-    tone: white
+    tone: paper
     label: Modernizing
     heading: Moving an older .NET system forward
     intro: A rewrite is rarely the right first step. We move in stages so the business keeps running.
@@ -134,34 +144,24 @@ sections:
         artifacts:
           - Working slice
           - Switch-over plan
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with .NET
-    columns:
-      - title: Build
-        items:
-          - New web applications, services, and internal tools.
-          - Back ends for web and mobile products.
-      - title: Modernize
-        items:
-          - Moving .NET Framework systems to current .NET.
-          - Adding tests and breaking up code that is hard to change.
-      - title: Connect
-        items:
-          - Links to your existing databases, identity, and business systems.
-          - Services that expose your data safely to other tools.
-      - title: Move to the cloud
-        items:
-          - Hosting on [Azure](ref:plat.azure) or another cloud.
-          - Containers and automated deployment for repeatable releases.
+  - type: callout
+    id: generations
+    tone: white
+    variant: note
+    title: Two generations of .NET
+    paragraphs:
+      - Older systems were written for .NET Framework, which only runs on Windows and is now maintained rather than developed. Current work uses modern .NET, which runs on Windows, Linux, and in containers.
+      - The distinction decides what a project involves. A system on the current platform is upgraded. A system on the older one is first moved across, in stages, and then upgraded.
+    items:
+      - Most older business systems are on .NET Framework
+      - The platform fits closely with Microsoft sign-in, databases, and hosting
+      - This is why .NET is common in finance, healthcare, and large organizations
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with .NET
-    intro: How we approach .NET work.
+    intro: "Our engineering choices on versions and support, structure, identity and security, and delivery, written for the people who will own the system after launch."
     panels:
       - title: Versions and support
         paragraphs:

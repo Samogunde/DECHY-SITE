@@ -128,6 +128,10 @@ sections:
         - Which problem should the product solve first?
   - type: index
     id: deliverables
+    photo:
+      asset: asset.photo-interfaces-wireframes
+      layout: split
+      position: 50% 50%
     tone: paper
     columns: 2
     label: What you receive
@@ -238,7 +242,7 @@ sections:
     tone: white
     label: Technology
     heading: Under the hood
-    intro: The tools and standards we use.
+    intro: "What we settle early: design and prototyping tools, accessibility, and from design to code, so nothing surprises your team later."
     panels:
       - title: Design and prototyping tools
         paragraphs:

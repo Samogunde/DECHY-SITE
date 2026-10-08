@@ -86,9 +86,18 @@ sections:
         - "A managed cluster for many containers."
         - "Larger platforms with several teams."
 
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Query cost deserves attention
+    paragraphs:
+      - "In a warehouse, cost often follows how much data each query reads. A careless query over a huge table can cost real money, and dashboards that refresh often can quietly add up."
+      - "We design tables and queries to read less, set limits and alerts, and review the bill monthly, so analysis stays affordable."
+
   - type: chooser
     id: platform
-    tone: white
+    tone: paper
     label: Options
     heading: What are you trying to do on Google Cloud?
     intro: "Projects tend to fall into three kinds."
@@ -112,7 +121,7 @@ sections:
 
   - type: columns
     id: dechy
-    tone: paper
+    tone: white
     label: What DECHY can do
     heading: Working with Google Cloud
     columns:
@@ -133,21 +142,27 @@ sections:
           - "Monitoring and incident response."
           - "Regular cost and design reviews."
 
-  - type: callout
-    id: limits
+  - type: faq
+    id: faq
     tone: paper
-    variant: limits
-    title: Query cost deserves attention
-    paragraphs:
-      - "In a warehouse, cost often follows how much data each query reads. A careless query over a huge table can cost real money, and dashboards that refresh often can quietly add up."
-      - "We design tables and queries to read less, set limits and alerts, and review the bill monthly, so analysis stays affordable."
+    label: Common questions
+    heading: Questions about Google Cloud
+    items:
+      - q: Do we need Google Workspace to use Google Cloud?
+        a: "No. They are separate products, though they share sign-in and work well together."
+      - q: Is BigQuery right for our data?
+        a: "It suits analysis of large data sets. For small data or heavy transactional use, a normal database such as [PostgreSQL](ref:tech.postgresql) is often better. We choose by the workload."
+      - q: Can you add AI to our data on Google Cloud?
+        a: "Yes, using Google's models or others. We test quality on your examples and set limits on what the models can see."
+      - q: How do we keep costs predictable?
+        a: "Budgets, alerts, query limits, and a monthly review, with estimates before building."
 
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Google Cloud
-    intro: "How we set up Google Cloud projects."
+    intro: "For your developers and IT lead: our Google Cloud choices on structure, data, and running workloads, and the reasoning behind each."
     panels:
       - title: Structure
         paragraphs:
@@ -161,21 +176,6 @@ sections:
         items:
           - "Container services with [Docker](ref:tool.docker) images, autoscaling, and private connections to databases."
           - "Logging and monitoring wired to alerts."
-
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Google Cloud
-    items:
-      - q: Do we need Google Workspace to use Google Cloud?
-        a: "No. They are separate products, though they share sign-in and work well together."
-      - q: Is BigQuery right for our data?
-        a: "It suits analysis of large data sets. For small data or heavy transactional use, a normal database such as [PostgreSQL](ref:tech.postgresql) is often better. We choose by the workload."
-      - q: Can you add AI to our data on Google Cloud?
-        a: "Yes, using Google's models or others. We test quality on your examples and set limits on what the models can see."
-      - q: How do we keep costs predictable?
-        a: "Budgets, alerts, query limits, and a monthly review, with estimates before building."
 
   - type: related
     id: related

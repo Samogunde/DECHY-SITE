@@ -77,7 +77,7 @@ sections:
       - Access control is also done in the database. Rules, called row-level policies, say which rows each person may see or change, so a mistake in the app is less likely to expose someone else's data.
   - type: index
     id: uses
-    tone: white
+    tone: paper
     columns: 2
     label: Typical uses
     heading: Where Supabase fits well
@@ -90,33 +90,9 @@ sections:
         body: Built quickly, on a database that can carry the real product later.
       - title: A move off a back end that has become limiting
         body: Data brought into a relational database, so reporting and relationships become straightforward.
-  - type: process
-    id: build
-    tone: paper
-    label: How we build it
-    heading: A Supabase project from first design to launch
-    steps:
-      - title: Model the data
-        body: We design the tables and relationships around what the product must do and report.
-        artifacts:
-          - Data model
-      - title: Write the access rules
-        body: Row-level policies decide who sees what. We test them as carefully as any feature.
-        artifacts:
-          - Access policies
-          - Policy tests
-      - title: Build the product on top
-        body: Screens and server functions use the platform's services instead of re-creating them.
-        artifacts:
-          - Working product
-      - title: Prepare to grow
-        body: Backups, environments, and monitoring are set up, and the exit plan is written down.
-        artifacts:
-          - Environments
-          - Runbook
   - type: table
     id: options
-    tone: paper
+    tone: white
     label: Options
     heading: Supabase compared with the alternatives
     caption: Supabase compared with other ways to give an app a back end
@@ -139,7 +115,7 @@ sections:
         - You assemble sign-in, storage, and live data yourself.
   - type: columns
     id: dechy
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: Working with Supabase
     columns:
@@ -159,12 +135,36 @@ sections:
         items:
           - Backups, upgrades, and performance reviews.
           - Self-hosting when you need it on your own infrastructure.
+  - type: process
+    id: build
+    tone: white
+    label: How we build it
+    heading: A Supabase project from first design to launch
+    steps:
+      - title: Model the data
+        body: We design the tables and relationships around what the product must do and report.
+        artifacts:
+          - Data model
+      - title: Write the access rules
+        body: Row-level policies decide who sees what. We test them as carefully as any feature.
+        artifacts:
+          - Access policies
+          - Policy tests
+      - title: Build the product on top
+        body: Screens and server functions use the platform's services instead of re-creating them.
+        artifacts:
+          - Working product
+      - title: Prepare to grow
+        body: Backups, environments, and monitoring are set up, and the exit plan is written down.
+        artifacts:
+          - Environments
+          - Runbook
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Supabase
-    intro: How we build on Supabase.
+    intro: "Our engineering choices on database, security, server logic, and portability, written for the people who will own the system after launch."
     panels:
       - title: Database
         items:

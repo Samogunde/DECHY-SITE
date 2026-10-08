@@ -63,49 +63,6 @@ sections:
       - "Its breadth suits complex organizations: many teams, regions, products, and approval steps. It is also why a Salesforce set-up needs governance. Anyone with access can add a field or a rule, and over the years those pile up."
       - "Most of the problems we see are not about Salesforce itself. They are about customization nobody documented and integrations nobody owns."
 
-  - type: table
-    id: compare
-    tone: paper
-    label: Options
-    heading: Salesforce compared with other CRMs
-    caption: Salesforce compared with other customer platforms
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - Salesforce
-        - "Complex organizations with many teams, custom processes, and a budget for administration."
-        - "Cost and complexity, and a need for skilled administration."
-      - - "[HubSpot](ref:plat.hubspot)"
-        - "Small and mid-sized teams who want to adopt quickly."
-        - "Less deep customization for unusual processes."
-      - - "[Zoho](ref:plat.zoho)"
-        - "Cost-conscious teams wanting a broad suite."
-        - "Smaller partner and talent ecosystem."
-      - - "Custom CRM"
-        - "Very unusual processes that no product fits."
-        - "Highest cost, and you maintain everything."
-
-  - type: process
-    id: layers
-    tone: white
-    label: How we work
-    heading: Connecting Salesforce to your other systems
-    steps:
-      - title: Map the data
-        body: "We list which system owns each piece of data, such as customer details, prices, and payment status, and where each must appear."
-        artifacts: [Data ownership map]
-      - title: Choose the connection
-        body: "We choose between built-in connectors, an automation platform, and a custom integration, based on volume and risk."
-        artifacts: [Integration design]
-      - title: Build with failure in mind
-        body: "We handle duplicates, retries, and limits, and decide what happens when one side is unavailable."
-        artifacts: [Working integration, Error handling]
-      - title: Test and monitor
-        body: "We test with realistic data, and set up alerts so a broken sync is noticed within hours."
-        artifacts: [Test results, Alerts]
-      - title: Document and hand over
-        body: "We document the integration and its owner, so it survives staff changes."
-        artifacts: [Integration guide]
-
   - type: columns
     id: dechy
     tone: paper
@@ -129,6 +86,49 @@ sections:
           - "Moves from spreadsheets or other CRMs."
           - "Data cleaning and mapping before cut-over."
 
+  - type: table
+    id: compare
+    tone: white
+    label: Options
+    heading: Salesforce compared with other CRMs
+    caption: Salesforce compared with other customer platforms
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Salesforce
+        - "Complex organizations with many teams, custom processes, and a budget for administration."
+        - "Cost and complexity, and a need for skilled administration."
+      - - "[HubSpot](ref:plat.hubspot)"
+        - "Small and mid-sized teams who want to adopt quickly."
+        - "Less deep customization for unusual processes."
+      - - "[Zoho](ref:plat.zoho)"
+        - "Cost-conscious teams wanting a broad suite."
+        - "Smaller partner and talent ecosystem."
+      - - "Custom CRM"
+        - "Very unusual processes that no product fits."
+        - "Highest cost, and you maintain everything."
+
+  - type: process
+    id: layers
+    tone: paper
+    label: How we work
+    heading: Connecting Salesforce to your other systems
+    steps:
+      - title: Map the data
+        body: "We list which system owns each piece of data, such as customer details, prices, and payment status, and where each must appear."
+        artifacts: [Data ownership map]
+      - title: Choose the connection
+        body: "We choose between built-in connectors, an automation platform, and a custom integration, based on volume and risk."
+        artifacts: [Integration design]
+      - title: Build with failure in mind
+        body: "We handle duplicates, retries, and limits, and decide what happens when one side is unavailable."
+        artifacts: [Working integration, Error handling]
+      - title: Test and monitor
+        body: "We test with realistic data, and set up alerts so a broken sync is noticed within hours."
+        artifacts: [Test results, Alerts]
+      - title: Document and hand over
+        body: "We document the integration and its owner, so it survives staff changes."
+        artifacts: [Integration guide]
+
   - type: callout
     id: limits
     tone: white
@@ -143,7 +143,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How we build with Salesforce
-    intro: "How we approach Salesforce integrations."
+    intro: "What we settle early on Salesforce work: integration patterns, reliability, and security, so nothing surprises your team later."
     panels:
       - title: Integration patterns
         paragraphs:

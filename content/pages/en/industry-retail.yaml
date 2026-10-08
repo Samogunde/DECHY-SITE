@@ -61,9 +61,18 @@ sections:
     takeaway: Every selling channel reads and writes one stock and order record, so availability and orders stay true wherever people buy.
     visualTitle: Many channels, one stock record
     figureCaption: "This diagram shows one stock and order record at the center with six parts around it: the online store, marketplaces, shop tills, the warehouse, customer records, and reporting."
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: A business of many small, repeated transactions
+    paragraphs:
+      - "Retail is high in volume and low in margin per order, so small inefficiencies are multiplied thousands of times. A minute of re-typing per order, a one per cent stock error, a delay in refunding a return: each is invisible on one order and decisive across a year."
+      - It is also seasonal. Systems that cope in March can fail in November, so the question is not only whether something works but whether it works on the busiest day.
+      - "The best returns come from the unglamorous parts: orders that flow without touching, stock that is true, and support that can see the order it is asked about."
   - type: table
     id: drift
-    tone: white
+    tone: paper
     label: Where it drifts
     heading: Where channels drift apart
     caption: Four common points where retail channels disagree, the usual cause, and the fix
@@ -84,15 +93,6 @@ sections:
       - - Sales figures differ by team
         - Each team counts returns, tax, and shipping in its own way.
         - Agreed measures calculated in one place.
-  - type: prose
-    id: different
-    tone: paper
-    label: What is different
-    heading: A business of many small, repeated transactions
-    paragraphs:
-      - "Retail is high in volume and low in margin per order, so small inefficiencies are multiplied thousands of times. A minute of re-typing per order, a one per cent stock error, a delay in refunding a return: each is invisible on one order and decisive across a year."
-      - It is also seasonal. Systems that cope in March can fail in November, so the question is not only whether something works but whether it works on the busiest day.
-      - "The best returns come from the unglamorous parts: orders that flow without touching, stock that is true, and support that can see the order it is asked about."
   - type: diagram
     id: store-front
     tone: white
@@ -104,9 +104,54 @@ sections:
     takeaway: A retail store joins a shop front to an engine holding the one catalog, price, and stock record.
     caption: This sketch shows a conceptual store front beside a commerce engine panel listing catalog, pricing, orders, and stock. It is an illustration, not a client store.
     points: []
+  - type: columns
+    id: help
+    tone: paper
+    label: What DECHY can do
+    heading: How we help retail teams
+    columns:
+      - title: Build
+        items:
+          - Stores, product pages, and checkout that load fast.
+          - Custom features where a standard store cannot express your model.
+      - title: Connect
+        items:
+          - Stock, orders, shipping, and accounting.
+          - Payments through [Stripe](ref:int.stripe) and other providers.
+      - title: Automate
+        items:
+          - Order confirmation, shipping notices, and refunds.
+          - Alerts for low stock and stuck orders.
+      - title: Prepare for peaks
+        items:
+          - Load testing before busy seasons.
+          - Monitoring and a plan for the busiest day.
+  - type: index
+    id: needs
+    photo:
+      asset: asset.photo-problems-warehouse-aisle
+      layout: split
+      position: 50% 52%
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Typical systems for retailers
+    items:
+      - title: Online stores
+        body: Stores on [Shopify](ref:plat.shopify) or [WooCommerce](ref:plat.woocommerce), or custom builds where the selling model is unusual. See [commerce systems](/work/areas/commerce-systems/).
+      - title: Stock and order connections
+        body: Links between stores, marketplaces, tills, warehouses, and accounts.
+      - title: Customer records and loyalty
+        body: One customer record across channels, with segments and follow-up. See [connecting customer systems](/solutions/crm-integration/).
+      - title: Support that sees the order
+        body: Help desks connected to orders, with an assistant for routine questions. See [AI customer support](/solutions/ai-customer-support/).
+      - title: Reporting
+        body: Sales, margin, stock, and returns from one source. See [business dashboards](/solutions/business-dashboards/).
+      - title: Order automation
+        body: Orders, shipping, and refunds without re-typing. See [process automation](/solutions/business-process-automation/).
   - type: process
     id: how
-    tone: white
+    tone: paper
     label: How we work
     heading: Making the channels agree
     steps:
@@ -130,53 +175,26 @@ sections:
         artifacts:
           - Dashboard
           - Review notes
-  - type: index
-    id: needs
-    tone: paper
-    columns: 2
-    label: What we build
-    heading: Typical systems for retailers
-    items:
-      - title: Online stores
-        body: Stores on [Shopify](ref:plat.shopify) or [WooCommerce](ref:plat.woocommerce), or custom builds where the selling model is unusual. See [commerce systems](/work/areas/commerce-systems/).
-      - title: Stock and order connections
-        body: Links between stores, marketplaces, tills, warehouses, and accounts.
-      - title: Customer records and loyalty
-        body: One customer record across channels, with segments and follow-up. See [connecting customer systems](/solutions/crm-integration/).
-      - title: Support that sees the order
-        body: Help desks connected to orders, with an assistant for routine questions. See [AI customer support](/solutions/ai-customer-support/).
-      - title: Reporting
-        body: Sales, margin, stock, and returns from one source. See [business dashboards](/solutions/business-dashboards/).
-      - title: Order automation
-        body: Orders, shipping, and refunds without re-typing. See [process automation](/solutions/business-process-automation/).
-  - type: columns
-    id: help
+  - type: faq
+    id: faq
     tone: white
-    label: What DECHY can do
-    heading: How we help retail teams
-    columns:
-      - title: Build
-        items:
-          - Stores, product pages, and checkout that load fast.
-          - Custom features where a standard store cannot express your model.
-      - title: Connect
-        items:
-          - Stock, orders, shipping, and accounting.
-          - Payments through [Stripe](ref:int.stripe) and other providers.
-      - title: Automate
-        items:
-          - Order confirmation, shipping notices, and refunds.
-          - Alerts for low stock and stuck orders.
-      - title: Prepare for peaks
-        items:
-          - Load testing before busy seasons.
-          - Monitoring and a plan for the busiest day.
+    label: Common questions
+    heading: Questions about retail software
+    items:
+      - q: Should we use a hosted store or build our own?
+        a: A hosted or ready-made store suits most retailers. Build custom only where your selling model needs something it cannot do. We compare the options on your facts.
+      - q: Can you connect our shop tills and our online store?
+        a: Usually, yes. Many point-of-sale systems offer a way to connect. We check what yours allows and design around it.
+      - q: How do you keep stock accurate across channels?
+        a: By making one system own the count and sending changes as events to every channel, with checks that flag differences.
+      - q: Can you prepare us for a peak season?
+        a: Yes. We test the store and the connections under load before the season and set up monitoring for the busiest days.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: Peak load and data notes
-    intro: The engineering choices we make for stores and their connections.
+    intro: "What we settle early: handling the busiest day, keeping stock true, and customer data and payments, so nothing surprises your team later."
     panels:
       - title: Handling the busiest day
         items:
@@ -193,23 +211,9 @@ sections:
         paragraphs:
           - Card details are handled by the payment provider and never stored on your systems. Customer records follow the privacy rules of each market you sell in.
         items: []
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about retail software
-    items:
-      - q: Should we use a hosted store or build our own?
-        a: A hosted or ready-made store suits most retailers. Build custom only where your selling model needs something it cannot do. We compare the options on your facts.
-      - q: Can you connect our shop tills and our online store?
-        a: Usually, yes. Many point-of-sale systems offer a way to connect. We check what yours allows and design around it.
-      - q: How do you keep stock accurate across channels?
-        a: By making one system own the count and sending changes as events to every channel, with checks that flag differences.
-      - q: Can you prepare us for a peak season?
-        a: Yes. We test the store and the connections under load before the season and set up monitoring for the busiest days.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Retail across DECHY
     groups:

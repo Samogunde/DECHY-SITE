@@ -67,25 +67,9 @@ sections:
       - "That structure is what removes the usual spreadsheet problems: the same name typed three ways, a copy that nobody updates, and a formula that someone overwrote."
       - "It is also quick to change. Teams adjust fields and views themselves, which is the main reason it works so well as a first system, and the main reason it needs a clear structure from the start."
 
-  - type: index
-    id: uses
-    tone: paper
-    columns: 2
-    label: Where it fits
-    heading: Systems that suit Airtable
-    items:
-      - title: A content or campaign calendar
-        body: "Ideas, drafts, owners, and dates in one place, with a board for status and a calendar for timing."
-      - title: A client or project tracker
-        body: "Clients, projects, tasks, and hours linked together, with different views for managers and the team."
-      - title: An asset or equipment register
-        body: "What exists, where it is, who has it, and when it is next due for service."
-      - title: A lightweight customer record
-        body: "Contacts, deals, and activity for a small team, with forms feeding it from your website."
-
   - type: chooser
     id: choice
-    tone: white
+    tone: paper
     label: Options
     heading: Airtable, a spreadsheet, or custom software?
     intro: "These are the three choices we weigh with teams."
@@ -109,7 +93,7 @@ sections:
 
   - type: table
     id: limits
-    tone: paper
+    tone: white
     label: Limits
     heading: Where Airtable stops
     caption: Common limits of Airtable and how we deal with each
@@ -127,37 +111,6 @@ sections:
       - - Cost with growth
         - "Per-user pricing adds up as the team grows."
         - "Review costs yearly against the alternatives."
-
-  - type: callout
-    id: tidy
-    tone: paper
-    variant: note
-    title: A base needs an owner
-    paragraphs:
-      - "The most common way an Airtable base goes wrong is that everyone can change its structure and nobody is responsible for it. Within a year there are duplicate fields, unused tables, and views that nobody understands."
-      - "We name an owner for each base and agree what members may change, so the system stays as clear as the day it was built."
-
-  - type: process
-    id: process
-    tone: white
-    label: How we work
-    heading: Moving a spreadsheet into Airtable
-    steps:
-      - title: Study how the spreadsheet is used
-        body: "We learn who edits it, what the columns really mean, and which mistakes happen."
-        artifacts: [Notes on current use, List of problems]
-      - title: Design the structure
-        body: "We split it into tables, define links between them, and choose field types that prevent bad data."
-        artifacts: [Table and link design]
-      - title: Build views and forms
-        body: "We create views for each role and forms for incoming data."
-        artifacts: [Working base, Forms]
-      - title: Move the data and run alongside
-        body: "We clean and import the records, and run the old and new together briefly."
-        artifacts: [Imported data, Check results]
-      - title: Automate and hand over
-        body: "We add the automations that save the most time, and train the team."
-        artifacts: [Automations, Guide and training]
 
   - type: columns
     id: dechy
@@ -182,12 +135,59 @@ sections:
           - "Clean-ups of messy bases."
           - "Training and ongoing support."
 
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Where it fits
+    heading: Systems that suit Airtable
+    items:
+      - title: A content or campaign calendar
+        body: "Ideas, drafts, owners, and dates in one place, with a board for status and a calendar for timing."
+      - title: A client or project tracker
+        body: "Clients, projects, tasks, and hours linked together, with different views for managers and the team."
+      - title: An asset or equipment register
+        body: "What exists, where it is, who has it, and when it is next due for service."
+      - title: A lightweight customer record
+        body: "Contacts, deals, and activity for a small team, with forms feeding it from your website."
+
+  - type: process
+    id: process
+    tone: paper
+    label: How we work
+    heading: Moving a spreadsheet into Airtable
+    steps:
+      - title: Study how the spreadsheet is used
+        body: "We learn who edits it, what the columns really mean, and which mistakes happen."
+        artifacts: [Notes on current use, List of problems]
+      - title: Design the structure
+        body: "We split it into tables, define links between them, and choose field types that prevent bad data."
+        artifacts: [Table and link design]
+      - title: Build views and forms
+        body: "We create views for each role and forms for incoming data."
+        artifacts: [Working base, Forms]
+      - title: Move the data and run alongside
+        body: "We clean and import the records, and run the old and new together briefly."
+        artifacts: [Imported data, Check results]
+      - title: Automate and hand over
+        body: "We add the automations that save the most time, and train the team."
+        artifacts: [Automations, Guide and training]
+
+  - type: callout
+    id: tidy
+    tone: white
+    variant: note
+    title: A base needs an owner
+    paragraphs:
+      - "The most common way an Airtable base goes wrong is that everyone can change its structure and nobody is responsible for it. Within a year there are duplicate fields, unused tables, and views that nobody understands."
+      - "We name an owner for each base and agree what members may change, so the system stays as clear as the day it was built."
+
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Airtable
-    intro: "How we build Airtable systems that last."
+    intro: "What we settle early on Airtable work: data design, integration, and governance, so nothing surprises your team later."
     panels:
       - title: Data design
         paragraphs:

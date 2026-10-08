@@ -66,21 +66,35 @@ sections:
       - "That fits data like product catalogs with different attributes per category, content with varied structure, or event records. A whole record can be read or written in one step."
       - "The flexibility has a price. Relationships between records are looser than in a relational database, so consistency has to be designed for deliberately."
 
-  - type: index
-    id: uses
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: Flexible is not the same as unplanned
+    paragraphs:
+      - "The most common problem with MongoDB is a collection where every document has drifted into a slightly different shape, and no code can rely on any field. The flexibility was used as a reason to skip design."
+      - "We agree the shape of each kind of document, validate it in the database, and plan how it changes over time, so flexibility stays a feature."
+
+  - type: table
+    id: options
     tone: white
-    columns: 2
-    label: Typical uses
-    heading: Systems that suit MongoDB
-    items:
-      - title: A catalog with varied product types
-        body: "Each category carries its own attributes, and a product page needs one read to show everything."
-      - title: Content and profile stores
-        body: "Articles, user profiles, and settings that differ from one record to the next."
-      - title: Event and activity records
-        body: "Logs of what happened, written quickly and read in bulk later."
-      - title: A product in early development
-        body: "Data shapes still changing week by week, where rigid tables would slow the team down."
+    label: Alternatives
+    heading: MongoDB compared with other databases
+    caption: MongoDB compared with other databases
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - MongoDB
+        - "Varied documents, fast-changing structure, and read-whole-record patterns."
+        - "Looser relationships, so consistency needs design."
+      - - "[PostgreSQL](ref:tech.postgresql)"
+        - "Connected business data with strict rules, plus flexible columns when needed."
+        - "Less natural for very large, constantly changing documents."
+      - - "[Firestore](ref:tech.firestore)"
+        - "Apps needing live updates with little server work."
+        - "Tied to Google's platform, with its own limits and costs."
+      - - "[DynamoDB](ref:tech.dynamodb)"
+        - "Very high scale with simple access patterns on AWS."
+        - "Needs access patterns known in advance."
 
   - type: chooser
     id: choice
@@ -106,26 +120,21 @@ sections:
         watch: "Two databases mean two things to run. Keep the split simple."
         cta: { label: Plan a mixed design, href: "/contact/?service=data-analytics" }
 
-  - type: table
-    id: options
+  - type: index
+    id: uses
     tone: white
-    label: Alternatives
-    heading: MongoDB compared with other databases
-    caption: MongoDB compared with other databases
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - MongoDB
-        - "Varied documents, fast-changing structure, and read-whole-record patterns."
-        - "Looser relationships, so consistency needs design."
-      - - "[PostgreSQL](ref:tech.postgresql)"
-        - "Connected business data with strict rules, plus flexible columns when needed."
-        - "Less natural for very large, constantly changing documents."
-      - - "[Firestore](ref:tech.firestore)"
-        - "Apps needing live updates with little server work."
-        - "Tied to Google's platform, with its own limits and costs."
-      - - "[DynamoDB](ref:tech.dynamodb)"
-        - "Very high scale with simple access patterns on AWS."
-        - "Needs access patterns known in advance."
+    columns: 2
+    label: Typical uses
+    heading: Systems that suit MongoDB
+    items:
+      - title: A catalog with varied product types
+        body: "Each category carries its own attributes, and a product page needs one read to show everything."
+      - title: Content and profile stores
+        body: "Articles, user profiles, and settings that differ from one record to the next."
+      - title: Event and activity records
+        body: "Logs of what happened, written quickly and read in bulk later."
+      - title: A product in early development
+        body: "Data shapes still changing week by week, where rigid tables would slow the team down."
 
   - type: columns
     id: dechy
@@ -150,21 +159,27 @@ sections:
           - "Migrations to and from relational databases."
           - "Careful cleaning of inconsistent data."
 
-  - type: callout
-    id: limits
+  - type: faq
+    id: faq
     tone: white
-    variant: limits
-    title: Flexible is not the same as unplanned
-    paragraphs:
-      - "The most common problem with MongoDB is a collection where every document has drifted into a slightly different shape, and no code can rely on any field. The flexibility was used as a reason to skip design."
-      - "We agree the shape of each kind of document, validate it in the database, and plan how it changes over time, so flexibility stays a feature."
+    label: Common questions
+    heading: Questions about MongoDB
+    items:
+      - q: Is MongoDB faster than a relational database?
+        a: "For reading whole documents it can be, and for some workloads it scales well. For connected data with rules, a relational database is often as fast and safer."
+      - q: Does MongoDB support transactions?
+        a: "Yes, across multiple documents. They exist, but heavy use of them is a sign that a relational database may suit the data better."
+      - q: Can we move from MongoDB to PostgreSQL or the reverse?
+        a: "Yes. We plan the mapping, test with real data, and cut over with a way back."
+      - q: Is our data safe?
+        a: "Safety depends on configuration. We set up authentication, network limits, encryption, and backups, and test recovery."
 
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with MongoDB
-    intro: "How we model and run MongoDB."
+    intro: "The detail a technical reviewer will ask about: modeling, performance, and operations."
     panels:
       - title: Modeling
         paragraphs:
@@ -179,24 +194,9 @@ sections:
           - "A managed service in most cases, with encryption, access control, and tested point-in-time recovery."
           - "Change tracking and migrations for evolving document shapes."
 
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about MongoDB
-    items:
-      - q: Is MongoDB faster than a relational database?
-        a: "For reading whole documents it can be, and for some workloads it scales well. For connected data with rules, a relational database is often as fast and safer."
-      - q: Does MongoDB support transactions?
-        a: "Yes, across multiple documents. They exist, but heavy use of them is a sign that a relational database may suit the data better."
-      - q: Can we move from MongoDB to PostgreSQL or the reverse?
-        a: "Yes. We plan the mapping, test with real data, and cut over with a way back."
-      - q: Is our data safe?
-        a: "Safety depends on configuration. We set up authentication, network limits, encryption, and backups, and test recovery."
-
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: MongoDB across DECHY
     groups:

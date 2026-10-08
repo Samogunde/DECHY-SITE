@@ -100,6 +100,43 @@ sections:
       - - A headless set-up
         - Content served to several websites and apps from one structured source.
         - More moving parts, and the front end must be built separately.
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Drupal
+    columns:
+      - title: Build
+        items:
+          - Content models designed with your editors.
+          - Themes that are fast, accessible, and consistent.
+      - title: Upgrade
+        items:
+          - Version upgrades and migrations in stages.
+          - Replacement of unsupported custom code.
+      - title: Govern
+        items:
+          - Roles, permissions, and review workflows.
+          - Audit trails for who changed what.
+      - title: Look after
+        items:
+          - Security updates applied promptly.
+          - Monitoring, backups, and performance tuning.
+  - type: index
+    id: uses
+    tone: paper
+    columns: 2
+    label: Typical sites
+    heading: Where Drupal is the right tool
+    items:
+      - title: A university or school group
+        body: Course, department, and staff pages built from one structure, in more than one language.
+      - title: A public body or regulated organization
+        body: Strict roles, review steps, and an audit trail of who published what.
+      - title: A publisher with many editors
+        body: Workflows for drafting, review, and scheduled release across large teams.
+      - title: A content hub feeding several channels
+        body: One structured source that serves a website, an app, and partner sites.
   - type: process
     id: upgrade
     tone: white
@@ -129,49 +166,12 @@ sections:
         artifacts:
           - Test results
           - Redirect map
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with Drupal
-    columns:
-      - title: Build
-        items:
-          - Content models designed with your editors.
-          - Themes that are fast, accessible, and consistent.
-      - title: Upgrade
-        items:
-          - Version upgrades and migrations in stages.
-          - Replacement of unsupported custom code.
-      - title: Govern
-        items:
-          - Roles, permissions, and review workflows.
-          - Audit trails for who changed what.
-      - title: Look after
-        items:
-          - Security updates applied promptly.
-          - Monitoring, backups, and performance tuning.
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical sites
-    heading: Where Drupal is the right tool
-    items:
-      - title: A university or school group
-        body: Course, department, and staff pages built from one structure, in more than one language.
-      - title: A public body or regulated organization
-        body: Strict roles, review steps, and an audit trail of who published what.
-      - title: A publisher with many editors
-        body: Workflows for drafting, review, and scheduled release across large teams.
-      - title: A content hub feeding several channels
-        body: One structured source that serves a website, an app, and partner sites.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Drupal
-    intro: How we run Drupal projects.
+    intro: "For your developers and IT lead: our Drupal choices on structure, content and delivery, security and maintenance, and accessibility, and the reasoning behind each."
     panels:
       - title: Structure
         items:
@@ -203,7 +203,7 @@ sections:
         a: Yes. We move content with repeatable scripts, redirect addresses, and check that nothing is lost, whichever platform you move to.
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: Drupal across DECHY
     groups:

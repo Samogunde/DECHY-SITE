@@ -70,32 +70,28 @@ sections:
       - The advantage of Microsoft 365 is that staff already use it. A form in Teams, a document library in SharePoint, or an approval in Outlook meets people where they are, with no new tool to learn and no new password.
       - The difficulty is structure. Without a plan, SharePoint becomes a pile of folders, Teams becomes a hundred channels, and automation grows as scattered flows that nobody owns.
       - "Our work is to give it shape: a sensible site and permission structure, a small number of well-built flows, and clean connections to the systems the suite does not replace."
-  - type: process
-    id: layers
+  - type: columns
+    id: dechy
     tone: paper
-    label: Built-in or custom
-    heading: Choosing the right layer for each need
-    intro: We work from the lightest tool to the heaviest, and stop at the first one that does the job well.
-    steps:
-      - title: Configure what is there
-        body: Libraries, lists, forms, and permissions set up well solve more than people expect.
-        artifacts:
-          - Site structure
-          - Permission model
-      - title: Automate between the tools
-        body: Approvals, reminders, and data movement built as flows with an owner and monitoring. See [Power Automate](ref:tech.microsoft-power-automate).
-        artifacts:
-          - Flows
-          - Run monitoring
-      - title: Build an app on the platform
-        body: Where a list and a flow are not enough, a small app or a Teams extension gives staff a proper screen.
-        artifacts:
-          - Working app
-      - title: Connect outside systems
-        body: Customer, finance, and operations systems are joined to the suite through its interfaces, so data is entered once.
-        artifacts:
-          - Connections
-          - Data map
+    label: What DECHY can do
+    heading: Working with Microsoft 365
+    columns:
+      - title: Organize
+        items:
+          - SharePoint sites and libraries that people can find things in.
+          - Teams and channels with a clear purpose, and a plan to retire the rest.
+      - title: Automate
+        items:
+          - Approvals, notices, and data movement as managed flows.
+          - Forms that feed lists, flows, and reports.
+      - title: Build
+        items:
+          - Small apps and Teams extensions for specific jobs.
+          - Custom parts where the built-in tools run out.
+      - title: Connect and move
+        items:
+          - Links to your customer records, accounting, and operations systems.
+          - Migrations from file servers and other suites.
   - type: table
     id: options
     tone: white
@@ -119,28 +115,6 @@ sections:
       - - A custom system
         - Processes that need a dedicated application and its own rules.
         - The most flexible and the most expensive to build.
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with Microsoft 365
-    columns:
-      - title: Organize
-        items:
-          - SharePoint sites and libraries that people can find things in.
-          - Teams and channels with a clear purpose, and a plan to retire the rest.
-      - title: Automate
-        items:
-          - Approvals, notices, and data movement as managed flows.
-          - Forms that feed lists, flows, and reports.
-      - title: Build
-        items:
-          - Small apps and Teams extensions for specific jobs.
-          - Custom parts where the built-in tools run out.
-      - title: Connect and move
-        items:
-          - Links to your customer records, accounting, and operations systems.
-          - Migrations from file servers and other suites.
   - type: index
     id: uses
     tone: paper
@@ -156,12 +130,38 @@ sections:
         body: News, policies, and tools in one place, found by search, not by asking.
       - title: Move off file servers
         body: Files migrated in waves, with permissions mapped and old links redirected.
+  - type: process
+    id: layers
+    tone: white
+    label: Built-in or custom
+    heading: Choosing the right layer for each need
+    intro: We work from the lightest tool to the heaviest, and stop at the first one that does the job well.
+    steps:
+      - title: Configure what is there
+        body: Libraries, lists, forms, and permissions set up well solve more than people expect.
+        artifacts:
+          - Site structure
+          - Permission model
+      - title: Automate between the tools
+        body: Approvals, reminders, and data movement built as flows with an owner and monitoring. See [Power Automate](ref:tech.microsoft-power-automate).
+        artifacts:
+          - Flows
+          - Run monitoring
+      - title: Build an app on the platform
+        body: Where a list and a flow are not enough, a small app or a Teams extension gives staff a proper screen.
+        artifacts:
+          - Working app
+      - title: Connect outside systems
+        body: Customer, finance, and operations systems are joined to the suite through its interfaces, so data is entered once.
+        artifacts:
+          - Connections
+          - Data map
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Microsoft 365
-    intro: How we build on the platform.
+    intro: "For your developers and IT lead: our Microsoft 365 choices on identity and access, data and interfaces, governance, and migration, and the reasoning behind each."
     panels:
       - title: Identity and access
         items:

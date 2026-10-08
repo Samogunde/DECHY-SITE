@@ -64,22 +64,9 @@ sections:
       - "Most firms started small and added tools as they grew: one for time, one for projects, one for the client list, one for invoices. Each is sensible. Together they require someone to carry information between them, usually a skilled person on a busy day."
       - The aim is not to turn a firm into a factory. It is to let people record what they did once, and have the rest follow.
       - There is a second difference, which is confidentiality. A firm holds its clients' draft accounts, contracts, strategies, and personal details, often for competitors at the same time. A system that mixes them, or lets the wrong colleague see a file, damages trust that took years to build.
-  - type: callout
-    id: leakage
-    tone: paper
-    variant: note
-    title: Where income quietly escapes
-    paragraphs:
-      - Most firms lose income in the same few places, rarely through one large failure.
-    items:
-      - Time worked but never recorded
-      - Recorded time on the wrong project or at the wrong rate
-      - Work done outside the scope that is never billed
-      - Invoices sent late, so payment is late
-      - Reminders that depend on someone's memory
   - type: diagram
     id: client-record
-    tone: white
+    tone: paper
     label: What it looks like
     heading: One client record across sales and delivery
     intro: A firm gains most when sales, delivery, and billing share one client record.
@@ -88,28 +75,9 @@ sections:
     takeaway: A professional firm benefits when sales, delivery, and billing share one record for each client.
     caption: This sketch shows a conceptual client system with a pipeline of prospects and a client record whose sections are in sync with other tools. It is not a client system.
     points: []
-  - type: index
-    id: leaks
-    tone: white
-    columns: 2
-    label: What we build
-    heading: Typical systems for professional firms
-    items:
-      - title: Client portals
-        body: A private place to share documents, see status, and approve work, in place of email attachments. See [customer portals](/work/areas/customer-portals/).
-      - title: Time and billing connections
-        body: Time, projects, and invoices linked, so billable work reaches the invoice.
-      - title: Proposal and onboarding workflows
-        body: From enquiry to signed engagement with the right steps and records. See [process automation](/solutions/business-process-automation/).
-      - title: Customer records
-        body: One client record across sales, delivery, and billing. See [connecting customer systems](/solutions/crm-integration/).
-      - title: Management reporting
-        body: Utilization, margin, and pipeline from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
-      - title: Knowledge and document search
-        body: Finding past work and approved templates quickly. See [knowledge and content systems](/work/areas/knowledge-and-content-systems/).
   - type: process
     id: how
-    tone: paper
+    tone: white
     label: How we work
     heading: Closing the leaks, one at a time
     steps:
@@ -132,9 +100,41 @@ sections:
         artifacts:
           - Dashboard
           - Definitions
+  - type: callout
+    id: leakage
+    tone: paper
+    variant: note
+    title: Where income quietly escapes
+    paragraphs:
+      - Most firms lose income in the same few places, rarely through one large failure.
+    items:
+      - Time worked but never recorded
+      - Recorded time on the wrong project or at the wrong rate
+      - Work done outside the scope that is never billed
+      - Invoices sent late, so payment is late
+      - Reminders that depend on someone's memory
+  - type: index
+    id: leaks
+    tone: white
+    columns: 2
+    label: What we build
+    heading: Typical systems for professional firms
+    items:
+      - title: Client portals
+        body: A private place to share documents, see status, and approve work, in place of email attachments. See [customer portals](/work/areas/customer-portals/).
+      - title: Time and billing connections
+        body: Time, projects, and invoices linked, so billable work reaches the invoice.
+      - title: Proposal and onboarding workflows
+        body: From enquiry to signed engagement with the right steps and records. See [process automation](/solutions/business-process-automation/).
+      - title: Customer records
+        body: One client record across sales, delivery, and billing. See [connecting customer systems](/solutions/crm-integration/).
+      - title: Management reporting
+        body: Utilization, margin, and pipeline from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
+      - title: Knowledge and document search
+        body: Finding past work and approved templates quickly. See [knowledge and content systems](/work/areas/knowledge-and-content-systems/).
   - type: columns
     id: help
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: How we help professional firms
     columns:
@@ -159,7 +159,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Client data and time capture notes
-    intro: The engineering choices we make for firms that hold client confidences.
+    intro: "For your developers and IT lead: our choices on keeping clients apart and capturing time reliably, and the reasoning behind each."
     panels:
       - title: Keeping clients apart
         items:

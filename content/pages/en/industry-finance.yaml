@@ -65,6 +65,28 @@ sections:
       - "A wrong figure in a marketing report is embarrassing. A wrong figure in a ledger, a policy record, or a regulatory return can be costly and hard to undo. Financial software is therefore built around checks: totals that must match, steps that must be approved, and records that must show who did what and when."
       - The second difference is history. Many firms run on core systems that are decades old, reliable in their narrow job and closed to everything else. New tools sit around them, connected by exports and re-typing. That is where errors and delay creep in.
       - "Our work is mostly at that edge: connecting the core to the tools around it, automating the manual steps, and moving old components forward one at a time."
+  - type: diagram
+    id: approval-flow
+    tone: paper
+    label: What it looks like
+    heading: An approval flow with every step recorded
+    intro: Financial processes need each approval recorded.
+    figure: workflow-ui
+    purpose: workflow
+    takeaway: A financial workflow shows each check, its owner, and its status, and records every decision.
+    caption: This sketch shows a conceptual workflow board with a request moving through four steps with owners and status labels. It is an illustration, not a client's workflow.
+    points: []
+  - type: callout
+    id: standards
+    tone: white
+    variant: note
+    title: A note on regulation
+    paragraphs:
+      - Financial firms operate under rules that differ by country and by activity. We build to the requirements you give us, and we are not your compliance adviser.
+    items:
+      - Requirements come from you and your regulator, and we design to them
+      - We suggest you confirm legal and regulatory points with your own advisers
+      - We keep an audit trail of changes and access, whatever the rules
   - type: chooser
     id: start
     tone: paper
@@ -89,47 +111,6 @@ sections:
         when: Every change is slow, risky, or impossible, and few people understand it.
         get: A staged route that surrounds, then replaces, parts of it.
         watch: Plan data checks and a way back for every step.
-  - type: diagram
-    id: approval-flow
-    tone: white
-    label: What it looks like
-    heading: An approval flow with every step recorded
-    intro: Financial processes need each approval recorded.
-    figure: workflow-ui
-    purpose: workflow
-    takeaway: A financial workflow shows each check, its owner, and its status, and records every decision.
-    caption: This sketch shows a conceptual workflow board with a request moving through four steps with owners and status labels. It is an illustration, not a client's workflow.
-    points: []
-  - type: index
-    id: needs
-    tone: white
-    columns: 2
-    label: What we build
-    heading: Typical systems for financial firms
-    items:
-      - title: Customer and client portals
-        body: Secure places for customers to see accounts, documents, and requests. See [customer portals](/work/areas/customer-portals/).
-      - title: Workflow and approvals
-        body: Applications, claims, and requests routed with owners, deadlines, and records. See [process automation](/solutions/business-process-automation/).
-      - title: Integration between systems
-        body: Links between the core, the CRM, billing, and reporting. See [connecting customer systems](/solutions/crm-integration/).
-      - title: Management and regulatory reporting
-        body: Figures from agreed definitions, with a trail from number to source. See [business dashboards](/solutions/business-dashboards/).
-      - title: Modernizing old components
-        body: Staged moves that keep the business running. See [legacy system modernization](/solutions/legacy-system-modernization/).
-      - title: Secure hosting and operations
-        body: Cloud environments with strong access control and monitoring. See [cloud migration](/solutions/cloud-migration/).
-  - type: callout
-    id: standards
-    tone: paper
-    variant: note
-    title: A note on regulation
-    paragraphs:
-      - Financial firms operate under rules that differ by country and by activity. We build to the requirements you give us, and we are not your compliance adviser.
-    items:
-      - Requirements come from you and your regulator, and we design to them
-      - We suggest you confirm legal and regulatory points with your own advisers
-      - We keep an audit trail of changes and access, whatever the rules
   - type: columns
     id: help
     tone: white
@@ -152,24 +133,25 @@ sections:
         items:
           - Moving components forward without stopping service.
           - Cloud hosting with a documented data location.
-  - type: technical
-    id: technology
+  - type: index
+    id: needs
     tone: paper
-    label: Technical depth
-    heading: Accuracy and audit notes
-    intro: How we build for exacting environments.
-    panels:
-      - title: Accuracy
-        items:
-          - Money is handled in exact decimal types, never in floating-point numbers, and rounding rules are written down and tested.
-          - Totals are reconciled between systems automatically, and differences raise an alert.
-      - title: Audit and access
-        items:
-          - Every change to a record is logged with who, when, and what changed, in a form that cannot be quietly altered.
-          - Duties are separated, so the person who requests a change is not the person who approves it.
-      - title: Integration
-        paragraphs:
-          - Messages between systems carry identifiers that make each action repeatable without duplicating it. See our [integration](ref:svc.api-integration) work.
+    columns: 2
+    label: What we build
+    heading: Typical systems for financial firms
+    items:
+      - title: Customer and client portals
+        body: Secure places for customers to see accounts, documents, and requests. See [customer portals](/work/areas/customer-portals/).
+      - title: Workflow and approvals
+        body: Applications, claims, and requests routed with owners, deadlines, and records. See [process automation](/solutions/business-process-automation/).
+      - title: Integration between systems
+        body: Links between the core, the CRM, billing, and reporting. See [connecting customer systems](/solutions/crm-integration/).
+      - title: Management and regulatory reporting
+        body: Figures from agreed definitions, with a trail from number to source. See [business dashboards](/solutions/business-dashboards/).
+      - title: Modernizing old components
+        body: Staged moves that keep the business running. See [legacy system modernization](/solutions/legacy-system-modernization/).
+      - title: Secure hosting and operations
+        body: Cloud environments with strong access control and monitoring. See [cloud migration](/solutions/cloud-migration/).
   - type: faq
     id: faq
     tone: white
@@ -184,6 +166,24 @@ sections:
         a: Compliance is your responsibility and your regulator's judgment. We build to the requirements you give us and design for traceability, and we suggest you confirm points with your own advisers.
       - q: Can automation make decisions for us?
         a: It can apply fixed rules and flag exceptions. We keep a person in the decision wherever judgment or risk is involved.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Accuracy and audit notes
+    intro: "For your developers and IT lead: our choices on accuracy, audit and access, and integration, and the reasoning behind each."
+    panels:
+      - title: Accuracy
+        items:
+          - Money is handled in exact decimal types, never in floating-point numbers, and rounding rules are written down and tested.
+          - Totals are reconciled between systems automatically, and differences raise an alert.
+      - title: Audit and access
+        items:
+          - Every change to a record is logged with who, when, and what changed, in a form that cannot be quietly altered.
+          - Duties are separated, so the person who requests a change is not the person who approves it.
+      - title: Integration
+        paragraphs:
+          - Messages between systems carry identifiers that make each action repeatable without duplicating it. See our [integration](ref:svc.api-integration) work.
   - type: related
     id: related
     tone: paper

@@ -149,7 +149,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The choices behind a typical system.
+    intro: "Our engineering choices on choosing the building blocks, structure, and ownership, written for the people who will own the system after launch."
     panels:
       - title: Choosing the building blocks
         paragraphs:

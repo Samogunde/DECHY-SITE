@@ -53,9 +53,31 @@ sections:
       - With Wix you do not rent a server, install software, or apply security updates. You design pages in an editor, add features from a library, and publish. Wix keeps the site online and patched.
       - That trade is the whole point. You give up some control, such as the ability to move the finished design to another host, and in return you avoid most of the work of running a website. For many small businesses that is the right bargain.
       - "Trouble starts when the site is asked to do work that the platform was not built for: unusual logic, heavy integrations, very fast pages on large catalogs, or content that must follow a strict structure."
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Wix
+    columns:
+      - title: Build
+        items:
+          - New Wix sites designed around your offer, not a template's layout.
+          - Stores, bookings, and events set up and tested.
+      - title: Extend
+        items:
+          - Custom behavior using the platform's developer tools.
+          - Forms and data connected to your other systems.
+      - title: Improve
+        items:
+          - Speed and search visibility reviews.
+          - Mobile layouts that are designed, not merely shrunk.
+      - title: Move
+        items:
+          - A planned move off Wix when the site outgrows it, keeping addresses and search visibility.
+          - Content and product data carried across.
   - type: table
     id: options
-    tone: paper
+    tone: white
     label: Options
     heading: Wix beside the other ways to build a site
     caption: Wix compared with other common ways to build a business website
@@ -79,40 +101,6 @@ sections:
       - - A custom build
         - Unusual functions, strict performance targets, or a product the site is part of.
         - The highest cost and the most control.
-  - type: columns
-    id: dechy
-    tone: white
-    label: What DECHY can do
-    heading: Working with Wix
-    columns:
-      - title: Build
-        items:
-          - New Wix sites designed around your offer, not a template's layout.
-          - Stores, bookings, and events set up and tested.
-      - title: Extend
-        items:
-          - Custom behavior using the platform's developer tools.
-          - Forms and data connected to your other systems.
-      - title: Improve
-        items:
-          - Speed and search visibility reviews.
-          - Mobile layouts that are designed, not merely shrunk.
-      - title: Move
-        items:
-          - A planned move off Wix when the site outgrows it, keeping addresses and search visibility.
-          - Content and product data carried across.
-  - type: callout
-    id: tradeoff
-    tone: paper
-    variant: note
-    title: What you give up for the convenience
-    paragraphs:
-      - A hosted builder removes work, and the price of that is control. Knowing the limits before you start avoids a rebuild later.
-    items:
-      - The design cannot be exported as code and used elsewhere
-      - Custom logic is limited to what the platform's developer tools allow
-      - Page speed depends partly on the platform's own overhead
-      - Your site depends on the platform's pricing and product decisions
   - type: process
     id: path
     tone: paper
@@ -136,12 +124,24 @@ sections:
         body: Hundreds of similar pages need strict templates and fields the editor cannot enforce.
         artifacts:
           - Content model
+  - type: callout
+    id: tradeoff
+    tone: white
+    variant: note
+    title: What you give up for the convenience
+    paragraphs:
+      - A hosted builder removes work, and the price of that is control. Knowing the limits before you start avoids a rebuild later.
+    items:
+      - The design cannot be exported as code and used elsewhere
+      - Custom logic is limited to what the platform's developer tools allow
+      - Page speed depends partly on the platform's own overhead
+      - Your site depends on the platform's pricing and product decisions
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Wix
-    intro: How we approach Wix work.
+    intro: "What we settle early on Wix work: custom code, data and connections, performance and search, and leaving, so nothing surprises your team later."
     panels:
       - title: Custom code
         items:

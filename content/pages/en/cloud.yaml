@@ -213,7 +213,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: How we build and run cloud systems.
+    intro: "Our engineering choices on infrastructure written as code, containers and orchestration, release pipelines, and watching the system, written for the people who will own the system after launch."
     panels:
       - title: Infrastructure written as code
         paragraphs:

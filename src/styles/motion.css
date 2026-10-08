@@ -1,0 +1,165 @@
+/* ------------------------------------------------------------------------------------------
+   Motion layer for figures and interactive cards (docs/design/motion-system.md).
+   One language: the tokens in :root (--dur-fast 140ms for feedback, --dur-base 220ms for state,
+   --dur-slow 520ms for entrances, one ease). Everything that moves on arrival keys off the
+   figure reveal (data-state hidden to shown), so it plays once, only for content that scrolls
+   in, and never under prefers-reduced-motion (the reveal script does not run then).
+   ------------------------------------------------------------------------------------------ */
+
+@property --m {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Chart bars grow from the baseline in order. */
+  [data-reveal="figure"][data-state="hidden"] .mk-bar {
+    transform: scaleY(0);
+  }
+  [data-reveal="figure"] .mk-bar {
+    transform-origin: 50% 100%;
+  }
+  [data-reveal="figure"][data-state="shown"] .mk-bar {
+    transition: transform 640ms var(--ease-out);
+    transition-delay: calc(180ms + var(--b, 0) * 45ms);
+  }
+
+  /* Progress meters fill. */
+  [data-reveal="figure"][data-state="hidden"] .pu-meter {
+    --m: 0%;
+  }
+  [data-reveal="figure"][data-state="shown"] .pu-meter {
+    transition: --m 900ms var(--ease-out) 260ms;
+  }
+  [data-reveal="figure"][data-state="hidden"] .mk-meter > span {
+    transform: scaleX(0);
+  }
+  [data-reveal="figure"] .mk-meter > span {
+    transform-origin: 0 50%;
+  }
+  [data-reveal="figure"][data-state="shown"] .mk-meter > span {
+    transition: transform 900ms var(--ease-out) 260ms;
+  }
+
+  /* Interface parts arrive in a short sequence: cards and rows first, then status labels. */
+  [data-reveal="figure"][data-state="hidden"] :is(.mk-card, .mk-tile, .pu-card, .pu-mcard) {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  [data-reveal="figure"][data-state="shown"] :is(.mk-card, .mk-tile, .pu-card, .pu-mcard) {
+    transition:
+      opacity var(--dur-slow) var(--ease-out),
+      transform var(--dur-slow) var(--ease-out);
+    transition-delay: 160ms;
+  }
+  [data-reveal="figure"][data-state="shown"]
+    :is(.mk-card, .mk-tile, .pu-card, .pu-mcard):nth-child(2) {
+    transition-delay: 230ms;
+  }
+  [data-reveal="figure"][data-state="shown"]
+    :is(.mk-card, .mk-tile, .pu-card, .pu-mcard):nth-child(3) {
+    transition-delay: 300ms;
+  }
+  [data-reveal="figure"][data-state="shown"]
+    :is(.mk-card, .mk-tile, .pu-card, .pu-mcard):nth-child(n + 4) {
+    transition-delay: 370ms;
+  }
+
+  /* A phone or a second window settles in front of the main one. */
+  [data-reveal="figure"][data-state="hidden"] :is(.pu-phone, .mk-set-phone) {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  [data-reveal="figure"][data-state="shown"] :is(.pu-phone, .mk-set-phone) {
+    transition:
+      opacity 600ms var(--ease-out) 380ms,
+      transform 600ms var(--ease-out) 380ms;
+  }
+
+  /* Hub: the connectors draw out from each part once the parts are in. */
+  [data-reveal="figure"][data-state="hidden"] .hub-spoke::after {
+    transform: scaleX(0);
+  }
+  [data-reveal="figure"] .hub-left .hub-spoke::after {
+    transform-origin: 0 50%;
+  }
+  [data-reveal="figure"] .hub-right .hub-spoke::after {
+    transform-origin: 100% 50%;
+  }
+  [data-reveal="figure"][data-state="shown"] .hub-spoke::after {
+    transition: transform 420ms var(--ease-out);
+    transition-delay: calc(160ms + var(--i, 0) * 90ms);
+  }
+
+  /* Delivery steps: the path between numbers draws in after the cards arrive. */
+  [data-reveal="group"][data-state="hidden"] .step::before {
+    transform: scale(0);
+  }
+  .steps .step::before {
+    transform-origin: 0 0;
+  }
+  [data-reveal="group"][data-state="shown"] .step::before {
+    transition: transform 520ms var(--ease-out);
+    transition-delay: calc(240ms + var(--i, 0) * var(--stagger));
+  }
+}
+
+/* ---------------- Hover inside interface mockups (pointer only) ----------------
+   The mockups are pictures, so nothing here is a control; pointing at a row or a card simply
+   lights it, which makes the interface feel real without pretending to be one. */
+@media (hover: hover) {
+  .pu-tr:not(.pu-th),
+  .mk-rows li,
+  .mk-card,
+  .pu-mcard,
+  .pu-nav {
+    transition:
+      background-color var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-fast) var(--ease-out);
+  }
+  .pu-tr:not(.pu-th):hover,
+  .mk-rows li:hover,
+  .pu-nav:hover {
+    background-color: rgb(47 111 237 / 0.06);
+  }
+  .mk-card:hover,
+  .pu-mcard:hover {
+    box-shadow: 0 0 0 1.5px var(--color-blue);
+  }
+}
+
+/* ---------------- Interactive cards: feedback that matches what they do ---------------- */
+/* Cards that are links lift and move their arrow; cards that are only information stay still
+   and acknowledge the pointer with an outline, so nothing pretends to be clickable. */
+@media (hover: hover) {
+  .option-card:hover {
+    transform: none;
+  }
+  .col-card,
+  .step-card,
+  .connects-card {
+    transition: border-color var(--dur-fast) var(--ease-out);
+  }
+  .col-card:hover,
+  .connects-card:hover {
+    border-color: rgb(17 24 39 / 0.26);
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .dest-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px -26px rgb(17 24 39 / 0.5);
+  }
+  .dest-card {
+    transition:
+      border-color var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out);
+  }
+}
+.dest-card:active,
+.path-row > .row-link:active {
+  transform: translateY(0) scale(0.99);
+  transition-duration: 70ms;
+}

@@ -62,67 +62,6 @@ sections:
       - "Working across media matters for tasks like reading a scanned form with handwriting, describing a product photo, or summarizing a recorded call. One model can handle the whole item."
       - "For organizations already on Google Cloud, there is a practical advantage: billing, access control, and data location can follow the rules they already use."
 
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical uses
-    heading: Work that suits mixed media
-    items:
-      - title: Reading scanned forms and receipts
-        body: "Extracting names, dates, and amounts from paper that was scanned or photographed, and flagging the unclear ones."
-      - title: Describing product and site images
-        body: "Writing descriptions and tags for large image libraries, with a person reviewing a sample."
-      - title: Summarizing recorded calls
-        body: "Turning audio into a short record of what was agreed and what needs follow-up."
-      - title: Answering questions across Workspace files
-        body: "Finding information in documents, sheets, and email, within each person's own permissions."
-
-  - type: chooser
-    id: fit
-    tone: paper
-    label: Where it fits
-    heading: When Gemini is worth testing first
-    intro: "These are the situations where we most often include it in a comparison."
-    question: Which sounds like your project?
-    options:
-      - label: We are already on Google Cloud
-        when: "Your data, identity, and billing are on Google Cloud."
-        get: "AI features that follow your existing access rules, regions, and billing, with less new vendor work."
-        watch: "Convenience is not quality. We still compare on your own examples."
-        cta: { label: Plan on Google Cloud, href: "/contact/?service=ai" }
-      - label: Our material is not just text
-        when: "Scans, photos, recordings, or video that people review by hand."
-        get: "A pipeline that reads the media, extracts the facts, and flags what needs a person."
-        watch: "Quality depends on the source. Poor scans and noisy audio need testing early."
-        cta: { label: Plan a media workflow, href: "/contact/?service=ai" }
-      - label: We use Google Workspace
-        when: "Your team works in Docs, Sheets, Gmail, and Drive."
-        get: "Assistants and automations that work with files and messages where your team already works."
-        watch: "Permissions need care. An assistant should see only what its user may see."
-        cta: { label: Plan Workspace automation, href: "/contact/?service=ai" }
-
-  - type: table
-    id: options
-    tone: white
-    label: Alternatives
-    heading: Gemini compared with other providers
-    caption: What to weigh when choosing between language-model providers
-    columns: [Consideration, Where Gemini may help, Where to check]
-    rows:
-      - - Ecosystem
-        - "Close to [Google Cloud](ref:plat.google-cloud) and Google Workspace."
-        - "Less natural if your stack is elsewhere."
-      - - Media types
-        - "Built to take mixed input."
-        - "Quality on your particular media."
-      - - Alternatives
-        - "[OpenAI](ref:prov.openai) and [Anthropic Claude](ref:prov.anthropic-claude) are strong options."
-        - "Run the same examples through each."
-      - - Open models
-        - "Not applicable."
-        - "Open models can run in your own environment when data cannot leave it."
-
   - type: columns
     id: dechy
     tone: paper
@@ -146,12 +85,73 @@ sections:
           - "Deployment on Google Cloud, with cost alerts."
           - "Re-testing as models change."
 
+  - type: chooser
+    id: fit
+    tone: white
+    label: Where it fits
+    heading: When Gemini is worth testing first
+    intro: "These are the situations where we most often include it in a comparison."
+    question: Which sounds like your project?
+    options:
+      - label: We are already on Google Cloud
+        when: "Your data, identity, and billing are on Google Cloud."
+        get: "AI features that follow your existing access rules, regions, and billing, with less new vendor work."
+        watch: "Convenience is not quality. We still compare on your own examples."
+        cta: { label: Plan on Google Cloud, href: "/contact/?service=ai" }
+      - label: Our material is not just text
+        when: "Scans, photos, recordings, or video that people review by hand."
+        get: "A pipeline that reads the media, extracts the facts, and flags what needs a person."
+        watch: "Quality depends on the source. Poor scans and noisy audio need testing early."
+        cta: { label: Plan a media workflow, href: "/contact/?service=ai" }
+      - label: We use Google Workspace
+        when: "Your team works in Docs, Sheets, Gmail, and Drive."
+        get: "Assistants and automations that work with files and messages where your team already works."
+        watch: "Permissions need care. An assistant should see only what its user may see."
+        cta: { label: Plan Workspace automation, href: "/contact/?service=ai" }
+
+  - type: table
+    id: options
+    tone: paper
+    label: Alternatives
+    heading: Gemini compared with other providers
+    caption: What to weigh when choosing between language-model providers
+    columns: [Consideration, Where Gemini may help, Where to check]
+    rows:
+      - - Ecosystem
+        - "Close to [Google Cloud](ref:plat.google-cloud) and Google Workspace."
+        - "Less natural if your stack is elsewhere."
+      - - Media types
+        - "Built to take mixed input."
+        - "Quality on your particular media."
+      - - Alternatives
+        - "[OpenAI](ref:prov.openai) and [Anthropic Claude](ref:prov.anthropic-claude) are strong options."
+        - "Run the same examples through each."
+      - - Open models
+        - "Not applicable."
+        - "Open models can run in your own environment when data cannot leave it."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Work that suits mixed media
+    items:
+      - title: Reading scanned forms and receipts
+        body: "Extracting names, dates, and amounts from paper that was scanned or photographed, and flagging the unclear ones."
+      - title: Describing product and site images
+        body: "Writing descriptions and tags for large image libraries, with a person reviewing a sample."
+      - title: Summarizing recorded calls
+        body: "Turning audio into a short record of what was agreed and what needs follow-up."
+      - title: Answering questions across Workspace files
+        body: "Finding information in documents, sheets, and email, within each person's own permissions."
+
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Google Gemini
-    intro: "How we build with Gemini."
+    intro: "The detail a technical reviewer will ask about: access routes, pipeline design, and evaluation."
     panels:
       - title: Access routes
         paragraphs:

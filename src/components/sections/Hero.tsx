@@ -38,7 +38,7 @@ export function Hero({
             {block.eyebrow ? <p className="t-eyebrow m-0">{block.eyebrow}</p> : null}
             <h1
               id={`${block.id}-h`}
-              className={`${isHome ? "t-display" : "t-h1"} mt-4 max-w-[19ch] ${isHome ? "min-[48rem]:max-w-[17ch]" : ""}`}
+              className={`${isHome ? "t-display" : "t-h1"} mt-4 ${isHome ? "max-w-[22ch]" : "max-w-[19ch]"}`}
             >
               {block.headline}
             </h1>
@@ -46,7 +46,9 @@ export function Hero({
               <Inline text={block.lead} />
             </p>
             {block.support ? (
-              <p className="t-body mt-4 max-w-[52ch] text-slate-text">
+              <p
+                className={`t-body mt-4 text-slate-text ${isHome ? "max-w-[46rem]" : "max-w-[52ch]"}`}
+              >
                 <Inline text={block.support} />
               </p>
             ) : null}

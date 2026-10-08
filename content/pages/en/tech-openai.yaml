@@ -70,6 +70,70 @@ sections:
     paragraphs:
       - You do not host these models yourself. That makes starting easy, and it means decisions about data handling, cost, and reliability depend partly on the provider's terms.
       - "Good integration is therefore less about calling the model and more about what surrounds the call: what is sent, what is checked, what is stored, and what happens when the answer is wrong."
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with OpenAI
+    columns:
+      - title: Design
+        items:
+          - Choosing which tasks suit a model and which do not.
+          - Cost estimates before building.
+      - title: Build
+        items:
+          - Features inside your product or workflow.
+          - Search and question answering over your documents.
+      - title: Control
+        items:
+          - Test sets and sampling of real results.
+          - Limits on spend, data sent, and actions allowed.
+      - title: Stay flexible
+        items:
+          - A design that lets the provider be swapped.
+          - Comparisons with other providers on your own examples.
+  - type: diagram
+    id: assistant-view
+    tone: white
+    label: What it looks like
+    heading: A model used safely inside a product
+    intro: A language model is useful inside a product when its answers are sourced and a person can step in.
+    figure: assistant-ui
+    purpose: system
+    takeaway: A language model works safely inside a product when its answers carry sources and a person can step in.
+    caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It is an illustration and not a client's product.
+    points: []
+  - type: diagram
+    id: control
+    tone: paper
+    label: Cost and risk
+    heading: What surrounds a model call
+    intro: The call is the small part. The layers around it make it safe to use.
+    spec:
+      kind: layers
+      layerLabel: Layers around a model call
+      layers:
+        - title: Your rules
+          text: What the feature may do, and what needs approval.
+        - title: What is sent
+          text: Only the data the task needs, with private parts removed.
+        - title: The model call
+          text: A request to the provider, with limits on size and spend.
+        - title: Checks on the answer
+          text: Validation, source checks, and confidence limits.
+        - title: Records
+          text: Logs and samples, so quality can be reviewed.
+    purpose: system
+    takeaway: A safe model call is wrapped in rules, a limit on what is sent, checks on the answer, and records that allow review.
+    caption: This diagram shows five layers around a model call, from your rules at the top to records at the bottom, with the call itself in the middle.
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: What no model removes
+    paragraphs:
+      - Language models can state wrong things with confidence. Careful design reduces this and testing measures it, but no setup removes it. Where a wrong answer is costly, a person should check it.
+      - We will tell you which parts of your process can be automated safely and which should stay with people.
   - type: table
     id: tasks
     tone: paper
@@ -96,68 +160,12 @@ sections:
       - - Drafting replies
         - Text generation.
         - Tone, correctness, and a person approving before sending.
-  - type: diagram
-    id: assistant-view
-    tone: white
-    label: What it looks like
-    heading: A model used safely inside a product
-    intro: A language model is useful inside a product when its answers are sourced and a person can step in.
-    figure: assistant-ui
-    purpose: system
-    takeaway: A language model works safely inside a product when its answers carry sources and a person can step in.
-    caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It is an illustration and not a client's product.
-    points: []
-  - type: columns
-    id: dechy
-    tone: white
-    label: What DECHY can do
-    heading: Working with OpenAI
-    columns:
-      - title: Design
-        items:
-          - Choosing which tasks suit a model and which do not.
-          - Cost estimates before building.
-      - title: Build
-        items:
-          - Features inside your product or workflow.
-          - Search and question answering over your documents.
-      - title: Control
-        items:
-          - Test sets and sampling of real results.
-          - Limits on spend, data sent, and actions allowed.
-      - title: Stay flexible
-        items:
-          - A design that lets the provider be swapped.
-          - Comparisons with other providers on your own examples.
-  - type: diagram
-    id: control
-    tone: paper
-    label: Cost and risk
-    heading: What surrounds a model call
-    intro: The call is the small part. The layers around it make it safe to use.
-    spec:
-      kind: layers
-      layerLabel: Layers around a model call
-      layers:
-        - title: Your rules
-          text: What the feature may do, and what needs approval.
-        - title: What is sent
-          text: Only the data the task needs, with private parts removed.
-        - title: The model call
-          text: A request to the provider, with limits on size and spend.
-        - title: Checks on the answer
-          text: Validation, source checks, and confidence limits.
-        - title: Records
-          text: Logs and samples, so quality can be reviewed.
-    purpose: system
-    takeaway: A safe model call is wrapped in rules, a limit on what is sent, checks on the answer, and records that allow review.
-    caption: This diagram shows five layers around a model call, from your rules at the top to records at the bottom, with the call itself in the middle.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with OpenAI
-    intro: How we integrate the models.
+    intro: "What we settle early on OpenAI work: integration, quality, and data handling, so nothing surprises your team later."
     panels:
       - title: Integration
         paragraphs:
@@ -170,17 +178,9 @@ sections:
       - title: Data handling
         paragraphs:
           - We review the provider's data terms against your requirements, send the minimum data, and choose regions and retention settings where the provider offers them.
-  - type: callout
-    id: limits
-    tone: paper
-    variant: limits
-    title: What no model removes
-    paragraphs:
-      - Language models can state wrong things with confidence. Careful design reduces this and testing measures it, but no setup removes it. Where a wrong answer is costly, a person should check it.
-      - We will tell you which parts of your process can be automated safely and which should stay with people.
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about OpenAI
     items:
@@ -194,7 +194,7 @@ sections:
         a: Our test set shows the effect, and the design lets us adjust or switch. That is why we keep the provider behind a clear boundary.
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: OpenAI across DECHY
     groups:

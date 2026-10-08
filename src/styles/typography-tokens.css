@@ -16,7 +16,8 @@
   --t: 1;
 
   /* Fluid reading and heading sizes. clamp(min, intercept + slope vw, max). */
-  --fs-display: calc(clamp(2.25rem, 1.5833rem + 2.963vw, 4.25rem) * var(--t));
+  /* Owner direction, 7 October 2026: the home headline sits on four lines, not five. */
+  --fs-display: calc(clamp(2.125rem, 1.6rem + 2.2vw, 3.5rem) * var(--t));
   --fs-h1: calc(clamp(2rem, 1.5833rem + 1.8519vw, 3.25rem) * var(--t));
   --fs-h2: calc(clamp(1.5rem, 1.2917rem + 0.9259vw, 2.125rem) * var(--t));
   --fs-h3: calc(clamp(1.3125rem, 1.1667rem + 0.6481vw, 1.75rem) * var(--t));

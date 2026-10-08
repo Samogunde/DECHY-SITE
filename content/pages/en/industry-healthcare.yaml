@@ -70,28 +70,9 @@ sections:
       - Three things set healthcare apart. The information is among the most sensitive that exists, so a careless screen can do real harm. The work is interrupted and urgent, so a system that is slow or awkward is not merely irritating, it takes time from care. And the estate is old and varied, with systems bought years apart that were never designed to share data.
       - Good healthcare software therefore does less than it could and does it reliably. It shows each person only what they need. It records who looked at what. It connects to the systems already in place without asking staff to change how they work for the sake of the software.
       - We approach it as a connection and protection problem first, and a features problem second.
-  - type: index
-    id: needs
-    tone: paper
-    columns: 2
-    label: What teams ask for
-    heading: Common needs in healthcare
-    items:
-      - title: Booking and reminders
-        body: Patients choose a time online and get reminders, which reduces missed appointments and phone traffic.
-      - title: A patient portal
-        body: Patients see their appointments, documents, and messages, and complete forms before they arrive. See [customer portals](/work/areas/customer-portals/).
-      - title: Connected systems
-        body: Records, scheduling, and billing share data through the interfaces your systems offer, so details are entered once. See [connecting customer systems](/solutions/crm-integration/) for the pattern.
-      - title: Referral and task workflows
-        body: A referral moves through its steps with owners and deadlines, in place of email chains. See [process automation](/solutions/business-process-automation/).
-      - title: Reporting for managers
-        body: Activity, waiting times, and quality figures on one screen, from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
-      - title: Moving off an old system
-        body: An older records or booking system brought forward in stages. See [legacy system modernization](/solutions/legacy-system-modernization/).
   - type: diagram
     id: app-screen
-    tone: white
+    tone: paper
     label: What it looks like
     heading: A staff or patient app built for a busy day
     intro: Healthcare screens must be quick to read between tasks.
@@ -150,9 +131,28 @@ sections:
         artifacts:
           - Pilot
           - Review
+  - type: index
+    id: needs
+    tone: white
+    columns: 2
+    label: What teams ask for
+    heading: Common needs in healthcare
+    items:
+      - title: Booking and reminders
+        body: Patients choose a time online and get reminders, which reduces missed appointments and phone traffic.
+      - title: A patient portal
+        body: Patients see their appointments, documents, and messages, and complete forms before they arrive. See [customer portals](/work/areas/customer-portals/).
+      - title: Connected systems
+        body: Records, scheduling, and billing share data through the interfaces your systems offer, so details are entered once. See [connecting customer systems](/solutions/crm-integration/) for the pattern.
+      - title: Referral and task workflows
+        body: A referral moves through its steps with owners and deadlines, in place of email chains. See [process automation](/solutions/business-process-automation/).
+      - title: Reporting for managers
+        body: Activity, waiting times, and quality figures on one screen, from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
+      - title: Moving off an old system
+        body: An older records or booking system brought forward in stages. See [legacy system modernization](/solutions/legacy-system-modernization/).
   - type: columns
     id: help
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: How we help healthcare teams
     columns:
@@ -177,7 +177,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Privacy and integration notes
-    intro: The engineering choices we make on health data.
+    intro: "The detail a technical reviewer will ask about: where data lives, connecting systems, and using AI carefully."
     panels:
       - title: Where data lives
         items:
@@ -192,7 +192,7 @@ sections:
           - Where AI can help, for example sorting incoming messages, we avoid sending identifiable information to outside models unless the provider's terms and your policy allow it. A person reviews anything that affects care. See our [AI work](ref:svc.ai).
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about healthcare software
     items:
@@ -206,7 +206,7 @@ sections:
         a: "Yes, when it is simple and covers what they ask for most: appointments, documents, and messages. We design for people who are unwell, tired, or unfamiliar with technology."
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: Healthcare across DECHY
     groups:

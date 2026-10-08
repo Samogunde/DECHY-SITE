@@ -88,9 +88,22 @@ sections:
       - - Recurring and payout use
         - Subscriptions, and paying sellers or contractors.
         - Rules and limits differ by country, so check each market.
+  - type: callout
+    id: wrong
+    tone: white
+    variant: note
+    title: Where PayPal integrations usually go wrong
+    paragraphs:
+      - Most faults appear after launch, in cases that were not tested. These are the ones we design for first.
+    items:
+      - A customer approves the payment but closes the window before the order is saved
+      - A webhook is missed, so a paid order stays marked as unpaid
+      - A partial refund is made in PayPal but never reaches the accounts
+      - A dispute arrives weeks later and nobody sees it
+      - Test and live settings get mixed up between environments
   - type: columns
     id: dechy
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: Working with PayPal
     columns:
@@ -110,25 +123,26 @@ sections:
         items:
           - PayPal alongside [Stripe](ref:int.stripe) or other providers.
           - A single view of payments across methods.
-  - type: callout
-    id: wrong
-    tone: paper
-    variant: note
-    title: Where PayPal integrations usually go wrong
-    paragraphs:
-      - Most faults appear after launch, in cases that were not tested. These are the ones we design for first.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about PayPal integration
     items:
-      - A customer approves the payment but closes the window before the order is saved
-      - A webhook is missed, so a paid order stays marked as unpaid
-      - A partial refund is made in PayPal but never reaches the accounts
-      - A dispute arrives weeks later and nobody sees it
-      - Test and live settings get mixed up between environments
+      - q: Should we offer PayPal as well as cards?
+        a: If your customers use it, yes. Many shoppers choose PayPal for convenience or protection, and offering it can avoid lost orders. Check your audience and fees.
+      - q: How are refunds and disputes handled?
+        a: Both arrive as events and update the order record and the accounts. A dispute also alerts the person who handles it, with the order and customer details attached.
+      - q: Can PayPal handle subscriptions?
+        a: Yes, for many cases. Rules differ by country and by product, so we check your model first.
+      - q: What about the fees?
+        a: PayPal charges fees on payments, which differ by market. We record them against each payment, so margins are clear and reconciliation is exact.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with PayPal
-    intro: How we build payment integrations.
+    intro: "Our engineering choices on order and capture, notifications, security, and testing, written for the people who will own the system after launch."
     panels:
       - title: Order and capture
         items:
@@ -145,23 +159,9 @@ sections:
       - title: Testing
         paragraphs:
           - "We test the full range of cases in the sandbox: approval, cancellation, failure, partial refund, and dispute, before live traffic. See our wider [integration](ref:svc.api-integration) work."
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about PayPal integration
-    items:
-      - q: Should we offer PayPal as well as cards?
-        a: If your customers use it, yes. Many shoppers choose PayPal for convenience or protection, and offering it can avoid lost orders. Check your audience and fees.
-      - q: How are refunds and disputes handled?
-        a: Both arrive as events and update the order record and the accounts. A dispute also alerts the person who handles it, with the order and customer details attached.
-      - q: Can PayPal handle subscriptions?
-        a: Yes, for many cases. Rules differ by country and by product, so we check your model first.
-      - q: What about the fees?
-        a: PayPal charges fees on payments, which differ by market. We record them against each payment, so margins are clear and reconciliation is exact.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: PayPal across DECHY
     groups:

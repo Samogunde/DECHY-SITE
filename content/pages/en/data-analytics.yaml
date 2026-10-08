@@ -232,7 +232,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The building blocks.
+    intro: "The detail a technical reviewer will ask about: storing and organizing information, moving information, modeling and definitions, and reporting and data quality."
     panels:
       - title: Storing and organizing information
         paragraphs:

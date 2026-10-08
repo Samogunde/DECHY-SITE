@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { DiagramRoot, step } from "./DiagramRoot";
 
 /**
@@ -27,7 +27,7 @@ function Bars({ values, accent = -1 }: { values: number[]; accent?: number }) {
         <span
           key={i}
           className={`mk-bar${i === accent ? " mk-bar-accent" : ""}`}
-          style={{ height: `${v}%` }}
+          style={{ height: `${v}%`, "--b": i } as CSSProperties}
         />
       ))}
     </div>

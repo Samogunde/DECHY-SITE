@@ -144,7 +144,7 @@ sections:
     tone: white
     label: Technical depth
     heading: How we build with Squarespace
-    intro: How we extend and tune Squarespace sites.
+    intro: "The detail a technical reviewer will ask about: extending the platform, performance, search and analytics, and leaving."
     panels:
       - title: Extending the platform
         items:

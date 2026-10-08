@@ -63,6 +63,36 @@ sections:
       - "The breadth means there are several ways to do almost anything, such as running code on a server, in a container, or as a function triggered by an event. The right choice depends on the workload, the team, and the budget."
       - "It also means the defaults are not always safe or cheap. Good AWS work is mostly about restraint: choosing few services, closing access by default, and watching the bill."
 
+  - type: table
+    id: compare
+    tone: paper
+    label: Alternatives
+    heading: AWS compared with other clouds
+    caption: AWS compared with other cloud options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - AWS
+        - "Broad needs, mature tooling, and wide availability of skills."
+        - "Many choices, and pricing that needs watching."
+      - - "[Azure](ref:plat.azure)"
+        - "Organizations centered on Microsoft tools and identity."
+        - "Best value inside the Microsoft ecosystem."
+      - - "[Google Cloud](ref:plat.google-cloud)"
+        - "Data, analytics, and AI-heavy workloads."
+        - "Smaller range of services than AWS."
+      - - "Simpler hosts"
+        - "Small sites and applications with modest needs."
+        - "Fewer services if the project grows."
+
+  - type: callout
+    id: bill
+    tone: white
+    variant: note
+    title: The bill is a design decision
+    paragraphs:
+      - "On AWS, most cost surprises trace back to design choices made early: always-on servers that could be switched off, data copied between regions, or storage that nobody cleans up. They are cheap to avoid at the start and expensive to untangle later."
+      - "We estimate cost during design, tag resources so spending can be traced to a project, and review the bill every month with the team that owns it."
+
   - type: chooser
     id: layout
     tone: paper
@@ -87,30 +117,9 @@ sections:
         watch: "More to learn and run. Do not start here unless the scale demands it."
         cta: { label: Plan a container platform, href: "/contact/?service=cloud" }
 
-  - type: table
-    id: compare
-    tone: white
-    label: Alternatives
-    heading: AWS compared with other clouds
-    caption: AWS compared with other cloud options
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - AWS
-        - "Broad needs, mature tooling, and wide availability of skills."
-        - "Many choices, and pricing that needs watching."
-      - - "[Azure](ref:plat.azure)"
-        - "Organizations centered on Microsoft tools and identity."
-        - "Best value inside the Microsoft ecosystem."
-      - - "[Google Cloud](ref:plat.google-cloud)"
-        - "Data, analytics, and AI-heavy workloads."
-        - "Smaller range of services than AWS."
-      - - "Simpler hosts"
-        - "Small sites and applications with modest needs."
-        - "Fewer services if the project grows."
-
   - type: process
     id: process
-    tone: paper
+    tone: white
     label: How we work
     heading: Putting a workload on AWS
     steps:
@@ -132,7 +141,7 @@ sections:
 
   - type: columns
     id: dechy
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: Working with AWS
     columns:
@@ -153,34 +162,6 @@ sections:
           - "Monitoring, alerts, and on-call arrangements."
           - "Regular reviews of cost and design."
 
-  - type: callout
-    id: bill
-    tone: white
-    variant: note
-    title: The bill is a design decision
-    paragraphs:
-      - "On AWS, most cost surprises trace back to design choices made early: always-on servers that could be switched off, data copied between regions, or storage that nobody cleans up. They are cheap to avoid at the start and expensive to untangle later."
-      - "We estimate cost during design, tag resources so spending can be traced to a project, and review the bill every month with the team that owns it."
-
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with AWS
-    intro: "The practices we apply on AWS."
-    panels:
-      - title: Accounts and access
-        paragraphs:
-          - "We use separate accounts for production and testing under an organization, single sign-on for people, roles instead of long-lived keys, and least-privilege policies reviewed regularly."
-      - title: Infrastructure as code
-        items:
-          - "Environments defined with [Terraform](ref:tool.terraform) or the platform's own tooling, reviewed like application code."
-          - "Containers built with [Docker](ref:tool.docker), on managed services before a full cluster."
-      - title: Cost and operations
-        items:
-          - "Budgets and alerts from the first day, and tagging so costs can be traced to a project."
-          - "Metrics, logs, and alarms for what users feel, such as errors and slow pages."
-
   - type: faq
     id: faq
     tone: white
@@ -195,6 +176,25 @@ sections:
         a: "Yes, in stages. We usually move the least risky parts first, test thoroughly, and keep the old system available until the move has proved itself."
       - q: Who looks after it afterwards?
         a: "That is agreed in advance. You, we, or a mix can handle monitoring, updates, and incident response."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with AWS
+    intro: "The detail a technical reviewer will ask about: accounts and access, infrastructure as code, and cost and operations."
+    panels:
+      - title: Accounts and access
+        paragraphs:
+          - "We use separate accounts for production and testing under an organization, single sign-on for people, roles instead of long-lived keys, and least-privilege policies reviewed regularly."
+      - title: Infrastructure as code
+        items:
+          - "Environments defined with [Terraform](ref:tool.terraform) or the platform's own tooling, reviewed like application code."
+          - "Containers built with [Docker](ref:tool.docker), on managed services before a full cluster."
+      - title: Cost and operations
+        items:
+          - "Budgets and alerts from the first day, and tagging so costs can be traced to a project."
+          - "Metrics, logs, and alarms for what users feel, such as errors and slow pages."
 
   - type: related
     id: related

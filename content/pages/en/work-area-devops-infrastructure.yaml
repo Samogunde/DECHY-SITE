@@ -134,7 +134,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The tools and practices.
+    intro: "The detail a technical reviewer will ask about: automation, infrastructure, and observability."
     panels:
       - title: Automation
         paragraphs:

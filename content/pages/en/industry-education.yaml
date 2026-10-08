@@ -66,60 +66,6 @@ sections:
       - Rhythm matters too. Demand arrives in surges at enrolment, at the start of term, and at results. A system that is fine on an ordinary Tuesday can fail on the day that counts.
       - And much of the data concerns children or young people, which raises the standard of care. Access has to be tightly limited, and every system that touches the data must be able to explain why it does.
       - Funding and inspection add a final layer. Many education bodies must report attendance, results, and spending to outside parties, in set formats and on set dates, so the numbers have to be right the first time and traceable afterwards.
-  - type: chooser
-    id: start
-    tone: paper
-    label: Where to start
-    heading: What causes the most re-typing?
-    intro: Start with the place where staff copy the most details between systems.
-    question: Where is effort being lost?
-    options:
-      - label: Enquiries and enrolment
-        when: Applications arrive by form, email, and phone, and are re-entered into the records system.
-        get: A single enrolment path that creates the learner record once and starts the follow-up.
-        watch: "Peak days: test with realistic numbers before the enrolment period."
-      - label: Communication with families and learners
-        when: Messages go out by several tools, and replies are lost.
-        get: A shared place for notices, messages, and forms, tied to the learner record.
-        watch: Respect consent and contact preferences, especially for minors.
-      - label: Records and reporting
-        when: Attendance, results, and funding returns are assembled by hand.
-        get: Data joined and checked, with reports produced from it.
-        watch: Agree each definition, such as attendance, before building the report.
-      - label: Course delivery and platforms
-        when: Learning platforms, timetables, and records do not share information.
-        get: Connections so enrolments and results flow between them.
-        watch: Pick one system as the source of truth for each learner fact.
-  - type: diagram
-    id: assistant-view
-    tone: white
-    label: What it looks like
-    heading: An assistant for routine questions from learners
-    intro: Routine enquiries can be answered quickly from approved content, with a person for anything more.
-    figure: assistant-ui
-    purpose: system
-    takeaway: An education assistant answers routine enquiries from approved content and hands the rest to a person.
-    caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It is an illustration, not a client's product.
-    points: []
-  - type: index
-    id: needs
-    tone: white
-    columns: 2
-    label: What we build
-    heading: Typical systems for education teams
-    items:
-      - title: Learner and family portals
-        body: A private place for timetable, results, documents, and messages. See [customer portals](/work/areas/customer-portals/).
-      - title: Enrolment and admissions workflows
-        body: Applications routed to the right staff, with reminders and checks. See [process automation](/solutions/business-process-automation/).
-      - title: Connected records and platforms
-        body: Learner data shared between the records system, learning platform, and finance. See [integrations](/work/areas/api-integrations/).
-      - title: Reporting and dashboards
-        body: Attendance, progress, and funding figures from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
-      - title: Websites and course catalogues
-        body: Clear course pages that lead to enrolment. See [business web platforms](/work/areas/business-web-platforms/).
-      - title: Answering routine questions
-        body: An assistant for common enquiries, handing over the rest. See [AI customer support](/solutions/ai-customer-support/).
   - type: columns
     id: help
     tone: paper
@@ -142,12 +88,66 @@ sections:
         items:
           - Role-based access and activity logs.
           - Careful handling of data about minors.
+  - type: diagram
+    id: assistant-view
+    tone: white
+    label: What it looks like
+    heading: An assistant for routine questions from learners
+    intro: Routine enquiries can be answered quickly from approved content, with a person for anything more.
+    figure: assistant-ui
+    purpose: system
+    takeaway: An education assistant answers routine enquiries from approved content and hands the rest to a person.
+    caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It is an illustration, not a client's product.
+    points: []
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Typical systems for education teams
+    items:
+      - title: Learner and family portals
+        body: A private place for timetable, results, documents, and messages. See [customer portals](/work/areas/customer-portals/).
+      - title: Enrolment and admissions workflows
+        body: Applications routed to the right staff, with reminders and checks. See [process automation](/solutions/business-process-automation/).
+      - title: Connected records and platforms
+        body: Learner data shared between the records system, learning platform, and finance. See [integrations](/work/areas/api-integrations/).
+      - title: Reporting and dashboards
+        body: Attendance, progress, and funding figures from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
+      - title: Websites and course catalogues
+        body: Clear course pages that lead to enrolment. See [business web platforms](/work/areas/business-web-platforms/).
+      - title: Answering routine questions
+        body: An assistant for common enquiries, handing over the rest. See [AI customer support](/solutions/ai-customer-support/).
+  - type: chooser
+    id: start
+    tone: white
+    label: Where to start
+    heading: What causes the most re-typing?
+    intro: Start with the place where staff copy the most details between systems.
+    question: Where is effort being lost?
+    options:
+      - label: Enquiries and enrolment
+        when: Applications arrive by form, email, and phone, and are re-entered into the records system.
+        get: A single enrolment path that creates the learner record once and starts the follow-up.
+        watch: "Peak days: test with realistic numbers before the enrolment period."
+      - label: Communication with families and learners
+        when: Messages go out by several tools, and replies are lost.
+        get: A shared place for notices, messages, and forms, tied to the learner record.
+        watch: Respect consent and contact preferences, especially for minors.
+      - label: Records and reporting
+        when: Attendance, results, and funding returns are assembled by hand.
+        get: Data joined and checked, with reports produced from it.
+        watch: Agree each definition, such as attendance, before building the report.
+      - label: Course delivery and platforms
+        when: Learning platforms, timetables, and records do not share information.
+        get: Connections so enrolments and results flow between them.
+        watch: Pick one system as the source of truth for each learner fact.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: Learner data and accessibility notes
-    intro: The engineering choices we make for education systems.
+    intro: "Our engineering choices on learner data, peak load, and accessibility, written for the people who will own the system after launch."
     panels:
       - title: Learner data
         items:

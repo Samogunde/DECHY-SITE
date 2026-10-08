@@ -66,6 +66,36 @@ sections:
       - "The benefit is predictability. If it ran in the container in testing, it will run in the same container in production, because it is the same package."
       - "Containers are a means, not a goal. They matter most when software is released often, runs in several places, or is built by several people with different machines."
 
+  - type: table
+    id: options
+    tone: paper
+    label: Alternatives
+    heading: Containers compared with other ways of deploying
+    caption: Containers compared with other ways of running software
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Containers
+        - "Applications released often or run in several places."
+        - "A new skill, and a build process to maintain."
+      - - Virtual machines
+        - "Whole systems that must be isolated, or older software."
+        - "Heavier, and slower to start and update."
+      - - Platform hosting without containers
+        - "Standard applications on a host that handles the environment."
+        - "Less control over the environment."
+      - - Functions on demand
+        - "Short, event-driven pieces of code."
+        - "Awkward for long-running work."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: What containers do not do
+    paragraphs:
+      - "A container does not make an application secure, fast, or well designed. It only makes it portable and repeatable. A badly built container is just a portable problem."
+      - "We build images from trusted bases, keep them small, scan them for known flaws, and avoid putting secrets inside them."
+
   - type: chooser
     id: difference
     tone: paper
@@ -89,27 +119,6 @@ sections:
         get: "Containers plus an orchestrator such as [Kubernetes](ref:tool.kubernetes), if the scale justifies it."
         watch: "Orchestration is a large step. Start with simpler container hosting if you can."
         cta: { label: Plan a platform, href: "/contact/?service=cloud" }
-
-  - type: table
-    id: options
-    tone: white
-    label: Alternatives
-    heading: Containers compared with other ways of deploying
-    caption: Containers compared with other ways of running software
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - Containers
-        - "Applications released often or run in several places."
-        - "A new skill, and a build process to maintain."
-      - - Virtual machines
-        - "Whole systems that must be isolated, or older software."
-        - "Heavier, and slower to start and update."
-      - - Platform hosting without containers
-        - "Standard applications on a host that handles the environment."
-        - "Less control over the environment."
-      - - Functions on demand
-        - "Short, event-driven pieces of code."
-        - "Awkward for long-running work."
 
   - type: index
     id: uses
@@ -150,34 +159,6 @@ sections:
           - "Hosting on managed container services."
           - "Monitoring and updates."
 
-  - type: callout
-    id: limits
-    tone: white
-    variant: limits
-    title: What containers do not do
-    paragraphs:
-      - "A container does not make an application secure, fast, or well designed. It only makes it portable and repeatable. A badly built container is just a portable problem."
-      - "We build images from trusted bases, keep them small, scan them for known flaws, and avoid putting secrets inside them."
-
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with Docker
-    intro: "How we build container images."
-    panels:
-      - title: Images
-        paragraphs:
-          - "We use multi-stage builds to keep final images small, pin base image versions, run as a non-root user, and scan images for known vulnerabilities in the pipeline."
-      - title: Configuration
-        items:
-          - "Settings through environment variables, and secrets from a secrets manager, never baked into images."
-          - "Health checks and graceful shutdown so releases do not drop requests."
-      - title: Delivery
-        items:
-          - "Images built once in a pipeline such as [GitHub Actions](ref:tool.github-actions), and promoted unchanged from testing to production."
-          - "Local environments with Compose so new developers are productive on the first day."
-
   - type: faq
     id: faq
     tone: white
@@ -192,6 +173,25 @@ sections:
         a: "Usually, yes. We assess how it is built and configured, then package it and test it in a copy of your environment."
       - q: Are containers secure?
         a: "They help isolate applications, but security depends on how images are built and run. We follow practices that reduce risk and scan regularly."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with Docker
+    intro: "What we settle early on Docker work: images, configuration, and delivery, so nothing surprises your team later."
+    panels:
+      - title: Images
+        paragraphs:
+          - "We use multi-stage builds to keep final images small, pin base image versions, run as a non-root user, and scan images for known vulnerabilities in the pipeline."
+      - title: Configuration
+        items:
+          - "Settings through environment variables, and secrets from a secrets manager, never baked into images."
+          - "Health checks and graceful shutdown so releases do not drop requests."
+      - title: Delivery
+        items:
+          - "Images built once in a pipeline such as [GitHub Actions](ref:tool.github-actions), and promoted unchanged from testing to production."
+          - "Local environments with Compose so new developers are productive on the first day."
 
   - type: related
     id: related

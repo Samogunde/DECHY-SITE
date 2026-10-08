@@ -64,18 +64,6 @@ sections:
       - On Friday someone exports sales from one tool, costs from another, and stock from a third. They paste them into a spreadsheet, fix the dates, and send it round. By Monday it is out of date. Two managers quote different revenue figures, because each counted a little differently.
       - That is not a technology shortage. It is a definitions shortage. Until the business has agreed what counts as a sale, an active customer, or a late order, no dashboard can be trusted, however good it looks.
       - "So the work has two halves. One is technical: connecting the sources and keeping the data current. The other is the harder one: agreeing the measures. We do both, and we start with the second."
-  - type: callout
-    id: trust
-    tone: white
-    variant: note
-    title: What makes a number trustworthy
-    paragraphs:
-      - A number is trustworthy when anyone can say where it came from, what it counts, and who owns it. A dashboard cannot supply that. The work around it does.
-    items:
-      - One written definition for each measure
-      - A named owner who can explain a change
-      - A check against a figure the business already knows
-      - A visible time of the last update
   - type: diagram
     id: dashboard-view
     tone: paper
@@ -107,9 +95,21 @@ sections:
       - - A spreadsheet connected to live data
         - A first version or a small team with a few sources.
         - Hard to secure and to share, and fragile as formulas multiply.
+  - type: callout
+    id: trust
+    tone: paper
+    variant: note
+    title: What makes a number trustworthy
+    paragraphs:
+      - A number is trustworthy when anyone can say where it came from, what it counts, and who owns it. A dashboard cannot supply that. The work around it does.
+    items:
+      - One written definition for each measure
+      - A named owner who can explain a change
+      - A check against a figure the business already knows
+      - A visible time of the last update
   - type: chooser
     id: kind
-    tone: paper
+    tone: white
     label: What to build
     heading: Which kind of dashboard do you need?
     intro: Dashboards differ by who uses them and how often. Four kinds cover most requests.
@@ -131,9 +131,31 @@ sections:
         when: Software you sell, where users expect charts and reports as part of it.
         get: Reporting built into the product, in its look and feel.
         watch: Plan for growth in data and users from the start.
+  - type: columns
+    id: delivers
+    tone: paper
+    label: What you get
+    heading: What a dashboard project delivers
+    columns:
+      - title: Trusted numbers
+        items:
+          - A written definition and owner for every key measure.
+          - Checks that the dashboard matches your known figures.
+      - title: Current data
+        items:
+          - Automatic refresh from your own systems.
+          - Alerts when a number moves outside its normal range.
+      - title: Clear screens
+        items:
+          - A dashboard for each role, designed for quick reading.
+          - Views that work on a phone as well as a desk.
+      - title: Safe access
+        items:
+          - Each person sees only what their role allows.
+          - Logs of who looked at what.
   - type: process
     id: how
-    tone: paper
+    tone: white
     label: How we do it
     heading: From questions to a dashboard people use
     steps:
@@ -157,34 +179,28 @@ sections:
           - Dashboard
           - User feedback
           - Training
-  - type: columns
-    id: delivers
-    tone: white
-    label: What you get
-    heading: What a dashboard project delivers
-    columns:
-      - title: Trusted numbers
-        items:
-          - A written definition and owner for every key measure.
-          - Checks that the dashboard matches your known figures.
-      - title: Current data
-        items:
-          - Automatic refresh from your own systems.
-          - Alerts when a number moves outside its normal range.
-      - title: Clear screens
-        items:
-          - A dashboard for each role, designed for quick reading.
-          - Views that work on a phone as well as a desk.
-      - title: Safe access
-        items:
-          - Each person sees only what their role allows.
-          - Logs of who looked at what.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about business dashboards
+    items:
+      - q: How many numbers should a dashboard show?
+        a: Few. Most roles need between five and ten measures to run their part of the business. More than that and the important ones are lost.
+      - q: Can a dashboard use data from several systems?
+        a: Yes, and that is the usual case. The data is brought together in one place, matched, and checked before it is shown.
+      - q: Do we need a data warehouse?
+        a: Not always. A modest set of sources can sit in a well-designed database. A warehouse is worth it when volumes or the number of sources grow.
+      - q: Why do you insist on agreeing definitions first?
+        a: Because a dashboard shows numbers faster. If two teams count differently, it only makes the disagreement more visible.
+      - q: Can we keep our existing reporting tool?
+        a: Often, yes. We can build the data layer underneath it, so it shows trusted numbers, or recommend a change if it is the limit.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build the data behind it
-    intro: How we build the data behind a dashboard.
+    intro: "The detail a technical reviewer will ask about: the data layer, the dashboard itself, and access and audit."
     panels:
       - title: The data layer
         items:
@@ -199,22 +215,6 @@ sections:
       - title: Access and audit
         paragraphs:
           - Row- and column-level rules limit data by role. Access is logged. Customer-facing dashboards enforce isolation between customers in the data layer, not only in the screen.
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about business dashboards
-    items:
-      - q: How many numbers should a dashboard show?
-        a: Few. Most roles need between five and ten measures to run their part of the business. More than that and the important ones are lost.
-      - q: Can a dashboard use data from several systems?
-        a: Yes, and that is the usual case. The data is brought together in one place, matched, and checked before it is shown.
-      - q: Do we need a data warehouse?
-        a: Not always. A modest set of sources can sit in a well-designed database. A warehouse is worth it when volumes or the number of sources grow.
-      - q: Why do you insist on agreeing definitions first?
-        a: Because a dashboard shows numbers faster. If two teams count differently, it only makes the disagreement more visible.
-      - q: Can we keep our existing reporting tool?
-        a: Often, yes. We can build the data layer underneath it, so it shows trusted numbers, or recommend a change if it is the limit.
   - type: related
     id: related
     tone: paper

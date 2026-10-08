@@ -103,9 +103,55 @@ sections:
       - - Retire it
         - A system nobody uses any more.
         - Needs confirmation that nothing depends on it before it is switched off.
+  - type: chooser
+    id: fit
+    tone: white
+    label: Which cloud
+    heading: Which cloud suits you?
+    intro: The three large providers are all capable. The choice usually follows the tools and skills you already have.
+    question: What best describes your estate?
+    options:
+      - label: We run mostly on Microsoft tools
+        when: Windows servers, Microsoft sign-in, and Microsoft business software.
+        get: A move to [Azure](ref:plat.azure), which connects closely to the tools you have.
+        watch: Licensing rules can reduce or raise the cost, so we check them first.
+      - label: We want the widest choice of services
+        when: Varied workloads, and a wish for the largest ecosystem and hiring pool.
+        get: A move to [AWS](ref:plat.aws), with the broadest set of services.
+        watch: Breadth brings complexity, so cost and design need active care.
+      - label: We work heavily with data and Google tools
+        when: Analytics, machine learning, or a team already on Google tools.
+        get: A move to [Google Cloud](ref:plat.google-cloud), strong in data and containers.
+        watch: Check that the services you need are offered in your regions.
+      - label: We are unsure, or want to avoid dependence on one provider
+        when: A mixed estate, or a policy against single-provider reliance.
+        get: A design built on containers and open tools, so moving later is practical.
+        watch: Portability has a cost, so use it where it matters.
+  - type: columns
+    id: delivers
+    tone: paper
+    label: What you get
+    heading: What a migration delivers
+    columns:
+      - title: A plan
+        items:
+          - An inventory and a route for every system.
+          - A cost model you can check against the bill.
+      - title: A safe landing
+        items:
+          - A secured cloud environment, built as code so it can be repeated.
+          - Access and monitoring in place before the first move.
+      - title: A tested move
+        items:
+          - Rehearsals before each cut-over and a rollback plan.
+          - Checks that data arrived complete and unchanged.
+      - title: Control afterwards
+        items:
+          - Budgets, alerts, and right-sizing reviews.
+          - Documentation and training, or ongoing care.
   - type: process
     id: how
-    tone: paper
+    tone: white
     label: How we do it
     heading: A migration in waves
     steps:
@@ -135,58 +181,28 @@ sections:
         artifacts:
           - Cost report
           - Runbook
-  - type: chooser
-    id: fit
-    tone: white
-    label: Which cloud
-    heading: Which cloud suits you?
-    intro: The three large providers are all capable. The choice usually follows the tools and skills you already have.
-    question: What best describes your estate?
-    options:
-      - label: We run mostly on Microsoft tools
-        when: Windows servers, Microsoft sign-in, and Microsoft business software.
-        get: A move to [Azure](ref:plat.azure), which connects closely to the tools you have.
-        watch: Licensing rules can reduce or raise the cost, so we check them first.
-      - label: We want the widest choice of services
-        when: Varied workloads, and a wish for the largest ecosystem and hiring pool.
-        get: A move to [AWS](ref:plat.aws), with the broadest set of services.
-        watch: Breadth brings complexity, so cost and design need active care.
-      - label: We work heavily with data and Google tools
-        when: Analytics, machine learning, or a team already on Google tools.
-        get: A move to [Google Cloud](ref:plat.google-cloud), strong in data and containers.
-        watch: Check that the services you need are offered in your regions.
-      - label: We are unsure, or want to avoid dependence on one provider
-        when: A mixed estate, or a policy against single-provider reliance.
-        get: A design built on containers and open tools, so moving later is practical.
-        watch: Portability has a cost, so use it where it matters.
-  - type: columns
-    id: delivers
-    tone: white
-    label: What you get
-    heading: What a migration delivers
-    columns:
-      - title: A plan
-        items:
-          - An inventory and a route for every system.
-          - A cost model you can check against the bill.
-      - title: A safe landing
-        items:
-          - A secured cloud environment, built as code so it can be repeated.
-          - Access and monitoring in place before the first move.
-      - title: A tested move
-        items:
-          - Rehearsals before each cut-over and a rollback plan.
-          - Checks that data arrived complete and unchanged.
-      - title: Control afterwards
-        items:
-          - Budgets, alerts, and right-sizing reviews.
-          - Documentation and training, or ongoing care.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about moving to the cloud
+    items:
+      - q: Will the cloud be cheaper?
+        a: Not automatically. It can be, especially when you stop paying for idle capacity or old equipment. It can also be dearer if systems are moved without being tuned. We model the cost first.
+      - q: How much downtime should we expect?
+        a: For most systems, a short, planned window at cut-over, and sometimes none, where data can be kept in step beforehand. We agree the window with you.
+      - q: Is the cloud less secure than our own servers?
+        a: Not if it is set up well. Large providers offer strong tools, but the set-up is yours to get right. We design access, encryption, and monitoring from the start.
+      - q: What if we want to leave the cloud provider later?
+        a: "We design to keep that option open where it is worth the cost: containers, open standards, and infrastructure written as code."
+      - q: Can we move only part of what we run?
+        a: Yes, and many organizations do. A mixed estate is common, and we plan the connections between the parts.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build and move
-    intro: How we build and move.
+    intro: "Our engineering choices on infrastructure as code, containers, data movement, and security and cost, written for the people who will own the system after launch."
     panels:
       - title: Infrastructure as code
         paragraphs:
@@ -203,22 +219,6 @@ sections:
         items:
           - Least-privilege access, network segmentation, encryption at rest and in transit, and central logging from day one.
           - Tagging, budgets, and scheduled right-sizing keep cost attributable and controlled.
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about moving to the cloud
-    items:
-      - q: Will the cloud be cheaper?
-        a: Not automatically. It can be, especially when you stop paying for idle capacity or old equipment. It can also be dearer if systems are moved without being tuned. We model the cost first.
-      - q: How much downtime should we expect?
-        a: For most systems, a short, planned window at cut-over, and sometimes none, where data can be kept in step beforehand. We agree the window with you.
-      - q: Is the cloud less secure than our own servers?
-        a: Not if it is set up well. Large providers offer strong tools, but the set-up is yours to get right. We design access, encryption, and monitoring from the start.
-      - q: What if we want to leave the cloud provider later?
-        a: "We design to keep that option open where it is worth the cost: containers, open standards, and infrastructure written as code."
-      - q: Can we move only part of what we run?
-        a: Yes, and many organizations do. A mixed estate is common, and we plan the connections between the parts.
   - type: related
     id: related
     tone: paper

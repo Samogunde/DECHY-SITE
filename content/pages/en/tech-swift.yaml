@@ -65,6 +65,51 @@ sections:
       - "Working in Apple's own tools means new platform features are available as soon as Apple releases them, and the app follows Apple's design conventions without extra effort."
       - "The cost is that an iPhone app is only an iPhone app. An Android version is a separate build, in a different language, unless you chose a cross-platform tool at the start."
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Swift
+    columns:
+      - title: Build
+        items:
+          - "Native iPhone and iPad apps in Swift and SwiftUI."
+          - "Interfaces that follow Apple's guidelines."
+      - title: Connect
+        items:
+          - "Back ends, sign-in, and push notifications."
+          - "Apple Pay and in-app purchases where relevant."
+      - title: Release
+        items:
+          - "App Store submission and review handling."
+          - "Test distribution and staged rollouts."
+      - title: Maintain
+        items:
+          - "Yearly updates for new iOS versions."
+          - "Crash reporting and improvements."
+
+  - type: process
+    id: process
+    tone: white
+    label: How we work
+    heading: From idea to the App Store
+    steps:
+      - title: Shape the app
+        body: "We agree who it is for, what it does first, and what can wait."
+        artifacts: [Scope, Screen map]
+      - title: Design and prototype
+        body: "We design the screens, and build a clickable prototype to test with real users."
+        artifacts: [Designs, Tested prototype]
+      - title: Build and test
+        body: "We build in short cycles, test on real devices, and distribute builds to your team."
+        artifacts: [Working builds, Test results]
+      - title: Prepare for review
+        body: "We prepare the store listing, privacy details, and the review submission."
+        artifacts: [Store listing, Review submission]
+      - title: Launch and support
+        body: "We release in stages, watch crashes and feedback, and plan updates."
+        artifacts: [Release, Update plan]
+
   - type: table
     id: worth
     tone: paper
@@ -89,51 +134,6 @@ sections:
         - "Excellent in markets where iPhone dominates."
         - "No Android audience without a second build."
 
-  - type: columns
-    id: dechy
-    tone: white
-    label: What DECHY can do
-    heading: Working with Swift
-    columns:
-      - title: Build
-        items:
-          - "Native iPhone and iPad apps in Swift and SwiftUI."
-          - "Interfaces that follow Apple's guidelines."
-      - title: Connect
-        items:
-          - "Back ends, sign-in, and push notifications."
-          - "Apple Pay and in-app purchases where relevant."
-      - title: Release
-        items:
-          - "App Store submission and review handling."
-          - "Test distribution and staged rollouts."
-      - title: Maintain
-        items:
-          - "Yearly updates for new iOS versions."
-          - "Crash reporting and improvements."
-
-  - type: process
-    id: process
-    tone: paper
-    label: How we work
-    heading: From idea to the App Store
-    steps:
-      - title: Shape the app
-        body: "We agree who it is for, what it does first, and what can wait."
-        artifacts: [Scope, Screen map]
-      - title: Design and prototype
-        body: "We design the screens, and build a clickable prototype to test with real users."
-        artifacts: [Designs, Tested prototype]
-      - title: Build and test
-        body: "We build in short cycles, test on real devices, and distribute builds to your team."
-        artifacts: [Working builds, Test results]
-      - title: Prepare for review
-        body: "We prepare the store listing, privacy details, and the review submission."
-        artifacts: [Store listing, Review submission]
-      - title: Launch and support
-        body: "We release in stages, watch crashes and feedback, and plan updates."
-        artifacts: [Release, Update plan]
-
   - type: callout
     id: limits
     tone: white
@@ -143,12 +143,27 @@ sections:
       - "Apple reviews every app, and has rules on payments, privacy, and content. An app can be delayed or rejected for reasons unrelated to its quality, and some business models face restrictions."
       - "We check the rules against your plans early, so review is rarely a surprise."
 
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Swift
+    items:
+      - q: Is Swift only for iPhone?
+        a: "It also builds apps for iPad, Apple Watch, Apple TV, and Mac, and parts of it can be used on servers."
+      - q: Should we build iPhone first and Android later?
+        a: "That is a sensible path if your audience leans to iPhone. We plan the back end so both apps can share it."
+      - q: What about cross-platform tools?
+        a: "[Flutter](ref:tech.flutter) and [React Native](ref:tech.react-native) can reach both platforms from one codebase, at some cost in depth. We compare them for your app."
+      - q: Do you handle the App Store submission?
+        a: "Yes. We prepare the listing, privacy details, and the submission, and respond to review feedback."
+
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Swift
-    intro: "How we structure an iOS app."
+    intro: "For your developers and IT lead: our Swift choices on structure, data and security, and quality, and the reasoning behind each."
     panels:
       - title: Structure
         paragraphs:
@@ -162,21 +177,6 @@ sections:
         items:
           - "Unit and interface tests in a pipeline, and testing on a range of real devices."
           - "Accessibility checks with VoiceOver and larger text sizes."
-
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Swift
-    items:
-      - q: Is Swift only for iPhone?
-        a: "It also builds apps for iPad, Apple Watch, Apple TV, and Mac, and parts of it can be used on servers."
-      - q: Should we build iPhone first and Android later?
-        a: "That is a sensible path if your audience leans to iPhone. We plan the back end so both apps can share it."
-      - q: What about cross-platform tools?
-        a: "[Flutter](ref:tech.flutter) and [React Native](ref:tech.react-native) can reach both platforms from one codebase, at some cost in depth. We compare them for your app."
-      - q: Do you handle the App Store submission?
-        a: "Yes. We prepare the listing, privacy details, and the submission, and respond to review feedback."
 
   - type: related
     id: related

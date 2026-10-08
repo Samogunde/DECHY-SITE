@@ -65,45 +65,6 @@ sections:
       - A web page that reacts to what people do, such as filtering a list, validating a form as they type, or updating a total, needs code in the browser. A framework gives that code a structure, so it stays manageable as it grows.
       - Vue is one of the three most widely used choices, with [React](ref:fw.react) and [Angular](ref:fw.angular). It is known for being approachable. Its templates look like ordinary page markup, a small team can learn it quickly, and it works alongside an existing site instead of demanding a rewrite.
       - "That makes it a good match for businesses that cannot stop and rebuild: a site with years of content, a back office that must keep running, a team that wants better screens without a new project every time."
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical uses
-    heading: Where we use Vue
-    items:
-      - title: Interactive features on an existing site
-        body: Product finders, quote calculators, and booking widgets added without rebuilding the site around them.
-      - title: Internal tools and dashboards
-        body: Screens for staff that filter, sort, and update data without a page reload.
-      - title: Customer-facing application screens
-        body: Account areas and ordering flows that feel fast and respond as people type.
-      - title: Moving an old front end forward
-        body: Replacing tangled scripts section by section, so the site improves while it stays live.
-  - type: table
-    id: options
-    tone: paper
-    label: Options
-    heading: How Vue compares
-    caption: Vue compared with the other two common front-end frameworks
-    columns:
-      - Option
-      - Suits
-      - Trade-off
-    rows:
-      - - Vue
-        - Gradual adoption, small and medium teams, and sites that must keep working during the change.
-        - A smaller job market and ecosystem than React.
-      - - "[React](ref:fw.react)"
-        - The widest range of libraries and developers, and products expected to grow large.
-        - More choices to make yourself, so structure depends on team discipline.
-      - - "[Angular](ref:fw.angular)"
-        - Large organizations that want strict structure and consistency across many developers.
-        - A steeper learning curve and more ceremony.
-      - - No framework
-        - Content sites with little interaction, where plain pages are faster and simpler.
-        - Adding interaction later means starting a framework then.
-    note: All three build good interfaces. The deciding factors are usually the team you have, the people you can hire, and how much of the site must keep running unchanged.
   - type: process
     id: adopt
     tone: paper
@@ -151,12 +112,65 @@ sections:
         items:
           - Speed, accessibility, and search visibility reviews.
           - Upgrades from older Vue versions.
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: How Vue compares
+    caption: Vue compared with the other two common front-end frameworks
+    columns:
+      - Option
+      - Suits
+      - Trade-off
+    rows:
+      - - Vue
+        - Gradual adoption, small and medium teams, and sites that must keep working during the change.
+        - A smaller job market and ecosystem than React.
+      - - "[React](ref:fw.react)"
+        - The widest range of libraries and developers, and products expected to grow large.
+        - More choices to make yourself, so structure depends on team discipline.
+      - - "[Angular](ref:fw.angular)"
+        - Large organizations that want strict structure and consistency across many developers.
+        - A steeper learning curve and more ceremony.
+      - - No framework
+        - Content sites with little interaction, where plain pages are faster and simpler.
+        - Adding interaction later means starting a framework then.
+    note: All three build good interfaces. The deciding factors are usually the team you have, the people you can hire, and how much of the site must keep running unchanged.
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Where we use Vue
+    items:
+      - title: Interactive features on an existing site
+        body: Product finders, quote calculators, and booking widgets added without rebuilding the site around them.
+      - title: Internal tools and dashboards
+        body: Screens for staff that filter, sort, and update data without a page reload.
+      - title: Customer-facing application screens
+        body: Account areas and ordering flows that feel fast and respond as people type.
+      - title: Moving an old front end forward
+        body: Replacing tangled scripts section by section, so the site improves while it stays live.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Vue
+    items:
+      - q: Is Vue a safe long-term choice?
+        a: It is mature, widely used, and actively maintained. As with any framework, the safest course is to keep to supported versions and avoid unusual add-ons.
+      - q: Vue or React?
+        a: Both are good. We lean to React for very large products and for teams that want the widest hiring pool, and to Vue where gradual adoption and approachability matter most.
+      - q: Can Vue sit inside an existing website?
+        a: Yes, and that is one of its main strengths. A single component can run in an existing page without changing the rest.
+      - q: Will a Vue site rank in search?
+        a: Yes, when it is rendered on the server so that complete pages reach search engines. We set that up for any page that needs to be found.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Vue
-    intro: How we build with Vue.
+    intro: "Our engineering choices on structure, rendering and search, quality, and upgrades, written for the people who will own the system after launch."
     panels:
       - title: Structure
         items:
@@ -174,20 +188,6 @@ sections:
       - title: Upgrades
         paragraphs:
           - We keep to a supported major version of Vue and plan upgrades before support ends, since the older generation no longer receives fixes.
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Vue
-    items:
-      - q: Is Vue a safe long-term choice?
-        a: It is mature, widely used, and actively maintained. As with any framework, the safest course is to keep to supported versions and avoid unusual add-ons.
-      - q: Vue or React?
-        a: Both are good. We lean to React for very large products and for teams that want the widest hiring pool, and to Vue where gradual adoption and approachability matter most.
-      - q: Can Vue sit inside an existing website?
-        a: Yes, and that is one of its main strengths. A single component can run in an existing page without changing the rest.
-      - q: Will a Vue site rank in search?
-        a: Yes, when it is rendered on the server so that complete pages reach search engines. We set that up for any page that needs to be found.
   - type: related
     id: related
     tone: paper

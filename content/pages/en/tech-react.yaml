@@ -67,6 +67,52 @@ sections:
       - "The practical benefit is reuse and predictability. A table or a form is built once and used everywhere, so a change in one place appears everywhere, and screens behave the same way."
       - "React on its own handles only the interface. The decisions around it, such as routing, data, and hosting, are usually made by adding a framework like [Next.js](ref:fw.nextjs), or by assembling the pieces directly."
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Where we use React
+    columns:
+      - title: Applications
+        items:
+          - "Internal tools and operations screens."
+          - "Customer portals with accounts and history."
+      - title: Dashboards
+        items:
+          - "Live views of orders, jobs, and stock."
+          - "Tables with search, filters, and exports."
+      - title: Product interfaces
+        items:
+          - "The screens of a software product."
+          - "A design system built once and reused."
+      - title: Rescue work
+        items:
+          - "Untangling an application that is hard to change."
+          - "Adding tests where none exist."
+
+  - type: diagram
+    id: structure
+    tone: white
+    label: How we structure it
+    heading: From design to working screens
+    intro: "A tidy React project starts from the design, not from the code."
+    spec:
+      kind: flow
+      steps:
+        - title: Design system
+          text: Agreed colors, type, and spacing.
+        - title: Component library
+          text: Reusable parts built once, in isolation.
+        - title: Screens
+          text: Assembled from those parts.
+        - title: Data connection
+          text: Screens linked to the services behind them.
+        - title: Checks
+          text: Automated tests, then review with real users.
+    purpose: process
+    takeaway: "A React project goes from a design system to reusable components to screens, and only then connects them to data."
+    caption: "This diagram shows five steps in a React build, from the design system to automated tests and review with real users."
+
   - type: table
     id: choice
     tone: paper
@@ -88,32 +134,9 @@ sections:
         - "A hosted site builder."
         - "Cheaper to run than a custom application."
 
-  - type: columns
-    id: dechy
-    tone: white
-    label: What DECHY can do
-    heading: Where we use React
-    columns:
-      - title: Applications
-        items:
-          - "Internal tools and operations screens."
-          - "Customer portals with accounts and history."
-      - title: Dashboards
-        items:
-          - "Live views of orders, jobs, and stock."
-          - "Tables with search, filters, and exports."
-      - title: Product interfaces
-        items:
-          - "The screens of a software product."
-          - "A design system built once and reused."
-      - title: Rescue work
-        items:
-          - "Untangling an application that is hard to change."
-          - "Adding tests where none exist."
-
   - type: index
     id: uses
-    tone: paper
+    tone: white
     columns: 2
     label: Typical uses
     heading: Systems that suit React
@@ -127,57 +150,14 @@ sections:
       - title: The front end of a software product
         body: "Screens built from a shared component library so new features look and behave like the rest."
 
-  - type: diagram
-    id: structure
-    tone: paper
-    label: How we structure it
-    heading: From design to working screens
-    intro: "A tidy React project starts from the design, not from the code."
-    spec:
-      kind: flow
-      steps:
-        - title: Design system
-          text: Agreed colors, type, and spacing.
-        - title: Component library
-          text: Reusable parts built once, in isolation.
-        - title: Screens
-          text: Assembled from those parts.
-        - title: Data connection
-          text: Screens linked to the services behind them.
-        - title: Checks
-          text: Automated tests, then review with real users.
-    purpose: process
-    takeaway: "A React project goes from a design system to reusable components to screens, and only then connects them to data."
-    caption: "This diagram shows five steps in a React build, from the design system to automated tests and review with real users."
-
   - type: callout
     id: limits
-    tone: white
+    tone: paper
     variant: limits
     title: When React is more than you need
     paragraphs:
       - "React adds a build process, a set of conventions, and developers who know it. For a small brochure site or a form on a page, that is overhead you will pay for every year."
       - "We will say so early. Sometimes the right answer is a content platform, or a lighter framework, and React earns its place only where the interface is genuinely complex."
-
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with React
-    intro: "How we usually set a React project up."
-    panels:
-      - title: Language and tooling
-        paragraphs:
-          - "We write React in [TypeScript](ref:lang.typescript), so mistakes in how data is passed between components show up while writing, not in production."
-      - title: State and data
-        items:
-          - "Local state for what one component owns, and a shared store only where several screens genuinely need the same data."
-          - "A data-fetching layer that handles loading, errors, and caching in one place."
-          - "Forms with clear validation and helpful error messages."
-      - title: Quality
-        items:
-          - "Component tests for behavior, and a small number of end-to-end tests for the journeys that matter."
-          - "Keyboard and screen reader checks on every shared component."
 
   - type: faq
     id: faq
@@ -193,6 +173,26 @@ sections:
         a: "Yes. We start with a short review of structure, tests, and dependencies, then tell you whether to improve it or rebuild parts of it."
       - q: Do we get a design system?
         a: "If you want one. We recommend a small one for any application with more than a handful of screens."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with React
+    intro: "The detail a technical reviewer will ask about: language and tooling, state and data, and quality."
+    panels:
+      - title: Language and tooling
+        paragraphs:
+          - "We write React in [TypeScript](ref:lang.typescript), so mistakes in how data is passed between components show up while writing, not in production."
+      - title: State and data
+        items:
+          - "Local state for what one component owns, and a shared store only where several screens genuinely need the same data."
+          - "A data-fetching layer that handles loading, errors, and caching in one place."
+          - "Forms with clear validation and helpful error messages."
+      - title: Quality
+        items:
+          - "Component tests for behavior, and a small number of end-to-end tests for the journeys that matter."
+          - "Keyboard and screen reader checks on every shared component."
 
   - type: related
     id: related

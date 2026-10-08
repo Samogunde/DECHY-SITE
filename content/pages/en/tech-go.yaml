@@ -63,53 +63,6 @@ sections:
       - Go was designed to be easy to read, quick to compile, and good at doing many things at once. A Go program builds into a single file with no runtime to install. It starts in a fraction of a second and uses little memory, which lowers hosting cost for services that run all day.
       - Its design is deliberately small. There are fewer ways to write the same thing, so code written by different people looks alike. That makes large codebases easier to share and to inherit, which matters on projects that outlive their first authors.
       - The cost of that restraint is breadth. Go has fewer ready-made libraries than older languages for some areas, such as data science, and fewer people know it than know the most common languages.
-  - type: chooser
-    id: fit
-    tone: paper
-    label: Fit
-    heading: Which jobs suit Go?
-    intro: Go is strongest when the work is infrastructure-like. For product work with rich screens or data science, other languages usually serve better.
-    question: What are you building?
-    options:
-      - label: A high-traffic API or service
-        when: Many requests, steady response times, and a wish to run on fewer servers.
-        get: A lean service that handles load predictably and deploys as one file.
-        watch: Make sure your team can maintain Go, or plan for handover.
-      - label: Internal platforms and tooling
-        when: Command-line tools, build tools, and services that glue other systems together.
-        get: Single-file tools that run anywhere, with no setup on the user's machine.
-        watch: Keep the scope small. Go shines on focused tools.
-      - label: Cloud and infrastructure software
-        when: Services that sit close to containers, networking, or monitoring.
-        get: Software in the same language as much of the cloud tooling it works with.
-        watch: Match the language of the tools you must extend.
-      - label: Data science or AI features
-        when: Models, notebooks, and heavy numerical work.
-        get: A recommendation to use [Python](ref:lang.python) for that part, with Go serving the results.
-        watch: Do not force a language into work it was not made for.
-  - type: table
-    id: options
-    tone: white
-    label: Options
-    heading: Go beside the other back-end languages
-    caption: Go compared with other common back-end languages on what each does best
-    columns:
-      - Language
-      - Does best
-      - Trade-off
-    rows:
-      - - Go
-        - Fast, steady services, small deployments, and infrastructure software.
-        - Fewer libraries in some fields and a smaller hiring pool.
-      - - "[Python](ref:lang.python)"
-        - Data, automation, and AI, with the richest set of libraries.
-        - Slower for heavy request handling without extra work.
-      - - "[Node.js](ref:tech.nodejs)"
-        - Interactive products where one language spans screen and server.
-        - Heavy computation blocks other requests unless moved elsewhere.
-      - - "[Java](ref:lang.java)"
-        - Large, long-lived enterprise systems with deep tooling.
-        - More to configure and more memory to run.
   - type: columns
     id: dechy
     tone: paper
@@ -158,12 +111,73 @@ sections:
         artifacts:
           - Pipeline
           - Monitoring
+  - type: chooser
+    id: fit
+    tone: paper
+    label: Fit
+    heading: Which jobs suit Go?
+    intro: Go is strongest when the work is infrastructure-like. For product work with rich screens or data science, other languages usually serve better.
+    question: What are you building?
+    options:
+      - label: A high-traffic API or service
+        when: Many requests, steady response times, and a wish to run on fewer servers.
+        get: A lean service that handles load predictably and deploys as one file.
+        watch: Make sure your team can maintain Go, or plan for handover.
+      - label: Internal platforms and tooling
+        when: Command-line tools, build tools, and services that glue other systems together.
+        get: Single-file tools that run anywhere, with no setup on the user's machine.
+        watch: Keep the scope small. Go shines on focused tools.
+      - label: Cloud and infrastructure software
+        when: Services that sit close to containers, networking, or monitoring.
+        get: Software in the same language as much of the cloud tooling it works with.
+        watch: Match the language of the tools you must extend.
+      - label: Data science or AI features
+        when: Models, notebooks, and heavy numerical work.
+        get: A recommendation to use [Python](ref:lang.python) for that part, with Go serving the results.
+        watch: Do not force a language into work it was not made for.
+  - type: table
+    id: options
+    tone: white
+    label: Options
+    heading: Go beside the other back-end languages
+    caption: Go compared with other common back-end languages on what each does best
+    columns:
+      - Language
+      - Does best
+      - Trade-off
+    rows:
+      - - Go
+        - Fast, steady services, small deployments, and infrastructure software.
+        - Fewer libraries in some fields and a smaller hiring pool.
+      - - "[Python](ref:lang.python)"
+        - Data, automation, and AI, with the richest set of libraries.
+        - Slower for heavy request handling without extra work.
+      - - "[Node.js](ref:tech.nodejs)"
+        - Interactive products where one language spans screen and server.
+        - Heavy computation blocks other requests unless moved elsewhere.
+      - - "[Java](ref:lang.java)"
+        - Large, long-lived enterprise systems with deep tooling.
+        - More to configure and more memory to run.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Go
+    items:
+      - q: Is Go better than Python or Node.js?
+        a: It is better for some jobs and worse for others. Go suits fast, steady services and tools. Python suits data and AI. Node.js suits teams that want one language across screens and server.
+      - q: Will we be able to hire Go developers?
+        a: The pool is smaller than for the most common languages, but the language is simple, and capable developers pick it up quickly. We document the code and can provide ongoing care.
+      - q: Can Go work with our existing systems?
+        a: Yes. It talks to databases, queues, and other services through standard interfaces, and often replaces one slow component without touching the rest.
+      - q: Can you take over a Go service?
+        a: Yes. We begin with a review of the code, the tests, and the running costs, and then recommend what to keep and what to change.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Go
-    intro: How we build in Go.
+    intro: "Our engineering choices on concurrency, structure and testing, operations, and dependencies, written for the people who will own the system after launch."
     panels:
       - title: Concurrency
         items:
@@ -180,23 +194,9 @@ sections:
       - title: Dependencies
         paragraphs:
           - We keep third-party packages few and pinned, review them for known weaknesses on every build, and prefer the standard library where it is enough.
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about Go
-    items:
-      - q: Is Go better than Python or Node.js?
-        a: It is better for some jobs and worse for others. Go suits fast, steady services and tools. Python suits data and AI. Node.js suits teams that want one language across screens and server.
-      - q: Will we be able to hire Go developers?
-        a: The pool is smaller than for the most common languages, but the language is simple, and capable developers pick it up quickly. We document the code and can provide ongoing care.
-      - q: Can Go work with our existing systems?
-        a: Yes. It talks to databases, queues, and other services through standard interfaces, and often replaces one slow component without touching the rest.
-      - q: Can you take over a Go service?
-        a: Yes. We begin with a review of the code, the tests, and the running costs, and then recommend what to keep and what to change.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Go across DECHY
     groups:

@@ -74,28 +74,9 @@ sections:
         - "Complex catalogs, B2B, and brands that want a custom front."
         - "Shopify suits the simplest start. WooCommerce suits content-led, owned stores."
 
-  - type: process
-    id: build
-    tone: white
-    label: How we build it
-    heading: From catalog to a store that connects
-    steps:
-      - title: Model the catalog and the buyers
-        body: "Products, variations, price lists, and customer groups are laid out before any design."
-        artifacts: [Catalog model, Pricing rules]
-      - title: Build or adapt the store front
-        body: "A theme for a conventional store, or a custom front end for a headless one, built to load quickly."
-        artifacts: [Store front, Performance budget]
-      - title: Connect stock, orders, and accounts
-        body: "Stock, orders, and customer records move between the store and your other systems without re-typing."
-        artifacts: [Connections, Test orders]
-      - title: Launch and tune
-        body: "Search, speed, checkout, and tax are tested, and the store is watched after launch."
-        artifacts: [Launch checklist, Review notes]
-
   - type: columns
     id: dechy
-    tone: paper
+    tone: white
     label: What DECHY can do
     heading: Working with BigCommerce
     columns:
@@ -116,12 +97,31 @@ sections:
           - "Updates, monitoring, and speed reviews."
           - "Support for the team that runs the store."
 
+  - type: process
+    id: build
+    tone: paper
+    label: How we build it
+    heading: From catalog to a store that connects
+    steps:
+      - title: Model the catalog and the buyers
+        body: "Products, variations, price lists, and customer groups are laid out before any design."
+        artifacts: [Catalog model, Pricing rules]
+      - title: Build or adapt the store front
+        body: "A theme for a conventional store, or a custom front end for a headless one, built to load quickly."
+        artifacts: [Store front, Performance budget]
+      - title: Connect stock, orders, and accounts
+        body: "Stock, orders, and customer records move between the store and your other systems without re-typing."
+        artifacts: [Connections, Test orders]
+      - title: Launch and tune
+        body: "Search, speed, checkout, and tax are tested, and the store is watched after launch."
+        artifacts: [Launch checklist, Review notes]
+
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with BigCommerce
-    intro: "How we build on BigCommerce."
+    intro: "Our engineering choices on interfaces, headless builds, performance and search, and data, written for the people who will own the system after launch."
     panels:
       - title: Interfaces
         items:
@@ -141,7 +141,7 @@ sections:
 
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about BigCommerce
     items:
@@ -156,7 +156,7 @@ sections:
 
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: BigCommerce across DECHY
     groups:

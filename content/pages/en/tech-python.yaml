@@ -67,69 +67,9 @@ sections:
       - "Readable code is cheaper to maintain, because the next developer can follow it. That matters more over five years than raw speed, and it is a large part of why Python is so common."
       - "Its weak spots are real. It is slower than some languages for heavy computation, and it is not the usual choice for phone apps or for interfaces in the browser."
 
-  - type: index
-    id: uses
-    tone: paper
-    columns: 2
-    label: Where it fits
-    heading: Work that suits Python
-    items:
-      - title: A back end for a web or mobile app
-        body: "Accounts, business rules, and a database behind an interface built in another tool, with a clear set of requests between them."
-      - title: Reporting and data pipelines
-        body: "Collecting data from several systems, cleaning it, and loading it somewhere people can analyze it."
-      - title: Automation of repeated work
-        body: "Reading files and emails, filling in systems, and producing reports that someone used to prepare by hand."
-      - title: AI features inside a product
-        body: "Sending text or documents to a model, checking what comes back, and storing the results."
-
-  - type: table
-    id: options
-    tone: white
-    label: Options
-    heading: Python compared with other languages
-    caption: Python compared with other common languages for business software
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - Python
-        - "Data, automation, AI, and back ends where development speed matters."
-        - "Slower for heavy computation, and less natural for interfaces."
-      - - "[TypeScript](ref:lang.typescript)"
-        - "Teams who want one language across the interface and the server."
-        - "Fewer ready tools for data and machine learning."
-      - - "[Java](ref:lang.java)"
-        - "Large, long-lived enterprise systems."
-        - "More code for the same result, and slower to start."
-      - - "[Go](ref:lang.go)"
-        - "Fast, simple network services."
-        - "Fewer libraries for data and AI work."
-
-  - type: diagram
-    id: pipeline
-    tone: paper
-    label: A common pattern
-    heading: How a Python data pipeline is organized
-    intro: "Many Python projects follow the same shape, whatever the data is."
-    spec:
-      kind: flow
-      steps:
-        - title: Collect
-          text: Pull data from files, systems, and services.
-        - title: Check
-          text: Reject or flag anything incomplete or wrong.
-        - title: Transform
-          text: Join, clean, and reshape it.
-        - title: Store
-          text: Load it into a database or warehouse.
-        - title: Use
-          text: Feed reports, dashboards, or other systems.
-    purpose: process
-    takeaway: "A Python pipeline collects, checks, transforms, stores, and then uses data, with the checking step placed before anything is relied on."
-    caption: "This diagram shows five steps of a Python data pipeline, from collecting data to feeding reports and dashboards, with checking before use."
-
   - type: columns
     id: dechy
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: Working with Python
     columns:
@@ -150,12 +90,87 @@ sections:
           - "Documentation and deployment steps."
           - "A structure other Python developers can pick up."
 
+  - type: diagram
+    id: pipeline
+    tone: white
+    label: A common pattern
+    heading: How a Python data pipeline is organized
+    intro: "Many Python projects follow the same shape, whatever the data is."
+    spec:
+      kind: flow
+      steps:
+        - title: Collect
+          text: Pull data from files, systems, and services.
+        - title: Check
+          text: Reject or flag anything incomplete or wrong.
+        - title: Transform
+          text: Join, clean, and reshape it.
+        - title: Store
+          text: Load it into a database or warehouse.
+        - title: Use
+          text: Feed reports, dashboards, or other systems.
+    purpose: process
+    takeaway: "A Python pipeline collects, checks, transforms, stores, and then uses data, with the checking step placed before anything is relied on."
+    caption: "This diagram shows five steps of a Python data pipeline, from collecting data to feeding reports and dashboards, with checking before use."
+
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: Python compared with other languages
+    caption: Python compared with other common languages for business software
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Python
+        - "Data, automation, AI, and back ends where development speed matters."
+        - "Slower for heavy computation, and less natural for interfaces."
+      - - "[TypeScript](ref:lang.typescript)"
+        - "Teams who want one language across the interface and the server."
+        - "Fewer ready tools for data and machine learning."
+      - - "[Java](ref:lang.java)"
+        - "Large, long-lived enterprise systems."
+        - "More code for the same result, and slower to start."
+      - - "[Go](ref:lang.go)"
+        - "Fast, simple network services."
+        - "Fewer libraries for data and AI work."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Where it fits
+    heading: Work that suits Python
+    items:
+      - title: A back end for a web or mobile app
+        body: "Accounts, business rules, and a database behind an interface built in another tool, with a clear set of requests between them."
+      - title: Reporting and data pipelines
+        body: "Collecting data from several systems, cleaning it, and loading it somewhere people can analyze it."
+      - title: Automation of repeated work
+        body: "Reading files and emails, filling in systems, and producing reports that someone used to prepare by hand."
+      - title: AI features inside a product
+        body: "Sending text or documents to a model, checking what comes back, and storing the results."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Python
+    items:
+      - q: Is Python fast enough?
+        a: "For most business software, yes. The database and network are usually the limit, not the language. Where raw speed matters, heavy parts can be written in faster code or in another language."
+      - q: Can Python build the website too?
+        a: "It can serve pages, but we usually pair a Python back end with an interface built in another tool, since that is where each is strongest."
+      - q: Do you use Python for AI work?
+        a: "Often, because most AI libraries and provider tools support it well. See our [AI](ref:svc.ai) service."
+      - q: Can you take over a Python codebase?
+        a: "Yes. We begin with a short review of structure, dependencies, and tests, then recommend how to proceed."
+
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Python
-    intro: "How we set up a typical Python project."
+    intro: "Our engineering choices on structure and tooling, serving requests, and delivery, written for the people who will own the system after launch."
     panels:
       - title: Structure and tooling
         paragraphs:
@@ -170,21 +185,6 @@ sections:
         items:
           - "Automated tests and linting on every change."
           - "Packaging in containers with [Docker](ref:tool.docker) for repeatable releases."
-
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Python
-    items:
-      - q: Is Python fast enough?
-        a: "For most business software, yes. The database and network are usually the limit, not the language. Where raw speed matters, heavy parts can be written in faster code or in another language."
-      - q: Can Python build the website too?
-        a: "It can serve pages, but we usually pair a Python back end with an interface built in another tool, since that is where each is strongest."
-      - q: Do you use Python for AI work?
-        a: "Often, because most AI libraries and provider tools support it well. See our [AI](ref:svc.ai) service."
-      - q: Can you take over a Python codebase?
-        a: "Yes. We begin with a short review of structure, dependencies, and tests, then recommend how to proceed."
 
   - type: related
     id: related

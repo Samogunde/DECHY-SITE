@@ -248,7 +248,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The building blocks we work with.
+    intro: "For your developers and IT lead: our choices on models and providers, giving a model your information, orchestration and tools, and evaluation and monitoring, and the reasoning behind each."
     panels:
       - title: Models and providers
         paragraphs:

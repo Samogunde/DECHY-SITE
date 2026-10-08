@@ -86,9 +86,18 @@ sections:
         - "A quick experiment."
         - "No record, and no way to repeat or review."
 
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Two things that go wrong
+    paragraphs:
+      - "The state file records what Terraform believes exists. If it is lost, corrupted, or edited carelessly, Terraform can act on the wrong picture. And if people keep changing things in the console, the code and the real system drift apart."
+      - "We store state remotely with locking, restrict console changes where we can, and run regular checks that flag drift."
+
   - type: process
     id: flow
-    tone: white
+    tone: paper
     label: How we adopt it
     heading: Moving existing infrastructure into code
     steps:
@@ -147,34 +156,6 @@ sections:
           - "Conventions, documentation, and training."
           - "Ongoing support if you want it."
 
-  - type: callout
-    id: limits
-    tone: white
-    variant: limits
-    title: Two things that go wrong
-    paragraphs:
-      - "The state file records what Terraform believes exists. If it is lost, corrupted, or edited carelessly, Terraform can act on the wrong picture. And if people keep changing things in the console, the code and the real system drift apart."
-      - "We store state remotely with locking, restrict console changes where we can, and run regular checks that flag drift."
-
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with Terraform
-    intro: "The conventions we follow."
-    panels:
-      - title: Structure
-        paragraphs:
-          - "We separate environments, use small modules with clear inputs and outputs, and pin provider and module versions so a plan today matches a plan next month."
-      - title: State and secrets
-        items:
-          - "Remote state with encryption and locking, one state per environment or component."
-          - "Secrets kept out of code and state where possible, using the cloud provider's secret service."
-      - title: Pipelines
-        items:
-          - "A plan on every pull request, applied only after approval, from a controlled pipeline such as [GitHub Actions](ref:tool.github-actions)."
-          - "Policy checks and formatting enforced automatically."
-
   - type: faq
     id: faq
     tone: white
@@ -189,6 +170,25 @@ sections:
         a: "Yes. The approach is common, though the resources and settings differ between [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud)."
       - q: What if our team prefers another tool?
         a: "The idea matters more than the tool. We will work with what suits your team and say what we recommend and why."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with Terraform
+    intro: "The detail a technical reviewer will ask about: structure, state and secrets, and pipelines."
+    panels:
+      - title: Structure
+        paragraphs:
+          - "We separate environments, use small modules with clear inputs and outputs, and pin provider and module versions so a plan today matches a plan next month."
+      - title: State and secrets
+        items:
+          - "Remote state with encryption and locking, one state per environment or component."
+          - "Secrets kept out of code and state where possible, using the cloud provider's secret service."
+      - title: Pipelines
+        items:
+          - "A plan on every pull request, applied only after approval, from a controlled pipeline such as [GitHub Actions](ref:tool.github-actions)."
+          - "Policy checks and formatting enforced automatically."
 
   - type: related
     id: related

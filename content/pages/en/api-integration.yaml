@@ -218,7 +218,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: How we build connections.
+    intro: "The detail a technical reviewer will ask about: styles of API, payments, safe sign-in between systems, and reliability."
     panels:
       - title: Styles of API
         paragraphs:

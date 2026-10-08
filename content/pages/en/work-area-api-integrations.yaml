@@ -167,7 +167,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The techniques we use.
+    intro: "For your developers and IT lead: our choices on styles of connection, reliability, and security, and the reasoning behind each."
     panels:
       - title: Styles of connection
         paragraphs:

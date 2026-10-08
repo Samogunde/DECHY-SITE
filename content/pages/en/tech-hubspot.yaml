@@ -65,46 +65,9 @@ sections:
     paragraphs:
       - Its value is joining things that usually stay apart. The form someone filled in, the email they opened, the call with sales, and the support ticket all appear on one timeline.
       - That only works if the data is clean and the process is agreed. A CRM that does not match how your team really sells becomes a place people avoid.
-  - type: table
-    id: parts
-    tone: paper
-    label: Where it fits
-    heading: What HubSpot covers, by team
-    caption: What HubSpot offers each team and what we set up for it
-    columns:
-      - Team
-      - What HubSpot offers
-      - What we set up
-    rows:
-      - - Marketing
-        - Forms, email, landing pages, and campaign reports.
-        - Forms on your site, lead scoring, and source tracking.
-      - - Sales
-        - Deals, pipelines, meetings, and reminders.
-        - A pipeline matching your real stages, and automatic task creation.
-      - - Service
-        - Tickets, a shared inbox, and a knowledge base.
-        - Ticket routing and customer-facing help pages.
-      - - Operations
-        - Data sync and automation across systems.
-        - Connections to accounting, billing, and other tools.
-      - - Website
-        - A content system for pages and blogs.
-        - Used when it fits. Otherwise we connect your existing site.
-  - type: diagram
-    id: crm-view
-    tone: white
-    label: What it looks like
-    heading: A customer record that other tools keep current
-    intro: HubSpot becomes valuable when the record is fed by the tools that touch the customer.
-    figure: crm-ui
-    purpose: relationship
-    takeaway: A customer platform is only as good as the tools that keep its record current.
-    caption: This sketch shows a conceptual customer system with a pipeline and a record whose sections stay in sync with other tools. It is an illustration and not a client system.
-    points: []
   - type: chooser
     id: shape
-    tone: white
+    tone: paper
     label: Options
     heading: What kind of HubSpot work do you need?
     intro: Teams usually come to us in one of three situations.
@@ -131,9 +94,46 @@ sections:
         cta:
           label: Plan a clean-up
           href: /contact/?service=automation
+  - type: table
+    id: parts
+    tone: white
+    label: Where it fits
+    heading: What HubSpot covers, by team
+    caption: What HubSpot offers each team and what we set up for it
+    columns:
+      - Team
+      - What HubSpot offers
+      - What we set up
+    rows:
+      - - Marketing
+        - Forms, email, landing pages, and campaign reports.
+        - Forms on your site, lead scoring, and source tracking.
+      - - Sales
+        - Deals, pipelines, meetings, and reminders.
+        - A pipeline matching your real stages, and automatic task creation.
+      - - Service
+        - Tickets, a shared inbox, and a knowledge base.
+        - Ticket routing and customer-facing help pages.
+      - - Operations
+        - Data sync and automation across systems.
+        - Connections to accounting, billing, and other tools.
+      - - Website
+        - A content system for pages and blogs.
+        - Used when it fits. Otherwise we connect your existing site.
+  - type: diagram
+    id: crm-view
+    tone: paper
+    label: What it looks like
+    heading: A customer record that other tools keep current
+    intro: HubSpot becomes valuable when the record is fed by the tools that touch the customer.
+    figure: crm-ui
+    purpose: relationship
+    takeaway: A customer platform is only as good as the tools that keep its record current.
+    caption: This sketch shows a conceptual customer system with a pipeline and a record whose sections stay in sync with other tools. It is an illustration and not a client system.
+    points: []
   - type: diagram
     id: path
-    tone: paper
+    tone: white
     label: The connections
     heading: What a HubSpot set-up connects to
     intro: HubSpot is most useful when the rest of the business feeds it and reads from it.
@@ -182,7 +182,7 @@ sections:
           - Merging duplicates and retiring unused fields.
   - type: callout
     id: limits
-    tone: paper
+    tone: white
     variant: limits
     title: A CRM is only as good as its data
     paragraphs:
@@ -193,7 +193,7 @@ sections:
     tone: white
     label: Technical depth
     heading: How we build with HubSpot
-    intro: How we build and connect HubSpot.
+    intro: "What we settle early on HubSpot work: data model, integration, and governance, so nothing surprises your team later."
     panels:
       - title: Data model
         paragraphs:

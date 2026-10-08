@@ -77,39 +77,9 @@ sections:
       - Customers rarely ask how a shipment is handled. They ask where it is. The value a logistics firm sells is reliable movement and reliable information, and the second is often what customers notice first.
       - The difficulty is that the information lives in many places. The order sits in the customer's system, the booking with a carrier, the loading in the warehouse tool, the proof of delivery on a driver's phone. The data exists. It does not meet.
       - "Our work is largely to make it meet: to connect the sources, resolve the differences, and present one dependable status to the people who ask."
-  - type: index
-    id: breaks
-    tone: paper
-    columns: 2
-    label: Where it breaks
-    heading: Where information usually gets lost
-    items:
-      - title: Between the order and the booking
-        body: Order details are re-typed into a carrier or planning tool, and mistakes follow.
-      - title: Between the warehouse and the customer
-        body: Pick, pack, and dispatch happen, but the customer's status does not change until someone updates it.
-      - title: On the road
-        body: Proof of delivery and exceptions stay on a driver's phone or paper until the end of the day.
-      - title: In the paperwork
-        body: Invoices, delivery notes, and customs documents are assembled by hand from several systems.
-      - title: In the reports
-        body: On-time and cost figures are built after the fact, so problems are seen late.
-      - title: In the old systems
-        body: A planning or warehouse system that works but cannot share data, so everything around it is manual.
-  - type: diagram
-    id: ops-view
-    tone: white
-    label: What it looks like
-    heading: An operations view of what needs attention
-    intro: Logistics managers need exceptions first.
-    figure: dashboard-ui
-    purpose: system
-    takeaway: A logistics operations view puts summary tiles first, then the trend, then the shipments behind schedule.
-    caption: This sketch shows a conceptual operations dashboard with summary tiles, a bar chart without figures, and a list of items that need attention. It is not a client's system.
-    points: []
   - type: chooser
     id: start
-    tone: white
+    tone: paper
     label: Where to start
     heading: What should come first?
     intro: The first project is the one that removes the most re-typing or the most chasing.
@@ -131,6 +101,17 @@ sections:
         when: On-time rate, cost per delivery, and delays are not visible until the month ends.
         get: A dashboard fed by the same data that runs operations.
         watch: Define on-time carefully, and use the same definition everywhere.
+  - type: diagram
+    id: ops-view
+    tone: white
+    label: What it looks like
+    heading: An operations view of what needs attention
+    intro: Logistics managers need exceptions first.
+    figure: dashboard-ui
+    purpose: system
+    takeaway: A logistics operations view puts summary tiles first, then the trend, then the shipments behind schedule.
+    caption: This sketch shows a conceptual operations dashboard with summary tiles, a bar chart without figures, and a list of items that need attention. It is not a client's system.
+    points: []
   - type: columns
     id: help
     tone: paper
@@ -153,24 +134,29 @@ sections:
         items:
           - Staged moves away from old planning or warehouse systems. See [legacy system modernization](/solutions/legacy-system-modernization/).
           - Mobile apps for drivers and warehouse staff.
-  - type: technical
-    id: technology
+  - type: index
+    id: breaks
+    photo:
+      asset: asset.photo-who-port-operations
+      layout: split
+      position: 38% 50%
     tone: white
-    label: Technical depth
-    heading: Integration and reliability notes
-    intro: How we build for operations that run all day.
-    panels:
-      - title: Events and status
-        items:
-          - Each shipment has a stable identifier that every system uses, so updates from different sources attach to the same record.
-          - Status changes are recorded as events with a time and a source, which makes the history reliable and the current status a calculation, not a guess.
-      - title: Reliability
-        items:
-          - Messages are queued and retried, so a carrier system that is briefly unavailable does not lose updates.
-          - Duplicates are detected, so a repeated message cannot change a record twice.
-      - title: Field use
-        paragraphs:
-          - Driver and warehouse apps work with poor or no signal and sync when connection returns. See our [mobile app](ref:svc.mobile-app-development) work.
+    columns: 2
+    label: Where it breaks
+    heading: Where information usually gets lost
+    items:
+      - title: Between the order and the booking
+        body: Order details are re-typed into a carrier or planning tool, and mistakes follow.
+      - title: Between the warehouse and the customer
+        body: Pick, pack, and dispatch happen, but the customer's status does not change until someone updates it.
+      - title: On the road
+        body: Proof of delivery and exceptions stay on a driver's phone or paper until the end of the day.
+      - title: In the paperwork
+        body: Invoices, delivery notes, and customs documents are assembled by hand from several systems.
+      - title: In the reports
+        body: On-time and cost figures are built after the fact, so problems are seen late.
+      - title: In the old systems
+        body: A planning or warehouse system that works but cannot share data, so everything around it is manual.
   - type: faq
     id: faq
     tone: paper
@@ -185,9 +171,27 @@ sections:
         a: By recording status as events from every source, with a time and origin, and by testing the common exceptions such as delays and amended orders.
       - q: Do we need a mobile app for drivers?
         a: Only if drivers need to send information from the road. A simple, reliable app that works offline is often worth it, because proof of delivery arrives at once.
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: Integration and reliability notes
+    intro: "What we settle early: events and status, reliability, and field use, so nothing surprises your team later."
+    panels:
+      - title: Events and status
+        items:
+          - Each shipment has a stable identifier that every system uses, so updates from different sources attach to the same record.
+          - Status changes are recorded as events with a time and a source, which makes the history reliable and the current status a calculation, not a guess.
+      - title: Reliability
+        items:
+          - Messages are queued and retried, so a carrier system that is briefly unavailable does not lose updates.
+          - Duplicates are detected, so a repeated message cannot change a record twice.
+      - title: Field use
+        paragraphs:
+          - Driver and warehouse apps work with poor or no signal and sync when connection returns. See our [mobile app](ref:svc.mobile-app-development) work.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Logistics across DECHY
     groups:

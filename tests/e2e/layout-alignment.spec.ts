@@ -134,7 +134,9 @@ test.describe("photographs are sharp at their rendered size", () => {
   for (const [path, dpr] of [
     ["/", 1],
     ["/", 2],
-    ["/software-development/", 2],
+    ["/ui-ux/", 2],
+    ["/industries/logistics/", 2],
+    ["/industries/retail/", 2],
     ["/contact/", 2],
   ] as const) {
     test(`${path} at ${dpr}x: source has at least the pixels the layout displays`, async ({

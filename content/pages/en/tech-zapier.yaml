@@ -105,29 +105,6 @@ sections:
     takeaway: A Zapier workflow moves a request between tools, with each step owned and recorded.
     caption: This sketch shows a conceptual workflow board with a request moving through four steps with owners and status labels. It is an illustration and not a client's workflow.
     points: []
-  - type: callout
-    id: limits
-    tone: paper
-    variant: limits
-    title: When Zapier has been outgrown
-    paragraphs:
-      - Warning signs include a rising bill, long chains nobody can follow, tasks that fail without anyone noticing, and logic that needs the same condition repeated in many places.
-      - At that point we move the busiest or most important flows to a tool with better control, and leave the simple ones where they are.
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical uses
-    heading: Automations we are often asked for
-    items:
-      - title: Lead capture
-        body: A website form creates a contact, notifies the owner in a chat tool, and starts a follow-up task.
-      - title: Customer onboarding
-        body: A closed deal triggers a welcome email, a project folder, and a checklist for the team.
-      - title: Reporting
-        body: Numbers from several tools collected into one sheet each morning for review.
-      - title: Reminders and approvals
-        body: Overdue items flagged to the right person, and approvals routed by chat or email.
   - type: columns
     id: dechy
     tone: paper
@@ -150,12 +127,35 @@ sections:
         items:
           - Migrating busy automations to [Make](ref:tech.make), [n8n](ref:tech.n8n), or custom code.
           - Keeping simple ones where they are.
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Automations we are often asked for
+    items:
+      - title: Lead capture
+        body: A website form creates a contact, notifies the owner in a chat tool, and starts a follow-up task.
+      - title: Customer onboarding
+        body: A closed deal triggers a welcome email, a project folder, and a checklist for the team.
+      - title: Reporting
+        body: Numbers from several tools collected into one sheet each morning for review.
+      - title: Reminders and approvals
+        body: Overdue items flagged to the right person, and approvals routed by chat or email.
+  - type: callout
+    id: limits
+    tone: paper
+    variant: limits
+    title: When Zapier has been outgrown
+    paragraphs:
+      - Warning signs include a rising bill, long chains nobody can follow, tasks that fail without anyone noticing, and logic that needs the same condition repeated in many places.
+      - At that point we move the busiest or most important flows to a tool with better control, and leave the simple ones where they are.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Zapier
-    intro: How we keep Zapier automations dependable.
+    intro: "The detail a technical reviewer will ask about: structure, reliability, and extending it."
     panels:
       - title: Structure
         paragraphs:
@@ -171,7 +171,7 @@ sections:
           - Code steps for small transformations.
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about Zapier
     items:
@@ -185,7 +185,7 @@ sections:
         a: Yes. We audit them, document them, and fix or retire what is not working.
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: Zapier across DECHY
     groups:

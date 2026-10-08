@@ -67,33 +67,9 @@ sections:
       - "That strictness is the point. When money, orders, or customer records are involved, you want the database to refuse bad data and never leave things half-changed."
       - "It is also unusually capable. Beyond tables, it can store documents, search text, handle location data, and support the vector search that AI features use, which often removes the need for a second database."
 
-  - type: chooser
-    id: choice
-    tone: paper
-    label: Where it fits
-    heading: Is PostgreSQL the right database?
-    intro: "It is a strong default, and not the answer to everything."
-    question: What does the data look like?
-    options:
-      - label: Structured business data
-        when: "Customers, orders, invoices, and records related to each other."
-        get: "PostgreSQL is usually the best starting point, with strong rules and mature tools."
-        watch: "Design the structure with care, since changing it later is harder."
-        cta: { label: Plan a database, href: "/contact/?service=data-analytics" }
-      - label: Very flexible documents
-        when: "Records that vary a lot, with little relation between them."
-        get: "A document database such as [MongoDB](ref:tech.mongodb) can suit, though PostgreSQL's document support is often enough."
-        watch: "Flexibility early can mean confusion later."
-        cta: { label: Compare document databases, href: "/contact/?service=data-analytics" }
-      - label: Huge analytical workloads
-        when: "Many terabytes queried for analysis, not for running an application."
-        get: "A data warehouse such as [BigQuery](ref:tech.bigquery) or [Snowflake](ref:plat.snowflake), fed from PostgreSQL."
-        watch: "Do not strain an application database with heavy reporting."
-        cta: { label: Plan a warehouse, href: "/contact/?service=data-analytics" }
-
   - type: callout
     id: managed
-    tone: white
+    tone: paper
     variant: note
     title: Managed or self-run?
     paragraphs:
@@ -124,9 +100,33 @@ sections:
         - "Small, local, or embedded data."
         - "Not designed for many users at once."
 
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Where it fits
+    heading: Is PostgreSQL the right database?
+    intro: "It is a strong default, and not the answer to everything."
+    question: What does the data look like?
+    options:
+      - label: Structured business data
+        when: "Customers, orders, invoices, and records related to each other."
+        get: "PostgreSQL is usually the best starting point, with strong rules and mature tools."
+        watch: "Design the structure with care, since changing it later is harder."
+        cta: { label: Plan a database, href: "/contact/?service=data-analytics" }
+      - label: Very flexible documents
+        when: "Records that vary a lot, with little relation between them."
+        get: "A document database such as [MongoDB](ref:tech.mongodb) can suit, though PostgreSQL's document support is often enough."
+        watch: "Flexibility early can mean confusion later."
+        cta: { label: Compare document databases, href: "/contact/?service=data-analytics" }
+      - label: Huge analytical workloads
+        when: "Many terabytes queried for analysis, not for running an application."
+        get: "A data warehouse such as [BigQuery](ref:tech.bigquery) or [Snowflake](ref:plat.snowflake), fed from PostgreSQL."
+        watch: "Do not strain an application database with heavy reporting."
+        cta: { label: Plan a warehouse, href: "/contact/?service=data-analytics" }
+
   - type: process
     id: process
-    tone: paper
+    tone: white
     label: How we work
     heading: Designing or fixing a database
     steps:
@@ -148,7 +148,7 @@ sections:
 
   - type: columns
     id: dechy
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: Working with PostgreSQL
     columns:
@@ -169,26 +169,6 @@ sections:
           - "Migrations from other databases."
           - "Upgrades with little downtime."
 
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with PostgreSQL
-    intro: "How we design and run PostgreSQL."
-    panels:
-      - title: Design
-        paragraphs:
-          - "We normalize sensibly, use constraints and foreign keys, choose appropriate types, and use JSON columns for genuinely variable data, not as a shortcut around design."
-      - title: Performance
-        items:
-          - "Indexes chosen from real query plans, and statistics kept current."
-          - "Connection pooling, and read replicas for reporting load."
-          - "Partitioning for very large tables."
-      - title: Operations
-        items:
-          - "Managed services on [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud), or self-run with automated backups and point-in-time recovery."
-          - "Extensions such as PostGIS for location data and pgvector for vector search."
-
   - type: faq
     id: faq
     tone: white
@@ -203,6 +183,26 @@ sections:
         a: "It scales a long way with good design, indexing, and replicas. Very large analytical workloads are usually better in a warehouse."
       - q: Can you migrate us from another database?
         a: "Yes. We plan the move, test with copies of real data, and cut over with a way back."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with PostgreSQL
+    intro: "The detail a technical reviewer will ask about: design, performance, and operations."
+    panels:
+      - title: Design
+        paragraphs:
+          - "We normalize sensibly, use constraints and foreign keys, choose appropriate types, and use JSON columns for genuinely variable data, not as a shortcut around design."
+      - title: Performance
+        items:
+          - "Indexes chosen from real query plans, and statistics kept current."
+          - "Connection pooling, and read replicas for reporting load."
+          - "Partitioning for very large tables."
+      - title: Operations
+        items:
+          - "Managed services on [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud), or self-run with automated backups and point-in-time recovery."
+          - "Extensions such as PostGIS for location data and pgvector for vector search."
 
   - type: related
     id: related

@@ -448,15 +448,31 @@
   }
 }
 
-/* A booking arrives: the staff card and the sync note settle in after the page, once. */
+/* A booking arrives: the staff card and the sync note settle in once, after the page, when the
+   interface is in view. In the hero (already on screen) they arrive on load. */
 @media (prefers-reduced-motion: no-preference) {
-  .pu-staff,
-  .pu-sync {
+  .hero-layer .pu-staff,
+  .hero-layer .pu-sync,
+  .figure:not([data-state]) .pu-staff,
+  .figure:not([data-state]) .pu-sync {
     animation: pu-arrive 0.6s var(--ease-out) both;
     animation-delay: 0.35s;
   }
-  .pu-sync {
+  .hero-layer .pu-sync,
+  .figure:not([data-state]) .pu-sync {
     animation-delay: 0.7s;
+  }
+  [data-reveal="figure"][data-state="hidden"] :is(.pu-staff, .pu-sync) {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  [data-reveal="figure"][data-state="shown"] :is(.pu-staff, .pu-sync) {
+    transition:
+      opacity 0.6s var(--ease-out) 0.35s,
+      transform 0.6s var(--ease-out) 0.35s;
+  }
+  [data-reveal="figure"][data-state="shown"] .pu-sync {
+    transition-delay: 0.7s;
   }
   @keyframes pu-arrive {
     from {

@@ -65,32 +65,9 @@ sections:
       - "Seeing the whole process on one canvas is the main benefit. A manager can follow it, a colleague can fix it, and mistakes in the logic are easier to spot than in a list of steps."
       - "It is more capable than a simple connector tool, and that capability needs discipline. Large scenarios become tangled just as large documents do."
 
-  - type: diagram
-    id: scenario
-    tone: paper
-    label: An example
-    heading: What a branching scenario looks like
-    intro: "Here is a typical order-handling scenario, described step by step."
-    spec:
-      kind: flow
-      steps:
-        - title: A new order arrives
-          text: From the online store.
-        - title: A router splits it
-          text: Digital goods one way, physical goods the other.
-        - title: Each path acts
-          text: Send a download link, or create a shipping task.
-        - title: Items are repeated
-          text: A loop adds each product to the stock sheet.
-        - title: Everything is logged
-          text: Errors go to a channel someone watches.
-    purpose: sequence
-    takeaway: "A Make scenario can split a flow by type, repeat steps for each item, and report errors, all on one readable canvas."
-    caption: "This diagram shows an order-handling scenario in five steps, from a new order arriving to a log with errors going to a monitored channel."
-
   - type: table
     id: choice
-    tone: white
+    tone: paper
     label: Options
     heading: Make compared with the alternatives
     caption: Make compared with other automation options
@@ -112,25 +89,32 @@ sections:
         - "Critical processes with strict reliability needs."
         - "Highest cost, and developers for every change."
 
-  - type: index
-    id: uses
-    tone: paper
-    columns: 2
-    label: Typical uses
-    heading: Processes that suit Make
-    items:
-      - title: Order and fulfilment routing
-        body: "Different handling by product type, region, or customer, with the right people told."
-      - title: Content and approval pipelines
-        body: "Drafts moving through review steps, with reminders and a record of who approved what."
-      - title: Data clean-up between systems
-        body: "Reformatting, de-duplicating, and enriching records on their way from one tool to another."
-      - title: Reporting from many sources
-        body: "Pulling numbers from several apps, combining them, and posting a daily summary."
+  - type: diagram
+    id: scenario
+    tone: white
+    label: An example
+    heading: What a branching scenario looks like
+    intro: "Here is a typical order-handling scenario, described step by step."
+    spec:
+      kind: flow
+      steps:
+        - title: A new order arrives
+          text: From the online store.
+        - title: A router splits it
+          text: Digital goods one way, physical goods the other.
+        - title: Each path acts
+          text: Send a download link, or create a shipping task.
+        - title: Items are repeated
+          text: A loop adds each product to the stock sheet.
+        - title: Everything is logged
+          text: Errors go to a channel someone watches.
+    purpose: sequence
+    takeaway: "A Make scenario can split a flow by type, repeat steps for each item, and report errors, all on one readable canvas."
+    caption: "This diagram shows an order-handling scenario in five steps, from a new order arriving to a log with errors going to a monitored channel."
 
   - type: columns
     id: dechy
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: Working with Make
     columns:
@@ -151,12 +135,28 @@ sections:
           - "Monitoring, alerts, and cost reviews."
           - "Documentation for your team."
 
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Processes that suit Make
+    items:
+      - title: Order and fulfilment routing
+        body: "Different handling by product type, region, or customer, with the right people told."
+      - title: Content and approval pipelines
+        body: "Drafts moving through review steps, with reminders and a record of who approved what."
+      - title: Data clean-up between systems
+        body: "Reformatting, de-duplicating, and enriching records on their way from one tool to another."
+      - title: Reporting from many sources
+        body: "Pulling numbers from several apps, combining them, and posting a daily summary."
+
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Make
-    intro: "How we keep scenarios maintainable."
+    intro: "Our engineering choices on structure, data and errors, and connections, written for the people who will own the system after launch."
     panels:
       - title: Structure
         paragraphs:
@@ -173,7 +173,7 @@ sections:
 
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about Make
     items:
@@ -188,7 +188,7 @@ sections:
 
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: Make across DECHY
     groups:

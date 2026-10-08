@@ -242,7 +242,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The tools we work with.
+    intro: "Our engineering choices on native and cross-platform apps and the systems behind them, written for the people who will own the app after launch."
     panels:
       - title: Native
         paragraphs:

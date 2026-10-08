@@ -71,6 +71,41 @@ sections:
       - A factory cannot pause for an upgrade. Systems here are chosen for dependability and tend to stay a long time, so a manufacturer often runs equipment and software from several decades. New software has to work alongside the old, and has to fail safely.
       - The data is also physical. A count, a temperature, or a measurement originates at a machine or a person at the line, not in an office, so capturing it cleanly is half the problem.
       - "The best projects begin small and close to the floor: one line, one process, one report. When that works, the approach spreads."
+  - type: chooser
+    id: start
+    tone: paper
+    label: Where to begin
+    heading: What is the first thing to fix?
+    intro: The first project should remove a daily nuisance and produce a number leaders care about.
+    question: Which problem is most costly?
+    options:
+      - label: Planning in spreadsheets
+        when: Schedules and material needs are kept in files that one or two people maintain.
+        get: A shared planning tool fed by orders and stock, with the same rules planners use.
+        watch: Capture the planners' rules in writing before building.
+      - label: Quality and traceability on paper
+        when: Checks are written down, then typed later, and problems are traced slowly.
+        get: Checks recorded at the line, linked to batches, and searchable.
+        watch: Make the screens fast to use with gloves and in noise.
+      - label: Problems seen too late
+        when: Output, scrap, and downtime are reported after the shift or the week.
+        get: A live view of production and downtime. See [business dashboards](/solutions/business-dashboards/).
+        watch: Agree what counts as downtime before measuring it.
+      - label: Disconnected systems
+        when: Orders, stock, production, and accounts are in different systems.
+        get: Connections that carry each fact once. See [process automation](/solutions/business-process-automation/).
+        watch: Test with real exceptions such as amended orders and scrap.
+  - type: diagram
+    id: production-report
+    tone: white
+    label: What it looks like
+    heading: A production report built from connected data
+    intro: Manufacturers learn faster when output, scrap, and downtime come from one source.
+    figure: analytics-ui
+    purpose: system
+    takeaway: A production report built from one connected source shows output and trends without manual assembly.
+    caption: This sketch shows a conceptual analytics report with filters, a two-series chart by month, and a table with trend labels. It carries no figures and is not a client report.
+    points: []
   - type: table
     id: legacy
     tone: paper
@@ -94,44 +129,9 @@ sections:
       - - Supplier and customer exchanges
         - Orders and updates by email and phone.
         - A shared portal or connection, with clear status. See [customer portals](/work/areas/customer-portals/).
-  - type: diagram
-    id: production-report
-    tone: white
-    label: What it looks like
-    heading: A production report built from connected data
-    intro: Manufacturers learn faster when output, scrap, and downtime come from one source.
-    figure: analytics-ui
-    purpose: system
-    takeaway: A production report built from one connected source shows output and trends without manual assembly.
-    caption: This sketch shows a conceptual analytics report with filters, a two-series chart by month, and a table with trend labels. It carries no figures and is not a client report.
-    points: []
-  - type: chooser
-    id: start
-    tone: white
-    label: Where to begin
-    heading: What is the first thing to fix?
-    intro: The first project should remove a daily nuisance and produce a number leaders care about.
-    question: Which problem is most costly?
-    options:
-      - label: Planning in spreadsheets
-        when: Schedules and material needs are kept in files that one or two people maintain.
-        get: A shared planning tool fed by orders and stock, with the same rules planners use.
-        watch: Capture the planners' rules in writing before building.
-      - label: Quality and traceability on paper
-        when: Checks are written down, then typed later, and problems are traced slowly.
-        get: Checks recorded at the line, linked to batches, and searchable.
-        watch: Make the screens fast to use with gloves and in noise.
-      - label: Problems seen too late
-        when: Output, scrap, and downtime are reported after the shift or the week.
-        get: A live view of production and downtime. See [business dashboards](/solutions/business-dashboards/).
-        watch: Agree what counts as downtime before measuring it.
-      - label: Disconnected systems
-        when: Orders, stock, production, and accounts are in different systems.
-        get: Connections that carry each fact once. See [process automation](/solutions/business-process-automation/).
-        watch: Test with real exceptions such as amended orders and scrap.
   - type: index
     id: needs
-    tone: paper
+    tone: white
     columns: 2
     label: What we build
     photo:
@@ -154,7 +154,7 @@ sections:
         body: Output, quality, and cost figures from one source.
   - type: columns
     id: help
-    tone: white
+    tone: paper
     label: What DECHY can do
     heading: How we help manufacturers
     columns:
@@ -179,7 +179,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: Shop-floor integration notes
-    intro: How we build for environments that cannot stop.
+    intro: "Our engineering choices on safe failure, data capture, and deployment, written for the people who will own the system after launch."
     panels:
       - title: Safe failure
         items:

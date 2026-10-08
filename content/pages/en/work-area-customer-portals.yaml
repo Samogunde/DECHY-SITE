@@ -158,7 +158,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The security and structure choices.
+    intro: "For your developers and IT lead: our choices on identity and access and data protection, and the reasoning behind each."
     panels:
       - title: Identity and access
         paragraphs:

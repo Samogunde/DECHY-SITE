@@ -67,6 +67,36 @@ sections:
       - "For an organization that already signs everyone in through Microsoft, applications on Azure can use the same accounts, groups, and security policies. That removes a whole layer of work and a whole class of mistakes."
       - "It is also a natural home for applications built on Microsoft's own technologies. For other workloads it competes on price and features with the other large clouds, and we compare them honestly."
 
+  - type: table
+    id: compare
+    tone: paper
+    label: Alternatives
+    heading: Azure compared with other clouds
+    caption: Azure compared with other cloud options
+    columns: [Consideration, Where Azure helps, Where to check]
+    rows:
+      - - Microsoft identity and tools
+        - "Native links to Entra ID and Microsoft 365."
+        - "Little advantage if you do not use them."
+      - - Windows and SQL Server workloads
+        - "Strong support, including licensing options."
+        - "Licensing can be complex, so we model the costs."
+      - - Other workloads
+        - "A broad range of services comparable to other clouds."
+        - "Compare price and skills against [AWS](ref:plat.aws) and [Google Cloud](ref:plat.google-cloud)."
+      - - Hybrid set-ups
+        - "Good tools for connecting offices and data centres."
+        - "Network design needs care."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: Licensing needs attention
+    paragraphs:
+      - "Microsoft's licensing can make the same workload cost very different amounts depending on what you already own and how you run it. A design that ignores licensing can be wrong by a wide margin."
+      - "We model costs with your existing licenses in mind, and confirm current terms with Microsoft or your reseller, since they change."
+
   - type: diagram
     id: connect
     tone: paper
@@ -90,26 +120,21 @@ sections:
     takeaway: "A move to Azure takes stock first, decides a route per system, prepares the foundation, moves in stages, and then retires the old servers."
     caption: "This diagram shows five steps in moving systems to Azure, from taking inventory to running the new set-up and retiring the old servers."
 
-  - type: table
-    id: compare
+  - type: index
+    id: uses
     tone: white
-    label: Alternatives
-    heading: Azure compared with other clouds
-    caption: Azure compared with other cloud options
-    columns: [Consideration, Where Azure helps, Where to check]
-    rows:
-      - - Microsoft identity and tools
-        - "Native links to Entra ID and Microsoft 365."
-        - "Little advantage if you do not use them."
-      - - Windows and SQL Server workloads
-        - "Strong support, including licensing options."
-        - "Licensing can be complex, so we model the costs."
-      - - Other workloads
-        - "A broad range of services comparable to other clouds."
-        - "Compare price and skills against [AWS](ref:plat.aws) and [Google Cloud](ref:plat.google-cloud)."
-      - - Hybrid set-ups
-        - "Good tools for connecting offices and data centres."
-        - "Network design needs care."
+    columns: 2
+    label: Typical uses
+    heading: Workloads that suit Azure
+    items:
+      - title: Business applications for Microsoft organizations
+        body: "Internal tools and portals that use staff sign-in and share data with Microsoft 365."
+      - title: Moving Windows and SQL Server systems
+        body: "Servers and databases lifted from an office or data centre, then improved in stages."
+      - title: Applications built on Microsoft technologies
+        body: "Software written in .NET, hosted with the tools its developers already know."
+      - title: Hybrid arrangements
+        body: "Some systems staying on site while others move, joined by a secure network."
 
   - type: columns
     id: dechy
@@ -134,50 +159,6 @@ sections:
           - "Releases through [Azure DevOps](ref:tech.azure-devops) (Microsoft's tool for planning and releasing software) or [GitHub Actions](ref:tool.github-actions)."
           - "Monitoring, alerts, and cost reviews."
 
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical uses
-    heading: Workloads that suit Azure
-    items:
-      - title: Business applications for Microsoft organizations
-        body: "Internal tools and portals that use staff sign-in and share data with Microsoft 365."
-      - title: Moving Windows and SQL Server systems
-        body: "Servers and databases lifted from an office or data centre, then improved in stages."
-      - title: Applications built on Microsoft technologies
-        body: "Software written in .NET, hosted with the tools its developers already know."
-      - title: Hybrid arrangements
-        body: "Some systems staying on site while others move, joined by a secure network."
-
-  - type: callout
-    id: limits
-    tone: white
-    variant: limits
-    title: Licensing needs attention
-    paragraphs:
-      - "Microsoft's licensing can make the same workload cost very different amounts depending on what you already own and how you run it. A design that ignores licensing can be wrong by a wide margin."
-      - "We model costs with your existing licenses in mind, and confirm current terms with Microsoft or your reseller, since they change."
-
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with Azure
-    intro: "The practices we use on Azure."
-    panels:
-      - title: Structure and governance
-        paragraphs:
-          - "We organize subscriptions under management groups, apply policy and role-based access consistently, and describe environments in code with [Terraform](ref:tool.terraform) or Bicep."
-      - title: Running applications
-        items:
-          - "Managed app services and [Azure Functions](ref:tech.azure-functions) for most workloads, containers on a managed cluster when scale demands it."
-          - "Managed databases, including [Azure SQL](ref:tech.azure-sql), with backups and private networking."
-      - title: Operations
-        items:
-          - "Monitoring with metrics, logs, and alerts tied to what users feel."
-          - "Budgets and cost reviews by resource group."
-
   - type: faq
     id: faq
     tone: white
@@ -192,6 +173,25 @@ sections:
         a: "No. It runs many languages and frameworks, including Python, Java, and JavaScript, as well as Microsoft's own."
       - q: Who manages it day to day?
         a: "That is agreed at the start. We can run it, support your team, or hand it over with documentation."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with Azure
+    intro: "What we settle early on Azure work: structure and governance, running applications, and operations, so nothing surprises your team later."
+    panels:
+      - title: Structure and governance
+        paragraphs:
+          - "We organize subscriptions under management groups, apply policy and role-based access consistently, and describe environments in code with [Terraform](ref:tool.terraform) or Bicep."
+      - title: Running applications
+        items:
+          - "Managed app services and [Azure Functions](ref:tech.azure-functions) for most workloads, containers on a managed cluster when scale demands it."
+          - "Managed databases, including [Azure SQL](ref:tech.azure-sql), with backups and private networking."
+      - title: Operations
+        items:
+          - "Monitoring with metrics, logs, and alerts tied to what users feel."
+          - "Budgets and cost reviews by resource group."
 
   - type: related
     id: related

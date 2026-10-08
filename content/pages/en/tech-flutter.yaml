@@ -69,6 +69,39 @@ sections:
     paragraphs:
       - That is the main difference from other cross-platform options. You get a consistent, designed interface and fast development, at the cost of an app that does not automatically take on each platform's native look.
       - Flutter can reach the phone's own features, such as the camera and notifications, through ready-made packages or small pieces of native code.
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Flutter
+    columns:
+      - title: Build
+        items:
+          - Apps for iPhone and Android from one codebase.
+          - A shared design system and component library.
+      - title: Connect
+        items:
+          - Back ends, sign-in, and payments.
+          - Push notifications and offline storage.
+      - title: Release
+        items:
+          - App store listings and review handling.
+          - Automated builds and testing.
+      - title: Maintain
+        items:
+          - Updates for new phone and Flutter versions.
+          - Crash reporting and improvements.
+  - type: diagram
+    id: app-screen
+    tone: white
+    label: What it looks like
+    heading: One codebase, one screen design, two phones
+    intro: Cross-platform work succeeds when one screen design serves both platforms.
+    figure: mobile-app-ui
+    purpose: system
+    takeaway: A cross-platform app shares one screen design across iPhone and Android.
+    caption: This sketch shows a conceptual phone screen with a job list, status labels, and a tab bar. It is an illustration and not a client's app.
+    points: []
   - type: chooser
     id: choice
     tone: paper
@@ -121,34 +154,26 @@ sections:
       - - Progressive web app
         - Simple tools used occasionally, with no store listing needed.
         - Limited access to phone features.
-  - type: columns
-    id: dechy
+  - type: faq
+    id: faq
     tone: paper
-    label: What DECHY can do
-    heading: Working with Flutter
-    columns:
-      - title: Build
-        items:
-          - Apps for iPhone and Android from one codebase.
-          - A shared design system and component library.
-      - title: Connect
-        items:
-          - Back ends, sign-in, and payments.
-          - Push notifications and offline storage.
-      - title: Release
-        items:
-          - App store listings and review handling.
-          - Automated builds and testing.
-      - title: Maintain
-        items:
-          - Updates for new phone and Flutter versions.
-          - Crash reporting and improvements.
+    label: Common questions
+    heading: Questions about Flutter
+    items:
+      - q: Is Flutter as good as a native app?
+        a: For most business apps, users will not notice a difference. For apps needing the deepest platform features or the very best fit with each system, native may be better.
+      - q: Can Flutter also build a website?
+        a: It can, but we usually recommend building the website with web tools, since Flutter for the web suits some applications more than public sites.
+      - q: Is it expensive to maintain?
+        a: One codebase is cheaper than two, but any app needs updates for new phone releases and dependency changes. We plan for this from the start.
+      - q: Can you take over an existing Flutter app?
+        a: Yes. We review structure, dependencies, and tests first, then tell you what to improve.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Flutter
-    intro: How we structure a Flutter app.
+    intro: "What we settle early on Flutter work: structure, platform features, and quality, so nothing surprises your team later."
     panels:
       - title: Structure
         paragraphs:
@@ -162,34 +187,9 @@ sections:
         items:
           - Widget, unit, and integration tests, run in a pipeline on every change.
           - Testing on a range of real devices, since emulators miss differences.
-  - type: diagram
-    id: app-screen
-    tone: white
-    label: What it looks like
-    heading: One codebase, one screen design, two phones
-    intro: Cross-platform work succeeds when one screen design serves both platforms.
-    figure: mobile-app-ui
-    purpose: system
-    takeaway: A cross-platform app shares one screen design across iPhone and Android.
-    caption: This sketch shows a conceptual phone screen with a job list, status labels, and a tab bar. It is an illustration and not a client's app.
-    points: []
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Flutter
-    items:
-      - q: Is Flutter as good as a native app?
-        a: For most business apps, users will not notice a difference. For apps needing the deepest platform features or the very best fit with each system, native may be better.
-      - q: Can Flutter also build a website?
-        a: It can, but we usually recommend building the website with web tools, since Flutter for the web suits some applications more than public sites.
-      - q: Is it expensive to maintain?
-        a: One codebase is cheaper than two, but any app needs updates for new phone releases and dependency changes. We plan for this from the start.
-      - q: Can you take over an existing Flutter app?
-        a: Yes. We review structure, dependencies, and tests first, then tell you what to improve.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Flutter across DECHY
     groups:

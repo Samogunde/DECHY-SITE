@@ -65,18 +65,6 @@ sections:
       - A website normally answers every visitor from one place. A visitor on the far side of the world waits for the round trip, and every attacker, scraper, and broken bot reaches the same server as real customers.
       - Cloudflare changes that. It holds copies of your static content in many places, answers many requests itself, and screens the rest. Real visitors get faster pages, and your server sees less traffic, and less of the harmful kind.
       - It also manages the domain's addresses, which is where many outages begin. A mistake in one record can take a site offline, so moving this to a well-run service with a record of changes is itself a gain.
-  - type: callout
-    id: limits
-    tone: paper
-    variant: note
-    title: What Cloudflare will not fix
-    paragraphs:
-      - An edge network improves delivery and filtering. It does not repair a site that is slow or unsafe at the source.
-    items:
-      - Slow database queries and heavy application code
-      - Outdated plugins and unpatched software on your own server
-      - Weak passwords and over-broad access for staff
-      - Missing backups
   - type: table
     id: options
     tone: paper
@@ -103,28 +91,18 @@ sections:
       - - Edge code
         - Runs small programs near visitors for redirects, headers, and light logic.
         - Keep it small. Heavy logic belongs on your own servers.
-  - type: columns
-    id: dechy
+  - type: callout
+    id: limits
     tone: white
-    label: What DECHY can do
-    heading: Working with Cloudflare
-    columns:
-      - title: Set up
-        items:
-          - Moving DNS safely, with mail and verification records preserved.
-          - Secure connections end to end.
-      - title: Speed up
-        items:
-          - Caching rules suited to your pages.
-          - Image and file delivery tuned for phones.
-      - title: Protect
-        items:
-          - Firewall and bot rules based on your real traffic.
-          - Rate limits on sign-in and forms.
-      - title: Extend
-        items:
-          - Redirects, security headers, and light logic at the edge.
-          - Monitoring and alerts for rule changes and attacks.
+    variant: note
+    title: What Cloudflare will not fix
+    paragraphs:
+      - An edge network improves delivery and filtering. It does not repair a site that is slow or unsafe at the source.
+    items:
+      - Slow database queries and heavy application code
+      - Outdated plugins and unpatched software on your own server
+      - Weak passwords and over-broad access for staff
+      - Missing backups
   - type: process
     id: flow
     tone: paper
@@ -151,12 +129,48 @@ sections:
         artifacts:
           - Tuned rules
           - Alerts
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with Cloudflare
+    columns:
+      - title: Set up
+        items:
+          - Moving DNS safely, with mail and verification records preserved.
+          - Secure connections end to end.
+      - title: Speed up
+        items:
+          - Caching rules suited to your pages.
+          - Image and file delivery tuned for phones.
+      - title: Protect
+        items:
+          - Firewall and bot rules based on your real traffic.
+          - Rate limits on sign-in and forms.
+      - title: Extend
+        items:
+          - Redirects, security headers, and light logic at the edge.
+          - Monitoring and alerts for rule changes and attacks.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Cloudflare
+    items:
+      - q: Will Cloudflare make our site faster?
+        a: Usually, for visitors far from your server and for pages that can be cached. It does little for slow application code, which needs fixing at the source.
+      - q: Is it enough to protect us from attacks?
+        a: It stops a great deal, especially floods and automated abuse. It is one layer. Keep your software updated, back up, and control access.
+      - q: Will switching break our email?
+        a: Not if the records are copied and checked first. We plan the move so mail and verification records are preserved.
+      - q: Can it block the search crawlers we want?
+        a: Poorly tuned rules can. We allow the crawlers you want and test the result.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Cloudflare
-    intro: How we configure Cloudflare.
+    intro: "The detail a technical reviewer will ask about: caching, security, DNS and mail, and limits."
     panels:
       - title: Caching
         items:
@@ -172,20 +186,6 @@ sections:
       - title: Limits
         paragraphs:
           - An edge network does not replace patching, backups, or access control on your own systems. We treat it as one layer in a wider [security](ref:svc.cybersecurity) approach.
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about Cloudflare
-    items:
-      - q: Will Cloudflare make our site faster?
-        a: Usually, for visitors far from your server and for pages that can be cached. It does little for slow application code, which needs fixing at the source.
-      - q: Is it enough to protect us from attacks?
-        a: It stops a great deal, especially floods and automated abuse. It is one layer. Keep your software updated, back up, and control access.
-      - q: Will switching break our email?
-        a: Not if the records are copied and checked first. We plan the move so mail and verification records are preserved.
-      - q: Can it block the search crawlers we want?
-        a: Poorly tuned rules can. We allow the crawlers you want and test the result.
   - type: related
     id: related
     tone: paper

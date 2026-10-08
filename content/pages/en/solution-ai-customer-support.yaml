@@ -69,9 +69,20 @@ sections:
       - Where is my order. How do I reset my password. What is your returns policy. These questions fill a large share of most support inboxes. Each is easy for a person to answer, and together they take the hours that the team needs for the cases that need thought.
       - Customers feel the cost as waiting. A simple question sits behind a difficult one. After hours there is nobody. During a busy week the queue grows, and the first reply comes a day later.
       - "An assistant fixes the routine part. It answers at once, at any hour, from content you control. It does not fix the hard part, which is why the design matters: what it may answer, how it hands over, and how you know it is right."
+  - type: diagram
+    id: assistant-view
+    tone: paper
+    label: What it looks like
+    heading: What the assistant looks like to a customer
+    intro: A customer sees a short answer, the source it came from, and a way to reach a person.
+    figure: assistant-ui
+    purpose: system
+    takeaway: A customer sees a short answer, the source it came from, and an easy route to a person.
+    caption: This sketch shows a conceptual chat with a return-policy question, an answer that cites its source, and an offer to talk to a person. It is an illustration, not a client's assistant.
+    points: []
   - type: chooser
     id: scope
-    tone: paper
+    tone: white
     label: Scope
     heading: What should it handle?
     intro: The right scope starts small and widens as you see how it performs. Four starting points cover most businesses.
@@ -93,17 +104,32 @@ sections:
         when: Questions arrive at night and at weekends, and wait until morning.
         get: An assistant that answers what it can and takes details for the rest, so the team starts the day informed.
         watch: Tell customers clearly when they are talking to an assistant.
-  - type: diagram
-    id: assistant-view
-    tone: white
-    label: What it looks like
-    heading: What the assistant looks like to a customer
-    intro: A customer sees a short answer, the source it came from, and a way to reach a person.
-    figure: assistant-ui
-    purpose: system
-    takeaway: A customer sees a short answer, the source it came from, and an easy route to a person.
-    caption: This sketch shows a conceptual chat with a return-policy question, an answer that cites its source, and an offer to talk to a person. It is an illustration, not a client's assistant.
-    points: []
+  - type: table
+    id: control
+    tone: paper
+    label: Control
+    heading: How accuracy and safety are kept
+    caption: The main risks of an AI support assistant and how each is controlled
+    columns:
+      - Risk
+      - What can go wrong
+      - How we control it
+    rows:
+      - - Wrong answers
+        - The assistant states something that is not true.
+        - It answers only from approved content, shows its source, and says when it does not know.
+      - - Exposing private data
+        - One customer sees another's details.
+        - Identity checks before any lookup, and access limited to the asking customer's own records.
+      - - Bad hand-offs
+        - A customer is stuck in a loop with no person.
+        - A visible route to a person at any point, and the conversation passed on.
+      - - Content drifting out of date
+        - Policies change and the assistant keeps the old answer.
+        - A named owner, a review schedule, and alerts when answers stop matching sources.
+      - - Hidden use of AI
+        - Customers do not know they are talking to an assistant.
+        - Clear labeling in the conversation.
   - type: process
     id: how
     tone: white
@@ -132,7 +158,7 @@ sections:
           - Scope decision
   - type: columns
     id: delivers
-    tone: white
+    tone: paper
     label: What you get
     heading: What the assistant comes with
     columns:
@@ -152,38 +178,12 @@ sections:
         items:
           - Reports on questions answered, hand-overs, and accuracy checks.
           - A list of content gaps found, so your documentation improves.
-  - type: table
-    id: control
-    tone: paper
-    label: Control
-    heading: How accuracy and safety are kept
-    caption: The main risks of an AI support assistant and how each is controlled
-    columns:
-      - Risk
-      - What can go wrong
-      - How we control it
-    rows:
-      - - Wrong answers
-        - The assistant states something that is not true.
-        - It answers only from approved content, shows its source, and says when it does not know.
-      - - Exposing private data
-        - One customer sees another's details.
-        - Identity checks before any lookup, and access limited to the asking customer's own records.
-      - - Bad hand-offs
-        - A customer is stuck in a loop with no person.
-        - A visible route to a person at any point, and the conversation passed on.
-      - - Content drifting out of date
-        - Policies change and the assistant keeps the old answer.
-        - A named owner, a review schedule, and alerts when answers stop matching sources.
-      - - Hidden use of AI
-        - Customers do not know they are talking to an assistant.
-        - Clear labeling in the conversation.
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How the assistant is built
-    intro: How we build a support assistant.
+    intro: "For your developers and IT lead: our choices on answering from your content, models and orchestration, evaluation, and privacy and security, and the reasoning behind each."
     panels:
       - title: Answering from your content
         paragraphs:
@@ -202,7 +202,7 @@ sections:
           - Actions the assistant can take are limited to a short, audited list.
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about AI in customer support
     items:
@@ -218,7 +218,7 @@ sections:
         a: "We design for it: identity checks, minimal data sent to models, limited retention, and provider terms reviewed. We explain the choices so you can approve them."
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: AI support across DECHY
     groups:

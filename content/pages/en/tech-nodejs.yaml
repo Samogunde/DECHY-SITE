@@ -71,6 +71,48 @@ sections:
         - "Strong at connections, live features, and many users"
         - "Less suited to heavy calculation inside one request"
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Node.js
+    columns:
+      - title: Build
+        items:
+          - "New back ends and services for web and mobile products."
+          - "Connection layers between your tools and your customers' systems."
+      - title: Connect
+        items:
+          - "Links to payment, customer, shipping, and accounting systems."
+          - "Webhooks and background jobs that keep data current."
+      - title: Modernize
+        items:
+          - "Moving an older server application to a current, supported setup."
+          - "Splitting a hard-to-change application into parts, stage by stage."
+      - title: Look after
+        items:
+          - "Updates, security patches, and dependency reviews."
+          - "Performance checks when traffic grows."
+
+  - type: process
+    id: build
+    tone: white
+    label: How we build it
+    heading: From brief to a back end you can maintain
+    steps:
+      - title: Define what the back end must do
+        body: "We list the data it holds, the systems it talks to, and how many people use it at peak."
+        artifacts: [Scope, Data and systems map]
+      - title: Choose the shape
+        body: "One simple service, or several small ones, depending on how the product will grow. We prefer the simplest that works."
+        artifacts: [Architecture sketch]
+      - title: Build in small, tested pieces
+        body: "Each feature ships with automated tests, so later changes do not break earlier ones."
+        artifacts: [Working increments, Test suite]
+      - title: Run it and watch it
+        body: "Deployment, monitoring, and a plan for updates, so the service stays healthy after launch."
+        artifacts: [Deployment set-up, Monitoring]
+
   - type: table
     id: options
     tone: paper
@@ -109,54 +151,27 @@ sections:
       - title: Internal tools and automation scripts
         body: "Small services and scheduled jobs that remove repeated work for your staff."
 
-  - type: process
-    id: build
+  - type: faq
+    id: faq
     tone: paper
-    label: How we build it
-    heading: From brief to a back end you can maintain
-    steps:
-      - title: Define what the back end must do
-        body: "We list the data it holds, the systems it talks to, and how many people use it at peak."
-        artifacts: [Scope, Data and systems map]
-      - title: Choose the shape
-        body: "One simple service, or several small ones, depending on how the product will grow. We prefer the simplest that works."
-        artifacts: [Architecture sketch]
-      - title: Build in small, tested pieces
-        body: "Each feature ships with automated tests, so later changes do not break earlier ones."
-        artifacts: [Working increments, Test suite]
-      - title: Run it and watch it
-        body: "Deployment, monitoring, and a plan for updates, so the service stays healthy after launch."
-        artifacts: [Deployment set-up, Monitoring]
-
-  - type: columns
-    id: dechy
-    tone: white
-    label: What DECHY can do
-    heading: Working with Node.js
-    columns:
-      - title: Build
-        items:
-          - "New back ends and services for web and mobile products."
-          - "Connection layers between your tools and your customers' systems."
-      - title: Connect
-        items:
-          - "Links to payment, customer, shipping, and accounting systems."
-          - "Webhooks and background jobs that keep data current."
-      - title: Modernize
-        items:
-          - "Moving an older server application to a current, supported setup."
-          - "Splitting a hard-to-change application into parts, stage by stage."
-      - title: Look after
-        items:
-          - "Updates, security patches, and dependency reviews."
-          - "Performance checks when traffic grows."
+    label: Common questions
+    heading: Questions about Node.js
+    items:
+      - q: Is Node.js fast enough for a serious business application?
+        a: "Yes, for the work it is designed for. It serves many simultaneous users well. For long calculations we move the work off the main path so the application stays responsive."
+      - q: Should the back end use the same language as the front end?
+        a: "It helps when one team builds both, because skills and some code are shared. It is a convenience, not a rule. If another language suits the problem better, we use it."
+      - q: Can you take over a Node.js application someone else built?
+        a: "Yes. We start with a review of the code, the dependencies, and the tests, and then tell you what is sound and what needs work."
+      - q: How does Node.js relate to React or Next.js?
+        a: "React builds the screens in the browser. [Next.js](ref:fw.nextjs) builds on it and can also run on a Node.js server. Node.js is the server side they commonly sit on."
 
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Node.js
-    intro: "How we run Node.js projects."
+    intro: "The detail a technical reviewer will ask about: language and runtime, handling load, security and dependencies, and shipping."
     panels:
       - title: Language and runtime
         paragraphs:
@@ -174,21 +189,6 @@ sections:
       - title: Shipping
         paragraphs:
           - "Services are packaged in [Docker](ref:tool.docker) containers and deployed through an automated pipeline. A pipeline of this kind is called CI/CD, short for continuous integration and delivery: every change is built, tested, and released the same way."
-
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Node.js
-    items:
-      - q: Is Node.js fast enough for a serious business application?
-        a: "Yes, for the work it is designed for. It serves many simultaneous users well. For long calculations we move the work off the main path so the application stays responsive."
-      - q: Should the back end use the same language as the front end?
-        a: "It helps when one team builds both, because skills and some code are shared. It is a convenience, not a rule. If another language suits the problem better, we use it."
-      - q: Can you take over a Node.js application someone else built?
-        a: "Yes. We start with a review of the code, the dependencies, and the tests, and then tell you what is sound and what needs work."
-      - q: How does Node.js relate to React or Next.js?
-        a: "React builds the screens in the browser. [Next.js](ref:fw.nextjs) builds on it and can also run on a Node.js server. Node.js is the server side they commonly sit on."
 
   - type: related
     id: related

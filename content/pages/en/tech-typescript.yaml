@@ -85,9 +85,28 @@ sections:
         body: "As coverage grows, we turn on stricter checking, one rule at a time."
         artifacts: [Stricter configuration]
 
+  - type: columns
+    id: dechy
+    tone: white
+    label: What DECHY can do
+    heading: Working with TypeScript
+    columns:
+      - title: New projects
+        items:
+          - "Web applications and portals written in TypeScript from the first day."
+          - "Server code that shares data descriptions with the interface."
+      - title: Existing projects
+        items:
+          - "A staged move from JavaScript."
+          - "Reviews that show where the riskiest untyped code is."
+      - title: Team practice
+        items:
+          - "Conventions that keep types useful, not decorative."
+          - "Handover notes and developer guidance."
+
   - type: table
     id: options
-    tone: white
+    tone: paper
     label: Options
     heading: TypeScript compared with other choices
     caption: Comparison of TypeScript with other options for server and web code
@@ -108,7 +127,7 @@ sections:
 
   - type: index
     id: uses
-    tone: paper
+    tone: white
     columns: 2
     label: Typical uses
     heading: Where TypeScript pays for itself
@@ -121,45 +140,6 @@ sections:
         body: "Careful handling of data from payment, shipping, and customer-record systems, where surprises are expensive."
       - title: A long-lived codebase
         body: "Code that will be maintained for years by people who did not write it."
-
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with TypeScript
-    columns:
-      - title: New projects
-        items:
-          - "Web applications and portals written in TypeScript from the first day."
-          - "Server code that shares data descriptions with the interface."
-      - title: Existing projects
-        items:
-          - "A staged move from JavaScript."
-          - "Reviews that show where the riskiest untyped code is."
-      - title: Team practice
-        items:
-          - "Conventions that keep types useful, not decorative."
-          - "Handover notes and developer guidance."
-
-  - type: technical
-    id: technology
-    tone: white
-    label: Technical depth
-    heading: How we build with TypeScript
-    intro: "The practices that make types worth having."
-    panels:
-      - title: Strictness
-        paragraphs:
-          - "We aim for strict mode on new code. The checker finds more problems, and the cost of turning it on later is higher than starting with it."
-      - title: Types at the boundary
-        items:
-          - "Runtime validation of external data, since types disappear after compilation and cannot protect against a bad response."
-          - "Generated types from API descriptions where the provider offers them."
-          - "Strictness introduced gradually, starting with the files that change most, so delivery does not stop and reviews stay small."
-      - title: Avoiding false confidence
-        items:
-          - "Few uses of the any type, and none without a comment saying why."
-          - "Code review that treats a forced type conversion as a flag."
 
   - type: faq
     id: faq
@@ -176,9 +156,29 @@ sections:
       - q: Is it only for front-end code?
         a: "No. It is used just as often on servers, including with frameworks such as [Next.js](ref:fw.nextjs)."
 
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: How we build with TypeScript
+    intro: "What we settle early on TypeScript work: strictness, types at the boundary, and avoiding false confidence, so nothing surprises your team later."
+    panels:
+      - title: Strictness
+        paragraphs:
+          - "We aim for strict mode on new code. The checker finds more problems, and the cost of turning it on later is higher than starting with it."
+      - title: Types at the boundary
+        items:
+          - "Runtime validation of external data, since types disappear after compilation and cannot protect against a bad response."
+          - "Generated types from API descriptions where the provider offers them."
+          - "Strictness introduced gradually, starting with the files that change most, so delivery does not stop and reviews stay small."
+      - title: Avoiding false confidence
+        items:
+          - "Few uses of the any type, and none without a comment saying why."
+          - "Code review that treats a forced type conversion as a flag."
+
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: TypeScript across DECHY
     groups:

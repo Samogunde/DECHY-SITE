@@ -66,9 +66,32 @@ sections:
       - "Providers differ in how much text a model can take in at once, how it follows detailed instructions, how it handles images and documents, and what it costs. Those differences matter more in practice than any league table."
       - "That is why we recommend testing on your own material. A provider that suits one company's documents may not suit another's."
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Claude
+    columns:
+      - title: Assess
+        items:
+          - "Testing Claude against your documents and tasks."
+          - "Comparing it with other providers."
+      - title: Build
+        items:
+          - "Document review and question answering with sources."
+          - "Assistants connected to your systems."
+      - title: Control
+        items:
+          - "Limits on tools, data, and spend."
+          - "Human review where a mistake would be costly."
+      - title: Maintain
+        items:
+          - "Re-testing when models change."
+          - "Reports on quality and cost."
+
   - type: chooser
     id: compare
-    tone: paper
+    tone: white
     label: Where it fits
     heading: What are you asking the model to do?
     intro: "Three common situations, and how we approach each."
@@ -89,6 +112,15 @@ sections:
         get: "Drafts that follow written guidance, reviewed by a person before use."
         watch: "Style is easier to check than facts, so check both."
         cta: { label: Plan drafting support, href: "/contact/?service=ai" }
+
+  - type: callout
+    id: note
+    tone: paper
+    variant: note
+    title: Test before you commit to a provider
+    paragraphs:
+      - "Public comparisons of AI models change every few months and rarely match a particular company's documents. A day spent testing three providers on fifty of your real examples is worth more than any ranking."
+      - "We run that test as a first step, and the examples stay yours, so you can repeat it whenever the market changes."
 
   - type: table
     id: options
@@ -114,44 +146,12 @@ sections:
         - "You may want to switch later."
         - "Keeping the provider behind a clear boundary."
 
-  - type: callout
-    id: note
-    tone: white
-    variant: note
-    title: Test before you commit to a provider
-    paragraphs:
-      - "Public comparisons of AI models change every few months and rarely match a particular company's documents. A day spent testing three providers on fifty of your real examples is worth more than any ranking."
-      - "We run that test as a first step, and the examples stay yours, so you can repeat it whenever the market changes."
-
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with Claude
-    columns:
-      - title: Assess
-        items:
-          - "Testing Claude against your documents and tasks."
-          - "Comparing it with other providers."
-      - title: Build
-        items:
-          - "Document review and question answering with sources."
-          - "Assistants connected to your systems."
-      - title: Control
-        items:
-          - "Limits on tools, data, and spend."
-          - "Human review where a mistake would be costly."
-      - title: Maintain
-        items:
-          - "Re-testing when models change."
-          - "Reports on quality and cost."
-
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Anthropic Claude
-    intro: "How we build with Claude."
+    intro: "For your developers and IT lead: our Anthropic Claude choices on prompting and structure, tools and agents, and retrieval and cost, and the reasoning behind each."
     panels:
       - title: Prompting and structure
         paragraphs:

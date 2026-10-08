@@ -95,17 +95,6 @@ sections:
         when: Many tools need to share customer data, and point-to-point links would multiply.
         get: A central integration layer that each tool connects to once.
         watch: It becomes a critical system, so it needs an owner and monitoring.
-  - type: diagram
-    id: shared-record
-    tone: white
-    label: What it looks like
-    heading: What a connected customer system looks like
-    intro: After integration, a customer's record is fed by every tool that touches them, and the CRM view shows one current picture.
-    figure: crm-ui
-    purpose: relationship
-    takeaway: A connected customer system shows one current record, fed by the website, billing, and support.
-    caption: This sketch shows a conceptual customer system with a lead pipeline and a customer record whose sections show they are in sync with other tools. It is an illustration, not a client system.
-    points: []
   - type: table
     id: platforms
     tone: white
@@ -129,6 +118,39 @@ sections:
       - - No CRM yet
         - Teams in spreadsheets who want to start with the connections in mind.
         - Choose the CRM against the systems it must join, not only its features.
+  - type: diagram
+    id: shared-record
+    tone: paper
+    label: What it looks like
+    heading: What a connected customer system looks like
+    intro: After integration, a customer's record is fed by every tool that touches them, and the CRM view shows one current picture.
+    figure: crm-ui
+    purpose: relationship
+    takeaway: A connected customer system shows one current record, fed by the website, billing, and support.
+    caption: This sketch shows a conceptual customer system with a lead pipeline and a customer record whose sections show they are in sync with other tools. It is an illustration, not a client system.
+    points: []
+  - type: columns
+    id: delivers
+    tone: white
+    label: What you get
+    heading: What a connected CRM delivers
+    columns:
+      - title: One record
+        items:
+          - Agreed ownership of each customer field.
+          - Duplicate handling and a clean starting data set.
+      - title: Connections
+        items:
+          - Website forms, billing, [Stripe](ref:int.stripe) payments, support, and marketing linked to the CRM.
+          - Automation of follow-up from CRM events.
+      - title: Reliability
+        items:
+          - Retries, alerts, and logs for every flow.
+          - A way to replay a failed update.
+      - title: Reporting
+        items:
+          - Pipeline and revenue figures from a single source.
+          - Documentation your team can follow.
   - type: process
     id: how
     tone: paper
@@ -156,50 +178,6 @@ sections:
           - Cleaned data
           - Monitoring
           - Runbook
-  - type: columns
-    id: delivers
-    tone: white
-    label: What you get
-    heading: What a connected CRM delivers
-    columns:
-      - title: One record
-        items:
-          - Agreed ownership of each customer field.
-          - Duplicate handling and a clean starting data set.
-      - title: Connections
-        items:
-          - Website forms, billing, [Stripe](ref:int.stripe) payments, support, and marketing linked to the CRM.
-          - Automation of follow-up from CRM events.
-      - title: Reliability
-        items:
-          - Retries, alerts, and logs for every flow.
-          - A way to replay a failed update.
-      - title: Reporting
-        items:
-          - Pipeline and revenue figures from a single source.
-          - Documentation your team can follow.
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build CRM connections
-    intro: How we build CRM connections.
-    panels:
-      - title: Interfaces
-        paragraphs:
-          - Systems talk through an API, short for application programming interface, which is a defined way for one program to ask another for data or send it. We use each platform's supported interface and respect its call limits.
-      - title: Reliability
-        items:
-          - Updates are designed to be repeated safely, so a retry never creates a duplicate.
-          - Webhooks, which are automatic messages a system sends when something changes, are verified and queued, so a spike in traffic does not lose events.
-          - A dead-letter store keeps failed updates for inspection and replay.
-      - title: Identity and matching
-        items:
-          - A stable key links the same customer across systems, usually the CRM record identifier.
-          - Matching rules compare email, company, and other fields, and send doubtful matches to a person.
-      - title: Choosing the tool
-        paragraphs:
-          - Simple connections often suit a platform such as [Zapier](ref:tech.zapier) or [Make](ref:tech.make). Heavy volumes or complex rules call for custom services, which we write in [Python](ref:lang.python).
   - type: faq
     id: faq
     tone: white
@@ -216,6 +194,28 @@ sections:
         a: Many connections are well served by a no-code platform. We recommend custom code only where volume, rules, or reliability need it.
       - q: How do we know it keeps working?
         a: Every flow logs its runs and raises an alert on failure, and we can review the logs with you on a schedule.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build CRM connections
+    intro: "For your developers and IT lead: our choices on interfaces, reliability, identity and matching, and choosing the tool, and the reasoning behind each."
+    panels:
+      - title: Interfaces
+        paragraphs:
+          - Systems talk through an API, short for application programming interface, which is a defined way for one program to ask another for data or send it. We use each platform's supported interface and respect its call limits.
+      - title: Reliability
+        items:
+          - Updates are designed to be repeated safely, so a retry never creates a duplicate.
+          - Webhooks, which are automatic messages a system sends when something changes, are verified and queued, so a spike in traffic does not lose events.
+          - A dead-letter store keeps failed updates for inspection and replay.
+      - title: Identity and matching
+        items:
+          - A stable key links the same customer across systems, usually the CRM record identifier.
+          - Matching rules compare email, company, and other fields, and send doubtful matches to a person.
+      - title: Choosing the tool
+        paragraphs:
+          - Simple connections often suit a platform such as [Zapier](ref:tech.zapier) or [Make](ref:tech.make). Heavy volumes or complex rules call for custom services, which we write in [Python](ref:lang.python).
   - type: related
     id: related
     tone: paper

@@ -223,13 +223,15 @@ export function TechnicalBlock({ block }: { block: Of<"technical"> }) {
               label: p.title,
               body: (
                 <div className="technical-body">
-                  <div className="technical-text">
-                    {p.paragraphs.map((para, k) => (
-                      <p key={k}>
-                        <Inline text={para} />
-                      </p>
-                    ))}
-                  </div>
+                  {p.paragraphs.length > 0 ? (
+                    <div className="technical-text">
+                      {p.paragraphs.map((para, k) => (
+                        <p key={k}>
+                          <Inline text={para} />
+                        </p>
+                      ))}
+                    </div>
+                  ) : null}
                   {p.items.length > 0 ? (
                     <ul className="technical-points">
                       {p.items.map((it) => (

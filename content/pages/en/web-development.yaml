@@ -234,7 +234,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The tools we use.
+    intro: "Our engineering choices on front end, content systems, back end and information, and quality checks, written for the people who will own the system after launch."
     panels:
       - title: Front end
         paragraphs:

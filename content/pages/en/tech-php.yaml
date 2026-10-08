@@ -65,62 +65,6 @@ sections:
       - "Its reputation is mixed because older PHP was often written without structure. Modern PHP, with current versions and good practice, is a sound choice for many business sites and applications."
       - "The question is rarely whether PHP is good. It is whether this particular system is in good shape, and what it would cost to improve it against what it would cost to replace it."
 
-  - type: table
-    id: options
-    tone: paper
-    label: Options
-    heading: PHP compared with the alternatives
-    caption: PHP compared with other server-side options
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - PHP
-        - "Content sites, WordPress work, and applications already built in it."
-        - "Quality varies widely, so the state of the code matters."
-      - - "[TypeScript](ref:lang.typescript) on the server"
-        - "Teams who want one language for interface and server."
-        - "A younger ecosystem for some business needs."
-      - - "[Python](ref:lang.python)"
-        - "Applications with data processing or AI features."
-        - "Fewer ready-made content management options."
-      - - "[Java](ref:lang.java)"
-        - "Large, long-lived systems in enterprise settings."
-        - "Heavier to start and slower to change for small projects."
-
-  - type: process
-    id: decide
-    tone: white
-    label: How we assess it
-    heading: Reviewing an existing PHP system
-    steps:
-      - title: Read the system
-        body: "We look at the PHP version, the dependencies, the structure, and whether there are any tests."
-        artifacts: [Inventory, Version and dependency report]
-      - title: Check the risks
-        body: "We look for unpatched components, exposed data, and code that only one person understands."
-        artifacts: [Risk list]
-      - title: Price the options
-        body: "We estimate keeping, modernizing, and replacing, in plain terms, with what each leaves you with."
-        artifacts: [Options with rough cost]
-      - title: Recommend and plan
-        body: "We recommend one route and set out the first stage, so you can start without committing to all of it."
-        artifacts: [Recommendation, First-stage plan]
-
-  - type: index
-    id: uses
-    tone: white
-    columns: 2
-    label: Typical uses
-    heading: Where PHP still makes sense
-    items:
-      - title: A WordPress site with custom features
-        body: "Themes and plugins written to your needs, kept apart from core code so updates are safe."
-      - title: A long-running business application
-        body: "A booking, membership, or ordering system that works well and needs steady care, not a rewrite."
-      - title: A content site on shared hosting
-        body: "A low-cost hosting arrangement that PHP supports almost everywhere."
-      - title: A system being moved off an old version
-        body: "Upgrading to a supported release, with tests added before the risky parts are touched."
-
   - type: columns
     id: dechy
     tone: paper
@@ -144,25 +88,61 @@ sections:
           - "Moving content and data to a new platform."
           - "Redirects that protect search visibility."
 
-  - type: technical
-    id: technology
+  - type: process
+    id: decide
     tone: white
-    label: Technical depth
-    heading: How we build with PHP
-    intro: "How we handle PHP projects."
-    panels:
-      - title: Versions and dependencies
-        paragraphs:
-          - "We target a currently supported PHP release, manage packages through Composer, and watch for security advisories on dependencies."
-      - title: Structure
-        items:
-          - "Code organized into small, testable classes instead of long page scripts."
-          - "Database access through prepared statements to avoid injection flaws."
-          - "Configuration and secrets outside the code."
-          - "Logs that show which request failed, so problems are traced in minutes, not days."
-      - title: WordPress
-        paragraphs:
-          - "For [WordPress](ref:plat.wordpress) sites we keep custom code in plugins and child themes, so core updates do not overwrite it."
+    label: How we assess it
+    heading: Reviewing an existing PHP system
+    steps:
+      - title: Read the system
+        body: "We look at the PHP version, the dependencies, the structure, and whether there are any tests."
+        artifacts: [Inventory, Version and dependency report]
+      - title: Check the risks
+        body: "We look for unpatched components, exposed data, and code that only one person understands."
+        artifacts: [Risk list]
+      - title: Price the options
+        body: "We estimate keeping, modernizing, and replacing, in plain terms, with what each leaves you with."
+        artifacts: [Options with rough cost]
+      - title: Recommend and plan
+        body: "We recommend one route and set out the first stage, so you can start without committing to all of it."
+        artifacts: [Recommendation, First-stage plan]
+
+  - type: table
+    id: options
+    tone: paper
+    label: Options
+    heading: PHP compared with the alternatives
+    caption: PHP compared with other server-side options
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - PHP
+        - "Content sites, WordPress work, and applications already built in it."
+        - "Quality varies widely, so the state of the code matters."
+      - - "[TypeScript](ref:lang.typescript) on the server"
+        - "Teams who want one language for interface and server."
+        - "A younger ecosystem for some business needs."
+      - - "[Python](ref:lang.python)"
+        - "Applications with data processing or AI features."
+        - "Fewer ready-made content management options."
+      - - "[Java](ref:lang.java)"
+        - "Large, long-lived systems in enterprise settings."
+        - "Heavier to start and slower to change for small projects."
+
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Where PHP still makes sense
+    items:
+      - title: A WordPress site with custom features
+        body: "Themes and plugins written to your needs, kept apart from core code so updates are safe."
+      - title: A long-running business application
+        body: "A booking, membership, or ordering system that works well and needs steady care, not a rewrite."
+      - title: A content site on shared hosting
+        body: "A low-cost hosting arrangement that PHP supports almost everywhere."
+      - title: A system being moved off an old version
+        body: "Upgrading to a supported release, with tests added before the risky parts are touched."
 
   - type: faq
     id: faq
@@ -179,9 +159,29 @@ sections:
       - q: Do you do WordPress work?
         a: "Yes. See our [WordPress](ref:plat.wordpress) page."
 
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: How we build with PHP
+    intro: "For your developers and IT lead: our PHP choices on versions and dependencies, structure, and WordPress, and the reasoning behind each."
+    panels:
+      - title: Versions and dependencies
+        paragraphs:
+          - "We target a currently supported PHP release, manage packages through Composer, and watch for security advisories on dependencies."
+      - title: Structure
+        items:
+          - "Code organized into small, testable classes instead of long page scripts."
+          - "Database access through prepared statements to avoid injection flaws."
+          - "Configuration and secrets outside the code."
+          - "Logs that show which request failed, so problems are traced in minutes, not days."
+      - title: WordPress
+        paragraphs:
+          - "For [WordPress](ref:plat.wordpress) sites we keep custom code in plugins and child themes, so core updates do not overwrite it."
+
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: PHP across DECHY
     groups:

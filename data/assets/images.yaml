@@ -263,7 +263,7 @@ assets:
     width: 2880
     height: 1920
     alt: Two port workers in hard hats and high-visibility vests reviewing information on a tablet beside a gantry crane and stacked shipping containers.
-    usage: [home]
+    usage: [home, industrieslogistics]
     approval: approved
     acquired: "2026-10-05"
 
@@ -281,7 +281,7 @@ assets:
     width: 2880
     height: 1728
     alt: A worker with a clipboard standing in a long warehouse aisle between tall racks of wrapped pallets.
-    usage: [home]
+    usage: [home, industriesretail]
     approval: approved
     acquired: "2026-10-05"
 
@@ -318,7 +318,7 @@ assets:
     height: 1921
     alt: A desk seen from above with printed wireframes, a phone interface template, a monitor showing interface components, and a laptop.
     caption: Interface work starts with wireframes on paper and in design tools, long before any code.
-    usage: [software-development]
+    usage: [ui-ux]
     approval: approved
     acquired: "2026-10-05"
 

@@ -76,7 +76,7 @@ sections:
     tone: white
     label: What it is
     heading: What cybersecurity means for a business
-    answer: Cybersecurity is the set of habits, tools, and design choices that keep your systems and information safe from theft, damage, and misuse. No one can promise zero risk. The aim is to make attacks hard, limit the harm if one succeeds, and recover quickly.
+    answer: "We keep your systems and information safe from theft, damage, and misuse through the habits, tools, and design choices that make up cybersecurity. No one can promise zero risk, so we make attacks hard, limit the harm if one succeeds, and make sure you can recover quickly."
     paragraphs:
       - "People often picture hackers breaking through firewalls. In practice, most problems start with ordinary gaps: a reused password, an unpatched program, a file shared with the wrong person, or a former employee who still has access."
       - That is good news, because ordinary gaps can be fixed. A clear picture of what you hold, plus a handful of dependable habits, removes most of the risk, and it does not need a large budget to start.
@@ -223,7 +223,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: Our methods.
+    intro: "For your developers and IT lead: our choices on application security, identity and access, encryption and trust, and detection and response, and the reasoning behind each."
     panels:
       - title: Application security
         paragraphs:

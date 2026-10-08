@@ -87,17 +87,6 @@ sections:
       - - Spreadsheets and exports
         - Early stages, with a few sources and one or two people.
         - Breaks down as sources, people, and versions multiply.
-  - type: diagram
-    id: report-view
-    tone: white
-    label: What it looks like
-    heading: What the warehouse delivers to people
-    intro: A warehouse matters because of what people see from it.
-    figure: analytics-ui
-    purpose: system
-    takeaway: "A warehouse is judged by the reports people read from it: a few filters, a chart, and a short table."
-    caption: This sketch shows a conceptual analytics report with filters, a two-series chart by month, and a table with trend labels. It carries no figures and is not a client report.
-    points: []
   - type: callout
     id: cost
     tone: white
@@ -110,6 +99,17 @@ sections:
       - Querying a very large table without a date filter
       - A dashboard that refreshes a heavy query every few minutes
       - Repeating the same expensive calculation instead of saving its result
+  - type: diagram
+    id: report-view
+    tone: paper
+    label: What it looks like
+    heading: What the warehouse delivers to people
+    intro: A warehouse matters because of what people see from it.
+    figure: analytics-ui
+    purpose: system
+    takeaway: "A warehouse is judged by the reports people read from it: a few filters, a chart, and a short table."
+    caption: This sketch shows a conceptual analytics report with filters, a two-series chart by month, and a table with trend labels. It carries no figures and is not a client report.
+    points: []
   - type: process
     id: how
     tone: white
@@ -158,12 +158,26 @@ sections:
         items:
           - Forecasts and models using data already in the warehouse.
           - A route into [AI](ref:svc.ai) features that use your own data.
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about BigQuery
+    items:
+      - q: Do we need BigQuery, or will our database do?
+        a: If your data is modest and one database already serves reports quickly, you may not need a warehouse yet. When reports slow the live system or you need data from many sources together, a warehouse earns its place.
+      - q: How do we keep the bill predictable?
+        a: By partitioning tables, limiting what each query scans, and setting budgets with alerts. We also review the heaviest queries regularly.
+      - q: Can we use BigQuery if we are not on Google Cloud?
+        a: Yes. Data can be loaded from systems anywhere. Teams already on other clouds should still compare it with the warehouse options on their own platform.
+      - q: Can you connect our existing dashboards?
+        a: Usually, yes. Most reporting tools can read from BigQuery. We check yours during the first review.
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with BigQuery
-    intro: How we design for cost and clarity.
+    intro: "For your developers and IT lead: our BigQuery choices on storage and structure, cost control, access and governance, and loading, and the reasoning behind each."
     panels:
       - title: Storage and structure
         items:
@@ -181,23 +195,9 @@ sections:
       - title: Loading
         paragraphs:
           - Batch loads cover most needs. Where freshness matters, streaming inserts or change capture from the source database keep the warehouse close to current.
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about BigQuery
-    items:
-      - q: Do we need BigQuery, or will our database do?
-        a: If your data is modest and one database already serves reports quickly, you may not need a warehouse yet. When reports slow the live system or you need data from many sources together, a warehouse earns its place.
-      - q: How do we keep the bill predictable?
-        a: By partitioning tables, limiting what each query scans, and setting budgets with alerts. We also review the heaviest queries regularly.
-      - q: Can we use BigQuery if we are not on Google Cloud?
-        a: Yes. Data can be loaded from systems anywhere. Teams already on other clouds should still compare it with the warehouse options on their own platform.
-      - q: Can you connect our existing dashboards?
-        a: Usually, yes. Most reporting tools can read from BigQuery. We check yours during the first review.
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: BigQuery across DECHY
     groups:

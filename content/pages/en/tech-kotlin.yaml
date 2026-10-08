@@ -62,54 +62,6 @@ sections:
       - "On Android, apps are typically built with Jetpack Compose, Google's toolkit for describing screens, along with Android's libraries for storage, background work, and device features."
       - "Beyond phones, Kotlin runs on servers, so a team can use one language across an Android app and its back end, and Kotlin Multiplatform can share business logic with an iPhone app."
 
-  - type: diagram
-    id: range
-    tone: paper
-    label: Where it fits
-    heading: Building for a range of devices
-    intro: "Variety is Android's defining challenge, and a plan for it is part of the build."
-    spec:
-      kind: layers
-      layerLabel: How we manage Android variety
-      layers:
-        - title: Supported versions
-          text: A clear minimum Android version, chosen from your audience.
-        - title: Adaptive layouts
-          text: Screens that adjust to phones, tablets, and foldables.
-        - title: Manufacturer quirks
-          text: Known differences handled and tested.
-        - title: Real-device testing
-          text: A chosen set of devices, not only emulators.
-        - title: Field monitoring
-          text: Crash and performance reports from real users.
-    purpose: system
-    takeaway: "We manage Android variety with supported versions, adaptive layouts, handling of manufacturer quirks, real-device testing, and monitoring in the field."
-    caption: "This diagram shows five layers used to manage Android variety, from supported versions at the top to monitoring in the field at the bottom."
-
-  - type: chooser
-    id: choice
-    tone: white
-    label: Options
-    heading: Native Android or cross-platform?
-    intro: "The decision depends on audience and depth of features."
-    question: What matters most?
-    options:
-      - label: An Android-first audience
-        when: "Your users are mostly on Android, or you serve markets where it dominates."
-        get: "A native app that follows Android conventions and uses the newest features."
-        watch: "An iPhone version is a separate build unless you plan shared logic."
-        cta: { label: Plan a native app, href: "/contact/?service=mobile-app-development" }
-      - label: Both platforms with one team
-        when: "You need iPhone and Android, with a single budget."
-        get: "A cross-platform tool such as [Flutter](ref:tech.flutter) or [React Native](ref:tech.react-native)."
-        watch: "Some depth in device features may need native code."
-        cta: { label: Compare cross-platform, href: "/contact/?service=mobile-app-development" }
-      - label: Shared logic, native screens
-        when: "Both platforms need native screens, but the business logic should be written once."
-        get: "Kotlin Multiplatform shares the logic, with native interfaces on each side."
-        watch: "A newer approach, with more setup, so it suits larger or longer-lived apps."
-        cta: { label: Ask about shared logic, href: "/contact/?service=mobile-app-development" }
-
   - type: columns
     id: dechy
     tone: paper
@@ -133,12 +85,75 @@ sections:
           - "Play Store listing and staged rollouts."
           - "Updates for new Android versions."
 
+  - type: diagram
+    id: range
+    tone: white
+    label: Where it fits
+    heading: Building for a range of devices
+    intro: "Variety is Android's defining challenge, and a plan for it is part of the build."
+    spec:
+      kind: layers
+      layerLabel: How we manage Android variety
+      layers:
+        - title: Supported versions
+          text: A clear minimum Android version, chosen from your audience.
+        - title: Adaptive layouts
+          text: Screens that adjust to phones, tablets, and foldables.
+        - title: Manufacturer quirks
+          text: Known differences handled and tested.
+        - title: Real-device testing
+          text: A chosen set of devices, not only emulators.
+        - title: Field monitoring
+          text: Crash and performance reports from real users.
+    purpose: system
+    takeaway: "We manage Android variety with supported versions, adaptive layouts, handling of manufacturer quirks, real-device testing, and monitoring in the field."
+    caption: "This diagram shows five layers used to manage Android variety, from supported versions at the top to monitoring in the field at the bottom."
+
+  - type: chooser
+    id: choice
+    tone: paper
+    label: Options
+    heading: Native Android or cross-platform?
+    intro: "The decision depends on audience and depth of features."
+    question: What matters most?
+    options:
+      - label: An Android-first audience
+        when: "Your users are mostly on Android, or you serve markets where it dominates."
+        get: "A native app that follows Android conventions and uses the newest features."
+        watch: "An iPhone version is a separate build unless you plan shared logic."
+        cta: { label: Plan a native app, href: "/contact/?service=mobile-app-development" }
+      - label: Both platforms with one team
+        when: "You need iPhone and Android, with a single budget."
+        get: "A cross-platform tool such as [Flutter](ref:tech.flutter) or [React Native](ref:tech.react-native)."
+        watch: "Some depth in device features may need native code."
+        cta: { label: Compare cross-platform, href: "/contact/?service=mobile-app-development" }
+      - label: Shared logic, native screens
+        when: "Both platforms need native screens, but the business logic should be written once."
+        get: "Kotlin Multiplatform shares the logic, with native interfaces on each side."
+        watch: "A newer approach, with more setup, so it suits larger or longer-lived apps."
+        cta: { label: Ask about shared logic, href: "/contact/?service=mobile-app-development" }
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about Kotlin
+    items:
+      - q: Is Kotlin only for Android?
+        a: "No. It also runs on servers, and can share logic with iPhone apps. Android is where it is best known."
+      - q: Do you still work with Java on Android?
+        a: "Yes. Existing apps are often a mix, and we work with both. New code is written in Kotlin."
+      - q: How many Android versions should we support?
+        a: "It depends on your users. We look at the data for your audience and choose a minimum version that covers almost everyone without holding the app back."
+      - q: Can you rescue an existing Android app?
+        a: "Yes. We review structure, dependencies, and crash reports first, then recommend what to improve."
+
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with Kotlin
-    intro: "How we structure an Android app."
+    intro: "For your developers and IT lead: our Kotlin choices on structure, data and background work, and quality, and the reasoning behind each."
     panels:
       - title: Structure
         paragraphs:
@@ -154,24 +169,9 @@ sections:
           - "Unit and interface tests in a pipeline, and tests on real devices of different makers."
           - "Crash and performance monitoring in production, with release tracks for staged rollout."
 
-  - type: faq
-    id: faq
-    tone: paper
-    label: Common questions
-    heading: Questions about Kotlin
-    items:
-      - q: Is Kotlin only for Android?
-        a: "No. It also runs on servers, and can share logic with iPhone apps. Android is where it is best known."
-      - q: Do you still work with Java on Android?
-        a: "Yes. Existing apps are often a mix, and we work with both. New code is written in Kotlin."
-      - q: How many Android versions should we support?
-        a: "It depends on your users. We look at the data for your audience and choose a minimum version that covers almost everyone without holding the app back."
-      - q: Can you rescue an existing Android app?
-        a: "Yes. We review structure, dependencies, and crash reports first, then recommend what to improve."
-
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Kotlin across DECHY
     groups:

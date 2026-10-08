@@ -63,63 +63,6 @@ sections:
       - "That compatibility is why so many large organizations still run it. Systems written many years ago often keep working with modest changes."
       - "The cost is ceremony. Java usually takes more code than lighter languages for the same job, and it suits systems with many contributors more than quick experiments."
 
-  - type: chooser
-    id: route
-    tone: paper
-    label: Options
-    heading: Which route fits your Java system?
-    intro: "Java projects tend to fall into three situations. The right advice differs in each."
-    question: What is your situation?
-    options:
-      - label: A new system
-        when: "You are building something that will run for years, with many developers, and tight rules on reliability."
-        get: "A Java service built in clear modules, with tests, monitoring, and a path for others to take over."
-        watch: "Check that the size of the project justifies it. A lighter language may do for a smaller one."
-        cta: { label: Plan a new service, href: "/contact/?service=software-development" }
-      - label: An existing system that works
-        when: "It runs, it earns its keep, and it is understood by at least a few people."
-        get: "Upkeep: version updates, security patches, and tests added around the riskiest parts."
-        watch: "Do not rewrite a working system for fashion. The savings rarely justify the risk."
-        cta: { label: Plan upkeep, href: "/contact/?service=software-development" }
-      - label: An old system that is stuck
-        when: "It runs on an unsupported version, nobody dares change it, or it blocks the business."
-        get: "A staged modernization: move to a supported version, carve out parts, and connect new work through clean interfaces."
-        watch: "Modernizing in stages is slower to show results but far less risky than a single cutover."
-        cta: { label: Plan modernization, href: "/contact/?service=software-development" }
-
-  - type: callout
-    id: limits
-    tone: white
-    variant: limits
-    title: When Java is more than you need
-    paragraphs:
-      - "For a small product, a prototype, or a team of two or three, Java's structure can slow you down. A lighter language gets you to a first version sooner."
-      - "We will say so. The point is to match the language to the life of the system, not to fit the system to the language."
-
-  - type: table
-    id: options
-    tone: white
-    label: Alternatives
-    heading: Java compared with other languages
-    caption: Java compared with other languages for back-end systems
-    columns: [Option, Suits, Trade-off]
-    rows:
-      - - Java
-        - "Large systems with long lives, many developers, and strict reliability needs."
-        - "More code and setup for smaller jobs."
-      - - "[Python](ref:lang.python)"
-        - "Data, automation, and AI-heavy work."
-        - "Slower for heavy computation."
-      - - "[C#](ref:lang.c-sharp)"
-        - "Organizations already invested in Microsoft tools."
-        - "Tied more closely to one vendor's ecosystem."
-      - - "[Go](ref:lang.go)"
-        - "Simple, fast network services."
-        - "A smaller library set for business applications."
-      - - "[Kotlin](ref:tech.kotlin)"
-        - "Teams who want a more concise language on the same platform."
-        - "Fewer developers than Java."
-
   - type: columns
     id: dechy
     tone: paper
@@ -143,12 +86,84 @@ sections:
           - "Short assessments of structure, dependencies, and risk."
           - "Plain recommendations, with costs."
 
+  - type: chooser
+    id: route
+    tone: white
+    label: Options
+    heading: Which route fits your Java system?
+    intro: "Java projects tend to fall into three situations. The right advice differs in each."
+    question: What is your situation?
+    options:
+      - label: A new system
+        when: "You are building something that will run for years, with many developers, and tight rules on reliability."
+        get: "A Java service built in clear modules, with tests, monitoring, and a path for others to take over."
+        watch: "Check that the size of the project justifies it. A lighter language may do for a smaller one."
+        cta: { label: Plan a new service, href: "/contact/?service=software-development" }
+      - label: An existing system that works
+        when: "It runs, it earns its keep, and it is understood by at least a few people."
+        get: "Upkeep: version updates, security patches, and tests added around the riskiest parts."
+        watch: "Do not rewrite a working system for fashion. The savings rarely justify the risk."
+        cta: { label: Plan upkeep, href: "/contact/?service=software-development" }
+      - label: An old system that is stuck
+        when: "It runs on an unsupported version, nobody dares change it, or it blocks the business."
+        get: "A staged modernization: move to a supported version, carve out parts, and connect new work through clean interfaces."
+        watch: "Modernizing in stages is slower to show results but far less risky than a single cutover."
+        cta: { label: Plan modernization, href: "/contact/?service=software-development" }
+
+  - type: table
+    id: options
+    tone: paper
+    label: Alternatives
+    heading: Java compared with other languages
+    caption: Java compared with other languages for back-end systems
+    columns: [Option, Suits, Trade-off]
+    rows:
+      - - Java
+        - "Large systems with long lives, many developers, and strict reliability needs."
+        - "More code and setup for smaller jobs."
+      - - "[Python](ref:lang.python)"
+        - "Data, automation, and AI-heavy work."
+        - "Slower for heavy computation."
+      - - "[C#](ref:lang.c-sharp)"
+        - "Organizations already invested in Microsoft tools."
+        - "Tied more closely to one vendor's ecosystem."
+      - - "[Go](ref:lang.go)"
+        - "Simple, fast network services."
+        - "A smaller library set for business applications."
+      - - "[Kotlin](ref:tech.kotlin)"
+        - "Teams who want a more concise language on the same platform."
+        - "Fewer developers than Java."
+
+  - type: callout
+    id: limits
+    tone: white
+    variant: limits
+    title: When Java is more than you need
+    paragraphs:
+      - "For a small product, a prototype, or a team of two or three, Java's structure can slow you down. A lighter language gets you to a first version sooner."
+      - "We will say so. The point is to match the language to the life of the system, not to fit the system to the language."
+
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about Java
+    items:
+      - q: Is Java still a good choice?
+        a: "Yes, for the right kind of system. It is actively developed, widely supported, and easy to hire for. It is a poor fit for small, fast-moving experiments."
+      - q: Should we rewrite our old Java system?
+        a: "Rarely all at once. We usually recommend upgrading the platform, adding tests, and replacing parts in stages."
+      - q: Can Java work with modern web and mobile apps?
+        a: "Yes. A Java back end can serve web and mobile clients through a clear set of requests, whatever they are built in."
+      - q: How is Java different from JavaScript?
+        a: "They are unrelated languages that share part of a name. Java is mostly used on servers, and JavaScript mostly in browsers."
+
   - type: technical
     id: technology
     tone: paper
     label: Technical depth
     heading: How we build with Java
-    intro: "The practices we use on Java projects."
+    intro: "Our engineering choices on platform and versions, design, and operations, written for the people who will own the system after launch."
     panels:
       - title: Platform and versions
         paragraphs:
@@ -162,21 +177,6 @@ sections:
         items:
           - "Containers with [Docker](ref:tool.docker), and release pipelines that run tests on every change."
           - "Metrics, logs, and alerts so problems are seen before users report them."
-
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about Java
-    items:
-      - q: Is Java still a good choice?
-        a: "Yes, for the right kind of system. It is actively developed, widely supported, and easy to hire for. It is a poor fit for small, fast-moving experiments."
-      - q: Should we rewrite our old Java system?
-        a: "Rarely all at once. We usually recommend upgrading the platform, adding tests, and replacing parts in stages."
-      - q: Can Java work with modern web and mobile apps?
-        a: "Yes. A Java back end can serve web and mobile clients through a clear set of requests, whatever they are built in."
-      - q: How is Java different from JavaScript?
-        a: "They are unrelated languages that share part of a name. Java is mostly used on servers, and JavaScript mostly in browsers."
 
   - type: related
     id: related

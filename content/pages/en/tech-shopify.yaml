@@ -63,33 +63,9 @@ sections:
       - "That takes away a lot of risk. You are not responsible for patching servers or protecting card data, and the checkout is among the most tested in the industry."
       - "The trade-off is that you work within the platform's model. For most sellers that is a good bargain. For unusual products or pricing, it takes thought."
 
-  - type: table
-    id: covers
-    tone: paper
-    label: Where it fits
-    heading: What Shopify covers, and what we add
-    caption: What Shopify provides by default and what DECHY adds
-    columns: [Area, What Shopify provides, What we add]
-    rows:
-      - - Store and checkout
-        - "Hosting, catalog, basket, checkout, and payments."
-        - "A theme matched to your brand, and a faster, clearer checkout journey."
-      - - Products and stock
-        - "Product records, variants, and inventory tracking."
-        - "Links to your warehouse or stock system, and bulk tools for large catalogs."
-      - - Orders and shipping
-        - "Order handling and shipping label tools."
-        - "Connections to carriers and fulfilment partners."
-      - - Money
-        - "Payments and payouts."
-        - "Links to accounting, and handling of tax and refunds your way."
-      - - Custom needs
-        - "Apps and a developer platform."
-        - "Custom features and private apps for what the store cannot do."
-
   - type: chooser
     id: shape
-    tone: white
+    tone: paper
     label: Options
     heading: What kind of Shopify work do you need?
     intro: "Most work falls into one of three shapes."
@@ -111,21 +87,29 @@ sections:
         watch: "Measure before and after, so changes are judged on evidence."
         cta: { label: Plan an audit, href: "/contact/?service=ecommerce" }
 
-  - type: index
-    id: uses
-    tone: paper
-    columns: 2
-    label: Typical uses
-    heading: Stores that suit Shopify
-    items:
-      - title: A direct-to-customer brand
-        body: "A focused catalog with a strong storefront, subscriptions or bundles, and email and advertising connected."
-      - title: A seller growing out of a marketplace
-        body: "Your own store alongside marketplace listings, with stock kept in step across them."
-      - title: A business that sells in person and online
-        body: "One catalog and one stock count shared between a shop, events, and the website."
-      - title: A wholesale and retail mix
-        body: "Separate prices and ordering rules for trade customers, with checkout rules that suit each."
+  - type: table
+    id: covers
+    tone: white
+    label: Where it fits
+    heading: What Shopify covers, and what we add
+    caption: What Shopify provides by default and what DECHY adds
+    columns: [Area, What Shopify provides, What we add]
+    rows:
+      - - Store and checkout
+        - "Hosting, catalog, basket, checkout, and payments."
+        - "A theme matched to your brand, and a faster, clearer checkout journey."
+      - - Products and stock
+        - "Product records, variants, and inventory tracking."
+        - "Links to your warehouse or stock system, and bulk tools for large catalogs."
+      - - Orders and shipping
+        - "Order handling and shipping label tools."
+        - "Connections to carriers and fulfilment partners."
+      - - Money
+        - "Payments and payouts."
+        - "Links to accounting, and handling of tax and refunds your way."
+      - - Custom needs
+        - "Apps and a developer platform."
+        - "Custom features and private apps for what the store cannot do."
 
   - type: columns
     id: dechy
@@ -150,9 +134,25 @@ sections:
           - "Speed and conversion audits."
           - "Search-ready structure and tracking."
 
+  - type: index
+    id: uses
+    tone: white
+    columns: 2
+    label: Typical uses
+    heading: Stores that suit Shopify
+    items:
+      - title: A direct-to-customer brand
+        body: "A focused catalog with a strong storefront, subscriptions or bundles, and email and advertising connected."
+      - title: A seller growing out of a marketplace
+        body: "Your own store alongside marketplace listings, with stock kept in step across them."
+      - title: A business that sells in person and online
+        body: "One catalog and one stock count shared between a shop, events, and the website."
+      - title: A wholesale and retail mix
+        body: "Separate prices and ordering rules for trade customers, with checkout rules that suit each."
+
   - type: callout
     id: limits
-    tone: white
+    tone: paper
     variant: limits
     title: Where Shopify has limits
     paragraphs:
@@ -164,7 +164,7 @@ sections:
     tone: paper
     label: Technical depth
     heading: How we build with Shopify
-    intro: "How we build on Shopify."
+    intro: "Our engineering choices on theme and performance, apps and the platform, and headless options, written for the people who will own the system after launch."
     panels:
       - title: Theme and performance
         paragraphs:
@@ -180,7 +180,7 @@ sections:
 
   - type: faq
     id: faq
-    tone: white
+    tone: paper
     label: Common questions
     heading: Questions about Shopify
     items:
@@ -195,7 +195,7 @@ sections:
 
   - type: related
     id: related
-    tone: paper
+    tone: white
     label: Related
     heading: Shopify across DECHY
     groups:

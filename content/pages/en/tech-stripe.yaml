@@ -62,29 +62,14 @@ sections:
       - "Stripe handles the card details, which keeps sensitive data off your own servers. Your job is to keep your own records in step with what Stripe says happened."
       - "Most integration problems are about that second job: a payment that succeeded but was never recorded, a renewal that failed silently, or a refund that did not reach accounting."
 
-  - type: diagram
-    id: flow
+  - type: callout
+    id: limits
     tone: paper
-    label: The data flow
-    heading: What passes between your system and Stripe
-    intro: "Information travels in both directions, and each direction has its own risks."
-    spec:
-      kind: layers
-      layerLabel: Systems connected to a payment
-      layers:
-        - title: Your checkout
-          text: Collects the order and sends the customer to pay.
-        - title: Stripe
-          text: Takes the payment and sends back events.
-        - title: Your back end
-          text: Receives events, checks them, and updates orders.
-        - title: Accounting and customer records
-          text: Receive the paid order, refunds, and fees.
-        - title: Monitoring
-          text: Alerts on failures, mismatches, and disputes.
-    purpose: architecture
-    takeaway: "A Stripe integration links your checkout, Stripe, your back end, your accounting and customer records, and monitoring that watches for mismatches."
-    caption: "This diagram shows five systems connected by a Stripe payment, from your checkout to the monitoring that watches for failures and mismatches."
+    variant: limits
+    title: What Stripe does not decide for you
+    paragraphs:
+      - "Tax, invoicing rules, refund policy, and consumer rights depend on where you sell and what you sell. Stripe offers tools, but the decisions are yours, and your accountant or adviser should confirm them."
+      - "Fees and features also change. We check the current terms when we plan, and design so the payment provider could be swapped."
 
   - type: table
     id: cases
@@ -110,6 +95,49 @@ sections:
         - "The order never completes."
         - "The back end confirms from Stripe's message, not from the browser."
 
+  - type: diagram
+    id: flow
+    tone: paper
+    label: The data flow
+    heading: What passes between your system and Stripe
+    intro: "Information travels in both directions, and each direction has its own risks."
+    spec:
+      kind: layers
+      layerLabel: Systems connected to a payment
+      layers:
+        - title: Your checkout
+          text: Collects the order and sends the customer to pay.
+        - title: Stripe
+          text: Takes the payment and sends back events.
+        - title: Your back end
+          text: Receives events, checks them, and updates orders.
+        - title: Accounting and customer records
+          text: Receive the paid order, refunds, and fees.
+        - title: Monitoring
+          text: Alerts on failures, mismatches, and disputes.
+    purpose: architecture
+    takeaway: "A Stripe integration links your checkout, Stripe, your back end, your accounting and customer records, and monitoring that watches for mismatches."
+    caption: "This diagram shows five systems connected by a Stripe payment, from your checkout to the monitoring that watches for failures and mismatches."
+
+  - type: process
+    id: build
+    tone: white
+    label: How we work
+    heading: How a payment integration is built
+    steps:
+      - title: Map the money flow
+        body: "We trace how a sale should move from checkout to accounting, including refunds and failed payments."
+        artifacts: [Payment flow map, List of cases]
+      - title: Build in test mode
+        body: "We build against Stripe's test environment, with simulated cards and events."
+        artifacts: [Working checkout, Event handling]
+      - title: Reconcile
+        body: "We add a check that compares Stripe's records with yours and flags any difference."
+        artifacts: [Reconciliation job, Alerts]
+      - title: Go live carefully
+        body: "We switch to live mode with a small real transaction, watch the first day, and keep a way back."
+        artifacts: [Launch checklist, First-day review]
+
   - type: columns
     id: dechy
     tone: paper
@@ -133,55 +161,6 @@ sections:
           - "Alerts for failures and disputes."
           - "Clear reports for finance."
 
-  - type: callout
-    id: limits
-    tone: white
-    variant: limits
-    title: What Stripe does not decide for you
-    paragraphs:
-      - "Tax, invoicing rules, refund policy, and consumer rights depend on where you sell and what you sell. Stripe offers tools, but the decisions are yours, and your accountant or adviser should confirm them."
-      - "Fees and features also change. We check the current terms when we plan, and design so the payment provider could be swapped."
-
-  - type: process
-    id: build
-    tone: white
-    label: How we work
-    heading: How a payment integration is built
-    steps:
-      - title: Map the money flow
-        body: "We trace how a sale should move from checkout to accounting, including refunds and failed payments."
-        artifacts: [Payment flow map, List of cases]
-      - title: Build in test mode
-        body: "We build against Stripe's test environment, with simulated cards and events."
-        artifacts: [Working checkout, Event handling]
-      - title: Reconcile
-        body: "We add a check that compares Stripe's records with yours and flags any difference."
-        artifacts: [Reconciliation job, Alerts]
-      - title: Go live carefully
-        body: "We switch to live mode with a small real transaction, watch the first day, and keep a way back."
-        artifacts: [Launch checklist, First-day review]
-
-  - type: technical
-    id: technology
-    tone: paper
-    label: Technical depth
-    heading: How we build with Stripe
-    intro: "How we build and secure the connection."
-    panels:
-      - title: Events and webhooks
-        paragraphs:
-          - "We treat [webhooks](ref:tech.webhooks) as the source of truth for payment state, verify their signatures, store each event identifier to make handling idempotent, and process slow work in a queue."
-      - title: Security
-        items:
-          - "Card details are collected by Stripe's hosted fields or pages, so they never reach your servers."
-          - "Secret keys live in a secrets store and are rotated."
-          - "Test mode and live mode are kept strictly separate."
-      - title: Quality
-        items:
-          - "Automated tests using Stripe's test cards and simulated events."
-          - "A scheduled reconciliation job comparing Stripe's records with yours."
-          - "Support for strong customer authentication where regulations require it."
-
   - type: faq
     id: faq
     tone: white
@@ -196,6 +175,27 @@ sections:
         a: "Yes. We connect plans, renewals, and failed-payment handling to your customer records and accounting."
       - q: What about security and compliance?
         a: "Using Stripe's hosted fields keeps card data off your servers, which reduces your burden. You still have responsibilities, and we explain which."
+
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: How we build with Stripe
+    intro: "What we settle early on Stripe work: events and webhooks, security, and quality, so nothing surprises your team later."
+    panels:
+      - title: Events and webhooks
+        paragraphs:
+          - "We treat [webhooks](ref:tech.webhooks) as the source of truth for payment state, verify their signatures, store each event identifier to make handling idempotent, and process slow work in a queue."
+      - title: Security
+        items:
+          - "Card details are collected by Stripe's hosted fields or pages, so they never reach your servers."
+          - "Secret keys live in a secrets store and are rotated."
+          - "Test mode and live mode are kept strictly separate."
+      - title: Quality
+        items:
+          - "Automated tests using Stripe's test cards and simulated events."
+          - "A scheduled reconciliation job comparing Stripe's records with yours."
+          - "Support for strong customer authentication where regulations require it."
 
   - type: related
     id: related

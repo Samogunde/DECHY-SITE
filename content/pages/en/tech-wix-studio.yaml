@@ -133,7 +133,7 @@ sections:
     tone: white
     label: Technical depth
     heading: How we build with Wix Studio
-    intro: "How we build on Wix Studio."
+    intro: "The detail a technical reviewer will ask about: layout and responsiveness, data and code, performance and search, and limits."
     panels:
       - title: Layout and responsiveness
         items:

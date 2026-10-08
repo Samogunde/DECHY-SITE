@@ -63,9 +63,29 @@ sections:
       - "A plain React app sends the browser a nearly empty page and builds everything on the visitor's device. That works for tools behind a sign-in. For a public site it costs speed and search visibility."
       - "Next.js moves that work earlier. Pages can be built ahead of time, built on request, or mixed, page by page. That choice is most of what makes it useful."
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with Next.js
+    columns:
+      - title: Build
+        items:
+          - "Marketing sites, portals, and web applications."
+          - "Content connected to an editing tool your team can use."
+          - "Forms, payments, and sign-in connected to the services you already run."
+      - title: Improve
+        items:
+          - "Speed and search-readiness reviews of existing sites."
+          - "Moves from an older framework or a plain React app."
+      - title: Hand over
+        items:
+          - "Documentation and a structure other developers can follow."
+          - "Training for the people who edit content."
+
   - type: chooser
     id: fit
-    tone: paper
+    tone: white
     label: Where it fits
     heading: Which rendering approach does your project need?
     intro: "Most of the design work in a Next.js project is choosing how each kind of page is prepared. The answer depends on how often the content changes."
@@ -89,7 +109,7 @@ sections:
 
   - type: table
     id: options
-    tone: white
+    tone: paper
     label: Options
     heading: Next.js and the alternatives
     intro: "Next.js is one of several good choices. These are the ones we compare most often."
@@ -115,7 +135,7 @@ sections:
 
   - type: index
     id: uses
-    tone: paper
+    tone: white
     columns: 2
     label: Typical uses
     heading: Systems that suit Next.js
@@ -128,45 +148,6 @@ sections:
         body: "Order history, documents, and messages for signed-in customers, with fast loading on phones."
       - title: A documentation or knowledge site
         body: "Searchable guides built from a content system, so editors publish without a developer."
-
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with Next.js
-    columns:
-      - title: Build
-        items:
-          - "Marketing sites, portals, and web applications."
-          - "Content connected to an editing tool your team can use."
-          - "Forms, payments, and sign-in connected to the services you already run."
-      - title: Improve
-        items:
-          - "Speed and search-readiness reviews of existing sites."
-          - "Moves from an older framework or a plain React app."
-      - title: Hand over
-        items:
-          - "Documentation and a structure other developers can follow."
-          - "Training for the people who edit content."
-
-  - type: technical
-    id: technology
-    tone: white
-    label: Technical depth
-    heading: How we build with Next.js
-    intro: "The choices we make on a typical project."
-    panels:
-      - title: Rendering and caching
-        paragraphs:
-          - "We choose static generation, incremental regeneration, or server rendering per route, and set cache lifetimes deliberately so content changes appear when they should."
-      - title: Structure
-        items:
-          - "The App Router with server components for data-heavy pages, and client components only where interaction needs them."
-          - "[TypeScript](ref:lang.typescript) throughout, so changes to data shapes show up as errors before release."
-          - "Metadata, sitemaps, and structured data generated from the same content source as the pages."
-      - title: Hosting
-        paragraphs:
-          - "Next.js runs well on platforms such as [Vercel](ref:plat.vercel) and [Netlify](ref:plat.netlify), and on containers in [AWS](ref:plat.aws) or other clouds. The choice depends on cost, control, and where your data lives."
 
   - type: faq
     id: faq
@@ -183,9 +164,28 @@ sections:
       - q: What does it cost to run?
         a: "Statically built pages cost very little. Costs rise with pages built per visitor and with traffic. We estimate this before you commit."
 
+  - type: technical
+    id: technology
+    tone: white
+    label: Technical depth
+    heading: How we build with Next.js
+    intro: "For your developers and IT lead: our Next.js choices on rendering and caching, structure, and hosting, and the reasoning behind each."
+    panels:
+      - title: Rendering and caching
+        paragraphs:
+          - "We choose static generation, incremental regeneration, or server rendering per route, and set cache lifetimes deliberately so content changes appear when they should."
+      - title: Structure
+        items:
+          - "The App Router with server components for data-heavy pages, and client components only where interaction needs them."
+          - "[TypeScript](ref:lang.typescript) throughout, so changes to data shapes show up as errors before release."
+          - "Metadata, sitemaps, and structured data generated from the same content source as the pages."
+      - title: Hosting
+        paragraphs:
+          - "Next.js runs well on platforms such as [Vercel](ref:plat.vercel) and [Netlify](ref:plat.netlify), and on containers in [AWS](ref:plat.aws) or other clouds. The choice depends on cost, control, and where your data lives."
+
   - type: related
     id: related
-    tone: white
+    tone: paper
     label: Related
     heading: Next.js across DECHY
     groups:

@@ -66,9 +66,32 @@ sections:
       - "For a team that already builds web interfaces in React, the learning curve is gentler than starting native. Developers can move between the web product and the app, and some code can be shared."
       - "It is not magic. Some features need native code, and performance-critical screens may need extra care. The framework has improved a lot, but this is the trade-off to keep in mind."
 
+  - type: columns
+    id: dechy
+    tone: paper
+    label: What DECHY can do
+    heading: Working with React Native
+    columns:
+      - title: Build
+        items:
+          - "Apps for iPhone and Android."
+          - "Shared code with your web product where it makes sense."
+      - title: Add native
+        items:
+          - "Native modules for cameras, sensors, and payments."
+          - "Careful handling of permissions."
+      - title: Release
+        items:
+          - "Store listings, builds, and test distribution."
+          - "Over-the-air updates for small fixes where allowed."
+      - title: Maintain
+        items:
+          - "Upgrades across framework and phone releases."
+          - "Crash reports and performance work."
+
   - type: diagram
     id: share
-    tone: paper
+    tone: white
     label: Where it fits
     heading: What a web product and an app can share
     intro: "Sharing is the main economic argument for React Native, so it is worth being specific."
@@ -96,7 +119,7 @@ sections:
 
   - type: table
     id: options
-    tone: white
+    tone: paper
     label: Alternatives
     heading: React Native compared with the alternatives
     caption: React Native compared with other ways of building a mobile app
@@ -115,44 +138,36 @@ sections:
         - "Occasional use, with no store listing needed."
         - "Limited phone features and no offline depth."
 
-  - type: columns
-    id: dechy
-    tone: paper
-    label: What DECHY can do
-    heading: Working with React Native
-    columns:
-      - title: Build
-        items:
-          - "Apps for iPhone and Android."
-          - "Shared code with your web product where it makes sense."
-      - title: Add native
-        items:
-          - "Native modules for cameras, sensors, and payments."
-          - "Careful handling of permissions."
-      - title: Release
-        items:
-          - "Store listings, builds, and test distribution."
-          - "Over-the-air updates for small fixes where allowed."
-      - title: Maintain
-        items:
-          - "Upgrades across framework and phone releases."
-          - "Crash reports and performance work."
-
   - type: callout
     id: limits
-    tone: paper
+    tone: white
     variant: limits
     title: Upgrades need planning
     paragraphs:
       - "React Native and the phone systems it runs on change every year. Dependencies can fall behind, and an upgrade left too long becomes a project in itself."
       - "We plan small, regular upgrades, keep dependencies few and well maintained, and test on real devices, so the app does not become hard to update."
 
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about React Native
+    items:
+      - q: Will the app feel native?
+        a: "Largely, yes, because it uses real native components. Feel also depends on how each screen is built, and we test on real devices."
+      - q: Can we reuse our web code?
+        a: "Logic, data types, and back-end connections can often be shared. Screens usually cannot, since a phone and a browser need different layouts."
+      - q: Is it as fast as a native app?
+        a: "For most business apps, yes. Graphics-heavy or very demanding apps may need native code for those parts."
+      - q: Who owns the app code?
+        a: "You do, as agreed in writing before work starts. We hand over code and documentation."
+
   - type: technical
     id: technology
     tone: white
     label: Technical depth
     heading: How we build with React Native
-    intro: "How we structure a React Native app."
+    intro: "For your developers and IT lead: our React Native choices on structure, native features, and delivery, and the reasoning behind each."
     panels:
       - title: Structure
         paragraphs:
@@ -166,21 +181,6 @@ sections:
         items:
           - "Automated builds and tests in a pipeline for both platforms."
           - "Staged releases and crash reporting for each version."
-
-  - type: faq
-    id: faq
-    tone: white
-    label: Common questions
-    heading: Questions about React Native
-    items:
-      - q: Will the app feel native?
-        a: "Largely, yes, because it uses real native components. Feel also depends on how each screen is built, and we test on real devices."
-      - q: Can we reuse our web code?
-        a: "Logic, data types, and back-end connections can often be shared. Screens usually cannot, since a phone and a browser need different layouts."
-      - q: Is it as fast as a native app?
-        a: "For most business apps, yes. Graphics-heavy or very demanding apps may need native code for those parts."
-      - q: Who owns the app code?
-        a: "You do, as agreed in writing before work starts. We hand over code and documentation."
 
   - type: related
     id: related

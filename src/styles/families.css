@@ -406,6 +406,13 @@
   line-height: 1.5;
   color: var(--color-paper);
 }
+.technical-points > li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.technical-points > li:first-child::before {
+  top: 0.62em;
+}
 .technical-points > li {
   position: relative;
   padding: 0.6rem 0 0.6rem 1.2rem;
@@ -422,15 +429,15 @@
   background: var(--color-slate-on-dark);
 }
 @media (min-width: 48rem) {
-  .technical-body:has(.technical-points) {
+  .technical-body:has(.technical-text):has(.technical-points) {
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
     column-gap: 2rem;
   }
-  .technical-points > li:first-child {
+  .technical-body:has(.technical-text) .technical-points > li:first-child {
     border-top: 0;
     padding-top: 0;
   }
-  .technical-points > li:first-child::before {
+  .technical-body:has(.technical-text) .technical-points > li:first-child::before {
     top: 0.62em;
   }
 }
@@ -989,5 +996,66 @@
   }
   .sysframe-foot {
     padding-inline: 0.75rem;
+  }
+}
+
+/* ---------------- No orphaned cards ----------------
+   When the last card would sit alone on its own row, it takes the whole row instead of leaving
+   an empty gap beside it. Two-column ranges first, then three-column ranges. */
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  :is(.dest-cards, .option-cards, .col-cards) > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 40rem) and (max-width: 63.99rem) {
+  .index-tiles > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 40rem) and (max-width: 71.99rem) {
+  .pathfinder > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 64rem) {
+  .dest-cards > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .index-tiles > :last-child:nth-child(3n + 1),
+  .option-cards:not([data-count="2"]):not([data-count="4"]) > :last-child:nth-child(3n + 1),
+  .col-cards:is([data-count="3"], [data-count="5"], [data-count="6"], [data-count="7"])
+    > :last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 72rem) {
+  .pathfinder > :last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 64rem) {
+  .index-tiles > :last-child:nth-child(3n + 2),
+  .option-cards:not([data-count="2"]):not([data-count="4"]) > :last-child:nth-child(3n + 2),
+  .col-cards:is([data-count="5"]) > :last-child:nth-child(3n + 2) {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 72rem) {
+  .pathfinder > :last-child:nth-child(3n + 2) {
+    grid-column: span 2;
+  }
+}
+/* Four tiles run four across on wide screens (two by two below), never three and one. */
+@media (min-width: 64rem) {
+  .index-tiles[data-count="4"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .index-tiles[data-count="4"] > :last-child {
+    grid-column: auto;
+  }
+}
+@media (min-width: 80rem) {
+  .index-tiles[data-count="4"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

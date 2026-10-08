@@ -132,7 +132,7 @@ sections:
 
   - type: callout
     id: limits
-    tone: paper
+    tone: white
     variant: limits
     title: Where Webflow stops
     paragraphs:
@@ -144,7 +144,7 @@ sections:
     tone: white
     label: Technical depth
     heading: How we build with Webflow
-    intro: "The practices that keep a Webflow site maintainable."
+    intro: "For your developers and IT lead: our Webflow choices on structure, extending the platform, and search and speed, and the reasoning behind each."
     panels:
       - title: Structure
         paragraphs:

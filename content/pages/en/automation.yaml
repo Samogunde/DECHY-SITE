@@ -268,7 +268,7 @@ sections:
     tone: white
     label: Technology
     heading: How automations are built
-    intro: It is here for technical readers.
+    intro: "What we settle early: triggers and connections, handling errors, keeping credentials and information safe, and where automations run, so nothing surprises your team later."
     panels:
       - title: Triggers and connections
         paragraphs:

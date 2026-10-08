@@ -144,7 +144,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: How content is prepared for search and AI.
+    intro: "The detail a technical reviewer will ask about: how content is structured, how search finds it, and how AI assistants use it safely."
     panels:
       - title: Structure
         paragraphs:

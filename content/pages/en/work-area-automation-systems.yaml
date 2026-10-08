@@ -149,7 +149,7 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: The tools we choose from.
+    intro: "The detail a technical reviewer will ask about: tools and reliability."
     panels:
       - title: Tools
         paragraphs:
