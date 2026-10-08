@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../brand/logos/primary/dechy-logo-primary.png";
+import logo from "../../../brand/logos/primary/dechy-logo.png";
 
 /**
  * The approved DECHY PNG logo, used exactly as supplied: not redrawn, recolored, stretched, or
@@ -7,12 +7,14 @@ import logo from "../../../brand/logos/primary/dechy-logo-primary.png";
  * artwork (CSS positioning of the unchanged image) and uses darken blending (exact on Warm Off White) so the file's
  * near-white background does not show as a box on the Warm Off White page.
  *
- * Artwork bounds measured in the 1536 x 676 source: x 231..1337, y 178..488. The frame adds
- * about 8px of breathing room on each side.
+ * The approved site logo is the DECHY wordmark without the descriptor (owner direction,
+ * 7 October 2026); the descriptor appears as text beside it where needed.
+ * Artwork bounds measured in the 2172 x 724 source: x 198..1980, y 206..537. The frame adds
+ * about 10px of breathing room on each side.
  */
-const SRC_W = 1536;
-const SRC_H = 676;
-const FRAME = { x: 223, y: 170, w: 1122, h: 326 };
+const SRC_W = 2172;
+const SRC_H = 724;
+const FRAME = { x: 188, y: 196, w: 1803, h: 352 };
 
 export function Logo({
   className = "",
@@ -34,7 +36,7 @@ export function Logo({
     >
       <Image
         src={logo}
-        alt="DECHY: Technology, Software, AI & Digital Solutions"
+        alt="DECHY"
         width={SRC_W}
         height={SRC_H}
         sizes={sizes}

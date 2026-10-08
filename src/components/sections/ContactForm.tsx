@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Arrow } from "@/components/primitives/Arrow";
 
 type Option = { value: string; label: string };
-type Fields = "name" | "email" | "organization" | "interest" | "timeline" | "message";
+type Fields = "name" | "email" | "organization" | "interest" | "timeline" | "budget" | "message";
 type Errors = Partial<Record<Fields, string>>;
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -19,10 +19,22 @@ const TIMELINE_OPTIONS: Option[] = [
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+/** Budget ranges (optional); the server accepts exactly these (src/lib/contact/validate.ts). */
+const BUDGET_OPTIONS = [
+  "$2,000 to $4,999",
+  "$5,000 to $9,999",
+  "$10,000 to $14,999",
+  "$15,000 to $19,999",
+  "$20,000 to $29,999",
+  "$30,000+",
+  "Not sure yet",
+];
+
 function clientValidate(v: Record<Fields, string>): Errors {
   const e: Errors = {};
   if (v.name.trim().length < 2) e.name = "Please enter your name.";
   if (!EMAIL.test(v.email.trim())) e.email = "Please enter a valid email address.";
+  if (!v.interest) e.interest = "Please choose what we can help with.";
   if (v.message.trim().length < 20)
     e.message = "Please tell us a little more (at least 20 characters).";
   return e;
@@ -43,6 +55,7 @@ export function ContactForm({ services }: { services: Option[] }) {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
   const [formError, setFormError] = useState("");
+  const [reference, setReference] = useState("");
   const startedAt = useRef<number>(0);
   const formRef = useRef<HTMLFormElement>(null);
   const resultRef = useRef<HTMLDivElement>(null);
@@ -63,13 +76,14 @@ export function ContactForm({ services }: { services: Option[] }) {
       organization: String(fd.get("organization") ?? ""),
       interest: String(fd.get("interest") ?? ""),
       timeline: String(fd.get("timeline") ?? ""),
+      budget: String(fd.get("budget") ?? ""),
       message: String(fd.get("message") ?? ""),
     };
     const local = clientValidate(values);
     setFormError("");
     if (Object.keys(local).length > 0) {
       setErrors(local);
-      const first = (["name", "email", "message"] as Fields[]).find((f) => local[f]);
+      const first = (["name", "email", "interest", "message"] as Fields[]).find((f) => local[f]);
       if (first) formRef.current?.querySelector<HTMLElement>(`[name="${first}"]`)?.focus();
       return;
     }
@@ -82,13 +96,17 @@ export function ContactForm({ services }: { services: Option[] }) {
         body: JSON.stringify({
           ...values,
           timeline: values.timeline || undefined,
+          budget: values.budget || undefined,
           website: String(fd.get("website") ?? ""),
           startedAt: startedAt.current,
         }),
       });
       const body = (await res.json().catch(() => null)) as
-        { ok: true } | { ok: false; code?: string; message?: string; errors?: Errors } | null;
+        | { ok: true; ref?: string }
+        | { ok: false; code?: string; message?: string; errors?: Errors }
+        | null;
       if (res.ok && body?.ok) {
+        setReference(body.ref ?? "");
         setStatus("success");
         requestAnimationFrame(() => resultRef.current?.focus());
         return;
@@ -119,9 +137,13 @@ export function ContactForm({ services }: { services: Option[] }) {
         className="form-result border-l-2 border-blue bg-white p-6 outline-none"
       >
         <h3 className="t-h3 m-0">Thank you. Your message has been sent.</h3>
-        <p className="t-body mt-3 mb-0">
-          We read every inquiry and will reply to the email address you provided.
-        </p>
+        {reference ? (
+          <p className="t-body mt-3 mb-0">
+            Your reference is <strong className="ref-code">{reference}</strong>. Mention it if you
+            write to us about this inquiry.
+          </p>
+        ) : null}
+        <p className="t-body mt-3 mb-0">We will reply to the email address you provided.</p>
       </div>
     );
   }
@@ -188,47 +210,39 @@ export function ContactForm({ services }: { services: Option[] }) {
       </div>
 
       <div className="field">
-        <label htmlFor={id("organization")}>
-          Organization <span className="font-normal text-slate-text">(optional)</span>
-        </label>
-        <input
-          id={id("organization")}
-          name="organization"
-          type="text"
-          autoComplete="organization"
-        />
-      </div>
-
-      <div className="grid gap-6 min-[40rem]:grid-cols-2">
-        <div className="field">
-          <label htmlFor={id("interest")}>
-            What is it about? <span className="font-normal text-slate-text">(optional)</span>
-          </label>
-          <select key={presetLabel} id={id("interest")} name="interest" defaultValue={presetLabel}>
-            <option value="">Not sure yet</option>
-            {services.map((s) => (
-              <option key={s.value} value={s.label}>
-                {s.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="field">
-          <label htmlFor={id("timeline")}>
-            Timeline <span className="font-normal text-slate-text">(optional)</span>
-          </label>
-          <select id={id("timeline")} name="timeline" defaultValue="">
-            {TIMELINE_OPTIONS.map((o) => (
-              <option key={o.value} value={o.value}>
-                {o.label}
-              </option>
-            ))}
-          </select>
-        </div>
+        <label htmlFor={id("interest")}>What can we help with?</label>
+        <select
+          key={presetLabel}
+          id={id("interest")}
+          name="interest"
+          defaultValue={presetLabel}
+          required
+          aria-required="true"
+          aria-invalid={errors.interest ? "true" : undefined}
+          aria-describedby={describedBy("interest", true)}
+        >
+          <option value="" disabled>
+            Choose the closest fit
+          </option>
+          {services.map((s) => (
+            <option key={s.value} value={s.label}>
+              {s.label}
+            </option>
+          ))}
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+        <p id={`${id("interest")}-hint`} className="hint">
+          Choose &ldquo;Not sure yet&rdquo; if more than one fits. We will help you decide.
+        </p>
+        {errors.interest ? (
+          <p id={`${id("interest")}-err`} className="error">
+            {errors.interest}
+          </p>
+        ) : null}
       </div>
 
       <div className="field">
-        <label htmlFor={id("message")}>What would you like to build, fix, or understand?</label>
+        <label htmlFor={id("message")}>Tell us about the project or request</label>
         <textarea
           id={id("message")}
           name="message"
@@ -238,7 +252,8 @@ export function ContactForm({ services }: { services: Option[] }) {
           aria-describedby={describedBy("message", true)}
         />
         <p id={`${id("message")}-hint`} className="hint">
-          A few sentences about the situation is enough. Please do not include passwords or
+          Describe the situation in your own words: what you want to build, connect, or fix, and
+          what is in the way. A few sentences is enough. Please do not include passwords or
           sensitive personal data.
         </p>
         {errors.message ? (
@@ -247,6 +262,44 @@ export function ContactForm({ services }: { services: Option[] }) {
           </p>
         ) : null}
       </div>
+
+      <fieldset className="form-optional">
+        <legend>
+          A little more context <span className="font-normal text-slate-text">(optional)</span>
+        </legend>
+        <div className="grid gap-6 min-[48rem]:grid-cols-3">
+          <div className="field">
+            <label htmlFor={id("organization")}>Organization</label>
+            <input
+              id={id("organization")}
+              name="organization"
+              type="text"
+              autoComplete="organization"
+            />
+          </div>
+          <div className="field">
+            <label htmlFor={id("timeline")}>Timeline</label>
+            <select id={id("timeline")} name="timeline" defaultValue="">
+              {TIMELINE_OPTIONS.map((o) => (
+                <option key={o.value} value={o.value}>
+                  {o.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="field">
+            <label htmlFor={id("budget")}>Estimated budget</label>
+            <select id={id("budget")} name="budget" defaultValue="">
+              <option value="">Prefer not to say</option>
+              {BUDGET_OPTIONS.map((b) => (
+                <option key={b} value={b}>
+                  {b}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      </fieldset>
 
       {/* Honeypot: invisible to people, tempting to bots. */}
       <div className="hp-field" aria-hidden="true">

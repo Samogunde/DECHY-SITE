@@ -13,16 +13,22 @@ const sha = (p: string) =>
     .update(fs.readFileSync(path.join(root, p)))
     .digest("hex");
 
-/** SHA-256 of the approved logo exactly as supplied by the owner. */
-const LOGO_SHA256 = "c8079c2161bcd9290c1d70878b15bdea155dacda50225265a0dd86ab0f95711c";
+/** SHA-256 of the approved logo (the wordmark without the descriptor) exactly as supplied. */
+const LOGO_SHA256 = "2fb8f86734f4a1c8f03db09f73acf0ff8e8ae03091da6fe62e49d766c7054e36";
+/** SHA-256 of the approved social sharing image exactly as supplied. */
+const SOCIAL_SHA256 = "f1ddd90a80ed7394fe87618abdf598d34c2e813c34e425268fa564caae0dfa82";
 
 describe("brand integrity", () => {
   it("keeps the approved logo byte-identical to the supplied file", () => {
-    expect(sha("brand/logos/primary/dechy-logo-primary.png")).toBe(LOGO_SHA256);
+    expect(sha("brand/logos/primary/dechy-logo.png")).toBe(LOGO_SHA256);
+  });
+
+  it("keeps the approved social sharing image byte-identical under its supplied name", () => {
+    expect(sha("brand/social/DECHY Technology Solutions Social Image.png")).toBe(SOCIAL_SHA256);
   });
 
   it("serves a delivery copy of the logo that is byte-identical to the master", () => {
-    expect(sha("public/brand/dechy-logo-primary.png")).toBe(LOGO_SHA256);
+    expect(sha("public/brand/dechy-logo.png")).toBe(LOGO_SHA256);
   });
 
   it("keeps the five approved brand tokens unchanged", () => {

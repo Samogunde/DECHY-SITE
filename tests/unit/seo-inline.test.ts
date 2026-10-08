@@ -65,7 +65,9 @@ describe("metadata", () => {
       "https://example.test/software-development/",
     );
     expect(m.openGraph?.url).toBe("https://example.test/software-development/");
-    expect(JSON.stringify(m.openGraph)).toContain("/og/dechy-og.png");
+    expect(JSON.stringify(m.openGraph)).toContain(
+      "/og/dechy-technology-solutions-social-image.png",
+    );
     expect((m.twitter as { card: string }).card).toBe("summary_large_image");
   });
 

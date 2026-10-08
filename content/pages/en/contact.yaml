@@ -22,9 +22,10 @@ sections:
     id: form
     tone: white
     label: Send a message
-    photo: { asset: asset.photo-contact-notebook-desk, layout: rail, position: "55% 50%" }
+    photo:
+      { asset: asset.photo-contact-consultation-conversation, layout: rail, position: "50% 38%" }
     heading: Start the conversation
-    intro: "Share the situation and what you would like to achieve. We reply to the email address you provide."
+    intro: "Describe the situation in your own words: what you want to build, connect, or fix. Organization, timeline, and budget are optional. We reply to the email address you provide."
 
   - type: prose
     id: next

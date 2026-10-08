@@ -18,9 +18,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "e2e": "playwright test",
-    "check": "npm run typecheck && npm run lint && npm run test && npm run build"
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "admin:hash": "tsx scripts/admin-hash.ts",
+    "brand:derivatives": "tsx scripts/brand-derivatives.ts"
   },
   "dependencies": {
+    "@netlify/blobs": "11.1.0",
     "next": "16.3.8",
     "react": "19.2.8",
     "react-dom": "19.2.8",

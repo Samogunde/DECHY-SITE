@@ -43,6 +43,8 @@ npm run dev                  # http://localhost:3000
 
 All configuration is by environment variable (see `.env.example`). The public origin (`SITE_ORIGIN`) is one setting because the final domain is undecided. Search indexing is off unless `SITE_INDEXING=true`. The contact form destination is configured with `CONTACT_DELIVERY` and provider variables; nothing is hard-coded and no secrets live in the repository.
 
+The data layer (inquiries, support requests, assistant conversations) uses Netlify Blobs on Netlify and a local `.data/` folder elsewhere (`DATA_STORE`). The website assistant runs in guided mode until `AI_API_KEY` is set. DECHY Admin (`/admin/`) stays locked until `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH` (create it with `npm run admin:hash`), and `ADMIN_SESSION_SECRET` are set on the host. Notifications for a future mobile app use `NOTIFICATION_PROVIDER`. Details: `docs/planning/21-platform-contact-assistant-admin.md`. Brand derivatives (icons, social image) are rebuilt with `npm run brand:derivatives`.
+
 ## Content rules that the build enforces
 
 Exact descriptor; no em or en dashes or emojis; the company statistic only through the approved facts register; no unsupported evidence claims; unbuilt pages render as plain text, never as dead links; no thin or template-identical pages. See `src/lib/content/validate.ts`.

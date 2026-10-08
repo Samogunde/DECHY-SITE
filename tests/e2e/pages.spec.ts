@@ -20,7 +20,9 @@ for (const p of PAGES) {
       expect(await meta('meta[name="robots"]')).toContain("noindex"); // no indexing before the domain is approved
       expect(await meta('meta[property="og:title"]')).toBe(p.title);
       expect(await meta('meta[property="og:url"]')).toBe(`${baseURL}${p.path}`);
-      expect(await meta('meta[property="og:image"]')).toBe(`${baseURL}/og/dechy-og.png`);
+      expect(await meta('meta[property="og:image"]')).toBe(
+        `${baseURL}/og/dechy-technology-solutions-social-image.png`,
+      );
       expect(await meta('meta[name="twitter:card"]')).toBe("summary_large_image");
       expect(await page.locator("html").getAttribute("lang")).toBe("en");
 

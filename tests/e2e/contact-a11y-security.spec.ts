@@ -10,6 +10,7 @@ test.describe("contact form", () => {
     await page.getByRole("button", { name: "Send message" }).click();
     await expect(page.getByText("Please enter your name.")).toBeVisible();
     await expect(page.getByText("Please enter a valid email address.")).toBeVisible();
+    await expect(page.getByText("Please choose what we can help with.")).toBeVisible();
     await expect(page.getByText(/at least 20 characters/)).toBeVisible();
     await expect(page.getByLabel("Your name")).toBeFocused();
     await expect(page.getByLabel("Your name")).toHaveAttribute("aria-invalid", "true");
@@ -20,20 +21,21 @@ test.describe("contact form", () => {
     await expect(page.getByLabel("Work email")).toBeFocused();
   });
 
-  test("submits successfully through the configured (log) destination and thanks the visitor", async ({
-    page,
-  }) => {
+  test("stores the inquiry, thanks the visitor, and gives a reference", async ({ page }) => {
     const errors = watchErrors(page);
     await page.goto("/contact/?service=software-development");
     await expect(page.getByText("Your inquiry is about")).toContainText("Software Development");
     await page.getByLabel("Your name").fill("Ada Lovelace");
     await page.getByLabel("Work email").fill("ada@example.org");
+    await expect(page.getByLabel("What can we help with?")).toHaveValue("Software Development");
     await page
-      .getByLabel("What would you like to build, fix, or understand?")
+      .getByLabel("Tell us about the project or request")
       .fill("We need a customer portal to track orders and invoices across three systems.");
+    await page.getByLabel("Estimated budget").selectOption("$10,000 to $14,999");
     await page.waitForTimeout(2800); // the anti-bot minimum fill time
     await page.getByRole("button", { name: "Send message" }).click();
     await expect(page.getByRole("status")).toContainText("Thank you");
+    await expect(page.getByRole("status")).toContainText(/DECHY-[23456789A-HJ-NP-TV-Z]{6}/);
     await expect(page.getByRole("status")).toBeFocused();
     expect(errors, errors.join("\n")).toEqual([]);
   });
@@ -169,12 +171,16 @@ test.describe("security and crawl controls", () => {
     for (const l of locs) expect(l).toMatch(/\/$/);
   });
 
-  test("declares an empty icon so browsers never request /favicon.ico", async ({ page }) => {
-    const requests: string[] = [];
-    page.on("request", (r) => requests.push(new URL(r.url()).pathname));
+  test("declares the approved DECHY icons, and every icon request succeeds", async ({ page }) => {
+    const failed: string[] = [];
+    page.on("response", (r) => {
+      if (/icon|favicon|manifest/.test(r.url()) && r.status() >= 400) failed.push(r.url());
+    });
     await page.goto("/");
     await page.waitForLoadState("networkidle");
-    expect(await page.locator('link[rel~="icon"]').first().getAttribute("href")).toBe("data:,");
-    expect(requests).not.toContain("/favicon.ico");
+    expect(await page.locator('link[rel~="icon"]').first().getAttribute("href")).toMatch(
+      /favicon.ico|icon/,
+    );
+    expect(failed).toEqual([]);
   });
 });

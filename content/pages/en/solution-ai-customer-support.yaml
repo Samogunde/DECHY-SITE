@@ -62,6 +62,7 @@ sections:
     figureCaption: "This diagram shows four kinds of customer question and what happens to each: answer it, help with checks, hand it to a person, or admit it does not know and hand over."
   - type: prose
     id: problem
+    photo: { asset: asset.photo-support-team-shared-screens, layout: aside, position: "50% 50%" }
     tone: white
     label: The problem
     heading: The same questions, every day

@@ -13,11 +13,11 @@ export function SiteHeader() {
       style={{ height: "var(--header-h)" }}
     >
       <div className="container-site flex h-full items-center gap-4">
-        <Link href="/" aria-label="DECHY home" className="block shrink-0 py-1.5">
+        <Link href="/" aria-label="DECHY home" className="flex min-h-11 shrink-0 items-center">
           <Logo
             priority
-            sizes="(min-width: 80rem) 220px, 180px"
-            className="h-9 min-[30rem]:h-10 min-[80rem]:h-[3.25rem]"
+            sizes="(min-width: 80rem) 190px, 170px"
+            className="h-7 min-[30rem]:h-8 min-[80rem]:h-9"
           />
         </Link>
         <HeaderNav model={model} />

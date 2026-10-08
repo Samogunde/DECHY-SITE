@@ -7,7 +7,7 @@ import { deliver, type DeliveryResult } from "./deliver";
 import { MIN_FILL_MS, validateContact, type FieldErrors } from "./validate";
 
 export type ContactResponse =
-  | { status: 200; body: { ok: true } }
+  | { status: 200; body: { ok: true; ref?: string } }
   | { status: 400; body: { ok: false; code: "invalid"; errors: FieldErrors } }
   | { status: 400; body: { ok: false; code: "too_fast" | "bad_request"; message: string } }
   | { status: 403; body: { ok: false; code: "forbidden"; message: string } }
@@ -19,7 +19,15 @@ export type ContactResponse =
 
 export type HandlerDeps = {
   now: () => number;
-  deliver: (data: Parameters<typeof deliver>[0]) => Promise<DeliveryResult>;
+  deliver: (data: Parameters<typeof deliver>[0], ref?: string) => Promise<DeliveryResult>;
+  /**
+   * Saves the inquiry in the DECHY data layer (the source of truth for DECHY Admin) and returns
+   * its reference, or null when storage is unavailable. When it succeeds, the visitor gets the
+   * reference even if email delivery is not configured yet.
+   */
+  record?: (data: Parameters<typeof deliver>[0]) => Promise<{ ref: string } | null>;
+  /** Allowed "What can we help with?" values (service names and "Not sure yet"). */
+  interests?: readonly string[];
 };
 
 const MAX_BODY = 16 * 1024;
@@ -107,7 +115,7 @@ export async function handleContact(
     return { status: 400, body: { ok: false, code: "bad_request", message: "Invalid request." } };
   }
 
-  const result = validateContact(raw);
+  const result = validateContact(raw, deps.interests);
   if (!result.ok) {
     return { status: 400, body: { ok: false, code: "invalid", errors: result.errors } };
   }
@@ -123,7 +131,16 @@ export async function handleContact(
     };
   }
 
-  const delivered = await deps.deliver(data);
+  let stored: { ref: string } | null = null;
+  if (deps.record) {
+    try {
+      stored = await deps.record(data);
+    } catch {
+      stored = null;
+    }
+  }
+  const delivered = await deps.deliver(data, stored?.ref);
+  if (stored) return { status: 200, body: { ok: true, ref: stored.ref } };
   if (delivered.ok) return { status: 200, body: { ok: true } };
   if (delivered.reason === "unconfigured") {
     return {

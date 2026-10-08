@@ -343,6 +343,8 @@ export const Block = z.discriminatedUnion("type", [
     heading: z.string(),
     answer: z.string(),
     paragraphs: z.array(z.string()).default([]),
+    /** A photograph set beside the opening text (layout "aside"). */
+    photo: PhotoRef.optional(),
   }),
   z.object({
     type: z.literal("prose"),
@@ -351,6 +353,8 @@ export const Block = z.discriminatedUnion("type", [
     heading: z.string(),
     paragraphs: z.array(z.string()).min(1),
     aside: z.object({ title: z.string(), items: z.array(z.string()) }).optional(),
+    /** A photograph set beside the opening text (layout "aside"). */
+    photo: PhotoRef.optional(),
   }),
   z.object({
     type: z.literal("index"),

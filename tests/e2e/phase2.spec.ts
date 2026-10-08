@@ -12,7 +12,12 @@ test.describe("phase 2 site-wide contract", () => {
       const html = await res.text();
       const hrefs = [...html.matchAll(/href="(\/[^"#?]*)(?:[#?][^"]*)?"/g)].map((m) => m[1]!);
       for (const href of hrefs) {
-        if (/^\/(_next|og|fonts|images|favicon|sitemap|robots|api)/.test(href)) continue;
+        if (
+          /^\/(_next|og|fonts|images|icons|brand|favicon|icon|apple-icon|manifest|sitemap|robots|api)/.test(
+            href,
+          )
+        )
+          continue;
         if (checked.has(href)) continue;
         checked.add(href);
         expect(built.has(href), `${p.path} links to ${href}`).toBe(true);
@@ -90,7 +95,8 @@ test.describe("phase 2 interactive blocks work without a mouse", () => {
 
   test("diagram captions sit inside the same figure", async ({ page }) => {
     await page.goto("/cloud/");
-    const figures = page.locator("figure");
+    // Diagrams only: a photograph carries a caption only when it has one to give.
+    const figures = page.locator("figure:not(.photo)");
     const n = await figures.count();
     expect(n).toBeGreaterThan(0);
     for (let i = 0; i < n; i++) await expect(figures.nth(i).locator("figcaption")).toHaveCount(1);

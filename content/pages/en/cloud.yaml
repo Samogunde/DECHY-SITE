@@ -61,6 +61,8 @@ sections:
     figureCaption: This diagram shows the layers of the cloud from your own software at the top down to the provider's data centers, so you can see what you rent and what you build.
   - type: prose
     id: problem
+    photo:
+      { asset: asset.photo-cloud-team-infrastructure-review, layout: aside, position: "60% 45%" }
     tone: white
     label: The problem
     heading: Why teams look at the cloud

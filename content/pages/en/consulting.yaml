@@ -138,6 +138,8 @@ sections:
         body: Findings and options are written for decision makers, not only for engineers.
   - type: index
     id: deliverables
+    photo:
+      { asset: asset.photo-consulting-process-mapping-review, layout: split, position: "50% 45%" }
     tone: paper
     columns: 2
     label: What you receive

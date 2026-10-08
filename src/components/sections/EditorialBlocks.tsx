@@ -119,13 +119,18 @@ export function DefinitionBlock({
             <Inline text={block.answer} />
           </p>
         </div>
-        {block.paragraphs.length > 0 ? (
-          <div className="prose-service answer-split-body" data-reveal="block">
-            {block.paragraphs.map((p, i) => (
-              <p key={i}>
-                <Inline text={p} />
-              </p>
-            ))}
+        {block.paragraphs.length > 0 || block.photo ? (
+          <div className="answer-split-col">
+            {block.paragraphs.length > 0 ? (
+              <div className="prose-service answer-split-body" data-reveal="block">
+                {block.paragraphs.map((p, i) => (
+                  <p key={i}>
+                    <Inline text={p} />
+                  </p>
+                ))}
+              </div>
+            ) : null}
+            {block.photo ? <Photo photo={block.photo} className="answer-photo" /> : null}
           </div>
         ) : null}
       </div>
@@ -159,13 +164,16 @@ export function ProseBlock({ block, visual }: { block: Of<"prose">; visual?: Rea
               <Inline text={lead} />
             </p>
           </div>
-          <div className="prose-service answer-split-body" data-reveal="block">
-            {more.map((p, i) => (
-              <p key={i}>
-                <Inline text={p} />
-              </p>
-            ))}
-            {block.aside ? <AsideCard aside={block.aside} /> : null}
+          <div className="answer-split-col">
+            <div className="prose-service answer-split-body" data-reveal="block">
+              {more.map((p, i) => (
+                <p key={i}>
+                  <Inline text={p} />
+                </p>
+              ))}
+              {block.aside ? <AsideCard aside={block.aside} /> : null}
+            </div>
+            {block.photo ? <Photo photo={block.photo} className="answer-photo" /> : null}
           </div>
         </div>
       </Section>

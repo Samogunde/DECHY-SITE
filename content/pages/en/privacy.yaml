@@ -3,16 +3,16 @@ kind: legal
 locale: en
 path: /privacy/
 title: "Privacy Policy | DECHY"
-description: "How DECHY handles personal information collected through this website, including contact form submissions, hosting data, cookies, and your rights."
+description: "How DECHY handles personal information from this website: the contact form, the assistant, support requests, hosting data, cookies, and your rights."
 breadcrumbLabel: Privacy policy
 h1: Privacy policy
-lead: "How this website handles personal information. Last updated 4 October 2026."
+lead: "How this website handles personal information. Last updated 7 October 2026."
 intent:
   primary: read the website privacy policy
 indexing: index
 claims: [company.name]
 datePublished: "2026-10-04"
-dateModified: "2026-10-04"
+dateModified: "2026-10-07"
 schemaTypes: [WebPage]
 
 sections:
@@ -25,30 +25,32 @@ sections:
           - "This website is operated by DECHY, a global technology company. In this policy, DECHY, we, and us mean the operator of this website. You can contact us about privacy through the [contact page](/contact/)."
       - heading: What information we collect
         paragraphs:
-          - "Information you give us. When you use the contact form we receive your name, your email address, and the message you write. You may also choose to give an organization name, a topic, and a timeline."
-          - "Information collected automatically. The website is delivered by a hosting provider, which processes standard technical data such as your IP address, browser type, and request details in order to serve pages and keep the site secure."
+          - "Contact form. We receive your name, your email address, what you need help with, and the message you write. You may also choose to give an organization name, a timeline, and an estimated budget."
+          - "Website assistant. When you use the assistant, the messages you type and its replies are kept as a conversation so it can follow the thread. When the assistant is powered by AI, your messages are sent to an AI model provider acting on our behalf to generate the replies."
+          - "Support requests. When you ask to speak to a person, we receive your name, your email address, and, if you choose, your organization, a note, and whether the request is time-sensitive, together with the assistant conversation so you do not have to repeat yourself."
+          - "Information collected automatically. The website is delivered by a hosting provider, which processes standard technical data such as your IP address, browser type, and request details in order to serve pages and keep the site secure. To limit abuse of the contact form and the assistant, we keep a one-way hash of the requesting address for a short time; the address itself is not stored."
           - "This website does not currently use analytics, advertising, or tracking cookies. See the [cookie policy](/cookies/)."
       - heading: How we use information
         paragraphs:
-          - "We use the information you send through the contact form to respond to your inquiry and to assess how DECHY might help. We use technical data to operate and secure the website. We do not sell personal information, and we do not use contact form submissions for unrelated marketing."
+          - "We use the information you send through the contact form, the assistant, or a support request to respond to you, to suggest which of our services might help, and to assess how DECHY might help. We use technical data to operate and secure the website. We do not sell personal information, and we do not use these submissions for unrelated marketing."
       - heading: Legal bases
         paragraphs:
           - "Where data protection law such as the GDPR or the UK GDPR applies, we rely on our legitimate interest in responding to inquiries and operating a secure website, and on taking steps at your request before entering into a contract."
       - heading: Who receives information
         paragraphs:
-          - "Messages are delivered to us using service providers that help operate the website and deliver messages, such as hosting, email, or workflow providers. They process information on our behalf and only for those purposes. We may also disclose information when the law requires it."
+          - "Information is processed by service providers that help operate the website on our behalf and only for those purposes: hosting and data storage, email delivery, notifications to our team, and, when the assistant uses AI, an AI model provider. We may also disclose information when the law requires it."
       - heading: International transfers
         paragraphs:
           - "DECHY works globally, and our service providers may process information in countries other than your own. Where the law requires it, we use appropriate safeguards for those transfers."
       - heading: How long we keep information
         paragraphs:
-          - "We keep inquiry details only as long as needed to respond and to manage any resulting relationship, and then delete or anonymize them. Hosting logs are kept for short periods for security and operations."
+          - "We keep inquiries and support requests only as long as needed to respond and to manage any resulting relationship, and then delete them. Assistant conversations are deleted automatically after a limited period (currently 90 days) unless they were passed to our team as a support request, in which case they are kept with that request. Hosting logs are kept for short periods for security and operations."
       - heading: Your rights
         paragraphs:
-          - "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, to data portability, and to withdraw consent where we rely on it. To exercise a right, contact us through the [contact page](/contact/). You may also complain to your local data protection authority."
+          - "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, to data portability, and to withdraw consent where we rely on it. To exercise a right, contact us through the [contact page](/contact/); we handle each request individually, including deleting your inquiries, support requests, and conversations. You may also complain to your local data protection authority."
       - heading: Security
         paragraphs:
-          - "We use measures such as encryption in transit, access controls, and input validation to protect information. No method of transmission over the internet is perfectly secure."
+          - "We use measures such as encryption in transit, sign-in protected access for our team, rate limiting, and input validation to protect information. No method of transmission over the internet is perfectly secure."
       - heading: Children
         paragraphs:
           - "This website is not directed at children, and we do not knowingly collect their personal information."

@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/patterns/SiteHeader";
-import { SiteFooter } from "@/components/patterns/SiteFooter";
-import { MotionProvider } from "@/components/primitives/MotionProvider";
 import { DESCRIPTOR, SITE_NAME, indexingEnabled, siteOrigin } from "@/lib/site";
 
 const manrope = Manrope({
@@ -26,9 +23,9 @@ export const metadata: Metadata = {
     ? { index: true, follow: true }
     : { index: false, follow: false, nocache: true },
   formatDetection: { telephone: false, email: false, address: false },
-  // No favicon has been supplied or approved, and none is invented. An empty data URL stops browsers
-  // from requesting /favicon.ico (no 404 noise) until the owner supplies an approved mark.
-  icons: { icon: [{ url: "data:," }] },
+  // Icons come from the approved DECHY monogram (scripts/brand-derivatives.ts): favicon.ico,
+  // icon.png, and apple-icon.png in this folder are picked up by Next.js; manifest.ts adds the
+  // larger app icons.
 };
 
 export const viewport: Viewport = {
@@ -40,17 +37,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${manrope.variable} ${sourceSans.variable}`}>
-      <body>
-        <a href="#main" className="skip-link">
-          Skip to main content
-        </a>
-        <SiteHeader />
-        <main id="main" tabIndex={-1} className="outline-none">
-          {children}
-        </main>
-        <SiteFooter />
-        <MotionProvider />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

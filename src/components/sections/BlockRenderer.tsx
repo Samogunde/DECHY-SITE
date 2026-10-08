@@ -4,6 +4,7 @@ import { getRegistry } from "@/lib/content/load";
 import type { Block, Page } from "@/lib/content/schema";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { ContactForm } from "./ContactForm";
+import { ContactPaths } from "./ContactPaths";
 import { ArticlesBlock, BrowseBlock, ConnectsBlock, DirectoryBlock } from "./DiscoveryBlocks";
 import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./EditorialBlocks";
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
@@ -17,7 +18,8 @@ function ContactFormBlock({ block }: { block: Extract<Block, { type: "contact-fo
   const options = getRegistry().services.map((s) => ({ value: s.slug, label: s.name }));
   return (
     <Section id={block.id} tone={block.tone}>
-      <div className="editorial">
+      <ContactPaths formId={`${block.id}-start`} />
+      <div className="editorial mt-12 min-[48rem]:mt-16">
         <div className="rail">
           <SectionHeader
             id={block.id}
@@ -27,7 +29,7 @@ function ContactFormBlock({ block }: { block: Extract<Block, { type: "contact-fo
           />
           {block.photo ? <Photo photo={block.photo} className="mt-8" /> : null}
         </div>
-        <div className="max-w-[40rem]">
+        <div id={`${block.id}-start`} className="max-w-[44rem] scroll-mt-28">
           <ContactForm services={options} />
         </div>
       </div>

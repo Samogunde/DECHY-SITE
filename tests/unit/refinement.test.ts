@@ -22,11 +22,14 @@ const photos = base.assets.filter((a) => a.role === "photograph");
 describe("photography: provenance is mandatory", () => {
   it("registers every photograph with source, license evidence, hash, size and alt text", () => {
     expect(photos.length).toBeGreaterThanOrEqual(4);
-    expect(photos.length).toBeLessThanOrEqual(8);
+    expect(photos.length).toBeLessThanOrEqual(16);
     for (const a of photos) {
-      expect(a.source, a.id).toBe("licensed-stock");
-      expect(a.sourceUrl, a.id).toMatch(/^https:\/\/unsplash\.com\/photos\//);
-      expect(a.licenseUrl, a.id).toBe("https://unsplash.com/license");
+      // Licensed stock (Unsplash) or supplied by the owner; either way with evidence on file.
+      expect(["licensed-stock", "owner-supplied"], a.id).toContain(a.source);
+      if (a.source === "licensed-stock") {
+        expect(a.sourceUrl, a.id).toMatch(/^https:\/\/unsplash\.com\/photos\//);
+        expect(a.licenseUrl, a.id).toBe("https://unsplash.com/license");
+      }
       expect(a.sha256, a.id).toMatch(/^[0-9a-f]{64}$/);
       expect(a.width && a.height, a.id).toBeTruthy();
       expect(a.alt.length, a.id).toBeGreaterThanOrEqual(20);
@@ -43,7 +46,9 @@ describe("photography: provenance is mandatory", () => {
     for (const a of photos) {
       const size = fs.statSync(path.join(process.cwd(), a.file)).size;
       expect(size, `${a.file} is ${Math.round(size / 1024)} KB`).toBeLessThan(900 * 1024);
-      expect(a.width, a.id).toBeGreaterThanOrEqual(2400);
+      // The minimum depends on the layout it is placed in (twice its widest rendered width);
+      // the content validator enforces that per placement.
+      expect(a.width, a.id).toBeGreaterThanOrEqual(848);
       expect(a.width, a.id).toBeLessThanOrEqual(3200);
     }
   });

@@ -43,6 +43,8 @@ const ALLOWED_ROOT = new Set([
   // generated or local, never committed
   "node_modules",
   ".next",
+  ".data", // local data store (gitignored)
+  ".data-e2e", // browser-test data store (gitignored)
   "next-env.d.ts",
   "test-results",
   "playwright-report",

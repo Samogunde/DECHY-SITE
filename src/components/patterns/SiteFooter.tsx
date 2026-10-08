@@ -27,8 +27,12 @@ export function SiteFooter() {
       <div className="container-site py-14 min-[64rem]:py-20">
         <div className="grid gap-12 min-[64rem]:grid-cols-12 min-[64rem]:gap-10">
           <div className="min-[64rem]:col-span-4">
-            <Link href="/" aria-label="DECHY home" className="block w-[15rem] max-w-full">
-              <Logo sizes="240px" className="w-full" />
+            <Link
+              href="/"
+              aria-label="DECHY home"
+              className="flex min-h-11 w-[12rem] max-w-full items-center"
+            >
+              <Logo sizes="192px" className="w-full" />
             </Link>
             <p className="t-small mt-5 max-w-[34ch]">
               <span className="font-[family-name:var(--font-heading)] font-semibold">

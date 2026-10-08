@@ -6,13 +6,13 @@ title: "Cookie Policy | DECHY"
 description: "What cookies and similar technologies the DECHY website uses. At present it sets no cookies and uses no analytics, advertising, or tracking technologies."
 breadcrumbLabel: Cookie policy
 h1: Cookie policy
-lead: "What this website stores in your browser. Last updated 4 October 2026."
+lead: "What this website stores in your browser. Last updated 7 October 2026."
 intent:
   primary: read the website cookie policy
 indexing: index
 claims: [company.name]
 datePublished: "2026-10-04"
-dateModified: "2026-10-04"
+dateModified: "2026-10-07"
 schemaTypes: [WebPage]
 
 sections:
@@ -25,7 +25,8 @@ sections:
           - "Cookies are small files that a website can store in your browser. Similar technologies, such as local storage, serve comparable purposes."
       - heading: What this website uses
         paragraphs:
-          - "At present this website sets no cookies and uses no analytics, advertising, or tracking technologies. The contact form does not set cookies. Fonts are served from this website itself rather than from a third-party font service."
+          - "The public website sets no cookies and uses no analytics, advertising, or tracking technologies. The contact form and the website assistant do not set cookies; the assistant keeps the current conversation only in the open page. Fonts are served from this website itself rather than from a third-party font service."
+          - "The private DECHY Admin area, used only by our team, sets one strictly necessary cookie to keep a signed-in session. Visitors to the public website never receive it."
       - heading: If this changes
         paragraphs:
           - "If we add analytics or other optional technologies, we will update this policy and ask for your consent first where the law requires it."

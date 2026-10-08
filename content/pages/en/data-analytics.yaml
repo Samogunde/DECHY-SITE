@@ -49,6 +49,7 @@ sections:
     takeaway: A good report offers a few filters, one clear chart, and a short table that says which way each line is moving.
   - type: definition
     id: what-is
+    photo: { asset: asset.photo-data-team-reviewing-reports, layout: aside, position: "45% 40%" }
     tone: white
     label: Our approach
     heading: Numbers your team can act on

@@ -19,7 +19,16 @@ import {
 } from "./similarity";
 import { expandFacts, linkTargets, toPlainText } from "./inline";
 import type { Registry } from "./load";
-import type { Block, Page } from "./schema";
+import type { Block, Page, PhotoRef } from "./schema";
+
+type PhotoLayout = PhotoRef["layout"];
+/** Stored width needed for each layout: twice its widest rendered width (src/components/primitives/Photo.tsx). */
+const PHOTO_MIN_WIDTH: Record<PhotoLayout, number> = {
+  rail: 848, // 26.5rem
+  aside: 1120, // 35rem
+  split: 1536, // 48rem
+  band: 2400, // 84rem and full-bleed on large screens
+};
 import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
@@ -595,6 +604,15 @@ export function validateRegistry(registry: Registry): Issue[] {
   const root = process.cwd();
   const registered = new Set<string>();
   const assetIds = new Set<string>();
+  // Where each photograph is placed, by layout, for the resolution rule below.
+  const photoUse = new Map<string, Set<PhotoLayout>>();
+  for (const page of registry.pages)
+    for (const b of page.sections)
+      if ("photo" in b && b.photo) {
+        const set = photoUse.get(b.photo.asset) ?? new Set<PhotoLayout>();
+        set.add(b.photo.layout);
+        photoUse.set(b.photo.asset, set);
+      }
   for (const a of registry.assets) {
     if (assetIds.has(a.id)) err("asset-dup", a.id, "Duplicate asset id");
     assetIds.add(a.id);
@@ -635,11 +653,14 @@ export function validateRegistry(registry: Registry): Issue[] {
       if (!a.width || !a.height || !a.sha256)
         err("asset-photo", a.id, "A photograph needs width, height, and sha256");
       if (a.alt.length < 20) err("asset-photo", a.id, "A photograph needs descriptive alt text");
-      if ((a.width ?? 0) < 2400)
+      // Sharp at 2x: the stored width must be at least twice the widest the photograph renders
+      // in any layout it is placed in (a full-width band keeps the 2400 px floor).
+      const need = Math.max(0, ...[...(photoUse.get(a.id) ?? [])].map((l) => PHOTO_MIN_WIDTH[l]));
+      if ((a.width ?? 0) < need)
         err(
           "asset-photo-resolution",
           a.id,
-          "A photograph must be at least 2400 px wide so it stays sharp at 2x on large screens",
+          `A photograph used as "${[...(photoUse.get(a.id) ?? [])].join(", ")}" must be at least ${need} px wide so it stays sharp at 2x`,
         );
       if (a.source === "original")
         err("asset-photo", a.id, "A photograph must be licensed, supplied, or client-owned");

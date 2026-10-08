@@ -13,48 +13,127 @@
 assets:
   - id: asset.logo-primary-master
     kind: file
-    file: brand/logos/primary/dechy-logo-primary.png
+    file: brand/logos/primary/dechy-logo.png
     role: logo
     source: owner-supplied
     creator: DECHY
-    license: Owned by DECHY. The approved logo, used exactly as supplied; never redrawn, recolored, or altered.
-    originalFilename: Minimalist DECHY Tech Logo.png
-    sha256: c8079c2161bcd9290c1d70878b15bdea155dacda50225265a0dd86ab0f95711c
-    width: 1536
-    height: 676
-    alt: "DECHY: Technology, Software, AI & Digital Solutions"
-    usage: [header, footer, structured-data, open-graph-composition]
+    license: Owned by DECHY. The approved site logo (the wordmark without the descriptor), used exactly as supplied; never redrawn, recolored, or altered.
+    originalFilename: DECHY Geometric Logo on White.png
+    sha256: 2fb8f86734f4a1c8f03db09f73acf0ff8e8ae03091da6fe62e49d766c7054e36
+    width: 2172
+    height: 724
+    alt: DECHY
+    usage: [header, footer, structured-data]
     approval: approved
-    acquired: "2026-10-04"
+    acquired: "2026-10-07"
 
   - id: asset.logo-primary-delivery
     kind: file
-    file: public/brand/dechy-logo-primary.png
+    file: public/brand/dechy-logo.png
     role: logo
     source: owner-supplied
     creator: DECHY
-    license: Owned by DECHY. Byte-identical delivery copy of the master, referenced by Organization structured data.
-    sha256: c8079c2161bcd9290c1d70878b15bdea155dacda50225265a0dd86ab0f95711c
-    width: 1536
-    height: 676
-    alt: "DECHY: Technology, Software, AI & Digital Solutions"
+    license: Owned by DECHY. Byte-identical delivery copy of the master, referenced as the Organization logo in structured data.
+    sha256: 2fb8f86734f4a1c8f03db09f73acf0ff8e8ae03091da6fe62e49d766c7054e36
+    width: 2172
+    height: 724
+    alt: DECHY
     usage: [structured-data]
     approval: approved
-    acquired: "2026-10-04"
+    acquired: "2026-10-07"
+
+  - id: asset.social-master
+    kind: file
+    file: brand/social/DECHY Technology Solutions Social Image.png
+    role: open-graph
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. The approved social sharing image, kept under its supplied name; never used as the site logo.
+    originalFilename: DECHY Technology Solutions Social Image.png
+    sha256: f1ddd90a80ed7394fe87618abdf598d34c2e813c34e425268fa564caae0dfa82
+    width: 2172
+    height: 724
+    alt: "DECHY: Technology, Software, AI & Digital Solutions"
+    usage: [open-graph-master]
+    approval: approved
+    acquired: "2026-10-07"
 
   - id: asset.og-default
     kind: file
-    file: public/og/dechy-og.png
+    file: public/og/dechy-technology-solutions-social-image.png
     role: open-graph
-    source: original
+    source: owner-supplied
     creator: DECHY
-    license: Original DECHY work. Composed by scripts/generate-og.ts from the unmodified approved logo and the working positioning line.
+    license: Owned by DECHY. Built by scripts/brand-derivatives.ts from the approved social image, scaled to 1200 wide and padded with its own background to 1200 x 630 so platforms that crop to 1.91:1 never cut the artwork.
+    sha256: bbb09cc0a50de429c00894eb1f4cc65f3ef5ea5ff9b84ff4d3009c922aaa207d
     width: 1200
     height: 630
     alt: "DECHY: Technology, Software, AI & Digital Solutions"
     usage: [open-graph, twitter-card]
     approval: approved
-    acquired: "2026-10-04"
+    acquired: "2026-10-07"
+
+  - id: asset.monogram-dark-master
+    kind: file
+    file: brand/monogram/DECHY_Monogram_On_Dark_Background.png
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. The approved monogram on a dark tile; source of the browser icons (favicon.ico, icon.png).
+    originalFilename: DECHY_Monogram_On_Dark_Background.png
+    sha256: 5db4e45e278c9cc0f8115fb240d2bcf3f02c58e71030d4d626975253a12a10fd
+    width: 258
+    height: 233
+    alt: DECHY monogram
+    usage: [favicon]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.monogram-emblem-master
+    kind: file
+    file: brand/monogram/Minimalist Navy D Emblem with Blue Accent.png
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. The approved navy D emblem; source of the larger app icons (apple-icon, manifest icons).
+    originalFilename: Minimalist Navy D Emblem with Blue Accent.png
+    sha256: 3c7614ae486792cd2a0eacc08213c15b5dd28ba9d68f5ade0fc5d8cd505932fc
+    width: 1536
+    height: 1024
+    alt: DECHY monogram
+    usage: [apple-touch-icon, web-app-manifest]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.icon-192
+    kind: file
+    file: public/icons/icon-192.png
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. Square crop of the approved emblem on its own white, built by scripts/brand-derivatives.ts.
+    sha256: 07377d5d635ea39ee86a283915227c54b20231bbffa11fcbbcd09543029f4a1a
+    width: 192
+    height: 192
+    alt: DECHY monogram
+    usage: [web-app-manifest]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.icon-512
+    kind: file
+    file: public/icons/icon-512.png
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. Square crop of the approved emblem on its own white, built by scripts/brand-derivatives.ts.
+    sha256: 59cedf9874af5f868d559661179c7e3012a2b5b82ab585bb17461701d6b7ed3c
+    width: 512
+    height: 512
+    alt: DECHY monogram
+    usage: [web-app-manifest]
+    approval: approved
+    acquired: "2026-10-07"
 
   - id: asset.fig-system-map
     kind: component
@@ -322,24 +401,6 @@ assets:
     approval: approved
     acquired: "2026-10-05"
 
-  - id: asset.photo-contact-notebook-desk
-    kind: file
-    file: public/photos/contact-notebook-desk.jpg
-    role: photograph
-    source: licensed-stock
-    creator: Vadim Bozhko
-    originalFilename: lbO1iCnbTW0
-    sourceUrl: https://unsplash.com/photos/lbO1iCnbTW0
-    licenseUrl: https://unsplash.com/license
-    license: Unsplash License. Free for commercial use, no attribution required, modification allowed. Evidence in data/assets/licenses/photo-contact-notebook-desk.md.
-    sha256: 94008fa3837dbdfd7da3e4e350788d3da7ca5a65f93905e79a93e636f57d584c
-    width: 2880
-    height: 1925
-    alt: Hands writing in a notebook on a dark desk beside an open laptop, a coffee cup and a business card.
-    usage: [contact]
-    approval: approved
-    acquired: "2026-10-05"
-
   - id: asset.photo-industries-manufacturing-line
     kind: file
     file: public/photos/industries-manufacturing-line.jpg
@@ -357,3 +418,99 @@ assets:
     usage: [industriesmanufacturing]
     approval: approved
     acquired: "2026-10-06"
+
+  - id: asset.photo-contact-consultation-conversation
+    kind: file
+    file: public/photos/contact-consultation-conversation.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-contact-consultation-conversation.md.
+    originalFilename: "Collaborative Office Consultation.png"
+    sha256: bdded49337f08dac52dcb9229fa0c994821cb664165d8cefb8901e69706a6d67
+    width: 1122
+    height: 1402
+    alt: Two people talking through a project at a shared desk with a laptop, notebooks, and printed notes.
+    usage: [contact]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.photo-consulting-process-mapping-review
+    kind: file
+    file: public/photos/consulting-process-mapping-review.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-consulting-process-mapping-review.md.
+    originalFilename: "oqiQZCCdmxOMYu8rPiZvxFXaNf....jpg (supplied without a descriptive name)"
+    sha256: a65535584854791093705e5e9aa948dfcd4576a8662d15ba8136454d30499b48
+    width: 1536
+    height: 1024
+    alt: A team gathered around a laptop, with process maps and sticky notes covering the wall behind them.
+    usage: [consulting]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.photo-support-team-shared-screens
+    kind: file
+    file: public/photos/support-team-shared-screens.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-support-team-shared-screens.md.
+    originalFilename: "3okFNs5iWgnI2AreYFYn6C2bb....jpg (supplied without a descriptive name)"
+    sha256: 0fb2e2a87fc1a2d5a956a5dd7c4420e94742f49865da68cd6645d0074323d809
+    width: 1248
+    height: 832
+    alt: A support team in headsets working at a shared table, with dashboards on the monitors and laptops.
+    usage: [solutionsai-customer-support]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.photo-cloud-team-infrastructure-review
+    kind: file
+    file: public/photos/cloud-team-infrastructure-review.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-cloud-team-infrastructure-review.md.
+    originalFilename: "OHyD3HNRyBgf7clQf8vaGsUBe....jpg (supplied without a descriptive name)"
+    sha256: 1ce496d4ab1aee694c2f4652b3e38e584b860d35182b2650c3779bf080bba7da
+    width: 1376
+    height: 768
+    alt: Four colleagues reviewing charts on a laptop and tablet, with a server rack and a world map display in the background.
+    usage: [cloud]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.photo-data-team-reviewing-reports
+    kind: file
+    file: public/photos/data-team-reviewing-reports.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-data-team-reviewing-reports.md.
+    originalFilename: "ME9SPKk1yNFJkNIVHiQdYjAjA....jpg (supplied without a descriptive name)"
+    sha256: b9558e452f7ffa2fbcef9ed19275f851174c2667f3beae15177ca91ac0866ed4
+    width: 2048
+    height: 1365
+    alt: Three colleagues reviewing figures on a laptop, with a bar chart on a tablet and a printed pie chart beside them.
+    usage: [data-analytics]
+    approval: approved
+    acquired: "2026-10-07"
+
+  - id: asset.photo-company-team-working-session
+    kind: file
+    file: public/photos/company-team-working-session.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-company-team-working-session.md.
+    originalFilename: "Collaborative Teamwork in a Modern Workspace.png"
+    sha256: 72518922a29b1a3d18986e590a21b19ffcf8659e3c2615fcdce4077d81f738d8
+    width: 1254
+    height: 1254
+    alt: Three colleagues working through a problem together at a laptop and tablet in a busy open workspace.
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-07"

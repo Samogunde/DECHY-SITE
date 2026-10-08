@@ -5,6 +5,7 @@
 @import "../styles/product-ui.css" layer(components);
 @import "../styles/families.css" layer(components);
 @import "../styles/motion.css" layer(components);
+@import "../styles/assistant.css" layer(components);
 @import "../styles/guidance.css" layer(components);
 @import "../styles/navigation.css" layer(components);
 
