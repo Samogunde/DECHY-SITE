@@ -170,3 +170,52 @@ export function catalogForPrompt(): string {
     group("technology", false),
   ].join("\n");
 }
+
+/** The catalog item for a page path, if the visitor is on one. */
+export function byPath(path: string): KnowledgeItem | undefined {
+  const p = path.endsWith("/") ? path : `${path}/`;
+  return knowledge().find((k) => k.path === p);
+}
+
+export type PageContext = {
+  id: string;
+  name: string;
+  kind: KnowledgeKind;
+  path: string;
+  /** A first-state suggestion that fits this kind of page (an offer, not a question asked). */
+  suggestion: { label: string; message: string };
+};
+
+/** Page awareness: what the visitor is looking at, worded for its kind of page. */
+export function pageContext(path: string | undefined): PageContext | null {
+  if (!path) return null;
+  const item = byPath(path);
+  if (!item) return null;
+  const n = item.name;
+  const suggestion =
+    item.kind === "service"
+      ? {
+          label: `Questions about ${n}?`,
+          message: `I'd like to know how DECHY could help us with ${n}.`,
+        }
+      : item.kind === "technology"
+        ? {
+            label: `Is ${n} right for us?`,
+            message: `We're considering ${n}. Is it the right choice for what we need?`,
+          }
+        : item.kind === "solution"
+          ? {
+              label: `Does ${n} fit our situation?`,
+              message: `Could ${n} help us? I'd like to understand whether it fits our situation.`,
+            }
+          : item.kind === "industry"
+            ? {
+                label: `Systems for ${n.toLowerCase()}`,
+                message: `What could DECHY build for a ${n.toLowerCase()} organization like ours?`,
+              }
+            : {
+                label: `What would ${n} take?`,
+                message: `What would it take to build ${n.toLowerCase()} for us?`,
+              };
+  return { id: item.id, name: n, kind: item.kind, path: item.path, suggestion };
+}

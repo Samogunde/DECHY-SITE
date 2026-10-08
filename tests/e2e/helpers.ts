@@ -23,9 +23,17 @@ export function watchErrors(page: Page) {
     if (m.type() === "error") errors.push(`console: ${m.text()}`);
   });
   page.on("pageerror", (e) => errors.push(`pageerror: ${e.message}`));
-  page.on("requestfailed", (r) =>
-    errors.push(`requestfailed: ${r.url()} ${r.failure()?.errorText ?? ""}`),
-  );
+  page.on("requestfailed", (r) => {
+    // Chromium can report a fully read streamed response (the assistant's server-sent events) as
+    // ERR_ABORTED when the reader finishes before the loader's completion signal arrives. The
+    // assistant tests assert the complete reply on screen, so only that case is ignored here.
+    const streamed =
+      r.method() === "POST" &&
+      new URL(r.url()).pathname === "/api/assistant/" &&
+      (r.headers()["accept"] ?? "").includes("text/event-stream") &&
+      r.failure()?.errorText === "net::ERR_ABORTED";
+    if (!streamed) errors.push(`requestfailed: ${r.url()} ${r.failure()?.errorText ?? ""}`);
+  });
   page.on("response", (r) => {
     const url = new URL(r.url());
     if (r.status() >= 400 && url.pathname !== "/favicon.ico")

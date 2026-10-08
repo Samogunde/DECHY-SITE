@@ -41,7 +41,7 @@ sections:
     purpose: system
     takeaway: Software, AI, automation and cloud work best when one connection layer joins them, instead of being separate tools.
     visualTitle: Five layers of technology joined into one system
-    figureCaption: This diagram shows five layers of technology, from what people see to the infrastructure underneath, joined by one connection layer. It is a conceptual picture; real systems vary.
+    figureCaption: This diagram shows five layers of technology, from what people see to the infrastructure underneath, joined by one connection layer.
   - type: statement
     id: since-2010
     tone: white
@@ -113,7 +113,7 @@ sections:
     tone: white
     label: Who we help
     photo:
-      asset: asset.photo-who-port-operations
+      asset: asset.photo-company-team-working-session
       layout: rail
       position: 38% 50%
     heading: Teams of every size, in every industry
@@ -142,8 +142,8 @@ sections:
     label: Problems we solve
     columns: 2
     photo:
-      asset: asset.photo-problems-warehouse-aisle
-      layout: band
+      asset: asset.photo-consulting-process-mapping-review
+      layout: split
       position: 50% 52%
     heading: What usually brings people to us
     intro: Projects usually begin with a problem, not a technology. These are the ones we see most.
@@ -282,7 +282,7 @@ sections:
     tone: ink
     label: AI, automation, and integration
     heading: Where AI and automation fit
-    intro: AI and automation are major parts of what we do, and they work best inside the system rather than beside it, connected to the software, data, and permissions around them. The diagram shows one illustrative pattern.
+    intro: AI and automation are major parts of what we do, and they work best inside the system rather than beside it, connected to the software, data, and permissions around them. Here is how a typical enquiry could move through a connected system.
     figure: connected-flow
     purpose: workflow
     takeaway: Each step hands its result to the next automatically, on a shared foundation, with people checking the decisions that matter.
@@ -347,7 +347,7 @@ sections:
     tone: white
     label: What we build
     photo:
-      asset: asset.photo-work-app-dashboard
+      asset: asset.photo-data-team-reviewing-reports
       layout: split
       position: 50% 50%
     heading: The kinds of systems we build and connect

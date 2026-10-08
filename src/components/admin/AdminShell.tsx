@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/patterns/Logo";
+import type { FieldSource, InboxRecord } from "@/lib/server/records";
 
 const NAV = [
   { href: "/admin/", label: "Overview" },
@@ -63,10 +64,34 @@ export function StatusBadge({ status }: { status: string }) {
 
 export const CHANNEL_LABEL: Record<string, string> = {
   "contact-form": "Contact form",
-  assistant: "AI handoff",
-  "human-support": "Human support",
+  assistant: "Website assistant",
+  "human-support": "Talk to the team",
   email: "Business email",
 };
+
+/** Where a detail came from, so inferred details are never mistaken for confirmed ones. */
+export const SOURCE_LABEL: Record<FieldSource, string> = {
+  visitor: "entered by the visitor",
+  conversation: "from the conversation",
+  page: "from the page",
+  system: "system",
+};
+
+/** Inquiry (new business) or Support Request (existing client), and whether it is an AI handoff. */
+export function RecordKind({ record }: { record: InboxRecord }) {
+  return (
+    <>
+      <span className="admin-kind" data-kind={record.kind}>
+        {record.kind === "inquiry" ? "Inquiry" : "Support request"}
+      </span>
+      {record.handoff && record.channel === "assistant" ? (
+        <span className="admin-kind" data-kind="handoff">
+          AI handoff
+        </span>
+      ) : null}
+    </>
+  );
+}
 
 export function when(iso: string) {
   return (

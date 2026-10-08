@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdminShell, when } from "@/components/admin/AdminShell";
+import { AdminShell, SOURCE_LABEL, when } from "@/components/admin/AdminShell";
 import { byId } from "@/lib/assistant/knowledge";
 import { requireAdmin } from "@/lib/server/admin-session";
 import { Repo } from "@/lib/server/records";
@@ -26,12 +26,48 @@ export default async function AdminConversation({ params }: { params: Promise<{ 
             </div>
             <div>
               <dt>Mode</dt>
-              <dd>{c.mode === "ai" ? "AI" : "Guided"}</dd>
+              <dd>{c.mode === "ai" ? "DECHY AI" : "Automated assistant"}</dd>
             </div>
             <div>
               <dt>Status</dt>
               <dd>{c.status}</dd>
             </div>
+            {c.personRequestedAt ? (
+              <div>
+                <dt>Person requested</dt>
+                <dd>
+                  {when(c.personRequestedAt)}
+                  {c.supportRef ? "" : ", not yet sent (no email given)"}
+                </dd>
+              </div>
+            ) : null}
+            {c.startPage ? (
+              <div>
+                <dt>Started on</dt>
+                <dd>
+                  <code>{c.startPage}</code>
+                </dd>
+              </div>
+            ) : null}
+            {c.handoffPage ? (
+              <div>
+                <dt>Asked for the team on</dt>
+                <dd>
+                  <code>{c.handoffPage}</code>
+                </dd>
+              </div>
+            ) : null}
+            {(["name", "email", "organization"] as const).map((k) =>
+              c.extracted?.[k] ? (
+                <div key={k}>
+                  <dt>{k.charAt(0).toUpperCase() + k.slice(1)}</dt>
+                  <dd>
+                    {c.extracted[k]!.value}{" "}
+                    <span className="admin-src">{SOURCE_LABEL[c.extracted[k]!.source]}</span>
+                  </dd>
+                </div>
+              ) : null,
+            )}
             {c.detectedNeed ? (
               <div>
                 <dt>Detected need</dt>
@@ -60,9 +96,7 @@ export default async function AdminConversation({ params }: { params: Promise<{ 
             ) : null}
             <div>
               <dt>Deleted after</dt>
-              <dd>
-                {c.status === "escalated" ? "Kept with its support request" : when(c.expiresAt)}
-              </dd>
+              <dd>{c.status === "escalated" ? "Kept with its record" : when(c.expiresAt)}</dd>
             </div>
           </dl>
           {c.summary ? <p className="admin-text mt-4">{c.summary}</p> : null}
@@ -74,9 +108,17 @@ export default async function AdminConversation({ params }: { params: Promise<{ 
         </h2>
         <ol className="admin-transcript">
           {c.messages.map((m, i) => (
-            <li key={i} data-role={m.role}>
+            <li key={i} data-role={m.kind === "handoff" ? "system" : m.role}>
               <span className="admin-transcript-who">
-                {m.role === "visitor" ? "Visitor" : "Assistant"} · {when(m.at)}
+                {m.kind === "handoff" ? "Handoff" : m.role === "visitor" ? "Visitor" : "Assistant"}{" "}
+                · {when(m.at)}
+                {m.page ? (
+                  <>
+                    {" "}
+                    · <code>{m.page}</code>
+                  </>
+                ) : null}
+                {m.afterHandoff ? <span className="admin-after"> After handoff</span> : null}
               </span>
               <p className="admin-text">{m.text}</p>
             </li>

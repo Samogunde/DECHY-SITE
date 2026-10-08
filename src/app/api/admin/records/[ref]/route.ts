@@ -1,8 +1,8 @@
 import { sameOrigin } from "@/lib/contact/handler";
-import { authorizeRequest } from "@/lib/server/auth";
+import { authorizeRequest, cookieValue, readSession } from "@/lib/server/auth";
 import { notify } from "@/lib/server/events";
 import { NO_STORE } from "@/lib/server/http";
-import { Repo, STATUSES, type Status } from "@/lib/server/records";
+import { conversationIdOf, Repo, STATUSES, type Status } from "@/lib/server/records";
 import { siteOrigin } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -19,17 +19,16 @@ export async function GET(request: Request, ctx: { params: Promise<{ ref: string
   const record = await repo.getByRef(ref);
   if (!record)
     return Response.json({ ok: false, code: "not_found" }, { status: 404, headers: NO_STORE });
-  const conversation =
-    record.kind === "support" && record.conversationId
-      ? await repo.getConversation(record.conversationId)
-      : null;
+  const cid = conversationIdOf(record);
+  const conversation = cid ? await repo.getConversation(cid) : null;
   return Response.json({ ok: true, record, conversation }, { headers: NO_STORE });
 }
 
 /**
- * Change status, read state, or who is handling it.
- * JSON (mobile/API): PATCH {"status": "open", "read": true, "handledBy": "..."}
- * Form (admin web): POST status=...&read=...&handledBy=...  then redirect back to the record.
+ * Change status, read state, or who it is assigned to, or add an internal note.
+ * JSON (mobile/API): PATCH {"status": "open", "read": true, "assignedTo": "...", "note": "..."}
+ * Form (admin web): POST status=...&read=...&assignedTo=...  (or action=note&note=...), then
+ * redirect back to the record. "handledBy" is accepted as an older name for assignedTo.
  */
 async function update(request: Request, ref: string, input: Record<string, unknown>) {
   const repo = new Repo();
@@ -43,8 +42,11 @@ async function update(request: Request, ref: string, input: Record<string, unkno
       : input.read === false || input.read === "false"
         ? false
         : undefined;
-  const handledBy = typeof input.handledBy === "string" ? input.handledBy : undefined;
-  const rec = await repo.updateRecord(ref, { status, read, handledBy }, "admin");
+  const assigned = input.assignedTo ?? input.handledBy;
+  const assignedTo = typeof assigned === "string" ? assigned : undefined;
+  if (typeof input.note === "string" && input.note.trim())
+    await repo.addNote(ref, input.note, typeof input.by === "string" ? input.by : "admin");
+  const rec = await repo.updateRecord(ref, { status, read, assignedTo }, "admin");
   if (rec && status)
     await notify({
       type: "record.status_changed",
@@ -82,7 +84,9 @@ export async function POST(request: Request, ctx: { params: Promise<{ ref: strin
       headers: { Location: "/admin/inbox/", "Cache-Control": "no-store" },
     });
   }
-  await update(request, ref, input);
+  const by = readSession(cookieValue(request.headers.get("cookie")))?.sub ?? "admin";
+  if (input.action === "note") await new Repo().addNote(ref, String(input.note ?? ""), by);
+  else await update(request, ref, input);
   return new Response(null, {
     status: 303,
     headers: { Location: `/admin/inbox/${encodeURIComponent(ref)}/`, "Cache-Control": "no-store" },

@@ -129,8 +129,8 @@ sections:
   - type: index
     id: deliverables
     photo:
-      asset: asset.photo-interfaces-wireframes
-      layout: split
+      asset: asset.photo-team-reviewing-process-workflows
+      layout: rail
       position: 50% 50%
     tone: paper
     columns: 2

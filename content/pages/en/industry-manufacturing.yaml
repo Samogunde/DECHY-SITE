@@ -135,7 +135,7 @@ sections:
     columns: 2
     label: What we build
     photo:
-      asset: asset.photo-industries-manufacturing-line
+      asset: asset.photo-cloud-team-infrastructure-review
       layout: rail
       position: 50% 50%
     heading: Typical systems for manufacturers

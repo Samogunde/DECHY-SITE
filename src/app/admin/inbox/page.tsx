@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { AdminShell, CHANNEL_LABEL, StatusBadge, when } from "@/components/admin/AdminShell";
+import {
+  AdminShell,
+  CHANNEL_LABEL,
+  RecordKind,
+  StatusBadge,
+  when,
+} from "@/components/admin/AdminShell";
 import { requireAdmin } from "@/lib/server/admin-session";
 import { Repo, STATUSES, type Channel, type Status } from "@/lib/server/records";
 
@@ -7,16 +13,17 @@ export const dynamic = "force-dynamic";
 
 const FILTERS: { label: string; q: string }[] = [
   { label: "All", q: "" },
+  { label: "Inquiries", q: "kind=inquiry" },
+  { label: "Support requests", q: "kind=support" },
+  { label: "AI handoffs", q: "handoff=1" },
   { label: "Contact form", q: "channel=contact-form" },
-  { label: "AI handoffs", q: "channel=assistant" },
-  { label: "Human support", q: "channel=human-support" },
   { label: "Business email", q: "channel=email" },
 ];
 
 export default async function AdminInbox({
   searchParams,
 }: {
-  searchParams: Promise<{ channel?: string; status?: string; kind?: string }>;
+  searchParams: Promise<{ channel?: string; status?: string; kind?: string; handoff?: string }>;
 }) {
   const { email } = await requireAdmin();
   const sp = await searchParams;
@@ -25,8 +32,17 @@ export default async function AdminInbox({
     : undefined;
   const status = STATUSES.includes(sp.status as Status) ? (sp.status as Status) : undefined;
   const kind = sp.kind === "inquiry" || sp.kind === "support" ? sp.kind : undefined;
-  const records = await new Repo().listInbox({ channel, status, kind });
-  const activeQ = channel ? `channel=${channel}` : "";
+  const handoffOnly = sp.handoff === "1";
+  const records = (await new Repo().listInbox({ channel, status, kind })).filter(
+    (r) => !handoffOnly || (Boolean(r.handoff) && r.channel === "assistant"),
+  );
+  const activeQ = handoffOnly
+    ? "handoff=1"
+    : kind && !channel && !status
+      ? `kind=${kind}`
+      : channel
+        ? `channel=${channel}`
+        : "";
   return (
     <AdminShell email={email} current="/admin/inbox/" title="Inbox">
       <nav aria-label="Filter by channel" className="admin-filters">
@@ -60,12 +76,14 @@ export default async function AdminInbox({
                     ) : null}
                   </span>
                   <span className="admin-row-sub">
-                    {r.kind === "inquiry"
-                      ? r.service || r.subject || "Inquiry"
-                      : r.recommendedService || "Asked for a person"}
+                    {r.handoff?.summary.need ||
+                      (r.kind === "inquiry"
+                        ? r.service || r.subject || "Inquiry"
+                        : r.recommendedService || "Asked for the team")}
                   </span>
                 </span>
                 <span className="admin-row-meta">
+                  <RecordKind record={r} />
                   <span className="admin-chip">{CHANNEL_LABEL[r.channel]}</span>
                   <StatusBadge status={r.status} />
                   <span className="admin-row-ref">{r.ref}</span>

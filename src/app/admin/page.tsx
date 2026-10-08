@@ -3,7 +3,9 @@ import { AdminShell, when } from "@/components/admin/AdminShell";
 import { aiConfigured } from "@/lib/assistant/engine";
 import { businessEmail } from "@/lib/contact/deliver";
 import { requireAdmin } from "@/lib/server/admin-session";
+import { limits, todayUsage } from "@/lib/server/ai-budget";
 import { Repo } from "@/lib/server/records";
+import { getStore } from "@/lib/server/store";
 
 export const dynamic = "force-dynamic";
 
@@ -23,8 +25,8 @@ function configState() {
     {
       label: "AI assistant",
       state: aiConfigured()
-        ? `AI (${env.AI_MODEL || "default model"})`
-        : "Guided mode (no AI key set)",
+        ? `DECHY AI (${env.AI_MODEL || "default model"})`
+        : "Automated assistant (no AI key set)",
     },
     {
       label: "Notifications",
@@ -52,9 +54,16 @@ export default async function AdminOverview() {
     },
     { label: "Unread", value: o.unread, href: "/admin/inbox/" },
     { label: "Open support requests", value: o.openSupport, href: "/admin/inbox/?kind=support" },
-    { label: "AI escalations", value: o.escalations, href: "/admin/inbox/?channel=assistant" },
+    { label: "AI handoffs", value: o.escalations, href: "/admin/inbox/?handoff=1" },
+    {
+      label: "Person requested, not yet sent",
+      value: o.personRequests,
+      href: "/admin/conversations/?person=1",
+    },
     { label: "AI conversations", value: o.conversations, href: "/admin/conversations/" },
   ];
+  const usage = await todayUsage(getStore()).catch(() => null);
+  const cap = limits();
   return (
     <AdminShell email={email} current="/admin/" title="Overview">
       <ul className="admin-stats">
@@ -97,6 +106,14 @@ export default async function AdminOverview() {
             <div>
               <dt>Data store</dt>
               <dd>{repo.storeKind}</dd>
+            </div>
+            <div>
+              <dt>AI use today</dt>
+              <dd>
+                {usage
+                  ? `${usage.calls} of ${cap.calls} replies, ${usage.outputTokens.toLocaleString("en-GB")} of ${cap.outputTokens.toLocaleString("en-GB")} output tokens`
+                  : "Not recorded"}
+              </dd>
             </div>
             {configState().map((c) => (
               <div key={c.label}>

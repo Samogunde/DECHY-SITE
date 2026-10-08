@@ -25,7 +25,7 @@ sections:
           - "Cookies are small files that a website can store in your browser. Similar technologies, such as local storage, serve comparable purposes."
       - heading: What this website uses
         paragraphs:
-          - "The public website sets no cookies and uses no analytics, advertising, or tracking technologies. The contact form and the website assistant do not set cookies; the assistant keeps the current conversation only in the open page. Fonts are served from this website itself rather than from a third-party font service."
+          - "The public website sets no cookies and uses no analytics, advertising, or tracking technologies. The contact form and the website assistant do not set cookies. So that you can continue a conversation as you move between pages, your browser keeps a random conversation reference in session storage, which is cleared when you close the tab. The assistant also remembers in local storage that its label has been shown, so the label is not expanded again on later visits. Neither is used for tracking or shared with anyone. Fonts are served from this website itself rather than from a third-party font service."
           - "The private DECHY Admin area, used only by our team, sets one strictly necessary cookie to keep a signed-in session. Visitors to the public website never receive it."
       - heading: If this changes
         paragraphs:

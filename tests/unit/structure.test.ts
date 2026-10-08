@@ -21,6 +21,7 @@ const ALLOWED_ROOT = new Set([
   "tests",
   "scripts",
   "public",
+  "netlify", // Netlify scheduled functions (retention)
   // tooling and configuration
   "package.json",
   "package-lock.json",

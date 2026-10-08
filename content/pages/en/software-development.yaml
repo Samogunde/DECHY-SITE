@@ -46,7 +46,7 @@ sections:
     purpose: system
     takeaway: A business application is a stack of parts, from the people using it down to the stored data, each with supporting pieces beside it.
     visualTitle: The parts of a typical business application
-    figureCaption: This diagram shows the parts a typical business application is made of, from the people using it down to the stored data, with the supporting pieces beside each layer. Real systems vary.
+    figureCaption: This diagram shows the parts a typical business application is made of, from the people using it down to the stored data, with the supporting pieces beside each layer.
   - type: definition
     id: what-is
     tone: white

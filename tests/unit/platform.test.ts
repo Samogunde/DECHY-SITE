@@ -1,13 +1,16 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   aiConfigured,
+  extractDetails,
   guidedReply,
+  META,
   parseModelOutput,
   respond,
   sanitizeReply,
   wantsHuman,
+  type RespondContext,
 } from "@/lib/assistant/engine";
-import { knowledge } from "@/lib/assistant/knowledge";
+import { knowledge, pageContext } from "@/lib/assistant/knowledge";
 import { handleContact, resetRateLimit } from "@/lib/contact/handler";
 import { BUDGETS, validateContact } from "@/lib/contact/validate";
 import {
@@ -196,41 +199,48 @@ describe("assistant engine", () => {
     expect(unsure.reply).toMatch(/what/i);
   });
 
+  const ctx = (over: Partial<RespondContext> = {}): RespondContext => ({
+    page: null,
+    handoffRef: null,
+    allowAI: true,
+    ...over,
+  });
+  const AI = { AI_PROVIDER: "anthropic", AI_API_KEY: "k" };
+
   it("hands off at once when a person is requested, whatever the mode", async () => {
     const fetchImpl = vi.fn();
-    const r = await respond(
-      "I want to talk to a human",
-      [],
-      { AI_PROVIDER: "anthropic", AI_API_KEY: "k" },
-      fetchImpl,
-    );
+    const r = await respond("I want to talk to a human", [], ctx(), AI, fetchImpl);
     expect(r.humanRequested).toBe(true);
+    expect(r.mode).toBe("guided");
     expect(fetchImpl).not.toHaveBeenCalled();
   });
 
-  it("uses the model only when configured, and keeps only known recommendations", async () => {
+  it("uses the model only when configured and allowed, and keeps only known recommendations", async () => {
     expect(aiConfigured({})).toBe(false);
+    const text =
+      "A portal fits. See <b>https://evil.test</b> [here](https://evil.test).\n" +
+      META +
+      JSON.stringify({
+        service: "svc.software-development",
+        solution: "sol.made-up",
+        related: ["workarea.customer-portals", "javascript:alert(1)"],
+        reasons: { "svc.software-development": "Custom portals are software work" },
+        need: "customer portal",
+        wantsHuman: false,
+        name: "Ada",
+      });
     const fetchImpl = vi.fn(async () =>
       Response.json({
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify({
-              reply: "A portal fits. See <b>https://evil.test</b> [here](https://evil.test).",
-              service: "svc.software-development",
-              solution: "sol.made-up",
-              related: ["workarea.customer-portals", "javascript:alert(1)"],
-              need: "customer portal",
-              wantsHuman: false,
-            }),
-          },
-        ],
+        content: [{ type: "text", text }],
+        usage: { input_tokens: 10, output_tokens: 20 },
       }),
     );
+    const usage = vi.fn();
     const r = await respond(
       "We want customers to see their orders",
       [],
-      { AI_PROVIDER: "anthropic", AI_API_KEY: "k" },
+      ctx({ onUsage: usage }),
+      AI,
       fetchImpl,
     );
     expect(fetchImpl).toHaveBeenCalledOnce();
@@ -244,20 +254,102 @@ describe("assistant engine", () => {
     expect(r.solution).toBe("");
     expect(r.recommendations).toContain("svc.software-development");
     expect(r.recommendations).not.toContain("javascript:alert(1)");
+    expect(r.reasons["svc.software-development"]).toBe("Custom portals are software work");
+    expect(r.extracted.name).toBe("Ada");
+    expect(usage).toHaveBeenCalledWith({ input: 10, output: 20 });
+
+    const off = vi.fn();
+    const guided = await respond(
+      "We want customers to see their orders",
+      [],
+      ctx({ allowAI: false }),
+      AI,
+      off,
+    );
+    expect(guided.mode).toBe("guided");
+    expect(off).not.toHaveBeenCalled();
+  });
+
+  it("streams the model's words as they arrive and never streams the metadata", async () => {
+    const events = [
+      { type: "message_start", message: { usage: { input_tokens: 12 } } },
+      { type: "content_block_delta", delta: { type: "text_delta", text: "Automation " } },
+      { type: "content_block_delta", delta: { type: "text_delta", text: "fits this well. " } },
+      {
+        type: "content_block_delta",
+        delta: { type: "text_delta", text: META + '{"service":"svc.automation"}' },
+      },
+      { type: "message_delta", usage: { output_tokens: 30 } },
+    ];
+    const sse = events.map((e) => "event: x\ndata: " + JSON.stringify(e) + "\n\n").join("");
+    const fetchImpl = async () =>
+      new Response(sse, { headers: { "content-type": "text/event-stream" } });
+    const deltas: string[] = [];
+    const usage = vi.fn();
+    const r = await respond(
+      "We chase approvals by email",
+      [],
+      ctx({ onDelta: (t) => deltas.push(t), onUsage: usage }),
+      AI,
+      fetchImpl,
+    );
+    expect(deltas.join("")).toBe("Automation fits this well. ");
+    expect(r.reply).toBe("Automation fits this well.");
+    expect(r.service).toBe("svc.automation");
+    expect(usage).toHaveBeenCalledWith({ input: 12, output: 30 });
   });
 
   it("falls back to guided mode when the model fails or answers badly", async () => {
-    const env = { AI_PROVIDER: "anthropic", AI_API_KEY: "k" };
     const broken = await respond(
       "We need an online store",
       [],
-      env,
+      ctx(),
+      AI,
       async () => new Response("oops", { status: 500 }),
     );
     expect(broken.mode).toBe("guided");
     expect(parseModelOutput("not json")).toBeNull();
     expect(parseModelOutput(JSON.stringify({ reply: "" }))).toBeNull();
     expect(sanitizeReply("x".repeat(5000)).length).toBeLessThanOrEqual(1200);
+  });
+
+  it("picks up the details a visitor states, and nothing it would have to guess", () => {
+    expect(extractDetails("Our team copies orders. I'm Dana from Northfield Supply.")).toEqual({
+      name: "Dana",
+      organization: "Northfield Supply",
+    });
+    expect(extractDetails("my name is sam okafor, email Sam@Acme.io")).toMatchObject({
+      name: "Sam Okafor",
+      email: "sam@acme.io",
+    });
+    expect(extractDetails("We're Acme Logistics and we need a portal").organization).toBe(
+      "Acme Logistics",
+    );
+    expect(
+      extractDetails("You built our booking system and it has stopped sending emails").intent,
+    ).toBe("existing");
+    expect(extractDetails("We are trying to fix our reporting")).toEqual({});
+  });
+
+  it("answers for the page the visitor is on, and acknowledges messages after a handoff", () => {
+    const page = pageContext("/cloud/");
+    expect(page?.suggestion.label).toContain("Cloud");
+    expect(pageContext("/not-a-page/")).toBeNull();
+    expect(pageContext("/solutions/business-process-automation/")?.suggestion.label).toMatch(
+      /fit our situation/,
+    );
+    const vague = guidedReply("hmm", [], page);
+    expect(vague.recommendations).toEqual([page!.id]);
+    const after = guidedReply("We also use Shopify", [], null, "DECHY-ABC234");
+    expect(after.reply).toContain("DECHY-ABC234");
+    expect(after.recommendations).toEqual([]);
+  });
+
+  it("keeps the reply short when the cards carry the reasons", () => {
+    const r = guidedReply("We copy data between tools and chase approvals by email every day", []);
+    expect(r.reply.length).toBeLessThan(400);
+    expect(Object.keys(r.reasons)).toEqual(r.recommendations);
+    expect(r.need).toBe("We copy data between tools and chase approvals by email every day");
   });
 });
 
@@ -380,53 +472,158 @@ describe("assistant and handoff endpoints", () => {
       body: JSON.stringify(body),
     });
 
-  it("answers, keeps the conversation, and hands it to a person with a reference", async () => {
+  it("answers, keeps the conversation, and hands it to the team with a reference", async () => {
     const assistant = await import("@/app/api/assistant/route");
     const handoff = await import("@/app/api/assistant/handoff/route");
     const r1 = await assistant.POST(
       post("https://site.test/api/assistant/", {
-        message: "We need an online store with stock and shipping connected",
+        message:
+          "We need an online store with stock and shipping connected. I'm Ada from Lumen Goods.",
+        page: "/ecommerce/",
       }),
     );
     expect(r1.status).toBe(200);
     const b1 = (await r1.json()) as {
       conversationId: string;
-      recommendations: { path: string }[];
+      recommendations: { path: string; reason: string }[];
       reply: string;
     };
     expect(b1.conversationId).toMatch(/^[0-9a-f-]{36}$/);
     expect(b1.recommendations.length).toBeGreaterThan(0);
-    expect(b1.recommendations.every((r) => r.path.startsWith("/"))).toBe(true);
+    expect(b1.recommendations.every((r) => r.path.startsWith("/") && r.reason)).toBe(true);
 
+    // The conversation can be continued from another page (the server is the source of truth).
+    const g = await assistant.GET(
+      new Request(
+        "https://site.test/api/assistant/?conversationId=" + b1.conversationId + "&page=/cloud/",
+      ),
+    );
+    const view = (await g.json()) as {
+      conversation: { messages: unknown[] };
+      page: { name: string };
+    };
+    expect(view.conversation.messages).toHaveLength(2);
+    expect(view.page.name).toBe("Cloud & DevOps");
+
+    // Asking for a person marks the conversation at once, before any record exists.
     const r2 = await assistant.POST(
       post("https://site.test/api/assistant/", {
         conversationId: b1.conversationId,
         message: "Can someone from DECHY contact me?",
+        page: "/contact/",
       }),
     );
-    const b2 = (await r2.json()) as { humanRequested: boolean };
+    const b2 = (await r2.json()) as {
+      humanRequested: boolean;
+      handoff: { name: { value: string; source: string }; organization: { value: string } };
+    };
     expect(b2.humanRequested).toBe(true);
+    expect(b2.handoff.name).toEqual({ value: "Ada", source: "conversation" });
+    expect(b2.handoff.organization.value).toBe("Lumen Goods");
+    const repo = new Repo(store);
+    expect((await repo.getConversation(b1.conversationId))?.personRequestedAt).toBeTruthy();
+    expect(await repo.listInbox()).toHaveLength(0);
+
+    // An email is required to confirm.
+    const bad = await handoff.POST(
+      post("https://site.test/api/assistant/handoff/", {
+        action: "confirm",
+        conversationId: b1.conversationId,
+        name: "Ada",
+        email: "",
+      }),
+    );
+    expect(bad.status).toBe(400);
 
     const r3 = await handoff.POST(
       post("https://site.test/api/assistant/handoff/", {
+        action: "confirm",
         conversationId: b1.conversationId,
+        page: "/contact/",
+        via: "message",
         name: "Ada",
         email: "ada@example.org",
+        organization: "Lumen Goods",
+        kind: "new",
         timeSensitive: true,
       }),
     );
     expect(r3.status).toBe(200);
-    const { ref } = (await r3.json()) as { ref: string };
+    const { ref, kind } = (await r3.json()) as { ref: string; kind: string };
     expect(ref).toMatch(REF_PATTERN);
-    const repo = new Repo(store);
+    expect(kind).toBe("inquiry");
     const rec = await repo.getByRef(ref);
+    expect(rec?.kind).toBe("inquiry");
+    expect(rec?.channel).toBe("assistant");
+    expect(rec?.handoff?.urgency).toBe("stated");
+    expect(rec?.handoff?.startPage).toBe("/ecommerce/");
+    expect(rec?.handoff?.handoffPage).toBe("/contact/");
+    expect(rec?.handoff?.fieldSources).toMatchObject({
+      name: "conversation",
+      email: "visitor",
+      organization: "conversation",
+    });
+    expect(rec?.handoff?.summary.need).toContain("online store");
+    expect(rec?.handoff?.keyMessages[0]).toContain("online store");
+    const conv = await repo.getConversation(b1.conversationId);
+    expect(conv?.status).toBe("escalated");
+    expect(conv?.supportRef).toBe(ref);
+    expect(conv?.messages.at(-1)?.kind).toBe("handoff");
+
+    // Later messages attach to the same record, marked as after the handoff.
+    await repo.updateRecord(ref, { read: true });
+    const r4 = await assistant.POST(
+      post("https://site.test/api/assistant/", {
+        conversationId: b1.conversationId,
+        message: "We also sell wholesale",
+      }),
+    );
+    const b4 = (await r4.json()) as { reply: string; handoffRef: string };
+    expect(b4.handoffRef).toBe(ref);
+    expect(b4.reply).toContain(ref);
+    const after = await repo.getConversation(b1.conversationId);
+    expect(after?.messages.filter((m) => m.afterHandoff)).toHaveLength(2);
+    expect((await repo.getByRef(ref))?.read).toBe(false);
+
+    // Confirming twice returns the same reference instead of a second record.
+    const again = await handoff.POST(
+      post("https://site.test/api/assistant/handoff/", {
+        action: "confirm",
+        conversationId: b1.conversationId,
+        name: "Ada",
+        email: "ada@example.org",
+      }),
+    );
+    expect(((await again.json()) as { ref: string }).ref).toBe(ref);
+    expect(await repo.listInbox()).toHaveLength(1);
+  });
+
+  it("routes an existing client to a support request, and asks for the team without a chat", async () => {
+    const handoff = await import("@/app/api/assistant/handoff/route");
+    const prep = await handoff.POST(
+      post("https://site.test/api/assistant/handoff/", { action: "prepare" }),
+    );
+    const p = (await prep.json()) as { prefill: { intent: string } };
+    expect(p.prefill.intent).toBe("unclear");
+    const res = await handoff.POST(
+      post("https://site.test/api/assistant/handoff/", {
+        action: "confirm",
+        via: "contact",
+        name: "Grace",
+        email: "grace@example.org",
+        kind: "existing",
+        note: "The booking emails stopped this morning.",
+      }),
+    );
+    const b = (await res.json()) as { ref: string; kind: string; conversationId: string };
+    expect(b.kind).toBe("support");
+    const repo = new Repo(store);
+    const rec = await repo.getByRef(b.ref);
     expect(rec?.kind).toBe("support");
-    if (rec?.kind === "support") {
-      expect(rec.origin).toBe("assistant-escalation");
-      expect(rec.urgency).toBe("stated");
-      expect(rec.summary).toContain("online store");
-    }
-    expect((await repo.getConversation(b1.conversationId))?.status).toBe("escalated");
+    expect(rec?.channel).toBe("human-support");
+    expect(rec?.handoff?.urgency).toBe("not-stated");
+    expect(rec?.handoff?.reason).toMatch(/contact page/);
+    expect((await repo.getConversation(b.conversationId))?.supportRef).toBe(b.ref);
   });
 
   it("rejects cross-origin, oversized, and empty requests", async () => {
@@ -445,7 +642,7 @@ describe("assistant and handoff endpoints", () => {
     expect(
       (
         await assistant.POST(
-          post("https://site.test/api/assistant/", { message: "x".repeat(7000) }),
+          post("https://site.test/api/assistant/", { message: "x".repeat(9000) }),
         )
       ).status,
     ).toBe(413);

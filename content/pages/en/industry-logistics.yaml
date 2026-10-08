@@ -137,8 +137,8 @@ sections:
   - type: index
     id: breaks
     photo:
-      asset: asset.photo-who-port-operations
-      layout: split
+      asset: asset.photo-support-team-shared-screens
+      layout: rail
       position: 38% 50%
     tone: white
     columns: 2

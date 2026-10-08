@@ -52,6 +52,38 @@ export type Contact = {
   conversationIds: string[];
 };
 
+/** Where a piece of information came from, so inferred details are never shown as confirmed. */
+export type FieldSource = "visitor" | "conversation" | "page" | "system";
+
+export type Note = { at: string; by: string; text: string };
+
+/** Structured summary for the team: read in seconds, check against the transcript if needed. */
+export type HandoffSummary = {
+  need: string;
+  context: string;
+  suggested: string;
+  openQuestions: string[];
+};
+
+/** Everything the team needs from an assistant conversation that led to a record. */
+export type HandoffContext = {
+  conversationId: string | null;
+  summary: HandoffSummary;
+  fieldSources: Partial<
+    Record<"name" | "email" | "organization" | "need" | "service", FieldSource>
+  >;
+  startPage: string;
+  handoffPage: string;
+  reason: string;
+  detectedNeed: string;
+  recommendedService: string;
+  recommendedSolution: string;
+  /** Only when the visitor ticked it; never inferred. */
+  urgency: "stated" | "not-stated";
+  /** The visitor's own words that matter most (first message, the request for a person). */
+  keyMessages: string[];
+};
+
 type RecordBase = {
   id: string;
   ref: string;
@@ -64,6 +96,11 @@ type RecordBase = {
   name: string;
   email: string;
   organization: string;
+  /** Internal only. */
+  notes: Note[];
+  assignedTo: string;
+  /** Present when the record came from an assistant conversation or a request for a person. */
+  handoff: HandoffContext | null;
 };
 
 /** A potential client or business opportunity (contact form, or an inbound business email). */
@@ -76,7 +113,7 @@ export type Inquiry = RecordBase & {
   message: string;
 };
 
-/** A person asking for human help, directly or through the assistant. */
+/** An existing client asking for help with work already under way (support, not new business). */
 export type SupportRequest = RecordBase & {
   kind: "support";
   origin: "visitor-request" | "assistant-escalation";
@@ -89,11 +126,10 @@ export type SupportRequest = RecordBase & {
   /** Only when the visitor said so explicitly; never inferred. */
   urgency: "stated" | "not-stated";
   escalationReason: string;
-  handledBy: string;
 };
 
-/** The assistant's handoff: a support request that came from a conversation. */
-export type AIHandoff = SupportRequest & { origin: "assistant-escalation" };
+/** An assistant handoff: any record (inquiry or support request) created from a conversation. */
+export type AIHandoff = InboxRecord & { handoff: HandoffContext };
 
 export type ConversationMessage = {
   role: "visitor" | "assistant";
@@ -101,7 +137,19 @@ export type ConversationMessage = {
   at: string;
   /** Entity ids the assistant recommended with this reply. */
   recommendations?: string[];
+  /** One-line reason per recommended id. */
+  reasons?: Record<string, string>;
+  /** Page ids the answer drew on. */
+  sources?: string[];
+  /** The page the visitor was on. */
+  page?: string;
+  /** Sent after the conversation was handed to the team; attached to that record. */
+  afterHandoff?: boolean;
+  /** System notes in the thread (handoff confirmation), shown to the visitor but not as AI text. */
+  kind?: "message" | "handoff";
 };
+
+export type Extracted = { value: string; source: FieldSource };
 
 export type Conversation = {
   id: string;
@@ -116,7 +164,17 @@ export type Conversation = {
   detectedNeed: string;
   recommendedService: string;
   recommendedSolution: string;
+  /** Reference of the record this conversation was handed to (inquiry or support request). */
   supportRef: string | null;
+  /** Set the moment the visitor asks for a person, even if they never finish the handoff. */
+  personRequestedAt: string | null;
+  startPage: string;
+  lastPage: string;
+  handoffPage: string;
+  /** Details the visitor gave during the conversation (shown for confirmation, never assumed). */
+  extracted: { name?: Extracted; email?: Extracted; organization?: Extracted };
+  /** New project, existing client, or not yet clear. */
+  intent: "new" | "existing" | "unclear";
 };
 
 export type Activity = {
@@ -129,6 +187,11 @@ export type Activity = {
 };
 
 export type InboxRecord = Inquiry | SupportRequest;
+
+/** The conversation a record came from, for either record kind. */
+export function conversationIdOf(r: InboxRecord): string | null {
+  return r.handoff?.conversationId ?? (r.kind === "support" ? r.conversationId : null);
+}
 
 /* ---------------- repository ---------------- */
 
@@ -220,8 +283,18 @@ export class Repo {
   async createInquiry(
     input: Omit<
       Inquiry,
-      "id" | "ref" | "kind" | "status" | "read" | "createdAt" | "updatedAt" | "contactId"
-    >,
+      | "id"
+      | "ref"
+      | "kind"
+      | "status"
+      | "read"
+      | "createdAt"
+      | "updatedAt"
+      | "contactId"
+      | "notes"
+      | "assignedTo"
+      | "handoff"
+    > & { handoff?: HandoffContext | null },
   ): Promise<Inquiry> {
     const t = this.iso();
     const ref = await this.uniqueRef();
@@ -244,6 +317,9 @@ export class Repo {
       createdAt: t,
       updatedAt: t,
       contactId,
+      notes: [],
+      assignedTo: "",
+      handoff: input.handoff ?? null,
     };
     await this.store.set(`inquiry/${id}`, inquiry);
     await this.store.set(`ref/${ref}`, { kind: "inquiry", id });
@@ -261,8 +337,10 @@ export class Repo {
       | "createdAt"
       | "updatedAt"
       | "contactId"
-      | "handledBy"
-    >,
+      | "notes"
+      | "assignedTo"
+      | "handoff"
+    > & { handoff?: HandoffContext | null },
   ): Promise<SupportRequest> {
     const t = this.iso();
     const ref = await this.uniqueRef();
@@ -286,7 +364,9 @@ export class Repo {
       createdAt: t,
       updatedAt: t,
       contactId,
-      handledBy: "",
+      notes: [],
+      assignedTo: "",
+      handoff: input.handoff ?? null,
     };
     await this.store.set(`support/${id}`, req);
     await this.store.set(`ref/${ref}`, { kind: "support", id });
@@ -302,7 +382,7 @@ export class Repo {
 
   async updateRecord(
     ref: string,
-    change: { status?: Status; read?: boolean; handledBy?: string },
+    change: { status?: Status; read?: boolean; assignedTo?: string },
     actor: Activity["actor"] = "admin",
   ): Promise<InboxRecord | null> {
     const rec = await this.getByRef(ref);
@@ -310,8 +390,7 @@ export class Repo {
     const before = rec.status;
     if (change.status && STATUSES.includes(change.status)) rec.status = change.status;
     if (typeof change.read === "boolean") rec.read = change.read;
-    if (rec.kind === "support" && typeof change.handledBy === "string")
-      rec.handledBy = change.handledBy.slice(0, 120);
+    if (typeof change.assignedTo === "string") rec.assignedTo = change.assignedTo.slice(0, 120);
     rec.updatedAt = this.iso();
     await this.store.set(`${rec.kind}/${rec.id}`, rec);
     if (change.status && change.status !== before)
@@ -324,6 +403,32 @@ export class Repo {
     return rec;
   }
 
+  /** Adds an internal note (never shown to the visitor). */
+  async addNote(ref: string, text: string, by: string): Promise<InboxRecord | null> {
+    const rec = await this.getByRef(ref);
+    const clean = text.trim().slice(0, 4000);
+    if (!rec || !clean) return rec;
+    rec.notes = [...(rec.notes ?? []), { at: this.iso(), by: by.slice(0, 120), text: clean }];
+    rec.updatedAt = this.iso();
+    await this.store.set(`${rec.kind}/${rec.id}`, rec);
+    return rec;
+  }
+
+  /** A visitor added to a conversation that was already handed over: surface it on the record. */
+  async markFollowUp(ref: string): Promise<void> {
+    const rec = await this.getByRef(ref);
+    if (!rec) return;
+    rec.read = false;
+    rec.updatedAt = this.iso();
+    await this.store.set(`${rec.kind}/${rec.id}`, rec);
+    await this.logActivity({
+      type: "conversation.followup",
+      ref,
+      summary: `The visitor added to ${ref} after the handoff`,
+      actor: "visitor",
+    });
+  }
+
   /**
    * Permanently deletes a record, its reference, and its conversation, and removes it from the
    * contact. Used for deletion requests; the activity log keeps only the reference.
@@ -333,15 +438,14 @@ export class Repo {
     if (!rec) return false;
     await this.store.delete(`${rec.kind}/${rec.id}`);
     await this.store.delete(`ref/${ref}`);
-    if (rec.kind === "support" && rec.conversationId)
-      await this.store.delete(`conversation/${rec.conversationId}`);
+    const cid = conversationIdOf(rec);
+    if (cid) await this.store.delete(`conversation/${cid}`);
     if (rec.contactId) {
       const key = `contact/${rec.contactId}`;
       const c = await this.store.get<Contact>(key);
       if (c) {
         c.refs = c.refs.filter((r) => r !== ref);
-        if (rec.kind === "support" && rec.conversationId)
-          c.conversationIds = c.conversationIds.filter((id) => id !== rec.conversationId);
+        if (cid) c.conversationIds = c.conversationIds.filter((id) => id !== cid);
         await this.store.set(key, c);
       }
     }
@@ -383,7 +487,7 @@ export class Repo {
 
   /* conversations */
 
-  async createConversation(mode: Conversation["mode"]): Promise<Conversation> {
+  async createConversation(mode: Conversation["mode"], page = ""): Promise<Conversation> {
     const t = this.now();
     const conv: Conversation = {
       id: newId(),
@@ -398,6 +502,12 @@ export class Repo {
       recommendedService: "",
       recommendedSolution: "",
       supportRef: null,
+      personRequestedAt: null,
+      startPage: page,
+      lastPage: page,
+      handoffPage: "",
+      extracted: {},
+      intent: "unclear",
     };
     await this.store.set(`conversation/${conv.id}`, conv);
     return conv;
@@ -446,10 +556,10 @@ export class Repo {
         (r) => r.kind === "support" && r.status !== "resolved" && r.status !== "archived",
       ).length,
       escalations: inbox.filter(
-        (r) =>
-          r.kind === "support" && r.origin === "assistant-escalation" && r.status !== "archived",
+        (r) => r.handoff && r.channel === "assistant" && r.status !== "archived",
       ).length,
       conversations: conversations.length,
+      personRequests: conversations.filter((c) => c.personRequestedAt && !c.supportRef).length,
       activity: await this.listActivity(12),
     };
   }

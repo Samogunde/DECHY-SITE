@@ -1,10 +1,22 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdminShell, CHANNEL_LABEL, StatusBadge, when } from "@/components/admin/AdminShell";
+import {
+  AdminShell,
+  CHANNEL_LABEL,
+  RecordKind,
+  SOURCE_LABEL,
+  StatusBadge,
+  when,
+} from "@/components/admin/AdminShell";
 import { requireAdmin } from "@/lib/server/admin-session";
-import { Repo, STATUSES } from "@/lib/server/records";
+import { conversationIdOf, Repo, STATUSES, type FieldSource } from "@/lib/server/records";
 
 export const dynamic = "force-dynamic";
+
+function Source({ source }: { source?: FieldSource }) {
+  if (!source) return null;
+  return <span className="admin-src">{SOURCE_LABEL[source]}</span>;
+}
 
 export default async function AdminRecord({ params }: { params: Promise<{ ref: string }> }) {
   const { email } = await requireAdmin();
@@ -14,61 +26,122 @@ export default async function AdminRecord({ params }: { params: Promise<{ ref: s
   if (!record) notFound();
   // Opening a record marks it read (a harmless state change, never destructive).
   if (!record.read) record = (await repo.updateRecord(ref, { read: true }, "admin")) ?? record;
-  const conv =
-    record.kind === "support" && record.conversationId
-      ? await repo.getConversation(record.conversationId)
-      : null;
+  const cid = conversationIdOf(record);
+  const conv = cid ? await repo.getConversation(cid) : null;
+  const h = record.handoff ?? null;
+  const notes = record.notes ?? [];
+  const after = conv?.messages.filter((m) => m.afterHandoff && m.role === "visitor") ?? [];
+  const src = h?.fieldSources ?? {};
 
-  const rows: [string, string][] =
+  const contact: [string, string, FieldSource | undefined][] = [
+    ["Name", record.name, src.name],
+    ["Email", record.email, src.email],
+    ["Organization", record.organization, src.organization],
+  ];
+  const facts: [string, string][] =
     record.kind === "inquiry"
       ? [
-          ["Name", record.name],
-          ["Email", record.email],
-          ["Organization", record.organization],
-          ["Help with", record.service],
+          ["Help with", h ? "" : record.service],
           ["Timeline", record.timeline],
           ["Estimated budget", record.budget],
           ["Subject", record.subject],
         ]
-      : [
-          ["Name", record.name],
-          ["Email", record.email],
-          ["Organization", record.organization],
-          [
-            "Origin",
-            record.origin === "assistant-escalation" ? "Assistant handoff" : "Asked for a person",
-          ],
-          ["Reason", record.escalationReason],
-          ["Detected need", record.detectedNeed],
-          ["Recommended service", record.recommendedService],
-          ["Recommended solution", record.recommendedSolution],
-          [
-            "Time-sensitive",
-            record.urgency === "stated" ? "Yes, stated by the visitor" : "Not stated",
-          ],
-          ["Handled by", record.handledBy],
-        ];
+      : [];
+  if (h)
+    facts.push(
+      ["Recommended service", h.recommendedService],
+      ["Recommended solution", h.recommendedSolution],
+      ["Time-sensitive", h.urgency === "stated" ? "Yes, stated by the visitor" : "Not stated"],
+      ["Started on", h.startPage],
+      ["Asked for the team on", h.handoffPage],
+      ["Reason", h.reason],
+    );
+  else if (record.kind === "support")
+    facts.push(
+      ["Recommended service", record.recommendedService],
+      ["Time-sensitive", record.urgency === "stated" ? "Yes, stated by the visitor" : "Not stated"],
+      ["Reason", record.escalationReason],
+    );
 
   return (
     <AdminShell email={email} current="/admin/inbox/" title={record.ref}>
       <p className="admin-meta-line">
+        <RecordKind record={record} />
         <span className="admin-chip">{CHANNEL_LABEL[record.channel]}</span>
         <StatusBadge status={record.status} />
         <span>Received {when(record.createdAt)}</span>
         <span>Updated {when(record.updatedAt)}</span>
+        {record.assignedTo ? <span>Assigned to {record.assignedTo}</span> : null}
       </p>
+
+      {h ? (
+        <section className="admin-card admin-summary" aria-labelledby="summary-h">
+          <h2 id="summary-h" className="admin-h2">
+            Summary
+          </h2>
+          <dl className="admin-summary-list">
+            <div>
+              <dt>Need</dt>
+              <dd>{h.summary.need || "Not stated"}</dd>
+            </div>
+            {h.summary.context ? (
+              <div>
+                <dt>Context</dt>
+                <dd>{h.summary.context}</dd>
+              </div>
+            ) : null}
+            {h.summary.suggested ? (
+              <div>
+                <dt>Suggested to the visitor</dt>
+                <dd>{h.summary.suggested}</dd>
+              </div>
+            ) : null}
+            {h.summary.openQuestions.length ? (
+              <div>
+                <dt>Open questions</dt>
+                <dd>
+                  <ul className="admin-bullets">
+                    {h.summary.openQuestions.map((q) => (
+                      <li key={q}>{q}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </div>
+            ) : null}
+          </dl>
+          {after.length ? (
+            <p className="admin-after-flag">
+              The visitor added {after.length} {after.length === 1 ? "message" : "messages"} after
+              the handoff. See the end of the transcript.
+            </p>
+          ) : null}
+        </section>
+      ) : null}
+
       <div className="admin-grid">
         <section className="admin-card" aria-labelledby="details-h">
           <h2 id="details-h" className="admin-h2">
             Details
           </h2>
           <dl className="admin-config">
-            {rows
+            {contact
+              .filter(([, v]) => v)
+              .map(([k, v, s]) => (
+                <div key={k}>
+                  <dt>{k}</dt>
+                  <dd>
+                    {k === "Email" ? <a href={`mailto:${v}`}>{v}</a> : v} <Source source={s} />
+                  </dd>
+                </div>
+              ))}
+            {facts
               .filter(([, v]) => v)
               .map(([k, v]) => (
                 <div key={k}>
                   <dt>{k}</dt>
-                  <dd>{k === "Email" ? <a href={`mailto:${v}`}>{v}</a> : v}</dd>
+                  <dd>
+                    {k === "Started on" || k === "Asked for the team on" ? <code>{v}</code> : v}
+                  </dd>
                 </div>
               ))}
             {record.contactId ? (
@@ -76,6 +149,14 @@ export default async function AdminRecord({ params }: { params: Promise<{ ref: s
                 <dt>Contact</dt>
                 <dd>
                   <Link href={`/admin/contacts/#c-${record.contactId}`}>View contact</Link>
+                </dd>
+              </div>
+            ) : null}
+            {conv ? (
+              <div>
+                <dt>Conversation</dt>
+                <dd>
+                  <Link href={`/admin/conversations/${conv.id}/`}>Open conversation</Link>
                 </dd>
               </div>
             ) : null}
@@ -100,17 +181,15 @@ export default async function AdminRecord({ params }: { params: Promise<{ ref: s
                 ))}
               </select>
             </div>
-            {record.kind === "support" ? (
-              <div className="field">
-                <label htmlFor="handledBy">Handled by</label>
-                <input
-                  id="handledBy"
-                  name="handledBy"
-                  defaultValue={record.handledBy}
-                  maxLength={120}
-                />
-              </div>
-            ) : null}
+            <div className="field">
+              <label htmlFor="assignedTo">Assigned to</label>
+              <input
+                id="assignedTo"
+                name="assignedTo"
+                defaultValue={record.assignedTo ?? ""}
+                maxLength={120}
+              />
+            </div>
             <div className="admin-actions">
               <button type="submit" className="admin-btn">
                 Save
@@ -122,39 +201,106 @@ export default async function AdminRecord({ params }: { params: Promise<{ ref: s
           </form>
         </section>
       </div>
-      {record.kind === "support" && record.summary ? (
-        <section className="admin-card" aria-labelledby="summary-h">
-          <h2 id="summary-h" className="admin-h2">
-            Summary for the team
+
+      {h?.keyMessages.length ? (
+        <section className="admin-card" aria-labelledby="key-h">
+          <h2 id="key-h" className="admin-h2">
+            In the visitor&apos;s words
           </h2>
-          <p className="admin-text">{record.summary}</p>
+          <ul className="admin-quotes">
+            {h.keyMessages.map((m) => (
+              <li key={m}>
+                <blockquote className="admin-text">{m}</blockquote>
+              </li>
+            ))}
+          </ul>
         </section>
       ) : null}
+
       {record.message ? (
         <section className="admin-card" aria-labelledby="message-h">
           <h2 id="message-h" className="admin-h2">
-            {record.kind === "inquiry" ? "Message" : "Note from the visitor"}
+            {h ? "Note from the visitor" : "Message"}
           </h2>
           <p className="admin-text">{record.message}</p>
         </section>
       ) : null}
+
       {conv ? (
         <section className="admin-card" aria-labelledby="conv-h">
-          <h2 id="conv-h" className="admin-h2">
-            Conversation
-          </h2>
-          <ol className="admin-transcript">
-            {conv.messages.map((m, i) => (
-              <li key={i} data-role={m.role}>
+          <details className="admin-disclosure">
+            <summary>
+              <h2 id="conv-h" className="admin-h2">
+                Full transcript
+              </h2>
+              <span className="admin-note-inline">
+                {conv.messages.length} messages,{" "}
+                {conv.mode === "ai" ? "DECHY AI" : "automated assistant"}
+              </span>
+            </summary>
+            <ol className="admin-transcript">
+              {conv.messages.map((m, i) => (
+                <li key={i} data-role={m.kind === "handoff" ? "system" : m.role}>
+                  <span className="admin-transcript-who">
+                    {m.kind === "handoff"
+                      ? "Handoff"
+                      : m.role === "visitor"
+                        ? "Visitor"
+                        : "Assistant"}
+                    {" · "}
+                    {when(m.at)}
+                    {m.page ? (
+                      <>
+                        {" "}
+                        · <code>{m.page}</code>
+                      </>
+                    ) : null}
+                    {m.afterHandoff ? <span className="admin-after"> After handoff</span> : null}
+                  </span>
+                  <p className="admin-text">{m.text}</p>
+                </li>
+              ))}
+            </ol>
+          </details>
+        </section>
+      ) : null}
+
+      <section className="admin-card" aria-labelledby="notes-h">
+        <h2 id="notes-h" className="admin-h2">
+          Internal notes
+        </h2>
+        {notes.length ? (
+          <ol className="admin-notes">
+            {notes.map((n, i) => (
+              <li key={i}>
                 <span className="admin-transcript-who">
-                  {m.role === "visitor" ? "Visitor" : "Assistant"}
+                  {n.by} · {when(n.at)}
                 </span>
-                <p className="admin-text">{m.text}</p>
+                <p className="admin-text">{n.text}</p>
               </li>
             ))}
           </ol>
-        </section>
-      ) : null}
+        ) : (
+          <p className="admin-empty">No notes yet. Notes are never shown to the visitor.</p>
+        )}
+        <form
+          method="post"
+          action={`/api/admin/records/${record.ref}/`}
+          className="admin-status-form"
+        >
+          <input type="hidden" name="action" value="note" />
+          <div className="field">
+            <label htmlFor="note">Add a note</label>
+            <textarea id="note" name="note" rows={3} maxLength={4000} required />
+          </div>
+          <div>
+            <button type="submit" className="admin-btn admin-btn-quiet">
+              Add note
+            </button>
+          </div>
+        </form>
+      </section>
+
       <section className="admin-card" aria-labelledby="delete-h">
         <h2 id="delete-h" className="admin-h2">
           Delete

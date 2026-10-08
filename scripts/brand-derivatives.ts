@@ -7,7 +7,8 @@
  *        (scaled to 1200 wide and padded top and bottom with its own background to 1200 x 630, so
  *         platforms that crop to 1.91:1 never cut into the wordmark or the descriptor)
  *   brand/monogram/DECHY_Monogram_On_Dark_Background.png    -> src/app/favicon.ico (16, 32, 48) and
- *        src/app/icon.png (96), with the white outside the rounded tile made transparent
+ *        src/app/icon.png (96), with the white outside the rounded tile made transparent, and
+ *        public/brand/dechy-monogram.png (128), the assistant launcher's identity
  *   brand/monogram/Minimalist Navy D Emblem with Blue Accent.png -> src/app/apple-icon.png (180) and
  *        public/icons/icon-192.png, icon-512.png (square crops on the emblem's own white)
  *
@@ -164,6 +165,7 @@ async function main() {
     ]),
   );
   fs.writeFileSync(p("src/app/icon.png"), await at(96));
+  fs.writeFileSync(p("public/brand/dechy-monogram.png"), await at(128));
 
   fs.writeFileSync(p("src/app/apple-icon.png"), await emblemSquare(180));
   fs.writeFileSync(p("public/icons/icon-192.png"), await emblemSquare(192));

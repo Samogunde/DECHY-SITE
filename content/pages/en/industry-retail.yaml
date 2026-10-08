@@ -129,8 +129,8 @@ sections:
   - type: index
     id: needs
     photo:
-      asset: asset.photo-problems-warehouse-aisle
-      layout: split
+      asset: asset.photo-company-team-working-session
+      layout: rail
       position: 50% 52%
     tone: white
     columns: 2

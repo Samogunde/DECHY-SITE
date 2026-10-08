@@ -7,7 +7,7 @@ import { getRegistry } from "@/lib/content/load";
 import { NOT_SURE, type ContactInput } from "@/lib/contact/validate";
 import { sendMessage } from "@/lib/contact/deliver";
 import { emit } from "./events";
-import { Repo, type Inquiry, type SupportRequest } from "./records";
+import { Repo, type HandoffContext, type Inquiry } from "./records";
 
 /** "What can we help with?" choices: the 15 services in their navigation order, then "Not sure yet". */
 export function interestChoices(): string[] {
@@ -39,79 +39,118 @@ export async function recordInquiry(
   return { ref: inquiry.ref };
 }
 
-export type SupportIntake = {
-  origin: SupportRequest["origin"];
-  channel: SupportRequest["channel"];
+export type HandoffIntake = {
+  /** "existing" creates a Support Request; anything else an Inquiry (new business). */
+  kind: "new" | "existing";
+  /** True when the record comes from an assistant conversation. */
+  fromConversation: boolean;
   name: string;
   email: string;
   organization: string;
-  message: string;
-  conversationId: string | null;
-  summary: string;
-  detectedNeed: string;
-  recommendedService: string;
-  recommendedSolution: string;
-  urgency: SupportRequest["urgency"];
-  escalationReason: string;
+  note: string;
+  handoff: HandoffContext;
 };
 
-/** Stores the support request, records the event, and emails the business mailbox if configured. */
-export async function recordSupport(
-  input: SupportIntake,
+/**
+ * A confirmed request to talk to the team: stores the record (Inquiry for new business, Support
+ * Request for an existing client) with the conversation context, records the event, and emails the
+ * business mailbox if configured. The notification carries only the reference and a title.
+ */
+export async function recordHandoff(
+  input: HandoffIntake,
   repo = new Repo(),
-): Promise<{ ref: string; stored: boolean; delivered: boolean }> {
-  let ref: string | null = null;
-  let req: SupportRequest | null = null;
+): Promise<{ ref: string; kind: "inquiry" | "support"; stored: boolean; delivered: boolean }> {
+  const h = input.handoff;
+  let ref = "";
+  let kind: "inquiry" | "support" = input.kind === "existing" ? "support" : "inquiry";
   if (repo.storeKind !== "none") {
     try {
-      req = await repo.createSupportRequest(input);
-      ref = req.ref;
+      if (kind === "support") {
+        const req = await repo.createSupportRequest({
+          origin: input.fromConversation ? "assistant-escalation" : "visitor-request",
+          channel: input.fromConversation ? "assistant" : "human-support",
+          name: input.name,
+          email: input.email,
+          organization: input.organization,
+          message: input.note,
+          conversationId: h.conversationId,
+          summary: [h.summary.need, h.summary.context].filter(Boolean).join(" "),
+          detectedNeed: h.detectedNeed,
+          recommendedService: h.recommendedService,
+          recommendedSolution: h.recommendedSolution,
+          urgency: h.urgency,
+          escalationReason: h.reason,
+          handoff: h,
+        });
+        ref = req.ref;
+      } else {
+        const inq = await repo.createInquiry({
+          channel: input.fromConversation ? "assistant" : "human-support",
+          name: input.name,
+          email: input.email,
+          organization: input.organization,
+          service: h.recommendedService,
+          timeline: "",
+          budget: "",
+          subject: "",
+          message: input.note,
+          handoff: h,
+        });
+        ref = inq.ref;
+      }
       await emit(repo, {
-        type: input.origin === "assistant-escalation" ? "assistant.escalated" : "support.requested",
+        type: input.fromConversation
+          ? "assistant.escalated"
+          : kind === "support"
+            ? "support.requested"
+            : "inquiry.created",
         ref,
-        title:
-          input.origin === "assistant-escalation"
-            ? "The assistant handed a conversation to the team"
-            : "A visitor asked to speak to a person",
+        title: input.fromConversation
+          ? kind === "support"
+            ? "An existing client asked DECHY AI for the team"
+            : "DECHY AI handed a new inquiry to the team"
+          : "A visitor asked to talk to the team",
         actor: "visitor",
       });
     } catch {
-      req = null;
+      ref = "";
     }
   }
+  if (!ref) kind = input.kind === "existing" ? "support" : "inquiry";
   const lines = [
-    `Reference: ${ref ?? "not stored"}`,
-    `Origin: ${input.origin === "assistant-escalation" ? "assistant handoff" : "visitor asked for a person"}`,
-    input.name ? `Name: ${input.name}` : null,
-    input.email ? `Email: ${input.email}` : null,
+    `Reference: ${ref || "not stored"}`,
+    `Type: ${kind === "support" ? "existing client" : "new inquiry"}${input.fromConversation ? " from the website assistant" : ""}`,
+    `Name: ${input.name}`,
+    `Email: ${input.email}`,
     input.organization ? `Organization: ${input.organization}` : null,
-    input.urgency === "stated" ? "The visitor said this is time-sensitive." : null,
-    input.recommendedService ? `Likely service: ${input.recommendedService}` : null,
-    input.recommendedSolution ? `Likely solution: ${input.recommendedSolution}` : null,
+    h.urgency === "stated" ? "The visitor said this is time-sensitive." : null,
+    h.recommendedService ? `Likely service: ${h.recommendedService}` : null,
     "",
-    input.summary ? `Summary: ${input.summary}` : null,
-    input.message ? `Message: ${input.message}` : null,
+    `Need: ${h.summary.need}`,
+    h.summary.context ? `Context: ${h.summary.context}` : null,
+    h.summary.openQuestions.length ? `Open questions: ${h.summary.openQuestions.join("; ")}` : null,
+    input.note ? `Note from the visitor: ${input.note}` : null,
   ].filter((l): l is string => l !== null);
   const sent = await sendMessage({
     kind: "support",
-    subject: `Support request${ref ? ` ${ref}` : ""}${input.name ? ` from ${input.name}` : ""}`,
+    subject: `${kind === "support" ? "Client request" : "New inquiry"}${ref ? ` ${ref}` : ""} from ${input.name}`,
     text: lines.join("\n"),
-    replyTo: input.email || undefined,
+    replyTo: input.email,
     payload: {
       ref,
-      origin: input.origin,
+      type: kind,
       name: input.name,
       email: input.email,
       organization: input.organization,
-      urgency: input.urgency,
-      summary: input.summary,
-      message: input.message,
-      recommendedService: input.recommendedService,
-      recommendedSolution: input.recommendedSolution,
+      urgency: h.urgency,
+      need: h.summary.need,
+      context: h.summary.context,
+      recommendedService: h.recommendedService,
+      note: input.note,
     },
   });
-  if (!ref && !sent.ok) throw new Error("support intake unavailable");
-  return { ref: ref ?? "", stored: Boolean(req), delivered: sent.ok };
+  if (!ref && !sent.ok) throw new Error("handoff intake unavailable");
+  return { ref, kind, stored: Boolean(ref), delivered: sent.ok };
 }
 
 /** Inbound business email (provider webhook), normalized into an inquiry. */
