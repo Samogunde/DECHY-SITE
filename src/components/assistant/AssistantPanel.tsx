@@ -43,8 +43,32 @@ type Done = {
   handoff?: Prefill;
 };
 type Via = "header" | "offer" | "message" | "contact";
+type ConvState = "active" | "inactive" | "closed" | "handed-off";
+type HistoryItem = {
+  id: string;
+  title: string;
+  updatedAt: string;
+  state: ConvState;
+  handoffRef: string | null;
+};
+type ConversationView = {
+  id: string;
+  mode: "ai" | "guided";
+  messages: (Msg & { recommendations?: Rec[] })[];
+  handoffRef: string | null;
+  state: ConvState;
+};
 
+/** The active conversation for this tab (cleared when the tab closes). */
 const CONV_KEY = "dechy-assistant-conversation";
+/** This browser's own conversation ids, newest first, for the history list. Ids only: titles and
+ *  messages stay on the server and disappear there when the retention period ends. */
+const HISTORY_KEY = "dechy-assistant-history";
+const HISTORY_MAX = 20;
+
+/** One gentle reminder after 10 quiet minutes; the conversation is paused after 30. */
+const REMIND_AFTER_MS = 10 * 60 * 1000;
+const INACTIVE_AFTER_MS = 30 * 60 * 1000;
 
 /** The four starting points; tapping one sends its label as the visitor's message. */
 const STARTERS = [
@@ -88,6 +112,47 @@ function store(id: string | null) {
   }
 }
 
+function historyIds(): string[] {
+  try {
+    const v = JSON.parse(window.localStorage.getItem(HISTORY_KEY) ?? "[]") as unknown;
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+  } catch {
+    return [];
+  }
+}
+function saveHistory(ids: string[]) {
+  try {
+    window.localStorage.setItem(HISTORY_KEY, JSON.stringify(ids.slice(0, HISTORY_MAX)));
+  } catch {
+    // without storage there is no history list, and the assistant still works
+  }
+}
+function remember(id: string) {
+  saveHistory([id, ...historyIds().filter((x) => x !== id)]);
+}
+
+/** The visitor's own conversations: ids in the request body, never in a URL. */
+async function conversations<T>(body: Record<string, unknown>): Promise<T | null> {
+  try {
+    const res = await fetch("/api/assistant/conversations/", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    return res.ok ? ((await res.json()) as T) : null;
+  } catch {
+    return null;
+  }
+}
+
+const when = (iso: string) => {
+  const d = new Date(iso);
+  const days = Math.floor((Date.now() - d.getTime()) / 86_400_000);
+  if (days < 1) return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  if (days < 7) return d.toLocaleDateString([], { weekday: "long" });
+  return d.toLocaleDateString([], { day: "numeric", month: "short" });
+};
+
 /** Reads a server-sent event stream: calls back per event with its parsed JSON data. */
 async function readEvents(res: Response, on: (event: string, data: unknown) => void) {
   const reader = res.body!.getReader();
@@ -125,6 +190,30 @@ const Icon = {
         stroke="currentColor"
         strokeWidth="1.8"
         strokeLinecap="round"
+      />
+    </svg>
+  ),
+  history: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M3.5 10a6.5 6.5 0 1 0 1.9-4.6M3.5 4v3.5H7M10 6.5V10l2.5 1.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  back: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path
+        d="M12 5l-5 5 5 5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
@@ -217,7 +306,14 @@ export default function AssistantPanel({
   const fid = (f: string) => `${uid}-${f}`;
   const [mode, setMode] = useState<"ai" | "guided">(ai ? "ai" : "guided");
   const [messages, setMessages] = useState<Msg[]>([]);
-  const [conversationId, setConversationId] = useState<string | undefined>(undefined);
+  const [conversationId, setConversationIdState] = useState<string | undefined>(undefined);
+  // The active id also lives in a ref, updated at once, so a message typed right after New chat or
+  // after reopening a chat can never be sent to the previous conversation.
+  const activeId = useRef<string | undefined>(undefined);
+  const setConversationId = useCallback((id: string | undefined) => {
+    activeId.current = id;
+    setConversationIdState(id);
+  }, []);
   // Wait for the server only when there is a conversation to restore; a new visitor sees the
   // first state at once. (The panel renders only in the browser, after the visitor opens it.)
   const [restoring, setRestoring] = useState(() => Boolean(stored()));
@@ -234,6 +330,11 @@ export default function AssistantPanel({
   const [submitting, setSubmitting] = useState(false);
   const [wide, setWide] = useState(false);
   const [confirmNew, setConfirmNew] = useState(false);
+  const [convState, setConvState] = useState<ConvState>("active");
+  const [view, setView] = useState<"chat" | "history">("chat");
+  const [history, setHistory] = useState<HistoryItem[] | null>(null);
+  const [reminder, setReminder] = useState(false);
+  const [activity, setActivity] = useState(0);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const log = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLFormElement>(null);
@@ -241,51 +342,115 @@ export default function AssistantPanel({
   const handledRequest = useRef(0);
   const panel = useRef<HTMLDivElement>(null);
 
-  /* Restore this session's conversation (the server is the source of truth). */
+  /** Shows a conversation the server returned (restore, or reopened from history). */
+  const show = useCallback(
+    (c: ConversationView) => {
+      setConversationId(c.id);
+      store(c.id);
+      remember(c.id);
+      setHandoffRef(c.handoffRef);
+      setConvState(c.state);
+      setMode((m) => (c.mode === "ai" ? "ai" : m));
+      setMessages(
+        c.messages.map((m) => ({
+          role: m.role,
+          text: m.text,
+          kind: m.kind,
+          recs: m.recommendations,
+        })),
+      );
+      setCard(null);
+      setOfferHuman(false);
+      setReminder(false);
+      setError("");
+      setActivity((n) => n + 1);
+    },
+    [setConversationId],
+  );
+
+  /* Restore this tab's conversation (the server is the source of truth). */
   useEffect(() => {
     const id = stored();
-    const q = new URLSearchParams({ page });
-    if (id) q.set("conversationId", id);
     let live = true;
-    fetch(`/api/assistant/?${q}`, { headers: { accept: "application/json" } })
+    fetch(`/api/assistant/?${new URLSearchParams({ page })}`, {
+      headers: { accept: "application/json" },
+    })
       .then((r) => r.json())
-      .then(
-        (b: {
-          ai?: boolean;
-          page?: PageCtx;
-          conversation?: {
-            id: string;
-            mode: "ai" | "guided";
-            messages: (Msg & { recommendations?: Rec[] })[];
-            handoffRef: string | null;
-          } | null;
-        }) => {
+      .then((b: { ai?: boolean; page?: PageCtx }) => {
+        if (!live) return;
+        if (typeof b.ai === "boolean") setMode(b.ai ? "ai" : "guided");
+        setPageCtx(b.page ?? null);
+      })
+      .catch(() => undefined);
+    if (id)
+      void conversations<{ conversation: ConversationView | null }>({
+        action: "open",
+        conversationId: id,
+      })
+        .then((b) => {
           if (!live) return;
-          if (typeof b.ai === "boolean") setMode(b.ai ? "ai" : "guided");
-          setPageCtx(b.page ?? null);
-          if (b.conversation) {
-            setConversationId(b.conversation.id);
-            setHandoffRef(b.conversation.handoffRef);
-            setMessages(
-              b.conversation.messages.map((m) => ({
-                role: m.role,
-                text: m.text,
-                kind: m.kind,
-                recs: m.recommendations,
-                sources: m.sources,
-              })),
-            );
-          } else if (id) store(null);
-        },
-      )
-      .catch(() => undefined)
-      .finally(() => live && setRestoring(false));
+          if (b?.conversation) show(b.conversation);
+          else store(null);
+        })
+        .finally(() => live && setRestoring(false));
     return () => {
       live = false;
     };
     // Restore once; later page changes only refresh the page suggestion.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  /* Inactivity: one gentle reminder, then the conversation is paused. Never repeated, never
+     reopening the panel; nothing runs for a conversation handed to the team. */
+  const visitorSpoke = messages.some((m) => m.role === "visitor");
+  useEffect(() => {
+    if (!conversationId || !visitorSpoke || busy || convState !== "active") return;
+    // Timers restart with every activity (a message sent or received, or "continue").
+    const remind = window.setTimeout(() => {
+      if (!hidden) setReminder(true);
+    }, REMIND_AFTER_MS);
+    const pause = window.setTimeout(() => {
+      setReminder(false);
+      setConvState("inactive");
+      void conversations({ action: "state", conversationId, state: "inactive" });
+    }, INACTIVE_AFTER_MS);
+    return () => {
+      window.clearTimeout(remind);
+      window.clearTimeout(pause);
+    };
+  }, [conversationId, visitorSpoke, busy, convState, activity, hidden]);
+
+  async function openHistory() {
+    setView("history");
+    setHistory(null);
+    const ids = historyIds();
+    const b = ids.length
+      ? await conversations<{ items: HistoryItem[] }>({ action: "list", ids })
+      : { items: [] };
+    const items = b?.items ?? [];
+    // Conversations past the retention period are gone on the server; forget them here too.
+    saveHistory(ids.filter((id) => items.some((i) => i.id === id)));
+    setHistory(items);
+  }
+
+  async function reopen(id: string) {
+    if (id === conversationId) {
+      setView("chat");
+      return;
+    }
+    const b = await conversations<{ conversation: ConversationView | null }>({
+      action: "open",
+      conversationId: id,
+    });
+    if (b?.conversation) {
+      show(b.conversation);
+      setView("chat");
+      requestAnimationFrame(() => inputRef.current?.focus());
+    } else {
+      saveHistory(historyIds().filter((x) => x !== id));
+      setHistory((h) => (h ?? []).filter((x) => x.id !== id));
+    }
+  }
 
   /* Page awareness: refresh the optional suggestion when the visitor moves to another page. */
   const firstPage = useRef(page);
@@ -307,13 +472,15 @@ export default function AssistantPanel({
     if (el) el.scrollTo({ top: el.scrollHeight });
   }, [messages, busy]);
 
-  // The card opens at its top, so what will be passed on is seen first.
+  // The card opens at its top, so what will be passed on is seen first, and focus goes to the first
+  // field still missing (after it has rendered, so focus never lands before the field exists).
   const cardOpen = Boolean(card);
   useEffect(() => {
     const l = log.current;
     const c = cardRef.current;
-    if (cardOpen && l && c)
-      l.scrollTop += c.getBoundingClientRect().top - l.getBoundingClientRect().top - 12;
+    if (!cardOpen || !l || !c) return;
+    l.scrollTop += c.getBoundingClientRect().top - l.getBoundingClientRect().top - 12;
+    cardFirst.current?.focus({ preventScroll: true });
   }, [cardOpen]);
 
   useEffect(() => {
@@ -360,7 +527,6 @@ export default function AssistantPanel({
       setEditName(!prefill.name);
       setCardErrors({});
       setCard(prefill);
-      requestAnimationFrame(() => cardFirst.current?.focus({ preventScroll: true }));
     },
     [conversationId, handoffRef, page],
   );
@@ -378,6 +544,9 @@ export default function AssistantPanel({
     setError("");
     setInput("");
     setConfirmNew(false);
+    setReminder(false);
+    setConvState((st) => (st === "handed-off" ? st : "active"));
+    setActivity((n) => n + 1);
     setBusy(true);
     setMessages((m) => [
       ...m,
@@ -396,13 +565,14 @@ export default function AssistantPanel({
       if (b.conversationId) {
         setConversationId(b.conversationId);
         store(b.conversationId);
+        remember(b.conversationId);
       }
       setMode(b.mode);
+      setActivity((n) => n + 1);
       patchLast(() => ({
         role: "assistant",
         text: b.reply,
         recs: b.recommendations,
-        sources: b.sources,
         suggestions: b.suggestions,
       }));
       if (b.handoffRef) setHandoffRef(b.handoffRef);
@@ -413,14 +583,13 @@ export default function AssistantPanel({
         setEditName(!prefill.name);
         setCardErrors({});
         setCard(prefill);
-        requestAnimationFrame(() => cardFirst.current?.focus({ preventScroll: true }));
       }
     };
     try {
       const res = await fetch("/api/assistant/", {
         method: "POST",
         headers: { "content-type": "application/json", accept: "text/event-stream" },
-        body: JSON.stringify({ conversationId, message, page }),
+        body: JSON.stringify({ conversationId: activeId.current, message, page }),
       });
       if ((res.headers.get("content-type") ?? "").includes("text/event-stream")) {
         let completed = false;
@@ -492,7 +661,13 @@ export default function AssistantPanel({
       const res = await fetch("/api/assistant/handoff/", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ action: "confirm", conversationId, page, via, ...values }),
+        body: JSON.stringify({
+          action: "confirm",
+          conversationId: activeId.current,
+          page,
+          via,
+          ...values,
+        }),
       });
       const b = (await res.json().catch(() => null)) as {
         ok?: boolean;
@@ -505,8 +680,10 @@ export default function AssistantPanel({
         if (b.conversationId) {
           setConversationId(b.conversationId);
           store(b.conversationId);
+          remember(b.conversationId);
         }
         setHandoffRef(b.ref);
+        setConvState("handed-off");
         setCard(null);
         setOfferHuman(false);
         setMessages((m) => [
@@ -538,10 +715,16 @@ export default function AssistantPanel({
       setConfirmNew(true);
       return;
     }
+    // The previous conversation is kept (and stays in history); a handed-off one is untouched.
+    if (conversationId && convState !== "handed-off" && messages.length)
+      void conversations({ action: "state", conversationId, state: "closed" });
     store(null);
     setConversationId(undefined);
     setMessages([]);
     setHandoffRef(null);
+    setConvState("active");
+    setReminder(false);
+    setView("chat");
     setCard(null);
     setOfferHuman(false);
     setError("");
@@ -559,6 +742,21 @@ export default function AssistantPanel({
   const empty = messages.length === 0 && !restoring;
   const lastIndex = messages.length - 1;
   const lastHandoff = messages.at(-1)?.kind === "handoff";
+  const paused = (convState === "inactive" || convState === "closed") && messages.length > 0;
+  const continueChat = () => {
+    setReminder(false);
+    setConvState("active");
+    setActivity((n) => n + 1);
+    requestAnimationFrame(() => inputRef.current?.focus());
+  };
+  const stateLabel = (i: HistoryItem) =>
+    i.state === "handed-off"
+      ? `With the DECHY team · ${i.handoffRef ?? ""}`
+      : i.state === "active"
+        ? "Open"
+        : i.state === "inactive"
+          ? "Paused"
+          : "Earlier chat";
 
   return (
     <div
@@ -574,33 +772,24 @@ export default function AssistantPanel({
       hidden={hidden}
     >
       <div className="assist-head">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/brand/dechy-monogram.png"
-          alt=""
-          width={32}
-          height={32}
-          className="assist-head-mark"
-        />
-        <p id={fid("title")} className="assist-title">
-          {isAI ? (
-            <>
-              DECHY <span className="assist-title-ai">AI</span>
-            </>
-          ) : (
-            "Ask DECHY"
-          )}
-        </p>
-        <div className="assist-head-actions">
-          <button
-            type="button"
-            className="assist-tool assist-tool-new"
-            onClick={() => startNewChat()}
-            title="Start a new chat"
-          >
-            {Icon.newChat}
-            <span>New chat</span>
-          </button>
+        <div className="assist-head-row">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/dechy-monogram.png"
+            alt=""
+            width={32}
+            height={32}
+            className="assist-head-mark"
+          />
+          <p id={fid("title")} className="assist-title">
+            {isAI ? (
+              <>
+                DECHY <span className="assist-title-ai">AI</span>
+              </>
+            ) : (
+              "Ask DECHY"
+            )}
+          </p>
           <button
             type="button"
             className="assist-tool assist-only-wide"
@@ -613,22 +802,54 @@ export default function AssistantPanel({
           </button>
           <button
             type="button"
-            className="assist-tool assist-tool-min"
+            className="assist-tool assist-only-wide"
             onClick={onMinimize}
             aria-label="Minimize the assistant"
             title="Minimize (keeps the conversation)"
           >
             {Icon.minimize}
-            <span className="assist-only-phone">Back to site</span>
           </button>
           <button
             type="button"
-            className="assist-tool assist-tool-close"
+            className="assist-tool"
             onClick={onClose}
             aria-label="Close the assistant"
             title="Close (the conversation stays for this visit)"
           >
             {Icon.close}
+          </button>
+        </div>
+        <div className="assist-toolbar">
+          <button
+            type="button"
+            className="assist-tool assist-only-phone-flex"
+            onClick={onMinimize}
+            aria-label="Back to site"
+          >
+            {Icon.minimize}
+            <span>
+              Back<span className="assist-word-long"> to site</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="assist-tool"
+            onClick={() => (view === "history" ? setView("chat") : void openHistory())}
+            aria-pressed={view === "history"}
+          >
+            {Icon.history}
+            <span>{view === "history" ? "Back to chat" : "Chats"}</span>
+          </button>
+          <button
+            type="button"
+            className="assist-tool assist-tool-new"
+            onClick={() => startNewChat()}
+            aria-label="New chat"
+          >
+            {Icon.newChat}
+            <span aria-hidden="true">
+              New<span className="assist-word-long"> chat</span>
+            </span>
           </button>
         </div>
       </div>
@@ -651,8 +872,45 @@ export default function AssistantPanel({
         </div>
       ) : null}
 
+      {view === "history" ? (
+        <div className="assist-history" aria-label="Your chats">
+          <p className="assist-history-title">Your chats</p>
+          {history === null ? (
+            <p className="assist-history-note" role="status">
+              Loading your chats
+            </p>
+          ) : history.length === 0 ? (
+            <p className="assist-history-note">
+              No earlier chats on this device yet. When you start one, it appears here.
+            </p>
+          ) : (
+            <ul className="assist-history-list">
+              {history.map((i) => (
+                <li key={i.id}>
+                  <button
+                    type="button"
+                    className="assist-history-item"
+                    aria-current={i.id === conversationId ? "true" : undefined}
+                    onClick={() => void reopen(i.id)}
+                  >
+                    <span className="assist-history-name">{i.title}</span>
+                    <span className="assist-history-meta">
+                      {i.id === conversationId ? "This chat" : stateLabel(i)} · {when(i.updatedAt)}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="assist-history-fine">
+            Chats are kept on this device and our server for up to 90 days, then removed.
+          </p>
+        </div>
+      ) : null}
+
       <div
         ref={log}
+        hidden={view === "history"}
         className="assist-log"
         role="log"
         aria-live="polite"
@@ -702,22 +960,26 @@ export default function AssistantPanel({
                 </p>
               </div>
             );
-          const recPaths = new Set((m.recs ?? []).map((r) => r.path));
-          const extraSources = (m.sources ?? []).filter((s) => !recPaths.has(s.path));
           const showChips = i === lastIndex && !busy && !card && (m.suggestions?.length ?? 0) > 0;
           return (
             <div key={i} className={`assist-msg assist-msg-${m.role}`}>
               {m.pending && !m.text ? (
                 <div className="assist-thinking" role="status">
-                  <span className="assist-progress" aria-hidden="true" />
-                  <span>{isAI ? "Thinking with DECHY's pages…" : "Reading DECHY's pages…"}</span>
+                  <span className="assist-dots" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                  <span className="visually-hidden">
+                    {isAI ? "DECHY AI is replying" : "Replying"}
+                  </span>
                 </div>
               ) : (
                 <p className="assist-bubble">{m.text}</p>
               )}
               {m.recs && m.recs.length > 0 ? (
                 <div className="assist-related">
-                  <p className="assist-related-k">Where this fits</p>
+                  <p className="assist-related-k">Related at DECHY</p>
                   <ul className="assist-recs" aria-label="Suggested pages">
                     {m.recs.slice(0, 2).map((r) => (
                       <li key={r.id}>
@@ -733,19 +995,6 @@ export default function AssistantPanel({
                   </ul>
                 </div>
               ) : null}
-              {extraSources.length > 0 ? (
-                <p className="assist-sources">
-                  From{" "}
-                  {extraSources.map((s, k) => (
-                    <span key={s.path}>
-                      {k > 0 ? ", " : null}
-                      <Link href={s.path} onClick={followed}>
-                        {s.name}
-                      </Link>
-                    </span>
-                  ))}
-                </p>
-              ) : null}
               {showChips ? (
                 <ul className="assist-chips" aria-label="Suggested replies">
                   {m.suggestions!.map((s) => (
@@ -760,6 +1009,29 @@ export default function AssistantPanel({
             </div>
           );
         })}
+
+        {reminder && !paused ? (
+          <div className="assist-notice" role="status">
+            <p>Still there? Your conversation is open whenever you&apos;d like to continue.</p>
+            <button type="button" className="assist-link-button" onClick={continueChat}>
+              Continue conversation
+            </button>
+          </div>
+        ) : null}
+
+        {paused && !lastHandoff ? (
+          <div className="assist-notice">
+            <p>This conversation was paused. You can pick it up where you left off.</p>
+            <div className="assist-after-actions">
+              <button type="button" className="assist-link-button" onClick={continueChat}>
+                Continue this conversation
+              </button>
+              <button type="button" className="assist-link-button" onClick={() => startNewChat()}>
+                Start a new chat
+              </button>
+            </div>
+          </div>
+        ) : null}
 
         {offerHuman && !card && !handoffRef && !busy ? (
           <div className="assist-offer">
@@ -950,7 +1222,7 @@ export default function AssistantPanel({
         ) : null}
       </div>
 
-      {error ? (
+      {error && view === "chat" ? (
         <p className="assist-error" role="alert">
           {error}
         </p>
@@ -961,7 +1233,7 @@ export default function AssistantPanel({
           className="assist-input"
           onSubmit={(e) => {
             e.preventDefault();
-            void send(input);
+            void send(inputRef.current?.value ?? input);
           }}
         >
           <label htmlFor={fid("input")} className="visually-hidden">
@@ -978,7 +1250,7 @@ export default function AssistantPanel({
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
-                void send(input);
+                void send(e.currentTarget.value);
               }
             }}
           />
@@ -990,7 +1262,7 @@ export default function AssistantPanel({
         <div className="assist-foot-row">
           <p id={fid("disclosure")} className="assist-disclosure">
             {isAI
-              ? "AI can make mistakes. Check important details."
+              ? "You're chatting with DECHY AI. It can make mistakes."
               : "Automated assistant, not a person."}
           </p>
           {handoffRef ? (

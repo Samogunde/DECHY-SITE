@@ -1,8 +1,16 @@
 import AxeBuilder from "@axe-core/playwright";
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 import { watchErrors } from "./helpers";
 
 const REF = /DECHY-[23456789A-HJ-NP-TV-Z]{6}/;
+
+/** Sends a message once the previous reply has finished, as a person would. */
+async function ask(input: Locator, text: string) {
+  const panel = input.locator("xpath=ancestor::*[@role='dialog'][1]");
+  await expect(panel.getByRole("log")).toHaveAttribute("aria-busy", "false");
+  await input.fill(text);
+  await input.press("Enter");
+}
 const WCAG = ["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"];
 
 async function signIn(page: Page) {
@@ -79,10 +87,10 @@ test.describe("website assistant", () => {
 
     // Free text, answered with recommendation cards that say why.
     const input = panel.getByLabel("Your message");
-    await input.fill(
+    await ask(
+      input,
       "Our warehouse team copies orders from email into a spreadsheet every day. I'm Dana from Northfield Supply.",
     );
-    await input.press("Enter");
     const log = panel.getByRole("log");
     await expect(log).toContainText(/sounds like/i);
     const cards = panel.getByRole("list", { name: "Suggested pages" }).first().getByRole("link");
@@ -102,8 +110,7 @@ test.describe("website assistant", () => {
     await expect(again.getByRole("log")).toContainText("Northfield Supply");
 
     // Asking for a person opens a card in the thread, filled in from the conversation.
-    await again.getByLabel("Your message").fill("Can someone from DECHY contact me?");
-    await again.getByLabel("Your message").press("Enter");
+    await ask(again.getByLabel("Your message"), "Can someone from DECHY contact me?");
     const card = again.locator("form.assist-card");
     await expect(card).toBeVisible();
     // What the visitor already said is shown, not asked again; only the email is missing.
@@ -127,8 +134,7 @@ test.describe("website assistant", () => {
     await expect(again.getByRole("button", { name: "Start a new chat" })).toBeVisible();
 
     // The visitor can keep writing; it is added to the same request.
-    await again.getByLabel("Your message").fill("We also take orders by phone.");
-    await again.getByLabel("Your message").press("Enter");
+    await ask(again.getByLabel("Your message"), "We also take orders by phone.");
     await expect(again.getByRole("log")).toContainText(`added this to your request ${ref}`);
 
     // Escape minimizes; the launcher gets focus back.
@@ -164,8 +170,7 @@ test.describe("website assistant", () => {
     await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
     const panel = page.getByRole("dialog", { name: "Ask DECHY" });
     const input = panel.getByLabel("Your message");
-    await input.fill("Hello");
-    await input.press("Enter");
+    await ask(input, "Hello");
     const log = panel.getByRole("log");
     await expect(log).toContainText("Hello. I'm DECHY's assistant. What are you working on?");
     await expect(panel.getByRole("list", { name: "Suggested pages" })).toHaveCount(0);
@@ -173,11 +178,9 @@ test.describe("website assistant", () => {
     await expect(
       panel.getByRole("list", { name: "Suggested replies" }).getByRole("button"),
     ).toHaveCount(4);
-    await input.fill("Who are you?");
-    await input.press("Enter");
+    await ask(input, "Who are you?");
     await expect(log).toContainText("DECHY's website assistant");
-    await input.fill("I need a mobile app");
-    await input.press("Enter");
+    await ask(input, "I need a mobile app");
     await expect(log).toContainText("iPhone, Android, or both?");
     await expect(log).not.toContainText("AI & Machine Learning is");
   });
@@ -204,17 +207,103 @@ test.describe("website assistant", () => {
     expect(
       await page.evaluate(() => sessionStorage.getItem("dechy-assistant-conversation")),
     ).toBeNull();
-    // The earlier conversation is kept on the server.
-    const kept = await page.request.get(`/api/assistant/?conversationId=${first}`);
+    // The earlier conversation is kept on the server, and in this browser's chats.
+    const kept = await page.request.post("/api/assistant/conversations/", {
+      data: { action: "open", conversationId: first },
+      headers: { "content-type": "application/json" },
+    });
     expect(((await kept.json()) as { conversation: unknown }).conversation).not.toBeNull();
+    await panel.getByRole("button", { name: "Chats" }).click();
+    await expect(panel.getByRole("button", { name: /Build something new/ })).toBeVisible();
+  });
+
+  test("is available on every public page, and never in DECHY Admin", async ({ page }) => {
+    test.setTimeout(180_000);
+    for (const path of [
+      "/",
+      "/contact/",
+      "/services/",
+      "/solutions/",
+      "/technologies/",
+      "/industries/",
+      "/work/",
+      "/resources/",
+      "/company/",
+      "/locations/",
+      "/cloud/",
+      "/solutions/ai-customer-support/",
+      "/industries/retail/",
+      "/privacy/",
+      "/cookies/",
+      "/terms/",
+      "/accessibility/",
+      "/no-such-page/",
+    ]) {
+      await page.goto(path);
+      await expect(
+        page.getByRole("button", { name: "Ask DECHY", exact: true }),
+        path,
+      ).toBeVisible();
+    }
+    await page.goto("/admin/login/");
+    await expect(page.locator(".assist-launcher")).toHaveCount(0);
+  });
+
+  test("keeps earlier chats on this device, titled from what was asked, and reopens them", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
+    const input = panel.getByLabel("Your message");
+    await ask(input, "I need a mobile app.");
+    await expect(panel.getByRole("log")).toContainText("iPhone, Android, or both?");
+    await panel.getByRole("button", { name: "New chat" }).click();
+    await ask(input, "I need an AI support system.");
+    await expect(panel.getByRole("log")).toContainText("What job would you like AI to do");
+    await expect(panel.getByRole("log")).toHaveAttribute("aria-busy", "false");
+    await panel.getByRole("button", { name: "Chats" }).click();
+    const a = panel.getByRole("button", { name: /Mobile app/ });
+    await expect(a).toBeVisible();
+    await expect(panel.getByRole("button", { name: /AI support system/ })).toBeVisible();
+    await a.click();
+    await expect(panel.getByRole("log")).toContainText("I need a mobile app.");
+    await expect(panel.getByRole("log")).not.toContainText("I need an AI support system.");
+    // Nothing about how answers are produced is ever shown.
+    await expect(panel).not.toContainText(/Reading DECHY|DECHY's pages|knowledge base/);
+  });
+
+  test("one gentle reminder when the visitor goes quiet, then the chat is paused", async ({
+    page,
+  }) => {
+    await page.clock.install();
+    await page.goto("/");
+    await page.getByRole("button", { name: "Ask DECHY", exact: true }).click();
+    const panel = page.getByRole("dialog", { name: "Ask DECHY" });
+    const input = panel.getByLabel("Your message");
+    await ask(input, "We want to automate our invoicing");
+    // Wait for the reply itself (the visitor's own words also mention automation).
+    await expect(panel.getByRole("log")).toContainText("Which task does your team repeat most");
+    await expect(panel.getByRole("log")).toHaveAttribute("aria-busy", "false");
+    await page.clock.fastForward("10:30");
+    await expect(panel).toContainText("Still there?");
+    await panel.getByRole("button", { name: "Continue conversation" }).click();
+    await expect(panel).not.toContainText("Still there?");
+    await page.clock.fastForward("31:00");
+    await expect(panel).toContainText("This conversation was paused.");
+    // Only ever one reminder.
+    await expect(panel.getByText("Still there?")).toHaveCount(0);
+    await panel.getByRole("button", { name: "Continue this conversation" }).click();
+    await ask(input, "It is about 200 invoices a month");
+    await expect(panel).not.toContainText("This conversation was paused.");
   });
 
   test("the contact page offers three paths, and the third opens the team card", async ({
     page,
   }) => {
     await page.goto("/contact/");
-    // The page has its own ways in, so the floating launcher stays out of the way.
-    await expect(page.locator(".assist-launcher")).toHaveCount(0);
+    // The assistant is available here too, as on every public page.
+    await expect(page.getByRole("button", { name: "Ask DECHY", exact: true })).toBeVisible();
     const paths = page.getByRole("list", { name: "Ways to reach DECHY" });
     await expect(paths.getByRole("button")).toHaveCount(2);
     await expect(paths.getByRole("link")).toHaveCount(1);

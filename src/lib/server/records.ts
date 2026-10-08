@@ -157,7 +157,9 @@ export type Conversation = {
   updatedAt: string;
   /** Deleted after this time unless it led to a support request (CONVERSATION_RETENTION_DAYS). */
   expiresAt: string;
-  status: "active" | "escalated" | "closed";
+  /** active, inactive (the visitor went quiet), closed (they started a new chat), or escalated
+   *  (handed to the team; kept with its record, never expired or reopened by the idle states). */
+  status: "active" | "inactive" | "closed" | "escalated";
   mode: "ai" | "guided";
   messages: ConversationMessage[];
   summary: string;
@@ -517,7 +519,7 @@ export class Repo {
     if (!/^[0-9a-f-]{36}$/.test(id)) return null;
     const c = await this.store.get<Conversation>(`conversation/${id}`);
     if (!c) return null;
-    if (c.status !== "escalated" && c.expiresAt < this.iso()) {
+    if (c.status !== "escalated" && !c.supportRef && c.expiresAt < this.iso()) {
       await this.store.delete(`conversation/${id}`);
       return null;
     }
@@ -537,7 +539,7 @@ export class Repo {
     const keep: Conversation[] = [];
     for (const c of all) {
       if (!c) continue;
-      if (c.status !== "escalated" && c.expiresAt < now) {
+      if (c.status !== "escalated" && !c.supportRef && c.expiresAt < now) {
         await this.store.delete(`conversation/${c.id}`);
         continue;
       }

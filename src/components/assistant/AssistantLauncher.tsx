@@ -107,13 +107,11 @@ export function AssistantLauncher({ ai }: { ai: boolean }) {
     write(session, OPEN_KEY, "1");
   };
 
-  // The contact page offers its own ways in, so the floating launcher stays out of the way there.
-  const onContact = pathname === "/contact/";
   const label = ai ? "Ask DECHY AI" : "Ask DECHY";
 
   return (
     <>
-      {state !== "open" && !(onContact && state === "closed") ? (
+      {state !== "open" ? (
         <button
           ref={button}
           type="button"

@@ -426,7 +426,7 @@ describe("assistant engine", () => {
     expect(def.recommendations).toEqual([]);
     expect(def.reply).toMatch(/AI agents/);
     const unknown = guidedReply("What is quantum blockchain?", []);
-    expect(unknown.reply).toMatch(/only answer from DECHY's own pages/);
+    expect(unknown.reply).toMatch(/outside what I can explain well here/);
     // The need is taken from the visitor's words, not their introduction.
     const john = guidedReply("My name is John. I need an AI customer support system.", []);
     expect(john.extracted.name).toBe("John");
@@ -581,18 +581,25 @@ describe("assistant and handoff endpoints", () => {
     expect(b1.recommendations.length).toBeGreaterThan(0);
     expect(b1.recommendations.every((r) => r.path.startsWith("/") && r.reason)).toBe(true);
 
-    // The conversation can be continued from another page (the server is the source of truth).
-    const g = await assistant.GET(
-      new Request(
-        "https://site.test/api/assistant/?conversationId=" + b1.conversationId + "&page=/cloud/",
-      ),
+    // The conversation can be continued from another page (the server is the source of truth),
+    // reopened by its id in a request body, never in a URL.
+    const conversations = await import("@/app/api/assistant/conversations/route");
+    const g = await conversations.POST(
+      post("https://site.test/api/assistant/conversations/", {
+        action: "open",
+        conversationId: b1.conversationId,
+      }),
     );
     const view = (await g.json()) as {
-      conversation: { messages: unknown[] };
-      page: { name: string };
+      conversation: { messages: unknown[]; title: string; state: string };
     };
     expect(view.conversation.messages).toHaveLength(2);
-    expect(view.page.name).toBe("Cloud & DevOps");
+    expect(view.conversation.title).toMatch(/online store/i);
+    expect(view.conversation.state).toBe("active");
+    const pageCtx = await assistant.GET(
+      new Request("https://site.test/api/assistant/?page=/cloud/"),
+    );
+    expect(((await pageCtx.json()) as { page: { name: string } }).page.name).toBe("Cloud & DevOps");
 
     // Asking for a person marks the conversation at once, before any record exists.
     const r2 = await assistant.POST(
@@ -685,6 +692,68 @@ describe("assistant and handoff endpoints", () => {
     );
     expect(((await again.json()) as { ref: string }).ref).toBe(ref);
     expect(await repo.listInbox()).toHaveLength(1);
+  });
+
+  it("keeps a browser's own chat history, titled from what was asked, with idle states", async () => {
+    const assistant = await import("@/app/api/assistant/route");
+    const conversations = await import("@/app/api/assistant/conversations/route");
+    const handoff = await import("@/app/api/assistant/handoff/route");
+    const say = async (message: string, conversationId?: string) =>
+      (await (
+        await assistant.POST(post("https://site.test/api/assistant/", { message, conversationId }))
+      ).json()) as { conversationId: string };
+    const call = async (body: unknown) =>
+      (await (
+        await conversations.POST(post("https://site.test/api/assistant/conversations/", body))
+      ).json()) as {
+        items?: { id: string; title: string; state: string; handoffRef: string | null }[];
+        conversation?: { state: string } | null;
+      };
+    // Conversation A, then B (titles come from the need, not the greeting).
+    const a = await say("Hello");
+    await say("I need a mobile app.", a.conversationId);
+    const b = await say("My name is John. I need an AI customer support system.");
+    const list = await call({ action: "list", ids: [a.conversationId, b.conversationId] });
+    expect(list.items?.map((i) => i.title).sort()).toEqual([
+      "AI customer support system",
+      "Mobile app",
+    ]);
+    // A paused conversation reopens; writing again makes it active.
+    await call({ action: "state", conversationId: a.conversationId, state: "inactive" });
+    expect(
+      (await call({ action: "open", conversationId: a.conversationId })).conversation?.state,
+    ).toBe("inactive");
+    await say("It's for our field staff.", a.conversationId);
+    expect(
+      (await call({ action: "open", conversationId: a.conversationId })).conversation?.state,
+    ).toBe("active");
+    // A handed-off conversation is never paused or closed by the idle states, and is never expired.
+    await handoff.POST(
+      post("https://site.test/api/assistant/handoff/", {
+        action: "confirm",
+        conversationId: b.conversationId,
+        name: "John",
+        email: "john@example.org",
+        kind: "new",
+      }),
+    );
+    await call({ action: "state", conversationId: b.conversationId, state: "closed" });
+    const after = await call({ action: "list", ids: [b.conversationId] });
+    expect(after.items?.[0]?.state).toBe("handed-off");
+    expect(after.items?.[0]?.handoffRef).toMatch(REF_PATTERN);
+    // Unknown or expired ids simply return nothing; ids never appear in a URL.
+    expect(
+      (await call({ action: "list", ids: ["00000000-0000-4000-8000-000000000000"] })).items,
+    ).toEqual([]);
+    expect((await conversations.GET()).status).toBe(405);
+    const cross = await conversations.POST(
+      post(
+        "https://site.test/api/assistant/conversations/",
+        { action: "list", ids: [] },
+        { origin: "https://evil.test" },
+      ),
+    );
+    expect(cross.status).toBe(403);
   });
 
   it("routes an existing client to a support request, and asks for the team without a chat", async () => {

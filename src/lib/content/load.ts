@@ -247,8 +247,11 @@ export function getRegistry(): Registry {
     }
     return cached;
   }
-  cached ??= buildRegistry();
-  return cached;
+  // One parse per server process, shared by every route bundle (each bundle has its own copy of
+  // this module, so a module-level cache alone would parse the content once per route).
+  const shared = globalThis as { __dechyRegistry?: Registry };
+  shared.__dechyRegistry ??= buildRegistry();
+  return shared.__dechyRegistry;
 }
 
 export function getPage(pathname: string): Page {

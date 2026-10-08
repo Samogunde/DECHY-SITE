@@ -11,7 +11,7 @@ import {
   type Turn,
 } from "@/lib/assistant/engine";
 import { pageContext } from "@/lib/assistant/knowledge";
-import { applyTurn, prefill, visitorView } from "@/lib/assistant/session";
+import { applyTurn, prefill } from "@/lib/assistant/session";
 import { aiAllowed, recordUsage } from "@/lib/server/ai-budget";
 import { fail, json, NO_STORE, readJson } from "@/lib/server/http";
 import { maybeMaintain } from "@/lib/server/maintenance";
@@ -43,26 +43,15 @@ function later(task: () => Promise<void>) {
 const safePage = (p: string | undefined) => (p && /^\/[a-z0-9/-]*$/i.test(p) ? p : "");
 
 /**
- * Session continuity and page awareness.
- * GET /api/assistant?page=/cloud/                       page context for the first state
- * GET /api/assistant?conversationId=...&page=/cloud/    the visitor's own conversation, to continue
- * The conversation id is an unguessable random id held only in the visitor's session.
+ * Page awareness: GET /api/assistant/?page=/cloud/ returns the context for the optional suggestion
+ * in the first state, and whether real AI answers are on. Conversations are read and reopened
+ * through POST /api/assistant/conversations/ (ids in the body, never in a URL).
  */
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const page = safePage(url.searchParams.get("page") ?? undefined);
-  const id = url.searchParams.get("conversationId") ?? "";
-  let conversation = null;
-  if (/^[0-9a-f-]{36}$/.test(id)) {
-    try {
-      const c = await new Repo().getConversation(id);
-      conversation = c ? visitorView(c) : null;
-    } catch {
-      conversation = null;
-    }
-  }
   return Response.json(
-    { ok: true, ai: aiConfigured(), page: pageContext(page), conversation },
+    { ok: true, ai: aiConfigured(), page: pageContext(page) },
     { headers: NO_STORE },
   );
 }
