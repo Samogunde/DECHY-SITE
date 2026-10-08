@@ -47,6 +47,13 @@ const nextConfig: NextConfig = {
   // governing DECHY specification and must only change by owner-approved edit, so it is disabled.
   agentRules: false,
   reactStrictMode: true,
+  // The API and admin routes read the content registry (content/ and data/ YAML) at request time.
+  // File access is excluded from automatic tracing (so the whole project is never bundled), so the
+  // files those routes need are declared here.
+  outputFileTracingIncludes: {
+    "/api/**/*": ["./content/**/*.yaml", "./data/**/*.yaml"],
+    "/admin/**/*": ["./content/**/*.yaml", "./data/**/*.yaml"],
+  },
   images: {
     // WebP only: at the same visual budget AVIF measurably softened photographic detail (hair,
     // fabric, on-screen text). Photographs use quality 85, the logo 92.
