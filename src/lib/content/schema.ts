@@ -333,7 +333,9 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
     intro: z.string().optional(),
-    families: z.array(z.object({ id: z.string(), blurb: z.string(), photo: PhotoRef })).min(2),
+    families: z.array(z.object({ id: z.string(), blurb: z.string() })).min(2),
+    /** One photograph per service slug; hovering or focusing a service shows its photograph. */
+    servicePhotos: z.record(z.string(), PhotoRef),
     more: Cta.optional(),
   }),
   /** Figures that count up when they come into view, beside a photograph. */

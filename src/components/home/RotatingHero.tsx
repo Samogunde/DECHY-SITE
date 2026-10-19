@@ -9,8 +9,9 @@ const INTERVAL = 3400;
 /**
  * The home hero. The headline stays "We build ..." and the offer cycles: custom software,
  * websites, web apps, mobile apps, each with its own line and screen. It is not a carousel: the
- * text and the screen change in place. It pauses while hovered or focused, stops when the tab is
- * hidden, and never moves under prefers-reduced-motion. The service buttons choose a slide.
+ * text and the screen change in place. It keeps moving while hovered (owner direction), stops when
+ * the tab is hidden, never moves under prefers-reduced-motion, and has a pause button (WCAG 2.2.2).
+ * The service buttons choose a slide.
  * Every slide is in the HTML, and the heading carries the full list for search and screen readers.
  */
 export function RotatingHero({
@@ -70,18 +71,7 @@ export function RotatingHero({
   }, []);
 
   return (
-    <section
-      ref={root}
-      id="hero"
-      aria-labelledby="hero-h"
-      className="tone-ink hero-home hero-rot"
-      onPointerEnter={() => setPaused(true)}
-      onPointerLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setPaused(false);
-      }}
-    >
+    <section ref={root} id="hero" aria-labelledby="hero-h" className="tone-ink hero-home hero-rot">
       <div className="scroll-progress" aria-hidden="true" />
       <span className="beam beam-a" aria-hidden="true" />
       <span className="beam beam-b" aria-hidden="true" />
@@ -130,6 +120,25 @@ export function RotatingHero({
                 </span>
               </button>
             ))}
+            {reduced ? null : (
+              <button
+                type="button"
+                className="hero-pause"
+                aria-pressed={paused}
+                aria-label={paused ? "Play the rotating headline" : "Pause the rotating headline"}
+                onClick={() => setPaused((p) => !p)}
+              >
+                {paused ? (
+                  <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+                    <path d="M4 2.5v11l9-5.5z" fill="currentColor" />
+                  </svg>
+                ) : (
+                  <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+                    <path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" fill="currentColor" />
+                  </svg>
+                )}
+              </button>
+            )}
           </div>
         </div>
         <div className="hero-rot-visual" aria-live="off">

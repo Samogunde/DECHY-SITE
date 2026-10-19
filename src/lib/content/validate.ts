@@ -428,7 +428,7 @@ export function validateRegistry(registry: Registry): Issue[] {
             );
         }
     // The home page carries the photographic story (owner direction, 19 October 2026).
-    const photoLimit = page.kind === "home" ? 32 : 4;
+    const photoLimit = page.kind === "home" ? 40 : 4;
     if (photoRefs.length > photoLimit)
       err(
         "photo-count",

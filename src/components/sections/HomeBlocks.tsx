@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { CheckCircle, Clock, Quotes } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, CheckCircle, Clock, Quotes } from "@phosphor-icons/react/dist/ssr";
 import { Figure } from "@/components/figures/Figure";
 import Image from "next/image";
 import {
   CaseViewer,
   CountUp,
+  ExplorerPanel,
   PhaseScroller,
   RevealText,
   ServiceExplorer,
@@ -67,21 +68,19 @@ function SplitHeader({
   aside?: ReactNode;
 }) {
   return (
-    <div className="split-header" data-reveal="block">
-      <div>
+    <div className={`split-header${aside ? " has-aside" : ""}`} data-reveal="block">
+      <div className="split-main">
         <p className="t-eyebrow eyebrow-accent m-0">{label}</p>
         <h2 id={`${id}-h`} className="home-h2 mt-4">
           {heading}
         </h2>
-      </div>
-      <div className="split-side">
         {intro ? (
-          <p className="split-intro m-0">
+          <p className="split-intro">
             <Inline text={intro} />
           </p>
         ) : null}
-        {aside}
       </div>
+      {aside ? <div className="split-side">{aside}</div> : null}
     </div>
   );
 }
@@ -164,48 +163,50 @@ export function ServiceExplorerBlock({ block }: { block: Of<"service-explorer"> 
       <ServiceExplorer
         tabs={families.map((f) => ({ label: f.label, count: f.services.length }))}
         panels={families.map((f) => (
-          <div key={f.id} className="explorer-panel">
-            <div className="explorer-photo">
-              <Photo photo={f.photo} />
-              <p className="glass-note">
-                <span className="explorer-family">{f.label}</span>
-                {f.blurb}
-              </p>
-            </div>
-            <ul className="explorer-services">
-              {f.services.map((s) => {
-                const href = `/${s.slug}/`;
-                const live = pathExists(href, registry);
-                const inner = (
-                  <>
-                    <span className="feature-icon">
-                      <Icon name={SERVICE_ICONS[s.slug] ?? "code"} />
-                    </span>
-                    <span className="explorer-text">
-                      <span className="explorer-name">{s.name}</span>
-                      <span className="explorer-micro">{s.micro}</span>
-                    </span>
-                    {live ? <Arrow /> : null}
-                  </>
-                );
-                return (
-                  <li key={s.slug}>
-                    {live ? (
-                      <Link href={href} className="explorer-card" data-spotlight>
-                        {inner}
-                      </Link>
-                    ) : (
-                      <span className="explorer-card">{inner}</span>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <ExplorerPanel
+            key={f.id}
+            family={f.label}
+            blurb={f.blurb}
+            photos={f.services.map((s) => {
+              const p = block.servicePhotos[s.slug];
+              return p ? <Photo key={s.slug} photo={p} /> : null;
+            })}
+            captions={f.services.map((s) => ({ name: s.name, text: s.micro }))}
+            cards={f.services.map((s) => {
+              const href = `/${s.slug}/`;
+              const live = pathExists(href, registry);
+              const inner = (
+                <>
+                  <span className="feature-icon">
+                    <Icon name={SERVICE_ICONS[s.slug] ?? "code"} />
+                  </span>
+                  <span className="explorer-text">
+                    <span className="explorer-name">{s.name}</span>
+                    <span className="explorer-micro">{s.micro}</span>
+                  </span>
+                  {live ? <HoverArrow /> : null}
+                </>
+              );
+              return live ? (
+                <Link key={s.slug} href={href} className="explorer-card link-card" data-spotlight>
+                  {inner}
+                </Link>
+              ) : (
+                <span key={s.slug} className="explorer-card">
+                  {inner}
+                </span>
+              );
+            })}
+          />
         ))}
       />
     </Section>
   );
+}
+
+/** The "this opens another page" signal: an arrow that appears in the corner on hover or focus. */
+export function HoverArrow() {
+  return <ArrowUpRight aria-hidden="true" weight="regular" className="hover-arrow" />;
 }
 
 /** Draft sections exist only in review builds (see showDrafts); they render like any other. */
@@ -242,10 +243,12 @@ export function StatsBlock({ block }: { block: Of<"stats"> }) {
           </dl>
         </div>
         {block.photo ? (
-          <div className="stats-photo">
+          <figure className="stats-photo">
             <Photo photo={block.photo} />
-            {block.photoNote ? <p className="glass-note">{block.photoNote}</p> : null}
-          </div>
+            {block.photoNote ? (
+              <figcaption className="photo-note">{block.photoNote}</figcaption>
+            ) : null}
+          </figure>
         ) : null}
       </div>
     </Section>
@@ -298,17 +301,37 @@ export function LeadServicesBlock({ block }: { block: Of<"lead-services"> }) {
                 </Link>
               ) : null}
             </div>
-            <div className={`lead-visual glass${s.photo ? " has-photo" : ""}`} data-spotlight>
-              {s.photo ? (
-                <Photo photo={s.photo} />
-              ) : s.figure ? (
-                <Figure
-                  id={s.figure}
-                  uid={`${block.id}-${i}`}
-                  caption={`${s.title}: a conceptual interface.`}
-                />
-              ) : null}
-            </div>
+            {live(s.href) ? (
+              <Link
+                href={s.href}
+                className={`lead-visual glass link-card${s.photo ? " has-photo" : ""}`}
+                data-spotlight
+                aria-label={s.action}
+              >
+                {s.photo ? (
+                  <Photo photo={s.photo} />
+                ) : s.figure ? (
+                  <Figure
+                    id={s.figure}
+                    uid={`${block.id}-${i}`}
+                    caption={`${s.title}: a conceptual interface.`}
+                  />
+                ) : null}
+                <HoverArrow />
+              </Link>
+            ) : (
+              <div className={`lead-visual glass${s.photo ? " has-photo" : ""}`} data-spotlight>
+                {s.photo ? (
+                  <Photo photo={s.photo} />
+                ) : s.figure ? (
+                  <Figure
+                    id={s.figure}
+                    uid={`${block.id}-${i}`}
+                    caption={`${s.title}: a conceptual interface.`}
+                  />
+                ) : null}
+              </div>
+            )}
           </li>
         ))}
       </ol>
@@ -333,7 +356,7 @@ export function FeatureGridBlock({ block }: { block: Of<"feature-grid"> }) {
           return (
             <li
               key={f.title}
-              className={`feature-card${linked ? " is-linked" : ""}`}
+              className={`feature-card${linked ? " is-linked link-card" : ""}`}
               data-spotlight
             >
               <span className="feature-icon">
@@ -353,11 +376,7 @@ export function FeatureGridBlock({ block }: { block: Of<"feature-grid"> }) {
                   <Inline text={f.body} />
                 </p>
               ) : null}
-              {linked && block.style === "cards" ? (
-                <span className="feature-arrow" aria-hidden="true">
-                  <Arrow />
-                </span>
-              ) : null}
+              {linked ? <HoverArrow /> : null}
             </li>
           );
         })}
@@ -434,8 +453,9 @@ export function StackBlock({ block }: { block: Of<"stack"> }) {
                   return (
                     <li key={id}>
                       {href ? (
-                        <Link href={href} className="stack-tile" data-spotlight>
+                        <Link href={href} className="stack-tile link-card" data-spotlight>
                           {inner}
+                          <HoverArrow />
                         </Link>
                       ) : (
                         <span className="stack-tile">{inner}</span>
@@ -516,7 +536,8 @@ export function InsightsBlock({ block }: { block: Of<"insights"> }) {
       />
       <ul className="insight-grid" data-reveal="group">
         {block.items.map((it) => (
-          <li key={it.title} className="insight-card">
+          <li key={it.title} className={`insight-card${live(it.href) ? " link-card" : ""}`}>
+            {live(it.href) ? <HoverArrow /> : null}
             <div className="insight-photo">
               <Photo photo={it.photo} />
             </div>

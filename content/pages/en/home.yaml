@@ -342,34 +342,75 @@ sections:
     families:
       - id: build
         blurb: Custom software, websites, web apps, mobile apps, and online stores, designed and built end to end.
-        photo:
-          asset: asset.photo-family-build-open-office
-          layout: split
-          position: 50% 50%
       - id: intelligence-automation
         blurb: AI, automation, data, and integration that make your systems work together and work for you.
-        photo:
-          asset: asset.photo-family-ai-chip
-          layout: split
-          position: 50% 50%
       - id: infrastructure-security
         blurb: Cloud hosting, delivery pipelines, and security that keep what we build fast, safe, and running.
-        photo:
-          asset: asset.photo-family-security-padlock
-          layout: split
-          position: 50% 50%
       - id: design-growth
         blurb: Product design, brand, search visibility, and marketing that bring people in and keep them.
-        photo:
-          asset: asset.photo-family-design-tablet
-          layout: split
-          position: 50% 50%
       - id: advisory
         blurb: Honest advice before you spend money, and a plan for changing how your business runs on technology.
-        photo:
-          asset: asset.photo-family-advisory-whiteboard
-          layout: split
-          position: 50% 40%
+    servicePhotos:
+      software-development:
+        asset: asset.photo-service-software-developers
+        layout: split
+        position: 50% 50%
+      web-development:
+        asset: asset.photo-hero-website-laptop
+        layout: split
+        position: 50% 50%
+      mobile-app-development:
+        asset: asset.photo-hero-mobile-app-hands
+        layout: split
+        position: 50% 50%
+      ecommerce:
+        asset: asset.photo-service-ecommerce-phone-payment
+        layout: split
+        position: 50% 50%
+      ai:
+        asset: asset.photo-service-ai-tablet
+        layout: split
+        position: 50% 50%
+      automation:
+        asset: asset.photo-service-automation-workflow-whiteboard
+        layout: split
+        position: 50% 50%
+      data-analytics:
+        asset: asset.photo-service-data-analytics-charts
+        layout: split
+        position: 50% 50%
+      api-integration:
+        asset: asset.photo-service-api-network-cables
+        layout: split
+        position: 50% 50%
+      cloud:
+        asset: asset.photo-service-cloud-data-center
+        layout: split
+        position: 50% 50%
+      cybersecurity:
+        asset: asset.photo-family-security-padlock
+        layout: split
+        position: 50% 50%
+      ui-ux:
+        asset: asset.photo-service-ui-design-system
+        layout: split
+        position: 50% 50%
+      branding:
+        asset: asset.photo-service-branding-color-book
+        layout: split
+        position: 50% 50%
+      seo-aeo-geo:
+        asset: asset.photo-service-seo-search-console
+        layout: split
+        position: 50% 50%
+      digital-marketing:
+        asset: asset.photo-service-digital-marketing-social
+        layout: split
+        position: 50% 50%
+      consulting:
+        asset: asset.photo-service-consulting-conversation
+        layout: split
+        position: 50% 50%
     more:
       label: See all services
       href: /services/

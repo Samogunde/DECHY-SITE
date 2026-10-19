@@ -778,40 +778,6 @@ assets:
     approval: approved
     acquired: "2026-10-19"
 
-  - id: asset.photo-family-build-open-office
-    kind: file
-    file: public/photos/family-build-open-office.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "Israel Andrade (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-build-open-office.md.
-    sourceUrl: https://unsplash.com/photos/people-sitting-on-chair-in-front-of-computer-YI_9SivVt_s
-    licenseUrl: https://unsplash.com/license
-    sha256: eb974398e0731db8e658687841eafdddb9276aab4bc4086f34e5ddd88b643b6d
-    width: 2600
-    height: 1734
-    alt: "An open-plan software office with people working at rows of computers."
-    usage: [home]
-    approval: approved
-    acquired: "2026-10-19"
-
-  - id: asset.photo-family-ai-chip
-    kind: file
-    file: public/photos/family-ai-chip.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "Immo Wegmann (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-ai-chip.md.
-    sourceUrl: https://unsplash.com/photos/glowing-ai-chip-on-a-circuit-board-w69Z8K-HGQU
-    licenseUrl: https://unsplash.com/license
-    sha256: 4b3af214d4f69b3f090d48790af5839f9e8ea9a93d7232611648c3f0c22de3ba
-    width: 2600
-    height: 1722
-    alt: "A circuit board with a glowing chip marked AI."
-    usage: [home]
-    approval: approved
-    acquired: "2026-10-19"
-
   - id: asset.photo-family-security-padlock
     kind: file
     file: public/photos/family-security-padlock.jpg
@@ -825,40 +791,6 @@ assets:
     width: 2600
     height: 1734
     alt: "A padlock resting on a laptop keyboard, circled by trails of light."
-    usage: [home]
-    approval: approved
-    acquired: "2026-10-19"
-
-  - id: asset.photo-family-design-tablet
-    kind: file
-    file: public/photos/family-design-tablet.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "Theme Photos (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-design-tablet.md.
-    sourceUrl: https://unsplash.com/photos/designer-using-tablet-and-laptop-workspace-CGpifH3FjOA
-    licenseUrl: https://unsplash.com/license
-    sha256: bac78b5ad02bfac6677f58d9f84cc66017949ce683a889ec83e93bff13f570c5
-    width: 2600
-    height: 1734
-    alt: "A designer drawing on a tablet beside a laptop and color swatches."
-    usage: [home]
-    approval: approved
-    acquired: "2026-10-19"
-
-  - id: asset.photo-family-advisory-whiteboard
-    kind: file
-    file: public/photos/family-advisory-whiteboard.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "ThisisEngineering (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-advisory-whiteboard.md.
-    sourceUrl: https://unsplash.com/photos/two-colleagues-discussing-ideas-at-whiteboard-uOhBxB23Wao
-    licenseUrl: https://unsplash.com/license
-    sha256: f99e27c015ea91f7b9ea11866baf2513f27699e1f445e7b91286c1277647f94b
-    width: 2600
-    height: 1734
-    alt: "Two colleagues discussing a plan at a whiteboard."
     usage: [home]
     approval: approved
     acquired: "2026-10-19"
@@ -910,6 +842,193 @@ assets:
     width: 2600
     height: 3271
     alt: "Portrait of a smiling woman against a light background."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-ecommerce-phone-payment
+    kind: file
+    file: public/photos/service-ecommerce-phone-payment.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-ecommerce-phone-payment.md.
+    sourceUrl: https://unsplash.com/photos/man-holding-credit-card-and-phone-for-online-shopping-pzrDjRo-qGs
+    licenseUrl: https://unsplash.com/license
+    sha256: d4e6d8df9891a4f18bd46ae60f702f99444f70ca85b0e0216a137ed8127acd20
+    width: 2600
+    height: 1463
+    alt: "A man paying for an online order on his phone with a card in hand."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-ai-tablet
+    kind: file
+    file: public/photos/service-ai-tablet.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jo Lin (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-ai-tablet.md.
+    sourceUrl: https://unsplash.com/photos/hands-holding-a-tablet-displaying-ai-logo-Gy1p3CkNLms
+    licenseUrl: https://unsplash.com/license
+    sha256: 7c0ca80cc4c267180a1250e5a094b6c248ee89300fbe6605cbeffdf25a75ccce
+    width: 2600
+    height: 1733
+    alt: "Hands holding a tablet that shows an AI app."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-automation-workflow-whiteboard
+    kind: file
+    file: public/photos/service-automation-workflow-whiteboard.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Campaign Creators (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-automation-workflow-whiteboard.md.
+    sourceUrl: https://unsplash.com/photos/man-writing-on-white-board---kQ4tBklJI
+    licenseUrl: https://unsplash.com/license
+    sha256: c9d34fd8cf6fb81c2d7ff3fc0ca735dbeb10dc40daf9c81156202345d9a7fea6
+    width: 2600
+    height: 1733
+    alt: "A man mapping an automated workflow on a whiteboard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-data-analytics-charts
+    kind: file
+    file: public/photos/service-data-analytics-charts.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Apex Virtual Education (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-data-analytics-charts.md.
+    sourceUrl: https://unsplash.com/photos/woman-working-on-laptop-with-charts-and-graphs-KNQUEQwTCY4
+    licenseUrl: https://unsplash.com/license
+    sha256: 310adf90a5ae2217d3d8183fcfd4468881212a8f1789242c2d5d6c8a5d902e2d
+    width: 2600
+    height: 1456
+    alt: "A woman working on a laptop that shows charts and graphs."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-api-network-cables
+    kind: file
+    file: public/photos/service-api-network-cables.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Scott Rodgerson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-api-network-cables.md.
+    sourceUrl: https://unsplash.com/photos/a-bunch-of-blue-wires-connected-to-each-other-PSpf_XgOM5w
+    licenseUrl: https://unsplash.com/license
+    sha256: 2d83082fc2d83ffa240ee654561d6f3b9b18f964039867eec1e14f4320a51324
+    width: 2600
+    height: 1733
+    alt: "Rows of blue network cables connected to a switch."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-cloud-data-center
+    kind: file
+    file: public/photos/service-cloud-data-center.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Taylor Vick (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-cloud-data-center.md.
+    sourceUrl: https://unsplash.com/photos/server-room-with-network-cabinets-aWslrFhs1w4
+    licenseUrl: https://unsplash.com/license
+    sha256: 74f7755a5317a85a1fde31d7f31be85d1325522817e695ad496fbbcb814ded10
+    width: 2600
+    height: 1463
+    alt: "A data center with rows of server cabinets."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-ui-design-system
+    kind: file
+    file: public/photos/service-ui-design-system.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Balázs Kétyi (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-ui-design-system.md.
+    sourceUrl: https://unsplash.com/photos/computer-monitor-displaying-design-system-_x335IZXxfc
+    licenseUrl: https://unsplash.com/license
+    sha256: 6b396a907620cbc26cbcbe4ceb4fe71c1c7387a0230c79ab4c2d9384bc6ba455
+    width: 2600
+    height: 3250
+    alt: "A monitor showing a design system with interface components."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-branding-color-book
+    kind: file
+    file: public/photos/service-branding-color-book.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Balázs Kétyi (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-branding-color-book.md.
+    sourceUrl: https://unsplash.com/photos/color-code-book-LPWl2pEVGKc
+    licenseUrl: https://unsplash.com/license
+    sha256: 12e977e95047ca6029b7889c1c13868b2cb6da7027118ebfb06aa77f27c4b338
+    width: 2600
+    height: 3250
+    alt: "A brand color book with swatches beside sketches on a tablet."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-seo-search-console
+    kind: file
+    file: public/photos/service-seo-search-console.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Myriam Jessier (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-seo-search-console.md.
+    sourceUrl: https://unsplash.com/photos/person-using-macbook-air-on-white-table-VHXiGXxwOQ4
+    licenseUrl: https://unsplash.com/license
+    sha256: de3757cca3fc5fcac2e3aabf77dc5b4a422f5c82a1d7b46af4614d5f197adce3
+    width: 2600
+    height: 1959
+    alt: "A person reviewing search performance on a laptop."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-digital-marketing-social
+    kind: file
+    file: public/photos/service-digital-marketing-social.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Austin Distel (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-digital-marketing-social.md.
+    sourceUrl: https://unsplash.com/photos/person-using-both-laptop-and-smartphone-tLZhFRLj6nY
+    licenseUrl: https://unsplash.com/license
+    sha256: 468d0f9cd79aab5ad8400250b8fe38f291abe5b9c4b40678ea9125bb2331f62f
+    width: 2600
+    height: 1734
+    alt: "A person managing social media on a laptop and a phone."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-consulting-conversation
+    kind: file
+    file: public/photos/service-consulting-conversation.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-consulting-conversation.md.
+    sourceUrl: https://unsplash.com/photos/two-colleagues-collaborating-on-a-project-at-a-laptop-tRvuRPE8cr4
+    licenseUrl: https://unsplash.com/license
+    sha256: c4af4babe8c14ef633bdf8f61617d122f8aa05c3be7eb4452eca484d010afa82
+    width: 2600
+    height: 1463
+    alt: "Two colleagues talking through a project plan at a laptop."
     usage: [home]
     approval: approved
     acquired: "2026-10-19"

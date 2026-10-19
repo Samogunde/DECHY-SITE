@@ -321,7 +321,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-blue), #7aa5f8, var(--color-amber));
+  background: var(--color-blue);
   transform-origin: 0 50%;
   transform: scaleX(0);
 }
@@ -411,10 +411,7 @@
 .hero-word {
   grid-area: 1 / 1;
   font-weight: 700;
-  background: linear-gradient(95deg, #ffffff 0%, #9cc0ff 45%, #7aa5f8 70%, var(--color-amber) 120%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #7aa5f8;
   padding-bottom: 0.08em;
   opacity: 0;
   transform: translateY(0.35em);
@@ -632,9 +629,6 @@
   align-items: center;
   gap: clamp(2.5rem, 2rem + 3vw, 5rem);
   animation: logo-scroll 42s linear infinite;
-}
-.logo-strip:hover .logo-track {
-  animation-play-state: paused;
 }
 @keyframes logo-scroll {
   to {
@@ -1299,7 +1293,7 @@ a.stack-tile:hover .tech-logo {
   inset: -1px -1px auto;
   height: 3px;
   border-radius: var(--radius-card) var(--radius-card) 0 0;
-  background: linear-gradient(90deg, var(--color-blue), var(--color-amber));
+  background: var(--color-blue);
 }
 .price-name {
   margin: 0;
@@ -1898,7 +1892,7 @@ a.explorer-card:hover .arrow {
   inset: -1px -1px auto;
   height: 3px;
   border-radius: var(--radius-card) var(--radius-card) 0 0;
-  background: linear-gradient(90deg, var(--color-blue), var(--color-amber));
+  background: var(--color-blue);
   opacity: 0;
   transition: opacity 300ms var(--ease-out);
 }
@@ -1992,4 +1986,198 @@ a.explorer-card:hover .arrow {
 }
 #hero ~ .section.tone-ink .faq .t-h2 {
   color: #fff;
+}
+
+/* ---------------- section header: heading and intro together, the action on the right ---------------- */
+.split-header {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 64rem) {
+  .split-header {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: end;
+  }
+  .split-header.has-aside {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 3rem;
+  }
+}
+.split-main .split-intro {
+  margin: 1.25rem 0 0;
+  max-width: 60ch;
+}
+.split-side {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (min-width: 64rem) {
+  .split-side {
+    justify-content: flex-end;
+    padding-bottom: 0.35rem;
+  }
+}
+
+/* ---------------- "opens another page": an arrow appears in the corner on hover or focus ---------------- */
+.link-card {
+  position: relative;
+}
+.hover-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  color: #7aa5f8;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+  pointer-events: none;
+}
+.link-card:hover .hover-arrow,
+.link-card:focus-within .hover-arrow,
+a.link-card:focus-visible .hover-arrow {
+  opacity: 1;
+  transform: none;
+}
+/* Touch screens have no hover: the signal is always shown, quietly. */
+@media (hover: none) {
+  .hover-arrow {
+    opacity: 0.6;
+    transform: none;
+  }
+}
+.feature-panels .link-card:hover {
+  border-color: #7aa5f8;
+}
+.feature-panels .link-card:hover .feature-title {
+  color: #9cc0ff;
+}
+.stack-tile .hover-arrow {
+  top: 0.45rem;
+  right: 0.45rem;
+  width: 0.95rem;
+  height: 0.95rem;
+}
+.insight-card .hover-arrow {
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+  background: rgb(11 15 25 / 0.7);
+  color: #fff;
+}
+.lead-visual.link-card .hover-arrow {
+  top: 1.4rem;
+  right: 1.4rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.45rem;
+  border-radius: 50%;
+  background: rgb(11 15 25 / 0.75);
+  color: #fff;
+}
+a.lead-visual {
+  display: block;
+  color: inherit;
+}
+
+/* ---------------- captions below photographs, never on them ---------------- */
+.stats-photo {
+  margin: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+.stats-photo .photo {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 40px 90px -30px rgb(0 0 0 / 0.8);
+}
+.photo-note {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-blue);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(255 255 255 / 0.85);
+}
+
+/* Hero labels sit in a row under the photograph. */
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.hero-chips li {
+  position: static;
+  animation: none !important;
+  box-shadow: none;
+  background: rgb(255 255 255 / 0.05);
+}
+.hero-pause {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-line-strong);
+  background: transparent;
+  color: rgb(255 255 255 / 0.75);
+  cursor: pointer;
+  align-self: center;
+}
+.hero-pause:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* ---------------- explorer: photograph with its caption underneath ---------------- */
+.explorer-media {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.explorer-photos {
+  display: grid;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.explorer-photos .explorer-photo {
+  grid-area: 1 / 1;
+  min-height: 0;
+  border-radius: 0;
+  opacity: 0;
+  transition: opacity 450ms var(--ease-out);
+}
+.explorer-photos .explorer-photo[data-active="true"] {
+  opacity: 1;
+}
+.explorer-photo .photo,
+.explorer-photo .photo-frame {
+  height: auto;
+}
+.explorer-caption {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 5.5rem;
+}
+.explorer-caption .explorer-family {
+  margin: 0;
+}
+.explorer-caption-text {
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: rgb(255 255 255 / 0.85);
+}
+.explorer-card {
+  position: relative;
+  padding-right: 2.5rem;
 }

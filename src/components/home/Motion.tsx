@@ -243,3 +243,59 @@ export function ServiceExplorer({
     </div>
   );
 }
+
+/**
+ * One family in the service explorer: a photograph with its caption underneath, and the family's
+ * services beside it. Hovering or focusing a service shows that service's photograph and caption.
+ */
+export function ExplorerPanel({
+  family,
+  blurb,
+  photos,
+  captions,
+  cards,
+}: {
+  family: string;
+  blurb: string;
+  photos: ReactNode[];
+  captions: { name: string; text: string }[];
+  cards: ReactNode[];
+}) {
+  const [active, setActive] = useState<number | null>(null);
+  const shown = active ?? 0;
+  const caption = active === null ? { name: family, text: blurb } : captions[active];
+  return (
+    <div className="explorer-panel">
+      <figure className="explorer-media">
+        <div className="explorer-photos">
+          {photos.map((p, i) => (
+            <div
+              key={i}
+              className="explorer-photo"
+              data-active={i === shown}
+              aria-hidden={i !== shown}
+            >
+              {p}
+            </div>
+          ))}
+        </div>
+        <figcaption className="explorer-caption">
+          <span className="explorer-family">{caption?.name}</span>
+          <span className="explorer-caption-text">{caption?.text}</span>
+        </figcaption>
+      </figure>
+      <ul className="explorer-services" onPointerLeave={() => setActive(null)}>
+        {cards.map((c, i) => (
+          <li
+            key={i}
+            onPointerEnter={() => setActive(i)}
+            onFocus={() => setActive(i)}
+            onBlur={() => setActive(null)}
+          >
+            {c}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
