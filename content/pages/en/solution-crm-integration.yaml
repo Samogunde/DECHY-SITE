@@ -47,7 +47,7 @@ sections:
         text: The CRM holds the agreed, current version.
       spokes:
         - title: Website forms
-          text: Enquiries arrive as records, not emails.
+          text: Inquiries arrive as records, not emails.
         - title: Billing
           text: Invoices and payments update the account.
         - title: Support

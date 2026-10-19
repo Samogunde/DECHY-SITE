@@ -19,7 +19,7 @@ datePublished: "2026-10-05"
 dateModified: "2026-10-05"
 schemaTypes: [WebPage, Service, FAQPage]
 comprehension:
-  what: "We use search, email, social media, ads, and content to reach the right people and turn their interest into enquiries and sales, measured all the way through."
+  what: "We use search, email, social media, ads, and content to reach the right people and turn their interest into inquiries and sales, measured all the way through."
   problem: "Money and time go into marketing, but it is hard to tell what works, leads go cold, and marketing, sales, and customer records do not share information."
   audience: "Owners and marketing leads who want measurable growth, and teams whose campaigns run separately from sales."
   choose: "Pick channels where your customers already are, measure each from first click to sale, and connect them to your customer records so nothing is lost."
@@ -31,7 +31,7 @@ sections:
     variant: service
     eyebrow: Service
     headline: Digital Marketing
-    lead: "At DECHY, we help you reach the right people and turn their interest into enquiries and sales. We choose a small number of channels, track each one from first click to customer, and connect the results to your sales records."
+    lead: "At DECHY, we help you reach the right people and turn their interest into inquiries and sales. We choose a small number of channels, track each one from first click to customer, and connect the results to your sales records."
     support: "Marketing here is tied to measurement and to your systems, so you can see what works and act on it."
     ctas:
       - { label: Discuss your marketing, href: "/contact/?service=digital-marketing" }
@@ -43,7 +43,7 @@ sections:
           text: Reached through search, email, social media, and ads.
         - title: Visitors who show interest
           text: They read, compare, and come back.
-        - title: Enquiries
+        - title: Inquiries
           text: They ask a question or request a quote.
         - title: Customers
           text: They buy, with the sale traced to its source.
@@ -52,7 +52,7 @@ sections:
     purpose: transformation
     takeaway: "Marketing is a path that narrows from many possible customers to the few who buy, so each stage can be measured and improved."
     visualTitle: "The path from stranger to repeat customer"
-    figureCaption: "This diagram shows how a large audience narrows to enquiries, customers, and repeat customers, with each stage a point you can measure."
+    figureCaption: "This diagram shows how a large audience narrows to inquiries, customers, and repeat customers, with each stage a point you can measure."
 
   - type: prose
     id: problem
@@ -87,7 +87,7 @@ sections:
         - title: Content
           text: Articles and guides that answer questions.
         - title: Your website
-          text: Where interest becomes an enquiry.
+          text: Where interest becomes an inquiry.
     purpose: relationship
     takeaway: "Every channel feeds one set of customer records, so you can see which ones lead to sales."
     caption: "This diagram shows six marketing channels all connected to one view of the customer, so results from each can be compared."
@@ -157,13 +157,13 @@ sections:
         items:
           - "Which pages they read and how long they stay."
           - "Which emails and posts they act on."
-      - title: Enquiries and sales
+      - title: Inquiries and sales
         items:
-          - "Which channel produced each enquiry."
+          - "Which channel produced each inquiry."
           - "How quickly it was answered."
       - title: Cost and return
         items:
-          - "What each enquiry and customer costs."
+          - "What each inquiry and customer costs."
           - "Which activities to grow and which to stop."
 
   - type: process
@@ -176,7 +176,7 @@ sections:
         body: "We learn who you want to reach, what you sell, and how you measure success today."
         artifacts: [Customer profiles, Goals and measures]
       - title: Set up tracking and connections
-        body: "We make sure enquiries and sales can be traced back to their source, and linked to your customer records."
+        body: "We make sure inquiries and sales can be traced back to their source, and linked to your customer records."
         artifacts: [Tracking set-up, Connected records]
       - title: Choose and launch channels
         body: "We start with a few channels, with clear messages and a plan for each."
@@ -194,7 +194,7 @@ sections:
     variant: limits
     title: Marketing cannot fix everything
     paragraphs:
-      - "Marketing multiplies what is already there. If the offer is unclear, the site is slow, or enquiries go unanswered, more traffic will not help."
+      - "Marketing multiplies what is already there. If the offer is unclear, the site is slow, or inquiries go unanswered, more traffic will not help."
       - "We will tell you if the best next step is improving the product, the site, or the follow-up before spending more on marketing."
 
   - type: prose
@@ -224,7 +224,7 @@ sections:
         items:
           - "Share knowledge of customers and products."
           - "Approve messages and offers."
-          - "Answer enquiries quickly and personally."
+          - "Answer inquiries quickly and personally."
 
   - type: faq
     id: faq
@@ -239,7 +239,7 @@ sections:
       - q: Can you manage our social media?
         a: "We can plan and design for it, and help set up the process. Social media works best with someone close to your business, so we often work with your team."
       - q: How do you connect marketing to our sales records?
-        a: "We link your forms, tools, and customer records, so each enquiry shows where it came from. See our [integration](ref:svc.api-integration) and [automation](ref:svc.automation) services."
+        a: "We link your forms, tools, and customer records, so each inquiry shows where it came from. See our [integration](ref:svc.api-integration) and [automation](ref:svc.automation) services."
       - q: Will you guarantee leads or sales?
         a: "No. No honest provider can. We guarantee clear tracking, careful work, and honest reports."
       - q: How is this different from SEO?

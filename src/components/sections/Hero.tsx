@@ -25,7 +25,11 @@ export function Hero({
     <section
       id={block.id}
       aria-labelledby={`${block.id}-h`}
-      className="tone-paper overflow-hidden pb-14 pt-6 min-[48rem]:pb-20 lg:pb-24"
+      className={
+        isHome
+          ? "tone-ink hero-home overflow-hidden pb-14 pt-6 min-[48rem]:pb-20 lg:pb-24"
+          : "tone-paper overflow-hidden pb-14 pt-6 min-[48rem]:pb-20 lg:pb-24"
+      }
     >
       <div className="container-site">
         {breadcrumbs ? (
@@ -35,7 +39,9 @@ export function Hero({
         )}
         <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           <div className={hasVisual ? "min-w-0 lg:col-span-7" : "min-w-0 lg:col-span-9"}>
-            {block.eyebrow ? <p className="t-eyebrow m-0">{block.eyebrow}</p> : null}
+            {block.eyebrow ? (
+              <p className={`t-eyebrow m-0${isHome ? " hero-eyebrow" : ""}`}>{block.eyebrow}</p>
+            ) : null}
             <h1
               id={`${block.id}-h`}
               className={`${isHome ? "t-display" : "t-h1"} mt-4 ${isHome ? "max-w-[22ch]" : "max-w-[19ch]"}`}
@@ -47,7 +53,7 @@ export function Hero({
             </p>
             {block.support ? (
               <p
-                className={`t-body mt-4 text-slate-text ${isHome ? "max-w-[46rem]" : "max-w-[52ch]"}`}
+                className={`t-body mt-4 ${isHome ? "hero-support max-w-[46rem]" : "text-slate-text max-w-[52ch]"}`}
               >
                 <Inline text={block.support} />
               </p>
@@ -78,18 +84,32 @@ export function Hero({
                 );
               })}
             </div>
+            {isHome && block.stats.length > 0 ? (
+              <dl className="hero-stats">
+                {block.stats.map((st) => (
+                  <div key={st.label}>
+                    <dt>
+                      <Inline text={st.label} />
+                    </dt>
+                    <dd>
+                      <Inline text={st.value} />
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            ) : null}
           </div>
           {aside ? (
             <div className="min-w-0 lg:col-span-5">{aside}</div>
           ) : hasVisual ? (
-            <div className="min-w-0 lg:col-span-5">
+            <div className={`min-w-0 lg:col-span-5${isHome ? " hero-visual" : ""}`}>
               <Figure
                 id={block.figure}
                 spec={block.spec}
                 title={block.visualTitle ?? block.headline}
                 uid={block.id}
                 caption={block.figureCaption ?? ""}
-                max={block.spec ? "34rem" : undefined}
+                max={block.spec ? "34rem" : isHome ? "36rem" : undefined}
               />
             </div>
           ) : null}

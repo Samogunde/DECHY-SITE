@@ -26,7 +26,7 @@ comprehension:
   problem: Leads sit in inboxes, follow-up depends on memory, and marketing, sales, and support each keep a different version of the customer.
   audience: Marketing and sales leaders who want one view of the customer, and teams whose HubSpot set-up has become messy.
   choose: Set HubSpot up around your real sales process, connect it to the website and your other systems, and automate only the follow-up that people forget.
-  next: Tell us how an enquiry becomes a customer today. We will show where HubSpot would help and what to connect to it.
+  next: Tell us how an inquiry becomes a customer today. We will show where HubSpot would help and what to connect to it.
 sections:
   - type: hero
     id: hero
@@ -256,7 +256,7 @@ sections:
           - ind.real-estate
   - type: cta
     id: contact-cta
-    heading: Tell us how an enquiry becomes a customer
+    heading: Tell us how an inquiry becomes a customer
     body: Describe your sales process and the tools involved. We will show where HubSpot would help and what to connect to it first.
     primary:
       label: Discuss your HubSpot project

@@ -5,7 +5,7 @@ path: /ai/anthropic-claude/
 parent: /ai/
 entityId: prov.anthropic-claude
 title: "Anthropic Claude Integration Services | DECHY"
-description: "Claude integration from DECHY: Anthropic's models for long documents, careful drafting, and tool-using assistants, with testing, limits, and provider comparison."
+description: "Claude integration from DECHY: Anthropic's models for long documents, careful drafting, and tool-using assistants, with testing, limits, and comparison."
 breadcrumbLabel: Anthropic Claude
 intent:
   primary: anthropic claude integration

@@ -8,6 +8,7 @@
 @import "../styles/assistant.css" layer(components);
 @import "../styles/guidance.css" layer(components);
 @import "../styles/navigation.css" layer(components);
+@import "../styles/home.css" layer(components);
 
 /* ------------------------------------------------------------------------------------------
    DECHY design tokens.

@@ -5,7 +5,7 @@ path: /cloud/azure/
 parent: /cloud/
 entityId: plat.azure
 title: "Microsoft Azure Cloud Services | DECHY"
-description: "Azure work from DECHY: building and running applications on Microsoft Azure, with Microsoft identity and tools in mind, plus migration, security, and cost control."
+description: "Azure work from DECHY: building and running applications on Microsoft Azure, with Microsoft identity in mind, plus migration, security, and cost control."
 breadcrumbLabel: Azure
 intent:
   primary: microsoft azure cloud services
@@ -85,7 +85,7 @@ sections:
         - "A broad range of services comparable to other clouds."
         - "Compare price and skills against [AWS](ref:plat.aws) and [Google Cloud](ref:plat.google-cloud)."
       - - Hybrid set-ups
-        - "Good tools for connecting offices and data centres."
+        - "Good tools for connecting offices and data centers."
         - "Network design needs care."
 
   - type: callout
@@ -102,7 +102,7 @@ sections:
     tone: paper
     label: Where it fits
     heading: Moving Windows-based systems to Azure
-    intro: "A common path for organizations with servers in an office or data centre."
+    intro: "A common path for organizations with servers in an office or data center."
     spec:
       kind: flow
       steps:
@@ -130,7 +130,7 @@ sections:
       - title: Business applications for Microsoft organizations
         body: "Internal tools and portals that use staff sign-in and share data with Microsoft 365."
       - title: Moving Windows and SQL Server systems
-        body: "Servers and databases lifted from an office or data centre, then improved in stages."
+        body: "Servers and databases lifted from an office or data center, then improved in stages."
       - title: Applications built on Microsoft technologies
         body: "Software written in .NET, hosted with the tools its developers already know."
       - title: Hybrid arrangements

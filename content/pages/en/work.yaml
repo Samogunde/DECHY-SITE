@@ -2,7 +2,7 @@ id: page.work
 kind: work-hub
 locale: en
 path: /work/
-title: "Work: What DECHY Builds | DECHY"
+title: "Our Work: Systems, Apps and Platforms We Build | DECHY"
 description: "The kinds of system DECHY builds, as twenty-five work areas: what each is, how it is built, and an illustrative scenario, grouped by what you want to achieve."
 breadcrumbLabel: Work
 intent:

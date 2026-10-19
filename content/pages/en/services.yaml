@@ -2,8 +2,8 @@ id: page.services
 kind: hub
 locale: en
 path: /services/
-title: "All DECHY Services | Software, AI and Digital"
-description: "All fifteen DECHY services in five groups: build, intelligence and automation, infrastructure and security, design and growth, and advisory, with a choosing guide."
+title: "Technology Services: Software, Web, Mobile and AI | DECHY"
+description: "Fifteen technology services in five groups: build, intelligence and automation, infrastructure and security, design and growth, and advisory."
 breadcrumbLabel: Services
 intent:
   primary: dechy services

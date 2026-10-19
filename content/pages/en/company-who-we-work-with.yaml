@@ -3,8 +3,8 @@ kind: company
 locale: en
 path: /company/who-we-work-with/
 parent: /company/
-title: "Who DECHY Works With | Organizations We Help"
-description: "The kinds of organization DECHY helps, from individuals and startups to enterprises, what each tends to need, and an honest note on when we may not be the right fit."
+title: "Who We Work With: Startups, SMEs, Enterprises | DECHY"
+description: "The organizations DECHY helps, from individuals and startups to enterprises, what each tends to need, and when we may not be the right fit."
 breadcrumbLabel: Who we work with
 intent:
   primary: who dechy works with

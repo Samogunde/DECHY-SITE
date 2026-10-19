@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/custom-software-systems/
 entityId: workarea.custom-software-systems
-title: Custom Software Systems We Build | DECHY
-description: "Custom software systems built around how your organization actually works: what they are, what they contain, how they are built, and when custom is the right choice."
+title: "Custom Business Software Systems and Examples | DECHY"
+description: "Custom software built around how your organization actually works: what it is, what it contains, how it is built, and when custom is the right choice."
 breadcrumbLabel: Custom Software Systems
 parent: /work/
 intent:

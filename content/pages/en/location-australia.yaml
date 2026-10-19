@@ -4,7 +4,7 @@ locale: en
 path: /locations/australia/
 parent: /locations/
 entityId: loc.australia
-title: Technology Services for Australia | DECHY
+title: "Software and Technology Services in Australia | DECHY"
 description: "How DECHY works with organizations in Australia: software, AI, and automation delivered remotely, with local privacy, payments, and time zones in view."
 breadcrumbLabel: Australia
 intent:

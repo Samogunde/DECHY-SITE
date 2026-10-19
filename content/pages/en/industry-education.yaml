@@ -42,7 +42,7 @@ sections:
     spec:
       kind: flow
       steps:
-        - title: Enquiry
+        - title: Inquiry
           text: A learner or family asks about a course.
         - title: Enrolment
           text: Details and documents are collected once.
@@ -53,9 +53,9 @@ sections:
         - title: Records and reporting
           text: Results, attendance, and finance are reported.
     purpose: process
-    takeaway: A learner's journey, from enquiry through enrolment and learning to records, should run on data entered once and shared by every system.
+    takeaway: A learner's journey, from inquiry through enrolment and learning to records, should run on data entered once and shared by every system.
     visualTitle: A learner's journey through the systems
-    figureCaption: This diagram follows a learner's journey in five steps, from the first enquiry through enrolment, learning, and support to records and reporting.
+    figureCaption: This diagram follows a learner's journey in five steps, from the first inquiry through enrolment, learning, and support to records and reporting.
   - type: prose
     id: different
     tone: white
@@ -93,10 +93,10 @@ sections:
     tone: white
     label: What it looks like
     heading: An assistant for routine questions from learners
-    intro: Routine enquiries can be answered quickly from approved content, with a person for anything more.
+    intro: Routine inquiries can be answered quickly from approved content, with a person for anything more.
     figure: assistant-ui
     purpose: system
-    takeaway: An education assistant answers routine enquiries from approved content and hands the rest to a person.
+    takeaway: An education assistant answers routine inquiries from approved content and hands the rest to a person.
     caption: This sketch shows a conceptual chat with an answer that cites its source and an offer to talk to a person. It is an illustration, not a client's product.
     points: []
   - type: index
@@ -114,10 +114,10 @@ sections:
         body: Learner data shared between the records system, learning platform, and finance. See [integrations](/work/areas/api-integrations/).
       - title: Reporting and dashboards
         body: Attendance, progress, and funding figures from agreed definitions. See [business dashboards](/solutions/business-dashboards/).
-      - title: Websites and course catalogues
+      - title: Websites and course catalogs
         body: Clear course pages that lead to enrolment. See [business web platforms](/work/areas/business-web-platforms/).
       - title: Answering routine questions
-        body: An assistant for common enquiries, handing over the rest. See [AI customer support](/solutions/ai-customer-support/).
+        body: An assistant for common inquiries, handing over the rest. See [AI customer support](/solutions/ai-customer-support/).
   - type: chooser
     id: start
     tone: white
@@ -126,7 +126,7 @@ sections:
     intro: Start with the place where staff copy the most details between systems.
     question: Where is effort being lost?
     options:
-      - label: Enquiries and enrolment
+      - label: Inquiries and enrolment
         when: Applications arrive by form, email, and phone, and are re-entered into the records system.
         get: A single enrolment path that creates the learner record once and starts the follow-up.
         watch: "Peak days: test with realistic numbers before the enrolment period."

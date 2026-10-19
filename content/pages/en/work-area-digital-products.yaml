@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/digital-products/
 entityId: workarea.digital-products
-title: Digital Products We Build | DECHY
+title: "Digital Product and SaaS Development | DECHY"
 description: "Digital products are software offered to customers as a product in its own right: how one is shaped, tested with users, launched, and improved over time."
 breadcrumbLabel: Digital Products
 parent: /work/

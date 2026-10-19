@@ -4,7 +4,7 @@ locale: en
 path: /seo-aeo-geo/
 entityId: svc.seo-aeo-geo
 title: SEO, AEO and GEO Services | DECHY
-description: "SEO, AEO, and GEO from DECHY: help people, search engines, and AI assistants find, understand, and accurately describe your organization, with honest measurement."
+description: "SEO, AEO, and GEO from DECHY: help people, search engines, and AI assistants find, understand, and accurately describe you, with honest measurement."
 breadcrumbLabel: SEO, AEO & GEO
 intent:
   primary: seo aeo and geo services
@@ -253,7 +253,7 @@ sections:
       - q: Will rebuilding our website hurt our rankings?
         a: Not if it is planned. We keep the addresses that matter, redirect the others, and monitor after launch. See our [web development](ref:svc.web-development) service.
       - q: How do you measure success?
-        a: "By the things that matter to you: the right people finding you, the questions you answer, and enquiries. We agree the measures first."
+        a: "By the things that matter to you: the right people finding you, the questions you answer, and inquiries. We agree the measures first."
   - type: related
     id: related
     tone: paper

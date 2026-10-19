@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/data-analytics/
 entityId: workarea.data-analytics
-title: Data and Analytics Systems We Build | DECHY
-description: "Data and analytics systems that bring your information together, check it, and turn it into reports and dashboards people trust: parts, process, and honest limits."
+title: "Data Platforms, Pipelines and Reporting Systems | DECHY"
+description: "Data systems that bring your information together, check it, and turn it into reports and dashboards people trust: the parts, the process, and the limits."
 breadcrumbLabel: Data and Analytics Systems
 parent: /work/
 intent:
@@ -131,7 +131,7 @@ sections:
     rows:
       - - Online store
         - Orders, products, and customers.
-        - Refunds and cancelled orders.
+        - Refunds and canceled orders.
       - - Accounting
         - Invoices, payments, and costs.
         - Different dates for the same event.
@@ -147,7 +147,7 @@ sections:
     variant: illustrative
     title: A two-day report ready by morning
     paragraphs:
-      - A typical case is a company whose monthly report takes two days to prepare. Someone exports sales, accounts, and enquiry lists, combines them, and fixes mismatches by hand.
+      - A typical case is a company whose monthly report takes two days to prepare. Someone exports sales, accounts, and inquiry lists, combines them, and fixes mismatches by hand.
       - A data system could collect each source overnight, check it, and update a dashboard by morning. The two days could go to reading the figures and acting on them.
   - type: related
     id: related

@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/internal-business-tools/
 entityId: workarea.internal-business-tools
-title: Internal Business Tools We Build | DECHY
-description: "Internal business tools replace spreadsheets and email chains with simple systems for your staff: what they look like, how they are scoped, and when not to build."
+title: "Internal Business Tools and Admin Systems | DECHY"
+description: "Internal business tools replace spreadsheets and email chains with simple systems for staff: what they look like, how they are scoped, and when not to build."
 breadcrumbLabel: Internal Business Tools
 parent: /work/
 intent:

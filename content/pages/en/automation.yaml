@@ -4,7 +4,7 @@ locale: en
 path: /automation/
 entityId: svc.automation
 title: Automation and Workflow Services | DECHY
-description: "Business automation from DECHY: we map how work flows, then automate approvals, data entry, reports, and follow-up so your team can focus on work that needs people."
+description: "Business automation from DECHY: we map how work flows, then automate approvals, data entry, reports, and follow-up so your team can focus on real work."
 breadcrumbLabel: Automation & Workflows
 intent:
   primary: business process automation services
@@ -125,7 +125,7 @@ sections:
     items:
       - title: Moving information between tools
         ref: cap.data-automation
-        body: A new order, enquiry, or booking appears in one tool and needs to appear in two more. Automation copies it, every time, without mistakes.
+        body: A new order, inquiry, or booking appears in one tool and needs to appear in two more. Automation copies it, every time, without mistakes.
       - title: Approvals and sign-offs
         ref: cap.approval-workflows
         body: Requests go to the right person, with reminders, and the decision is recorded. Nobody has to chase.
@@ -188,7 +188,7 @@ sections:
     columns:
       - title: Sales and customers
         items:
-          - New enquiries are logged and assigned automatically.
+          - New inquiries are logged and assigned automatically.
           - Follow-up emails go out on schedule.
           - Quotes and contracts are created from a template.
       - title: Finance

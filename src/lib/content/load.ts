@@ -94,6 +94,9 @@ export type Registry = {
 
 const ROOT = process.cwd();
 
+/** A local review build (DECHY_SHOW_DRAFTS=true) keeps draft sections, labeled as drafts. */
+export const showDrafts = () => process.env.DECHY_SHOW_DRAFTS === "true";
+
 function readYaml<T>(file: string, schema: z.ZodType<T>): T {
   // Content is read at build time only (every page is statically generated), so this must not
   // pull the whole project into server bundles.
@@ -187,6 +190,8 @@ export function buildRegistry(): Registry {
   const pages: Page[] = [];
   for (const file of listFiles("content/pages/en")) {
     const page = readYaml(file, Page);
+    // Draft sections wait for owner-supplied facts; outside a review build they do not exist.
+    if (!showDrafts()) page.sections = page.sections.filter((b) => !("draft" in b && b.draft));
     pages.push(page);
   }
   const pageByPath = new Map<string, Page>();

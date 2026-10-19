@@ -129,7 +129,7 @@ industries:
     - { id: ind.finance, summary: "Accuracy, audit trails, and systems that connect." }
     - { id: ind.real-estate, summary: "Listings, tenants, documents, and follow-up." }
     - { id: ind.logistics, summary: "Orders, routes, tracking, and handoffs." }
-    - { id: ind.retail, summary: "Selling, stock, customers, and fulfilment." }
+    - { id: ind.retail, summary: "Selling, stock, customers, and fulfillment." }
     - { id: ind.education, summary: "Learners, courses, records, and communication." }
     - { id: ind.professional-services, summary: "Clients, matters, time, and billing." }
     - { id: ind.manufacturing, summary: "Production, quality, suppliers, and planning." }

@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/ai-agents/
 entityId: workarea.ai-agents
-title: AI Agents We Build | DECHY
-description: "AI agents that carry out multi-step tasks with tools, limits, and human oversight: what they are, how they are controlled, and where a simpler automation is better."
+title: "AI Agent Development for Business Workflows | DECHY"
+description: "AI agents that carry out multi-step tasks with tools, limits, and human oversight: what they are, how they are controlled, and when simpler automation wins."
 breadcrumbLabel: AI Agents
 parent: /work/
 intent:
@@ -153,10 +153,10 @@ sections:
     id: scenario
     tone: white
     variant: illustrative
-    title: An agent handling inbound enquiries
+    title: An agent handling inbound inquiries
     paragraphs:
-      - A typical case is a sales team that receives enquiries from a form. Someone must look up the company, check whether it is already a customer, and write a first reply.
-      - An agent could do the lookups, draft the reply, and file the enquiry in the customer records. A salesperson would read each draft and press send. Anything unclear would be flagged.
+      - A typical case is a sales team that receives inquiries from a form. Someone must look up the company, check whether it is already a customer, and write a first reply.
+      - An agent could do the lookups, draft the reply, and file the inquiry in the customer records. A salesperson would read each draft and press send. Anything unclear would be flagged.
   - type: faq
     id: faq
     tone: paper

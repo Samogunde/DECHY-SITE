@@ -2,7 +2,7 @@ id: page.solutions
 kind: hub
 locale: en
 path: /solutions/
-title: "Solutions by Problem and Goal | DECHY"
+title: "Business Technology Solutions by Problem | DECHY"
 description: "Find a DECHY solution by the problem you have: manual work, old software, moving to the cloud, disconnected customer records, unclear numbers, or slow support."
 breadcrumbLabel: Solutions
 intent:

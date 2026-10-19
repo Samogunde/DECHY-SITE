@@ -3,7 +3,7 @@ kind: hub
 locale: en
 path: /technologies/
 title: "Technologies We Use and How We Choose | DECHY"
-description: "The languages, frameworks, platforms, and tools DECHY works with, and how we choose among them: by fit, maintainability, cost, and risk, not by fashion or brand."
+description: "The languages, frameworks, platforms, and tools DECHY works with, and how we choose among them: by fit, maintainability, cost, and risk, not fashion."
 breadcrumbLabel: Technologies
 intent:
   primary: technologies we use
@@ -98,7 +98,7 @@ sections:
         - "Is it widely used, and will it still be supported in five years?"
         - "Replacing a tool is costly."
       - - Cost
-        - "What are the licence, hosting, and staffing costs over time?"
+        - "What are the license, hosting, and staffing costs over time?"
         - "The cheapest start is not always the cheapest total."
       - - Security
         - "Does it have a good record and the controls we need?"

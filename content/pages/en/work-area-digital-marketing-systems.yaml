@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/digital-marketing-systems/
 entityId: workarea.digital-marketing-systems
-title: Digital Marketing Systems We Build | DECHY
-description: "Digital marketing systems connect tracking, email, forms, and follow-up to your customer records so you can see what works: what they contain and how they are built."
+title: "Marketing Systems: Tracking, Email and CRM | DECHY"
+description: "Marketing systems that connect tracking, email, forms, and follow-up to your customer records, so you can see what works and act on it."
 breadcrumbLabel: Digital Marketing Systems
 parent: /work/
 intent:
@@ -26,7 +26,7 @@ comprehension:
   problem: Leads arrive through many channels, follow-up is slow, and nobody can say which activity produced a customer.
   audience: Marketing and sales teams that want to see results by channel, and owners who suspect leads are being lost.
   choose: Connect capture, follow-up, and records first. Add channels only after the system can measure them.
-  next: Tell us how enquiries reach you and what happens next. We will show where leads are lost and how to track them.
+  next: Tell us how inquiries reach you and what happens next. We will show where leads are lost and how to track them.
 sections:
   - type: hero
     id: hero
@@ -74,7 +74,7 @@ sections:
     question: Where do you lose people?
     options:
       - label: Between interest and reply
-        when: Enquiries wait hours or days for a response.
+        when: Inquiries wait hours or days for a response.
         get: Instant acknowledgments, alerts to the right person, and reminders.
         watch: Speed helps only if a person actually follows up.
         cta:
@@ -115,7 +115,7 @@ sections:
       - title: Reporting
         items:
           - Results by channel, from first click to sale.
-          - Cost per enquiry and per customer.
+          - Cost per inquiry and per customer.
   - type: diagram
     id: flow
     tone: white
@@ -128,28 +128,28 @@ sections:
         title: Without a system
         text: Interest arrives and waits.
         nodes:
-          - title: Enquiries go into a shared inbox
+          - title: Inquiries go into a shared inbox
           - title: Follow-up depends on memory
           - title: Nobody knows which channel worked
       after:
         title: With a system
         text: Interest is captured and followed.
         nodes:
-          - title: Each enquiry becomes a record
+          - title: Each inquiry becomes a record
           - title: Replies and reminders start at once
           - title: Results are shown by channel
       hubLabel: Traceable
     purpose: before-after
-    takeaway: A marketing system turns enquiries from messages that wait into records that are followed and measured.
-    caption: This diagram contrasts enquiries that wait in an inbox with enquiries that become records, receive quick follow-up, and are measured by channel.
+    takeaway: A marketing system turns inquiries from messages that wait into records that are followed and measured.
+    caption: This diagram contrasts inquiries that wait in an inbox with inquiries that become records, receive quick follow-up, and are measured by channel.
   - type: callout
     id: scenario
     tone: white
     variant: illustrative
-    title: Enquiries traced back to their source
+    title: Inquiries traced back to their source
     paragraphs:
-      - A typical case is a firm that gets enquiries from its website, a directory, and a newsletter. They all land in one inbox, and the team cannot tell which source brings customers.
-      - A marketing system could record each enquiry's source, send a prompt reply, alert the right person, and report on results by channel. The firm could then spend more where customers actually come from.
+      - A typical case is a firm that gets inquiries from its website, a directory, and a newsletter. They all land in one inbox, and the team cannot tell which source brings customers.
+      - A marketing system could record each inquiry's source, send a prompt reply, alert the right person, and report on results by channel. The firm could then spend more where customers actually come from.
   - type: related
     id: related
     tone: paper
@@ -170,8 +170,8 @@ sections:
           - workarea.integration-platforms
   - type: cta
     id: contact-cta
-    heading: Tell us how enquiries reach you
-    body: Describe how enquiries arrive and what happens next. We will show where leads are lost and how to track them.
+    heading: Tell us how inquiries reach you
+    body: Describe how inquiries arrive and what happens next. We will show where leads are lost and how to track them.
     primary:
       label: Discuss your marketing systems
       href: /contact/?service=digital-marketing

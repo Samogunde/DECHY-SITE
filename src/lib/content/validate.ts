@@ -280,6 +280,13 @@ export function validateRegistry(registry: Registry): Issue[] {
     const where = page.path;
     if (titles.has(page.title)) err("title-dup", where, `Same title as ${titles.get(page.title)}`);
     titles.set(page.title, where);
+    // Search titles say what the page is first and carry the brand once, at the end.
+    if (!page.title.endsWith(" | DECHY") || page.title.indexOf("DECHY") !== page.title.length - 5)
+      err("title-format", where, `Title must describe the page and end with " | DECHY" only`);
+    if (page.title.length > 60)
+      err("title-length", where, `Title is ${page.title.length} characters (max 60)`);
+    if (page.description.length < 70 || page.description.length > 160)
+      err("desc-length", where, `Description is ${page.description.length} characters (70 to 160)`);
     if (descs.has(page.description))
       err("desc-dup", where, `Same description as ${descs.get(page.description)}`);
     descs.set(page.description, where);
@@ -329,6 +336,10 @@ export function validateRegistry(registry: Registry): Issue[] {
 
     // Strings: style, banned phrases, unsupported claims, descriptor exactness, facts.
     const strings = pageStrings(page);
+    // Draft sections never reach the live site; their placeholder proof wording is not a claim.
+    const draftStrings = new Set(
+      page.sections.filter((b) => "draft" in b && b.draft).flatMap((b) => blockStrings(b)),
+    );
     for (const s of strings) {
       const label = `${where} :: ${s.slice(0, 50)}`;
       if (DASHES.test(s)) err("dash", label, "Contains an em or en dash (AGENTS 1A.16)");
@@ -336,7 +347,7 @@ export function validateRegistry(registry: Registry): Issue[] {
       for (const re of BANNED_PHRASES) if (re.test(s)) err("banned-phrase", label, `Matches ${re}`);
       for (const re of WRONG_DESCRIPTOR)
         if (re.test(s)) err("descriptor", label, `Non-approved descriptor wording (${re})`);
-      for (const re of UNSUPPORTED)
+      for (const re of draftStrings.has(s) ? [] : UNSUPPORTED)
         if (re.test(s)) err("unsupported-claim", label, `Unsupported claim wording (${re})`);
       // The company statistic and history may only come from the facts register.
       if (/1,?500|\b2010\b/.test(s.replace(/\{\{fact:[^}]+\}\}/g, ""))) {

@@ -87,7 +87,7 @@ sections:
         get: Scheduling, payments, and email in one place.
         watch: Check that the scheduling rules match how you really work.
       - label: A small store
-        when: A modest catalogue with simple shipping and tax.
+        when: A modest catalog with simple shipping and tax.
         get: A tidy store with the basics handled.
         watch: Larger catalogs and complex rules strain it, so compare with [Shopify](ref:plat.shopify).
       - label: Custom logic or deep integrations

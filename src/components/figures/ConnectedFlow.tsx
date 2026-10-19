@@ -10,7 +10,7 @@ import { DiagramRoot, step } from "./DiagramRoot";
  * per row, and six across with a drop from each step to the shared foundation.
  */
 const STEPS = [
-  { title: "Web form", body: "A visitor sends an enquiry" },
+  { title: "Web form", body: "A visitor sends an inquiry" },
   { title: "Customer record", body: "Saved in your customer system" },
   { title: "Workflow", body: "Sent to the right person" },
   { title: "AI step", body: "Suggests how good a fit it is; a person decides" },
@@ -23,7 +23,7 @@ export function ConnectedFlow({ titleId }: { titleId: string }) {
     <DiagramRoot
       titleId={titleId}
       title="Illustrative connected system"
-      description="An illustrative flow in six steps: a visitor sends an enquiry through a web form; it is saved as a customer record; a workflow sends it to the right person; an AI step suggests how good a fit it is while a person decides; follow-up goes out by email, calendar and alerts; and dashboards report on the whole process. One shared foundation connects every step, and safety checks sit underneath."
+      description="An illustrative flow in six steps: a visitor sends an inquiry through a web form; it is saved as a customer record; a workflow sends it to the right person; an AI step suggests how good a fit it is while a person decides; follow-up goes out by email, calendar and alerts; and dashboards report on the whole process. One shared foundation connects every step, and safety checks sit underneath."
       className="flow"
     >
       <ol className="flow-steps">

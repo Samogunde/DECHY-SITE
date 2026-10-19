@@ -5,7 +5,7 @@ path: /automation/salesforce/
 parent: /automation/
 entityId: plat.salesforce
 title: "Salesforce Integration and Automation | DECHY"
-description: "Salesforce work from DECHY: connecting Salesforce to your other systems, automating its processes, and keeping customization manageable as the organization grows."
+description: "Salesforce work from DECHY: connecting Salesforce to your other systems, automating its processes, and keeping customization manageable as you grow."
 breadcrumbLabel: Salesforce
 intent:
   primary: salesforce integration and automation

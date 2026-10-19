@@ -4,7 +4,7 @@ locale: en
 path: /ai/
 entityId: svc.ai
 title: AI and Machine Learning Services | DECHY
-description: "AI and machine learning from DECHY: assistants that answer from your own documents, document processing, AI agents, and predictions, built to be safe and useful."
+description: "AI and machine learning from DECHY: assistants that answer from your documents, document processing, AI agents, and predictions, built to be safe and useful."
 breadcrumbLabel: AI & Machine Learning
 intent:
   primary: ai development services for business

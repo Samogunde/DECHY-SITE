@@ -42,7 +42,7 @@ sections:
         - title: Stripe confirms
           text: It tells your system the payment succeeded or failed.
         - title: Your system updates
-          text: The order is marked paid and fulfilment starts.
+          text: The order is marked paid and fulfillment starts.
         - title: Records are kept in step
           text: Accounting and customer records are updated.
         - title: The customer is told

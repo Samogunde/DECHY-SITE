@@ -24,9 +24,10 @@ describe("content validator: the shipped content", () => {
 });
 
 describe("content validator: it rejects what the architecture forbids", () => {
-  const home = (pages: Page[]) => pages.find((p) => p.path === "/")!;
   const para = (pages: Page[]) => {
-    const prose = home(pages).sections.find((s) => s.type === "prose");
+    // Any page with a prose block serves as the fixture (the home page no longer has one).
+    const page = pages.find((p) => p.sections.some((s) => s.type === "prose"))!;
+    const prose = page.sections.find((s) => s.type === "prose");
     if (!prose || prose.type !== "prose") throw new Error("no prose block");
     return prose;
   };

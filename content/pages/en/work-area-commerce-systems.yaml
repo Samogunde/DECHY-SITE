@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/commerce-systems/
 entityId: workarea.commerce-systems
-title: Commerce Systems We Build | DECHY
-description: "Commerce systems handle what happens around the store: pricing, orders, subscriptions, payments, and fulfilment, for businesses that sell in more than a basic way."
+title: "Commerce Systems: Orders, Subscriptions, Payments | DECHY"
+description: "Commerce systems for what happens around the store: pricing, orders, subscriptions, payments, and fulfillment, for businesses that sell beyond a basic shop."
 breadcrumbLabel: Commerce Systems
 parent: /work/
 intent:
@@ -64,7 +64,7 @@ sections:
     tone: white
     label: In practice
     heading: When selling is more than a basket
-    answer: "We build commerce for the ways of selling a basic online store cannot handle: repeating payments, many sellers, prices that vary, or products made after the order. The storefront is joined to pricing, payment, and fulfilment."
+    answer: "We build commerce for the ways of selling a basic online store cannot handle: repeating payments, many sellers, prices that vary, or products made after the order. The storefront is joined to pricing, payment, and fulfillment."
     paragraphs:
       - Standard platforms handle ordinary selling very well. Trouble begins at the edges, where staff keep spreadsheets of special prices or chase repeat payments by hand.
       - A commerce system takes on those edge cases. It can sit behind an existing store or run a new one, depending on how far your needs depart from the standard.
@@ -107,7 +107,7 @@ sections:
           label: Ask about extending
           href: /contact/?service=ecommerce
       - label: Partly different
-        when: The storefront is standard, but pricing or fulfilment is not.
+        when: The storefront is standard, but pricing or fulfillment is not.
         get: A standard storefront with a custom system behind it.
         watch: Define the link between them carefully.
         cta:

@@ -103,7 +103,7 @@ sections:
         - "Links to your warehouse or stock system, and bulk tools for large catalogs."
       - - Orders and shipping
         - "Order handling and shipping label tools."
-        - "Connections to carriers and fulfilment partners."
+        - "Connections to carriers and fulfillment partners."
       - - Money
         - "Payments and payouts."
         - "Links to accounting, and handling of tax and refunds your way."

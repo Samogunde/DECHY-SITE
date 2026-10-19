@@ -138,7 +138,7 @@ sections:
     items:
       - title: Website and customer records
         ref: cap.crm-integration
-        body: Enquiries and orders flow into your customer system as soon as they happen, with nothing lost in an inbox.
+        body: Inquiries and orders flow into your customer system as soon as they happen, with nothing lost in an inbox.
       - title: Payments and accounting
         ref: cap.payment-integration
         body: Payments from providers such as [Stripe](ref:int.stripe) and [PayPal](ref:int.paypal) are matched to orders and recorded correctly.

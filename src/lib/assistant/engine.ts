@@ -228,7 +228,7 @@ const CLARIFY: Record<string, string> = {
   "svc.branding": "Is this a new brand, or a refresh of the one you have?",
   "svc.seo-aeo-geo": "Is the goal to be found in search, to be quoted by AI assistants, or both?",
   "svc.digital-marketing":
-    "Which result matters most right now: more enquiries, more sales, or a clearer picture of what works?",
+    "Which result matters most right now: more inquiries, more sales, or a clearer picture of what works?",
   "svc.consulting": "What decision are you trying to make, and what makes it hard today?",
 };
 const CLARIFY_DEFAULT = "What should it do, and who will use it?";

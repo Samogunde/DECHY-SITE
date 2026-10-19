@@ -79,7 +79,7 @@ sections:
     label: How we build it
     heading: From plan to a store that stays fast
     steps:
-      - title: Plan the catalogue and the checkout
+      - title: Plan the catalog and the checkout
         body: "We map the products, variations, shipping, tax, and payment methods before choosing any add-on."
         artifacts: [Store plan, Add-on list]
       - title: Build on solid foundations
@@ -142,7 +142,7 @@ sections:
     items:
       - title: A content-led brand that also sells
         body: "Guides, stories, and products on one site, so the content brings buyers to the store."
-      - title: A catalogue with variations
+      - title: A catalog with variations
         body: "Products with sizes, colors, bundles, or made-to-order options."
       - title: Subscriptions and memberships
         body: "Recurring orders and member-only content, handled by well-tested extensions."
@@ -181,8 +181,8 @@ sections:
     items:
       - q: Is WooCommerce cheaper than Shopify?
         a: "The software costs less, but hosting, upkeep, and security are yours to pay for. Over time the totals can be close, so compare the whole cost of running the store, not only the license."
-      - q: Can WooCommerce handle a large catalogue?
-        a: "Yes, with good hosting and a clean build. Large catalogues need database tuning and caching, which we plan from the start."
+      - q: Can WooCommerce handle a large catalog?
+        a: "Yes, with good hosting and a clean build. Large catalogs need database tuning and caching, which we plan from the start."
       - q: Can we move from Shopify to WooCommerce, or the other way?
         a: "Yes. We move products, customers, and orders, and set up redirects so you keep your search visibility. The effort depends on how much custom behavior the old store had."
       - q: Who looks after updates and security?

@@ -2,7 +2,7 @@ id: page.locations
 kind: hub
 locale: en
 path: /locations/
-title: "Where DECHY Works: Markets We Serve | DECHY"
+title: "Markets We Serve: US, UK, Canada and More | DECHY"
 description: "DECHY is a global company that works remotely with clients worldwide. See how we work with organizations in the US, UK, Canada, Australia, and Ireland."
 breadcrumbLabel: Locations
 intent:

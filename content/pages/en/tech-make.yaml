@@ -142,7 +142,7 @@ sections:
     label: Typical uses
     heading: Processes that suit Make
     items:
-      - title: Order and fulfilment routing
+      - title: Order and fulfillment routing
         body: "Different handling by product type, region, or customer, with the right people told."
       - title: Content and approval pipelines
         body: "Drafts moving through review steps, with reminders and a record of who approved what."

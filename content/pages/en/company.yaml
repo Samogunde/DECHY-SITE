@@ -2,8 +2,8 @@ id: page.company
 kind: company
 locale: en
 path: /company/
-title: "About DECHY | Technology, Software, AI & Digital Solutions"
-description: "About DECHY, a global company for technology, software, AI, and digital solutions: who we help, how we think, and how to see what we do."
+title: "About Us: Global Software and Technology Company | DECHY"
+description: "About DECHY, a global technology and software company: who we help, how we think, how we work, and how to start a project with us."
 breadcrumbLabel: Company
 intent:
   primary: about dechy

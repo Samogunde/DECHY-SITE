@@ -27,6 +27,7 @@ export function ProcessBlock({ block }: { block: Of<"process"> }) {
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="step-card">
+              {s.duration ? <p className="step-duration">{s.duration}</p> : null}
               <h3 className="step-title">{s.title}</h3>
               <p className="step-body">
                 <Inline text={s.body} />

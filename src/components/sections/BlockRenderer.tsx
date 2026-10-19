@@ -10,6 +10,16 @@ import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./Edito
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
 import { CalloutBlock, ChooserBlock, PathFinderBlock, TechnicalBlock } from "./GuidanceBlocks";
 import { Hero } from "./Hero";
+import {
+  CaseStudiesBlock,
+  FeatureGridBlock,
+  LeadServicesBlock,
+  LogosBlock,
+  PricingBlock,
+  PromiseBlock,
+  ServiceStripBlock,
+  TestimonialsBlock,
+} from "./HomeBlocks";
 import { ColumnsBlock, EntitiesBlock, RelatedBlock, ServiceIndexBlock } from "./ListBlocks";
 import { DiagramBlock, ProcessBlock, TableBlock } from "./ProcessTableBlocks";
 import { Section, SectionHeader } from "./Section";
@@ -104,6 +114,22 @@ export function BlockRenderer({
       return <CalloutBlock block={block} />;
     case "contact-form":
       return <ContactFormBlock block={block} />;
+    case "lead-services":
+      return <LeadServicesBlock block={block} />;
+    case "feature-grid":
+      return <FeatureGridBlock block={block} />;
+    case "service-strip":
+      return <ServiceStripBlock block={block} />;
+    case "pricing":
+      return <PricingBlock block={block} />;
+    case "case-studies":
+      return <CaseStudiesBlock block={block} />;
+    case "testimonials":
+      return <TestimonialsBlock block={block} />;
+    case "logos":
+      return <LogosBlock block={block} />;
+    case "promise":
+      return <PromiseBlock block={block} />;
     default: {
       const never: never = block;
       throw new Error(`Unhandled block: ${JSON.stringify(never)}`);

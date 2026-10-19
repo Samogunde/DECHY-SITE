@@ -56,7 +56,7 @@ export function SiteBuilder({ titleId }: P) {
       className="mk mk-site"
     >
       <div className="mk-window">
-        <Chrome title="yourbusiness.example" />
+        <Chrome title="Website editor" />
         <div className="mk-site-body">
           <ul className="mk-rail" aria-hidden="true">
             {["Pages", "Design", "Store", "Bookings", "Apps"].map((t, i) => (
@@ -108,7 +108,7 @@ export function StoreUi({ titleId }: P) {
     >
       <div className="mk-store-grid">
         <div className="mk-window">
-          <Chrome title="shop.example" />
+          <Chrome title="Online store" />
           <div className="mk-store-front" aria-hidden="true">
             <div className="mk-nav">
               <span className="mk-logo">Shop</span>
@@ -120,7 +120,7 @@ export function StoreUi({ titleId }: P) {
             <div className="mk-products">
               {[
                 ["Everyday tote", "In stock"],
-                ["Desk lamp", "Two colours"],
+                ["Desk lamp", "Two colors"],
                 ["Ceramic mug set", "Back soon"],
               ].map(([n, s], i) => (
                 <div key={i} className="mk-product">
@@ -161,7 +161,7 @@ export function DashboardUi({ titleId }: P) {
       className="mk mk-dash"
     >
       <div className="mk-window">
-        <Chrome title="dashboard.example" />
+        <Chrome title="Operations dashboard" />
         <div className="mk-dash-body" aria-hidden="true">
           <div className="mk-tiles">
             {[
@@ -246,7 +246,7 @@ const CRM_PIPE: [string, [string, string][]][] = [
   [
     "Lead",
     [
-      ["Website enquiry", "Today"],
+      ["Website inquiry", "Today"],
       ["Second location", "From a form"],
       ["Training request", "By phone"],
     ],
@@ -274,11 +274,11 @@ export function CrmUi({ titleId }: P) {
     <DiagramRoot
       titleId={titleId}
       title="Conceptual customer system"
-      description="A customer system window. Four pipeline columns, named lead, qualified, proposal, and won, hold cards for deals such as a website enquiry, a renewal, and an office move. A side panel shows one customer record with contact, orders, support, and billing sections that stay in step with other tools."
+      description="A customer system window. Four pipeline columns, named lead, qualified, proposal, and won, hold cards for deals such as a website inquiry, a renewal, and an office move. A side panel shows one customer record with contact, orders, support, and billing sections that stay in step with other tools."
       className="mk mk-crm"
     >
       <div className="mk-window">
-        <Chrome title="customers.example" />
+        <Chrome title="Customer records" />
         <div className="mk-crm-body" aria-hidden="true">
           <div className="mk-pipe">
             {CRM_PIPE.map(([c, cards]) => (
@@ -320,7 +320,7 @@ export function AnalyticsUi({ titleId }: P) {
       className="mk mk-analytics"
     >
       <div className="mk-window">
-        <Chrome title="reports.example" />
+        <Chrome title="Reports" />
         <div className="mk-an-body" aria-hidden="true">
           <div className="mk-filters">
             <Chip tone="blue">Last 12 months</Chip>
@@ -362,7 +362,7 @@ export function AssistantUi({ titleId }: P) {
       className="mk mk-chat-wrap"
     >
       <div className="mk-window mk-chat">
-        <Chrome title="help.example" />
+        <Chrome title="Support assistant" />
         <div className="mk-chat-body" aria-hidden="true">
           <p className="mk-msg mk-msg-user">How do I return an item?</p>
           <div className="mk-msg mk-msg-bot">
@@ -392,7 +392,7 @@ export function WorkflowUi({ titleId }: P) {
       className="mk mk-flow"
     >
       <div className="mk-window">
-        <Chrome title="workflow.example" />
+        <Chrome title="Workflows" />
         <div className="mk-flow-body" aria-hidden="true">
           <p className="mk-label">Request: new supplier</p>
           <ol className="mk-steps">
@@ -427,7 +427,7 @@ export function InterfaceSet({ titleId }: P) {
     >
       <div className="mk-set-grid" aria-hidden="true">
         <div className="mk-window mk-set-dash">
-          <Chrome title="dashboard.example" />
+          <Chrome title="Operations dashboard" />
           <div className="mk-dash-body">
             <div className="mk-tiles">
               {[
@@ -488,7 +488,7 @@ export function InterfaceSet({ titleId }: P) {
           </ul>
         </div>
         <div className="mk-window mk-chat mk-set-chat">
-          <Chrome title="help.example" />
+          <Chrome title="Support assistant" />
           <div className="mk-chat-body">
             <p className="mk-msg mk-msg-user">How do I return an item?</p>
             <div className="mk-msg mk-msg-bot">

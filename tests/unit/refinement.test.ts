@@ -105,7 +105,7 @@ describe("photography: provenance is mandatory", () => {
       const home = pages.find((p) => p.path === "/")!;
       const withPhoto = home.sections.find((s) => s.type === "index" && s.photo);
       if (!withPhoto || withPhoto.type !== "index" || !withPhoto.photo) throw new Error("no photo");
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 4; i++) {
         home.sections.push({
           ...structuredClone(withPhoto),
           id: `extra-photo-${i}`,
@@ -136,7 +136,12 @@ describe("voice: DECHY speaks as a company", () => {
       "Since 2010, DECHY has helped over 1,500 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types.",
     );
     const hero = home.sections.find((s) => s.type === "hero");
+    // Owner direction, 19 October 2026: the home headline leads with websites, apps, and software;
+    // the approved positioning line stays in the facts register unchanged.
     expect(hero && hero.type === "hero" ? hero.headline : "").toBe(
+      "Websites, web apps, mobile apps, and custom software, built to work as one system.",
+    );
+    expect(base.facts.get("company.positioning")!.value).toBe(
       "Software, AI, automation, integration, and cloud, designed to work as one system.",
     );
     expect(base.facts.get("company.descriptor")!.value).toBe(

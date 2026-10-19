@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/mobile-apps/
 entityId: workarea.mobile-apps
-title: Mobile Apps We Build | DECHY
+title: "Mobile Apps for Customers, Staff and Field Teams | DECHY"
 description: "Mobile apps for customers, staff, and field teams: what they contain, how they work with a back end, and what to decide before building one."
 breadcrumbLabel: Mobile Apps
 parent: /work/

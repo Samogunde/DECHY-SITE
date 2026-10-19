@@ -40,7 +40,7 @@ export function PortalUi({ titleId }: { titleId: string }) {
     >
       <div className="pu-stage" aria-hidden="true">
         <div className="mk-window pu-desk">
-          <Chrome url="portal.yourcompany.example" />
+          <Chrome url="Customer portal" />
           <div className="pu-app">
             <nav className="pu-side">
               <p className="pu-brand">Your company</p>

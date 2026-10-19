@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/ai-solutions/
 entityId: workarea.ai-solutions
-title: AI Solutions We Build | DECHY
-description: "AI solutions that read, summarize, classify, and answer within real business processes: what they contain, how they are checked, and where they should not be used."
+title: "Business AI Solutions: Assistants and Document AI | DECHY"
+description: "AI that reads, summarizes, classifies, and answers within real business processes: what it contains, how it is checked, and where it should not be used."
 breadcrumbLabel: AI Solutions
 parent: /work/
 intent:

@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /mobile-app-development/
 entityId: svc.mobile-app-development
-title: Mobile App Development Services | DECHY
+title: "Mobile App Development for iOS and Android | DECHY"
 description: "Mobile app development from DECHY: iPhone, Android, and cross-platform apps, designed, built, tested, released to the app stores, and kept up to date."
 breadcrumbLabel: Mobile App Development
 intent:

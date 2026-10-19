@@ -24,7 +24,7 @@ schemaTypes:
   - FAQPage
 comprehension:
   what: "We plan and carry out the move of your servers, applications, and data from your own equipment or a hosting provider to a cloud platform, with a tested way back."
-  problem: Servers are costly, aging, or fragile, a data centre contract is ending, or the business needs capacity and resilience it cannot easily build for itself.
+  problem: Servers are costly, aging, or fragile, a data center contract is ending, or the business needs capacity and resilience it cannot easily build for itself.
   audience: Owners and technology leads whose systems run on their own servers or older hosting, and teams told to reduce risk or cost.
   choose: Move what benefits first, in waves, with a way back at each step. Do not move everything the same way; some systems should be improved, replaced, or retired.
   next: Tell us what you run and where. We will inventory it, recommend a route for each system, and plan the first move.
@@ -74,7 +74,7 @@ sections:
     label: The problem
     heading: Why organizations move, and why moves go wrong
     paragraphs:
-      - The reasons to move are practical. A data centre contract ends. A server is old enough that nobody wants to restart it. A business needs to scale for a busy season, or to recover quickly after a failure, without buying equipment it will use for a few weeks a year.
+      - The reasons to move are practical. A data center contract ends. A server is old enough that nobody wants to restart it. A business needs to scale for a busy season, or to recover quickly after a failure, without buying equipment it will use for a few weeks a year.
       - Moves go wrong for equally practical reasons. Systems are moved without anyone knowing what depends on them. Costs are estimated from a brochure, not from how the system behaves. The cut-over date arrives, and there is no tested way back.
       - A sound migration treats the move as a series of small, reversible steps, each tested, with the cost modeled before it starts and watched after it ends.
   - type: table

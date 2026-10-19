@@ -171,7 +171,42 @@ export const PhotoRef = z.object({
 export type PhotoRef = z.infer<typeof PhotoRef>;
 
 const tone = z.enum(["paper", "white", "ink"]).default("paper");
-const base = { id: z.string().regex(/^[a-z0-9-]+$/), tone };
+/**
+ * `draft` marks a section whose facts the owner has not supplied yet (prices, projects, quotes,
+ * logos). Draft sections are removed when the registry loads, unless DECHY_SHOW_DRAFTS=true for a
+ * local review build, so they can never reach production, search, structured data, or the assistant.
+ */
+const base = { id: z.string().regex(/^[a-z0-9-]+$/), tone, draft: z.boolean().optional() };
+
+/** The icon set used by cards and tiles (lucide, rendered by components/primitives/Icon.tsx). */
+export const IconName = z.enum([
+  "code",
+  "globe",
+  "phone",
+  "sparkles",
+  "workflow",
+  "plug",
+  "cloud",
+  "shield",
+  "chart",
+  "cart",
+  "pen",
+  "palette",
+  "search",
+  "megaphone",
+  "compass",
+  "health",
+  "finance",
+  "building",
+  "truck",
+  "factory",
+  "bag",
+  "education",
+  "briefcase",
+]);
+export type IconName = z.infer<typeof IconName>;
+
+const Stat = z.object({ value: z.string(), label: z.string() });
 
 /* ---------- teaching diagrams (data-driven; see docs/design/clarity-and-comprehension-standard.md) ---------- */
 
@@ -273,6 +308,144 @@ export const Block = z.discriminatedUnion("type", [
     takeaway: z.string().optional(),
     visualTitle: z.string().optional(),
     figureCaption: z.string().optional(),
+    /** Home only: proof figures under the buttons. Values may use {{fact:...}} macros. */
+    stats: z.array(Stat).max(4).default([]),
+  }),
+  /** The services a page leads with, as large tiles with an interface visual each. */
+  z.object({
+    type: z.literal("lead-services"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          title: z.string(),
+          kicker: z.string(),
+          body: z.string(),
+          href: z.string(),
+          action: z.string(),
+          includes: z.array(z.string()).min(3).max(5),
+          figure: FigureId,
+        }),
+      )
+      .min(2)
+      .max(4),
+  }),
+  /** Icon cards: capabilities, industries, or commitments. */
+  z.object({
+    type: z.literal("feature-grid"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    style: z.enum(["cards", "tiles"]).default("cards"),
+    items: z
+      .array(
+        z.object({
+          icon: IconName,
+          title: z.string(),
+          body: z.string().optional(),
+          href: z.string().optional(),
+        }),
+      )
+      .min(3),
+    more: Cta.optional(),
+  }),
+  /** A compact row of further services, each a link with its icon. */
+  z.object({
+    type: z.literal("service-strip"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z.array(z.object({ icon: IconName, title: z.string(), href: z.string() })).min(3),
+    more: Cta.optional(),
+  }),
+  /** Typical price ranges and what moves them. Figures are the owner's, never estimated. */
+  z.object({
+    type: z.literal("pricing"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    plans: z
+      .array(
+        z.object({
+          name: z.string(),
+          range: z.string(),
+          timeline: z.string(),
+          summary: z.string(),
+          includes: z.array(z.string()).min(2).max(6),
+          featured: z.boolean().optional(),
+        }),
+      )
+      .min(2)
+      .max(4),
+    factors: z.object({ title: z.string(), items: z.array(z.string()).min(2) }),
+    note: z.string().optional(),
+    cta: Cta,
+  }),
+  /** Selected projects. Only real, supplied Work Entries (AGENTS: no invented evidence). */
+  z.object({
+    type: z.literal("case-studies"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          client: z.string(),
+          sector: z.string(),
+          title: z.string(),
+          summary: z.string(),
+          results: z.array(Stat).min(1).max(3),
+          services: z.array(z.string()).default([]),
+          href: z.string().optional(),
+        }),
+      )
+      .min(1)
+      .max(6),
+  }),
+  /** Client quotes, with the person's real name, role, and organization. */
+  z.object({
+    type: z.literal("testimonials"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    items: z
+      .array(
+        z.object({ quote: z.string(), name: z.string(), role: z.string(), company: z.string() }),
+      )
+      .min(1)
+      .max(6),
+  }),
+  /** Client, partner, or press names as a logo wall or a slow strip. */
+  z.object({
+    type: z.literal("logos"),
+    ...base,
+    label: z.string(),
+    heading: z.string().optional(),
+    style: z.enum(["strip", "grid"]).default("strip"),
+    items: z
+      .array(
+        z.object({ name: z.string(), icon: IconName.optional(), asset: z.string().optional() }),
+      )
+      .min(4),
+  }),
+  /** A short commitment in large type, with what it means in practice. */
+  z.object({
+    type: z.literal("promise"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    body: z.string(),
+    items: z
+      .array(z.object({ title: z.string(), body: z.string() }))
+      .min(2)
+      .max(4),
   }),
   z.object({
     type: z.literal("pathfinder"),
@@ -425,7 +598,13 @@ export const Block = z.discriminatedUnion("type", [
     heading: z.string(),
     intro: z.string().optional(),
     steps: z.array(
-      z.object({ title: z.string(), body: z.string(), artifacts: z.array(z.string()).default([]) }),
+      z.object({
+        title: z.string(),
+        body: z.string(),
+        artifacts: z.array(z.string()).default([]),
+        /** Typical length of the stage, shown on timelines. */
+        duration: z.string().optional(),
+      }),
     ),
   }),
   z.object({

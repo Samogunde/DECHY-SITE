@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/cloud-platforms/
 entityId: workarea.cloud-platforms
-title: Cloud Platforms We Build | DECHY
+title: "Cloud Platform Architecture and Hosting | DECHY"
 description: "Cloud platforms host your software on rented infrastructure that grows with use: how they are laid out, what they cost, and when not to move."
 breadcrumbLabel: Cloud Platforms
 parent: /work/

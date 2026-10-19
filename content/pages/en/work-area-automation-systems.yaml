@@ -3,8 +3,8 @@ kind: work-area
 locale: en
 path: /work/areas/automation-systems/
 entityId: workarea.automation-systems
-title: Automation Systems We Build | DECHY
-description: "Automation systems that move information and trigger actions between your tools without re-entry: what they contain, how they are watched, and when to avoid them."
+title: "Business Automation Systems and Examples | DECHY"
+description: "Automation systems that move information and trigger actions between your tools without re-entry: what they contain, how they are watched, when to skip them."
 breadcrumbLabel: Automation Systems
 parent: /work/
 intent:
@@ -122,7 +122,7 @@ sections:
     columns:
       - title: Sales and customers
         items:
-          - New enquiries logged and assigned.
+          - New inquiries logged and assigned.
           - Follow-up reminders and welcome emails.
       - title: Finance
         items:

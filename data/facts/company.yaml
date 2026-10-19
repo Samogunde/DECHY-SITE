@@ -45,3 +45,9 @@ facts:
     value: "From custom software and AI to cloud, security, data, design, and search visibility, DECHY helps organizations build, connect, automate, and scale."
     status: approved
     source: Owner approval of working positioning (DEC-23); refinable, descriptor unchanged
+
+  - id: company.clients
+    label: Clients helped (short form)
+    value: "1,500+"
+    status: approved
+    source: Approved company statement ("over 1,500"); short form for proof figures

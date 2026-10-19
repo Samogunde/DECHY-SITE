@@ -2,8 +2,8 @@ id: page.contact
 kind: contact
 locale: en
 path: /contact/
-title: "Contact DECHY | Start a Conversation"
-description: "Contact DECHY to discuss software, AI, automation, integration, cloud, or any technology project. Tell us what you want to build, connect, or fix."
+title: "Contact Us for a Project Estimate | DECHY"
+description: "Tell us what you want to build, connect, or fix, and get a project estimate for software, a website, a web or mobile app, AI, or automation."
 breadcrumbLabel: Contact
 h1: Talk to DECHY
 lead: "Tell us what you are trying to build, connect, or fix. A few sentences are enough to start."

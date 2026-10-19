@@ -10,6 +10,7 @@ import { BlockRenderer } from "./BlockRenderer";
 import { articlePages } from "./DiscoveryBlocks";
 import { IndustryProfile, SolutionBlueprint, SystemFrame, TechProfile } from "./FamilyHero";
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
+import { DraftFrame } from "./HomeBlocks";
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
 export function PageView({ path }: { path: string }) {
@@ -100,14 +101,22 @@ export function PageView({ path }: { path: string }) {
         <AtAGlance comprehension={page.comprehension} cta={glanceCta} kind={page.kind} />
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
-      {rest.map((block) => (
-        <BlockRenderer
-          key={block.id}
-          block={block}
-          page={page}
-          visual={block === opening ? openingVisual : undefined}
-        />
-      ))}
+      {rest.map((block) => {
+        const rendered = (
+          <BlockRenderer
+            key={block.id}
+            block={block}
+            page={page}
+            visual={block === opening ? openingVisual : undefined}
+          />
+        );
+        // Draft sections only exist in a review build (see showDrafts); they are always labeled.
+        return "draft" in block && block.draft ? (
+          <DraftFrame key={block.id}>{rendered}</DraftFrame>
+        ) : (
+          rendered
+        );
+      })}
     </>
   );
 }
