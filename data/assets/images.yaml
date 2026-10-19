@@ -658,3 +658,258 @@ assets:
     usage: [home]
     approval: approved
     acquired: "2026-10-19"
+
+  - id: asset.photo-hero-software-developer-monitors
+    kind: file
+    file: public/photos/hero-software-developer-monitors.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "ThisisEngineering (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-hero-software-developer-monitors.md.
+    sourceUrl: https://unsplash.com/photos/woman-in-green-shirt-sitting-in-front-of-computer-64YrPKiguAE
+    licenseUrl: https://unsplash.com/license
+    sha256: 40138d025d23f2c88167e9f4e930905d88915637235bd0b077be182c08886a21
+    width: 2600
+    height: 1734
+    alt: "A software developer working at two monitors in a bright office."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-hero-website-laptop
+    kind: file
+    file: public/photos/hero-website-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "paweldotio (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-hero-website-laptop.md.
+    sourceUrl: https://unsplash.com/photos/graphical-user-interface-website-X8mwAQ03KxI
+    licenseUrl: https://unsplash.com/license
+    sha256: 35b2cc9548df878f398cf9e57627fb7b0ad7a4a94cbc6d9c672e0dff2c200a60
+    width: 2600
+    height: 1463
+    alt: "A laptop on a concrete ledge showing a modern website."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-hero-web-app-dashboard
+    kind: file
+    file: public/photos/hero-web-app-dashboard.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "path digital (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-hero-web-app-dashboard.md.
+    sourceUrl: https://unsplash.com/photos/black-and-silver-laptop-computer-tR0jvlsmCuQ
+    licenseUrl: https://unsplash.com/license
+    sha256: d043a8a3f5d02ddb5918d1daa3ee8c35c40aa4bd3dda119118ef9843de4162a8
+    width: 2600
+    height: 1950
+    alt: "A laptop showing a web application dashboard with sales charts."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-hero-mobile-app-hands
+    kind: file
+    file: public/photos/hero-mobile-app-hands.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alvaro Reyes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-hero-mobile-app-hands.md.
+    sourceUrl: https://unsplash.com/photos/person-using-silver-iphone-x-3iTRMP8Uq2k
+    licenseUrl: https://unsplash.com/license
+    sha256: a0331f1704866a1fa8cc3154bbf4cfb69e4fe73df265e16d84f7fb891c8ea36b
+    width: 2600
+    height: 1733
+    alt: "Hands holding a smartphone with apps on screen at a desk."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-software-developers
+    kind: file
+    file: public/photos/service-software-developers.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tim van der Kuip (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-software-developers.md.
+    sourceUrl: https://unsplash.com/photos/man-sitting-on-chair-wearing-gray-crew-neck-long-sleeved-shirt-using-apple-magic-keyboard-CPs2X8JYmS8
+    licenseUrl: https://unsplash.com/license
+    sha256: 5bc7e0ade756373977537717b4dff6f411d04f609d6e88203e1982ebe1b8ecae
+    width: 2600
+    height: 1733
+    alt: "Two software developers working at their desks with laptops and monitors."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-web-analytics-laptop
+    kind: file
+    file: public/photos/service-web-analytics-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Campaign Creators (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-web-analytics-laptop.md.
+    sourceUrl: https://unsplash.com/photos/person-using-macbook-pro-pypeCEaJeZY
+    licenseUrl: https://unsplash.com/license
+    sha256: f0839e7986cdb09bc2baa39883b1bcae1687a5ef51dbf7f60bc02870f0dc0328
+    width: 2600
+    height: 1882
+    alt: "A person working on a laptop that shows a web analytics dashboard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-service-mobile-app-code
+    kind: file
+    file: public/photos/service-mobile-app-code.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fahim Muntashir (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-service-mobile-app-code.md.
+    sourceUrl: https://unsplash.com/photos/a-person-holding-a-cell-phone-in-front-of-a-laptop-v-FOvoL3onk
+    licenseUrl: https://unsplash.com/license
+    sha256: 8b820285542df4ab5fbfbeff0fca7f1dcdbd9a7cf63d08c9bf69bc526718bd78
+    width: 2600
+    height: 3900
+    alt: "A phone showing a mobile app, held in front of a screen of code."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-family-build-open-office
+    kind: file
+    file: public/photos/family-build-open-office.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Israel Andrade (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-build-open-office.md.
+    sourceUrl: https://unsplash.com/photos/people-sitting-on-chair-in-front-of-computer-YI_9SivVt_s
+    licenseUrl: https://unsplash.com/license
+    sha256: eb974398e0731db8e658687841eafdddb9276aab4bc4086f34e5ddd88b643b6d
+    width: 2600
+    height: 1734
+    alt: "An open-plan software office with people working at rows of computers."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-family-ai-chip
+    kind: file
+    file: public/photos/family-ai-chip.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Immo Wegmann (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-ai-chip.md.
+    sourceUrl: https://unsplash.com/photos/glowing-ai-chip-on-a-circuit-board-w69Z8K-HGQU
+    licenseUrl: https://unsplash.com/license
+    sha256: 4b3af214d4f69b3f090d48790af5839f9e8ea9a93d7232611648c3f0c22de3ba
+    width: 2600
+    height: 1722
+    alt: "A circuit board with a glowing chip marked AI."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-family-security-padlock
+    kind: file
+    file: public/photos/family-security-padlock.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "FlyD (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-security-padlock.md.
+    sourceUrl: https://unsplash.com/photos/padlock-on-laptop-with-light-trails-C5pXRFEjq3w
+    licenseUrl: https://unsplash.com/license
+    sha256: 188ec60acf2475d83548b10fc08f7ce9ded87338e9375b55097d9ca8500de543
+    width: 2600
+    height: 1734
+    alt: "A padlock resting on a laptop keyboard, circled by trails of light."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-family-design-tablet
+    kind: file
+    file: public/photos/family-design-tablet.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Theme Photos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-design-tablet.md.
+    sourceUrl: https://unsplash.com/photos/designer-using-tablet-and-laptop-workspace-CGpifH3FjOA
+    licenseUrl: https://unsplash.com/license
+    sha256: bac78b5ad02bfac6677f58d9f84cc66017949ce683a889ec83e93bff13f570c5
+    width: 2600
+    height: 1734
+    alt: "A designer drawing on a tablet beside a laptop and color swatches."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-family-advisory-whiteboard
+    kind: file
+    file: public/photos/family-advisory-whiteboard.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "ThisisEngineering (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-family-advisory-whiteboard.md.
+    sourceUrl: https://unsplash.com/photos/two-colleagues-discussing-ideas-at-whiteboard-uOhBxB23Wao
+    licenseUrl: https://unsplash.com/license
+    sha256: f99e27c015ea91f7b9ea11866baf2513f27699e1f445e7b91286c1277647f94b
+    width: 2600
+    height: 1734
+    alt: "Two colleagues discussing a plan at a whiteboard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-portrait-woman-smiling
+    kind: file
+    file: public/photos/portrait-woman-smiling.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "alex starnes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-woman-smiling.md.
+    sourceUrl: https://unsplash.com/photos/woman-in-white-scoop-neck-shirt-smiling-WYE2UhXsU1Y
+    licenseUrl: https://unsplash.com/license
+    sha256: 859ac5699e5ea0e2a8f70bd4d39405888b7cec580c4fbb7dbe378b244f51e8dd
+    width: 2600
+    height: 1733
+    alt: "Portrait of a smiling woman in a white top."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-portrait-man-beard
+    kind: file
+    file: public/photos/portrait-man-beard.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Willian Souza (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-man-beard.md.
+    sourceUrl: https://unsplash.com/photos/man-in-black-zip-up-jacket-p5BoBF0XJUA
+    licenseUrl: https://unsplash.com/license
+    sha256: cebba888c000bbc75b9bb6c2302818648acf2ec51ed2d909a0a7c9a5561f9466
+    width: 2600
+    height: 3900
+    alt: "Portrait of a smiling bearded man with crossed arms."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-portrait-woman-studio
+    kind: file
+    file: public/photos/portrait-woman-studio.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jake Nackos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-woman-studio.md.
+    sourceUrl: https://unsplash.com/photos/woman-in-white-crew-neck-shirt-smiling-IF9TK5Uy-KI
+    licenseUrl: https://unsplash.com/license
+    sha256: 165dae94cf47df9ce019548c798a449a987736e6d1daea2dc4bc0a763ec2ed05
+    width: 2600
+    height: 3271
+    alt: "Portrait of a smiling woman against a light background."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"

@@ -6,6 +6,7 @@ import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
 import { RotatingHero } from "@/components/home/RotatingHero";
+import { Photo } from "@/components/primitives/Photo";
 
 type HeroBlock = Extract<Block, { type: "hero" }>;
 
@@ -51,14 +52,18 @@ export function Hero({
           lead: s.lead,
           chips: s.chips,
         }))}
-        visuals={block.slides.map((s, i) => (
-          <Figure
-            key={s.label}
-            id={s.figure}
-            uid={`hero-${i}`}
-            caption={`${s.label}: a conceptual interface.`}
-          />
-        ))}
+        visuals={block.slides.map((s, i) =>
+          s.photo ? (
+            <Photo key={s.label} photo={s.photo} className="hero-photo" />
+          ) : s.figure ? (
+            <Figure
+              key={s.label}
+              id={s.figure}
+              uid={`hero-${i}`}
+              caption={`${s.label}: a conceptual interface.`}
+            />
+          ) : null,
+        )}
         actions={actions}
       />
     );

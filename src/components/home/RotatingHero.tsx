@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 
 type Slide = { label: string; word: string; lead: string; chips: string[] };
 
-const INTERVAL = 5200;
+const INTERVAL = 3400;
 
 /**
  * The home hero. The headline stays "We build ..." and the offer cycles: custom software,

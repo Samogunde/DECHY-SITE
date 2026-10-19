@@ -42,25 +42,37 @@ sections:
         word: custom software.
         lead: Internal tools, portals, and platforms built around the way your business works, so your team stops fighting spreadsheets.
         href: /software-development/
-        figure: portal-wireframe
+        photo:
+          asset: asset.photo-hero-software-developer-monitors
+          layout: split
+          position: 55% 40%
         chips: [Customer portal, Role-based access, Connected to your tools]
       - label: Websites
         word: websites.
         lead: Fast, accessible websites that explain what you do, rank in search, and turn visitors into inquiries.
         href: /web-development/
-        figure: site-builder
+        photo:
+          asset: asset.photo-hero-website-laptop
+          layout: split
+          position: 50% 50%
         chips: [Loads fast, Easy to edit, Search ready]
       - label: Web apps
         word: web apps.
         lead: Browser apps with accounts, dashboards, bookings, and payments, connected to the systems behind them.
         href: /web-development/
-        figure: dashboard-ui
+        photo:
+          asset: asset.photo-hero-web-app-dashboard
+          layout: split
+          position: 50% 45%
         chips: [Live dashboards, Payments, Secure sign-in]
       - label: Mobile apps
         word: mobile apps.
         lead: iPhone and Android apps for customers, staff, and field teams, from the first prototype to the app stores.
         href: /mobile-app-development/
-        figure: mobile-app-ui
+        photo:
+          asset: asset.photo-hero-mobile-app-hands
+          layout: split
+          position: 50% 50%
         chips: [iOS and Android, Works offline, App store release]
 
   - type: logos
@@ -113,7 +125,10 @@ sections:
         body: Business software built around the way you actually work, so your team stops fighting spreadsheets and disconnected tools.
         href: /software-development/
         action: Explore custom software
-        figure: portal-wireframe
+        photo:
+          asset: asset.photo-service-software-developers
+          layout: split
+          position: 60% 50%
         includes:
           - Internal tools and admin systems
           - Customer and staff portals
@@ -125,7 +140,10 @@ sections:
         body: Fast, accessible websites that win customers, and web applications your customers or staff log in to every day.
         href: /web-development/
         action: Explore web development
-        figure: site-builder
+        photo:
+          asset: asset.photo-service-web-analytics-laptop
+          layout: split
+          position: 50% 50%
         includes:
           - Business websites and landing pages
           - Web apps with accounts and dashboards
@@ -137,7 +155,10 @@ sections:
         body: iPhone and Android apps for customers, staff, and field teams, from first prototype to the app stores and every update after.
         href: /mobile-app-development/
         action: Explore mobile apps
-        figure: mobile-app-ui
+        photo:
+          asset: asset.photo-service-mobile-app-code
+          layout: split
+          position: 50% 45%
         includes:
           - iPhone and Android apps
           - One shared codebase or fully native
@@ -195,24 +216,30 @@ sections:
     heading: Any stack, chosen for the job
     intro: We choose by fit, cost, and how easy the result will be to maintain, and we work with the platforms you already use.
     groups:
-      - title: Web and software
+      - title: Languages and frameworks
         entityIds:
           - fw.react
           - fw.nextjs
           - lang.typescript
+          - lang.javascript
           - tech.nodejs
           - lang.python
           - lang.php
+          - fw.laravel
           - tech.dotnet
           - lang.java
+          - lang.go
           - fw.vue
           - fw.angular
+          - fw.svelte
       - title: Mobile
         entityIds:
           - tech.flutter
           - tech.react-native
           - tech.swift
           - tech.kotlin
+          - tech.jetpack-compose
+          - plat.firebase
       - title: Website and store platforms
         entityIds:
           - plat.wordpress
@@ -221,24 +248,51 @@ sections:
           - plat.woocommerce
           - plat.wix
           - plat.squarespace
+          - plat.bigcommerce
+          - plat.drupal
       - title: AI and automation
         entityIds:
           - prov.openai
           - prov.anthropic-claude
           - prov.google-gemini
+          - fw.langchain
+          - tech.pinecone
           - tech.zapier
           - tech.n8n
           - tech.make
-      - title: Cloud, data, and payments
+      - title: Data and databases
+        entityIds:
+          - tech.postgresql
+          - tech.mysql
+          - tech.mongodb
+          - tech.redis
+          - plat.supabase
+          - plat.snowflake
+          - tech.bigquery
+          - plat.databricks
+      - title: Cloud and DevOps
         entityIds:
           - plat.aws
           - plat.azure
           - plat.google-cloud
           - plat.cloudflare
-          - tech.postgresql
-          - tech.mongodb
+          - tool.docker
+          - tool.kubernetes
+          - tool.terraform
+          - tool.github-actions
+          - plat.vercel
+          - plat.netlify
+      - title: Business platforms, payments, and design
+        entityIds:
+          - plat.salesforce
+          - plat.hubspot
+          - plat.airtable
+          - plat.notion
           - int.stripe
           - int.paypal
+          - int.adyen
+          - tech.graphql
+          - tool.figma
     more:
       label: See all technologies
       href: /technologies/
@@ -279,39 +333,45 @@ sections:
       label: See all industries
       href: /industries/
 
-  - type: service-strip
-    id: also
+  - type: service-explorer
+    id: all-services
     tone: ink
-    label: Also from DECHY
-    heading: Everything else your product needs
-    intro: The same team covers security, data, design, and growth, so nothing falls between suppliers.
-    items:
-      - icon: shield
-        title: Cybersecurity
-        href: /cybersecurity/
-      - icon: chart
-        title: Data and analytics
-        href: /data-analytics/
-      - icon: cart
-        title: Ecommerce
-        href: /ecommerce/
-      - icon: pen
-        title: UI/UX and product design
-        href: /ui-ux/
-      - icon: palette
-        title: Branding and creative
-        href: /branding/
-      - icon: search
-        title: SEO, AEO and GEO
-        href: /seo-aeo-geo/
-      - icon: megaphone
-        title: Digital marketing
-        href: /digital-marketing/
-      - icon: compass
-        title: Consulting and digital transformation
-        href: /consulting/
+    label: Fifteen services, one team
+    heading: Everything your product and business need, in one place
+    intro: Software, web, and mobile are where most projects start. Around them, the same team covers AI, data, cloud, security, design, marketing, and strategy, so nothing falls between suppliers.
+    families:
+      - id: build
+        blurb: Custom software, websites, web apps, mobile apps, and online stores, designed and built end to end.
+        photo:
+          asset: asset.photo-family-build-open-office
+          layout: split
+          position: 50% 50%
+      - id: intelligence-automation
+        blurb: AI, automation, data, and integration that make your systems work together and work for you.
+        photo:
+          asset: asset.photo-family-ai-chip
+          layout: split
+          position: 50% 50%
+      - id: infrastructure-security
+        blurb: Cloud hosting, delivery pipelines, and security that keep what we build fast, safe, and running.
+        photo:
+          asset: asset.photo-family-security-padlock
+          layout: split
+          position: 50% 50%
+      - id: design-growth
+        blurb: Product design, brand, search visibility, and marketing that bring people in and keep them.
+        photo:
+          asset: asset.photo-family-design-tablet
+          layout: split
+          position: 50% 50%
+      - id: advisory
+        blurb: Honest advice before you spend money, and a plan for changing how your business runs on technology.
+        photo:
+          asset: asset.photo-family-advisory-whiteboard
+          layout: split
+          position: 50% 40%
     more:
-      label: See all fifteen services
+      label: See all services
       href: /services/
 
   - type: phases
@@ -431,14 +491,26 @@ sections:
         name: Amara Okafor
         role: Founder
         company: Lumora Health
+        photo:
+          asset: asset.photo-portrait-woman-smiling
+          layout: rail
+          position: 50% 25%
       - quote: Our team stopped copying data between systems. Orders, stock, and invoices finally agree with each other.
         name: Daniel Reyes
         role: Operations Director
         company: Brightwell Retail
+        photo:
+          asset: asset.photo-portrait-man-beard
+          layout: rail
+          position: 50% 25%
       - quote: Clear scope, honest estimates, and a weekly demo. It felt like working with our own team.
         name: Sofia Lindqvist
         role: Head of Product
         company: Stratus Labs
+        photo:
+          asset: asset.photo-portrait-woman-studio
+          layout: rail
+          position: 50% 25%
 
   - type: pricing
     id: pricing
@@ -460,7 +532,6 @@ sections:
         range: "$15,000 to $60,000"
         timeline: 6 to 14 weeks
         summary: A web app with accounts, dashboards, and the logic behind them.
-        featured: true
         includes:
           - Product design and prototypes
           - Front end, back end, and database
@@ -532,7 +603,7 @@ sections:
 
   - type: faq
     id: questions
-    tone: paper
+    tone: ink
     label: Common questions
     heading: What people ask before they start
     items:

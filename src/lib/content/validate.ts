@@ -415,8 +415,20 @@ export function validateRegistry(registry: Registry): Issue[] {
       if (!asset || asset.role !== "photograph")
         err("photo-ref", `${where}#${p.block}`, `${p.ref} is not a registered photograph`);
     }
+    // A published testimonial shows the real person: never a stock portrait.
+    for (const b of page.sections)
+      if (b.type === "testimonials" && !b.draft)
+        for (const q of b.items) {
+          const a = q.photo && registry.assets.find((x) => x.id === q.photo?.asset);
+          if (a && a.source === "licensed-stock")
+            err(
+              "testimonial-photo",
+              `${where}#${b.id}`,
+              `${q.name} uses a stock portrait; use the person's own photo`,
+            );
+        }
     // The home page carries the photographic story (owner direction, 19 October 2026).
-    const photoLimit = page.kind === "home" ? 14 : 4;
+    const photoLimit = page.kind === "home" ? 32 : 4;
     if (photoRefs.length > photoLimit)
       err(
         "photo-count",

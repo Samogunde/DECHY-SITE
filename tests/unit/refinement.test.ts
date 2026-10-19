@@ -23,7 +23,7 @@ const photos = base.assets.filter((a) => a.role === "photograph");
 describe("photography: provenance is mandatory", () => {
   it("registers every photograph with source, license evidence, hash, size and alt text", () => {
     expect(photos.length).toBeGreaterThanOrEqual(4);
-    expect(photos.length).toBeLessThanOrEqual(32);
+    expect(photos.length).toBeLessThanOrEqual(48);
     for (const a of photos) {
       // Licensed stock (Unsplash) or supplied by the owner; either way with evidence on file.
       expect(["licensed-stock", "owner-supplied"], a.id).toContain(a.source);

@@ -2,7 +2,14 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { CheckCircle, Clock, Quotes } from "@phosphor-icons/react/dist/ssr";
 import { Figure } from "@/components/figures/Figure";
-import { CaseViewer, CountUp, PhaseScroller, RevealText } from "@/components/home/Motion";
+import Image from "next/image";
+import {
+  CaseViewer,
+  CountUp,
+  PhaseScroller,
+  RevealText,
+  ServiceExplorer,
+} from "@/components/home/Motion";
 import { TechLogo } from "@/components/home/TechLogo";
 import { Arrow } from "@/components/primitives/Arrow";
 import { Icon } from "@/components/primitives/Icon";
@@ -11,7 +18,7 @@ import { LinkButton } from "@/components/primitives/LinkButton";
 import { Photo } from "@/components/primitives/Photo";
 import { expandFacts } from "@/lib/content/inline";
 import { getRegistry } from "@/lib/content/load";
-import type { Block } from "@/lib/content/schema";
+import type { Block, IconName } from "@/lib/content/schema";
 import { pathExists, publishedPath } from "@/lib/content/urls";
 import { Section } from "./Section";
 
@@ -89,6 +96,115 @@ function Checks({ items }: { items: string[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/** A testimonial portrait: the person's photograph in a circle, or their initials. */
+function Avatar({ photo, name }: { photo?: { asset: string }; name: string }) {
+  const asset = photo ? getRegistry().assets.find((a) => a.id === photo.asset) : undefined;
+  if (!asset || !asset.width || !asset.height) {
+    return (
+      <span className="quote-avatar" aria-hidden="true">
+        {name
+          .split(/s+/)
+          .map((w) => w[0])
+          .slice(0, 2)
+          .join("")}
+      </span>
+    );
+  }
+  return (
+    <Image
+      className="quote-avatar quote-photo"
+      src={`/${asset.file.replace(/^public\//, "")}`}
+      alt=""
+      width={112}
+      height={112}
+      sizes="56px"
+      quality={85}
+    />
+  );
+}
+
+/** Icons for the fifteen services, by slug. */
+const SERVICE_ICONS: Record<string, IconName> = {
+  "software-development": "code",
+  "web-development": "globe",
+  "mobile-app-development": "phone",
+  ecommerce: "cart",
+  ai: "sparkles",
+  automation: "workflow",
+  "data-analytics": "chart",
+  "api-integration": "plug",
+  cloud: "cloud",
+  cybersecurity: "shield",
+  "ui-ux": "pen",
+  branding: "palette",
+  "seo-aeo-geo": "search",
+  "digital-marketing": "megaphone",
+  consulting: "compass",
+};
+
+export function ServiceExplorerBlock({ block }: { block: Of<"service-explorer"> }) {
+  const registry = getRegistry();
+  const families = block.families.map((f) => {
+    const label = registry.families.find((x) => x.id === f.id)?.label ?? f.id;
+    const services = registry.services.filter((s) => s.family === f.id);
+    return { ...f, label, services };
+  });
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader
+        id={block.id}
+        label={block.label}
+        heading={block.heading}
+        intro={block.intro}
+        aside={<MoreLink cta={block.more} />}
+      />
+      <ServiceExplorer
+        tabs={families.map((f) => ({ label: f.label, count: f.services.length }))}
+        panels={families.map((f) => (
+          <div key={f.id} className="explorer-panel">
+            <div className="explorer-photo">
+              <Photo photo={f.photo} />
+              <p className="glass-note">
+                <span className="explorer-family">{f.label}</span>
+                {f.blurb}
+              </p>
+            </div>
+            <ul className="explorer-services">
+              {f.services.map((s) => {
+                const href = `/${s.slug}/`;
+                const live = pathExists(href, registry);
+                const inner = (
+                  <>
+                    <span className="feature-icon">
+                      <Icon name={SERVICE_ICONS[s.slug] ?? "code"} />
+                    </span>
+                    <span className="explorer-text">
+                      <span className="explorer-name">{s.name}</span>
+                      <span className="explorer-micro">{s.micro}</span>
+                    </span>
+                    {live ? <Arrow /> : null}
+                  </>
+                );
+                return (
+                  <li key={s.slug}>
+                    {live ? (
+                      <Link href={href} className="explorer-card" data-spotlight>
+                        {inner}
+                      </Link>
+                    ) : (
+                      <span className="explorer-card">{inner}</span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
+      />
+    </Section>
   );
 }
 
@@ -182,12 +298,16 @@ export function LeadServicesBlock({ block }: { block: Of<"lead-services"> }) {
                 </Link>
               ) : null}
             </div>
-            <div className="lead-visual glass" data-spotlight>
-              <Figure
-                id={s.figure}
-                uid={`${block.id}-${i}`}
-                caption={`${s.title}: a conceptual interface.`}
-              />
+            <div className={`lead-visual glass${s.photo ? " has-photo" : ""}`} data-spotlight>
+              {s.photo ? (
+                <Photo photo={s.photo} />
+              ) : s.figure ? (
+                <Figure
+                  id={s.figure}
+                  uid={`${block.id}-${i}`}
+                  caption={`${s.title}: a conceptual interface.`}
+                />
+              ) : null}
             </div>
           </li>
         ))}
@@ -425,28 +545,24 @@ export function PricingBlock({ block }: { block: Of<"pricing"> }) {
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
       <ul className="price-grid" data-reveal="group">
         {block.plans.map((p) => (
-          <li
-            key={p.name}
-            className={`price-card${p.featured ? " is-featured" : ""}`}
-            data-spotlight
-          >
+          <li key={p.name} className="price-card" data-spotlight>
             <h3 className="price-name">{p.name}</h3>
+            <p className="price-from">Typical range</p>
             <p className="price-range">{p.range}</p>
+            <p className="price-summary">
+              <Inline text={p.summary} />
+            </p>
             <p className="price-time">
               <Clock aria-hidden="true" weight="light" className="price-clock" />
               {p.timeline}
             </p>
-            <p className="price-summary">
-              <Inline text={p.summary} />
-            </p>
-            <Checks items={p.includes} />
           </li>
         ))}
       </ul>
       <div className="price-foot" data-reveal="block">
         <div>
           <h3 className="price-foot-title">{block.factors.title}</h3>
-          <ul className="dot-list factor-list">
+          <ul className="factor-chips">
             {block.factors.items.map((x) => (
               <li key={x}>{x}</li>
             ))}
@@ -528,13 +644,7 @@ export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
                 <p>{q.quote}</p>
               </blockquote>
               <figcaption className="quote-who">
-                <span className="quote-avatar" aria-hidden="true">
-                  {q.name
-                    .split(/\s+/)
-                    .map((w) => w[0])
-                    .slice(0, 2)
-                    .join("")}
-                </span>
+                <Avatar photo={q.photo} name={q.name} />
                 <span>
                   <span className="quote-name">{q.name}</span>
                   <span className="quote-role">

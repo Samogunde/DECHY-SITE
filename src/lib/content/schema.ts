@@ -318,12 +318,23 @@ export const Block = z.discriminatedUnion("type", [
           word: z.string(),
           lead: z.string(),
           href: z.string(),
-          figure: FigureId,
+          figure: FigureId.optional(),
+          photo: PhotoRef.optional(),
           chips: z.array(z.string()).max(3).default([]),
         }),
       )
       .max(5)
       .default([]),
+  }),
+  /** Every service, grouped by family: choose a family to see its services beside a photograph. */
+  z.object({
+    type: z.literal("service-explorer"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    families: z.array(z.object({ id: z.string(), blurb: z.string(), photo: PhotoRef })).min(2),
+    more: Cta.optional(),
   }),
   /** Figures that count up when they come into view, beside a photograph. */
   z.object({
@@ -417,7 +428,8 @@ export const Block = z.discriminatedUnion("type", [
           /** The large word the row opens with ("Software"). */
           word: z.string().optional(),
           includes: z.array(z.string()).min(3).max(5),
-          figure: FigureId,
+          figure: FigureId.optional(),
+          photo: PhotoRef.optional(),
         }),
       )
       .min(2)
@@ -508,7 +520,13 @@ export const Block = z.discriminatedUnion("type", [
     heading: z.string(),
     items: z
       .array(
-        z.object({ quote: z.string(), name: z.string(), role: z.string(), company: z.string() }),
+        z.object({
+          quote: z.string(),
+          name: z.string(),
+          role: z.string(),
+          company: z.string(),
+          photo: PhotoRef.optional(),
+        }),
       )
       .min(1)
       .max(6),

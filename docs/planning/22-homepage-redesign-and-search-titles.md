@@ -68,3 +68,14 @@ The owner's feedback on the first sample was that it still read as flat, the her
 - **Icons.** Phosphor line icons (light and thin weights) replace the earlier set. Technology tiles use the official marks from Simple Icons (CC0). AWS, Azure, Java, OpenAI, and Salesforce are not in that set, because their owners withdrew them, so those tiles show the name as a wordmark.
 - **Photographs.** Twelve Unsplash photographs from the free library (Unsplash License: commercial use, no attribution). Each is stored as a 2600 px JPEG at quality 90 with 4:4:4 chroma and registered with license evidence. Browsers receive WebP sized to the painted width. The home page may carry up to 14 photographs; other pages keep the limit of 4. The validator now finds photographs inside items (phases, cards), not only on blocks.
 - **Draft sections** (logos, selected work, testimonials, pricing) now render without a draft label in review builds, as the owner asked. They are still removed from production builds until real details replace the samples. The sample company names, quotes, and figures are invented for layout only.
+
+## Third pass (19 October 2026): photographs instead of illustrations, all services visible
+
+- The hero rotates every 3.4 seconds instead of 5.2.
+- The hero and the three service rows show photographs instead of interface illustrations. The owner's direction is real images on the site; stock is used until project photography is supplied.
+- A "Fifteen services, one team" explorer replaces the compact list. Five family tabs each show a photograph and every service in the family, with icons, short descriptions, and links. The home page now shows the full range, not only the three lead services.
+- The technology section now has seven groups and about 60 marks, with room between tiles so a lifted tile never touches its neighbors.
+- Pricing cards are shorter (name, typical range, one line, timeline), and whichever card is hovered or focused lights up. What moves the price is shown as chips.
+- Testimonials show circular portraits. The validator rejects a stock portrait on any published (non-draft) testimonial, so a sample face can never reach the live site.
+- The questions section uses the dark home design.
+- Fifteen more Unsplash photographs, registered with license evidence. The home page may carry up to 32 photographs.

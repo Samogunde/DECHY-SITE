@@ -20,6 +20,7 @@ import {
   PricingBlock,
   PromiseBlock,
   RevealBlock,
+  ServiceExplorerBlock,
   ServiceStripBlock,
   StackBlock,
   StatsBlock,
@@ -145,6 +146,8 @@ export function BlockRenderer({
       return <PhasesBlock block={block} />;
     case "insights":
       return <InsightsBlock block={block} />;
+    case "service-explorer":
+      return <ServiceExplorerBlock block={block} />;
     default: {
       const never: never = block;
       throw new Error(`Unhandled block: ${JSON.stringify(never)}`);

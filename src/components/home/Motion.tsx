@@ -183,3 +183,63 @@ export function CaseViewer({ labels, panels }: { labels: string[]; panels: React
     </div>
   );
 }
+
+/**
+ * All services by family: a row of family tabs, and one panel at a time with the family's
+ * photograph and its services. Arrow keys move between tabs (WAI-ARIA tabs pattern).
+ */
+export function ServiceExplorer({
+  tabs,
+  panels,
+}: {
+  tabs: { label: string; count: number }[];
+  panels: ReactNode[];
+}) {
+  const [active, setActive] = useState(0);
+  const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  const move = (i: number) => {
+    const n = (i + tabs.length) % tabs.length;
+    setActive(n);
+    refs.current[n]?.focus();
+  };
+  return (
+    <div className="explorer">
+      <div className="explorer-tabs" role="tablist" aria-label="Service families">
+        {tabs.map((t, i) => (
+          <button
+            key={t.label}
+            ref={(el) => {
+              refs.current[i] = el;
+            }}
+            id={`svc-tab-${i}`}
+            type="button"
+            role="tab"
+            aria-selected={i === active}
+            aria-controls={`svc-panel-${i}`}
+            tabIndex={i === active ? 0 : -1}
+            className="explorer-tab"
+            onClick={() => setActive(i)}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowRight") move(i + 1);
+              else if (e.key === "ArrowLeft") move(i - 1);
+            }}
+          >
+            <span>{t.label}</span>
+            <span className="explorer-count">{t.count}</span>
+          </button>
+        ))}
+      </div>
+      {panels.map((p, i) => (
+        <div
+          key={i}
+          id={`svc-panel-${i}`}
+          role="tabpanel"
+          aria-labelledby={`svc-tab-${i}`}
+          hidden={i !== active}
+        >
+          {p}
+        </div>
+      ))}
+    </div>
+  );
+}

@@ -491,7 +491,7 @@
   transform: scaleX(1);
 }
 .hero-tab[data-running="true"] .hero-tab-bar > span {
-  animation: tab-fill 5200ms linear both;
+  animation: tab-fill 3400ms linear both;
 }
 @keyframes tab-fill {
   from {
@@ -1678,4 +1678,318 @@ a.stack-tile:hover .tech-logo {
   .phase-cols {
     display: none;
   }
+}
+
+/* ---------------- photographs in the hero and service rows ---------------- */
+.hero-screen .photo,
+.lead-visual .photo {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.hero-screen:has(.hero-photo) {
+  padding: 0.6rem;
+}
+.lead-visual.has-photo {
+  padding: 0.6rem;
+}
+.lead-visual.has-photo .photo-frame {
+  aspect-ratio: 4 / 3;
+}
+
+/* ---------------- technology tiles: room to lift without touching ---------------- */
+.stack-tiles {
+  row-gap: 1.75rem;
+  column-gap: 1rem;
+}
+@media (min-width: 64rem) {
+  .stack-tiles {
+    padding-top: 0.75rem;
+  }
+  .stack-tiles > li:nth-child(even) {
+    transform: translateY(-0.75rem);
+  }
+}
+
+/* ---------------- every service, by family ---------------- */
+.explorer {
+  margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+}
+.explorer-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.75rem;
+  scrollbar-width: none;
+}
+.explorer-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: none;
+  min-height: 48px;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--glass-line-strong);
+  background: transparent;
+  color: rgb(255 255 255 / 0.72);
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.explorer-tab:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.explorer-tab[aria-selected="true"] {
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-ink);
+}
+.explorer-count {
+  display: grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: rgb(245 165 36 / 0.18);
+  color: var(--color-amber);
+  font-size: var(--fs-label);
+  font-weight: 800;
+}
+.explorer-tab[aria-selected="true"] .explorer-count {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+.explorer-panel {
+  display: grid;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+@media (min-width: 64rem) {
+  .explorer-panel {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 2rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  [role="tabpanel"]:not([hidden]) .explorer-panel {
+    animation: panel-in 450ms var(--ease-out);
+  }
+  @keyframes panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}
+.explorer-photo {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 18rem;
+}
+.explorer-photo .photo {
+  margin: 0;
+  height: 100%;
+}
+.explorer-photo .photo-frame {
+  height: 100%;
+}
+.explorer-family {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-amber);
+}
+.explorer-services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+@media (min-width: 40rem) {
+  .explorer-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.explorer-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  color: #fff;
+  text-decoration: none;
+  transition:
+    transform 260ms var(--ease-out),
+    border-color 260ms var(--ease-out),
+    background-color 260ms var(--ease-out);
+}
+#hero ~ .section a.explorer-card {
+  color: #fff;
+}
+a.explorer-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(122 165 248 / 0.5);
+  background-color: rgb(255 255 255 / 0.06);
+  text-decoration: none;
+}
+.explorer-card .feature-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.explorer-card .feature-icon .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.explorer-text {
+  display: grid;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 0;
+}
+.explorer-name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.explorer-micro {
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.explorer-card .arrow {
+  margin-top: 0.3rem;
+  color: rgb(255 255 255 / 0.5);
+}
+a.explorer-card:hover .arrow {
+  transform: translateX(4px);
+  color: #fff;
+}
+
+/* ---------------- pricing: short cards, the hovered one lights up ---------------- */
+.price-card {
+  gap: 0.6rem;
+  transition:
+    transform 300ms var(--ease-out),
+    border-color 300ms var(--ease-out),
+    box-shadow 300ms var(--ease-out),
+    background-color 300ms var(--ease-out);
+}
+.price-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px -1px auto;
+  height: 3px;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  background: linear-gradient(90deg, var(--color-blue), var(--color-amber));
+  opacity: 0;
+  transition: opacity 300ms var(--ease-out);
+}
+.price-card:hover,
+.price-card:focus-within {
+  border-color: rgb(122 165 248 / 0.55);
+  background-color: rgb(255 255 255 / 0.06);
+  box-shadow: var(--glow-blue);
+  transform: translateY(-6px);
+}
+.price-card:hover::after,
+.price-card:focus-within::after {
+  opacity: 1;
+}
+.price-from {
+  margin: 0.4rem 0 0;
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.5);
+}
+.price-range {
+  font-size: clamp(1.6rem, 1.3rem + 0.9vw, 2.1rem);
+}
+.price-summary {
+  margin: 0.25rem 0 0.75rem;
+}
+.price-time {
+  margin-top: auto;
+}
+.factor-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.factor-chips li {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--glass-line-strong);
+  font-size: var(--fs-body-sm);
+  color: rgb(255 255 255 / 0.85);
+}
+
+/* ---------------- testimonial portraits ---------------- */
+.quote-photo {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  object-position: 50% 25%;
+  border: 2px solid rgb(255 255 255 / 0.2);
+}
+
+/* ---------------- questions on the dark home ---------------- */
+#hero ~ .section.tone-ink .faq.faq-cards details {
+  background: var(--glass);
+  border-color: var(--glass-line);
+}
+#hero ~ .section.tone-ink .faq.faq-cards details:hover {
+  border-color: rgb(122 165 248 / 0.4);
+}
+#hero ~ .section.tone-ink .faq.faq-cards details[open] {
+  background: rgb(255 255 255 / 0.06);
+  border-color: rgb(122 165 248 / 0.55);
+  box-shadow: var(--glow-blue);
+}
+#hero ~ .section.tone-ink .faq summary {
+  color: #fff;
+}
+#hero ~ .section.tone-ink .faq summary:hover {
+  color: #9cc0ff;
+}
+#hero ~ .section.tone-ink .faq summary::after {
+  color: var(--color-amber);
+}
+#hero ~ .section.tone-ink .faq-n {
+  color: var(--color-amber);
+}
+#hero ~ .section.tone-ink .faq.faq-cards .answer {
+  color: var(--text-dim);
+}
+#hero ~ .section.tone-ink .faq-ask {
+  background: var(--glass);
+  border-color: var(--glass-line);
+  color: #fff;
+}
+#hero ~ .section.tone-ink .faq-ask-text {
+  color: var(--text-dim);
+}
+#hero ~ .section.tone-ink .faq .t-h2 {
+  color: #fff;
 }
