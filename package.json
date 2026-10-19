@@ -23,13 +23,13 @@
     "brand:derivatives": "tsx scripts/brand-derivatives.ts"
   },
   "dependencies": {
-    "@netlify/blobs": "11.1.0",
-    "next": "16.3.8",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "@netlify/blobs": "11.1.4",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "schema-dts": "^2.1.0",
     "yaml": "^2.9.1",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
