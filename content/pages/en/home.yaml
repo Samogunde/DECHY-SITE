@@ -30,33 +30,43 @@ sections:
     id: hero
     variant: home
     eyebrow: Technology, Software, AI & Digital Solutions
-    headline: Websites, web apps, mobile apps, and custom software, built to work as one system.
+    headline: We build custom software, websites, web apps, and mobile apps that work as one system.
     lead: We design, build, and support digital products for startups and growing businesses, with AI, automation, and integrations built in from the start.
-    support: A clear scope and price range before work begins, and honest advice on what not to build.
     ctas:
       - label: Get a project estimate
         href: /contact/
       - label: See what we build
         href: "#services"
-    stats:
-      - value: "{{fact:company.founded}}"
-        label: Building since
-      - value: "{{fact:company.clients}}"
-        label: Clients helped
-      - value: "15"
-        label: Service areas
-      - value: Global
-        label: Remote, across time zones
-    figure: system-map
-    purpose: system
-    takeaway: Websites, apps, software, AI, automation, and cloud work best when one connection layer joins them, instead of being separate tools.
-    visualTitle: Five layers of technology joined into one system
-    figureCaption: This diagram shows five layers of technology, from what people see to the infrastructure underneath, joined by one connection layer.
+    slides:
+      - label: Custom software
+        word: custom software.
+        lead: Internal tools, portals, and platforms built around the way your business works, so your team stops fighting spreadsheets.
+        href: /software-development/
+        figure: portal-wireframe
+        chips: [Customer portal, Role-based access, Connected to your tools]
+      - label: Websites
+        word: websites.
+        lead: Fast, accessible websites that explain what you do, rank in search, and turn visitors into inquiries.
+        href: /web-development/
+        figure: site-builder
+        chips: [Loads fast, Easy to edit, Search ready]
+      - label: Web apps
+        word: web apps.
+        lead: Browser apps with accounts, dashboards, bookings, and payments, connected to the systems behind them.
+        href: /web-development/
+        figure: dashboard-ui
+        chips: [Live dashboards, Payments, Secure sign-in]
+      - label: Mobile apps
+        word: mobile apps.
+        lead: iPhone and Android apps for customers, staff, and field teams, from the first prototype to the app stores.
+        href: /mobile-app-development/
+        figure: mobile-app-ui
+        chips: [iOS and Android, Works offline, App store release]
 
   - type: logos
     id: clients
     draft: true
-    tone: white
+    tone: ink
     label: Trusted by teams at
     style: strip
     items:
@@ -69,14 +79,36 @@ sections:
       - { name: Stratus Labs, icon: cloud }
       - { name: Kinetica Finance, icon: finance }
 
+  - type: stats
+    id: numbers
+    tone: ink
+    label: DECHY in numbers
+    heading: One team for the software, the website, and the app
+    intro: We have built for startups, growing businesses, and enterprises across many industries, and we stay with what we build.
+    items:
+      - value: "{{fact:company.clients}}"
+        label: Clients helped
+      - value: "{{years}}+"
+        label: Years building software
+      - value: "15"
+        label: Service areas, one team
+      - value: "50+"
+        label: Technologies we build with
+    photo:
+      asset: asset.photo-team-planning-whiteboard-office
+      layout: split
+      position: 50% 45%
+    photoNote: Design, engineering, and delivery in one conversation, from the first sketch to launch.
+
   - type: lead-services
     id: services
-    tone: paper
+    tone: ink
     label: What we build
     heading: Software, websites, and apps, designed and built end to end
     intro: Most projects start with one of these three. Each is a full practice, from first idea and design to launch, hosting, and support.
     items:
       - title: Custom software
+        word: Software
         kicker: Software development
         body: Business software built around the way you actually work, so your team stops fighting spreadsheets and disconnected tools.
         href: /software-development/
@@ -88,6 +120,7 @@ sections:
           - Subscription software (SaaS) products
           - Connections to the tools you already use
       - title: Websites and web apps
+        word: Web
         kicker: Web development
         body: Fast, accessible websites that win customers, and web applications your customers or staff log in to every day.
         href: /web-development/
@@ -99,6 +132,7 @@ sections:
           - Content your team can edit
           - Built to load fast and be found in search
       - title: Mobile apps
+        word: Mobile
         kicker: Mobile app development
         body: iPhone and Android apps for customers, staff, and field teams, from first prototype to the app stores and every update after.
         href: /mobile-app-development/
@@ -110,9 +144,29 @@ sections:
           - App store release and updates
           - Secure back end and notifications
 
+  - type: reveal
+    id: promise-statement
+    tone: ink
+    label: Our promise
+    text: We will tell you what not to build. Before any commitment, we recommend the smallest first step that proves the idea, and we say plainly when something should be bought, connected, or left alone.
+
+  - type: promise
+    id: promise
+    tone: ink
+    label: What you can count on
+    heading: Clear scope, a clear price range, and no surprises
+    body: You know what you are getting and roughly what it costs before work starts, and you see progress all the way through.
+    items:
+      - title: Advice before commitment
+        body: A short discovery or a review of what you have, and a recommendation you can take anywhere.
+      - title: Scope, timeline, and price range agreed
+        body: Everything is written down before work starts, so you can plan and budget with confidence.
+      - title: No surprises
+        body: Changes to scope are discussed and agreed before work continues, and bad news is reported when it is known.
+
   - type: feature-grid
     id: built-in
-    tone: white
+    tone: ink
     label: Built in, not bolted on
     heading: AI, automation, and integration come with the product
     intro: The hardest problems sit between systems. At DECHY, we design the connections at the same time as the screens, so what we build keeps working with everything around it.
@@ -134,9 +188,100 @@ sections:
         body: Hosting, release pipelines, monitoring, and backups, so updates reach users safely and the system stays up.
         href: /cloud/
 
+  - type: stack
+    id: technology
+    tone: ink
+    label: Technology
+    heading: Any stack, chosen for the job
+    intro: We choose by fit, cost, and how easy the result will be to maintain, and we work with the platforms you already use.
+    groups:
+      - title: Web and software
+        entityIds:
+          - fw.react
+          - fw.nextjs
+          - lang.typescript
+          - tech.nodejs
+          - lang.python
+          - lang.php
+          - tech.dotnet
+          - lang.java
+          - fw.vue
+          - fw.angular
+      - title: Mobile
+        entityIds:
+          - tech.flutter
+          - tech.react-native
+          - tech.swift
+          - tech.kotlin
+      - title: Website and store platforms
+        entityIds:
+          - plat.wordpress
+          - plat.shopify
+          - plat.webflow
+          - plat.woocommerce
+          - plat.wix
+          - plat.squarespace
+      - title: AI and automation
+        entityIds:
+          - prov.openai
+          - prov.anthropic-claude
+          - prov.google-gemini
+          - tech.zapier
+          - tech.n8n
+          - tech.make
+      - title: Cloud, data, and payments
+        entityIds:
+          - plat.aws
+          - plat.azure
+          - plat.google-cloud
+          - plat.cloudflare
+          - tech.postgresql
+          - tech.mongodb
+          - int.stripe
+          - int.paypal
+    more:
+      label: See all technologies
+      href: /technologies/
+
+  - type: feature-grid
+    id: industries
+    tone: ink
+    style: panels
+    label: Industries
+    heading: Built for the sector you work in
+    intro: Each sector's data, rules, and customers shape the work. These are the sectors we write about in depth.
+    items:
+      - icon: health
+        title: Healthcare
+        href: /industries/healthcare/
+      - icon: finance
+        title: Finance
+        href: /industries/finance/
+      - icon: building
+        title: Real estate
+        href: /industries/real-estate/
+      - icon: truck
+        title: Logistics
+        href: /industries/logistics/
+      - icon: factory
+        title: Manufacturing
+        href: /industries/manufacturing/
+      - icon: bag
+        title: Retail and ecommerce
+        href: /industries/retail/
+      - icon: education
+        title: Education
+        href: /industries/education/
+      - icon: briefcase
+        title: Professional services
+        href: /industries/professional-services/
+    more:
+      label: See all industries
+      href: /industries/
+
   - type: service-strip
     id: also
-    tone: paper
+    tone: ink
     label: Also from DECHY
     heading: Everything else your product needs
     intro: The same team covers security, data, design, and growth, so nothing falls between suppliers.
@@ -169,50 +314,136 @@ sections:
       label: See all fifteen services
       href: /services/
 
-  - type: index
-    id: problems
-    tone: white
-    numbered: true
-    label: Problems we solve
-    columns: 2
-    photo:
-      asset: asset.photo-consulting-process-mapping-review
-      layout: split
-      position: 50% 52%
-    heading: What usually brings people to us
-    intro: Projects usually begin with a problem, not a technology. These are the ones we see most.
-    items:
-      - title: An idea that needs to become a product
-        body: A web app, mobile app, or platform that has to work for real users, not only in a demo. We shape the first version and build it to grow.
-      - title: Manual work that should not be manual
-        body: Re-keying data, chasing approvals by email, assembling reports by hand. We automate the repetition and keep a record of what happened.
-      - title: Disconnected systems
-        body: A CRM (where you keep track of customers), accounting, ecommerce, and support tools that each hold part of the truth. We connect them so data flows once.
-      - title: Outdated software
-        body: Systems that are slow to change or no longer supported. We replace or wrap them in stages, so the business keeps running.
-      - title: A website that does not bring in work
-        body: Slow pages, unclear messages, and forms that lose people. We fix what visitors feel and what search engines read.
-      - title: AI that never reaches daily use
-        body: Pilots with no route into the work. We connect assistants to your data and permissions, with human review built in.
-
-  - type: promise
-    id: promise
+  - type: phases
+    id: process
     tone: ink
-    label: Our promise
-    heading: We will tell you what not to build.
-    body: Before any commitment, we recommend the smallest first step that proves the idea, and we say plainly when something should be bought, connected, or left alone.
+    label: How a project runs
+    heading: A clear process, with something to see at every step
+    intro: The details change with each project. The stages stay the same, and you decide at every step.
+    steps:
+      - title: Discover and define
+        summary: We learn the goal, the users, and the systems you already have, then recommend an approach and a first step.
+        tags: [Discovery, Workshops, Recommendation]
+        activities:
+          [Goals and user interviews, Review of current systems, Scope options with trade-offs]
+        deliverables: [Recommendation, First-step plan, Rough price range]
+        photo:
+          asset: asset.photo-discovery-sticky-notes-glass
+          layout: split
+          position: 50% 50%
+      - title: Plan and design
+        summary: Screens and flows you can click through before anything is built, so decisions are made early and cheaply.
+        tags: [Product design, User journeys, Prototype]
+        activities: [Feature priorities, User journeys, Interface design]
+        deliverables: [Clickable prototype, Agreed scope, Delivery plan]
+        photo:
+          asset: asset.photo-design-workshop-color-swatches
+          layout: split
+          position: 50% 50%
+      - title: Build and test
+        summary: Working software in stages, tested as we go, with regular updates in plain language and a demo at every milestone.
+        tags: [Engineering, Testing, Releases]
+        activities:
+          [Development in short cycles, Automated testing, Security and performance checks]
+        deliverables: [Working releases, Progress reports, Test results]
+        photo:
+          asset: asset.photo-developers-coding-monitors
+          layout: split
+          position: 50% 50%
+      - title: Launch
+        summary: A planned release with monitoring and a rollback path, so problems are caught before your users notice.
+        tags: [Release, Monitoring, Training]
+        activities: [Launch checklist, Data migration, Team training]
+        deliverables: [Live system, Documentation, Handover]
+        photo:
+          asset: asset.photo-team-reviewing-release-screen
+          layout: split
+          position: 50% 50%
+      - title: Support and improve
+        summary: We look after what we built, fix problems, and help it improve, on terms agreed in advance.
+        tags: [Support, Maintenance, Growth]
+        activities: [Monitoring and fixes, Updates and security patches, Improvement planning]
+        deliverables: [Support agreement, Improvement list, Regular reports]
+        photo:
+          asset: asset.photo-team-support-laptop-review
+          layout: split
+          position: 50% 50%
+
+  - type: case-studies
+    id: work
+    draft: true
+    tone: ink
+    label: Selected work
+    heading: Projects and what changed
+    intro: A few of the systems we have built, with the problem, the solution, and the result.
     items:
-      - title: Advice before commitment
-        body: A short discovery or a review of what you have, and a recommendation you can take anywhere.
-      - title: Scope, timeline, and price range agreed
-        body: You know what you are getting and roughly what it costs before work starts.
-      - title: No surprises
-        body: Changes to scope are discussed and agreed before work continues, and bad news is reported when it is known.
+      - client: Clinic booking platform
+        sector: Healthcare, web app
+        title: Online booking and a patient portal for a multi-site clinic group
+        summary: Patients book, reschedule, and receive reminders online, and staff see every location's diary in one place, connected to the clinic's records.
+        results:
+          - value: "38%"
+            label: Fewer missed appointments
+          - value: "12 weeks"
+            label: From design to launch
+        services: [Web app, Integration, Product design]
+        photo:
+          asset: asset.photo-web-dashboard-laptop
+          layout: split
+          position: 50% 50%
+      - client: Field service app
+        sector: Logistics, mobile app
+        title: A mobile app for field engineers, with job sheets that work offline
+        summary: Engineers receive jobs, capture photos and signatures, and close work on site, and the office sees progress as it happens.
+        results:
+          - value: "45%"
+            label: Less admin per job
+          - value: "2x"
+            label: Faster invoicing
+        services: [Mobile app, Cloud, Automation]
+        photo:
+          asset: asset.photo-mobile-app-in-hand
+          layout: split
+          position: 50% 50%
+      - client: Order and stock system
+        sector: Wholesale, custom software
+        title: One order and stock system replacing six spreadsheets
+        summary: Sales, stock, and dispatch work from the same live data, with automatic reorder alerts and reports for management.
+        results:
+          - value: "20 hrs"
+            label: Saved every week
+          - value: "60%"
+            label: Faster order processing
+        services: [Custom software, Automation, Dashboards]
+        photo:
+          asset: asset.photo-business-software-laptop
+          layout: split
+          position: 50% 50%
+
+  - type: testimonials
+    id: testimonials
+    draft: true
+    tone: ink
+    label: What clients say
+    heading: In our clients' words
+    items:
+      - quote: They told us which features to leave out, and that is why we launched on time. The app has been stable since day one.
+        name: Amara Okafor
+        role: Founder
+        company: Lumora Health
+      - quote: Our team stopped copying data between systems. Orders, stock, and invoices finally agree with each other.
+        name: Daniel Reyes
+        role: Operations Director
+        company: Brightwell Retail
+      - quote: Clear scope, honest estimates, and a weekly demo. It felt like working with our own team.
+        name: Sofia Lindqvist
+        role: Head of Product
+        company: Stratus Labs
 
   - type: pricing
     id: pricing
     draft: true
-    tone: paper
+    tone: ink
     label: Pricing
     heading: What projects typically cost
     intro: Every project is quoted in writing after a short discovery. These ranges show where most projects land, so you can plan before you talk to us.
@@ -264,172 +495,40 @@ sections:
       label: Get a project estimate
       href: /contact/
 
-  - type: case-studies
-    id: work
-    draft: true
-    tone: white
-    label: Selected work
-    heading: Projects and what changed
-    intro: A few of the systems we have built, with the problem, the solution, and the result.
-    items:
-      - client: Client name
-        sector: Sector
-        title: Project one, named by what was built
-        summary: The problem the client had, what we built, and how it changed their work.
-        results:
-          - value: "00%"
-            label: Result metric
-          - value: "0 weeks"
-            label: Time to launch
-        services: [Web app, Integration]
-      - client: Client name
-        sector: Sector
-        title: Project two, named by what was built
-        summary: The problem the client had, what we built, and how it changed their work.
-        results:
-          - value: "00%"
-            label: Result metric
-          - value: "0x"
-            label: Second metric
-        services: [Mobile app, Cloud]
-      - client: Client name
-        sector: Sector
-        title: Project three, named by what was built
-        summary: The problem the client had, what we built, and how it changed their work.
-        results:
-          - value: "00 hrs"
-            label: Saved each week
-          - value: "00%"
-            label: Result metric
-        services: [Custom software, Automation]
-
-  - type: testimonials
-    id: testimonials
-    draft: true
+  - type: insights
+    id: guides
     tone: ink
-    label: What clients say
-    heading: In our clients' words
+    label: Guides
+    heading: Decisions we help clients make
+    intro: Before you commit to a big technology decision, these pages explain the options in plain language.
     items:
-      - quote: A short quote from a real client about what it was like to work with DECHY and what changed.
-        name: Client name 1
-        role: Role
-        company: Company
-      - quote: A short quote from a real client about what it was like to work with DECHY and what changed.
-        name: Client name 2
-        role: Role
-        company: Company
-      - quote: A short quote from a real client about what it was like to work with DECHY and what changed.
-        name: Client name 3
-        role: Role
-        company: Company
-
-  - type: process
-    id: process
-    tone: white
-    label: How a project runs
-    heading: Five stages, with something to see at each
-    intro: The details change with each project. The stages stay the same, and you decide at every step.
-    steps:
-      - title: Discovery
-        body: We learn the goal, the users, and the systems you already have, then recommend an approach.
-        artifacts: [Recommendation, First-step plan]
-      - title: Design
-        body: Screens and flows you can click through before anything is built.
-        artifacts: [Prototype, Agreed scope]
-      - title: Build
-        body: Working software in stages, tested as we go, with regular updates in plain language.
-        artifacts: [Releases, Progress reports]
-      - title: Launch
-        body: A planned release with monitoring, so problems are caught before your users notice.
-        artifacts: [Live system, Documentation]
-      - title: Support
-        body: We look after what we built, fix problems, and help it improve, on terms agreed in advance.
-        artifacts: [Support agreement]
-
-  - type: entities
-    id: technology
-    tone: paper
-    style: lists
-    label: Technology
-    heading: The tools and platforms we build with
-    intro: A representative view. We choose by fit, cost, and how easy the result will be to maintain.
-    groups:
-      - title: Web and software
-        entityIds:
-          - fw.react
-          - fw.nextjs
-          - lang.typescript
-          - tech.nodejs
-          - lang.python
-          - lang.php
-          - lang.java
-          - tech.dotnet
-      - title: Mobile
-        entityIds:
-          - tech.flutter
-          - tech.react-native
-          - tech.swift
-          - tech.kotlin
-      - title: Website and store platforms
-        entityIds:
-          - plat.wordpress
-          - plat.shopify
-          - plat.webflow
-          - plat.woocommerce
-          - plat.wix
-          - plat.squarespace
-      - title: AI, data, and automation
-        entityIds:
-          - prov.openai
-          - prov.anthropic-claude
-          - prov.google-gemini
-          - tech.postgresql
-          - tech.zapier
-          - tech.n8n
-      - title: Cloud and payments
-        entityIds:
-          - plat.aws
-          - plat.azure
-          - plat.google-cloud
-          - plat.cloudflare
-          - int.stripe
-          - int.paypal
-
-  - type: feature-grid
-    id: industries
-    tone: white
-    style: tiles
-    label: Industries
-    heading: Built for the sector you work in
-    intro: Each sector's data, rules, and customers shape the work. These are the sectors we write about in depth.
-    items:
-      - icon: health
-        title: Healthcare
-        href: /industries/healthcare/
-      - icon: finance
-        title: Finance
-        href: /industries/finance/
-      - icon: building
-        title: Real estate
-        href: /industries/real-estate/
-      - icon: truck
-        title: Logistics
-        href: /industries/logistics/
-      - icon: factory
-        title: Manufacturing
-        href: /industries/manufacturing/
-      - icon: bag
-        title: Retail and ecommerce
-        href: /industries/retail/
-      - icon: education
-        title: Education
-        href: /industries/education/
-      - icon: briefcase
-        title: Professional services
-        href: /industries/professional-services/
+      - category: Modernization
+        title: When to replace old software, and how to do it in stages
+        summary: How to modernize a system your business depends on without stopping it.
+        href: /solutions/legacy-system-modernization/
+        photo:
+          asset: asset.photo-laptop-code-dark
+          layout: rail
+          position: 50% 50%
+      - category: Data
+        title: Business dashboards your team will trust
+        summary: Numbers from every system in one place, checked and up to date.
+        href: /solutions/business-dashboards/
+        photo:
+          asset: asset.photo-analytics-dashboard-screen
+          layout: rail
+          position: 50% 50%
+      - category: Design
+        title: Why good products are designed before they are built
+        summary: What a design phase produces, and how it saves time and money in the build.
+        href: /ui-ux/
+        photo:
+          asset: asset.photo-website-wireframe-sketch
+          layout: rail
+          position: 50% 50%
     more:
-      label: See all industries
-      href: /industries/
+      label: See all guides
+      href: /resources/
 
   - type: faq
     id: questions

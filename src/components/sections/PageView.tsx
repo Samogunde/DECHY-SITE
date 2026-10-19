@@ -101,6 +101,7 @@ export function PageView({ path }: { path: string }) {
         <AtAGlance comprehension={page.comprehension} cta={glanceCta} kind={page.kind} />
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
+      {page.kind === "home" ? <div className="home-dark-start" aria-hidden="true" /> : null}
       {rest.map((block) => {
         const rendered = (
           <BlockRenderer

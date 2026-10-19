@@ -13,11 +13,16 @@ import { Hero } from "./Hero";
 import {
   CaseStudiesBlock,
   FeatureGridBlock,
+  InsightsBlock,
   LeadServicesBlock,
   LogosBlock,
+  PhasesBlock,
   PricingBlock,
   PromiseBlock,
+  RevealBlock,
   ServiceStripBlock,
+  StackBlock,
+  StatsBlock,
   TestimonialsBlock,
 } from "./HomeBlocks";
 import { ColumnsBlock, EntitiesBlock, RelatedBlock, ServiceIndexBlock } from "./ListBlocks";
@@ -130,6 +135,16 @@ export function BlockRenderer({
       return <LogosBlock block={block} />;
     case "promise":
       return <PromiseBlock block={block} />;
+    case "stats":
+      return <StatsBlock block={block} />;
+    case "reveal":
+      return <RevealBlock block={block} />;
+    case "stack":
+      return <StackBlock block={block} />;
+    case "phases":
+      return <PhasesBlock block={block} />;
+    case "insights":
+      return <InsightsBlock block={block} />;
     default: {
       const never: never = block;
       throw new Error(`Unhandled block: ${JSON.stringify(never)}`);

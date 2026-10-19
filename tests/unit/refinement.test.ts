@@ -23,7 +23,7 @@ const photos = base.assets.filter((a) => a.role === "photograph");
 describe("photography: provenance is mandatory", () => {
   it("registers every photograph with source, license evidence, hash, size and alt text", () => {
     expect(photos.length).toBeGreaterThanOrEqual(4);
-    expect(photos.length).toBeLessThanOrEqual(16);
+    expect(photos.length).toBeLessThanOrEqual(32);
     for (const a of photos) {
       // Licensed stock (Unsplash) or supplied by the owner; either way with evidence on file.
       expect(["licensed-stock", "owner-supplied"], a.id).toContain(a.source);
@@ -92,8 +92,9 @@ describe("photography: provenance is mandatory", () => {
 
   it("the validator rejects an unregistered photograph reference", () => {
     const r = withPages((pages) => {
-      const home = pages.find((p) => p.path === "/")!;
-      const idx = home.sections.find((s) => s.type === "index" && s.photo);
+      // Any page with a photographed index block serves as the fixture.
+      const page = pages.find((p) => p.sections.some((s) => s.type === "index" && s.photo))!;
+      const idx = page.sections.find((s) => s.type === "index" && s.photo);
       if (!idx || idx.type !== "index" || !idx.photo) throw new Error("no photo block");
       idx.photo.asset = "asset.photo-does-not-exist";
     });
@@ -102,11 +103,14 @@ describe("photography: provenance is mandatory", () => {
 
   it("the validator caps photographs per page", () => {
     const r = withPages((pages) => {
-      const home = pages.find((p) => p.path === "/")!;
-      const withPhoto = home.sections.find((s) => s.type === "index" && s.photo);
+      // A non-home page (limit 4) with a photographed index block.
+      const page = pages.find(
+        (p) => p.kind !== "home" && p.sections.some((s) => s.type === "index" && s.photo),
+      )!;
+      const withPhoto = page.sections.find((s) => s.type === "index" && s.photo);
       if (!withPhoto || withPhoto.type !== "index" || !withPhoto.photo) throw new Error("no photo");
       for (let i = 0; i < 4; i++) {
-        home.sections.push({
+        page.sections.push({
           ...structuredClone(withPhoto),
           id: `extra-photo-${i}`,
         });
@@ -139,7 +143,7 @@ describe("voice: DECHY speaks as a company", () => {
     // Owner direction, 19 October 2026: the home headline leads with websites, apps, and software;
     // the approved positioning line stays in the facts register unchanged.
     expect(hero && hero.type === "hero" ? hero.headline : "").toBe(
-      "Websites, web apps, mobile apps, and custom software, built to work as one system.",
+      "We build custom software, websites, web apps, and mobile apps that work as one system.",
     );
     expect(base.facts.get("company.positioning")!.value).toBe(
       "Software, AI, automation, integration, and cloud, designed to work as one system.",

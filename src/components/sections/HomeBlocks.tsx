@@ -1,15 +1,19 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Check, Clock, Quote } from "lucide-react";
+import { CheckCircle, Clock, Quotes } from "@phosphor-icons/react/dist/ssr";
 import { Figure } from "@/components/figures/Figure";
+import { CaseViewer, CountUp, PhaseScroller, RevealText } from "@/components/home/Motion";
+import { TechLogo } from "@/components/home/TechLogo";
 import { Arrow } from "@/components/primitives/Arrow";
 import { Icon } from "@/components/primitives/Icon";
 import { Inline } from "@/components/primitives/Inline";
 import { LinkButton } from "@/components/primitives/LinkButton";
+import { Photo } from "@/components/primitives/Photo";
+import { expandFacts } from "@/lib/content/inline";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
-import { pathExists } from "@/lib/content/urls";
-import { Section, SectionHeader } from "./Section";
+import { pathExists, publishedPath } from "@/lib/content/urls";
+import { Section } from "./Section";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -20,12 +24,20 @@ function useLive() {
     href.startsWith("#") || pathExists(href.split(/[?#]/)[0] ?? "", registry);
 }
 
+/** Facts expanded, plus {{years}}: whole years since the founding year in the facts register. */
+function statValue(raw: string): string {
+  const registry = getRegistry();
+  const founded = Number(registry.facts.get("company.founded")?.value ?? "0");
+  const years = founded ? new Date().getFullYear() - founded : 0;
+  return expandFacts(raw, registry.facts).replace("{{years}}", String(years));
+}
+
 function MoreLink({ cta }: { cta?: { label: string; href: string } }) {
   const live = useLive();
   if (!cta || !live(cta.href)) return null;
   return (
-    <p className="mt-8 m-0">
-      <Link href={cta.href} className="text-link-strong">
+    <p className="more-link">
+      <Link href={cta.href} className="btn btn-ghost">
         {cta.label}
         <Arrow />
       </Link>
@@ -33,93 +45,153 @@ function MoreLink({ cta }: { cta?: { label: string; href: string } }) {
   );
 }
 
-/** Heading on the left and the intro beside it on wide screens, so no half of the row is empty. */
+/** Heading on the left and the intro (or an action) beside it on wide screens. */
 function SplitHeader({
   id,
   label,
   heading,
   intro,
+  aside,
 }: {
   id: string;
   label: string;
   heading: string;
   intro?: string;
+  aside?: ReactNode;
 }) {
   return (
     <div className="split-header" data-reveal="block">
       <div>
         <p className="t-eyebrow eyebrow-accent m-0">{label}</p>
-        <h2 id={`${id}-h`} className="t-h2 mt-3 max-w-[22ch]">
+        <h2 id={`${id}-h`} className="home-h2 mt-4">
           {heading}
         </h2>
       </div>
-      {intro ? (
-        <p className="t-body-lg split-intro m-0">
-          <Inline text={intro} />
-        </p>
-      ) : null}
+      <div className="split-side">
+        {intro ? (
+          <p className="split-intro m-0">
+            <Inline text={intro} />
+          </p>
+        ) : null}
+        {aside}
+      </div>
     </div>
   );
 }
 
-/** Wraps a section whose facts are not supplied yet. Only ever rendered in a review build. */
-export function DraftFrame({ children }: { children: ReactNode }) {
+function Checks({ items }: { items: string[] }) {
   return (
-    <div className="draft-frame" data-draft="true">
-      <p className="draft-tag" role="note">
-        Draft for review: sample layout and placeholder content, removed from the live site until
-        real details are supplied.
-      </p>
-      {children}
-    </div>
+    <ul className="check-list">
+      {items.map((x) => (
+        <li key={x}>
+          <CheckCircle aria-hidden="true" weight="light" className="check-icon" />
+          <span>{x}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** Draft sections exist only in review builds (see showDrafts); they render like any other. */
+export function DraftFrame({ children }: { children: ReactNode }) {
+  return <>{children}</>;
+}
+
+export function StatsBlock({ block }: { block: Of<"stats"> }) {
+  return (
+    <Section id={block.id} tone={block.tone} className="stats-band" ruled={false}>
+      <div className="stats-grid">
+        <div>
+          <p className="t-eyebrow eyebrow-accent m-0" data-reveal="block">
+            {block.label}
+          </p>
+          <h2 id={`${block.id}-h`} className="home-h2 mt-4" data-reveal="block">
+            {block.heading}
+          </h2>
+          {block.intro ? (
+            <p className="split-intro mt-5" data-reveal="block">
+              <Inline text={block.intro} />
+            </p>
+          ) : null}
+          <dl className="stat-list">
+            {block.items.map((s) => (
+              <div key={s.label} className="stat">
+                <dt>{s.label}</dt>
+                <dd>
+                  <CountUp value={statValue(s.value)} />
+                </dd>
+                {s.detail ? <p className="stat-detail">{s.detail}</p> : null}
+              </div>
+            ))}
+          </dl>
+        </div>
+        {block.photo ? (
+          <div className="stats-photo">
+            <Photo photo={block.photo} />
+            {block.photoNote ? <p className="glass-note">{block.photoNote}</p> : null}
+          </div>
+        ) : null}
+      </div>
+    </Section>
+  );
+}
+
+export function RevealBlock({ block }: { block: Of<"reveal"> }) {
+  return (
+    <section
+      id={block.id}
+      aria-labelledby={`${block.id}-h`}
+      className={`section tone-${block.tone} reveal-band`}
+    >
+      <span className="beam beam-c" aria-hidden="true" />
+      <div className="container-site">
+        <h2 id={`${block.id}-h`} className="t-eyebrow eyebrow-accent m-0">
+          {block.label}
+        </h2>
+        <RevealText text={block.text} className="mt-6" />
+        {block.note ? <p className="reveal-note">{block.note}</p> : null}
+      </div>
+    </section>
   );
 }
 
 export function LeadServicesBlock({ block }: { block: Of<"lead-services"> }) {
   const live = useLive();
   return (
-    <Section id={block.id} tone={block.tone} className="lead-services">
+    <Section id={block.id} tone={block.tone} className="lead-services" ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <ul className="lead-grid" data-reveal="group">
+      <ol className="lead-rows">
         {block.items.map((s, i) => (
-          <li key={s.title} className="lead-tile">
-            <div className="lead-visual">
+          <li key={s.title} className="lead-row" data-reveal="block">
+            <div className="lead-copy">
+              <p className="lead-word" aria-hidden="true">
+                {s.word ?? s.title}
+              </p>
+              <p className="lead-kicker">{s.kicker}</p>
+              <h3 className="lead-title">
+                {live(s.href) ? <Link href={s.href}>{s.title}</Link> : s.title}
+              </h3>
+              <p className="lead-body">
+                <Inline text={s.body} />
+              </p>
+              <Checks items={s.includes} />
+              {live(s.href) ? (
+                <Link href={s.href} className="btn btn-ghost mt-8" aria-label={s.action}>
+                  {s.action}
+                  <Arrow />
+                </Link>
+              ) : null}
+            </div>
+            <div className="lead-visual glass" data-spotlight>
               <Figure
                 id={s.figure}
                 uid={`${block.id}-${i}`}
                 caption={`${s.title}: a conceptual interface.`}
               />
             </div>
-            <div className="lead-copy">
-              <p className="lead-kicker">{s.kicker}</p>
-              <h3 className="t-h3 lead-title">
-                {live(s.href) ? (
-                  <Link href={s.href} className="stretched-link">
-                    {s.title}
-                  </Link>
-                ) : (
-                  s.title
-                )}
-              </h3>
-              <p className="t-body mt-3">
-                <Inline text={s.body} />
-              </p>
-              <ul className="check-list mt-5">
-                {s.includes.map((x) => (
-                  <li key={x}>
-                    <Check aria-hidden="true" className="check-icon" strokeWidth={2.25} />
-                    <span>{x}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="lead-action" aria-hidden="true">
-                {s.action}
-                <Arrow />
-              </p>
-            </div>
           </li>
         ))}
-      </ul>
+      </ol>
     </Section>
   );
 }
@@ -127,15 +199,25 @@ export function LeadServicesBlock({ block }: { block: Of<"lead-services"> }) {
 export function FeatureGridBlock({ block }: { block: Of<"feature-grid"> }) {
   const live = useLive();
   return (
-    <Section id={block.id} tone={block.tone}>
-      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader
+        id={block.id}
+        label={block.label}
+        heading={block.heading}
+        intro={block.intro}
+        aside={<MoreLink cta={block.more} />}
+      />
       <ul className={`feature-grid feature-${block.style}`} data-reveal="group">
         {block.items.map((f) => {
-          const linked = f.href && live(f.href);
+          const linked = Boolean(f.href && live(f.href));
           return (
-            <li key={f.title} className={`feature-card${linked ? " is-linked" : ""}`}>
+            <li
+              key={f.title}
+              className={`feature-card${linked ? " is-linked" : ""}`}
+              data-spotlight
+            >
               <span className="feature-icon">
-                <Icon name={f.icon} />
+                <Icon name={f.icon} weight={block.style === "panels" ? "thin" : "light"} />
               </span>
               <h3 className="feature-title">
                 {linked ? (
@@ -160,7 +242,6 @@ export function FeatureGridBlock({ block }: { block: Of<"feature-grid"> }) {
           );
         })}
       </ul>
-      <MoreLink cta={block.more} />
     </Section>
   );
 }
@@ -168,40 +249,171 @@ export function FeatureGridBlock({ block }: { block: Of<"feature-grid"> }) {
 export function ServiceStripBlock({ block }: { block: Of<"service-strip"> }) {
   const live = useLive();
   return (
-    <Section id={block.id} tone={block.tone}>
-      <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
-        <div className="lg:col-span-4">
-          <SectionHeader
-            id={block.id}
-            label={block.label}
-            heading={block.heading}
-            intro={block.intro}
-          />
-        </div>
-        <div className="lg:col-span-8">
-          <ul className="service-strip" data-reveal="group">
-            {block.items.map((s) =>
-              live(s.href) ? (
-                <li key={s.title}>
-                  <Link href={s.href} className="service-pill">
-                    <Icon name={s.icon} />
-                    <span>{s.title}</span>
-                    <Arrow />
-                  </Link>
-                </li>
-              ) : (
-                <li key={s.title}>
-                  <span className="service-pill">
-                    <Icon name={s.icon} />
-                    <span>{s.title}</span>
-                  </span>
-                </li>
-              ),
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader
+        id={block.id}
+        label={block.label}
+        heading={block.heading}
+        intro={block.intro}
+        aside={<MoreLink cta={block.more} />}
+      />
+      <ul className="service-strip" data-reveal="group">
+        {block.items.map((s) => (
+          <li key={s.title}>
+            {live(s.href) ? (
+              <Link href={s.href} className="service-pill" data-spotlight>
+                <Icon name={s.icon} />
+                <span>{s.title}</span>
+                <Arrow />
+              </Link>
+            ) : (
+              <span className="service-pill">
+                <Icon name={s.icon} />
+                <span>{s.title}</span>
+              </span>
             )}
-          </ul>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  );
+}
+
+export function StackBlock({ block }: { block: Of<"stack"> }) {
+  const registry = getRegistry();
+  return (
+    <Section id={block.id} tone={block.tone} className="stack" ruled={false}>
+      <div className="stack-grid">
+        <div className="stack-head">
+          <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
+          <h2 id={`${block.id}-h`} className="home-h2 mt-4">
+            {block.heading}
+          </h2>
+          {block.intro ? (
+            <p className="split-intro mt-5">
+              <Inline text={block.intro} />
+            </p>
+          ) : null}
           <MoreLink cta={block.more} />
         </div>
+        <div className="stack-groups">
+          {block.groups.map((g) => (
+            <div key={g.title} className="stack-group">
+              <h3 className="stack-title">{g.title}</h3>
+              <ul className="stack-tiles" data-reveal="group">
+                {g.entityIds.map((id) => {
+                  const node = registry.nodes.get(id);
+                  if (!node) return null;
+                  const href = publishedPath(node, registry);
+                  const inner = (
+                    <>
+                      <TechLogo id={id} name={node.name} />
+                      <span className="stack-name">{node.name}</span>
+                    </>
+                  );
+                  return (
+                    <li key={id}>
+                      {href ? (
+                        <Link href={href} className="stack-tile" data-spotlight>
+                          {inner}
+                        </Link>
+                      ) : (
+                        <span className="stack-tile">{inner}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
+    </Section>
+  );
+}
+
+export function PhasesBlock({ block }: { block: Of<"phases"> }) {
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+      <PhaseScroller
+        photos={block.steps.map((s) => (
+          <Photo key={s.title} photo={s.photo} />
+        ))}
+      >
+        {block.steps.map((s, i) => (
+          <div key={s.title} className="phase-body">
+            <div className="phase-inline-photo">
+              <Photo photo={s.photo} />
+            </div>
+            <p className="phase-n">Phase {String(i + 1).padStart(2, "0")}</p>
+            <h3 className="phase-title">{s.title}</h3>
+            <p className="phase-summary">
+              <Inline text={s.summary} />
+            </p>
+            {s.tags.length ? (
+              <ul className="phase-tags">
+                {s.tags.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            ) : null}
+            <div className="phase-cols">
+              <div>
+                <h4 className="phase-sub">Activities</h4>
+                <ul className="dot-list">
+                  {s.activities.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="phase-sub">Deliverables</h4>
+                <ul className="dot-list">
+                  {s.deliverables.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </PhaseScroller>
+    </Section>
+  );
+}
+
+export function InsightsBlock({ block }: { block: Of<"insights"> }) {
+  const live = useLive();
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader
+        id={block.id}
+        label={block.label}
+        heading={block.heading}
+        intro={block.intro}
+        aside={<MoreLink cta={block.more} />}
+      />
+      <ul className="insight-grid" data-reveal="group">
+        {block.items.map((it) => (
+          <li key={it.title} className="insight-card">
+            <div className="insight-photo">
+              <Photo photo={it.photo} />
+            </div>
+            <p className="insight-cat">{it.category}</p>
+            <h3 className="insight-title">
+              {live(it.href) ? (
+                <Link href={it.href} className="stretched-link">
+                  {it.title}
+                </Link>
+              ) : (
+                it.title
+              )}
+            </h3>
+            <p className="insight-summary">{it.summary}</p>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }
@@ -209,35 +421,32 @@ export function ServiceStripBlock({ block }: { block: Of<"service-strip"> }) {
 export function PricingBlock({ block }: { block: Of<"pricing"> }) {
   const live = useLive();
   return (
-    <Section id={block.id} tone={block.tone} className="pricing">
+    <Section id={block.id} tone={block.tone} className="pricing" ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
       <ul className="price-grid" data-reveal="group">
         {block.plans.map((p) => (
-          <li key={p.name} className={`price-card${p.featured ? " is-featured" : ""}`}>
+          <li
+            key={p.name}
+            className={`price-card${p.featured ? " is-featured" : ""}`}
+            data-spotlight
+          >
             <h3 className="price-name">{p.name}</h3>
             <p className="price-range">{p.range}</p>
             <p className="price-time">
-              <Clock aria-hidden="true" className="price-clock" strokeWidth={2} />
+              <Clock aria-hidden="true" weight="light" className="price-clock" />
               {p.timeline}
             </p>
             <p className="price-summary">
               <Inline text={p.summary} />
             </p>
-            <ul className="check-list">
-              {p.includes.map((x) => (
-                <li key={x}>
-                  <Check aria-hidden="true" className="check-icon" strokeWidth={2.25} />
-                  <span>{x}</span>
-                </li>
-              ))}
-            </ul>
+            <Checks items={p.includes} />
           </li>
         ))}
       </ul>
       <div className="price-foot" data-reveal="block">
-        <div className="price-factors">
-          <h3 className="t-h4">{block.factors.title}</h3>
-          <ul className="factor-list">
+        <div>
+          <h3 className="price-foot-title">{block.factors.title}</h3>
+          <ul className="dot-list factor-list">
             {block.factors.items.map((x) => (
               <li key={x}>{x}</li>
             ))}
@@ -245,7 +454,7 @@ export function PricingBlock({ block }: { block: Of<"pricing"> }) {
         </div>
         <div className="price-next">
           {block.note ? (
-            <p className="t-body m-0">
+            <p className="m-0">
               <Inline text={block.note} />
             </p>
           ) : null}
@@ -261,69 +470,76 @@ export function PricingBlock({ block }: { block: Of<"pricing"> }) {
 }
 
 export function CaseStudiesBlock({ block }: { block: Of<"case-studies"> }) {
-  const live = useLive();
   return (
-    <Section id={block.id} tone={block.tone}>
+    <Section id={block.id} tone={block.tone} ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <ul className="case-grid" data-reveal="group">
-        {block.items.map((c) => (
-          <li key={c.title} className="case-card">
-            <p className="case-meta">
-              <span className="case-sector">{c.sector}</span>
-              <span>{c.client}</span>
-            </p>
-            <h3 className="t-h3 case-title">
-              {c.href && live(c.href) ? (
-                <Link href={c.href} className="stretched-link">
-                  {c.title}
-                </Link>
-              ) : (
-                c.title
-              )}
-            </h3>
-            <p className="t-body mt-3">
-              <Inline text={c.summary} />
-            </p>
-            <dl className="case-results">
-              {c.results.map((r) => (
-                <div key={r.label}>
-                  <dt>{r.label}</dt>
-                  <dd>{r.value}</dd>
-                </div>
-              ))}
-            </dl>
-            {c.services.length > 0 ? (
-              <ul className="case-tags">
-                {c.services.map((s) => (
-                  <li key={s}>{s}</li>
-                ))}
-              </ul>
+      <CaseViewer
+        labels={block.items.map((c) => c.client)}
+        panels={block.items.map((c) => (
+          <article key={c.title} className="case">
+            {c.photo ? (
+              <div className="case-photo">
+                <Photo photo={c.photo} />
+              </div>
             ) : null}
-          </li>
+            <div className="case-body">
+              <p className="case-meta">
+                <span>{c.sector}</span>
+              </p>
+              <h3 className="case-title">{c.title}</h3>
+              <p className="case-summary">
+                <Inline text={c.summary} />
+              </p>
+              {c.services.length > 0 ? (
+                <ul className="phase-tags">
+                  {c.services.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              ) : null}
+              <dl className="case-results">
+                {c.results.map((r) => (
+                  <div key={r.label}>
+                    <dt>{r.label}</dt>
+                    <dd>
+                      <CountUp value={r.value} />
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </article>
         ))}
-      </ul>
+      />
     </Section>
   );
 }
 
 export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
   return (
-    <Section id={block.id} tone={block.tone}>
-      <div className="max-w-[52rem]">
-        <SectionHeader id={block.id} label={block.label} heading={block.heading} />
-      </div>
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} />
       <ul className="quote-grid" data-reveal="group">
         {block.items.map((q) => (
           <li key={q.name}>
-            <figure className="quote-card">
-              <Quote aria-hidden="true" className="quote-mark" strokeWidth={1.5} />
+            <figure className="quote-card" data-spotlight>
+              <Quotes aria-hidden="true" weight="fill" className="quote-mark" />
               <blockquote className="quote-text">
                 <p>{q.quote}</p>
               </blockquote>
               <figcaption className="quote-who">
-                <span className="quote-name">{q.name}</span>
-                <span className="quote-role">
-                  {q.role}, {q.company}
+                <span className="quote-avatar" aria-hidden="true">
+                  {q.name
+                    .split(/\s+/)
+                    .map((w) => w[0])
+                    .slice(0, 2)
+                    .join("")}
+                </span>
+                <span>
+                  <span className="quote-name">{q.name}</span>
+                  <span className="quote-role">
+                    {q.role}, {q.company}
+                  </span>
                 </span>
               </figcaption>
             </figure>
@@ -335,46 +551,36 @@ export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
 }
 
 export function LogosBlock({ block }: { block: Of<"logos"> }) {
+  const headingId = `${block.id}-h`;
   const mark = (i: (typeof block.items)[number]) => (
     <>
-      {i.icon ? <Icon name={i.icon} /> : null}
+      {i.icon ? <Icon name={i.icon} weight="duotone" /> : null}
       <span>{i.name}</span>
     </>
   );
-  const headingId = `${block.id}-h`;
   return (
     <section id={block.id} aria-labelledby={headingId} className={`logos tone-${block.tone}`}>
       <div className="container-site">
         <h2 id={headingId} className="logos-label">
           {block.heading ?? block.label}
         </h2>
-        {block.style === "strip" ? (
-          <div className="logo-strip">
-            {/* The list is read once; the visual copy that makes the loop seamless is hidden. */}
-            <ul className="logo-track">
-              {block.items.map((i) => (
-                <li key={i.name} className="logo-mark">
-                  {mark(i)}
-                </li>
-              ))}
-            </ul>
-            <ul className="logo-track" aria-hidden="true">
-              {block.items.map((i) => (
-                <li key={i.name} className="logo-mark">
-                  {mark(i)}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : (
-          <ul className="logo-grid">
+        <div className="logo-strip">
+          {/* The list is read once; the visual copy that makes the loop seamless is hidden. */}
+          <ul className="logo-track">
             {block.items.map((i) => (
               <li key={i.name} className="logo-mark">
                 {mark(i)}
               </li>
             ))}
           </ul>
-        )}
+          <ul className="logo-track" aria-hidden="true">
+            {block.items.map((i) => (
+              <li key={i.name} className="logo-mark">
+                {mark(i)}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
@@ -382,26 +588,16 @@ export function LogosBlock({ block }: { block: Of<"logos"> }) {
 
 export function PromiseBlock({ block }: { block: Of<"promise"> }) {
   return (
-    <Section id={block.id} tone={block.tone} className="promise">
-      <div className="grid gap-10 lg:grid-cols-12 lg:items-end" data-reveal="block">
-        <div className="lg:col-span-7">
-          <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
-          <h2 id={`${block.id}-h`} className="promise-heading mt-4">
-            {block.heading}
-          </h2>
-        </div>
-        <p className="t-body-lg m-0 lg:col-span-5">
-          <Inline text={block.body} />
-        </p>
-      </div>
+    <Section id={block.id} tone={block.tone} className="promise" ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.body} />
       <ul className="promise-list" data-reveal="group">
         {block.items.map((p, i) => (
-          <li key={p.title}>
+          <li key={p.title} data-spotlight>
             <span className="promise-n" aria-hidden="true">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="t-h4">{p.title}</h3>
-            <p className="t-body mt-2 m-0">
+            <h3 className="promise-title">{p.title}</h3>
+            <p className="m-0">
               <Inline text={p.body} />
             </p>
           </li>

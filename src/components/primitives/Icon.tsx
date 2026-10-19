@@ -1,51 +1,57 @@
 import {
-  BarChart3,
+  Bank,
   Briefcase,
-  Building2,
+  Buildings,
+  ChartBar,
   Cloud,
-  Code2,
+  Code,
   Compass,
+  DeviceMobile,
   Factory,
+  FlowArrow,
   Globe,
   GraduationCap,
-  HeartPulse,
-  Landmark,
+  Heartbeat,
+  MagnifyingGlass,
   Megaphone,
   Palette,
-  PenTool,
-  Plug,
-  Search,
+  PenNib,
+  Plugs,
   ShieldCheck,
   ShoppingBag,
   ShoppingCart,
-  Smartphone,
-  Sparkles,
+  Sparkle,
   Truck,
-  Workflow,
-  type LucideIcon,
-} from "lucide-react";
+} from "@phosphor-icons/react/dist/ssr";
+import type { ComponentType } from "react";
+import type { IconProps } from "@phosphor-icons/react";
 import type { IconName } from "@/lib/content/schema";
 
-/** One icon set for the whole site: lucide, 1.75 stroke, sized by the surrounding type. */
-const ICONS: Record<IconName, LucideIcon> = {
-  code: Code2,
+type PhosphorIcon = ComponentType<IconProps>;
+
+/**
+ * One icon set for the whole site: Phosphor, drawn as fine line icons (light weight by default).
+ * Server-rendered SVG, sized by the surrounding type unless a size is given.
+ */
+const ICONS: Record<IconName, PhosphorIcon> = {
+  code: Code,
   globe: Globe,
-  phone: Smartphone,
-  sparkles: Sparkles,
-  workflow: Workflow,
-  plug: Plug,
+  phone: DeviceMobile,
+  sparkles: Sparkle,
+  workflow: FlowArrow,
+  plug: Plugs,
   cloud: Cloud,
   shield: ShieldCheck,
-  chart: BarChart3,
+  chart: ChartBar,
   cart: ShoppingCart,
-  pen: PenTool,
+  pen: PenNib,
   palette: Palette,
-  search: Search,
+  search: MagnifyingGlass,
   megaphone: Megaphone,
   compass: Compass,
-  health: HeartPulse,
-  finance: Landmark,
-  building: Building2,
+  health: Heartbeat,
+  finance: Bank,
+  building: Buildings,
   truck: Truck,
   factory: Factory,
   bag: ShoppingBag,
@@ -53,13 +59,21 @@ const ICONS: Record<IconName, LucideIcon> = {
   briefcase: Briefcase,
 };
 
-export function Icon({ name, className = "" }: { name: IconName; className?: string }) {
+export function Icon({
+  name,
+  className = "",
+  weight = "light",
+}: {
+  name: IconName;
+  className?: string;
+  weight?: "thin" | "light" | "regular" | "duotone";
+}) {
   const Glyph = ICONS[name];
   return (
     <Glyph
       aria-hidden="true"
       focusable="false"
-      strokeWidth={1.75}
+      weight={weight}
       className={`icon ${className}`.trim()}
     />
   );

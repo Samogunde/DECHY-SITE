@@ -5,6 +5,7 @@ import { LinkButton } from "@/components/primitives/LinkButton";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
+import { RotatingHero } from "@/components/home/RotatingHero";
 
 type HeroBlock = Extract<Block, { type: "hero" }>;
 
@@ -21,6 +22,47 @@ export function Hero({
   const registry = getRegistry();
   const isHome = block.variant === "home";
   const hasVisual = Boolean(aside || block.figure || block.spec);
+  if (isHome && block.slides.length > 0) {
+    const actions = block.ctas
+      .filter((c) => c.href.startsWith("#") || pathExists(c.href.split(/[?#]/)[0] ?? "", registry))
+      .map((c, i) =>
+        c.href.startsWith("#") ? (
+          <a key={c.label} href={c.href} className="btn btn-ghost">
+            {c.label}
+          </a>
+        ) : (
+          <LinkButton
+            key={c.label}
+            href={c.href}
+            variant={i === 0 ? "primary" : "secondary"}
+            arrow={i === 0}
+          >
+            {c.label}
+          </LinkButton>
+        ),
+      );
+    return (
+      <RotatingHero
+        eyebrow={block.eyebrow}
+        title={block.headline}
+        slides={block.slides.map((s) => ({
+          label: s.label,
+          word: s.word,
+          lead: s.lead,
+          chips: s.chips,
+        }))}
+        visuals={block.slides.map((s, i) => (
+          <Figure
+            key={s.label}
+            id={s.figure}
+            uid={`hero-${i}`}
+            caption={`${s.label}: a conceptual interface.`}
+          />
+        ))}
+        actions={actions}
+      />
+    );
+  }
   return (
     <section
       id={block.id}

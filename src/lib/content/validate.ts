@@ -23,6 +23,22 @@ import { requiredPhotoWidth } from "./photo-geometry";
 import type { Block, Page, PhotoRef } from "./schema";
 
 type PhotoLayout = PhotoRef["layout"];
+
+/** Every photograph placed in a block, including those inside its items (cards, phases). */
+export function blockPhotos(value: unknown, out: PhotoRef[] = []): PhotoRef[] {
+  if (Array.isArray(value)) for (const v of value) blockPhotos(v, out);
+  else if (value && typeof value === "object") {
+    const o = value as Record<string, unknown>;
+    if (
+      typeof o.asset === "string" &&
+      o.asset.startsWith("asset.photo-") &&
+      typeof o.layout === "string"
+    )
+      out.push(o as unknown as PhotoRef);
+    else for (const v of Object.values(o)) blockPhotos(v, out);
+  }
+  return out;
+}
 import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
@@ -392,15 +408,21 @@ export function validateRegistry(registry: Registry): Issue[] {
     // Photography: each placement must resolve to a registered, approved photograph, and a page
     // carries a few purposeful photographs, not a gallery.
     const photoRefs = page.sections.flatMap((b) =>
-      "photo" in b && b.photo ? [{ block: b.id, ref: b.photo.asset }] : [],
+      blockPhotos(b).map((p) => ({ block: b.id, ref: p.asset })),
     );
     for (const p of photoRefs) {
       const asset = registry.assets.find((a) => a.id === p.ref);
       if (!asset || asset.role !== "photograph")
         err("photo-ref", `${where}#${p.block}`, `${p.ref} is not a registered photograph`);
     }
-    if (photoRefs.length > 4)
-      err("photo-count", where, `${photoRefs.length} photographs on one page; the limit is 4`);
+    // The home page carries the photographic story (owner direction, 19 October 2026).
+    const photoLimit = page.kind === "home" ? 14 : 4;
+    if (photoRefs.length > photoLimit)
+      err(
+        "photo-count",
+        where,
+        `${photoRefs.length} photographs on one page; the limit is ${photoLimit}`,
+      );
     // Clarity and comprehension standard (ADR 0004).
     const GUIDED = [
       "service",
@@ -613,10 +635,10 @@ export function validateRegistry(registry: Registry): Issue[] {
   const photoUse = new Map<string, Set<PhotoLayout>>();
   for (const page of registry.pages)
     for (const b of page.sections)
-      if ("photo" in b && b.photo) {
-        const set = photoUse.get(b.photo.asset) ?? new Set<PhotoLayout>();
-        set.add(b.photo.layout);
-        photoUse.set(b.photo.asset, set);
+      for (const p of blockPhotos(b)) {
+        const set = photoUse.get(p.asset) ?? new Set<PhotoLayout>();
+        set.add(p.layout);
+        photoUse.set(p.asset, set);
       }
   for (const a of registry.assets) {
     if (assetIds.has(a.id)) err("asset-dup", a.id, "Duplicate asset id");

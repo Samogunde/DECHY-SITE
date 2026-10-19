@@ -454,3 +454,207 @@ assets:
     usage: [ui-ux]
     approval: approved
     acquired: "2026-10-07"
+
+  - id: asset.photo-team-planning-whiteboard-office
+    kind: file
+    file: public/photos/team-planning-whiteboard-office.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-team-planning-whiteboard-office.md.
+    sourceUrl: https://unsplash.com/photos/diverse-team-collaborating-on-a-project-in-an-office-PSksbOVDhWk
+    licenseUrl: https://unsplash.com/license
+    sha256: ac97fe647e7f6a5a11658ff29607956aff90b593826428e3d59a61a87e9e01d9
+    width: 2600
+    height: 1463
+    alt: "A product team talking through a plan in front of a chalkboard covered in sketches."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-discovery-sticky-notes-glass
+    kind: file
+    file: public/photos/discovery-sticky-notes-glass.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-discovery-sticky-notes-glass.md.
+    sourceUrl: https://unsplash.com/photos/team-collaborating-with-sticky-notes-on-glass-wall-TSyD0nGc0Bs
+    licenseUrl: https://unsplash.com/license
+    sha256: c880af4d25480b321bc79ebf3cb9001e0b434f42bb2e0cad1dc465b4e675f4c9
+    width: 2600
+    height: 1463
+    alt: "A team arranging sticky notes on a glass wall during a discovery workshop."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-design-workshop-color-swatches
+    kind: file
+    file: public/photos/design-workshop-color-swatches.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-design-workshop-color-swatches.md.
+    sourceUrl: https://unsplash.com/photos/people-working-on-design-workspace-PoCy1dNMZxs
+    licenseUrl: https://unsplash.com/license
+    sha256: 501c86da87008bacb5b7d36d1763e833a8d008af49c6c463a6b087a0a3d17714
+    width: 2600
+    height: 1463
+    alt: "Designers working around a table with color swatches, sketches, and a laptop."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-developers-coding-monitors
+    kind: file
+    file: public/photos/developers-coding-monitors.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Compagnons (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-developers-coding-monitors.md.
+    sourceUrl: https://unsplash.com/photos/people-coding-at-monitors-in-workspace-Im_cQ6hQo10
+    licenseUrl: https://unsplash.com/license
+    sha256: 00158fdf5bc3c00b3bb9c652dd1b7025155daa311d3121370d26abc89f7924d3
+    width: 2600
+    height: 1733
+    alt: "Two developers writing code at large monitors in a bright office."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-team-reviewing-release-screen
+    kind: file
+    file: public/photos/team-reviewing-release-screen.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-team-reviewing-release-screen.md.
+    sourceUrl: https://unsplash.com/photos/team-collaborating-around-a-computer-in-an-office-UikYLDQj9_I
+    licenseUrl: https://unsplash.com/license
+    sha256: 4944c7ab7d9248317812de64232529f810c67f0f0c55a876852d8effa3fbce2d
+    width: 2600
+    height: 1463
+    alt: "Team members reviewing a release together on a desktop screen."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-team-support-laptop-review
+    kind: file
+    file: public/photos/team-support-laptop-review.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-team-support-laptop-review.md.
+    sourceUrl: https://unsplash.com/photos/diverse-team-collaborating-around-a-laptop-in-office-yd_RKGH_RH4
+    licenseUrl: https://unsplash.com/license
+    sha256: b8ef67d5d8c8a2bf77cd77981c345bf455b23890f6ac086c324307b652cf825b
+    width: 2600
+    height: 1463
+    alt: "A team gathered around a laptop, reviewing work together in an open office."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-mobile-app-in-hand
+    kind: file
+    file: public/photos/mobile-app-in-hand.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Balázs Kétyi (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-mobile-app-in-hand.md.
+    sourceUrl: https://unsplash.com/photos/smartphone-displaying-environmental-data-dashboard-sScmok4Iq1o
+    licenseUrl: https://unsplash.com/license
+    sha256: 60c692c46c0128a94751522c1c3f2b39337135df2e635d97bb988136d6eb6c43
+    width: 2600
+    height: 1950
+    alt: "A hand holding a phone that shows a mobile app dashboard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-web-dashboard-laptop
+    kind: file
+    file: public/photos/web-dashboard-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Carlos Muza (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-web-dashboard-laptop.md.
+    sourceUrl: https://unsplash.com/photos/laptop-computer-on-glass-top-table-hpjSkU2UYSU
+    licenseUrl: https://unsplash.com/license
+    sha256: bde1ad7683fd331aeda1c7bd1f03063ef84f44999de7e717041096d3f0d4b18f
+    width: 2600
+    height: 1852
+    alt: "A laptop on a desk showing a web dashboard with charts."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-business-software-laptop
+    kind: file
+    file: public/photos/business-software-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Pinky Pinky (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-business-software-laptop.md.
+    sourceUrl: https://unsplash.com/photos/laptop-displaying-business-dashboard-workspace-jkSHnFQOYrE
+    licenseUrl: https://unsplash.com/license
+    sha256: 7bf40c8becb77c41a0a06963aef9d958c5840eae497417aea339f74e8523b1b3
+    width: 2600
+    height: 1300
+    alt: "A laptop showing a business software dashboard against a plain wall."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-website-wireframe-sketch
+    kind: file
+    file: public/photos/website-wireframe-sketch.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Compagnons (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-website-wireframe-sketch.md.
+    sourceUrl: https://unsplash.com/photos/website-wireframe-sketch-on-paper-4UGmm3WRUoQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 82b3231a69cb766ed6700eef86b19efbb2b4536c0a38b9a042a41ea24cc2e787
+    width: 2600
+    height: 1950
+    alt: "A hand-drawn website wireframe on paper with an orange pen beside it."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-laptop-code-dark
+    kind: file
+    file: public/photos/laptop-code-dark.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Arnold Francisca (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-laptop-code-dark.md.
+    sourceUrl: https://unsplash.com/photos/turned-on-macbook-pro-wit-programming-codes-display-f77Bh3inUpE
+    licenseUrl: https://unsplash.com/license
+    sha256: 96b29dbf23500a64accd4f5f96f25e3d43d8ba9a8ac0e64b294f2e3d19bcca57
+    width: 2600
+    height: 1733
+    alt: "A laptop showing program code on a dark screen."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"
+
+  - id: asset.photo-analytics-dashboard-screen
+    kind: file
+    file: public/photos/analytics-dashboard-screen.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Luke Chesser (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-analytics-dashboard-screen.md.
+    sourceUrl: https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00
+    licenseUrl: https://unsplash.com/license
+    sha256: 20ae3f9f940c071b4064f0996981cbfe2f8e4b6f5b4980e234192de52b3a66dd
+    width: 2600
+    height: 1734
+    alt: "Performance analytics charts on a laptop screen."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-19"

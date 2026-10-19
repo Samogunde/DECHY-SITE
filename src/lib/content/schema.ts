@@ -310,6 +310,94 @@ export const Block = z.discriminatedUnion("type", [
     figureCaption: z.string().optional(),
     /** Home only: proof figures under the buttons. Values may use {{fact:...}} macros. */
     stats: z.array(Stat).max(4).default([]),
+    /** Home only: the offers the headline cycles through, each with its own line and screen. */
+    slides: z
+      .array(
+        z.object({
+          label: z.string(),
+          word: z.string(),
+          lead: z.string(),
+          href: z.string(),
+          figure: FigureId,
+          chips: z.array(z.string()).max(3).default([]),
+        }),
+      )
+      .max(5)
+      .default([]),
+  }),
+  /** Figures that count up when they come into view, beside a photograph. */
+  z.object({
+    type: z.literal("stats"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(Stat.extend({ detail: z.string().optional() }))
+      .min(2)
+      .max(4),
+    photo: PhotoRef.optional(),
+    photoNote: z.string().optional(),
+  }),
+  /** A statement in large type that lights up word by word as it scrolls past. */
+  z.object({
+    type: z.literal("reveal"),
+    ...base,
+    label: z.string(),
+    text: z.string(),
+    note: z.string().optional(),
+  }),
+  /** Technology logos in groups, each linking to its page where one exists. */
+  z.object({
+    type: z.literal("stack"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    groups: z.array(z.object({ title: z.string(), entityIds: z.array(z.string()).min(2) })).min(2),
+    more: Cta.optional(),
+  }),
+  /** Project phases: a photograph that stays in view while each phase scrolls past. */
+  z.object({
+    type: z.literal("phases"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    steps: z
+      .array(
+        z.object({
+          title: z.string(),
+          summary: z.string(),
+          tags: z.array(z.string()).max(4).default([]),
+          activities: z.array(z.string()).min(2).max(4),
+          deliverables: z.array(z.string()).min(2).max(4),
+          photo: PhotoRef,
+        }),
+      )
+      .min(3)
+      .max(6),
+  }),
+  /** Guides and decision pages, as photo cards. */
+  z.object({
+    type: z.literal("insights"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          category: z.string(),
+          title: z.string(),
+          summary: z.string(),
+          href: z.string(),
+          photo: PhotoRef,
+        }),
+      )
+      .min(2)
+      .max(4),
+    more: Cta.optional(),
   }),
   /** The services a page leads with, as large tiles with an interface visual each. */
   z.object({
@@ -326,6 +414,8 @@ export const Block = z.discriminatedUnion("type", [
           body: z.string(),
           href: z.string(),
           action: z.string(),
+          /** The large word the row opens with ("Software"). */
+          word: z.string().optional(),
           includes: z.array(z.string()).min(3).max(5),
           figure: FigureId,
         }),
@@ -340,7 +430,7 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
     intro: z.string().optional(),
-    style: z.enum(["cards", "tiles"]).default("cards"),
+    style: z.enum(["cards", "tiles", "panels"]).default("cards"),
     items: z
       .array(
         z.object({
@@ -404,6 +494,7 @@ export const Block = z.discriminatedUnion("type", [
           results: z.array(Stat).min(1).max(3),
           services: z.array(z.string()).default([]),
           href: z.string().optional(),
+          photo: PhotoRef.optional(),
         }),
       )
       .min(1)
