@@ -1,0 +1,274 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-recruitment
+kind: industry
+locale: en
+path: /industries/recruitment/
+parent: /industries/
+entityId: ind.recruitment
+title: Recruitment and HR Software Development | DECHY
+description: "Recruitment and HR software from DECHY: job boards, applicant tracking, candidate and
+  client portals, onboarding, and AI screening tools."
+breadcrumbLabel: HR and recruitment
+intent:
+  primary: recruitment software development
+  secondary:
+    - applicant tracking system development
+    - hr software development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build job boards, applicant tracking, candidate and client portals, onboarding, timesheets,
+    and AI-assisted screening for recruiters and HR teams.
+  problem:
+    Candidates apply and hear nothing, recruiters copy details between job boards, inboxes, and
+    spreadsheets, and clients chase updates by phone.
+  audience: Recruitment agencies, staffing firms, in-house talent teams, HR departments, and HR
+    technology startups.
+  choose:
+    Start with applicant tracking and a candidate portal if speed to placement matters, or with
+    onboarding and timesheets if you place temporary staff.
+  next: Tell us how candidates move from application to placement. We reply with a plan, a price
+    range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Recruitment and HR software that places people faster
+    lead:
+      We build the job boards, applicant tracking, and portals that move candidates from application
+      to first day without the email chaos. Recruiters spend time with people instead of
+      spreadsheets, candidates always know where they stand, and clients see progress without
+      calling.
+    ctas:
+      - label: Plan recruitment software
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every candidate
+        text: From application to first day.
+      spokes:
+        - title: Job board
+          text: Your roles, your brand.
+        - title: Applicant tracking
+          text: Every stage in view.
+        - title: Screening
+          text: Faster shortlists.
+        - title: Client portal
+          text: Shortlists and feedback.
+        - title: Onboarding
+          text: Documents and checks.
+        - title: Timesheets
+          text: Hours and invoices.
+    purpose: relationship
+    takeaway: Recruitment software follows each candidate from application to first day, with job
+      boards, tracking, screening, client portals, onboarding, and timesheets sharing one record.
+    visualTitle: The journey of a candidate
+    figureCaption: This diagram shows a candidate record at the center with the job board, applicant
+      tracking, screening, client portal, onboarding, and timesheets around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why recruiters need their own platform
+    paragraphs:
+      - Recruitment is a speed business. The best candidates are off the market within days, and the
+        agency that shortlists first usually places. Every hour spent copying a CV between systems
+        is an hour a competitor uses.
+      - Off-the-shelf applicant tracking tools cover the basics, but many agencies bend their
+        process to fit them. A platform built around your desks, sectors, and clients lets
+        recruiters work the way they win.
+      - Candidates notice the difference too. A clear application, status updates, and a simple
+        portal for documents turn a stressful search into a good experience, and good experiences
+        become referrals.
+      - We add AI where it saves time without making decisions about people. It can summarize CVs,
+        suggest matches, and draft messages, while recruiters always make the call.
+      - The result is a desk that runs on one system. Recruiters see every candidate, client, and
+        role in one place, managers see which desks and sources produce placements, and the business
+        can grow without adding administrators for every new recruiter.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build recruitment software
+    intro: A branded job board launches in two to three weeks, and tracking and portals follow in stages.
+    steps:
+      - title: Map the desk
+        body: We follow a role from brief to placement and count every manual step.
+        artifacts:
+          - Process map
+          - Time per stage
+      - title: Design for speed
+        body: We design pipelines and portals around the fastest path to a shortlist.
+        artifacts:
+          - Prototype
+          - Pipeline stages
+      - title: Connect the boards
+        body: We connect job boards, email, and calendars so candidates arrive in one place.
+        artifacts:
+          - Integrations
+          - Candidate import
+      - title: Add AI with care
+        body: We add AI summaries and matching once the data is clean, with recruiters in control.
+        artifacts:
+          - AI assistant
+          - Review rules
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: HR and recruitment projects, costs, and timelines
+    intro: Most agencies and HR teams start with tracking and a portal, then automate onboarding.
+    caption:
+      Typical hr and recruitment projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Branded job board
+        - Job listings, search, applications, and alerts
+        - $5,000 to $12,000
+        - 2 to 3 weeks
+      - - Applicant tracking system
+        - Pipelines, notes, emails, and client shortlists
+        - $20,000 to $45,000
+        - 5 to 8 weeks
+      - - Onboarding and timesheets
+        - Documents, checks, timesheets, and invoicing
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Full recruitment platform with AI screening
+        - Job board, tracking, portals, onboarding, and AI tools
+        - $50,000 to $100,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about recruitment software
+    items:
+      - q: How much does an applicant tracking system cost?
+        a:
+          A custom applicant tracking system usually costs $20,000 to $45,000 and takes 5 to 8 weeks. A
+          full platform with portals and AI costs more.
+      - q: Can you connect to the job boards we use?
+        a:
+          Usually, yes. We post roles and import applications through job board interfaces where they offer
+          them.
+      - q: Will AI decide who gets hired?
+        a: No. AI helps summarize and match, but recruiters and hiring managers make every decision.
+      - q: Can clients see shortlists online?
+        a: Yes. Clients get a portal for shortlists, feedback, and interview booking.
+      - q: Can it handle temporary staff and timesheets?
+        a: Yes. Workers submit hours, clients approve them, and pay and invoices are created automatically.
+      - q: How do you protect candidate data?
+        a:
+          Access is role-based, data is encrypted, and retention rules delete records when they are no
+          longer needed.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Recruitment and HR software we build
+    intro: Every tool shares one candidate and one client record, so nobody types the same details twice.
+    items:
+      - title: Job board and careers site
+        body: Your roles on a fast, search-friendly site with simple applications from a phone.
+      - title: Applicant tracking
+        body: Pipelines by role and desk, with notes, emails, and interview scheduling in one place.
+      - title: Candidate portal
+        body: Application status, documents, interview details, and offers in one secure place.
+      - title: Client portal
+        body: Shortlists, feedback, interview booking, and placement status for hiring managers.
+      - title: Onboarding and compliance
+        body: Right-to-work checks, contracts, and documents collected before the first day.
+      - title: Timesheets and invoicing
+        body: Hours approved by clients and turned into pay and invoices automatically.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What recruiters and HR teams get from us
+    intro:
+      Recruiters feel the change in hours saved each week, and candidates and clients notice how
+      much faster and clearer every step has become.
+    columns:
+      - title: Faster placements
+        items:
+          - Shortlists in hours.
+          - Interviews booked automatically.
+      - title: Better candidate experience
+        items:
+          - Status updates without chasing.
+          - Documents uploaded once.
+      - title: Happier clients
+        items:
+          - Shortlists in a portal.
+          - Feedback captured in one click.
+      - title: Less admin
+        items:
+          - No copying between systems.
+          - Timesheets that invoice themselves.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for recruitment platforms
+    intro: What to know about job boards, personal data, and AI.
+    panels:
+      - title: Job boards and calendars
+        items:
+          - We post to job boards and import applications through their interfaces.
+          - Interviews are scheduled against real calendar availability.
+      - title: Personal data and AI
+        items:
+          - Candidate data is access-controlled, retained only as long as needed, and deletable on
+            request.
+          - AI summarizes and suggests, and every hiring decision stays with a person.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: HR and recruitment across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.ai
+          - svc.automation
+          - svc.web-development
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.workflow-automation
+          - workarea.ai-solutions
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - lang.python
+          - tech.postgresql
+          - prov.anthropic-claude
+  - type: cta
+    id: contact-cta
+    heading: Tell us how candidates reach placement
+    body: Share your desks, tools, and clients. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan recruitment software
+      href: /contact/?service=software-development

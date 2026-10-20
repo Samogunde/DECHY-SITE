@@ -1,0 +1,271 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-hospitality
+kind: industry
+locale: en
+path: /industries/hospitality/
+parent: /industries/
+entityId: ind.hospitality
+title: Hotel Booking Engine and Hospitality Software | DECHY
+description: "Hospitality software from DECHY: direct booking websites, guest apps, upsells, and
+  integrations with your property system for hotels and venues."
+breadcrumbLabel: Hospitality
+intent:
+  primary: hotel booking engine development
+  secondary:
+    - hospitality software development
+    - hotel website development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build direct booking websites, guest apps, upsell and check-in flows, and integrations with
+    property management systems for hotels, resorts, and venues.
+  problem: Online travel agencies take a large commission, the booking flow loses guests, and the
+    guest experience is split across paper, email, and the front desk.
+  audience: Independent hotels, hotel groups, resorts, serviced apartments, and event venues.
+  choose:
+    Start with the direct booking flow if commission is the cost, or with a guest app if service
+    and upsells matter most.
+  next: Tell us how guests book and arrive today. We reply with a plan, a price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Direct bookings and guest experiences for hotels
+    lead:
+      We build the booking websites, guest apps, and upsell flows that bring guests to you directly
+      and make every stay smoother. You save commission, sell more room upgrades and extras, and
+      give staff time back for real hospitality.
+    ctas:
+      - label: Plan hotel booking
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every stay
+        text: From first search to checkout.
+      spokes:
+        - title: Booking engine
+          text: Direct and commission-free.
+        - title: Guest app
+          text: Check-in and requests.
+        - title: Upsells
+          text: Upgrades and extras.
+        - title: Property system
+          text: Rooms and rates.
+        - title: Messaging
+          text: Before and during the stay.
+        - title: Reviews
+          text: Feedback after checkout.
+    purpose: relationship
+    takeaway:
+      Hotel software works when the booking engine, guest app, upsells, and property system all
+      share one stay record.
+    visualTitle: The systems around a hotel stay
+    figureCaption:
+      This diagram shows a stay record at the center with the booking engine, guest app,
+      upsells, property system, messaging, and reviews around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why hotels invest in their own booking and guest tools
+    paragraphs:
+      - Guests often find a hotel on a travel agency site and then book there, because the hotel's
+        own booking flow is slower or more confusing. The commission on that booking can wipe out
+        the margin on the room.
+      - A fast, clear direct booking flow changes the habit. When guests see the same price, a small
+        perk, and a booking that takes a minute, many book direct. Every one of those bookings is a
+        guest you can talk to before and after the stay.
+      - During the stay, a guest app or web check-in removes queues at the desk, handles requests,
+        and offers upgrades at the moment guests are most likely to say yes.
+      - We build around the property management system you already run, so rates, rooms, and guest
+        details stay in one place and staff are not asked to learn a second system.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Hospitality software we build
+    intro: Every tool connects to your property system, so rooms, rates, and guests stay in one place.
+    items:
+      - title: Direct booking website
+        body: Fast room search, clear prices, and a booking flow guests finish on their phone.
+      - title: Online check-in
+        body: Details, payment, and arrival time collected before the guest reaches the desk.
+      - title: Upsells and extras
+        body: Room upgrades, breakfasts, late checkout, and experiences offered at the right moment.
+      - title: Guest app or web app
+        body: Requests, messages, dining, and local guides in one place during the stay.
+      - title: Venue and event booking
+        body: Meeting rooms, weddings, and events with packages, deposits, and contracts.
+      - title: Guest feedback and reviews
+        body: Feedback collected after the stay and happy guests guided to public reviews.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build hotel booking and guest tools
+    intro: A direct booking flow usually goes live in two to three weeks, and guest tools follow in
+      stages.
+    steps:
+      - title: Audit the booking flow
+        body: We test your current booking flow on a phone and count every step and delay.
+        artifacts:
+          - Booking audit
+          - Conversion baseline
+      - title: Connect rates and rooms
+        body: We connect to your property system and channel manager so availability is always right.
+        artifacts:
+          - Integration plan
+          - Test bookings
+      - title: Design the stay
+        body: We design check-in, requests, and upsells around how guests really arrive.
+        artifacts:
+          - Guest journey
+          - Prototype
+      - title: Launch and measure
+        body: We launch, then track direct bookings, upsell revenue, and guest feedback.
+        artifacts:
+          - Launch
+          - Results report
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for hospitality
+    intro: What to know about property systems, channel managers, and payments.
+    panels:
+      - title: Property and channel systems
+        items:
+          - We connect to your property management system and channel manager through their
+            interfaces.
+          - Rates and availability come from one place, so double bookings do not happen.
+      - title: Payments and keys
+        items:
+          - Payments and pre-authorizations run through established card providers.
+          - Mobile keys are added where your door lock supplier supports them.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Hospitality projects, costs, and timelines
+    intro: Most hotels start with direct booking, then add guest tools.
+    caption: Typical hospitality projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Hotel website and booking flow
+        - Rooms, offers, real-time rates, and payments
+        - $5,000 to $12,000
+        - 2 to 3 weeks
+      - - Online check-in and upsells
+        - Pre-arrival check-in, upgrades, extras, and messages
+        - $8,000 to $20,000
+        - 2 to 4 weeks
+      - - Guest app
+        - Requests, digital key where supported, dining, and offers
+        - $20,000 to $40,000
+        - 4 to 6 weeks
+      - - Group booking and guest platform
+        - Several properties, central rates, loyalty, and reporting
+        - $40,000 to $80,000+
+        - 6 to 10 weeks
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What hotels get from us
+    intro:
+      Hotels feel the change at the front desk and in the revenue report. Guests arrive prepared,
+      staff spend time on hospitality instead of forms, and more of every booking stays with you.
+    columns:
+      - title: More direct bookings
+        items:
+          - Less commission.
+          - Guest data you own.
+      - title: More revenue per stay
+        items:
+          - Upgrades and extras sold online.
+          - Offers at the right moment.
+      - title: Smoother arrivals
+        items:
+          - Shorter queues at the desk.
+          - Requests handled in the app.
+      - title: Better reviews
+        items:
+          - Feedback before it goes public.
+          - Happy guests prompted to review.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about hotel software
+    items:
+      - q: How much does a hotel booking website cost?
+        a:
+          A hotel website with a direct booking flow usually costs $5,000 to $12,000 and launches in 2 to 3
+          weeks.
+      - q: Can you connect to our property management system?
+        a: Usually, yes. We connect through its interfaces so rooms, rates, and guests stay in sync.
+      - q: Will guests really book direct?
+        a:
+          Many will, when the flow is fast and the price is the same or better. A small direct-booking perk
+          helps.
+      - q: Do we need an app or is a web app enough?
+        a:
+          Most hotels start with a web app guests open from a link, which needs no download. Groups with
+          loyal guests often add a native app.
+      - q: Can you handle events and meeting rooms?
+        a:
+          Yes. We build booking for meeting rooms, weddings, and events with packages, deposits, and
+          contracts.
+      - q: Do you work with hotel groups?
+        a: Yes. Groups get one platform across properties, with central rates, offers, and reporting.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Hospitality across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.mobile-app-development
+          - svc.api-integration
+          - svc.ui-ux
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.customer-portals
+          - workarea.api-integrations
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - int.stripe
+          - plat.vercel
+          - lang.typescript
+  - type: cta
+    id: contact-cta
+    heading: Tell us how guests book and arrive
+    body:
+      Share your property system, channels, and guest journey. We reply with a plan, a price range,
+      and a timeline.
+    primary:
+      label: Plan hotel booking
+      href: /contact/?service=web-development

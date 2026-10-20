@@ -1,0 +1,269 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-transportation
+kind: industry
+locale: en
+path: /industries/transportation/
+parent: /industries/
+entityId: ind.transportation
+title: Transportation and Fleet Management Software | DECHY
+description: "Transportation software from DECHY: fleet management, driver apps, route planning,
+  booking, and tracking for transport and fleet operators."
+breadcrumbLabel: Transportation
+intent:
+  primary: fleet management software development
+  secondary:
+    - transportation software development
+    - driver app development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build fleet management tools, driver apps, route planning, booking and dispatch, and live
+    tracking for transport companies and fleet operators.
+  problem:
+    Dispatchers juggle phones and spreadsheets, drivers fill in paper logs, and customers call
+    to ask where their delivery or vehicle is.
+  audience: Haulage and freight companies, passenger transport operators, courier fleets, and
+    businesses running their own vehicles.
+  choose: Start with the driver app and tracking if visibility is the problem, or with planning and
+    dispatch if empty miles cost most.
+  next: Tell us how jobs, vehicles, and drivers are planned today. We reply with a plan, a price
+    range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Fleet and transport software that keeps every vehicle on plan
+    lead:
+      We build the dispatch, driver apps, and tracking that show where every vehicle is and what it
+      should do next. Plans are made in minutes, drivers have everything on their phone, and
+      customers get live updates instead of calling.
+    ctas:
+      - label: Plan fleet software
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every trip
+        text: Vehicle, driver, load, and status.
+      spokes:
+        - title: Booking and orders
+          text: Jobs come in once.
+        - title: Planning
+          text: Routes and loads.
+        - title: Dispatch
+          text: Right vehicle and driver.
+        - title: Driver app
+          text: Jobs, checks, proof.
+        - title: Tracking
+          text: Live location and arrival.
+        - title: Fleet care
+          text: Maintenance and compliance.
+    purpose: relationship
+    takeaway: Transport software keeps every trip in one record that booking, planning, dispatch,
+      drivers, tracking, and fleet care share.
+    visualTitle: The systems around a transport trip
+    figureCaption:
+      This diagram shows a trip record at the center with booking, planning, dispatch, the
+      driver app, tracking, and fleet care around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why transport operators move off phones and spreadsheets
+    paragraphs:
+      - Transport runs on thin margins. Every empty mile, missed slot, and wasted hour on the phone
+        eats profit. Yet many operators still plan in spreadsheets, dispatch by phone, and learn
+        about problems from an angry customer.
+      - A connected system changes the day. Jobs arrive in one place, routes are planned with real
+        constraints, drivers receive work on their phones, and everyone sees live status.
+      - The same data keeps vehicles compliant and safe. Daily checks, defects, maintenance, and
+        driver hours are recorded as the work happens, not reconstructed before an inspection.
+      - We work with the telematics and tachograph systems you already use and build the operational
+        layer they lack. You keep the hardware and contracts you already have, and gain the
+        planning, apps, and visibility they never provided.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Transportation software we build
+    intro: Each part connects to your telematics and accounts, so data is captured once and used
+      everywhere.
+    items:
+      - title: Booking and order intake
+        body: Customer orders taken online or through connections with their systems.
+      - title: Route and load planning
+        body: Routes built around time windows, vehicle sizes, and driver hours.
+      - title: Dispatch board
+        body: Jobs assigned by drag and drop with live status from every vehicle.
+      - title: Driver app
+        body: Jobs, vehicle checks, proof of delivery, and messages on one phone app.
+      - title: Customer tracking portal
+        body: Live location and arrival times customers can check without calling.
+      - title: Fleet maintenance and compliance
+        body: Inspections, defects, servicing, and documents tracked for every vehicle.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about transport software
+    items:
+      - q: How much does fleet management software cost?
+        a:
+          A driver app with tracking usually costs $12,000 to $35,000. A full platform with planning and
+          maintenance costs $50,000 to $120,000 or more.
+      - q: Can you work with our telematics provider?
+        a:
+          Usually, yes. We read location and vehicle data from their systems and build the operations layer
+          on top.
+      - q: Can customers track their deliveries?
+        a: Yes. Customers get a tracking link with live location and arrival estimates.
+      - q: Do drivers need new phones?
+        a: No. The app runs on standard iPhone and Android phones, including rugged models.
+      - q: Can it handle vehicle checks and defects?
+        a: Yes. Drivers complete daily checks in the app, and defects go straight to maintenance.
+      - q: Can you connect to our accounts system?
+        a:
+          Yes. Completed jobs and proof of delivery flow into invoicing automatically. Fuel, tolls, and
+          driver expenses can be captured in the same flow, so each job shows its true cost and
+          margin when it is invoiced.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build fleet software
+    intro: Most operators see live tracking and a working driver app within the first month.
+    steps:
+      - title: Shadow the control room
+        body: We sit with planners and dispatchers for a day and log every manual step.
+        artifacts:
+          - Control room findings
+          - Priorities
+      - title: Start with drivers
+        body: We give drivers a simple app first, because good data starts on the road.
+        artifacts:
+          - Driver app
+          - Field test
+      - title: Plan and dispatch
+        body: We build planning and dispatch on top of the live data the app provides.
+        artifacts:
+          - Planning board
+          - Dispatch rules
+      - title: Open it to customers
+        body: We add tracking links and customer portals once the data is reliable.
+        artifacts:
+          - Tracking portal
+          - Customer updates
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What transport operators get from us
+    intro:
+      Operators feel the difference in the control room first. Planners stop firefighting, drivers
+      stop calling in, and customers stop chasing updates, because everyone sees the same live
+      picture of every vehicle and every job.
+    columns:
+      - title: Fewer empty miles
+        items:
+          - Smarter routes and loads.
+          - Better use of every vehicle.
+      - title: Less phone time
+        items:
+          - Drivers get jobs in the app.
+          - Customers track online.
+      - title: Compliance
+        items:
+          - Checks and defects recorded.
+          - Maintenance on schedule.
+      - title: Faster billing
+        items:
+          - Proof of delivery captured instantly.
+          - Invoices raised on completion.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Transportation projects, costs, and timelines
+    intro: Operators usually start with visibility, then add planning and customer tools.
+    caption: Typical transportation projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Driver app and proof of delivery
+        - Jobs, checks, photos, signatures, and offline use
+        - $12,000 to $25,000
+        - 3 to 5 weeks
+      - - Live tracking and customer updates
+        - Vehicle locations, arrival estimates, and customer messages
+        - $10,000 to $25,000
+        - 2 to 4 weeks
+      - - Planning and dispatch board
+        - Orders, routes, loads, and driver assignment
+        - $25,000 to $50,000
+        - 5 to 8 weeks
+      - - Full fleet management platform
+        - Booking, planning, apps, maintenance, and reporting
+        - $50,000 to $120,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for transportation
+    intro: What to know about telematics, mapping, and offline use.
+    panels:
+      - title: Telematics and mapping
+        items:
+          - We connect to telematics providers for live location rather than replacing their
+            hardware.
+          - Routes and arrival times use mapping services with traffic data.
+      - title: Drivers on the road
+        items:
+          - Driver apps work offline and sync when a signal returns.
+          - Screens are designed for use when parked, never while driving.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Transportation across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.mobile-app-development
+          - svc.api-integration
+          - svc.data-analytics
+      - title: Systems we build
+        entityIds:
+          - workarea.operations-platforms
+          - workarea.mobile-apps
+          - workarea.data-analytics
+      - title: Technologies
+        entityIds:
+          - tech.flutter
+          - tech.nodejs
+          - tech.postgresql
+          - plat.google-cloud
+  - type: cta
+    id: contact-cta
+    heading: Tell us how your fleet is planned today
+    body: Share your vehicles, jobs, and tools. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan fleet software
+      href: /contact/?service=software-development

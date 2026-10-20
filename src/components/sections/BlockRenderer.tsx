@@ -17,6 +17,8 @@ import {
   LeadServicesBlock,
   LogosBlock,
   PartnersBlock,
+  CaseGridBlock,
+  TeamBlock,
   PhasesBlock,
   PricingBlock,
   PromiseBlock,
@@ -137,6 +139,10 @@ export function BlockRenderer({
       return <LogosBlock block={block} />;
     case "partners":
       return <PartnersBlock block={block} />;
+    case "case-grid":
+      return <CaseGridBlock block={block} />;
+    case "team":
+      return <TeamBlock block={block} />;
     case "promise":
       return <PromiseBlock block={block} />;
     case "stats":

@@ -7,7 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
-import { sampleProof, sampleWork } from "./samples";
+import { sampleCasePages, sampleProof, sampleWork, servicePricing } from "./samples";
 import { blockPhotos } from "./photos";
 import { loadArticles } from "./articles";
 import { z } from "zod";
@@ -206,6 +206,15 @@ export function buildRegistry(): Registry {
   }
   // Blog articles are written as markdown and join the pages here (content/articles).
   pages.push(...loadArticles(ROOT));
+  // Every service page: typical price ranges and timelines, before the questions (owner, 20 Oct).
+  for (const page of pages.filter((p) => p.kind === "service")) {
+    const at = page.sections.findIndex((b) => b.type === "faq" || b.type === "cta");
+    page.sections.splice(
+      at < 0 ? page.sections.length : at,
+      0,
+      ...servicePricing(page.path.replace(/\//g, "")),
+    );
+  }
   // Review builds: sample case studies and testimonials on service pages, before the closing call.
   if (showDrafts())
     for (const page of pages.filter((p) => p.kind === "service")) {
@@ -215,11 +224,26 @@ export function buildRegistry(): Registry {
     }
   // Review builds: the Work page opens with sample case studies until real ones are supplied.
   const work = showDrafts() ? pages.find((p) => p.path === "/work/") : undefined;
-  if (work) work.sections.splice(1, 0, ...sampleWork());
+  if (work)
+    work.sections.splice(
+      1,
+      0,
+      ...sampleWork(Object.fromEntries(svcFile.services.map((s) => [s.slug, s.name]))),
+    );
+  // Review builds: a page for every sample case study (noindex; real ones replace them).
+  if (showDrafts()) pages.push(...sampleCasePages());
   // Photographs: hand-placed ones first, then every other placement gets an unused one.
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);
   for (const page of pages) applyPhotographs(page, serviceOfEntity, usedPhotos);
+  // Case study cards show the same photograph as the case study they open.
+  for (const page of pages)
+    for (const b of page.sections)
+      if (b.type === "case-grid")
+        for (const item of b.items) {
+          const hero = pages.find((p) => p.path === item.href)?.sections[0];
+          if (hero?.type === "hero" && hero.photo) item.photo = { ...hero.photo, layout: "split" };
+        }
   const pageByPath = new Map<string, Page>();
   for (const p of pages) {
     if (pageByPath.has(p.path)) throw new Error(`Two pages share the path ${p.path}`);

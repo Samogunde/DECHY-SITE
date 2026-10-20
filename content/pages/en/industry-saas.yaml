@@ -1,0 +1,272 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-saas
+kind: industry
+locale: en
+path: /industries/saas/
+parent: /industries/
+entityId: ind.saas
+title: SaaS Product Development for Software Companies | DECHY
+description: "SaaS product development from DECHY: new products, platform rebuilds, billing,
+  integrations, AI features, and extra engineering capacity for software companies."
+breadcrumbLabel: SaaS and software companies
+intent:
+  primary: saas development company
+  secondary:
+    - saas product development
+    - software product development partner
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: "We build and scale software products for software companies: first versions, new features,
+    billing and accounts, integrations, AI features, and platform rebuilds."
+  problem: Roadmaps grow faster than engineering teams, technical debt slows every release, and new
+    features like AI need skills the team does not have yet.
+  audience:
+    Software-as-a-service companies, product startups, software vendors, and technology teams
+    inside larger businesses.
+  choose: Use us for a whole product if you are starting out, or alongside your team for a feature,
+    integration, or rebuild if you already have one.
+  next: Tell us where your product is and what is slowing it down. We reply with a plan, a price
+    range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Product engineering for software companies that need to ship
+    lead:
+      We build software products and join software teams to ship what the roadmap promises. You get
+      a first version in weeks, new features without hiring delays, and a codebase that gets faster
+      to change, not slower.
+    ctas:
+      - label: Plan product work
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Your product
+        text: Shipping on a steady rhythm.
+      spokes:
+        - title: First versions
+          text: From idea to launch.
+        - title: Features
+          text: Roadmap delivered.
+        - title: Billing and accounts
+          text: Plans and trials.
+        - title: Integrations
+          text: The tools customers use.
+        - title: AI features
+          text: Useful, not gimmicks.
+        - title: Platform health
+          text: Speed, tests, scale.
+    purpose: relationship
+    takeaway:
+      Software companies need first versions, features, billing, integrations, AI, and platform
+      health to move together on one steady release rhythm.
+    visualTitle: What a software product needs to grow
+    figureCaption:
+      This diagram shows a software product at the center with first versions, features,
+      billing and accounts, integrations, AI features, and platform health around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why software companies work with us
+    paragraphs:
+      - Software companies sell speed. Customers judge you by how quickly the product improves, and
+        competitors are always one release away. Yet hiring good engineers takes months, and every
+        new hire needs time to learn the codebase.
+      - We add capacity without that delay. A small, senior team joins your process, ships against
+        your roadmap, and leaves behind tested, documented code your engineers are happy to own.
+      - For new products, we take you from idea to paying customers with a focused first version,
+        then keep building as you learn what customers value.
+      - "We are strongest on the work in-house teams find hardest to fit in: billing and plans,
+        integrations with other tools, AI features, performance, and rebuilding the parts of the
+        platform that slow everyone down."
+      - Engagements are flexible. Some clients keep us for a single release, others for years as an
+        extension of their own team.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we work with software teams
+    intro: Most engagements ship their first change to production within the first two weeks.
+    steps:
+      - title: Learn the codebase
+        body: We review the architecture, tests, and backlog, and agree on how we will work together.
+        artifacts:
+          - Codebase review
+          - Working agreement
+      - title: Ship something small
+        body: We ship a small, real change in the first weeks to prove the setup works.
+        artifacts:
+          - First release
+          - Pipeline check
+      - title: Take on the roadmap
+        body: We deliver agreed features in short cycles with demos to your product team.
+        artifacts:
+          - Roadmap features
+          - Demos
+      - title: Leave it better
+        body: We document, test, and hand over, so your team owns everything we built.
+        artifacts:
+          - Documentation
+          - Handover
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about software product development
+    items:
+      - q: How much does it cost to build a software product?
+        a:
+          A focused first version usually costs $30,000 to $60,000 and takes 6 to 10 weeks. Ongoing feature
+          work is priced per release or per month.
+      - q: Can you work alongside our engineers?
+        a: Yes. We join your process, tools, and code reviews, and work as part of your team.
+      - q: Who owns the code?
+        a: You do. Everything we build is yours, documented and ready for your team to maintain.
+      - q: Can you add AI to our product?
+        a:
+          Yes. We add assistants, smart search, summaries, and automation, measured against real customer
+          use.
+      - q: Can you fix a slow or fragile platform?
+        a: Yes. We find the bottlenecks, then rebuild the worst parts in stages while releases continue.
+      - q: How quickly can you start?
+        a: Usually within two weeks of agreeing scope, with a first change in production soon after.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Software product work we do
+    intro:
+      We work inside your tools, rituals, and code standards, so our releases look like your team's
+      releases.
+    items:
+      - title: First versions
+        body: A focused product with accounts, billing, and analytics, ready for paying customers.
+      - title: Roadmap features
+        body: Features built and shipped on your release rhythm, with tests and documentation.
+      - title: Billing and plans
+        body: Trials, upgrades, seats, usage billing, and invoices that finance trusts.
+      - title: Integrations
+        body: Connections to the tools your customers already use, plus a public interface for partners.
+      - title: AI features
+        body: Assistants, search, summaries, and automation that customers actually use.
+      - title: Rebuilds and performance
+        body: Slow or fragile parts of the platform rebuilt in stages without stopping releases.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: SaaS and software companies projects, costs, and timelines
+    intro: Software companies usually bring us one of these, then keep us for the next release.
+    caption:
+      Typical saas and software companies projects with what they include, what they cost, and
+      how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - First product version
+        - Core features, accounts, billing, and an admin console
+        - $30,000 to $60,000
+        - 6 to 10 weeks
+      - - Billing and subscription system
+        - Plans, trials, upgrades, invoices, and usage billing
+        - $12,000 to $30,000
+        - 3 to 5 weeks
+      - - Integrations and public interface
+        - Connections to popular tools and a documented interface for customers
+        - $10,000 to $35,000
+        - 3 to 6 weeks
+      - - Platform rebuild or scale-up
+        - Architecture, performance, testing, and migration
+        - $50,000 to $150,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for software products
+    intro: What your CTO will ask about stack, process, and quality.
+    panels:
+      - title: Stack and process
+        items:
+          - We work in your stack, whether that is TypeScript, Python, Go, Java, or .NET, and in
+            your repositories and tools.
+          - Every change goes through review and automated tests before it ships.
+      - title: Scale and reliability
+        items:
+          - We measure performance and fix bottlenecks with evidence, not guesses.
+          - Monitoring and alerts are added so problems are caught before customers notice.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What software companies get from us
+    intro: Software companies feel the change in release speed and in the confidence of their own
+      engineers when they work in the code we leave behind.
+    columns:
+      - title: Speed
+        items:
+          - Features shipped sooner.
+          - No hiring delay.
+      - title: Quality
+        items:
+          - Tests and reviews on every change.
+          - Fewer regressions.
+      - title: New skills
+        items:
+          - AI and integrations added.
+          - Billing done right.
+      - title: Ownership
+        items:
+          - Your code and your standards.
+          - Full handover.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: SaaS and software companies across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.cloud
+          - svc.ai
+          - svc.api-integration
+      - title: Systems we build
+        entityIds:
+          - workarea.digital-products
+          - workarea.custom-software-systems
+          - workarea.devops-infrastructure
+      - title: Technologies
+        entityIds:
+          - lang.typescript
+          - fw.nextjs
+          - tech.postgresql
+          - plat.aws
+  - type: cta
+    id: contact-cta
+    heading: Tell us what your roadmap needs
+    body:
+      Share your product, stack, and the work that is waiting. We reply with a plan, a price range,
+      and a timeline.
+    primary:
+      label: Plan product work
+      href: /contact/?service=software-development

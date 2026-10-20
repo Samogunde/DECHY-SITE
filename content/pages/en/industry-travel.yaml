@@ -1,0 +1,272 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-travel
+kind: industry
+locale: en
+path: /industries/travel/
+parent: /industries/
+entityId: ind.travel
+title: Travel Booking Platform and Tour Software | DECHY
+description: "Travel and tourism software from DECHY: booking platforms, tour and activity booking,
+  itinerary apps, and supplier integrations for travel companies."
+breadcrumbLabel: Travel and tourism
+intent:
+  primary: travel booking platform development
+  secondary:
+    - tour booking software
+    - travel app development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build travel booking platforms, tour and activity booking, itinerary apps, agent tools, and
+    supplier integrations for travel companies and tour operators.
+  problem:
+    Bookings come through many channels, availability is managed by hand, and travelers juggle
+    confirmations from five different emails.
+  audience: Tour operators, travel agencies, activity providers, destination companies, and travel startups.
+  choose: Start with online booking and availability if you sell tours or packages, or with an
+    itinerary app if service during the trip matters most.
+  next: Tell us what you sell and how bookings arrive. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Travel booking platforms and apps travelers love to use
+    lead:
+      We build the booking sites, availability tools, and itinerary apps that let travelers plan and
+      book with you in minutes. Your team stops juggling spreadsheets, suppliers stay in sync, and
+      travelers have everything for the trip on one screen.
+    ctas:
+      - label: Plan a travel platform
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every trip
+        text: Bookings, people, and plans together.
+      spokes:
+        - title: Search and booking
+          text: Tours, packages, activities.
+        - title: Availability
+          text: Live seats and dates.
+        - title: Payments
+          text: Deposits and balances.
+        - title: Itinerary app
+          text: The whole trip in one place.
+        - title: Suppliers
+          text: Hotels, guides, transport.
+        - title: Agent tools
+          text: Quotes and changes.
+    purpose: relationship
+    takeaway: Travel software keeps every trip in one record that booking, availability, payments,
+      suppliers, and the traveler's app share.
+    visualTitle: The systems around a trip
+    figureCaption:
+      This diagram shows a trip record at the center with booking, availability, payments,
+      itinerary app, suppliers, and agent tools around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: What travel companies need from their software
+    paragraphs:
+      - Travel is sold on dreams and delivered through details. A traveler compares options for
+        weeks, then expects booking to take minutes and every confirmation to be right. Behind the
+        scenes, your team juggles suppliers, seats, rooms, and changes.
+      - Many travel companies still manage availability in spreadsheets and send itineraries as
+        attachments. That is where errors and refunds come from. One platform for availability,
+        booking, and payments removes most of them.
+      - During the trip, an itinerary app keeps every booking, ticket, and contact in one place,
+        works offline abroad, and lets you send updates when plans change.
+      - We design for seasonal peaks, many currencies, and the moment a traveler is standing at an
+        airport with a question. The software has to work then, not only during a calm demo.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Travel and tourism software we build
+    intro:
+      Choose the piece that removes your biggest manual job first. Each one shares the same trip
+      record.
+    items:
+      - title: Tour and activity booking
+        body: Dates, time slots, group sizes, and pickup points with live availability.
+      - title: Package builder
+        body: Flights, rooms, and activities combined into packages with deposits and balance payments.
+      - title: Itinerary app
+        body: The whole trip on the traveler's phone, offline, with updates when plans change.
+      - title: Supplier integrations
+        body: Live rates and availability from hotels, transport, and activity suppliers.
+      - title: Agent and back-office tools
+        body: Quotes, changes, refunds, and documents handled from one screen.
+      - title: Reviews and rebooking
+        body: Feedback after the trip and offers that bring travelers back next season.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What travel companies get from us
+    intro:
+      Travel companies feel the change in fewer booking errors, fewer support emails, and travelers
+      who book again. Behind the scenes, your team spends far less time copying details between
+      systems.
+    columns:
+      - title: More online bookings
+        items:
+          - Booking in minutes.
+          - Fewer abandoned carts.
+      - title: Fewer errors
+        items:
+          - Live availability.
+          - No double bookings.
+      - title: Happier travelers
+        items:
+          - Everything in one app.
+          - Updates when plans change.
+      - title: Less admin
+        items:
+          - Changes and refunds handled faster.
+          - Supplier data in sync.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Travel and tourism projects, costs, and timelines
+    intro: Travel companies usually start with booking and availability, then add the traveler app.
+    caption:
+      Typical travel and tourism projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Tour and activity booking site
+        - Listings, dates, live availability, and payments
+        - $5,000 to $12,000
+        - 2 to 3 weeks
+      - - Package and itinerary builder
+        - Packages, extras, deposits, balances, and documents
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Traveler itinerary app
+        - Bookings, tickets, maps, offline use, and updates
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Travel marketplace or booking platform
+        - Many suppliers, search, payments, and agent tools
+        - $40,000 to $90,000+
+        - 2 to 3 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about travel software
+    items:
+      - q: How much does a travel booking platform cost?
+        a:
+          A tour or activity booking site usually costs $5,000 to $12,000. A full platform with many
+          suppliers and agent tools costs $40,000 to $90,000 or more.
+      - q: Can you connect to our suppliers?
+        a: Usually, yes, through their systems or the booking networks they use. Where there is no
+          connection, we build simple supplier tools.
+      - q: Does the itinerary app work offline?
+        a:
+          Yes. Tickets, maps, and contacts are stored on the phone so travelers can use them without data
+          roaming.
+      - q: Can travelers pay a deposit and the balance later?
+        a: Yes. Deposits, balance reminders, and automatic payments are built in.
+      - q: Do you handle several currencies?
+        a: Yes. Prices and payments can be shown and taken in the traveler's currency.
+      - q: Can our agents use the same system?
+        a: Yes. Agents get tools for quotes, changes, and refunds on the same platform travelers use.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for travel platforms
+    intro: What to know about suppliers, currencies, and peak demand.
+    panels:
+      - title: Suppliers and availability
+        items:
+          - We connect to supplier systems and booking networks through their interfaces, with
+            checks before a booking confirms.
+          - Availability is held briefly during checkout so two travelers cannot buy the last seat.
+      - title: Payments and peaks
+        items:
+          - Payments support several currencies, deposits, and scheduled balance payments.
+          - Platforms are tested for peak-season traffic before launch.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build travel booking software
+    intro: A tour booking site usually launches in two to three weeks. Larger platforms are built in
+      stages before peak season.
+    steps:
+      - title: Map the products
+        body: We list what you sell, how it is priced, and where availability really lives.
+        artifacts:
+          - Product map
+          - Pricing rules
+      - title: Design the booking
+        body: We design search and booking for travelers comparing options on a phone.
+        artifacts:
+          - Prototype
+          - Booking flow
+      - title: Connect suppliers and payments
+        body: We connect supplier systems and payment providers so bookings confirm instantly.
+        artifacts:
+          - Integrations
+          - Test bookings
+      - title: Launch before the peak
+        body: We plan launch dates around your season so the platform is proven before demand peaks.
+        artifacts:
+          - Launch plan
+          - Load test
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Travel and tourism across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.mobile-app-development
+          - svc.api-integration
+          - svc.ecommerce
+      - title: Systems we build
+        entityIds:
+          - workarea.commerce-systems
+          - workarea.mobile-apps
+          - workarea.api-integrations
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - tech.react-native
+          - int.stripe
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you sell and how it books
+    body: Share your products, suppliers, and channels. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan a travel platform
+      href: /contact/?service=web-development

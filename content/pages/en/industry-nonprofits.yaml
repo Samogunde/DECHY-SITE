@@ -1,0 +1,273 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-nonprofits
+kind: industry
+locale: en
+path: /industries/nonprofits/
+parent: /industries/
+entityId: ind.nonprofits
+title: Nonprofit Website, Donation, and Volunteer Software | DECHY
+description: "Nonprofit software from DECHY: donation websites, fundraising platforms, volunteer
+  management, supporter records, and impact reporting."
+breadcrumbLabel: Nonprofits
+intent:
+  primary: nonprofit website development
+  secondary:
+    - donation platform development
+    - volunteer management software
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build donation websites, fundraising and campaign tools, volunteer management, supporter
+    records, and impact reporting for charities and nonprofits.
+  problem:
+    Donation pages lose givers, volunteers are coordinated by email, and supporter data sits in
+    several disconnected tools.
+  audience: Charities, foundations, community organizations, faith groups, and social enterprises.
+  choose:
+    Start with the donation journey if fundraising is the priority, or with volunteer management
+    if coordinating people takes most of your time.
+  next: Tell us how supporters give and volunteer today. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Websites and tools that grow donations and volunteers
+    lead: We build the donation pages, campaign tools, and volunteer systems that turn interest into
+      support. Giving takes a minute, regular donors stay longer, and volunteers sign up and get
+      organized without a chain of emails.
+    ctas:
+      - label: Plan nonprofit technology
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every supporter
+        text: Gifts, events, and volunteering together.
+      spokes:
+        - title: Donations
+          text: One-off and monthly.
+        - title: Campaigns
+          text: Appeals and events.
+        - title: Volunteers
+          text: Sign-up and shifts.
+        - title: Supporter records
+          text: One view of each person.
+        - title: Impact reports
+          text: What gifts achieved.
+        - title: Gift Aid and receipts
+          text: Done automatically.
+    purpose: relationship
+    takeaway:
+      Nonprofit tools work best when donations, campaigns, volunteering, and impact reporting
+      share one supporter record.
+    visualTitle: The tools around a supporter
+    figureCaption: This diagram shows a supporter record at the center with donations, campaigns,
+      volunteers, supporter records, impact reports, and receipts around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: What nonprofits need from their technology
+    paragraphs:
+      - Nonprofits run on generosity and stretched budgets. Every donation lost to a confusing form,
+        and every hour spent coordinating volunteers by email, is money and time that does not reach
+        the cause.
+      - Good tools pay for themselves quickly. A simple, fast donation journey raises more,
+        especially monthly giving. Volunteer scheduling frees staff for program work. One supporter
+        record lets you thank people properly and ask at the right time.
+      - Supporters also want to see impact. Clear stories and numbers about what their gifts
+        achieved keep them giving year after year.
+      - We keep running costs low and build with tools your small team can manage, often on
+        affordable platforms, so the technology stays an asset rather than a burden.
+      - We also plan for the people who will run the tools after we leave. Admin screens are simple,
+        training is short, and the documentation is written for staff and volunteers rather than
+        developers. If your team changes, the knowledge stays. That matters in organizations where a
+        single staff member often looks after the website, the database, and the newsletter at the
+        same time.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we work with nonprofits
+    intro: A new donation journey usually launches within two weeks, so you can use it in your next
+      appeal.
+    steps:
+      - title: Test the giving journey
+        body: We try to donate on your site from a phone and remove every unnecessary step.
+        artifacts:
+          - Journey review
+          - Quick fixes
+      - title: Join up supporter data
+        body: We bring gifts, events, and volunteers into one record without forcing a costly system change.
+        artifacts:
+          - Data plan
+          - Integrations
+      - title: Build for your team
+        body: We design admin tools that a small team can run without technical help.
+        artifacts:
+          - Admin tools
+          - Training
+      - title: Show the impact
+        body: We set up reporting that turns activity into stories supporters understand.
+        artifacts:
+          - Impact dashboard
+          - Story templates
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What nonprofits get from us
+    intro: Nonprofits see more completed donations, more monthly givers, and staff time freed from
+      coordination for the work that matters.
+    columns:
+      - title: More donations
+        items:
+          - Faster giving journeys.
+          - More monthly donors.
+      - title: Organized volunteers
+        items:
+          - Self-service sign-up.
+          - Fewer emails.
+      - title: Stronger relationships
+        items:
+          - One record per supporter.
+          - Thanks at the right time.
+      - title: Clear impact
+        items:
+          - Numbers boards trust.
+          - Stories donors share.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about nonprofit technology
+    items:
+      - q: How much does a nonprofit donation website cost?
+        a: A donation website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks.
+      - q: Can you connect to our supporter database?
+        a: Usually, yes. We connect donation and volunteer tools to the database you already use.
+      - q: Do you offer nonprofit pricing?
+        a:
+          We keep builds lean and use affordable platforms, and we will always suggest the lowest-cost
+          route that meets your goals.
+      - q: Can volunteers manage their own shifts?
+        a: Yes. Volunteers sign up, choose shifts, and get reminders without staff coordinating by email.
+      - q: Can donors give monthly?
+        a:
+          Yes. Monthly giving is built in, with automatic receipts and simple ways to update payment
+          details.
+      - q: Can we show the impact of donations?
+        a:
+          Yes. We build impact pages and dashboards that show what gifts achieved in clear numbers and
+          stories. Each gift is linked to the campaign that inspired it, so you can see which
+          appeals and stories work best and plan the next one with confidence.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Nonprofit software we build
+    intro: Every tool feeds one supporter record, so staff thank, report, and ask from the same
+      information.
+    items:
+      - title: Donation journeys
+        body: One-off and monthly giving in under a minute, with wallets and cards.
+      - title: Campaign and event pages
+        body: Appeals, challenge events, and peer-to-peer fundraising pages.
+      - title: Volunteer management
+        body: Sign-up, background checks, shifts, reminders, and hours logged.
+      - title: Supporter records
+        body: Gifts, events, volunteering, and contact preferences in one place.
+      - title: Impact reporting
+        body: Dashboards and stories showing what donations achieved.
+      - title: Receipts and tax relief
+        body: Receipts sent automatically and tax relief claims prepared where they apply.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for nonprofits
+    intro: What to know about payments, supporter data, and running costs.
+    panels:
+      - title: Payments and giving
+        items:
+          - Donations run through card and wallet providers with low nonprofit fees where available.
+          - Monthly gifts retry failed payments and update expired cards automatically.
+      - title: Data and costs
+        items:
+          - Supporter data respects contact preferences and is stored securely.
+          - We favor affordable platforms and nonprofit discounts to keep running costs low.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Nonprofits projects, costs, and timelines
+    intro: Most nonprofits start with donations, then add volunteering and supporter records.
+    caption: Typical nonprofits projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Donation website
+        - Fast donation journey, monthly giving, and receipts
+        - $3,000 to $8,000
+        - 1 to 2 weeks
+      - - Campaign and event fundraising
+        - Appeal pages, peer fundraising, and event tickets
+        - $6,000 to $15,000
+        - 2 to 4 weeks
+      - - Volunteer management
+        - Sign-up, roles, shifts, reminders, and hours
+        - $8,000 to $20,000
+        - 3 to 5 weeks
+      - - Supporter platform and impact reporting
+        - One supporter record, integrations, and dashboards
+        - $20,000 to $45,000+
+        - 5 to 8 weeks
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Nonprofits across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.digital-marketing
+          - svc.automation
+          - svc.branding
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.workflow-automation
+          - workarea.customer-portals
+      - title: Technologies
+        entityIds:
+          - plat.wordpress
+          - int.stripe
+          - fw.nextjs
+          - plat.hubspot
+  - type: cta
+    id: contact-cta
+    heading: Tell us how supporters give and help
+    body:
+      Share your fundraising, volunteering, and tools. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan nonprofit technology
+      href: /contact/?service=web-development

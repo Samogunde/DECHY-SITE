@@ -5486,3 +5486,2910 @@ assets:
     usage: [library]
     approval: approved
     acquired: "2026-10-20"
+
+  - id: asset.photo-lib-beauty-01
+    kind: file
+    file: public/photos/lib-beauty-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-beauty-01.md.
+    sourceUrl: https://www.pexels.com/photo/woman-getting-a-haircut-3993320/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c5a3748d7410f6dcc4c00f285efb3ef2a88e5dff41037f55990249ce32690227
+    width: 2400
+    height: 1600
+    alt: "A stylist applying hair color to a client in a modern salon"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-beauty-02
+    kind: file
+    file: public/photos/lib-beauty-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jose Antonio Otegui Auzmendi (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-beauty-02.md.
+    sourceUrl: https://www.pexels.com/photo/relaxing-spa-day-facial-and-pedicure-services-34930126/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a4723e646029e219e1780a18c8fdf1096f4ec7d9d5bb64f4fee2cf038aa4637b
+    width: 2400
+    height: 1600
+    alt: "Spa professionals giving facial and pedicure treatments in a bright salon"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fitness-02
+    kind: file
+    file: public/photos/lib-fitness-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ketut Subiyanto (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fitness-02.md.
+    sourceUrl: https://www.pexels.com/photo/man-and-woman-talking-at-the-gym-4853687/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a2c6f905f00c41c12528d8b5e2b7cf785d1d11258069e55a32d9f2135bb99965
+    width: 2400
+    height: 1600
+    alt: "Two young adults talking in a gym with a colorful mural behind them"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fitness-01
+    kind: file
+    file: public/photos/lib-fitness-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Andrej Klintsy (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fitness-01.md.
+    sourceUrl: https://www.pexels.com/photo/a-woman-doing-exercise-6392833/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: df86bce0703fa60bb4b2855b2a2cbecc5e384d4d3042b2c1eec53baf9c491722
+    width: 2400
+    height: 1600
+    alt: "A personal trainer helping a woman with sit-ups and a medicine ball in a gym"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fitness-03
+    kind: file
+    file: public/photos/lib-fitness-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Saulo Leite (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fitness-03.md.
+    sourceUrl: https://www.pexels.com/photo/back-view-of-a-man-7444444/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 24f754b9ef7dde298fb8f1c94f6d113472515a2b47b98c3a9aaf4601b046071c
+    width: 2400
+    height: 1600
+    alt: "A personal trainer guiding two women through a gym session"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fitness-04
+    kind: file
+    file: public/photos/lib-fitness-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Khezez (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fitness-04.md.
+    sourceUrl: https://www.pexels.com/photo/women-engaged-in-conversation-at-modern-gym-35341600/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e9a2560c97140225ed68d545a3fb86776cc6303b7def49181c3a5b5699b289ce
+    width: 2400
+    height: 1600
+    alt: "Three women in a modern gym having a conversation"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-beauty-03
+    kind: file
+    file: public/photos/lib-beauty-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tatiana Lucky (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-beauty-03.md.
+    sourceUrl: https://www.pexels.com/photo/woman-with-cloak-on-shoulder-in-beautician-20309789/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 43388000540c8553b6f8343e7e8a830217260107b6176607b2e674c9056f4b1e
+    width: 2400
+    height: 1600
+    alt: "A makeup artist working with a client in a bright beauty studio"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fintech-01
+    kind: file
+    file: public/photos/lib-fintech-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fintech-01.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-black-long-sleeve-shirt-holding-black-mobile-phone-7534379/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 5004456f3c453e8be5b739dd0bd2fe03a4c3c225b3af2d5236f7cf4f8df96dd8
+    width: 2400
+    height: 1800
+    alt: "A man holding a smartphone and a card while paying online"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-beauty-04
+    kind: file
+    file: public/photos/lib-beauty-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-beauty-04.md.
+    sourceUrl: https://www.pexels.com/photo/woman-getting-a-haircut-3992861/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8dc065d04d521c2b79a79541af8b1b84172e4e455203a152330465a86d2e2646
+    width: 2400
+    height: 1600
+    alt: "A stylist and client in a hair consultation at a salon"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fintech-02
+    kind: file
+    file: public/photos/lib-fintech-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shvetsa (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fintech-02.md.
+    sourceUrl: https://www.pexels.com/photo/a-woman-paying-using-her-smartphone-4226272/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: bb62ad4b01710336161e1ff8ae3775f9fa95f53c66f98cbbe6231a8e7cdfea09
+    width: 2400
+    height: 1600
+    alt: "A woman paying with her smartphone at a payment terminal"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fintech-03
+    kind: file
+    file: public/photos/lib-fintech-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tima Miroshnichenko (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fintech-03.md.
+    sourceUrl: https://www.pexels.com/photo/person-holding-brown-credit-card-and-cellphone-5198284/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 1d32513a8518be7dc08add1d038017be6fb77512613842aa04d77d71eb8a54e3
+    width: 2400
+    height: 1600
+    alt: "A person using a smartphone and card to pay online"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-fintech-04
+    kind: file
+    file: public/photos/lib-fintech-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Pavel Danilyuk (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-fintech-04.md.
+    sourceUrl: https://www.pexels.com/photo/a-person-making-contactless-payment-in-close-up-photography-6407590/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 9bebe540c42a406ce9da29268f658554b663fbfd344d2ffff1a94eda4049b207
+    width: 2400
+    height: 1602
+    alt: "A contactless phone payment on a handheld card terminal"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-banking-02
+    kind: file
+    file: public/photos/lib-banking-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rdne (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-banking-02.md.
+    sourceUrl: https://www.pexels.com/photo/photograph-of-a-mortgage-broker-sitting-8292840/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: f6d4d051f313b121328e5d1ace19fb7fbaf05e570e77bd7a2a01dc78322c2e79
+    width: 2400
+    height: 1600
+    alt: "A mortgage adviser meeting a client with a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-banking-01
+    kind: file
+    file: public/photos/lib-banking-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rdne (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-banking-01.md.
+    sourceUrl: https://www.pexels.com/photo/businessmen-having-a-discussion-8068654/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 89f68696a54efe8a395d9aa18c53503d0424923e15359f1aaaeefc898c122118
+    width: 2400
+    height: 1600
+    alt: "Two professionals reviewing financial documents together"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-banking-03
+    kind: file
+    file: public/photos/lib-banking-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kampus (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-banking-03.md.
+    sourceUrl: https://www.pexels.com/photo/four-people-working-in-the-office-8353820/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 61aa67943f6fec02c77e6166e33f4e628fce416ae9ee533a372218a427cd6863
+    width: 2400
+    height: 1602
+    alt: "Four professionals discussing financial plans in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-insurance-01
+    kind: file
+    file: public/photos/lib-insurance-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kampus (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-insurance-01.md.
+    sourceUrl: https://www.pexels.com/photo/an-agent-showing-documents-to-an-elderly-man-8441811/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 183a814d3cc96eafa22ce704b5a0df60cf0f6f211725545667acd170dddd03db
+    width: 2400
+    height: 1602
+    alt: "An adviser going through policy documents with senior clients"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-insurance-02
+    kind: file
+    file: public/photos/lib-insurance-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-insurance-02.md.
+    sourceUrl: https://www.pexels.com/photo/a-woman-explaining-a-document-to-a-couple-7735625/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c84ebd841ba14349b76c5f714ada86cc62f17992840d13484ab301fa099cd2c9
+    width: 2400
+    height: 1586
+    alt: "An agent explaining a home insurance policy to a couple"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-banking-04
+    kind: file
+    file: public/photos/lib-banking-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Calvinseng (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-banking-04.md.
+    sourceUrl: https://www.pexels.com/photo/night-view-of-skyscrapers-in-singapore-s-financial-district-32229751/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8fb99c941779a9bedc12e8b1b1af04fab1badd4ec38e617ca71ac510999e2b88
+    width: 2400
+    height: 1800
+    alt: "Bank towers lit up in the Singapore financial district at night"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-insurance-03
+    kind: file
+    file: public/photos/lib-insurance-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-insurance-03.md.
+    sourceUrl: https://www.pexels.com/photo/a-woman-holding-key-and-insurance-policy-7736044/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c46ba0e3a1aacee1ccdba8d439f20edf752957188d6bdbcb4d8adcb2415b9345
+    width: 2400
+    height: 1600
+    alt: "A smiling woman holding house keys and a home insurance policy"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-construction-01
+    kind: file
+    file: public/photos/lib-construction-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikael Blomkvist (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-construction-01.md.
+    sourceUrl: https://www.pexels.com/photo/people-with-hard-hard-standing-on-the-construction-site-8961260/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a5a89e23a2552d37d9f1c9628cafc9f01604350358f95fbc029509a118f40915
+    width: 2400
+    height: 1601
+    alt: "Two workers in safety gear discussing plans on a construction site"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-construction-02
+    kind: file
+    file: public/photos/lib-construction-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikael Blomkvist (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-construction-02.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-and-woman-wearing-safety-helmets-8961146/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 1e4f629171ea7ea4804bc42ca747bba6f6e0238ad28346dcfc89c9a843b43127
+    width: 2400
+    height: 1600
+    alt: "Two engineers reviewing drawings at a construction site"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-insurance-04
+    kind: file
+    file: public/photos/lib-insurance-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-insurance-04.md.
+    sourceUrl: https://www.pexels.com/photo/person-holding-insurance-policy-contract-7734672/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 83da93be8e24510f0298ce2c287f27d568757f1b896428633f9c68a58df730d1
+    width: 2400
+    height: 1839
+    alt: "A home insurance policy held on a clipboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-construction-03
+    kind: file
+    file: public/photos/lib-construction-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikael Blomkvist (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-construction-03.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-and-a-woman-with-ppe-s-talking-at-a-construction-site-8961065/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d40b316fb81e79b5e25bd09813e825df985ebf04ca929e3239534df8a356e918
+    width: 2400
+    height: 1600
+    alt: "Two engineers in hard hats talking on a busy construction site"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-construction-04
+    kind: file
+    file: public/photos/lib-construction-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rezwan (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-construction-04.md.
+    sourceUrl: https://www.pexels.com/photo/man-wearing-white-hard-hat-holding-2-way-radio-1078879/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 758bfd9a1fdda964fbf093994c4fad5c291a8d731912c0fbb79898bce5cc476d
+    width: 2400
+    height: 1600
+    alt: "A construction worker in a hard hat using a two-way radio on site"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-energy-01
+    kind: file
+    file: public/photos/lib-energy-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Gustavo Fring (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-energy-01.md.
+    sourceUrl: https://www.pexels.com/photo/electricians-inspecting-the-solar-panels-4254166/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 71a0ae3037488fd8051df7cbfae8beac588259d9152ab29db79a50a5ef98cc4a
+    width: 2400
+    height: 1600
+    alt: "An inspector and foreman checking documents beside solar panels"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-energy-02
+    kind: file
+    file: public/photos/lib-energy-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cristian Rojas (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-energy-02.md.
+    sourceUrl: https://www.pexels.com/photo/selective-focus-on-maintenance-man-installing-solar-panel-8853537/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: f7f07f6a418bea983d3c4aeaacf60c98e501520ea7ba82f785f0d1bbbbaa4834
+    width: 2400
+    height: 1603
+    alt: "A technician maintaining solar panels outdoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-energy-03
+    kind: file
+    file: public/photos/lib-energy-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Hoan Ng C (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-energy-03.md.
+    sourceUrl: https://www.pexels.com/photo/solar-technician-installing-solar-panels-6961110/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 97d99e7bf0a695d1e3f121823d121d586a19d9d1f17af1bc3ec05207673aa908
+    width: 2400
+    height: 1600
+    alt: "A technician checking rooftop solar panels"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-field-services-01
+    kind: file
+    file: public/photos/lib-field-services-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jose Andres Pacheco Cortes (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-field-services-01.md.
+    sourceUrl: https://www.pexels.com/photo/man-checking-an-air-conditioner-5463575/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8815230b4a0cfd68349d50b549b9eabfd942a24a763227f5d5fb621ab31092e6
+    width: 2400
+    height: 1705
+    alt: "A technician testing an outdoor air conditioning unit with gauges"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-energy-04
+    kind: file
+    file: public/photos/lib-energy-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kindelmedia (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-energy-04.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-installing-solar-panel-9875418/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a2bbef3dac124b3aa99bb35d89e94d4f51158a610f76f1930eca83a9edfed21e
+    width: 2400
+    height: 1800
+    alt: "A man in safety glasses installing a solar panel on a roof"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-field-services-02
+    kind: file
+    file: public/photos/lib-field-services-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kathleen Austin Kuhn (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-field-services-02.md.
+    sourceUrl: https://www.pexels.com/photo/technician-inspecting-outdoor-hvac-unit-32497161/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 362618d4de6361575f75f65e5a3a3fbc17136e933ce7b41b896a8b1fc42706a1
+    width: 2400
+    height: 1600
+    alt: "A technician inspecting an outdoor HVAC unit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-field-services-03
+    kind: file
+    file: public/photos/lib-field-services-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Richard Low Hong (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-field-services-03.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-gray-t-shirt-fixing-the-aircon-7347538/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: ea1864baf3544ea6e7853ffb407e0df1bfb065e72741db01fe34c4d73c52b596
+    width: 2400
+    height: 1600
+    alt: "A technician repairing a wall-mounted air conditioning unit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-restaurants-01
+    kind: file
+    file: public/photos/lib-restaurants-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-restaurants-01.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-white-dress-shirt-standing-beside-man-in-gray-vest-4253300/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 6f5a5e93a8a45cf5e6e97b76c4a713ae3e5f6827c7dd48365305925c71c6d4b8
+    width: 2400
+    height: 1600
+    alt: "Two chefs cooking in an open restaurant kitchen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-field-services-04
+    kind: file
+    file: public/photos/lib-field-services-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Elite Power Group (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-field-services-04.md.
+    sourceUrl: https://www.pexels.com/photo/electrician-working-on-solar-battery-installation-36085816/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c072670969ca8b188e00f95868290932c61fed3b662c16c49f587b5678e181d3
+    width: 2400
+    height: 1600
+    alt: "An electrician installing a home battery system"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-restaurants-02
+    kind: file
+    file: public/photos/lib-restaurants-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Matreding (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-restaurants-02.md.
+    sourceUrl: https://www.pexels.com/photo/chefs-preparing-meals-in-amsterdam-kitchen-31452625/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8a334f5cce85ddc0f6b9b00a986a7208bd074c1b06cf5b4ca5b779fa3b8ec75c
+    width: 2400
+    height: 1600
+    alt: "Chefs cooking during service in a restaurant kitchen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-restaurants-03
+    kind: file
+    file: public/photos/lib-restaurants-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alvin Chelsea (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-restaurants-03.md.
+    sourceUrl: https://www.pexels.com/photo/cookers-in-professional-kitchen-17318176/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: ad7870b89fe6881a703f7bafb0485d8d1bdb380fa8eda333e23219b2d2d72551
+    width: 2400
+    height: 1600
+    alt: "Two chefs working side by side in a professional kitchen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-restaurants-04
+    kind: file
+    file: public/photos/lib-restaurants-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Reneterp (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-restaurants-04.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-white-top-standing-beside-plates-2977514/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 33437aa8515ca83c237b57ede911150fafe8d7565b7cfff48a4bf55a8e3ef254
+    width: 2400
+    height: 1600
+    alt: "A chef plating dishes in a fine dining kitchen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-hospitality-01
+    kind: file
+    file: public/photos/lib-hospitality-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-hospitality-01.md.
+    sourceUrl: https://www.pexels.com/photo/brown-wall-with-hanging-lights-7821349/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c1dd7dcf433b9199069e77c20c13205baee75cb6fbbb512df0105ad65d165884
+    width: 2400
+    height: 1600
+    alt: "A hotel reception area with warm lighting and signage"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-hospitality-02
+    kind: file
+    file: public/photos/lib-hospitality-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alfred Franz (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-hospitality-02.md.
+    sourceUrl: https://www.pexels.com/photo/elegant-hotel-reception-with-ornate-woodwork-31231176/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 74814187b6438214b4b34613b99ba9e7472d04c9683732f82954aa031b5c9f86
+    width: 2400
+    height: 1596
+    alt: "A hotel reception with marble walls and carved wood"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-hospitality-03
+    kind: file
+    file: public/photos/lib-hospitality-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Olly (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-hospitality-03.md.
+    sourceUrl: https://www.pexels.com/photo/reception-desk-with-antique-hotel-bell-3771110/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: cbc1b1eb0a295e60b4f8e5b1c5cf4a7854d8fa6fa6a0c580d37c08a3a1885262
+    width: 2400
+    height: 1600
+    alt: "A brass service bell on a hotel reception counter"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-travel-01
+    kind: file
+    file: public/photos/lib-travel-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kelly (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-travel-01.md.
+    sourceUrl: https://www.pexels.com/photo/airbus-at-airport-16562841/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 7eb66e904e41dea4e15470fa8b2e40f6b5604cb3b9b43ef8e8bcb6abad4d2b14
+    width: 2400
+    height: 1601
+    alt: "A jet aircraft at an airport gate ready for boarding"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-travel-03
+    kind: file
+    file: public/photos/lib-travel-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Maxchen2k (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-travel-03.md.
+    sourceUrl: https://www.pexels.com/photo/planes-on-airport-runway-view-through-a-porthole-18090300/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: b389438b64394829925ec9ed3ba4f31b130049b7fa0bc7c19c0c6aab89be3f5a
+    width: 2400
+    height: 1600
+    alt: "An aircraft on the runway seen through a cabin window"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-hospitality-04
+    kind: file
+    file: public/photos/lib-hospitality-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Quang Nguyen Vinh (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-hospitality-04.md.
+    sourceUrl: https://www.pexels.com/photo/elegant-hotel-interior-and-a-receptionist-desk-6876590/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e34b3a514d4abb68bedac45538c43656280265ac23fbf5e239e77f90d30ec4fe
+    width: 2400
+    height: 1600
+    alt: "A classic hotel lobby with a wooden reception desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-marketplaces-01
+    kind: file
+    file: public/photos/lib-marketplaces-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mizunokozuki (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-marketplaces-01.md.
+    sourceUrl: https://www.pexels.com/photo/delivery-man-looking-for-address-13432255/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 14b2684c8484dfad00cd505aca3e1a03f43ed726657d5def0143ad0ac2334a7c
+    width: 2400
+    height: 1600
+    alt: "A courier delivering a package in a city neighborhood"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-marketplaces-02
+    kind: file
+    file: public/photos/lib-marketplaces-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Artempodrez (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-marketplaces-02.md.
+    sourceUrl: https://www.pexels.com/photo/a-person-signing-a-proof-of-delivery-8989470/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e2195dbab1c74ee221cded92889eec3472b1f556cda75e7d3d2d3624a36e2aaf
+    width: 2400
+    height: 1350
+    alt: "A customer signing for a delivered package"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automotive-01
+    kind: file
+    file: public/photos/lib-automotive-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Davidmcbee (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automotive-01.md.
+    sourceUrl: https://www.pexels.com/photo/aerial-photo-of-building-395537/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a9a551db2739cc2e7abd7c3dede679325f98255b3b063e0563ae97814c25edb7
+    width: 2400
+    height: 1350
+    alt: "An aerial view of a car dealership surrounded by parked cars"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-travel-02
+    kind: file
+    file: public/photos/lib-travel-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Brett Sayles (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-travel-02.md.
+    sourceUrl: https://www.pexels.com/photo/photo-of-airplanes-at-airport-3140204/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 9536c663a7509ef51095b2187cb93d210577f51a4958cce5e4f26c1edaa0e259
+    width: 2400
+    height: 2400
+    alt: "Aircraft parked at a busy airport terminal at sunset"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-marketplaces-03
+    kind: file
+    file: public/photos/lib-marketplaces-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Roman Odintsov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-marketplaces-03.md.
+    sourceUrl: https://www.pexels.com/photo/smiling-man-with-box-12725403/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 79d4ad93c59061d5a00b7a9325fc7059103ecc7eac04cb0b931a3ebc8cf19712
+    width: 2400
+    height: 3598
+    alt: "A smiling courier holding a parcel outdoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automotive-02
+    kind: file
+    file: public/photos/lib-automotive-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Silverkblack (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automotive-02.md.
+    sourceUrl: https://www.pexels.com/photo/happy-couple-shopping-for-a-new-car-at-dealership-36729871/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 53c02ae61d463e2d81107c340e57008e85e64cac622c35469dd8ec68dec37fed
+    width: 2400
+    height: 1350
+    alt: "A couple looking at new cars in a dealership"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-transportation-01
+    kind: file
+    file: public/photos/lib-transportation-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Bogdankrupin (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-transportation-01.md.
+    sourceUrl: https://www.pexels.com/photo/trucks-near-warehouse-16663692/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: aa4a648605789c084a398f70dbb951937e15b2e39d77fe92e94aba070a91f7e8
+    width: 2400
+    height: 1807
+    alt: "Semi-trucks parked outside a parts warehouse"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automotive-03
+    kind: file
+    file: public/photos/lib-automotive-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shkrabaanthony (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automotive-03.md.
+    sourceUrl: https://www.pexels.com/photo/couple-buying-car-in-dealership-7144172/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 6376b8f90bc59d1e9c026b36108306227d293dc0c2d25703cfd07eaa7886c703
+    width: 2400
+    height: 1600
+    alt: "A salesperson talking with a couple about a car purchase"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-transportation-02
+    kind: file
+    file: public/photos/lib-transportation-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kamus Cheung (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-transportation-02.md.
+    sourceUrl: https://www.pexels.com/photo/row-of-parked-isuzu-delivery-trucks-in-urban-area-38199714/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 047919c51a70dc9af8e6ab0af6e4ec051a9511212f113734eb2a18cdfeccba48
+    width: 2400
+    height: 1600
+    alt: "A row of delivery trucks parked in the city"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-transportation-03
+    kind: file
+    file: public/photos/lib-transportation-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-transportation-03.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-sitting-in-a-truck-7541982/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c3499e7d580056aa046d331184f0fe0d8abe6487540bff4918ad0831409e6728
+    width: 2400
+    height: 1600
+    alt: "A driver at the wheel in a truck cab"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automotive-04
+    kind: file
+    file: public/photos/lib-automotive-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Silverkblack (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automotive-04.md.
+    sourceUrl: https://www.pexels.com/photo/business-handshake-in-car-dealership-36729862/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: fdca20ff6ec06e532c06ece39207bb355441befed421a3da2361d355fbce118c
+    width: 2400
+    height: 1350
+    alt: "Two people shaking hands in a car dealership"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-transportation-04
+    kind: file
+    file: public/photos/lib-transportation-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tony Mrst (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-transportation-04.md.
+    sourceUrl: https://www.pexels.com/photo/driver-and-truck-11114134/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 19daa5c96133acf1b8cd951f62c83358a56e1f0899a0e55797ac185dcc934052
+    width: 2400
+    height: 2275
+    alt: "A truck driver in high-visibility gear unloading cargo"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-marketplaces-04
+    kind: file
+    file: public/photos/lib-marketplaces-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kindelmedia (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-marketplaces-04.md.
+    sourceUrl: https://www.pexels.com/photo/man-delivering-packages-6868616/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d47f80f0f1cebb4e9f2561b40a2b576bb84d28757b6a4a1ec76e7e5c7ef3332b
+    width: 2400
+    height: 4261
+    alt: "A courier carrying parcels to a customer door"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-agriculture-02
+    kind: file
+    file: public/photos/lib-agriculture-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tieugiang007 (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-agriculture-02.md.
+    sourceUrl: https://www.pexels.com/photo/rice-field-harvest-with-a-tractor-in-vietnam-34632627/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 05e464f58a6b0591e7294c72e08a170914433586ec4513ea18c100651e7ee1c9
+    width: 2400
+    height: 1675
+    alt: "A tractor harvesting a green rice field"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-agriculture-03
+    kind: file
+    file: public/photos/lib-agriculture-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Andres Alaniz (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-agriculture-03.md.
+    sourceUrl: https://www.pexels.com/photo/green-tractor-in-mendoza-farmland-29465456/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8e774c0203dc0c305950540de0413356813f77b56cca8a0bb29d2a97419caa7a
+    width: 2400
+    height: 1600
+    alt: "A green tractor on farmland under a clear sky"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-recruitment-01
+    kind: file
+    file: public/photos/lib-recruitment-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tima Miroshnichenko (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-recruitment-01.md.
+    sourceUrl: https://www.pexels.com/photo/man-reviewing-woman-s-resume-5439455/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4e68d11c6e986773cd6d157e37572fc151225ad63e58706be138bc6594453b71
+    width: 2400
+    height: 1600
+    alt: "An interviewer reviewing a candidate resume in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-recruitment-02
+    kind: file
+    file: public/photos/lib-recruitment-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shvetsa (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-recruitment-02.md.
+    sourceUrl: https://www.pexels.com/photo/woman-sitting-by-a-table-taking-notes-at-a-meeting-4225927/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a6a7a5bd48c803d56b666d1f2036c2c64fce5016026c07e97403cfe69042b1f6
+    width: 2400
+    height: 1600
+    alt: "A candidate taking notes during a job interview"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-agriculture-01
+    kind: file
+    file: public/photos/lib-agriculture-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kindelmedia (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-agriculture-01.md.
+    sourceUrl: https://www.pexels.com/photo/blue-tractor-on-a-farmland-7457180/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 1f3fee867edf686740040406d6ee54fa59f92b1a338c3ff71ffcabebafa715f5
+    width: 2400
+    height: 1351
+    alt: "A blue tractor in a farm field during the day"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-recruitment-03
+    kind: file
+    file: public/photos/lib-recruitment-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tima Miroshnichenko (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-recruitment-03.md.
+    sourceUrl: https://www.pexels.com/photo/businessman-looking-at-employee-5439368/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e8d66197575695eb2199e6bc41c3cf91f2d168489a38a69dcc4c240832d9bd0e
+    width: 2400
+    height: 1600
+    alt: "A job interview in an office with large windows"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-recruitment-04
+    kind: file
+    file: public/photos/lib-recruitment-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Silverkblack (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-recruitment-04.md.
+    sourceUrl: https://www.pexels.com/photo/professional-job-interview-in-modern-office-setting-36733328/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4352097e4851e7e51f2de78db9383f89e356490ece66d9d58c708932ecfa26b9
+    width: 2400
+    height: 1350
+    alt: "A hiring manager interviewing a candidate in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-legal-01
+    kind: file
+    file: public/photos/lib-legal-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Pavel Danilyuk (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-legal-01.md.
+    sourceUrl: https://www.pexels.com/photo/a-certificate-and-lady-justice-figurine-on-table-8112198/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d63314bb049f8dd9999ab69370bdc735376e24e26226d371b15be48fd46ec917
+    width: 2400
+    height: 1602
+    alt: "A legal certificate and a figure of justice on a lawyer desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-legal-02
+    kind: file
+    file: public/photos/lib-legal-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Pavel Danilyuk (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-legal-02.md.
+    sourceUrl: https://www.pexels.com/photo/professional-lawyer-using-a-laptop-8112112/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 6adc6cffd66955cfb3026d17af1b0baee8ee2e784278e636db30cca2f15b1da1
+    width: 2400
+    height: 1602
+    alt: "A lawyer working at a laptop in his office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-agriculture-04
+    kind: file
+    file: public/photos/lib-agriculture-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rahul Mahalik (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-agriculture-04.md.
+    sourceUrl: https://www.pexels.com/photo/tractor-plowing-the-field-18135422/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 3a72e62a6b895dcf9589a30f9287ac8bc4b43fa2f1be5442f208e68644c5ad22
+    width: 2400
+    height: 1600
+    alt: "A tractor plowing a field with birds flying around it"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-legal-03
+    kind: file
+    file: public/photos/lib-legal-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Pavel Danilyuk (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-legal-03.md.
+    sourceUrl: https://www.pexels.com/photo/a-woman-in-black-blazer-holding-a-clipboard-8111876/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4f3fdacc460826f68df8a063c3d0a2a4e6dd9c41506124ece609665b822458b6
+    width: 2400
+    height: 1602
+    alt: "A lawyer reviewing paperwork in a law office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-media-01
+    kind: file
+    file: public/photos/lib-media-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alphaen (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-media-01.md.
+    sourceUrl: https://www.pexels.com/photo/close-up-of-professional-microphone-in-studio-setting-31213674/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a65d3f850feeb2d5de165a6716e38b8b749058bc8af1863a1f472d191db5c2ba
+    width: 2400
+    height: 1600
+    alt: "A professional microphone on a boom arm in a studio"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-travel-04
+    kind: file
+    file: public/photos/lib-travel-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Radubradu (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-travel-04.md.
+    sourceUrl: https://www.pexels.com/photo/modern-airport-terminal-16292057/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4d259a4cca08347f383a00f5d3260da316166f031c916c04e2a047e2c7551f99
+    width: 2400
+    height: 3200
+    alt: "Travelers in a large modern airport terminal"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-legal-04
+    kind: file
+    file: public/photos/lib-legal-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Karola G (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-legal-04.md.
+    sourceUrl: https://www.pexels.com/photo/a-lawyer-talking-to-the-woman-wearing-brown-blazer-7876197/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 50cc9d558f1036b0b709cd1ae7e7a3fe005512db3d36eb11542636fec52ea7bb
+    width: 2400
+    height: 1600
+    alt: "Two lawyers discussing a case in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-media-04
+    kind: file
+    file: public/photos/lib-media-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ben Khatry (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-media-04.md.
+    sourceUrl: https://www.pexels.com/photo/young-man-podcasting-in-home-studio-setting-36917956/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d92ea0b58a384cc3502e49e08c5675f40ab0b5384e86359650bc712fc190ea45
+    width: 2400
+    height: 1350
+    alt: "A young man recording a podcast in a home studio"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-media-02
+    kind: file
+    file: public/photos/lib-media-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-media-02.md.
+    sourceUrl: https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-sitting-beside-yellow-microphone-7600898/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 2490ff2aa54e80459d455fb807d45857be03599e8f6d1594b47a66cc0eafff52
+    width: 2400
+    height: 1600
+    alt: "A woman recording a podcast in a studio"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-media-03
+    kind: file
+    file: public/photos/lib-media-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Hcdigital (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-media-03.md.
+    sourceUrl: https://www.pexels.com/photo/an-intricate-podcast-setup-7383469/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d25577b9844089e1dbbaafe510c4f2e014d0c49a2642fccbdd04761d63c550f7
+    width: 2400
+    height: 1600
+    alt: "A podcast studio with microphones, a mixer, and acoustic panels"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-nonprofits-02
+    kind: file
+    file: public/photos/lib-nonprofits-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rdne (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-nonprofits-02.md.
+    sourceUrl: https://www.pexels.com/photo/volunteer-men-in-white-shirts-6646873/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 10003285bfbe47a838977f0cbf5d4d532aa865ed21132916c2df073cf5153cc8
+    width: 2400
+    height: 1600
+    alt: "Volunteers organizing food donations"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-nonprofits-01
+    kind: file
+    file: public/photos/lib-nonprofits-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Julia M Cameron (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-nonprofits-01.md.
+    sourceUrl: https://www.pexels.com/photo/a-person-holding-a-cardboard-with-inscription-6994992/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 30e0997ece5c927125d80d6e3b85e3d984d44606cceffe4ad49c030fa31dcaa3
+    width: 2400
+    height: 1600
+    alt: "A person holding a sign asking for volunteers"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-nonprofits-03
+    kind: file
+    file: public/photos/lib-nonprofits-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-nonprofits-03.md.
+    sourceUrl: https://www.pexels.com/photo/man-and-woman-wearing-beige-sweater-6568953/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 416f7d097afc85ec5f17de7aca0779c91ced07cb309d3e62b190d594ac9f68a2
+    width: 2400
+    height: 1600
+    alt: "Two smiling volunteers with name tags at an event"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-nonprofits-04
+    kind: file
+    file: public/photos/lib-nonprofits-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rdne (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-nonprofits-04.md.
+    sourceUrl: https://www.pexels.com/photo/two-male-volunteers-6647023/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4f0e798e3f59bff08d346cba4412ad89386246e6026d1a473ec50d5e068a8a07
+    width: 2400
+    height: 1600
+    alt: "Two volunteers knocking on a door during community outreach"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-government-01
+    kind: file
+    file: public/photos/lib-government-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Werner Pfennig (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-government-01.md.
+    sourceUrl: https://www.pexels.com/photo/woman-standing-at-a-rostrum-and-talking-during-a-political-conference-6950156/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: f55eaf813ba610d8ce8519813e2557d86dd037a386d60ac59dcbae5c96ca1727
+    width: 2400
+    height: 1600
+    alt: "A woman speaking at a public conference while delegates listen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-government-02
+    kind: file
+    file: public/photos/lib-government-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Werner Pfennig (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-government-02.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-in-black-suit-standing-in-front-of-people-6950135/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 834c8afbf95c71daeec70be792e4c0810a34e04e9c42fd1398eb4802f3d55de6
+    width: 2400
+    height: 1601
+    alt: "A speaker addressing officials in a conference room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-government-03
+    kind: file
+    file: public/photos/lib-government-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-government-03.md.
+    sourceUrl: https://www.pexels.com/photo/politicians-on-a-conference-room-8847041/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 71d9ff17cfe79ccf1dca71f86205d0d2a7d9c5a3d48c8882ada1a754458d5d0f
+    width: 2400
+    height: 1601
+    alt: "Officials discussing plans around a conference table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-saas-01
+    kind: file
+    file: public/photos/lib-saas-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-saas-01.md.
+    sourceUrl: https://www.pexels.com/photo/team-discussing-project-at-a-computer-6804084/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 3cbb85896a5ff5f7348834fc48f20274becc7583a5db59d6cdda36f8333763e2
+    width: 2400
+    height: 1600
+    alt: "A product team discussing work at a computer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-saas-02
+    kind: file
+    file: public/photos/lib-saas-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-saas-02.md.
+    sourceUrl: https://www.pexels.com/photo/men-sitting-at-the-desks-in-an-office-and-using-computers-6804068/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 848aa0dda3e53f0fccf67cc8e6d6c0becd7fac3b51a81a1ce8e1d758186b108e
+    width: 2400
+    height: 1600
+    alt: "Developers working together at computers in a tech office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-saas-03
+    kind: file
+    file: public/photos/lib-saas-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-saas-03.md.
+    sourceUrl: https://www.pexels.com/photo/employees-of-a-startup-software-company-talking-during-a-break-6805161/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 29b343683bbdb4eb3fab631040cf2f76fe4d84b672fe0e0445c3506cbb68f8f1
+    width: 2400
+    height: 1600
+    alt: "A software startup team meeting with laptops and tablets"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-government-04
+    kind: file
+    file: public/photos/lib-government-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christian Wasserfallen (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-government-04.md.
+    sourceUrl: https://www.pexels.com/photo/swiss-parliament-council-chamber-in-bern-36207471/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 001b8bc0ed67000ab458d460861aa3d902b515feae68806e225b9b45cd8d09f0
+    width: 2400
+    height: 1600
+    alt: "The interior of a parliament council chamber"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-saas-04
+    kind: file
+    file: public/photos/lib-saas-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cottonbro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-saas-04.md.
+    sourceUrl: https://www.pexels.com/photo/employees-discussing-project-standing-over-programmer-working-at-a-computer-6804079/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e04a630e7146201aab349f444ed80400fe32b95723d65d0bd8dbdb8f63e64cf2
+    width: 2400
+    height: 1600
+    alt: "A team gathered around a developer screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-telecommunications-01
+    kind: file
+    file: public/photos/lib-telecommunications-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Edouard Matte (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-telecommunications-01.md.
+    sourceUrl: https://www.pexels.com/photo/photo-of-a-wi-fi-tower-under-a-blue-sky-7862565/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 5f0822e3994e1b400b9d13f2d5d7188304fa89195e3fed86eaed30638a3164c4
+    width: 2400
+    height: 1600
+    alt: "A communications tower with antennas against a blue sky"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-01
+    kind: file
+    file: public/photos/lib-portraits-m-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vincent Santamaria (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-01.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-business-professional-in-suit-37148308/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 03bd93d4d4625e21c7382c55b4fef9345fd1a362565ca15c85addd258633d5bd
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a blue suit and tie"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-telecommunications-02
+    kind: file
+    file: public/photos/lib-telecommunications-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jolennetrieu (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-telecommunications-02.md.
+    sourceUrl: https://www.pexels.com/photo/tall-communication-tower-against-blue-sky-with-clouds-36532938/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: b93d94ad3e24ddd33899f48bb184a88380d699960ef6e9d8dec1534c753d1d3d
+    width: 2400
+    height: 1600
+    alt: "A tall communications tower against a blue sky with clouds"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-02
+    kind: file
+    file: public/photos/lib-portraits-m-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Sam Agdasi (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-02.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-businessman-in-studio-39974547/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8de0b5194ef923d9a42943ccad568d3bb845a83377776758dd5ea100ef945649
+    width: 1000
+    height: 1500
+    alt: "Studio portrait of a man in formal attire"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-telecommunications-03
+    kind: file
+    file: public/photos/lib-telecommunications-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Nishantaneja (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-telecommunications-03.md.
+    sourceUrl: https://www.pexels.com/photo/low-angle-shot-of-telecommunications-towers-under-blue-sky-19851982/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a6778915f57dc92aa0708b11425a0fcac3716b008340c0859f980ba1cfc6e7ae
+    width: 2400
+    height: 2158
+    alt: "Two telecommunications towers against a clear blue sky"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-telecommunications-04
+    kind: file
+    file: public/photos/lib-telecommunications-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shreyaan (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-telecommunications-04.md.
+    sourceUrl: https://www.pexels.com/photo/satellite-on-tower-14938295/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: dc55a1dd8de0d1cd3c062b367999f89f5edb3f80ae721b0d2ce81ef0e3dee0c5
+    width: 2400
+    height: 1600
+    alt: "A tower carrying many satellite dishes"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-03
+    kind: file
+    file: public/photos/lib-portraits-m-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Prolificpeople (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-03.md.
+    sourceUrl: https://www.pexels.com/photo/professional-business-portrait-in-greenville-30004325/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 2b68bafc64d62027e92c8f525a2d85dd654d5a0a2658e3be5ef7c3abd4bad48e
+    width: 1000
+    height: 1500
+    alt: "Business portrait of a confident professional man"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-04
+    kind: file
+    file: public/photos/lib-portraits-m-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Josepheulo Nyc (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-04.md.
+    sourceUrl: https://www.pexels.com/photo/man-wearing-black-suit-on-white-background-12311572/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: a1760a0130239b562482e3e608a76be4eb16bd61b251c3ceea07c5528c17b3e8
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a black suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-01
+    kind: file
+    file: public/photos/lib-portraits-f-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Prolificpeople (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-01.md.
+    sourceUrl: https://www.pexels.com/photo/professional-headshot-of-confident-female-in-greenville-30004323/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 3044d8c2b66f9392103c593376a1dfc9a39d3bc30eb19fa543fb78c9b1de6ab6
+    width: 1000
+    height: 1500
+    alt: "Headshot of a professional woman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-02
+    kind: file
+    file: public/photos/lib-portraits-f-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ifeyinkastudios (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-02.md.
+    sourceUrl: https://www.pexels.com/photo/professional-corporate-headshot-of-smiling-woman-29852895/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 3290d7f05371662070b6aedfac017a4907313cebeae5024ad1ccdc1846cd5f1e
+    width: 1000
+    height: 1250
+    alt: "Headshot of a smiling woman in a black suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-05
+    kind: file
+    file: public/photos/lib-portraits-m-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Omar Tapia (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-05.md.
+    sourceUrl: https://www.pexels.com/photo/young-business-professional-portrait-outdoors-31409070/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 5df5e6d5d07b1d356ed8844691c4d696e9104ed0ae5647884d5d0359e53b5e7b
+    width: 1000
+    height: 1503
+    alt: "Portrait of a young professional man in a suit outdoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-03
+    kind: file
+    file: public/photos/lib-portraits-f-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tony Zohari (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-03.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-smiling-woman-in-studio-38197025/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 0faed113015d0b1177a653b3d714d7e6229ade965e95dbb092d0a02883b27286
+    width: 1000
+    height: 1500
+    alt: "Studio portrait of a smiling woman in formal attire"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-06
+    kind: file
+    file: public/photos/lib-portraits-m-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kooldark (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-06.md.
+    sourceUrl: https://www.pexels.com/photo/professional-businessman-in-a-formal-suit-portrait-29995581/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 42e09ccb03b468ebe3bfcb59d38b23415167783faaefbb4287dc39576bbd4b5c
+    width: 1000
+    height: 1500
+    alt: "Formal portrait of a man in a navy suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-04
+    kind: file
+    file: public/photos/lib-portraits-f-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Finn Gruber (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-04.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-smiling-woman-in-business-attire-31869537/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 2cd9b1bea12b18b5fdc5a36bc7dda718fc2554a940ae878573bc02abd2600b3e
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in business attire"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-05
+    kind: file
+    file: public/photos/lib-portraits-f-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Biola Visuals (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-05.md.
+    sourceUrl: https://www.pexels.com/photo/confident-woman-in-black-outfit-portrait-30198184/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8843220046e43cb53278794180036a726003fc2511533a1e949b91376ebb4539
+    width: 1000
+    height: 1499
+    alt: "Portrait of a confident woman dressed in black"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-06
+    kind: file
+    file: public/photos/lib-portraits-f-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Hanuman Photo Studio (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-06.md.
+    sourceUrl: https://www.pexels.com/photo/smiling-woman-in-a-suit-26728094/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4e637a37321cc840138380c39a0c69a673aaa00b7631ea9f07620d13898a962a
+    width: 1000
+    height: 1500
+    alt: "Portrait of a businesswoman in a black suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-07
+    kind: file
+    file: public/photos/lib-portraits-m-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vincent Santamaria (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-07.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businessman-portrait-in-dark-suit-37148344/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 9240051f6b776624bf18c0a5aac11e0066c6cd78afeae0f59f722d147f4593a4
+    width: 1000
+    height: 1500
+    alt: "Close-up portrait of a man in a dark suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-07
+    kind: file
+    file: public/photos/lib-portraits-f-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jay Imagery (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-07.md.
+    sourceUrl: https://www.pexels.com/photo/woman-in-formalwear-11655430/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 67ec5ded3b732f46d4472b4014d0fd825518e74e2c42448bd40b14fd9d3b7eaf
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling businesswoman in formal attire"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-08
+    kind: file
+    file: public/photos/lib-portraits-m-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Josepheulo Nyc (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-08.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-smiling-man-with-a-mustache-12311567/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 7e77b2b03d640f41328e2f7031c84d08d9349f8ad8d08c429df83e7fc7d6d2d6
+    width: 1000
+    height: 1500
+    alt: "Close-up portrait of a smiling man with a mustache"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-09
+    kind: file
+    file: public/photos/lib-portraits-m-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Luis Angel Alejos Espinoza (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-09.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-businessman-26872232/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: bdbccfef5d2585f2378d174f162bd90609a7f55de2b4adffc834a52a68dc5425
+    width: 1000
+    height: 1250
+    alt: "Studio portrait of a young man in a blue suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-08
+    kind: file
+    file: public/photos/lib-portraits-f-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Augustocarneirojr (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-08.md.
+    sourceUrl: https://www.pexels.com/photo/professional-headshot-of-a-young-businesswoman-30468665/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e95b21ad8afcbdbf7d86e0275a29487d812757f2587341cf70c44211c14e4f1e
+    width: 1000
+    height: 1333
+    alt: "Headshot of a young businesswoman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-10
+    kind: file
+    file: public/photos/lib-portraits-m-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Wasinpirom (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-10.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-businessman-in-suit-31880922/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: b3236d91f53547080514c0b65d3a5a989005a5bcc9e45b6be18e3e05f90ff6be
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a suit on a neutral background"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-11
+    kind: file
+    file: public/photos/lib-portraits-m-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Moh Dikko Photography (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-11.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-young-man-in-suit-33331334/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 96f583e31efaaf4a7c662e258346cedbb89cc7ded899083995c329d0f8434167
+    width: 1000
+    height: 1500
+    alt: "Formal portrait of a young man in a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-09
+    kind: file
+    file: public/photos/lib-portraits-f-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rdne (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-09.md.
+    sourceUrl: https://www.pexels.com/photo/photo-of-woman-in-formal-wear-7468194/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 509f2e5a32fb5bebe7a9a68b2fe871f6a7ab90c5ea7b80a17839fa9720342e6f
+    width: 1000
+    height: 1500
+    alt: "Portrait of a businesswoman against a brick wall"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-10
+    kind: file
+    file: public/photos/lib-portraits-f-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Marinaphotos (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-10.md.
+    sourceUrl: https://www.pexels.com/photo/professional-woman-in-business-attire-portrait-33646670/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 0104a3c316fc2a29b2e41e16ba6c9add28d92fd860a0db8be8bf41bc3e6f282e
+    width: 1000
+    height: 1510
+    alt: "Portrait of a woman in a suit on a neutral background"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-13
+    kind: file
+    file: public/photos/lib-portraits-m-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kingcyrusstudios (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-13.md.
+    sourceUrl: https://www.pexels.com/photo/professional-young-man-in-business-attire-with-glasses-30496625/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: f63c31191f82bffda6608df778e72b05136bf2a316d65ef69b2103f3fcd03eda
+    width: 1000
+    height: 1250
+    alt: "Portrait of a young man in a suit and glasses"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-12
+    kind: file
+    file: public/photos/lib-portraits-m-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Prolificpeople (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-12.md.
+    sourceUrl: https://www.pexels.com/photo/professional-headshot-of-smiling-businessman-30004315/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 34dc0337f2aba44d899003688b3070dd2cecdc07a6b7ead4d6ad5ea50ac1a674
+    width: 1000
+    height: 1500
+    alt: "Headshot of a smiling businessman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-14
+    kind: file
+    file: public/photos/lib-portraits-m-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Absoluteabhi (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-14.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businessman-in-formal-suit-portrait-38889910/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: bd37530e2ab09d800578ba2d249fea3a272744d21e7d3bb25319a6787fa640df
+    width: 1000
+    height: 1778
+    alt: "Portrait of a businessman in a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-11
+    kind: file
+    file: public/photos/lib-portraits-f-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Norbaine Glory Tamar (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-11.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businesswoman-in-white-shirt-portrait-40163920/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 87fdd4a7ea18a5b207f139ca3d6e4e9f764d0eec1193fc5c1214be019b3e4881
+    width: 1000
+    height: 1400
+    alt: "Portrait of a smiling woman in a white shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-15
+    kind: file
+    file: public/photos/lib-portraits-m-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Sandro Tavares (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-15.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-in-black-suit-with-his-arms-crossed-13111213/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 17ac98b1e10b625bdcd653573fef2d560528afd30782fac11a944a30e5e63284
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a suit with arms folded"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-16
+    kind: file
+    file: public/photos/lib-portraits-m-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ansey (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-16.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-young-man-in-suit-against-brown-background-38977106/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: b01c53832372bc649c7825f04ec6131315cea7e75e8b8b0962d4191b8cea55e4
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling young man in a suit and blue tie"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-17
+    kind: file
+    file: public/photos/lib-portraits-m-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Realprince (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-17.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-gray-suit-wearing-eyeglasses-10816007/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c1f4f539c2d822577f68c7eb43ff9fa5dd67296b6f303d095a00288ba058d18a
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a grey suit and glasses"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-18
+    kind: file
+    file: public/photos/lib-portraits-m-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Anthonyshkraba Production (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-18.md.
+    sourceUrl: https://www.pexels.com/photo/close-up-photo-of-a-man-wearing-eyeglasses-looking-at-the-camera-8278853/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c39408001fcb9b97fa9bc38419bab6661eb61ceb97b1f2ab80d104d5bb960202
+    width: 1000
+    height: 1500
+    alt: "Close-up portrait of a man in glasses and a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-12
+    kind: file
+    file: public/photos/lib-portraits-f-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tiago Chaves (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-12.md.
+    sourceUrl: https://www.pexels.com/photo/smiling-woman-portrait-against-gray-background-36439572/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: ce9a2c798ed17c8608d349e15738a155db2003eb3e2133812e4048c51e772c3f
+    width: 1000
+    height: 1501
+    alt: "Studio portrait of a smiling woman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-19
+    kind: file
+    file: public/photos/lib-portraits-m-19.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Hao Peng (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-19.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-confident-businessman-30975982/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: b33fcb052e2b931ac37678b00dc08b6c6d5f0c7faf064841d544c2d5c4ac1e39
+    width: 1000
+    height: 1500
+    alt: "Studio portrait of a thoughtful businessman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-21
+    kind: file
+    file: public/photos/lib-portraits-m-21.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Josepheulo Nyc (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-21.md.
+    sourceUrl: https://www.pexels.com/photo/man-wearing-black-suit-on-white-background-12311549/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 6d4abc25267ee541323c042f388725cfb0203a4c5d6dd4b12bd7010803941072
+    width: 1000
+    height: 1500
+    alt: "Portrait of a bearded man in a black suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-20
+    kind: file
+    file: public/photos/lib-portraits-m-20.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Salvador Olague (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-20.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-smiling-man-in-shirt-18032391/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8b4af88ea335a88ddb03098dd68345790c8381a9d121db9828b4a6c4cd34192d
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man with a beard in a blue shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-13
+    kind: file
+    file: public/photos/lib-portraits-f-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ilayda0700 (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-13.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-smiling-woman-in-black-turtleneck-36593089/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4ac7a246bf161b19f79435032d35e84b4c83fd9e5a435430b92eaf9540da4336
+    width: 1000
+    height: 1500
+    alt: "Studio portrait of a smiling woman in a black turtleneck"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-16
+    kind: file
+    file: public/photos/lib-portraits-f-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tima Miroshnichenko (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-16.md.
+    sourceUrl: https://www.pexels.com/photo/woman-in-gray-blazer-5717550/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 14684ed22850354719f40134126ebe6a5df659fe2b4c658e78c332b1100c6a51
+    width: 1000
+    height: 667
+    alt: "A businesswoman at her desk in a bright office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-14
+    kind: file
+    file: public/photos/lib-portraits-f-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Bule (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-14.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-confident-young-woman-35572078/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 05776f958aa3394fc9c96ce00abfa34925e44e831c41b80ba19d54b27b2c239a
+    width: 1000
+    height: 1250
+    alt: "Portrait of a young woman in a blue blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-15
+    kind: file
+    file: public/photos/lib-portraits-f-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ann Walton (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-15.md.
+    sourceUrl: https://www.pexels.com/photo/elegant-portrait-of-a-smiling-woman-36378433/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4232151925dd3eb2b9c97bcb5368e309c63991a91cfe4baae25bf670176c5abf
+    width: 1000
+    height: 1493
+    alt: "Portrait of a smiling woman in elegant attire"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-18
+    kind: file
+    file: public/photos/lib-portraits-f-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Helenalopes (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-18.md.
+    sourceUrl: https://www.pexels.com/photo/smiling-woman-in-a-business-suit-27086761/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 95aed62393a83568171f07920e7aef5c7178e2e6bcb41be81e40b7873a6d0a3b
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling young woman indoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-17
+    kind: file
+    file: public/photos/lib-portraits-f-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cristian Rojas (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-17.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-businesswoman-10041272/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: dc5314be2befb8ed1be607fe6ceaf1089a2f5aaf1bc33f46c0d53f892a3e2d75
+    width: 1000
+    height: 1498
+    alt: "Portrait of a businesswoman holding documents in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-19
+    kind: file
+    file: public/photos/lib-portraits-f-19.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Thisismcfollis (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-19.md.
+    sourceUrl: https://www.pexels.com/photo/confident-professional-woman-in-black-attire-38670854/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: ba349ca56a6fcccf26ea4ed350f27dbea8c474c3978895577e998254e4376579
+    width: 1000
+    height: 1500
+    alt: "Portrait of a woman in formal attire on a turquoise background"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-20
+    kind: file
+    file: public/photos/lib-portraits-f-20.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-20.md.
+    sourceUrl: https://www.pexels.com/photo/a-cute-woman-in-black-blazer-smiling-8101969/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: bc5de1f3d624c3217027ab7da61b537b63b50496459c2c34f8418a52a0ab7cd2
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a black blazer at work"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-22
+    kind: file
+    file: public/photos/lib-portraits-m-22.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Silverkblack (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-22.md.
+    sourceUrl: https://www.pexels.com/photo/confident-adult-man-in-outdoor-setting-36712860/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c95d70726cc51d4b241a23a48b0d7f51a422ae62edda3c630247f95088c17578
+    width: 1000
+    height: 563
+    alt: "Portrait of a bearded man outdoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-23
+    kind: file
+    file: public/photos/lib-portraits-m-23.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Moises Sanchez (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-23.md.
+    sourceUrl: https://www.pexels.com/photo/professional-man-in-stylish-grey-suit-34299170/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 16d89afdba6acd7c5f8b12a54a372c565c9bf07a835d12b76ae235996fc816bc
+    width: 1000
+    height: 1332
+    alt: "Portrait of a man in a grey suit and blue shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-24
+    kind: file
+    file: public/photos/lib-portraits-m-24.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Lara Jameson (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-24.md.
+    sourceUrl: https://www.pexels.com/photo/man-with-full-beard-wearing-business-attire-9623645/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: cb304a74adf082081f8cbb0411458fce925da522abe2b24e5dfbc5139f4aefac
+    width: 1000
+    height: 1500
+    alt: "A bearded businessman in a suit outside a modern building"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-25
+    kind: file
+    file: public/photos/lib-portraits-m-25.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Bhandari Law And Partners (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-25.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-man-with-his-arms-crossed-26834972/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 2a68bb155bd95a78ed4447543477e3f1cbfe082a8f5ca4a03e89fd1f097a69bb
+    width: 1000
+    height: 1500
+    alt: "Portrait of a businessman with arms crossed on a blue background"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-27
+    kind: file
+    file: public/photos/lib-portraits-m-27.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Arsalanahmed5590 (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-27.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-man-in-gray-suit-15200105/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d72e12643385731934eb5a87c0cc27501dd4259127572cf005b36e2b7ccf23a3
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a grey suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-29
+    kind: file
+    file: public/photos/lib-portraits-m-29.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Khutso Mokoena (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-29.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-confident-man-in-blue-suit-40079131/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 7bdbc834b0bf19ad2c10505d12d75a31ab853415873ae2816e4970b2a817ab61
+    width: 1000
+    height: 667
+    alt: "Portrait of a smiling man in glasses and a blue suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-26
+    kind: file
+    file: public/photos/lib-portraits-m-26.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kooldark (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-26.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-businessman-in-a-suit-17049771/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 0a40227e7a9b8714bbfef10c780308301d31b771a8337587cd686ee19df52c65
+    width: 1000
+    height: 1500
+    alt: "Portrait of a businessman in a suit with arms crossed"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-28
+    kind: file
+    file: public/photos/lib-portraits-m-28.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Wolrider (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-28.md.
+    sourceUrl: https://www.pexels.com/photo/confident-man-posing-in-modern-office-37409445/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 333df04648538849a65b64d7a2571672cbaedba2aa475ca582bdf65562a77c7d
+    width: 1000
+    height: 1500
+    alt: "A smiling man leaning on a desk in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-30
+    kind: file
+    file: public/photos/lib-portraits-m-30.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ketut Subiyanto (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-30.md.
+    sourceUrl: https://www.pexels.com/photo/a-portrait-of-a-bearded-man-in-a-suit-4965009/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4debf083cfe5982347add363a0d77953312013a1af2d43d25d741948def096e4
+    width: 1000
+    height: 667
+    alt: "Portrait of a bearded man in a suit with arms crossed"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-32
+    kind: file
+    file: public/photos/lib-portraits-m-32.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-32.md.
+    sourceUrl: https://www.pexels.com/photo/photo-of-a-businessman-in-a-suit-8937582/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d3c5cfef3da4303dae76d69e9e99b44af66c8341b384ee8d007cdf194a5ca810
+    width: 1000
+    height: 668
+    alt: "A young businessman in a blue suit in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-31
+    kind: file
+    file: public/photos/lib-portraits-m-31.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kooldark (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-31.md.
+    sourceUrl: https://www.pexels.com/photo/confident-professional-man-holding-smartphone-33100431/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 2fd88b16167ff0b0c069799b1d136073f74de714c1f85abd59bf87d1e07bfc7c
+    width: 1000
+    height: 1499
+    alt: "Portrait of a smiling man in a suit holding a phone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-34
+    kind: file
+    file: public/photos/lib-portraits-m-34.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Antonio Ribeiro (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-34.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-smart-clothes-17362827/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: ad1ee4c4132b3bcd1bcab98111f48ab215aa20eac4345d97b5dadc91b8b21137
+    width: 1000
+    height: 1250
+    alt: "Portrait of a man in a blue suit and glasses"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-33
+    kind: file
+    file: public/photos/lib-portraits-m-33.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ayub Solikhin (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-33.md.
+    sourceUrl: https://www.pexels.com/photo/studio-shot-of-a-young-man-in-a-suit-17685845/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4da2e101f2b885bf8454a493eec9b9c26a45177d5251e0cc89871bbb509bb3b4
+    width: 1000
+    height: 1498
+    alt: "Studio portrait of a smiling young man in a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-35
+    kind: file
+    file: public/photos/lib-portraits-m-35.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Sandro Tavares (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-35.md.
+    sourceUrl: https://www.pexels.com/photo/close-up-shot-of-a-man-wearing-blue-suit-on-gray-background-12989198/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e7e1af663d99310b91fec4527e9fc9b288aa3e89becf7047223d374f6f3d3730
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a blue suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-36
+    kind: file
+    file: public/photos/lib-portraits-m-36.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kooldark (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-36.md.
+    sourceUrl: https://www.pexels.com/photo/smiling-man-in-formal-wear-posing-on-white-studio-background-17311576/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 9ed38d2f3a48ecdde58f361d546940046022b584ab596e2b020f7feb89334dd7
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a dark suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-21
+    kind: file
+    file: public/photos/lib-portraits-f-21.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Norbaine Glory Tamar (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-21.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businesswoman-smiling-portrait-40083446/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 945c5da0f9466f640f65e0e7f82b6f82ec0e6d46d4c6d1df7f805d049d5e1e25
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling professional woman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-22
+    kind: file
+    file: public/photos/lib-portraits-f-22.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Speakmediauganda (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-22.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businesswoman-smiling-indoors-37079379/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4fde885f5964c6e3f879c69919f1dcfb46d2599e991534e028aa06cca9749288
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling businesswoman indoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-37
+    kind: file
+    file: public/photos/lib-portraits-m-37.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Gustt Rabelo (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-37.md.
+    sourceUrl: https://www.pexels.com/photo/man-in-a-gray-suit-and-red-tie-16322150/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: fd0d474f1032bdb2a5c35cca32a453fb3e7be9543e4dc148218e74b6afec1641
+    width: 1000
+    height: 1375
+    alt: "Portrait of a senior businessman in a grey suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-23
+    kind: file
+    file: public/photos/lib-portraits-f-23.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Thekehindeogunsanya (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-23.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-curly-haired-woman-wearing-blue-blazer-on-blue-background-14840190/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 073a8fad24ee44c99531dd96664c5dcfad9781b061416530c9de83751f71afab
+    width: 1000
+    height: 1333
+    alt: "Portrait of a smiling woman in a blue blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-38
+    kind: file
+    file: public/photos/lib-portraits-m-38.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shiva Kumar Reddy (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-38.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-businessman-in-formal-attire-37605831/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 9331bdbda364e24132b8bb86d41139aa350f486cddc531b2d717765a14cca55f
+    width: 1000
+    height: 1500
+    alt: "Portrait of a middle-aged businessman in a black suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-24
+    kind: file
+    file: public/photos/lib-portraits-f-24.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kooldark (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-24.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-businesswoman-29995646/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: bd61bd08c50708089ac997437e822cbb6620e1ddfd3d15133e17dd4cde66910b
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling businesswoman in a blue suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-39
+    kind: file
+    file: public/photos/lib-portraits-m-39.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Itay Verchik (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-39.md.
+    sourceUrl: https://www.pexels.com/photo/studio-shot-of-an-elegant-man-in-a-suit-16970142/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 1244dbf4a7ea94ae2e70c9820d497284f268d231150be62c70c40ace14a03d7e
+    width: 1000
+    height: 1500
+    alt: "Studio portrait of a man in a business suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-40
+    kind: file
+    file: public/photos/lib-portraits-m-40.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Denigrafias (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-40.md.
+    sourceUrl: https://www.pexels.com/photo/confident-young-professional-in-a-suit-38319085/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 7da26a25c9a63ece3f6469a3d027dbfe0a85b9bcabc140b31388bf6b15a0bf76
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling young man in a suit and tie"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-25
+    kind: file
+    file: public/photos/lib-portraits-f-25.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Zoe Galarza (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-25.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-smiling-businesswoman-34381970/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 650b70595df66494c3772b86d02273301c75e33fdd0bf6b9fb377d0cdc0cfaf6
+    width: 1000
+    height: 1400
+    alt: "Studio portrait of a smiling businesswoman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-41
+    kind: file
+    file: public/photos/lib-portraits-m-41.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Josepheulo Nyc (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-41.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-man-wearing-a-suit-jacket-12311564/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: afd3db6183ad0b5d45710bdf1d8cffd485a2bdb19c40afaf0a503f72d3bc9338
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-26
+    kind: file
+    file: public/photos/lib-portraits-f-26.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Monica Crews (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-26.md.
+    sourceUrl: https://www.pexels.com/photo/smiling-professional-woman-in-black-blazer-32846944/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c28f59b5bca44979df166463aaeb4370a123a9ba1c4770d96e0bdffab67565b2
+    width: 1000
+    height: 1502
+    alt: "Portrait of a smiling woman in a black blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-28
+    kind: file
+    file: public/photos/lib-portraits-f-28.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mikhail Nilov (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-28.md.
+    sourceUrl: https://www.pexels.com/photo/a-beautiful-woman-wearing-a-purple-top-8872492/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: f1601ae28423e830f537068688ca6c6a76b7891e026262ba438682c73c8d47ea
+    width: 1000
+    height: 1498
+    alt: "Portrait of a businesswoman in a purple top"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-27
+    kind: file
+    file: public/photos/lib-portraits-f-27.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Speakmediauganda (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-27.md.
+    sourceUrl: https://www.pexels.com/photo/confident-young-woman-in-a-blazer-outdoors-37118096/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: cb9ad830b76ecfcac06ab26a5a56d000bb8afa368050cf4a856105a1efba23f6
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling young woman in a blazer outdoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-29
+    kind: file
+    file: public/photos/lib-portraits-f-29.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Marceloverfe (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-29.md.
+    sourceUrl: https://www.pexels.com/photo/beautiful-woman-in-black-blazer-13059581/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 645b8fb2231a5d3c7d857d675b4df69f68c81d572eb69f4c8eee960c69b29b7c
+    width: 1000
+    height: 1250
+    alt: "Studio portrait of a smiling businesswoman in a blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-42
+    kind: file
+    file: public/photos/lib-portraits-m-42.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "2mephoto (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-42.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businessman-in-blue-suit-portrait-34461740/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: fb2cf29444d283e80b8a1985780c8be56070a47a34a42b8b463973e164312289
+    width: 1000
+    height: 1306
+    alt: "Portrait of a smiling businessman in a blue suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-30
+    kind: file
+    file: public/photos/lib-portraits-f-30.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cedric Fauntleroy (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-30.md.
+    sourceUrl: https://www.pexels.com/photo/woman-with-yellow-and-white-headscarf-smiling-8154425/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: e07fc77eba0b28fc5e583a10cc49de7a0711358cf7281a648fe4532604bf5abe
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman wearing a headscarf in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-32
+    kind: file
+    file: public/photos/lib-portraits-f-32.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Lucretius Mooka (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-32.md.
+    sourceUrl: https://www.pexels.com/photo/professional-woman-in-black-suit-smiling-33539340/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: f63b94995e73479bb76256b6da95b645c830dea2e534b4dc2d6277c6610b69f0
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a black suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-33
+    kind: file
+    file: public/photos/lib-portraits-f-33.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Helenalopes (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-33.md.
+    sourceUrl: https://www.pexels.com/photo/confident-businesswoman-smiling-indoors-27086916/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 45443a73e7e87d253cf541e706ba77a67481fdfce0ae8e78637cb36d2e792c37
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a business suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-43
+    kind: file
+    file: public/photos/lib-portraits-m-43.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Atulm0han (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-43.md.
+    sourceUrl: https://www.pexels.com/photo/professional-businessman-smiling-in-office-corridor-36645466/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 94c363947c435aa63ed06280db1ba024d0f81d322dd24a280f7048f58a0552b7
+    width: 1000
+    height: 1500
+    alt: "A smiling businessman in an office corridor"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-31
+    kind: file
+    file: public/photos/lib-portraits-f-31.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Picha Stock (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-31.md.
+    sourceUrl: https://www.pexels.com/photo/woman-in-blue-clothes-smiling-3894379/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 3d3f980b5f05156f9d38e02e66a2668c1f7b0194946a3b75ad3e6aa56e7d7c70
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling businesswoman in blue"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-44
+    kind: file
+    file: public/photos/lib-portraits-m-44.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Afshin Aliabadi (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-44.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-an-elderly-man-in-a-suit-7366286/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 4db85fc35fb73f00904f4f8a3e8572426c907a8c11bc1387018f40fb5b9fce69
+    width: 1000
+    height: 1400
+    alt: "Studio portrait of a senior man in a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-45
+    kind: file
+    file: public/photos/lib-portraits-m-45.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jesse Davidson Attorney (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-45.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-smiling-man-in-suit-38139419/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 0f86664c1c81033ed59526bc5f56d2f747638e8d47cc7367ff61f0a18757cd50
+    width: 1000
+    height: 1362
+    alt: "Portrait of a smiling man in a grey suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-46
+    kind: file
+    file: public/photos/lib-portraits-m-46.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fabricio Moraes Cunha (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-46.md.
+    sourceUrl: https://www.pexels.com/photo/portrait-of-a-man-smiling-while-his-hands-are-together-12616225/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: c7d5cc8a5716da78412572802c273369ffd92f6c41a0ad8eea492d7531a9de3c
+    width: 1000
+    height: 1506
+    alt: "Studio portrait of a smiling businessman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-m-47
+    kind: file
+    file: public/photos/lib-portraits-m-47.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Luisbecerrafotografo (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-47.md.
+    sourceUrl: https://www.pexels.com/photo/a-man-in-a-suit-jacket-5906433/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: ed2be7b75d52fa8d6d56aea586eadcf2aded188c55e154a4dd21ca242b1de666
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a suit jacket"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-34
+    kind: file
+    file: public/photos/lib-portraits-f-34.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tochukwu Ekeh (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-34.md.
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-woman-in-orange-suit-32288634/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 8883d7c8785f516423e9677e838b4129110249c6d2f0b4e6d0ef2c893afd8906
+    width: 1000
+    height: 1250
+    alt: "Portrait of a smiling woman in an orange suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-35
+    kind: file
+    file: public/photos/lib-portraits-f-35.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Divinetechygirl (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-35.md.
+    sourceUrl: https://www.pexels.com/photo/woman-wearing-white-polo-long-sleeved-shirt-1181695/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: d584f6c6a5a0565726742ed3b9ca005bcc04d9ec5ccd2fd9643661e43093713d
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-f-36
+    kind: file
+    file: public/photos/lib-portraits-f-36.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Norbaine Glory Tamar (Pexels)"
+    license: Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-36.md.
+    sourceUrl: https://www.pexels.com/photo/professional-woman-smiling-in-blue-blazer-portrait-40163927/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 97014b324d693246a42991969dcd25956d9f0684f76ec8777cf3e571f3a7ead0
+    width: 1000
+    height: 1400
+    alt: "Portrait of a smiling woman in a blue blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"

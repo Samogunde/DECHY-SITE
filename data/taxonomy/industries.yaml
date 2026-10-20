@@ -10,7 +10,7 @@ entities:
     name: Agriculture
     slug: agriculture
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.architecture
@@ -26,7 +26,7 @@ entities:
     name: Automotive
     slug: automotive
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.banking
@@ -34,7 +34,7 @@ entities:
     name: Banking
     slug: banking
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.beauty
@@ -42,7 +42,7 @@ entities:
     name: Beauty
     slug: beauty
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.construction
@@ -50,7 +50,7 @@ entities:
     name: Construction
     slug: construction
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.cybersecurity
@@ -82,7 +82,7 @@ entities:
     name: Energy
     slug: energy
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.engineering
@@ -114,7 +114,7 @@ entities:
     name: Fitness
     slug: fitness
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.government
@@ -122,7 +122,7 @@ entities:
     name: Government
     slug: government
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.healthcare
@@ -138,7 +138,7 @@ entities:
     name: Hospitality
     slug: hospitality
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.human-resources
@@ -154,7 +154,7 @@ entities:
     name: Insurance
     slug: insurance
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.legal
@@ -162,7 +162,7 @@ entities:
     name: Legal
     slug: legal
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.logistics
@@ -186,7 +186,7 @@ entities:
     name: Media
     slug: media
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.nonprofits
@@ -194,7 +194,7 @@ entities:
     name: Nonprofits
     slug: nonprofits
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.pharmaceuticals
@@ -234,7 +234,7 @@ entities:
     name: Recruitment
     slug: recruitment
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.restaurants
@@ -242,7 +242,7 @@ entities:
     name: Restaurants
     slug: restaurants
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.retail
@@ -258,7 +258,7 @@ entities:
     name: SaaS
     slug: saas
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.sports
@@ -282,7 +282,7 @@ entities:
     name: Telecommunications
     slug: telecommunications
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.transportation
@@ -290,7 +290,7 @@ entities:
     name: Transportation
     slug: transportation
     prominence: standard
-    pagePolicy: CREATE LATER
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20
   - id: ind.travel
@@ -298,6 +298,30 @@ entities:
     name: Travel
     slug: travel
     prominence: standard
-    pagePolicy: REVIEW
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.fintech
+    type: industry
+    name: Fintech and Payments
+    slug: fintech
+    prominence: standard
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.field-services
+    type: industry
+    name: Home and Field Services
+    slug: field-services
+    prominence: standard
+    pagePolicy: CREATE / INDEX
+    evidenceLevel: none
+    sourceSection: 20
+  - id: ind.marketplaces
+    type: industry
+    name: Marketplaces and On-Demand
+    slug: marketplaces
+    prominence: standard
+    pagePolicy: CREATE / INDEX
     evidenceLevel: none
     sourceSection: 20

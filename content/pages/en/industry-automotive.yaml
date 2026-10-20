@@ -1,0 +1,273 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-automotive
+kind: industry
+locale: en
+path: /industries/automotive/
+parent: /industries/
+entityId: ind.automotive
+title: Automotive Dealership Software and App Development | DECHY
+description: "Automotive software from DECHY: dealership websites, vehicle inventory, service
+  booking, finance applications, and apps for dealers and service centers."
+breadcrumbLabel: Automotive
+intent:
+  primary: dealership website development
+  secondary:
+    - automotive software development
+    - car service booking app
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build dealership websites with live inventory, service booking, finance and trade-in tools,
+    customer apps, and connections to dealer management systems.
+  problem:
+    Buyers research online for weeks, but dealer websites show stale stock, slow forms, and no
+    way to book a service without a call.
+  audience:
+    Car dealers, dealer groups, service and repair centers, rental and leasing companies, and
+    automotive startups.
+  choose: Start with the website and live inventory if sales leads are the goal, or with service
+    booking if the workshop drives profit.
+  next:
+    Tell us how buyers and service customers reach you today. We reply with a plan, a price range,
+    and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Dealership websites and apps that sell cars and fill the workshop
+    lead: We build the websites, inventory tools, and booking apps that turn online research into
+      showroom visits and service bookings. Buyers see live stock and real prices, finance and
+      trade-in start online, and the workshop diary fills itself.
+    ctas:
+      - label: Plan dealership software
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every customer
+        text: From first search to every service.
+      spokes:
+        - title: Live inventory
+          text: Real stock and prices.
+        - title: Lead capture
+          text: Test drives and enquiries.
+        - title: Finance and trade-in
+          text: Started online.
+        - title: Service booking
+          text: Workshop slots.
+        - title: Customer app
+          text: Vehicle history.
+        - title: Dealer system
+          text: The source of truth.
+    purpose: relationship
+    takeaway: Automotive software links live inventory, leads, finance, and service booking to the
+      dealer system and one customer record.
+    visualTitle: The systems around an automotive customer
+    figureCaption:
+      This diagram shows a customer record at the center with live inventory, lead capture,
+      finance and trade-in, service booking, a customer app, and the dealer system around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why automotive buyers need a better online experience
+    paragraphs:
+      - Most car buyers decide long before they visit. They compare stock, prices, and reviews
+        online, then contact one or two dealers. If your website shows cars that have already sold,
+        or a form that nobody answers, the buyer goes elsewhere.
+      - "The fix is live inventory from your dealer system, clear prices, and simple next steps:
+        book a test drive, value a trade-in, or check finance. Every lead lands with the right
+        salesperson within minutes."
+      - After the sale, service is where loyalty and profit live. Online booking, reminders, and a
+        customer app with the vehicle's history keep customers coming back to your workshop.
+      - Dealer groups gain one platform across brands and sites, with central control over stock,
+        offers, and lead routing, and clear reports on which channels sell.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Automotive software we build
+    intro:
+      Every tool reads from your dealer management system, so stock, customers, and service history
+      stay consistent.
+    items:
+      - title: Dealer website
+        body: Fast vehicle search, rich vehicle pages, and clear next steps on every car.
+      - title: Live inventory feeds
+        body: Stock and prices synced from your dealer system and published to your site and listing
+          portals.
+      - title: Lead routing
+        body: Test drive and enquiry leads sent to the right salesperson instantly, with follow-up
+          reminders.
+      - title: Finance and trade-in
+        body: Online finance applications and trade-in valuations that start the deal before the visit.
+      - title: Service booking
+        body: Workshop slots, recall checks, reminders, and courtesy cars booked online.
+      - title: Customer app
+        body: Vehicle history, service reminders, documents, and offers for every owner.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for automotive
+    intro: What to know about dealer systems, feeds, and vehicle data.
+    panels:
+      - title: Dealer systems and feeds
+        items:
+          - We connect to dealer management systems through their interfaces or export feeds.
+          - Inventory is published to your website and to listing portals from one source.
+      - title: Vehicle data
+        items:
+          - Vehicle details, images, and history are stored once and reused across channels.
+          - Valuations and finance checks use specialist providers through their interfaces.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What dealers get from us
+    intro:
+      Dealers feel the change in lead quality and workshop occupancy. Sales teams spend their time
+      with buyers who are ready, and service advisors stop answering the phone to book routine work.
+    columns:
+      - title: More leads
+        items:
+          - Live stock buyers trust.
+          - Clear next steps on every car.
+      - title: Faster response
+        items:
+          - Leads routed in minutes.
+          - Follow-ups that happen.
+      - title: A fuller workshop
+        items:
+          - Online service booking.
+          - Reminders that bring owners back.
+      - title: Group control
+        items:
+          - Central stock and offers.
+          - Reports by site and channel.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build dealership software
+    intro: A dealer website with live inventory usually launches in two to three weeks.
+    steps:
+      - title: Connect the stock
+        body: We connect your dealer management system so inventory and prices update automatically.
+        artifacts:
+          - Stock feed
+          - Data checks
+      - title: Design the buying path
+        body: We design search and vehicle pages around how buyers compare cars on a phone.
+        artifacts:
+          - Prototype
+          - Lead flows
+      - title: Route every lead
+        body: We route leads to the right person and track response times.
+        artifacts:
+          - Lead routing
+          - Response report
+      - title: Add service and loyalty
+        body: We add service booking and the customer app once sales journeys are live.
+        artifacts:
+          - Service booking
+          - Customer app
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about automotive software
+    items:
+      - q: How much does a dealership website cost?
+        a:
+          A dealer website with live inventory usually costs $6,000 to $15,000 and launches in 2 to 3
+          weeks.
+      - q: Can you connect to our dealer management system?
+        a: Usually, yes, through its interface or a stock export, so your website always shows real
+          inventory.
+      - q: Can customers book a service online?
+        a: Yes. Customers choose a slot, add work and a courtesy car, and get reminders before the visit.
+      - q: Can buyers apply for finance online?
+        a:
+          Yes. We build finance application and trade-in valuation tools that connect to your finance
+          partners.
+      - q: Do you build for dealer groups?
+        a: Yes. Groups get one platform across brands and sites with central control and local pages.
+      - q: Can you build an app for our customers?
+        a:
+          Yes. Owners get service history, reminders, documents, and offers in an app with your brand.
+          Owners can book their next service from the app in a few taps.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Automotive projects, costs, and timelines
+    intro: Dealers usually start with the website and inventory, then add service and apps.
+    caption: Typical automotive projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Dealer website with live inventory
+        - Stock feed, search, vehicle pages, and lead forms
+        - $6,000 to $15,000
+        - 2 to 3 weeks
+      - - Service booking system
+        - Workshop slots, reminders, and courtesy car booking
+        - $5,000 to $12,000
+        - 1 to 3 weeks
+      - - Finance and trade-in tools
+        - Online finance applications and trade-in valuation
+        - $10,000 to $25,000
+        - 3 to 5 weeks
+      - - Dealer group platform and app
+        - Several brands and sites, customer app, and reporting
+        - $40,000 to $80,000+
+        - 6 to 10 weeks
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Automotive across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.mobile-app-development
+          - svc.api-integration
+          - svc.seo-aeo-geo
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.customer-portals
+          - workarea.mobile-apps
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - lang.typescript
+          - tech.flutter
+          - plat.vercel
+  - type: cta
+    id: contact-cta
+    heading: Tell us how buyers and owners reach you
+    body: Share your sites, brands, and dealer system. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan dealership software
+      href: /contact/?service=web-development

@@ -123,16 +123,38 @@ solutions:
 # Industries menu: the first industry pages. Only published pages appear.
 industries:
   heading: Where we work
-  allLabel: All industries
+  allLabel: All 30 industries
   items:
     - { id: ind.healthcare, summary: "Records, privacy, and systems that must work together." }
+    - { id: ind.fitness, summary: "Member apps, booking, and coaching." }
+    - { id: ind.beauty, summary: "Booking, deposits, and client records." }
     - { id: ind.finance, summary: "Accuracy, audit trails, and systems that connect." }
+    - { id: ind.fintech, summary: "Payment apps, wallets, and lending." }
+    - { id: ind.banking, summary: "Digital banking connected to the core." }
+    - { id: ind.insurance, summary: "Quotes, claims, and broker portals." }
     - { id: ind.real-estate, summary: "Listings, tenants, documents, and follow-up." }
-    - { id: ind.logistics, summary: "Orders, routes, tracking, and handoffs." }
+    - { id: ind.construction, summary: "Site apps, approvals, and cost control." }
+    - { id: ind.energy, summary: "Customer portals, crews, and asset data." }
+    - { id: ind.field-services, summary: "Booking, dispatch, and technician apps." }
     - { id: ind.retail, summary: "Selling, stock, customers, and fulfillment." }
-    - { id: ind.education, summary: "Learners, courses, records, and communication." }
-    - { id: ind.professional-services, summary: "Clients, matters, time, and billing." }
+    - { id: ind.restaurants, summary: "Direct ordering, booking, and loyalty." }
+    - { id: ind.hospitality, summary: "Direct bookings and guest apps." }
+    - { id: ind.travel, summary: "Tour booking and itinerary apps." }
+    - { id: ind.marketplaces, summary: "Two-sided platforms and on-demand apps." }
+    - { id: ind.automotive, summary: "Dealer websites, stock, and service." }
+    - { id: ind.logistics, summary: "Orders, routes, tracking, and handoffs." }
+    - { id: ind.transportation, summary: "Fleet, drivers, and live tracking." }
     - { id: ind.manufacturing, summary: "Production, quality, suppliers, and planning." }
+    - { id: ind.agriculture, summary: "Farm records, sensors, and traceability." }
+    - { id: ind.education, summary: "Learners, courses, records, and communication." }
+    - { id: ind.recruitment, summary: "Job boards, tracking, and onboarding." }
+    - { id: ind.legal, summary: "Intake, portals, and document automation." }
+    - { id: ind.professional-services, summary: "Clients, matters, time, and billing." }
+    - { id: ind.media, summary: "Publishing, subscriptions, and audio." }
+    - { id: ind.nonprofits, summary: "Donations, volunteers, and impact." }
+    - { id: ind.government, summary: "Accessible public digital services." }
+    - { id: ind.saas, summary: "Product engineering for software firms." }
+    - { id: ind.telecommunications, summary: "Self-service, ordering, and field tools." }
 
 # Work menu ("What we build"). Groups and order are editorial. Every Work Area page must appear in
 # exactly one group (a validator enforces it). Labels are the canonical Work Area names.

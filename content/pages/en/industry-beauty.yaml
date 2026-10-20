@@ -1,0 +1,274 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-beauty
+kind: industry
+locale: en
+path: /industries/beauty/
+parent: /industries/
+entityId: ind.beauty
+title: Salon and Spa Booking Software Development | DECHY
+description: Booking apps, websites, and client tools for salons, spas, clinics, and beauty brands,
+  built by DECHY to fill chairs and cut no-shows.
+breadcrumbLabel: Beauty and salons
+intent:
+  primary: salon booking software
+  secondary:
+    - spa booking app development
+    - beauty business website
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build booking websites and apps, client records, loyalty, and online stores for salons,
+    spas, aesthetic clinics, and beauty brands.
+  problem:
+    Phones ring during appointments, no-shows cost you every week, and client history lives in
+    a paper card or a stylist's memory.
+  audience: Hair and beauty salons, spas, nail and lash studios, aesthetic clinics, barbers, and
+    beauty product brands.
+  choose:
+    Start with online booking and deposits if no-shows hurt, or with a store if retail products
+    are your growth.
+  next: Tell us how clients book and pay now. We reply with a plan, a price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Booking, websites, and apps that keep your chairs full
+    lead:
+      We build the online booking, client records, and loyalty tools that fill your diary and bring
+      clients back. Clients book themselves in a minute, deposits stop no-shows, and your team stops
+      answering the phone mid-appointment.
+    ctas:
+      - label: Plan a salon booking system
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every client
+        text: Visits, treatments, notes, and preferences.
+      spokes:
+        - title: Online booking
+          text: By service and stylist.
+        - title: Deposits
+          text: Fewer no-shows.
+        - title: Client notes
+          text: Formulas and allergies.
+        - title: Loyalty
+          text: Points and referrals.
+        - title: Retail
+          text: Products online and in salon.
+        - title: Reminders
+          text: Text and email.
+    purpose: relationship
+    takeaway:
+      Salon software revolves around a client record that booking, deposits, notes, loyalty, and
+      retail all share.
+    visualTitle: The tools around a salon client
+    figureCaption: This diagram shows a client record at the center with booking, deposits, notes,
+      loyalty, retail, and reminders around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why beauty businesses need booking built for them
+    paragraphs:
+      - In a salon, time is the product. An empty hour cannot be sold again, and a no-show costs a
+        stylist's full rate. Every booking tool promises to fix this, yet many businesses still
+        juggle a booking app, a website, a till, and a notebook of client formulas.
+      - We build around your services, your team, and your brand. Clients pick a treatment and a
+        person they trust, pay a deposit, and get a reminder they can act on. Staff see the client's
+        history before they say hello.
+      - Done well, the tools feel as considered as your treatments.
+      - "Owners get the view they rarely have: which services earn most, which stylists are booked
+        out, and which clients have not been back in three months. A simple campaign to those
+        clients often pays for the project on its own."
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Beauty and salons projects, costs, and timelines
+    intro: Most salons start with booking and deposits, then add an app and a store.
+    caption: Typical beauty and salons projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Booking website
+        - Services, team, real-time booking, and local search setup
+        - $3,000 to $7,000
+        - 1 to 2 weeks
+      - - Deposits and client records
+        - Card deposits, cancellation rules, notes, and history
+        - $4,000 to $10,000
+        - 1 to 3 weeks
+      - - Branded booking app
+        - Rebooking, loyalty, offers, and notifications
+        - $10,000 to $25,000
+        - 3 to 5 weeks
+      - - Multi-location platform with store
+        - Several salons, retail store, reporting, and integrations
+        - $25,000 to $45,000+
+        - 5 to 8 weeks
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Salon and spa software we build
+    intro:
+      Each tool works on its own and gets better together. Bookings, notes, loyalty, and sales all
+      attach to the same client record your team already knows.
+    items:
+      - title: Booking website
+        body:
+          A fast website with real-time booking by treatment, stylist, and location, built to rank in
+          local search.
+      - title: Branded booking app
+        body: An app clients keep on their phone for rebooking, offers, and loyalty points.
+      - title: Deposits and cancellation rules
+        body: Card deposits and clear cancellation windows that cut no-shows without awkward conversations.
+      - title: Client records
+        body: Treatment history, color formulas, allergies, and photos, visible to the right staff only.
+      - title: Loyalty and referrals
+        body: Points, rewards, and referral codes that turn first visits into regular appointments.
+      - title: Online product store
+        body: Sell the products you use in the chair, with click-and-collect at the salon.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about salon software
+    items:
+      - q: How much does a salon booking website cost?
+        a:
+          Most booking websites cost $3,000 to $10,000 and launch in 1 to 3 weeks. A branded app with
+          loyalty usually adds $10,000 to $25,000.
+      - q: Can we keep the booking system we already pay for?
+        a:
+          Yes, if it has an open connection. We can build your website and app on top of it, or replace it
+          if it holds you back.
+      - q: Will deposits put clients off?
+        a:
+          Rarely, when the rules are clear and refunds are easy. Most salons see far fewer no-shows and
+          almost no lost bookings.
+      - q: Can we run several locations?
+        a: Yes. Clients choose a location, and you see bookings and revenue for each one and for the group.
+      - q: Do you build product stores too?
+        a: Yes. We add an online shop with click-and-collect, so products sell between visits.
+      - q: Can clients rebook straight after an appointment?
+        a:
+          Yes. The receipt and the app both offer the next appointment with the same stylist, which is one
+          of the simplest ways to raise repeat visits.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What salons and spas get from us
+    columns:
+      - title: A fuller diary
+        items:
+          - Booking open around the clock.
+          - Gaps filled by last-minute offers.
+      - title: Fewer no-shows
+        items:
+          - Deposits and reminders.
+          - Easy rescheduling instead of silence.
+      - title: Better service
+        items:
+          - Client history before they arrive.
+          - Notes that follow the client between staff.
+      - title: More revenue
+        items:
+          - Retail sold online.
+          - Loyalty that brings clients back sooner.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we set up a salon platform
+    intro:
+      Most salons go live within three weeks. Existing clients and future appointments come across,
+      so nothing is lost on switch-over day.
+    steps:
+      - title: Learn your diary
+        body:
+          We look at how services, durations, and staff skills fit together, including the treatments
+          that need special rules.
+        artifacts:
+          - Service map
+          - Booking rules
+      - title: Design the client side
+        body: We design booking for a phone in one hand and make the first visit feel easy.
+        artifacts:
+          - Booking prototype
+          - Brand styling
+      - title: Build and move data
+        body: We build the site or app and bring over existing clients and future bookings.
+        artifacts:
+          - Live booking
+          - Imported clients
+      - title: Train and launch
+        body: We train the team in an hour, switch on deposits, and watch no-shows for the first month.
+        artifacts:
+          - Team training
+          - No-show report
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for beauty businesses
+    intro: What to know about payments, client privacy, and multi-location setups.
+    panels:
+      - title: Payments and deposits
+        items:
+          - Deposits and no-show fees run through card providers such as Stripe or Square.
+          - Cards are stored by the provider, never on your own system.
+      - title: Client privacy
+        items:
+          - Treatment notes and photos are visible only to staff who need them.
+          - Clients can see, update, or delete their own details.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Beauty and salons across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.mobile-app-development
+          - svc.ecommerce
+          - svc.branding
+      - title: Systems we build
+        entityIds:
+          - workarea.business-web-platforms
+          - workarea.mobile-apps
+          - workarea.ecommerce-platforms
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - int.stripe
+          - int.square
+          - plat.shopify
+  - type: cta
+    id: contact-cta
+    heading: Tell us how clients book today
+    body: Share your services, team, and booking tools. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan a salon booking system
+      href: /contact/?service=web-development

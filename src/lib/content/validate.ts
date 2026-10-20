@@ -178,10 +178,12 @@ function wordCount(text: string): number {
 export function validateRegistry(input: Registry): Issue[] {
   // Sample (draft) sections exist only in review builds and are never published; content rules
   // apply to what the live site will show.
-  const pages = input.pages.map((p) => ({
-    ...p,
-    sections: p.sections.filter((b) => !("draft" in b && b.draft)),
-  }));
+  const pages = input.pages
+    .filter((p) => !p.id.startsWith("sample."))
+    .map((p) => ({
+      ...p,
+      sections: p.sections.filter((b) => !("draft" in b && b.draft)),
+    }));
   const registry: Registry = {
     ...input,
     pages,
@@ -364,7 +366,8 @@ export function validateRegistry(input: Registry): Issue[] {
       for (const re of draftStrings.has(s) ? [] : UNSUPPORTED)
         if (re.test(s)) err("unsupported-claim", label, `Unsupported claim wording (${re})`);
       // The company statistic and history may only come from the facts register.
-      if (/1,?500|\b2010\b/.test(s.replace(/\{\{fact:[^}]+\}\}/g, ""))) {
+      // Prices such as "$1,500" are not the client count.
+      if (/(?<!\$)\b1,?500\b|\b2010\b/.test(s.replace(/\{\{fact:[^}]+\}\}/g, ""))) {
         err(
           "fact-bypass",
           label,

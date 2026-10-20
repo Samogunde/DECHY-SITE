@@ -12,6 +12,7 @@ import {
   ServiceExplorer,
 } from "@/components/home/Motion";
 import { TechLogo } from "@/components/home/TechLogo";
+import { BlogGrid } from "@/components/home/BlogGrid";
 import { Arrow } from "@/components/primitives/Arrow";
 import { Icon } from "@/components/primitives/Icon";
 import { Inline } from "@/components/primitives/Inline";
@@ -644,6 +645,11 @@ export function CaseStudiesBlock({ block }: { block: Of<"case-studies"> }) {
                   </div>
                 ))}
               </dl>
+              {c.href && getRegistry().pageByPath.has(c.href) ? (
+                <Link href={c.href} className="case-card-go mt-5">
+                  Read the case study <Arrow />
+                </Link>
+              ) : null}
             </div>
           </article>
         ))}
@@ -774,6 +780,88 @@ export function PartnersBlock({ block }: { block: Of<"partners"> }) {
           </article>
         ) : null}
       </div>
+    </Section>
+  );
+}
+
+export function CaseGridBlock({ block }: { block: Of<"case-grid"> }) {
+  const counts = new Map<string, { label: string; count: number }>();
+  for (const i of block.items) {
+    const c = counts.get(i.service) ?? { label: i.serviceLabel, count: 0 };
+    c.count++;
+    counts.set(i.service, c);
+  }
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+      <div className="mt-10">
+        <BlogGrid
+          total={block.items.length}
+          categories={[...counts].map(([key, v]) => ({ key, label: v.label, count: v.count }))}
+          cards={block.items.map((i) => ({
+            key: i.href,
+            category: i.service,
+            node: (
+              <Link href={i.href} className="case-card">
+                {i.photo ? (
+                  <span className="case-card-photo">
+                    <Photo photo={i.photo} />
+                  </span>
+                ) : null}
+                <span className="case-card-body">
+                  <span className="case-card-sector">{i.sector}</span>
+                  <span className="case-card-title">{i.title}</span>
+                  <span className="case-card-company">{i.company}</span>
+                  <span className="case-card-result">
+                    <strong>{i.result.value}</strong> {i.result.label}
+                  </span>
+                  <span className="case-card-go">
+                    Read the case study <Arrow />
+                  </span>
+                </span>
+              </Link>
+            ),
+          }))}
+        />
+      </div>
+    </Section>
+  );
+}
+
+export function TeamBlock({ block }: { block: Of<"team"> }) {
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+      <ul className="team-grid" data-reveal="group">
+        {block.members.map((m) => (
+          <li key={m.name}>
+            <details className="team-card">
+              <summary>
+                {m.photo ? (
+                  <span className="team-photo">
+                    <Photo photo={m.photo} />
+                  </span>
+                ) : null}
+                <span className="team-name">{m.name}</span>
+                <span className="team-role">{m.role}</span>
+                <span className="team-more" aria-hidden="true">
+                  Bio
+                </span>
+              </summary>
+              <div className="team-bio">
+                <p>{m.bio}</p>
+                {m.focus.length ? (
+                  <ul className="team-focus">
+                    {m.focus.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
+            </details>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }

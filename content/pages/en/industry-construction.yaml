@@ -1,0 +1,264 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-construction
+kind: industry
+locale: en
+path: /industries/construction/
+parent: /industries/
+entityId: ind.construction
+title: Construction Software Development and Site Apps | DECHY
+description: "Construction software from DECHY: site apps, project tracking, approvals, and
+  reporting that connect the office to every site."
+breadcrumbLabel: Construction
+intent:
+  primary: construction software development
+  secondary:
+    - construction project management app
+    - site app development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build site apps, project and cost tracking, purchase approvals, document control, and
+    reporting for builders, contractors, and developers.
+  problem: Sites run on paper and phone calls, costs surprise the office too late, and drawings and
+    approvals go missing.
+  audience: General contractors, specialist subcontractors, developers, and building services firms.
+  choose:
+    Start with what costs you most, usually site reporting or purchase approvals, and connect it
+    to your accounts.
+  next: Tell us how sites report to the office today. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Construction software that connects every site to the office
+    lead:
+      We build the site apps, approvals, and cost tracking that show you what is happening on every
+      project today, not at month end. Site teams report from their phones, the office sees costs
+      early, and nothing waits for a signature in someone's inbox.
+    ctas:
+      - label: Plan a construction app
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Each project
+        text: Costs, progress, and documents in one place.
+      spokes:
+        - title: Site diaries
+          text: Daily reports and photos.
+        - title: Purchase approvals
+          text: Fast and controlled.
+        - title: Cost tracking
+          text: Budget against actual.
+        - title: Documents
+          text: Drawings and versions.
+        - title: Safety
+          text: Inspections and incidents.
+        - title: Subcontractors
+          text: Orders and payments.
+    purpose: relationship
+    takeaway:
+      Construction software brings site reports, approvals, costs, documents, and safety into
+      one project record the office can trust.
+    visualTitle: The systems around a construction project
+    figureCaption:
+      This diagram shows a project record at the center with site diaries, approvals, cost
+      tracking, documents, safety, and subcontractors around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why construction needs software built for the site
+    paragraphs:
+      - A construction business is many temporary factories running at once, each with its own team,
+        suppliers, and problems. Information travels from site to office by phone, photo, and paper,
+        and arrives late. By the time a cost overrun shows up in the accounts, the money is spent.
+      - Generic project tools were designed for desks, not muddy boots and poor signal. We build
+        apps that work offline with gloves on, and connect them to the systems the office already
+        uses.
+      - "The aim is simple: every project leader sees the truth about cost and progress every day."
+      - Subcontractors and suppliers are part of the picture too. When orders, payment applications,
+        and documents move through one portal, disputes drop and everyone works from the same record
+        of what was agreed and delivered.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Construction projects, costs, and timelines
+    intro: Contractors usually start with the workflow that leaks most money or time.
+    caption: Typical construction projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Site diary and reporting app
+        - Daily reports, labor, delays, and photos, offline
+        - $15,000 to $30,000
+        - 4 to 6 weeks
+      - - Purchase approvals
+        - Routing, mobile approvals, and orders created in your accounts
+        - $10,000 to $25,000
+        - 2 to 4 weeks
+      - - Cost tracking dashboard
+        - Budget, committed, and actual cost by project
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Full project platform
+        - Diaries, approvals, documents, safety, and a subcontractor portal
+        - $50,000 to $120,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for construction
+    intro: What your operations and IT leads will ask about offline use, files, and integrations.
+    panels:
+      - title: Offline and on site
+        items:
+          - Apps store work on the device and sync when a signal returns, without losing entries.
+          - Photos are compressed and tagged with project, location, and time.
+      - title: Connecting office systems
+        items:
+          - We integrate with accounting and procurement tools so costs flow without rekeying.
+          - Large drawing files are stored once and versioned, so phones download only what changed.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What contractors get from us
+    columns:
+      - title: Cost control
+        items:
+          - Overruns seen in days, not months.
+          - Committed cost visible early.
+      - title: Faster approvals
+        items:
+          - Orders approved between meetings.
+          - Materials on site when needed.
+      - title: Fewer mistakes
+        items:
+          - Everyone on the latest drawings.
+          - Issues logged with photos.
+      - title: Safer sites
+        items:
+          - Inspections done and recorded.
+          - Actions tracked to closure.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about construction software
+    items:
+      - q: How much does a construction app cost?
+        a:
+          A site diary or approvals app usually costs $15,000 to $35,000 and takes 4 to 6 weeks. A full
+          project platform costs more and is built in stages.
+      - q: Will site teams actually use it?
+        a: They do when it saves them time. We design with site managers and keep every task to a few taps.
+      - q: Does it work without signal?
+        a: Yes. Entries are saved on the phone and sync automatically when a connection returns.
+      - q: Can you connect to our accounting system?
+        a: Usually, yes. Orders, invoices, and costs flow between the app and your accounts automatically.
+      - q: Can subcontractors use it?
+        a: Yes. Subcontractors get their own portal for orders, payment applications, and documents.
+      - q: Can we capture photos and sign-offs on site?
+        a: Yes. Site teams take photos, record signatures, and complete checklists in the app, and
+          everything is filed against the right project automatically.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Construction software we build
+    intro:
+      Site teams get simple tools that work in the field, and the office gets live numbers on every
+      project without chasing anyone for updates.
+    items:
+      - title: Site diary app
+        body: Daily reports, labor, weather, delays, and photos captured on site, even without signal.
+      - title: Purchase approvals
+        body: Requests routed by value and project, approved on a phone, and turned into orders
+          automatically.
+      - title: Cost and valuation tracking
+        body: Budget against committed and actual cost per project, updated as orders and invoices arrive.
+      - title: Document control
+        body: The latest drawings and method statements on every phone, with old versions clearly retired.
+      - title: Safety inspections
+        body: Checklists, incidents, and actions tracked to closure, with evidence for audits.
+      - title: Subcontractor portal
+        body: Orders, applications for payment, and documents exchanged in one place.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we digitize a construction workflow
+    intro: We start on one live project, so the tools are shaped by real site conditions before they
+      reach the rest of the business.
+    steps:
+      - title: Walk the site
+        body: We spend time with site managers to see how reports, orders, and drawings really move.
+        artifacts:
+          - Site findings
+          - Workflow map
+      - title: Design for the site
+        body: We design large, simple screens that work offline and need no training.
+        artifacts:
+          - Prototype
+          - Field test
+      - title: Connect the office
+        body: We link the app to accounts, procurement, and document storage you already use.
+        artifacts:
+          - Integrations
+          - Test data
+      - title: Roll out project by project
+        body: We launch on one project, refine with the team, then add the rest.
+        artifacts:
+          - Pilot project
+          - Rollout plan
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Construction across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.mobile-app-development
+          - svc.automation
+          - svc.data-analytics
+      - title: Systems we build
+        entityIds:
+          - workarea.operations-platforms
+          - workarea.mobile-apps
+          - workarea.workflow-automation
+      - title: Technologies
+        entityIds:
+          - tech.flutter
+          - tech.react-native
+          - plat.microsoft-365
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us how your sites report today
+    body: Describe your projects, your sites, and the systems in the office. We reply with a plan, a
+      price range, and a timeline.
+    primary:
+      label: Plan a construction app
+      href: /contact/?service=software-development

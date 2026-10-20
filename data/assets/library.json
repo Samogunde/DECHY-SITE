@@ -253,5 +253,224 @@
     "lib-portraits-28",
     "lib-portraits-29",
     "lib-portraits-30"
+  ],
+  "fitness": [
+    "lib-fitness-01",
+    "lib-fitness-02",
+    "lib-fitness-03",
+    "lib-fitness-04"
+  ],
+  "beauty": [
+    "lib-beauty-01",
+    "lib-beauty-02",
+    "lib-beauty-03",
+    "lib-beauty-04"
+  ],
+  "fintech": [
+    "lib-fintech-01",
+    "lib-fintech-02",
+    "lib-fintech-03",
+    "lib-fintech-04"
+  ],
+  "banking": [
+    "lib-banking-01",
+    "lib-banking-02",
+    "lib-banking-03",
+    "lib-banking-04"
+  ],
+  "insurance": [
+    "lib-insurance-01",
+    "lib-insurance-02",
+    "lib-insurance-03",
+    "lib-insurance-04"
+  ],
+  "construction": [
+    "lib-construction-01",
+    "lib-construction-02",
+    "lib-construction-03",
+    "lib-construction-04"
+  ],
+  "energy": [
+    "lib-energy-01",
+    "lib-energy-02",
+    "lib-energy-03",
+    "lib-energy-04"
+  ],
+  "field-services": [
+    "lib-field-services-01",
+    "lib-field-services-02",
+    "lib-field-services-03",
+    "lib-field-services-04"
+  ],
+  "restaurants": [
+    "lib-restaurants-01",
+    "lib-restaurants-02",
+    "lib-restaurants-03",
+    "lib-restaurants-04"
+  ],
+  "hospitality": [
+    "lib-hospitality-01",
+    "lib-hospitality-02",
+    "lib-hospitality-03",
+    "lib-hospitality-04"
+  ],
+  "travel": [
+    "lib-travel-01",
+    "lib-travel-02",
+    "lib-travel-03",
+    "lib-travel-04"
+  ],
+  "marketplaces": [
+    "lib-marketplaces-01",
+    "lib-marketplaces-02",
+    "lib-marketplaces-03",
+    "lib-marketplaces-04"
+  ],
+  "automotive": [
+    "lib-automotive-01",
+    "lib-automotive-02",
+    "lib-automotive-03",
+    "lib-automotive-04"
+  ],
+  "transportation": [
+    "lib-transportation-01",
+    "lib-transportation-02",
+    "lib-transportation-03",
+    "lib-transportation-04"
+  ],
+  "agriculture": [
+    "lib-agriculture-01",
+    "lib-agriculture-02",
+    "lib-agriculture-03",
+    "lib-agriculture-04"
+  ],
+  "recruitment": [
+    "lib-recruitment-01",
+    "lib-recruitment-02",
+    "lib-recruitment-03",
+    "lib-recruitment-04"
+  ],
+  "legal": [
+    "lib-legal-01",
+    "lib-legal-02",
+    "lib-legal-03",
+    "lib-legal-04"
+  ],
+  "media": [
+    "lib-media-01",
+    "lib-media-02",
+    "lib-media-03",
+    "lib-media-04"
+  ],
+  "nonprofits": [
+    "lib-nonprofits-01",
+    "lib-nonprofits-02",
+    "lib-nonprofits-03",
+    "lib-nonprofits-04"
+  ],
+  "government": [
+    "lib-government-01",
+    "lib-government-02",
+    "lib-government-03",
+    "lib-government-04"
+  ],
+  "saas": [
+    "lib-saas-01",
+    "lib-saas-02",
+    "lib-saas-03",
+    "lib-saas-04"
+  ],
+  "telecommunications": [
+    "lib-telecommunications-01",
+    "lib-telecommunications-02",
+    "lib-telecommunications-03",
+    "lib-telecommunications-04"
+  ],
+  "portraits-m": [
+    "lib-portraits-m-01",
+    "lib-portraits-m-02",
+    "lib-portraits-m-03",
+    "lib-portraits-m-04",
+    "lib-portraits-m-05",
+    "lib-portraits-m-06",
+    "lib-portraits-m-07",
+    "lib-portraits-m-08",
+    "lib-portraits-m-09",
+    "lib-portraits-m-10",
+    "lib-portraits-m-11",
+    "lib-portraits-m-12",
+    "lib-portraits-m-13",
+    "lib-portraits-m-14",
+    "lib-portraits-m-15",
+    "lib-portraits-m-16",
+    "lib-portraits-m-17",
+    "lib-portraits-m-18",
+    "lib-portraits-m-19",
+    "lib-portraits-m-20",
+    "lib-portraits-m-21",
+    "lib-portraits-m-22",
+    "lib-portraits-m-23",
+    "lib-portraits-m-24",
+    "lib-portraits-m-25",
+    "lib-portraits-m-26",
+    "lib-portraits-m-27",
+    "lib-portraits-m-28",
+    "lib-portraits-m-29",
+    "lib-portraits-m-30",
+    "lib-portraits-m-31",
+    "lib-portraits-m-32",
+    "lib-portraits-m-33",
+    "lib-portraits-m-34",
+    "lib-portraits-m-35",
+    "lib-portraits-m-36",
+    "lib-portraits-m-37",
+    "lib-portraits-m-38",
+    "lib-portraits-m-39",
+    "lib-portraits-m-40",
+    "lib-portraits-m-41",
+    "lib-portraits-m-42",
+    "lib-portraits-m-43",
+    "lib-portraits-m-44",
+    "lib-portraits-m-45",
+    "lib-portraits-m-46",
+    "lib-portraits-m-47"
+  ],
+  "portraits-f": [
+    "lib-portraits-f-01",
+    "lib-portraits-f-02",
+    "lib-portraits-f-03",
+    "lib-portraits-f-04",
+    "lib-portraits-f-05",
+    "lib-portraits-f-06",
+    "lib-portraits-f-07",
+    "lib-portraits-f-08",
+    "lib-portraits-f-09",
+    "lib-portraits-f-10",
+    "lib-portraits-f-11",
+    "lib-portraits-f-12",
+    "lib-portraits-f-13",
+    "lib-portraits-f-14",
+    "lib-portraits-f-15",
+    "lib-portraits-f-16",
+    "lib-portraits-f-17",
+    "lib-portraits-f-18",
+    "lib-portraits-f-19",
+    "lib-portraits-f-20",
+    "lib-portraits-f-21",
+    "lib-portraits-f-22",
+    "lib-portraits-f-23",
+    "lib-portraits-f-24",
+    "lib-portraits-f-25",
+    "lib-portraits-f-26",
+    "lib-portraits-f-27",
+    "lib-portraits-f-28",
+    "lib-portraits-f-29",
+    "lib-portraits-f-30",
+    "lib-portraits-f-31",
+    "lib-portraits-f-32",
+    "lib-portraits-f-33",
+    "lib-portraits-f-34",
+    "lib-portraits-f-35",
+    "lib-portraits-f-36"
   ]
 }

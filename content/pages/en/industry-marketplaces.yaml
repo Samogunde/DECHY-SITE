@@ -1,0 +1,274 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-marketplaces
+kind: industry
+locale: en
+path: /industries/marketplaces/
+parent: /industries/
+entityId: ind.marketplaces
+title: Marketplace and On-Demand App Development | DECHY
+description: "Marketplace and on-demand app development from DECHY: two-sided platforms with
+  listings, matching, payments, payouts, and tracking."
+breadcrumbLabel: Marketplaces and on-demand
+intent:
+  primary: marketplace app development
+  secondary:
+    - on-demand app development
+    - two-sided marketplace platform
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    "We build two-sided marketplaces and on-demand apps: listings, search and matching, bookings,
+    payments, payouts, ratings, and live tracking."
+  problem: A marketplace must work for buyers and sellers at once, handle money between them, and
+    build trust from the first transaction.
+  audience: Marketplace founders, on-demand service startups, delivery companies, and businesses
+    opening their platform to other sellers.
+  choose:
+    Start with one side of the market you can win and a simple first version, then add features
+    as both sides grow.
+  next: Tell us who buys, who sells, and how money moves. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Marketplace and on-demand apps that both sides trust
+    lead:
+      We build two-sided platforms where buyers find what they need, sellers get paid on time, and
+      every transaction feels safe. You launch a focused first version quickly, then grow features
+      as your market grows.
+    ctas:
+      - label: Plan a marketplace
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: The marketplace
+        text: Matches, money, and trust.
+      spokes:
+        - title: Listings
+          text: Products or services.
+        - title: Search and matching
+          text: The right provider fast.
+        - title: Bookings and orders
+          text: Confirmed in seconds.
+        - title: Payments and payouts
+          text: Split automatically.
+        - title: Ratings
+          text: Trust on both sides.
+        - title: Live tracking
+          text: Where the order is now.
+    purpose: relationship
+    takeaway:
+      A marketplace connects two sides through listings, matching, payments, payouts, ratings,
+      and tracking that both sides rely on.
+    visualTitle: The parts of a two-sided marketplace
+    figureCaption:
+      This diagram shows the marketplace at the center with listings, matching, bookings,
+      payments and payouts, ratings, and live tracking around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: What makes a marketplace work
+    paragraphs:
+      - A marketplace is two products in one. Buyers need choice, speed, and confidence. Sellers
+        need customers, simple tools, and reliable payouts. If either side has a poor experience,
+        the other side leaves too.
+      - Money is the hardest part. Platforms take payment from one person, keep a fee, and pay
+        another, sometimes across borders, with refunds and disputes along the way. We build on
+        payment providers designed for marketplaces, so this works safely from day one.
+      - Trust comes next. Verified profiles, ratings, clear policies, and live tracking turn
+        strangers into repeat customers.
+      - Above all, we keep the first version small. The best marketplaces start by serving one niche
+        very well, learn from real transactions, and grow features only when both sides ask for
+        them.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Marketplace software we build
+    intro:
+      "We build every side of the platform: the buyer app, the seller tools, and the admin console
+      your team runs it from."
+    items:
+      - title: Buyer web and mobile apps
+        body: Search, filters, booking or checkout, tracking, and reviews.
+      - title: Seller or provider tools
+        body: Listings, availability, orders, earnings, and payouts in one place.
+      - title: Matching and dispatch
+        body: The nearest or best provider offered each job, with accept and decline.
+      - title: Marketplace payments
+        body: Split payments, platform fees, refunds, and scheduled payouts.
+      - title: Trust and safety
+        body: Identity checks, ratings, reporting, and moderation tools.
+      - title: Admin console
+        body: Users, listings, disputes, payouts, and growth metrics for your team.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What marketplace founders get from us
+    intro: Founders get a platform that is ready for real transactions from launch day, with the
+      foundations to grow into new categories and cities when the market is ready for it.
+    columns:
+      - title: Speed to market
+        items:
+          - A first version in weeks.
+          - Room to grow later.
+      - title: Safe money flows
+        items:
+          - Split payments and payouts.
+          - Refunds and disputes handled.
+      - title: Trust
+        items:
+          - Verified users and ratings.
+          - Live tracking.
+      - title: Growth
+        items:
+          - Analytics on both sides.
+          - Features added as demand proves them.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about marketplace development
+    items:
+      - q: How much does a marketplace app cost?
+        a:
+          A focused first version usually costs $20,000 to $40,000 and takes 4 to 6 weeks. On-demand apps
+          with live tracking cost $30,000 to $60,000.
+      - q: How do payments to sellers work?
+        a:
+          Buyers pay the platform, your fee is kept automatically, and sellers are paid on a schedule
+          through a marketplace payment service.
+      - q: Should we build web or mobile first?
+        a:
+          It depends on how people use your market. On-demand services usually need mobile first, while
+          many product marketplaces start on the web.
+      - q: Can you build both the buyer and seller apps?
+        a: Yes. We build every side, plus the admin console your team uses to run the platform.
+      - q: How do you build trust between strangers?
+        a:
+          With verified profiles, ratings, clear policies, secure payments, and live tracking where it
+          matters.
+      - q: Can the platform grow to new cities or categories?
+        a: Yes. We design it so new areas and categories are settings, not rebuilds.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for marketplaces
+    intro: What your technical co-founder or investors will ask about payments, location, and scale.
+    panels:
+      - title: Payments between parties
+        items:
+          - We use marketplace payment services such as Stripe Connect, which handle seller
+            onboarding, splits, and payouts.
+          - Platform fees, refunds, and disputes are recorded for every transaction.
+      - title: Location and scale
+        items:
+          - Matching and tracking use real-time location with privacy controls for both sides.
+          - The platform is designed to scale across cities and categories without a rebuild.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Marketplaces and on-demand projects, costs, and timelines
+    intro: Most marketplaces start with a focused first version and grow from there.
+    caption:
+      Typical marketplaces and on-demand projects with what they include, what they cost, and how
+      long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Marketplace first version
+        - Listings, search, checkout, payouts, and basic ratings
+        - $20,000 to $40,000
+        - 4 to 6 weeks
+      - - On-demand service app
+        - Customer app, provider app, matching, and payments
+        - $30,000 to $50,000
+        - 6 to 8 weeks
+      - - Delivery app with live tracking
+        - Customer, courier, and store apps with live maps
+        - $35,000 to $60,000
+        - 6 to 10 weeks
+      - - Scaled multi-vendor platform
+        - Vendor portal, admin, disputes, analytics, and growth features
+        - $60,000 to $120,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we launch a marketplace
+    intro: A focused first version usually reaches real buyers and sellers in four to eight weeks.
+    steps:
+      - title: Pick the first niche
+        body: We help you choose the first market and the smallest set of features that makes a deal happen.
+        artifacts:
+          - Launch scope
+          - Success measures
+      - title: Design both sides
+        body: We design the buyer journey and the seller tools together, because each depends on the other.
+        artifacts:
+          - Prototypes
+          - User tests
+      - title: Build payments and trust
+        body: We set up marketplace payments, payouts, verification, and ratings before launch.
+        artifacts:
+          - Payment flows
+          - Trust features
+      - title: Launch and learn
+        body: We launch in one area or category, measure transactions, and plan the next release.
+        artifacts:
+          - Launch
+          - Growth plan
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Marketplaces and on-demand across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.mobile-app-development
+          - svc.web-development
+          - svc.ui-ux
+      - title: Systems we build
+        entityIds:
+          - workarea.digital-products
+          - workarea.commerce-systems
+          - workarea.mobile-apps
+      - title: Technologies
+        entityIds:
+          - int.stripe
+          - tech.react-native
+          - fw.nextjs
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us who buys, who sells, and how money moves
+    body: Describe both sides of your market. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan a marketplace
+      href: /contact/?service=software-development

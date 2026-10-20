@@ -3,7 +3,7 @@ kind: hub
 locale: en
 path: /industries/
 title: "Industries We Build Software For | DECHY"
-description: "How DECHY applies its services to healthcare, finance, real estate, logistics, retail, education, professional services, and manufacturing."
+description: "Software, apps, and websites for 30 industries, from healthcare and fintech to retail, logistics, legal, and government, built by DECHY."
 breadcrumbLabel: Industries
 intent:
   primary: industry software solutions
@@ -60,38 +60,45 @@ sections:
     visualTitle: "How an industry page leads to the work"
     figureCaption: "This diagram shows four layers from your industry at the top to systems, solutions, and finally the services and technologies behind them."
 
-  - type: index
+  - type: entities
     id: industries
     tone: white
     label: The industries
-    heading: Eight fields, and what is different in each
-    intro: "Each page explains the field, lists the systems its teams ask for, and notes what to take care over."
-    columns: 2
-    items:
-      - title: Healthcare
-        body: "Records, privacy, and systems that must work together, with access control and audit trails from the start."
-        href: /industries/healthcare/
-      - title: Finance, banking, and insurance
-        body: "Accuracy, audit trails, onboarding, and connections between core systems and the tools around them."
-        href: /industries/finance/
-      - title: Real estate and property
-        body: "Leads, listings, tenant and owner portals, and maintenance requests that must not get lost."
-        href: /industries/real-estate/
-      - title: Logistics and transport
-        body: "Orders, shipments, carriers, and one reliable status for customers and managers."
-        href: /industries/logistics/
-      - title: Retail and ecommerce
-        body: "Stores, stock, orders, and customer records that agree across every channel."
-        href: /industries/retail/
-      - title: Education and training
-        body: "Learner portals, enrolment, records, and careful handling of data about young people."
-        href: /industries/education/
-      - title: Professional services
-        body: "Time, projects, billing, and client portals for firms that sell expertise."
-        href: /industries/professional-services/
-      - title: Manufacturing
-        body: "Planning, production, quality, and supplier data connected, with systems that must not stop the line."
-        href: /industries/manufacturing/
+    heading: Thirty industries, in seven groups
+    intro: "Each industry page shows the systems that sector asks for, typical project costs and timelines, and how we deliver them."
+    style: lists
+    groups:
+      - title: Health and wellness
+        entityIds: [ind.healthcare, ind.fitness, ind.beauty]
+      - title: Money
+        entityIds: [ind.finance, ind.fintech, ind.banking, ind.insurance]
+      - title: Property and building
+        entityIds: [ind.real-estate, ind.construction, ind.energy, ind.field-services]
+      - title: Commerce and consumer
+        entityIds:
+          [
+            ind.retail,
+            ind.restaurants,
+            ind.hospitality,
+            ind.travel,
+            ind.marketplaces,
+            ind.automotive,
+          ]
+      - title: Operations and supply
+        entityIds: [ind.logistics, ind.transportation, ind.manufacturing, ind.agriculture]
+      - title: People and knowledge
+        entityIds:
+          [
+            ind.education,
+            ind.recruitment,
+            ind.legal,
+            ind.professional-services,
+            ind.media,
+            ind.nonprofits,
+            ind.government,
+          ]
+      - title: Technology
+        entityIds: [ind.saas, ind.telecommunications]
 
   - type: table
     id: same
@@ -116,7 +123,7 @@ sections:
     variant: note
     title: If your industry is not listed
     paragraphs:
-      - "These eight are where we have written most. The same services apply across many more fields, such as hospitality, legal, government, construction, and others. Tell us how your field works and we will say how the work would apply."
+      - "These thirty cover the fields we are asked about most. The same services apply in many more. Tell us how your field works and we will show you what we would build first."
     items:
       - "A short description of your organization and its systems is enough to start"
       - "We will say plainly when a field has rules that need a specialist adviser"
@@ -127,8 +134,8 @@ sections:
     label: Common questions
     heading: Questions about industries
     items:
-      - q: Do you only work in these eight industries?
-        a: "No. These are the fields we have written about first. The same services and technologies apply in many others, and we welcome conversations about them."
+      - q: Do you only work in these thirty industries?
+        a: "No. These are the fields we are asked about most. The same services and technologies apply in many others, and we welcome conversations about them."
       - q: Do you have an office near us?
         a: "DECHY is a global company and works remotely with clients worldwide, so location is not a limit on who we can work with."
       - q: How do you learn the rules of our industry?

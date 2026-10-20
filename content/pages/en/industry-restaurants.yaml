@@ -1,0 +1,273 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-restaurants
+kind: industry
+locale: en
+path: /industries/restaurants/
+parent: /industries/
+entityId: ind.restaurants
+title: Restaurant Ordering and Food Business Software | DECHY
+description: "Restaurant software from DECHY: direct online ordering, table booking, loyalty apps,
+  and kitchen tools that cut delivery commissions and fill tables."
+breadcrumbLabel: Food and restaurants
+intent:
+  primary: restaurant ordering system development
+  secondary:
+    - restaurant app development
+    - food business software
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build direct online ordering, table booking, loyalty apps, kitchen display tools, and
+    multi-site reporting for restaurants, cafes, and food brands.
+  problem: Delivery apps take a large share of every order, phone bookings tie up staff, and owners
+    cannot see which sites and dishes really earn.
+  audience: Independent restaurants, restaurant groups, cafes, dark kitchens, caterers, and food and
+    drink brands.
+  choose: Start with direct ordering if delivery commissions hurt, or with booking and loyalty if
+    tables sit empty midweek.
+  next: Tell us how orders and bookings come in today. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Restaurant ordering, booking, and loyalty you own
+    lead:
+      We build the ordering site, booking, and loyalty app that bring customers to you directly. You
+      keep the margin delivery apps take, fill quiet nights with regulars, and see every site's
+      numbers in one place.
+    ctas:
+      - label: Plan restaurant ordering
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every guest
+        text: Orders, visits, and rewards in one record.
+      spokes:
+        - title: Direct ordering
+          text: Delivery and collection.
+        - title: Table booking
+          text: Deposits for busy nights.
+        - title: Loyalty app
+          text: Rewards that bring guests back.
+        - title: Kitchen display
+          text: Orders in sequence.
+        - title: Menus
+          text: One update for every channel.
+        - title: Reports
+          text: Sales by site and dish.
+    purpose: relationship
+    takeaway:
+      Restaurant software pays off when ordering, booking, loyalty, and the kitchen all share
+      one guest and one menu.
+    visualTitle: The systems around a restaurant guest
+    figureCaption:
+      This diagram shows a guest record at the center with direct ordering, table booking,
+      loyalty, kitchen display, menus, and reports around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why restaurants are taking ordering back
+    paragraphs:
+      - Delivery platforms brought restaurants new customers, then took up to a third of every
+        order. Many owners now pay more in commission than in rent. The customers who order every
+        week are often regulars who would happily order direct if it were just as easy.
+      - A direct ordering site and app give those regulars an easy reason to switch. You set the
+        prices, keep the data, and reward loyalty with your own offers instead of paying a platform
+        for the privilege.
+      - Inside the restaurant, the same system routes orders to the kitchen in sequence, keeps menus
+        and stock in step across every channel, and shows you which dishes and sites earn the most.
+      - We design for the busiest hour of the week. Ordering stays fast under load, the kitchen sees
+        a calm queue, and staff never retype an order from one screen to another.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Restaurant software we build
+    intro: Each tool is useful on day one, and together they give you one picture of every guest and
+      every site.
+    items:
+      - title: Direct ordering
+        body: Delivery and collection ordering on your own site, with your prices and no per-order
+          commission.
+      - title: Ordering app with loyalty
+        body: A branded app where regulars reorder favorites in two taps and collect rewards.
+      - title: Table booking
+        body: Online booking with deposits for busy nights and automatic reminders that cut no-shows.
+      - title: Kitchen display
+        body: Orders from every channel shown in sequence, with timers and clear status for the pass.
+      - title: Menu management
+        body: Change a price or mark a dish sold out once, and every channel updates.
+      - title: Multi-site reporting
+        body: Sales, margins, and top dishes by site and hour, without exporting spreadsheets.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Food and restaurants projects, costs, and timelines
+    intro: Most restaurants start with direct ordering, then add loyalty and kitchen tools.
+    caption:
+      Typical food and restaurants projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Direct ordering website
+        - Menu, delivery and collection, payments, and order alerts
+        - $3,000 to $8,000
+        - 1 to 2 weeks
+      - - Booking and deposits
+        - Table booking, deposits, reminders, and waitlists
+        - $3,000 to $7,000
+        - 1 to 2 weeks
+      - - Branded ordering and loyalty app
+        - Ordering, rewards, offers, and push notifications
+        - $12,000 to $30,000
+        - 3 to 5 weeks
+      - - Multi-site restaurant platform
+        - Several sites, kitchen display, menu control, and reporting
+        - $30,000 to $60,000+
+        - 5 to 8 weeks
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about restaurant software
+    items:
+      - q: How much does a restaurant ordering system cost?
+        a:
+          A direct ordering website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks. A branded
+          app with loyalty usually costs $12,000 to $30,000.
+      - q: Will customers really order direct?
+        a:
+          Regulars will, when ordering is just as easy and they get a reward for it. Most restaurants move
+          a good share of repeat orders within months.
+      - q: Can you connect to our till?
+        a:
+          Usually, yes. We send orders to your point-of-sale system or to a kitchen display, so staff never
+          retype them.
+      - q: Can we keep using delivery platforms?
+        a: Yes. Many restaurants keep platforms for new customers and use direct ordering for regulars.
+      - q: Do you build for restaurant groups?
+        a: Yes. Groups get one platform for every site, with central menus and reports for each location.
+      - q: Who handles delivery?
+        a:
+          Your own drivers, or an on-demand courier booked automatically for each order. You choose per
+          site.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we launch restaurant ordering
+    intro: Most restaurants take their first direct orders within two weeks of starting.
+    steps:
+      - title: Count the commission
+        body: We look at what delivery platforms cost you and which customers order most often.
+        artifacts:
+          - Commission review
+          - Customer list
+      - title: Design the ordering
+        body: We design ordering for a hungry customer on a phone, with as few taps as possible.
+        artifacts:
+          - Prototype
+          - Menu structure
+      - title: Connect the kitchen
+        body: We connect orders to your till or kitchen display so nothing is retyped.
+        artifacts:
+          - Kitchen flow
+          - Till link
+      - title: Move regulars across
+        body: We launch with offers that move regulars from delivery apps to your own channel.
+        artifacts:
+          - Launch offers
+          - Order tracking
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for restaurants
+    intro: What to know about tills, payments, and delivery.
+    panels:
+      - title: Tills and kitchens
+        items:
+          - We connect to the point-of-sale system you use where it allows, or send orders to a
+            kitchen display.
+          - Sold-out items update every channel within seconds.
+      - title: Payments and delivery
+        items:
+          - Card and wallet payments run through providers such as Stripe or Square.
+          - Delivery can use your own drivers or an on-demand courier service, booked automatically.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What restaurants get from us
+    intro:
+      "Restaurants usually feel the difference in the first month: more direct orders, fewer calls
+      during service, and a clear view of which nights and dishes need attention. Here is what
+      changes."
+    columns:
+      - title: Margin
+        items:
+          - No commission on direct orders.
+          - Prices you set yourself.
+      - title: Loyalty
+        items:
+          - Rewards that bring guests back.
+          - Data you own.
+      - title: Calmer service
+        items:
+          - Orders routed to the kitchen.
+          - Fewer phone calls.
+      - title: Clear numbers
+        items:
+          - Sales by site and dish.
+          - Quiet times you can fill.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Food and restaurants across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.mobile-app-development
+          - svc.ecommerce
+          - svc.digital-marketing
+      - title: Systems we build
+        entityIds:
+          - workarea.commerce-systems
+          - workarea.mobile-apps
+          - workarea.business-web-platforms
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - int.stripe
+          - int.square
+          - tech.flutter
+  - type: cta
+    id: contact-cta
+    heading: Tell us how orders come in today
+    body: Share your channels, sites, and tools. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan restaurant ordering
+      href: /contact/?service=web-development

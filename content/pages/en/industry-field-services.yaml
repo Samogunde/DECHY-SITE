@@ -1,0 +1,269 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-field-services
+kind: industry
+locale: en
+path: /industries/field-services/
+parent: /industries/
+entityId: ind.field-services
+title: Field Service App and Scheduling Software | DECHY
+description: "Field service software from DECHY: booking, dispatch, technician apps, quotes, and
+  invoicing for trades and home service companies."
+breadcrumbLabel: Home and field services
+intent:
+  primary: field service app development
+  secondary:
+    - home services software
+    - dispatch software development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build online booking, dispatch boards, technician apps, quoting, and invoicing for
+    plumbing, heating, electrical, cleaning, and repair companies.
+  problem: Jobs are booked by phone, schedules live on a whiteboard, technicians write paper job
+    sheets, and invoices go out late.
+  audience: Trades and home service companies, facilities maintenance firms, and franchise networks.
+  choose:
+    Start with the technician app and invoicing if cash flow hurts, or with booking and dispatch
+    if the phones are overloaded.
+  next: Tell us how a job moves from call to invoice. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Field service software from booking to paid invoice
+    lead: We build the booking, dispatch, and technician apps that move every job from first call to
+      paid invoice. Customers book online, dispatchers see every van, and technicians finish the
+      paperwork before they leave the driveway.
+    ctas:
+      - label: Plan field service software
+        href: /contact/?service=mobile-app-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every job
+        text: From booking to payment.
+      spokes:
+        - title: Online booking
+          text: Customers pick a slot.
+        - title: Dispatch
+          text: Right tech, right job.
+        - title: Technician app
+          text: Jobs, photos, signatures.
+        - title: Quotes
+          text: Sent on the spot.
+        - title: Invoices
+          text: Paid the same day.
+        - title: Maintenance plans
+          text: Recurring revenue.
+    purpose: relationship
+    takeaway: Field service runs on a job record that booking, dispatch, technicians, quotes, and
+      invoices all update.
+    visualTitle: The life of a field service job
+    figureCaption:
+      This diagram shows a job record at the center with booking, dispatch, the technician
+      app, quotes, invoices, and maintenance plans around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why field service businesses outgrow the whiteboard
+    paragraphs:
+      - A small team can run on phone calls and a whiteboard. Past a handful of vans it breaks. Jobs
+        are double-booked, technicians drive across town twice, and invoices wait until someone
+        types up the paper sheets on Friday.
+      - The fix is one flow from call to cash. Customers book a slot that really exists, dispatch
+        assigns by skill and location, and the technician closes the job with photos, a signature,
+        and a payment on site.
+      - We build that flow around how your trade works, and connect it to the accounts you already
+        keep. Your team spends its day on jobs and customers instead of chasing paper, phone calls,
+        and unpaid invoices.
+      - "Owners finally see the numbers that matter: jobs per technician, first-time fix rate,
+        average invoice, and how many customers come back. These figures show where to hire, what to
+        charge, and which jobs to chase."
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Field service software we build
+    intro:
+      Use one piece or the whole flow. Each part updates the same job record, so the office, the
+      technician, and the customer always see the same status.
+    items:
+      - title: Online booking
+        body: Customers choose a service and a real time slot, with the price shown up front.
+      - title: Dispatch board
+        body: Drag-and-drop scheduling by skill, location, and availability, with live job status.
+      - title: Technician app
+        body: Job details, history, checklists, photos, and signatures, working offline.
+      - title: Quotes and upsells
+        body: Good, better, best options sent on site and approved on the customer's phone.
+      - title: Invoicing and payments
+        body: Invoices raised when the job closes and paid by card before the van leaves.
+      - title: Service plans
+        body: Recurring maintenance visits scheduled and billed automatically.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Home and field services projects, costs, and timelines
+    intro: Service companies usually start with the part of the job that wastes most time.
+    caption:
+      Typical home and field services projects with what they include, what they cost, and how
+      long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Online booking and quotes
+        - Services, real slots, pricing, and confirmations
+        - $4,000 to $10,000
+        - 1 to 2 weeks
+      - - Technician app
+        - Jobs, checklists, photos, signatures, and offline use
+        - $12,000 to $25,000
+        - 3 to 5 weeks
+      - - Dispatch and invoicing
+        - Scheduling board, invoices, payments, and accounting link
+        - $10,000 to $25,000
+        - 3 to 5 weeks
+      - - Full field service platform
+        - Booking, dispatch, app, invoicing, and service plans
+        - $30,000 to $60,000+
+        - 6 to 8 weeks
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we set up field service software
+    intro:
+      Most service companies switch over in four to eight weeks, starting with a few vans so the
+      team trusts the tools before everyone moves.
+    steps:
+      - title: Ride along
+        body: We follow jobs from call to invoice and note every place information is copied or lost.
+        artifacts:
+          - Job flow map
+          - Time lost
+      - title: Design the technician app
+        body: We design for a phone in a van, with big buttons and few steps.
+        artifacts:
+          - Prototype
+          - Field test
+      - title: Build booking and dispatch
+        body: We build the booking and dispatch board and connect your accounts.
+        artifacts:
+          - Live system
+          - Accounting link
+      - title: Switch over
+        body: We move a few vans first, then the whole team, with training on the way.
+        artifacts:
+          - Pilot
+          - Full rollout
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for field service
+    intro: What to know about offline apps, maps, and accounting links.
+    panels:
+      - title: Apps that work anywhere
+        items:
+          - Technician apps keep jobs on the phone and sync when signal returns.
+          - Photos and signatures are attached to the job and stored securely.
+      - title: Maps and accounts
+        items:
+          - Routes and travel times use mapping services to plan realistic days.
+          - Invoices and payments flow into accounting tools such as QuickBooks or Xero without
+            rekeying.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What service companies get from us
+    columns:
+      - title: More jobs per day
+        items:
+          - Smarter routes.
+          - Less time on paperwork.
+      - title: Faster cash
+        items:
+          - Invoices sent on completion.
+          - Payments taken on site.
+      - title: Happier customers
+        items:
+          - Online booking.
+          - Arrival updates by text.
+      - title: Recurring revenue
+        items:
+          - Service plans that renew.
+          - Reminders that rebook.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about field service software
+    items:
+      - q: How much does field service software cost?
+        a:
+          A technician app with dispatch and invoicing usually costs $15,000 to $40,000 and takes 4 to 8
+          weeks.
+      - q: Why not buy an off-the-shelf tool?
+        a:
+          Many companies should, and we will say so. We build when your trade, pricing, or workflow does
+          not fit the packaged tools.
+      - q: Can customers book online?
+        a: Yes. Customers choose a service and a real slot, and dispatch sees the job instantly.
+      - q: Can technicians take payments?
+        a: Yes. Technicians take card payments on site, and the invoice is marked paid automatically.
+      - q: Does it work for franchise networks?
+        a: Yes. Each franchise runs its own jobs, and the owners see performance across the whole network.
+      - q: Can customers track the technician on the way?
+        a:
+          Yes. Customers get a text when the technician is on the way, with an arrival estimate, which cuts
+          calls and missed appointments.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Home and field services across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.mobile-app-development
+          - svc.software-development
+          - svc.automation
+          - svc.api-integration
+      - title: Systems we build
+        entityIds:
+          - workarea.operations-platforms
+          - workarea.mobile-apps
+          - workarea.workflow-automation
+      - title: Technologies
+        entityIds:
+          - tech.flutter
+          - tech.react-native
+          - int.stripe
+          - plat.firebase
+  - type: cta
+    id: contact-cta
+    heading: Tell us how a job moves from call to invoice
+    body: Describe your trade, team, and tools. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan field service software
+      href: /contact/?service=mobile-app-development

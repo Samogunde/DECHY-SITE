@@ -1,0 +1,1384 @@
+# Industry page copy (owner direction, 20 October 2026). One entry per industry, each written for
+# that industry. scripts/build-industry-pages.mjs turns these into content/pages/en/industry-*.yaml.
+industries:
+  - slug: recruitment
+    entity: ind.recruitment
+    name: HR and recruitment
+    service: software-development
+    title: Recruitment and HR Software Development | DECHY
+    description:
+      "Recruitment and HR software from DECHY: job boards, applicant tracking, candidate and
+      client portals, onboarding, and AI screening tools."
+    intent:
+      - recruitment software development
+      - applicant tracking system development
+      - hr software development
+    comprehension:
+      what:
+        We build job boards, applicant tracking, candidate and client portals, onboarding, timesheets,
+        and AI-assisted screening for recruiters and HR teams.
+      problem:
+        Candidates apply and hear nothing, recruiters copy details between job boards, inboxes, and
+        spreadsheets, and clients chase updates by phone.
+      audience: Recruitment agencies, staffing firms, in-house talent teams, HR departments, and HR
+        technology startups.
+      choose:
+        Start with applicant tracking and a candidate portal if speed to placement matters, or with
+        onboarding and timesheets if you place temporary staff.
+      next: Tell us how candidates move from application to placement. We reply with a plan, a price
+        range, and a timeline.
+    hero:
+      headline: Recruitment and HR software that places people faster
+      lead:
+        We build the job boards, applicant tracking, and portals that move candidates from application
+        to first day without the email chaos. Recruiters spend time with people instead of
+        spreadsheets, candidates always know where they stand, and clients see progress without
+        calling.
+      center:
+        - Every candidate
+        - From application to first day.
+      spokes:
+        - - Job board
+          - Your roles
+          - your brand.
+        - - Applicant tracking
+          - Every stage in view.
+        - - Screening
+          - Faster shortlists.
+        - - Client portal
+          - Shortlists and feedback.
+        - - Onboarding
+          - Documents and checks.
+        - - Timesheets
+          - Hours and invoices.
+      takeaway: Recruitment software follows each candidate from application to first day, with job
+        boards, tracking, screening, client portals, onboarding, and timesheets sharing one record.
+      visual: The journey of a candidate
+      caption:
+        This diagram shows a candidate record at the center with the job board, applicant tracking,
+        screening, client portal, onboarding, and timesheets around it.
+    why:
+      heading: Why recruiters need their own platform
+      paragraphs:
+        - Recruitment is a speed business. The best candidates are off the market within days, and
+          the agency that shortlists first usually places. Every hour spent copying a CV between
+          systems is an hour a competitor uses.
+        - Off-the-shelf applicant tracking tools cover the basics, but many agencies bend their
+          process to fit them. A platform built around your desks, sectors, and clients lets
+          recruiters work the way they win.
+        - Candidates notice the difference too. A clear application, status updates, and a simple
+          portal for documents turn a stressful search into a good experience, and good experiences
+          become referrals.
+        - We add AI where it saves time without making decisions about people. It can summarize CVs,
+          suggest matches, and draft messages, while recruiters always make the call.
+        - The result is a desk that runs on one system. Recruiters see every candidate, client, and
+          role in one place, managers see which desks and sources produce placements, and the
+          business can grow without adding administrators for every new recruiter.
+    projects:
+      intro: Most agencies and HR teams start with tracking and a portal, then automate onboarding.
+      rows:
+        - - Branded job board
+          - Job listings, search, applications, and alerts
+          - $5,000 to $12,000
+          - 2 to 3 weeks
+        - - Applicant tracking system
+          - Pipelines, notes, emails, and client shortlists
+          - $20,000 to $45,000
+          - 5 to 8 weeks
+        - - Onboarding and timesheets
+          - Documents, checks, timesheets, and invoicing
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Full recruitment platform with AI screening
+          - Job board, tracking, portals, onboarding, and AI tools
+          - $50,000 to $100,000+
+          - 2 to 4 months
+    needs:
+      heading: Recruitment and HR software we build
+      intro: Every tool shares one candidate and one client record, so nobody types the same details
+        twice.
+      items:
+        - - Job board and careers site
+          - Your roles on a fast, search-friendly site with simple applications from a phone.
+        - - Applicant tracking
+          - Pipelines by role and desk, with notes, emails, and interview scheduling in one place.
+        - - Candidate portal
+          - Application status, documents, interview details, and offers in one secure place.
+        - - Client portal
+          - Shortlists, feedback, interview booking, and placement status for hiring managers.
+        - - Onboarding and compliance
+          - Right-to-work checks, contracts, and documents collected before the first day.
+        - - Timesheets and invoicing
+          - Hours approved by clients and turned into pay and invoices automatically.
+    steps:
+      heading: How we build recruitment software
+      intro: A branded job board launches in two to three weeks, and tracking and portals follow in
+        stages.
+      items:
+        - - Map the desk
+          - We follow a role from brief to placement and count every manual step.
+          - - Process map
+            - Time per stage
+        - - Design for speed
+          - We design pipelines and portals around the fastest path to a shortlist.
+          - - Prototype
+            - Pipeline stages
+        - - Connect the boards
+          - We connect job boards, email, and calendars so candidates arrive in one place.
+          - - Integrations
+            - Candidate import
+        - - Add AI with care
+          - We add AI summaries and matching once the data is clean, with recruiters in control.
+          - - AI assistant
+            - Review rules
+    help:
+      heading: What recruiters and HR teams get from us
+      intro:
+        Recruiters feel the change in hours saved each week, and candidates and clients notice how
+        much faster and clearer every step has become.
+      cols:
+        - - Faster placements
+          - - Shortlists in hours.
+            - Interviews booked automatically.
+        - - Better candidate experience
+          - - Status updates without chasing.
+            - Documents uploaded once.
+        - - Happier clients
+          - - Shortlists in a portal.
+            - Feedback captured in one click.
+        - - Less admin
+          - - No copying between systems.
+            - Timesheets that invoice themselves.
+    tech:
+      heading: Technical notes for recruitment platforms
+      intro: What to know about job boards, personal data, and AI.
+      panels:
+        - - Job boards and calendars
+          - - We post to job boards and import applications through their interfaces.
+            - Interviews are scheduled against real calendar availability.
+        - - Personal data and AI
+          - - Candidate data is access-controlled, retained only as long as needed, and deletable on
+              request.
+            - AI summarizes and suggests, and every hiring decision stays with a person.
+    faq:
+      heading: Questions about recruitment software
+      items:
+        - - How much does an applicant tracking system cost?
+          - A custom applicant tracking system usually costs $20,000 to $45,000 and takes 5 to 8
+            weeks. A full platform with portals and AI costs more.
+        - - Can you connect to the job boards we use?
+          - Usually, yes. We post roles and import applications through job board interfaces where
+            they offer them.
+        - - Will AI decide who gets hired?
+          - No. AI helps summarize and match, but recruiters and hiring managers make every decision.
+        - - Can clients see shortlists online?
+          - Yes. Clients get a portal for shortlists, feedback, and interview booking.
+        - - Can it handle temporary staff and timesheets?
+          - Yes. Workers submit hours, clients approve them, and pay and invoices are created
+            automatically.
+        - - How do you protect candidate data?
+          - Access is role-based, data is encrypted, and retention rules delete records when they
+            are no longer needed.
+    related:
+      services:
+        - svc.software-development
+        - svc.ai
+        - svc.automation
+        - svc.web-development
+      work:
+        - workarea.customer-portals
+        - workarea.workflow-automation
+        - workarea.ai-solutions
+      tech:
+        - fw.nextjs
+        - lang.python
+        - tech.postgresql
+        - prov.anthropic-claude
+    cta:
+      heading: Tell us how candidates reach placement
+      body: Share your desks, tools, and clients. We reply with a plan, a price range, and a timeline.
+      label: Plan recruitment software
+  - slug: legal
+    entity: ind.legal
+    name: Legal
+    service: software-development
+    title: Legal Software and Law Firm Technology | DECHY
+    description: "Legal software from DECHY: client portals, intake, document automation, matter
+      management, and AI tools for law firms and legal teams."
+    intent:
+      - legal software development
+      - law firm software
+      - legal document automation
+    comprehension:
+      what:
+        We build client intake, secure client portals, document automation, matter management, and AI
+        research and drafting tools for law firms and legal teams.
+      problem: Lawyers spend billable hours on forms and status emails, documents are drafted from
+        scratch, and clients ask for updates the firm could share automatically.
+      audience: Law firms, in-house legal teams, legal service providers, and legal technology startups.
+      choose:
+        Start with intake and the client portal if client service is the issue, or with document
+        automation if drafting time is the cost.
+      next: Tell us which tasks take your team the most unbilled time. We reply with a plan, a price
+        range, and a timeline.
+    hero:
+      headline: Legal software that gives lawyers their hours back
+      lead:
+        We build the intake, portals, and document automation that take routine work off your lawyers'
+        desks. Clients get answers and updates without calling, standard documents draft themselves,
+        and fee earners spend their time on advice.
+      center:
+        - Every matter
+        - Client, documents, deadlines, and fees.
+      spokes:
+        - - Client intake
+          - Online and conflict-checked.
+        - - Client portal
+          - Updates and documents.
+        - - Document automation
+          - Drafts in minutes.
+        - - Matter management
+          - Tasks and deadlines.
+        - - AI tools
+          - Research and summaries.
+        - - Billing
+          - Time and invoices.
+      takeaway:
+        Legal software organizes every matter so intake, the client portal, documents, deadlines,
+        AI tools, and billing share one record.
+      visual: The systems around a legal matter
+      caption:
+        This diagram shows a matter record at the center with client intake, the client portal,
+        document automation, matter management, AI tools, and billing around it.
+    why:
+      heading: Why law firms are rethinking routine work
+      paragraphs:
+        - Much legal work is repeatable. Intake questions, engagement letters, standard agreements,
+          and status updates follow patterns, yet they are still typed by people whose time is worth
+          hundreds an hour.
+        - Automating that work does not replace lawyers. It removes the parts clients do not want to
+          pay for, so fixed fees become profitable and fee earners spend their day on judgement.
+        - Clients expect the same convenience they get from their bank. A secure portal for
+          documents, updates, and payments builds trust and cuts the calls that interrupt focused
+          work.
+        - Confidentiality shapes every decision we make. Access is strict, actions are logged, and
+          AI tools are configured so client information is never used to train outside models.
+        - Most firms do not need a huge program to see results. One well-chosen automation, such as
+          intake for a busy practice area or templates for its most common documents, often frees
+          enough time in the first quarter to fund the next step.
+    projects:
+      intro: Firms usually start with intake or document automation, then add the portal.
+      rows:
+        - - Online intake and booking
+          - Questionnaires, conflict checks, and consultation booking
+          - $5,000 to $12,000
+          - 2 to 3 weeks
+        - - Document automation
+          - Templates, question flows, and drafts for standard documents
+          - $10,000 to $30,000
+          - 3 to 5 weeks
+        - - Secure client portal
+          - Documents, updates, messages, and payments
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Matter platform with AI tools
+          - Matters, deadlines, AI research and summaries, and billing links
+          - $40,000 to $90,000+
+          - 2 to 3 months
+    needs:
+      heading: Legal software we build
+      intro:
+        Each tool connects to the practice management system you already use, so matters and time
+        stay in one place.
+      items:
+        - - Client intake
+          - Online questionnaires that collect facts, run conflict checks, and book consultations.
+        - - Secure client portal
+          - Documents, updates, signatures, and payments in one place clients can trust.
+        - - Document automation
+          - Standard documents drafted from a short set of questions, ready for lawyer review.
+        - - Matter and deadline tracking
+          - Tasks, key dates, and reminders so nothing important slips.
+        - - AI research and summaries
+          - Long documents summarized and key terms extracted, with sources shown.
+        - - Fixed-fee and billing tools
+          - Packaged services, online payment, and time captured against each matter.
+    steps:
+      heading: How we build legal technology
+      intro: Most firms see their first automated documents or online intake within a month.
+      items:
+        - - Find the repeat work
+          - We list the tasks your team repeats and time how long each takes.
+          - - Task inventory
+            - Time study
+        - - Turn templates into flows
+          - We convert your best precedents into question-led templates lawyers approve.
+          - - Template library
+            - Review rules
+        - - Build the client side
+          - We build intake and the portal so clients self-serve the common requests.
+          - - Portal
+            - Intake forms
+        - - Add AI carefully
+          - We add AI tools with strict data controls and lawyer review on every output.
+          - - AI tools
+            - Data controls
+    help:
+      heading: What law firms get from us
+      intro:
+        Firms see the benefit in fewer interruptions, faster turnaround on standard work, and fixed
+        fees that finally make money.
+      cols:
+        - - More billable time
+          - - Routine drafting automated.
+            - Fewer status calls.
+        - - Better client service
+          - - Updates in a portal.
+            - Documents signed online.
+        - - Profitable fixed fees
+          - - Standard work packaged.
+            - Paid online.
+        - - Lower risk
+          - - Deadlines tracked.
+            - Every action logged.
+    tech:
+      heading: Technical notes for legal teams
+      intro: What your IT and risk partners will ask about confidentiality, systems, and AI.
+      panels:
+        - - Confidentiality and access
+          - - Documents are encrypted, access is role-based, and every view is logged.
+            - Data location is chosen to meet your professional and client obligations.
+        - - Systems and AI
+          - - We connect to practice management and document systems through their interfaces.
+            - AI providers are configured so client data is not retained or used for training.
+    faq:
+      heading: Questions about legal software
+      items:
+        - - How much does legal document automation cost?
+          - Document automation for a set of standard documents usually costs $10,000 to $30,000 and
+            takes 3 to 5 weeks.
+        - - Will AI give legal advice to our clients?
+          - No. AI helps your lawyers summarize and draft, and a lawyer reviews everything before it
+            reaches a client.
+        - - Can you connect to our practice management system?
+          - Usually, yes, through its interfaces, so matters, contacts, and time stay in one place.
+        - - Is client data safe in a portal?
+          - Yes. Data is encrypted, access is strictly controlled, and every action is logged.
+        - - Do you work with in-house legal teams?
+          - Yes. In-house teams use our intake, contract automation, and request tracking to handle
+            business requests faster.
+        - - Can clients sign documents online?
+          - Yes. Clients can review and sign documents in the portal using established e-signature
+            services. Signed documents are filed against the matter automatically, so nobody has to
+            download and upload them again.
+    related:
+      services:
+        - svc.software-development
+        - svc.ai
+        - svc.automation
+        - svc.cybersecurity
+      work:
+        - workarea.customer-portals
+        - workarea.knowledge-and-content-systems
+        - workarea.ai-solutions
+      tech:
+        - lang.python
+        - prov.anthropic-claude
+        - plat.azure
+        - plat.microsoft-365
+    cta:
+      heading: Tell us where your team loses unbilled hours
+      body: Share the tasks and systems involved. We reply with a plan, a price range, and a timeline.
+      label: Plan legal technology
+  - slug: media
+    entity: ind.media
+    name: Media and publishing
+    service: web-development
+    title: Media and Publishing Platform Development | DECHY
+    description: "Media and publishing software from DECHY: fast publishing sites, subscriptions and
+      paywalls, podcast and video platforms, and newsroom tools."
+    intent:
+      - publishing platform development
+      - media website development
+      - subscription paywall development
+    comprehension:
+      what:
+        We build fast publishing websites, subscriptions and paywalls, newsletters, podcast and video
+        platforms, and editorial tools for publishers and media brands.
+      problem:
+        Advertising pays less every year, sites are slow under traffic spikes, and editors fight a
+        content system that was built for another decade.
+      audience:
+        News and magazine publishers, media brands, podcast and video networks, creators, and
+        membership organizations.
+      choose: Start with subscriptions and the reader experience if revenue is the goal, or with the
+        editorial system if publishing speed is the problem.
+      next: Tell us how you publish and earn today. We reply with a plan, a price range, and a timeline.
+    hero:
+      headline: Publishing platforms that load fast and earn from readers
+      lead: We build the sites, subscriptions, and editorial tools that help media brands grow loyal
+        audiences and recurring revenue. Pages load instantly under traffic spikes, readers
+        subscribe in a minute, and editors publish without fighting the system.
+      center:
+        - Every reader
+        - From first visit to subscriber.
+      spokes:
+        - - Publishing site
+          - Fast under any traffic.
+        - - Editorial tools
+          - Write
+          - edit
+          - schedule.
+        - - Subscriptions
+          - Paywalls and plans.
+        - - Newsletters
+          - Direct to the inbox.
+        - - Podcasts and video
+          - Players and feeds.
+        - - Audience data
+          - What readers value.
+      takeaway: Media platforms turn visitors into subscribers when publishing, subscriptions,
+        newsletters, audio, video, and audience data share one reader record.
+      visual: The platform around a reader
+      caption:
+        This diagram shows a reader record at the center with the publishing site, editorial tools,
+        subscriptions, newsletters, podcasts and video, and audience data around it.
+    why:
+      heading: Why publishers are rebuilding around readers
+      paragraphs:
+        - For years, media grew on page views and advertising. Those rates keep falling, and
+          platforms control more of the traffic. Publishers that thrive now earn directly from
+          readers through subscriptions, memberships, events, and newsletters.
+        - That shift needs different technology. Paywalls must be smart enough to convert without
+          driving people away. Accounts, payments, and newsletters must work as one. Pages must stay
+          fast when a story spreads.
+        - "Editors need tools that keep up with the news: drafting, editing, scheduling, and
+          publishing to web, apps, and newsletters from one place."
+        - We build on modern headless content systems, which separate writing from presentation, so
+          your team can publish everywhere while readers get a fast, clean experience.
+        - We also help with the business side of the platform. Clear dashboards show which sections,
+          authors, and formats bring subscribers, so editorial and commercial teams can plan
+          together from the same numbers instead of arguing over different reports.
+    projects:
+      intro: Publishers usually start with the site and subscriptions, then add audio, video, and apps.
+      rows:
+        - - Publishing website rebuild
+          - Fast templates, content migration, and search setup
+          - $8,000 to $20,000
+          - 2 to 4 weeks
+        - - Subscriptions and paywall
+          - Plans, metering, accounts, payments, and offers
+          - $10,000 to $30,000
+          - 3 to 5 weeks
+        - - Podcast or video platform
+          - Players, feeds, members-only content, and analytics
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Full media platform with apps
+          - Editorial system, subscriptions, newsletters, and apps
+          - $40,000 to $100,000+
+          - 2 to 4 months
+    needs:
+      heading: Media and publishing software we build
+      intro: Each piece shares one reader account, so subscriptions, newsletters, and content work
+        together.
+      items:
+        - - Publishing website
+          - Fast article pages, section fronts, and search that rank well and stay up under spikes.
+        - - Headless editorial system
+          - Write once and publish to web, apps, and newsletters, with roles and scheduling.
+        - - Subscriptions and paywalls
+          - Metered or hard paywalls, plans, gifts, and offers tested against conversion.
+        - - Newsletters
+          - Sign-up, segments, and automated editions from your published stories.
+        - - Podcast and video hubs
+          - Players, episode pages, feeds, and members-only content.
+        - - Audience dashboards
+          - Which stories bring subscribers, and which readers are at risk of leaving.
+    steps:
+      heading: How we build media platforms
+      intro:
+        A rebuilt publishing site usually launches in two to four weeks, with subscriptions close
+        behind.
+      items:
+        - - Study the readers
+          - We look at how readers arrive, what they read, and where they subscribe or leave.
+          - - Audience review
+            - Conversion points
+        - - Model the content
+          - We structure stories, authors, and sections so content can travel to every channel.
+          - - Content model
+            - Migration plan
+        - - Build for speed
+          - We build pages that load fast and stay fast during traffic spikes.
+          - - Performance budget
+            - Load test
+        - - Launch subscriptions
+          - We launch plans and the paywall, then test offers to improve conversion.
+          - - Subscription flow
+            - Offer tests
+    help:
+      heading: What publishers get from us
+      intro:
+        Publishers see the change in page speed, editorial calm, and a growing number of readers who
+        pay directly.
+      cols:
+        - - Reader revenue
+          - - Subscriptions that convert.
+            - Offers you can test.
+        - - Speed
+          - - Pages that load instantly.
+            - Stable under spikes.
+        - - Editorial calm
+          - - Publish everywhere at once.
+            - Scheduling and roles.
+        - - Audience insight
+          - - Stories that convert.
+            - Readers at risk of leaving.
+    tech:
+      heading: Technical notes for media platforms
+      intro: What your product and engineering leads will ask about content systems, caching, and
+        payments.
+      panels:
+        - - Content and caching
+          - - We use headless content systems such as Sanity, Strapi, or WordPress with a modern
+              front end.
+            - Pages are cached at the network edge so traffic spikes do not slow the site.
+        - - Subscriptions and access
+          - - Subscriptions run through Stripe or your existing provider, with accounts shared
+              across web and apps.
+            - Paywall rules are configurable by section, story, and reader.
+    faq:
+      heading: Questions about media and publishing platforms
+      items:
+        - - How much does a publishing platform cost?
+          - A rebuilt publishing site usually costs $8,000 to $20,000. Adding subscriptions and a
+            paywall usually costs $10,000 to $30,000.
+        - - Can you migrate our archive?
+          - Yes. We move articles, images, authors, and URLs, with redirects so search rankings
+            carry over.
+        - - Will the site stay up when a story goes viral?
+          - Yes. Pages are cached at the edge and tested for high traffic before launch.
+        - - Can readers pay for podcasts or video?
+          - Yes. Members-only episodes and videos are unlocked by the same subscription as articles.
+        - - Do you build newsletters?
+          - Yes. Sign-ups, segments, and automated editions connect to your stories and subscriber
+            accounts.
+        - - Can we keep WordPress?
+          - Often, yes. We can use WordPress as the editorial system with a faster front end in
+            front of it. Readers manage their own subscription and newsletter preferences from one
+            account.
+    related:
+      services:
+        - svc.web-development
+        - svc.seo-aeo-geo
+        - svc.mobile-app-development
+        - svc.ui-ux
+      work:
+        - workarea.knowledge-and-content-systems
+        - workarea.business-web-platforms
+        - workarea.digital-products
+      tech:
+        - fw.nextjs
+        - plat.sanity
+        - plat.wordpress
+        - int.stripe
+    cta:
+      heading: Tell us how you publish and earn today
+      body:
+        Share your content, channels, and revenue mix. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan a media platform
+  - slug: nonprofits
+    entity: ind.nonprofits
+    name: Nonprofits
+    service: web-development
+    title: Nonprofit Website, Donation, and Volunteer Software | DECHY
+    description: "Nonprofit software from DECHY: donation websites, fundraising platforms, volunteer
+      management, supporter records, and impact reporting."
+    intent:
+      - nonprofit website development
+      - donation platform development
+      - volunteer management software
+    comprehension:
+      what:
+        We build donation websites, fundraising and campaign tools, volunteer management, supporter
+        records, and impact reporting for charities and nonprofits.
+      problem:
+        Donation pages lose givers, volunteers are coordinated by email, and supporter data sits in
+        several disconnected tools.
+      audience: Charities, foundations, community organizations, faith groups, and social enterprises.
+      choose:
+        Start with the donation journey if fundraising is the priority, or with volunteer management
+        if coordinating people takes most of your time.
+      next:
+        Tell us how supporters give and volunteer today. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Websites and tools that grow donations and volunteers
+      lead:
+        We build the donation pages, campaign tools, and volunteer systems that turn interest into
+        support. Giving takes a minute, regular donors stay longer, and volunteers sign up and get
+        organized without a chain of emails.
+      center:
+        - Every supporter
+        - Gifts, events, and volunteering together.
+      spokes:
+        - - Donations
+          - One-off and monthly.
+        - - Campaigns
+          - Appeals and events.
+        - - Volunteers
+          - Sign-up and shifts.
+        - - Supporter records
+          - One view of each person.
+        - - Impact reports
+          - What gifts achieved.
+        - - Gift Aid and receipts
+          - Done automatically.
+      takeaway:
+        Nonprofit tools work best when donations, campaigns, volunteering, and impact reporting
+        share one supporter record.
+      visual: The tools around a supporter
+      caption:
+        This diagram shows a supporter record at the center with donations, campaigns, volunteers,
+        supporter records, impact reports, and receipts around it.
+    why:
+      heading: What nonprofits need from their technology
+      paragraphs:
+        - Nonprofits run on generosity and stretched budgets. Every donation lost to a confusing
+          form, and every hour spent coordinating volunteers by email, is money and time that does
+          not reach the cause.
+        - Good tools pay for themselves quickly. A simple, fast donation journey raises more,
+          especially monthly giving. Volunteer scheduling frees staff for program work. One
+          supporter record lets you thank people properly and ask at the right time.
+        - Supporters also want to see impact. Clear stories and numbers about what their gifts
+          achieved keep them giving year after year.
+        - We keep running costs low and build with tools your small team can manage, often on
+          affordable platforms, so the technology stays an asset rather than a burden.
+        - We also plan for the people who will run the tools after we leave. Admin screens are
+          simple, training is short, and the documentation is written for staff and volunteers
+          rather than developers. If your team changes, the knowledge stays. That matters in
+          organizations where a single staff member often looks after the website, the database, and
+          the newsletter at the same time.
+    projects:
+      intro: Most nonprofits start with donations, then add volunteering and supporter records.
+      rows:
+        - - Donation website
+          - Fast donation journey, monthly giving, and receipts
+          - $3,000 to $8,000
+          - 1 to 2 weeks
+        - - Campaign and event fundraising
+          - Appeal pages, peer fundraising, and event tickets
+          - $6,000 to $15,000
+          - 2 to 4 weeks
+        - - Volunteer management
+          - Sign-up, roles, shifts, reminders, and hours
+          - $8,000 to $20,000
+          - 3 to 5 weeks
+        - - Supporter platform and impact reporting
+          - One supporter record, integrations, and dashboards
+          - $20,000 to $45,000+
+          - 5 to 8 weeks
+    needs:
+      heading: Nonprofit software we build
+      intro: Every tool feeds one supporter record, so staff thank, report, and ask from the same
+        information.
+      items:
+        - - Donation journeys
+          - One-off and monthly giving in under a minute, with wallets and cards.
+        - - Campaign and event pages
+          - Appeals, challenge events, and peer-to-peer fundraising pages.
+        - - Volunteer management
+          - Sign-up, background checks, shifts, reminders, and hours logged.
+        - - Supporter records
+          - Gifts, events, volunteering, and contact preferences in one place.
+        - - Impact reporting
+          - Dashboards and stories showing what donations achieved.
+        - - Receipts and tax relief
+          - Receipts sent automatically and tax relief claims prepared where they apply.
+    steps:
+      heading: How we work with nonprofits
+      intro:
+        A new donation journey usually launches within two weeks, so you can use it in your next
+        appeal.
+      items:
+        - - Test the giving journey
+          - We try to donate on your site from a phone and remove every unnecessary step.
+          - - Journey review
+            - Quick fixes
+        - - Join up supporter data
+          - We bring gifts, events, and volunteers into one record without forcing a costly system
+            change.
+          - - Data plan
+            - Integrations
+        - - Build for your team
+          - We design admin tools that a small team can run without technical help.
+          - - Admin tools
+            - Training
+        - - Show the impact
+          - We set up reporting that turns activity into stories supporters understand.
+          - - Impact dashboard
+            - Story templates
+    help:
+      heading: What nonprofits get from us
+      intro: Nonprofits see more completed donations, more monthly givers, and staff time freed from
+        coordination for the work that matters.
+      cols:
+        - - More donations
+          - - Faster giving journeys.
+            - More monthly donors.
+        - - Organized volunteers
+          - - Self-service sign-up.
+            - Fewer emails.
+        - - Stronger relationships
+          - - One record per supporter.
+            - Thanks at the right time.
+        - - Clear impact
+          - - Numbers boards trust.
+            - Stories donors share.
+    tech:
+      heading: Technical notes for nonprofits
+      intro: What to know about payments, supporter data, and running costs.
+      panels:
+        - - Payments and giving
+          - - Donations run through card and wallet providers with low nonprofit fees where
+              available.
+            - Monthly gifts retry failed payments and update expired cards automatically.
+        - - Data and costs
+          - - Supporter data respects contact preferences and is stored securely.
+            - We favor affordable platforms and nonprofit discounts to keep running costs low.
+    faq:
+      heading: Questions about nonprofit technology
+      items:
+        - - How much does a nonprofit donation website cost?
+          - A donation website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks.
+        - - Can you connect to our supporter database?
+          - Usually, yes. We connect donation and volunteer tools to the database you already use.
+        - - Do you offer nonprofit pricing?
+          - We keep builds lean and use affordable platforms, and we will always suggest the
+            lowest-cost route that meets your goals.
+        - - Can volunteers manage their own shifts?
+          - Yes. Volunteers sign up, choose shifts, and get reminders without staff coordinating by
+            email.
+        - - Can donors give monthly?
+          - Yes. Monthly giving is built in, with automatic receipts and simple ways to update
+            payment details.
+        - - Can we show the impact of donations?
+          - Yes. We build impact pages and dashboards that show what gifts achieved in clear numbers
+            and stories. Each gift is linked to the campaign that inspired it, so you can see which
+            appeals and stories work best and plan the next one with confidence.
+    related:
+      services:
+        - svc.web-development
+        - svc.digital-marketing
+        - svc.automation
+        - svc.branding
+      work:
+        - workarea.business-web-platforms
+        - workarea.workflow-automation
+        - workarea.customer-portals
+      tech:
+        - plat.wordpress
+        - int.stripe
+        - fw.nextjs
+        - plat.hubspot
+    cta:
+      heading: Tell us how supporters give and help
+      body:
+        Share your fundraising, volunteering, and tools. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan nonprofit technology
+  - slug: government
+    entity: ind.government
+    name: Government and public sector
+    service: software-development
+    title: Government and Public Sector Software Development | DECHY
+    description: "Public sector software from DECHY: accessible digital services, online forms and
+      payments, case management, and data platforms for public bodies."
+    intent:
+      - government software development
+      - public sector digital services
+      - case management software development
+    comprehension:
+      what:
+        We build accessible digital services, online forms and payments, case management, citizen
+        portals, and data platforms for public bodies and agencies.
+      problem: Citizens still print forms and queue, staff rekey applications into old systems, and
+        services must meet strict accessibility and security standards.
+      audience:
+        Local and regional authorities, agencies, public services, education and health bodies,
+        and the suppliers who serve them.
+      choose:
+        Start with one high-volume service that still runs on paper or email, and rebuild it end to
+        end as a digital service.
+      next:
+        Tell us which service costs your teams and citizens the most time. We reply with a plan, a
+        price range, and a timeline.
+    hero:
+      headline: Public sector digital services people can actually use
+      lead:
+        We build accessible online services, case management, and data platforms that let citizens
+        apply, pay, and track progress without visiting an office. Staff stop rekeying paper forms,
+        and every service meets the accessibility and security standards it must.
+      center:
+        - Every case
+        - From application to decision.
+      spokes:
+        - - Online forms
+          - Accessible and clear.
+        - - Payments
+          - Fees and fines online.
+        - - Case management
+          - Work queues for staff.
+        - - Citizen portal
+          - Track progress.
+        - - Notifications
+          - Updates by text and email.
+        - - Data and reporting
+          - Performance and planning.
+      takeaway: Public services work best when online forms, payments, case management, the citizen
+        portal, notifications, and reporting share one case record.
+      visual: The systems around a public service case
+      caption: This diagram shows a case record at the center with online forms, payments, case
+        management, the citizen portal, notifications, and reporting around it.
+    why:
+      heading: What good public sector services need
+      paragraphs:
+        - Public services serve everyone, including people with disabilities, limited digital
+          skills, or poor connections. A service that only works for confident users is not
+          finished. Accessibility and plain language come first, not last.
+        - Behind the form, staff need case management that routes work, tracks deadlines, and
+          connects to the records systems already in place. Too often a shiny form ends in an inbox
+          where someone retypes everything.
+        - We build services end to end, from the citizen's first question to the decision and the
+          follow-up, and we measure completion rates, time to decision, and calls avoided.
+        - Security, privacy, and procurement rules shape the work. We document decisions, test
+          thoroughly, and hand over everything so your team owns the service long after launch.
+        - We work in short, visible stages. Each release is shown to the service team and to real
+          users before it goes live, so there are no surprises at launch and no long gap between
+          investment and benefit.
+    projects:
+      intro: Public bodies usually start with one high-volume service and reuse the pattern.
+      rows:
+        - - Accessible online form and payment
+          - Form, validation, payment, and confirmation for one service
+          - $8,000 to $20,000
+          - 2 to 4 weeks
+        - - Citizen portal
+          - Accounts, applications, status tracking, and messages
+          - $20,000 to $45,000
+          - 5 to 8 weeks
+        - - Case management system
+          - Work queues, deadlines, documents, and decisions
+          - $30,000 to $70,000
+          - 2 to 3 months
+        - - Data and reporting platform
+          - Service data joined for performance and planning
+          - $40,000 to $100,000+
+          - 2 to 4 months
+    needs:
+      heading: Public sector software we build
+      intro:
+        Every service we build is accessible, secure, and designed to be run by your own team after
+        launch.
+      items:
+        - - Accessible online services
+          - Forms in plain language that work with screen readers, keyboards, and slow connections.
+        - - Online payments
+          - Fees, permits, and fines paid online with receipts and reconciliation.
+        - - Case management
+          - Work queues, assignments, deadlines, and decisions for the staff who handle applications.
+        - - Citizen portals
+          - Accounts where people track applications, upload documents, and receive messages.
+        - - Booking and appointments
+          - Online booking for inspections, collections, and appointments, with reminders.
+        - - Data platforms
+          - Service data brought together for performance reports and planning.
+    steps:
+      heading: How we deliver public sector services
+      intro:
+        A first accessible online service usually goes live within four weeks, with research and
+        testing included.
+      items:
+        - - Research with real users
+          - We test the current service with citizens and staff, including people with access needs.
+          - - User research
+            - Accessibility findings
+        - - Prototype and test
+          - We prototype the new service and test it until people complete it unaided.
+          - - Tested prototype
+            - Content design
+        - - Build and integrate
+          - We build the service and connect it to the records systems staff use.
+          - - Live service
+            - Integrations
+        - - Run and improve
+          - We measure completion and contact rates and improve the service after launch.
+          - - Performance data
+            - Improvement plan
+    help:
+      heading: What public bodies get from us
+      intro:
+        Public bodies see more people completing services online, fewer calls and visits, and staff
+        spending their time on decisions instead of data entry.
+      cols:
+        - - Services people finish
+          - - Plain language.
+            - Accessible to everyone.
+        - - Lower cost per case
+          - - Fewer calls and visits.
+            - No rekeying.
+        - - Faster decisions
+          - - Work routed automatically.
+            - Deadlines tracked.
+        - - Ownership
+          - - Documented and handed over.
+            - No lock-in.
+    tech:
+      heading: Technical notes for the public sector
+      intro: What your digital, security, and procurement teams will ask about.
+      panels:
+        - - Accessibility and standards
+          - - Services are built to the WCAG accessibility guidelines and tested with assistive
+              technology.
+            - Content is written in plain language and tested with real users.
+        - - Security and ownership
+          - - Hosting, data location, and access follow your security policies and are documented.
+            - Code and documentation are handed over so your team or another supplier can continue.
+    faq:
+      heading: Questions about public sector software
+      items:
+        - - How much does a digital public service cost?
+          - One accessible online form with payment usually costs $8,000 to $20,000. Case management
+            and portals cost more and are delivered in stages.
+        - - Do you meet accessibility standards?
+          - Yes. We build to the WCAG guidelines and test with screen readers, keyboards, and real
+            users.
+        - - Can you connect to our existing records systems?
+          - Usually, yes, through their interfaces or a controlled adapter, so staff keep their
+            tools.
+        - - Will we own the code?
+          - Yes. You own what we build, with documentation so your team or another supplier can run
+            it.
+        - - Can you work within our procurement process?
+          - Yes. We provide the documentation, pricing, and evidence procurement teams ask for.
+        - - Do you support services after launch?
+          - Yes. We offer support and improvement plans, or a full handover to your own team.
+    related:
+      services:
+        - svc.software-development
+        - svc.web-development
+        - svc.ui-ux
+        - svc.cybersecurity
+      work:
+        - workarea.customer-portals
+        - workarea.digital-transformation
+        - workarea.workflow-automation
+      tech:
+        - fw.nextjs
+        - lang.typescript
+        - tech.postgresql
+        - plat.azure
+    cta:
+      heading: Tell us which service to fix first
+      body:
+        Share the service, its volume, and the systems behind it. We reply with a plan, a price range,
+        and a timeline.
+      label: Plan a public service
+  - slug: saas
+    entity: ind.saas
+    name: SaaS and software companies
+    service: software-development
+    title: SaaS Product Development for Software Companies | DECHY
+    description: "SaaS product development from DECHY: new products, platform rebuilds, billing,
+      integrations, AI features, and extra engineering capacity for software companies."
+    intent:
+      - saas development company
+      - saas product development
+      - software product development partner
+    comprehension:
+      what:
+        "We build and scale software products for software companies: first versions, new features,
+        billing and accounts, integrations, AI features, and platform rebuilds."
+      problem:
+        Roadmaps grow faster than engineering teams, technical debt slows every release, and new
+        features like AI need skills the team does not have yet.
+      audience:
+        Software-as-a-service companies, product startups, software vendors, and technology teams
+        inside larger businesses.
+      choose:
+        Use us for a whole product if you are starting out, or alongside your team for a feature,
+        integration, or rebuild if you already have one.
+      next: Tell us where your product is and what is slowing it down. We reply with a plan, a price
+        range, and a timeline.
+    hero:
+      headline: Product engineering for software companies that need to ship
+      lead:
+        We build software products and join software teams to ship what the roadmap promises. You get
+        a first version in weeks, new features without hiring delays, and a codebase that gets
+        faster to change, not slower.
+      center:
+        - Your product
+        - Shipping on a steady rhythm.
+      spokes:
+        - - First versions
+          - From idea to launch.
+        - - Features
+          - Roadmap delivered.
+        - - Billing and accounts
+          - Plans and trials.
+        - - Integrations
+          - The tools customers use.
+        - - AI features
+          - Useful
+          - not gimmicks.
+        - - Platform health
+          - Speed
+          - tests
+          - scale.
+      takeaway:
+        Software companies need first versions, features, billing, integrations, AI, and platform
+        health to move together on one steady release rhythm.
+      visual: What a software product needs to grow
+      caption:
+        This diagram shows a software product at the center with first versions, features, billing
+        and accounts, integrations, AI features, and platform health around it.
+    why:
+      heading: Why software companies work with us
+      paragraphs:
+        - Software companies sell speed. Customers judge you by how quickly the product improves,
+          and competitors are always one release away. Yet hiring good engineers takes months, and
+          every new hire needs time to learn the codebase.
+        - We add capacity without that delay. A small, senior team joins your process, ships against
+          your roadmap, and leaves behind tested, documented code your engineers are happy to own.
+        - For new products, we take you from idea to paying customers with a focused first version,
+          then keep building as you learn what customers value.
+        - "We are strongest on the work in-house teams find hardest to fit in: billing and plans,
+          integrations with other tools, AI features, performance, and rebuilding the parts of the
+          platform that slow everyone down."
+        - Engagements are flexible. Some clients keep us for a single release, others for years as
+          an extension of their own team.
+    projects:
+      intro: Software companies usually bring us one of these, then keep us for the next release.
+      rows:
+        - - First product version
+          - Core features, accounts, billing, and an admin console
+          - $30,000 to $60,000
+          - 6 to 10 weeks
+        - - Billing and subscription system
+          - Plans, trials, upgrades, invoices, and usage billing
+          - $12,000 to $30,000
+          - 3 to 5 weeks
+        - - Integrations and public interface
+          - Connections to popular tools and a documented interface for customers
+          - $10,000 to $35,000
+          - 3 to 6 weeks
+        - - Platform rebuild or scale-up
+          - Architecture, performance, testing, and migration
+          - $50,000 to $150,000+
+          - 2 to 4 months
+    needs:
+      heading: Software product work we do
+      intro:
+        We work inside your tools, rituals, and code standards, so our releases look like your team's
+        releases.
+      items:
+        - - First versions
+          - A focused product with accounts, billing, and analytics, ready for paying customers.
+        - - Roadmap features
+          - Features built and shipped on your release rhythm, with tests and documentation.
+        - - Billing and plans
+          - Trials, upgrades, seats, usage billing, and invoices that finance trusts.
+        - - Integrations
+          - Connections to the tools your customers already use, plus a public interface for
+            partners.
+        - - AI features
+          - Assistants, search, summaries, and automation that customers actually use.
+        - - Rebuilds and performance
+          - Slow or fragile parts of the platform rebuilt in stages without stopping releases.
+    steps:
+      heading: How we work with software teams
+      intro: Most engagements ship their first change to production within the first two weeks.
+      items:
+        - - Learn the codebase
+          - We review the architecture, tests, and backlog, and agree on how we will work together.
+          - - Codebase review
+            - Working agreement
+        - - Ship something small
+          - We ship a small, real change in the first weeks to prove the setup works.
+          - - First release
+            - Pipeline check
+        - - Take on the roadmap
+          - We deliver agreed features in short cycles with demos to your product team.
+          - - Roadmap features
+            - Demos
+        - - Leave it better
+          - We document, test, and hand over, so your team owns everything we built.
+          - - Documentation
+            - Handover
+    help:
+      heading: What software companies get from us
+      intro: Software companies feel the change in release speed and in the confidence of their own
+        engineers when they work in the code we leave behind.
+      cols:
+        - - Speed
+          - - Features shipped sooner.
+            - No hiring delay.
+        - - Quality
+          - - Tests and reviews on every change.
+            - Fewer regressions.
+        - - New skills
+          - - AI and integrations added.
+            - Billing done right.
+        - - Ownership
+          - - Your code and your standards.
+            - Full handover.
+    tech:
+      heading: Technical notes for software products
+      intro: What your CTO will ask about stack, process, and quality.
+      panels:
+        - - Stack and process
+          - - We work in your stack, whether that is TypeScript, Python, Go, Java, or .NET, and in
+              your repositories and tools.
+            - Every change goes through review and automated tests before it ships.
+        - - Scale and reliability
+          - - We measure performance and fix bottlenecks with evidence, not guesses.
+            - Monitoring and alerts are added so problems are caught before customers notice.
+    faq:
+      heading: Questions about software product development
+      items:
+        - - How much does it cost to build a software product?
+          - A focused first version usually costs $30,000 to $60,000 and takes 6 to 10 weeks.
+            Ongoing feature work is priced per release or per month.
+        - - Can you work alongside our engineers?
+          - Yes. We join your process, tools, and code reviews, and work as part of your team.
+        - - Who owns the code?
+          - You do. Everything we build is yours, documented and ready for your team to maintain.
+        - - Can you add AI to our product?
+          - Yes. We add assistants, smart search, summaries, and automation, measured against real
+            customer use.
+        - - Can you fix a slow or fragile platform?
+          - Yes. We find the bottlenecks, then rebuild the worst parts in stages while releases
+            continue.
+        - - How quickly can you start?
+          - Usually within two weeks of agreeing scope, with a first change in production soon after.
+    related:
+      services:
+        - svc.software-development
+        - svc.cloud
+        - svc.ai
+        - svc.api-integration
+      work:
+        - workarea.digital-products
+        - workarea.custom-software-systems
+        - workarea.devops-infrastructure
+      tech:
+        - lang.typescript
+        - fw.nextjs
+        - tech.postgresql
+        - plat.aws
+    cta:
+      heading: Tell us what your roadmap needs
+      body:
+        Share your product, stack, and the work that is waiting. We reply with a plan, a price range,
+        and a timeline.
+      label: Plan product work
+  - slug: telecommunications
+    entity: ind.telecommunications
+    name: Telecommunications
+    service: software-development
+    title: Telecom Software Development and Customer Platforms | DECHY
+    description: "Telecommunications software from DECHY: customer self-service apps, ordering and
+      provisioning, field service tools, and network data dashboards."
+    intent:
+      - telecom software development
+      - telecom self-service app
+      - telecommunications software company
+    comprehension:
+      what:
+        We build customer self-service apps, ordering and provisioning flows, field service tools, and
+        network and service data dashboards for telecom providers.
+      problem:
+        Customers call for things they could do online, orders stall between systems, and engineers
+        arrive without the details they need.
+      audience:
+        Mobile and broadband providers, internet service providers, network operators, and telecom
+        resellers.
+      choose:
+        Start with self-service if contact volume is high, or with ordering and provisioning if
+        installs and activations are slow.
+      next: Tell us where customers or engineers wait. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Telecom software that cuts calls and speeds up installs
+      lead:
+        We build the self-service apps, ordering flows, and engineer tools that let telecom customers
+        help themselves and get connected faster. Calls drop, orders flow through without manual
+        steps, and engineers arrive with everything they need.
+      center:
+        - Every customer line
+        - Plan, usage, service, and status.
+      spokes:
+        - - Self-service app
+          - Plans
+          - bills
+          - usage.
+        - - Online ordering
+          - Availability to activation.
+        - - Provisioning
+          - Automated setup.
+        - - Field engineers
+          - Installs and repairs.
+        - - Support
+          - Faults and status.
+        - - Network data
+          - Service health.
+      takeaway:
+        Telecom software works when self-service, ordering, provisioning, engineers, support, and
+        network data share each customer line.
+      visual: The systems around a customer line
+      caption: This diagram shows a customer line at the center with the self-service app, ordering,
+        provisioning, field engineers, support, and network data around it.
+    why:
+      heading: What telecom providers need from software today
+      paragraphs:
+        - Telecom customers rarely want to call. They want to check usage, change a plan, report a
+          fault, and see when it will be fixed, all from their phone. Every call that could have
+          been self-service costs money and patience.
+        - Behind the scenes, ordering and provisioning often pass through several systems with
+          manual steps between them. New customers wait days for activation that could take minutes.
+        - Field engineers carry the rest of the burden. When they arrive without the right details,
+          installs fail and repeat visits follow.
+        - We build the customer and operations layer that connects these pieces to your billing and
+          network systems, so the whole journey from order to working service runs smoothly.
+        - We build so your teams can keep changing the journeys after launch. Offers, plans, and
+          messages are managed in admin tools rather than code, and every integration is documented,
+          monitored, and tested, so adding the next journey is faster than the first. The same
+          building blocks then support new products, partner channels, and business customers
+          without starting again.
+    projects:
+      intro: Providers usually start with self-service, then automate ordering and field work.
+      rows:
+        - - Customer self-service app
+          - Plans, bills, usage, payments, and fault reporting
+          - $20,000 to $45,000
+          - 4 to 8 weeks
+        - - Online ordering and availability
+          - Address checks, plan selection, checkout, and booking
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Engineer field app
+          - Jobs, equipment, tests, photos, and sign-off
+          - $20,000 to $40,000
+          - 4 to 6 weeks
+        - - Provisioning automation and data dashboards
+          - Order flow automation and network service dashboards
+          - $40,000 to $100,000+
+          - 2 to 4 months
+    needs:
+      heading: Telecom software we build
+      intro:
+        Each tool connects to your billing, network, and provisioning systems, which stay the source
+        of truth.
+      items:
+        - - Self-service app and portal
+          - Plans, bills, usage, payments, and add-ons managed without calling.
+        - - Online ordering
+          - Address availability checks, plan choice, checkout, and installation booking.
+        - - Provisioning automation
+          - Orders passed between systems automatically, with exceptions flagged for staff.
+        - - Fault reporting and status
+          - Customers report faults, run checks, and see repair status in the app.
+        - - Engineer field app
+          - Jobs, equipment, test results, photos, and customer sign-off on one phone.
+        - - Network and service dashboards
+          - Service health, outages, and customer impact shown in one view.
+    steps:
+      heading: How we deliver telecom software
+      intro: A self-service app or ordering flow usually reaches customers within two months.
+      items:
+        - - Find the avoidable calls
+          - We analyze why customers call and which reasons could be handled online.
+          - - Contact analysis
+            - Self-service list
+        - - Map the order flow
+          - We trace orders from checkout to activation and mark every manual step.
+          - - Order flow map
+            - Automation plan
+        - - Build and connect
+          - We build the apps and connect them to billing, network, and provisioning systems.
+          - - Apps
+            - Integrations
+        - - Measure and expand
+          - We track calls avoided and activation times, then extend to more journeys.
+          - - Results report
+            - Next journeys
+    help:
+      heading: What telecom providers get from us
+      intro:
+        Providers see the change in contact volumes, activation times, and first-time install rates
+        within months of launch.
+      cols:
+        - - Fewer calls
+          - - Common tasks in the app.
+            - Fault status without calling.
+        - - Faster activation
+          - - Orders flow automatically.
+            - Exceptions flagged early.
+        - - Better installs
+          - - Engineers fully briefed.
+            - Fewer repeat visits.
+        - - Clear service view
+          - - Outages and impact visible.
+            - Customers informed proactively.
+    tech:
+      heading: Technical notes for telecommunications
+      intro: What your architecture and operations teams will ask about.
+      panels:
+        - - Billing and network systems
+          - - We connect to billing, provisioning, and network systems through their interfaces,
+              which stay the source of truth.
+            - Integration services handle retries and log every message, so orders are never lost.
+        - - Scale and availability
+          - - Customer apps are built to handle large customer bases and peak times such as outages.
+            - Monitoring shows the health of every integration and alerts the team to failures.
+    faq:
+      heading: Questions about telecom software
+      items:
+        - - How much does a telecom self-service app cost?
+          - A customer self-service app usually costs $20,000 to $45,000 and takes 4 to 8 weeks,
+            depending on billing integration.
+        - - Can you connect to our billing system?
+          - Usually, yes, through its interfaces. Billing stays the source of truth and the app
+            reads from it.
+        - - Can customers check service availability online?
+          - Yes. Address checks show available plans and speeds before checkout.
+        - - Can you automate provisioning?
+          - Yes. We automate the steps between ordering and activation and flag exceptions for staff.
+        - - Do you build tools for field engineers?
+          - Yes. Engineers get jobs, equipment details, tests, and sign-off in one mobile app.
+        - - Can customers see outage information?
+          - Yes. Outages and repair status appear in the app, so customers do not need to call.
+            Proactive messages can go out by text and push notification as soon as an outage is
+            confirmed, along with updates when the service is restored.
+    related:
+      services:
+        - svc.software-development
+        - svc.mobile-app-development
+        - svc.api-integration
+        - svc.automation
+      work:
+        - workarea.customer-portals
+        - workarea.integration-platforms
+        - workarea.operations-platforms
+      tech:
+        - lang.java
+        - tech.nodejs
+        - tech.react-native
+        - plat.aws
+    cta:
+      heading: Tell us where customers or engineers wait
+      body: Share your journeys, volumes, and systems. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan telecom software

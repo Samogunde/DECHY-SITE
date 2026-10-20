@@ -115,8 +115,8 @@ describe("Solutions layer", () => {
 });
 
 describe("Industries and locations", () => {
-  it("publishes the eight first-wave industries and five first-wave countries", () => {
-    expect(registry.pages.filter((p) => p.kind === "industry")).toHaveLength(8);
+  it("publishes the thirty industries and five first-wave countries", () => {
+    expect(registry.pages.filter((p) => p.kind === "industry")).toHaveLength(30);
     expect(registry.pages.filter((p) => p.kind === "location")).toHaveLength(5);
   });
 

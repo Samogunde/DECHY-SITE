@@ -1,0 +1,266 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-agriculture
+kind: industry
+locale: en
+path: /industries/agriculture/
+parent: /industries/
+entityId: ind.agriculture
+title: Agriculture and Farm Management Software Development | DECHY
+description: "Agriculture software from DECHY: farm management, field and livestock records, sensor
+  data, traceability, and supply apps for farms and agribusiness."
+breadcrumbLabel: Agriculture
+intent:
+  primary: farm management software development
+  secondary:
+    - agriculture software development
+    - agtech app development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build farm management tools, field and livestock records, sensor and machine data
+    dashboards, traceability, and ordering apps for farms and agribusiness.
+  problem:
+    Records are kept in notebooks and spreadsheets, data from machines and sensors goes unused,
+    and buyers demand traceability that is hard to prove.
+  audience: Farms and growers, cooperatives, agribusiness suppliers, food processors, and agtech startups.
+  choose: Start with the records you must keep anyway, such as fields, inputs, or livestock, then
+    connect machine and sensor data.
+  next:
+    Tell us what you grow or raise and how records are kept. We reply with a plan, a price range,
+    and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Farm and agribusiness software that turns field data into decisions
+    lead: We build the farm records, sensor dashboards, and traceability tools that put every field,
+      animal, and batch on one screen. Records are kept as work happens, machine data becomes
+      useful, and buyers get the proof they ask for.
+    ctas:
+      - label: Plan agriculture software
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every field and batch
+        text: Inputs, work, and yields recorded once.
+      spokes:
+        - title: Field records
+          text: Crops, inputs, and work.
+        - title: Livestock records
+          text: Health and movements.
+        - title: Sensors and machines
+          text: Soil, weather, equipment.
+        - title: Traceability
+          text: From field to buyer.
+        - title: Ordering and supply
+          text: Inputs and sales.
+        - title: Reports
+          text: Yields and costs.
+    purpose: relationship
+    takeaway: Agricultural software keeps one record for every field and batch that field work,
+      livestock, sensors, traceability, and sales share.
+    visualTitle: The systems around a field and its harvest
+    figureCaption: This diagram shows a field and batch record at the center with field records,
+      livestock, sensors and machines, traceability, ordering, and reports around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why farms and agribusiness are going digital
+    paragraphs:
+      - Farming has always been data-rich, but most of that data stayed in heads, notebooks, and
+        machine memory cards. Today buyers, lenders, and regulators ask for records and proof, and
+        margins reward every input used well.
+      - Tractors, sensors, and weather stations already produce useful data. The gap is a place that
+        brings it together with field records, so a grower can see what each field cost and earned.
+      - Traceability is now a selling point. Processors and retailers want to know where produce
+        came from and how it was grown, and good records answer them in minutes.
+      - "We design for the field: simple apps that work offline, with large buttons, and reports
+        that make sense to people who would rather be outside than at a desk."
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build farm software
+    intro: We usually have a records app in growers' hands within a month, before the next busy season.
+    steps:
+      - title: Walk the farm
+        body: We spend time with the people doing the work and note what they record and why.
+        artifacts:
+          - Farm visit notes
+          - Record list
+      - title: Build the field app
+        body: We build simple offline tools for the records that matter most.
+        artifacts:
+          - Field app
+          - Field test
+      - title: Connect data sources
+        body: We bring in sensor, weather, and machine data where it adds value.
+        artifacts:
+          - Data connections
+          - Dashboard
+      - title: Prove traceability
+        body: We set up batch tracking and reports buyers and auditors accept.
+        artifacts:
+          - Traceability
+          - Buyer reports
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Agriculture projects, costs, and timelines
+    intro: Farms and agribusinesses usually start with records, then connect data and buyers.
+    caption: Typical agriculture projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Field or livestock records app
+        - Fields, inputs, work, or animals recorded offline
+        - $12,000 to $25,000
+        - 3 to 5 weeks
+      - - Sensor and machine data dashboard
+        - Soil, weather, and equipment data in one view
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Traceability system
+        - Batches tracked from field to buyer with documents
+        - $20,000 to $45,000
+        - 5 to 8 weeks
+      - - Agribusiness platform
+        - Growers, ordering, traceability, and reporting together
+        - $50,000 to $100,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Agriculture software we build
+    intro:
+      Every tool is built to work on a phone in the field and to share data with the rest of the
+      farm.
+    items:
+      - title: Field records
+        body: Crops, sprays, fertilizer, and work logged per field, offline.
+      - title: Livestock management
+        body: Animal records, health treatments, movements, and weights.
+      - title: Sensor and machine dashboards
+        body: Soil moisture, weather, and equipment data brought into one view.
+      - title: Traceability
+        body: Every batch traced from field to buyer, with the documents to prove it.
+      - title: Grower and buyer portals
+        body: Contracts, deliveries, quality results, and payments for cooperatives and processors.
+      - title: Cost and yield reports
+        body: Cost and margin per field or herd, season by season.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What farms and agribusinesses get from us
+    intro:
+      Growers and agribusinesses see the benefit at the end of the season, when costs, yields, and
+      records are already in one place instead of scattered across notebooks, emails, and machine
+      files.
+    columns:
+      - title: Better decisions
+        items:
+          - Cost and yield per field.
+          - Data from machines used.
+      - title: Less paperwork
+        items:
+          - Records kept as work happens.
+          - Reports in minutes.
+      - title: Market access
+        items:
+          - Traceability buyers trust.
+          - Certificates easier to keep.
+      - title: Connected supply
+        items:
+          - Growers and buyers on one platform.
+          - Faster payments.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about agriculture software
+    items:
+      - q: How much does farm management software cost?
+        a:
+          A records app usually costs $12,000 to $25,000. A full agribusiness platform with traceability
+          and portals costs $50,000 to $100,000 or more.
+      - q: Does it work without signal?
+        a: Yes. Everything works offline and syncs when the phone finds a connection.
+      - q: Can you use data from our tractors and sensors?
+        a: Usually, yes. We connect to the data services your machines and sensors provide.
+      - q: Can you help us prove traceability to buyers?
+        a: Yes. We track every batch from field to buyer and produce the reports they ask for.
+      - q: Do you build for cooperatives?
+        a: Yes. Cooperatives get portals for members, deliveries, quality results, and payments.
+      - q: Why build instead of buying a farm app?
+        a:
+          Many farms should buy, and we will say so. We build when your crops, processes, or supply chain
+          do not fit packaged tools. Where a packaged app fits most of your needs, we can also
+          connect it to your other systems instead.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for agriculture
+    intro: What to know about connectivity, machines, and sensor data.
+    panels:
+      - title: Working in the field
+        items:
+          - Apps work fully offline and sync when a phone reaches signal.
+          - Maps show fields and boundaries so records attach to the right place.
+      - title: Machines and sensors
+        items:
+          - We connect to sensor platforms and machine data services through their interfaces.
+          - Readings are stored over time so trends and anomalies are easy to spot.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Agriculture across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.mobile-app-development
+          - svc.data-analytics
+          - svc.api-integration
+      - title: Systems we build
+        entityIds:
+          - workarea.operations-platforms
+          - workarea.data-analytics
+          - workarea.mobile-apps
+      - title: Technologies
+        entityIds:
+          - tech.flutter
+          - lang.python
+          - tech.postgresql
+          - plat.google-cloud
+  - type: cta
+    id: contact-cta
+    heading: Tell us what you grow and how records are kept
+    body:
+      Share your operation, your data, and your buyers. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan agriculture software
+      href: /contact/?service=software-development

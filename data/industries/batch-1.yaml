@@ -1,0 +1,1567 @@
+# Industry page copy (owner direction, 20 October 2026). One entry per industry, each written for
+# that industry. scripts/build-industry-pages.mjs turns these into content/pages/en/industry-*.yaml.
+industries:
+  - slug: fitness
+    entity: ind.fitness
+    name: Fitness and wellness
+    service: mobile-app-development
+    title: Fitness App and Gym Software Development | DECHY
+    description:
+      "Gym, studio, and wellness software from DECHY: member apps, class booking, payments,
+      and coaching tools that keep members coming back."
+    intent:
+      - fitness app development
+      - gym management software
+      - wellness app development
+    comprehension:
+      what: We build member apps, class booking, memberships, payments, and coaching tools for gyms,
+        studios, trainers, and wellness brands.
+      problem:
+        Members churn when booking is clumsy, progress is invisible, and the only contact is a
+        renewal invoice.
+      audience:
+        Gym groups, boutique studios, personal trainers, wellness apps, and corporate wellbeing
+        providers.
+      choose:
+        Start with booking and payments if you run classes, or with the member app if retention is
+        the problem.
+      next:
+        Tell us how members book, pay, and train today. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Fitness apps and gym software that keep members coming back
+      lead:
+        We build the booking, membership, and coaching tools that turn sign-ups into regulars. Your
+        members book in seconds, see their progress, and hear from you between visits.
+      center:
+        - Every member
+        - One profile across app, front desk, and coach.
+      spokes:
+        - - Class booking
+          - Waitlists and reminders.
+        - - Memberships
+          - Plans
+          - freezes
+          - and renewals.
+        - - Payments
+          - Cards and direct debit.
+        - - Coaching
+          - Programs and check-ins.
+        - - Progress
+          - Workouts and results.
+        - - Reports
+          - Attendance and churn.
+      takeaway:
+        Fitness software works best when booking, payments, coaching, and progress all share one
+        member profile.
+      visual: The systems around a fitness member
+      caption:
+        This diagram shows a member profile at the center with booking, memberships, payments,
+        coaching, progress, and reports around it.
+    why:
+      heading: What makes fitness software succeed or fail
+      paragraphs:
+        - Fitness is a habit business. People join in a burst of motivation and drift away within
+          months unless something pulls them back. Your software is one of the few things that
+          touches members every week, so it either builds the habit or gets in its way.
+        - Off-the-shelf gym platforms handle the basics, but they look like everyone else and rarely
+          fit a studio with its own method. We build the parts that make you different, such as your
+          programs, your community, and your brand, and connect them to the booking and billing you
+          already trust.
+        - The result is an app members open because it helps them, not because it sends a
+          notification.
+        - We also think about the business behind the app. Memberships, packs, and coaching sold
+          online lift revenue per member. Attendance data shows which classes to grow and which
+          members need a nudge before they cancel.
+    needs:
+      heading: Fitness software we build
+      items:
+        - - Member app
+          - Book classes, track workouts, and follow programs on iPhone and Android, with your
+            branding.
+        - - Class and trainer booking
+          - Live timetables, waitlists, late-cancel rules, and reminders that cut no-shows.
+        - - Memberships and billing
+          - Plans, trials, freezes, family accounts, and automatic renewals with failed-payment
+            retries.
+        - - Online coaching
+          - Programs, video, check-ins, and messaging for trainers who coach clients remotely.
+        - - Progress and challenges
+          - Workout logs, personal bests, streaks, and team challenges that keep people engaged.
+        - - Owner dashboards
+          - Attendance, revenue, and churn risk by site and class, so you act before members leave.
+      intro:
+        Pick one piece or the full platform. Every part shares the same member profile, so what a
+        member does in the app shows up at the front desk and in your reports.
+    steps:
+      heading: How we launch a fitness product
+      items:
+        - - Map the member journey
+          - We follow a new member from sign-up to their tenth visit and mark where they drop off.
+          - - Journey map
+            - Drop-off points
+        - - Design the first release
+          - We pick the features that move retention most and design them for one-handed use in a
+            gym.
+          - - Prototype
+            - Release plan
+        - - Build and connect
+          - We build the app and connect it to your booking, payments, and access control.
+          - - Working app
+            - Integrations
+        - - Launch with one site
+          - We release at one location, measure bookings and visits, then roll out to the rest.
+          - - Pilot results
+            - Rollout plan
+      intro:
+        A typical member app goes from first call to the app stores in two to five weeks, with a
+        pilot at one site before the full rollout.
+    help:
+      heading: What gyms and studios get from us
+      cols:
+        - - Retention
+          - - Fewer no-shows with smart reminders.
+            - Members who see their own progress.
+        - - Revenue
+          - - Online sales of plans and packs.
+            - Automatic renewals and payment recovery.
+        - - Brand
+          - - An app in your name and colors.
+            - Your programs
+            - not a generic library.
+        - - Time back
+          - - Front desk freed from bookings.
+            - Reports without spreadsheets.
+    tech:
+      heading: Technical notes for fitness platforms
+      intro: What your operations or technical lead will ask about wearables, payments, and peak traffic.
+      panels:
+        - - Wearables and health data
+          - - We connect to Apple Health and Google Health Connect when members choose to share
+              their data.
+            - Health data is stored separately and only with the member's consent.
+        - - Peak-time booking
+          - - Class releases cause traffic spikes, so booking is built to handle a rush without
+              double-booking a spot.
+            - Payments use tested providers with automatic retries and receipts.
+    faq:
+      heading: Questions about fitness software
+      items:
+        - - How much does a fitness app cost?
+          - Most member apps cost $10,000 to $35,000 and take 2 to 6 weeks. A full platform with
+            coaching, billing, and multiple sites sits at the top of that range or above.
+        - - Can you connect to the gym system we already use?
+          - Usually, yes. We connect through the booking and billing platform you have, so staff
+            keep their tools and members get a better app.
+        - - Do members need a separate login for the app and the website?
+          - No. Members use one account for booking on the web, in the app, and at the front desk.
+        - - Can trainers use it to coach online?
+          - Yes. Trainers build programs, share videos, review check-ins, and message clients from
+            the same platform.
+        - - Will it work for a single studio?
+          - Yes. We size the build to you. A single studio usually starts with booking, payments,
+            and a branded app.
+        - - Can members pay for packs and personal training in the app?
+          - Yes. Members buy class packs, memberships, and personal training sessions in the app,
+            and payments land in the same account as your front desk sales.
+    related:
+      services:
+        - svc.mobile-app-development
+        - svc.web-development
+        - svc.ui-ux
+        - svc.digital-marketing
+      work:
+        - workarea.mobile-apps
+        - workarea.customer-portals
+        - workarea.commerce-systems
+      tech:
+        - tech.flutter
+        - tech.react-native
+        - int.stripe
+        - plat.firebase
+    cta:
+      heading: Tell us how your members book and train
+      body:
+        Share how booking, payments, and coaching work today. We reply with a plan, a price range, and
+        a timeline.
+      label: Plan a fitness app
+    projects:
+      intro: Most gyms and studios start with one of these and add the rest as members adopt the app.
+      rows:
+        - - Booking website
+          - Timetable, online booking, memberships, and payments
+          - $3,000 to $8,000
+          - 1 to 2 weeks
+        - - Branded member app
+          - Booking, progress, notifications, and your branding on iPhone and Android
+          - $10,000 to $25,000
+          - 2 to 5 weeks
+        - - Online coaching platform
+          - Programs, video library, check-ins, and messaging
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Multi-site fitness platform
+          - Several locations, staff roles, reporting, and integrations
+          - $35,000 to $60,000+
+          - 6 to 8 weeks
+  - slug: beauty
+    entity: ind.beauty
+    name: Beauty and salons
+    service: web-development
+    title: Salon and Spa Booking Software Development | DECHY
+    description:
+      Booking apps, websites, and client tools for salons, spas, clinics, and beauty brands,
+      built by DECHY to fill chairs and cut no-shows.
+    intent:
+      - salon booking software
+      - spa booking app development
+      - beauty business website
+    comprehension:
+      what:
+        We build booking websites and apps, client records, loyalty, and online stores for salons,
+        spas, aesthetic clinics, and beauty brands.
+      problem:
+        Phones ring during appointments, no-shows cost you every week, and client history lives in
+        a paper card or a stylist's memory.
+      audience: Hair and beauty salons, spas, nail and lash studios, aesthetic clinics, barbers, and
+        beauty product brands.
+      choose:
+        Start with online booking and deposits if no-shows hurt, or with a store if retail products
+        are your growth.
+      next: Tell us how clients book and pay now. We reply with a plan, a price range, and a timeline.
+    hero:
+      headline: Booking, websites, and apps that keep your chairs full
+      lead:
+        We build the online booking, client records, and loyalty tools that fill your diary and bring
+        clients back. Clients book themselves in a minute, deposits stop no-shows, and your team
+        stops answering the phone mid-appointment.
+      center:
+        - Every client
+        - Visits, treatments, notes, and preferences.
+      spokes:
+        - - Online booking
+          - By service and stylist.
+        - - Deposits
+          - Fewer no-shows.
+        - - Client notes
+          - Formulas and allergies.
+        - - Loyalty
+          - Points and referrals.
+        - - Retail
+          - Products online and in salon.
+        - - Reminders
+          - Text and email.
+      takeaway:
+        Salon software revolves around a client record that booking, deposits, notes, loyalty, and
+        retail all share.
+      visual: The tools around a salon client
+      caption:
+        This diagram shows a client record at the center with booking, deposits, notes, loyalty,
+        retail, and reminders around it.
+    why:
+      heading: Why beauty businesses need booking built for them
+      paragraphs:
+        - In a salon, time is the product. An empty hour cannot be sold again, and a no-show costs a
+          stylist's full rate. Every booking tool promises to fix this, yet many businesses still
+          juggle a booking app, a website, a till, and a notebook of client formulas.
+        - We build around your services, your team, and your brand. Clients pick a treatment and a
+          person they trust, pay a deposit, and get a reminder they can act on. Staff see the
+          client's history before they say hello.
+        - Done well, the tools feel as considered as your treatments.
+        - "Owners get the view they rarely have: which services earn most, which stylists are booked
+          out, and which clients have not been back in three months. A simple campaign to those
+          clients often pays for the project on its own."
+    needs:
+      heading: Salon and spa software we build
+      items:
+        - - Booking website
+          - A fast website with real-time booking by treatment, stylist, and location, built to rank
+            in local search.
+        - - Branded booking app
+          - An app clients keep on their phone for rebooking, offers, and loyalty points.
+        - - Deposits and cancellation rules
+          - Card deposits and clear cancellation windows that cut no-shows without awkward
+            conversations.
+        - - Client records
+          - Treatment history, color formulas, allergies, and photos, visible to the right staff
+            only.
+        - - Loyalty and referrals
+          - Points, rewards, and referral codes that turn first visits into regular appointments.
+        - - Online product store
+          - Sell the products you use in the chair, with click-and-collect at the salon.
+      intro:
+        Each tool works on its own and gets better together. Bookings, notes, loyalty, and sales all
+        attach to the same client record your team already knows.
+    steps:
+      heading: How we set up a salon platform
+      items:
+        - - Learn your diary
+          - We look at how services, durations, and staff skills fit together, including the
+            treatments that need special rules.
+          - - Service map
+            - Booking rules
+        - - Design the client side
+          - We design booking for a phone in one hand and make the first visit feel easy.
+          - - Booking prototype
+            - Brand styling
+        - - Build and move data
+          - We build the site or app and bring over existing clients and future bookings.
+          - - Live booking
+            - Imported clients
+        - - Train and launch
+          - We train the team in an hour, switch on deposits, and watch no-shows for the first month.
+          - - Team training
+            - No-show report
+      intro:
+        Most salons go live within three weeks. Existing clients and future appointments come across,
+        so nothing is lost on switch-over day.
+    help:
+      heading: What salons and spas get from us
+      cols:
+        - - A fuller diary
+          - - Booking open around the clock.
+            - Gaps filled by last-minute offers.
+        - - Fewer no-shows
+          - - Deposits and reminders.
+            - Easy rescheduling instead of silence.
+        - - Better service
+          - - Client history before they arrive.
+            - Notes that follow the client between staff.
+        - - More revenue
+          - - Retail sold online.
+            - Loyalty that brings clients back sooner.
+    tech:
+      heading: Technical notes for beauty businesses
+      intro: What to know about payments, client privacy, and multi-location setups.
+      panels:
+        - - Payments and deposits
+          - - Deposits and no-show fees run through card providers such as Stripe or Square.
+            - Cards are stored by the provider, never on your own system.
+        - - Client privacy
+          - - Treatment notes and photos are visible only to staff who need them.
+            - Clients can see, update, or delete their own details.
+    faq:
+      heading: Questions about salon software
+      items:
+        - - How much does a salon booking website cost?
+          - Most booking websites cost $3,000 to $10,000 and launch in 1 to 3 weeks. A branded app
+            with loyalty usually adds $10,000 to $25,000.
+        - - Can we keep the booking system we already pay for?
+          - Yes, if it has an open connection. We can build your website and app on top of it, or
+            replace it if it holds you back.
+        - - Will deposits put clients off?
+          - Rarely, when the rules are clear and refunds are easy. Most salons see far fewer
+            no-shows and almost no lost bookings.
+        - - Can we run several locations?
+          - Yes. Clients choose a location, and you see bookings and revenue for each one and for
+            the group.
+        - - Do you build product stores too?
+          - Yes. We add an online shop with click-and-collect, so products sell between visits.
+        - - Can clients rebook straight after an appointment?
+          - Yes. The receipt and the app both offer the next appointment with the same stylist,
+            which is one of the simplest ways to raise repeat visits.
+    related:
+      services:
+        - svc.web-development
+        - svc.mobile-app-development
+        - svc.ecommerce
+        - svc.branding
+      work:
+        - workarea.business-web-platforms
+        - workarea.mobile-apps
+        - workarea.ecommerce-platforms
+      tech:
+        - fw.nextjs
+        - int.stripe
+        - int.square
+        - plat.shopify
+    cta:
+      heading: Tell us how clients book today
+      body: Share your services, team, and booking tools. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan a salon booking system
+    projects:
+      intro: Most salons start with booking and deposits, then add an app and a store.
+      rows:
+        - - Booking website
+          - Services, team, real-time booking, and local search setup
+          - $3,000 to $7,000
+          - 1 to 2 weeks
+        - - Deposits and client records
+          - Card deposits, cancellation rules, notes, and history
+          - $4,000 to $10,000
+          - 1 to 3 weeks
+        - - Branded booking app
+          - Rebooking, loyalty, offers, and notifications
+          - $10,000 to $25,000
+          - 3 to 5 weeks
+        - - Multi-location platform with store
+          - Several salons, retail store, reporting, and integrations
+          - $25,000 to $45,000+
+          - 5 to 8 weeks
+  - slug: fintech
+    entity: ind.fintech
+    name: Fintech and payments
+    service: software-development
+    title: Fintech Software and Payment App Development | DECHY
+    description:
+      "Fintech software from DECHY: payment apps, wallets, lending platforms, and customer
+      onboarding, built secure, tested, and ready to scale."
+    intent:
+      - fintech software development
+      - payment app development
+      - fintech app company
+    comprehension:
+      what:
+        We build payment apps, digital wallets, lending and investment platforms, onboarding, and
+        back-office tools for fintech companies.
+      problem:
+        Fintech teams must move fast while handling money, identity checks, and audits, and one
+        mistake costs trust.
+      audience:
+        Fintech startups, payment companies, lenders, investment platforms, and banks launching
+        digital products.
+      choose:
+        Start with a focused first product on proven payment and identity providers, then build the
+        parts that make you different.
+      next:
+        Tell us what your product moves, lends, or manages. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Fintech software and payment apps built to be trusted
+      lead: We build the apps, ledgers, and onboarding flows that let your customers move money with
+        confidence. You launch faster on proven providers, and your own product stays secure,
+        tested, and ready for an audit.
+      center:
+        - Every transaction
+        - Recorded once, traceable forever.
+      spokes:
+        - - Onboarding
+          - Identity and checks.
+        - - Wallet or account
+          - Balances and history.
+        - - Payments
+          - Cards and transfers.
+        - - Ledger
+          - Every movement recorded.
+        - - Risk
+          - Fraud rules and limits.
+        - - Back office
+          - Support and reporting.
+      takeaway:
+        Fintech products depend on a ledger where every transaction is recorded once and traced by
+        onboarding, payments, risk, and support.
+      visual: The parts of a fintech product
+      caption:
+        This diagram shows a transaction ledger at the center with onboarding, accounts, payments,
+        risk rules, and back office around it.
+    why:
+      heading: Why fintech needs a different kind of engineering
+      paragraphs:
+        - A bug in most apps is an inconvenience. In fintech it can send money to the wrong place or
+          freeze someone's salary. Your software has to be correct under load, explain every number,
+          and survive a regulator asking how a balance was calculated.
+        - Speed still matters, because competitors launch every month. We get you to market quickly
+          by building on established payment, banking, and identity providers, and we spend our
+          effort on the experience and logic that are truly yours.
+        - Every money movement goes through a ledger, every rule is tested, and every change is
+          logged.
+        - We work well with small product teams. We can own the whole build, or join your engineers
+          to add a product line, strengthen testing, or rebuild a weak part of the platform without
+          slowing your roadmap.
+    needs:
+      heading: Fintech products we build
+      items:
+        - - Payment apps and wallets
+          - Send, receive, and store money, with cards, transfers, and instant notifications.
+        - - Customer onboarding
+          - Identity verification and checks that approve good customers in minutes and flag risky
+            ones.
+        - - Lending platforms
+          - Applications, decisions, repayments, and collections, with the rules your credit team
+            sets.
+        - - Investment and savings apps
+          - Portfolios, goals, recurring deposits, and clear statements people actually read.
+        - - Merchant and payout tools
+          - Checkout, invoicing, split payments, and payouts for platforms that pay other people.
+        - - Back-office consoles
+          - Support, refunds, disputes, and reporting for your operations and compliance teams.
+      intro:
+        We build on licensed payment, banking, and identity providers, then design the experience and
+        logic that make your product worth choosing.
+    steps:
+      heading: How we build a fintech product
+      items:
+        - - Define the money flows
+          - We map how money, data, and approvals move, and which provider handles each step.
+          - - Flow diagrams
+            - Provider choices
+        - - Design for trust
+          - We design onboarding and payments so customers always know what happened and what comes
+            next.
+          - - Prototype
+            - Copy for key moments
+        - - Build with a ledger and tests
+          - Every movement is recorded in a ledger and covered by automated tests before release.
+          - - Ledger
+            - Test suite
+        - - Prepare for audit
+          - We document controls, access, and logs so your compliance review starts from evidence.
+          - - Control notes
+            - Audit logs
+      intro:
+        A focused first version usually reaches real customers in six to ten weeks, with tests and
+        controls in place from the first release.
+    help:
+      heading: What fintech teams get from us
+      cols:
+        - - Speed
+          - - A first product in weeks.
+            - Proven providers instead of rebuilding rails.
+        - - Trust
+          - - Clear money movement for customers.
+            - A ledger that reconciles.
+        - - Control
+          - - Fraud rules and limits you can tune.
+            - Full audit trails.
+        - - Scale
+          - - Architecture that grows with volume.
+            - Monitoring from day one.
+    tech:
+      heading: Technical notes for fintech
+      intro: What your engineering or compliance lead will ask about ledgers, providers, and security.
+      panels:
+        - - Ledgers and reconciliation
+          - - Balances are derived from an append-only ledger, never edited in place.
+            - Daily reconciliation compares the ledger with provider reports and flags differences.
+        - - Security and providers
+          - - Card data stays with certified providers such as Stripe, so your own system never
+              stores it.
+            - Sign-in uses strong authentication, and sensitive actions need a second step.
+    faq:
+      heading: Questions about fintech development
+      items:
+        - - How much does a fintech app cost?
+          - A focused first product usually costs $25,000 to $60,000 and takes 6 to 10 weeks.
+            Lending or investment platforms with many rules cost more.
+        - - Do you handle licensing?
+          - No. Licensing is a legal matter for you and your advisers. We build the product and the
+            controls your compliance team needs.
+        - - Which payment and identity providers do you use?
+          - We choose by market and product, from providers such as Stripe, Adyen, and established
+            identity check services.
+        - - Can you add features to our existing app?
+          - Yes. We often join fintech teams to build a new product line, improve onboarding, or
+            strengthen testing.
+        - - How do you keep money movements correct?
+          - Every movement goes through a ledger with automated tests and daily reconciliation, so
+            errors surface early.
+        - - Can you build a first version to show investors?
+          - Yes. We often build a focused first version on real providers, so you can demo live
+            transactions and collect feedback before raising or scaling.
+    related:
+      services:
+        - svc.software-development
+        - svc.mobile-app-development
+        - svc.cybersecurity
+        - svc.api-integration
+      work:
+        - workarea.digital-products
+        - workarea.custom-software-systems
+        - workarea.api-integrations
+      tech:
+        - int.stripe
+        - int.adyen
+        - tech.postgresql
+        - lang.typescript
+    cta:
+      heading: Tell us what your product moves
+      body:
+        Describe the money flows and the customers you serve. We reply with a plan, a price range, and
+        a timeline.
+      label: Plan a fintech product
+    projects:
+      intro: These ranges cover most fintech builds we are asked to quote.
+      rows:
+        - - Payment or wallet first version
+          - Accounts, payments, ledger, and onboarding on proven providers
+          - $25,000 to $45,000
+          - 6 to 8 weeks
+        - - Merchant and payout platform
+          - Checkout, invoicing, split payments, and payouts
+          - $30,000 to $60,000
+          - 6 to 10 weeks
+        - - Lending platform
+          - Applications, decisions, repayments, and collections
+          - $40,000 to $80,000
+          - 2 to 3 months
+        - - Investment or banking-grade app
+          - Portfolios or accounts, statements, controls, and reporting
+          - $60,000 to $150,000+
+          - 3 to 4 months
+  - slug: banking
+    entity: ind.banking
+    name: Banking
+    service: software-development
+    title: Banking Software Development and Modernization | DECHY
+    description:
+      "Banking software from DECHY: digital banking apps, customer onboarding, lending tools,
+      and core system integration for banks and credit unions."
+    intent:
+      - banking software development
+      - digital banking app development
+      - core banking integration
+    comprehension:
+      what:
+        We build digital banking apps, onboarding, lending and servicing tools, and the integrations
+        that connect them to core banking systems.
+      problem:
+        Customers expect app-first banking, but core systems are old, changes are slow, and every
+        release must pass strict review.
+      audience:
+        Banks, credit unions, building societies, and their digital, operations, and technology
+        teams.
+      choose:
+        Start with one customer journey, such as account opening or loan applications, and connect
+        it cleanly to the core.
+      next:
+        Tell us which journey frustrates customers most. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Digital banking that customers enjoy and auditors approve
+      lead:
+        We build the apps, onboarding flows, and staff tools your customers judge you by, and connect
+        them safely to the core systems you already run. You modernize one journey at a time,
+        without a risky big-bang replacement.
+      center:
+        - The core system
+        - Stays the source of truth.
+      spokes:
+        - - Mobile banking
+          - Accounts and payments.
+        - - Account opening
+          - Online in minutes.
+        - - Lending
+          - Applications and decisions.
+        - - Staff tools
+          - Servicing and support.
+        - - Notifications
+          - Alerts customers want.
+        - - Reporting
+          - Regulatory and internal.
+      takeaway:
+        Modern banking keeps the core system as the source of truth while new apps and staff tools
+        connect to it safely.
+      visual: New banking journeys around the core
+      caption: This diagram shows the core banking system at the center with mobile banking, account
+        opening, lending, staff tools, notifications, and reporting around it.
+    why:
+      heading: Why banking modernization works best in steps
+      paragraphs:
+        - Banks carry decades of systems that still work and still hold the money. Replacing them
+          all at once is expensive and risky, and many such projects stall. Meanwhile customers
+          compare your app with the best ones on their phone.
+        - We take a different path. We pick one journey, build a modern front end and the services
+          behind it, and connect it to the core through a controlled layer. Each release is
+          reviewed, tested, and reversible.
+        - Customers feel the improvement within months, and your risk team sees evidence at every
+          step.
+        - Our role is to make each step small enough to approve and safe enough to undo. Your teams
+          keep ownership of the core, the data, and the decisions, and we leave behind code, tests,
+          and documentation they can run without us.
+    needs:
+      heading: Banking software we build
+      items:
+        - - Mobile and online banking
+          - Balances, transfers, cards, and statements in an app customers rate highly.
+        - - Digital account opening
+          - Identity checks and account setup in one sitting, with a handoff to staff when needed.
+        - - Loan origination tools
+          - Applications, document collection, decisions, and offers that move in days, not weeks.
+        - - Staff servicing console
+          - One screen for customer details, requests, and history, so calls end sooner.
+        - - Integration layer
+          - A controlled connection between new apps and the core, with logging and limits.
+        - - Management reporting
+          - Accurate daily figures for leaders and regulators, from one agreed set of definitions.
+      intro:
+        Each of these connects to your existing core through a controlled layer, so new journeys go
+        live without touching the system that holds the money.
+    steps:
+      heading: How we modernize a banking journey
+      items:
+        - - Choose the journey
+          - We agree one journey with clear value, such as account opening, and measure it today.
+          - - Journey baseline
+            - Success measures
+        - - Design and validate
+          - We prototype the journey with real customers and review it with risk and compliance
+            early.
+          - - Tested prototype
+            - Review notes
+        - - Build the integration layer
+          - We connect to the core through a controlled layer, never by changing it directly.
+          - - Integration services
+            - Test environment
+        - - Release in stages
+          - We release to a small group, monitor closely, then widen to all customers.
+          - - Staged release
+            - Monitoring
+      intro:
+        Each journey moves from baseline to staged release in about two to three months, with risk
+        and compliance involved from the first prototype.
+    help:
+      heading: What banks get from us
+      cols:
+        - - Better journeys
+          - - Apps customers rate highly.
+            - Fewer abandoned applications.
+        - - Lower risk
+          - - No big-bang core replacement.
+            - Reversible
+            - reviewed releases.
+        - - Efficiency
+          - - Staff tools that end calls sooner.
+            - Less manual rework.
+        - - Evidence
+          - - Logs and controls for audit.
+            - Clear reporting.
+    tech:
+      heading: Technical notes for banking
+      intro: What your architecture and security teams will ask about the core, data, and access.
+      panels:
+        - - Working with the core
+          - - We connect through the interfaces your core system offers and add a layer that
+              controls volume and logs every call.
+            - Test environments use synthetic data, never real customer records.
+        - - Security and access
+          - - Strong customer authentication and device checks protect every sign-in.
+            - Staff access is role-based and reviewed, and every action is logged.
+    faq:
+      heading: Questions about banking software
+      items:
+        - - Do we need to replace our core banking system?
+          - Usually not. Most of the value comes from new journeys connected to the core you have.
+            We replace parts only when it clearly pays.
+        - - How long does a new banking journey take?
+          - A focused journey such as account opening usually takes 8 to 12 weeks, including
+            reviews, testing, and a staged release.
+        - - How do you handle regulatory review?
+          - We involve your risk and compliance teams from the first prototype and provide
+            documentation, tests, and logs as evidence.
+        - - Can you work with our in-house team?
+          - Yes. We often work alongside bank teams, sharing code standards and handing over
+            everything we build.
+        - - What does a banking project cost?
+          - Most journeys cost $40,000 to $100,000 depending on integration and review needs. Larger
+            programs are planned in stages.
+        - - Can you improve the app we already have?
+          - Yes. Many banks start by fixing the journeys customers complain about in their current
+            app, before building anything new.
+    related:
+      services:
+        - svc.software-development
+        - svc.api-integration
+        - svc.cybersecurity
+        - svc.consulting
+      work:
+        - workarea.digital-transformation
+        - workarea.customer-portals
+        - workarea.integration-platforms
+      tech:
+        - lang.java
+        - tech.dotnet
+        - plat.azure
+        - tech.postgresql
+    cta:
+      heading: Tell us which journey to fix first
+      body:
+        Describe the journey and the systems behind it. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan a banking project
+    projects:
+      intro: Banking work is planned journey by journey. These are typical starting points.
+      rows:
+        - - Journey redesign in the current app
+          - Research, design, and build for one customer journey
+          - $25,000 to $50,000
+          - 6 to 8 weeks
+        - - Digital account opening
+          - Identity checks, account setup, and staff handoff
+          - $40,000 to $80,000
+          - 8 to 12 weeks
+        - - Loan origination tool
+          - Applications, documents, decisions, and offers
+          - $50,000 to $100,000
+          - 2 to 3 months
+        - - Integration layer and new channel
+          - Controlled access to the core for new apps
+          - $80,000 to $150,000+
+          - 3 to 4 months
+  - slug: insurance
+    entity: ind.insurance
+    name: Insurance
+    service: software-development
+    title: Insurance Software Development and Claims Automation | DECHY
+    description: "Insurance software from DECHY: quote and buy journeys, claims automation, broker
+      portals, and AI document reading for insurers and brokers."
+    intent:
+      - insurance software development
+      - claims automation software
+      - insurance broker portal
+    comprehension:
+      what:
+        We build quote and buy journeys, policy administration tools, claims systems, broker portals,
+        and AI that reads insurance documents.
+      problem: Quotes take too long, claims are slowed by paperwork, and brokers and customers chase
+        updates by email.
+      audience: Insurers, brokers, managing general agents, and insurtech companies.
+      choose:
+        Start with the step that costs most time, often claims intake or quoting, and automate it
+        end to end.
+      next: Tell us where policies or claims slow down. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Insurance software that speeds up quotes and claims
+      lead: We build the quote journeys, claims tools, and broker portals that cut days out of your
+        processes. Customers buy online in minutes, claims move without paper chasing, and your
+        handlers spend their time on judgement, not typing.
+      center:
+        - Each policy
+        - From quote to renewal to claim.
+      spokes:
+        - - Quote and buy
+          - Online in minutes.
+        - - Policy admin
+          - Changes and renewals.
+        - - Claims
+          - Intake to settlement.
+        - - Broker portal
+          - Quotes and documents.
+        - - Document AI
+          - Forms read automatically.
+        - - Reporting
+          - Loss and performance.
+      takeaway:
+        Insurance systems follow a policy from quote to renewal to claim, and every tool around it
+        should share that record.
+      visual: The life of an insurance policy
+      caption: This diagram shows a policy record at the center with quoting, policy administration,
+        claims, broker portal, document reading, and reporting around it.
+    why:
+      heading: Why insurance processes are ready for automation
+      paragraphs:
+        - Insurance is built on documents and decisions. A claim arrives as forms, photos, invoices,
+          and emails, and someone retypes the details before anyone can decide anything. Quotes wait
+          on manual checks. Brokers phone for status because no portal tells them.
+        - Much of this work follows clear rules and can be automated safely. AI can read documents
+          and suggest the details, while handlers review and decide. Rules engines can price
+          standard risks instantly and refer the unusual ones.
+        - We automate the routine and keep people in charge of the judgement calls.
+        - Brokers and agents benefit as much as customers. When quotes, documents, and renewals live
+          in a portal, brokers stop phoning for updates and place more business with you, because
+          you are simply easier to work with than the insurer next door.
+    needs:
+      heading: Insurance software we build
+      items:
+        - - Quote and buy journeys
+          - Online quotes and checkout for standard products, with referrals for risks that need
+            underwriting.
+        - - Claims intake and tracking
+          - First notice of loss online, document upload, and status updates customers can see.
+        - - AI document reading
+          - Forms, invoices, and reports read automatically, with every field shown for review.
+        - - Broker and agent portals
+          - Quotes, policy documents, renewals, and commission statements in one place.
+        - - Policy administration tools
+          - Changes, cancellations, and renewals handled without spreadsheets.
+        - - Fraud and risk checks
+          - Rules and data checks that flag unusual claims for a closer look.
+      intro:
+        Each piece removes manual work from a step your team repeats every day, and each one connects
+        to the policy and claims systems you run today.
+    steps:
+      heading: How we automate an insurance process
+      items:
+        - - Measure the process
+          - We time each step of the process and find where documents and handoffs slow it down.
+          - - Process timings
+            - Bottleneck list
+        - - Design the automation
+          - We decide what software decides, what AI suggests, and what a person always reviews.
+          - - Decision map
+            - Review rules
+        - - Build and test on real cases
+          - We test against past policies and claims before anything goes live.
+          - - Tested workflow
+            - Accuracy report
+        - - Go live and tune
+          - We launch for one product or region, track speed and accuracy, and adjust.
+          - - Live process
+            - Tuning log
+      intro:
+        We usually automate one product or one claims type first, prove the time saved, and then
+        extend the same pattern across the book.
+    help:
+      heading: What insurers and brokers get from us
+      cols:
+        - - Faster quotes
+          - - Standard risks priced instantly.
+            - Referrals routed to underwriters.
+        - - Faster claims
+          - - Documents read automatically.
+            - Customers updated without calls.
+        - - Happier brokers
+          - - Self-service portal.
+            - Documents on demand.
+        - - Control
+          - - People review every decision that matters.
+            - Full audit trail.
+    tech:
+      heading: Technical notes for insurance
+      intro: What your IT and claims leaders will ask about legacy systems, AI, and data.
+      panels:
+        - - Legacy policy systems
+          - - We connect to existing policy and claims systems through their interfaces or a
+              controlled adapter.
+            - Changes roll out product by product, so nothing has to switch over at once.
+        - - AI with oversight
+          - - Document AI shows where each value came from, and handlers confirm it.
+            - Accuracy is measured by document type and reported every month.
+    faq:
+      heading: Questions about insurance software
+      items:
+        - - How much does claims automation cost?
+          - A focused claims intake and document reading project usually costs $25,000 to $60,000
+            and takes 6 to 10 weeks.
+        - - Will AI make claims decisions?
+          - No. AI reads and suggests. Your handlers decide, and every suggestion is logged with its
+            source.
+        - - Can you work with our policy administration system?
+          - Usually, yes. We connect through its interfaces or build a controlled adapter around it.
+        - - Do you build for brokers as well as insurers?
+          - Yes. We build broker portals, comparison tools, and the integrations brokers need with
+            several insurers.
+        - - How do you protect customer data?
+          - Data is encrypted, access is role-based and logged, and test environments never use real
+            customer records.
+        - - How long does it take to launch an online quote journey?
+          - A quote and buy journey for one standard product usually takes 4 to 8 weeks, including
+            pricing rules, payments, and policy documents.
+    related:
+      services:
+        - svc.software-development
+        - svc.ai
+        - svc.automation
+        - svc.api-integration
+      work:
+        - workarea.automation-systems
+        - workarea.ai-solutions
+        - workarea.customer-portals
+      tech:
+        - lang.python
+        - prov.openai
+        - plat.azure
+        - tech.postgresql
+    cta:
+      heading: Tell us where claims or quotes slow down
+      body:
+        Describe the process and the systems it touches. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan an insurance project
+    projects:
+      intro: Most insurers and brokers start with the step that costs the most time.
+      rows:
+        - - Online quote and buy
+          - Quote, checkout, payment, and policy documents for one product
+          - $20,000 to $45,000
+          - 4 to 8 weeks
+        - - Claims intake and tracking
+          - Online first notice of loss, uploads, and status updates
+          - $20,000 to $40,000
+          - 4 to 6 weeks
+        - - AI document reading
+          - Extraction, review screen, and filing into your claims system
+          - $25,000 to $60,000
+          - 6 to 10 weeks
+        - - Broker portal and policy tools
+          - Quotes, renewals, documents, commissions, and integrations
+          - $40,000 to $100,000+
+          - 2 to 3 months
+  - slug: construction
+    entity: ind.construction
+    name: Construction
+    service: software-development
+    title: Construction Software Development and Site Apps | DECHY
+    description: "Construction software from DECHY: site apps, project tracking, approvals, and
+      reporting that connect the office to every site."
+    intent:
+      - construction software development
+      - construction project management app
+      - site app development
+    comprehension:
+      what: We build site apps, project and cost tracking, purchase approvals, document control, and
+        reporting for builders, contractors, and developers.
+      problem:
+        Sites run on paper and phone calls, costs surprise the office too late, and drawings and
+        approvals go missing.
+      audience: General contractors, specialist subcontractors, developers, and building services firms.
+      choose:
+        Start with what costs you most, usually site reporting or purchase approvals, and connect it
+        to your accounts.
+      next: Tell us how sites report to the office today. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Construction software that connects every site to the office
+      lead:
+        We build the site apps, approvals, and cost tracking that show you what is happening on every
+        project today, not at month end. Site teams report from their phones, the office sees costs
+        early, and nothing waits for a signature in someone's inbox.
+      center:
+        - Each project
+        - Costs, progress, and documents in one place.
+      spokes:
+        - - Site diaries
+          - Daily reports and photos.
+        - - Purchase approvals
+          - Fast and controlled.
+        - - Cost tracking
+          - Budget against actual.
+        - - Documents
+          - Drawings and versions.
+        - - Safety
+          - Inspections and incidents.
+        - - Subcontractors
+          - Orders and payments.
+      takeaway:
+        Construction software brings site reports, approvals, costs, documents, and safety into
+        one project record the office can trust.
+      visual: The systems around a construction project
+      caption: This diagram shows a project record at the center with site diaries, approvals, cost
+        tracking, documents, safety, and subcontractors around it.
+    why:
+      heading: Why construction needs software built for the site
+      paragraphs:
+        - A construction business is many temporary factories running at once, each with its own
+          team, suppliers, and problems. Information travels from site to office by phone, photo,
+          and paper, and arrives late. By the time a cost overrun shows up in the accounts, the
+          money is spent.
+        - Generic project tools were designed for desks, not muddy boots and poor signal. We build
+          apps that work offline with gloves on, and connect them to the systems the office already
+          uses.
+        - "The aim is simple: every project leader sees the truth about cost and progress every day."
+        - Subcontractors and suppliers are part of the picture too. When orders, payment
+          applications, and documents move through one portal, disputes drop and everyone works from
+          the same record of what was agreed and delivered.
+    needs:
+      heading: Construction software we build
+      items:
+        - - Site diary app
+          - Daily reports, labor, weather, delays, and photos captured on site, even without signal.
+        - - Purchase approvals
+          - Requests routed by value and project, approved on a phone, and turned into orders
+            automatically.
+        - - Cost and valuation tracking
+          - Budget against committed and actual cost per project, updated as orders and invoices
+            arrive.
+        - - Document control
+          - The latest drawings and method statements on every phone, with old versions clearly
+            retired.
+        - - Safety inspections
+          - Checklists, incidents, and actions tracked to closure, with evidence for audits.
+        - - Subcontractor portal
+          - Orders, applications for payment, and documents exchanged in one place.
+      intro:
+        Site teams get simple tools that work in the field, and the office gets live numbers on every
+        project without chasing anyone for updates.
+    steps:
+      heading: How we digitize a construction workflow
+      items:
+        - - Walk the site
+          - We spend time with site managers to see how reports, orders, and drawings really move.
+          - - Site findings
+            - Workflow map
+        - - Design for the site
+          - We design large, simple screens that work offline and need no training.
+          - - Prototype
+            - Field test
+        - - Connect the office
+          - We link the app to accounts, procurement, and document storage you already use.
+          - - Integrations
+            - Test data
+        - - Roll out project by project
+          - We launch on one project, refine with the team, then add the rest.
+          - - Pilot project
+            - Rollout plan
+      intro:
+        We start on one live project, so the tools are shaped by real site conditions before they
+        reach the rest of the business.
+    help:
+      heading: What contractors get from us
+      cols:
+        - - Cost control
+          - - Overruns seen in days, not months.
+            - Committed cost visible early.
+        - - Faster approvals
+          - - Orders approved between meetings.
+            - Materials on site when needed.
+        - - Fewer mistakes
+          - - Everyone on the latest drawings.
+            - Issues logged with photos.
+        - - Safer sites
+          - - Inspections done and recorded.
+            - Actions tracked to closure.
+    tech:
+      heading: Technical notes for construction
+      intro: What your operations and IT leads will ask about offline use, files, and integrations.
+      panels:
+        - - Offline and on site
+          - - Apps store work on the device and sync when a signal returns, without losing entries.
+            - Photos are compressed and tagged with project, location, and time.
+        - - Connecting office systems
+          - - We integrate with accounting and procurement tools so costs flow without rekeying.
+            - Large drawing files are stored once and versioned, so phones download only what
+              changed.
+    faq:
+      heading: Questions about construction software
+      items:
+        - - How much does a construction app cost?
+          - A site diary or approvals app usually costs $15,000 to $35,000 and takes 4 to 6 weeks. A
+            full project platform costs more and is built in stages.
+        - - Will site teams actually use it?
+          - They do when it saves them time. We design with site managers and keep every task to a
+            few taps.
+        - - Does it work without signal?
+          - Yes. Entries are saved on the phone and sync automatically when a connection returns.
+        - - Can you connect to our accounting system?
+          - Usually, yes. Orders, invoices, and costs flow between the app and your accounts
+            automatically.
+        - - Can subcontractors use it?
+          - Yes. Subcontractors get their own portal for orders, payment applications, and documents.
+        - - Can we capture photos and sign-offs on site?
+          - Yes. Site teams take photos, record signatures, and complete checklists in the app, and
+            everything is filed against the right project automatically.
+    related:
+      services:
+        - svc.software-development
+        - svc.mobile-app-development
+        - svc.automation
+        - svc.data-analytics
+      work:
+        - workarea.operations-platforms
+        - workarea.mobile-apps
+        - workarea.workflow-automation
+      tech:
+        - tech.flutter
+        - tech.react-native
+        - plat.microsoft-365
+        - tech.postgresql
+    cta:
+      heading: Tell us how your sites report today
+      body:
+        Describe your projects, your sites, and the systems in the office. We reply with a plan, a
+        price range, and a timeline.
+      label: Plan a construction app
+    projects:
+      intro: Contractors usually start with the workflow that leaks most money or time.
+      rows:
+        - - Site diary and reporting app
+          - Daily reports, labor, delays, and photos, offline
+          - $15,000 to $30,000
+          - 4 to 6 weeks
+        - - Purchase approvals
+          - Routing, mobile approvals, and orders created in your accounts
+          - $10,000 to $25,000
+          - 2 to 4 weeks
+        - - Cost tracking dashboard
+          - Budget, committed, and actual cost by project
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Full project platform
+          - Diaries, approvals, documents, safety, and a subcontractor portal
+          - $50,000 to $120,000+
+          - 2 to 4 months
+  - slug: energy
+    entity: ind.energy
+    name: Energy and utilities
+    service: software-development
+    title: Energy and Utility Software Development | DECHY
+    description:
+      "Energy and utility software from DECHY: customer portals, field service apps, asset
+      monitoring, and data platforms for energy companies and utilities."
+    intent:
+      - energy software development
+      - utility software development
+      - renewable energy software
+    comprehension:
+      what:
+        We build customer portals, billing tools, field service apps, asset and meter data platforms,
+        and dashboards for energy and utility companies.
+      problem:
+        Customer service is stretched, field work is planned on paper, and data from meters and
+        assets sits unused.
+      audience: Energy suppliers, utilities, renewable developers, solar and battery installers, and
+        energy service companies.
+      choose:
+        Start with customer self-service if contact volume is high, or with field service if crews
+        are your bottleneck.
+      next: Tell us where customers or crews wait. We reply with a plan, a price range, and a timeline.
+    hero:
+      headline: Energy and utility software for customers, crews, and assets
+      lead: We build the portals, field apps, and data platforms that help energy companies serve
+        customers and run assets well. Customers help themselves online, crews arrive with the right
+        job details, and meter and asset data turns into decisions.
+      center:
+        - Customers and assets
+        - Linked by one source of data.
+      spokes:
+        - - Customer portal
+          - Bills and usage.
+        - - Field service
+          - Jobs and crews.
+        - - Meter data
+          - Readings and trends.
+        - - Asset monitoring
+          - Health and alerts.
+        - - Installations
+          - Quotes to commissioning.
+        - - Reporting
+          - Performance and targets.
+      takeaway:
+        Energy companies run on customer and asset data that portals, field crews, monitoring, and
+        reporting should all share.
+      visual: The systems around customers and assets
+      caption: This diagram shows customers and assets at the center with a customer portal, field
+        service, meter data, asset monitoring, installations, and reporting around them.
+    why:
+      heading: What energy companies need from software now
+      paragraphs:
+        - Energy is changing faster than its systems. Customers install solar, batteries, and
+          chargers and expect to see their usage in an app. Networks need to balance more variable
+          supply. Installers need to quote, schedule, and commission faster.
+        - "Most energy companies already have billing and asset systems that work. What they lack is
+          a good layer on top: portals customers like, apps crews trust, and data platforms that
+          join readings, assets, and jobs."
+        - That is the layer we build, connected carefully to the systems you depend on. You get
+          modern customer and crew experiences without putting the systems that run supply and
+          billing at risk.
+        - We plan for growth from the start. Customer numbers, devices, and readings tend to
+          multiply quickly, so the platforms we build handle much higher volumes than you have today
+          without a rebuild.
+    needs:
+      heading: Energy and utility software we build
+      items:
+        - - Customer portal and app
+          - Bills, usage charts, payments, and moving home handled online, without a call.
+        - - Field service app
+          - Jobs, routes, safety checks, and photos for engineers and installers.
+        - - Installer quoting tools
+          - Solar, battery, and charger quotes with system sizing and finance options.
+        - - Meter and usage data platform
+          - Readings collected, cleaned, and stored so customers and analysts can trust them.
+        - - Asset monitoring dashboards
+          - Live performance and alerts for panels, batteries, and network equipment.
+        - - Operations reporting
+          - Daily figures on supply, jobs, and service levels for managers.
+      intro:
+        Each tool sits on top of the billing, metering, and asset systems you already run, and gives
+        customers, crews, and analysts what they need from them.
+    steps:
+      heading: How we deliver energy software
+      items:
+        - - Find the costly contact
+          - We study why customers call and where crews lose time, using your own data.
+          - - Contact analysis
+            - Field findings
+        - - Design self-service first
+          - We design portals and apps that answer the most common needs without staff.
+          - - Prototype
+            - Content plan
+        - - Connect billing and assets
+          - We connect to billing, metering, and asset systems through controlled interfaces.
+          - - Integrations
+            - Data checks
+        - - Launch and measure
+          - We launch, then measure call volume, job times, and data quality.
+          - - Launch
+            - Results report
+      intro:
+        We start where the cost is highest, usually customer contact or field time, and measure the
+        change from the first month.
+    help:
+      heading: What energy companies get from us
+      cols:
+        - - Lower service cost
+          - - Fewer calls about bills and usage.
+            - Moves and payments online.
+        - - Efficient crews
+          - - Right job details on site.
+            - Less paperwork after each visit.
+        - - Useful data
+          - - Readings joined to assets and jobs.
+            - Alerts before failures.
+        - - Faster installs
+          - - Quotes in minutes.
+            - Smooth handover to customers.
+    tech:
+      heading: Technical notes for energy and utilities
+      intro: What your technical leads will ask about data volume, devices, and integration.
+      panels:
+        - - Time-series data
+          - - Meter and device readings are stored in databases built for large volumes over time.
+            - Missing or odd readings are flagged before they reach a bill or a chart.
+        - - Devices and systems
+          - - We connect to inverters, chargers, and meters through the interfaces their makers
+              provide.
+            - Billing and asset systems stay the source of truth, and new tools read from them.
+    faq:
+      heading: Questions about energy software
+      items:
+        - - How much does an energy customer portal cost?
+          - Most customer portals cost $20,000 to $50,000 and take 4 to 8 weeks, depending on
+            billing and metering integration.
+        - - Can you build tools for solar and battery installers?
+          - Yes. We build quoting, scheduling, installation checklists, and customer apps for
+            installers.
+        - - Do you work with smart meter data?
+          - Yes. We build platforms that collect, clean, and chart meter data for customers and
+            analysts.
+        - - Can you connect to our billing system?
+          - Usually, yes, through its interfaces. We keep billing as the source of truth.
+        - - How do you keep critical systems safe?
+          - New tools connect through controlled interfaces with logging, and nothing changes the
+            systems that run supply.
+        - - Can customers see their usage in an app?
+          - Yes. We build apps that show usage by day and hour, compare periods, and explain what
+            changed, using the readings your meters already send.
+    related:
+      services:
+        - svc.software-development
+        - svc.data-analytics
+        - svc.mobile-app-development
+        - svc.cloud
+      work:
+        - workarea.customer-portals
+        - workarea.data-analytics
+        - workarea.operations-platforms
+      tech:
+        - lang.python
+        - plat.aws
+        - tech.postgresql
+        - tech.flutter
+    cta:
+      heading: Tell us where customers or crews wait
+      body: Describe your customers, crews, and systems. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan an energy project
+    projects:
+      intro: These are the projects energy companies most often start with.
+      rows:
+        - - Installer quoting and booking
+          - Sizing, quotes, finance options, and scheduling
+          - $10,000 to $25,000
+          - 2 to 4 weeks
+        - - Customer portal and app
+          - Bills, usage, payments, and account changes online
+          - $20,000 to $50,000
+          - 4 to 8 weeks
+        - - Field service app
+          - Jobs, routes, safety checks, and photos for crews
+          - $20,000 to $40,000
+          - 4 to 6 weeks
+        - - Meter and asset data platform
+          - Collection, cleaning, monitoring, and dashboards
+          - $40,000 to $120,000+
+          - 2 to 4 months
+  - slug: field-services
+    entity: ind.field-services
+    name: Home and field services
+    service: mobile-app-development
+    title: Field Service App and Scheduling Software | DECHY
+    description: "Field service software from DECHY: booking, dispatch, technician apps, quotes, and
+      invoicing for trades and home service companies."
+    intent:
+      - field service app development
+      - home services software
+      - dispatch software development
+    comprehension:
+      what: We build online booking, dispatch boards, technician apps, quoting, and invoicing for
+        plumbing, heating, electrical, cleaning, and repair companies.
+      problem: Jobs are booked by phone, schedules live on a whiteboard, technicians write paper job
+        sheets, and invoices go out late.
+      audience: Trades and home service companies, facilities maintenance firms, and franchise networks.
+      choose:
+        Start with the technician app and invoicing if cash flow hurts, or with booking and dispatch
+        if the phones are overloaded.
+      next: Tell us how a job moves from call to invoice. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Field service software from booking to paid invoice
+      lead:
+        We build the booking, dispatch, and technician apps that move every job from first call to
+        paid invoice. Customers book online, dispatchers see every van, and technicians finish the
+        paperwork before they leave the driveway.
+      center:
+        - Every job
+        - From booking to payment.
+      spokes:
+        - - Online booking
+          - Customers pick a slot.
+        - - Dispatch
+          - Right tech
+          - right job.
+        - - Technician app
+          - Jobs
+          - photos
+          - signatures.
+        - - Quotes
+          - Sent on the spot.
+        - - Invoices
+          - Paid the same day.
+        - - Maintenance plans
+          - Recurring revenue.
+      takeaway: Field service runs on a job record that booking, dispatch, technicians, quotes, and
+        invoices all update.
+      visual: The life of a field service job
+      caption:
+        This diagram shows a job record at the center with booking, dispatch, the technician app,
+        quotes, invoices, and maintenance plans around it.
+    why:
+      heading: Why field service businesses outgrow the whiteboard
+      paragraphs:
+        - A small team can run on phone calls and a whiteboard. Past a handful of vans it breaks.
+          Jobs are double-booked, technicians drive across town twice, and invoices wait until
+          someone types up the paper sheets on Friday.
+        - The fix is one flow from call to cash. Customers book a slot that really exists, dispatch
+          assigns by skill and location, and the technician closes the job with photos, a signature,
+          and a payment on site.
+        - We build that flow around how your trade works, and connect it to the accounts you already
+          keep. Your team spends its day on jobs and customers instead of chasing paper, phone
+          calls, and unpaid invoices.
+        - "Owners finally see the numbers that matter: jobs per technician, first-time fix rate,
+          average invoice, and how many customers come back. These figures show where to hire, what
+          to charge, and which jobs to chase."
+    needs:
+      heading: Field service software we build
+      items:
+        - - Online booking
+          - Customers choose a service and a real time slot, with the price shown up front.
+        - - Dispatch board
+          - Drag-and-drop scheduling by skill, location, and availability, with live job status.
+        - - Technician app
+          - Job details, history, checklists, photos, and signatures, working offline.
+        - - Quotes and upsells
+          - Good, better, best options sent on site and approved on the customer's phone.
+        - - Invoicing and payments
+          - Invoices raised when the job closes and paid by card before the van leaves.
+        - - Service plans
+          - Recurring maintenance visits scheduled and billed automatically.
+      intro:
+        Use one piece or the whole flow. Each part updates the same job record, so the office, the
+        technician, and the customer always see the same status.
+    steps:
+      heading: How we set up field service software
+      items:
+        - - Ride along
+          - We follow jobs from call to invoice and note every place information is copied or lost.
+          - - Job flow map
+            - Time lost
+        - - Design the technician app
+          - We design for a phone in a van, with big buttons and few steps.
+          - - Prototype
+            - Field test
+        - - Build booking and dispatch
+          - We build the booking and dispatch board and connect your accounts.
+          - - Live system
+            - Accounting link
+        - - Switch over
+          - We move a few vans first, then the whole team, with training on the way.
+          - - Pilot
+            - Full rollout
+      intro:
+        Most service companies switch over in four to eight weeks, starting with a few vans so the
+        team trusts the tools before everyone moves.
+    help:
+      heading: What service companies get from us
+      cols:
+        - - More jobs per day
+          - - Smarter routes.
+            - Less time on paperwork.
+        - - Faster cash
+          - - Invoices sent on completion.
+            - Payments taken on site.
+        - - Happier customers
+          - - Online booking.
+            - Arrival updates by text.
+        - - Recurring revenue
+          - - Service plans that renew.
+            - Reminders that rebook.
+    tech:
+      heading: Technical notes for field service
+      intro: What to know about offline apps, maps, and accounting links.
+      panels:
+        - - Apps that work anywhere
+          - - Technician apps keep jobs on the phone and sync when signal returns.
+            - Photos and signatures are attached to the job and stored securely.
+        - - Maps and accounts
+          - - Routes and travel times use mapping services to plan realistic days.
+            - Invoices and payments flow into accounting tools such as QuickBooks or Xero without
+              rekeying.
+    faq:
+      heading: Questions about field service software
+      items:
+        - - How much does field service software cost?
+          - A technician app with dispatch and invoicing usually costs $15,000 to $40,000 and takes
+            4 to 8 weeks.
+        - - Why not buy an off-the-shelf tool?
+          - Many companies should, and we will say so. We build when your trade, pricing, or
+            workflow does not fit the packaged tools.
+        - - Can customers book online?
+          - Yes. Customers choose a service and a real slot, and dispatch sees the job instantly.
+        - - Can technicians take payments?
+          - Yes. Technicians take card payments on site, and the invoice is marked paid
+            automatically.
+        - - Does it work for franchise networks?
+          - Yes. Each franchise runs its own jobs, and the owners see performance across the whole
+            network.
+        - - Can customers track the technician on the way?
+          - Yes. Customers get a text when the technician is on the way, with an arrival estimate,
+            which cuts calls and missed appointments.
+    related:
+      services:
+        - svc.mobile-app-development
+        - svc.software-development
+        - svc.automation
+        - svc.api-integration
+      work:
+        - workarea.operations-platforms
+        - workarea.mobile-apps
+        - workarea.workflow-automation
+      tech:
+        - tech.flutter
+        - tech.react-native
+        - int.stripe
+        - plat.firebase
+    cta:
+      heading: Tell us how a job moves from call to invoice
+      body: Describe your trade, team, and tools. We reply with a plan, a price range, and a timeline.
+      label: Plan field service software
+    projects:
+      intro: Service companies usually start with the part of the job that wastes most time.
+      rows:
+        - - Online booking and quotes
+          - Services, real slots, pricing, and confirmations
+          - $4,000 to $10,000
+          - 1 to 2 weeks
+        - - Technician app
+          - Jobs, checklists, photos, signatures, and offline use
+          - $12,000 to $25,000
+          - 3 to 5 weeks
+        - - Dispatch and invoicing
+          - Scheduling board, invoices, payments, and accounting link
+          - $10,000 to $25,000
+          - 3 to 5 weeks
+        - - Full field service platform
+          - Booking, dispatch, app, invoicing, and service plans
+          - $30,000 to $60,000+
+          - 6 to 8 weeks

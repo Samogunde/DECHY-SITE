@@ -1,0 +1,271 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-energy
+kind: industry
+locale: en
+path: /industries/energy/
+parent: /industries/
+entityId: ind.energy
+title: Energy and Utility Software Development | DECHY
+description: "Energy and utility software from DECHY: customer portals, field service apps, asset
+  monitoring, and data platforms for energy companies and utilities."
+breadcrumbLabel: Energy and utilities
+intent:
+  primary: energy software development
+  secondary:
+    - utility software development
+    - renewable energy software
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build customer portals, billing tools, field service apps, asset and meter data platforms,
+    and dashboards for energy and utility companies.
+  problem: Customer service is stretched, field work is planned on paper, and data from meters and
+    assets sits unused.
+  audience: Energy suppliers, utilities, renewable developers, solar and battery installers, and
+    energy service companies.
+  choose: Start with customer self-service if contact volume is high, or with field service if crews
+    are your bottleneck.
+  next: Tell us where customers or crews wait. We reply with a plan, a price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Energy and utility software for customers, crews, and assets
+    lead: We build the portals, field apps, and data platforms that help energy companies serve
+      customers and run assets well. Customers help themselves online, crews arrive with the right
+      job details, and meter and asset data turns into decisions.
+    ctas:
+      - label: Plan an energy project
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Customers and assets
+        text: Linked by one source of data.
+      spokes:
+        - title: Customer portal
+          text: Bills and usage.
+        - title: Field service
+          text: Jobs and crews.
+        - title: Meter data
+          text: Readings and trends.
+        - title: Asset monitoring
+          text: Health and alerts.
+        - title: Installations
+          text: Quotes to commissioning.
+        - title: Reporting
+          text: Performance and targets.
+    purpose: relationship
+    takeaway:
+      Energy companies run on customer and asset data that portals, field crews, monitoring, and
+      reporting should all share.
+    visualTitle: The systems around customers and assets
+    figureCaption:
+      This diagram shows customers and assets at the center with a customer portal, field
+      service, meter data, asset monitoring, installations, and reporting around them.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: What energy companies need from software now
+    paragraphs:
+      - Energy is changing faster than its systems. Customers install solar, batteries, and chargers
+        and expect to see their usage in an app. Networks need to balance more variable supply.
+        Installers need to quote, schedule, and commission faster.
+      - "Most energy companies already have billing and asset systems that work. What they lack is a
+        good layer on top: portals customers like, apps crews trust, and data platforms that join
+        readings, assets, and jobs."
+      - That is the layer we build, connected carefully to the systems you depend on. You get modern
+        customer and crew experiences without putting the systems that run supply and billing at
+        risk.
+      - We plan for growth from the start. Customer numbers, devices, and readings tend to multiply
+        quickly, so the platforms we build handle much higher volumes than you have today without a
+        rebuild.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Energy and utilities projects, costs, and timelines
+    intro: These are the projects energy companies most often start with.
+    caption:
+      Typical energy and utilities projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Installer quoting and booking
+        - Sizing, quotes, finance options, and scheduling
+        - $10,000 to $25,000
+        - 2 to 4 weeks
+      - - Customer portal and app
+        - Bills, usage, payments, and account changes online
+        - $20,000 to $50,000
+        - 4 to 8 weeks
+      - - Field service app
+        - Jobs, routes, safety checks, and photos for crews
+        - $20,000 to $40,000
+        - 4 to 6 weeks
+      - - Meter and asset data platform
+        - Collection, cleaning, monitoring, and dashboards
+        - $40,000 to $120,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about energy software
+    items:
+      - q: How much does an energy customer portal cost?
+        a:
+          Most customer portals cost $20,000 to $50,000 and take 4 to 8 weeks, depending on billing and
+          metering integration.
+      - q: Can you build tools for solar and battery installers?
+        a: Yes. We build quoting, scheduling, installation checklists, and customer apps for installers.
+      - q: Do you work with smart meter data?
+        a: Yes. We build platforms that collect, clean, and chart meter data for customers and analysts.
+      - q: Can you connect to our billing system?
+        a: Usually, yes, through its interfaces. We keep billing as the source of truth.
+      - q: How do you keep critical systems safe?
+        a:
+          New tools connect through controlled interfaces with logging, and nothing changes the systems
+          that run supply.
+      - q: Can customers see their usage in an app?
+        a:
+          Yes. We build apps that show usage by day and hour, compare periods, and explain what changed,
+          using the readings your meters already send.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we deliver energy software
+    intro:
+      We start where the cost is highest, usually customer contact or field time, and measure the
+      change from the first month.
+    steps:
+      - title: Find the costly contact
+        body: We study why customers call and where crews lose time, using your own data.
+        artifacts:
+          - Contact analysis
+          - Field findings
+      - title: Design self-service first
+        body: We design portals and apps that answer the most common needs without staff.
+        artifacts:
+          - Prototype
+          - Content plan
+      - title: Connect billing and assets
+        body: We connect to billing, metering, and asset systems through controlled interfaces.
+        artifacts:
+          - Integrations
+          - Data checks
+      - title: Launch and measure
+        body: We launch, then measure call volume, job times, and data quality.
+        artifacts:
+          - Launch
+          - Results report
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What energy companies get from us
+    columns:
+      - title: Lower service cost
+        items:
+          - Fewer calls about bills and usage.
+          - Moves and payments online.
+      - title: Efficient crews
+        items:
+          - Right job details on site.
+          - Less paperwork after each visit.
+      - title: Useful data
+        items:
+          - Readings joined to assets and jobs.
+          - Alerts before failures.
+      - title: Faster installs
+        items:
+          - Quotes in minutes.
+          - Smooth handover to customers.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for energy and utilities
+    intro: What your technical leads will ask about data volume, devices, and integration.
+    panels:
+      - title: Time-series data
+        items:
+          - Meter and device readings are stored in databases built for large volumes over time.
+          - Missing or odd readings are flagged before they reach a bill or a chart.
+      - title: Devices and systems
+        items:
+          - We connect to inverters, chargers, and meters through the interfaces their makers
+            provide.
+          - Billing and asset systems stay the source of truth, and new tools read from them.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Energy and utility software we build
+    intro:
+      Each tool sits on top of the billing, metering, and asset systems you already run, and gives
+      customers, crews, and analysts what they need from them.
+    items:
+      - title: Customer portal and app
+        body: Bills, usage charts, payments, and moving home handled online, without a call.
+      - title: Field service app
+        body: Jobs, routes, safety checks, and photos for engineers and installers.
+      - title: Installer quoting tools
+        body: Solar, battery, and charger quotes with system sizing and finance options.
+      - title: Meter and usage data platform
+        body: Readings collected, cleaned, and stored so customers and analysts can trust them.
+      - title: Asset monitoring dashboards
+        body: Live performance and alerts for panels, batteries, and network equipment.
+      - title: Operations reporting
+        body: Daily figures on supply, jobs, and service levels for managers.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Energy and utilities across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.data-analytics
+          - svc.mobile-app-development
+          - svc.cloud
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.data-analytics
+          - workarea.operations-platforms
+      - title: Technologies
+        entityIds:
+          - lang.python
+          - plat.aws
+          - tech.postgresql
+          - tech.flutter
+  - type: cta
+    id: contact-cta
+    heading: Tell us where customers or crews wait
+    body: Describe your customers, crews, and systems. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan an energy project
+      href: /contact/?service=software-development

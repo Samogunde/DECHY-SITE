@@ -113,11 +113,15 @@ export function pageTopic(page: Page, serviceOfEntity: (id: string) => string | 
     case "solution":
       return SOLUTION_TOPIC[last] ?? "consulting";
     case "industry":
-      return TOPICS[last] ? last : "company";
+      return TOPICS[last] || LIBRARY[last] ? last : "company";
     case "location":
       return TOPICS[last] ? last : "company";
     case "work-area": {
       const svc = page.entityId ? serviceOfEntity(page.entityId) : undefined;
+      return svc && TOPICS[svc] ? svc : "software-development";
+    }
+    case "case-study": {
+      const svc = page.entityId?.replace(/^svc\./, "");
       return svc && TOPICS[svc] ? svc : "software-development";
     }
     case "article": {
@@ -244,15 +248,36 @@ export function applyPhotographs(
       b.figure = undefined;
     } else if (b.type === "case-studies") {
       for (const c of b.items) c.photo ??= pick(topic, page, n++, used);
+    } else if (b.type === "team") {
+      for (const m of b.members)
+        m.photo ??= {
+          ...pick(portraitPool(m.name), page, n++, used),
+          layout: "rail",
+          position: "50% 22%",
+        };
     } else if (b.type === "testimonials") {
       for (const q of b.items)
         q.photo ??= {
-          ...pick(LIBRARY.portraits ?? [], page, n++, used),
+          ...pick(portraitPool(q.name), page, n++, used),
           layout: "rail",
           position: "50% 25%",
         };
     }
   }
+}
+
+/** First names used in the sample people, so each portrait matches the name beside it. */
+const FEMALE = new Set(
+  "Grace Helen Laura Sarah Emma Rachel Claire Nina Victoria Sophie Megan Anna Lucy Karen Natalie Sofia Olivia Hannah Charlotte Amelia Isabel Julia Rebecca Alice Emily Kate Maria Elena Priya Mia Leah Zoe Ruth Jane Ellen Fiona Tessa Ingrid Clara Naomi Chloe Margaret Diana Paula Lisa".split(
+    " ",
+  ),
+);
+
+/** Portraits for a person: the matching pool first (women or men), then the older shared set. */
+export function portraitPool(name: string): string[] {
+  const first = name.split(" ")[0] ?? "";
+  const own = FEMALE.has(first) ? LIBRARY["portraits-f"] : LIBRARY["portraits-m"];
+  return own?.length ? own : (LIBRARY.portraits ?? []);
 }
 
 /** Every photograph id in the curated pools and the library, for the registry check. */

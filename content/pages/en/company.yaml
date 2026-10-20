@@ -64,6 +64,71 @@ sections:
     visualTitle: "What DECHY does, in six verbs"
     figureCaption: "This diagram shows DECHY at the center with six areas of work around it: build, connect, automate, run, design, and decide."
 
+  - type: stats
+    id: facts
+    tone: ink
+    label: DECHY facts
+    heading: The facts, in one place
+    intro: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We work with clients worldwide, remotely."
+    items:
+      - value: "{{fact:company.founded}}"
+        label: Operating since
+      - value: "{{fact:company.clients}}"
+        label: Clients helped
+      - value: "15"
+        label: Services, one team
+      - value: "50+"
+        label: Technologies we build with
+
+  - type: team
+    id: team
+    draft: true
+    tone: ink
+    label: Our team
+    heading: The people who design, build, and support your systems
+    intro: Strategy, engineering, design, and delivery in one team, so nothing gets lost between handoffs. Hover or tap a card to read more.
+    members:
+      - name: Daniel Whitaker
+        role: Founder and CEO
+        bio: Daniel started DECHY in 2010 to give growing businesses the kind of technology team large companies have. He still joins the first call on most projects and keeps every engagement focused on business results.
+        focus: [Strategy, Client relationships, Growth]
+      - name: Sarah Mitchell
+        role: Chief Technology Officer
+        bio: Sarah leads architecture and engineering standards across every project. She has designed platforms for finance, healthcare, and logistics, and makes sure what we build is secure, tested, and easy to maintain.
+        focus: [Architecture, Security, Engineering standards]
+      - name: James Calloway
+        role: Head of Delivery
+        bio: James runs delivery and project management. Every client gets a clear plan, weekly demos, and one person who always knows the status. He is the reason our timelines stay short.
+        focus: [Project management, Planning, Quality]
+      - name: Ethan Brooks
+        role: Lead Software Engineer
+        bio: Ethan leads our web and back-end engineers. He builds with React, Next.js, Node.js, and Python, and has shipped portals, SaaS products, and integrations used by thousands of people every day.
+        focus: [Web apps, APIs, Cloud]
+      - name: Marcus Reid
+        role: Mobile Lead
+        bio: Marcus leads iPhone and Android development in Flutter, React Native, Swift, and Kotlin. He cares about apps that work offline, load fast, and pass app store review the first time.
+        focus: [iOS, Android, Flutter]
+      - name: Olivia Grant
+        role: Lead Product Designer
+        bio: Olivia turns rough ideas into screens people understand. She runs research, builds clickable prototypes, and owns our design systems, so the product feels simple from the first release.
+        focus: [UX research, UI design, Design systems]
+      - name: Lucas Moreno
+        role: AI and Automation Lead
+        bio: Lucas builds the AI assistants, agents, and automations that take repetitive work off your team. He makes sure every AI feature is accurate, measured, and has a person in control.
+        focus: [AI assistants, Automation, Integrations]
+      - name: Ryan Foster
+        role: Cloud and DevOps Lead
+        bio: Ryan looks after hosting, deployment, monitoring, and cost. He has moved dozens of systems to AWS, Azure, and Google Cloud without downtime, and keeps them running after launch.
+        focus: [AWS, Azure, Monitoring]
+      - name: Chloe Bennett
+        role: Client Success Manager
+        bio: Chloe is your contact after launch. She runs support, plans improvements with you, and makes sure small requests get done quickly and big ones get planned properly.
+        focus: [Support, Training, Roadmaps]
+      - name: Hannah Cole
+        role: Head of People
+        bio: Hannah leads hiring and growth for the DECHY team. She brings in engineers and designers who communicate clearly, and makes sure the same people stay with your project from start to finish.
+        focus: [Hiring, Team growth, Culture]
+
   - type: statement
     id: since-2010
     tone: white

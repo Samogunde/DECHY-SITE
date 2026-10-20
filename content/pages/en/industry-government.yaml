@@ -1,0 +1,270 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-government
+kind: industry
+locale: en
+path: /industries/government/
+parent: /industries/
+entityId: ind.government
+title: Government and Public Sector Software Development | DECHY
+description: "Public sector software from DECHY: accessible digital services, online forms and
+  payments, case management, and data platforms for public bodies."
+breadcrumbLabel: Government and public sector
+intent:
+  primary: government software development
+  secondary:
+    - public sector digital services
+    - case management software development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build accessible digital services, online forms and payments, case management, citizen
+    portals, and data platforms for public bodies and agencies.
+  problem: Citizens still print forms and queue, staff rekey applications into old systems, and
+    services must meet strict accessibility and security standards.
+  audience: Local and regional authorities, agencies, public services, education and health bodies,
+    and the suppliers who serve them.
+  choose:
+    Start with one high-volume service that still runs on paper or email, and rebuild it end to
+    end as a digital service.
+  next: Tell us which service costs your teams and citizens the most time. We reply with a plan, a
+    price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Public sector digital services people can actually use
+    lead: We build accessible online services, case management, and data platforms that let citizens
+      apply, pay, and track progress without visiting an office. Staff stop rekeying paper forms,
+      and every service meets the accessibility and security standards it must.
+    ctas:
+      - label: Plan a public service
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every case
+        text: From application to decision.
+      spokes:
+        - title: Online forms
+          text: Accessible and clear.
+        - title: Payments
+          text: Fees and fines online.
+        - title: Case management
+          text: Work queues for staff.
+        - title: Citizen portal
+          text: Track progress.
+        - title: Notifications
+          text: Updates by text and email.
+        - title: Data and reporting
+          text: Performance and planning.
+    purpose: relationship
+    takeaway: Public services work best when online forms, payments, case management, the citizen
+      portal, notifications, and reporting share one case record.
+    visualTitle: The systems around a public service case
+    figureCaption: This diagram shows a case record at the center with online forms, payments, case
+      management, the citizen portal, notifications, and reporting around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: What good public sector services need
+    paragraphs:
+      - Public services serve everyone, including people with disabilities, limited digital skills,
+        or poor connections. A service that only works for confident users is not finished.
+        Accessibility and plain language come first, not last.
+      - Behind the form, staff need case management that routes work, tracks deadlines, and connects
+        to the records systems already in place. Too often a shiny form ends in an inbox where
+        someone retypes everything.
+      - We build services end to end, from the citizen's first question to the decision and the
+        follow-up, and we measure completion rates, time to decision, and calls avoided.
+      - Security, privacy, and procurement rules shape the work. We document decisions, test
+        thoroughly, and hand over everything so your team owns the service long after launch.
+      - We work in short, visible stages. Each release is shown to the service team and to real
+        users before it goes live, so there are no surprises at launch and no long gap between
+        investment and benefit.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we deliver public sector services
+    intro: A first accessible online service usually goes live within four weeks, with research and
+      testing included.
+    steps:
+      - title: Research with real users
+        body: We test the current service with citizens and staff, including people with access needs.
+        artifacts:
+          - User research
+          - Accessibility findings
+      - title: Prototype and test
+        body: We prototype the new service and test it until people complete it unaided.
+        artifacts:
+          - Tested prototype
+          - Content design
+      - title: Build and integrate
+        body: We build the service and connect it to the records systems staff use.
+        artifacts:
+          - Live service
+          - Integrations
+      - title: Run and improve
+        body: We measure completion and contact rates and improve the service after launch.
+        artifacts:
+          - Performance data
+          - Improvement plan
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for the public sector
+    intro: What your digital, security, and procurement teams will ask about.
+    panels:
+      - title: Accessibility and standards
+        items:
+          - Services are built to the WCAG accessibility guidelines and tested with assistive
+            technology.
+          - Content is written in plain language and tested with real users.
+      - title: Security and ownership
+        items:
+          - Hosting, data location, and access follow your security policies and are documented.
+          - Code and documentation are handed over so your team or another supplier can continue.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What public bodies get from us
+    intro:
+      Public bodies see more people completing services online, fewer calls and visits, and staff
+      spending their time on decisions instead of data entry.
+    columns:
+      - title: Services people finish
+        items:
+          - Plain language.
+          - Accessible to everyone.
+      - title: Lower cost per case
+        items:
+          - Fewer calls and visits.
+          - No rekeying.
+      - title: Faster decisions
+        items:
+          - Work routed automatically.
+          - Deadlines tracked.
+      - title: Ownership
+        items:
+          - Documented and handed over.
+          - No lock-in.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Public sector software we build
+    intro:
+      Every service we build is accessible, secure, and designed to be run by your own team after
+      launch.
+    items:
+      - title: Accessible online services
+        body: Forms in plain language that work with screen readers, keyboards, and slow connections.
+      - title: Online payments
+        body: Fees, permits, and fines paid online with receipts and reconciliation.
+      - title: Case management
+        body: Work queues, assignments, deadlines, and decisions for the staff who handle applications.
+      - title: Citizen portals
+        body: Accounts where people track applications, upload documents, and receive messages.
+      - title: Booking and appointments
+        body: Online booking for inspections, collections, and appointments, with reminders.
+      - title: Data platforms
+        body: Service data brought together for performance reports and planning.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Government and public sector projects, costs, and timelines
+    intro: Public bodies usually start with one high-volume service and reuse the pattern.
+    caption:
+      Typical government and public sector projects with what they include, what they cost, and
+      how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Accessible online form and payment
+        - Form, validation, payment, and confirmation for one service
+        - $8,000 to $20,000
+        - 2 to 4 weeks
+      - - Citizen portal
+        - Accounts, applications, status tracking, and messages
+        - $20,000 to $45,000
+        - 5 to 8 weeks
+      - - Case management system
+        - Work queues, deadlines, documents, and decisions
+        - $30,000 to $70,000
+        - 2 to 3 months
+      - - Data and reporting platform
+        - Service data joined for performance and planning
+        - $40,000 to $100,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about public sector software
+    items:
+      - q: How much does a digital public service cost?
+        a:
+          One accessible online form with payment usually costs $8,000 to $20,000. Case management and
+          portals cost more and are delivered in stages.
+      - q: Do you meet accessibility standards?
+        a: Yes. We build to the WCAG guidelines and test with screen readers, keyboards, and real users.
+      - q: Can you connect to our existing records systems?
+        a: Usually, yes, through their interfaces or a controlled adapter, so staff keep their tools.
+      - q: Will we own the code?
+        a: Yes. You own what we build, with documentation so your team or another supplier can run it.
+      - q: Can you work within our procurement process?
+        a: Yes. We provide the documentation, pricing, and evidence procurement teams ask for.
+      - q: Do you support services after launch?
+        a: Yes. We offer support and improvement plans, or a full handover to your own team.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Government and public sector across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.web-development
+          - svc.ui-ux
+          - svc.cybersecurity
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.digital-transformation
+          - workarea.workflow-automation
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - lang.typescript
+          - tech.postgresql
+          - plat.azure
+  - type: cta
+    id: contact-cta
+    heading: Tell us which service to fix first
+    body:
+      Share the service, its volume, and the systems behind it. We reply with a plan, a price range,
+      and a timeline.
+    primary:
+      label: Plan a public service
+      href: /contact/?service=software-development

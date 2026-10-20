@@ -149,7 +149,7 @@ describe("navigation model", () => {
       "sol.business-dashboards",
       "sol.ai-customer-support",
     ]);
-    expect(i.items).toHaveLength(8);
+    expect(i.items).toHaveLength(30);
     for (const x of [...s.items, ...i.items]) {
       expect(paths.has(x.href), x.href).toBe(true);
       expect(x.summary.length, x.id).toBeGreaterThan(10);

@@ -1,0 +1,269 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-insurance
+kind: industry
+locale: en
+path: /industries/insurance/
+parent: /industries/
+entityId: ind.insurance
+title: Insurance Software Development and Claims Automation | DECHY
+description: "Insurance software from DECHY: quote and buy journeys, claims automation, broker
+  portals, and AI document reading for insurers and brokers."
+breadcrumbLabel: Insurance
+intent:
+  primary: insurance software development
+  secondary:
+    - claims automation software
+    - insurance broker portal
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build quote and buy journeys, policy administration tools, claims systems, broker portals,
+    and AI that reads insurance documents.
+  problem: Quotes take too long, claims are slowed by paperwork, and brokers and customers chase
+    updates by email.
+  audience: Insurers, brokers, managing general agents, and insurtech companies.
+  choose: Start with the step that costs most time, often claims intake or quoting, and automate it
+    end to end.
+  next: Tell us where policies or claims slow down. We reply with a plan, a price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Insurance software that speeds up quotes and claims
+    lead: We build the quote journeys, claims tools, and broker portals that cut days out of your
+      processes. Customers buy online in minutes, claims move without paper chasing, and your
+      handlers spend their time on judgement, not typing.
+    ctas:
+      - label: Plan an insurance project
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Each policy
+        text: From quote to renewal to claim.
+      spokes:
+        - title: Quote and buy
+          text: Online in minutes.
+        - title: Policy admin
+          text: Changes and renewals.
+        - title: Claims
+          text: Intake to settlement.
+        - title: Broker portal
+          text: Quotes and documents.
+        - title: Document AI
+          text: Forms read automatically.
+        - title: Reporting
+          text: Loss and performance.
+    purpose: relationship
+    takeaway:
+      Insurance systems follow a policy from quote to renewal to claim, and every tool around it
+      should share that record.
+    visualTitle: The life of an insurance policy
+    figureCaption:
+      This diagram shows a policy record at the center with quoting, policy administration,
+      claims, broker portal, document reading, and reporting around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why insurance processes are ready for automation
+    paragraphs:
+      - Insurance is built on documents and decisions. A claim arrives as forms, photos, invoices,
+        and emails, and someone retypes the details before anyone can decide anything. Quotes wait
+        on manual checks. Brokers phone for status because no portal tells them.
+      - Much of this work follows clear rules and can be automated safely. AI can read documents and
+        suggest the details, while handlers review and decide. Rules engines can price standard
+        risks instantly and refer the unusual ones.
+      - We automate the routine and keep people in charge of the judgement calls.
+      - Brokers and agents benefit as much as customers. When quotes, documents, and renewals live
+        in a portal, brokers stop phoning for updates and place more business with you, because you
+        are simply easier to work with than the insurer next door.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Insurance projects, costs, and timelines
+    intro: Most insurers and brokers start with the step that costs the most time.
+    caption: Typical insurance projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Online quote and buy
+        - Quote, checkout, payment, and policy documents for one product
+        - $20,000 to $45,000
+        - 4 to 8 weeks
+      - - Claims intake and tracking
+        - Online first notice of loss, uploads, and status updates
+        - $20,000 to $40,000
+        - 4 to 6 weeks
+      - - AI document reading
+        - Extraction, review screen, and filing into your claims system
+        - $25,000 to $60,000
+        - 6 to 10 weeks
+      - - Broker portal and policy tools
+        - Quotes, renewals, documents, commissions, and integrations
+        - $40,000 to $100,000+
+        - 2 to 3 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What insurers and brokers get from us
+    columns:
+      - title: Faster quotes
+        items:
+          - Standard risks priced instantly.
+          - Referrals routed to underwriters.
+      - title: Faster claims
+        items:
+          - Documents read automatically.
+          - Customers updated without calls.
+      - title: Happier brokers
+        items:
+          - Self-service portal.
+          - Documents on demand.
+      - title: Control
+        items:
+          - People review every decision that matters.
+          - Full audit trail.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about insurance software
+    items:
+      - q: How much does claims automation cost?
+        a:
+          A focused claims intake and document reading project usually costs $25,000 to $60,000 and takes 6
+          to 10 weeks.
+      - q: Will AI make claims decisions?
+        a: No. AI reads and suggests. Your handlers decide, and every suggestion is logged with its source.
+      - q: Can you work with our policy administration system?
+        a: Usually, yes. We connect through its interfaces or build a controlled adapter around it.
+      - q: Do you build for brokers as well as insurers?
+        a:
+          Yes. We build broker portals, comparison tools, and the integrations brokers need with several
+          insurers.
+      - q: How do you protect customer data?
+        a:
+          Data is encrypted, access is role-based and logged, and test environments never use real customer
+          records.
+      - q: How long does it take to launch an online quote journey?
+        a:
+          A quote and buy journey for one standard product usually takes 4 to 8 weeks, including pricing
+          rules, payments, and policy documents.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for insurance
+    intro: What your IT and claims leaders will ask about legacy systems, AI, and data.
+    panels:
+      - title: Legacy policy systems
+        items:
+          - We connect to existing policy and claims systems through their interfaces or a
+            controlled adapter.
+          - Changes roll out product by product, so nothing has to switch over at once.
+      - title: AI with oversight
+        items:
+          - Document AI shows where each value came from, and handlers confirm it.
+          - Accuracy is measured by document type and reported every month.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we automate an insurance process
+    intro: We usually automate one product or one claims type first, prove the time saved, and then
+      extend the same pattern across the book.
+    steps:
+      - title: Measure the process
+        body: We time each step of the process and find where documents and handoffs slow it down.
+        artifacts:
+          - Process timings
+          - Bottleneck list
+      - title: Design the automation
+        body: We decide what software decides, what AI suggests, and what a person always reviews.
+        artifacts:
+          - Decision map
+          - Review rules
+      - title: Build and test on real cases
+        body: We test against past policies and claims before anything goes live.
+        artifacts:
+          - Tested workflow
+          - Accuracy report
+      - title: Go live and tune
+        body: We launch for one product or region, track speed and accuracy, and adjust.
+        artifacts:
+          - Live process
+          - Tuning log
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Insurance software we build
+    intro:
+      Each piece removes manual work from a step your team repeats every day, and each one connects
+      to the policy and claims systems you run today.
+    items:
+      - title: Quote and buy journeys
+        body: Online quotes and checkout for standard products, with referrals for risks that need
+          underwriting.
+      - title: Claims intake and tracking
+        body: First notice of loss online, document upload, and status updates customers can see.
+      - title: AI document reading
+        body: Forms, invoices, and reports read automatically, with every field shown for review.
+      - title: Broker and agent portals
+        body: Quotes, policy documents, renewals, and commission statements in one place.
+      - title: Policy administration tools
+        body: Changes, cancellations, and renewals handled without spreadsheets.
+      - title: Fraud and risk checks
+        body: Rules and data checks that flag unusual claims for a closer look.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Insurance across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.ai
+          - svc.automation
+          - svc.api-integration
+      - title: Systems we build
+        entityIds:
+          - workarea.automation-systems
+          - workarea.ai-solutions
+          - workarea.customer-portals
+      - title: Technologies
+        entityIds:
+          - lang.python
+          - prov.openai
+          - plat.azure
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us where claims or quotes slow down
+    body:
+      Describe the process and the systems it touches. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan an insurance project
+      href: /contact/?service=software-development

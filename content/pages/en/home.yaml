@@ -596,39 +596,38 @@ sections:
 
   - type: pricing
     id: pricing
-    draft: true
     tone: ink
     label: Pricing
     heading: What projects typically cost
     intro: Every project is quoted in writing after a short discovery. These ranges show where most projects land, so you can plan before you talk to us.
     plans:
       - name: Website
-        range: "$3,000 to $15,000"
-        timeline: 2 to 6 weeks
+        range: "$2,000 to $10,000+"
+        timeline: 1 to 2 weeks
         summary: A business website or landing pages your team can edit.
         includes:
           - Design and content structure
           - Responsive build and editing tools
           - Speed, accessibility, and search setup
       - name: Web application
-        range: "$15,000 to $60,000"
-        timeline: 6 to 14 weeks
+        range: "$5,000 to $50,000+"
+        timeline: 1 to 3 weeks
         summary: A web app with accounts, dashboards, and the logic behind them.
         includes:
           - Product design and prototypes
           - Front end, back end, and database
           - Integrations, testing, and hosting
       - name: Mobile app
-        range: "$20,000 to $80,000"
-        timeline: 8 to 16 weeks
+        range: "$10,000 to $60,000+"
+        timeline: 2 to 8 weeks
         summary: An iPhone and Android app with its back end.
         includes:
           - App design and prototypes
           - Cross-platform or native build
           - App store release and back end
       - name: Custom software
-        range: "$25,000 to $120,000+"
-        timeline: 3 to 6 months
+        range: "$15,000 to $100,000+"
+        timeline: 2 to 4 months
         summary: A system built around how your organization works.
         includes:
           - Discovery and architecture

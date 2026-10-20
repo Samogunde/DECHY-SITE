@@ -25,13 +25,18 @@ describe("photography: provenance is mandatory", () => {
   it("registers every photograph with source, license evidence, hash, size and alt text", () => {
     expect(photos.length).toBeGreaterThanOrEqual(4);
     // The topic photo library (owner direction, 20 October 2026) puts photographs on every page.
-    expect(photos.length).toBeLessThanOrEqual(400);
+    expect(photos.length).toBeLessThanOrEqual(600);
     for (const a of photos) {
-      // Licensed stock (Unsplash) or supplied by the owner; either way with evidence on file.
+      // Licensed stock (Unsplash or Pexels, both free for commercial use with no attribution) or
+      // supplied by the owner; either way with evidence on file.
       expect(["licensed-stock", "owner-supplied"], a.id).toContain(a.source);
       if (a.source === "licensed-stock") {
-        expect(a.sourceUrl, a.id).toMatch(/^https:\/\/unsplash\.com\/photos\//);
-        expect(a.licenseUrl, a.id).toBe("https://unsplash.com/license");
+        expect(a.sourceUrl, a.id).toMatch(
+          /^https:\/\/(unsplash\.com\/photos\/|www\.pexels\.com\/photo\/)/,
+        );
+        expect(["https://unsplash.com/license", "https://www.pexels.com/license/"]).toContain(
+          a.licenseUrl,
+        );
       }
       expect(a.sha256, a.id).toMatch(/^[0-9a-f]{64}$/);
       expect(a.width && a.height, a.id).toBeTruthy();

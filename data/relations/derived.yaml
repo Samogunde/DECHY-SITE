@@ -159,6 +159,60 @@ relations:
   - { from: svc.ecommerce, type: usesTechnology, to: plat.bigcommerce }
   - { from: svc.ecommerce, type: usesTechnology, to: int.stripe }
   - { from: svc.ecommerce, type: usesTechnology, to: int.paypal }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.agriculture }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.agriculture }
+  - { from: svc.data-analytics, type: appliesToIndustry, to: ind.agriculture }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.agriculture }
+  - { from: workarea.operations-platforms, type: appliesToIndustry, to: ind.agriculture }
+  - { from: workarea.data-analytics, type: appliesToIndustry, to: ind.agriculture }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.agriculture }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.agriculture }
+  - { from: lang.python, type: appliesToIndustry, to: ind.agriculture }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.agriculture }
+  - { from: plat.google-cloud, type: appliesToIndustry, to: ind.agriculture }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.automotive }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.automotive }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.automotive }
+  - { from: svc.seo-aeo-geo, type: appliesToIndustry, to: ind.automotive }
+  - { from: workarea.business-web-platforms, type: appliesToIndustry, to: ind.automotive }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.automotive }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.automotive }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.automotive }
+  - { from: lang.typescript, type: appliesToIndustry, to: ind.automotive }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.automotive }
+  - { from: plat.vercel, type: appliesToIndustry, to: ind.automotive }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.banking }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.banking }
+  - { from: svc.cybersecurity, type: appliesToIndustry, to: ind.banking }
+  - { from: svc.consulting, type: appliesToIndustry, to: ind.banking }
+  - { from: workarea.digital-transformation, type: appliesToIndustry, to: ind.banking }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.banking }
+  - { from: workarea.integration-platforms, type: appliesToIndustry, to: ind.banking }
+  - { from: lang.java, type: appliesToIndustry, to: ind.banking }
+  - { from: tech.dotnet, type: appliesToIndustry, to: ind.banking }
+  - { from: plat.azure, type: appliesToIndustry, to: ind.banking }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.banking }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.beauty }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.beauty }
+  - { from: svc.ecommerce, type: appliesToIndustry, to: ind.beauty }
+  - { from: svc.branding, type: appliesToIndustry, to: ind.beauty }
+  - { from: workarea.business-web-platforms, type: appliesToIndustry, to: ind.beauty }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.beauty }
+  - { from: workarea.ecommerce-platforms, type: appliesToIndustry, to: ind.beauty }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.beauty }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.beauty }
+  - { from: int.square, type: appliesToIndustry, to: ind.beauty }
+  - { from: plat.shopify, type: appliesToIndustry, to: ind.beauty }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.construction }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.construction }
+  - { from: svc.data-analytics, type: appliesToIndustry, to: ind.construction }
+  - { from: workarea.operations-platforms, type: appliesToIndustry, to: ind.construction }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.construction }
+  - { from: workarea.workflow-automation, type: appliesToIndustry, to: ind.construction }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.construction }
+  - { from: tech.react-native, type: appliesToIndustry, to: ind.construction }
+  - { from: plat.microsoft-365, type: appliesToIndustry, to: ind.construction }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.construction }
   - { from: svc.web-development, type: appliesToIndustry, to: ind.education }
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.education }
   - { from: svc.ui-ux, type: appliesToIndustry, to: ind.education }
@@ -169,6 +223,28 @@ relations:
   - { from: lang.typescript, type: appliesToIndustry, to: ind.education }
   - { from: tech.mysql, type: appliesToIndustry, to: ind.education }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.education }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.energy }
+  - { from: svc.data-analytics, type: appliesToIndustry, to: ind.energy }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.energy }
+  - { from: svc.cloud, type: appliesToIndustry, to: ind.energy }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.energy }
+  - { from: workarea.data-analytics, type: appliesToIndustry, to: ind.energy }
+  - { from: workarea.operations-platforms, type: appliesToIndustry, to: ind.energy }
+  - { from: lang.python, type: appliesToIndustry, to: ind.energy }
+  - { from: plat.aws, type: appliesToIndustry, to: ind.energy }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.energy }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.energy }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.field-services }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.field-services }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.field-services }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.field-services }
+  - { from: workarea.operations-platforms, type: appliesToIndustry, to: ind.field-services }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.field-services }
+  - { from: workarea.workflow-automation, type: appliesToIndustry, to: ind.field-services }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.field-services }
+  - { from: tech.react-native, type: appliesToIndustry, to: ind.field-services }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.field-services }
+  - { from: plat.firebase, type: appliesToIndustry, to: ind.field-services }
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.finance }
   - { from: svc.cybersecurity, type: appliesToIndustry, to: ind.finance }
   - { from: svc.data-analytics, type: appliesToIndustry, to: ind.finance }
@@ -179,6 +255,38 @@ relations:
   - { from: lang.java, type: appliesToIndustry, to: ind.finance }
   - { from: plat.azure, type: appliesToIndustry, to: ind.finance }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.finance }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.fintech }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.fintech }
+  - { from: svc.cybersecurity, type: appliesToIndustry, to: ind.fintech }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.fintech }
+  - { from: workarea.digital-products, type: appliesToIndustry, to: ind.fintech }
+  - { from: workarea.custom-software-systems, type: appliesToIndustry, to: ind.fintech }
+  - { from: workarea.api-integrations, type: appliesToIndustry, to: ind.fintech }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.fintech }
+  - { from: int.adyen, type: appliesToIndustry, to: ind.fintech }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.fintech }
+  - { from: lang.typescript, type: appliesToIndustry, to: ind.fintech }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.fitness }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.fitness }
+  - { from: svc.ui-ux, type: appliesToIndustry, to: ind.fitness }
+  - { from: svc.digital-marketing, type: appliesToIndustry, to: ind.fitness }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.fitness }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.fitness }
+  - { from: workarea.commerce-systems, type: appliesToIndustry, to: ind.fitness }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.fitness }
+  - { from: tech.react-native, type: appliesToIndustry, to: ind.fitness }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.fitness }
+  - { from: plat.firebase, type: appliesToIndustry, to: ind.fitness }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.government }
+  - { from: svc.ui-ux, type: appliesToIndustry, to: ind.government }
+  - { from: svc.cybersecurity, type: appliesToIndustry, to: ind.government }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.government }
+  - { from: workarea.digital-transformation, type: appliesToIndustry, to: ind.government }
+  - { from: workarea.workflow-automation, type: appliesToIndustry, to: ind.government }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.government }
+  - { from: lang.typescript, type: appliesToIndustry, to: ind.government }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.government }
+  - { from: plat.azure, type: appliesToIndustry, to: ind.government }
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.healthcare }
   - { from: svc.cybersecurity, type: appliesToIndustry, to: ind.healthcare }
   - { from: svc.ui-ux, type: appliesToIndustry, to: ind.healthcare }
@@ -189,6 +297,38 @@ relations:
   - { from: lang.typescript, type: appliesToIndustry, to: ind.healthcare }
   - { from: plat.azure, type: appliesToIndustry, to: ind.healthcare }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.healthcare }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.hospitality }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.hospitality }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.hospitality }
+  - { from: svc.ui-ux, type: appliesToIndustry, to: ind.hospitality }
+  - { from: workarea.business-web-platforms, type: appliesToIndustry, to: ind.hospitality }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.hospitality }
+  - { from: workarea.api-integrations, type: appliesToIndustry, to: ind.hospitality }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.hospitality }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.hospitality }
+  - { from: plat.vercel, type: appliesToIndustry, to: ind.hospitality }
+  - { from: lang.typescript, type: appliesToIndustry, to: ind.hospitality }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.insurance }
+  - { from: svc.ai, type: appliesToIndustry, to: ind.insurance }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.insurance }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.insurance }
+  - { from: workarea.automation-systems, type: appliesToIndustry, to: ind.insurance }
+  - { from: workarea.ai-solutions, type: appliesToIndustry, to: ind.insurance }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.insurance }
+  - { from: lang.python, type: appliesToIndustry, to: ind.insurance }
+  - { from: prov.openai, type: appliesToIndustry, to: ind.insurance }
+  - { from: plat.azure, type: appliesToIndustry, to: ind.insurance }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.insurance }
+  - { from: svc.ai, type: appliesToIndustry, to: ind.legal }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.legal }
+  - { from: svc.cybersecurity, type: appliesToIndustry, to: ind.legal }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.legal }
+  - { from: workarea.knowledge-and-content-systems, type: appliesToIndustry, to: ind.legal }
+  - { from: workarea.ai-solutions, type: appliesToIndustry, to: ind.legal }
+  - { from: lang.python, type: appliesToIndustry, to: ind.legal }
+  - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.legal }
+  - { from: plat.azure, type: appliesToIndustry, to: ind.legal }
+  - { from: plat.microsoft-365, type: appliesToIndustry, to: ind.legal }
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.logistics }
   - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.logistics }
   - { from: svc.data-analytics, type: appliesToIndustry, to: ind.logistics }
@@ -209,6 +349,39 @@ relations:
   - { from: tech.dotnet, type: appliesToIndustry, to: ind.manufacturing }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.manufacturing }
   - { from: plat.azure, type: appliesToIndustry, to: ind.manufacturing }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: svc.ui-ux, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: workarea.digital-products, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: workarea.commerce-systems, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: tech.react-native, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.marketplaces }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.media }
+  - { from: svc.seo-aeo-geo, type: appliesToIndustry, to: ind.media }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.media }
+  - { from: svc.ui-ux, type: appliesToIndustry, to: ind.media }
+  - { from: workarea.knowledge-and-content-systems, type: appliesToIndustry, to: ind.media }
+  - { from: workarea.business-web-platforms, type: appliesToIndustry, to: ind.media }
+  - { from: workarea.digital-products, type: appliesToIndustry, to: ind.media }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.media }
+  - { from: plat.sanity, type: appliesToIndustry, to: ind.media }
+  - { from: plat.wordpress, type: appliesToIndustry, to: ind.media }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.media }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: svc.digital-marketing, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: svc.branding, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: workarea.business-web-platforms, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: workarea.workflow-automation, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: plat.wordpress, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.nonprofits }
+  - { from: plat.hubspot, type: appliesToIndustry, to: ind.nonprofits }
   - { from: svc.automation, type: appliesToIndustry, to: ind.professional-services }
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.professional-services }
   - { from: svc.data-analytics, type: appliesToIndustry, to: ind.professional-services }
@@ -237,6 +410,28 @@ relations:
   - { from: plat.salesforce, type: appliesToIndustry, to: ind.real-estate }
   - { from: fw.nextjs, type: appliesToIndustry, to: ind.real-estate }
   - { from: tech.postgresql, type: appliesToIndustry, to: ind.real-estate }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.recruitment }
+  - { from: svc.ai, type: appliesToIndustry, to: ind.recruitment }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.recruitment }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.recruitment }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.recruitment }
+  - { from: workarea.workflow-automation, type: appliesToIndustry, to: ind.recruitment }
+  - { from: workarea.ai-solutions, type: appliesToIndustry, to: ind.recruitment }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.recruitment }
+  - { from: lang.python, type: appliesToIndustry, to: ind.recruitment }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.recruitment }
+  - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.recruitment }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.restaurants }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.restaurants }
+  - { from: svc.ecommerce, type: appliesToIndustry, to: ind.restaurants }
+  - { from: svc.digital-marketing, type: appliesToIndustry, to: ind.restaurants }
+  - { from: workarea.commerce-systems, type: appliesToIndustry, to: ind.restaurants }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.restaurants }
+  - { from: workarea.business-web-platforms, type: appliesToIndustry, to: ind.restaurants }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.restaurants }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.restaurants }
+  - { from: int.square, type: appliesToIndustry, to: ind.restaurants }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.restaurants }
   - { from: svc.ecommerce, type: appliesToIndustry, to: ind.retail }
   - { from: svc.web-development, type: appliesToIndustry, to: ind.retail }
   - { from: svc.api-integration, type: appliesToIndustry, to: ind.retail }
@@ -248,6 +443,50 @@ relations:
   - { from: plat.woocommerce, type: appliesToIndustry, to: ind.retail }
   - { from: int.stripe, type: appliesToIndustry, to: ind.retail }
   - { from: tech.zapier, type: appliesToIndustry, to: ind.retail }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.saas }
+  - { from: svc.cloud, type: appliesToIndustry, to: ind.saas }
+  - { from: svc.ai, type: appliesToIndustry, to: ind.saas }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.saas }
+  - { from: workarea.digital-products, type: appliesToIndustry, to: ind.saas }
+  - { from: workarea.custom-software-systems, type: appliesToIndustry, to: ind.saas }
+  - { from: workarea.devops-infrastructure, type: appliesToIndustry, to: ind.saas }
+  - { from: lang.typescript, type: appliesToIndustry, to: ind.saas }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.saas }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.saas }
+  - { from: plat.aws, type: appliesToIndustry, to: ind.saas }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: svc.automation, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: workarea.customer-portals, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: workarea.integration-platforms, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: workarea.operations-platforms, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: lang.java, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: tech.nodejs, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: tech.react-native, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: plat.aws, type: appliesToIndustry, to: ind.telecommunications }
+  - { from: svc.software-development, type: appliesToIndustry, to: ind.transportation }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.transportation }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.transportation }
+  - { from: svc.data-analytics, type: appliesToIndustry, to: ind.transportation }
+  - { from: workarea.operations-platforms, type: appliesToIndustry, to: ind.transportation }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.transportation }
+  - { from: workarea.data-analytics, type: appliesToIndustry, to: ind.transportation }
+  - { from: tech.flutter, type: appliesToIndustry, to: ind.transportation }
+  - { from: tech.nodejs, type: appliesToIndustry, to: ind.transportation }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.transportation }
+  - { from: plat.google-cloud, type: appliesToIndustry, to: ind.transportation }
+  - { from: svc.web-development, type: appliesToIndustry, to: ind.travel }
+  - { from: svc.mobile-app-development, type: appliesToIndustry, to: ind.travel }
+  - { from: svc.api-integration, type: appliesToIndustry, to: ind.travel }
+  - { from: svc.ecommerce, type: appliesToIndustry, to: ind.travel }
+  - { from: workarea.commerce-systems, type: appliesToIndustry, to: ind.travel }
+  - { from: workarea.mobile-apps, type: appliesToIndustry, to: ind.travel }
+  - { from: workarea.api-integrations, type: appliesToIndustry, to: ind.travel }
+  - { from: fw.nextjs, type: appliesToIndustry, to: ind.travel }
+  - { from: tech.react-native, type: appliesToIndustry, to: ind.travel }
+  - { from: int.stripe, type: appliesToIndustry, to: ind.travel }
+  - { from: tech.postgresql, type: appliesToIndustry, to: ind.travel }
   - { from: svc.mobile-app-development, type: relatedService, to: svc.software-development }
   - { from: svc.mobile-app-development, type: relatedService, to: svc.ui-ux }
   - { from: svc.mobile-app-development, type: relatedService, to: svc.api-integration }
@@ -412,7 +651,6 @@ relations:
       type: usesTechnology,
       to: prov.anthropic-claude,
     }
-  - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.legal }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.finance }
   - { from: prov.anthropic-claude, type: appliesToIndustry, to: ind.pharmaceuticals }
   - { from: plat.aws, type: alternativeTo, to: plat.azure }
@@ -427,7 +665,6 @@ relations:
   - { from: workarea.devops-infrastructure, type: usesTechnology, to: plat.aws }
   - { from: plat.aws, type: appliesToIndustry, to: ind.retail }
   - { from: plat.aws, type: appliesToIndustry, to: ind.media }
-  - { from: plat.aws, type: appliesToIndustry, to: ind.saas }
   - { from: plat.azure, type: alternativeTo, to: plat.aws }
   - { from: plat.azure, type: alternativeTo, to: plat.google-cloud }
   - { from: plat.azure, type: integratesWith, to: tech.azure-devops }
@@ -440,7 +677,6 @@ relations:
   - { from: plat.azure, type: offersSolution, to: sol.legacy-system-modernization }
   - { from: workarea.cloud-platforms, type: usesTechnology, to: plat.azure }
   - { from: workarea.cybersecurity-systems, type: usesTechnology, to: plat.azure }
-  - { from: plat.azure, type: appliesToIndustry, to: ind.government }
   - { from: plat.bigcommerce, type: integratesWith, to: fw.nextjs }
   - { from: plat.bigcommerce, type: integratesWith, to: int.stripe }
   - { from: plat.bigcommerce, type: integratesWith, to: int.paypal }
@@ -546,7 +782,6 @@ relations:
   - { from: tech.flutter, type: offersSolution, to: sol.customer-experience-systems }
   - { from: workarea.mobile-apps, type: usesTechnology, to: tech.flutter }
   - { from: workarea.digital-products, type: usesTechnology, to: tech.flutter }
-  - { from: tech.flutter, type: appliesToIndustry, to: ind.fitness }
   - { from: tech.flutter, type: appliesToIndustry, to: ind.travel }
   - { from: tech.flutter, type: appliesToIndustry, to: ind.retail }
   - { from: lang.go, type: integratesWith, to: tool.docker }
@@ -616,9 +851,7 @@ relations:
   - { from: lang.java, type: offersSolution, to: sol.cloud-migration }
   - { from: workarea.custom-software-systems, type: usesTechnology, to: lang.java }
   - { from: workarea.integration-platforms, type: usesTechnology, to: lang.java }
-  - { from: lang.java, type: appliesToIndustry, to: ind.banking }
   - { from: lang.java, type: appliesToIndustry, to: ind.insurance }
-  - { from: lang.java, type: appliesToIndustry, to: ind.telecommunications }
   - { from: tech.kotlin, type: integratesWith, to: tech.swift }
   - { from: tech.kotlin, type: integratesWith, to: tech.flutter }
   - { from: tech.kotlin, type: integratesWith, to: tech.react-native }
@@ -745,7 +978,6 @@ relations:
   - { from: workarea.digital-products, type: usesTechnology, to: fw.nextjs }
   - { from: fw.nextjs, type: appliesToIndustry, to: ind.retail }
   - { from: fw.nextjs, type: appliesToIndustry, to: ind.professional-services }
-  - { from: fw.nextjs, type: appliesToIndustry, to: ind.saas }
   - { from: tech.nodejs, type: integratesWith, to: lang.typescript }
   - { from: tech.nodejs, type: integratesWith, to: fw.react }
   - { from: tech.nodejs, type: integratesWith, to: fw.nextjs }
@@ -897,7 +1129,6 @@ relations:
   - { from: plat.shopify, type: offersSolution, to: sol.payment-integration }
   - { from: workarea.ecommerce-platforms, type: usesTechnology, to: plat.shopify }
   - { from: workarea.commerce-systems, type: usesTechnology, to: plat.shopify }
-  - { from: plat.shopify, type: appliesToIndustry, to: ind.beauty }
   - { from: plat.shopify, type: appliesToIndustry, to: ind.fitness }
   - { from: plat.snowflake, type: integratesWith, to: plat.aws }
   - { from: plat.snowflake, type: integratesWith, to: plat.azure }
@@ -997,7 +1228,6 @@ relations:
   - { from: lang.typescript, type: offersSolution, to: sol.internal-business-software }
   - { from: workarea.custom-software-systems, type: usesTechnology, to: lang.typescript }
   - { from: workarea.business-web-platforms, type: usesTechnology, to: lang.typescript }
-  - { from: lang.typescript, type: appliesToIndustry, to: ind.saas }
   - { from: lang.typescript, type: appliesToIndustry, to: ind.finance }
   - { from: lang.typescript, type: appliesToIndustry, to: ind.technology }
   - { from: svc.web-development, type: usesTechnology, to: fw.vue }
@@ -1084,7 +1314,6 @@ relations:
   - { from: plat.wordpress, type: offersSolution, to: sol.customer-experience-systems }
   - { from: workarea.business-web-platforms, type: usesTechnology, to: plat.wordpress }
   - { from: workarea.seo-search-visibility, type: usesTechnology, to: plat.wordpress }
-  - { from: plat.wordpress, type: appliesToIndustry, to: ind.nonprofits }
   - { from: plat.wordpress, type: appliesToIndustry, to: ind.professional-services }
   - { from: plat.wordpress, type: appliesToIndustry, to: ind.education }
   - { from: tech.zapier, type: alternativeTo, to: tech.make }

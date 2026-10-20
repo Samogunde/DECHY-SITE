@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
-import type { Block } from "./schema";
+import type { Block, Page } from "./schema";
 
 /**
  * Sample proof for service pages: case studies and testimonials that show the layout until real
@@ -50,7 +50,7 @@ export function sampleProof(serviceSlug: string): Block[] {
       label: "Selected work",
       heading: "Projects and what changed",
       intro: "A few of the systems we have built, with the problem, the solution, and the result.",
-      items: s.cases.map(({ photo: _photo, ...c }) => ({ ...c, href: undefined })),
+      items: s.cases.map(({ photo: _photo, ...c }) => ({ ...c, href: casePath(c.title) })),
     },
     {
       type: "testimonials",
@@ -70,7 +70,40 @@ export function sampleProof(serviceSlug: string): Block[] {
 }
 
 /** The Work page in a review build: sample cases and quotes from the three lead services. */
-export function sampleWork(): Block[] {
+export function sampleWork(serviceNames: Record<string, string> = {}): Block[] {
+  const raw = load();
+  const grid: Block = {
+    type: "case-grid",
+    id: "case-studies",
+    tone: "ink",
+    draft: true,
+    label: "Case studies",
+    heading: "Recent projects and what changed",
+    intro:
+      "Custom software, websites, mobile apps, AI, and the systems around them. Filter by service to find work like yours.",
+    items: cases().flatMap((c) => {
+      const card = Object.values(raw.services)
+        .flatMap((s) => s.cases)
+        .find((x) => x.title === c.title);
+      return card
+        ? [
+            {
+              title: c.title,
+              company: c.company,
+              sector: card.sector,
+              service: c.service,
+              serviceLabel: serviceNames[c.service] ?? c.service,
+              result: card.results[0]!,
+              href: `/work/case-studies/${c.slug}/`,
+            },
+          ]
+        : [];
+    }),
+  } as Block;
+  return [grid, ...sampleWorkQuotes()];
+}
+
+function sampleWorkQuotes(): Block[] {
   const lead = ["software-development", "web-development", "mobile-app-development"];
   const blocks = lead.map((slug) => sampleProof(slug));
   const [cases, quotes] = [0, 1].map((k) => blocks.map((b) => b[k]).filter(Boolean)) as [
@@ -90,4 +123,192 @@ export function sampleWork(): Block[] {
     },
     { ...quotes[0], id: "client-quotes", items: quotes.map((q) => q.items[0]!).slice(0, 3) },
   ] as Block[];
+}
+
+type PriceFile = {
+  services: Record<
+    string,
+    {
+      heading: string;
+      plans: { name: string; range: string; timeline: string; summary: string }[];
+      factors: string[];
+    }
+  >;
+};
+let prices: PriceFile | undefined;
+
+/** The pricing section for a service page (data/pricing/services.yaml), or none. */
+export function servicePricing(serviceSlug: string): Block[] {
+  prices ??= YAML.parse(
+    fs.readFileSync(
+      path.join(/*turbopackIgnore: true*/ process.cwd(), "data/pricing/services.yaml"),
+      "utf8",
+    ),
+  ) as PriceFile;
+  const p = prices.services[serviceSlug];
+  if (!p) return [];
+  return [
+    {
+      type: "pricing",
+      id: "pricing",
+      tone: "ink",
+      label: "Pricing and timelines",
+      heading: p.heading,
+      intro:
+        "Every project is quoted in writing after a short call. These ranges show where most projects land, so you can plan before you talk to us.",
+      plans: p.plans.map((x) => ({ ...x, includes: [] })),
+      factors: { title: "What moves the price", items: p.factors },
+      note: "Not sure which fits? Tell us what you need and we will send a fixed quote and timeline for your project.",
+      cta: { label: "Get a quote", href: "/contact/" },
+    },
+  ] as Block[];
+}
+
+type CaseFile = {
+  cases: {
+    slug: string;
+    title: string;
+    service: string;
+    industry: string;
+    company: string;
+    duration: string;
+    challenge: string;
+    approach: string[];
+    delivered: string[];
+    stack: string[];
+    quote: { text: string; name: string; role: string };
+  }[];
+};
+let caseFile: CaseFile | undefined;
+function cases(): CaseFile["cases"] {
+  caseFile ??= YAML.parse(
+    fs.readFileSync(
+      path.join(/*turbopackIgnore: true*/ process.cwd(), "data/samples/case-studies.yaml"),
+      "utf8",
+    ),
+  ) as CaseFile;
+  return caseFile.cases;
+}
+
+/** The case study page path for a sample case title, if it has one. */
+export function casePath(title: string): string | undefined {
+  const c = cases().find((x) => x.title === title);
+  return c ? `/work/case-studies/${c.slug}/` : undefined;
+}
+
+/**
+ * Sample case study pages (review builds only): one per sample case, built from ordinary blocks.
+ * They are noindex and never published; real case studies replace them.
+ */
+export function sampleCasePages(): Page[] {
+  const raw = load();
+  const cards = Object.entries(raw.services).flatMap(([service, s]) =>
+    s.cases.map((c) => ({ ...c, service })),
+  );
+  return cases().flatMap((c) => {
+    const card = cards.find((x) => x.title === c.title);
+    if (!card) return [];
+    const results = [...card.results];
+    if (results.length < 4) results.push({ value: c.duration, label: "From kickoff to launch" });
+    const description = `${card.summary} A ${card.sector.toLowerCase()} project by DECHY.`;
+    const page: Page = {
+      id: `sample.case.${c.slug}`,
+      kind: "case-study",
+      locale: "en",
+      path: `/work/case-studies/${c.slug}/`,
+      entityId: `svc.${c.service}`,
+      title: `${c.company} case study | DECHY`.slice(0, 70),
+      description: description.length > 165 ? description.slice(0, 162) + "..." : description,
+      breadcrumbLabel: c.company,
+      intent: { primary: `${c.company} case study`, secondary: [] },
+      indexing: "noindex",
+      claims: [],
+      datePublished: "2026-10-20",
+      dateModified: "2026-10-20",
+      parent: "/work/",
+      schemaTypes: ["WebPage"],
+      sections: [
+        {
+          type: "hero",
+          id: "hero",
+          variant: "service",
+          eyebrow: `Case study: ${card.sector}`,
+          headline: c.title,
+          lead: card.summary,
+          ctas: [
+            { label: "Start a similar project", href: "/contact/" },
+            { label: "See the service", href: `/${c.service}/` },
+          ],
+          stats: [],
+          slides: [],
+        },
+        {
+          type: "stats",
+          id: "results",
+          tone: "ink",
+          label: "Results",
+          heading: `What changed for ${c.company}`,
+          items: results.slice(0, 4),
+        },
+        {
+          type: "prose",
+          id: "challenge",
+          tone: "paper",
+          label: "The challenge",
+          heading: `Where ${c.company} started`,
+          paragraphs: [c.challenge],
+        },
+        {
+          type: "columns",
+          id: "approach",
+          tone: "white",
+          label: "Our approach",
+          heading: "How we delivered it",
+          columns: [
+            { title: "How we worked", items: c.approach },
+            { title: "What we delivered", items: c.delivered },
+          ],
+        },
+        {
+          type: "entities",
+          id: "stack",
+          tone: "paper",
+          label: "Technology",
+          heading: "Built with",
+          style: "chips",
+          groups: [{ title: "Stack", entityIds: c.stack }],
+        },
+        {
+          type: "testimonials",
+          id: "quote",
+          tone: "ink",
+          label: "Client",
+          heading: "In their words",
+          items: [
+            { quote: c.quote.text, name: c.quote.name, role: c.quote.role, company: c.company },
+          ],
+        },
+        {
+          type: "related",
+          id: "related",
+          tone: "white",
+          label: "Related",
+          heading: "Related service and industry",
+          groups: [
+            { title: "Service", entityIds: [`svc.${c.service}`] },
+            { title: "Industry", entityIds: [c.industry] },
+          ],
+        },
+        {
+          type: "cta",
+          id: "contact-cta",
+          heading: "Have a project like this?",
+          body: "Tell us what you need. We reply with a plan, a fixed quote, and a timeline.",
+          primary: { label: "Start a similar project", href: "/contact/" },
+          secondary: { label: "See all case studies", href: "/work/#case-studies" },
+        },
+      ] as Block[],
+    };
+    return [page];
+  });
 }

@@ -1,0 +1,273 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-banking
+kind: industry
+locale: en
+path: /industries/banking/
+parent: /industries/
+entityId: ind.banking
+title: Banking Software Development and Modernization | DECHY
+description: "Banking software from DECHY: digital banking apps, customer onboarding, lending tools,
+  and core system integration for banks and credit unions."
+breadcrumbLabel: Banking
+intent:
+  primary: banking software development
+  secondary:
+    - digital banking app development
+    - core banking integration
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build digital banking apps, onboarding, lending and servicing tools, and the integrations
+    that connect them to core banking systems.
+  problem: Customers expect app-first banking, but core systems are old, changes are slow, and every
+    release must pass strict review.
+  audience: Banks, credit unions, building societies, and their digital, operations, and technology teams.
+  choose: Start with one customer journey, such as account opening or loan applications, and connect
+    it cleanly to the core.
+  next: Tell us which journey frustrates customers most. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Digital banking that customers enjoy and auditors approve
+    lead:
+      We build the apps, onboarding flows, and staff tools your customers judge you by, and connect
+      them safely to the core systems you already run. You modernize one journey at a time, without
+      a risky big-bang replacement.
+    ctas:
+      - label: Plan a banking project
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: The core system
+        text: Stays the source of truth.
+      spokes:
+        - title: Mobile banking
+          text: Accounts and payments.
+        - title: Account opening
+          text: Online in minutes.
+        - title: Lending
+          text: Applications and decisions.
+        - title: Staff tools
+          text: Servicing and support.
+        - title: Notifications
+          text: Alerts customers want.
+        - title: Reporting
+          text: Regulatory and internal.
+    purpose: relationship
+    takeaway:
+      Modern banking keeps the core system as the source of truth while new apps and staff tools
+      connect to it safely.
+    visualTitle: New banking journeys around the core
+    figureCaption:
+      This diagram shows the core banking system at the center with mobile banking, account
+      opening, lending, staff tools, notifications, and reporting around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why banking modernization works best in steps
+    paragraphs:
+      - Banks carry decades of systems that still work and still hold the money. Replacing them all
+        at once is expensive and risky, and many such projects stall. Meanwhile customers compare
+        your app with the best ones on their phone.
+      - We take a different path. We pick one journey, build a modern front end and the services
+        behind it, and connect it to the core through a controlled layer. Each release is reviewed,
+        tested, and reversible.
+      - Customers feel the improvement within months, and your risk team sees evidence at every step.
+      - Our role is to make each step small enough to approve and safe enough to undo. Your teams
+        keep ownership of the core, the data, and the decisions, and we leave behind code, tests,
+        and documentation they can run without us.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Banking projects, costs, and timelines
+    intro: Banking work is planned journey by journey. These are typical starting points.
+    caption: Typical banking projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Journey redesign in the current app
+        - Research, design, and build for one customer journey
+        - $25,000 to $50,000
+        - 6 to 8 weeks
+      - - Digital account opening
+        - Identity checks, account setup, and staff handoff
+        - $40,000 to $80,000
+        - 8 to 12 weeks
+      - - Loan origination tool
+        - Applications, documents, decisions, and offers
+        - $50,000 to $100,000
+        - 2 to 3 months
+      - - Integration layer and new channel
+        - Controlled access to the core for new apps
+        - $80,000 to $150,000+
+        - 3 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What banks get from us
+    columns:
+      - title: Better journeys
+        items:
+          - Apps customers rate highly.
+          - Fewer abandoned applications.
+      - title: Lower risk
+        items:
+          - No big-bang core replacement.
+          - Reversible
+          - reviewed releases.
+      - title: Efficiency
+        items:
+          - Staff tools that end calls sooner.
+          - Less manual rework.
+      - title: Evidence
+        items:
+          - Logs and controls for audit.
+          - Clear reporting.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we modernize a banking journey
+    intro:
+      Each journey moves from baseline to staged release in about two to three months, with risk
+      and compliance involved from the first prototype.
+    steps:
+      - title: Choose the journey
+        body: We agree one journey with clear value, such as account opening, and measure it today.
+        artifacts:
+          - Journey baseline
+          - Success measures
+      - title: Design and validate
+        body: We prototype the journey with real customers and review it with risk and compliance early.
+        artifacts:
+          - Tested prototype
+          - Review notes
+      - title: Build the integration layer
+        body: We connect to the core through a controlled layer, never by changing it directly.
+        artifacts:
+          - Integration services
+          - Test environment
+      - title: Release in stages
+        body: We release to a small group, monitor closely, then widen to all customers.
+        artifacts:
+          - Staged release
+          - Monitoring
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Banking software we build
+    intro:
+      Each of these connects to your existing core through a controlled layer, so new journeys go
+      live without touching the system that holds the money.
+    items:
+      - title: Mobile and online banking
+        body: Balances, transfers, cards, and statements in an app customers rate highly.
+      - title: Digital account opening
+        body: Identity checks and account setup in one sitting, with a handoff to staff when needed.
+      - title: Loan origination tools
+        body: Applications, document collection, decisions, and offers that move in days, not weeks.
+      - title: Staff servicing console
+        body: One screen for customer details, requests, and history, so calls end sooner.
+      - title: Integration layer
+        body: A controlled connection between new apps and the core, with logging and limits.
+      - title: Management reporting
+        body: Accurate daily figures for leaders and regulators, from one agreed set of definitions.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for banking
+    intro: What your architecture and security teams will ask about the core, data, and access.
+    panels:
+      - title: Working with the core
+        items:
+          - We connect through the interfaces your core system offers and add a layer that controls
+            volume and logs every call.
+          - Test environments use synthetic data, never real customer records.
+      - title: Security and access
+        items:
+          - Strong customer authentication and device checks protect every sign-in.
+          - Staff access is role-based and reviewed, and every action is logged.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about banking software
+    items:
+      - q: Do we need to replace our core banking system?
+        a:
+          Usually not. Most of the value comes from new journeys connected to the core you have. We replace
+          parts only when it clearly pays.
+      - q: How long does a new banking journey take?
+        a: A focused journey such as account opening usually takes 8 to 12 weeks, including reviews,
+          testing, and a staged release.
+      - q: How do you handle regulatory review?
+        a:
+          We involve your risk and compliance teams from the first prototype and provide documentation,
+          tests, and logs as evidence.
+      - q: Can you work with our in-house team?
+        a:
+          Yes. We often work alongside bank teams, sharing code standards and handing over everything we
+          build.
+      - q: What does a banking project cost?
+        a:
+          Most journeys cost $40,000 to $100,000 depending on integration and review needs. Larger programs
+          are planned in stages.
+      - q: Can you improve the app we already have?
+        a:
+          Yes. Many banks start by fixing the journeys customers complain about in their current app,
+          before building anything new.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Banking across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.api-integration
+          - svc.cybersecurity
+          - svc.consulting
+      - title: Systems we build
+        entityIds:
+          - workarea.digital-transformation
+          - workarea.customer-portals
+          - workarea.integration-platforms
+      - title: Technologies
+        entityIds:
+          - lang.java
+          - tech.dotnet
+          - plat.azure
+          - tech.postgresql
+  - type: cta
+    id: contact-cta
+    heading: Tell us which journey to fix first
+    body: Describe the journey and the systems behind it. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan a banking project
+      href: /contact/?service=software-development

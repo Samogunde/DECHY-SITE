@@ -212,6 +212,27 @@ export const IconName = z.enum([
   "steps",
   "growth",
   "grid",
+  "fitness",
+  "beauty",
+  "wallet",
+  "umbrella",
+  "hardhat",
+  "energy",
+  "wrench",
+  "food",
+  "hotel",
+  "travel",
+  "store",
+  "car",
+  "bus",
+  "plant",
+  "legal",
+  "media",
+  "charity",
+  "flag",
+  "app",
+  "tower",
+  "hire",
 ]);
 export type IconName = z.infer<typeof IconName>;
 
@@ -492,12 +513,12 @@ export const Block = z.discriminatedUnion("type", [
           range: z.string(),
           timeline: z.string(),
           summary: z.string(),
-          includes: z.array(z.string()).min(2).max(6),
+          includes: z.array(z.string()).max(6).default([]),
           featured: z.boolean().optional(),
         }),
       )
       .min(2)
-      .max(4),
+      .max(6),
     factors: z.object({ title: z.string(), items: z.array(z.string()).min(2) }),
     note: z.string().optional(),
     cta: Cta,
@@ -556,6 +577,47 @@ export const Block = z.discriminatedUnion("type", [
         z.object({ name: z.string(), icon: IconName.optional(), asset: z.string().optional() }),
       )
       .min(4),
+  }),
+  /** The team: portrait, name, and role, with a short bio that opens in place. */
+  z.object({
+    type: z.literal("team"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    members: z
+      .array(
+        z.object({
+          name: z.string(),
+          role: z.string(),
+          bio: z.string(),
+          focus: z.array(z.string()).max(4).default([]),
+          photo: PhotoRef.optional(),
+        }),
+      )
+      .min(3),
+  }),
+  /** Case study cards in a grid with service filters (the Work page). */
+  z.object({
+    type: z.literal("case-grid"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          title: z.string(),
+          company: z.string(),
+          sector: z.string(),
+          service: z.string(),
+          serviceLabel: z.string(),
+          result: Stat,
+          href: z.string(),
+          photo: PhotoRef.optional(),
+        }),
+      )
+      .min(2),
   }),
   /** Partners and platforms: a mark, the kind of partnership, and one line each, plus an invitation. */
   z.object({
@@ -841,6 +903,7 @@ export const Page = z.object({
     "industry",
     "location",
     "article",
+    "case-study",
     "contact",
     "legal",
   ]),

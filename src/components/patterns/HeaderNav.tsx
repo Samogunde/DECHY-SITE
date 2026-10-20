@@ -13,7 +13,8 @@ type Props = { model: NavModel };
 type MenuItem = Exclude<NavItemModel, { kind: "link" }>;
 
 const HOVER_OPEN_MS = 100;
-const HOVER_CLOSE_MS = 250;
+// Owner direction, 20 October 2026: a menu closes as soon as the pointer leaves it.
+const HOVER_CLOSE_MS = 40;
 
 /** Items without a page render as plain text, never as links or placeholders. */
 function Entry({
@@ -158,6 +159,28 @@ const LIST_ICON: Record<string, IconName> = {
   retail: "bag",
   education: "education",
   "professional-services": "briefcase",
+  fitness: "fitness",
+  beauty: "beauty",
+  fintech: "wallet",
+  banking: "finance",
+  insurance: "umbrella",
+  construction: "hardhat",
+  energy: "energy",
+  "field-services": "wrench",
+  restaurants: "food",
+  hospitality: "hotel",
+  travel: "travel",
+  marketplaces: "store",
+  automotive: "car",
+  transportation: "bus",
+  agriculture: "plant",
+  recruitment: "hire",
+  legal: "legal",
+  media: "media",
+  nonprofits: "charity",
+  government: "flag",
+  saas: "app",
+  telecommunications: "tower",
   "business-process-automation": "workflow",
   "legacy-system-modernization": "code",
   "cloud-migration": "cloud",
@@ -412,17 +435,19 @@ function ListPanel({
   item: Extract<MenuItem, { kind: "solutions" | "industries" }>;
   onNavigate: () => void;
 }) {
+  // Long lists (thirty industries) show names only, three to a row.
+  const compact = item.items.length > 12;
   return (
     <div className="mega-pad">
       <p className="mega-group-label">{item.heading}</p>
-      <ul className="mega-list mega-grid-2">
+      <ul className={`mega-list ${compact ? "mega-grid-3" : "mega-grid-2"}`}>
         {item.items.map((i) => (
           <li key={i.id}>
             <MenuRow
               label={i.label}
               href={i.href}
               icon={LIST_ICON[slugOf(i.href)]}
-              line={i.summary}
+              line={compact ? undefined : i.summary}
               onNavigate={onNavigate}
             />
           </li>
@@ -672,8 +697,24 @@ export function HeaderNav({ model }: Props) {
       const t = e.target as Element | null;
       if (!t?.closest("[data-menu-item]")) closeMenus();
     };
+    // A safety net for missed leave events (fast exits, leaving the window): any mouse movement
+    // outside the open menu item closes it.
+    const onMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
+      const t = e.target as Element | null;
+      if (!t?.closest("[data-menu-item]")) closeMenus();
+    };
+    const onOut = (e: MouseEvent) => {
+      if (!e.relatedTarget) closeMenus();
+    };
     document.addEventListener("pointerdown", onDown);
-    return () => document.removeEventListener("pointerdown", onDown);
+    document.addEventListener("pointermove", onMove, { passive: true });
+    document.addEventListener("mouseout", onOut);
+    return () => {
+      document.removeEventListener("pointerdown", onDown);
+      document.removeEventListener("pointermove", onMove);
+      document.removeEventListener("mouseout", onOut);
+    };
   }, [menu.id, closeMenus]);
 
   const onEnter = (id: string, e: React.PointerEvent) => {
@@ -691,7 +732,7 @@ export function HeaderNav({ model }: Props) {
     window.clearTimeout(timers.current.open);
     window.clearTimeout(timers.current.close);
     timers.current.close = window.setTimeout(
-      () => setMenu((s) => (s.id === id && !s.pinned ? { id: null, pinned: false } : s)),
+      () => setMenu((s) => (s.id === id ? { id: null, pinned: false } : s)),
       HOVER_CLOSE_MS,
     );
   };

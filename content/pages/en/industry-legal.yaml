@@ -1,0 +1,270 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-legal
+kind: industry
+locale: en
+path: /industries/legal/
+parent: /industries/
+entityId: ind.legal
+title: Legal Software and Law Firm Technology | DECHY
+description: "Legal software from DECHY: client portals, intake, document automation, matter
+  management, and AI tools for law firms and legal teams."
+breadcrumbLabel: Legal
+intent:
+  primary: legal software development
+  secondary:
+    - law firm software
+    - legal document automation
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build client intake, secure client portals, document automation, matter management, and AI
+    research and drafting tools for law firms and legal teams.
+  problem: Lawyers spend billable hours on forms and status emails, documents are drafted from
+    scratch, and clients ask for updates the firm could share automatically.
+  audience: Law firms, in-house legal teams, legal service providers, and legal technology startups.
+  choose: Start with intake and the client portal if client service is the issue, or with document
+    automation if drafting time is the cost.
+  next: Tell us which tasks take your team the most unbilled time. We reply with a plan, a price
+    range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Legal software that gives lawyers their hours back
+    lead:
+      We build the intake, portals, and document automation that take routine work off your lawyers'
+      desks. Clients get answers and updates without calling, standard documents draft themselves,
+      and fee earners spend their time on advice.
+    ctas:
+      - label: Plan legal technology
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every matter
+        text: Client, documents, deadlines, and fees.
+      spokes:
+        - title: Client intake
+          text: Online and conflict-checked.
+        - title: Client portal
+          text: Updates and documents.
+        - title: Document automation
+          text: Drafts in minutes.
+        - title: Matter management
+          text: Tasks and deadlines.
+        - title: AI tools
+          text: Research and summaries.
+        - title: Billing
+          text: Time and invoices.
+    purpose: relationship
+    takeaway:
+      Legal software organizes every matter so intake, the client portal, documents, deadlines,
+      AI tools, and billing share one record.
+    visualTitle: The systems around a legal matter
+    figureCaption: This diagram shows a matter record at the center with client intake, the client
+      portal, document automation, matter management, AI tools, and billing around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why law firms are rethinking routine work
+    paragraphs:
+      - Much legal work is repeatable. Intake questions, engagement letters, standard agreements,
+        and status updates follow patterns, yet they are still typed by people whose time is worth
+        hundreds an hour.
+      - Automating that work does not replace lawyers. It removes the parts clients do not want to
+        pay for, so fixed fees become profitable and fee earners spend their day on judgement.
+      - Clients expect the same convenience they get from their bank. A secure portal for documents,
+        updates, and payments builds trust and cuts the calls that interrupt focused work.
+      - Confidentiality shapes every decision we make. Access is strict, actions are logged, and AI
+        tools are configured so client information is never used to train outside models.
+      - Most firms do not need a huge program to see results. One well-chosen automation, such as
+        intake for a busy practice area or templates for its most common documents, often frees
+        enough time in the first quarter to fund the next step.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build legal technology
+    intro: Most firms see their first automated documents or online intake within a month.
+    steps:
+      - title: Find the repeat work
+        body: We list the tasks your team repeats and time how long each takes.
+        artifacts:
+          - Task inventory
+          - Time study
+      - title: Turn templates into flows
+        body: We convert your best precedents into question-led templates lawyers approve.
+        artifacts:
+          - Template library
+          - Review rules
+      - title: Build the client side
+        body: We build intake and the portal so clients self-serve the common requests.
+        artifacts:
+          - Portal
+          - Intake forms
+      - title: Add AI carefully
+        body: We add AI tools with strict data controls and lawyer review on every output.
+        artifacts:
+          - AI tools
+          - Data controls
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Legal software we build
+    intro: Each tool connects to the practice management system you already use, so matters and time
+      stay in one place.
+    items:
+      - title: Client intake
+        body: Online questionnaires that collect facts, run conflict checks, and book consultations.
+      - title: Secure client portal
+        body: Documents, updates, signatures, and payments in one place clients can trust.
+      - title: Document automation
+        body: Standard documents drafted from a short set of questions, ready for lawyer review.
+      - title: Matter and deadline tracking
+        body: Tasks, key dates, and reminders so nothing important slips.
+      - title: AI research and summaries
+        body: Long documents summarized and key terms extracted, with sources shown.
+      - title: Fixed-fee and billing tools
+        body: Packaged services, online payment, and time captured against each matter.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What law firms get from us
+    intro:
+      Firms see the benefit in fewer interruptions, faster turnaround on standard work, and fixed
+      fees that finally make money.
+    columns:
+      - title: More billable time
+        items:
+          - Routine drafting automated.
+          - Fewer status calls.
+      - title: Better client service
+        items:
+          - Updates in a portal.
+          - Documents signed online.
+      - title: Profitable fixed fees
+        items:
+          - Standard work packaged.
+          - Paid online.
+      - title: Lower risk
+        items:
+          - Deadlines tracked.
+          - Every action logged.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about legal software
+    items:
+      - q: How much does legal document automation cost?
+        a:
+          Document automation for a set of standard documents usually costs $10,000 to $30,000 and takes 3
+          to 5 weeks.
+      - q: Will AI give legal advice to our clients?
+        a:
+          No. AI helps your lawyers summarize and draft, and a lawyer reviews everything before it reaches
+          a client.
+      - q: Can you connect to our practice management system?
+        a: Usually, yes, through its interfaces, so matters, contacts, and time stay in one place.
+      - q: Is client data safe in a portal?
+        a: Yes. Data is encrypted, access is strictly controlled, and every action is logged.
+      - q: Do you work with in-house legal teams?
+        a:
+          Yes. In-house teams use our intake, contract automation, and request tracking to handle business
+          requests faster.
+      - q: Can clients sign documents online?
+        a:
+          Yes. Clients can review and sign documents in the portal using established e-signature services.
+          Signed documents are filed against the matter automatically, so nobody has to download and
+          upload them again.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for legal teams
+    intro: What your IT and risk partners will ask about confidentiality, systems, and AI.
+    panels:
+      - title: Confidentiality and access
+        items:
+          - Documents are encrypted, access is role-based, and every view is logged.
+          - Data location is chosen to meet your professional and client obligations.
+      - title: Systems and AI
+        items:
+          - We connect to practice management and document systems through their interfaces.
+          - AI providers are configured so client data is not retained or used for training.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Legal projects, costs, and timelines
+    intro: Firms usually start with intake or document automation, then add the portal.
+    caption: Typical legal projects with what they include, what they cost, and how long they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Online intake and booking
+        - Questionnaires, conflict checks, and consultation booking
+        - $5,000 to $12,000
+        - 2 to 3 weeks
+      - - Document automation
+        - Templates, question flows, and drafts for standard documents
+        - $10,000 to $30,000
+        - 3 to 5 weeks
+      - - Secure client portal
+        - Documents, updates, messages, and payments
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Matter platform with AI tools
+        - Matters, deadlines, AI research and summaries, and billing links
+        - $40,000 to $90,000+
+        - 2 to 3 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Legal across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.ai
+          - svc.automation
+          - svc.cybersecurity
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.knowledge-and-content-systems
+          - workarea.ai-solutions
+      - title: Technologies
+        entityIds:
+          - lang.python
+          - prov.anthropic-claude
+          - plat.azure
+          - plat.microsoft-365
+  - type: cta
+    id: contact-cta
+    heading: Tell us where your team loses unbilled hours
+    body: Share the tasks and systems involved. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan legal technology
+      href: /contact/?service=software-development

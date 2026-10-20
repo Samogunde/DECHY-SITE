@@ -1,0 +1,271 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-media
+kind: industry
+locale: en
+path: /industries/media/
+parent: /industries/
+entityId: ind.media
+title: Media and Publishing Platform Development | DECHY
+description: "Media and publishing software from DECHY: fast publishing sites, subscriptions and
+  paywalls, podcast and video platforms, and newsroom tools."
+breadcrumbLabel: Media and publishing
+intent:
+  primary: publishing platform development
+  secondary:
+    - media website development
+    - subscription paywall development
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build fast publishing websites, subscriptions and paywalls, newsletters, podcast and video
+    platforms, and editorial tools for publishers and media brands.
+  problem:
+    Advertising pays less every year, sites are slow under traffic spikes, and editors fight a
+    content system that was built for another decade.
+  audience: News and magazine publishers, media brands, podcast and video networks, creators, and
+    membership organizations.
+  choose: Start with subscriptions and the reader experience if revenue is the goal, or with the
+    editorial system if publishing speed is the problem.
+  next: Tell us how you publish and earn today. We reply with a plan, a price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Publishing platforms that load fast and earn from readers
+    lead: We build the sites, subscriptions, and editorial tools that help media brands grow loyal
+      audiences and recurring revenue. Pages load instantly under traffic spikes, readers subscribe
+      in a minute, and editors publish without fighting the system.
+    ctas:
+      - label: Plan a media platform
+        href: /contact/?service=web-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every reader
+        text: From first visit to subscriber.
+      spokes:
+        - title: Publishing site
+          text: Fast under any traffic.
+        - title: Editorial tools
+          text: Write, edit, schedule.
+        - title: Subscriptions
+          text: Paywalls and plans.
+        - title: Newsletters
+          text: Direct to the inbox.
+        - title: Podcasts and video
+          text: Players and feeds.
+        - title: Audience data
+          text: What readers value.
+    purpose: relationship
+    takeaway: Media platforms turn visitors into subscribers when publishing, subscriptions,
+      newsletters, audio, video, and audience data share one reader record.
+    visualTitle: The platform around a reader
+    figureCaption:
+      This diagram shows a reader record at the center with the publishing site, editorial
+      tools, subscriptions, newsletters, podcasts and video, and audience data around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why publishers are rebuilding around readers
+    paragraphs:
+      - For years, media grew on page views and advertising. Those rates keep falling, and platforms
+        control more of the traffic. Publishers that thrive now earn directly from readers through
+        subscriptions, memberships, events, and newsletters.
+      - That shift needs different technology. Paywalls must be smart enough to convert without
+        driving people away. Accounts, payments, and newsletters must work as one. Pages must stay
+        fast when a story spreads.
+      - "Editors need tools that keep up with the news: drafting, editing, scheduling, and
+        publishing to web, apps, and newsletters from one place."
+      - We build on modern headless content systems, which separate writing from presentation, so
+        your team can publish everywhere while readers get a fast, clean experience.
+      - We also help with the business side of the platform. Clear dashboards show which sections,
+        authors, and formats bring subscribers, so editorial and commercial teams can plan together
+        from the same numbers instead of arguing over different reports.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build media platforms
+    intro: A rebuilt publishing site usually launches in two to four weeks, with subscriptions close
+      behind.
+    steps:
+      - title: Study the readers
+        body: We look at how readers arrive, what they read, and where they subscribe or leave.
+        artifacts:
+          - Audience review
+          - Conversion points
+      - title: Model the content
+        body: We structure stories, authors, and sections so content can travel to every channel.
+        artifacts:
+          - Content model
+          - Migration plan
+      - title: Build for speed
+        body: We build pages that load fast and stay fast during traffic spikes.
+        artifacts:
+          - Performance budget
+          - Load test
+      - title: Launch subscriptions
+        body: We launch plans and the paywall, then test offers to improve conversion.
+        artifacts:
+          - Subscription flow
+          - Offer tests
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What publishers get from us
+    intro:
+      Publishers see the change in page speed, editorial calm, and a growing number of readers who
+      pay directly.
+    columns:
+      - title: Reader revenue
+        items:
+          - Subscriptions that convert.
+          - Offers you can test.
+      - title: Speed
+        items:
+          - Pages that load instantly.
+          - Stable under spikes.
+      - title: Editorial calm
+        items:
+          - Publish everywhere at once.
+          - Scheduling and roles.
+      - title: Audience insight
+        items:
+          - Stories that convert.
+          - Readers at risk of leaving.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Media and publishing projects, costs, and timelines
+    intro: Publishers usually start with the site and subscriptions, then add audio, video, and apps.
+    caption:
+      Typical media and publishing projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Publishing website rebuild
+        - Fast templates, content migration, and search setup
+        - $8,000 to $20,000
+        - 2 to 4 weeks
+      - - Subscriptions and paywall
+        - Plans, metering, accounts, payments, and offers
+        - $10,000 to $30,000
+        - 3 to 5 weeks
+      - - Podcast or video platform
+        - Players, feeds, members-only content, and analytics
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Full media platform with apps
+        - Editorial system, subscriptions, newsletters, and apps
+        - $40,000 to $100,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about media and publishing platforms
+    items:
+      - q: How much does a publishing platform cost?
+        a:
+          A rebuilt publishing site usually costs $8,000 to $20,000. Adding subscriptions and a paywall
+          usually costs $10,000 to $30,000.
+      - q: Can you migrate our archive?
+        a: Yes. We move articles, images, authors, and URLs, with redirects so search rankings carry over.
+      - q: Will the site stay up when a story goes viral?
+        a: Yes. Pages are cached at the edge and tested for high traffic before launch.
+      - q: Can readers pay for podcasts or video?
+        a: Yes. Members-only episodes and videos are unlocked by the same subscription as articles.
+      - q: Do you build newsletters?
+        a: Yes. Sign-ups, segments, and automated editions connect to your stories and subscriber accounts.
+      - q: Can we keep WordPress?
+        a:
+          Often, yes. We can use WordPress as the editorial system with a faster front end in front of it.
+          Readers manage their own subscription and newsletter preferences from one account.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Media and publishing software we build
+    intro: Each piece shares one reader account, so subscriptions, newsletters, and content work together.
+    items:
+      - title: Publishing website
+        body: Fast article pages, section fronts, and search that rank well and stay up under spikes.
+      - title: Headless editorial system
+        body: Write once and publish to web, apps, and newsletters, with roles and scheduling.
+      - title: Subscriptions and paywalls
+        body: Metered or hard paywalls, plans, gifts, and offers tested against conversion.
+      - title: Newsletters
+        body: Sign-up, segments, and automated editions from your published stories.
+      - title: Podcast and video hubs
+        body: Players, episode pages, feeds, and members-only content.
+      - title: Audience dashboards
+        body: Which stories bring subscribers, and which readers are at risk of leaving.
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for media platforms
+    intro: What your product and engineering leads will ask about content systems, caching, and payments.
+    panels:
+      - title: Content and caching
+        items:
+          - We use headless content systems such as Sanity, Strapi, or WordPress with a modern front
+            end.
+          - Pages are cached at the network edge so traffic spikes do not slow the site.
+      - title: Subscriptions and access
+        items:
+          - Subscriptions run through Stripe or your existing provider, with accounts shared across
+            web and apps.
+          - Paywall rules are configurable by section, story, and reader.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Media and publishing across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.web-development
+          - svc.seo-aeo-geo
+          - svc.mobile-app-development
+          - svc.ui-ux
+      - title: Systems we build
+        entityIds:
+          - workarea.knowledge-and-content-systems
+          - workarea.business-web-platforms
+          - workarea.digital-products
+      - title: Technologies
+        entityIds:
+          - fw.nextjs
+          - plat.sanity
+          - plat.wordpress
+          - int.stripe
+  - type: cta
+    id: contact-cta
+    heading: Tell us how you publish and earn today
+    body: Share your content, channels, and revenue mix. We reply with a plan, a price range, and a
+      timeline.
+    primary:
+      label: Plan a media platform
+      href: /contact/?service=web-development

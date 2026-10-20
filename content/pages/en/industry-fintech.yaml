@@ -1,0 +1,277 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-fintech
+kind: industry
+locale: en
+path: /industries/fintech/
+parent: /industries/
+entityId: ind.fintech
+title: Fintech Software and Payment App Development | DECHY
+description: "Fintech software from DECHY: payment apps, wallets, lending platforms, and customer
+  onboarding, built secure, tested, and ready to scale."
+breadcrumbLabel: Fintech and payments
+intent:
+  primary: fintech software development
+  secondary:
+    - payment app development
+    - fintech app company
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what: We build payment apps, digital wallets, lending and investment platforms, onboarding, and
+    back-office tools for fintech companies.
+  problem: Fintech teams must move fast while handling money, identity checks, and audits, and one
+    mistake costs trust.
+  audience: Fintech startups, payment companies, lenders, investment platforms, and banks launching
+    digital products.
+  choose:
+    Start with a focused first product on proven payment and identity providers, then build the
+    parts that make you different.
+  next:
+    Tell us what your product moves, lends, or manages. We reply with a plan, a price range, and a
+    timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Fintech software and payment apps built to be trusted
+    lead: We build the apps, ledgers, and onboarding flows that let your customers move money with
+      confidence. You launch faster on proven providers, and your own product stays secure, tested,
+      and ready for an audit.
+    ctas:
+      - label: Plan a fintech product
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every transaction
+        text: Recorded once, traceable forever.
+      spokes:
+        - title: Onboarding
+          text: Identity and checks.
+        - title: Wallet or account
+          text: Balances and history.
+        - title: Payments
+          text: Cards and transfers.
+        - title: Ledger
+          text: Every movement recorded.
+        - title: Risk
+          text: Fraud rules and limits.
+        - title: Back office
+          text: Support and reporting.
+    purpose: relationship
+    takeaway:
+      Fintech products depend on a ledger where every transaction is recorded once and traced by
+      onboarding, payments, risk, and support.
+    visualTitle: The parts of a fintech product
+    figureCaption: This diagram shows a transaction ledger at the center with onboarding, accounts,
+      payments, risk rules, and back office around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: Why fintech needs a different kind of engineering
+    paragraphs:
+      - A bug in most apps is an inconvenience. In fintech it can send money to the wrong place or
+        freeze someone's salary. Your software has to be correct under load, explain every number,
+        and survive a regulator asking how a balance was calculated.
+      - Speed still matters, because competitors launch every month. We get you to market quickly by
+        building on established payment, banking, and identity providers, and we spend our effort on
+        the experience and logic that are truly yours.
+      - Every money movement goes through a ledger, every rule is tested, and every change is logged.
+      - We work well with small product teams. We can own the whole build, or join your engineers to
+        add a product line, strengthen testing, or rebuild a weak part of the platform without
+        slowing your roadmap.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Fintech and payments projects, costs, and timelines
+    intro: These ranges cover most fintech builds we are asked to quote.
+    caption:
+      Typical fintech and payments projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Payment or wallet first version
+        - Accounts, payments, ledger, and onboarding on proven providers
+        - $25,000 to $45,000
+        - 6 to 8 weeks
+      - - Merchant and payout platform
+        - Checkout, invoicing, split payments, and payouts
+        - $30,000 to $60,000
+        - 6 to 10 weeks
+      - - Lending platform
+        - Applications, decisions, repayments, and collections
+        - $40,000 to $80,000
+        - 2 to 3 months
+      - - Investment or banking-grade app
+        - Portfolios or accounts, statements, controls, and reporting
+        - $60,000 to $150,000+
+        - 3 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we build a fintech product
+    intro:
+      A focused first version usually reaches real customers in six to ten weeks, with tests and
+      controls in place from the first release.
+    steps:
+      - title: Define the money flows
+        body: We map how money, data, and approvals move, and which provider handles each step.
+        artifacts:
+          - Flow diagrams
+          - Provider choices
+      - title: Design for trust
+        body: We design onboarding and payments so customers always know what happened and what comes next.
+        artifacts:
+          - Prototype
+          - Copy for key moments
+      - title: Build with a ledger and tests
+        body: Every movement is recorded in a ledger and covered by automated tests before release.
+        artifacts:
+          - Ledger
+          - Test suite
+      - title: Prepare for audit
+        body: We document controls, access, and logs so your compliance review starts from evidence.
+        artifacts:
+          - Control notes
+          - Audit logs
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for fintech
+    intro: What your engineering or compliance lead will ask about ledgers, providers, and security.
+    panels:
+      - title: Ledgers and reconciliation
+        items:
+          - Balances are derived from an append-only ledger, never edited in place.
+          - Daily reconciliation compares the ledger with provider reports and flags differences.
+      - title: Security and providers
+        items:
+          - Card data stays with certified providers such as Stripe, so your own system never stores
+            it.
+          - Sign-in uses strong authentication, and sensitive actions need a second step.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Fintech products we build
+    intro:
+      We build on licensed payment, banking, and identity providers, then design the experience and
+      logic that make your product worth choosing.
+    items:
+      - title: Payment apps and wallets
+        body: Send, receive, and store money, with cards, transfers, and instant notifications.
+      - title: Customer onboarding
+        body: Identity verification and checks that approve good customers in minutes and flag risky ones.
+      - title: Lending platforms
+        body: Applications, decisions, repayments, and collections, with the rules your credit team sets.
+      - title: Investment and savings apps
+        body: Portfolios, goals, recurring deposits, and clear statements people actually read.
+      - title: Merchant and payout tools
+        body: Checkout, invoicing, split payments, and payouts for platforms that pay other people.
+      - title: Back-office consoles
+        body: Support, refunds, disputes, and reporting for your operations and compliance teams.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about fintech development
+    items:
+      - q: How much does a fintech app cost?
+        a:
+          A focused first product usually costs $25,000 to $60,000 and takes 6 to 10 weeks. Lending or
+          investment platforms with many rules cost more.
+      - q: Do you handle licensing?
+        a:
+          No. Licensing is a legal matter for you and your advisers. We build the product and the controls
+          your compliance team needs.
+      - q: Which payment and identity providers do you use?
+        a:
+          We choose by market and product, from providers such as Stripe, Adyen, and established identity
+          check services.
+      - q: Can you add features to our existing app?
+        a:
+          Yes. We often join fintech teams to build a new product line, improve onboarding, or strengthen
+          testing.
+      - q: How do you keep money movements correct?
+        a:
+          Every movement goes through a ledger with automated tests and daily reconciliation, so errors
+          surface early.
+      - q: Can you build a first version to show investors?
+        a:
+          Yes. We often build a focused first version on real providers, so you can demo live transactions
+          and collect feedback before raising or scaling.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What fintech teams get from us
+    columns:
+      - title: Speed
+        items:
+          - A first product in weeks.
+          - Proven providers instead of rebuilding rails.
+      - title: Trust
+        items:
+          - Clear money movement for customers.
+          - A ledger that reconciles.
+      - title: Control
+        items:
+          - Fraud rules and limits you can tune.
+          - Full audit trails.
+      - title: Scale
+        items:
+          - Architecture that grows with volume.
+          - Monitoring from day one.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Fintech and payments across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.mobile-app-development
+          - svc.cybersecurity
+          - svc.api-integration
+      - title: Systems we build
+        entityIds:
+          - workarea.digital-products
+          - workarea.custom-software-systems
+          - workarea.api-integrations
+      - title: Technologies
+        entityIds:
+          - int.stripe
+          - int.adyen
+          - tech.postgresql
+          - lang.typescript
+  - type: cta
+    id: contact-cta
+    heading: Tell us what your product moves
+    body:
+      Describe the money flows and the customers you serve. We reply with a plan, a price range, and
+      a timeline.
+    primary:
+      label: Plan a fintech product
+      href: /contact/?service=software-development

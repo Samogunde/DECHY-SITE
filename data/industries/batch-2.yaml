@@ -1,0 +1,1367 @@
+# Industry page copy (owner direction, 20 October 2026). One entry per industry, each written for
+# that industry. scripts/build-industry-pages.mjs turns these into content/pages/en/industry-*.yaml.
+industries:
+  - slug: restaurants
+    entity: ind.restaurants
+    name: Food and restaurants
+    service: web-development
+    title: Restaurant Ordering and Food Business Software | DECHY
+    description:
+      "Restaurant software from DECHY: direct online ordering, table booking, loyalty apps,
+      and kitchen tools that cut delivery commissions and fill tables."
+    intent:
+      - restaurant ordering system development
+      - restaurant app development
+      - food business software
+    comprehension:
+      what: We build direct online ordering, table booking, loyalty apps, kitchen display tools, and
+        multi-site reporting for restaurants, cafes, and food brands.
+      problem:
+        Delivery apps take a large share of every order, phone bookings tie up staff, and owners
+        cannot see which sites and dishes really earn.
+      audience:
+        Independent restaurants, restaurant groups, cafes, dark kitchens, caterers, and food and
+        drink brands.
+      choose:
+        Start with direct ordering if delivery commissions hurt, or with booking and loyalty if
+        tables sit empty midweek.
+      next:
+        Tell us how orders and bookings come in today. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Restaurant ordering, booking, and loyalty you own
+      lead:
+        We build the ordering site, booking, and loyalty app that bring customers to you directly. You
+        keep the margin delivery apps take, fill quiet nights with regulars, and see every site's
+        numbers in one place.
+      center:
+        - Every guest
+        - Orders, visits, and rewards in one record.
+      spokes:
+        - - Direct ordering
+          - Delivery and collection.
+        - - Table booking
+          - Deposits for busy nights.
+        - - Loyalty app
+          - Rewards that bring guests back.
+        - - Kitchen display
+          - Orders in sequence.
+        - - Menus
+          - One update for every channel.
+        - - Reports
+          - Sales by site and dish.
+      takeaway:
+        Restaurant software pays off when ordering, booking, loyalty, and the kitchen all share
+        one guest and one menu.
+      visual: The systems around a restaurant guest
+      caption: This diagram shows a guest record at the center with direct ordering, table booking,
+        loyalty, kitchen display, menus, and reports around it.
+    why:
+      heading: Why restaurants are taking ordering back
+      paragraphs:
+        - Delivery platforms brought restaurants new customers, then took up to a third of every
+          order. Many owners now pay more in commission than in rent. The customers who order every
+          week are often regulars who would happily order direct if it were just as easy.
+        - A direct ordering site and app give those regulars an easy reason to switch. You set the
+          prices, keep the data, and reward loyalty with your own offers instead of paying a
+          platform for the privilege.
+        - Inside the restaurant, the same system routes orders to the kitchen in sequence, keeps
+          menus and stock in step across every channel, and shows you which dishes and sites earn
+          the most.
+        - We design for the busiest hour of the week. Ordering stays fast under load, the kitchen
+          sees a calm queue, and staff never retype an order from one screen to another.
+    projects:
+      intro: Most restaurants start with direct ordering, then add loyalty and kitchen tools.
+      rows:
+        - - Direct ordering website
+          - Menu, delivery and collection, payments, and order alerts
+          - $3,000 to $8,000
+          - 1 to 2 weeks
+        - - Booking and deposits
+          - Table booking, deposits, reminders, and waitlists
+          - $3,000 to $7,000
+          - 1 to 2 weeks
+        - - Branded ordering and loyalty app
+          - Ordering, rewards, offers, and push notifications
+          - $12,000 to $30,000
+          - 3 to 5 weeks
+        - - Multi-site restaurant platform
+          - Several sites, kitchen display, menu control, and reporting
+          - $30,000 to $60,000+
+          - 5 to 8 weeks
+    needs:
+      heading: Restaurant software we build
+      intro:
+        Each tool is useful on day one, and together they give you one picture of every guest and
+        every site.
+      items:
+        - - Direct ordering
+          - Delivery and collection ordering on your own site, with your prices and no per-order
+            commission.
+        - - Ordering app with loyalty
+          - A branded app where regulars reorder favorites in two taps and collect rewards.
+        - - Table booking
+          - Online booking with deposits for busy nights and automatic reminders that cut no-shows.
+        - - Kitchen display
+          - Orders from every channel shown in sequence, with timers and clear status for the pass.
+        - - Menu management
+          - Change a price or mark a dish sold out once, and every channel updates.
+        - - Multi-site reporting
+          - Sales, margins, and top dishes by site and hour, without exporting spreadsheets.
+    steps:
+      heading: How we launch restaurant ordering
+      intro: Most restaurants take their first direct orders within two weeks of starting.
+      items:
+        - - Count the commission
+          - We look at what delivery platforms cost you and which customers order most often.
+          - - Commission review
+            - Customer list
+        - - Design the ordering
+          - We design ordering for a hungry customer on a phone, with as few taps as possible.
+          - - Prototype
+            - Menu structure
+        - - Connect the kitchen
+          - We connect orders to your till or kitchen display so nothing is retyped.
+          - - Kitchen flow
+            - Till link
+        - - Move regulars across
+          - We launch with offers that move regulars from delivery apps to your own channel.
+          - - Launch offers
+            - Order tracking
+    help:
+      heading: What restaurants get from us
+      cols:
+        - - Margin
+          - - No commission on direct orders.
+            - Prices you set yourself.
+        - - Loyalty
+          - - Rewards that bring guests back.
+            - Data you own.
+        - - Calmer service
+          - - Orders routed to the kitchen.
+            - Fewer phone calls.
+        - - Clear numbers
+          - - Sales by site and dish.
+            - Quiet times you can fill.
+      intro:
+        "Restaurants usually feel the difference in the first month: more direct orders, fewer calls
+        during service, and a clear view of which nights and dishes need attention. Here is what
+        changes."
+    tech:
+      heading: Technical notes for restaurants
+      intro: What to know about tills, payments, and delivery.
+      panels:
+        - - Tills and kitchens
+          - - We connect to the point-of-sale system you use where it allows, or send orders to a
+              kitchen display.
+            - Sold-out items update every channel within seconds.
+        - - Payments and delivery
+          - - Card and wallet payments run through providers such as Stripe or Square.
+            - Delivery can use your own drivers or an on-demand courier service, booked
+              automatically.
+    faq:
+      heading: Questions about restaurant software
+      items:
+        - - How much does a restaurant ordering system cost?
+          - A direct ordering website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks. A
+            branded app with loyalty usually costs $12,000 to $30,000.
+        - - Will customers really order direct?
+          - Regulars will, when ordering is just as easy and they get a reward for it. Most
+            restaurants move a good share of repeat orders within months.
+        - - Can you connect to our till?
+          - Usually, yes. We send orders to your point-of-sale system or to a kitchen display, so
+            staff never retype them.
+        - - Can we keep using delivery platforms?
+          - Yes. Many restaurants keep platforms for new customers and use direct ordering for
+            regulars.
+        - - Do you build for restaurant groups?
+          - Yes. Groups get one platform for every site, with central menus and reports for each
+            location.
+        - - Who handles delivery?
+          - Your own drivers, or an on-demand courier booked automatically for each order. You
+            choose per site.
+    related:
+      services:
+        - svc.web-development
+        - svc.mobile-app-development
+        - svc.ecommerce
+        - svc.digital-marketing
+      work:
+        - workarea.commerce-systems
+        - workarea.mobile-apps
+        - workarea.business-web-platforms
+      tech:
+        - fw.nextjs
+        - int.stripe
+        - int.square
+        - tech.flutter
+    cta:
+      heading: Tell us how orders come in today
+      body: Share your channels, sites, and tools. We reply with a plan, a price range, and a timeline.
+      label: Plan restaurant ordering
+  - slug: hospitality
+    entity: ind.hospitality
+    name: Hospitality
+    service: web-development
+    title: Hotel Booking Engine and Hospitality Software | DECHY
+    description: "Hospitality software from DECHY: direct booking websites, guest apps, upsells, and
+      integrations with your property system for hotels and venues."
+    intent:
+      - hotel booking engine development
+      - hospitality software development
+      - hotel website development
+    comprehension:
+      what:
+        We build direct booking websites, guest apps, upsell and check-in flows, and integrations with
+        property management systems for hotels, resorts, and venues.
+      problem:
+        Online travel agencies take a large commission, the booking flow loses guests, and the
+        guest experience is split across paper, email, and the front desk.
+      audience: Independent hotels, hotel groups, resorts, serviced apartments, and event venues.
+      choose:
+        Start with the direct booking flow if commission is the cost, or with a guest app if service
+        and upsells matter most.
+      next: Tell us how guests book and arrive today. We reply with a plan, a price range, and a timeline.
+    hero:
+      headline: Direct bookings and guest experiences for hotels
+      lead:
+        We build the booking websites, guest apps, and upsell flows that bring guests to you directly
+        and make every stay smoother. You save commission, sell more room upgrades and extras, and
+        give staff time back for real hospitality.
+      center:
+        - Every stay
+        - From first search to checkout.
+      spokes:
+        - - Booking engine
+          - Direct and commission-free.
+        - - Guest app
+          - Check-in and requests.
+        - - Upsells
+          - Upgrades and extras.
+        - - Property system
+          - Rooms and rates.
+        - - Messaging
+          - Before and during the stay.
+        - - Reviews
+          - Feedback after checkout.
+      takeaway:
+        Hotel software works when the booking engine, guest app, upsells, and property system all
+        share one stay record.
+      visual: The systems around a hotel stay
+      caption:
+        This diagram shows a stay record at the center with the booking engine, guest app, upsells,
+        property system, messaging, and reviews around it.
+    why:
+      heading: Why hotels invest in their own booking and guest tools
+      paragraphs:
+        - Guests often find a hotel on a travel agency site and then book there, because the hotel's
+          own booking flow is slower or more confusing. The commission on that booking can wipe out
+          the margin on the room.
+        - A fast, clear direct booking flow changes the habit. When guests see the same price, a
+          small perk, and a booking that takes a minute, many book direct. Every one of those
+          bookings is a guest you can talk to before and after the stay.
+        - During the stay, a guest app or web check-in removes queues at the desk, handles requests,
+          and offers upgrades at the moment guests are most likely to say yes.
+        - We build around the property management system you already run, so rates, rooms, and guest
+          details stay in one place and staff are not asked to learn a second system.
+    projects:
+      intro: Most hotels start with direct booking, then add guest tools.
+      rows:
+        - - Hotel website and booking flow
+          - Rooms, offers, real-time rates, and payments
+          - $5,000 to $12,000
+          - 2 to 3 weeks
+        - - Online check-in and upsells
+          - Pre-arrival check-in, upgrades, extras, and messages
+          - $8,000 to $20,000
+          - 2 to 4 weeks
+        - - Guest app
+          - Requests, digital key where supported, dining, and offers
+          - $20,000 to $40,000
+          - 4 to 6 weeks
+        - - Group booking and guest platform
+          - Several properties, central rates, loyalty, and reporting
+          - $40,000 to $80,000+
+          - 6 to 10 weeks
+    needs:
+      heading: Hospitality software we build
+      intro: Every tool connects to your property system, so rooms, rates, and guests stay in one place.
+      items:
+        - - Direct booking website
+          - Fast room search, clear prices, and a booking flow guests finish on their phone.
+        - - Online check-in
+          - Details, payment, and arrival time collected before the guest reaches the desk.
+        - - Upsells and extras
+          - Room upgrades, breakfasts, late checkout, and experiences offered at the right moment.
+        - - Guest app or web app
+          - Requests, messages, dining, and local guides in one place during the stay.
+        - - Venue and event booking
+          - Meeting rooms, weddings, and events with packages, deposits, and contracts.
+        - - Guest feedback and reviews
+          - Feedback collected after the stay and happy guests guided to public reviews.
+    steps:
+      heading: How we build hotel booking and guest tools
+      intro:
+        A direct booking flow usually goes live in two to three weeks, and guest tools follow in
+        stages.
+      items:
+        - - Audit the booking flow
+          - We test your current booking flow on a phone and count every step and delay.
+          - - Booking audit
+            - Conversion baseline
+        - - Connect rates and rooms
+          - We connect to your property system and channel manager so availability is always right.
+          - - Integration plan
+            - Test bookings
+        - - Design the stay
+          - We design check-in, requests, and upsells around how guests really arrive.
+          - - Guest journey
+            - Prototype
+        - - Launch and measure
+          - We launch, then track direct bookings, upsell revenue, and guest feedback.
+          - - Launch
+            - Results report
+    help:
+      heading: What hotels get from us
+      cols:
+        - - More direct bookings
+          - - Less commission.
+            - Guest data you own.
+        - - More revenue per stay
+          - - Upgrades and extras sold online.
+            - Offers at the right moment.
+        - - Smoother arrivals
+          - - Shorter queues at the desk.
+            - Requests handled in the app.
+        - - Better reviews
+          - - Feedback before it goes public.
+            - Happy guests prompted to review.
+      intro:
+        Hotels feel the change at the front desk and in the revenue report. Guests arrive prepared,
+        staff spend time on hospitality instead of forms, and more of every booking stays with you.
+    tech:
+      heading: Technical notes for hospitality
+      intro: What to know about property systems, channel managers, and payments.
+      panels:
+        - - Property and channel systems
+          - - We connect to your property management system and channel manager through their
+              interfaces.
+            - Rates and availability come from one place, so double bookings do not happen.
+        - - Payments and keys
+          - - Payments and pre-authorizations run through established card providers.
+            - Mobile keys are added where your door lock supplier supports them.
+    faq:
+      heading: Questions about hotel software
+      items:
+        - - How much does a hotel booking website cost?
+          - A hotel website with a direct booking flow usually costs $5,000 to $12,000 and launches
+            in 2 to 3 weeks.
+        - - Can you connect to our property management system?
+          - Usually, yes. We connect through its interfaces so rooms, rates, and guests stay in sync.
+        - - Will guests really book direct?
+          - Many will, when the flow is fast and the price is the same or better. A small
+            direct-booking perk helps.
+        - - Do we need an app or is a web app enough?
+          - Most hotels start with a web app guests open from a link, which needs no download.
+            Groups with loyal guests often add a native app.
+        - - Can you handle events and meeting rooms?
+          - Yes. We build booking for meeting rooms, weddings, and events with packages, deposits,
+            and contracts.
+        - - Do you work with hotel groups?
+          - Yes. Groups get one platform across properties, with central rates, offers, and
+            reporting.
+    related:
+      services:
+        - svc.web-development
+        - svc.mobile-app-development
+        - svc.api-integration
+        - svc.ui-ux
+      work:
+        - workarea.business-web-platforms
+        - workarea.customer-portals
+        - workarea.api-integrations
+      tech:
+        - fw.nextjs
+        - int.stripe
+        - plat.vercel
+        - lang.typescript
+    cta:
+      heading: Tell us how guests book and arrive
+      body:
+        Share your property system, channels, and guest journey. We reply with a plan, a price range,
+        and a timeline.
+      label: Plan hotel booking
+  - slug: travel
+    entity: ind.travel
+    name: Travel and tourism
+    service: web-development
+    title: Travel Booking Platform and Tour Software | DECHY
+    description:
+      "Travel and tourism software from DECHY: booking platforms, tour and activity booking,
+      itinerary apps, and supplier integrations for travel companies."
+    intent:
+      - travel booking platform development
+      - tour booking software
+      - travel app development
+    comprehension:
+      what:
+        We build travel booking platforms, tour and activity booking, itinerary apps, agent tools, and
+        supplier integrations for travel companies and tour operators.
+      problem:
+        Bookings come through many channels, availability is managed by hand, and travelers juggle
+        confirmations from five different emails.
+      audience:
+        Tour operators, travel agencies, activity providers, destination companies, and travel
+        startups.
+      choose: Start with online booking and availability if you sell tours or packages, or with an
+        itinerary app if service during the trip matters most.
+      next:
+        Tell us what you sell and how bookings arrive. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Travel booking platforms and apps travelers love to use
+      lead:
+        We build the booking sites, availability tools, and itinerary apps that let travelers plan and
+        book with you in minutes. Your team stops juggling spreadsheets, suppliers stay in sync, and
+        travelers have everything for the trip on one screen.
+      center:
+        - Every trip
+        - Bookings, people, and plans together.
+      spokes:
+        - - Search and booking
+          - Tours
+          - packages
+          - activities.
+        - - Availability
+          - Live seats and dates.
+        - - Payments
+          - Deposits and balances.
+        - - Itinerary app
+          - The whole trip in one place.
+        - - Suppliers
+          - Hotels
+          - guides
+          - transport.
+        - - Agent tools
+          - Quotes and changes.
+      takeaway: Travel software keeps every trip in one record that booking, availability, payments,
+        suppliers, and the traveler's app share.
+      visual: The systems around a trip
+      caption: This diagram shows a trip record at the center with booking, availability, payments,
+        itinerary app, suppliers, and agent tools around it.
+    why:
+      heading: What travel companies need from their software
+      paragraphs:
+        - Travel is sold on dreams and delivered through details. A traveler compares options for
+          weeks, then expects booking to take minutes and every confirmation to be right. Behind the
+          scenes, your team juggles suppliers, seats, rooms, and changes.
+        - Many travel companies still manage availability in spreadsheets and send itineraries as
+          attachments. That is where errors and refunds come from. One platform for availability,
+          booking, and payments removes most of them.
+        - During the trip, an itinerary app keeps every booking, ticket, and contact in one place,
+          works offline abroad, and lets you send updates when plans change.
+        - We design for seasonal peaks, many currencies, and the moment a traveler is standing at an
+          airport with a question. The software has to work then, not only during a calm demo.
+    projects:
+      intro: Travel companies usually start with booking and availability, then add the traveler app.
+      rows:
+        - - Tour and activity booking site
+          - Listings, dates, live availability, and payments
+          - $5,000 to $12,000
+          - 2 to 3 weeks
+        - - Package and itinerary builder
+          - Packages, extras, deposits, balances, and documents
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Traveler itinerary app
+          - Bookings, tickets, maps, offline use, and updates
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Travel marketplace or booking platform
+          - Many suppliers, search, payments, and agent tools
+          - $40,000 to $90,000+
+          - 2 to 3 months
+    needs:
+      heading: Travel and tourism software we build
+      intro:
+        Choose the piece that removes your biggest manual job first. Each one shares the same trip
+        record.
+      items:
+        - - Tour and activity booking
+          - Dates, time slots, group sizes, and pickup points with live availability.
+        - - Package builder
+          - Flights, rooms, and activities combined into packages with deposits and balance payments.
+        - - Itinerary app
+          - The whole trip on the traveler's phone, offline, with updates when plans change.
+        - - Supplier integrations
+          - Live rates and availability from hotels, transport, and activity suppliers.
+        - - Agent and back-office tools
+          - Quotes, changes, refunds, and documents handled from one screen.
+        - - Reviews and rebooking
+          - Feedback after the trip and offers that bring travelers back next season.
+    steps:
+      heading: How we build travel booking software
+      intro:
+        A tour booking site usually launches in two to three weeks. Larger platforms are built in
+        stages before peak season.
+      items:
+        - - Map the products
+          - We list what you sell, how it is priced, and where availability really lives.
+          - - Product map
+            - Pricing rules
+        - - Design the booking
+          - We design search and booking for travelers comparing options on a phone.
+          - - Prototype
+            - Booking flow
+        - - Connect suppliers and payments
+          - We connect supplier systems and payment providers so bookings confirm instantly.
+          - - Integrations
+            - Test bookings
+        - - Launch before the peak
+          - We plan launch dates around your season so the platform is proven before demand peaks.
+          - - Launch plan
+            - Load test
+    help:
+      heading: What travel companies get from us
+      cols:
+        - - More online bookings
+          - - Booking in minutes.
+            - Fewer abandoned carts.
+        - - Fewer errors
+          - - Live availability.
+            - No double bookings.
+        - - Happier travelers
+          - - Everything in one app.
+            - Updates when plans change.
+        - - Less admin
+          - - Changes and refunds handled faster.
+            - Supplier data in sync.
+      intro:
+        Travel companies feel the change in fewer booking errors, fewer support emails, and travelers
+        who book again. Behind the scenes, your team spends far less time copying details between
+        systems.
+    tech:
+      heading: Technical notes for travel platforms
+      intro: What to know about suppliers, currencies, and peak demand.
+      panels:
+        - - Suppliers and availability
+          - - We connect to supplier systems and booking networks through their interfaces, with
+              checks before a booking confirms.
+            - Availability is held briefly during checkout so two travelers cannot buy the last seat.
+        - - Payments and peaks
+          - - Payments support several currencies, deposits, and scheduled balance payments.
+            - Platforms are tested for peak-season traffic before launch.
+    faq:
+      heading: Questions about travel software
+      items:
+        - - How much does a travel booking platform cost?
+          - A tour or activity booking site usually costs $5,000 to $12,000. A full platform with
+            many suppliers and agent tools costs $40,000 to $90,000 or more.
+        - - Can you connect to our suppliers?
+          - Usually, yes, through their systems or the booking networks they use. Where there is no
+            connection, we build simple supplier tools.
+        - - Does the itinerary app work offline?
+          - Yes. Tickets, maps, and contacts are stored on the phone so travelers can use them
+            without data roaming.
+        - - Can travelers pay a deposit and the balance later?
+          - Yes. Deposits, balance reminders, and automatic payments are built in.
+        - - Do you handle several currencies?
+          - Yes. Prices and payments can be shown and taken in the traveler's currency.
+        - - Can our agents use the same system?
+          - Yes. Agents get tools for quotes, changes, and refunds on the same platform travelers
+            use.
+    related:
+      services:
+        - svc.web-development
+        - svc.mobile-app-development
+        - svc.api-integration
+        - svc.ecommerce
+      work:
+        - workarea.commerce-systems
+        - workarea.mobile-apps
+        - workarea.api-integrations
+      tech:
+        - fw.nextjs
+        - tech.react-native
+        - int.stripe
+        - tech.postgresql
+    cta:
+      heading: Tell us what you sell and how it books
+      body: Share your products, suppliers, and channels. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan a travel platform
+  - slug: marketplaces
+    entity: ind.marketplaces
+    name: Marketplaces and on-demand
+    service: software-development
+    title: Marketplace and On-Demand App Development | DECHY
+    description: "Marketplace and on-demand app development from DECHY: two-sided platforms with
+      listings, matching, payments, payouts, and tracking."
+    intent:
+      - marketplace app development
+      - on-demand app development
+      - two-sided marketplace platform
+    comprehension:
+      what:
+        "We build two-sided marketplaces and on-demand apps: listings, search and matching, bookings,
+        payments, payouts, ratings, and live tracking."
+      problem:
+        A marketplace must work for buyers and sellers at once, handle money between them, and
+        build trust from the first transaction.
+      audience: Marketplace founders, on-demand service startups, delivery companies, and businesses
+        opening their platform to other sellers.
+      choose:
+        Start with one side of the market you can win and a simple first version, then add features
+        as both sides grow.
+      next:
+        Tell us who buys, who sells, and how money moves. We reply with a plan, a price range, and a
+        timeline.
+    hero:
+      headline: Marketplace and on-demand apps that both sides trust
+      lead:
+        We build two-sided platforms where buyers find what they need, sellers get paid on time, and
+        every transaction feels safe. You launch a focused first version quickly, then grow features
+        as your market grows.
+      center:
+        - The marketplace
+        - Matches, money, and trust.
+      spokes:
+        - - Listings
+          - Products or services.
+        - - Search and matching
+          - The right provider fast.
+        - - Bookings and orders
+          - Confirmed in seconds.
+        - - Payments and payouts
+          - Split automatically.
+        - - Ratings
+          - Trust on both sides.
+        - - Live tracking
+          - Where the order is now.
+      takeaway:
+        A marketplace connects two sides through listings, matching, payments, payouts, ratings,
+        and tracking that both sides rely on.
+      visual: The parts of a two-sided marketplace
+      caption: This diagram shows the marketplace at the center with listings, matching, bookings,
+        payments and payouts, ratings, and live tracking around it.
+    why:
+      heading: What makes a marketplace work
+      paragraphs:
+        - A marketplace is two products in one. Buyers need choice, speed, and confidence. Sellers
+          need customers, simple tools, and reliable payouts. If either side has a poor experience,
+          the other side leaves too.
+        - Money is the hardest part. Platforms take payment from one person, keep a fee, and pay
+          another, sometimes across borders, with refunds and disputes along the way. We build on
+          payment providers designed for marketplaces, so this works safely from day one.
+        - Trust comes next. Verified profiles, ratings, clear policies, and live tracking turn
+          strangers into repeat customers.
+        - Above all, we keep the first version small. The best marketplaces start by serving one
+          niche very well, learn from real transactions, and grow features only when both sides ask
+          for them.
+    projects:
+      intro: Most marketplaces start with a focused first version and grow from there.
+      rows:
+        - - Marketplace first version
+          - Listings, search, checkout, payouts, and basic ratings
+          - $20,000 to $40,000
+          - 4 to 6 weeks
+        - - On-demand service app
+          - Customer app, provider app, matching, and payments
+          - $30,000 to $50,000
+          - 6 to 8 weeks
+        - - Delivery app with live tracking
+          - Customer, courier, and store apps with live maps
+          - $35,000 to $60,000
+          - 6 to 10 weeks
+        - - Scaled multi-vendor platform
+          - Vendor portal, admin, disputes, analytics, and growth features
+          - $60,000 to $120,000+
+          - 2 to 4 months
+    needs:
+      heading: Marketplace software we build
+      intro:
+        "We build every side of the platform: the buyer app, the seller tools, and the admin console
+        your team runs it from."
+      items:
+        - - Buyer web and mobile apps
+          - Search, filters, booking or checkout, tracking, and reviews.
+        - - Seller or provider tools
+          - Listings, availability, orders, earnings, and payouts in one place.
+        - - Matching and dispatch
+          - The nearest or best provider offered each job, with accept and decline.
+        - - Marketplace payments
+          - Split payments, platform fees, refunds, and scheduled payouts.
+        - - Trust and safety
+          - Identity checks, ratings, reporting, and moderation tools.
+        - - Admin console
+          - Users, listings, disputes, payouts, and growth metrics for your team.
+    steps:
+      heading: How we launch a marketplace
+      intro: A focused first version usually reaches real buyers and sellers in four to eight weeks.
+      items:
+        - - Pick the first niche
+          - We help you choose the first market and the smallest set of features that makes a deal
+            happen.
+          - - Launch scope
+            - Success measures
+        - - Design both sides
+          - We design the buyer journey and the seller tools together, because each depends on the
+            other.
+          - - Prototypes
+            - User tests
+        - - Build payments and trust
+          - We set up marketplace payments, payouts, verification, and ratings before launch.
+          - - Payment flows
+            - Trust features
+        - - Launch and learn
+          - We launch in one area or category, measure transactions, and plan the next release.
+          - - Launch
+            - Growth plan
+    help:
+      heading: What marketplace founders get from us
+      cols:
+        - - Speed to market
+          - - A first version in weeks.
+            - Room to grow later.
+        - - Safe money flows
+          - - Split payments and payouts.
+            - Refunds and disputes handled.
+        - - Trust
+          - - Verified users and ratings.
+            - Live tracking.
+        - - Growth
+          - - Analytics on both sides.
+            - Features added as demand proves them.
+      intro: Founders get a platform that is ready for real transactions from launch day, with the
+        foundations to grow into new categories and cities when the market is ready for it.
+    tech:
+      heading: Technical notes for marketplaces
+      intro: What your technical co-founder or investors will ask about payments, location, and scale.
+      panels:
+        - - Payments between parties
+          - - We use marketplace payment services such as Stripe Connect, which handle seller
+              onboarding, splits, and payouts.
+            - Platform fees, refunds, and disputes are recorded for every transaction.
+        - - Location and scale
+          - - Matching and tracking use real-time location with privacy controls for both sides.
+            - The platform is designed to scale across cities and categories without a rebuild.
+    faq:
+      heading: Questions about marketplace development
+      items:
+        - - How much does a marketplace app cost?
+          - A focused first version usually costs $20,000 to $40,000 and takes 4 to 6 weeks.
+            On-demand apps with live tracking cost $30,000 to $60,000.
+        - - How do payments to sellers work?
+          - Buyers pay the platform, your fee is kept automatically, and sellers are paid on a
+            schedule through a marketplace payment service.
+        - - Should we build web or mobile first?
+          - It depends on how people use your market. On-demand services usually need mobile first,
+            while many product marketplaces start on the web.
+        - - Can you build both the buyer and seller apps?
+          - Yes. We build every side, plus the admin console your team uses to run the platform.
+        - - How do you build trust between strangers?
+          - With verified profiles, ratings, clear policies, secure payments, and live tracking
+            where it matters.
+        - - Can the platform grow to new cities or categories?
+          - Yes. We design it so new areas and categories are settings, not rebuilds.
+    related:
+      services:
+        - svc.software-development
+        - svc.mobile-app-development
+        - svc.web-development
+        - svc.ui-ux
+      work:
+        - workarea.digital-products
+        - workarea.commerce-systems
+        - workarea.mobile-apps
+      tech:
+        - int.stripe
+        - tech.react-native
+        - fw.nextjs
+        - tech.postgresql
+    cta:
+      heading: Tell us who buys, who sells, and how money moves
+      body: Describe both sides of your market. We reply with a plan, a price range, and a timeline.
+      label: Plan a marketplace
+  - slug: automotive
+    entity: ind.automotive
+    name: Automotive
+    service: web-development
+    title: Automotive Dealership Software and App Development | DECHY
+    description: "Automotive software from DECHY: dealership websites, vehicle inventory, service
+      booking, finance applications, and apps for dealers and service centers."
+    intent:
+      - dealership website development
+      - automotive software development
+      - car service booking app
+    comprehension:
+      what:
+        We build dealership websites with live inventory, service booking, finance and trade-in tools,
+        customer apps, and connections to dealer management systems.
+      problem:
+        Buyers research online for weeks, but dealer websites show stale stock, slow forms, and no
+        way to book a service without a call.
+      audience:
+        Car dealers, dealer groups, service and repair centers, rental and leasing companies, and
+        automotive startups.
+      choose: Start with the website and live inventory if sales leads are the goal, or with service
+        booking if the workshop drives profit.
+      next:
+        Tell us how buyers and service customers reach you today. We reply with a plan, a price range,
+        and a timeline.
+    hero:
+      headline: Dealership websites and apps that sell cars and fill the workshop
+      lead: We build the websites, inventory tools, and booking apps that turn online research into
+        showroom visits and service bookings. Buyers see live stock and real prices, finance and
+        trade-in start online, and the workshop diary fills itself.
+      center:
+        - Every customer
+        - From first search to every service.
+      spokes:
+        - - Live inventory
+          - Real stock and prices.
+        - - Lead capture
+          - Test drives and enquiries.
+        - - Finance and trade-in
+          - Started online.
+        - - Service booking
+          - Workshop slots.
+        - - Customer app
+          - Vehicle history.
+        - - Dealer system
+          - The source of truth.
+      takeaway: Automotive software links live inventory, leads, finance, and service booking to the
+        dealer system and one customer record.
+      visual: The systems around an automotive customer
+      caption: This diagram shows a customer record at the center with live inventory, lead capture,
+        finance and trade-in, service booking, a customer app, and the dealer system around it.
+    why:
+      heading: Why automotive buyers need a better online experience
+      paragraphs:
+        - Most car buyers decide long before they visit. They compare stock, prices, and reviews
+          online, then contact one or two dealers. If your website shows cars that have already
+          sold, or a form that nobody answers, the buyer goes elsewhere.
+        - "The fix is live inventory from your dealer system, clear prices, and simple next steps:
+          book a test drive, value a trade-in, or check finance. Every lead lands with the right
+          salesperson within minutes."
+        - After the sale, service is where loyalty and profit live. Online booking, reminders, and a
+          customer app with the vehicle's history keep customers coming back to your workshop.
+        - Dealer groups gain one platform across brands and sites, with central control over stock,
+          offers, and lead routing, and clear reports on which channels sell.
+    projects:
+      intro: Dealers usually start with the website and inventory, then add service and apps.
+      rows:
+        - - Dealer website with live inventory
+          - Stock feed, search, vehicle pages, and lead forms
+          - $6,000 to $15,000
+          - 2 to 3 weeks
+        - - Service booking system
+          - Workshop slots, reminders, and courtesy car booking
+          - $5,000 to $12,000
+          - 1 to 3 weeks
+        - - Finance and trade-in tools
+          - Online finance applications and trade-in valuation
+          - $10,000 to $25,000
+          - 3 to 5 weeks
+        - - Dealer group platform and app
+          - Several brands and sites, customer app, and reporting
+          - $40,000 to $80,000+
+          - 6 to 10 weeks
+    needs:
+      heading: Automotive software we build
+      intro:
+        Every tool reads from your dealer management system, so stock, customers, and service history
+        stay consistent.
+      items:
+        - - Dealer website
+          - Fast vehicle search, rich vehicle pages, and clear next steps on every car.
+        - - Live inventory feeds
+          - Stock and prices synced from your dealer system and published to your site and listing
+            portals.
+        - - Lead routing
+          - Test drive and enquiry leads sent to the right salesperson instantly, with follow-up
+            reminders.
+        - - Finance and trade-in
+          - Online finance applications and trade-in valuations that start the deal before the visit.
+        - - Service booking
+          - Workshop slots, recall checks, reminders, and courtesy cars booked online.
+        - - Customer app
+          - Vehicle history, service reminders, documents, and offers for every owner.
+    steps:
+      heading: How we build dealership software
+      intro: A dealer website with live inventory usually launches in two to three weeks.
+      items:
+        - - Connect the stock
+          - We connect your dealer management system so inventory and prices update automatically.
+          - - Stock feed
+            - Data checks
+        - - Design the buying path
+          - We design search and vehicle pages around how buyers compare cars on a phone.
+          - - Prototype
+            - Lead flows
+        - - Route every lead
+          - We route leads to the right person and track response times.
+          - - Lead routing
+            - Response report
+        - - Add service and loyalty
+          - We add service booking and the customer app once sales journeys are live.
+          - - Service booking
+            - Customer app
+    help:
+      heading: What dealers get from us
+      cols:
+        - - More leads
+          - - Live stock buyers trust.
+            - Clear next steps on every car.
+        - - Faster response
+          - - Leads routed in minutes.
+            - Follow-ups that happen.
+        - - A fuller workshop
+          - - Online service booking.
+            - Reminders that bring owners back.
+        - - Group control
+          - - Central stock and offers.
+            - Reports by site and channel.
+      intro:
+        Dealers feel the change in lead quality and workshop occupancy. Sales teams spend their time
+        with buyers who are ready, and service advisors stop answering the phone to book routine
+        work.
+    tech:
+      heading: Technical notes for automotive
+      intro: What to know about dealer systems, feeds, and vehicle data.
+      panels:
+        - - Dealer systems and feeds
+          - - We connect to dealer management systems through their interfaces or export feeds.
+            - Inventory is published to your website and to listing portals from one source.
+        - - Vehicle data
+          - - Vehicle details, images, and history are stored once and reused across channels.
+            - Valuations and finance checks use specialist providers through their interfaces.
+    faq:
+      heading: Questions about automotive software
+      items:
+        - - How much does a dealership website cost?
+          - A dealer website with live inventory usually costs $6,000 to $15,000 and launches in 2
+            to 3 weeks.
+        - - Can you connect to our dealer management system?
+          - Usually, yes, through its interface or a stock export, so your website always shows real
+            inventory.
+        - - Can customers book a service online?
+          - Yes. Customers choose a slot, add work and a courtesy car, and get reminders before the
+            visit.
+        - - Can buyers apply for finance online?
+          - Yes. We build finance application and trade-in valuation tools that connect to your
+            finance partners.
+        - - Do you build for dealer groups?
+          - Yes. Groups get one platform across brands and sites with central control and local
+            pages.
+        - - Can you build an app for our customers?
+          - Yes. Owners get service history, reminders, documents, and offers in an app with your
+            brand. Owners can book their next service from the app in a few taps.
+    related:
+      services:
+        - svc.web-development
+        - svc.mobile-app-development
+        - svc.api-integration
+        - svc.seo-aeo-geo
+      work:
+        - workarea.business-web-platforms
+        - workarea.customer-portals
+        - workarea.mobile-apps
+      tech:
+        - fw.nextjs
+        - lang.typescript
+        - tech.flutter
+        - plat.vercel
+    cta:
+      heading: Tell us how buyers and owners reach you
+      body: Share your sites, brands, and dealer system. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan dealership software
+  - slug: transportation
+    entity: ind.transportation
+    name: Transportation
+    service: software-development
+    title: Transportation and Fleet Management Software | DECHY
+    description: "Transportation software from DECHY: fleet management, driver apps, route planning,
+      booking, and tracking for transport and fleet operators."
+    intent:
+      - fleet management software development
+      - transportation software development
+      - driver app development
+    comprehension:
+      what:
+        We build fleet management tools, driver apps, route planning, booking and dispatch, and live
+        tracking for transport companies and fleet operators.
+      problem:
+        Dispatchers juggle phones and spreadsheets, drivers fill in paper logs, and customers call
+        to ask where their delivery or vehicle is.
+      audience: Haulage and freight companies, passenger transport operators, courier fleets, and
+        businesses running their own vehicles.
+      choose:
+        Start with the driver app and tracking if visibility is the problem, or with planning and
+        dispatch if empty miles cost most.
+      next: Tell us how jobs, vehicles, and drivers are planned today. We reply with a plan, a price
+        range, and a timeline.
+    hero:
+      headline: Fleet and transport software that keeps every vehicle on plan
+      lead:
+        We build the dispatch, driver apps, and tracking that show where every vehicle is and what it
+        should do next. Plans are made in minutes, drivers have everything on their phone, and
+        customers get live updates instead of calling.
+      center:
+        - Every trip
+        - Vehicle, driver, load, and status.
+      spokes:
+        - - Booking and orders
+          - Jobs come in once.
+        - - Planning
+          - Routes and loads.
+        - - Dispatch
+          - Right vehicle and driver.
+        - - Driver app
+          - Jobs
+          - checks
+          - proof.
+        - - Tracking
+          - Live location and arrival.
+        - - Fleet care
+          - Maintenance and compliance.
+      takeaway: Transport software keeps every trip in one record that booking, planning, dispatch,
+        drivers, tracking, and fleet care share.
+      visual: The systems around a transport trip
+      caption:
+        This diagram shows a trip record at the center with booking, planning, dispatch, the driver
+        app, tracking, and fleet care around it.
+    why:
+      heading: Why transport operators move off phones and spreadsheets
+      paragraphs:
+        - Transport runs on thin margins. Every empty mile, missed slot, and wasted hour on the
+          phone eats profit. Yet many operators still plan in spreadsheets, dispatch by phone, and
+          learn about problems from an angry customer.
+        - A connected system changes the day. Jobs arrive in one place, routes are planned with real
+          constraints, drivers receive work on their phones, and everyone sees live status.
+        - The same data keeps vehicles compliant and safe. Daily checks, defects, maintenance, and
+          driver hours are recorded as the work happens, not reconstructed before an inspection.
+        - We work with the telematics and tachograph systems you already use and build the
+          operational layer they lack. You keep the hardware and contracts you already have, and
+          gain the planning, apps, and visibility they never provided.
+    projects:
+      intro: Operators usually start with visibility, then add planning and customer tools.
+      rows:
+        - - Driver app and proof of delivery
+          - Jobs, checks, photos, signatures, and offline use
+          - $12,000 to $25,000
+          - 3 to 5 weeks
+        - - Live tracking and customer updates
+          - Vehicle locations, arrival estimates, and customer messages
+          - $10,000 to $25,000
+          - 2 to 4 weeks
+        - - Planning and dispatch board
+          - Orders, routes, loads, and driver assignment
+          - $25,000 to $50,000
+          - 5 to 8 weeks
+        - - Full fleet management platform
+          - Booking, planning, apps, maintenance, and reporting
+          - $50,000 to $120,000+
+          - 2 to 4 months
+    needs:
+      heading: Transportation software we build
+      intro: Each part connects to your telematics and accounts, so data is captured once and used
+        everywhere.
+      items:
+        - - Booking and order intake
+          - Customer orders taken online or through connections with their systems.
+        - - Route and load planning
+          - Routes built around time windows, vehicle sizes, and driver hours.
+        - - Dispatch board
+          - Jobs assigned by drag and drop with live status from every vehicle.
+        - - Driver app
+          - Jobs, vehicle checks, proof of delivery, and messages on one phone app.
+        - - Customer tracking portal
+          - Live location and arrival times customers can check without calling.
+        - - Fleet maintenance and compliance
+          - Inspections, defects, servicing, and documents tracked for every vehicle.
+    steps:
+      heading: How we build fleet software
+      intro: Most operators see live tracking and a working driver app within the first month.
+      items:
+        - - Shadow the control room
+          - We sit with planners and dispatchers for a day and log every manual step.
+          - - Control room findings
+            - Priorities
+        - - Start with drivers
+          - We give drivers a simple app first, because good data starts on the road.
+          - - Driver app
+            - Field test
+        - - Plan and dispatch
+          - We build planning and dispatch on top of the live data the app provides.
+          - - Planning board
+            - Dispatch rules
+        - - Open it to customers
+          - We add tracking links and customer portals once the data is reliable.
+          - - Tracking portal
+            - Customer updates
+    help:
+      heading: What transport operators get from us
+      cols:
+        - - Fewer empty miles
+          - - Smarter routes and loads.
+            - Better use of every vehicle.
+        - - Less phone time
+          - - Drivers get jobs in the app.
+            - Customers track online.
+        - - Compliance
+          - - Checks and defects recorded.
+            - Maintenance on schedule.
+        - - Faster billing
+          - - Proof of delivery captured instantly.
+            - Invoices raised on completion.
+      intro:
+        Operators feel the difference in the control room first. Planners stop firefighting, drivers
+        stop calling in, and customers stop chasing updates, because everyone sees the same live
+        picture of every vehicle and every job.
+    tech:
+      heading: Technical notes for transportation
+      intro: What to know about telematics, mapping, and offline use.
+      panels:
+        - - Telematics and mapping
+          - - We connect to telematics providers for live location rather than replacing their
+              hardware.
+            - Routes and arrival times use mapping services with traffic data.
+        - - Drivers on the road
+          - - Driver apps work offline and sync when a signal returns.
+            - Screens are designed for use when parked, never while driving.
+    faq:
+      heading: Questions about transport software
+      items:
+        - - How much does fleet management software cost?
+          - A driver app with tracking usually costs $12,000 to $35,000. A full platform with
+            planning and maintenance costs $50,000 to $120,000 or more.
+        - - Can you work with our telematics provider?
+          - Usually, yes. We read location and vehicle data from their systems and build the
+            operations layer on top.
+        - - Can customers track their deliveries?
+          - Yes. Customers get a tracking link with live location and arrival estimates.
+        - - Do drivers need new phones?
+          - No. The app runs on standard iPhone and Android phones, including rugged models.
+        - - Can it handle vehicle checks and defects?
+          - Yes. Drivers complete daily checks in the app, and defects go straight to maintenance.
+        - - Can you connect to our accounts system?
+          - Yes. Completed jobs and proof of delivery flow into invoicing automatically. Fuel,
+            tolls, and driver expenses can be captured in the same flow, so each job shows its true
+            cost and margin when it is invoiced.
+    related:
+      services:
+        - svc.software-development
+        - svc.mobile-app-development
+        - svc.api-integration
+        - svc.data-analytics
+      work:
+        - workarea.operations-platforms
+        - workarea.mobile-apps
+        - workarea.data-analytics
+      tech:
+        - tech.flutter
+        - tech.nodejs
+        - tech.postgresql
+        - plat.google-cloud
+    cta:
+      heading: Tell us how your fleet is planned today
+      body: Share your vehicles, jobs, and tools. We reply with a plan, a price range, and a timeline.
+      label: Plan fleet software
+  - slug: agriculture
+    entity: ind.agriculture
+    name: Agriculture
+    service: software-development
+    title: Agriculture and Farm Management Software Development | DECHY
+    description:
+      "Agriculture software from DECHY: farm management, field and livestock records, sensor
+      data, traceability, and supply apps for farms and agribusiness."
+    intent:
+      - farm management software development
+      - agriculture software development
+      - agtech app development
+    comprehension:
+      what: We build farm management tools, field and livestock records, sensor and machine data
+        dashboards, traceability, and ordering apps for farms and agribusiness.
+      problem:
+        Records are kept in notebooks and spreadsheets, data from machines and sensors goes unused,
+        and buyers demand traceability that is hard to prove.
+      audience: Farms and growers, cooperatives, agribusiness suppliers, food processors, and agtech
+        startups.
+      choose:
+        Start with the records you must keep anyway, such as fields, inputs, or livestock, then
+        connect machine and sensor data.
+      next:
+        Tell us what you grow or raise and how records are kept. We reply with a plan, a price range,
+        and a timeline.
+    hero:
+      headline: Farm and agribusiness software that turns field data into decisions
+      lead:
+        We build the farm records, sensor dashboards, and traceability tools that put every field,
+        animal, and batch on one screen. Records are kept as work happens, machine data becomes
+        useful, and buyers get the proof they ask for.
+      center:
+        - Every field and batch
+        - Inputs, work, and yields recorded once.
+      spokes:
+        - - Field records
+          - Crops
+          - inputs
+          - and work.
+        - - Livestock records
+          - Health and movements.
+        - - Sensors and machines
+          - Soil
+          - weather
+          - equipment.
+        - - Traceability
+          - From field to buyer.
+        - - Ordering and supply
+          - Inputs and sales.
+        - - Reports
+          - Yields and costs.
+      takeaway: Agricultural software keeps one record for every field and batch that field work,
+        livestock, sensors, traceability, and sales share.
+      visual: The systems around a field and its harvest
+      caption:
+        This diagram shows a field and batch record at the center with field records, livestock,
+        sensors and machines, traceability, ordering, and reports around it.
+    why:
+      heading: Why farms and agribusiness are going digital
+      paragraphs:
+        - Farming has always been data-rich, but most of that data stayed in heads, notebooks, and
+          machine memory cards. Today buyers, lenders, and regulators ask for records and proof, and
+          margins reward every input used well.
+        - Tractors, sensors, and weather stations already produce useful data. The gap is a place
+          that brings it together with field records, so a grower can see what each field cost and
+          earned.
+        - Traceability is now a selling point. Processors and retailers want to know where produce
+          came from and how it was grown, and good records answer them in minutes.
+        - "We design for the field: simple apps that work offline, with large buttons, and reports
+          that make sense to people who would rather be outside than at a desk."
+    projects:
+      intro: Farms and agribusinesses usually start with records, then connect data and buyers.
+      rows:
+        - - Field or livestock records app
+          - Fields, inputs, work, or animals recorded offline
+          - $12,000 to $25,000
+          - 3 to 5 weeks
+        - - Sensor and machine data dashboard
+          - Soil, weather, and equipment data in one view
+          - $15,000 to $35,000
+          - 4 to 6 weeks
+        - - Traceability system
+          - Batches tracked from field to buyer with documents
+          - $20,000 to $45,000
+          - 5 to 8 weeks
+        - - Agribusiness platform
+          - Growers, ordering, traceability, and reporting together
+          - $50,000 to $100,000+
+          - 2 to 4 months
+    needs:
+      heading: Agriculture software we build
+      intro:
+        Every tool is built to work on a phone in the field and to share data with the rest of the
+        farm.
+      items:
+        - - Field records
+          - Crops, sprays, fertilizer, and work logged per field, offline.
+        - - Livestock management
+          - Animal records, health treatments, movements, and weights.
+        - - Sensor and machine dashboards
+          - Soil moisture, weather, and equipment data brought into one view.
+        - - Traceability
+          - Every batch traced from field to buyer, with the documents to prove it.
+        - - Grower and buyer portals
+          - Contracts, deliveries, quality results, and payments for cooperatives and processors.
+        - - Cost and yield reports
+          - Cost and margin per field or herd, season by season.
+    steps:
+      heading: How we build farm software
+      intro: We usually have a records app in growers' hands within a month, before the next busy season.
+      items:
+        - - Walk the farm
+          - We spend time with the people doing the work and note what they record and why.
+          - - Farm visit notes
+            - Record list
+        - - Build the field app
+          - We build simple offline tools for the records that matter most.
+          - - Field app
+            - Field test
+        - - Connect data sources
+          - We bring in sensor, weather, and machine data where it adds value.
+          - - Data connections
+            - Dashboard
+        - - Prove traceability
+          - We set up batch tracking and reports buyers and auditors accept.
+          - - Traceability
+            - Buyer reports
+    help:
+      heading: What farms and agribusinesses get from us
+      cols:
+        - - Better decisions
+          - - Cost and yield per field.
+            - Data from machines used.
+        - - Less paperwork
+          - - Records kept as work happens.
+            - Reports in minutes.
+        - - Market access
+          - - Traceability buyers trust.
+            - Certificates easier to keep.
+        - - Connected supply
+          - - Growers and buyers on one platform.
+            - Faster payments.
+      intro:
+        Growers and agribusinesses see the benefit at the end of the season, when costs, yields, and
+        records are already in one place instead of scattered across notebooks, emails, and machine
+        files.
+    tech:
+      heading: Technical notes for agriculture
+      intro: What to know about connectivity, machines, and sensor data.
+      panels:
+        - - Working in the field
+          - - Apps work fully offline and sync when a phone reaches signal.
+            - Maps show fields and boundaries so records attach to the right place.
+        - - Machines and sensors
+          - - We connect to sensor platforms and machine data services through their interfaces.
+            - Readings are stored over time so trends and anomalies are easy to spot.
+    faq:
+      heading: Questions about agriculture software
+      items:
+        - - How much does farm management software cost?
+          - A records app usually costs $12,000 to $25,000. A full agribusiness platform with
+            traceability and portals costs $50,000 to $100,000 or more.
+        - - Does it work without signal?
+          - Yes. Everything works offline and syncs when the phone finds a connection.
+        - - Can you use data from our tractors and sensors?
+          - Usually, yes. We connect to the data services your machines and sensors provide.
+        - - Can you help us prove traceability to buyers?
+          - Yes. We track every batch from field to buyer and produce the reports they ask for.
+        - - Do you build for cooperatives?
+          - Yes. Cooperatives get portals for members, deliveries, quality results, and payments.
+        - - Why build instead of buying a farm app?
+          - Many farms should buy, and we will say so. We build when your crops, processes, or
+            supply chain do not fit packaged tools. Where a packaged app fits most of your needs, we
+            can also connect it to your other systems instead.
+    related:
+      services:
+        - svc.software-development
+        - svc.mobile-app-development
+        - svc.data-analytics
+        - svc.api-integration
+      work:
+        - workarea.operations-platforms
+        - workarea.data-analytics
+        - workarea.mobile-apps
+      tech:
+        - tech.flutter
+        - lang.python
+        - tech.postgresql
+        - plat.google-cloud
+    cta:
+      heading: Tell us what you grow and how records are kept
+      body:
+        Share your operation, your data, and your buyers. We reply with a plan, a price range, and a
+        timeline.
+      label: Plan agriculture software

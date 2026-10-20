@@ -1,0 +1,277 @@
+# Generated from data/industries by scripts/build-industry-pages.mjs. Edit the data file.
+id: page.industry-telecommunications
+kind: industry
+locale: en
+path: /industries/telecommunications/
+parent: /industries/
+entityId: ind.telecommunications
+title: Telecom Software Development and Customer Platforms | DECHY
+description: "Telecommunications software from DECHY: customer self-service apps, ordering and
+  provisioning, field service tools, and network data dashboards."
+breadcrumbLabel: Telecommunications
+intent:
+  primary: telecom software development
+  secondary:
+    - telecom self-service app
+    - telecommunications software company
+indexing: index
+claims:
+  - company.name
+  - company.descriptor
+datePublished: 2026-10-20
+dateModified: 2026-10-20
+schemaTypes:
+  - WebPage
+  - FAQPage
+comprehension:
+  what:
+    We build customer self-service apps, ordering and provisioning flows, field service tools, and
+    network and service data dashboards for telecom providers.
+  problem:
+    Customers call for things they could do online, orders stall between systems, and engineers
+    arrive without the details they need.
+  audience:
+    Mobile and broadband providers, internet service providers, network operators, and telecom
+    resellers.
+  choose: Start with self-service if contact volume is high, or with ordering and provisioning if
+    installs and activations are slow.
+  next: Tell us where customers or engineers wait. We reply with a plan, a price range, and a timeline.
+sections:
+  - type: hero
+    id: hero
+    variant: service
+    eyebrow: Industry
+    headline: Telecom software that cuts calls and speeds up installs
+    lead:
+      We build the self-service apps, ordering flows, and engineer tools that let telecom customers
+      help themselves and get connected faster. Calls drop, orders flow through without manual
+      steps, and engineers arrive with everything they need.
+    ctas:
+      - label: Plan telecom software
+        href: /contact/?service=software-development
+      - label: See what we build
+        href: "#needs"
+    spec:
+      kind: hub
+      center:
+        title: Every customer line
+        text: Plan, usage, service, and status.
+      spokes:
+        - title: Self-service app
+          text: Plans, bills, usage.
+        - title: Online ordering
+          text: Availability to activation.
+        - title: Provisioning
+          text: Automated setup.
+        - title: Field engineers
+          text: Installs and repairs.
+        - title: Support
+          text: Faults and status.
+        - title: Network data
+          text: Service health.
+    purpose: relationship
+    takeaway:
+      Telecom software works when self-service, ordering, provisioning, engineers, support, and
+      network data share each customer line.
+    visualTitle: The systems around a customer line
+    figureCaption:
+      This diagram shows a customer line at the center with the self-service app, ordering,
+      provisioning, field engineers, support, and network data around it.
+  - type: prose
+    id: different
+    tone: white
+    label: What is different
+    heading: What telecom providers need from software today
+    paragraphs:
+      - Telecom customers rarely want to call. They want to check usage, change a plan, report a
+        fault, and see when it will be fixed, all from their phone. Every call that could have been
+        self-service costs money and patience.
+      - Behind the scenes, ordering and provisioning often pass through several systems with manual
+        steps between them. New customers wait days for activation that could take minutes.
+      - Field engineers carry the rest of the burden. When they arrive without the right details,
+        installs fail and repeat visits follow.
+      - We build the customer and operations layer that connects these pieces to your billing and
+        network systems, so the whole journey from order to working service runs smoothly.
+      - We build so your teams can keep changing the journeys after launch. Offers, plans, and
+        messages are managed in admin tools rather than code, and every integration is documented,
+        monitored, and tested, so adding the next journey is faster than the first. The same
+        building blocks then support new products, partner channels, and business customers without
+        starting again.
+  - type: columns
+    id: help
+    tone: paper
+    label: What you get
+    heading: What telecom providers get from us
+    intro:
+      Providers see the change in contact volumes, activation times, and first-time install rates
+      within months of launch.
+    columns:
+      - title: Fewer calls
+        items:
+          - Common tasks in the app.
+          - Fault status without calling.
+      - title: Faster activation
+        items:
+          - Orders flow automatically.
+          - Exceptions flagged early.
+      - title: Better installs
+        items:
+          - Engineers fully briefed.
+          - Fewer repeat visits.
+      - title: Clear service view
+        items:
+          - Outages and impact visible.
+          - Customers informed proactively.
+  - type: table
+    id: projects
+    tone: white
+    label: Typical projects
+    heading: Telecommunications projects, costs, and timelines
+    intro: Providers usually start with self-service, then automate ordering and field work.
+    caption:
+      Typical telecommunications projects with what they include, what they cost, and how long
+      they take
+    columns:
+      - Project
+      - What it includes
+      - Typical cost
+      - Timeline
+    rows:
+      - - Customer self-service app
+        - Plans, bills, usage, payments, and fault reporting
+        - $20,000 to $45,000
+        - 4 to 8 weeks
+      - - Online ordering and availability
+        - Address checks, plan selection, checkout, and booking
+        - $15,000 to $35,000
+        - 4 to 6 weeks
+      - - Engineer field app
+        - Jobs, equipment, tests, photos, and sign-off
+        - $20,000 to $40,000
+        - 4 to 6 weeks
+      - - Provisioning automation and data dashboards
+        - Order flow automation and network service dashboards
+        - $40,000 to $100,000+
+        - 2 to 4 months
+    note: Every project is quoted in writing after a short call. The top of each range covers larger
+      builds and more integrations.
+  - type: index
+    id: needs
+    tone: paper
+    columns: 2
+    label: What we build
+    heading: Telecom software we build
+    intro:
+      Each tool connects to your billing, network, and provisioning systems, which stay the source
+      of truth.
+    items:
+      - title: Self-service app and portal
+        body: Plans, bills, usage, payments, and add-ons managed without calling.
+      - title: Online ordering
+        body: Address availability checks, plan choice, checkout, and installation booking.
+      - title: Provisioning automation
+        body: Orders passed between systems automatically, with exceptions flagged for staff.
+      - title: Fault reporting and status
+        body: Customers report faults, run checks, and see repair status in the app.
+      - title: Engineer field app
+        body: Jobs, equipment, test results, photos, and customer sign-off on one phone.
+      - title: Network and service dashboards
+        body: Service health, outages, and customer impact shown in one view.
+  - type: process
+    id: how
+    tone: white
+    label: How we deliver
+    heading: How we deliver telecom software
+    intro: A self-service app or ordering flow usually reaches customers within two months.
+    steps:
+      - title: Find the avoidable calls
+        body: We analyze why customers call and which reasons could be handled online.
+        artifacts:
+          - Contact analysis
+          - Self-service list
+      - title: Map the order flow
+        body: We trace orders from checkout to activation and mark every manual step.
+        artifacts:
+          - Order flow map
+          - Automation plan
+      - title: Build and connect
+        body: We build the apps and connect them to billing, network, and provisioning systems.
+        artifacts:
+          - Apps
+          - Integrations
+      - title: Measure and expand
+        body: We track calls avoided and activation times, then extend to more journeys.
+        artifacts:
+          - Results report
+          - Next journeys
+  - type: technical
+    id: technology
+    tone: paper
+    label: Technical depth
+    heading: Technical notes for telecommunications
+    intro: What your architecture and operations teams will ask about.
+    panels:
+      - title: Billing and network systems
+        items:
+          - We connect to billing, provisioning, and network systems through their interfaces, which
+            stay the source of truth.
+          - Integration services handle retries and log every message, so orders are never lost.
+      - title: Scale and availability
+        items:
+          - Customer apps are built to handle large customer bases and peak times such as outages.
+          - Monitoring shows the health of every integration and alerts the team to failures.
+  - type: faq
+    id: faq
+    tone: paper
+    label: Common questions
+    heading: Questions about telecom software
+    items:
+      - q: How much does a telecom self-service app cost?
+        a:
+          A customer self-service app usually costs $20,000 to $45,000 and takes 4 to 8 weeks, depending on
+          billing integration.
+      - q: Can you connect to our billing system?
+        a:
+          Usually, yes, through its interfaces. Billing stays the source of truth and the app reads from
+          it.
+      - q: Can customers check service availability online?
+        a: Yes. Address checks show available plans and speeds before checkout.
+      - q: Can you automate provisioning?
+        a: Yes. We automate the steps between ordering and activation and flag exceptions for staff.
+      - q: Do you build tools for field engineers?
+        a: Yes. Engineers get jobs, equipment details, tests, and sign-off in one mobile app.
+      - q: Can customers see outage information?
+        a:
+          Yes. Outages and repair status appear in the app, so customers do not need to call. Proactive
+          messages can go out by text and push notification as soon as an outage is confirmed, along
+          with updates when the service is restored.
+  - type: related
+    id: related
+    tone: white
+    label: Related
+    heading: Telecommunications across DECHY
+    groups:
+      - title: Services
+        entityIds:
+          - svc.software-development
+          - svc.mobile-app-development
+          - svc.api-integration
+          - svc.automation
+      - title: Systems we build
+        entityIds:
+          - workarea.customer-portals
+          - workarea.integration-platforms
+          - workarea.operations-platforms
+      - title: Technologies
+        entityIds:
+          - lang.java
+          - tech.nodejs
+          - tech.react-native
+          - plat.aws
+  - type: cta
+    id: contact-cta
+    heading: Tell us where customers or engineers wait
+    body: Share your journeys, volumes, and systems. We reply with a plan, a price range, and a timeline.
+    primary:
+      label: Plan telecom software
+      href: /contact/?service=software-development
