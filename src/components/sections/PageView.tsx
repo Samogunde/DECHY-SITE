@@ -12,6 +12,46 @@ import { IndustryProfile, SolutionBlueprint, SystemFrame, TechProfile } from "./
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 import { DraftFrame } from "./HomeBlocks";
 import { ArticleView } from "./ArticleView";
+import { LinkButton } from "@/components/primitives/LinkButton";
+
+const MID_CTA_KINDS = new Set([
+  "service",
+  "solution",
+  "industry",
+  "work-area",
+  "technology",
+  "location",
+]);
+
+const MID_CTA_LINE: Record<string, string> = {
+  service: "Tell us what you need. We reply with a plan, a price range, and a timeline.",
+  technology:
+    "Tell us what you want to build. We will tell you whether this is the right tool for it.",
+  industry: "Tell us how your business runs. We will show you what we would build first.",
+  solution: "Tell us where the problem sits. We will map the fix and what it costs.",
+  "work-area":
+    "Tell us what the system has to do. We reply with a plan, a price range, and a timeline.",
+  location: "Tell us what you need. We reply with a plan, a price range, and a timeline.",
+};
+
+/** A compact call to action band placed after the first third of a page. */
+function MidCta({ cta, kind }: { cta: { label: string; href: string }; kind: string }) {
+  return (
+    <aside className="mid-cta" aria-label="Start a project">
+      <div className="container-site">
+        <div className="mid-cta-card" data-reveal="block">
+          <div>
+            <p className="mid-cta-kicker">Start a project</p>
+            <p className="mid-cta-line">{MID_CTA_LINE[kind] ?? MID_CTA_LINE.service}</p>
+          </div>
+          <LinkButton href={cta.href} arrow>
+            {cta.label}
+          </LinkButton>
+        </div>
+      </div>
+    </aside>
+  );
+}
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
 export function PageView({ path }: { path: string }) {
@@ -43,13 +83,15 @@ export function PageView({ path }: { path: string }) {
       id: b.id,
       label:
         b.type === "related" && CONNECTS_KINDS.has(page.kind)
-          ? "Where this connects"
+          ? "Related"
           : (b as { label: string }).label,
     }));
   const showNav = guided && navItems.length >= 6;
   const first = page.sections[0];
   const restBase = first?.type === "hero" ? page.sections.slice(1) : page.sections;
   const rest = restBase;
+  // A call to action after the first third of the page (consultant brief, 20 October 2026).
+  const midAt = MID_CTA_KINDS.has(page.kind) && rest.length >= 6 ? Math.floor(rest.length / 3) : -1;
 
   // Each page family opens differently. Technology and industry pages show a profile beside the
   // headline and move the hero's teaching diagram next to the opening text; solution pages show
@@ -113,7 +155,11 @@ export function PageView({ path }: { path: string }) {
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}
       {page.kind === "home" ? <div className="home-dark-start" aria-hidden="true" /> : null}
-      {rest.map((block) => {
+      {rest.map((block, i) => {
+        const band =
+          i === midAt && glanceCta ? (
+            <MidCta key="mid-cta" cta={glanceCta} kind={page.kind} />
+          ) : null;
         const rendered = (
           <BlockRenderer
             key={block.id}
@@ -123,11 +169,13 @@ export function PageView({ path }: { path: string }) {
           />
         );
         // Draft sections only exist in a review build (see showDrafts); they are always labeled.
-        return "draft" in block && block.draft ? (
-          <DraftFrame key={block.id}>{rendered}</DraftFrame>
-        ) : (
-          rendered
-        );
+        const out =
+          "draft" in block && block.draft ? (
+            <DraftFrame key={block.id}>{rendered}</DraftFrame>
+          ) : (
+            rendered
+          );
+        return band ? [band, out] : out;
       })}
     </>
   );

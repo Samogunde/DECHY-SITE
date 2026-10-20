@@ -37,8 +37,16 @@ export function ConnectsBlock({ block, page }: { block: Of<"related">; page: Pag
   const rails = connectionsFor(page, registry);
   return (
     <Section id={block.id} tone={block.tone}>
-      <SectionHeader id={block.id} label="Connections" heading="Where this connects" />
-      <div data-reveal="group" className="connects">
+      <SectionHeader
+        id={block.id}
+        label="Related"
+        heading="Related services, technologies and industries"
+      />
+      <div
+        data-reveal="group"
+        className="connects"
+        style={{ "--rails": rails.length } as React.CSSProperties}
+      >
         {rails.map((r) => (
           <div key={r.id} data-rail={r.id} className="connects-card">
             <h3 className="connects-title">{r.title}</h3>

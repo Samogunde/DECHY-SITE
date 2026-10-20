@@ -10,6 +10,7 @@
 @import "../styles/navigation.css" layer(components);
 @import "../styles/home.css" layer(components);
 @import "../styles/dark.css" layer(components);
+@import "../styles/premium.css" layer(components);
 
 /* ------------------------------------------------------------------------------------------
    DECHY design tokens.

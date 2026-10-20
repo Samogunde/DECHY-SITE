@@ -34,9 +34,8 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Software Development
+    headline: Custom software built around how your business runs
     lead: "At DECHY, we build custom software around the way your organization actually works: business tools, customer portals, online platforms, dashboards, and internal systems. We design, build, test, and look after them as one continuous job."
-    support: Software development is one part of our wider work across software, AI, automation, integration, and cloud.
     ctas:
       - label: Discuss a software project
         href: /contact/?service=software-development
@@ -195,7 +194,7 @@ sections:
     takeaway: Every change passes a series of checks, from many small tests to a few full walk-throughs, before it goes live.
     caption: "This diagram shows two ideas side by side: many small, fast tests with fewer full-journey tests above them, and the six checks every change passes before it is released."
     points:
-      - title: Tested at several levels
+      - title: Quality assurance in every release
         body: Many quick tests of small parts, fewer tests of parts working together, and a handful of full walk-throughs of the tasks that matter most.
       - title: Secure by design
         body: We plan for threats, give people only the access they need, scan for known weaknesses, and follow the [OWASP](ref:con.owasp) list of the most common web security mistakes from the first round, not the last.
@@ -205,10 +204,10 @@ sections:
     id: when-not
     tone: white
     variant: limits
-    title: Custom software is not always the answer
+    title: "How we pick the right approach: build, buy or connect"
     paragraphs:
       - If a mature product already does the job, buying it is faster and cheaper. If your tools are fine but separate, connecting them is often enough.
-      - Custom software is a long-term commitment. Someone has to look after it. We would rather say so at the start than sell you something you do not need.
+      - "We look at what you already use, what the market sells, and what you need to own, then recommend the route that will still work for you in three years. Buying or connecting usually wins when:"
     items:
       - Your need is common, such as standard accounting or email.
       - You are not yet sure the idea works. A simple test version or a configured product may teach you more.
@@ -253,11 +252,11 @@ sections:
     takeaway: Old software can be replaced in four careful stages while the business keeps running.
     caption: "This diagram shows four stages of replacing old software: assess it, put a new front layer on it, move its pieces over one at a time, and retire what is no longer used. The method is often called the strangler pattern."
     points:
-      - title: Look before touching
+      - title: We audit your current system first
         body: We map what the system does, what depends on it, and where its information lives. Surprises found here are cheap. Surprises found after launch are not.
       - title: Keep the business running
         body: A new layer in front lets old and new run side by side, so nobody faces a switchover weekend.
-      - title: Move information carefully
+      - title: Data migration, planned and tested before go-live
         body: Moving information is planned, rehearsed, and checked, with a way back if a check fails.
   - type: prose
     id: connected

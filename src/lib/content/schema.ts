@@ -203,6 +203,15 @@ export const IconName = z.enum([
   "bag",
   "education",
   "briefcase",
+  "quote",
+  "handshake",
+  "users",
+  "book",
+  "mail",
+  "info",
+  "steps",
+  "growth",
+  "grid",
 ]);
 export type IconName = z.infer<typeof IconName>;
 
@@ -547,6 +556,20 @@ export const Block = z.discriminatedUnion("type", [
         z.object({ name: z.string(), icon: IconName.optional(), asset: z.string().optional() }),
       )
       .min(4),
+  }),
+  /** Partners and platforms: a mark, the kind of partnership, and one line each, plus an invitation. */
+  z.object({
+    type: z.literal("partners"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(
+        z.object({ entityId: z.string(), name: z.string(), kind: z.string(), text: z.string() }),
+      )
+      .min(4),
+    invite: z.object({ title: z.string(), body: z.string(), cta: Cta }).optional(),
   }),
   /** A short commitment in large type, with what it means in practice. */
   z.object({

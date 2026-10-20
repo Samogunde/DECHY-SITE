@@ -553,6 +553,47 @@ sections:
           layout: rail
           position: 50% 25%
 
+  - type: partners
+    id: partners
+    draft: true
+    tone: ink
+    label: Partnership
+    heading: Partners and platforms we build on
+    intro: We work closely with the platforms our clients rely on, so what we build fits the tools you already pay for.
+    items:
+      - entityId: plat.google-cloud
+        name: Google Cloud
+        kind: Cloud
+        text: "Hosting, data, and AI services for products that need to scale."
+      - entityId: plat.shopify
+        name: Shopify
+        kind: Commerce
+        text: "Stores, custom apps, and checkout built on Shopify."
+      - entityId: int.stripe
+        name: Stripe
+        kind: Payments
+        text: "Payments, billing, and subscriptions wired into your product."
+      - entityId: plat.hubspot
+        name: HubSpot
+        kind: CRM
+        text: "CRM setup, integrations, and sales automation."
+      - entityId: plat.cloudflare
+        name: Cloudflare
+        kind: Edge and security
+        text: "Speed, DNS, and protection in front of every site."
+      - entityId: plat.vercel
+        name: Vercel
+        kind: Hosting
+        text: "Fast hosting and previews for Next.js sites and apps."
+      - entityId: plat.webflow
+        name: Webflow
+        kind: Websites
+        text: "Marketing sites your team can edit without a developer."
+    invite:
+      title: Partner with us
+      body: Agencies, consultancies, and product teams use us to design, build, and support software under their own name.
+      cta: { label: Talk about a partnership, href: /contact/ }
+
   - type: pricing
     id: pricing
     draft: true

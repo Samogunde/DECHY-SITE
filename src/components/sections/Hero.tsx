@@ -54,7 +54,7 @@ export function Hero({
         }))}
         visuals={block.slides.map((s, i) =>
           s.photo ? (
-            <Photo key={s.label} photo={s.photo} className="hero-photo" />
+            <Photo key={s.label} photo={s.photo} className="hero-photo" priority={i === 0} />
           ) : s.figure ? (
             <Figure
               key={s.label}
@@ -131,6 +131,28 @@ export function Hero({
                 );
               })}
             </div>
+            {!isHome ? (
+              <ul className="hero-proof" aria-label="DECHY in brief">
+                <li>
+                  <strong>
+                    <Inline text="{{fact:company.clients}}" />
+                  </strong>{" "}
+                  clients helped
+                </li>
+                <li>
+                  Building since{" "}
+                  <strong>
+                    <Inline text="{{fact:company.founded}}" />
+                  </strong>
+                </li>
+                <li>
+                  <strong>15</strong> services, one team
+                </li>
+                <li>
+                  <strong>50+</strong> technologies
+                </li>
+              </ul>
+            ) : null}
             {isHome && block.stats.length > 0 ? (
               <dl className="hero-stats">
                 {block.stats.map((st) => (
@@ -151,7 +173,7 @@ export function Hero({
           ) : block.photo && !isHome ? (
             <div className="min-w-0 lg:col-span-5">
               <figure className="page-hero-photo">
-                <Photo photo={block.photo} />
+                <Photo photo={block.photo} priority />
               </figure>
             </div>
           ) : hasVisual ? (

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Arrow } from "@/components/primitives/Arrow";
+import { Icon } from "@/components/primitives/Icon";
+import type { IconName } from "@/lib/content/schema";
 import type { NavItemModel, NavModel } from "@/lib/nav";
 import { OPEN_SEARCH_EVENT, SiteSearch } from "./SiteSearch";
 
@@ -91,13 +93,31 @@ const MENU_INTRO: Record<string, { title: string; text: string; cta: string }> =
   },
 };
 
-function MegaIntro({ item, onNavigate }: { item: MenuItem; onNavigate: () => void }) {
+function MegaIntro({
+  item,
+  proof,
+  onNavigate,
+}: {
+  item: MenuItem;
+  proof: NavModel["proof"];
+  onNavigate: () => void;
+}) {
   const intro = MENU_INTRO[item.kind];
   if (!intro) return null;
   return (
     <div className="mega-intro">
       <p className="mega-intro-title">{intro.title}</p>
       <p className="mega-intro-text">{intro.text}</p>
+      <dl className="mega-intro-stats">
+        <div>
+          <dt>Clients helped</dt>
+          <dd>{proof.clients}</dd>
+        </div>
+        <div>
+          <dt>Building since</dt>
+          <dd>{proof.founded}</dd>
+        </div>
+      </dl>
       {item.href ? (
         <Link prefetch={false} href={item.href} onClick={onNavigate} className="mega-intro-link">
           {intro.cta}
@@ -110,6 +130,104 @@ function MegaIntro({ item, onNavigate }: { item: MenuItem; onNavigate: () => voi
 
 /* ------------------------------ desktop panels ------------------------------ */
 
+/** One line per service in the menu: what the visitor gets, in a few words. */
+const SERVICE_LINE: Record<string, [IconName, string]> = {
+  "software-development": ["code", "Custom platforms, portals, internal tools"],
+  "web-development": ["globe", "Websites and web apps that load fast"],
+  "mobile-app-development": ["phone", "iOS, Android, and cross-platform apps"],
+  ecommerce: ["cart", "Online stores, checkout, and payments"],
+  ai: ["sparkles", "Assistants, agents, and AI features"],
+  automation: ["workflow", "Workflows that run without the busywork"],
+  "data-analytics": ["chart", "Dashboards, reporting, and data pipelines"],
+  "api-integration": ["plug", "Connect the tools you already use"],
+  cloud: ["cloud", "Hosting, deployment, and scaling"],
+  cybersecurity: ["shield", "Security reviews and hardening"],
+  "ui-ux": ["pen", "Product design people understand"],
+  branding: ["palette", "Identity, voice, and visual systems"],
+  "seo-aeo-geo": ["search", "Be found in search and AI answers"],
+  "digital-marketing": ["megaphone", "Campaigns that bring qualified leads"],
+  consulting: ["compass", "Strategy, audits, and roadmaps"],
+};
+
+const LIST_ICON: Record<string, IconName> = {
+  healthcare: "health",
+  finance: "finance",
+  "real-estate": "building",
+  logistics: "truck",
+  manufacturing: "factory",
+  retail: "bag",
+  education: "education",
+  "professional-services": "briefcase",
+  "business-process-automation": "workflow",
+  "legacy-system-modernization": "code",
+  "cloud-migration": "cloud",
+  "crm-integration": "plug",
+  "business-dashboards": "chart",
+  "ai-customer-support": "sparkles",
+};
+
+const slugOf = (href: string | null) => (href ?? "").split("/").filter(Boolean).pop() ?? "";
+
+/** A menu row: icon tile, name, and one short line. */
+function MenuRow({
+  label,
+  href,
+  icon,
+  line,
+  onNavigate,
+}: {
+  label: string;
+  href: string | null;
+  icon?: IconName;
+  line?: string;
+  onNavigate: () => void;
+}) {
+  const body = (
+    <>
+      {icon ? (
+        <span className="mrow-icon" aria-hidden="true">
+          <Icon name={icon} weight="regular" />
+        </span>
+      ) : null}
+      <span className="mrow-text">
+        <span className="mrow-label">{label}</span>
+        {line ? <span className="mrow-line">{line}</span> : null}
+      </span>
+    </>
+  );
+  if (!href) return <span className="mrow mrow-plain">{body}</span>;
+  return (
+    <Link prefetch={false} href={href} onClick={onNavigate} className="mrow">
+      {body}
+    </Link>
+  );
+}
+
+function MegaFoot({
+  href,
+  label,
+  onNavigate,
+  extra,
+}: {
+  href: string | null;
+  label: string;
+  onNavigate: () => void;
+  extra?: React.ReactNode;
+}) {
+  if (!href && !extra) return null;
+  return (
+    <div className="mega-foot">
+      {href ? (
+        <Link prefetch={false} href={href} onClick={onNavigate} className="mega-foot-link">
+          {label}
+          <Arrow />
+        </Link>
+      ) : null}
+      {extra}
+    </div>
+  );
+}
+
 function ServicesPanel({
   item,
   onNavigate,
@@ -118,36 +236,31 @@ function ServicesPanel({
   onNavigate: () => void;
 }) {
   return (
-    <div className="container-site py-9">
-      <div className="grid grid-cols-5 gap-8">
+    <div className="mega-pad">
+      <div className="mega-cols">
         {item.families.map((f) => (
-          <div key={f.id}>
-            <p className="t-eyebrow m-0 mb-3">{f.label}</p>
-            <ul className="m-0 list-none space-y-1 p-0">
-              {f.services.map((s) => (
-                <li key={s.name}>
-                  <span className="block py-1.5 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold leading-snug">
-                    <Entry label={s.name} href={s.href} onNavigate={onNavigate} />
-                  </span>
-                </li>
-              ))}
+          <div key={f.id} className="mega-group">
+            <p className="mega-group-label">{f.label}</p>
+            <ul className="mega-list">
+              {f.services.map((s) => {
+                const [icon, line] = SERVICE_LINE[slugOf(s.href)] ?? ["code", undefined];
+                return (
+                  <li key={s.name}>
+                    <MenuRow
+                      label={s.name}
+                      href={s.href}
+                      icon={icon}
+                      line={line}
+                      onNavigate={onNavigate}
+                    />
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
       </div>
-      {item.href ? (
-        <div className="mt-6 border-t border-line pt-4">
-          <Link
-            prefetch={false}
-            href={item.href}
-            onClick={onNavigate}
-            className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
-          >
-            {FIND_SERVICE}
-            <Arrow />
-          </Link>
-        </div>
-      ) : null}
+      <MegaFoot href={item.href} label={FIND_SERVICE} onNavigate={onNavigate} />
     </div>
   );
 }
@@ -183,8 +296,8 @@ function TechnologiesPanel({
   };
   const cat = item.categories[active] ?? item.categories[0]!;
   return (
-    <div className="container-site py-8">
-      <div className="grid grid-cols-[17rem_minmax(0,1fr)] gap-10">
+    <div className="mega-pad">
+      <div className="grid grid-cols-[15rem_minmax(0,1fr)] gap-8">
         <div
           role="tablist"
           aria-orientation="vertical"
@@ -226,27 +339,20 @@ function TechnologiesPanel({
           aria-labelledby={`${uid}-tab-${cat.id}`}
           className="min-w-0"
         >
-          <p className="t-small m-0 max-w-[52ch] text-slate-text">{cat.summary}</p>
-          <ul className="m-0 mt-4 grid list-none grid-cols-2 gap-x-8 gap-y-0.5 p-0">
+          <p className="mega-cat-summary">{cat.summary}</p>
+          <ul className="mega-list mega-grid-3">
             {cat.items.map((i) => (
               <li key={i.id}>
-                <Link
-                  prefetch={false}
-                  href={i.href}
-                  onClick={onNavigate}
-                  className="menu-link block py-1.5 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold leading-snug text-ink"
-                >
-                  {i.label}
-                </Link>
+                <MenuRow label={i.label} href={i.href} onNavigate={onNavigate} />
               </li>
             ))}
           </ul>
-          <div className="mt-5 flex flex-wrap items-center gap-x-8 gap-y-1 border-t border-line pt-4">
+          <div className="mega-foot">
             <Link
               prefetch={false}
               href={cat.directoryHref}
               onClick={onNavigate}
-              className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
+              className="mega-foot-link"
             >
               {cat.more > 0
                 ? `All technologies in this category (${cat.all.length})`
@@ -258,7 +364,7 @@ function TechnologiesPanel({
                 prefetch={false}
                 href={item.href}
                 onClick={onNavigate}
-                className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
+                className="mega-foot-link"
               >
                 View all technologies
                 <Arrow />
@@ -279,42 +385,22 @@ function WorkPanel({
   onNavigate: () => void;
 }) {
   return (
-    <div className="container-site py-9">
-      <p className="t-eyebrow eyebrow-accent m-0 mb-5 uppercase">{item.heading}</p>
-      <div className="grid grid-cols-5 gap-8">
+    <div className="mega-pad">
+      <div className="mega-cols mega-cols-work">
         {item.groups.map((g) => (
-          <div key={g.id}>
-            <p className="t-eyebrow m-0 mb-3 text-ink!">{g.label}</p>
-            <ul className="m-0 list-none space-y-1 p-0">
+          <div key={g.id} className="mega-group">
+            <p className="mega-group-label">{g.label}</p>
+            <ul className="mega-list">
               {g.items.map((i) => (
                 <li key={i.id}>
-                  <Link
-                    prefetch={false}
-                    href={i.href}
-                    onClick={onNavigate}
-                    className="menu-link block py-1.5 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold leading-snug text-ink"
-                  >
-                    {i.label}
-                  </Link>
+                  <MenuRow label={i.label} href={i.href} onNavigate={onNavigate} />
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
-      {item.href ? (
-        <div className="mt-6 border-t border-line pt-4">
-          <Link
-            prefetch={false}
-            href={item.href}
-            onClick={onNavigate}
-            className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
-          >
-            All Work Areas
-            <Arrow />
-          </Link>
-        </div>
-      ) : null}
+      <MegaFoot href={item.href} label="All Work Areas" onNavigate={onNavigate} />
     </div>
   );
 }
@@ -327,40 +413,22 @@ function ListPanel({
   onNavigate: () => void;
 }) {
   return (
-    <div className="container-site py-9">
-      <p className="t-eyebrow eyebrow-accent m-0 mb-5 uppercase">{item.heading}</p>
-      <ul className="m-0 grid list-none grid-cols-3 gap-x-8 gap-y-2 p-0">
+    <div className="mega-pad">
+      <p className="mega-group-label">{item.heading}</p>
+      <ul className="mega-list mega-grid-2">
         {item.items.map((i) => (
           <li key={i.id}>
-            <Link
-              prefetch={false}
+            <MenuRow
+              label={i.label}
               href={i.href}
-              onClick={onNavigate}
-              className="menu-link block py-2 text-ink"
-            >
-              <span className="block font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold leading-snug">
-                {i.label}
-              </span>
-              <span className="mt-0.5 block text-[length:var(--fs-label)] font-normal leading-snug text-slate-text">
-                {i.summary}
-              </span>
-            </Link>
+              icon={LIST_ICON[slugOf(i.href)]}
+              line={i.summary}
+              onNavigate={onNavigate}
+            />
           </li>
         ))}
       </ul>
-      {item.href ? (
-        <div className="mt-6 border-t border-line pt-4">
-          <Link
-            prefetch={false}
-            href={item.href}
-            onClick={onNavigate}
-            className="menu-link inline-flex min-h-11 items-center gap-2 font-[family-name:var(--font-heading)] text-[length:var(--fs-nav)] font-semibold text-ink"
-          >
-            {item.allLabel}
-            <Arrow />
-          </Link>
-        </div>
-      ) : null}
+      <MegaFoot href={item.href} label={item.allLabel} onNavigate={onNavigate} />
     </div>
   );
 }
@@ -800,7 +868,7 @@ export function HeaderNav({ model }: Props) {
                     className="nav-panel nav-mega absolute inset-x-0 top-full border-b border-line bg-white shadow-[0_18px_40px_-24px_rgba(17,24,39,0.35)]"
                   >
                     <div className="mega-wrap">
-                      <MegaIntro item={item} onNavigate={closeAll} />
+                      <MegaIntro item={item} proof={model.proof} onNavigate={closeAll} />
                       <div className="mega-body">
                         {item.kind === "services" ? (
                           <ServicesPanel item={item} onNavigate={closeAll} />

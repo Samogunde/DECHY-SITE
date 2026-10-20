@@ -28,12 +28,12 @@ export function AtAGlance({
       commercial page says what we do or build. */
   kind?: string;
 }) {
-  const first =
-    kind === "technology" ? "What it is" : kind === "work-area" ? "What we build" : "What we do";
+  // Tab names only name the answer (consultant brief, 20 October 2026); no instructions.
+  const tech = kind === "technology";
   const items: { label: string; text: string }[] = [
-    { label: first, text: comprehension.what },
-    { label: "The problem it solves", text: comprehension.problem },
-    { label: "Who it helps", text: comprehension.audience },
+    { label: tech ? "What it is" : "What we build", text: comprehension.what },
+    { label: tech ? "Problems it solves" : "Problems we solve", text: comprehension.problem },
+    { label: tech ? "Who it suits" : "Who we serve", text: comprehension.audience },
     { label: "How to choose", text: comprehension.choose },
   ];
   const showCta = cta && pathExists(cta.href.split(/[?#]/)[0] ?? "", getRegistry());
@@ -46,7 +46,6 @@ export function AtAGlance({
         <div className="glance-layout">
           <SelectPanel
             label="At a glance"
-            hint="Choose a question to see the answer"
             items={items.map((it) => ({
               label: it.label,
               body: (
@@ -162,7 +161,6 @@ export function ChooserBlock({ block }: { block: Of<"chooser"> }) {
         <h3 className="chooser-question">{block.question}</h3>
         <SelectPanel
           label={block.question}
-          hint="Choose the answer closest to yours"
           numbered={false}
           items={block.options.map((o) => ({
             label: o.label,
@@ -255,7 +253,7 @@ export function TechnicalBlock({ block }: { block: Of<"technical"> }) {
 export function CalloutBlock({ block }: { block: Of<"callout"> }) {
   const eyebrow =
     block.variant === "limits"
-      ? "When this is not the right answer"
+      ? "Choosing the right approach"
       : block.variant === "illustrative"
         ? "A typical example"
         : "Worth knowing";

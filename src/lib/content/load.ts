@@ -7,7 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
-import { sampleProof } from "./samples";
+import { sampleProof, sampleWork } from "./samples";
 import { blockPhotos } from "./photos";
 import { loadArticles } from "./articles";
 import { z } from "zod";
@@ -213,6 +213,9 @@ export function buildRegistry(): Registry {
       const at = page.sections.findIndex((b) => b.type === "cta");
       page.sections.splice(at < 0 ? page.sections.length : at, 0, ...samples);
     }
+  // Review builds: the Work page opens with sample case studies until real ones are supplied.
+  const work = showDrafts() ? pages.find((p) => p.path === "/work/") : undefined;
+  if (work) work.sections.splice(1, 0, ...sampleWork());
   // Photographs: hand-placed ones first, then every other placement gets an unused one.
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);

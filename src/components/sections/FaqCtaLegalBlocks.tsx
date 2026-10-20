@@ -67,7 +67,7 @@ export function CtaBlock({ block }: { block: Of<"cta"> }) {
     ? pathExists(block.secondary.href.split(/[?#]/)[0] ?? "", registry)
     : false;
   return (
-    <section id={block.id} aria-labelledby={`${block.id}-h`} className="section tone-ink">
+    <section id={block.id} aria-labelledby={`${block.id}-h`} className="section tone-ink cta-band">
       <div className="container-site">
         <div className="grid items-end gap-10 lg:grid-cols-12" data-reveal="block">
           <div className="lg:col-span-8">

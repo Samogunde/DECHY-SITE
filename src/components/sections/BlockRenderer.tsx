@@ -16,6 +16,7 @@ import {
   InsightsBlock,
   LeadServicesBlock,
   LogosBlock,
+  PartnersBlock,
   PhasesBlock,
   PricingBlock,
   PromiseBlock,
@@ -134,6 +135,8 @@ export function BlockRenderer({
       return <TestimonialsBlock block={block} />;
     case "logos":
       return <LogosBlock block={block} />;
+    case "partners":
+      return <PartnersBlock block={block} />;
     case "promise":
       return <PromiseBlock block={block} />;
     case "stats":

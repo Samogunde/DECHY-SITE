@@ -14,40 +14,68 @@ function drawerLinks(): DrawerLink[] {
     {
       label: "Our impact",
       href: "/#numbers",
-      text: "What we have delivered since we started",
+      text: "What we have delivered",
+      icon: "growth",
       ok: has("numbers"),
     },
     {
       label: "Our work",
       href: "/work/",
-      text: "The kinds of system we design and build",
+      text: "Systems we design and build",
+      icon: "grid",
       ok: true,
     },
-    { label: "Clients", href: "/#clients", text: "Teams we work with", ok: has("clients") },
+    {
+      label: "Clients",
+      href: "/#clients",
+      text: "Teams we work with",
+      icon: "users",
+      ok: has("clients"),
+    },
     {
       label: "Testimonials",
       href: "/#testimonials",
-      text: "What clients say about working with us",
+      text: "What clients say",
+      icon: "quote",
       ok: has("testimonials"),
+    },
+    {
+      label: "Partnership",
+      href: "/#partners",
+      text: "Platforms and partners",
+      icon: "handshake",
+      ok: has("partners"),
     },
     {
       label: "How we work",
       href: "/company/how-we-work/",
-      text: "Our process, from first call to support",
+      text: "From first call to support",
+      icon: "steps",
       ok: true,
     },
-    {
-      label: "Insights",
-      href: "/resources/",
-      text: "Guides and articles for better technology decisions",
-      ok: true,
-    },
-    { label: "Company", href: "/company/", text: "Who we are and who we help", ok: true },
-    { label: "Contact", href: "/contact/", text: "Tell us what you want to build", ok: true },
+    { label: "Insights", href: "/resources/", text: "Guides and articles", icon: "book", ok: true },
+    { label: "Company", href: "/company/", text: "Who we are", icon: "info", ok: true },
+    { label: "Contact", href: "/contact/", text: "Tell us what you need", icon: "mail", ok: true },
   ];
   return all
     .filter((l) => l.ok && (l.href.startsWith("/#") || registry.pageByPath.has(l.href)))
-    .map(({ label, href, text }) => ({ label, href, text }));
+    .map(({ label, href, text, icon }) => ({ label, href, text, icon }));
+}
+
+/** The services most visitors come for, shown as quick chips in the drawer. */
+function drawerServices(): { label: string; href: string }[] {
+  const registry = getRegistry();
+  const pick: [string, string][] = [
+    ["/software-development/", "Custom software"],
+    ["/web-development/", "Websites and web apps"],
+    ["/mobile-app-development/", "Mobile apps"],
+    ["/ai/", "AI"],
+    ["/automation/", "Automation"],
+    ["/ecommerce/", "Ecommerce"],
+  ];
+  return pick
+    .filter(([href]) => registry.pageByPath.has(href))
+    .map(([href, label]) => ({ href, label }));
 }
 
 export function SiteHeader() {
@@ -71,7 +99,12 @@ export function SiteHeader() {
           />
         </Link>
         <HeaderNav model={model} />
-        <SiteDrawer links={drawerLinks()} cta={model.cta} />
+        <SiteDrawer
+          links={drawerLinks()}
+          services={drawerServices()}
+          cta={model.cta}
+          proof={model.proof}
+        />
       </div>
     </header>
   );

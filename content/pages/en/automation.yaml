@@ -36,7 +36,6 @@ sections:
     eyebrow: Service
     headline: Automation, Workflows & AI Solutions
     lead: At DECHY, we take repetitive work off your team. We map how work really flows, automate the steps that deserve it, and connect the tools involved, so approvals, updates, and reports happen on their own.
-    support: Automation is a major part of our work, alongside software, AI, integration, and cloud. It does not always need AI.
     ctas:
       - label: Discuss your automation project
         href: /contact/?service=automation

@@ -68,3 +68,26 @@ export function sampleProof(serviceSlug: string): Block[] {
     },
   ] as Block[];
 }
+
+/** The Work page in a review build: sample cases and quotes from the three lead services. */
+export function sampleWork(): Block[] {
+  const lead = ["software-development", "web-development", "mobile-app-development"];
+  const blocks = lead.map((slug) => sampleProof(slug));
+  const [cases, quotes] = [0, 1].map((k) => blocks.map((b) => b[k]).filter(Boolean)) as [
+    Extract<Block, { type: "case-studies" }>[],
+    Extract<Block, { type: "testimonials" }>[],
+  ];
+  if (!cases[0] || !quotes[0]) return [];
+  return [
+    {
+      ...cases[0],
+      id: "case-studies",
+      label: "Case studies",
+      heading: "Recent projects and what changed",
+      intro:
+        "Custom software, websites, and mobile apps, with the problem, what we built, and the result.",
+      items: cases.flatMap((c) => c.items).slice(0, 6),
+    },
+    { ...quotes[0], id: "client-quotes", items: quotes.map((q) => q.items[0]!).slice(0, 3) },
+  ] as Block[];
+}

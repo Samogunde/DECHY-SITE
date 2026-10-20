@@ -16,7 +16,16 @@ export const PHOTO_QUALITY = 85;
  * is actually painted at (see src/lib/content/photo-geometry.ts), so the browser never downloads a
  * copy that is then stretched.
  */
-export function Photo({ photo, className = "" }: { photo: PhotoRef; className?: string }) {
+export function Photo({
+  photo,
+  className = "",
+  priority = false,
+}: {
+  photo: PhotoRef;
+  className?: string;
+  /** Above-the-fold photographs load at once with high fetch priority. */
+  priority?: boolean;
+}) {
   const asset = getRegistry().assets.find((a) => a.id === photo.asset);
   if (!asset || !asset.width || !asset.height) throw new Error(`Unknown photograph ${photo.asset}`);
   const ratio = asset.width / asset.height;
@@ -27,7 +36,7 @@ export function Photo({ photo, className = "" }: { photo: PhotoRef; className?: 
     "--ar-lg": ratioCss(frameRatio(photo.layout, "lg", ratio)),
   } as React.CSSProperties;
   return (
-    <figure className={`photo ${className}`.trim()} data-reveal="image">
+    <figure className={`photo ${className}`.trim()} data-reveal={priority ? undefined : "image"}>
       <div className="photo-frame" style={style}>
         <Image
           src={src}
@@ -37,6 +46,7 @@ export function Photo({ photo, className = "" }: { photo: PhotoRef; className?: 
           sizes={photoSizes(photo.layout, ratio)}
           quality={PHOTO_QUALITY}
           className="photo-img"
+          priority={priority}
           style={{ objectPosition: photo.position }}
         />
       </div>

@@ -19,7 +19,7 @@ comprehension:
   what: "We build twenty-five kinds of system. Each Work Area shows what the system is, how we build it, and what to decide first."
   problem: "A list of services does not show what the finished result looks like, or whether it matches what you have in mind."
   audience: "Buyers who want to picture the result before they commit, and teams comparing how different providers approach a problem."
-  choose: "Find the area closest to your goal, read how that kind of system works, and use the illustrative scenario to check it matches your situation."
+  choose: "Find the area closest to your goal, see how we build it, and tell us what you need. We reply with a plan, a price range, and a timeline."
   next: "Choose a work area, or describe what you want to build and we will point you to the nearest one."
 
 sections:
@@ -27,12 +27,11 @@ sections:
     id: hero
     variant: hub
     eyebrow: Work
-    headline: What we build, explained
-    lead: "At DECHY, our work falls into twenty-five areas, each a kind of system. Each page explains what the system is, how it is built, and what to decide first, so you can picture the result before you commit."
-    support: "The scenarios in this section are illustrations of typical systems. They are not client projects."
+    headline: Our work
+    lead: "At DECHY, we build custom software, websites, web apps, and mobile apps, and the systems behind them. Here is what we build, grouped by what you want to achieve."
     ctas:
-      - { label: Describe what you want to build, href: "/contact/" }
-      - { label: Browse the areas, href: "#areas" }
+      - { label: Start a similar project, href: "/contact/" }
+      - { label: Browse what we build, href: "#areas" }
     spec:
       kind: layers
       layerLabel: How work areas relate to services
@@ -48,63 +47,13 @@ sections:
     visualTitle: "From services to a system shaped for you"
     figureCaption: "This diagram shows three layers: services at the top, work areas below them, and your own system at the base, shaped to your situation."
 
-  - type: definition
-    id: what-is
-    tone: white
-    label: How to read this section
-    heading: Work areas describe kinds of system
-    answer: "Each work area is a kind of system we build, such as a customer portal or an automation system. For each one we show what it contains, how we build it, and a typical scenario in plain language, without naming any client."
-    paragraphs:
-      - "We describe work this way for a reason. A work area shows how we think and what the result looks like. It does not claim a particular client, result, or date."
-      - "Where a specific project can be described accurately, with the client's agreement, it will be shown separately and identified as a real project."
-
   - type: directory
     id: areas
     tone: white
     label: What we build
-    heading: The twenty-five Work Areas, in five groups
-    intro: "Each area explains what the system is, how it is built, and what to decide first."
+    heading: Twenty-five kinds of system we design, build, and support
+    intro: "Portals, platforms, apps, internal tools, AI agents, and the integrations that tie them together."
     source: work
-
-  - type: browse
-    id: ways
-    tone: paper
-    label: Four ways in
-    heading: Explore DECHY the way you think about it
-    intro: "Work Areas are the kinds of system we build. Start here if you know what you want, or enter by problem, technology, or discipline."
-    current: system
-
-  - type: chooser
-    id: start
-    tone: white
-    label: Where to begin
-    heading: Which kind of reader are you?
-    intro: "Different readers want different things from this section."
-    question: What best describes you?
-    options:
-      - label: I know my problem but not the system
-        when: "You can describe what hurts, but not what to build."
-        get: "Start with the solutions page, which begins from problems, then follow the work area it points to."
-        watch: "A problem often needs more than one work area."
-        cta: { label: Browse by problem, href: "/solutions/" }
-      - label: I know the system I want
-        when: "You are fairly sure, for example, that you need a customer portal."
-        get: "Go straight to that work area and read what to decide first."
-        watch: "Use the illustrative scenario to check it matches your case."
-      - label: I am comparing providers
-        when: "You want to see how a provider thinks."
-        get: "Read two or three areas close to your needs, and compare the questions each asks."
-        watch: "Look for honesty about limits as well as promises."
-        cta: { label: See how we work, href: "/company/how-we-work/" }
-
-  - type: callout
-    id: honest
-    tone: paper
-    variant: note
-    title: What this section shows, and what it does not
-    paragraphs:
-      - "These pages describe kinds of system and typical approaches. They are written from our practice, and they say plainly when a different approach would serve you better."
-      - "They do not describe particular clients, projects, results, or dates. If you want to know whether we have built a particular kind of system, ask us directly."
 
   - type: faq
     id: faq
@@ -112,8 +61,8 @@ sections:
     label: Common questions
     heading: Questions about our work
     items:
-      - q: Why are there no client names?
-        a: "Work areas describe kinds of system. They are not records of client projects. We do not name clients or claim results unless we can state them accurately and have permission."
+      - q: Can we see projects like ours?
+        a: "Yes. Tell us what you are planning and we will walk you through work close to it, including what it cost and how long it took."
       - q: How does a work area differ from a service?
         a: "A service is a kind of help, such as integration. A work area is a kind of system, such as an integration platform, which may draw on several services."
       - q: Can you build something not listed here?

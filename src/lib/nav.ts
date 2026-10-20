@@ -61,7 +61,12 @@ export type NavItemModel =
     }
   | { kind: "link"; label: string; href: string | null };
 
-export type NavModel = { items: NavItemModel[]; cta: { label: string; href: string } };
+export type NavModel = {
+  items: NavItemModel[];
+  cta: { label: string; href: string };
+  /** Approved company facts shown in the menus. */
+  proof: { clients: string; founded: string };
+};
 
 export function buildNavModel(registry: Registry): NavModel {
   const published = (id: string): NavLinkModel | null => {
@@ -139,7 +144,14 @@ export function buildNavModel(registry: Registry): NavModel {
     return { kind: "link", label: item.label, href };
   });
 
-  return { items, cta: { label: registry.nav.cta.label, href: registry.nav.cta.path } };
+  return {
+    items,
+    cta: { label: registry.nav.cta.label, href: registry.nav.cta.path },
+    proof: {
+      clients: registry.facts.get("company.clients")?.value ?? "",
+      founded: registry.facts.get("company.founded")?.value ?? "",
+    },
+  };
 }
 
 /** Every destination a menu can contain, for tests and link checks. */

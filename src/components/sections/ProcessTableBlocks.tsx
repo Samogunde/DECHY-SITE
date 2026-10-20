@@ -198,7 +198,6 @@ export function TableBlock({ block, page }: { block: Of<"table">; page?: Page })
         <div className="chooser" data-reveal="block">
           <SelectPanel
             label={block.caption}
-            hint="Choose an option to compare"
             numbered={false}
             items={block.rows.map((row) => ({
               label: plain(row[0] ?? ""),

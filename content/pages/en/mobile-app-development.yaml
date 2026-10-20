@@ -34,7 +34,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Mobile App Development
+    headline: Mobile apps for iOS and Android, designed, built, and looked after by one team
     lead: At DECHY, we design and build mobile apps for iPhone, Android, or both at once. We help you decide what the first version should do, build it, release it to the app stores, and keep it working as phones and systems change.
     support: Apps rarely stand alone. We connect them to your website, customer records, and payments, so the app and the business work together.
     ctas:

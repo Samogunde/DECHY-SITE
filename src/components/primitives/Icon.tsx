@@ -1,5 +1,14 @@
 import {
   Bank,
+  BookOpenText,
+  ChartLineUp,
+  EnvelopeSimple,
+  Handshake,
+  Info,
+  Path,
+  Quotes,
+  SquaresFour,
+  UsersThree,
   Briefcase,
   Buildings,
   ChartBar,
@@ -57,6 +66,15 @@ const ICONS: Record<IconName, PhosphorIcon> = {
   bag: ShoppingBag,
   education: GraduationCap,
   briefcase: Briefcase,
+  quote: Quotes,
+  handshake: Handshake,
+  users: UsersThree,
+  book: BookOpenText,
+  mail: EnvelopeSimple,
+  info: Info,
+  steps: Path,
+  growth: ChartLineUp,
+  grid: SquaresFour,
 };
 
 export function Icon({

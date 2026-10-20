@@ -36,7 +36,6 @@ sections:
     eyebrow: Service
     headline: AI and Machine Learning
     lead: "At DECHY, we help organizations use AI where it genuinely helps: assistants that answer from your own documents, tools that read and sort paperwork, agents that carry out routine tasks, and predictions that support decisions."
-    support: AI is a major part of our work, alongside software, automation, integration, and cloud. We treat it as one tool among several, not the answer to everything.
     ctas:
       - label: Discuss your AI project
         href: /contact/?service=ai

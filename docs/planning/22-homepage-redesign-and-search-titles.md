@@ -79,3 +79,36 @@ The owner's feedback on the first sample was that it still read as flat, the her
 - Testimonials show circular portraits. The validator rejects a stock portrait on any published (non-draft) testimonial, so a sample face can never reach the live site.
 - The questions section uses the dark home design.
 - Fifteen more Unsplash photographs, registered with license evidence. The home page may carry up to 32 photographs.
+
+## Fourth pass (20 October 2026): premium menus, quieter text, tighter inner pages
+
+Owner direction (20 October 2026) and the consultant brief of the same date.
+
+- **Menus.**
+  - The top navigation uses pill hovers.
+  - Each mega menu is a floating card. On the left it describes what the menu covers and shows two approved facts (clients helped, operating since). On the right are rows with an icon tile, a name, and one short line.
+  - The menu drawer shows link cards with icons (Partnership included), a "Popular services" row, a solid blue call-to-action card, and a proof strip.
+- **Text.**
+  - Headings stay white. Body text is gray (#AEB6C3) and leads are a lighter gray, so plain white is no longer used for body copy.
+  - Secondary text is 14 to 15px: cards, steps, lists, menus, and small print. Main reading text stays 16px.
+  - Inner-page section headings drop from about 50px to 40px.
+  - This amends the 7 October typography rule for secondary text only.
+- **Inner pages.**
+  - Section padding is cut by about a third. The cause was a homepage rule that also matched inner pages.
+  - Three clearly different surfaces alternate, the third with a faint grid and a blue glow.
+  - The inner hero has a larger headline and a proof strip.
+  - A mid-page call-to-action band sits after the first third of the page.
+  - The closing call to action is a solid blue card.
+  - "Related services, technologies and industries" sits in one row.
+  - The Software page dropped from 14,118px to about 11,600px at 1440px wide.
+- **Brief items done.**
+  - Instruction text is removed ("Choose a question to see the answer", "1 of 4", "Next: ...").
+  - The At a glance tabs are renamed (What we build, Problems we solve, Who we serve, How to choose).
+  - The Software page H1, H2, and H3 wording changed as the brief directs. The hedging hero lines on Software, AI, and Automation are removed.
+  - The Work page is retitled "Our work", and the sections that talked about the site itself are removed.
+  - In the home hero, the old line now leaves before the new one arrives, with no blur. The pause on hover stays off, as the owner asked earlier.
+  - The first hero photograph loads at once.
+- **Partners.**
+  - A "Partners and platforms we build on" section on the home page shows seven platform marks and a "Partner with us" card.
+  - It is a draft (review builds only), because a partnership is a factual claim that needs the owner's confirmation.
+- **Work page samples.** In review builds, the Work page opens with sample case studies and quotes from the three lead services. Real case studies replace them when the owner supplies project facts.

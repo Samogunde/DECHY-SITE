@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
+import { Icon } from "@/components/primitives/Icon";
+import type { IconName } from "@/lib/content/schema";
 
 const noop = () => () => {};
 
-export type DrawerLink = { label: string; href: string; text: string };
+export type DrawerLink = { label: string; href: string; text: string; icon: IconName };
 
 /**
  * The menu button at the right of the header opens a side panel of quick links (impact, work,
@@ -16,10 +18,14 @@ export type DrawerLink = { label: string; href: string; text: string };
  */
 export function SiteDrawer({
   links,
+  services,
   cta,
+  proof,
 }: {
   links: DrawerLink[];
+  services: { label: string; href: string }[];
   cta: { label: string; href: string };
+  proof: { clients: string; founded: string };
 }) {
   const [open, setOpen] = useState(false);
   // The panel renders into <body>: the header's blur would otherwise clip a fixed panel.
@@ -111,34 +117,60 @@ export function SiteDrawer({
                   {links.map((l, i) => (
                     <li key={l.href} style={{ "--i": i } as React.CSSProperties}>
                       <Link href={l.href} className="drawer-link" onClick={() => setOpen(false)}>
+                        <span className="drawer-icon" aria-hidden="true">
+                          <Icon name={l.icon} weight="regular" />
+                        </span>
                         <span className="drawer-label">{l.label}</span>
                         <span className="drawer-text">{l.text}</span>
-                        <svg
-                          className="drawer-arrow"
-                          viewBox="0 0 16 16"
-                          width="16"
-                          height="16"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M4 12L12 4M6 4h6v6"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1.6"
-                            strokeLinecap="round"
-                          />
-                        </svg>
                       </Link>
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href={cta.href}
-                  className="btn btn-primary drawer-cta"
-                  onClick={() => setOpen(false)}
-                >
-                  {cta.label}
-                </Link>
+                <div className="drawer-services">
+                  <p className="drawer-kicker">Popular services</p>
+                  <ul>
+                    {services.map((sv) => (
+                      <li key={sv.href}>
+                        <Link href={sv.href} onClick={() => setOpen(false)}>
+                          {sv.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="drawer-cta-card">
+                  <p className="drawer-cta-title">Have a project in mind?</p>
+                  <p className="drawer-cta-text">
+                    Tell us what you need. We reply with a plan, a price range, and a timeline.
+                  </p>
+                  <Link href={cta.href} className="drawer-cta-btn" onClick={() => setOpen(false)}>
+                    {cta.label}
+                    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                      <path
+                        d="M2.5 8h10.5M9 4l4 4-4 4"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+                <dl className="drawer-proof">
+                  <div>
+                    <dt>Clients helped</dt>
+                    <dd>{proof.clients}</dd>
+                  </div>
+                  <div>
+                    <dt>Building since</dt>
+                    <dd>{proof.founded}</dd>
+                  </div>
+                  <div>
+                    <dt>Services</dt>
+                    <dd>15</dd>
+                  </div>
+                </dl>
               </div>
             </>,
             document.body,

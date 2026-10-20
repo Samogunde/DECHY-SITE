@@ -737,3 +737,43 @@ export function PromiseBlock({ block }: { block: Of<"promise"> }) {
     </Section>
   );
 }
+
+export function PartnersBlock({ block }: { block: Of<"partners"> }) {
+  const inviteOk = block.invite
+    ? pathExists(block.invite.cta.href.split(/[?#]/)[0] ?? "", getRegistry())
+    : false;
+  return (
+    <Section id={block.id} tone={block.tone} className="partners" ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+      <div className="partners-grid" data-reveal="group">
+        {block.items.map((p) => (
+          <article key={p.name} className="partner-card" data-spotlight>
+            <div className="partner-top">
+              <span className="partner-mark">
+                <TechLogo id={p.entityId} name={p.name} />
+              </span>
+              <span className="partner-kind">{p.kind}</span>
+            </div>
+            <h3 className="partner-name">{p.name}</h3>
+            <p className="partner-text">{p.text}</p>
+          </article>
+        ))}
+        {block.invite ? (
+          <article className="partner-card partner-invite">
+            <span className="partner-invite-icon" aria-hidden="true">
+              <Icon name="handshake" weight="regular" />
+            </span>
+            <h3 className="partner-name">{block.invite.title}</h3>
+            <p className="partner-text">{block.invite.body}</p>
+            {inviteOk ? (
+              <Link href={block.invite.cta.href} className="partner-invite-link">
+                {block.invite.cta.label}
+                <Arrow />
+              </Link>
+            ) : null}
+          </article>
+        ) : null}
+      </div>
+    </Section>
+  );
+}
