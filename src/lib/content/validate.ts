@@ -20,25 +20,12 @@ import {
 import { expandFacts, linkTargets, toPlainText } from "./inline";
 import type { Registry } from "./load";
 import { requiredPhotoWidth } from "./photo-geometry";
+import { blockPhotos } from "./photos";
+export { blockPhotos };
 import type { Block, Page, PhotoRef } from "./schema";
 
 type PhotoLayout = PhotoRef["layout"];
 
-/** Every photograph placed in a block, including those inside its items (cards, phases). */
-export function blockPhotos(value: unknown, out: PhotoRef[] = []): PhotoRef[] {
-  if (Array.isArray(value)) for (const v of value) blockPhotos(v, out);
-  else if (value && typeof value === "object") {
-    const o = value as Record<string, unknown>;
-    if (
-      typeof o.asset === "string" &&
-      o.asset.startsWith("asset.photo-") &&
-      typeof o.layout === "string"
-    )
-      out.push(o as unknown as PhotoRef);
-    else for (const v of Object.values(o)) blockPhotos(v, out);
-  }
-  return out;
-}
 import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
@@ -188,7 +175,18 @@ function wordCount(text: string): number {
   return text.split(/\s+/).filter(Boolean).length;
 }
 
-export function validateRegistry(registry: Registry): Issue[] {
+export function validateRegistry(input: Registry): Issue[] {
+  // Sample (draft) sections exist only in review builds and are never published; content rules
+  // apply to what the live site will show.
+  const pages = input.pages.map((p) => ({
+    ...p,
+    sections: p.sections.filter((b) => !("draft" in b && b.draft)),
+  }));
+  const registry: Registry = {
+    ...input,
+    pages,
+    pageByPath: new Map(pages.map((p) => [p.path, p])),
+  };
   const issues: Issue[] = [];
   const err = (code: string, where: string, message: string) =>
     issues.push({ level: "error", code, where, message });
@@ -429,11 +427,15 @@ export function validateRegistry(registry: Registry): Issue[] {
         }
     // The home page carries the photographic story (owner direction, 19 October 2026).
     const photoLimit = page.kind === "home" ? 40 : 4;
-    if (photoRefs.length > photoLimit)
+    // Sample (draft) sections show in review builds only and do not count toward the limit.
+    const livePhotos = page.sections
+      .filter((b) => !("draft" in b && b.draft))
+      .flatMap((b) => blockPhotos(b));
+    if (livePhotos.length > photoLimit)
       err(
         "photo-count",
         where,
-        `${photoRefs.length} photographs on one page; the limit is ${photoLimit}`,
+        `${livePhotos.length} photographs on one page; the limit is ${photoLimit}`,
       );
     // Clarity and comprehension standard (ADR 0004).
     const GUIDED = [

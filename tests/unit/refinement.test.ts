@@ -25,7 +25,7 @@ describe("photography: provenance is mandatory", () => {
   it("registers every photograph with source, license evidence, hash, size and alt text", () => {
     expect(photos.length).toBeGreaterThanOrEqual(4);
     // The topic photo library (owner direction, 20 October 2026) puts photographs on every page.
-    expect(photos.length).toBeLessThanOrEqual(120);
+    expect(photos.length).toBeLessThanOrEqual(400);
     for (const a of photos) {
       // Licensed stock (Unsplash) or supplied by the owner; either way with evidence on file.
       expect(["licensed-stock", "owner-supplied"], a.id).toContain(a.source);

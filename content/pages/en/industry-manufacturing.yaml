@@ -134,10 +134,6 @@ sections:
     tone: white
     columns: 2
     label: What we build
-    photo:
-      asset: asset.photo-cloud-team-infrastructure-review
-      layout: rail
-      position: 50% 50%
     heading: Typical systems for manufacturers
     items:
       - title: Production and quality tracking

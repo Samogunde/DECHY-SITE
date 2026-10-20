@@ -136,10 +136,6 @@ sections:
           - Mobile apps for drivers and warehouse staff.
   - type: index
     id: breaks
-    photo:
-      asset: asset.photo-support-team-shared-screens
-      layout: rail
-      position: 38% 50%
     tone: white
     columns: 2
     label: Where it breaks

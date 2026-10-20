@@ -352,15 +352,15 @@ sections:
         blurb: Honest advice before you spend money, and a plan for changing how your business runs on technology.
     servicePhotos:
       software-development:
-        asset: asset.photo-service-software-developers
+        asset: asset.photo-lib-software-development-13
         layout: split
         position: 50% 50%
       web-development:
-        asset: asset.photo-hero-website-laptop
+        asset: asset.photo-lib-web-development-01
         layout: split
         position: 50% 50%
       mobile-app-development:
-        asset: asset.photo-hero-mobile-app-hands
+        asset: asset.photo-lib-mobile-app-development-04
         layout: split
         position: 50% 50%
       ecommerce:
@@ -368,7 +368,7 @@ sections:
         layout: split
         position: 50% 50%
       ai:
-        asset: asset.photo-service-ai-tablet
+        asset: asset.photo-lib-ai-09
         layout: split
         position: 50% 50%
       automation:

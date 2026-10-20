@@ -6,7 +6,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
-import { applyPhotographs } from "./visuals";
+import { applyPhotographs, reservePhotographs } from "./visuals";
+import { sampleProof } from "./samples";
+import { blockPhotos } from "./photos";
 import { loadArticles } from "./articles";
 import { z } from "zod";
 import {
@@ -200,14 +202,21 @@ export function buildRegistry(): Registry {
     const page = readYaml(file, Page);
     // Draft sections wait for owner-supplied facts; outside a review build they do not exist.
     if (!showDrafts()) page.sections = page.sections.filter((b) => !("draft" in b && b.draft));
-    applyPhotographs(page, serviceOfEntity);
     pages.push(page);
   }
   // Blog articles are written as markdown and join the pages here (content/articles).
-  for (const page of loadArticles(ROOT)) {
-    applyPhotographs(page, serviceOfEntity);
-    pages.push(page);
-  }
+  pages.push(...loadArticles(ROOT));
+  // Review builds: sample case studies and testimonials on service pages, before the closing call.
+  if (showDrafts())
+    for (const page of pages.filter((p) => p.kind === "service")) {
+      const samples = sampleProof(page.path.replace(/\//g, ""));
+      const at = page.sections.findIndex((b) => b.type === "cta");
+      page.sections.splice(at < 0 ? page.sections.length : at, 0, ...samples);
+    }
+  // Photographs: hand-placed ones first, then every other placement gets an unused one.
+  const usedPhotos = new Map<string, number>();
+  reservePhotographs(pages, usedPhotos, blockPhotos);
+  for (const page of pages) applyPhotographs(page, serviceOfEntity, usedPhotos);
   const pageByPath = new Map<string, Page>();
   for (const p of pages) {
     if (pageByPath.has(p.path)) throw new Error(`Two pages share the path ${p.path}`);

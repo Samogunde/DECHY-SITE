@@ -1729,3 +1729,3760 @@ assets:
     usage: [home]
     approval: approved
     acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-05
+    kind: file
+    file: public/photos/lib-software-development-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-05.md.
+    sourceUrl: https://unsplash.com/photos/9XVOmdIu8BY
+    licenseUrl: https://unsplash.com/license
+    sha256: 9674648dfe31a568791df7cb2940cbc8344857bbaa563df0bd8c635125a96186
+    width: 2400
+    height: 1350
+    alt: "A developer with glasses standing in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-02
+    kind: file
+    file: public/photos/lib-software-development-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Florian Olivo (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-02.md.
+    sourceUrl: https://unsplash.com/photos/4hbJ-eymZ1o
+    licenseUrl: https://unsplash.com/license
+    sha256: c4e33d719f57761a67230c760f6dfb5b5384dc0e3a51516da18f74bacbecad20
+    width: 2400
+    height: 1600
+    alt: "Lines of HTML code on a screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-06
+    kind: file
+    file: public/photos/lib-software-development-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "James Harrison (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-06.md.
+    sourceUrl: https://unsplash.com/photos/vpOeXr5wmR4
+    licenseUrl: https://unsplash.com/license
+    sha256: bd241e9f973bbd1837cabadde50b563a954cce8b25b9220e94627ae3ef54f846
+    width: 2400
+    height: 1350
+    alt: "A laptop showing code on a desk at night"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-01
+    kind: file
+    file: public/photos/lib-software-development-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fotis Fotopoulos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-01.md.
+    sourceUrl: https://unsplash.com/photos/6sAl6aQ4OWI
+    licenseUrl: https://unsplash.com/license
+    sha256: e69aff3dc8a1859c4c6766a68e8246a014e59574e5d845d32969e269169d3d20
+    width: 2400
+    height: 1538
+    alt: "A smartphone on a desk beside computer monitors showing code"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-03
+    kind: file
+    file: public/photos/lib-software-development-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mohammad Rahmani (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-03.md.
+    sourceUrl: https://unsplash.com/photos/8qEB0fTe9Vw
+    licenseUrl: https://unsplash.com/license
+    sha256: 8327556e670decb6e75d1b96d6fcdf4567c9d7315fd4ee4bdb2cbc68a13209bf
+    width: 2400
+    height: 1600
+    alt: "A laptop screen displaying colorful code"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-04
+    kind: file
+    file: public/photos/lib-software-development-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Chris Ried (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-04.md.
+    sourceUrl: https://unsplash.com/photos/ieic5Tq8YMk
+    licenseUrl: https://unsplash.com/license
+    sha256: bf8b47239dd927710f451ffddf4d460b9afa83f56920ccf57a667a150b025be0
+    width: 2400
+    height: 1602
+    alt: "A computer screen full of program code"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-07
+    kind: file
+    file: public/photos/lib-software-development-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fotis Fotopoulos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-07.md.
+    sourceUrl: https://unsplash.com/photos/DuHKoV44prg
+    licenseUrl: https://unsplash.com/license
+    sha256: 5d4edefda77eccb751b3a84f3dd7f0c22d9f4450dba31d11b2cfbfba8070c209
+    width: 2400
+    height: 1600
+    alt: "A keyboard and monitors with code on a developer's desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-10
+    kind: file
+    file: public/photos/lib-software-development-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-10.md.
+    sourceUrl: https://unsplash.com/photos/Q3xWisdE54Q
+    licenseUrl: https://unsplash.com/license
+    sha256: c12b324ee715f884c81c2fd4cfc4c63c74b0011c39f55dcb36db6e17dd2b7a73
+    width: 2400
+    height: 1350
+    alt: "A developer working on a laptop in an office with a whiteboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-08
+    kind: file
+    file: public/photos/lib-software-development-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-08.md.
+    sourceUrl: https://unsplash.com/photos/bzjBeodgohc
+    licenseUrl: https://unsplash.com/license
+    sha256: 5a4df6b4456d4be4362d17b7cbc425310c12777b9ec5cc6e4d738f7df1ec5b88
+    width: 2400
+    height: 1350
+    alt: "A developer wearing glasses working at a desk in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-09
+    kind: file
+    file: public/photos/lib-software-development-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mohammad Rahmani (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-09.md.
+    sourceUrl: https://unsplash.com/photos/_Fx34KeqIEw
+    licenseUrl: https://unsplash.com/license
+    sha256: 625b23875589931ba67f4edc901ea048e5b1ca16b4f63668ba49d37f16541fc4
+    width: 2400
+    height: 1600
+    alt: "A developer writing code at a computer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-11
+    kind: file
+    file: public/photos/lib-software-development-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Emile Perron (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-11.md.
+    sourceUrl: https://unsplash.com/photos/xrVDYZRGdw4
+    licenseUrl: https://unsplash.com/license
+    sha256: 18f3c77c558dd2bc94a4d86143e12d38bc96f2a5fc34310853c8b0c17ca73fd6
+    width: 2400
+    height: 1350
+    alt: "A laptop showing program code"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-13
+    kind: file
+    file: public/photos/lib-software-development-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Compagnons (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-13.md.
+    sourceUrl: https://unsplash.com/photos/Fa9b57hffnM
+    licenseUrl: https://unsplash.com/license
+    sha256: f01a30e8ab1b902483e3f440a4091d50ed39bb152b94311bdb00d8f3aeadfa35
+    width: 2400
+    height: 1600
+    alt: "Developers working together at a computer monitor"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-12
+    kind: file
+    file: public/photos/lib-software-development-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fotis Fotopoulos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-12.md.
+    sourceUrl: https://unsplash.com/photos/LJ9KY8pIH3E
+    licenseUrl: https://unsplash.com/license
+    sha256: 8bc73f765eb5fba02a99df8586bb3a2c3a81d0d7135b5cda8311fcabd9e21cae
+    width: 2400
+    height: 1600
+    alt: "Two monitors showing code on a developer's desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-14
+    kind: file
+    file: public/photos/lib-software-development-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Clint Patterson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-14.md.
+    sourceUrl: https://unsplash.com/photos/dYEuFB8KQJk
+    licenseUrl: https://unsplash.com/license
+    sha256: 0a69eb6bc672ee5fe11efffbad6b790123667fd15922b9e0d9fd39fbc6e1093a
+    width: 2400
+    height: 1603
+    alt: "A developer working at a laptop in a dark room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-16
+    kind: file
+    file: public/photos/lib-software-development-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mohammad Rahmani (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-16.md.
+    sourceUrl: https://unsplash.com/photos/LrxSl4ZxoRs
+    licenseUrl: https://unsplash.com/license
+    sha256: cf9ab833689b45a79f00e2b251501692bf61609bbf904f400de8c3955e452b62
+    width: 2400
+    height: 1600
+    alt: "A laptop displaying code beside a steaming mug"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-15
+    kind: file
+    file: public/photos/lib-software-development-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Radowan Nakif Rehan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-15.md.
+    sourceUrl: https://unsplash.com/photos/cYyqhdbJ9TI
+    licenseUrl: https://unsplash.com/license
+    sha256: e54e3202db4153a50462b92be9b2cb37060f6785260d01c27a7b5b3f40bf5d5e
+    width: 2400
+    height: 1796
+    alt: "A monitor showing code in a code editor"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-17
+    kind: file
+    file: public/photos/lib-software-development-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Sandisk (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-17.md.
+    sourceUrl: https://unsplash.com/photos/udRj4qXyAPs
+    licenseUrl: https://unsplash.com/license
+    sha256: 8e17d617952c74a886977c325273de8f00c7f522df90aa4d3774c4e426d6b825
+    width: 2400
+    height: 1751
+    alt: "A smiling man working across several computer monitors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-19
+    kind: file
+    file: public/photos/lib-software-development-19.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fotis Fotopoulos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-19.md.
+    sourceUrl: https://unsplash.com/photos/SyvsTmuuZyM
+    licenseUrl: https://unsplash.com/license
+    sha256: 56054105582dd9cac49d7c766f2699dd5d857bf9953fa153829ec2d33e09de6d
+    width: 2400
+    height: 1551
+    alt: "A monitor showing code beside a keyboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-18
+    kind: file
+    file: public/photos/lib-software-development-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "ThisisEngineering (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-18.md.
+    sourceUrl: https://unsplash.com/photos/ZPeXrWxOjRQ
+    licenseUrl: https://unsplash.com/license
+    sha256: e48f943d94e90bdf1c6a8f653334ecd623364c8b39322251833bd4d706d17fd4
+    width: 2400
+    height: 1601
+    alt: "An engineer working on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-20
+    kind: file
+    file: public/photos/lib-software-development-20.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Danial Igdery (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-20.md.
+    sourceUrl: https://unsplash.com/photos/FCHlYvR5gJI
+    licenseUrl: https://unsplash.com/license
+    sha256: 6a47409048c4be711ae389bb04b0bfabfcefd143558a3c11f981111890591257
+    width: 2400
+    height: 1600
+    alt: "A developer programming on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-software-development-21
+    kind: file
+    file: public/photos/lib-software-development-21.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "X (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-software-development-21.md.
+    sourceUrl: https://unsplash.com/photos/kwzWjTnDPLk
+    licenseUrl: https://unsplash.com/license
+    sha256: 9d69366817848d65231176f62ba5cc833b498748227dc0b1ece0d601602cfd5d
+    width: 2400
+    height: 1600
+    alt: "A man working on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-01
+    kind: file
+    file: public/photos/lib-web-development-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mahmudul Hasan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-01.md.
+    sourceUrl: https://unsplash.com/photos/Mo08jadTWYc
+    licenseUrl: https://unsplash.com/license
+    sha256: 1d14a9a292473a37301303036b4e8e9871758d11812ad7eeadb1973d0a4e8271
+    width: 2400
+    height: 1996
+    alt: "A web designer working at a desk with a computer and a tablet"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-02
+    kind: file
+    file: public/photos/lib-web-development-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christopher Gower (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-02.md.
+    sourceUrl: https://unsplash.com/photos/m_HRfLhgABo
+    licenseUrl: https://unsplash.com/license
+    sha256: 5130695099edafd8ae82acf6c6e3e521b21b1a38ef98c07a9162737d28455ad2
+    width: 2400
+    height: 1598
+    alt: "A laptop with code on its screen on a busy desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-05
+    kind: file
+    file: public/photos/lib-web-development-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Hal Gatewood (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-05.md.
+    sourceUrl: https://unsplash.com/photos/tZc3vjPCk-Q
+    licenseUrl: https://unsplash.com/license
+    sha256: 30949ad481e69b7f42204e6fa52d16a556b58b61b0e19c9a7cc19e35be57470e
+    width: 2400
+    height: 1600
+    alt: "Hand-drawn wireframe sketches of website layouts"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-04
+    kind: file
+    file: public/photos/lib-web-development-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mahmudul Hasan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-04.md.
+    sourceUrl: https://unsplash.com/photos/_ITadYbx6Ls
+    licenseUrl: https://unsplash.com/license
+    sha256: 5f6497de9f5582cd7c81281c0b68ff356c4e892cee50eb8ae8436e08ba93e189
+    width: 2400
+    height: 1853
+    alt: "A designer working on a website at a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-06
+    kind: file
+    file: public/photos/lib-web-development-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ilya Pavlov (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-06.md.
+    sourceUrl: https://unsplash.com/photos/OqtafYT5kTw
+    licenseUrl: https://unsplash.com/license
+    sha256: af56aaf348156c7458b504a59050a8053a2aa2db3bb61bb2a04e4c49e9ad2b51
+    width: 2400
+    height: 1602
+    alt: "A monitor showing web application code"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-07
+    kind: file
+    file: public/photos/lib-web-development-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-07.md.
+    sourceUrl: https://unsplash.com/photos/CQzRpVkUorM
+    licenseUrl: https://unsplash.com/license
+    sha256: f005fc61cf8a7278d38076217a198d53224e76fda257921a3e2eb6441f87ee87
+    width: 2400
+    height: 1350
+    alt: "A team collaborating on a design project at a white table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-03
+    kind: file
+    file: public/photos/lib-web-development-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Eftakher Alam (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-03.md.
+    sourceUrl: https://unsplash.com/photos/i1VQZsU86ok
+    licenseUrl: https://unsplash.com/license
+    sha256: ade5a928c0b8b74ba324db5026603b1fe48fd2ac21eab84bd611b298d526ac9d
+    width: 2400
+    height: 1892
+    alt: "A monitor showing a website design"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-09
+    kind: file
+    file: public/photos/lib-web-development-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Dharmik Moradiya (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-09.md.
+    sourceUrl: https://unsplash.com/photos/I_8_KJBWAV4
+    licenseUrl: https://unsplash.com/license
+    sha256: 69c612cedcee09944fe6af2afd28ad5e34583bb4a2b39918e9b875d4e9bda874
+    width: 2400
+    height: 1347
+    alt: "A laptop showing interface button style options"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-08
+    kind: file
+    file: public/photos/lib-web-development-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Campaign Creators (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-08.md.
+    sourceUrl: https://unsplash.com/photos/iEiUITs149M
+    licenseUrl: https://unsplash.com/license
+    sha256: 26f2f7342bf970dcb5305df129de774ddf9a6137e990f0287101821ea72ea9a6
+    width: 2400
+    height: 1600
+    alt: "A man working on a website on a desktop computer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-10
+    kind: file
+    file: public/photos/lib-web-development-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tran Mau Tri Tam (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-10.md.
+    sourceUrl: https://unsplash.com/photos/h7v_38e3iGE
+    licenseUrl: https://unsplash.com/license
+    sha256: 13b59b1490cf2e3179c2ed8c8388fee6eda925670120934b253796570848a482
+    width: 2400
+    height: 1600
+    alt: "Two monitors set up side by side on a developer's desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-12
+    kind: file
+    file: public/photos/lib-web-development-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kelly Sikkema (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-12.md.
+    sourceUrl: https://unsplash.com/photos/v9FQR4tbIq8
+    licenseUrl: https://unsplash.com/license
+    sha256: 94f97a6e84ad73cc90a1bbb279ce0daf112fc132c6c302337511fbbfa422b7d1
+    width: 2400
+    height: 1600
+    alt: "A person sketching a page layout on paper"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-11
+    kind: file
+    file: public/photos/lib-web-development-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "2H Media (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-11.md.
+    sourceUrl: https://unsplash.com/photos/NmSPbe0bDtc
+    licenseUrl: https://unsplash.com/license
+    sha256: c527350ada6ef81027b9906d5fb7e7908e8e611727ad0950a96d2015d85cac8f
+    width: 2400
+    height: 1920
+    alt: "Design books and printed samples arranged on a white surface"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-14
+    kind: file
+    file: public/photos/lib-web-development-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tran Mau Tri Tam (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-14.md.
+    sourceUrl: https://unsplash.com/photos/XyaFyD87o6E
+    licenseUrl: https://unsplash.com/license
+    sha256: c178034d3c9c5ee661f3147189e4bc7fc621693d4ee4adf2363f947f7db519a8
+    width: 2400
+    height: 1600
+    alt: "Two computer monitors on a wooden desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-13
+    kind: file
+    file: public/photos/lib-web-development-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Domenico Loia (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-13.md.
+    sourceUrl: https://unsplash.com/photos/EhTcC9sYXsw
+    licenseUrl: https://unsplash.com/license
+    sha256: b8e442a31ca63807e201280f4c0c2a0a6f8b6d31b36e9948e0b3a3966bb2f65d
+    width: 2400
+    height: 1600
+    alt: "A desktop computer and phone on a wooden desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-15
+    kind: file
+    file: public/photos/lib-web-development-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Per Looev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-15.md.
+    sourceUrl: https://unsplash.com/photos/4wOkqiXNP7M
+    licenseUrl: https://unsplash.com/license
+    sha256: 88610ad7c809a54f80a02f59f41d54fe5d4ffa91ee535c16ec2013ed5b0197ba
+    width: 2400
+    height: 1800
+    alt: "A man working at a computer near a window"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-16
+    kind: file
+    file: public/photos/lib-web-development-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christina Morillo (wocintechchat.com) (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-16.md.
+    sourceUrl: https://unsplash.com/photos/FVgECvTjlBQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 134ae91cc4dc91c1ad68457a295d8eb7b44c26bb47cbc4185e192c2a1e4b67f5
+    width: 2400
+    height: 1602
+    alt: "A woman working on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-18
+    kind: file
+    file: public/photos/lib-web-development-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Carriza Maiquez (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-18.md.
+    sourceUrl: https://unsplash.com/photos/RTdvy9izXvw
+    licenseUrl: https://unsplash.com/license
+    sha256: 3dc73e975f3818ee9e472af200d082632027de09a0fb0fc9558650cc4df21210
+    width: 2400
+    height: 1507
+    alt: "A laptop on a wooden desk showing a website"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-web-development-17
+    kind: file
+    file: public/photos/lib-web-development-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "UX Indonesia (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-web-development-17.md.
+    sourceUrl: https://unsplash.com/photos/qC2n6RQU4Vw
+    licenseUrl: https://unsplash.com/license
+    sha256: 17f018cd35311dfa7452d47d58b3670c125c044ef21ba229938b003fb989f0e0
+    width: 2400
+    height: 1600
+    alt: "A designer sketching wireframes on paper"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-01
+    kind: file
+    file: public/photos/lib-mobile-app-development-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "William Hook (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-01.md.
+    sourceUrl: https://unsplash.com/photos/9e9PD9blAto
+    licenseUrl: https://unsplash.com/license
+    sha256: b274c8e16149fa09cdcad210ea7c5774d967950b13d418f61c82886d6a4a9b35
+    width: 2400
+    height: 1600
+    alt: "A smartphone with apps on screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-02
+    kind: file
+    file: public/photos/lib-mobile-app-development-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rami Al-zayat (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-02.md.
+    sourceUrl: https://unsplash.com/photos/w33-zg-dNL4
+    licenseUrl: https://unsplash.com/license
+    sha256: a9c63f2291f735ee5feff953c2eb075974cb7e39d502d5c4032f7aad94c8d17b
+    width: 2400
+    height: 1600
+    alt: "An Android smartphone on a table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-03
+    kind: file
+    file: public/photos/lib-mobile-app-development-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jay Openiano (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-03.md.
+    sourceUrl: https://unsplash.com/photos/45ocl21g-MQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 6d9570c03451c93fcb2f69f77bdb02f828e5399caec5b8bb53096c36f61d5d70
+    width: 2400
+    height: 1604
+    alt: "A smartphone screen showing a grid of app icons"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-04
+    kind: file
+    file: public/photos/lib-mobile-app-development-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "NordWood Themes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-04.md.
+    sourceUrl: https://unsplash.com/photos/q8U1YgBaRQk
+    licenseUrl: https://unsplash.com/license
+    sha256: 5379e34ab288f396d64dfd889f4669951c1b37f099d1937b65dfdd44c266bd29
+    width: 2400
+    height: 1601
+    alt: "A person holding a smartphone with an app open"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-05
+    kind: file
+    file: public/photos/lib-mobile-app-development-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Gilles Lambert (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-05.md.
+    sourceUrl: https://unsplash.com/photos/pb_lF8VWaPU
+    licenseUrl: https://unsplash.com/license
+    sha256: 47df42e08b3793a19fe98354d0dd17796c384083f01b5fc05ded33ce15efedbd
+    width: 2400
+    height: 1600
+    alt: "A person holding a smartphone in low light"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-07
+    kind: file
+    file: public/photos/lib-mobile-app-development-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Yura Fresh (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-07.md.
+    sourceUrl: https://unsplash.com/photos/n31x0hhnzOs
+    licenseUrl: https://unsplash.com/license
+    sha256: 6c012eb9b28d59c5d187cfca65d58a28a369b770de334fa79347e242c551d715
+    width: 2400
+    height: 1350
+    alt: "A person holding a smartphone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-06
+    kind: file
+    file: public/photos/lib-mobile-app-development-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rob Hampson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-06.md.
+    sourceUrl: https://unsplash.com/photos/cqFKhqv6Ong
+    licenseUrl: https://unsplash.com/license
+    sha256: 193f9fe913f6a42a4c19a70c0e35ae2a35d722d700e12d20e21430d8b39bf669
+    width: 2400
+    height: 1600
+    alt: "A person using a smartphone app"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-08
+    kind: file
+    file: public/photos/lib-mobile-app-development-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "abillion (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-08.md.
+    sourceUrl: https://unsplash.com/photos/bMTl6uFMONg
+    licenseUrl: https://unsplash.com/license
+    sha256: e5fa7935abc4ec288c701fd2af0b53f4eef44328025549b7e4e407fd9489885a
+    width: 2400
+    height: 1601
+    alt: "A person using an app on a smartphone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-09
+    kind: file
+    file: public/photos/lib-mobile-app-development-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Luis Villasmil (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-09.md.
+    sourceUrl: https://unsplash.com/photos/4V8uMZx8FYA
+    licenseUrl: https://unsplash.com/license
+    sha256: b379f0e2ca0ec6f5bce6888f75fb08405de804c21d6dc9ee886e26233ba589c6
+    width: 2400
+    height: 1606
+    alt: "A person holding a smartphone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-mobile-app-development-10
+    kind: file
+    file: public/photos/lib-mobile-app-development-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tran Mau Tri Tam (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-mobile-app-development-10.md.
+    sourceUrl: https://unsplash.com/photos/QwAL909kTiY
+    licenseUrl: https://unsplash.com/license
+    sha256: 475dc796a14cd46af42c68531223072338b3f549dbfaeba39a05725924630b05
+    width: 2400
+    height: 1600
+    alt: "A person holding an Android smartphone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-01
+    kind: file
+    file: public/photos/lib-ecommerce-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "SumUp (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-01.md.
+    sourceUrl: https://unsplash.com/photos/ShB9pI4mpRg
+    licenseUrl: https://unsplash.com/license
+    sha256: 759c63e2330113a725d5f3ade2853a32297cad1d6d97b3c510227ce1cad825a9
+    width: 2400
+    height: 1600
+    alt: "A person paying online with a laptop and a card"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-02
+    kind: file
+    file: public/photos/lib-ecommerce-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-02.md.
+    sourceUrl: https://unsplash.com/photos/1JnN9QhmTGU
+    licenseUrl: https://unsplash.com/license
+    sha256: 5708b7e100ad5abd26adb267132f1a3a08ebda11bf61244ba6075cf3ee3e1619
+    width: 2400
+    height: 1350
+    alt: "A woman shopping on her phone at a table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-04
+    kind: file
+    file: public/photos/lib-ecommerce-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-04.md.
+    sourceUrl: https://unsplash.com/photos/4OPaeyML_lM
+    licenseUrl: https://unsplash.com/license
+    sha256: 2abae314aaf190c21a461e8fdb0786c0e75cf1a9ea506f6e04a7d26a49f22dd6
+    width: 2400
+    height: 1350
+    alt: "A man holding a card while shopping on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-05
+    kind: file
+    file: public/photos/lib-ecommerce-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Campaign Creators (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-05.md.
+    sourceUrl: https://unsplash.com/photos/OGOWDVLbMSc
+    licenseUrl: https://unsplash.com/license
+    sha256: c911413159d1fa10da4551a865fb9650f089c3a7152590cf4660e8877ad322df
+    width: 2400
+    height: 1600
+    alt: "A person reviewing sales on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-03
+    kind: file
+    file: public/photos/lib-ecommerce-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "John Schnobrich (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-03.md.
+    sourceUrl: https://unsplash.com/photos/2FPjlAyMQTA
+    licenseUrl: https://unsplash.com/license
+    sha256: cb54828a3727bb34f380221a9b71d61892537d6996382a136543518322caa4d7
+    width: 2400
+    height: 1601
+    alt: "Three people reviewing an online store on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-06
+    kind: file
+    file: public/photos/lib-ecommerce-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-06.md.
+    sourceUrl: https://unsplash.com/photos/dEmlP20lTo8
+    licenseUrl: https://unsplash.com/license
+    sha256: d4d3b6dc340c27d675c2ca397f8ddf1c46e2c2a3c5b09f63c1384d6d0683a4ba
+    width: 2400
+    height: 1350
+    alt: "A young person shopping online with a phone and a card"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-07
+    kind: file
+    file: public/photos/lib-ecommerce-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Viva Reella (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-07.md.
+    sourceUrl: https://unsplash.com/photos/O3eGXAUeGGg
+    licenseUrl: https://unsplash.com/license
+    sha256: adcc3f61a0ea5c588a82bf311cf932fa047a91c21e5c62fab77593d374ef6b40
+    width: 2400
+    height: 1920
+    alt: "A person holding a phone near a laptop and coffee"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-09
+    kind: file
+    file: public/photos/lib-ecommerce-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Sergey Zolkin (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-09.md.
+    sourceUrl: https://unsplash.com/photos/_UeY8aTI6d0
+    licenseUrl: https://unsplash.com/license
+    sha256: 3fed05e8c9e09cef672699c0a22af121f5b97e9600898ccc39b07adc8f7b5ae5
+    width: 2400
+    height: 1600
+    alt: "A person working on a laptop in black and white"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-08
+    kind: file
+    file: public/photos/lib-ecommerce-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jonas Leupe (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-08.md.
+    sourceUrl: https://unsplash.com/photos/0IVop5v4MMU
+    licenseUrl: https://unsplash.com/license
+    sha256: 4fb718998c23f6cc4ffde7aaee5074fd672001e73eba6cf4267847bc90ec6cb2
+    width: 2400
+    height: 1600
+    alt: "A woman holding a smartphone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-11
+    kind: file
+    file: public/photos/lib-ecommerce-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "CardMapr.nl (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-11.md.
+    sourceUrl: https://unsplash.com/photos/XH2JFgT4Abc
+    licenseUrl: https://unsplash.com/license
+    sha256: e84559017bb7eb428bd3a2f4fbf156021ad2094699096c3110dca33060e9d54c
+    width: 2400
+    height: 1500
+    alt: "A person paying with a phone at a card reader"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-10
+    kind: file
+    file: public/photos/lib-ecommerce-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Gabriel Weyand (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-10.md.
+    sourceUrl: https://unsplash.com/photos/pPpUCaudT5Q
+    licenseUrl: https://unsplash.com/license
+    sha256: 571a41eb1bddf337f963b834317524155474f1432bf62010292c7c03938eada4
+    width: 2400
+    height: 1600
+    alt: "A person working on a laptop at a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-13
+    kind: file
+    file: public/photos/lib-ecommerce-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "naipo.de (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-13.md.
+    sourceUrl: https://unsplash.com/photos/k24rOBJ2D_0
+    licenseUrl: https://unsplash.com/license
+    sha256: ac100dedb761134dc03c2be0146cd019d204e78b7e4a6c9083b441a5bbf3acf1
+    width: 2400
+    height: 1600
+    alt: "A person holding a smartphone"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ecommerce-12
+    kind: file
+    file: public/photos/lib-ecommerce-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Blake Wisz (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ecommerce-12.md.
+    sourceUrl: https://unsplash.com/photos/Xn5FbEM9564
+    licenseUrl: https://unsplash.com/license
+    sha256: 97aa8e3f33579d73d4b444a57c04d68c77be63d4089cc26105fcf2cab3ef1f96
+    width: 2400
+    height: 1600
+    alt: "A person holding a smartphone beside a tablet at a counter"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-02
+    kind: file
+    file: public/photos/lib-ai-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "BoliviaInteligente (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-02.md.
+    sourceUrl: https://unsplash.com/photos/kECRXz0m42A
+    licenseUrl: https://unsplash.com/license
+    sha256: 48a7491ed4717e30f6cd5d9cb619e1a2222fca893e024df757c54e0e786c0dfc
+    width: 2400
+    height: 1500
+    alt: "A keyboard with a blue AI key"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-01
+    kind: file
+    file: public/photos/lib-ai-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Steve A Johnson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-01.md.
+    sourceUrl: https://unsplash.com/photos/_0iV9LmPDn0
+    licenseUrl: https://unsplash.com/license
+    sha256: 0cb23aefac65b4f50ece346c230eb99cd1da935643468e53fb04b5c8cbf6c057
+    width: 2400
+    height: 1350
+    alt: "A circuit board with a brain shape on it"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-05
+    kind: file
+    file: public/photos/lib-ai-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "BoliviaInteligente (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-05.md.
+    sourceUrl: https://unsplash.com/photos/DEci5GH0r0k
+    licenseUrl: https://unsplash.com/license
+    sha256: 1248464a95ca6ce8a5f8c2f3b39601146e3c4c1a25d803e100308e93f431d602
+    width: 2400
+    height: 1500
+    alt: "A close-up of a keyboard with a blue key"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-04
+    kind: file
+    file: public/photos/lib-ai-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Steve A Johnson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-04.md.
+    sourceUrl: https://unsplash.com/photos/WhAQMsdRKMI
+    licenseUrl: https://unsplash.com/license
+    sha256: 44d6f82a232af3aaf55be3a4c2dcc25dde424877371291fbec291fb4f497ac7d
+    width: 2400
+    height: 1350
+    alt: "A head silhouette with a circuit board in front of it"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-03
+    kind: file
+    file: public/photos/lib-ai-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Emiliano Vittoriosi (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-03.md.
+    sourceUrl: https://unsplash.com/photos/fvxNerA8uk0
+    licenseUrl: https://unsplash.com/license
+    sha256: 415ef0abdd97c24adf0424808278a3bc3b51f745abc29395db5ae942cb183ee1
+    width: 2400
+    height: 1800
+    alt: "A close-up of an AI assistant menu on a screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-06
+    kind: file
+    file: public/photos/lib-ai-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Luke Jones (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-06.md.
+    sourceUrl: https://unsplash.com/photos/tBvF46kmwBw
+    licenseUrl: https://unsplash.com/license
+    sha256: 49491c1119b8ae6de439d81904f074e1dfa2d2e9aaafc8afc51db2526948d799
+    width: 2400
+    height: 1350
+    alt: "A close-up of a computer circuit board"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-07
+    kind: file
+    file: public/photos/lib-ai-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Stephen Dawson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-07.md.
+    sourceUrl: https://unsplash.com/photos/qwtCeJ5cLYs
+    licenseUrl: https://unsplash.com/license
+    sha256: e1b378b67fd084a1ba7987e252de00b0be4641edc043b7d989692124f97cb364
+    width: 2400
+    height: 1727
+    alt: "A monitoring screen with live charts"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-08
+    kind: file
+    file: public/photos/lib-ai-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "charlesdeluvio (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-08.md.
+    sourceUrl: https://unsplash.com/photos/pjAH2Ax4uWk
+    licenseUrl: https://unsplash.com/license
+    sha256: 26932cd8d9719b4916a71e778bc4620507f4098701efda9aca1f7cbb3ccbe09f
+    width: 2400
+    height: 1600
+    alt: "A person working at a desktop computer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-09
+    kind: file
+    file: public/photos/lib-ai-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Deng Xiang (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-09.md.
+    sourceUrl: https://unsplash.com/photos/ILyeoImR8Uk
+    licenseUrl: https://unsplash.com/license
+    sha256: e58b936b1e5bfcbceb4ce24b0fe0c755481748f19a24692de8b3b91b46776b7a
+    width: 2400
+    height: 1737
+    alt: "A laptop on a table with an AI assistant open"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-11
+    kind: file
+    file: public/photos/lib-ai-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jonathan Kemper (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-11.md.
+    sourceUrl: https://unsplash.com/photos/N8AYH8R2rWQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 7519789404192e13e8fed91fc49e6eeb72f05570a2197a9b50c91f34f52302d9
+    width: 2400
+    height: 1600
+    alt: "A close-up of an AI assistant on a computer screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-10
+    kind: file
+    file: public/photos/lib-ai-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Swello (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-10.md.
+    sourceUrl: https://unsplash.com/photos/z2LZn6fDVyk
+    licenseUrl: https://unsplash.com/license
+    sha256: 0707d1c1116d2b35321e205e178ce442f4b7039ad7abcde109ba4ac9b2e02790
+    width: 2400
+    height: 1600
+    alt: "A person typing on a laptop with iced coffee nearby"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-12
+    kind: file
+    file: public/photos/lib-ai-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rolf van Root (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-12.md.
+    sourceUrl: https://unsplash.com/photos/oLthDWAG244
+    licenseUrl: https://unsplash.com/license
+    sha256: 26f388a74f4b254f91da09eb415fb628b3d008c9d3bd8aee20dd8838c7c6085b
+    width: 2400
+    height: 1600
+    alt: "A computer screen with an AI web page"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-01
+    kind: file
+    file: public/photos/lib-automation-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alvaro Reyes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-01.md.
+    sourceUrl: https://unsplash.com/photos/qWwpHwip31M
+    licenseUrl: https://unsplash.com/license
+    sha256: d2db0e0299412761fbb013fb533db53d52281c2422c173e64d719126223e8774
+    width: 2400
+    height: 1600
+    alt: "A person planning a process on a board with sticky notes"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ai-13
+    kind: file
+    file: public/photos/lib-ai-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jonathan Kemper (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ai-13.md.
+    sourceUrl: https://unsplash.com/photos/5yuRImxKOcU
+    licenseUrl: https://unsplash.com/license
+    sha256: d9659bd6abc4593a6ae69f02ec724c56d717da3c1bd6d38b3464cea758a868d0
+    width: 2400
+    height: 1600
+    alt: "A computer screen with an AI text response"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-02
+    kind: file
+    file: public/photos/lib-automation-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christin Hume (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-02.md.
+    sourceUrl: https://unsplash.com/photos/Hcfwew744z4
+    licenseUrl: https://unsplash.com/license
+    sha256: 471121c8c5bc5f2897109429628d70e8a699ac90640a3739abf9ccb73ca75d94
+    width: 2400
+    height: 1600
+    alt: "A person working on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-03
+    kind: file
+    file: public/photos/lib-automation-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-03.md.
+    sourceUrl: https://unsplash.com/photos/fXlL5I0IvK0
+    licenseUrl: https://unsplash.com/license
+    sha256: f1b0965bd6735c488d61396b6b36813cb4d1a918ffa6e32b792aa91de9d1ddd3
+    width: 2400
+    height: 1350
+    alt: "A hand checking off items on a to-do list"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-05
+    kind: file
+    file: public/photos/lib-automation-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-05.md.
+    sourceUrl: https://unsplash.com/photos/2kHqlCwj35E
+    licenseUrl: https://unsplash.com/license
+    sha256: 7388b71c9d5045f7ecdf2d41ae2aa9eee3c0a1b487b36a8209bc7b374d0c77ce
+    width: 2400
+    height: 1350
+    alt: "A team brainstorming on a glass wall with sticky notes"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-04
+    kind: file
+    file: public/photos/lib-automation-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kelly Sikkema (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-04.md.
+    sourceUrl: https://unsplash.com/photos/wdnpaTNwOEQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 1c857264ea2eccbdf9d50f2ac26eede40471490ed3f99f303ef7112f9d7c7223
+    width: 2400
+    height: 1600
+    alt: "A workflow diagram with a product brief and user goals"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-07
+    kind: file
+    file: public/photos/lib-automation-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Compagnons (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-07.md.
+    sourceUrl: https://unsplash.com/photos/Rez3-Mv7n_c
+    licenseUrl: https://unsplash.com/license
+    sha256: d3daf68f625043268d1414693e1a58e568418baff59a55f6e42e49e54753bdd3
+    width: 2400
+    height: 1600
+    alt: "A monitor on a tidy office desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-08
+    kind: file
+    file: public/photos/lib-automation-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-08.md.
+    sourceUrl: https://unsplash.com/photos/rBlRxCgWK10
+    licenseUrl: https://unsplash.com/license
+    sha256: ef85961bb5dfd58fc9132cb65c21ee086ba894ab5165693b7315002f13c5587a
+    width: 2400
+    height: 1350
+    alt: "A woman writing on sticky notes on a wall"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-09
+    kind: file
+    file: public/photos/lib-automation-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Beatriz Cattel (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-09.md.
+    sourceUrl: https://unsplash.com/photos/ajTN690FnUg
+    licenseUrl: https://unsplash.com/license
+    sha256: 9c5e56fad64a60c96b821036e5f2f5d55a27bc133196bbed035652394a86d0f2
+    width: 2400
+    height: 1600
+    alt: "A hand drawing a diagram on a whiteboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-06
+    kind: file
+    file: public/photos/lib-automation-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kelly Sikkema (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-06.md.
+    sourceUrl: https://unsplash.com/photos/lFtttcsx5Vk
+    licenseUrl: https://unsplash.com/license
+    sha256: 3824984b071ec72aecef49721dc064798e80b90c86758d7d75706934de2eae53
+    width: 2400
+    height: 1600
+    alt: "A person drawing a process diagram on paper"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-10
+    kind: file
+    file: public/photos/lib-automation-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Campaign Creators (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-10.md.
+    sourceUrl: https://unsplash.com/photos/8F4EX4Nw1yY
+    licenseUrl: https://unsplash.com/license
+    sha256: 84e63e816ab2469915426b1b019d95f881b5a0e2a18ddc7eff7dd03c55c25c98
+    width: 2400
+    height: 1600
+    alt: "A man writing a plan on a whiteboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-11
+    kind: file
+    file: public/photos/lib-automation-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-11.md.
+    sourceUrl: https://unsplash.com/photos/TB7aNN4blTQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 0c328e5384082703c5db9d653d2f79895f46bf31003ca803ed6106c04da63a1e
+    width: 2400
+    height: 1350
+    alt: "A hand writing a checklist in a notebook"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-12
+    kind: file
+    file: public/photos/lib-automation-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-12.md.
+    sourceUrl: https://unsplash.com/photos/vhZ8K5Np9mk
+    licenseUrl: https://unsplash.com/license
+    sha256: 2d6b329e56e4e6e8e13313c9924bbc3193f1e73ae4306babba912b7ed341141b
+    width: 2400
+    height: 1350
+    alt: "A person drawing on a tablet at a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-13
+    kind: file
+    file: public/photos/lib-automation-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Lukas Blazek (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-13.md.
+    sourceUrl: https://unsplash.com/photos/mcSDtbWXUZU
+    licenseUrl: https://unsplash.com/license
+    sha256: d9903d469ca6a71e171bdba9c27eaf347aeaec234c232eb1e4b80a5e994752bd
+    width: 2400
+    height: 1590
+    alt: "A laptop showing reports on a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-14
+    kind: file
+    file: public/photos/lib-automation-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-14.md.
+    sourceUrl: https://unsplash.com/photos/QiUWAuFleVg
+    licenseUrl: https://unsplash.com/license
+    sha256: 941219ce7f06d00c8ba22999eaa78300be29571961c961ba4102d1dcb17219ba
+    width: 2400
+    height: 1350
+    alt: "A man presenting a plan on a whiteboard to colleagues"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-15
+    kind: file
+    file: public/photos/lib-automation-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christin Hume (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-15.md.
+    sourceUrl: https://unsplash.com/photos/mfB1B1s4sMc
+    licenseUrl: https://unsplash.com/license
+    sha256: 054737ae161fc010b2711a7e23e520579b8fad8ec09e25242ae62ceba4268330
+    width: 2400
+    height: 1600
+    alt: "A person working at a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-16
+    kind: file
+    file: public/photos/lib-automation-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-16.md.
+    sourceUrl: https://unsplash.com/photos/p2zR1G1ry20
+    licenseUrl: https://unsplash.com/license
+    sha256: 994c4bf287fb2a8edab0fc301b1ed13ee308fe9483f1f0a839c10e1b26e96f52
+    width: 2400
+    height: 1568
+    alt: "A phone, keyboard, and mouse on a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-17
+    kind: file
+    file: public/photos/lib-automation-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kevin Bhagat (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-17.md.
+    sourceUrl: https://unsplash.com/photos/zNRITe8NPqY
+    licenseUrl: https://unsplash.com/license
+    sha256: 916f8bb0dcf51b44e99889430cc688bb3a7a54cb91688270cf540ecc836c615e
+    width: 2400
+    height: 1600
+    alt: "A laptop beside a green plant on a table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-18
+    kind: file
+    file: public/photos/lib-automation-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Bernd Dittrich (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-18.md.
+    sourceUrl: https://unsplash.com/photos/pYlBAu3de0w
+    licenseUrl: https://unsplash.com/license
+    sha256: daf0dbcfbd28adcef5babc6f7c5ff93d6aed6e71234b8f23b406094063f8758f
+    width: 2400
+    height: 1290
+    alt: "An office with rows of desks and chairs"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-automation-19
+    kind: file
+    file: public/photos/lib-automation-19.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ryland Dean (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-automation-19.md.
+    sourceUrl: https://unsplash.com/photos/6k6N8HTrXyE
+    licenseUrl: https://unsplash.com/license
+    sha256: a92e99453cc4ca41080eb55cda5f6c652c26b8e80471d69e27845dbae71de3b8
+    width: 2400
+    height: 1590
+    alt: "A mug beside a keyboard on a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-01
+    kind: file
+    file: public/photos/lib-data-analytics-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Deng Xiang (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-01.md.
+    sourceUrl: https://unsplash.com/photos/-WXQm_NTK0U
+    licenseUrl: https://unsplash.com/license
+    sha256: 877976f3bf38ac2240630b9bcba05771cb2ca1325c861356d551bdd7d342bb7d
+    width: 2400
+    height: 1595
+    alt: "A data dashboard on a screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-02
+    kind: file
+    file: public/photos/lib-data-analytics-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ngital (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-02.md.
+    sourceUrl: https://unsplash.com/photos/8OYcY9CRP_0
+    licenseUrl: https://unsplash.com/license
+    sha256: 3fbdee39ece862997a15f15a4b85e8859d1aa9e67396aaa935376c0a1b5009d9
+    width: 2400
+    height: 1350
+    alt: "A laptop with charts on a desk by a sunny window"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-03
+    kind: file
+    file: public/photos/lib-data-analytics-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Markus Spiske (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-03.md.
+    sourceUrl: https://unsplash.com/photos/hvSr_CVecVI
+    licenseUrl: https://unsplash.com/license
+    sha256: 8a4c9bdf83e9c9da39ded2194088a8c3e2c620a6f33806f2151902dc50e53e5f
+    width: 2400
+    height: 1600
+    alt: "A screen showing data and code"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-04
+    kind: file
+    file: public/photos/lib-data-analytics-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Myriam Jessier (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-04.md.
+    sourceUrl: https://unsplash.com/photos/eveI7MOcSmw
+    licenseUrl: https://unsplash.com/license
+    sha256: 50c736abe3b6dfe0b27467fb3d2f8c61cf28a31d20abc691c014935666715818
+    width: 2400
+    height: 1601
+    alt: "A person reviewing analytics on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-05
+    kind: file
+    file: public/photos/lib-data-analytics-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-05.md.
+    sourceUrl: https://unsplash.com/photos/ykgLX_CwtDw
+    licenseUrl: https://unsplash.com/license
+    sha256: 55308f2e233a46cd674d324680c18b8de575ea9f6263ce566f279b3b187cd23c
+    width: 2400
+    height: 1601
+    alt: "A person using a stylus on a tablet with charts"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-07
+    kind: file
+    file: public/photos/lib-data-analytics-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "1981 Digital (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-07.md.
+    sourceUrl: https://unsplash.com/photos/bMWHu8wU1Vk
+    licenseUrl: https://unsplash.com/license
+    sha256: 4bd7bd2ef6da39f88aefa21f470f6e223e2ec9bf01ec5611ea5dad5b33ecfbb7
+    width: 2400
+    height: 1600
+    alt: "A computer screen full of analytics data"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-06
+    kind: file
+    file: public/photos/lib-data-analytics-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Stephen Phillips (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-06.md.
+    sourceUrl: https://unsplash.com/photos/shr_Xn8S8QU
+    licenseUrl: https://unsplash.com/license
+    sha256: 56ff29b6ab8b8b365999d0777f36f5dcf10a4e785f0ea41b6ee0f7e8294a734a
+    width: 2400
+    height: 1464
+    alt: "A monitor showing an analytics report"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-10
+    kind: file
+    file: public/photos/lib-data-analytics-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-10.md.
+    sourceUrl: https://unsplash.com/photos/NNFACGKyzZw
+    licenseUrl: https://unsplash.com/license
+    sha256: 4be9d20384bd6574ea84f6ff1550d2ab4bff9e0f3557775127152a8dc5b7db51
+    width: 2400
+    height: 1350
+    alt: "A woman presenting a business strategy to colleagues"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-08
+    kind: file
+    file: public/photos/lib-data-analytics-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Gorilla ROI (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-08.md.
+    sourceUrl: https://unsplash.com/photos/9fZuqBYlV1w
+    licenseUrl: https://unsplash.com/license
+    sha256: 886423e11913ade57c88d238a37ddc8a663fa4e45fe7cc5f67949a487e6a6ea9
+    width: 2400
+    height: 1800
+    alt: "Hands typing on a laptop displaying a spreadsheet"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-11
+    kind: file
+    file: public/photos/lib-data-analytics-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-11.md.
+    sourceUrl: https://unsplash.com/photos/0iTp1WNlMGc
+    licenseUrl: https://unsplash.com/license
+    sha256: e54c85502818b80ac5e3de8750d6a388f55e92ba8564ecaa1330d261726f4796
+    width: 2400
+    height: 1350
+    alt: "Colleagues reviewing data at an office desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-09
+    kind: file
+    file: public/photos/lib-data-analytics-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Austin Distel (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-09.md.
+    sourceUrl: https://unsplash.com/photos/744oGeqpxPQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 1a581eeaa302d4d6ba2bf7791b2f25bea171cca43c05487892aadb100db69e0f
+    width: 2400
+    height: 1600
+    alt: "A person reviewing figures on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-12
+    kind: file
+    file: public/photos/lib-data-analytics-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-12.md.
+    sourceUrl: https://unsplash.com/photos/juTM2daTxN0
+    licenseUrl: https://unsplash.com/license
+    sha256: 97ff485405b7ac8475db4596e3b5097e1292f471342e2e11e0272164be3b0cd8
+    width: 2400
+    height: 1350
+    alt: "Two colleagues reviewing figures at a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-13
+    kind: file
+    file: public/photos/lib-data-analytics-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Markus Winkler (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-13.md.
+    sourceUrl: https://unsplash.com/photos/IrRbSND5EUc
+    licenseUrl: https://unsplash.com/license
+    sha256: 97920151262e140c82c8c53c03495991e4d486c522f26c356b42361d1071b181
+    width: 2400
+    height: 1600
+    alt: "A chart displayed on a laptop screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-14
+    kind: file
+    file: public/photos/lib-data-analytics-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kaleidico (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-14.md.
+    sourceUrl: https://unsplash.com/photos/3V8xo5Gbusk
+    licenseUrl: https://unsplash.com/license
+    sha256: 7ef6a4f881cfb0886b3d1a7d6bcfc10714464302c7811039bd93fdc435126951
+    width: 2400
+    height: 1601
+    alt: "A man explaining figures beside a whiteboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-15
+    kind: file
+    file: public/photos/lib-data-analytics-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Towfiqu barbhuiya (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-15.md.
+    sourceUrl: https://unsplash.com/photos/nApaSgkzaxg
+    licenseUrl: https://unsplash.com/license
+    sha256: 8bef1cce277bbc6ee56ffa1f62dfd2c6a38fb37078a961c9d9484ed92e8b5cf8
+    width: 2400
+    height: 1602
+    alt: "A person holding a tablet with business figures"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-16
+    kind: file
+    file: public/photos/lib-data-analytics-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Nick Chong (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-16.md.
+    sourceUrl: https://unsplash.com/photos/N__BnvQ_w18
+    licenseUrl: https://unsplash.com/license
+    sha256: 36a415a08b4ad5e1b88a508b1918bf44b64c48844e20a32a54a1e8eb895a6b8d
+    width: 2400
+    height: 1600
+    alt: "A screen showing a trading chart"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-17
+    kind: file
+    file: public/photos/lib-data-analytics-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Adam Smigielski (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-17.md.
+    sourceUrl: https://unsplash.com/photos/K5mPtONmpHM
+    licenseUrl: https://unsplash.com/license
+    sha256: 815141c26fb85ae0b225b058c1da2ac187fb0aedfb647143a60663f889a9b192
+    width: 2400
+    height: 1601
+    alt: "A person holding a phone in front of a chart"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-data-analytics-18
+    kind: file
+    file: public/photos/lib-data-analytics-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Maxim Hopman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-data-analytics-18.md.
+    sourceUrl: https://unsplash.com/photos/fiXLQXAhCfk
+    licenseUrl: https://unsplash.com/license
+    sha256: 5743ba51f594791cab5dd614ae7285f59d53d3de5939544c8c319bddc76b5090
+    width: 2400
+    height: 1600
+    alt: "A candlestick chart on a dark screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-01
+    kind: file
+    file: public/photos/lib-api-integration-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jordan Harrison (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-01.md.
+    sourceUrl: https://unsplash.com/photos/40XgDxBfYXM
+    licenseUrl: https://unsplash.com/license
+    sha256: 4400c72af1b82ae3a1ccdf415419759f8015b5be89fe97c2f276a179864076f7
+    width: 2400
+    height: 1600
+    alt: "Blue network cables plugged into a switch"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-02
+    kind: file
+    file: public/photos/lib-api-integration-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Viacheslav Shatunov (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-02.md.
+    sourceUrl: https://unsplash.com/photos/5R5fdK9sNOU
+    licenseUrl: https://unsplash.com/license
+    sha256: 56049f626562d13bf9e90446c667ac1ad44c2d80426e946d38ab7aa604e62ee2
+    width: 2400
+    height: 1350
+    alt: "Three cables intertwined on a gray background"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-03
+    kind: file
+    file: public/photos/lib-api-integration-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Albert Stoynov (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-03.md.
+    sourceUrl: https://unsplash.com/photos/dyUp7WPu5q4
+    licenseUrl: https://unsplash.com/license
+    sha256: f5281d4def25928a6f78de869873807aa0297ad13627f9d512449f3d556ae670
+    width: 2400
+    height: 1350
+    alt: "A close-up of network cables connected to a switch"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-04
+    kind: file
+    file: public/photos/lib-api-integration-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Aleksandr Lyaptsev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-04.md.
+    sourceUrl: https://unsplash.com/photos/6mJzISk_Ib4
+    licenseUrl: https://unsplash.com/license
+    sha256: de88c03015259132200c8e56f92b9681bdf3026fa115743de020a0447a12af70
+    width: 2400
+    height: 1610
+    alt: "An open control panel with wires and connectors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-05
+    kind: file
+    file: public/photos/lib-api-integration-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "John Barkiple (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-05.md.
+    sourceUrl: https://unsplash.com/photos/l090uFWoPaI
+    licenseUrl: https://unsplash.com/license
+    sha256: 585bceeeebec4de575727c4aa30c921aac4cf21688e1b851c45dc1a8979b99bf
+    width: 2400
+    height: 1600
+    alt: "Bundles of connected cables"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-06
+    kind: file
+    file: public/photos/lib-api-integration-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Lightsaber Collection (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-06.md.
+    sourceUrl: https://unsplash.com/photos/T-IN5o3kxyA
+    licenseUrl: https://unsplash.com/license
+    sha256: 671056894d6a0dedc4528e33c1ef42aa9dc35ff669a48a561dc2abd7c496c80c
+    width: 2400
+    height: 1254
+    alt: "Cables connected to a server"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-07
+    kind: file
+    file: public/photos/lib-api-integration-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jonathan Borba (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-07.md.
+    sourceUrl: https://unsplash.com/photos/SwVkmowt7qA
+    licenseUrl: https://unsplash.com/license
+    sha256: 39d4f00db8b401eeedaa8543491fef7d803ab4a5fbf06a7a84a8ea1e361f5827
+    width: 2400
+    height: 1350
+    alt: "A white connector cable"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-08
+    kind: file
+    file: public/photos/lib-api-integration-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ronald Crow (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-08.md.
+    sourceUrl: https://unsplash.com/photos/8oR7XykOjk4
+    licenseUrl: https://unsplash.com/license
+    sha256: b23f33b62169b17ac4b1aebbd5eeee8e0a648efbd913edb8030a6396f6057417
+    width: 2400
+    height: 1600
+    alt: "Colored wires connected in a panel"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-01
+    kind: file
+    file: public/photos/lib-cloud-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-01.md.
+    sourceUrl: https://unsplash.com/photos/8ljjFxQFwKM
+    licenseUrl: https://unsplash.com/license
+    sha256: 9b616f76f9315d4ed8a25449b06c4052a861b02a8ba217a521150fdfbd12e902
+    width: 2400
+    height: 1350
+    alt: "Hands typing on a keyboard in front of several screens"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-10
+    kind: file
+    file: public/photos/lib-api-integration-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Franck V. (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-10.md.
+    sourceUrl: https://unsplash.com/photos/uWaRsN-CqY0
+    licenseUrl: https://unsplash.com/license
+    sha256: f6bc0ea1a9d0223cd1fa1f514fd30e5df91203bcf0474323eb025ab9199c4784
+    width: 2400
+    height: 1843
+    alt: "A network cable plugged into a router"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-02
+    kind: file
+    file: public/photos/lib-cloud-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Philipp Katzenberger (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-02.md.
+    sourceUrl: https://unsplash.com/photos/iIJrUoeRoCQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 6deafab267f9da32170cc3b647239a21d1c583d5493abda2debe4734eddf533d
+    width: 2400
+    height: 1600
+    alt: "A close-up of a laptop with a blue screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-03
+    kind: file
+    file: public/photos/lib-cloud-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kevin Ache (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-03.md.
+    sourceUrl: https://unsplash.com/photos/2JJ3wBHu4_0
+    licenseUrl: https://unsplash.com/license
+    sha256: 6bb6ae6b6c671247c28d9e1d2994f3bc93102d4109eae38f69de4285364efd8e
+    width: 2400
+    height: 1600
+    alt: "A rack of servers in a server room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-04
+    kind: file
+    file: public/photos/lib-cloud-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christina Morillo (wocintechchat.com) (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-04.md.
+    sourceUrl: https://unsplash.com/photos/glRqyWJgUeY
+    licenseUrl: https://unsplash.com/license
+    sha256: 79e6f186d5ae4fe6215492cbf1d7dbaf3b4d9531aff21cf5338ca6ba5ba629df
+    width: 2400
+    height: 1602
+    alt: "A woman working on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-05
+    kind: file
+    file: public/photos/lib-cloud-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ismail Enes Ayhan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-05.md.
+    sourceUrl: https://unsplash.com/photos/lVZjvw-u9V8
+    licenseUrl: https://unsplash.com/license
+    sha256: f2c7bae282b57f52a2211345bef636f9eb18da2b47ca5229166b689144b58673
+    width: 2400
+    height: 1380
+    alt: "A server room aisle with equipment racks"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-07
+    kind: file
+    file: public/photos/lib-cloud-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "imgix (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-07.md.
+    sourceUrl: https://unsplash.com/photos/pgdaAwf6IJg
+    licenseUrl: https://unsplash.com/license
+    sha256: 6cdd3321917cbe49dd025ca8caf74b95af8a7253820e02e549560c8291401d76
+    width: 2400
+    height: 1605
+    alt: "Black server cabinets in a data center"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-08
+    kind: file
+    file: public/photos/lib-cloud-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tyler (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-08.md.
+    sourceUrl: https://unsplash.com/photos/OnI_TNcIv9U
+    licenseUrl: https://unsplash.com/license
+    sha256: cfb9cb0b6bc846171828d86ffc13a822e6e5de57e20f598a5a22b196b316f1b5
+    width: 2400
+    height: 1350
+    alt: "A rack of electronic equipment in a dark room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-10
+    kind: file
+    file: public/photos/lib-cloud-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Marc Pezin (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-10.md.
+    sourceUrl: https://unsplash.com/photos/i_JUAdanGH0
+    licenseUrl: https://unsplash.com/license
+    sha256: 867856c4f74cc4fbcb06c2789884436a280a04e680795090463d3cec0e9462ed
+    width: 2400
+    height: 1602
+    alt: "A close-up of servers in a rack"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-09
+    kind: file
+    file: public/photos/lib-cloud-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kirill Sh (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-09.md.
+    sourceUrl: https://unsplash.com/photos/eVWWr6nmDf8
+    licenseUrl: https://unsplash.com/license
+    sha256: bab73330fbb3fd98a76ca18c231986af1f0b3b3dc17df1a5302a30639af27d83
+    width: 2400
+    height: 1606
+    alt: "Fiber optic cables connected to a network switch"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-06
+    kind: file
+    file: public/photos/lib-cloud-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Winston Chen (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-06.md.
+    sourceUrl: https://unsplash.com/photos/iZe21DzHnUg
+    licenseUrl: https://unsplash.com/license
+    sha256: 5497d5254824c0d2c526c1fd10b25d7a2ff4a1d031a546218624d96a02f9fa9c
+    width: 2400
+    height: 1600
+    alt: "Server cooling fans in a data center"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-api-integration-09
+    kind: file
+    file: public/photos/lib-api-integration-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ivan N (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-api-integration-09.md.
+    sourceUrl: https://unsplash.com/photos/AfStyhXC5kM
+    licenseUrl: https://unsplash.com/license
+    sha256: 4e642ad9625685f3052465c387aa87027547d041f6846323413ac6ae40e001b4
+    width: 2400
+    height: 1800
+    alt: "Cables connected across a server room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-13
+    kind: file
+    file: public/photos/lib-cloud-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Evgeniy Surzhan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-13.md.
+    sourceUrl: https://unsplash.com/photos/VFMhqkiL6E4
+    licenseUrl: https://unsplash.com/license
+    sha256: 91fc4e4cdbe7736dcbe182c6ec93cd5ed14266eb6207deb771ec5f13d7856a1d
+    width: 2400
+    height: 1600
+    alt: "Colleagues reviewing system designs on a screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-14
+    kind: file
+    file: public/photos/lib-cloud-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shamin Haky (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-14.md.
+    sourceUrl: https://unsplash.com/photos/RIk-i9rXPao
+    licenseUrl: https://unsplash.com/license
+    sha256: befb4ea590019285c82c8ad4c0b22b33a889b14057c79bf8da171fd2d9085765
+    width: 2400
+    height: 1350
+    alt: "Two engineers working on computers in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-12
+    kind: file
+    file: public/photos/lib-cloud-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tyler (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-12.md.
+    sourceUrl: https://unsplash.com/photos/vSprjjDbu60
+    licenseUrl: https://unsplash.com/license
+    sha256: 8b81fc46d984301d0aaf67c92965ce52bf280a973ef2ff6445dc4ba117e279ed
+    width: 2400
+    height: 1350
+    alt: "A close-up of a server in a server room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-11
+    kind: file
+    file: public/photos/lib-cloud-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kvistholt Photography (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-11.md.
+    sourceUrl: https://unsplash.com/photos/oZPwn40zCK4
+    licenseUrl: https://unsplash.com/license
+    sha256: b0aa8e2af0b88adb32ef13c3bd327b88fc0c1776d7e06724c254aa59cb344b25
+    width: 2400
+    height: 1602
+    alt: "Computer cables connected to servers"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cloud-15
+    kind: file
+    file: public/photos/lib-cloud-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alvaro Reyes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cloud-15.md.
+    sourceUrl: https://unsplash.com/photos/LXx1hwmp67E
+    licenseUrl: https://unsplash.com/license
+    sha256: e20337a77a492cc7080de6874678cb3f25d1938173a400a147b69c6f0c485b5e
+    width: 2400
+    height: 1600
+    alt: "Three engineers looking at computer monitors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cybersecurity-02
+    kind: file
+    file: public/photos/lib-cybersecurity-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jefferson Santos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cybersecurity-02.md.
+    sourceUrl: https://unsplash.com/photos/9SoCnyQmkzI
+    licenseUrl: https://unsplash.com/license
+    sha256: 79b553970f1e9b4f11e527be4bd6a96b2e6a78e797b449ef3092fe57c7474005
+    width: 2400
+    height: 1600
+    alt: "A person working across two laptops"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cybersecurity-04
+    kind: file
+    file: public/photos/lib-cybersecurity-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shamin Haky (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cybersecurity-04.md.
+    sourceUrl: https://unsplash.com/photos/Uhx-gHPpCDg
+    licenseUrl: https://unsplash.com/license
+    sha256: 549bb963517cae2107245f5dd643fb6ce7da1d88cdcfd649b3027d0a6de08c08
+    width: 2400
+    height: 1350
+    alt: "A person typing on a laptop at a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cybersecurity-03
+    kind: file
+    file: public/photos/lib-cybersecurity-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Shahadat Rahman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cybersecurity-03.md.
+    sourceUrl: https://unsplash.com/photos/BfrQnKBulYQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 040da93f12957ecfeaa5a7a4287ce73718bb07a53b37ecbf317fc21a6f154687
+    width: 2400
+    height: 1600
+    alt: "A close-up of program code on a screen"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-01
+    kind: file
+    file: public/photos/lib-ui-ux-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tirza van Dijk (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-01.md.
+    sourceUrl: https://unsplash.com/photos/o1SKqmgSDbg
+    licenseUrl: https://unsplash.com/license
+    sha256: 4f93973ef7c41750b14106ac8ce55a6d42e3d4d7c307e61f5a5eadec2adfc985
+    width: 2400
+    height: 1350
+    alt: "A laptop displaying interface icons"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-03
+    kind: file
+    file: public/photos/lib-ui-ux-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Faizur Rehman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-03.md.
+    sourceUrl: https://unsplash.com/photos/pHPzdEHN6Os
+    licenseUrl: https://unsplash.com/license
+    sha256: 5436a95c862768161c9d5f029affbf2e73adaf7adb41cebfc9cb39461c292d61
+    width: 2400
+    height: 1470
+    alt: "A designer working on an interface at a computer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-02
+    kind: file
+    file: public/photos/lib-ui-ux-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Amelie Mourichon (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-02.md.
+    sourceUrl: https://unsplash.com/photos/sv8oOQaUb-o
+    licenseUrl: https://unsplash.com/license
+    sha256: 863a7e1da4a6f7429f2218fba1ea63f42776bf64096a0fd5cc7fa2655ce8bc36
+    width: 2400
+    height: 1800
+    alt: "A designer sketching app screens on paper"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-cybersecurity-01
+    kind: file
+    file: public/photos/lib-cybersecurity-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Adi Goldstein (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-cybersecurity-01.md.
+    sourceUrl: https://unsplash.com/photos/EUsVwEOsblE
+    licenseUrl: https://unsplash.com/license
+    sha256: 34a08efe0e654714c6ace2b445010bc1fc02c935bd980f43ca1af20248676d76
+    width: 2400
+    height: 1602
+    alt: "A glowing circuit panel in a dark room"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-05
+    kind: file
+    file: public/photos/lib-ui-ux-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Julio Lopez (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-05.md.
+    sourceUrl: https://unsplash.com/photos/c4Fp1Y-BQDQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 00a77ab94dba3c047b9f898c091c54681829fa8e65387e2da3a7f9c1277915a6
+    width: 2400
+    height: 1600
+    alt: "A woman working on a laptop and notebook at a desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-04
+    kind: file
+    file: public/photos/lib-ui-ux-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alvaro Reyes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-04.md.
+    sourceUrl: https://unsplash.com/photos/KxVlKiqQObU
+    licenseUrl: https://unsplash.com/license
+    sha256: 63f073bb0a56561ace65e217f3579ed7fd40b80764a6c9c5ea05c87f6c7ab257
+    width: 2400
+    height: 1601
+    alt: "A person drawing wireframes on a tablet with a stylus"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-06
+    kind: file
+    file: public/photos/lib-ui-ux-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alvaro Reyes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-06.md.
+    sourceUrl: https://unsplash.com/photos/zvmZiw3vdsQ
+    licenseUrl: https://unsplash.com/license
+    sha256: fb7a8307f88e870054687ae74bcf5fc6a267f55857f7104b2d77cf3ad40e91f7
+    width: 2400
+    height: 1601
+    alt: "A laptop showing a design file beside a mouse"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-ui-ux-07
+    kind: file
+    file: public/photos/lib-ui-ux-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-ui-ux-07.md.
+    sourceUrl: https://unsplash.com/photos/_nW2eAbAlwg
+    licenseUrl: https://unsplash.com/license
+    sha256: 8329e3039d7a08865431766e033e63ead6ed48f32a5053c698ad7ab8da6f79da
+    width: 2400
+    height: 1350
+    alt: "A team collaborating on a design project at an office table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-01
+    kind: file
+    file: public/photos/lib-branding-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Patrik Michalicka (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-01.md.
+    sourceUrl: https://unsplash.com/photos/r3iAqHb7JWs
+    licenseUrl: https://unsplash.com/license
+    sha256: f99ee22e2a8c0ce746f8786f2d9394cd0ac9bbb38611e8b757f87418290220f9
+    width: 2400
+    height: 1600
+    alt: "A clean designer's desk with a keyboard, laptop, and book"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-02
+    kind: file
+    file: public/photos/lib-branding-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "MK +2 (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-02.md.
+    sourceUrl: https://unsplash.com/photos/E6XStmd5wfk
+    licenseUrl: https://unsplash.com/license
+    sha256: d4010a5029493efd43c2a7ea024723a7416c3c6c71a7d86da2f2532d6003979e
+    width: 2400
+    height: 1350
+    alt: "A series of printed brochures in a consistent design"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-03
+    kind: file
+    file: public/photos/lib-branding-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Emily Bernal (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-03.md.
+    sourceUrl: https://unsplash.com/photos/v9vII5gV8Lw
+    licenseUrl: https://unsplash.com/license
+    sha256: 71fc4e5eacd85be0427698d3c2bd64b48973ccc96b012388ab8a5d7acef9d33d
+    width: 2400
+    height: 1600
+    alt: "A designer's desk with a desktop computer and keyboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-04
+    kind: file
+    file: public/photos/lib-branding-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Theme Photos (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-04.md.
+    sourceUrl: https://unsplash.com/photos/CGpifH3FjOA
+    licenseUrl: https://unsplash.com/license
+    sha256: 7cf8d3bbd64d1dc31002daf5524d51fd590675b99e6273a2972e9c2b5e0df9e0
+    width: 2400
+    height: 1601
+    alt: "A designer using a drawing tablet with color swatches"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-05
+    kind: file
+    file: public/photos/lib-branding-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "UX Store (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-05.md.
+    sourceUrl: https://unsplash.com/photos/jJT2r2n7lYA
+    licenseUrl: https://unsplash.com/license
+    sha256: 6a7d016d31718d558ac333f69cdc5fd84917b985bd10de83c77d579b8d367589
+    width: 2400
+    height: 1601
+    alt: "A laptop and desktop computer on a designer's table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-06
+    kind: file
+    file: public/photos/lib-branding-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Georgie Cobbs (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-06.md.
+    sourceUrl: https://unsplash.com/photos/bKjHgo_Lbpo
+    licenseUrl: https://unsplash.com/license
+    sha256: f7c0768315b262dba75c691f8adc3932e434745b03122c4561387b81a581d1e1
+    width: 2400
+    height: 1350
+    alt: "A yellow mug beside a desktop computer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-07
+    kind: file
+    file: public/photos/lib-branding-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Faizur Rehman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-07.md.
+    sourceUrl: https://unsplash.com/photos/yapBRdPWxik
+    licenseUrl: https://unsplash.com/license
+    sha256: 184ab4be7a788f8953f824e3b444ffc50d455432b6bd61e5c38ef24e694444dd
+    width: 2400
+    height: 1443
+    alt: "A desktop computer on a wooden table in a studio"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-branding-08
+    kind: file
+    file: public/photos/lib-branding-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "The Maker Jess (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-branding-08.md.
+    sourceUrl: https://unsplash.com/photos/-H2U3ZNI2ME
+    licenseUrl: https://unsplash.com/license
+    sha256: e8f6ef31b48fdcd286d05478386197474169d9e7e63357faed2dd0a85f09c72f
+    width: 2400
+    height: 1600
+    alt: "A monitor on a wooden desk in a design studio"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-01
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-01.md.
+    sourceUrl: https://unsplash.com/photos/zXA0jx1vrVk
+    licenseUrl: https://unsplash.com/license
+    sha256: 1237d86317026c2793b95a31009d37fc520b29e08380a533d8ad8cdd6248c1e8
+    width: 2400
+    height: 1601
+    alt: "A tablet displaying a project board with task cards"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-03
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "ZBRA Marketing (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-03.md.
+    sourceUrl: https://unsplash.com/photos/Q_HUQlTjZeU
+    licenseUrl: https://unsplash.com/license
+    sha256: cecc5f229cc12de203106c183bdbe8c33ede343e843fcff180b4610236e795ee
+    width: 2400
+    height: 1597
+    alt: "A person writing content notes on paper"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-02
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Daniil Komov (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-02.md.
+    sourceUrl: https://unsplash.com/photos/GQOylIn892U
+    licenseUrl: https://unsplash.com/license
+    sha256: db5c1f7e6045b4cdb68d9f816c50fe70280badae3a538603b432f89cb329e525
+    width: 2400
+    height: 1598
+    alt: "A laptop screen showing code and data charts"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-04
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Justin Morgan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-04.md.
+    sourceUrl: https://unsplash.com/photos/VxLhYXuLQN8
+    licenseUrl: https://unsplash.com/license
+    sha256: 2dc0634c7711e6bc358edb1047d0a7e3f822e741df71c29464b327df3eaae136
+    width: 2400
+    height: 1601
+    alt: "A computer screen with search data"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-05
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "1981 Digital (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-05.md.
+    sourceUrl: https://unsplash.com/photos/bf9sZBcGQl4
+    licenseUrl: https://unsplash.com/license
+    sha256: 83aba5446a7d6f3b23603bd0e17b1f2945de92f1eb665fd7d611f4cf4771b41d
+    width: 2400
+    height: 1350
+    alt: "A computer screen showing search analytics"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-06
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Myriam Jessier (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-06.md.
+    sourceUrl: https://unsplash.com/photos/VCtI-0qlVgA
+    licenseUrl: https://unsplash.com/license
+    sha256: da359ec979f249e4336af3285453ba86984363b6f14e3b04229c1ae6414f106c
+    width: 2400
+    height: 1601
+    alt: "A person reviewing search results on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-08
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "1981 Digital (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-08.md.
+    sourceUrl: https://unsplash.com/photos/MVS3ecBsfmk
+    licenseUrl: https://unsplash.com/license
+    sha256: ecb5f6562704c29e341d85f069b369e8db626981927ec5ccc91b02d0e80835ad
+    width: 2400
+    height: 1600
+    alt: "A close-up of an analytics dashboard"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-09
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Edho Pratama (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-09.md.
+    sourceUrl: https://unsplash.com/photos/yeB9jDmHm6M
+    licenseUrl: https://unsplash.com/license
+    sha256: ce6e7277037c709e4a1412f30e665844943e72b1e485f0ce2ca9e3cbd51dba87
+    width: 2400
+    height: 1601
+    alt: "A smartphone showing a search page"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-seo-aeo-geo-07
+    kind: file
+    file: public/photos/lib-seo-aeo-geo-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Justin Morgan (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-seo-aeo-geo-07.md.
+    sourceUrl: https://unsplash.com/photos/_Lnid7JAWFQ
+    licenseUrl: https://unsplash.com/license
+    sha256: dd9d1c185b6fc3180d9fe22e1399a77f8e9c6c3591d86f86e0dcb0fb3a4d7aa2
+    width: 2400
+    height: 1601
+    alt: "A computer screen with a traffic line graph"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-02
+    kind: file
+    file: public/photos/lib-digital-marketing-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-02.md.
+    sourceUrl: https://unsplash.com/photos/vWkwul5Bpbs
+    licenseUrl: https://unsplash.com/license
+    sha256: 275569c4d242a74588c8e0d993272debbca2a579fc5bcd54055bf5d4e01dd671
+    width: 2400
+    height: 1350
+    alt: "A person using a stylus on a tablet with campaign charts"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-01
+    kind: file
+    file: public/photos/lib-digital-marketing-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Marvin Meyer (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-01.md.
+    sourceUrl: https://unsplash.com/photos/SYTO3xs06fU
+    licenseUrl: https://unsplash.com/license
+    sha256: 331b803db9f34c9560e7be281e0a73fea585765a4d2ebdf2e574fd2c48536f78
+    width: 2400
+    height: 1600
+    alt: "A marketing team working on laptops at a shared table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-06
+    kind: file
+    file: public/photos/lib-digital-marketing-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "dole777 (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-06.md.
+    sourceUrl: https://unsplash.com/photos/EQSPI11rf68
+    licenseUrl: https://unsplash.com/license
+    sha256: 76d9e8317efb542ea9f6ab3dd3ed8a9d660164fed039979438144b2c5c8d3269
+    width: 2400
+    height: 1347
+    alt: "A smartphone with social media apps on a wooden table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-03
+    kind: file
+    file: public/photos/lib-digital-marketing-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Diggity Marketing (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-03.md.
+    sourceUrl: https://unsplash.com/photos/SB0WARG16HI
+    licenseUrl: https://unsplash.com/license
+    sha256: 4580f647026edeac2b2346c9096a959fb92e51dff2c83f220e49ad613b6f060d
+    width: 2400
+    height: 1350
+    alt: "Digital marketing planning materials on a wooden desk"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-04
+    kind: file
+    file: public/photos/lib-digital-marketing-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "charlesdeluvio (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-04.md.
+    sourceUrl: https://unsplash.com/photos/Lks7vei-eAg
+    licenseUrl: https://unsplash.com/license
+    sha256: 9b255ab040d539d2c8febb7901d9350ec25e235c523b5dad3f5e18b9b8068b7f
+    width: 2400
+    height: 1600
+    alt: "A man working on a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-05
+    kind: file
+    file: public/photos/lib-digital-marketing-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Campaign Creators (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-05.md.
+    sourceUrl: https://unsplash.com/photos/gMsnXqILjp4
+    licenseUrl: https://unsplash.com/license
+    sha256: 399b0caf676dc15c6aced5254b6d513cc99fe5d18dc85fd607e30d1603e3aeff
+    width: 2400
+    height: 1600
+    alt: "A man presenting to a marketing team"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-07
+    kind: file
+    file: public/photos/lib-digital-marketing-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Merakist (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-07.md.
+    sourceUrl: https://unsplash.com/photos/CNbRsQj8mHQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 2287571cb1d8c3230b393d1818ac93b20b9c5bbaa487e32d9152382294050e5c
+    width: 2400
+    height: 1800
+    alt: "Social media icons on colored tiles"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-digital-marketing-08
+    kind: file
+    file: public/photos/lib-digital-marketing-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Firmbee.com (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-digital-marketing-08.md.
+    sourceUrl: https://unsplash.com/photos/gcsNOsPEXfs
+    licenseUrl: https://unsplash.com/license
+    sha256: f1439b339cce9da496568fe9b58646057137a72d157c2412c5f1e2559e2713c2
+    width: 2400
+    height: 1594
+    alt: "A person planning a campaign on paper beside a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-01
+    kind: file
+    file: public/photos/lib-consulting-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Dylan Gillis (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-01.md.
+    sourceUrl: https://unsplash.com/photos/KdeqA3aTnBY
+    licenseUrl: https://unsplash.com/license
+    sha256: 6724baf3e63514213394e9875066227f36628375f34a2dec2f6e7df49ecf27d1
+    width: 2400
+    height: 1600
+    alt: "A team in a planning meeting holding pens and notes"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-02
+    kind: file
+    file: public/photos/lib-consulting-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-02.md.
+    sourceUrl: https://unsplash.com/photos/5V6KbvRcnV8
+    licenseUrl: https://unsplash.com/license
+    sha256: cce50c95db4dbc1e82884e420c0afb8616d68d657dd7977ee3eab074e2c6b992
+    width: 2400
+    height: 1350
+    alt: "A group of people in a modern office meeting"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-04
+    kind: file
+    file: public/photos/lib-consulting-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-04.md.
+    sourceUrl: https://unsplash.com/photos/YyJNda7nsPo
+    licenseUrl: https://unsplash.com/license
+    sha256: 89bf99ee444f19cf083e7e4361a0b255c6c9954b319b918236a4caff33a9699b
+    width: 2400
+    height: 1350
+    alt: "Colleagues discussing a plan in a modern office meeting"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-03
+    kind: file
+    file: public/photos/lib-consulting-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Rodeo Project Management Software (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-03.md.
+    sourceUrl: https://unsplash.com/photos/ONe-snuCaqQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 36232839896dc67097f4eb1115f1b6246b845ad4048acd0e52015cfeb1810300
+    width: 2400
+    height: 1600
+    alt: "A team meeting in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-05
+    kind: file
+    file: public/photos/lib-consulting-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christina Morillo (wocintechchat.com) (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-05.md.
+    sourceUrl: https://unsplash.com/photos/faEfWCdOKIg
+    licenseUrl: https://unsplash.com/license
+    sha256: f31e80b2f613e8957a9dc671c017cd494e0d0e564d8b55a2c3a0745923dd77fa
+    width: 2400
+    height: 1602
+    alt: "A team meeting around a wooden table with laptops"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-06
+    kind: file
+    file: public/photos/lib-consulting-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-06.md.
+    sourceUrl: https://unsplash.com/photos/_4tpElFQemQ
+    licenseUrl: https://unsplash.com/license
+    sha256: c3d14b81256cda7ea39d2c2f49d21fed07830d7773d0ec8b444e675bb5241a15
+    width: 2400
+    height: 1350
+    alt: "A business team collaborating in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-08
+    kind: file
+    file: public/photos/lib-consulting-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Headway (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-08.md.
+    sourceUrl: https://unsplash.com/photos/5QgIuuBxKwM
+    licenseUrl: https://unsplash.com/license
+    sha256: 388ddbfc9b00149b095b2df380088b1a7536506196d5a103a4558e0d235804e3
+    width: 2400
+    height: 1600
+    alt: "A person explaining a point during a meeting with a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-consulting-07
+    kind: file
+    file: public/photos/lib-consulting-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Redd Francisco (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-consulting-07.md.
+    sourceUrl: https://unsplash.com/photos/5U_28ojjgms
+    licenseUrl: https://unsplash.com/license
+    sha256: 7ddce2f33c14eb95ac78de96ac41cd1e4dd2118b0b28dfa110546bf5c158fa2f
+    width: 2400
+    height: 1350
+    alt: "A team meeting in a bright office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-01
+    kind: file
+    file: public/photos/lib-company-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Annie Spratt (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-01.md.
+    sourceUrl: https://unsplash.com/photos/QckxruozjRg
+    licenseUrl: https://unsplash.com/license
+    sha256: 7c065c570f8cfcdeaad4589165b572abad4396500884ace2c0278bce6832e905
+    width: 2400
+    height: 1601
+    alt: "A team working together around a laptop"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-02
+    kind: file
+    file: public/photos/lib-company-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cherrydeck (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-02.md.
+    sourceUrl: https://unsplash.com/photos/rMILC1PIwM0
+    licenseUrl: https://unsplash.com/license
+    sha256: 2045f359297592aaae0c8207956fb5889718de4ba7f5976cb90aeab543534b56
+    width: 2400
+    height: 1554
+    alt: "A team working at laptops in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-04
+    kind: file
+    file: public/photos/lib-company-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Arlington Research (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-04.md.
+    sourceUrl: https://unsplash.com/photos/kN_kViDchA0
+    licenseUrl: https://unsplash.com/license
+    sha256: cbfea2547ea64fc1c5811cb8b9631664077dc513e300b1a66993695d5d4d850b
+    width: 2400
+    height: 1602
+    alt: "People working at desks in an open office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-03
+    kind: file
+    file: public/photos/lib-company-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Mario Gogh (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-03.md.
+    sourceUrl: https://unsplash.com/photos/VBLHICVh-lI
+    licenseUrl: https://unsplash.com/license
+    sha256: 5aaa0496a8990e9ef6638cd6503d7875275a2748ffd90fa71d776cc331551f46
+    width: 2400
+    height: 1600
+    alt: "A team having a meeting"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-06
+    kind: file
+    file: public/photos/lib-company-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Lyubomyr Reverchuk (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-06.md.
+    sourceUrl: https://unsplash.com/photos/rtD_lcsN6_U
+    licenseUrl: https://unsplash.com/license
+    sha256: 896ccafead742e6edb8e57b45f106b7455cee5069409f828a573c10cbdd250d5
+    width: 2400
+    height: 1600
+    alt: "A team sitting around a table with laptops"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-07
+    kind: file
+    file: public/photos/lib-company-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cherrydeck (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-07.md.
+    sourceUrl: https://unsplash.com/photos/UpsEF48wAgk
+    licenseUrl: https://unsplash.com/license
+    sha256: b82132557f0e9118ebbe36ac9cfaf483df4fca35e7cd8d5ec166d7f0f1db3a31
+    width: 2400
+    height: 1569
+    alt: "Four people collaborating around a laptop in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-09
+    kind: file
+    file: public/photos/lib-company-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Cherrydeck (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-09.md.
+    sourceUrl: https://unsplash.com/photos/05gac-Qn0k4
+    licenseUrl: https://unsplash.com/license
+    sha256: c815db6899efb2bf3621fae43c5030e15861c7e4b15e29855a543e8d8399e97d
+    width: 2400
+    height: 1583
+    alt: "Four people in a meeting around a table in a modern office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-05
+    kind: file
+    file: public/photos/lib-company-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jud Mackrill (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-05.md.
+    sourceUrl: https://unsplash.com/photos/Of_m3hMsoAA
+    licenseUrl: https://unsplash.com/license
+    sha256: 6b20eba6af9d95d7fe374041afac9bba9bd69154856b40976c5ce64c0d8e3dac
+    width: 2400
+    height: 1600
+    alt: "Four coworkers smiling around a laptop at a table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-01
+    kind: file
+    file: public/photos/lib-portraits-01.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "LinkedIn Sales Solutions (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-01.md.
+    sourceUrl: https://unsplash.com/photos/pAtA8xe_iVM
+    licenseUrl: https://unsplash.com/license
+    sha256: 4ac3a01d4059885e4671e4a58c38ce9f9e42e10d982b9d0aa94bb2b0aebdac25
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a suit standing beside a wall"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-10
+    kind: file
+    file: public/photos/lib-company-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "ThisisEngineering (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-10.md.
+    sourceUrl: https://unsplash.com/photos/p5wrlynJR4A
+    licenseUrl: https://unsplash.com/license
+    sha256: 1bc9cf2cdd8b7e7b0205a42da09fc8b31aec31fe09973ac2ad572771b2d8df69
+    width: 2400
+    height: 1601
+    alt: "Two engineers discussing work in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-03
+    kind: file
+    file: public/photos/lib-portraits-03.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Clay Elliot (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-03.md.
+    sourceUrl: https://unsplash.com/photos/mpDV4xaFP8c
+    licenseUrl: https://unsplash.com/license
+    sha256: 2463bcc56bea31c60b922ac0aec2fb1499fc14b004c3cd11ae9e5725be583035
+    width: 1000
+    height: 1440
+    alt: "Portrait of a smiling woman in a red cardigan"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-company-08
+    kind: file
+    file: public/photos/lib-company-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Andreea Avramescu (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-08.md.
+    sourceUrl: https://unsplash.com/photos/wR56AUlEsE4
+    licenseUrl: https://unsplash.com/license
+    sha256: 5748bcadf6191ef40af8865ce09599025d0f99e2bae0e0dffae354ad3a8c485b
+    width: 2400
+    height: 1600
+    alt: "Four people reviewing documents at a wooden table"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-04
+    kind: file
+    file: public/photos/lib-portraits-04.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "arthur henrique (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-04.md.
+    sourceUrl: https://unsplash.com/photos/SLd8M9knkGc
+    licenseUrl: https://unsplash.com/license
+    sha256: d63abf78af92a1571abf6e1c3a072832375a5b07430a9aa6a539f1f67f1cef59
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a white suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-02
+    kind: file
+    file: public/photos/lib-portraits-02.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jonathan Borba (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-02.md.
+    sourceUrl: https://unsplash.com/photos/4mUk_DFImbI
+    licenseUrl: https://unsplash.com/license
+    sha256: 9915d9b1a21e7a84b25df95569c482a07481d7b40d3f6fa072628c1581bf7399
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a white blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-06
+    kind: file
+    file: public/photos/lib-portraits-06.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ali Morshedlou (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-06.md.
+    sourceUrl: https://unsplash.com/photos/WMD64tMfc4k
+    licenseUrl: https://unsplash.com/license
+    sha256: 8348fc4823ed8f94fa239f6accca48a4092c86d7221abe8720e39240c9210726
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a dark suit jacket"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-05
+    kind: file
+    file: public/photos/lib-portraits-05.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christina Morillo (wocintechchat.com) (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-05.md.
+    sourceUrl: https://unsplash.com/photos/SJvDxw0azqw
+    licenseUrl: https://unsplash.com/license
+    sha256: dc315a5f45da8427b9f1ac67d7133a2812b43542489c5e70285a648b040bd4cd
+    width: 1000
+    height: 1500
+    alt: "Portrait of a woman in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-07
+    kind: file
+    file: public/photos/lib-portraits-07.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Joecalih (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-07.md.
+    sourceUrl: https://unsplash.com/photos/1l6UeCc9P9o
+    licenseUrl: https://unsplash.com/license
+    sha256: c547381f02c9b35bda0c8ddc8cf06776077738cd7d477e8b509e8dba0e533dc2
+    width: 1000
+    height: 1500
+    alt: "Portrait of a young professional woman smiling"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-08
+    kind: file
+    file: public/photos/lib-portraits-08.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ryan Hoffman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-08.md.
+    sourceUrl: https://unsplash.com/photos/Ft4p5E9HjTQ
+    licenseUrl: https://unsplash.com/license
+    sha256: c63583b18e79c6ea1070d4d1e397c46c9ca9663f77e753737db5855087dcc4b1
+    width: 1000
+    height: 1400
+    alt: "Portrait of a man in a black shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-09
+    kind: file
+    file: public/photos/lib-portraits-09.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Md Ishak Rahman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-09.md.
+    sourceUrl: https://unsplash.com/photos/14sDcYjYl9Q
+    licenseUrl: https://unsplash.com/license
+    sha256: 9e549203dc394e7cd29d1ce23f512bcf1bd8f854459498671f54560bca7aa50a
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a plaid blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-10
+    kind: file
+    file: public/photos/lib-portraits-10.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christina Morillo (wocintechchat.com) (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-10.md.
+    sourceUrl: https://unsplash.com/photos/Zpzf7TLj_gA
+    licenseUrl: https://unsplash.com/license
+    sha256: c800a68997f0fb23c4b90b04c6d66036b1c2f8bf60d380ad6cc9ba640ff779f8
+    width: 1000
+    height: 1498
+    alt: "Portrait of a woman sitting next to a window"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-11
+    kind: file
+    file: public/photos/lib-portraits-11.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Joseph Gonzalez (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-11.md.
+    sourceUrl: https://unsplash.com/photos/iFgRcqHznqg
+    licenseUrl: https://unsplash.com/license
+    sha256: 49478032214fa5d8a6902a42e253a7b53b0926a6d35b670f4d31b0f63b88c8cd
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-12
+    kind: file
+    file: public/photos/lib-portraits-12.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Joecalih (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-12.md.
+    sourceUrl: https://unsplash.com/photos/8Cbk_IGBoQU
+    licenseUrl: https://unsplash.com/license
+    sha256: 3721707f3fcbb73181ec5f9470fb596ac67577f134a2f2ae98ea99c3ef5fc405
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling woman in a white shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-13
+    kind: file
+    file: public/photos/lib-portraits-13.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tony Luginsland (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-13.md.
+    sourceUrl: https://unsplash.com/photos/bbOOTiq-EPA
+    licenseUrl: https://unsplash.com/license
+    sha256: d8a37147dab6a136d7b20e5cb5ffbe433dd363749b308e701893f3569c6e5195
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-15
+    kind: file
+    file: public/photos/lib-portraits-15.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "DarceyStone Photography (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-15.md.
+    sourceUrl: https://unsplash.com/photos/KmRM8RkL2ZI
+    licenseUrl: https://unsplash.com/license
+    sha256: 9cd20a23aa1f5ddc86790b8763d9cc27723f363be879bebe07b622f5be4d1b6c
+    width: 1000
+    height: 1500
+    alt: "Portrait of a woman with her arms crossed outside a building"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-14
+    kind: file
+    file: public/photos/lib-portraits-14.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Albert Dera (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-14.md.
+    sourceUrl: https://unsplash.com/photos/ILip77SbmOE
+    licenseUrl: https://unsplash.com/license
+    sha256: 81892f600bef47538f7132ee5d69da61efe2691ee5af47c4b1ec380795e8ae70
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a gray shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-16
+    kind: file
+    file: public/photos/lib-portraits-16.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Md Ishak Rahman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-16.md.
+    sourceUrl: https://unsplash.com/photos/gsxSEDbyzsE
+    licenseUrl: https://unsplash.com/license
+    sha256: 5a0a5dc8a5046cf76311fc4e0a20dc6050b4c2f9c91f9104945d40831daa95e5
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a suit"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-17
+    kind: file
+    file: public/photos/lib-portraits-17.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Skytech Aviation (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-17.md.
+    sourceUrl: https://unsplash.com/photos/P3i8MtIT1ug
+    licenseUrl: https://unsplash.com/license
+    sha256: 356c2433031e5234818f141c5019c212b38b63aa521a15a3f57207b951f5e2cc
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a suit in an office"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-18
+    kind: file
+    file: public/photos/lib-portraits-18.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "alex starnes (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-18.md.
+    sourceUrl: https://unsplash.com/photos/PK_t0Lrh7MM
+    licenseUrl: https://unsplash.com/license
+    sha256: e5dfb263f821d7d9a4274ec97de926d605bcd67796e512fedb5b41825c7fab65
+    width: 1000
+    height: 1250
+    alt: "Portrait of a smiling woman in a yellow blazer holding a tablet"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-19
+    kind: file
+    file: public/photos/lib-portraits-19.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jeppe Monster (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-19.md.
+    sourceUrl: https://unsplash.com/photos/qIZNyuZe638
+    licenseUrl: https://unsplash.com/license
+    sha256: 26ef9c0cfe36b36e0bd0c7073fbdce53b5d4420719a6e038ee92cbc2137191e8
+    width: 1000
+    height: 1250
+    alt: "Portrait of a man in a suit and tie"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-20
+    kind: file
+    file: public/photos/lib-portraits-20.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vincenzo De Simone (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-20.md.
+    sourceUrl: https://unsplash.com/photos/BjnXKceifJA
+    licenseUrl: https://unsplash.com/license
+    sha256: 52dd93d7086e6c9c91a518dbfd2437d070d99040bfb922f27694d721f2e7493d
+    width: 1000
+    height: 1231
+    alt: "Portrait of a young man in glasses"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-21
+    kind: file
+    file: public/photos/lib-portraits-21.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Zahir Namane (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-21.md.
+    sourceUrl: https://unsplash.com/photos/hwc7eIQiTCE
+    licenseUrl: https://unsplash.com/license
+    sha256: 9cb294ebc6ef6bd4ab6d12269f185d1c41fb17c9fe517eabf1ec69a7f3844c68
+    width: 1000
+    height: 1500
+    alt: "Portrait of a smiling man in a dark blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-25
+    kind: file
+    file: public/photos/lib-portraits-25.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Devin Santiago (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-25.md.
+    sourceUrl: https://unsplash.com/photos/ij6JGuYzCd4
+    licenseUrl: https://unsplash.com/license
+    sha256: 40b431e2f29d297fb2a3a0c991266a03ff61cc7b4afe4acad376087ae566867e
+    width: 1000
+    height: 1294
+    alt: "Portrait of a smiling young woman"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-22
+    kind: file
+    file: public/photos/lib-portraits-22.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Guillaume Bolduc (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-22.md.
+    sourceUrl: https://unsplash.com/photos/ByT3r80omGs
+    licenseUrl: https://unsplash.com/license
+    sha256: 2d9521269cde9900729baca1a2c141942435c58ebdea65be9665eb601cd6e013
+    width: 1000
+    height: 1398
+    alt: "Portrait of a woman in a white blazer"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-24
+    kind: file
+    file: public/photos/lib-portraits-24.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Margaret Young (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-24.md.
+    sourceUrl: https://unsplash.com/photos/DAVi-fYTsXM
+    licenseUrl: https://unsplash.com/license
+    sha256: a81b9cc22e99aaa2c4530ade1f0fc872265b2a4b44908adb2954854b667daafa
+    width: 1000
+    height: 1500
+    alt: "Portrait of a woman with long brown hair"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-23
+    kind: file
+    file: public/photos/lib-portraits-23.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ludovic Migneault (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-23.md.
+    sourceUrl: https://unsplash.com/photos/EZ4TYgXPNWk
+    licenseUrl: https://unsplash.com/license
+    sha256: 431cc149b7612f75eab3e09835950c888d484445e564da8593e15a81650ebb6c
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a gray shirt"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-26
+    kind: file
+    file: public/photos/lib-portraits-26.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Ronny Sison (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-26.md.
+    sourceUrl: https://unsplash.com/photos/4lnzxFIgTmg
+    licenseUrl: https://unsplash.com/license
+    sha256: 5dba1b9fca37eb56864de7fab0d66b56e790c6655a3c71063d7b0e0d38d80844
+    width: 1000
+    height: 1498
+    alt: "Portrait of a man near a window"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-27
+    kind: file
+    file: public/photos/lib-portraits-27.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Abu Saied (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-27.md.
+    sourceUrl: https://unsplash.com/photos/4GL0-ynnIXc
+    licenseUrl: https://unsplash.com/license
+    sha256: 8db2950a841aa4c9bb96e72e7ed8dc257b1f9f9fc3c3e9578b5135e344e7fdb3
+    width: 1000
+    height: 1500
+    alt: "Portrait of a woman with red wavy hair"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-28
+    kind: file
+    file: public/photos/lib-portraits-28.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Moughit Fawzi (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-28.md.
+    sourceUrl: https://unsplash.com/photos/_XJzWcd1NVw
+    licenseUrl: https://unsplash.com/license
+    sha256: db6fd8143fa06479e2c5344c3b469de983cafb1bbc5b7ec13ef6bab697a9be90
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a suit and tie"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-29
+    kind: file
+    file: public/photos/lib-portraits-29.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Fortune Vieyra (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-29.md.
+    sourceUrl: https://unsplash.com/photos/aAN9ocBHbyo
+    licenseUrl: https://unsplash.com/license
+    sha256: d4f3576ac7e04a93d01f4660b2a008180b02e11fa8fbfe7f6895d8111b60218c
+    width: 1000
+    height: 1500
+    alt: "Portrait of a man in a black suit jacket"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-lib-portraits-30
+    kind: file
+    file: public/photos/lib-portraits-30.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jadon Johnson (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-30.md.
+    sourceUrl: https://unsplash.com/photos/c6HGWH_1njc
+    licenseUrl: https://unsplash.com/license
+    sha256: 5a150fef607cf1018581ed07003e1883278d94fa06d087b49bc473510e7fa7cb
+    width: 1000
+    height: 1865
+    alt: "Portrait of a man in a suit outdoors"
+    usage: [library]
+    approval: approved
+    acquired: "2026-10-20"

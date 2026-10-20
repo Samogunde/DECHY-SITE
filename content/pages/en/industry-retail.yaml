@@ -128,10 +128,6 @@ sections:
           - Monitoring and a plan for the busiest day.
   - type: index
     id: needs
-    photo:
-      asset: asset.photo-company-team-working-session
-      layout: rail
-      position: 50% 52%
     tone: white
     columns: 2
     label: What we build

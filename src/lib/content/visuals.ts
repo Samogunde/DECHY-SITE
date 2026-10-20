@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { Block, Page, PhotoRef } from "./schema";
 
 /**
@@ -156,26 +158,79 @@ function hash(s: string): number {
   return h;
 }
 
-function pick(pool: string[], page: Page, n: number, used: Set<string>): PhotoRef {
-  // A service page opens with its pool's first photograph; other pages rotate through the pool.
-  // A photograph is never shown twice on one page while the pool still has an unused one.
-  const start = page.kind === "service" ? 0 : hash(page.path);
-  let id = pool[(start + n) % pool.length] as string;
-  for (let i = 0; i < pool.length && used.has(id); i++)
-    id = pool[(start + n + i + 1) % pool.length] as string;
-  used.add(id);
-  return { asset: `asset.photo-${id}`, layout: "split", position: "50% 50%" };
+/** The photo library (data/assets/library.json): extra photographs per topic, plus portraits. */
+const LIBRARY: Record<string, string[]> = JSON.parse(
+  fs.readFileSync(
+    path.join(/*turbopackIgnore: true*/ process.cwd(), "data/assets/library.json"),
+    "utf8",
+  ),
+);
+
+/** Pools a topic may borrow from when its own photographs are all in use. */
+const SHARED_FALLBACK = [
+  "company",
+  "software-development",
+  "web-development",
+  "consulting",
+  "automation",
+  "data-analytics",
+].flatMap((t) => LIBRARY[t] ?? []);
+
+/** Every photograph a topic may use: its curated photographs first, then its library. */
+function poolFor(topic: string): string[] {
+  return [...(TOPICS[topic] ?? []), ...(LIBRARY[topic] ?? [])];
 }
 
 /**
- * Replace illustrations with photographs: the hero gets a photograph, and every diagram block that
- * shows an interface mockup or a drawn illustration shows a photograph instead (its points stay).
- * Teaching data (a block's `spec`) is kept and rendered as cards.
+ * Pick a photograph no other placement on the site has used (owner direction, 20 October 2026:
+ * no photograph appears twice). Rotation starts at a stable point per page; when a pool is fully
+ * used, the least-used photograph of the pool is shown again rather than nothing.
  */
-export function applyPhotographs(page: Page, serviceOfEntity: (id: string) => string | undefined) {
+function pick(pool: string[], page: Page, n: number, used: Map<string, number>): PhotoRef {
+  const start = page.kind === "service" ? 0 : hash(page.path) + n;
+  let id: string | undefined;
+  for (let i = 0; i < pool.length; i++) {
+    const c = pool[(start + i) % pool.length] as string;
+    if (!used.has(c)) {
+      id = c;
+      break;
+    }
+  }
+  // A topic that has run out borrows an unused photograph from the shared pools before repeating.
+  id ??=
+    SHARED_FALLBACK.find((c) => !used.has(c)) ??
+    [...pool].sort((x, y) => (used.get(x) ?? 0) - (used.get(y) ?? 0))[0] ??
+    "company-team-working-session";
+  used.set(id, (used.get(id) ?? 0) + 1);
+  return { asset: `asset.photo-${id}`, layout: "split", position: "50% 50%" };
+}
+
+/** Photographs set by hand in the content (the home page) are counted as used first. */
+export function reservePhotographs(
+  pages: Page[],
+  used: Map<string, number>,
+  collect: (b: Block) => PhotoRef[],
+) {
+  for (const p of pages)
+    for (const b of p.sections)
+      for (const ph of collect(b)) {
+        const id = ph.asset.replace(/^asset.photo-/, "");
+        used.set(id, (used.get(id) ?? 0) + 1);
+      }
+}
+
+/**
+ * Replace illustrations with photographs: the hero gets a photograph, every diagram block that
+ * shows an interface mockup or a drawn illustration shows a photograph instead (its points stay),
+ * and sample case studies and testimonials get photographs and portraits. No photograph repeats.
+ */
+export function applyPhotographs(
+  page: Page,
+  serviceOfEntity: (id: string) => string | undefined,
+  used: Map<string, number>,
+) {
   if (page.kind === "home") return;
-  const topic = TOPICS[pageTopic(page, serviceOfEntity)] ?? TOPICS.company ?? [];
-  const used = new Set<string>();
+  const topic = poolFor(pageTopic(page, serviceOfEntity));
   let n = 0;
   if (page.kind === "article" && page.article && !page.article.photo) {
     page.article.photo = pick(topic, page, n++, used);
@@ -185,14 +240,22 @@ export function applyPhotographs(page: Page, serviceOfEntity: (id: string) => st
       b.photo = pick(topic, page, n++, used);
     } else if (b.type === "diagram" && b.figure && !b.photo) {
       const screens = SCREEN_PHOTOS[b.figure];
-      const pool = screens ? [...screens, ...topic] : topic;
-      b.photo = pick(pool, page, screens ? 0 : n++, used);
+      b.photo = pick(screens ? [...screens, ...topic] : topic, page, n++, used);
       b.figure = undefined;
+    } else if (b.type === "case-studies") {
+      for (const c of b.items) c.photo ??= pick(topic, page, n++, used);
+    } else if (b.type === "testimonials") {
+      for (const q of b.items)
+        q.photo ??= {
+          ...pick(LIBRARY.portraits ?? [], page, n++, used),
+          layout: "rail",
+          position: "50% 25%",
+        };
     }
   }
 }
 
-/** Every photograph id in the library, for the registry check. */
+/** Every photograph id in the curated pools and the library, for the registry check. */
 export const TOPIC_PHOTO_IDS = new Set(
-  [...Object.values(TOPICS), ...Object.values(SCREEN_PHOTOS)].flat(),
+  [...Object.values(TOPICS), ...Object.values(SCREEN_PHOTOS), ...Object.values(LIBRARY)].flat(),
 );

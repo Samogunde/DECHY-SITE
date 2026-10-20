@@ -37,9 +37,6 @@ function load(): Raw {
   return cache;
 }
 
-const photo = (id: string) =>
-  ({ asset: `asset.photo-${id}`, layout: "split", position: "50% 50%" }) as const;
-
 /** The sample case-study and testimonial blocks for a service, or none. */
 export function sampleProof(serviceSlug: string): Block[] {
   const s = load().services[serviceSlug];
@@ -53,7 +50,7 @@ export function sampleProof(serviceSlug: string): Block[] {
       label: "Selected work",
       heading: "Projects and what changed",
       intro: "A few of the systems we have built, with the problem, the solution, and the result.",
-      items: s.cases.map((c) => ({ ...c, href: undefined, photo: photo(c.photo) })),
+      items: s.cases.map(({ photo: _photo, ...c }) => ({ ...c, href: undefined })),
     },
     {
       type: "testimonials",
@@ -67,7 +64,6 @@ export function sampleProof(serviceSlug: string): Block[] {
         name: q.name,
         role: q.role,
         company: q.company,
-        photo: { asset: `asset.photo-${q.portrait}`, layout: "rail", position: "50% 25%" },
       })),
     },
   ] as Block[];
