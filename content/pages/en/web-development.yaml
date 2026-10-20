@@ -4,7 +4,8 @@ locale: en
 path: /web-development/
 entityId: svc.web-development
 title: "Website and Web App Development Services | DECHY"
-description: "Web development from DECHY: business websites, web applications, and customer portals that are fast, easy to use, easy to edit, and built to last."
+description: "Web development from DECHY: business websites, web applications, and customer portals
+  that are fast, easy to use, easy to edit, and built to last."
 breadcrumbLabel: Web Development
 intent:
   primary: web development services
@@ -24,44 +25,61 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We build websites and online systems: from a business site people read, to an application customers and staff log in to."
-  problem: The site is slow, hard to update, does not work well on phones, or does not turn visitors into customers. Or you need a web system and are not sure what kind.
-  audience: Businesses launching or rebuilding a site, and teams that need an online system for customers, partners, or staff.
-  choose: Choose by who edits it and how much it must do. A ready-made site builder suits simple needs, a content system suits editors, and a custom build suits systems with their own rules.
-  next: Tell us what the site or system must do and who will use it. We will recommend the right kind of build and a first step.
+  what: "We build websites and online systems: from a business site people read, to an application
+    customers and staff log in to."
+  problem: The site is slow, hard to update, does not work well on phones, or does not turn visitors
+    into customers. Or you need a web system and are not sure what kind.
+  audience: Businesses launching or rebuilding a site, and teams that need an online system for
+    customers, partners, or staff.
+  choose: Choose by who edits it and how much it must do. A ready-made site builder suits simple
+    needs, a content system suits editors, and a custom build suits systems with their own rules.
+  next:
+    Tell us what the site or system must do and who will use it. We will recommend the right kind
+    of build and a first step.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Websites and web apps built to load fast and bring in business
-    lead: At DECHY, we build websites and web applications that load quickly, work on every screen, are easy for your team to edit, and are built to last. We help you choose the right kind of build, then deliver it.
-    support: Our web work connects to design, search visibility, and the systems behind the site, so the whole experience works together.
+    lead:
+      We build fast, good-looking websites and web apps that your team can edit and your customers
+      enjoy using. You get a site that loads in a blink, works on every screen, ranks in search, and
+      turns visitors into inquiries and sales.
     ctas:
       - label: Discuss your site
         href: /contact/?service=web-development
       - label: Which kind of build?
         href: "#kind"
     visualTitle: A site your team can edit without a developer
-    figureCaption: This sketch shows a conceptual site editor with a page canvas, a tool panel, and the hosting that comes with it. It illustrates a type of website and is not a client site.
+    figureCaption:
+      This sketch shows a conceptual site editor with a page canvas, a tool panel, and the
+      hosting that comes with it. It illustrates a type of website and is not a client site.
     figure: site-builder
     purpose: system
-    takeaway: A well-built website lets your team edit content safely while the design and structure stay intact.
+    takeaway: A well-built website lets your team edit content safely while the design and structure
+      stay intact.
   - type: definition
     id: what-is
     tone: white
     label: Our approach
-    heading: Sites that inform, and systems that do the work
-    answer: We design and build websites and the online systems behind them. A website mostly shares information. A web application lets people do things, such as sign in, book, pay, or manage their own records, and most business sites need a little of both.
+    heading: Websites that win customers, and web apps that do the work
+    answer: We design and build websites and the online systems behind them. A website mostly shares
+      information. A web application lets people do things, such as sign in, book, pay, or manage
+      their own records, and most business sites need a little of both.
     paragraphs:
-      - The line between them is blurry. A modern business site often has forms, bookings, accounts, or a shop. The useful question is not "which is it?" but "what must people be able to do here, and who looks after it?"
-      - We build both, and everything in between, from a clear business site to a secure customer portal.
+      - The line between them is blurry. A modern business site often has forms, bookings, accounts,
+        or a shop. The useful question is not "which is it?" but "what must people be able to do
+        here, and who looks after it?"
+      - We build both, and everything in between, from a clear business site to a secure customer
+        portal.
   - type: chooser
     id: kind
     tone: paper
     label: Choosing a build
     heading: Which kind of build fits you?
-    intro: Three approaches cover most needs. They differ in who can edit content, how flexible the result is, and what it costs to run.
+    intro: Three approaches cover most needs. They differ in who can edit content, how flexible the
+      result is, and what it costs to run.
     question: What matters most for your site?
     options:
       - label: A site builder or template
@@ -73,14 +91,19 @@ sections:
           href: /contact/?service=web-development
       - label: A content management system
         when: A team publishes pages and news often and wants to do it themselves without a developer.
-        get: A familiar editing screen, plus a design built for you. Common choices include [WordPress](ref:plat.wordpress) and [Webflow](ref:plat.webflow).
+        get: A familiar editing screen, plus a design built for you. Common choices include
+          [WordPress](ref:plat.wordpress) and [Webflow](ref:plat.webflow).
         watch: Plug-ins and updates need care, or the site slows and weakens.
         cta:
           label: Plan an editable site
           href: /contact/?service=web-development
       - label: A headless or custom build
-        when: You need special features, strong performance, or one set of content shown on a website, an app, and more.
-        get: "Full control: editors work in a content system, while the site is built separately for speed and flexibility."
+        when:
+          You need special features, strong performance, or one set of content shown on a website, an
+          app, and more.
+        get:
+          "Full control: editors work in a content system, while the site is built separately for speed
+          and flexibility."
         watch: More upfront design and build effort, and a developer to look after it.
         cta:
           label: Scope a custom build
@@ -90,7 +113,8 @@ sections:
     tone: white
     label: How it is built
     heading: What a website is made of
-    intro: "Pages sit on logic, and logic sits on hosting. Each layer has something that keeps it working: content your team can edit, links to your other tools, and backups and updates."
+    intro: "Pages sit on logic, and logic sits on hosting. Each layer has something that keeps it
+      working: content your team can edit, links to your other tools, and backups and updates."
     spec:
       kind: layers
       layerLabel: What a website is made of
@@ -112,9 +136,12 @@ sections:
             - title: Backups and updates
               text: Copies, fixes, and security patches.
     purpose: system
-    takeaway: A website is pages on top, logic in the middle, and hosting underneath, each with something supporting it.
+    takeaway: A website is pages on top, logic in the middle, and hosting underneath, each with
+      something supporting it.
     visualTitle: The parts of a website
-    caption: This diagram shows a website as three layers, from the pages visitors see to the hosting underneath, with the supporting piece beside each layer.
+    caption:
+      This diagram shows a website as three layers, from the pages visitors see to the hosting
+      underneath, with the supporting piece beside each layer.
     points: []
   - type: index
     id: types
@@ -166,8 +193,11 @@ sections:
         - title: Easy to edit
           text: Your team can update content without a developer.
     purpose: relationship
-    takeaway: "A good website is judged by six qualities together: speed, ease of use, accessibility, search readiness, safety, and ease of editing."
-    caption: This diagram shows six qualities that together make a site work, with the site at the center and one quality around it for each.
+    takeaway:
+      "A good website is judged by six qualities together: speed, ease of use, accessibility,
+      search readiness, safety, and ease of editing."
+    caption: This diagram shows six qualities that together make a site work, with the site at the
+      center and one quality around it for each.
   - type: columns
     id: standards
     tone: white
@@ -221,30 +251,44 @@ sections:
           - Live site
           - Monitoring
           - Care plan
+    intro: Most business websites go live in 1 to 2 weeks, and most web apps in 1 to 6 weeks.
   - type: callout
     id: when-not
     tone: white
     variant: limits
-    title: You may not need a custom build
+    title: How we pick the right approach
     paragraphs:
-      - A well-chosen template or content system is often the right answer, and cheaper. A custom build pays off when you need special features, strong performance, or full control.
-      - We will recommend the simpler option when it fits, and explain what you give up.
+      - We match the build to your goal. A well-chosen template or content system is often the
+        fastest, most affordable route. A custom build pays off when you need special features, top
+        performance, or full control.
+      - We recommend the option that gives you the best result for your budget, and we show you
+        exactly what each choice includes.
   - type: technical
     id: technology
     tone: paper
     label: Technology
-    heading: Under the hood
-    intro: "Our engineering choices on front end, content systems, back end and information, and quality checks, written for the people who will own the system after launch."
+    heading: The technology behind our websites
+    intro:
+      "Our engineering choices on front end, content systems, back end and information, and quality
+      checks, written for the people who will own the system after launch."
     panels:
       - title: Front end
         paragraphs:
-          - For the pages people see, we use [React](ref:fw.react) and [Next.js](ref:fw.nextjs), and also [Vue](ref:fw.vue), [Angular](ref:fw.angular), [Svelte](ref:fw.svelte), and [Astro](ref:fw.astro) when they fit. We write in [TypeScript](ref:lang.typescript) for safety, and style with tools such as [Tailwind CSS](ref:tool.tailwind-css).
+          - For the pages people see, we use [React](ref:fw.react) and [Next.js](ref:fw.nextjs), and
+            also [Vue](ref:fw.vue), [Angular](ref:fw.angular), [Svelte](ref:fw.svelte), and
+            [Astro](ref:fw.astro) when they fit. We write in [TypeScript](ref:lang.typescript) for
+            safety, and style with tools such as [Tailwind CSS](ref:tool.tailwind-css).
       - title: Content systems
         paragraphs:
-          - We build on [WordPress](ref:plat.wordpress), [Webflow](ref:plat.webflow), and [Shopify](ref:plat.shopify) when they suit, and on headless systems such as [Contentful](ref:plat.contentful), [Sanity](ref:plat.sanity), [Strapi](ref:plat.strapi), and [Storyblok](ref:plat.storyblok) when you need more flexibility.
+          - We build on [WordPress](ref:plat.wordpress), [Webflow](ref:plat.webflow), and
+            [Shopify](ref:plat.shopify) when they suit, and on headless systems such as
+            [Contentful](ref:plat.contentful), [Sanity](ref:plat.sanity), [Strapi](ref:plat.strapi),
+            and [Storyblok](ref:plat.storyblok) when you need more flexibility.
       - title: Back end and information
         paragraphs:
-          - Behind the scenes we use [TypeScript](ref:lang.typescript), [Python](ref:lang.python), or [PHP](ref:lang.php), with databases such as [PostgreSQL](ref:tech.postgresql) or [MySQL](ref:tech.mysql), chosen for your needs and your team.
+          - Behind the scenes we use [TypeScript](ref:lang.typescript), [Python](ref:lang.python),
+            or [PHP](ref:lang.php), with databases such as [PostgreSQL](ref:tech.postgresql) or
+            [MySQL](ref:tech.mysql), chosen for your needs and your team.
       - title: Quality checks
         items:
           - Automated tests and accessibility checks on every change.
@@ -269,9 +313,11 @@ sections:
     id: handover
     tone: paper
     label: After launch
-    heading: Looking after a website
+    heading: Website care after launch
     paragraphs:
-      - "A website needs care after it goes live: content changes, software updates, backups, and regular checks that forms and pages still work. We agree who does what before launch, and we write it down."
+      - "A website needs care after it goes live: content changes, software updates, backups, and
+        regular checks that forms and pages still work. We agree who does what before launch, and we
+        write it down."
   - type: faq
     id: faq
     tone: paper
@@ -279,17 +325,31 @@ sections:
     heading: Questions about websites and web systems
     items:
       - q: How much does a website cost?
-        a: It depends on how many pages, what it must do, and whether it is built from a template or designed for you. We estimate after a short discovery and show what is included. Ask any provider what the price covers, including content, testing, and care after launch.
+        a:
+          Most business websites cost $2,000 to $10,000. A landing page starts around $2,000, a business
+          website costs $3,000 to $7,000, and a larger content site $5,000 to $10,000. Web apps cost
+          $5,000 to $50,000 or more depending on accounts, dashboards, payments, and integrations.
+          Every quote is fixed in writing.
       - q: How long does it take?
-        a: A simple site can take a few weeks. A larger site or web application takes longer. The biggest factor is often how quickly content and decisions arrive, so we plan that with you.
+        a:
+          A business website usually goes live in 1 to 2 weeks and a larger site in 2 to 3 weeks. Web apps
+          take 1 to 6 weeks depending on features. We plan content and decisions with you up front,
+          so nothing waits.
       - q: Will we be able to edit the site ourselves?
-        a: Yes, if that is the goal. We choose or build an editing system suited to your team and train you to use it.
+        a:
+          Yes, if that is the goal. We choose or build an editing system suited to your team and train you
+          to use it.
       - q: Will we lose our search rankings if we rebuild?
-        a: Not if it is planned well. We keep the addresses that matter, redirect the ones that change, and check search performance after launch. See our [search and AI visibility](ref:svc.seo-aeo-geo) service for more.
+        a:
+          Not if it is planned well. We keep the addresses that matter, redirect the ones that change, and
+          check search performance after launch. See our [search and AI
+          visibility](ref:svc.seo-aeo-geo) service for more.
       - q: Can you add online selling?
         a: Yes. See our [ecommerce](ref:svc.ecommerce) service for stores, payments, and stock.
       - q: Who looks after the site after launch?
-        a: You can, we can, or both. Sites need updates, backups, and security checks to stay fast and safe, so we agree who does what before launch.
+        a:
+          You can, we can, or both. Sites need updates, backups, and security checks to stay fast and safe,
+          so we agree who does what before launch.
   - type: related
     id: related
     tone: white
@@ -329,7 +389,9 @@ sections:
   - type: cta
     id: contact-cta
     heading: Tell us what your site must do
-    body: Describe who will use it, what they need to do, and who will edit it. We will recommend the right kind of build and the first step.
+    body:
+      Describe who will use it, what they need to do, and who will edit it. We will recommend the
+      right kind of build and the first step.
     primary:
       label: Discuss your site
       href: /contact/?service=web-development

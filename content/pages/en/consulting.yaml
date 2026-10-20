@@ -4,7 +4,8 @@ locale: en
 path: /consulting/
 entityId: svc.consulting
 title: Technology Consulting and Digital Transformation | DECHY
-description: "Technology consulting from DECHY: decide what to build, buy, or connect, with honest audits, clear roadmaps, and practical help from decision to delivery."
+description: "Technology consulting from DECHY: decide what to build, buy, or connect, with honest
+  audits, clear roadmaps, and practical help from decision to delivery."
 breadcrumbLabel: Consulting & Digital Transformation
 intent:
   primary: technology consulting and digital transformation
@@ -24,19 +25,29 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We help you decide what technology to build, buy, connect, or leave alone, and plan the steps to get there before money is spent."
-  problem: Technology decisions are large, expensive, and hard to reverse, and advice often comes from people who sell one answer.
-  audience: Leaders facing a big technology decision, teams whose tools have grown messy, and organizations unsure where to start with AI or automation.
-  choose: "Start where you are: a short workshop to frame the problem, an assessment to see what you have, or a roadmap when you know the goal and need the route."
-  next: Describe the decision you are facing, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it.
+  what:
+    "We help you decide what technology to build, buy, connect, or leave alone, and plan the steps
+    to get there before money is spent."
+  problem:
+    Technology decisions are large, expensive, and hard to reverse, and advice often comes from
+    people who sell one answer.
+  audience: Leaders facing a big technology decision, teams whose tools have grown messy, and
+    organizations unsure where to start with AI or automation.
+  choose: "Start where you are: a short workshop to frame the problem, an assessment to see what you
+    have, or a roadmap when you know the goal and need the route."
+  next:
+    Describe the decision you are facing, or the part of your technology that worries you. We will
+    suggest the lightest kind of help that settles it.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
-    headline: Consulting & Digital Transformation
-    lead: At DECHY, we help you decide what to do with your technology before you spend the money. We look at what you have, set out your options in plain language, and give you a roadmap you can follow, whether or not we build it.
-    support: We are a technology company that builds, so our advice comes from practical experience. We also tell you when the best answer is to build less.
+    headline: Technology consulting and digital transformation that pays off
+    lead:
+      We help you decide what to build, buy, or fix before you spend the money. You get a clear view
+      of your systems, options in plain language, and a costed roadmap you can follow, whether or
+      not we build it.
     ctas:
       - label: Discuss a decision
         href: /contact/?service=consulting
@@ -59,24 +70,35 @@ sections:
           choose: An AI readiness review
           text: A check of your information, processes, and risks.
     purpose: decision
-    takeaway: The right kind of consulting depends on whether you need to frame a problem, see what you have, plan a route, or prepare for AI.
+    takeaway:
+      The right kind of consulting depends on whether you need to frame a problem, see what you
+      have, plan a route, or prepare for AI.
     visualTitle: Which kind of consulting fits which question
-    figureCaption: This diagram shows four common questions people bring to technology consulting and the kind of help that answers each.
+    figureCaption:
+      This diagram shows four common questions people bring to technology consulting and
+      the kind of help that answers each.
   - type: definition
     id: what-is
     tone: white
     label: Our approach
     heading: Clear advice before money is spent
-    answer: "We give independent, practical advice on technology decisions: what to build, buy, or connect, in what order, and what to avoid. When the answer is digital transformation, we mean changing how work gets done with technology, not buying more tools."
+    answer: "We give independent, practical advice on technology decisions: what to build, buy, or
+      connect, in what order, and what to avoid. When the answer is digital transformation, we mean
+      changing how work gets done with technology, not buying more tools."
     paragraphs:
-      - Most organizations do not lack tools. They lack a clear picture of what they have, what it costs, and what to do next. Advice that starts from that picture saves money, because the cheapest project is often the one you decide not to do.
-      - We keep the advice plain. You should leave understanding the options, the trade-offs, and the reasons for our recommendation.
+      - Most organizations do not lack tools. They lack a clear picture of what they have, what it
+        costs, and what to do next. Advice that starts from that picture saves money, because the
+        cheapest project is often the one you decide not to do.
+      - We keep the advice plain. You should leave understanding the options, the trade-offs, and
+        the reasons for our recommendation.
   - type: chooser
     id: help
     tone: paper
     label: Choosing help
     heading: Four ways we can help
-    intro: Consulting can be a single conversation or a longer partnership. Choose the lightest shape that settles your question.
+    intro:
+      Consulting can be a single conversation or a longer partnership. Choose the lightest shape
+      that settles your question.
     question: How far along is your thinking?
     options:
       - label: Framing workshop
@@ -112,7 +134,9 @@ sections:
     tone: white
     label: How it works
     heading: From a question to a decision
-    intro: Most consulting work follows the same short path. Each step produces something you can use on its own.
+    intro:
+      Most consulting work follows the same short path. Each step produces something you can use on
+      its own.
     spec:
       kind: flow
       steps:
@@ -127,8 +151,11 @@ sections:
         - title: Hand over or deliver
           text: You take the plan, or we help build it.
     purpose: process
-    takeaway: Consulting moves from the goal, to what you have, to options, to a recommendation, and ends with a plan you can use.
-    caption: This diagram traces consulting work through five steps, from understanding the goal to a plan you can take elsewhere or have us deliver.
+    takeaway: Consulting moves from the goal, to what you have, to options, to a recommendation, and
+      ends with a plan you can use.
+    caption:
+      This diagram traces consulting work through five steps, from understanding the goal to a
+      plan you can take elsewhere or have us deliver.
     points:
       - title: Useful at every step
         body: Each stage produces something you can use even if you stop there.
@@ -219,20 +246,28 @@ sections:
     id: limits
     tone: white
     variant: limits
-    title: When consulting is not needed
+    title: How we pick the right approach
     paragraphs:
-      - If the problem is clear, the solution is standard, and the risk is low, you may not need advice. You may only need a good provider and a short brief.
-      - We will tell you if that is your situation, and point you to the right kind of help.
+      - When a problem is clear and the solution is standard, you need a good provider and a short
+        brief, and we will write that brief with you. When the choice is bigger or riskier, an
+        assessment saves far more than it costs.
   - type: prose
     id: examples
     tone: paper
     label: Questions we help with
     heading: The kinds of decision people bring to us
     paragraphs:
-      - "Some decisions are about choosing: should we buy a ready-made product, build something of our own, or connect the tools we already have? The honest answer depends on how unusual your process is, how many people use it, and how much change you can absorb."
-      - "Some are about order: we want a new website, better reporting, and automated invoicing. Which should come first, and what does each one depend on? A roadmap shows which pieces unlock others, so effort is not wasted."
-      - "Some are about risk: our systems are old, one person understands them, and nobody knows what would happen if they failed. An assessment finds the weak points and puts a price on fixing them, so the risk can be weighed against other spending."
-      - And some are about whether to start at all. Sometimes a process is better changed on paper before any software is involved. We say so when that is the case.
+      - "Some decisions are about choosing: should we buy a ready-made product, build something of
+        our own, or connect the tools we already have? The honest answer depends on how unusual your
+        process is, how many people use it, and how much change you can absorb."
+      - "Some are about order: we want a new website, better reporting, and automated invoicing.
+        Which should come first, and what does each one depend on? A roadmap shows which pieces
+        unlock others, so effort is not wasted."
+      - "Some are about risk: our systems are old, one person understands them, and nobody knows
+        what would happen if they failed. An assessment finds the weak points and puts a price on
+        fixing them, so the risk can be weighed against other spending."
+      - And some are about whether to start at all. Sometimes a process is better changed on paper
+        before any software is involved. We say so when that is the case.
   - type: faq
     id: faq
     tone: paper
@@ -240,17 +275,27 @@ sections:
     heading: Questions about consulting
     items:
       - q: Is consulting separate from building?
-        a: Yes. You can take our advice to any provider. We can also build what we recommend, but we keep the two clearly separate so the advice is honest.
+        a:
+          Yes. You can take our advice to any provider. We can also build what we recommend, but we keep
+          the two clearly separate so the advice is honest.
       - q: How long does a consulting project take?
-        a: A workshop can take a day or two. An assessment takes a few weeks, depending on the number of systems. We confirm timing after we hear your question.
+        a: A technology assessment usually takes 1 to 2 weeks and costs $2,500 to $7,000. A full
+          transformation roadmap takes 2 to 4 weeks and costs $7,000 to $20,000. Ongoing advisory
+          starts at $3,000 a month.
       - q: What if we only want help with AI?
-        a: We can focus on that. An AI readiness review looks at your information, processes, and risks, and suggests where AI can help and where it cannot. See our [AI](ref:svc.ai) service.
+        a:
+          We can focus on that. An AI readiness review looks at your information, processes, and risks, and
+          suggests where AI can help and where it cannot. See our [AI](ref:svc.ai) service.
       - q: Do you work with our existing suppliers?
         a: Yes. We review what they have built, and can help you ask better questions and compare proposals.
       - q: Will you give us a price for the work that follows?
-        a: Yes. A roadmap includes rough costs for each phase, with ranges that narrow as details become clear.
+        a:
+          Yes. A roadmap includes rough costs for each phase, with ranges that narrow as details become
+          clear.
       - q: How is this different from a one-off audit?
-        a: An audit tells you what is wrong. Consulting also sets out options and a route forward, and can continue while you act.
+        a:
+          An audit tells you what is wrong. Consulting also sets out options and a route forward, and can
+          continue while you act.
   - type: index
     id: work
     tone: white
@@ -284,7 +329,8 @@ sections:
   - type: cta
     id: contact-cta
     heading: Describe the decision you are facing
-    body: Tell us the question, or the part of your technology that worries you. We will suggest the lightest kind of help that settles it.
+    body: Tell us the question, or the part of your technology that worries you. We will suggest the
+      lightest kind of help that settles it.
     primary:
       label: Discuss your decision
       href: /contact/?service=consulting

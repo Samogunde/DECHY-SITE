@@ -4,7 +4,8 @@ locale: en
 path: /software-development/
 entityId: svc.software-development
 title: "Custom Software Development Services | DECHY"
-description: "Custom software from DECHY: business applications, customer portals, online platforms, dashboards, and internal tools, built, tested, secured, and maintained."
+description: "Custom software from DECHY: business applications, customer portals, online platforms,
+  dashboards, and internal tools, built, tested, secured, and maintained."
 breadcrumbLabel: Software Development
 intent:
   primary: custom software development services
@@ -24,18 +25,27 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We design and build software for one organization: its own tools, portals, apps, and dashboards, shaped around how it really works, then tested, secured, and looked after."
-  problem: Ready-made software forces workarounds. Spreadsheets pile up, systems do not share information, and people lose time and make mistakes.
-  audience: Founders, operations leaders, and teams whose process is too specific, or too important, for a ready-made product.
-  choose: Build when your process is unique or gives you an edge. Buy when the need is common. Connect what you already have when the tools are fine but do not talk to each other.
-  next: Describe what you want to build, replace, or connect. We will tell you honestly whether building is the right approach.
+  what: "We design and build software for one organization: its own tools, portals, apps, and
+    dashboards, shaped around how it really works, then tested, secured, and looked after."
+  problem: Ready-made software forces workarounds. Spreadsheets pile up, systems do not share
+    information, and people lose time and make mistakes.
+  audience: Founders, operations leaders, and teams whose process is too specific, or too important,
+    for a ready-made product.
+  choose:
+    Build when your process is unique or gives you an edge. Buy when the need is common. Connect
+    what you already have when the tools are fine but do not talk to each other.
+  next: Describe what you want to build, replace, or connect. We will tell you honestly whether
+    building is the right approach.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
     headline: Custom software built around how your business runs
-    lead: "At DECHY, we build custom software around the way your organization actually works: business tools, customer portals, online platforms, dashboards, and internal systems. We design, build, test, and look after them as one continuous job."
+    lead:
+      "At DECHY, we design, build, and look after custom software that fits how your business runs: business
+      tools, customer portals, online platforms, dashboards, and internal systems. You get one team
+      from the first workshop to years of support, and software your staff actually want to use."
     ctas:
       - label: Discuss a software project
         href: /contact/?service=software-development
@@ -43,24 +53,41 @@ sections:
         href: "#delivery"
     figure: software-anatomy
     purpose: system
-    takeaway: A business application is a stack of parts, from the people using it down to the stored data, each with supporting pieces beside it.
+    takeaway:
+      A business application is a stack of parts, from the people using it down to the stored
+      data, each with supporting pieces beside it.
     visualTitle: The parts of a typical business application
-    figureCaption: This diagram shows the parts a typical business application is made of, from the people using it down to the stored data, with the supporting pieces beside each layer.
+    figureCaption: This diagram shows the parts a typical business application is made of, from the
+      people using it down to the stored data, with the supporting pieces beside each layer.
   - type: definition
     id: what-is
     tone: white
     label: Our approach
-    heading: Built around how you work, and only when building is right
-    answer: We build software for one organization's own processes, information, and users, instead of making you bend to a product designed for the average customer. We recommend it when your process gives you an edge, when ready-made tools force workarounds, or when several systems need to work as one.
+    heading: Custom software that fits your business, not the other way round
+    answer:
+      We build software for one organization's own processes, information, and users, instead of
+      making you bend to a product designed for the average customer. We recommend it when your
+      process gives you an edge, when ready-made tools force workarounds, or when several systems
+      need to work as one.
     paragraphs:
-      - "It is often the wrong answer too, and we will tell you when it is. A common spreadsheet process may be better served by a configured product. A generic need such as invoicing is usually better bought. We start by testing three options: build it, buy it, or connect what you already have. The cheapest software is the software you do not have to write."
-      - When building is right, the work covers more than writing code. It includes understanding the process, planning the structure, building the application, testing it, securing it, putting it online, and keeping it healthy afterward. We treat these as one job. That is why [software architecture](ref:cap.software-architecture), [software testing](ref:cap.software-testing), and [software maintenance](ref:cap.software-maintenance) are part of every project, not extras.
+      - "It is often the wrong answer too, and we will tell you when it is. A common spreadsheet
+        process may be better served by a configured product. A generic need such as invoicing is
+        usually better bought. We start by testing three options: build it, buy it, or connect what
+        you already have. The cheapest software is the software you do not have to write."
+      - When building is right, the work covers more than writing code. It includes understanding
+        the process, planning the structure, building the application, testing it, securing it,
+        putting it online, and keeping it healthy afterward. We treat these as one job. That is why
+        [software architecture](ref:cap.software-architecture), [software
+        testing](ref:cap.software-testing), and [software maintenance](ref:cap.software-maintenance)
+        are part of every project, not extras.
   - type: table
     id: build-buy-integrate
     tone: paper
     label: Choosing an approach
     heading: Build, buy, or connect what you have
-    intro: This is the first decision on most projects. The honest answer depends on how specific your process is and how well existing tools fit it.
+    intro:
+      This is the first decision on most projects. The honest answer depends on how specific your
+      process is and how well existing tools fit it.
     caption: Comparison of build, buy, and connect approaches
     columns:
       - Approach
@@ -69,11 +96,13 @@ sections:
       - What you end up with
     rows:
       - - Build custom software
-        - Your process is specific to you, gives you an edge, or is poorly served by products on the market.
+        - Your process is specific to you, gives you an edge, or is poorly served by products on the
+          market.
         - A bigger upfront investment, and a long-term responsibility to look after it.
         - A system shaped to your workflow, which you own and can extend.
       - - Buy and configure
-        - The need is common and mature products cover it well, such as accounting, email, or standard HR.
+        - The need is common and mature products cover it well, such as accounting, email, or
+          standard HR.
         - Workarounds that grow over time, fees that rise with each user, and limited control.
         - A fast start, with the product's limits built in.
       - - Connect what you have
@@ -81,10 +110,12 @@ sections:
         - Tools with poor connection options, and links that nobody monitors.
         - Your existing tools behave as one system, with less new software to build.
       - - Combine them
-        - "Most real situations: buy the common parts, build the part that sets you apart, and connect the rest."
+        - "Most real situations: buy the common parts, build the part that sets you apart, and
+          connect the rest."
         - Unclear ownership between the pieces.
         - A practical mix with a clear line around what is custom.
-    note: We recommend an approach on the merits of your situation, including recommending against a build.
+    note: We recommend an approach on the merits of your situation, including recommending against a
+      build.
   - type: index
     id: system-types
     tone: white
@@ -95,90 +126,136 @@ sections:
     items:
       - title: Business applications and management systems
         ref: cap.business-management-systems
-        body: "Applications that run a process from start to finish: orders, jobs, cases, approvals, stock, billing. Each person sees what their role needs, and every change is recorded."
+        body:
+          "Applications that run a process from start to finish: orders, jobs, cases, approvals, stock,
+          billing. Each person sees what their role needs, and every change is recorded."
       - title: Online platforms people subscribe to
         ref: cap.saas-development
-        body: Software that customers pay for monthly or yearly and use online (often called SaaS). It includes accounts, billing, and the operations behind them, from first release through growth.
+        body:
+          Software that customers pay for monthly or yearly and use online (often called SaaS). It
+          includes accounts, billing, and the operations behind them, from first release through
+          growth.
       - title: Customer and employee portals
         ref: cap.customer-portals
-        body: "A secure place where customers, partners, or staff handle things themselves: documents, requests, status, payments, and support."
+        body:
+          "A secure place where customers, partners, or staff handle things themselves: documents,
+          requests, status, payments, and support."
       - title: Dashboards and reporting
         ref: cap.business-dashboards
-        body: Live views of the numbers your team runs on, drawn from the right sources and designed to be trusted.
+        body:
+          Live views of the numbers your team runs on, drawn from the right sources and designed to be
+          trusted.
       - title: Marketplaces
         ref: cap.marketplace-development
-        body: Platforms that connect buyers and sellers, or providers and clients, with listings, matching, payments, and trust features.
+        body:
+          Platforms that connect buyers and sellers, or providers and clients, with listings, matching,
+          payments, and trust features.
       - title: Booking and scheduling systems
         ref: cap.booking-systems
-        body: Appointment, resource, and capacity management with availability rules, reminders, and payments.
+        body: Appointment, resource, and capacity management with availability rules, reminders, and
+          payments.
       - title: Membership and subscription platforms
         ref: cap.membership-platforms
-        body: Access, billing, renewals, and delivery of content or services for customers who stay with you over time.
+        body:
+          Access, billing, renewals, and delivery of content or services for customers who stay with you
+          over time.
       - title: Customer, operations, and stock systems
         ref: cap.crm-development
-        body: Custom or extended systems for customer records (CRM), company operations (ERP), and stock, where ready-made products do not fit.
+        body:
+          Custom or extended systems for customer records (CRM), company operations (ERP), and stock,
+          where ready-made products do not fit.
       - title: Internal tools
         ref: cap.internal-tools
-        body: Focused tools that replace spreadsheets and email chains for one team, built quickly and maintained properly.
+        body:
+          Focused tools that replace spreadsheets and email chains for one team, built quickly and
+          maintained properly.
       - title: Learning and payment systems
         ref: cap.learning-platforms
-        body: Course delivery, progress tracking, and certificates, plus payment flows built with providers such as Stripe and PayPal.
+        body:
+          Course delivery, progress tracking, and certificates, plus payment flows built with providers
+          such as Stripe and PayPal.
   - type: diagram
     id: interfaces
     tone: paper
     label: Interfaces
     heading: The screens your customers and staff use
-    intro: People judge a system by its screens. We design each one to show what a person came for first, on a desktop and on a phone.
+    intro: People judge a system by its screens. We design each one to show what a person came for
+      first, on a desktop and on a phone.
     figure: portal-wireframe
     purpose: system
-    takeaway: A well-designed portal shows each person what they came for first, on any screen size, and nothing they should not see.
-    caption: This sketch shows a conceptual customer portal on a desktop and on a phone, with a menu, summary cards, and a list of orders with their status. It illustrates a type of system we design and build. It is not a client's screen.
+    takeaway:
+      A well-designed portal shows each person what they came for first, on any screen size, and
+      nothing they should not see.
+    caption:
+      This sketch shows a conceptual customer portal on a desktop and on a phone, with a menu,
+      summary cards, and a list of orders with their status. It illustrates a type of system we
+      design and build. It is not a client's screen.
     points:
       - title: Different views for different people
-        body: Customers, staff, and administrators see what they need and nothing they should not. One set of access rules applies across the screens and the system behind them.
+        body:
+          Customers, staff, and administrators see what they need and nothing they should not. One set
+          of access rules applies across the screens and the system behind them.
       - title: Designed for every screen
-        body: The phone layout is designed on its own terms, not shrunk from the desktop one. It has touch-sized controls and puts the most important status first.
+        body: The phone layout is designed on its own terms, not shrunk from the desktop one. It has
+          touch-sized controls and puts the most important status first.
       - title: Usable by everyone
-        body: Keyboard use, clear focus, readable contrast, and plain labels are part of the standard from the start, not a repair later.
+        body:
+          Keyboard use, clear focus, readable contrast, and plain labels are part of the standard from
+          the start, not a repair later.
   - type: process
     id: delivery
     tone: paper
     label: How we deliver
     heading: From first conversation to software that stays healthy
-    intro: These stages are common to most projects. Their size depends on the job, and we do not skip any of them.
+    intro:
+      These stages are common to most projects. Their size depends on the job, and we do not skip
+      any of them.
     steps:
       - title: Discover
-        body: We learn the process, the users, the information involved, and what success means. We test whether to build, buy, or connect.
+        body:
+          We learn the process, the users, the information involved, and what success means. We test
+          whether to build, buy, or connect.
         artifacts:
           - Problem and scope statement
           - Map of the process and information
           - Build, buy, or connect recommendation
       - title: Plan the structure
-        body: "We choose how the system is organized: its parts, how information is stored, how it links to other systems, how it is secured, and where it runs. We write decisions down with their trade-offs."
+        body:
+          "We choose how the system is organized: its parts, how information is stored, how it links to
+          other systems, how it is secured, and where it runs. We write decisions down with their
+          trade-offs."
         artifacts:
           - Overview of the structure
           - Plan for stored information
           - Decision records
       - title: Build
-        body: We deliver in short steps you can see and use, riskiest parts first. Every piece of work is reviewed and can be shown to you.
+        body:
+          We deliver in short steps you can see and use, riskiest parts first. Every piece of work is
+          reviewed and can be shown to you.
         artifacts:
           - Working software each round
           - Reviewed and versioned work
           - Progress you can inspect
       - title: Test
-        body: Automated checks at several levels, plus accessibility, speed, and security checks, run on every change.
+        body:
+          Automated checks at several levels, plus accessibility, speed, and security checks, run on
+          every change.
         artifacts:
           - Automated test suite
           - Security and update-check results
           - Speed and accessibility checks
       - title: Release
-        body: We release to a safe preview first, then to the live system, with a rehearsed way back and a clear handover.
+        body:
+          We release to a safe preview first, then to the live system, with a rehearsed way back and a
+          clear handover.
         artifacts:
           - Release process
           - Release notes
           - Rollback plan
       - title: Look after it
-        body: We watch, update, and improve the software after launch. Software that matters needs an owner who keeps it current.
+        body:
+          We watch, update, and improve the software after launch. Software that matters needs an owner
+          who keeps it current.
         artifacts:
           - Monitoring and alerts
           - Security and update fixes
@@ -187,17 +264,28 @@ sections:
     id: quality
     tone: ink
     label: Quality
-    heading: Testing, security, and speed are part of the build
-    intro: Quality is a set of habits applied to every change, not a phase at the end. This is the model we work to.
+    heading: Quality assurance, security, and speed in every release
+    intro:
+      Quality is a set of habits applied to every change, not a phase at the end. This is the model
+      we work to.
     figure: quality-layers
     purpose: process
-    takeaway: Every change passes a series of checks, from many small tests to a few full walk-throughs, before it goes live.
-    caption: "This diagram shows two ideas side by side: many small, fast tests with fewer full-journey tests above them, and the six checks every change passes before it is released."
+    takeaway:
+      Every change passes a series of checks, from many small tests to a few full walk-throughs,
+      before it goes live.
+    caption:
+      "This diagram shows two ideas side by side: many small, fast tests with fewer full-journey
+      tests above them, and the six checks every change passes before it is released."
     points:
       - title: Quality assurance in every release
-        body: Many quick tests of small parts, fewer tests of parts working together, and a handful of full walk-throughs of the tasks that matter most.
+        body:
+          Many quick tests of small parts, fewer tests of parts working together, and a handful of full
+          walk-throughs of the tasks that matter most.
       - title: Secure by design
-        body: We plan for threats, give people only the access they need, scan for known weaknesses, and follow the [OWASP](ref:con.owasp) list of the most common web security mistakes from the first round, not the last.
+        body:
+          We plan for threats, give people only the access they need, scan for known weaknesses, and
+          follow the [OWASP](ref:con.owasp) list of the most common web security mistakes from the
+          first round, not the last.
       - title: Watched after launch
         body: Records, measurements, and alerts mean our team sees a problem before your users report it.
   - type: callout
@@ -206,25 +294,42 @@ sections:
     variant: limits
     title: "How we pick the right approach: build, buy or connect"
     paragraphs:
-      - If a mature product already does the job, buying it is faster and cheaper. If your tools are fine but separate, connecting them is often enough.
-      - "We look at what you already use, what the market sells, and what you need to own, then recommend the route that will still work for you in three years. Buying or connecting usually wins when:"
+      - If a mature product already does the job, buying it is faster and cheaper. If your tools are
+        fine but separate, connecting them is often enough.
+      - "We look at what you already use, what the market sells, and what you need to own, then
+        recommend the route that will still work for you in three years. Buying or connecting
+        usually wins when:"
     items:
       - Your need is common, such as standard accounting or email.
-      - You are not yet sure the idea works. A simple test version or a configured product may teach you more.
+      - You are not yet sure the idea works. A simple test version or a configured product may teach
+        you more.
       - You cannot yet name who will own and maintain the system.
   - type: technical
     id: technology
     tone: paper
     label: Technology
-    heading: How we choose technology
-    intro: "For your technical team: how we pick a stack, the choices we make most often, how we weigh one option against another, and the architecture styles we consider."
+    heading: The technology we build with
+    intro:
+      "For your technical team: how we pick a stack, the choices we make most often, how we weigh
+      one option against another, and the architecture styles we consider."
     panels:
       - title: We are not tied to one set of tools
         paragraphs:
-          - The programming language, framework, database, and hosting for a project are chosen for the problem, for the team that will look after it, and for the long-term cost. A tool chosen because it is fashionable becomes a burden once the people who chose it have moved on.
+          - The programming language, framework, database, and hosting for a project are chosen for
+            the problem, for the team that will look after it, and for the long-term cost. A tool
+            chosen because it is fashionable becomes a burden once the people who chose it have
+            moved on.
       - title: Common choices
         paragraphs:
-          - For the behind-the-scenes part, we often use [Python](ref:lang.python), [TypeScript](ref:lang.typescript), [Java](ref:lang.java), [C#](ref:lang.c-sharp), [Go](ref:lang.go), or [PHP](ref:lang.php). For the screens people use, [React](ref:fw.react), [Next.js](ref:fw.nextjs), [Vue](ref:fw.vue), or [Angular](ref:fw.angular). For stored information, [PostgreSQL](ref:tech.postgresql), [MySQL](ref:tech.mysql), or [MongoDB](ref:tech.mongodb). For hosting, [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud), with [Docker](ref:tool.docker) and [Kubernetes](ref:tool.kubernetes) where containers pay for themselves.
+          - For the behind-the-scenes part, we often use [Python](ref:lang.python),
+            [TypeScript](ref:lang.typescript), [Java](ref:lang.java), [C#](ref:lang.c-sharp),
+            [Go](ref:lang.go), or [PHP](ref:lang.php). For the screens people use,
+            [React](ref:fw.react), [Next.js](ref:fw.nextjs), [Vue](ref:fw.vue), or
+            [Angular](ref:fw.angular). For stored information, [PostgreSQL](ref:tech.postgresql),
+            [MySQL](ref:tech.mysql), or [MongoDB](ref:tech.mongodb). For hosting,
+            [AWS](ref:plat.aws), [Azure](ref:plat.azure), or [Google Cloud](ref:plat.google-cloud),
+            with [Docker](ref:tool.docker) and [Kubernetes](ref:tool.kubernetes) where containers
+            pay for themselves.
       - title: How we weigh a choice
         items:
           - How well it fits the problem.
@@ -246,14 +351,21 @@ sections:
     tone: white
     label: Modernization
     heading: Replacing old software without stopping the business
-    intro: Old software is rarely rewritten in one go. The safer path is to wrap it, replace it piece by piece, and switch it off only when nothing depends on it.
+    intro:
+      Old software is rarely rewritten in one go. The safer path is to wrap it, replace it piece by
+      piece, and switch it off only when nothing depends on it.
     figure: modernization-path
     purpose: transformation
     takeaway: Old software can be replaced in four careful stages while the business keeps running.
-    caption: "This diagram shows four stages of replacing old software: assess it, put a new front layer on it, move its pieces over one at a time, and retire what is no longer used. The method is often called the strangler pattern."
+    caption:
+      "This diagram shows four stages of replacing old software: assess it, put a new front layer
+      on it, move its pieces over one at a time, and retire what is no longer used. The method is
+      often called the strangler pattern."
     points:
       - title: We audit your current system first
-        body: We map what the system does, what depends on it, and where its information lives. Surprises found here are cheap. Surprises found after launch are not.
+        body:
+          We map what the system does, what depends on it, and where its information lives. Surprises
+          found here are cheap. Surprises found after launch are not.
       - title: Keep the business running
         body: A new layer in front lets old and new run side by side, so nobody faces a switchover weekend.
       - title: Data migration, planned and tested before go-live
@@ -264,16 +376,27 @@ sections:
     label: Beyond the application
     heading: Software that connects to AI, automation, and the cloud
     paragraphs:
-      - A modern business application rarely stands alone. It shares information with your customer or accounting system, takes payments, sends notifications, and increasingly includes AI features such as search across your documents, drafting, or an assistant that can act inside the system.
-      - We also work on [AI and machine learning](ref:svc.ai), [automation and workflows](ref:svc.automation), [integration](ref:svc.api-integration), and [cloud and DevOps](ref:svc.cloud) (building, testing, and releasing software reliably). So we design those pieces together with the application instead of bolting them on afterward. Sign-in, access rules, stored information, and hosting are decided once. An AI feature then follows the same access rules as the rest of the product.
-      - That is the practical meaning of designing software, AI, automation, integration, and cloud as one system. It is also why security and monitoring belong in the first design conversation, not in a later clean-up.
+      - A modern business application rarely stands alone. It shares information with your customer
+        or accounting system, takes payments, sends notifications, and increasingly includes AI
+        features such as search across your documents, drafting, or an assistant that can act inside
+        the system.
+      - We also work on [AI and machine learning](ref:svc.ai), [automation and
+        workflows](ref:svc.automation), [integration](ref:svc.api-integration), and [cloud and
+        DevOps](ref:svc.cloud) (building, testing, and releasing software reliably). So we design
+        those pieces together with the application instead of bolting them on afterward. Sign-in,
+        access rules, stored information, and hosting are decided once. An AI feature then follows
+        the same access rules as the rest of the product.
+      - That is the practical meaning of designing software, AI, automation, integration, and cloud
+        as one system. It is also why security and monitoring belong in the first design
+        conversation, not in a later clean-up.
   - type: entities
     id: sectors
     tone: white
     style: chips
     label: Where it is applied
     heading: Industries and business types
-    intro: Software needs differ by sector. We shape requirements around each sector's information, rules, and users.
+    intro: Software needs differ by sector. We shape requirements around each sector's information,
+      rules, and users.
     groups:
       - title: Industries
         entityIds:
@@ -305,19 +428,44 @@ sections:
     heading: Questions about custom software
     items:
       - q: How much does custom software cost?
-        a: "It depends on scope, complexity, connections to other systems, and the level of assurance required, so any single figure would be a guess. We estimate after a discovery conversation, in stages: a small discovery or prototype first to reduce risk, then a build plan with a range that narrows as unknowns are resolved. If you are comparing providers, ask each what the price includes: testing, security, documentation, and support after launch."
+        a:
+          "Most custom software projects cost $15,000 to $100,000 or more. An internal tool usually costs
+          $15,000 to $30,000, a customer portal $25,000 to $50,000, and a full business platform or
+          SaaS product $50,000 to $100,000 or more. Every quote is fixed in writing after a short
+          discovery call, and it includes testing, security, documentation, and launch support."
       - q: How long does a custom software project take?
-        a: A focused internal tool can reach real users in weeks. A system with several user roles and connections to other tools typically takes months, delivered in steps so something usable appears early. The honest answer comes from discovery, because the main drivers are the number of distinct workflows, the quality of the information you start with, and how many other systems must connect.
+        a:
+          Most projects take 4 weeks to 4 months. An internal tool usually goes live in 4 to 6 weeks, a
+          portal in 6 to 8 weeks, and a larger platform in 2 to 4 months. We release in stages, so
+          your team uses working software early instead of waiting for one big launch.
       - q: Should we build or buy?
-        a: Buy when the need is common and a mature product fits with little change. Build when the process is specific to you or gives you an edge. Connect when the tools you have are fine but do not share information. Many projects combine all three, as the comparison above shows.
+        a:
+          Buy when the need is common and a mature product fits with little change. Build when the process
+          is specific to you or gives you an edge. Connect when the tools you have are fine but do
+          not share information. Many projects combine all three, as the comparison above shows.
       - q: Can you work with software we already have?
-        a: "Yes. Improving existing systems is a large part of our work: reviewing and stabilizing code, adding features, connecting to other tools, moving to the cloud, or modernizing in stages. The first step is a technical review to understand what is there."
+        a:
+          "Yes. Improving existing systems is a large part of our work: reviewing and stabilizing code,
+          adding features, connecting to other tools, moving to the cloud, or modernizing in stages.
+          The first step is a technical review to understand what is there."
       - q: Who owns the code and the system afterward?
-        a: Ownership and licensing terms are agreed in writing before work starts. We aim to keep code in a repository you can access, document key decisions, and avoid lock-in where it is not needed, so your system can be maintained by whoever you choose.
+        a:
+          Ownership and licensing terms are agreed in writing before work starts. We aim to keep code in a
+          repository you can access, document key decisions, and avoid lock-in where it is not
+          needed, so your system can be maintained by whoever you choose.
       - q: How is security handled?
-        a: Security is designed in from the planning stage. That covers sign-in and permissions, giving people only the access they need, encrypting information, and scanning for known weaknesses. We also follow the OWASP list of common web security mistakes. Where rules apply, such as privacy law or industry regulation, we identify the requirements during discovery. Our [cybersecurity](ref:svc.cybersecurity) practice can also review an existing system.
+        a:
+          Security is designed in from the planning stage. That covers sign-in and permissions, giving
+          people only the access they need, encrypting information, and scanning for known
+          weaknesses. We also follow the OWASP list of common web security mistakes. Where rules
+          apply, such as privacy law or industry regulation, we identify the requirements during
+          discovery. Our [cybersecurity](ref:svc.cybersecurity) practice can also review an existing
+          system.
       - q: Do you support software after launch?
-        a: Yes. Support includes monitoring, updating parts that age, fixing defects, and adding features. Software that matters needs an owner who keeps it current, whether that is your team, us, or both.
+        a:
+          Yes. Support includes monitoring, updating parts that age, fixing defects, and adding features.
+          Software that matters needs an owner who keeps it current, whether that is your team, us,
+          or both.
   - type: related
     id: related
     tone: white
@@ -366,7 +514,8 @@ sections:
   - type: cta
     id: contact-cta
     heading: Tell us what you want built, replaced, or connected
-    body: Describe what you want to build, replace, or connect. We will tell you honestly whether building is the right approach and what the first step should be.
+    body: Describe what you want to build, replace, or connect. We will tell you honestly whether
+      building is the right approach and what the first step should be.
     primary:
       label: Discuss your software project
       href: /contact/?service=software-development

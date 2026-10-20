@@ -4,7 +4,8 @@ locale: en
 path: /cloud/
 entityId: svc.cloud
 title: Cloud and DevOps Services | DECHY
-description: "Cloud and DevOps from DECHY: move to the cloud safely, keep systems reliable and affordable, and release new features without the risk and delay."
+description: "Cloud and DevOps from DECHY: move to the cloud safely, keep systems reliable and
+  affordable, and release new features without the risk and delay."
 breadcrumbLabel: Cloud & DevOps
 intent:
   primary: cloud migration and devops services
@@ -24,19 +25,27 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We move and run your software and information on rented computing power instead of your own servers, and set up DevOps: the routine that builds, tests, and releases software reliably."
-  problem: Servers fail, updates are risky, costs are unpredictable, and releasing new features takes too long or breaks things.
-  audience: Teams with their own servers or old hosting, fast-growing products, and anyone worried about downtime, cost, or slow releases.
-  choose: Move as-is when speed matters, adjust for the cloud when you want savings and flexibility, and rebuild only when the old design is holding you back.
-  next: Tell us where your software runs today and what worries you. We will recommend a path and a first step.
+  what: "We move and run your software and information on rented computing power instead of your own
+    servers, and set up DevOps: the routine that builds, tests, and releases software reliably."
+  problem:
+    Servers fail, updates are risky, costs are unpredictable, and releasing new features takes
+    too long or breaks things.
+  audience: Teams with their own servers or old hosting, fast-growing products, and anyone worried
+    about downtime, cost, or slow releases.
+  choose: Move as-is when speed matters, adjust for the cloud when you want savings and flexibility,
+    and rebuild only when the old design is holding you back.
+  next: Tell us where your software runs today and what worries you. We will recommend a path and a
+    first step.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
-    headline: Cloud & DevOps
-    lead: At DECHY, we help you run your software on the cloud in a way that is reliable, secure, and affordable. We plan the move, set up the infrastructure, and build the DevOps routines, which are the habits that let software be built, tested, and released safely.
-    support: Cloud work sits next to our software, security, and integration teams, so hosting decisions are made together with the application.
+    headline: Cloud and DevOps services for reliable, affordable software
+    lead:
+      We move, set up, and run your software in the cloud so it stays fast, secure, and affordable.
+      You get automatic deployments, monitoring, and backups, and a team that keeps everything
+      running after launch.
     ctas:
       - label: Discuss your cloud project
         href: /contact/?service=cloud
@@ -56,9 +65,13 @@ sections:
         - title: The provider's data centers
           text: Buildings, power, and networks run by the cloud provider.
     purpose: architecture
-    takeaway: The cloud is rented layers, from ready-made services down to the provider's data centers, so you manage less hardware.
+    takeaway:
+      The cloud is rented layers, from ready-made services down to the provider's data centers,
+      so you manage less hardware.
     visualTitle: The layers that make up the cloud
-    figureCaption: This diagram shows the layers of the cloud from your own software at the top down to the provider's data centers, so you can see what you rent and what you build.
+    figureCaption:
+      This diagram shows the layers of the cloud from your own software at the top down to
+      the provider's data centers, so you can see what you rent and what you build.
   - type: prose
     id: problem
     photo:
@@ -67,15 +80,22 @@ sections:
     label: The problem
     heading: Why teams look at the cloud
     paragraphs:
-      - Many organizations run software on servers they bought years ago or on hosting nobody has reviewed. It works until it does not. A disk fails on a Friday. An update has to wait for a weekend. A busy day slows everything down.
-      - The cloud changes the deal. You rent computing power and ready-made services. You pay for what you use, you add capacity in minutes, and the provider looks after the buildings and hardware, so your team spends its time on the software instead.
-      - It is not a magic fix. Without good design, cloud bills grow and systems stay fragile. The value comes from how things are set up and looked after.
+      - Many organizations run software on servers they bought years ago or on hosting nobody has
+        reviewed. It works until it does not. A disk fails on a Friday. An update has to wait for a
+        weekend. A busy day slows everything down.
+      - The cloud changes the deal. You rent computing power and ready-made services. You pay for
+        what you use, you add capacity in minutes, and the provider looks after the buildings and
+        hardware, so your team spends its time on the software instead.
+      - It is not a magic fix. Without good design, cloud bills grow and systems stay fragile. The
+        value comes from how things are set up and looked after.
   - type: diagram
     id: paths
     tone: paper
     label: Choosing a path
     heading: Move, adjust, or rebuild?
-    intro: There are three common ways to get to the cloud. The right one depends on how much you want to change and why you are moving.
+    intro:
+      There are three common ways to get to the cloud. The right one depends on how much you want
+      to change and why you are moving.
     spec:
       kind: decision
       question: How much do you want to change on the way?
@@ -91,7 +111,8 @@ sections:
           text: Redesign the system to use cloud strengths. The most effort, and the most benefit.
     purpose: decision
     takeaway: How much you change on the way to the cloud decides how fast you move and how much you gain.
-    caption: This diagram sets out three common paths to the cloud and the situation each one suits, from a quick move to a full rebuild.
+    caption: This diagram sets out three common paths to the cloud and the situation each one suits,
+      from a quick move to a full rebuild.
     points:
       - title: Start with why
         body: Savings, reliability, speed, and growth point to different paths.
@@ -114,7 +135,8 @@ sections:
       - - Simple hosting platforms such as [Vercel](ref:plat.vercel) or [Netlify](ref:plat.netlify)
         - Websites and web apps that need to be fast and easy to publish.
         - Less control over the underlying setup.
-      - - Major cloud providers such as [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google Cloud](ref:plat.google-cloud)
+      - - Major cloud providers such as [AWS](ref:plat.aws), [Azure](ref:plat.azure), and [Google
+          Cloud](ref:plat.google-cloud)
         - Systems that need flexibility, scale, and a wide choice of services.
         - Many choices. Cost and security need careful design.
       - - Backend platforms such as [Firebase](ref:plat.firebase) or [Supabase](ref:plat.supabase)
@@ -128,7 +150,8 @@ sections:
     tone: paper
     label: DevOps in practice
     heading: From a change to a live update
-    intro: DevOps turns releasing software from a nervous event into a routine one. This is the path every change takes.
+    intro: DevOps turns releasing software from a nervous event into a routine one. This is the path
+      every change takes.
     spec:
       kind: flow
       steps:
@@ -144,7 +167,9 @@ sections:
           text: Alerts tell the team at once if something is wrong.
     purpose: sequence
     takeaway: A routine, automated path from change to live update makes releases small, safe, and frequent.
-    caption: This diagram traces one change from a developer's finished work through automatic checks and a safe preview to going live and being watched.
+    caption:
+      This diagram traces one change from a developer's finished work through automatic checks
+      and a safe preview to going live and being watched.
   - type: columns
     id: outcomes
     tone: white
@@ -206,29 +231,42 @@ sections:
     id: when-not
     tone: white
     variant: limits
-    title: The cloud is not always cheaper or better
+    title: How we pick the right approach
     paragraphs:
-      - For steady, predictable workloads, owning hardware can cost less. Some rules about where information may be stored also limit the choices.
-      - We compare honestly and tell you if staying where you are, or doing a smaller upgrade, makes more sense.
+      - We compare cloud, hosted, and existing setups on cost, performance, and the rules about
+        where your data may live. Then we recommend the option that gives you the best reliability
+        for the money.
+      - Sometimes that is a full move, sometimes a smaller upgrade. You see the numbers either way.
   - type: technical
     id: technology
     tone: paper
     label: Technology
-    heading: Under the hood
-    intro: "Our engineering choices on infrastructure written as code, containers and orchestration, release pipelines, and watching the system, written for the people who will own the system after launch."
+    heading: The cloud platforms and tools we use
+    intro: "Our engineering choices on infrastructure written as code, containers and orchestration,
+      release pipelines, and watching the system, written for the people who will own the system
+      after launch."
     panels:
       - title: Infrastructure written as code
         paragraphs:
-          - We describe infrastructure in files using tools such as [Terraform](ref:tool.terraform), [Pulumi](ref:tool.pulumi), or [CloudFormation](ref:tech.cloudformation). This makes environments repeatable, reviewable, and easy to rebuild.
+          - We describe infrastructure in files using tools such as [Terraform](ref:tool.terraform),
+            [Pulumi](ref:tool.pulumi), or [CloudFormation](ref:tech.cloudformation). This makes
+            environments repeatable, reviewable, and easy to rebuild.
       - title: Containers and orchestration
         paragraphs:
-          - Software is packaged with [Docker](ref:tool.docker) and, when scale demands it, run on [Kubernetes](ref:tool.kubernetes) or managed services such as [ECS](ref:tech.ecs), [Cloud Run](ref:tech.cloud-run), or [Azure Container Apps](ref:tech.container-apps). Many systems do not need Kubernetes, and we say so.
+          - Software is packaged with [Docker](ref:tool.docker) and, when scale demands it, run on
+            [Kubernetes](ref:tool.kubernetes) or managed services such as [ECS](ref:tech.ecs),
+            [Cloud Run](ref:tech.cloud-run), or [Azure Container Apps](ref:tech.container-apps).
+            Many systems do not need Kubernetes, and we say so.
       - title: Release pipelines
         paragraphs:
-          - The path from change to release is often called CI/CD (continuous integration and delivery). We build it with tools such as [GitHub Actions](ref:tool.github-actions), [GitLab CI/CD](ref:tool.gitlab-ci-cd), [Jenkins](ref:tool.jenkins), or [Azure DevOps](ref:tech.azure-devops).
+          - The path from change to release is often called CI/CD (continuous integration and
+            delivery). We build it with tools such as [GitHub Actions](ref:tool.github-actions),
+            [GitLab CI/CD](ref:tool.gitlab-ci-cd), [Jenkins](ref:tool.jenkins), or [Azure
+            DevOps](ref:tech.azure-devops).
       - title: Watching the system
         items:
-          - Metrics, logs, and traces with tools such as [Prometheus](ref:tool.prometheus), [Grafana](ref:tool.grafana), and [OpenTelemetry](ref:tool.opentelemetry).
+          - Metrics, logs, and traces with tools such as [Prometheus](ref:tool.prometheus),
+            [Grafana](ref:tool.grafana), and [OpenTelemetry](ref:tool.opentelemetry).
           - Alerts tied to what users feel, such as slow pages or failed payments.
           - Cost reports by system, so spending is visible.
   - type: index
@@ -250,17 +288,30 @@ sections:
     heading: Questions about cloud and DevOps
     items:
       - q: Will moving to the cloud save us money?
-        a: Often, but not automatically. Savings come from paying for what you use and from less hardware work. Costs can rise if the system is badly set up. We estimate before you move and review afterward.
+        a:
+          Often, but not automatically. Savings come from paying for what you use and from less hardware
+          work. Costs can rise if the system is badly set up. We estimate before you move and review
+          afterward.
       - q: Which cloud provider should we use?
-        a: It depends on your existing tools, your skills, the services you need, and where your information must be stored. We work with all the major providers and recommend the one that fits.
+        a:
+          It depends on your existing tools, your skills, the services you need, and where your information
+          must be stored. We work with all the major providers and recommend the one that fits.
       - q: Will there be downtime during the move?
-        a: We plan moves to avoid it, using staged migration and a rehearsed way back. Some systems need a short switchover window, which we schedule with you.
+        a:
+          We plan moves to avoid it, using staged migration and a rehearsed way back. Some systems need a
+          short switchover window, which we schedule with you.
       - q: What if we want to change provider later?
-        a: We design to keep that option open where it makes sense, by writing infrastructure as code and avoiding unnecessary lock-in.
+        a:
+          We design to keep that option open where it makes sense, by writing infrastructure as code and
+          avoiding unnecessary lock-in.
       - q: Do we need DevOps if we are small?
-        a: "A light version helps almost everyone: automatic checks, a preview copy, and one-step releases. We match the effort to your size."
+        a:
+          "A light version helps almost everyone: automatic checks, a preview copy, and one-step releases.
+          We match the effort to your size."
       - q: Can you look after our cloud after the move?
-        a: Yes. We can monitor, update, and tune your environment, or train your team to do it. See also our [cybersecurity](ref:svc.cybersecurity) service for protection.
+        a:
+          Yes. We can monitor, update, and tune your environment, or train your team to do it. See also our
+          [cybersecurity](ref:svc.cybersecurity) service for protection.
   - type: related
     id: related
     tone: white
@@ -299,7 +350,9 @@ sections:
   - type: cta
     id: contact-cta
     heading: Tell us where your software runs today
-    body: Describe your current setup and what worries you most. We will recommend a path to the cloud, or tell you honestly if staying put is better.
+    body:
+      Describe your current setup and what worries you most. We will recommend a path to the cloud,
+      or tell you honestly if staying put is better.
     primary:
       label: Discuss your cloud project
       href: /contact/?service=cloud

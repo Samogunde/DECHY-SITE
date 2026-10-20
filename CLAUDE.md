@@ -24,6 +24,12 @@ This file tells every Claude Code session how to work on DECHY. It adds no compa
   - Price ranges, case studies, testimonials, and the "Trusted by" logos are draft sections, shown only in review builds (`DECHY_SHOW_DRAFTS=true`) until the owner supplies the facts.
   - Every title ends with " | DECHY" (validator enforced). US English throughout.
   - Reference: `docs/planning/22-homepage-redesign-and-search-titles.md`.
+- Pricing, case studies, team, thirty industries, agency voice (20 October 2026, owner direction): **built on branch `homepage-redesign-sample`.**
+  - Every service shows tiered price ranges and short timelines (`data/pricing/services.yaml`).
+  - 30 industry pages, generated from per-industry copy in `data/industries/` by `scripts/build-industry-pages.mjs`.
+  - Thirty sample case study pages and a ten-person team section exist in review builds only (samples, noindex).
+  - The service pages are rewritten in agency voice.
+  - Reference: `docs/planning/22-homepage-redesign-and-search-titles.md`, fifth pass.
 - Netlify (7 October 2026): site `dechy-site` created on the owner's Netlify team and deployed at https://dechy-site.netlify.app (site id 4c3031f8-b780-46b4-89aa-62d5568c8b2a), with `SITE_ORIGIN` set to that URL. Indexing stays off (noindex, robots Disallow) until `SITE_INDEXING=true` is set at launch. Deploys so far are manual uploads from a clean `git archive` copy (the upload tool zips the whole folder, so never run it from the working tree). Not yet done: GitHub-linked continuous deploys (needs the owner to authorize the Netlify GitHub app), custom domain and DNS, and the contact-form destination.
 - Technology and Solutions qualification and reconciliation (ADR 0006): **decided and recorded, nothing built.** The first-wave Solution architecture is **six standalone Solution pages** (Business Process Automation, Legacy System Modernization, Cloud Migration, CRM Integration, Business Dashboards, AI Customer Support); the earlier twelve are superseded. Grouped technologies use the `partOf` relation. Solution to Industry mapping is deferred. Nine named technologies are CONFIRMATION REQUIRED. The next technology wave and Phase 4 are not started. Authoritative: `docs/planning/14-technology-and-solutions-qualification.md` sections 10 and 11.
 - Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (private; GitHub is the permanent source of truth). Never use or reference the abandoned Codex repository or its code.

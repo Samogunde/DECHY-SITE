@@ -19,7 +19,7 @@ const perms = (xs) =>
     : xs.flatMap((x, k) => perms([...xs.slice(0, k), ...xs.slice(k + 1)]).map((p) => [x, ...p]));
 const ORDERS = perms(["projects", "needs", "how", "help", "technology", "faq"]);
 
-const page = (i, n) => ({
+const page = (i) => ({
   id: `page.industry-${i.slug}`,
   kind: "industry",
   locale: "en",

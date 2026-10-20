@@ -4,7 +4,8 @@ locale: en
 path: /seo-aeo-geo/
 entityId: svc.seo-aeo-geo
 title: SEO, AEO and GEO Services | DECHY
-description: "SEO, AEO, and GEO from DECHY: help people, search engines, and AI assistants find, understand, and accurately describe you, with honest measurement."
+description: "SEO, AEO, and GEO from DECHY: help people, search engines, and AI assistants find,
+  understand, and accurately describe you, with honest measurement."
 breadcrumbLabel: SEO, AEO & GEO
 intent:
   primary: seo aeo and geo services
@@ -24,19 +25,30 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We help you get found three ways: ranking in search results (SEO), being quoted as the direct answer (AEO), and being understood and cited by AI assistants (GEO)."
-  problem: A good business that people cannot find in search or in AI answers, because the site is hard to read, unclear, or does not answer real questions.
-  audience: Owners and marketing teams who depend on being found online, and teams worried about how AI assistants describe them.
-  choose: Fix the foundations first so search engines can read your site. Then make your answers clear. Then make your organization and its relationships easy to understand.
-  next: Share your website and the questions you want to be found for. We will tell you what to fix first and what to measure.
+  what:
+    "We help you get found three ways: ranking in search results (SEO), being quoted as the direct
+    answer (AEO), and being understood and cited by AI assistants (GEO)."
+  problem: A good business that people cannot find in search or in AI answers, because the site is
+    hard to read, unclear, or does not answer real questions.
+  audience: Owners and marketing teams who depend on being found online, and teams worried about how
+    AI assistants describe them.
+  choose: Fix the foundations first so search engines can read your site. Then make your answers
+    clear. Then make your organization and its relationships easy to understand.
+  next: Share your website and the questions you want to be found for. We will tell you what to fix
+    first and what to measure.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
-    headline: SEO, AEO & GEO
-    lead: At DECHY, we help people, search engines, and AI assistants find and understand you. That covers SEO (search engine optimization, being found in search results), AEO (answer engine optimization, being the direct answer to a question), and GEO (generative engine optimization, being understood and described correctly by AI assistants).
-    support: We build this into websites from the start, and we measure it honestly. We do not promise rankings or AI citations, because nobody can.
+    headline: SEO, AEO, and GEO services to be found in search and AI answers
+    lead:
+      We help customers find you on Google, Bing, and AI assistants such as ChatGPT. That covers SEO
+      (search engine optimization, ranking in search results), AEO (answer engine optimization,
+      being the direct answer to a question), and GEO (generative engine optimization, being
+      described correctly by AI assistants).
+    support: You get a site search engines and AI tools understand, content that answers buyers'
+      questions, and honest monthly reporting.
     ctas:
       - label: Discuss your search visibility
         href: /contact/?service=seo-aeo-geo
@@ -53,24 +65,38 @@ sections:
         - title: Be understood
           text: AI assistants describe you accurately (GEO).
     purpose: system
-    takeaway: "Visibility works in three layers: being found, being answered, and being understood, and each builds on the one above."
+    takeaway:
+      "Visibility works in three layers: being found, being answered, and being understood, and
+      each builds on the one above."
     visualTitle: The three layers of being found online
-    figureCaption: This diagram shows three layers of online visibility, from being found in search to giving direct answers to being understood by AI assistants.
+    figureCaption:
+      This diagram shows three layers of online visibility, from being found in search to
+      giving direct answers to being understood by AI assistants.
   - type: definition
     id: what-is
     tone: white
     label: Our approach
     heading: Search used to be ten links. Now it is also an answer.
-    answer: "We make you visible in three places: ranked in search results, quoted as the direct answer, and correctly described by AI assistants that summarize the web. All three reward clear, trustworthy, well-organized content, which is what we build."
+    answer:
+      "We make you visible in three places: ranked in search results, quoted as the direct answer,
+      and correctly described by AI assistants that summarize the web. All three reward clear,
+      trustworthy, well-organized content, which is what we build."
     paragraphs:
-      - People still search the way they always have. But search engines also show direct answers, and people increasingly ask AI assistants instead. These systems read the web, decide which sources they understand and trust, and write a response.
-      - So the goal widens. It is no longer enough to rank. You also want to be the clear source of a good answer, and to be described correctly when an assistant mentions you. We shape your content so both people and machines can use it. We also check how assistants describe you today, so we know where to start.
+      - People still search the way they always have. But search engines also show direct answers,
+        and people increasingly ask AI assistants instead. These systems read the web, decide which
+        sources they understand and trust, and write a response.
+      - So the goal widens. It is no longer enough to rank. You also want to be the clear source of
+        a good answer, and to be described correctly when an assistant mentions you. We shape your
+        content so both people and machines can use it. We also check how assistants describe you
+        today, so we know where to start.
   - type: diagram
     id: how
     tone: paper
     label: How it works
     heading: What happens when someone asks a question
-    intro: Whether it is a search engine or an AI assistant, the process is similar. Your content has to survive every step.
+    intro:
+      Whether it is a search engine or an AI assistant, the process is similar. Your content has to
+      survive every step.
     spec:
       kind: flow
       steps:
@@ -85,14 +111,18 @@ sections:
         - title: An answer is given
           text: You may be shown, quoted, or named.
     purpose: sequence
-    takeaway: Your content must be reachable, readable, clear, and trustworthy at every step to be shown, quoted, or named.
-    caption: This diagram traces a question from the person asking, through finding, reading, and choosing sources, to the answer they see.
+    takeaway: Your content must be reachable, readable, clear, and trustworthy at every step to be
+      shown, quoted, or named.
+    caption: This diagram traces a question from the person asking, through finding, reading, and
+      choosing sources, to the answer they see.
   - type: table
     id: compare
     tone: white
     label: Three terms
     heading: SEO, AEO, and GEO compared
-    intro: The three overlap. The same good work helps all of them, but each asks a slightly different question.
+    intro:
+      The three overlap. The same good work helps all of them, but each asks a slightly different
+      question.
     caption: Comparison of SEO, AEO, and GEO
     columns:
       - Term
@@ -111,7 +141,8 @@ sections:
       - - GEO
         - Making your organization and its relationships clear to AI systems.
         - Do AI assistants understand and describe us correctly?
-        - Answers from tools such as [ChatGPT](ref:eco.chatgpt), [Perplexity](ref:eco.perplexity), [Gemini](ref:eco.gemini), and [Google AI Overviews](ref:eco.google-ai-overviews).
+        - Answers from tools such as [ChatGPT](ref:eco.chatgpt), [Perplexity](ref:eco.perplexity),
+          [Gemini](ref:eco.gemini), and [Google AI Overviews](ref:eco.google-ai-overviews).
     note: These systems change often. We focus on the lasting basics rather than tricks.
   - type: columns
     id: foundations
@@ -165,10 +196,11 @@ sections:
     id: limits
     tone: paper
     variant: limits
-    title: What no one can promise
+    title: What we promise
     paragraphs:
-      - No one controls search rankings or what an AI assistant says. Anyone who guarantees a first-page ranking or an AI citation is guessing, or selling a trick.
-      - What we can do is remove obstacles, make your content clear and trustworthy, and measure what changes. That is a sound base that holds up as the systems evolve.
+      - "No one controls rankings or what an AI assistant says, so we never sell guarantees. We
+        promise the work that moves visibility: removing technical obstacles, making your content
+        clear and quotable, and measuring what changes every month."
     items:
       - We do not buy links or use spam methods.
       - We do not promise rankings, traffic, or citations.
@@ -209,14 +241,18 @@ sections:
     tone: paper
     label: Technology
     heading: Under the hood
-    intro: "Our engineering choices on crawling and indexing, structured data, performance and page quality, and measuring, written for the people who will own the system after launch."
+    intro: "Our engineering choices on crawling and indexing, structured data, performance and page
+      quality, and measuring, written for the people who will own the system after launch."
     panels:
       - title: Crawling and indexing
         paragraphs:
-          - We check that search engines such as [Google](ref:eco.google-search) and [Bing](ref:eco.bing) can reach and index the right pages, using sitemaps, robots rules, canonical addresses, and clean redirects.
+          - We check that search engines such as [Google](ref:eco.google-search) and
+            [Bing](ref:eco.bing) can reach and index the right pages, using sitemaps, robots rules,
+            canonical addresses, and clean redirects.
       - title: Structured data
         paragraphs:
-          - We use the schema.org vocabulary in JSON-LD to describe your organization, services, and pages. Only facts you can stand behind are marked up.
+          - We use the schema.org vocabulary in JSON-LD to describe your organization, services, and
+            pages. Only facts you can stand behind are marked up.
       - title: Performance and page quality
         items:
           - "[Core Web Vitals](ref:cap.core-web-vitals): loading, responsiveness, and stability."
@@ -233,9 +269,14 @@ sections:
     label: What good content looks like
     heading: Content that is easy to quote
     paragraphs:
-      - Search engines and AI assistants prefer pages that answer a question clearly. The best pages open with the answer in a sentence or two, then explain, give examples, and say what to do next.
-      - They also prefer pages that are honest about what they do not know. A page that states its limits, names who wrote it, and shows when it was last checked is easier to trust, for people and for machines.
-      - We write and review pages in this way, and we avoid padding. A short page that answers one question well is better than a long page that wanders.
+      - Search engines and AI assistants prefer pages that answer a question clearly. The best pages
+        open with the answer in a sentence or two, then explain, give examples, and say what to do
+        next.
+      - They also prefer pages that are honest about what they do not know. A page that states its
+        limits, names who wrote it, and shows when it was last checked is easier to trust, for
+        people and for machines.
+      - We write and review pages in this way, and we avoid padding. A short page that answers one
+        question well is better than a long page that wanders.
   - type: faq
     id: faq
     tone: white
@@ -243,17 +284,30 @@ sections:
     heading: Questions about SEO, AEO, and GEO
     items:
       - q: How long does SEO take to work?
-        a: Fixes to reachability can show effects in weeks. Building authority and content that earns visibility usually takes months. We set expectations in the first review and report honestly.
+        a:
+          Technical fixes often show results within weeks. Content and authority usually take 3 to 6 months
+          to build momentum. A technical audit with fixes costs $1,500 to $5,000, and monthly
+          programs cost $1,000 to $4,000 a month.
       - q: Can you get us into AI answers?
-        a: We cannot control what an AI assistant says. We can make your content clear, accurate, and easy to cite, which gives you the best chance. We do not promise citations.
+        a:
+          We cannot control what an AI assistant says. We can make your content clear, accurate, and easy
+          to cite, which gives you the best chance. We do not promise citations.
       - q: Is AEO or GEO replacing SEO?
-        a: No. The same foundations help all three. Many people still use search, and AI assistants often read the same web pages.
+        a:
+          No. The same foundations help all three. Many people still use search, and AI assistants often
+          read the same web pages.
       - q: Do you use AI to write our content?
-        a: AI can help with drafts and research. People review everything, because accuracy and a real point of view matter more than volume.
+        a:
+          AI can help with drafts and research. People review everything, because accuracy and a real point
+          of view matter more than volume.
       - q: Will rebuilding our website hurt our rankings?
-        a: Not if it is planned. We keep the addresses that matter, redirect the others, and monitor after launch. See our [web development](ref:svc.web-development) service.
+        a:
+          Not if it is planned. We keep the addresses that matter, redirect the others, and monitor after
+          launch. See our [web development](ref:svc.web-development) service.
       - q: How do you measure success?
-        a: "By the things that matter to you: the right people finding you, the questions you answer, and inquiries. We agree the measures first."
+        a:
+          "By the things that matter to you: the right people finding you, the questions you answer, and
+          inquiries. We agree the measures first."
   - type: related
     id: related
     tone: paper
@@ -290,7 +344,9 @@ sections:
   - type: cta
     id: contact-cta
     heading: Tell us how you want to be found
-    body: Share your website and the questions you want to be found for. We will tell you what to fix first, what to measure, and what we cannot promise.
+    body:
+      Share your website and the questions you want to be found for. We will tell you what to fix
+      first, what to measure, and what we cannot promise.
     primary:
       label: Discuss your search visibility
       href: /contact/?service=seo-aeo-geo

@@ -4,7 +4,8 @@ locale: en
 path: /api-integration/
 entityId: svc.api-integration
 title: API and Systems Integration Services | DECHY
-description: "System integration from DECHY: connect your website, customer records, payments, accounting, and internal tools so information moves between them automatically."
+description: "System integration from DECHY: connect your website, customer records, payments,
+  accounting, and internal tools so information moves between them automatically."
 breadcrumbLabel: API & Systems Integration
 intent:
   primary: api and systems integration services
@@ -24,19 +25,27 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We connect your business systems, such as your website, customer records, payments, and accounting, so information moves between them automatically and nobody types it twice."
-  problem: When systems do not share information, people type the same details more than once, numbers disagree between reports, and things get missed.
-  audience: Teams that use several tools for one process, and owners who suspect they pay people to copy information between screens.
-  choose: Connect systems when your tools are fine but separate. Choose the simplest connection that is reliable, and replace a tool only when it cannot be connected.
-  next: List the tools involved and what you wish moved between them automatically. We will say what is possible and how to do it safely.
+  what: "We connect your business systems, such as your website, customer records, payments, and
+    accounting, so information moves between them automatically and nobody types it twice."
+  problem:
+    When systems do not share information, people type the same details more than once, numbers
+    disagree between reports, and things get missed.
+  audience: Teams that use several tools for one process, and owners who suspect they pay people to
+    copy information between screens.
+  choose: Connect systems when your tools are fine but separate. Choose the simplest connection that
+    is reliable, and replace a tool only when it cannot be connected.
+  next: List the tools involved and what you wish moved between them automatically. We will say what
+    is possible and how to do it safely.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
-    headline: API & Systems Integration
-    lead: At DECHY, we connect the systems your business runs on, so a customer, an order, or a payment is entered once and appears everywhere it should. We build the connections, check them, and watch them so they keep working.
-    support: Integration is the quiet foundation of automation, AI, and good reporting. Without it, each of those has to start from copies and guesses.
+    headline: API and systems integration that connects your tools
+    lead:
+      We connect the systems your business runs on, so a customer, an order, or a payment is entered
+      once and appears everywhere it should. You stop retyping data, your reports agree, and
+      automation and AI finally have clean data to work with.
     ctas:
       - label: Discuss your integrations
         href: /contact/?service=api-integration
@@ -61,18 +70,26 @@ sections:
         - title: Email and calendar
           text: Messages and bookings follow the work.
     purpose: relationship
-    takeaway: One connection layer lets your tools share information, instead of people carrying it between them.
+    takeaway: One connection layer lets your tools share information, instead of people carrying it
+      between them.
     visualTitle: Business tools joined by one connection layer
-    figureCaption: This diagram shows six common business tools joined through one connection layer, so information entered in one place reaches the others.
+    figureCaption:
+      This diagram shows six common business tools joined through one connection layer, so
+      information entered in one place reaches the others.
   - type: prose
     id: problem
     tone: white
     label: The problem
     heading: Why your systems stop talking to each other
     paragraphs:
-      - Businesses buy tools one at a time. A website here, a customer database there, an accounting package, a payment service, a stock system. Each purchase makes sense. Nobody plans how they will share information, so people become the connection.
-      - That shows up as double entry, reports that disagree, orders that wait for someone to key them in, and customers who get asked for the same details twice. It is slow, and every re-typed detail is a chance for a mistake.
-      - The fix is rarely a new system. It is usually a set of dependable connections between the systems you already trust.
+      - Businesses buy tools one at a time. A website here, a customer database there, an accounting
+        package, a payment service, a stock system. Each purchase makes sense. Nobody plans how they
+        will share information, so people become the connection.
+      - That shows up as double entry, reports that disagree, orders that wait for someone to key
+        them in, and customers who get asked for the same details twice. It is slow, and every
+        re-typed detail is a chance for a mistake.
+      - The fix is rarely a new system. It is usually a set of dependable connections between the
+        systems you already trust.
   - type: diagram
     id: before-after
     tone: paper
@@ -107,28 +124,39 @@ sections:
             text: Immediately.
       hubLabel: Information moves by itself
     purpose: before-after
-    takeaway: A sale entered once reaches every tool on its own, which removes re-typing and the mistakes that come with it.
-    caption: This diagram compares one website sale handled by hand across four tools with the same sale flowing through connected tools.
+    takeaway: A sale entered once reaches every tool on its own, which removes re-typing and the
+      mistakes that come with it.
+    caption:
+      This diagram compares one website sale handled by hand across four tools with the same sale
+      flowing through connected tools.
   - type: diagram
     id: shared-record
     tone: white
     label: What it looks like
     heading: One customer record shared across tools
-    intro: Integration is easiest to see in a customer system, where one record is fed by the website, billing, and support.
+    intro:
+      Integration is easiest to see in a customer system, where one record is fed by the website,
+      billing, and support.
     figure: crm-ui
     purpose: relationship
     takeaway: Integration keeps one customer record in step across the tools that create or need it.
-    caption: This sketch shows a conceptual customer system with a pipeline of leads and a customer record whose sections stay in sync with other tools. It illustrates integration and is not a client system.
+    caption: This sketch shows a conceptual customer system with a pipeline of leads and a customer
+      record whose sections stay in sync with other tools. It illustrates integration and is not a
+      client system.
     points: []
   - type: definition
     id: what-is
     tone: white
     label: Our approach
     heading: Connecting the systems you already run
-    answer: We make separate systems share information and work as one. Most tools offer an API, a defined way for one program to request or send information to another, and we build the connections on top of it, then watch them so they keep working.
+    answer: We make separate systems share information and work as one. Most tools offer an API, a
+      defined way for one program to request or send information to another, and we build the
+      connections on top of it, then watch them so they keep working.
     paragraphs:
-      - Most modern tools offer an API. Connecting two tools means using their APIs to send the right information, in the right format, at the right moment, with the right permissions.
-      - Good integration is more than a link. It also decides what happens when something fails, how to avoid duplicates, who is allowed to see what, and how to know it is still working.
+      - Most modern tools offer an API. Connecting two tools means using their APIs to send the
+        right information, in the right format, at the right moment, with the right permissions.
+      - Good integration is more than a link. It also decides what happens when something fails, how
+        to avoid duplicates, who is allowed to see what, and how to know it is still working.
   - type: index
     id: connections
     tone: paper
@@ -138,10 +166,14 @@ sections:
     items:
       - title: Website and customer records
         ref: cap.crm-integration
-        body: Inquiries and orders flow into your customer system as soon as they happen, with nothing lost in an inbox.
+        body:
+          Inquiries and orders flow into your customer system as soon as they happen, with nothing lost
+          in an inbox.
       - title: Payments and accounting
         ref: cap.payment-integration
-        body: Payments from providers such as [Stripe](ref:int.stripe) and [PayPal](ref:int.paypal) are matched to orders and recorded correctly.
+        body:
+          Payments from providers such as [Stripe](ref:int.stripe) and [PayPal](ref:int.paypal) are
+          matched to orders and recorded correctly.
       - title: Online stores and stock
         ref: cap.ecommerce-integration
         body: Orders, stock, shipping, and prices stay in step between your shop and the systems behind it.
@@ -150,7 +182,9 @@ sections:
         body: Operations software and finance systems share the same numbers, so reports agree.
       - title: Older systems and new tools
         ref: cap.legacy-system-integration
-        body: Systems that were never designed to connect can still be linked, safely, so you can modernize one step at a time.
+        body:
+          Systems that were never designed to connect can still be linked, safely, so you can modernize
+          one step at a time.
       - title: Email, calendar, and documents
         ref: cap.saas-integration
         body: Messages, bookings, and files follow the work, instead of living in separate places.
@@ -159,7 +193,8 @@ sections:
     tone: white
     label: Ways to connect
     heading: Three ways to connect systems
-    intro: There is more than one way to join systems. The right one depends on how many systems are involved and how much they change.
+    intro: There is more than one way to join systems. The right one depends on how many systems are
+      involved and how much they change.
     caption: Comparison of three ways to connect systems
     columns:
       - Way to connect
@@ -199,15 +234,20 @@ sections:
         - title: Success is confirmed or retried
           text: If it fails, the system tries again and alerts someone.
     purpose: sequence
-    takeaway: A dependable connection checks the information, confirms the result, and retries or alerts if anything fails.
-    caption: This diagram traces the five steps inside one connection between two systems, from the change that starts it to the confirmation or retry at the end.
+    takeaway:
+      A dependable connection checks the information, confirms the result, and retries or alerts
+      if anything fails.
+    caption: This diagram traces the five steps inside one connection between two systems, from the
+      change that starts it to the confirmation or retry at the end.
   - type: callout
     id: when-not
     tone: white
     variant: limits
-    title: When connecting is not the answer
+    title: How we pick the right approach
     paragraphs:
-      - Some tools cannot be connected well, or are so limited that every fix is a workaround. In that case, replacing the tool is cheaper than building around it.
+      - We connect what can be connected well. When a tool is too limited to integrate cleanly, we
+        show you what replacing it would cost against working around it, so you choose with the
+        numbers in front of you.
     items:
       - The tool has no way for other systems to reach it.
       - The connection would cost more than the tool.
@@ -217,25 +257,37 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: Under the hood
-    intro: "The detail a technical reviewer will ask about: styles of API, payments, safe sign-in between systems, and reliability."
+    heading: The integration technology we use
+    intro: "The detail a technical reviewer will ask about: styles of API, payments, safe sign-in
+      between systems, and reliability."
     panels:
       - title: Styles of API
         paragraphs:
-          - We work with [REST](ref:tech.rest) APIs, [GraphQL](ref:tech.graphql), [webhooks](ref:tech.webhooks) for real-time notices, and older formats such as SOAP when a system needs them. For business tools we use their official APIs, including [Salesforce](ref:int.salesforce-api), [HubSpot](ref:int.hubspot-api), [Shopify](ref:int.shopify-api), [Microsoft Graph](ref:int.microsoft-graph), and the [Google APIs](ref:int.google-apis).
+          - We work with [REST](ref:tech.rest) APIs, [GraphQL](ref:tech.graphql),
+            [webhooks](ref:tech.webhooks) for real-time notices, and older formats such as SOAP when
+            a system needs them. For business tools we use their official APIs, including
+            [Salesforce](ref:int.salesforce-api), [HubSpot](ref:int.hubspot-api),
+            [Shopify](ref:int.shopify-api), [Microsoft Graph](ref:int.microsoft-graph), and the
+            [Google APIs](ref:int.google-apis).
       - title: Payments
         paragraphs:
-          - For payments we integrate providers such as [Stripe](ref:int.stripe), [PayPal](ref:int.paypal), [Paystack](ref:int.paystack), [Flutterwave](ref:int.flutterwave), and [Adyen](ref:int.adyen), taking care with payment status, refunds, and records that must match.
+          - For payments we integrate providers such as [Stripe](ref:int.stripe),
+            [PayPal](ref:int.paypal), [Paystack](ref:int.paystack),
+            [Flutterwave](ref:int.flutterwave), and [Adyen](ref:int.adyen), taking care with payment
+            status, refunds, and records that must match.
       - title: Safe sign-in between systems
         paragraphs:
-          - We use standard sign-in methods such as [OAuth 2](ref:con.oauth2) and [OpenID Connect](ref:tech.openid-connect), keep access keys in a secure store, and grant each connection only the permissions it needs.
+          - We use standard sign-in methods such as [OAuth 2](ref:con.oauth2) and [OpenID
+            Connect](ref:tech.openid-connect), keep access keys in a secure store, and grant each
+            connection only the permissions it needs.
       - title: Reliability
         items:
           - Retries with increasing waits, and queues for work that cannot be processed right away.
           - Duplicate protection, so a message handled twice does not create two records.
           - Rate-limit awareness, so we do not overload a partner's system.
           - Logs, metrics, and alerts for every connection.
-          - An [API gateway](ref:tech.api-gateway) or event-based design when the number of systems grows.
+          - An [API gateway](ref:tech.api-gateway) or event-based design when the number of systems
+            grows.
   - type: index
     id: work
     tone: white
@@ -255,17 +307,33 @@ sections:
     heading: Questions about connecting systems
     items:
       - q: Can any two systems be connected?
-        a: Most can. Modern tools usually offer a way to connect. Older systems may need a different approach. We check what each tool allows before promising anything, and we tell you honestly when a connection is not worth building.
+        a: Most can. Modern tools usually offer a way to connect. Older systems may need a different
+          approach. We check what each tool allows before promising anything, and we tell you
+          honestly when a connection is not worth building.
       - q: Is our information safe when it moves between systems?
-        a: It can be. We use secure connections, limit each link to the permissions it needs, protect access keys, and keep a record of what moves. Sensitive information gets extra care, including whether it should move at all.
+        a:
+          It can be. We use secure connections, limit each link to the permissions it needs, protect access
+          keys, and keep a record of what moves. Sensitive information gets extra care, including
+          whether it should move at all.
       - q: What if one of the systems changes or goes down?
-        a: Dependable connections expect this. They retry, keep a queue of waiting work, and alert a person if a problem lasts. We also watch for changes in the tools we connect.
+        a:
+          Dependable connections expect this. They retry, keep a queue of waiting work, and alert a person
+          if a problem lasts. We also watch for changes in the tools we connect.
       - q: How long does an integration take?
-        a: A simple link between two modern tools can take days. Connecting several systems, or an older one, takes longer. We scope it in discovery, because the main factors are how many systems are involved and how clean the information is.
+        a:
+          A single integration between two systems usually takes about a week and costs $2,000 to $6,000.
+          Connecting several systems takes 2 to 4 weeks and costs $6,000 to $20,000. Larger
+          integration platforms take 6 to 10 weeks.
       - q: Do we need integration or automation?
-        a: Often both. Integration moves information between systems. [Automation](ref:svc.automation) uses those connections to run a process, with rules and approvals. We help you decide where each fits.
+        a:
+          Often both. Integration moves information between systems. [Automation](ref:svc.automation) uses
+          those connections to run a process, with rules and approvals. We help you decide where
+          each fits.
       - q: Can you connect our older software?
-        a: Usually, yes, though the method varies. It may be a database connection, a file exchange, or a new layer placed in front. It is also a good first step toward modernizing, one piece at a time.
+        a:
+          Usually, yes, though the method varies. It may be a database connection, a file exchange, or a
+          new layer placed in front. It is also a good first step toward modernizing, one piece at a
+          time.
   - type: related
     id: related
     tone: white
@@ -304,7 +372,8 @@ sections:
   - type: cta
     id: contact-cta
     heading: Tell us which tools should talk
-    body: List the tools you use and what you wish moved between them. We will tell you what is possible, what to connect first, and how to keep it dependable.
+    body: List the tools you use and what you wish moved between them. We will tell you what is
+      possible, what to connect first, and how to keep it dependable.
     primary:
       label: Discuss your integrations
       href: /contact/?service=api-integration

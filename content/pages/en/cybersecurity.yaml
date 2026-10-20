@@ -4,7 +4,8 @@ locale: en
 path: /cybersecurity/
 entityId: svc.cybersecurity
 title: Cybersecurity Services for Business | DECHY
-description: "Cybersecurity from DECHY: understand what you must protect, find the weak points, and build practical protection into your software, systems, and daily habits."
+description: "Cybersecurity from DECHY: understand what you must protect, find the weak points, and
+  build practical protection into your software, systems, and daily habits."
 breadcrumbLabel: Cybersecurity
 intent:
   primary: cybersecurity services for business
@@ -24,19 +25,27 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We protect your systems, accounts, and information from being stolen, damaged, or misused, and get you ready to respond if something goes wrong."
-  problem: "Most breaches come from a small gap: a weak password, an old update, an account with too much access. Many organizations do not know where their gaps are."
-  audience: Owners and leaders who hold customer or payment information, teams building software, and anyone who has been asked about security by a customer or insurer.
-  choose: Start by finding out what you hold and what could go wrong. Then fix the gaps that matter most first, before buying any tools.
-  next: Tell us what you protect and what concerns you. We will suggest a practical first step, such as a review of your most important system.
+  what: "We protect your systems, accounts, and information from being stolen, damaged, or misused,
+    and get you ready to respond if something goes wrong."
+  problem: "Most breaches come from a small gap: a weak password, an old update, an account with too
+    much access. Many organizations do not know where their gaps are."
+  audience:
+    Owners and leaders who hold customer or payment information, teams building software, and
+    anyone who has been asked about security by a customer or insurer.
+  choose: Start by finding out what you hold and what could go wrong. Then fix the gaps that matter
+    most first, before buying any tools.
+  next: Tell us what you protect and what concerns you. We will suggest a practical first step, such
+    as a review of your most important system.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
-    headline: Cybersecurity
-    lead: At DECHY, we help you protect what matters. We work out what you hold and who might want it, find the weak points, and build practical protection into your software, your systems, and your everyday habits.
-    support: Security is part of how we design and build everything, from software to cloud. It is also a service on its own, for systems you already run.
+    headline: Cybersecurity services that protect your business and your customers
+    lead:
+      We find the weak points in your software, systems, and habits, then fix them in order of real
+      risk. You get practical protection, clear evidence for customers and auditors, and security
+      built into everything we build.
     ctas:
       - label: Discuss your security
         href: /contact/?service=cybersecurity
@@ -68,24 +77,36 @@ sections:
             - title: Watching and alerts
               text: Warnings when something is unusual.
     purpose: architecture
-    takeaway: Several layers of protection, each backed by a safeguard, mean one failure does not expose everything.
+    takeaway:
+      Several layers of protection, each backed by a safeguard, mean one failure does not expose
+      everything.
     visualTitle: Security works in layers
-    figureCaption: This diagram shows four layers of protection from people at the top to networks at the bottom, each with a safeguard beside it.
+    figureCaption:
+      This diagram shows four layers of protection from people at the top to networks at
+      the bottom, each with a safeguard beside it.
   - type: definition
     id: what-is
     tone: white
     label: What it is
     heading: What cybersecurity means for a business
-    answer: "We keep your systems and information safe from theft, damage, and misuse through the habits, tools, and design choices that make up cybersecurity. No one can promise zero risk, so we make attacks hard, limit the harm if one succeeds, and make sure you can recover quickly."
+    answer: "We keep your systems and information safe from theft, damage, and misuse through the
+      habits, tools, and design choices that make up cybersecurity. No one can promise zero risk, so
+      we make attacks hard, limit the harm if one succeeds, and make sure you can recover quickly."
     paragraphs:
-      - "People often picture hackers breaking through firewalls. In practice, most problems start with ordinary gaps: a reused password, an unpatched program, a file shared with the wrong person, or a former employee who still has access."
-      - That is good news, because ordinary gaps can be fixed. A clear picture of what you hold, plus a handful of dependable habits, removes most of the risk, and it does not need a large budget to start.
+      - "People often picture hackers breaking through firewalls. In practice, most problems start
+        with ordinary gaps: a reused password, an unpatched program, a file shared with the wrong
+        person, or a former employee who still has access."
+      - That is good news, because ordinary gaps can be fixed. A clear picture of what you hold,
+        plus a handful of dependable habits, removes most of the risk, and it does not need a large
+        budget to start.
   - type: diagram
     id: priorities
     tone: paper
     label: Priorities
     heading: From every possible threat to a short list
-    intro: We do not try to fix everything at once. We narrow every possible threat down to the few that are likely and damaging for you, and fix those first.
+    intro:
+      We do not try to fix everything at once. We narrow every possible threat down to the few that
+      are likely and damaging for you, and fix those first.
     spec:
       kind: funnel
       stages:
@@ -100,8 +121,12 @@ sections:
         - title: Watch and respond
           text: Alerts and a plan for when something happens.
     purpose: transformation
-    takeaway: Good security does not try to fix everything. It narrows the long list of threats to the few that matter and deals with them first.
-    caption: This diagram shows how a long list of possible threats narrows to the few to fix first, and ends with watching and being ready to respond.
+    takeaway:
+      Good security does not try to fix everything. It narrows the long list of threats to the
+      few that matter and deals with them first.
+    caption:
+      This diagram shows how a long list of possible threats narrows to the few to fix first, and
+      ends with watching and being ready to respond.
     visualTitle: From every possible threat to a short list to fix
   - type: index
     id: services
@@ -192,10 +217,12 @@ sections:
     id: limits
     tone: paper
     variant: note
-    title: What no one can promise
+    title: What we promise
     paragraphs:
-      - Be cautious of anyone who promises that you will never be attacked. Security lowers risk. It does not remove it.
-      - What we can promise is honest assessment, practical priorities, and clear explanation. We do not claim certifications or results we cannot show.
+      - Security lowers risk; it never removes it completely. What we promise is an honest
+        assessment, fixes ranked by real risk, and clear explanations your team and your customers
+        understand.
+      - Every finding comes with evidence, and every fix is tested.
   - type: columns
     id: basics
     tone: white
@@ -222,18 +249,27 @@ sections:
     id: technology
     tone: paper
     label: Technology
-    heading: Under the hood
-    intro: "For your developers and IT lead: our choices on application security, identity and access, encryption and trust, and detection and response, and the reasoning behind each."
+    heading: The security tools and standards we use
+    intro:
+      "For your developers and IT lead: our choices on application security, identity and access,
+      encryption and trust, and detection and response, and the reasoning behind each."
     panels:
       - title: Application security
         paragraphs:
-          - "We follow the [OWASP](ref:con.owasp) guidance on common web security mistakes: weak access control, injection, insecure design, and misconfiguration. We combine code review, dependency scanning, and testing."
+          - "We follow the [OWASP](ref:con.owasp) guidance on common web security mistakes: weak
+            access control, injection, insecure design, and misconfiguration. We combine code
+            review, dependency scanning, and testing."
       - title: Identity and access
         paragraphs:
-          - We design sign-in around standards such as [OAuth](ref:con.oauth) and MFA (multi-factor authentication, the second step at sign-in), manage permissions through [IAM](ref:tech.iam) (identity and access management), and protect secrets with [secrets management](ref:con.secrets-management).
+          - We design sign-in around standards such as [OAuth](ref:con.oauth) and MFA (multi-factor
+            authentication, the second step at sign-in), manage permissions through
+            [IAM](ref:tech.iam) (identity and access management), and protect secrets with [secrets
+            management](ref:con.secrets-management).
       - title: Encryption and trust
         paragraphs:
-          - "Information is protected with [encryption](ref:con.encryption) in transit using [TLS](ref:con.tls-ssl), and at rest. We design with [zero trust](ref:con.zero-trust) ideas: nothing is trusted just because it is inside the network."
+          - "Information is protected with [encryption](ref:con.encryption) in transit using
+            [TLS](ref:con.tls-ssl), and at rest. We design with [zero trust](ref:con.zero-trust)
+            ideas: nothing is trusted just because it is inside the network."
       - title: Detection and response
         items:
           - Central logs and alerts tuned to real signals.
@@ -245,8 +281,11 @@ sections:
     label: People and habits
     heading: Security is partly about habits
     paragraphs:
-      - "Most security incidents begin with an ordinary mistake: a reused password, a message that looked real, an old account that was never closed. Technology reduces the chance and the damage, but habits matter too."
-      - We pair technical work with simple guidance your team can follow, such as how to report something suspicious, who approves access, and what to do first if an account is lost.
+      - "Most security incidents begin with an ordinary mistake: a reused password, a message that
+        looked real, an old account that was never closed. Technology reduces the chance and the
+        damage, but habits matter too."
+      - We pair technical work with simple guidance your team can follow, such as how to report
+        something suspicious, who approves access, and what to do first if an account is lost.
   - type: faq
     id: faq
     tone: white
@@ -254,17 +293,30 @@ sections:
     heading: Questions about security
     items:
       - q: Where do we start if we have never done a security review?
-        a: Start with the system that would hurt most if it failed, such as your customer information or payment flow. A focused review of that one system teaches you the most and gives you a short list to act on.
+        a:
+          Start with the system that would hurt most if it failed, such as your customer information or
+          payment flow. A focused review of that one system teaches you the most and gives you a
+          short list to act on.
       - q: Are we too small to be a target?
-        a: Many attacks are automatic and do not choose by size. They look for easy gaps. Small organizations are often targeted because they have fewer protections.
+        a: Many attacks are automatic and do not choose by size. They look for easy gaps. Small
+          organizations are often targeted because they have fewer protections.
       - q: Do you hold security certifications?
-        a: We do not make certification claims on this site. We describe the work we do and the standards we follow. If your customer or insurer asks for a specific certificate, we will tell you plainly what we can and cannot provide.
+        a:
+          We do not make certification claims on this site. We describe the work we do and the standards we
+          follow. If your customer or insurer asks for a specific certificate, we will tell you
+          plainly what we can and cannot provide.
       - q: Can you secure software someone else built?
-        a: Yes. We review existing software, find weaknesses, and help fix them, or recommend a safer approach when fixing would cost more than rebuilding.
+        a:
+          Yes. We review existing software, find weaknesses, and help fix them, or recommend a safer
+          approach when fixing would cost more than rebuilding.
       - q: What should we do if we think we have been attacked?
-        a: Contact us as soon as you can through the [contact page](/contact/). Do not delete anything, and note what you saw and when. Quick, careful action limits the harm.
+        a:
+          Contact us as soon as you can through the [contact page](/contact/). Do not delete anything, and
+          note what you saw and when. Quick, careful action limits the harm.
       - q: How does this relate to privacy rules?
-        a: Good security helps you meet privacy rules, but the rules have their own requirements. We identify the rules that apply during discovery and recommend that you take legal advice for your situation.
+        a: Good security helps you meet privacy rules, but the rules have their own requirements. We
+          identify the rules that apply during discovery and recommend that you take legal advice
+          for your situation.
   - type: index
     id: work
     tone: paper
@@ -301,7 +353,8 @@ sections:
   - type: cta
     id: contact-cta
     heading: Tell us what you need to protect
-    body: Describe your most important system or information and what worries you. We will suggest a practical first step and tell you honestly what it will and will not achieve.
+    body: Describe your most important system or information and what worries you. We will suggest a
+      practical first step and tell you honestly what it will and will not achieve.
     primary:
       label: Discuss your security
       href: /contact/?service=cybersecurity

@@ -4,7 +4,8 @@ locale: en
 path: /ui-ux/
 entityId: svc.ui-ux
 title: UI/UX and Product Design Services | DECHY
-description: "UI/UX and product design from DECHY: research, design, test, and hand over software and websites that people understand quickly and enjoy using."
+description: "UI/UX and product design from DECHY: research, design, test, and hand over software
+  and websites that people understand quickly and enjoy using."
 breadcrumbLabel: UI/UX & Product Design
 intent:
   primary: ui ux and product design services
@@ -24,38 +25,54 @@ schemaTypes:
   - Service
   - FAQPage
 comprehension:
-  what: "We make software and websites easy to understand and pleasant to use: we research users, design the UI (user interface) and the UX (user experience), test them, and hand them to builders."
-  problem: People cannot find things, abandon forms, or need training for tools that should be obvious. Teams argue about design because nothing has been tested.
+  what: "We make software and websites easy to understand and pleasant to use: we research users,
+    design the UI (user interface) and the UX (user experience), test them, and hand them to
+    builders."
+  problem: People cannot find things, abandon forms, or need training for tools that should be
+    obvious. Teams argue about design because nothing has been tested.
   audience: Teams building a product or site, and organizations whose screens confuse customers or staff.
-  choose: "Choose by what you have: research when you do not know what people need, design when you know but cannot show it, and testing when something exists but does not work well."
-  next: Show us the screen or journey that causes trouble, or the product you want to create. We will suggest where design effort pays off most.
+  choose: "Choose by what you have: research when you do not know what people need, design when you
+    know but cannot show it, and testing when something exists but does not work well."
+  next:
+    Show us the screen or journey that causes trouble, or the product you want to create. We will
+    suggest where design effort pays off most.
 sections:
   - type: hero
     id: hero
     variant: service
     eyebrow: Service
-    headline: UI/UX & Product Design
-    lead: At DECHY, we design software and websites that people understand at a glance. We work on UI (the user interface, what people see and touch) and UX (the user experience, how it feels to get something done), and we test our ideas with real people before anything is built.
-    support: Design and engineering work as one team here, so what we design can be built well, and what we build matches what we designed.
+    headline: UI/UX and product design people understand at a glance
+    lead:
+      We design websites, apps, and software that feel obvious to use. You get research with real
+      users, clickable prototypes, and finished screens that developers can build exactly, so your
+      product looks good and works the first time.
     ctas:
       - label: Discuss your design project
         href: /contact/?service=ui-ux
       - label: See what you receive
         href: "#deliverables"
     visualTitle: A dashboard designed to be read at a glance
-    figureCaption: This sketch shows a conceptual dashboard with three summary tiles, a bar chart without figures, and a short list of items that need attention. It illustrates our design approach and is not a client screen.
+    figureCaption: This sketch shows a conceptual dashboard with three summary tiles, a bar chart
+      without figures, and a short list of items that need attention. It illustrates our design
+      approach and is not a client screen.
     figure: dashboard-ui
     purpose: system
-    takeaway: A well-designed dashboard puts the summary first, the trend next, and the items that need attention last.
+    takeaway:
+      A well-designed dashboard puts the summary first, the trend next, and the items that need
+      attention last.
   - type: prose
     id: why
     tone: white
     label: Why it matters
     heading: Design is how the product feels to use
     paragraphs:
-      - When software is hard to use, people give up, make mistakes, or phone for help. Staff need training for tools that should be obvious. Customers leave at the checkout. These are design problems, even when they look like technical ones.
-      - Design is not decoration. It is deciding what to show first, how to word a button, how many steps a task needs, and what to do when something goes wrong.
-      - We keep it practical. We design for the real people who will use the product, test with them, and measure whether the change helped.
+      - When software is hard to use, people give up, make mistakes, or phone for help. Staff need
+        training for tools that should be obvious. Customers leave at the checkout. These are design
+        problems, even when they look like technical ones.
+      - Design is not decoration. It is deciding what to show first, how to word a button, how many
+        steps a task needs, and what to do when something goes wrong.
+      - We keep it practical. We design for the real people who will use the product, test with
+        them, and measure whether the change helped.
   - type: diagram
     id: form
     tone: paper
@@ -80,14 +97,19 @@ sections:
           - title: Errors shown next to the field
       hubLabel: Easier to finish
     purpose: before-after
-    takeaway: Small design changes, such as shorter steps, plain words, and help where it is needed, can turn an abandoned form into a finished one.
-    caption: This diagram contrasts a long, confusing form with the same form redesigned into short steps with plain labels and helpful errors.
+    takeaway:
+      Small design changes, such as shorter steps, plain words, and help where it is needed, can
+      turn an abandoned form into a finished one.
+    caption: This diagram contrasts a long, confusing form with the same form redesigned into short
+      steps with plain labels and helpful errors.
   - type: diagram
     id: screen-design-map
     tone: white
     label: The process
     heading: From learning about users to a design ready to build
-    intro: Good design tests ideas with real people early, when changes are cheap, and only then hands them to the builders.
+    intro:
+      Good design tests ideas with real people early, when changes are cheap, and only then hands
+      them to the builders.
     spec:
       kind: flow
       steps:
@@ -102,9 +124,12 @@ sections:
         - title: Hand over
           text: Give builders everything they need.
     purpose: process
-    takeaway: Good design tests ideas with real people early, when changes are cheap, and only then hands them to builders.
+    takeaway: Good design tests ideas with real people early, when changes are cheap, and only then
+      hands them to builders.
     visualTitle: From learning about users to a design ready to build
-    caption: This diagram follows a design project through five steps, from learning about users to a tested design handed to the builders.
+    caption:
+      This diagram follows a design project through five steps, from learning about users to a
+      tested design handed to the builders.
     points: []
   - type: table
     id: terms
@@ -124,7 +149,8 @@ sections:
         - "What people see and touch: layout, color, type, buttons, and icons."
         - Is the main button obvious, and is the text readable?
       - - Product design
-        - "The bigger picture: what the product should do, for whom, and why, across all its screens."
+        - "The bigger picture: what the product should do, for whom, and why, across all its
+          screens."
         - Which problem should the product solve first?
   - type: index
     id: deliverables
@@ -160,7 +186,9 @@ sections:
     tone: white
     label: Design systems
     heading: What a design system is
-    intro: A design system is a shared kit. It saves time and keeps a product looking and behaving the same everywhere.
+    intro:
+      A design system is a shared kit. It saves time and keeps a product looking and behaving the
+      same everywhere.
     spec:
       kind: layers
       layers:
@@ -173,8 +201,12 @@ sections:
         - title: Page patterns
           text: Tested layouts for common screens, such as sign-in or checkout.
     purpose: system
-    takeaway: A design system stacks shared principles, basics, parts, and patterns, so each new screen is quicker to make and consistent.
-    caption: This diagram shows a design system as four layers, from principles at the top to ready-made page patterns, each built on the one above.
+    takeaway:
+      A design system stacks shared principles, basics, parts, and patterns, so each new screen
+      is quicker to make and consistent.
+    caption:
+      This diagram shows a design system as four layers, from principles at the top to ready-made
+      page patterns, each built on the one above.
   - type: process
     id: process
     tone: paper
@@ -235,21 +267,27 @@ sections:
     variant: note
     title: Test with real people, not opinions
     paragraphs:
-      - Design debates often come down to taste. A short test with a handful of real users usually settles it, and finds problems nobody expected.
+      - Design debates often come down to taste. A short test with a handful of real users usually
+        settles it, and finds problems nobody expected.
       - We build testing into the process. Even a few sessions can show what to fix first.
   - type: technical
     id: technology
     tone: white
     label: Technology
-    heading: Under the hood
-    intro: "What we settle early: design and prototyping tools, accessibility, and from design to code, so nothing surprises your team later."
+    heading: The design tools we use
+    intro:
+      "What we settle early: design and prototyping tools, accessibility, and from design to code,
+      so nothing surprises your team later."
     panels:
       - title: Design and prototyping tools
         paragraphs:
-          - We design and prototype in [Figma](ref:tool.figma), and work with other tools such as [Adobe XD](ref:tool.adobe-xd), [Illustrator](ref:tool.illustrator), and [Photoshop](ref:tool.photoshop) when a project needs them.
+          - We design and prototype in [Figma](ref:tool.figma), and work with other tools such as
+            [Adobe XD](ref:tool.adobe-xd), [Illustrator](ref:tool.illustrator), and
+            [Photoshop](ref:tool.photoshop) when a project needs them.
       - title: Accessibility
         paragraphs:
-          - We design to the Web Content Accessibility Guidelines (WCAG), the widely used standard for making websites usable by everyone, and test with keyboards and screen readers.
+          - We design to the Web Content Accessibility Guidelines (WCAG), the widely used standard
+            for making websites usable by everyone, and test with keyboards and screen readers.
       - title: From design to code
         items:
           - Components in the design system match components in code.
@@ -261,9 +299,17 @@ sections:
     label: In practice
     heading: What testing with real people looks like
     paragraphs:
-      - A usability test is simpler than it sounds. A person who resembles your customer is asked to complete a realistic task, such as booking an appointment, while we watch quietly and note where they hesitate, click the wrong thing, or ask a question.
-      - Five or six sessions usually reveal the main problems, which is a small investment compared with building the wrong thing and having to redo it, because the same difficulties appear again and again. We then fix those, and test again with fresh people to confirm that the changes helped.
-      - "The results are shown in plain terms: short clips, quotes, and a ranked list of what to change first. That keeps discussions focused on what people did, and not on what anyone prefers. We also note what worked well, so good parts of the design are kept as the product changes."
+      - A usability test is simpler than it sounds. A person who resembles your customer is asked to
+        complete a realistic task, such as booking an appointment, while we watch quietly and note
+        where they hesitate, click the wrong thing, or ask a question.
+      - Five or six sessions usually reveal the main problems, which is a small investment compared
+        with building the wrong thing and having to redo it, because the same difficulties appear
+        again and again. We then fix those, and test again with fresh people to confirm that the
+        changes helped.
+      - "The results are shown in plain terms: short clips, quotes, and a ranked list of what to
+        change first. That keeps discussions focused on what people did, and not on what anyone
+        prefers. We also note what worked well, so good parts of the design are kept as the product
+        changes."
   - type: faq
     id: faq
     tone: paper
@@ -271,17 +317,29 @@ sections:
     heading: Questions about design
     items:
       - q: Do we need research before design?
-        a: Not always. If you already know your users well, we can move straight to design and test. If you are unsure what people need, a short round of research saves much more than it costs.
+        a:
+          Not always. If you already know your users well, we can move straight to design and test. If you
+          are unsure what people need, a short round of research saves much more than it costs.
       - q: How many people do you need to test with?
-        a: A handful of the right people often reveals most of the major problems. We test in rounds, fixing issues between them.
+        a:
+          A handful of the right people often reveals most of the major problems. We test in rounds, fixing
+          issues between them.
       - q: Can you redesign something that already exists?
-        a: Yes. We start by finding where people struggle, then improve those parts first instead of redoing everything.
+        a:
+          Yes. We start by finding where people struggle, then improve those parts first instead of redoing
+          everything.
       - q: Will the design be ready for developers?
-        a: Yes. We hand over designs, specifications, and a component kit, and stay involved while it is built. Our [software](ref:svc.software-development) and [web](ref:svc.web-development) teams can build it.
+        a:
+          Yes. We hand over designs, specifications, and a component kit, and stay involved while it is
+          built. Our [software](ref:svc.software-development) and [web](ref:svc.web-development)
+          teams can build it.
       - q: Do you design for mobile?
-        a: Yes. We design for phones first and widen from there. See our [mobile app](ref:svc.mobile-app-development) service.
+        a: Yes. We design for phones first and widen from there. See our [mobile
+          app](ref:svc.mobile-app-development) service.
       - q: How is design different from branding?
-        a: Design makes a product easy to use. [Branding](ref:svc.branding) shapes how an organization looks and is remembered. They work best together.
+        a:
+          Design makes a product easy to use. [Branding](ref:svc.branding) shapes how an organization looks
+          and is remembered. They work best together.
   - type: index
     id: work
     tone: white
@@ -323,7 +381,9 @@ sections:
   - type: cta
     id: contact-cta
     heading: Show us what is not working
-    body: Tell us about the screen or journey that causes trouble, or the product you want to create. We will suggest where design effort will pay off most.
+    body:
+      Tell us about the screen or journey that causes trouble, or the product you want to create. We
+      will suggest where design effort will pay off most.
     primary:
       label: Discuss your design project
       href: /contact/?service=ui-ux
