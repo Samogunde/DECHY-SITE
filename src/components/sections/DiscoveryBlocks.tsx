@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { BlogGrid } from "@/components/home/BlogGrid";
+import { Photo } from "@/components/primitives/Photo";
+import { readingMinutes } from "@/lib/content/articles";
+import { CATEGORY_LABEL } from "./ArticleView";
+import { HoverArrow } from "./HomeBlocks";
 import { Arrow } from "@/components/primitives/Arrow";
 import { Inline } from "@/components/primitives/Inline";
 import { getRegistry, type Registry } from "@/lib/content/load";
@@ -268,13 +273,37 @@ export function ArticlesBlock({ block }: { block: Of<"articles"> }) {
   const registry = getRegistry();
   const articles = articlePages(registry);
   if (articles.length === 0) return null;
-  const groups = Object.entries(ARTICLE_CATEGORIES)
+  const categories = Object.entries(ARTICLE_CATEGORIES)
     .map(([key, label]) => ({
       key,
       label,
-      items: articles.filter((p) => p.article?.category === key),
+      count: articles.filter((p) => p.article?.category === key).length,
     }))
-    .filter((g) => g.items.length > 0);
+    .filter((c) => c.count > 0);
+  const card = (p: Page, featured = false) => (
+    <Link
+      href={p.path}
+      className={`blog-card link-card${featured ? " is-featured" : ""}`}
+      data-spotlight
+    >
+      {p.article?.photo ? (
+        <span className="blog-photo">
+          <Photo photo={p.article.photo} />
+        </span>
+      ) : null}
+      <span className="blog-text">
+        <span className="blog-meta">
+          <span className="article-cat">{CATEGORY_LABEL[p.article?.category ?? "guide"]}</span>
+          <span>{readingMinutes(p)} min read</span>
+        </span>
+        <span className="blog-title">{p.breadcrumbLabel}</span>
+        <span className="blog-summary">{p.article?.summary ?? p.description}</span>
+      </span>
+      <HoverArrow />
+    </Link>
+  );
+  const pillars = articles.filter((p) => p.article?.number === 1);
+  const featured = pillars[0] ?? articles[0]!;
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="max-w-[48rem]">
@@ -285,25 +314,14 @@ export function ArticlesBlock({ block }: { block: Of<"articles"> }) {
           intro={block.intro}
         />
       </div>
-      <div className="mt-10 grid gap-10 min-[48rem]:grid-cols-2" data-reveal="group">
-        {groups.map((g) => (
-          <div key={g.key}>
-            <h3 className="t-h4 m-0">{g.label}</h3>
-            <ul className="t-body m-0 mt-3 list-none p-0">
-              {g.items.map((p) => (
-                <li key={p.path} className="rule-row py-3">
-                  <Link href={p.path} className="font-semibold">
-                    {p.breadcrumbLabel}
-                  </Link>
-                  <span className="mt-1 block text-slate-text">
-                    <Inline text={p.article?.summary ?? p.description} />
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <div className="blog-featured">{card(featured, true)}</div>
+      <BlogGrid
+        total={articles.length}
+        categories={categories}
+        cards={articles
+          .filter((p) => p !== featured)
+          .map((p) => ({ key: p.path, category: p.article?.category ?? "guide", node: card(p) }))}
+      />
     </Section>
   );
 }

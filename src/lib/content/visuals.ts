@@ -118,6 +118,10 @@ export function pageTopic(page: Page, serviceOfEntity: (id: string) => string | 
       const svc = page.entityId ? serviceOfEntity(page.entityId) : undefined;
       return svc && TOPICS[svc] ? svc : "software-development";
     }
+    case "article": {
+      const svc = page.article?.service;
+      return svc && TOPICS[svc] ? svc : "consulting";
+    }
     default:
       return HUB_TOPIC[page.path] ?? "company";
   }
@@ -173,6 +177,9 @@ export function applyPhotographs(page: Page, serviceOfEntity: (id: string) => st
   const topic = TOPICS[pageTopic(page, serviceOfEntity)] ?? TOPICS.company ?? [];
   const used = new Set<string>();
   let n = 0;
+  if (page.kind === "article" && page.article && !page.article.photo) {
+    page.article.photo = pick(topic, page, n++, used);
+  }
   for (const b of page.sections as Block[]) {
     if (b.type === "hero" && !b.photo && b.slides.length === 0) {
       b.photo = pick(topic, page, n++, used);

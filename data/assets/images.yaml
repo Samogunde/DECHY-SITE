@@ -1661,3 +1661,71 @@ assets:
     usage: [home]
     approval: approved
     acquired: "2026-10-20"
+
+  - id: asset.photo-portrait-man-henley
+    kind: file
+    file: public/photos/portrait-man-henley.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jurica Koletic (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-man-henley.md.
+    sourceUrl: https://unsplash.com/photos/man-wearing-henley-top-portrait-7YVZYZeITc8
+    licenseUrl: https://unsplash.com/license
+    sha256: f81b9454503ec66ca19804c55fda980686813cd1bb1e57d4b174bcfcc12f7a1d
+    width: 1600
+    height: 2400
+    alt: "Portrait of a smiling man in a henley top."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-portrait-man-glasses
+    kind: file
+    file: public/photos/portrait-man-glasses.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christian Buehner (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-man-glasses.md.
+    sourceUrl: https://unsplash.com/photos/smiling-man-with-glasses-and-beard-portrait-DItYlc26zVI
+    licenseUrl: https://unsplash.com/license
+    sha256: f0bd7574488185ce48d3f2b03b18d498aa1b3530bc03b7d2a5596225244aa49f
+    width: 1600
+    height: 1067
+    alt: "Portrait of a smiling man with glasses and a beard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-portrait-woman-gray-jacket
+    kind: file
+    file: public/photos/portrait-woman-gray-jacket.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Christina Morillo (wocintechchat.com) (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-woman-gray-jacket.md.
+    sourceUrl: https://unsplash.com/photos/shallow-focus-photo-of-woman-in-gray-jacket-0Zx1bDv5BNY
+    licenseUrl: https://unsplash.com/license
+    sha256: d46aa7e65e10f56b2b465936cfac98f328b4e99fdf48b5a73159c9918c93655b
+    width: 1600
+    height: 2397
+    alt: "Portrait of a smiling woman in a gray jacket."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-portrait-woman-red-top
+    kind: file
+    file: public/photos/portrait-woman-red-top.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Michael Dam (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-portrait-woman-red-top.md.
+    sourceUrl: https://unsplash.com/photos/closeup-photography-of-woman-smiling-mEZ3PoFGs_k
+    licenseUrl: https://unsplash.com/license
+    sha256: 8741820811c68642d82bf9b90f651c84aec93a29e1cdcae0b34d799924075d9a
+    width: 1600
+    height: 2400
+    alt: "Portrait of a smiling woman in a red top."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"

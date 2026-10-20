@@ -1,0 +1,517 @@
+# Sample proof for the service pages (review builds only).
+# Owner direction, 20 October 2026: show the layout of case studies and testimonials on every
+# service page now and replace them with real projects and quotes later. These samples are invented
+# for layout. They render only when DECHY_SHOW_DRAFTS=true and never reach the live site, search,
+# structured data, or the assistant.
+portraits:
+  [
+    portrait-woman-smiling,
+    portrait-man-beard,
+    portrait-woman-studio,
+    portrait-man-henley,
+    portrait-man-glasses,
+    portrait-woman-gray-jacket,
+    portrait-woman-red-top,
+  ]
+services:
+  software-development:
+    cases:
+      - client: Field operations platform
+        sector: Facilities management, custom software
+        title: One system for jobs, crews, and invoices across four regions
+        summary: Dispatchers plan the day on one board, engineers update jobs from site, and invoices go out the same day the work is signed off.
+        results:
+          [
+            { value: "32%", label: More jobs completed per week },
+            { value: "0", label: Spreadsheets left in daily use },
+          ]
+        services: [Custom software, Mobile app, Integration]
+        photo: business-software-laptop
+      - client: Member portal
+        sector: Professional body, web platform
+        title: A member portal that replaced email renewals and paper forms
+        summary: Members renew, book events, and download certificates online, and staff see every account in one place.
+        results:
+          [
+            { value: "70%", label: Renewals completed online },
+            { value: "9 weeks", label: From design to launch },
+          ]
+        services: [Web app, Payments, Product design]
+        photo: mockup-dashboard-ui
+    quotes:
+      - quote: They mapped how we actually work before writing a line of code. The system fits our day instead of the other way round.
+        name: Grace Adeyemi
+        role: Operations Director
+        company: Northpeak Facilities
+        portrait: portrait-woman-smiling
+      - quote: We get weekly demos and plain answers. When something was not worth building, they said so and saved us money.
+        name: Marcus Hale
+        role: Managing Director
+        company: Vantix Group
+        portrait: portrait-man-beard
+  web-development:
+    cases:
+      - client: Clinic website and booking
+        sector: Healthcare, website
+        title: A fast website with online booking for a group of clinics
+        summary: Patients find the right clinic, book in two minutes, and get reminders, and the team edits every page without a developer.
+        results:
+          [
+            { value: "2.1x", label: More online bookings },
+            { value: "0.9s", label: Typical page load },
+          ]
+        services: [Website, Booking, Search visibility]
+        photo: mockup-website-laptop
+      - client: Supplier web app
+        sector: Wholesale, web application
+        title: A web app where trade customers order, track, and reorder
+        summary: Trade customers see their prices, stock, and order history, and repeat orders take a few clicks instead of a phone call.
+        results:
+          [
+            { value: "45%", label: Orders placed online },
+            { value: "12 weeks", label: To first release },
+          ]
+        services: [Web app, Integration, Product design]
+        photo: hero-web-app-dashboard
+    quotes:
+      - quote: Our new site is quick, clear, and easy for the team to update. Inquiries went up within the first month.
+        name: Hannah Brooks
+        role: Marketing Lead
+        company: Lumora Health
+        portrait: portrait-woman-studio
+      - quote: They built exactly what our customers asked for and nothing we did not need. Support after launch has been excellent.
+        name: Tom Reid
+        role: Commercial Director
+        company: Brightwell Trade
+        portrait: portrait-man-henley
+  mobile-app-development:
+    cases:
+      - client: Field engineer app
+        sector: Logistics, mobile app
+        title: A mobile app for engineers, with job sheets that work offline
+        summary: Engineers receive jobs, capture photos and signatures, and close work on site, and the office sees progress as it happens.
+        results:
+          [{ value: "45%", label: Less admin per job }, { value: "4.8", label: App store rating }]
+        services: [Mobile app, Cloud, Automation]
+        photo: hero-mobile-app-hands
+      - client: Customer loyalty app
+        sector: Retail, mobile app
+        title: A loyalty app that turned one-off shoppers into regulars
+        summary: Customers collect points, get offers that match what they buy, and pay in store with the app.
+        results:
+          [
+            { value: "28%", label: More repeat visits },
+            { value: "60k", label: Downloads in the first year },
+          ]
+        services: [Mobile app, Payments, Data]
+        photo: mobile-app-design-mockup
+    quotes:
+      - quote: The app was stable from day one, and they kept the first version small so we launched on time.
+        name: Daniel Okoro
+        role: Head of Operations
+        company: Corvana Logistics
+        portrait: portrait-man-glasses
+      - quote: Clear scope, honest estimates, and a demo every week. It felt like working with our own team.
+        name: Sofia Lindqvist
+        role: Head of Product
+        company: Stratus Labs
+        portrait: portrait-woman-gray-jacket
+  ecommerce:
+    cases:
+      - client: Homeware online store
+        sector: Retail, ecommerce
+        title: A faster store with stock and orders connected to the warehouse
+        summary: The store, stock, and shipping now share one record, so customers see what is really available and orders ship the same day.
+        results:
+          [
+            { value: "36%", label: Higher conversion rate },
+            { value: "1 day", label: Average dispatch time },
+          ]
+        services: [Online store, Integration, Search visibility]
+        photo: ecommerce-phone-shopping
+      - client: Subscription checkout
+        sector: Food and drink, ecommerce
+        title: A subscription checkout that customers can manage themselves
+        summary: Customers pause, skip, or change deliveries on their own, and failed payments retry automatically.
+        results:
+          [
+            { value: "22%", label: Fewer cancellations },
+            { value: "80%", label: Less support email },
+          ]
+        services: [Ecommerce, Payments, Automation]
+        photo: ecommerce-card-laptop
+    quotes:
+      - quote: Our store finally knows what is in the warehouse. Overselling stopped the week we launched.
+        name: Amara Okafor
+        role: Founder
+        company: Brightwell Retail
+        portrait: portrait-woman-red-top
+      - quote: They connected Shopify to everything behind it, and the whole team works faster because of it.
+        name: James Carter
+        role: Ecommerce Manager
+        company: Kinetica Home
+        portrait: portrait-man-beard
+  ai:
+    cases:
+      - client: Support assistant
+        sector: Software company, AI
+        title: An assistant that answers customers from the company's own help content
+        summary: Customers get accurate answers at any hour, and anything the assistant cannot handle goes to a person with the full conversation.
+        results:
+          [
+            { value: "41%", label: Questions resolved without a ticket },
+            { value: "24/7", label: Answers available },
+          ]
+        services: [AI assistant, Integration, Support tools]
+        photo: service-ai-tablet
+      - client: Document processing
+        sector: Insurance, AI
+        title: AI that reads claim documents and fills in the case file
+        summary: The system reads forms and letters, extracts the details, and flags anything unclear for a person to check.
+        results:
+          [
+            { value: "65%", label: Faster claim intake },
+            { value: "100%", label: Decisions reviewed by staff },
+          ]
+        services: [Document AI, Automation, Security]
+        photo: ai-chip-board
+    quotes:
+      - quote: They were honest about where AI would help and where a simple rule would do. The result is reliable and our team trusts it.
+        name: Priya Nair
+        role: Customer Experience Lead
+        company: Helixa
+        portrait: portrait-woman-smiling
+      - quote: Every answer is grounded in our own documents, and we can see exactly why it said what it said.
+        name: Oliver Grant
+        role: Chief Operating Officer
+        company: Stratus Cover
+        portrait: portrait-man-glasses
+  automation:
+    cases:
+      - client: Approvals workflow
+        sector: Construction, automation
+        title: Purchase approvals that used to take days now take minutes
+        summary: Requests route to the right approver, reminders go out on their own, and finance sees every approved order automatically.
+        results:
+          [{ value: "85%", label: Faster approvals }, { value: "12 hrs", label: Saved every week }]
+        services: [Workflow automation, Integration, Reporting]
+        photo: service-automation-workflow-whiteboard
+      - client: Lead follow-up
+        sector: Professional services, automation
+        title: Every new inquiry answered, assigned, and followed up automatically
+        summary: Inquiries from the website and email land in the CRM, get assigned, and receive a reply while a person prepares the proposal.
+        results:
+          [{ value: "3x", label: Faster first response }, { value: "0", label: Inquiries lost }]
+        services: [Automation, CRM integration, Email]
+        photo: team-reviewing-release-screen
+    quotes:
+      - quote: Our team stopped copying data between systems. Orders, stock, and invoices finally agree with each other.
+        name: Daniel Reyes
+        role: Operations Director
+        company: Brightwell Retail
+        portrait: portrait-man-henley
+      - quote: The automations just run, and when something needs a person, the right person hears about it.
+        name: Laura Mendes
+        role: Finance Manager
+        company: Northpeak Build
+        portrait: portrait-woman-studio
+  data-analytics:
+    cases:
+      - client: Management dashboard
+        sector: Multi-site retail, data
+        title: One dashboard the whole management team trusts
+        summary: Sales, stock, and staffing from five systems now arrive checked and up to date every morning, in one place.
+        results:
+          [
+            { value: "5", label: Systems joined into one view },
+            { value: "2 hrs", label: Saved per report },
+          ]
+        services: [Data platform, Dashboards, Integration]
+        photo: mockup-dashboard-ui
+      - client: Forecasting model
+        sector: Distribution, data
+        title: Demand forecasts that cut overstock without running short
+        summary: A forecasting model suggests order quantities by product and week, and buyers approve or adjust them.
+        results:
+          [{ value: "18%", label: Less overstock }, { value: "96%", label: Orders filled in full }]
+        services: [Data science, Dashboards, Automation]
+        photo: data-presentation-screen
+    quotes:
+      - quote: For the first time, finance and operations look at the same numbers and agree on them.
+        name: Rachel Kim
+        role: Finance Director
+        company: Vantix Retail
+        portrait: portrait-woman-gray-jacket
+      - quote: The dashboard replaced a week of spreadsheet work every month.
+        name: Ben Thompson
+        role: Head of Planning
+        company: Corvana Distribution
+        portrait: portrait-man-beard
+  api-integration:
+    cases:
+      - client: CRM and accounting link
+        sector: Professional services, integration
+        title: Customer, billing, and project records kept in step automatically
+        summary: Deals won in the CRM create projects and invoices in accounting, and payments update the customer record.
+        results:
+          [{ value: "0", label: Records re-keyed by hand }, { value: "6 weeks", label: To go live }]
+        services: [API integration, CRM, Accounting]
+        photo: api-cable-network
+      - client: Marketplace connections
+        sector: Ecommerce, integration
+        title: One stock record feeding the website and three marketplaces
+        summary: Stock and orders sync across every sales channel, with alerts when a connection fails.
+        results:
+          [{ value: "4", label: Channels in sync }, { value: "99.9%", label: Sync success rate }]
+        services: [Integration, Ecommerce, Monitoring]
+        photo: hero-web-app-dashboard
+    quotes:
+      - quote: Our systems finally talk to each other, and when one has a problem we know about it before customers do.
+        name: Michael Osei
+        role: IT Manager
+        company: Lumora Group
+        portrait: portrait-man-glasses
+      - quote: They documented every connection, so our own team can look after them.
+        name: Emma Walsh
+        role: Head of Digital
+        company: Kinetica Brands
+        portrait: portrait-woman-red-top
+  cloud:
+    cases:
+      - client: Cloud migration
+        sector: Software company, cloud
+        title: An ageing server room moved to the cloud without downtime
+        summary: Applications moved in stages with a tested way back at every step, and hosting now scales with demand.
+        results:
+          [
+            { value: "0 min", label: Customer-facing downtime },
+            { value: "30%", label: Lower hosting cost },
+          ]
+        services: [Cloud migration, DevOps, Security]
+        photo: service-cloud-data-center
+      - client: Release pipeline
+        sector: SaaS, DevOps
+        title: From monthly releases to safe releases every day
+        summary: Automated tests and staged releases mean small changes ship quickly and can be rolled back in seconds.
+        results:
+          [
+            { value: "20x", label: More frequent releases },
+            { value: "90%", label: Fewer failed releases },
+          ]
+        services: [DevOps, Cloud, Monitoring]
+        photo: cloud-server-rack
+    quotes:
+      - quote: The migration was planned so carefully that our customers never noticed it happened.
+        name: Chris Morgan
+        role: Chief Technology Officer
+        company: Stratus Labs
+        portrait: portrait-man-henley
+      - quote: Releases used to be stressful. Now they are routine.
+        name: Nina Patel
+        role: Engineering Lead
+        company: Helixa
+        portrait: portrait-woman-smiling
+  cybersecurity:
+    cases:
+      - client: Security review
+        sector: Financial services, security
+        title: A security review that closed every high-risk finding in six weeks
+        summary: We tested the platform, ranked what mattered, fixed the urgent issues, and set up monitoring for the rest.
+        results:
+          [
+            { value: "100%", label: High-risk findings closed },
+            { value: "6 weeks", label: From review to fix },
+          ]
+        services: [Security review, Access control, Monitoring]
+        photo: security-padlock-keyboard
+      - client: Access and sign-in
+        sector: Healthcare, security
+        title: Single sign-on and role-based access across six internal tools
+        summary: Staff sign in once, see only what their role needs, and every access is recorded.
+        results:
+          [
+            { value: "6", label: Tools behind one sign-in },
+            { value: "1 day", label: To onboard a new starter },
+          ]
+        services: [Identity, Access control, Audit logs]
+        photo: family-security-padlock
+    quotes:
+      - quote: They explained every risk in plain language and fixed the ones that mattered first.
+        name: Elena Rossi
+        role: Compliance Manager
+        company: Kinetica Finance
+        portrait: portrait-woman-studio
+      - quote: Our auditors were impressed by how clear the access records are now.
+        name: Samuel Price
+        role: Head of IT
+        company: Lumora Health
+        portrait: portrait-man-beard
+  ui-ux:
+    cases:
+      - client: Booking app redesign
+        sector: Hospitality, product design
+        title: A booking flow redesigned around how guests actually book
+        summary: Research with real guests led to a shorter flow, clearer prices, and a design system the developers reuse.
+        results:
+          [
+            { value: "48%", label: Fewer abandoned bookings },
+            { value: "5", label: Screens removed from the flow },
+          ]
+        services: [UX research, UI design, Design system]
+        photo: service-ui-design-system
+      - client: Admin dashboard
+        sector: SaaS, product design
+        title: An admin dashboard that new staff understand on day one
+        summary: Clear navigation, readable tables, and the most-used actions one click away.
+        results:
+          [
+            { value: "60%", label: Less training time },
+            { value: "4.6", label: Staff usability score },
+          ]
+        services: [Product design, Prototyping, Usability testing]
+        photo: design-workshop-color-swatches
+    quotes:
+      - quote: They tested every idea with real users before we built it. It saved us months.
+        name: Isabel Turner
+        role: Product Manager
+        company: Vantix Travel
+        portrait: portrait-woman-gray-jacket
+      - quote: The design system made our developers faster and our product more consistent.
+        name: Alex Chen
+        role: Head of Engineering
+        company: Stratus Labs
+        portrait: portrait-man-glasses
+  branding:
+    cases:
+      - client: Brand refresh
+        sector: Professional services, branding
+        title: A brand refresh that made a 20-year-old firm look current
+        summary: A new identity, a clear voice, and templates every team uses, rolled out across the website and documents.
+        results:
+          [{ value: "40+", label: Templates delivered }, { value: "3 weeks", label: To roll out }]
+        services: [Brand identity, Guidelines, Templates]
+        photo: branding-tablet-sketch
+      - client: Product launch brand
+        sector: Consumer app, branding
+        title: A name, logo, and launch kit for a new consumer app
+        summary: From naming and logo to app store visuals and launch graphics, one consistent look from day one.
+        results:
+          [
+            { value: "1", label: Consistent look across every channel },
+            { value: "6 weeks", label: From brief to launch },
+          ]
+        services: [Naming, Logo design, Launch assets]
+        photo: service-branding-color-book
+    quotes:
+      - quote: The new brand finally looks like the firm we have become.
+        name: Victoria Hughes
+        role: Managing Partner
+        company: Northpeak Advisory
+        portrait: portrait-woman-red-top
+      - quote: Every template just works, so the whole team stays on brand without thinking about it.
+        name: Liam Foster
+        role: Marketing Director
+        company: Corvana Group
+        portrait: portrait-man-henley
+  seo-aeo-geo:
+    cases:
+      - client: Search visibility program
+        sector: Software company, SEO
+        title: Organic visibility rebuilt after a website migration
+        summary: Technical fixes, clear answers to buyer questions, and structured data brought the site back and then ahead.
+        results:
+          [
+            { value: "2.4x", label: Organic traffic in six months },
+            { value: "120", label: Pages fixed and clarified },
+          ]
+        services: [Technical SEO, Content, Structured data]
+        photo: service-seo-search-console
+      - client: AI answer visibility
+        sector: Professional services, AEO and GEO
+        title: A firm that AI assistants now describe accurately
+        summary: Clear service pages, consistent facts, and structured data mean AI assistants answer correctly about the firm.
+        results:
+          [
+            { value: "15", label: Key questions answered on site },
+            { value: "100%", label: Facts consistent across pages },
+          ]
+        services: [AEO, GEO, Content structure]
+        photo: seo-analytics-screen
+    quotes:
+      - quote: They fixed the foundations first, and the results have kept growing since.
+        name: Olivia Bennett
+        role: Head of Marketing
+        company: Helixa
+        portrait: portrait-woman-smiling
+      - quote: Honest reporting, no vanity numbers, and real inquiries from search.
+        name: Ryan Mitchell
+        role: Founder
+        company: Vantix Studio
+        portrait: portrait-man-glasses
+  digital-marketing:
+    cases:
+      - client: Campaign measurement
+        sector: Ecommerce, digital marketing
+        title: Campaign tracking that shows which spend really sells
+        summary: Every campaign, form, and sale is tracked back to its source, so budget moves to what works.
+        results:
+          [
+            { value: "31%", label: Lower cost per sale },
+            { value: "1", label: Report everyone uses },
+          ]
+        services: [Analytics, Campaigns, CRM]
+        photo: marketing-social-phone
+      - client: Email nurture
+        sector: B2B services, digital marketing
+        title: Email journeys that turn new leads into booked calls
+        summary: Leads receive useful emails based on what they asked about, and sales sees who is ready to talk.
+        results:
+          [{ value: "2x", label: More booked calls }, { value: "45%", label: Average open rate }]
+        services: [Email marketing, Automation, CRM]
+        photo: service-digital-marketing-social
+    quotes:
+      - quote: We finally know which campaigns bring customers, not just clicks.
+        name: Chloe Martin
+        role: Marketing Manager
+        company: Brightwell Retail
+        portrait: portrait-woman-gray-jacket
+      - quote: The follow-up runs on its own and our sales team spends time on the right people.
+        name: David Lee
+        role: Sales Director
+        company: Kinetica Services
+        portrait: portrait-man-beard
+  consulting:
+    cases:
+      - client: Technology roadmap
+        sector: Manufacturing, consulting
+        title: A two-year technology plan the board approved in one meeting
+        summary: We reviewed every system, ranked the problems, and set out a staged plan with costs and quick wins.
+        results:
+          [
+            { value: "12", label: Systems reviewed },
+            { value: "4", label: Quick wins delivered in month one },
+          ]
+        services: [Technology review, Roadmap, Advisory]
+        photo: service-consulting-conversation
+      - client: Build or buy decision
+        sector: Healthcare, consulting
+        title: Advice that saved a client from building what they could buy
+        summary: A short discovery showed an off-the-shelf system plus two integrations would do the job at a fraction of the cost.
+        results:
+          [
+            { value: "60%", label: Lower first-year cost },
+            { value: "3 weeks", label: From question to decision },
+          ]
+        services: [Discovery, Build or buy, Integration plan]
+        photo: discovery-sticky-notes-glass
+    quotes:
+      - quote: They told us not to build it, and they were right. That honesty is why we trust them.
+        name: Margaret Owens
+        role: Chief Executive
+        company: Lumora Care
+        portrait: portrait-woman-studio
+      - quote: The roadmap turned a long list of worries into a clear plan we could fund.
+        name: Peter Walsh
+        role: Operations Director
+        company: Northpeak Manufacturing
+        portrait: portrait-man-henley

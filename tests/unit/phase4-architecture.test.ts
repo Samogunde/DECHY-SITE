@@ -168,9 +168,10 @@ describe("Industries and locations", () => {
 });
 
 describe("Resources architecture", () => {
-  it("has a Resources hub and no published article", () => {
+  it("has a Resources hub that lists every published article", () => {
     expect(registry.pageByPath.get("/resources/")?.kind).toBe("hub");
-    expect(registry.pages.some((p) => p.kind === "article")).toBe(false);
+    for (const p of registry.pages.filter((x) => x.kind === "article"))
+      expect(p.parent, p.path).toBe("/resources/");
   });
 
   it("requires an article to declare its record, its parent, and the Article schema", () => {

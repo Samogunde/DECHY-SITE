@@ -14,14 +14,15 @@ describe("the 53 launch article briefs", () => {
     expect(briefs.map((b) => b.number)).toEqual(Array.from({ length: 53 }, (_, i) => i + 1));
   });
 
-  it("are all still planned, with no article page published yet", () => {
+  it("are published only as articles that match a planned brief (owner, 20 October 2026)", () => {
     const registry = buildRegistry();
-    for (const b of briefs) expect(b.status).toBe("planned");
-    // The Resources hub exists; no article or resource page beneath it does.
-    expect(registry.pages.some((p) => /^\/(articles|insights|resources)\/./.test(p.path))).toBe(
-      false,
-    );
-    expect(registry.pages.some((p) => p.kind === "article")).toBe(false);
+    const numbers = new Set(briefs.map((b) => b.number));
+    for (const p of registry.pages.filter((x) => x.kind === "article")) {
+      expect(p.path).toMatch(
+        /^\/resources\/(guides|comparisons|definitions|articles)\/[a-z0-9-]+\/$/,
+      );
+      expect(numbers.has(p.article?.number ?? 0), p.path).toBe(true);
+    }
   });
 
   it("report to an existing service and fall in batches 1 to 6", () => {

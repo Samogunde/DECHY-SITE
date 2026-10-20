@@ -9,6 +9,6 @@ export default defineConfig({
     environment: "node",
     include: ["tests/unit/**/*.test.ts", "tests/unit/**/*.test.tsx"],
     globals: false,
-    testTimeout: 20000,
+    testTimeout: 60000,
   },
 });

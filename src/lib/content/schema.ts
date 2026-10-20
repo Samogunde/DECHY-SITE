@@ -854,6 +854,12 @@ export const Page = z.object({
     .object({
       category: z.enum(["guide", "comparison", "decision", "explainer", "industry"]),
       summary: z.string().min(40),
+      /** The service the article reports to (its canonical home). */
+      service: z.string().optional(),
+      /** Its number in the 53-article plan. */
+      number: z.number().int().optional(),
+      /** The cover photograph (assigned from the topic library). */
+      photo: PhotoRef.optional(),
     })
     .optional(),
   sections: z.array(Block).min(1),

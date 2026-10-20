@@ -7,6 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs } from "./visuals";
+import { loadArticles } from "./articles";
 import { z } from "zod";
 import {
   Asset,
@@ -199,6 +200,11 @@ export function buildRegistry(): Registry {
     const page = readYaml(file, Page);
     // Draft sections wait for owner-supplied facts; outside a review build they do not exist.
     if (!showDrafts()) page.sections = page.sections.filter((b) => !("draft" in b && b.draft));
+    applyPhotographs(page, serviceOfEntity);
+    pages.push(page);
+  }
+  // Blog articles are written as markdown and join the pages here (content/articles).
+  for (const page of loadArticles(ROOT)) {
     applyPhotographs(page, serviceOfEntity);
     pages.push(page);
   }

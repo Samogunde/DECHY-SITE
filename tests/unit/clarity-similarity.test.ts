@@ -148,6 +148,8 @@ describe("scope control", () => {
       /^\/(software-development|ai|automation|api-integration|data-analytics|cloud|web-development|mobile-app-development|ecommerce)\/[a-z0-9-]+\/$/,
       // Phase 4: Solution pages, the first industry pages, and the first-wave country pages
       /^\/(solutions|industries|locations)\/[a-z0-9-]+\/$/,
+      // Blog (owner direction, 20 October 2026): the planned launch articles
+      /^\/resources\/(guides|comparisons|definitions|articles)\/[a-z0-9-]+\/$/,
     ];
     for (const p of registry.pages)
       expect(
@@ -156,10 +158,12 @@ describe("scope control", () => {
       ).toBe(true);
   });
 
-  it("does not create article, resource, problem, or city pages", () => {
-    const forbidden = /^\/(resources|insights|articles|countries|problems|cities)\/./;
+  it("does not create problem, city, or loose resource pages", () => {
+    const forbidden = /^\/(insights|articles|countries|problems|cities)\/./;
     for (const p of registry.pages) expect(forbidden.test(p.path), p.path).toBe(false);
-    expect(registry.pages.some((p) => p.kind === "article")).toBe(false);
+    for (const p of registry.pages)
+      if (p.path.startsWith("/resources/") && p.path !== "/resources/")
+        expect(p.kind, p.path).toBe("article");
   });
 
   it("builds only the approved Solution pages, and none for deferred or represented concepts", () => {

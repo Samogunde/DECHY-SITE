@@ -125,8 +125,8 @@ describe("URL architecture", () => {
 });
 
 describe("pages and graph", () => {
-  it("has exactly the 127 pages of Phases 1 to 5", () => {
-    const paths = registry.pages.map((p) => p.path);
+  it("has the 127 pages of Phases 1 to 5, plus the blog articles", () => {
+    const paths = registry.pages.filter((p) => p.kind !== "article").map((p) => p.path);
     expect(paths).toHaveLength(127);
     for (const p of [
       "/",

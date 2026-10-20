@@ -842,6 +842,10 @@ export function validateRegistry(registry: Registry): Issue[] {
       link("footer", p);
     }
   }
+  // The blog listing on /resources/ links every published article.
+  const resources = registry.pageByPath.get("/resources/");
+  if (resources?.sections.some((b) => b.type === "articles"))
+    for (const p of registry.pages) if (p.kind === "article") link("/resources/", p.path);
   for (const page of registry.pages) {
     if (page.path === "/") continue;
     if (!inbound.get(page.path) || inbound.get(page.path)!.size === 0)

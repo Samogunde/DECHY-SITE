@@ -2,7 +2,8 @@ import { Breadcrumbs } from "@/components/patterns/Breadcrumbs";
 import { JsonLd } from "@/components/primitives/JsonLd";
 import { Inline } from "@/components/primitives/Inline";
 import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
-import { getPage, getRegistry } from "@/lib/content/load";
+import { getPage, getRegistry, showDrafts } from "@/lib/content/load";
+import { sampleProof } from "@/lib/content/samples";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { Photo } from "@/components/primitives/Photo";
@@ -11,11 +12,19 @@ import { articlePages } from "./DiscoveryBlocks";
 import { IndustryProfile, SolutionBlueprint, SystemFrame, TechProfile } from "./FamilyHero";
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 import { DraftFrame } from "./HomeBlocks";
+import { ArticleView } from "./ArticleView";
 
 /** Renders any page record: structured data, header (for pages without a hero), then its blocks. */
 export function PageView({ path }: { path: string }) {
   const registry = getRegistry();
   const page = getPage(path);
+  if (page.kind === "article")
+    return (
+      <>
+        <JsonLd data={buildGraph(page, registry)} />
+        <ArticleView page={page} registry={registry} />
+      </>
+    );
   const crumbs = breadcrumbsFor(page, registry);
   const hasHero = page.sections.some((b) => b.type === "hero");
   const graph = buildGraph(page, registry);
@@ -40,7 +49,18 @@ export function PageView({ path }: { path: string }) {
     }));
   const showNav = guided && navItems.length >= 6;
   const first = page.sections[0];
-  const rest = first?.type === "hero" ? page.sections.slice(1) : page.sections;
+  const restBase = first?.type === "hero" ? page.sections.slice(1) : page.sections;
+  // Review builds show sample case studies and testimonials on service pages, before the closing
+  // call to action, so the layout can be judged before real proof is supplied.
+  const samples =
+    showDrafts() && page.kind === "service" ? sampleProof(page.path.replace(/\//g, "")) : [];
+  const ctaAt = restBase.findIndex((b) => b.type === "cta");
+  const rest =
+    samples.length === 0
+      ? restBase
+      : ctaAt < 0
+        ? [...restBase, ...samples]
+        : [...restBase.slice(0, ctaAt), ...samples, ...restBase.slice(ctaAt)];
 
   // Each page family opens differently. Technology and industry pages show a profile beside the
   // headline and move the hero's teaching diagram next to the opening text; solution pages show
