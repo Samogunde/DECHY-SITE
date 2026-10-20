@@ -40,7 +40,7 @@ services:
         photo: mockup-dashboard-ui
     quotes:
       - quote: They mapped how we actually work before writing a line of code. The system fits our day instead of the other way round.
-        name: Grace Adeyemi
+        name: Grace Whitmore
         role: Operations Director
         company: Northpeak Facilities
         portrait: portrait-woman-smiling
@@ -107,7 +107,7 @@ services:
         photo: mobile-app-design-mockup
     quotes:
       - quote: The app was stable from day one, and they kept the first version small so we launched on time.
-        name: Daniel Okoro
+        name: Daniel Hartley
         role: Head of Operations
         company: Corvana Logistics
         portrait: portrait-man-glasses
@@ -142,7 +142,7 @@ services:
         photo: ecommerce-card-laptop
     quotes:
       - quote: Our store finally knows what is in the warehouse. Overselling stopped the week we launched.
-        name: Amara Okafor
+        name: Natalie Brooks
         role: Founder
         company: Brightwell Retail
         portrait: portrait-woman-red-top
@@ -267,7 +267,7 @@ services:
         photo: hero-web-app-dashboard
     quotes:
       - quote: Our systems finally talk to each other, and when one has a problem we know about it before customers do.
-        name: Michael Osei
+        name: Michael Fraser
         role: IT Manager
         company: Lumora Group
         portrait: portrait-man-glasses

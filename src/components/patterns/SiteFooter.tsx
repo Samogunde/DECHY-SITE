@@ -23,7 +23,11 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
   const linkOrNull = (path: string) => (registry.pageByPath.has(path) ? path : null);
   return (
-    <footer data-site-footer className="rule-top tone-paper" aria-label="Site footer">
+    <footer
+      data-site-footer
+      className="site-footer-dark rule-top tone-paper"
+      aria-label="Site footer"
+    >
       <div className="container-site py-14 min-[64rem]:py-20">
         <div className="grid gap-12 min-[64rem]:grid-cols-12 min-[64rem]:gap-10">
           <div className="min-[64rem]:col-span-4">

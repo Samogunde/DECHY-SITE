@@ -62,6 +62,52 @@ function ChevronIcon({ open }: { open: boolean }) {
 
 const FIND_SERVICE = "Not sure which service you need? Find your service";
 
+/** What each menu covers, shown in the menu's left column. */
+const MENU_INTRO: Record<string, { title: string; text: string; cta: string }> = {
+  services: {
+    title: "Fifteen services, one team",
+    text: "Custom software, websites, web apps, and mobile apps, with AI, automation, cloud, security, design, and growth around them.",
+    cta: "Explore all services",
+  },
+  solutions: {
+    title: "Start from the problem",
+    text: "Manual work, old systems, disconnected tools, unclear numbers. Pick the problem and see how we solve it.",
+    cta: "Browse solutions",
+  },
+  technologies: {
+    title: "Any stack, chosen for the job",
+    text: "The languages, frameworks, and platforms we build with, and how we choose between them.",
+    cta: "See all technologies",
+  },
+  industries: {
+    title: "Built for your sector",
+    text: "How each sector's data, rules, and customers shape the systems we build.",
+    cta: "See all industries",
+  },
+  work: {
+    title: "What we build",
+    text: "The kinds of system we design and build, from portals and internal tools to platforms and AI agents.",
+    cta: "See our work",
+  },
+};
+
+function MegaIntro({ item, onNavigate }: { item: MenuItem; onNavigate: () => void }) {
+  const intro = MENU_INTRO[item.kind];
+  if (!intro) return null;
+  return (
+    <div className="mega-intro">
+      <p className="mega-intro-title">{intro.title}</p>
+      <p className="mega-intro-text">{intro.text}</p>
+      {item.href ? (
+        <Link prefetch={false} href={item.href} onClick={onNavigate} className="mega-intro-link">
+          {intro.cta}
+          <Arrow />
+        </Link>
+      ) : null}
+    </div>
+  );
+}
+
 /* ------------------------------ desktop panels ------------------------------ */
 
 function ServicesPanel({
@@ -753,15 +799,20 @@ export function HeaderNav({ model }: Props) {
                     inert={!open}
                     className="nav-panel nav-mega absolute inset-x-0 top-full border-b border-line bg-white shadow-[0_18px_40px_-24px_rgba(17,24,39,0.35)]"
                   >
-                    {item.kind === "services" ? (
-                      <ServicesPanel item={item} onNavigate={closeAll} />
-                    ) : item.kind === "technologies" ? (
-                      <TechnologiesPanel item={item} uid={panelId} onNavigate={closeAll} />
-                    ) : item.kind === "work" ? (
-                      <WorkPanel item={item} onNavigate={closeAll} />
-                    ) : (
-                      <ListPanel item={item} onNavigate={closeAll} />
-                    )}
+                    <div className="mega-wrap">
+                      <MegaIntro item={item} onNavigate={closeAll} />
+                      <div className="mega-body">
+                        {item.kind === "services" ? (
+                          <ServicesPanel item={item} onNavigate={closeAll} />
+                        ) : item.kind === "technologies" ? (
+                          <TechnologiesPanel item={item} uid={panelId} onNavigate={closeAll} />
+                        ) : item.kind === "work" ? (
+                          <WorkPanel item={item} onNavigate={closeAll} />
+                        ) : (
+                          <ListPanel item={item} onNavigate={closeAll} />
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </li>
               );

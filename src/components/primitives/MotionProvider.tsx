@@ -37,6 +37,50 @@ export function MotionProvider() {
     };
   }, []);
 
+  // Open on hover (owner direction, 20 October 2026): on devices with a real pointer, questions
+  // open when the pointer is over them and close when it leaves, and tabs switch on hover. Clicks,
+  // taps, and the keyboard keep working exactly as before.
+  useEffect(() => {
+    const fine = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const onOver = (e: PointerEvent) => {
+      if (!fine.matches || e.pointerType !== "mouse") return;
+      const t = e.target as Element | null;
+      const details = t?.closest<HTMLDetailsElement>("main details");
+      if (details && !details.open) {
+        details.open = true;
+        details.dataset.hoverOpened = "true";
+      }
+      const tab = t?.closest<HTMLElement>('main [role="tab"]');
+      if (tab && tab.getAttribute("aria-selected") !== "true") tab.click();
+    };
+    const onOut = (e: PointerEvent) => {
+      if (!fine.matches || e.pointerType !== "mouse") return;
+      const details = (e.target as Element | null)?.closest<HTMLDetailsElement>("main details");
+      if (!details || details.contains(e.relatedTarget as Node | null)) return;
+      if (details.dataset.hoverOpened === "true") {
+        details.open = false;
+        delete details.dataset.hoverOpened;
+      }
+    };
+    // A click on an open question keeps it open for reading.
+    const onClick = (e: MouseEvent) => {
+      const summary = (e.target as Element | null)?.closest("main summary");
+      const details = summary?.parentElement as HTMLDetailsElement | null;
+      if (details?.dataset.hoverOpened === "true") {
+        e.preventDefault();
+        delete details.dataset.hoverOpened;
+      }
+    };
+    document.addEventListener("pointerover", onOver);
+    document.addEventListener("pointerout", onOut);
+    document.addEventListener("click", onClick, true);
+    return () => {
+      document.removeEventListener("pointerover", onOver);
+      document.removeEventListener("pointerout", onOut);
+      document.removeEventListener("click", onClick, true);
+    };
+  }, []);
+
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
     const targets = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));

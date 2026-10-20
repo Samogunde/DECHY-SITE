@@ -20,8 +20,8 @@ main.theme-dark {
   color: var(--color-ink);
 }
 
-/* Already-dark sections, interface mockups, and photographs keep the original palette. */
-main.theme-dark :is(.tone-ink, .mk-window, .pu-stage, .mk-phone, .photo) {
+/* Interface mockups and photographs keep the original light palette. */
+main.theme-dark :is(.mk-window, .pu-stage, .mk-phone, .photo) {
   --color-ink: #111827;
   --color-paper: #f7f6f2;
   --color-white: #ffffff;
@@ -32,9 +32,18 @@ main.theme-dark :is(.tone-ink, .mk-window, .pu-stage, .mk-phone, .photo) {
   --color-input-border: #858c98;
   --color-error-text: #b91c1c;
 }
+/* Dark sections and dark emphasis panels: one light-text token set. Rules that paint text with
+   --color-paper (the old "text on ink" color) or --color-ink both resolve to light text here, and
+   surfaces painted with --color-white stay dark. */
 main.theme-dark .tone-ink {
+  --color-ink: #eef0f4;
+  --color-paper: #eef0f4;
+  --color-white: #121a2a;
+  --color-line: rgb(255 255 255 / 0.12);
+  --color-slate-text: #b3bac6;
+  --color-link: #7aa5f8;
   background-color: #0b0f19;
-  color: #f7f6f2;
+  color: #eef0f4;
 }
 main.theme-dark .tone-ink :is(.mk-window, .pu-stage, .mk-phone) {
   color: #111827;
@@ -112,15 +121,16 @@ main.theme-dark
     .dgm-box-ink,
     .dgm-badge-ink
   ) {
-  --color-ink: #111827;
-  --color-paper: #f7f6f2;
-  --color-white: #ffffff;
-  --color-line: #2f3a50;
-  --color-slate-text: #9ca3af;
+  --color-ink: #eef0f4;
+  --color-paper: #eef0f4;
+  --color-white: #182033;
+  --color-line: rgb(255 255 255 / 0.15);
+  --color-slate-text: #b3bac6;
   --color-link: #7aa5f8;
-  background: #182033;
-  color: #f7f6f2;
+  background: #182033 !important;
+  color: #eef0f4 !important;
   border-color: rgb(122 165 248 / 0.45);
+  box-shadow: none !important;
 }
 main.theme-dark :is(.glance-action, .blueprint, .callout-limits) {
   border: 1px solid rgb(122 165 248 / 0.35);
@@ -604,4 +614,383 @@ main.theme-dark::before {
   .blog-card.is-featured .blog-title {
     font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.25rem);
   }
+}
+
+/* Directory filter tabs: the chosen tab is filled blue. */
+main.theme-dark .dir-tabs {
+  --color-ink: #2f6fed;
+  --color-line: rgb(255 255 255 / 0.08);
+}
+main.theme-dark .dir-tab {
+  color: #eef0f4;
+  border-color: rgb(255 255 255 / 0.25);
+}
+.blog-filter[aria-pressed="true"] .explorer-count {
+  background: #f5a524;
+  color: #111827;
+}
+
+/* Connections ("Where this connects"): a calm list. Each item is plain text with room around it;
+   the arrow and the blue edge appear only on hover or focus, as on the home page. */
+main.theme-dark .connects {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+main.theme-dark .connects-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 0.03);
+  border-color: rgb(255 255 255 / 0.1);
+}
+main.theme-dark .connects-title {
+  color: #f5a524;
+}
+main.theme-dark .connects-list {
+  display: grid;
+  gap: 0.15rem;
+  margin-top: 1rem;
+}
+main.theme-dark .connects .chip {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: rgb(255 255 255 / 0.82);
+}
+main.theme-dark .connects .chip-tag {
+  color: rgb(255 255 255 / 0.55);
+}
+main.theme-dark .chip-link .chip-arrow {
+  opacity: 0;
+  transform: translate(-4px, 4px) rotate(-45deg);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+main.theme-dark .chip-link:hover .chip-arrow,
+main.theme-dark .chip-link:focus-visible .chip-arrow {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
+main.theme-dark .connects .chip-link:hover {
+  background: rgb(122 165 248 / 0.08);
+  border-color: rgb(122 165 248 / 0.35);
+  color: #fff;
+}
+@media (hover: none) {
+  main.theme-dark .chip-link .chip-arrow {
+    opacity: 0.6;
+    transform: rotate(-45deg);
+  }
+}
+
+/* ==========================================================================================
+   Header and footer in the dark theme (owner direction, 20 October 2026)
+   ========================================================================================== */
+.site-header-dark,
+.site-footer-dark {
+  --color-ink: #eef0f4;
+  --color-paper: #0b0f19;
+  --color-white: #0e1422;
+  --color-line: rgb(255 255 255 / 0.1);
+  --color-slate-text: #a9b0bc;
+  --color-link: #7aa5f8;
+  color: #eef0f4;
+}
+.site-header-dark {
+  background: rgb(11 15 25 / 0.82) !important;
+  backdrop-filter: blur(14px) saturate(1.4);
+}
+.site-header-dark[data-scrolled] {
+  background: rgb(11 15 25 / 0.94) !important;
+  box-shadow: 0 12px 30px -20px rgb(0 0 0 / 0.8);
+}
+.site-footer-dark {
+  background: #070a12 !important;
+}
+/* The supplied logo is navy and is never recolored: until the white version arrives it sits on a
+   small light plate so it stays legible on the dark header and footer. */
+.logo-pill,
+.site-footer-dark a[aria-label="DECHY home"] {
+  padding: 0.35rem 0.75rem;
+  border-radius: 10px;
+  background: #f7f6f2;
+}
+.site-header-dark .nav-mega {
+  background: #0b0f19 !important;
+  border-color: rgb(255 255 255 / 0.08) !important;
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.9) !important;
+}
+.site-header-dark .nav-link:hover,
+.site-header-dark .menu-link:hover {
+  color: #7aa5f8;
+}
+.site-header-dark .eyebrow-accent,
+.site-footer-dark .t-eyebrow {
+  color: #f5a524;
+}
+
+/* Mega menu: a description column on the left, the links on the right. */
+.mega-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 80rem) {
+  .mega-wrap {
+    grid-template-columns: minmax(15rem, 3fr) minmax(0, 9fr);
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+  .mega-wrap .mega-body > .container-site {
+    max-width: none;
+    padding-inline: 0 0;
+    padding-left: 2.5rem;
+  }
+}
+.mega-intro {
+  display: none;
+}
+@media (min-width: 80rem) {
+  .mega-intro {
+    display: grid;
+    align-content: start;
+    gap: 0.9rem;
+    padding: 2.25rem 2.5rem 2.25rem 0;
+    border-right: 1px solid rgb(255 255 255 / 0.08);
+  }
+}
+.mega-intro-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #fff;
+}
+.mega-intro-text {
+  margin: 0;
+  font-size: var(--fs-body-sm);
+  line-height: 1.6;
+  color: #a9b0bc;
+}
+.mega-intro-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: #7aa5f8;
+  text-decoration: none;
+}
+
+/* Menu drawer */
+.drawer-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  margin-left: 0.5rem;
+  padding: 0 11px;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+@media (min-width: 80rem) {
+  .drawer-btn {
+    display: inline-flex;
+  }
+}
+.drawer-btn svg {
+  color: #fff;
+}
+.drawer-btn-unused {
+  height: 1.5px;
+  background: #fff;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.drawer-btn span:last-child {
+  width: 60%;
+  margin-left: auto;
+}
+.drawer-btn:hover span:last-child {
+  width: 100%;
+}
+.drawer-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgb(0 0 0 / 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms var(--ease-out);
+}
+.drawer-scrim[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+.drawer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(30rem, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem 2rem;
+  background:
+    radial-gradient(30rem 20rem at 100% 0%, rgb(47 111 237 / 0.22), transparent 60%), #0b0f19;
+  border-left: 1px solid rgb(255 255 255 / 0.08);
+  color: #fff;
+  transform: translateX(100%);
+  transition: transform 450ms var(--ease-out);
+  overflow-y: auto;
+}
+.drawer[data-open="true"] {
+  transform: none;
+}
+.drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drawer-kicker {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: #f5a524;
+}
+.drawer-close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.drawer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+.drawer-links li {
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+.drawer[data-open="true"] .drawer-links li {
+  animation: drawer-in 500ms var(--ease-out) both;
+  animation-delay: calc(var(--i) * 45ms + 120ms);
+}
+@keyframes drawer-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+.drawer-link {
+  position: relative;
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 2rem 1rem 0;
+  color: #fff;
+  text-decoration: none;
+}
+.drawer-label {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.drawer-text {
+  font-size: var(--fs-body-sm);
+  color: #a9b0bc;
+}
+.drawer-arrow {
+  position: absolute;
+  right: 0;
+  top: 1.4rem;
+  color: #7aa5f8;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.drawer-link:hover .drawer-label,
+.drawer-link:focus-visible .drawer-label {
+  color: #7aa5f8;
+}
+.drawer-link:hover .drawer-arrow,
+.drawer-link:focus-visible .drawer-arrow {
+  opacity: 1;
+  transform: none;
+}
+.drawer-cta {
+  margin-top: auto;
+  width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .drawer,
+  .drawer-scrim {
+    transition: none;
+  }
+  .drawer[data-open="true"] .drawer-links li {
+    animation: none;
+  }
+}
+
+/* Selected tabs and filters are filled white with dark text. */
+main.theme-dark
+  :is(
+    .tabs-tab[aria-selected="true"],
+    .explorer-tab[aria-selected="true"],
+    .case-tab[aria-selected="true"],
+    .blog-filter[aria-pressed="true"]
+  ) {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #111827 !important;
+}
+main.theme-dark .explorer-tab[aria-selected="true"] span:first-child {
+  color: #111827;
+}
+main.theme-dark .tabs-tab[aria-selected="true"] .tabs-n {
+  color: #2a62d8;
+}
+main.theme-dark .callout-eyebrow {
+  color: #7aa5f8 !important;
+}
+main.theme-dark :is(.blueprint, .profile, .sysframe) .chip-link {
+  background: rgb(255 255 255 / 0.06) !important;
+  border-color: rgb(255 255 255 / 0.14) !important;
+  color: #eef0f4 !important;
+}
+main.theme-dark .figure .dgm {
+  --dgm-ink: #eef0f4;
+  --dgm-muted: #b3bac6;
+  --dgm-fill: rgb(255 255 255 / 0.04);
+  --dgm-border: rgb(255 255 255 / 0.14);
+}
+main.theme-dark .figure :is(.dgm-box, .dgm-box-ink, .dgm-box-accent) {
+  background: rgb(255 255 255 / 0.04) !important;
+  color: #eef0f4;
 }
