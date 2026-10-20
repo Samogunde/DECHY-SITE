@@ -1,0 +1,310 @@
+/* ------------------------------------------------------------------------------------------
+   Site-wide dark theme (owner direction, 20 October 2026): every public page matches the home
+   page. Instead of restyling each component, the main content area gets a dark version of the
+   shared color tokens, so every block, card, table, diagram, and panel follows automatically.
+   Sections that are already dark (tone-ink) keep the original tokens and render as designed.
+   Interface mockups and photographs keep their own light palette: they show screens and scenes.
+   Header and footer stay light, because the supplied logo is navy and is never recolored.
+   ------------------------------------------------------------------------------------------ */
+main.theme-dark {
+  --color-ink: #eef0f4;
+  --color-paper: #0b0f19;
+  --color-white: #121a2a;
+  --color-line: rgb(255 255 255 / 0.1);
+  --color-slate: #9ca3af;
+  --color-slate-text: #a9b0bc;
+  --color-link: #7aa5f8;
+  --color-input-border: rgb(255 255 255 / 0.28);
+  --color-error-text: #fca5a5;
+  background: #0b0f19;
+  color: var(--color-ink);
+}
+
+/* Already-dark sections, interface mockups, and photographs keep the original palette. */
+main.theme-dark :is(.tone-ink, .mk-window, .pu-stage, .mk-phone, .photo) {
+  --color-ink: #111827;
+  --color-paper: #f7f6f2;
+  --color-white: #ffffff;
+  --color-line: #e5e7eb;
+  --color-slate: #6b7280;
+  --color-slate-text: #5b6472;
+  --color-link: #2a62d8;
+  --color-input-border: #858c98;
+  --color-error-text: #b91c1c;
+}
+main.theme-dark .tone-ink {
+  background-color: #0b0f19;
+  color: #f7f6f2;
+}
+main.theme-dark .tone-ink :is(.mk-window, .pu-stage, .mk-phone) {
+  color: #111827;
+}
+
+/* Section rhythm: hairlines instead of alternating light bands. */
+main.theme-dark :is(.tone-paper, .tone-white) {
+  background-color: #0b0f19;
+}
+main.theme-dark .tone-white {
+  background-color: #0e1320;
+}
+main.theme-dark .rule-top {
+  border-top-color: rgb(255 255 255 / 0.08);
+}
+
+/* Text that sits on blue stays white. */
+main.theme-dark :is(.dest-card:hover .dest-card-go, .step:hover .step-n, .row-link:hover .path-go) {
+  color: #fff;
+}
+
+/* Hairlines and soft shadows written as dark rgb values would vanish on dark surfaces. */
+main.theme-dark :is(.faq.faq-cards details[open], .step-card, .dest-card, .tile-card) {
+  box-shadow: none;
+}
+
+/* Cards and panels: the same glass treatment as the home page, with a lift on hover. */
+main.theme-dark :is(.dest-card, .step-card, .faq.faq-cards details, .faq-ask, .glance, .callout) {
+  border-color: rgb(255 255 255 / 0.1);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  main.theme-dark :is(.dest-card, a.tile-card):hover {
+    transform: translateY(-4px);
+    border-color: rgb(122 165 248 / 0.45);
+  }
+}
+
+/* Secondary buttons on dark: outline with the same fill sweep as the home page. */
+main.theme-dark .btn-secondary {
+  color: #fff;
+  border-color: rgb(255 255 255 / 0.3);
+}
+main.theme-dark .btn-secondary:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #111827;
+}
+
+/* Page headings and eyebrows. */
+main.theme-dark .eyebrow-accent {
+  color: var(--color-amber, #f5a524);
+}
+main.theme-dark :is(.t-h1, .t-h2, .t-display) {
+  color: #fff;
+}
+
+/* Inputs */
+main.theme-dark :is(input, textarea, select) {
+  background-color: #121a2a;
+  color: #eef0f4;
+}
+
+/* Emphasis panels that were dark on the light site stay dark, with a hairline and a blue edge so
+   they still stand out on the dark page. */
+main.theme-dark
+  :is(
+    .glance-action,
+    .sp-item[data-active] .sp-opt,
+    .blueprint,
+    .profile-mark,
+    .callout-limits,
+    .q-node,
+    .anatomy-base,
+    .hub-core,
+    .dgm-box-ink,
+    .dgm-badge-ink
+  ) {
+  --color-ink: #111827;
+  --color-paper: #f7f6f2;
+  --color-white: #ffffff;
+  --color-line: #2f3a50;
+  --color-slate-text: #9ca3af;
+  --color-link: #7aa5f8;
+  background: #182033;
+  color: #f7f6f2;
+  border-color: rgb(122 165 248 / 0.45);
+}
+main.theme-dark :is(.glance-action, .blueprint, .callout-limits) {
+  border: 1px solid rgb(122 165 248 / 0.35);
+}
+main.theme-dark .sp-item[data-active] .sp-opt {
+  box-shadow: inset 3px 0 0 #2f6fed;
+}
+
+/* ==========================================================================================
+   The home page's design language on every page (owner direction, 20 October 2026)
+   ========================================================================================== */
+
+/* Page heroes: grid texture, a blue glow, and the photograph in a glass frame. */
+main.theme-dark .page-hero {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(50rem 30rem at 85% 15%, rgb(47 111 237 / 0.22), transparent 60%), #0b0f19;
+}
+main.theme-dark .page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 70% at 70% 30%, #000 20%, transparent 80%);
+}
+main.theme-dark .page-hero .t-h1 {
+  font-size: clamp(2.25rem, 1.5rem + 2.6vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+}
+main.theme-dark .page-hero .t-eyebrow {
+  color: var(--color-amber, #f5a524);
+}
+.page-hero-photo {
+  margin: 0;
+  padding: 0.6rem;
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.015));
+  border: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow:
+    0 0 0 1px rgb(122 165 248 / 0.18),
+    0 30px 80px -20px rgb(47 111 237 / 0.5);
+}
+.page-hero-photo .photo,
+.section-photo .photo,
+.opening-photo .photo {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.section-photo,
+.opening-photo {
+  margin: 0;
+  border-radius: 18px;
+  box-shadow: 0 40px 90px -30px rgb(0 0 0 / 0.8);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .section-photo,
+  .page-hero-photo {
+    transition: transform 500ms var(--ease-out);
+  }
+  .section-photo:hover,
+  .page-hero-photo:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Every dark section gets one soft light beam, leaning the other way on alternate sections. */
+main.theme-dark .section {
+  position: relative;
+  overflow: clip;
+}
+main.theme-dark .section > .container-site {
+  position: relative;
+  z-index: 1;
+}
+main.theme-dark .section::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 30rem;
+  height: 150%;
+  top: -25%;
+  left: 6%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.035), transparent);
+  filter: blur(30px);
+  transform: rotate(28deg);
+}
+main.theme-dark .section:nth-of-type(even)::before {
+  left: auto;
+  right: 4%;
+  transform: rotate(-26deg);
+}
+@media (prefers-reduced-motion: no-preference) {
+  main.theme-dark .section::before {
+    animation: beam-drift 18s var(--ease-in-out) infinite alternate;
+  }
+}
+
+/* Section headings: the home page's large, light-weight type. */
+main.theme-dark .section .t-h2 {
+  font-size: clamp(1.9rem, 1.25rem + 2.3vw, 3.1rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+main.theme-dark .section .t-h3 {
+  color: #fff;
+}
+
+/* "Opens another page": the arrow appears in the corner on hover or focus, as on the home page. */
+main.theme-dark :is(.dest-card, .row-link) {
+  position: relative;
+}
+main.theme-dark :is(.dest-card-go, .path-go) {
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+main.theme-dark
+  :is(.dest-card:hover, .dest-card:focus-visible, .row-link:hover, .row-link:focus-visible)
+  :is(.dest-card-go, .path-go) {
+  opacity: 1;
+  transform: none;
+}
+@media (hover: none) {
+  main.theme-dark :is(.dest-card-go, .path-go) {
+    opacity: 0.6;
+    transform: none;
+  }
+}
+
+/* Cards everywhere: glass surfaces, a lift and a blue edge on hover. */
+main.theme-dark :is(.dest-card, .step-card, .index-tile, .faq.faq-cards details, .faq-ask) {
+  background-color: rgb(255 255 255 / 0.04);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  main.theme-dark :is(.dest-card, .step-card, .index-tile) {
+    transition:
+      transform 260ms var(--ease-out),
+      border-color 260ms var(--ease-out),
+      background-color 260ms var(--ease-out);
+  }
+  main.theme-dark :is(.dest-card, .step-card, .index-tile):hover {
+    transform: translateY(-4px);
+    border-color: rgb(122 165 248 / 0.45);
+    background-color: rgb(255 255 255 / 0.06);
+  }
+}
+
+/* Teaching diagrams read as clean cards: no drawn arrows or connector lines. */
+main.theme-dark .figure .dgm-box {
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.04);
+  border-color: rgb(255 255 255 / 0.12);
+}
+
+/* The progress bar at the top of every page. */
+main.theme-dark::before {
+  content: "";
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-blue);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main.theme-dark::before {
+      animation: grow-x linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+}

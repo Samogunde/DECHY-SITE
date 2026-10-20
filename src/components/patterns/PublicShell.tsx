@@ -17,7 +17,7 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
         Skip to main content
       </a>
       <SiteHeader />
-      <main id="main" tabIndex={-1} className="outline-none">
+      <main id="main" tabIndex={-1} className="theme-dark outline-none">
         {children}
       </main>
       <SiteFooter />

@@ -313,6 +313,31 @@ export function DiagramBlock({ block }: { block: Of<"diagram"> }) {
     block.spec !== undefined &&
     ["hub", "layers", "funnel", "decision"].includes(block.spec.kind) &&
     !block.photo;
+  // A photograph in place of an illustration: text and points beside the photograph.
+  if (!block.figure && !block.spec && block.photo) {
+    return (
+      <Section id={block.id} tone={block.tone}>
+        <div className="split-visual photo-split">
+          <div className="split-visual-text">
+            <SectionHeader
+              id={block.id}
+              label={block.label}
+              heading={block.heading}
+              intro={block.intro}
+            />
+            {points.length > 0 ? (
+              <div className="split-points" data-reveal="group">
+                {points}
+              </div>
+            ) : null}
+          </div>
+          <figure className="split-visual-figure section-photo">
+            <Photo photo={block.photo} />
+          </figure>
+        </div>
+      </Section>
+    );
+  }
   if (
     block.layout === "split" ||
     (block.layout !== "stack" && compact) ||

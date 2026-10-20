@@ -308,6 +308,8 @@ export const Block = z.discriminatedUnion("type", [
     takeaway: z.string().optional(),
     visualTitle: z.string().optional(),
     figureCaption: z.string().optional(),
+    /** A photograph for the hero visual (assigned from the topic library when not set). */
+    photo: PhotoRef.optional(),
     /** Home only: proof figures under the buttons. Values may use {{fact:...}} macros. */
     stats: z.array(Stat).max(4).default([]),
     /** Home only: the offers the headline cycles through, each with its own line and screen. */

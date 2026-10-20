@@ -5,7 +5,7 @@ import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import { getPage, getRegistry } from "@/lib/content/load";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { buildGraph } from "@/lib/seo/structured-data";
-import { Figure } from "@/components/figures/Figure";
+import { Photo } from "@/components/primitives/Photo";
 import { BlockRenderer } from "./BlockRenderer";
 import { articlePages } from "./DiscoveryBlocks";
 import { IndustryProfile, SolutionBlueprint, SystemFrame, TechProfile } from "./FamilyHero";
@@ -46,31 +46,33 @@ export function PageView({ path }: { path: string }) {
   // headline and move the hero's teaching diagram next to the opening text; solution pages show
   // the answer as a blueprint.
   const hero = first?.type === "hero" ? first : undefined;
-  const heroVisual = Boolean(hero && (hero.spec || hero.figure));
+  // The hero shows a photograph on every page except technology pages, which open with their
+  // profile card (official mark and connections). The family card each page used to show beside the
+  // headline (industry profile, solution blueprint, system frame) moves next to the opening text.
   const aside =
     hero && page.kind === "technology" ? (
       <TechProfile page={page} registry={registry} />
-    ) : hero && page.kind === "industry" ? (
+    ) : undefined;
+  const opening = hero
+    ? rest.find((b) => b.type === "definition" || b.type === "prose")
+    : undefined;
+  const familyCard =
+    hero && page.kind === "industry" ? (
       <IndustryProfile page={page} registry={registry} />
-    ) : hero && heroVisual && page.kind === "solution" ? (
+    ) : hero && page.kind === "solution" && (hero.spec || hero.figure) ? (
       <SolutionBlueprint page={page} registry={registry} hero={hero} />
     ) : hero && hero.spec && page.kind === "work-area" ? (
       <SystemFrame page={page} registry={registry} hero={hero} />
     ) : undefined;
-  const opening =
-    hero && heroVisual && (page.kind === "technology" || page.kind === "industry")
-      ? rest.find((b) => b.type === "definition" || b.type === "prose")
-      : undefined;
   const openingVisual =
-    opening && hero ? (
-      <Figure
-        id={hero.figure}
-        spec={hero.spec}
-        title={hero.visualTitle ?? hero.headline}
-        uid={`${hero.id}-open`}
-        caption={hero.figureCaption ?? ""}
-      />
-    ) : undefined;
+    opening && hero
+      ? (familyCard ??
+        (page.kind === "technology" && hero.photo ? (
+          <figure className="opening-photo">
+            <Photo photo={hero.photo} />
+          </figure>
+        ) : undefined))
+      : undefined;
 
   return (
     <>

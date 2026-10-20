@@ -1032,3 +1032,632 @@ assets:
     usage: [home]
     approval: approved
     acquired: "2026-10-19"
+
+  - id: asset.photo-web-dev-dark-desk
+    kind: file
+    file: public/photos/web-dev-dark-desk.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Lee Campbell (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-web-dev-dark-desk.md.
+    sourceUrl: https://unsplash.com/photos/silver-imac-turned-on-inside-room-DtDlVpy-vvQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 4c390218b6bcedbb284fedf487db74778d03ad86dd5857119556a14aa45285a5
+    width: 2600
+    height: 1736
+    alt: "A web developer's desk with code and a website on two monitors."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-web-workspace-desk
+    kind: file
+    file: public/photos/web-workspace-desk.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Domenico Loia (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-web-workspace-desk.md.
+    sourceUrl: https://unsplash.com/photos/macbook-pro-on-table-beside-white-imac-and-magic-mouse-hGV2TfOh0ns
+    licenseUrl: https://unsplash.com/license
+    sha256: 0ab21915f57a8bb9b1cc54436e3588b7037e5e73ef34d77c9dc2d8fb052f1269
+    width: 2600
+    height: 1734
+    alt: "A bright workspace with a laptop and a desktop showing a website."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-mobile-app-design-mockup
+    kind: file
+    file: public/photos/mobile-app-design-mockup.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Faiz Rhm (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-mobile-app-design-mockup.md.
+    sourceUrl: https://unsplash.com/photos/mobile-app-interface-design-with-map-and-social-feed-nOY38cJyZaA
+    licenseUrl: https://unsplash.com/license
+    sha256: 3f2506a14db94f261dc4d57b56f35898b1143e8660b4aa0aa371294dca9502b2
+    width: 2600
+    height: 1950
+    alt: "Mobile app screens laid out as a design mockup."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-ecommerce-card-laptop
+    kind: file
+    file: public/photos/ecommerce-card-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "rupixen (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-ecommerce-card-laptop.md.
+    sourceUrl: https://unsplash.com/photos/person-using-laptop-computer-holding-card-Q59HmzK38eQ
+    licenseUrl: https://unsplash.com/license
+    sha256: 0bdd44682b3567b75af2cb1c2540d88b17421fb5d98a0ba481d70093fb5d5cdd
+    width: 2600
+    height: 1733
+    alt: "A person paying online at a laptop with a card in hand."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-ecommerce-phone-shopping
+    kind: file
+    file: public/photos/ecommerce-phone-shopping.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "V H (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-ecommerce-phone-shopping.md.
+    sourceUrl: https://unsplash.com/photos/person-scrolling-through-online-shopping-on-phone-Iywgu-a_eCs
+    licenseUrl: https://unsplash.com/license
+    sha256: fa8ace86d87fc5268a80738c68746b3997c8f29394ba19cb0962462dbbf57e3e
+    width: 2600
+    height: 1733
+    alt: "A person browsing an online store on a phone."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-ai-chip-board
+    kind: file
+    file: public/photos/ai-chip-board.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Igor Omilaev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-ai-chip-board.md.
+    sourceUrl: https://unsplash.com/photos/a-computer-chip-with-the-letter-a-on-top-of-it-eGGFZ5X2LnA
+    licenseUrl: https://unsplash.com/license
+    sha256: 2cb6c71658e87fd7c530bcd4a449f9cdc6b768ac154e2b1fbcb11aab14066f39
+    width: 2200
+    height: 1834
+    alt: "A processor marked AI on a circuit board."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-data-presentation-screen
+    kind: file
+    file: public/photos/data-presentation-screen.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-data-presentation-screen.md.
+    sourceUrl: https://unsplash.com/photos/man-presenting-data-on-a-large-screen-to-colleagues-6CfjB_bQ_FY
+    licenseUrl: https://unsplash.com/license
+    sha256: 06b9a3fc284ce98d1d6fbd0c8c3eacae6bcbde0683700a6a99d80007a9c92943
+    width: 2600
+    height: 1463
+    alt: "A man presenting charts on a large screen to colleagues."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-api-cable-network
+    kind: file
+    file: public/photos/api-cable-network.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Taylor Vick (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-api-cable-network.md.
+    sourceUrl: https://unsplash.com/photos/cable-network-M5tzZtFCOfs
+    licenseUrl: https://unsplash.com/license
+    sha256: b0fef0680df0012917ea4e7dbec96ce9ae1aca7b671d3e5bdef3a49afdce8fdc
+    width: 2600
+    height: 1459
+    alt: "Network cables connected across a rack of switches."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-cloud-server-rack
+    kind: file
+    file: public/photos/cloud-server-rack.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Domaintechnik (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-cloud-server-rack.md.
+    sourceUrl: https://unsplash.com/photos/server-rack-with-blinking-green-lights-VHmBX7FnXw0
+    licenseUrl: https://unsplash.com/license
+    sha256: 676bcdd707794fcb15b880e5b85b73885dde122d850d6c342784a35dca12cb7d
+    width: 2600
+    height: 1722
+    alt: "A server rack with rows of drives and status lights."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-security-padlock-keyboard
+    kind: file
+    file: public/photos/security-padlock-keyboard.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "FlyD (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-security-padlock-keyboard.md.
+    sourceUrl: https://unsplash.com/photos/red-padlock-on-black-computer-keyboard-mT7lXZPjk7U
+    licenseUrl: https://unsplash.com/license
+    sha256: 55e242b3133928591d050d08a2201320aee1108c97f8f8cdcee7db5e7025d2a9
+    width: 2600
+    height: 1734
+    alt: "A padlock resting on a lit keyboard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-branding-tablet-sketch
+    kind: file
+    file: public/photos/branding-tablet-sketch.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Kelly Sikkema (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-branding-tablet-sketch.md.
+    sourceUrl: https://unsplash.com/photos/person-drawing-on-tablet-at-workspace-Dx1b5ucschA
+    licenseUrl: https://unsplash.com/license
+    sha256: 65a37e903868dd74e0d38847b43876bf84ee77f48e1c45bca8e4a234320f8919
+    width: 2600
+    height: 1733
+    alt: "A designer sketching a logo on a tablet with a stylus."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-seo-analytics-screen
+    kind: file
+    file: public/photos/seo-analytics-screen.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "1981 Digital (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-seo-analytics-screen.md.
+    sourceUrl: https://unsplash.com/photos/a-close-up-of-a-computer-screen-with-a-blurry-background-oMe_FjZnHGU
+    licenseUrl: https://unsplash.com/license
+    sha256: 836d5f5ec92cd611aef31b7bfe91e79a703161a4b5302a256b6715ae80dbb639
+    width: 2600
+    height: 1733
+    alt: "A browser showing a web analytics dashboard."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-marketing-social-phone
+    kind: file
+    file: public/photos/marketing-social-phone.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Swello (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-marketing-social-phone.md.
+    sourceUrl: https://unsplash.com/photos/hand-holding-phone-with-social-media-apps-on-screen-Ida7lqixzY4
+    licenseUrl: https://unsplash.com/license
+    sha256: 370d7696054f9edfe0163fcbc6c4359f919f97bc137d258daf88dce749e7ee50
+    width: 2600
+    height: 1733
+    alt: "A hand holding a phone with a folder of social media apps."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-healthcare-doctors
+    kind: file
+    file: public/photos/industry-healthcare-doctors.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-healthcare-doctors.md.
+    sourceUrl: https://unsplash.com/photos/two-doctors-looking-at-a-tablet-together-2kopEHjST-g
+    licenseUrl: https://unsplash.com/license
+    sha256: a8a73ad8a99c36bb4a457e5e4d90675744cc8b95c908290beb35a502570c818d
+    width: 2600
+    height: 1463
+    alt: "Two doctors reviewing information on a tablet."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-finance-trading
+    kind: file
+    file: public/photos/industry-finance-trading.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-finance-trading.md.
+    sourceUrl: https://unsplash.com/photos/hands-holding-smartphone-showing-stock-market-data-sqok1QIK1mw
+    licenseUrl: https://unsplash.com/license
+    sha256: 9fdb2a382dfedd009c614ceb1abf6b4b8274d8f25dbe13bc203e57dee43865a9
+    width: 2600
+    height: 1463
+    alt: "Hands holding a phone that shows market data."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-real-estate-keys
+    kind: file
+    file: public/photos/industry-real-estate-keys.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Tuan 123 (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-real-estate-keys.md.
+    sourceUrl: https://unsplash.com/photos/two-men-shaking-hands-over-a-house-model-and-keys-69K2AGQc_Yw
+    licenseUrl: https://unsplash.com/license
+    sha256: 98ef9a3b1a234a3af24a65287a2288cf322ceb033ed8e507aa848ef43223da5b
+    width: 2600
+    height: 1558
+    alt: "A handshake over a house model and keys."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-logistics-warehouse
+    kind: file
+    file: public/photos/industry-logistics-warehouse.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Craftsman Concrete Floors (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-logistics-warehouse.md.
+    sourceUrl: https://unsplash.com/photos/workers-inspect-a-large-empty-industrial-warehouse-space-68E-dFpOF0g
+    licenseUrl: https://unsplash.com/license
+    sha256: c69d21dd2eb56c9591b41632359ee38886866b410c62d6dffbc9f032aeb84a8f
+    width: 2600
+    height: 1734
+    alt: "Workers inspecting a large warehouse floor."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-manufacturing-line
+    kind: file
+    file: public/photos/industry-manufacturing-line.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Trans Russia (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-manufacturing-line.md.
+    sourceUrl: https://unsplash.com/photos/men-observe-automated-conveyor-belt-system-in-warehouse-4nfPgBofTs4
+    licenseUrl: https://unsplash.com/license
+    sha256: feba9a0cbc8386e5dcaf327536641e2fdff51f360715113e252dd2c955d0f06d
+    width: 2600
+    height: 1733
+    alt: "People reviewing an automated conveyor system in a plant."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-retail-store
+    kind: file
+    file: public/photos/industry-retail-store.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Clark Street Mercantile (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-retail-store.md.
+    sourceUrl: https://unsplash.com/photos/clothes-store-interior-P3pI6xzovu0
+    licenseUrl: https://unsplash.com/license
+    sha256: 6813dd126f0937ddaa8c49c2fd89e07d93f3ac2dfd9f64fe7e1c1efbbe87730d
+    width: 2600
+    height: 1736
+    alt: "The interior of a clothing store with shelves and racks."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-education-online
+    kind: file
+    file: public/photos/industry-education-online.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Chris Montgomery (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-education-online.md.
+    sourceUrl: https://unsplash.com/photos/macbook-pro-displaying-group-of-people-smgTvepind4
+    licenseUrl: https://unsplash.com/license
+    sha256: 513d356a2aa9894721deb1255ef5df07c9ac435c7230c2610bb694c06b0256b9
+    width: 2600
+    height: 1950
+    alt: "A laptop showing an online class with many participants."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-professional-documents
+    kind: file
+    file: public/photos/industry-professional-documents.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Scott Graham (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-professional-documents.md.
+    sourceUrl: https://unsplash.com/photos/man-writing-on-paper-OQMZwNd3ThU
+    licenseUrl: https://unsplash.com/license
+    sha256: 7368b7ca09e02aa91835ddd6a7e3af544f29a9f4bcd2e64ce288f9cd058ee686
+    width: 2600
+    height: 1736
+    alt: "A professional writing on documents at a desk."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-location-new-york
+    kind: file
+    file: public/photos/location-new-york.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Patrick Tomasso (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-location-new-york.md.
+    sourceUrl: https://unsplash.com/photos/manhattan-skyline-and-brooklyn-bridge-SVVTZtTGyaU
+    licenseUrl: https://unsplash.com/license
+    sha256: 8ae8729bdca0659a3945e04c9241a11f51fbf5cdda07b6440859b72a01ef0002
+    width: 2600
+    height: 1731
+    alt: "The Manhattan skyline and Brooklyn Bridge from above."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-location-london
+    kind: file
+    file: public/photos/location-london.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Benjamin Davies (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-location-london.md.
+    sourceUrl: https://unsplash.com/photos/aerial-photography-of-london-skyline-during-daytime-Oja2ty_9ZLM
+    licenseUrl: https://unsplash.com/license
+    sha256: c94e63574b6e1b605f2c40a84efa868bfdf8f2540d9b86519fa189e4981e84e4
+    width: 2600
+    height: 1733
+    alt: "An aerial view of London and the River Thames."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-location-toronto
+    kind: file
+    file: public/photos/location-toronto.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Berkay Gumustekin (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-location-toronto.md.
+    sourceUrl: https://unsplash.com/photos/toronto-skyline-and-cn-tower-hRg1KL4-AUE
+    licenseUrl: https://unsplash.com/license
+    sha256: 394e2dbb509acfa1d856f02544cc964cff69d13fd0758c77ad30ed2aea2249fc
+    width: 2600
+    height: 1734
+    alt: "The Toronto skyline with the CN Tower across the lake."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-location-sydney
+    kind: file
+    file: public/photos/location-sydney.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Dan Freeman (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-location-sydney.md.
+    sourceUrl: https://unsplash.com/photos/sydney-opera-house-during-daytime-7Zb7kUyQg1E
+    licenseUrl: https://unsplash.com/license
+    sha256: 7979321adfa98abc1ceb668d4e5231fc6d951bd785db647cadf0a960cc5a2f4c
+    width: 2600
+    height: 1733
+    alt: "Sydney Harbour with the Opera House and the city skyline."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-location-dublin
+    kind: file
+    file: public/photos/location-dublin.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Alessandro Santoro (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-location-dublin.md.
+    sourceUrl: https://unsplash.com/photos/modern-bridge-over-a-wide-river-in-a-city-MqJosbD2PEw
+    licenseUrl: https://unsplash.com/license
+    sha256: cc0af27a3d964f7a884eb5a3cd2ad4361887f486e695eddc05b53505f6ac2ae2
+    width: 2600
+    height: 1733
+    alt: "The River Liffey and a modern bridge in Dublin."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-mockup-website-laptop
+    kind: file
+    file: public/photos/mockup-website-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Michal Parzuchowski (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-mockup-website-laptop.md.
+    sourceUrl: https://unsplash.com/photos/laptop-on-wooden-desk-workspace-Nh4Sxasye24
+    licenseUrl: https://unsplash.com/license
+    sha256: 76c9f4a4520f615194b49e8fba3deb9c12b2a02f8ade743f244ec654973f2c39
+    width: 2600
+    height: 1733
+    alt: "A laptop on a wooden desk showing a website."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-mockup-website-tablet
+    kind: file
+    file: public/photos/mockup-website-tablet.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Detail .co (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-mockup-website-tablet.md.
+    sourceUrl: https://unsplash.com/photos/a-tablet-displaying-a-website-with-images-and-text-content-jczSZ-L8rh8
+    licenseUrl: https://unsplash.com/license
+    sha256: bf077f30272eb8d9997bf204a477246a9d859312cf71ffd81fc7918bae57ff9a
+    width: 2600
+    height: 1733
+    alt: "A tablet showing a website with images and text."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-mockup-dashboard-ui
+    kind: file
+    file: public/photos/mockup-dashboard-ui.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "prashant hiremath (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-mockup-dashboard-ui.md.
+    sourceUrl: https://unsplash.com/photos/employer-dashboard-showing-application-trends-and-key-metrics-phS1wAgXOQI
+    licenseUrl: https://unsplash.com/license
+    sha256: d57acba024e7bccfeb4fd08e467205f51137226999b43eee06ea9fc136208578
+    width: 2600
+    height: 1184
+    alt: "A web application dashboard with charts and key figures."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-healthcare-scans
+    kind: file
+    file: public/photos/industry-healthcare-scans.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-healthcare-scans.md.
+    sourceUrl: https://unsplash.com/photos/doctor-examining-mri-scans-on-a-tablet-screen-Wz4Mx3JbnzE
+    licenseUrl: https://unsplash.com/license
+    sha256: e881c8c42ee49bd0544cd5ea454f76fd0a82f18b9e677d17a911550ee3099338
+    width: 2600
+    height: 1463
+    alt: "A doctor reviewing scans on a tablet."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-finance-app
+    kind: file
+    file: public/photos/industry-finance-app.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Aleksandr Lyaptsev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-finance-app.md.
+    sourceUrl: https://unsplash.com/photos/hands-holding-a-smartphone-displaying-a-mobile-application-TR6GDzFR0WE
+    licenseUrl: https://unsplash.com/license
+    sha256: dd2e2436a267044118123993a35ef858cb095ded67ecd842efa95d820dd1583d
+    width: 2600
+    height: 1733
+    alt: "Hands holding a phone with a finance app open."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-real-estate-listing
+    kind: file
+    file: public/photos/industry-real-estate-listing.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-real-estate-listing.md.
+    sourceUrl: https://unsplash.com/photos/a-person-taking-a-picture-of-a-kitchen-mUIQGiXddOU
+    licenseUrl: https://unsplash.com/license
+    sha256: 68830b515bb759477a48201eafa156a0e21cc608c6b1c70418f0d8ff41cf1760
+    width: 2600
+    height: 1734
+    alt: "A person photographing a kitchen for a property listing."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-logistics-truck
+    kind: file
+    file: public/photos/industry-logistics-truck.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Seb Creativo (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-logistics-truck.md.
+    sourceUrl: https://unsplash.com/photos/trailer-truck-passing-on-road-near-rail-guard-3jG-UM8IZ40
+    licenseUrl: https://unsplash.com/license
+    sha256: c74711f8de5e42a03bd2bc6a3c032f1e49ba19924dfad0aafa2d39b8e08e8a20
+    width: 2600
+    height: 1733
+    alt: "A delivery truck on a mountain road at dusk."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-manufacturing-tablet
+    kind: file
+    file: public/photos/industry-manufacturing-tablet.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Toon Lambrechts (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-manufacturing-tablet.md.
+    sourceUrl: https://unsplash.com/photos/a-few-people-in-blue-lab-coats-looking-at-a-computer-screen-FYToaJdSTWA
+    licenseUrl: https://unsplash.com/license
+    sha256: f30fd1c92349619dfe4bcdc1feb806cbddb5ac667f6f0413f03bc847a02e1c95
+    width: 2600
+    height: 1733
+    alt: "Production staff in protective clothing checking a tablet."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-retail-checkout
+    kind: file
+    file: public/photos/industry-retail-checkout.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "sq lim (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-retail-checkout.md.
+    sourceUrl: https://unsplash.com/photos/a-woman-standing-at-a-cash-register-in-a-store-HaZhm6xIUgs
+    licenseUrl: https://unsplash.com/license
+    sha256: 0796f16d98c1410bf79dc3c0777ebec513c1b4f82ce5bb4a168ffc19329ee2d9
+    width: 2600
+    height: 2074
+    alt: "A cashier at a store checkout."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-education-laptop
+    kind: file
+    file: public/photos/industry-education-laptop.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Vitaly Gariev (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-education-laptop.md.
+    sourceUrl: https://unsplash.com/photos/a-smiling-woman-with-curly-hair-works-at-a-laptop-QLYH-AU2p60
+    licenseUrl: https://unsplash.com/license
+    sha256: ea86b06fe7c75728d2a0053c3a87198206370f0ef4b87156a9eb35a61c8c8ef7
+    width: 2600
+    height: 1463
+    alt: "A smiling woman studying at a laptop."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-industry-professional-calculator
+    kind: file
+    file: public/photos/industry-professional-calculator.jpg
+    role: photograph
+    source: licensed-stock
+    creator: "Jakub Zerdzicki (Unsplash)"
+    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-industry-professional-calculator.md.
+    sourceUrl: https://unsplash.com/photos/a-person-pointing-at-a-calculator-on-a-desk-eGI0aGwuE-A
+    licenseUrl: https://unsplash.com/license
+    sha256: 9c8c94f4ac2f24b590934e8eba8bb6d6e2333e72e7b72dbe82db3cd424cf17e2
+    width: 2600
+    height: 1734
+    alt: "A professional reviewing figures with a calculator and charts."
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"

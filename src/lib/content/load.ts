@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
+import { applyPhotographs } from "./visuals";
 import { z } from "zod";
 import {
   Asset,
@@ -187,11 +188,18 @@ export function buildRegistry(): Registry {
     relations.push(...readYaml(file, RelationFile).relations);
   }
 
+  // A work area's photographs come from its home service's topic.
+  const serviceSlug = new Map(svcFile.services.map((s) => [s.id, s.slug]));
+  const serviceOfEntity = (id: string) => {
+    const node = nodes.get(id);
+    return node?.primaryService ? serviceSlug.get(node.primaryService) : undefined;
+  };
   const pages: Page[] = [];
   for (const file of listFiles("content/pages/en")) {
     const page = readYaml(file, Page);
     // Draft sections wait for owner-supplied facts; outside a review build they do not exist.
     if (!showDrafts()) page.sections = page.sections.filter((b) => !("draft" in b && b.draft));
+    applyPhotographs(page, serviceOfEntity);
     pages.push(page);
   }
   const pageByPath = new Map<string, Page>();

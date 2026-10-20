@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { TOPIC_PHOTO_IDS } from "@/lib/content/visuals";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { photoSizes } from "@/components/primitives/Photo";
@@ -23,7 +24,8 @@ const photos = base.assets.filter((a) => a.role === "photograph");
 describe("photography: provenance is mandatory", () => {
   it("registers every photograph with source, license evidence, hash, size and alt text", () => {
     expect(photos.length).toBeGreaterThanOrEqual(4);
-    expect(photos.length).toBeLessThanOrEqual(48);
+    // The topic photo library (owner direction, 20 October 2026) puts photographs on every page.
+    expect(photos.length).toBeLessThanOrEqual(120);
     for (const a of photos) {
       // Licensed stock (Unsplash) or supplied by the owner; either way with evidence on file.
       expect(["licensed-stock", "owner-supplied"], a.id).toContain(a.source);
@@ -84,6 +86,8 @@ describe("photography: provenance is mandatory", () => {
       for (const block of page.sections) {
         if (!("photo" in block) || !block.photo) continue;
         const asset = base.assets.find((a) => a.id === block.photo!.asset)!;
+        // Photographs from the topic library may appear on any page of their topic.
+        if (TOPIC_PHOTO_IDS.has(asset.id.replace(/^asset\.photo-/, ""))) continue;
         const slug = page.kind === "home" ? "home" : page.path.replace(/\//g, "");
         expect(asset.usage, `${asset.id} on ${page.path}`).toContain(slug);
       }

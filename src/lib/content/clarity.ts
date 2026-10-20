@@ -176,9 +176,16 @@ export function diagramIssues(page: Page): string[] {
   const issues: string[] = [];
   const check = (
     where: string,
-    parts: { figure?: unknown; spec?: unknown; takeaway?: string; caption?: string },
+    parts: {
+      figure?: unknown;
+      spec?: unknown;
+      photo?: unknown;
+      takeaway?: string;
+      caption?: string;
+    },
   ) => {
-    if (Boolean(parts.figure) === Boolean(parts.spec))
+    // A photograph may stand in for an illustration (owner direction, 20 October 2026).
+    if (Boolean(parts.figure) === Boolean(parts.spec) && !parts.photo)
       issues.push(`${where}: a diagram needs exactly one of figure or spec`);
     if (!parts.takeaway || parts.takeaway.trim().length < 20)
       issues.push(`${where}: a diagram needs a one-sentence takeaway`);
@@ -221,6 +228,7 @@ export function diagramIssues(page: Page): string[] {
       check(`${page.path} :: ${b.id}`, {
         figure: b.figure,
         spec: b.spec,
+        photo: b.photo,
         takeaway: b.takeaway,
         caption: b.caption,
       });

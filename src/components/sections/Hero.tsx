@@ -22,7 +22,7 @@ export function Hero({
 }) {
   const registry = getRegistry();
   const isHome = block.variant === "home";
-  const hasVisual = Boolean(aside || block.figure || block.spec);
+  const hasVisual = Boolean(aside || block.photo || block.figure || block.spec);
   if (isHome && block.slides.length > 0) {
     const actions = block.ctas
       .filter((c) => c.href.startsWith("#") || pathExists(c.href.split(/[?#]/)[0] ?? "", registry))
@@ -75,7 +75,7 @@ export function Hero({
       className={
         isHome
           ? "tone-ink hero-home overflow-hidden pb-14 pt-6 min-[48rem]:pb-20 lg:pb-24"
-          : "tone-paper overflow-hidden pb-14 pt-6 min-[48rem]:pb-20 lg:pb-24"
+          : "tone-paper page-hero overflow-hidden pb-14 pt-6 min-[48rem]:pb-20 lg:pb-24"
       }
     >
       <div className="container-site">
@@ -148,6 +148,12 @@ export function Hero({
           </div>
           {aside ? (
             <div className="min-w-0 lg:col-span-5">{aside}</div>
+          ) : block.photo && !isHome ? (
+            <div className="min-w-0 lg:col-span-5">
+              <figure className="page-hero-photo">
+                <Photo photo={block.photo} />
+              </figure>
+            </div>
           ) : hasVisual ? (
             <div className={`min-w-0 lg:col-span-5${isHome ? " hero-visual" : ""}`}>
               <Figure
