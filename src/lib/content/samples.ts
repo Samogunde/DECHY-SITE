@@ -24,6 +24,12 @@ export function pricingFor(serviceSlug: string): PriceFile["services"][string] |
   return prices.services[serviceSlug];
 }
 
+/** Every service's price tiers, in file order (the "How we price" guide). */
+export function allPricing(): [string, PriceFile["services"][string]][] {
+  prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;
+  return Object.entries(prices.services);
+}
+
 /** The pricing section for a service page (data/pricing/services.yaml), or none. */
 export function servicePricing(serviceSlug: string): Block[] {
   prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;

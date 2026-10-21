@@ -241,3 +241,22 @@ Owner review, 21 October 2026.
   - Front matter can now set `author`, `reviewed`, `answer` (the short answer box), `related`, `compare` (side-by-side table, when to choose each, our recommendation), and `pricing` (a cost guide's price table from `data/pricing/services.yaml`).
   - New type `cost-guides` and category `cost`. URLs are `/resources/<type>/<slug>/`.
   - A service's pricing section links to its cost guide once one is published.
+
+## Tenth pass (21 October 2026): cost guides and comparisons published
+
+At the owner's direction, eight resource pages are written and published as live content.
+
+- **Cost guides** (`/resources/cost-guides/`):
+  - How much custom software, a website, and a mobile app cost.
+  - How we price, with a table of every service's smaller and larger typical projects, read from `data/pricing/services.yaml`.
+- **Comparisons** (`/resources/comparisons/`):
+  - Native vs cross-platform apps (brief 8).
+  - WordPress vs a custom website (brief 7).
+  - Custom software vs off-the-shelf, which links to the build, buy, or integrate guide.
+  - In-house team vs agency.
+- **Content rules.**
+  - Prices and timelines come only from the owner's pricing data.
+  - The pages use no statistics, client claims, or named authors.
+  - The process statements are ones the site already makes: a written plan with a fixed quote and timeline after a short call, staged delivery, and client ownership of code and data.
+- **Validator.** The short answer and the comparison table now count as page text for the length check, and pass the same style checks as other copy.
+- **Tests.** Cost guides and the two unplanned comparisons are allowed outside the 53-article plan. The search test checks the eight results the search box shows.

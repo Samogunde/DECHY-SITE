@@ -296,7 +296,9 @@ describe("site search", () => {
   });
 
   it("matches by category and service, so a visitor can search by kind", () => {
-    expect(top("mobile")).toEqual(expect.arrayContaining(["Flutter", "Swift"]));
+    // The search box shows eight results; guides about mobile apps rank alongside the technologies.
+    const mobile = searchEntries(entries, "mobile", 8).map((e) => e.t);
+    expect(mobile).toEqual(expect.arrayContaining(["Flutter", "Swift"]));
   });
 
   it("returns nothing for gibberish and never an unbuilt entity", () => {

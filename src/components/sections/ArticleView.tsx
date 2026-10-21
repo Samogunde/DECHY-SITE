@@ -6,7 +6,7 @@ import { readingMinutes } from "@/lib/content/articles";
 import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import type { Registry } from "@/lib/content/load";
 import type { Page } from "@/lib/content/schema";
-import { pricingFor } from "@/lib/content/samples";
+import { allPricing, pricingFor } from "@/lib/content/samples";
 import { pathExists } from "@/lib/content/urls";
 import { BlockRenderer } from "./BlockRenderer";
 import { HoverArrow } from "./HomeBlocks";
@@ -39,7 +39,16 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
   const a = page.article;
   const service = registry.services.find((s) => s.slug === a?.service);
   const serviceHref = service ? `/${service.slug}/` : undefined;
-  const price = a?.pricing ? pricingFor(a.pricing) : undefined;
+  const price = a?.pricing && a.pricing !== "all" ? pricingFor(a.pricing) : undefined;
+  // "all": one row per service, from its smallest to its largest typical project.
+  const everyPrice =
+    a?.pricing === "all"
+      ? allPricing().flatMap(([slug, p]) => {
+          const svc = registry.services.find((s) => s.slug === slug);
+          const [first, last] = [p.plans[0], p.plans[p.plans.length - 1]];
+          return svc && first && last ? [{ slug, name: svc.name, first, last }] : [];
+        })
+      : [];
   // Related reading: the links the writer chose, then other articles on the same service.
   const related = [
     ...(a?.related ?? []).filter((r) => pathExists(r.href.split("#")[0] ?? "", registry)),
@@ -103,6 +112,49 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
             <nav className="article-toc" aria-label="In this article">
               <p className="article-toc-title">In this article</p>
               <ol>
+                {everyPrice.length ? (
+                  <section className="article-section" aria-labelledby="all-price-h">
+                    <h2 id="all-price-h" className="article-h2">
+                      Typical ranges for every service
+                    </h2>
+                    <div className="cmp-scroll">
+                      <table className="cmp-table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Service</th>
+                            <th scope="col">Smaller projects</th>
+                            <th scope="col">Larger projects</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {everyPrice.map((r) => (
+                            <tr key={r.slug}>
+                              <th scope="row">
+                                {pathExists(`/${r.slug}/`, registry) ? (
+                                  <Link href={`/${r.slug}/`}>{r.name}</Link>
+                                ) : (
+                                  r.name
+                                )}
+                              </th>
+                              <td>
+                                {r.first.range}
+                                <span className="cmp-sub">
+                                  {r.first.name}, {r.first.timeline}
+                                </span>
+                              </td>
+                              <td>
+                                {r.last.range}
+                                <span className="cmp-sub">
+                                  {r.last.name}, {r.last.timeline}
+                                </span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                ) : null}
                 {prose.map((b) =>
                   b.type === "prose" ? (
                     <li key={b.id}>

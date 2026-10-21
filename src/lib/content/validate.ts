@@ -135,6 +135,16 @@ export function pageStrings(page: Page): string[] {
     page.breadcrumbLabel,
     page.h1 ?? "",
     page.lead ?? "",
+    // Article fields the page shows: the short answer and the comparison.
+    page.article?.answer ?? "",
+    ...(page.article?.compare
+      ? [
+          ...page.article.compare.options,
+          ...page.article.compare.rows.flatMap((r) => [r.label, ...r.values]),
+          ...page.article.compare.choose.flatMap((c) => c.when),
+          page.article.compare.recommendation,
+        ]
+      : []),
     ...page.sections.flatMap((s) => blockStrings(s)),
   ].filter(Boolean);
 }

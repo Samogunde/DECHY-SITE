@@ -9,6 +9,15 @@ const { briefs } = parse(fs.readFileSync(file, "utf8")) as {
   briefs: { number: number; canonicalHome: string; status: string; batch: number }[];
 };
 
+const OWNER_ADDED = new Set([
+  "/resources/cost-guides/how-much-does-custom-software-cost/",
+  "/resources/cost-guides/how-much-does-a-website-cost/",
+  "/resources/cost-guides/how-much-does-a-mobile-app-cost/",
+  "/resources/cost-guides/how-we-price/",
+  "/resources/comparisons/custom-software-vs-off-the-shelf/",
+  "/resources/comparisons/in-house-team-vs-agency/",
+]);
+
 describe("the 53 launch article briefs", () => {
   it("are kept as data, all 53, numbered 1 to 53", () => {
     expect(briefs.map((b) => b.number)).toEqual(Array.from({ length: 53 }, (_, i) => i + 1));
@@ -19,9 +28,12 @@ describe("the 53 launch article briefs", () => {
     const numbers = new Set(briefs.map((b) => b.number));
     for (const p of registry.pages.filter((x) => x.kind === "article")) {
       expect(p.path).toMatch(
-        /^\/resources\/(guides|comparisons|definitions|articles)\/[a-z0-9-]+\/$/,
+        /^\/resources\/(guides|comparisons|cost-guides|definitions|articles)\/[a-z0-9-]+\/$/,
       );
-      expect(numbers.has(p.article?.number ?? 0), p.path).toBe(true);
+      // Cost guides and comparisons the owner asked for on 21 October 2026 may sit outside the
+      // 53-article plan; a numbered article must match its brief.
+      if (p.article?.number !== undefined || !OWNER_ADDED.has(p.path))
+        expect(numbers.has(p.article?.number ?? 0), p.path).toBe(true);
     }
   });
 

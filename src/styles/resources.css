@@ -262,3 +262,11 @@
   color: #fff;
   text-decoration: none;
 }
+.cmp-table a {
+  color: #9db8f5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cmp-table a:hover {
+  color: #fff;
+}
