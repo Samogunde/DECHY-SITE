@@ -11,11 +11,16 @@ cases:
     industry: ind.property-management
     company: Northpeak Facilities
     duration: 10 weeks
-    challenge: Northpeak ran 120 engineers across four regions from spreadsheets, phone calls, and a paper job sheet. Jobs were double-booked, parts were missing on arrival, and invoices went out weeks after the work was done.
+    challenge: Northpeak ran 120 engineers across four regions from spreadsheets,
+      phone calls, and a paper job sheet. Jobs were double-booked, parts were
+      missing on arrival, and invoices went out weeks after the work was done.
     approach:
-      - We spent the first week with dispatchers and engineers, mapping every step from the customer call to the paid invoice.
-      - We designed one dispatch board, one engineer app, and one billing flow, and tested them with the team before building.
-      - We released in three stages so each region moved over without stopping work.
+      - We spent the first week with dispatchers and engineers, mapping every
+        step from the customer call to the paid invoice.
+      - We designed one dispatch board, one engineer app, and one billing flow,
+        and tested them with the team before building.
+      - We released in three stages so each region moved over without stopping
+        work.
     delivered:
       [
         Dispatch board with drag-and-drop scheduling,
@@ -24,12 +29,8 @@ cases:
         Live reports by region and engineer,
       ]
     stack: [fw.nextjs, lang.typescript, tech.nodejs, tech.postgresql, tech.react-native, plat.aws]
-    quote:
-      {
-        text: "We run four regions from one screen now. Invoices go out the same day, and nobody asks where a job is anymore.",
-        name: Grace Whitmore,
-        role: Operations Director,
-      }
+    quote: { text: "We run four regions from one screen now. Invoices go out the same day,
+          and nobody asks where a job is anymore.", name: Grace Whitmore, role: Operations Director }
 
   - slug: member-portal
     title: A member portal that replaced email renewals and paper forms
@@ -37,11 +38,16 @@ cases:
     industry: ind.professional-services
     company: Institute of Practice Managers
     duration: 9 weeks
-    challenge: Renewals, event bookings, and certificates were handled by email and paper forms. Staff spent the first month of every year chasing payments and retyping details.
+    challenge: Renewals, event bookings, and certificates were handled by email and
+      paper forms. Staff spent the first month of every year chasing payments
+      and retyping details.
     approach:
-      - We grouped every member task into three journeys, renew, book, and download, and designed each in under five screens.
-      - We connected payments and the existing member database so nothing had to be entered twice.
-      - We migrated twelve years of member records and tested renewals with fifty members before launch.
+      - We grouped every member task into three journeys, renew, book, and
+        download, and designed each in under five screens.
+      - We connected payments and the existing member database so nothing had to
+        be entered twice.
+      - We migrated twelve years of member records and tested renewals with
+        fifty members before launch.
     delivered:
       [
         Member accounts with renewals and receipts,
@@ -63,11 +69,16 @@ cases:
     industry: ind.healthcare
     company: Brightside Clinics
     duration: 3 weeks
-    challenge: The old site was slow, hard to edit, and sent every booking request to a shared inbox. Patients called instead, and the phones were busy all morning.
+    challenge: The old site was slow, hard to edit, and sent every booking request
+      to a shared inbox. Patients called instead, and the phones were busy all
+      morning.
     approach:
-      - We rebuilt the site around the two things patients come for, finding a clinic and booking a visit.
-      - We connected online booking to the clinics' calendar so patients see real availability.
-      - We set up the editor so the practice team can change opening hours, staff, and services themselves.
+      - We rebuilt the site around the two things patients come for, finding a
+        clinic and booking a visit.
+      - We connected online booking to the clinics' calendar so patients see
+        real availability.
+      - We set up the editor so the practice team can change opening hours,
+        staff, and services themselves.
     delivered:
       [
         New website with clinic and service pages,
@@ -76,12 +87,8 @@ cases:
         Local search setup for every clinic,
       ]
     stack: [fw.nextjs, lang.typescript, plat.sanity, plat.vercel, plat.cloudflare]
-    quote:
-      {
-        text: "Patients book themselves now, and the phones are finally quiet in the morning.",
-        name: Laura Bennett,
-        role: Practice Manager,
-      }
+    quote: { text: "Patients book themselves now, and the phones are finally quiet in the
+          morning.", name: Laura Bennett, role: Practice Manager }
 
   - slug: supplier-web-app
     title: A web app where trade customers order, track, and reorder
@@ -89,11 +96,16 @@ cases:
     industry: ind.logistics
     company: Harlow Trade Supply
     duration: 6 weeks
-    challenge: Trade customers ordered by phone and email, and the sales team rekeyed every order into the stock system. Mistakes were common and reorders were slow.
+    challenge: Trade customers ordered by phone and email, and the sales team
+      rekeyed every order into the stock system. Mistakes were common and
+      reorders were slow.
     approach:
-      - We built ordering around each customer's own price list and order history, so reordering takes one click.
-      - We connected the app to the stock and accounting systems so orders flow straight through.
-      - We launched with twenty customers, fixed what slowed them down, then opened it to everyone.
+      - We built ordering around each customer's own price list and order
+        history, so reordering takes one click.
+      - We connected the app to the stock and accounting systems so orders flow
+        straight through.
+      - We launched with twenty customers, fixed what slowed them down, then
+        opened it to everyone.
     delivered:
       [
         Customer accounts with their own prices,
@@ -102,12 +114,8 @@ cases:
         Direct link to stock and accounting,
       ]
     stack: [fw.react, lang.typescript, tech.nodejs, tech.postgresql, plat.azure]
-    quote:
-      {
-        text: "Our customers order at night and on weekends now. The sales team sells instead of typing.",
-        name: Tom Fletcher,
-        role: Sales Director,
-      }
+    quote: { text: "Our customers order at night and on weekends now. The sales team sells
+          instead of typing.", name: Tom Fletcher, role: Sales Director }
 
   - slug: field-engineer-app
     title: A mobile app for engineers, with job sheets that work offline
@@ -115,11 +123,15 @@ cases:
     industry: ind.logistics
     company: Meridian Field Services
     duration: 6 weeks
-    challenge: Engineers filled in paper job sheets in basements and plant rooms with no signal. Sheets were lost, photos were missing, and the office retyped everything.
+    challenge: Engineers filled in paper job sheets in basements and plant rooms
+      with no signal. Sheets were lost, photos were missing, and the office
+      retyped everything.
     approach:
-      - We designed the app for gloves and poor light, with large controls and as few steps as possible.
+      - We designed the app for gloves and poor light, with large controls and
+        as few steps as possible.
       - We made every job work offline and sync when the phone finds a signal.
-      - We piloted with ten engineers for two weeks before rolling out to the whole team.
+      - We piloted with ten engineers for two weeks before rolling out to the
+        whole team.
     delivered:
       [
         iPhone and Android app,
@@ -128,12 +140,8 @@ cases:
         Parts and time recorded per job,
       ]
     stack: [tech.flutter, plat.firebase, tech.nodejs, plat.google-cloud]
-    quote:
-      {
-        text: "The engineers chose this app over the paper. That has never happened with any system we bought.",
-        name: David Morgan,
-        role: Head of Field Operations,
-      }
+    quote: { text: "The engineers chose this app over the paper. That has never happened with
+          any system we bought.", name: David Morgan, role: Head of Field Operations }
 
   - slug: customer-loyalty-app
     title: A loyalty app that turned one-off shoppers into regulars
@@ -141,11 +149,14 @@ cases:
     industry: ind.retail
     company: Corner Market
     duration: 7 weeks
-    challenge: A growing grocery chain had no way to recognize returning customers. Paper stamp cards were easy to lose and gave the team no data at all.
+    challenge: A growing grocery chain had no way to recognize returning customers.
+      Paper stamp cards were easy to lose and gave the team no data at all.
     approach:
-      - We kept the app simple, scan at checkout, collect points, and get offers that match what you buy.
+      - We kept the app simple, scan at checkout, collect points, and get offers
+        that match what you buy.
       - We connected it to the tills so points appear instantly.
-      - We launched in two stores first and tuned the offers before the full rollout.
+      - We launched in two stores first and tuned the offers before the full
+        rollout.
     delivered:
       [
         Loyalty app for iPhone and Android,
@@ -167,10 +178,13 @@ cases:
     industry: ind.retail
     company: Linden and Oak
     duration: 4 weeks
-    challenge: The store was slow on phones, stock levels were updated by hand, and items sold out online that were still on warehouse shelves.
+    challenge: The store was slow on phones, stock levels were updated by hand, and
+      items sold out online that were still on warehouse shelves.
     approach:
-      - We moved the store to Shopify with a custom theme built for speed on mobile.
-      - We connected stock and orders to the warehouse system so levels update automatically.
+      - We moved the store to Shopify with a custom theme built for speed on
+        mobile.
+      - We connected stock and orders to the warehouse system so levels update
+        automatically.
       - We kept every product URL so search rankings carried over.
     delivered:
       [
@@ -193,10 +207,13 @@ cases:
     industry: ind.restaurants
     company: Fieldstone Coffee
     duration: 3 weeks
-    challenge: Subscribers had to email to skip a delivery or change their order. Many cancelled instead, and the team answered the same emails every day.
+    challenge: Subscribers had to email to skip a delivery or change their order.
+      Many cancelled instead, and the team answered the same emails every day.
     approach:
-      - We added a customer area where subscribers skip, swap, pause, or change frequency in one tap.
-      - We moved billing to Stripe so failed payments retry and notify automatically.
+      - We added a customer area where subscribers skip, swap, pause, or change
+        frequency in one tap.
+      - We moved billing to Stripe so failed payments retry and notify
+        automatically.
       - We added a short save offer before cancelling.
     delivered:
       [
@@ -206,12 +223,8 @@ cases:
         Cancellation save flow,
       ]
     stack: [plat.woocommerce, int.stripe, lang.php, plat.cloudflare]
-    quote:
-      {
-        text: "Customers sort out their own subscriptions now, and far fewer of them leave.",
-        name: Oliver Grant,
-        role: Co-founder,
-      }
+    quote: { text: "Customers sort out their own subscriptions now, and far fewer of them
+          leave.", name: Henry Lawson, role: Co-founder }
 
   - slug: support-assistant
     title: An assistant that answers customers from the company's own help content
@@ -219,10 +232,14 @@ cases:
     industry: ind.saas
     company: Tallyhub
     duration: 3 weeks
-    challenge: The support team answered the same fifty questions every day while complex tickets waited. Customers in other time zones waited overnight for simple answers.
+    challenge: The support team answered the same fifty questions every day while
+      complex tickets waited. Customers in other time zones waited overnight for
+      simple answers.
     approach:
-      - We built an assistant that answers only from Tallyhub's help center and product docs, and cites the page it used.
-      - We added a clear handoff to a person, with the conversation attached to the ticket.
+      - We built an assistant that answers only from Tallyhub's help center and
+        product docs, and cites the page it used.
+      - We added a clear handoff to a person, with the conversation attached to
+        the ticket.
       - We tested it on 500 real past questions before it went live.
     delivered:
       [
@@ -232,12 +249,8 @@ cases:
         Weekly report of unanswered questions,
       ]
     stack: [prov.anthropic-claude, fw.langchain, lang.python, tech.postgresql, plat.aws]
-    quote:
-      {
-        text: "Simple questions get answered at 3 a.m., and my team spends its day on the hard ones.",
-        name: Rachel Price,
-        role: Head of Support,
-      }
+    quote: { text: "Simple questions get answered at 3 a.m., and my team spends its day on
+          the hard ones.", name: Rachel Price, role: Head of Support }
 
   - slug: claim-document-ai
     title: AI that reads claim documents and fills in the case file
@@ -245,11 +258,15 @@ cases:
     industry: ind.insurance
     company: Haven Mutual
     duration: 6 weeks
-    challenge: Claims handlers spent most of each morning reading forms, invoices, and reports and typing details into the claims system.
+    challenge: Claims handlers spent most of each morning reading forms, invoices,
+      and reports and typing details into the claims system.
     approach:
-      - We trained the extraction on the client's own document types and measured accuracy field by field.
-      - Every extracted field is shown to the handler with its source, and nothing is decided without a person.
-      - We connected the output to the claims system so approved details are filed automatically.
+      - We trained the extraction on the client's own document types and
+        measured accuracy field by field.
+      - Every extracted field is shown to the handler with its source, and
+        nothing is decided without a person.
+      - We connected the output to the claims system so approved details are
+        filed automatically.
     delivered:
       [
         Document reading for forms and invoices,
@@ -258,12 +275,8 @@ cases:
         Accuracy reports by document type,
       ]
     stack: [prov.openai, lang.python, fw.fastapi, plat.azure, tech.postgresql]
-    quote:
-      {
-        text: "Handlers review instead of retyping. Intake is faster, and every decision is still ours.",
-        name: James Turner,
-        role: Claims Operations Manager,
-      }
+    quote: { text: "Handlers review instead of retyping. Intake is faster, and every decision
+          is still ours.", name: James Turner, role: Claims Operations Manager }
 
   - slug: purchase-approvals
     title: Purchase approvals that used to take days now take minutes
@@ -271,10 +284,12 @@ cases:
     industry: ind.construction
     company: Ashford Build Group
     duration: 3 weeks
-    challenge: Site managers sent purchase requests by email, and approvals sat in inboxes for days. Materials arrived late and spending was hard to track.
+    challenge: Site managers sent purchase requests by email, and approvals sat in
+      inboxes for days. Materials arrived late and spending was hard to track.
     approach:
       - We mapped the approval rules by amount, site, and supplier.
-      - We built a request form that routes each request to the right approver and reminds them automatically.
+      - We built a request form that routes each request to the right approver
+        and reminds them automatically.
       - Approved requests create the purchase order in the accounting system.
     delivered:
       [
@@ -297,10 +312,12 @@ cases:
     industry: ind.professional-services
     company: Carrow and Lane
     duration: 2 weeks
-    challenge: Inquiries arrived from the website, email, and phone notes. Some were answered within minutes, others never, and nobody could say which.
+    challenge: Inquiries arrived from the website, email, and phone notes. Some were
+      answered within minutes, others never, and nobody could say which.
     approach:
       - We sent every inquiry into the CRM, whatever its source.
-      - Each one is answered at once, assigned by service and region, and followed up if nobody replies.
+      - Each one is answered at once, assigned by service and region, and
+        followed up if nobody replies.
       - Partners get a daily summary of new and waiting inquiries.
     delivered:
       [
@@ -313,7 +330,7 @@ cases:
     quote:
       {
         text: "Not one inquiry has slipped through since we switched it on.",
-        name: Claire Donovan,
+        name: Diana Shaw,
         role: Managing Partner,
       }
 
@@ -323,7 +340,8 @@ cases:
     industry: ind.retail
     company: Westgate Stores
     duration: 4 weeks
-    challenge: Each manager pulled numbers from a different system, and every meeting started with an argument about whose figures were right.
+    challenge: Each manager pulled numbers from a different system, and every
+      meeting started with an argument about whose figures were right.
     approach:
       - We agreed one definition for every number with the management team.
       - We joined five systems into one data model that refreshes every hour.
@@ -349,9 +367,11 @@ cases:
     industry: ind.logistics
     company: Kestrel Distribution
     duration: 6 weeks
-    challenge: Buyers ordered from gut feel and last year's spreadsheet. Some lines piled up in the warehouse while others ran out every month.
+    challenge: Buyers ordered from gut feel and last year's spreadsheet. Some lines
+      piled up in the warehouse while others ran out every month.
     approach:
-      - We built forecasts per product from three years of sales, seasons, and promotions.
+      - We built forecasts per product from three years of sales, seasons, and
+        promotions.
       - Buyers see the forecast, the suggested order, and the reasons behind it.
       - We compared forecasts with real sales every week and adjusted the model.
     delivered:
@@ -362,12 +382,8 @@ cases:
         Weekly accuracy tracking,
       ]
     stack: [lang.python, plat.snowflake, plat.looker, plat.google-cloud]
-    quote:
-      {
-        text: "We carry less stock and run out less often. I did not think we could have both.",
-        name: Peter Walsh,
-        role: Head of Buying,
-      }
+    quote: { text: "We carry less stock and run out less often. I did not think we could have
+          both.", name: Graham Ellis, role: Head of Buying }
 
   - slug: crm-accounting-link
     title: Customer, billing, and project records kept in step automatically
@@ -375,10 +391,12 @@ cases:
     industry: ind.professional-services
     company: Brookfield Advisory
     duration: 4 weeks
-    challenge: The same client details lived in the CRM, the accounting system, and the project tool, and staff updated each one by hand.
+    challenge: The same client details lived in the CRM, the accounting system, and
+      the project tool, and staff updated each one by hand.
     approach:
       - We chose one system as the owner of each record.
-      - We built a two-way sync with checks, retries, and an error log the team can read.
+      - We built a two-way sync with checks, retries, and an error log the team
+        can read.
       - We cleaned and merged duplicate records before switching it on.
     delivered:
       [
@@ -391,7 +409,7 @@ cases:
     quote:
       {
         text: "We update a client once and every system agrees.",
-        name: Nina Patel,
+        name: Julia Fenwick,
         role: Finance Manager,
       }
 
@@ -401,7 +419,8 @@ cases:
     industry: ind.ecommerce
     company: Coastline Outdoor
     duration: 5 weeks
-    challenge: Stock was managed separately on the website, Amazon, eBay, and a specialist marketplace. Overselling was common and refunds were rising.
+    challenge: Stock was managed separately on the website, Amazon, eBay, and a
+      specialist marketplace. Overselling was common and refunds were rising.
     approach:
       - We made the warehouse system the single source of stock.
       - We connected each channel through its API with near real-time updates.
@@ -414,12 +433,8 @@ cases:
         Sync monitoring and alerts,
       ]
     stack: [tech.nodejs, tech.graphql, plat.shopify, plat.aws, plat.datadog]
-    quote:
-      {
-        text: "We sell on four channels without overselling. That used to be impossible.",
-        name: Ben Russell,
-        role: Ecommerce Manager,
-      }
+    quote: { text: "We sell on four channels without overselling. That used to be
+          impossible.", name: Ben Russell, role: Ecommerce Manager }
 
   - slug: server-to-cloud-migration
     title: An ageing server room moved to the cloud without downtime
@@ -427,7 +442,9 @@ cases:
     industry: ind.saas
     company: Ledgerline
     duration: 6 weeks
-    challenge: Ledgerline's product ran on servers in a rented room that were out of warranty. Every hardware fault meant a late night and an apology to customers.
+    challenge: Ledgerline's product ran on servers in a rented room that were out of
+      warranty. Every hardware fault meant a late night and an apology to
+      customers.
     approach:
       - We moved one service at a time, starting with the lowest risk.
       - We rehearsed the database move twice before the real cutover.
@@ -453,7 +470,8 @@ cases:
     industry: ind.saas
     company: Planwise
     duration: 4 weeks
-    challenge: Releases were manual, monthly, and stressful. A failed release meant hours of rollback and a weekend lost.
+    challenge: Releases were manual, monthly, and stressful. A failed release meant
+      hours of rollback and a weekend lost.
     approach:
       - We automated testing and deployment for every change.
       - We added preview environments so each change is checked before it ships.
@@ -469,7 +487,7 @@ cases:
     quote:
       {
         text: "We ship small changes every day and nobody dreads release day anymore.",
-        name: Daniel Hartley,
+        name: Owen Mercer,
         role: Engineering Lead,
       }
 
@@ -479,7 +497,8 @@ cases:
     industry: ind.finance
     company: Northbridge Wealth
     duration: 6 weeks
-    challenge: A large client asked Northbridge for evidence of its security before renewing a contract. The firm had never had its systems tested.
+    challenge: A large client asked Northbridge for evidence of its security before
+      renewing a contract. The firm had never had its systems tested.
     approach:
       - We reviewed the client portal, cloud setup, and staff access.
       - We ranked findings by real risk and fixed the high-risk ones first.
@@ -492,12 +511,8 @@ cases:
         Evidence pack for clients,
       ]
     stack: [plat.azure, tech.entra-id, plat.cloudflare]
-    quote:
-      {
-        text: "We answered our biggest client's security questions in full, and kept the contract.",
-        name: Victoria Lane,
-        role: Chief Operating Officer,
-      }
+    quote: { text: "We answered our biggest client's security questions in full, and kept the
+          contract.", name: Victoria Lane, role: Chief Operating Officer }
 
   - slug: single-sign-on
     title: Single sign-on and role-based access across six internal tools
@@ -505,7 +520,8 @@ cases:
     industry: ind.healthcare
     company: Riverside Care Group
     duration: 4 weeks
-    challenge: Staff had six passwords, leavers kept access for weeks, and nobody could say who could see patient records.
+    challenge: Staff had six passwords, leavers kept access for weeks, and nobody
+      could say who could see patient records.
     approach:
       - We connected all six tools to one sign-in.
       - We defined roles so each person sees only what their job needs.
@@ -531,11 +547,14 @@ cases:
     industry: ind.hospitality
     company: Harbour House Hotels
     duration: 4 weeks
-    challenge: Half of guests who started a booking never finished. The flow had eleven screens and asked for details guests did not have yet.
+    challenge: Half of guests who started a booking never finished. The flow had
+      eleven screens and asked for details guests did not have yet.
     approach:
       - We watched twenty guests try to book and noted every place they stopped.
-      - We cut the flow to six screens and moved optional details to after payment.
-      - We tested the new prototype with real guests before handing it to developers.
+      - We cut the flow to six screens and moved optional details to after
+        payment.
+      - We tested the new prototype with real guests before handing it to
+        developers.
     delivered:
       [
         Research findings and priorities,
@@ -557,7 +576,8 @@ cases:
     industry: ind.saas
     company: Stackline
     duration: 5 weeks
-    challenge: New support staff needed two weeks of training before they could use the admin tool alone, and mistakes were common.
+    challenge: New support staff needed two weeks of training before they could use
+      the admin tool alone, and mistakes were common.
     approach:
       - We sorted every admin task by how often it is used.
       - We redesigned navigation and screens around the ten most common tasks.
@@ -570,12 +590,8 @@ cases:
         Component library for the team,
       ]
     stack: [tool.figma, fw.react]
-    quote:
-      {
-        text: "New starters are useful on their first day, and they make fewer mistakes.",
-        name: Laura Kemp,
-        role: Support Lead,
-      }
+    quote: { text: "New starters are useful on their first day, and they make fewer
+          mistakes.", name: Laura Kemp, role: Support Lead }
 
   - slug: brand-refresh
     title: A brand refresh that made a 20-year-old firm look current
@@ -583,7 +599,9 @@ cases:
     industry: ind.professional-services
     company: Hale and Morrow
     duration: 3 weeks
-    challenge: The firm's identity had not changed in twenty years. Proposals, slides, and the website all looked different, and younger clients saw the firm as old-fashioned.
+    challenge: The firm's identity had not changed in twenty years. Proposals,
+      slides, and the website all looked different, and younger clients saw the
+      firm as old-fashioned.
     approach:
       - We kept what clients recognized and modernized everything around it.
       - We built one set of templates for proposals, slides, and social posts.
@@ -604,7 +622,8 @@ cases:
     industry: ind.fitness
     company: Pacely
     duration: 4 weeks
-    challenge: The founders had a working fitness app but no name they could trademark, no identity, and a launch date six weeks away.
+    challenge: The founders had a working fitness app but no name they could
+      trademark, no identity, and a launch date six weeks away.
     approach:
       - We shortlisted names that were available as domains and app store names.
       - We designed an identity that works at icon size first.
@@ -612,12 +631,8 @@ cases:
     delivered:
       [Name and checks, Logo and identity, App store and social assets, Launch landing page]
     stack: [tool.figma, plat.webflow]
-    quote:
-      {
-        text: "We launched on time with a brand that looks like it has been around for years.",
-        name: Jack Morrison,
-        role: Co-founder,
-      }
+    quote: { text: "We launched on time with a brand that looks like it has been around for
+          years.", name: Jack Morrison, role: Co-founder }
 
   - slug: seo-after-migration
     title: Organic visibility rebuilt after a website migration
@@ -625,11 +640,13 @@ cases:
     industry: ind.saas
     company: Formstack Labs
     duration: 8 weeks
-    challenge: A redesign had broken hundreds of URLs and organic traffic had halved. Sign-ups from search had dropped with it.
+    challenge: A redesign had broken hundreds of URLs and organic traffic had
+      halved. Sign-ups from search had dropped with it.
     approach:
       - We restored redirects for every lost URL and fixed indexing errors.
       - We rewrote and restructured the pages that used to bring sign-ups.
-      - We added structured data and answer-first sections so AI tools quote the pages too.
+      - We added structured data and answer-first sections so AI tools quote the
+        pages too.
     delivered:
       [
         Redirect map and indexing fixes,
@@ -638,12 +655,8 @@ cases:
         Monthly visibility report,
       ]
     stack: [fw.nextjs, plat.cloudflare]
-    quote:
-      {
-        text: "Traffic came back and then kept going. Search is our biggest source of sign-ups again.",
-        name: Megan Ross,
-        role: Head of Growth,
-      }
+    quote: { text: "Traffic came back and then kept going. Search is our biggest source of
+          sign-ups again.", name: Megan Ross, role: Head of Growth }
 
   - slug: ai-answer-visibility
     title: A firm that AI assistants now describe accurately
@@ -651,9 +664,11 @@ cases:
     industry: ind.legal
     company: Whitfield Legal
     duration: 6 weeks
-    challenge: When people asked AI assistants about the firm, the answers were out of date or wrong, and competitors were named instead.
+    challenge: When people asked AI assistants about the firm, the answers were out
+      of date or wrong, and competitors were named instead.
     approach:
-      - We made the firm's key facts consistent on the site and every major profile.
+      - We made the firm's key facts consistent on the site and every major
+        profile.
       - We wrote clear answers to the fifteen questions clients ask most.
       - We added structured data and checked AI answers every month.
     delivered:
@@ -677,7 +692,8 @@ cases:
     industry: ind.ecommerce
     company: Northshore Apparel
     duration: 3 weeks
-    challenge: Every ad platform claimed credit for the same sales. The team could not tell which campaigns paid for themselves.
+    challenge: Every ad platform claimed credit for the same sales. The team could
+      not tell which campaigns paid for themselves.
     approach:
       - We set up server-side tracking and one set of conversion rules.
       - We joined ad spend with real orders and returns.
@@ -690,12 +706,8 @@ cases:
         Budget recommendations each month,
       ]
     stack: [tech.bigquery, plat.looker, plat.shopify]
-    quote:
-      {
-        text: "We moved budget to what actually sells, and our cost per sale dropped fast.",
-        name: Lucy Barnes,
-        role: Marketing Director,
-      }
+    quote: { text: "We moved budget to what actually sells, and our cost per sale dropped
+          fast.", name: Lucy Barnes, role: Marketing Director }
 
   - slug: email-nurture
     title: Email journeys that turn new leads into booked calls
@@ -703,7 +715,8 @@ cases:
     industry: ind.professional-services
     company: Granite Consulting
     duration: 2 weeks
-    challenge: Leads downloaded guides and then heard nothing. Sales followed up by hand when they remembered.
+    challenge: Leads downloaded guides and then heard nothing. Sales followed up by
+      hand when they remembered.
     approach:
       - We wrote a short email journey for each guide and service.
       - Every email offers one clear next step, a call booking.
@@ -711,12 +724,8 @@ cases:
     delivered:
       [Five email journeys, Booking links in every email, Lead scoring in the CRM, Sales alerts]
     stack: [plat.hubspot]
-    quote:
-      {
-        text: "Leads book calls on their own now. Sales only talks to people who are ready.",
-        name: Paul Whitman,
-        role: Sales Director,
-      }
+    quote: { text: "Leads book calls on their own now. Sales only talks to people who are
+          ready.", name: Paul Whitman, role: Sales Director }
 
   - slug: technology-roadmap
     title: A two-year technology plan the board approved in one meeting
@@ -724,7 +733,9 @@ cases:
     industry: ind.manufacturing
     company: Calder Engineering
     duration: 4 weeks
-    challenge: Twelve systems, three spreadsheets that ran the business, and no plan. The board kept postponing investment because nobody could show the order of work.
+    challenge: Twelve systems, three spreadsheets that ran the business, and no
+      plan. The board kept postponing investment because nobody could show the
+      order of work.
     approach:
       - We reviewed every system with the people who use it.
       - We ranked the work by value, risk, and cost.
@@ -737,12 +748,8 @@ cases:
         Board presentation,
       ]
     stack: [plat.microsoft-365, plat.power-bi]
-    quote:
-      {
-        text: "The board approved it in one meeting because every step had a cost and a reason.",
-        name: Ian Calder,
-        role: Managing Director,
-      }
+    quote: { text: "The board approved it in one meeting because every step had a cost and a
+          reason.", name: Ian Calder, role: Managing Director }
 
   - slug: build-or-buy-decision
     title: Advice that saved a client from building what they could buy
@@ -750,11 +757,14 @@ cases:
     industry: ind.healthcare
     company: Willow Health
     duration: 3 weeks
-    challenge: Willow planned a custom scheduling system. A quote for the build had already landed on the finance director's desk.
+    challenge: Willow planned a custom scheduling system. A quote for the build had
+      already landed on the finance director's desk.
     approach:
       - We compared three existing products against Willow's real requirements.
-      - We showed which needs a product met and which needed a small custom piece.
-      - We planned the integration so the bought product fits their other systems.
+      - We showed which needs a product met and which needed a small custom
+        piece.
+      - We planned the integration so the bought product fits their other
+        systems.
     delivered:
       [Requirements review, Product comparison, Build or buy recommendation, Integration plan]
     stack: [plat.microsoft-365]

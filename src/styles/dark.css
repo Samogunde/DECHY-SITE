@@ -713,14 +713,6 @@ main.theme-dark .connects .chip-link:hover {
 .site-footer-dark {
   background: #070a12 !important;
 }
-/* The supplied logo is navy and is never recolored: until the white version arrives it sits on a
-   small light plate so it stays legible on the dark header and footer. */
-.logo-pill,
-.site-footer-dark a[aria-label="DECHY home"] {
-  padding: 0.35rem 0.75rem;
-  border-radius: 10px;
-  background: #f7f6f2;
-}
 .site-header-dark .nav-mega {
   background: #0b0f19 !important;
   border-color: rgb(255 255 255 / 0.08) !important;

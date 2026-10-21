@@ -50,6 +50,8 @@ export type NavItemModel =
       href: string | null;
       heading: string;
       groups: WorkGroupModel[];
+      /** Proof pages that exist (case studies, testimonials), linked at the foot of the menu. */
+      extra: NavLinkModel[];
     }
   | {
       kind: "solutions" | "industries";
@@ -122,7 +124,23 @@ export function buildNavModel(registry: Registry): NavModel {
           items: g.items.map(published).filter((x): x is NavLinkModel => !!x),
         }))
         .filter((g) => g.items.length > 0);
-      return { kind: "work", label: item.label, href, heading: registry.nav.work.heading, groups };
+      // Proof pages that exist (case studies, testimonials), linked at the foot of the menu.
+      const extra: NavLinkModel[] = [
+        ...(registry.pages.some((p) => p.kind === "case-study")
+          ? [{ id: "case-studies", label: "Case studies", href: "/work/#case-studies" }]
+          : []),
+        ...(registry.pageByPath.has("/testimonials/")
+          ? [{ id: "testimonials", label: "Testimonials", href: "/testimonials/" }]
+          : []),
+      ];
+      return {
+        kind: "work",
+        label: item.label,
+        href,
+        heading: registry.nav.work.heading,
+        groups,
+        extra,
+      };
     }
     if (item.kind === "solutions" || item.kind === "industries") {
       const list = registry.nav[item.kind];

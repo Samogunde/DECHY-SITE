@@ -84,14 +84,15 @@ const APPROVED_SERVICES = [
   "Consulting & Digital Transformation",
 ];
 
+// Owner direction, 20 October 2026: buyer-friendly labels and order.
 const APPROVED_NAV = [
   "Services",
+  "Industries",
+  "Our Work",
   "Solutions",
   "Technologies",
-  "Industries",
-  "Work",
-  "Resources",
-  "Company",
+  "Insights",
+  "About us",
 ];
 
 const SKIP_KEYS = new Set([
@@ -429,7 +430,8 @@ export function validateRegistry(input: Registry): Issue[] {
             );
         }
     // The home page carries the photographic story (owner direction, 19 October 2026).
-    const photoLimit = page.kind === "home" ? 40 : 4;
+    // About us shows the DECHY workspace as a gallery (owner direction, 20 October 2026).
+    const photoLimit = page.kind === "home" ? 40 : page.path === "/company/" ? 6 : 4;
     // Sample (draft) sections show in review builds only and do not count toward the limit.
     const livePhotos = page.sections
       .filter((b) => !("draft" in b && b.draft))
@@ -773,7 +775,7 @@ export function validateRegistry(input: Registry): Issue[] {
   const KIND_BY_LABEL: Record<string, string> = {
     Services: "services",
     Technologies: "technologies",
-    Work: "work",
+    "Our Work": "work",
     Solutions: "solutions",
     Industries: "industries",
   };

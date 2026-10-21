@@ -31,6 +31,10 @@ sections:
     headline: How we work with you
     lead: "At DECHY, a project follows a clear path, with plain reports and decisions kept in your hands. You always know which stage the work is in, what it delivers, and what comes next."
     support: "The details change with each project. The principles stay the same."
+    photo:
+      asset: asset.photo-dechy-project-team-planning
+      layout: split
+      position: 50% 50%
     ctas:
       - { label: Talk to us, href: "/contact/" }
       - { label: See the stages, href: "#stages" }

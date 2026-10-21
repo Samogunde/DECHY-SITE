@@ -34,10 +34,10 @@ function drawerLinks(): DrawerLink[] {
     },
     {
       label: "Testimonials",
-      href: "/#testimonials",
+      href: registry.pageByPath.has("/testimonials/") ? "/testimonials/" : "/#testimonials",
       text: "What clients say",
       icon: "quote",
-      ok: has("testimonials"),
+      ok: registry.pageByPath.has("/testimonials/") || has("testimonials"),
     },
     {
       label: "Partnership",
@@ -54,7 +54,13 @@ function drawerLinks(): DrawerLink[] {
       ok: true,
     },
     { label: "Insights", href: "/resources/", text: "Guides and articles", icon: "book", ok: true },
-    { label: "Company", href: "/company/", text: "Who we are", icon: "info", ok: true },
+    {
+      label: "About us",
+      href: "/company/",
+      text: "Who we are and how we work",
+      icon: "info",
+      ok: true,
+    },
     { label: "Contact", href: "/contact/", text: "Tell us what you need", icon: "mail", ok: true },
   ];
   return all
@@ -87,12 +93,9 @@ export function SiteHeader() {
       style={{ height: "var(--header-h)" }}
     >
       <div className="container-site flex h-full items-center gap-4">
-        <Link
-          href="/"
-          aria-label="DECHY home"
-          className="logo-pill flex min-h-11 shrink-0 items-center"
-        >
+        <Link href="/" aria-label="DECHY home" className="flex min-h-11 shrink-0 items-center">
           <Logo
+            tone="dark"
             priority
             sizes="(min-width: 80rem) 190px, 170px"
             className="h-6 min-[30rem]:h-7 min-[80rem]:h-8"

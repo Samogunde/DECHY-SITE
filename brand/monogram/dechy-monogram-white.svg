@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8192" height="8192" viewBox="0 0 256 256">
+  <title>DECHY Monogram — White and Blue</title>
+  <desc>Clean vector monogram with a white geometric D-shaped mark and electric-blue center bar on a transparent background.</desc>
+  <g>
+    <path fill="#FFFFFF" fill-rule="evenodd" d="
+      M75 56
+      H146
+      C183 56 209 82 209 120
+      C209 158 183 184 146 184
+      H75
+      Q65 184 65 174
+      V166
+      Q65 156 75 156
+      H145
+      C164 156 176 142 176 120
+      C176 98 164 84 145 84
+      H75
+      Q65 84 65 74
+      V66
+      Q65 56 75 56
+      Z" />
+    <rect x="65" y="104" width="52" height="35" rx="5" fill="#086BFF"/>
+  </g>
+</svg>

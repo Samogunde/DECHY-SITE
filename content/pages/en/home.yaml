@@ -107,7 +107,7 @@ sections:
       - value: "50+"
         label: Technologies we build with
     photo:
-      asset: asset.photo-team-planning-whiteboard-office
+      asset: asset.photo-dechy-team-meeting-software-development
       layout: split
       position: 50% 45%
     photoNote: Design, engineering, and delivery in one conversation, from the first sketch to launch.

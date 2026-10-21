@@ -9,12 +9,12 @@
 #   link          a plain link
 primary:
   - { label: Services, kind: services, path: /services/ }
+  - { label: Industries, kind: industries, path: /industries/ }
+  - { label: Our Work, kind: work, path: /work/ }
   - { label: Solutions, kind: solutions, path: /solutions/ }
   - { label: Technologies, kind: technologies, path: /technologies/ }
-  - { label: Industries, kind: industries, path: /industries/ }
-  - { label: Work, kind: work, path: /work/ }
-  - { label: Resources, kind: link, path: /resources/ }
-  - { label: Company, kind: link, path: /company/ }
+  - { label: Insights, kind: link, path: /resources/ }
+  - { label: About us, kind: link, path: /company/ }
 cta:
   label: Talk to DECHY
   path: /contact/
@@ -211,7 +211,7 @@ footer:
     - { label: Work, path: /work/ }
     - { label: Resources, path: /resources/ }
     - { label: Locations, path: /locations/ }
-    - { label: Company, path: /company/ }
+    - { label: About us, path: /company/ }
     - { label: Contact, path: /contact/ }
   legal:
     - { label: Privacy policy, path: /privacy/ }

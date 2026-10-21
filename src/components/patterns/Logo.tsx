@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../../../brand/logos/primary/dechy-logo.png";
+import logoWhite from "../../../public/brand/dechy-logo-white.png";
 
 /**
  * The approved DECHY PNG logo, used exactly as supplied: not redrawn, recolored, stretched, or
@@ -20,11 +21,25 @@ export function Logo({
   className = "",
   priority = false,
   sizes,
+  tone = "light",
 }: {
   className?: string;
   priority?: boolean;
   sizes: string;
+  /** "dark": the owner's white logo for dark surfaces (header, footer), from the SVG master. */
+  tone?: "light" | "dark";
 }) {
+  if (tone === "dark")
+    return (
+      <Image
+        src={logoWhite}
+        alt="DECHY logo"
+        sizes={sizes}
+        quality={92}
+        priority={priority}
+        className={`block w-auto ${className}`}
+      />
+    );
   // Percentages are relative to the frame (the positioned parent).
   const widthPct = (SRC_W / FRAME.w) * 100;
   const leftPct = -(FRAME.x / FRAME.w) * 100;

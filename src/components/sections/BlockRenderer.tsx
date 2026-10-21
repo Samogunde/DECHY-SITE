@@ -19,6 +19,8 @@ import {
   PartnersBlock,
   CaseGridBlock,
   TeamBlock,
+  GalleryBlock,
+  TestimonialWallBlock,
   PhasesBlock,
   PricingBlock,
   PromiseBlock,
@@ -143,6 +145,10 @@ export function BlockRenderer({
       return <CaseGridBlock block={block} />;
     case "team":
       return <TeamBlock block={block} />;
+    case "gallery":
+      return <GalleryBlock block={block} />;
+    case "testimonial-wall":
+      return <TestimonialWallBlock block={block} />;
     case "promise":
       return <PromiseBlock block={block} />;
     case "stats":

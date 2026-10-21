@@ -30,6 +30,12 @@ This file tells every Claude Code session how to work on DECHY. It adds no compa
   - Thirty sample case study pages and a ten-person team section exist in review builds only (samples, noindex).
   - The service pages are rewritten in agency voice.
   - Reference: `docs/planning/22-homepage-redesign-and-search-titles.md`, fifth pass.
+- Brand files, office photos, menu, testimonials (20 October 2026, owner direction): **built on branch `homepage-redesign-sample`.**
+  - The owner's SVG logo and monogram are used on the dark header and footer, the favicon, and the icons.
+  - The owner supplied photographs of the DECHY workspace. They are shown on About us and other pages, with no address stated. This amends the "no physical offices" wording for imagery only.
+  - The menu reads Services, Industries, Our Work, Solutions, Technologies, Insights, About us.
+  - A Testimonials page with service and industry filters (review builds only until real testimonials are supplied).
+  - Reference: doc 22, sixth pass.
 - Netlify (7 October 2026): site `dechy-site` created on the owner's Netlify team and deployed at https://dechy-site.netlify.app (site id 4c3031f8-b780-46b4-89aa-62d5568c8b2a), with `SITE_ORIGIN` set to that URL. Indexing stays off (noindex, robots Disallow) until `SITE_INDEXING=true` is set at launch. Deploys so far are manual uploads from a clean `git archive` copy (the upload tool zips the whole folder, so never run it from the working tree). Not yet done: GitHub-linked continuous deploys (needs the owner to authorize the Netlify GitHub app), custom domain and DNS, and the contact-form destination.
 - Technology and Solutions qualification and reconciliation (ADR 0006): **decided and recorded, nothing built.** The first-wave Solution architecture is **six standalone Solution pages** (Business Process Automation, Legacy System Modernization, Cloud Migration, CRM Integration, Business Dashboards, AI Customer Support); the earlier twelve are superseded. Grouped technologies use the `partOf` relation. Solution to Industry mapping is deferred. Nine named technologies are CONFIRMATION REQUIRED. The next technology wave and Phase 4 are not started. Authoritative: `docs/planning/14-technology-and-solutions-qualification.md` sections 10 and 11.
 - Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (private; GitHub is the permanent source of truth). Never use or reference the abandoned Codex repository or its code.

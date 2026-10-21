@@ -88,8 +88,8 @@ const MENU_INTRO: Record<string, { title: string; text: string; cta: string }> =
     cta: "See all industries",
   },
   work: {
-    title: "What we build",
-    text: "The kinds of system we design and build, from portals and internal tools to platforms and AI agents.",
+    title: "Our work",
+    text: "Case studies, client testimonials, and the kinds of system we design and build, from portals and internal tools to platforms and AI agents.",
     cta: "See our work",
   },
 };
@@ -423,7 +423,23 @@ function WorkPanel({
           </div>
         ))}
       </div>
-      <MegaFoot href={item.href} label="All Work Areas" onNavigate={onNavigate} />
+      <MegaFoot
+        href={item.href}
+        label="Our work"
+        onNavigate={onNavigate}
+        extra={item.extra.map((x) => (
+          <Link
+            key={x.id}
+            prefetch={false}
+            href={x.href}
+            onClick={onNavigate}
+            className="mega-foot-link"
+          >
+            {x.label}
+            <Arrow />
+          </Link>
+        ))}
+      />
     </div>
   );
 }

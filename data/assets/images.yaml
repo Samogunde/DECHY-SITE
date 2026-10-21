@@ -111,8 +111,8 @@ assets:
     role: icon
     source: owner-supplied
     creator: DECHY
-    license: Owned by DECHY. The approved monogram tile at 128 px with the surround made transparent, built by scripts/brand-derivatives.ts; the identity of the website assistant (launcher and panel), never redrawn.
-    sha256: e4dd553a313293cf43c1cf643f24a2a85b57e9e189b7903dc847f7d03604704c
+    license: "Owned by DECHY. The owner's monogram tile (white D with the blue accent on black) rendered at 128 px from brand/monogram/dechy-monogram-tile.svg by scripts/brand-v2.ts; the identity of the website assistant, never redrawn."
+    sha256: a652a43a581aefbf41ccebe8a6011ebb03307d9f05f0dd80bab9e48ccba29590
     width: 128
     height: 128
     alt: DECHY monogram
@@ -126,8 +126,8 @@ assets:
     role: icon
     source: owner-supplied
     creator: DECHY
-    license: Owned by DECHY. Square crop of the approved emblem on its own white, built by scripts/brand-derivatives.ts.
-    sha256: 07377d5d635ea39ee86a283915227c54b20231bbffa11fcbbcd09543029f4a1a
+    license: "Owned by DECHY. The owner's monogram tile rendered at 192 px from brand/monogram/dechy-monogram-tile.svg by scripts/brand-v2.ts."
+    sha256: 279be55393179d9b9c4323fb3ff176fb9858e2c704502bf30f4e0b331bd67d39
     width: 192
     height: 192
     alt: DECHY monogram
@@ -141,14 +141,92 @@ assets:
     role: icon
     source: owner-supplied
     creator: DECHY
-    license: Owned by DECHY. Square crop of the approved emblem on its own white, built by scripts/brand-derivatives.ts.
-    sha256: 59cedf9874af5f868d559661179c7e3012a2b5b82ab585bb17461701d6b7ed3c
+    license: "Owned by DECHY. The owner's monogram tile rendered at 512 px from brand/monogram/dechy-monogram-tile.svg by scripts/brand-v2.ts."
+    sha256: 19ae65f96e1ff5aaf323f2d0687e9cf506316c0b4ad94dc2c5b975a521c40a5d
     width: 512
     height: 512
     alt: DECHY monogram
     usage: [web-app-manifest]
     approval: approved
     acquired: "2026-10-07"
+
+  - id: asset.logo-white-master
+    kind: file
+    file: brand/logos/dark/dechy-logo-white.svg
+    role: logo
+    source: owner-supplied
+    creator: DECHY
+    license: "Owned by DECHY. The owner's white DECHY logo for dark backgrounds, supplied as SVG on 20 October 2026; master, never edited."
+    originalFilename: "Untitled design (1).svg"
+    sha256: 5268cc2503cebb7d250ef3dc4c10ce5248ca4b483e882d905e04fbf6041fc51a
+    width: 2172
+    height: 724
+    alt: DECHY logo
+    usage: [master]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.logo-white
+    kind: file
+    file: public/brand/dechy-logo-white.png
+    role: logo
+    source: owner-supplied
+    creator: DECHY
+    license: "Owned by DECHY. The white logo master rendered and trimmed by scripts/brand-v2.ts; the site logo on the dark header and footer."
+    sha256: 6172a762f5f218c53b1078e55ae207e50f31d2cf4352caae03c584fac839d371
+    width: 2400
+    height: 464
+    alt: DECHY logo
+    usage: [header, footer]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.monogram-tile-master
+    kind: file
+    file: brand/monogram/dechy-monogram-tile.svg
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: "Owned by DECHY. The owner's monogram on black, supplied as SVG on 20 October 2026; source of the favicon and app icons."
+    originalFilename: "Untitled design (2).svg"
+    sha256: 907de3bfd0a83946a91c9163e1c6d5d9561e254261f125aad9c9c0b8792b97e4
+    width: 256
+    height: 256
+    alt: DECHY monogram
+    usage: [master]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.monogram-white-master
+    kind: file
+    file: brand/monogram/dechy-monogram-white.svg
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: "Owned by DECHY. The owner's white monogram on a transparent background, supplied as SVG on 20 October 2026."
+    originalFilename: "DECHY_monogram_transparent.svg"
+    sha256: e825c528a3c540e6b9b5da41c5075cae261d88169eec4f97268441979ec6b3cd
+    width: 8192
+    height: 8192
+    alt: DECHY monogram
+    usage: [master]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.monogram-white
+    kind: file
+    file: public/brand/dechy-monogram-white.png
+    role: icon
+    source: owner-supplied
+    creator: DECHY
+    license: "Owned by DECHY. The white monogram master rendered at 512 px by scripts/brand-v2.ts."
+    sha256: 7f8e4ba07b949d835eed63563778ab71643bd4ae45616439d7c5eae8de1f474d
+    width: 512
+    height: 512
+    alt: DECHY monogram
+    usage: [brand]
+    approval: approved
+    acquired: "2026-10-20"
 
   - id: asset.fig-system-map
     kind: component
@@ -8391,5 +8469,101 @@ assets:
     height: 1400
     alt: "Portrait of a smiling woman in a blue blazer"
     usage: [library]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-dechy-office-reception
+    kind: file
+    file: public/photos/dechy-office-reception.png
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-dechy-office-reception.md.
+    originalFilename: "Modern DECHY Office Reception.png"
+    sha256: 68428de0befed4c8993ff76f19e0c76c4a8b49a4b6acdd02d3906f14b5f53f20
+    width: 1774
+    height: 887
+    alt: "Reception desk at the DECHY office, with the DECHY logo and the words Technology, Software, AI & Digital Solutions on the wall"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-dechy-team-meeting-software-development
+    kind: file
+    file: public/photos/dechy-team-meeting-software-development.png
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-dechy-team-meeting-software-development.md.
+    originalFilename: "Collaborative Meeting at DECHY Office.png"
+    sha256: 6625352fba38b505081ece4eeb8744ee360105b26eb27838c72199f6c68ea483
+    width: 1536
+    height: 1024
+    alt: "The DECHY team in a working meeting at a shared table, laptops open, with the DECHY logo on the wall behind them"
+    usage: [home]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-dechy-boardroom-client-workshops
+    kind: file
+    file: public/photos/dechy-boardroom-client-workshops.png
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-dechy-boardroom-client-workshops.md.
+    originalFilename: "DECHY Modern Glass Boardroom.png"
+    sha256: 569dd543eb548cc15d98a3a01d013b48cb87cbf376eb878711c909bb904c2011
+    width: 1536
+    height: 1024
+    alt: "The DECHY boardroom behind glass, where client workshops and project planning take place"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-dechy-software-engineers-workspace
+    kind: file
+    file: public/photos/dechy-software-engineers-workspace.png
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-dechy-software-engineers-workspace.md.
+    originalFilename: "DECHY Modern Tech Office Workspace.png"
+    sha256: d9610a91377f8c44fb12cfc895df176940e7b6e7e49668d7ff52ba2d7b049728
+    width: 1536
+    height: 1024
+    alt: "DECHY software engineers building and testing client software at their desks in the DECHY office"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-dechy-meeting-room-project-reviews
+    kind: file
+    file: public/photos/dechy-meeting-room-project-reviews.png
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-dechy-meeting-room-project-reviews.md.
+    originalFilename: "Modern DECHY Tech Boardroom.png"
+    sha256: abdcbc7ea14690fc6e500e087d3375d001f6015fe521a09c8ab461f843a1a8e5
+    width: 1536
+    height: 1024
+    alt: "A DECHY meeting room set up for project reviews and client demos, with the DECHY logo on screen"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-20"
+
+  - id: asset.photo-dechy-project-team-planning
+    kind: file
+    file: public/photos/dechy-project-team-planning.png
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for use on the DECHY website. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-dechy-project-team-planning.md.
+    originalFilename: "Modern Glass Office Team Meeting.png"
+    sha256: 47f16a74464b56fcf086a736c531267c7b2e8b44f176101aa490a00e800b18a8
+    width: 1536
+    height: 1024
+    alt: "A DECHY project team planning the next release together in a glass meeting room"
+    usage: [companyhow-we-work]
     approval: approved
     acquired: "2026-10-20"

@@ -14,12 +14,12 @@ describe("navigation model", () => {
   it("keeps the approved seven top-level items in order, plus the call to action", () => {
     expect(model.items.map((i) => i.label)).toEqual([
       "Services",
+      "Industries",
+      "Our Work",
       "Solutions",
       "Technologies",
-      "Industries",
-      "Work",
-      "Resources",
-      "Company",
+      "Insights",
+      "About us",
     ]);
     expect(model.cta.label).toBe("Talk to DECHY");
   });
@@ -29,9 +29,9 @@ describe("navigation model", () => {
       if (i.href) expect(paths.has(i.href), i.label).toBe(true);
     }
     expect(model.items.find((i) => i.label === "Industries")!.href).toBe("/industries/");
-    expect(model.items.find((i) => i.label === "Resources")!.href).toBe("/resources/");
+    expect(model.items.find((i) => i.label === "Insights")!.href).toBe("/resources/");
     expect(model.items.find((i) => i.label === "Solutions")!.kind).toBe("solutions");
-    expect(model.items.find((i) => i.label === "Company")!.kind).toBe("link");
+    expect(model.items.find((i) => i.label === "About us")!.kind).toBe("link");
   });
 
   it("every destination in every menu is a built page: no dead ends", () => {
@@ -126,13 +126,13 @@ describe("navigation model", () => {
     expect(s.families.flatMap((f) => f.services)).toHaveLength(15);
   });
 
-  it("has menus for Services, Solutions, Technologies, Industries, and Work only, and none for Locations", () => {
+  it("has menus for Services, Industries, Our Work, Solutions, and Technologies only, and none for Locations", () => {
     expect(registry.nav.primary.filter((i) => i.kind !== "link").map((i) => i.label)).toEqual([
       "Services",
+      "Industries",
+      "Our Work",
       "Solutions",
       "Technologies",
-      "Industries",
-      "Work",
     ]);
     expect(registry.nav.primary.map((i) => i.label)).not.toContain("Locations");
   });

@@ -13,6 +13,7 @@ import {
 } from "@/components/home/Motion";
 import { TechLogo } from "@/components/home/TechLogo";
 import { BlogGrid } from "@/components/home/BlogGrid";
+import { TestimonialWall } from "@/components/home/TestimonialWall";
 import { Arrow } from "@/components/primitives/Arrow";
 import { Icon } from "@/components/primitives/Icon";
 import { Inline } from "@/components/primitives/Inline";
@@ -683,6 +684,13 @@ export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
           </li>
         ))}
       </ul>
+      {getRegistry().pageByPath.has("/testimonials/") ? (
+        <div className="quote-more">
+          <Link href="/testimonials/" className="mega-foot-link">
+            See all client testimonials <Arrow />
+          </Link>
+        </div>
+      ) : null}
     </Section>
   );
 }
@@ -862,6 +870,95 @@ export function TeamBlock({ block }: { block: Of<"team"> }) {
           </li>
         ))}
       </ul>
+    </Section>
+  );
+}
+
+export function GalleryBlock({ block }: { block: Of<"gallery"> }) {
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+      <ul className="gallery" data-count={block.items.length} data-reveal="group">
+        {block.items.map((g) => (
+          <li key={g.title} className="gallery-item">
+            <Photo photo={g.photo} />
+            <div className="gallery-note">
+              <p className="gallery-title">{g.title}</p>
+              <p className="gallery-text">{g.text}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Section>
+  );
+}
+
+function WallCard({
+  t,
+  big = false,
+}: {
+  t: Of<"testimonial-wall">["items"][number];
+  big?: boolean;
+}) {
+  return (
+    <figure className={`tw-card${big ? " tw-card-big" : ""}`}>
+      <Quotes className="tw-mark" weight="fill" aria-hidden="true" />
+      <blockquote className="tw-quote">{t.quote}</blockquote>
+      <figcaption className="tw-person">
+        {t.photo ? (
+          <span className="tw-avatar">
+            <Photo photo={t.photo} />
+          </span>
+        ) : null}
+        <span className="tw-who">
+          <span className="tw-name">{t.name}</span>
+          <span className="tw-role">
+            {t.role}, {t.company}
+          </span>
+        </span>
+      </figcaption>
+      <div className="tw-tags">
+        <span className="tw-tag tw-tag-service">{t.serviceLabel}</span>
+        <span className="tw-tag">{t.industryLabel}</span>
+        {t.href && getRegistry().pageByPath.has(t.href) ? (
+          <Link href={t.href} className="tw-case">
+            Case study <Arrow />
+          </Link>
+        ) : null}
+      </div>
+    </figure>
+  );
+}
+
+export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> }) {
+  const facets = (key: "service" | "industry", label: "serviceLabel" | "industryLabel") => {
+    const m = new Map<string, { label: string; count: number }>();
+    for (const t of block.items) {
+      const f = m.get(t[key]) ?? { label: t[label], count: 0 };
+      f.count++;
+      m.set(t[key], f);
+    }
+    return [...m]
+      .map(([k, v]) => ({ key: k, ...v }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  };
+  const [first, ...rest] = block.items;
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
+      <div className="mt-10">
+        <TestimonialWall
+          services={facets("service", "serviceLabel")}
+          industries={facets("industry", "industryLabel")}
+          featured={first ? <WallCard t={first} big /> : undefined}
+          cards={[...(first ? [first] : []), ...rest].map((t) => ({
+            key: t.name,
+            service: t.service,
+            industry: t.industry,
+            node: <WallCard t={t} />,
+          }))}
+        />
+      </div>
     </Section>
   );
 }

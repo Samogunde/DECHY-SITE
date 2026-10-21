@@ -312,3 +312,147 @@ export function sampleCasePages(): Page[] {
     return [page];
   });
 }
+
+/** The industry of each sample client company (sample quotes on the service pages). */
+const INDUSTRY_OF_COMPANY: Record<string, string> = {
+  "Northpeak Facilities": "ind.property-management",
+  "Vantix Group": "ind.professional-services",
+  "Lumora Health": "ind.healthcare",
+  "Brightwell Trade": "ind.logistics",
+  "Corvana Logistics": "ind.logistics",
+  "Stratus Labs": "ind.saas",
+  "Brightwell Retail": "ind.retail",
+  "Kinetica Home": "ind.retail",
+  Helixa: "ind.saas",
+  "Stratus Cover": "ind.insurance",
+  "Northpeak Build": "ind.construction",
+  "Vantix Retail": "ind.retail",
+  "Corvana Distribution": "ind.logistics",
+  "Lumora Group": "ind.healthcare",
+  "Kinetica Brands": "ind.ecommerce",
+  "Kinetica Finance": "ind.finance",
+  "Vantix Travel": "ind.travel",
+  "Northpeak Advisory": "ind.professional-services",
+  "Corvana Group": "ind.logistics",
+  "Vantix Studio": "ind.media",
+  "Kinetica Services": "ind.professional-services",
+  "Lumora Care": "ind.healthcare",
+  "Northpeak Manufacturing": "ind.manufacturing",
+};
+
+export type SampleTestimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  service: string;
+  industry: string;
+  href?: string;
+};
+
+/** Every sample testimonial, tagged by service and industry (one per person). */
+export function sampleTestimonials(): SampleTestimonial[] {
+  const out = new Map<string, SampleTestimonial>();
+  for (const c of cases())
+    out.set(c.quote.name, {
+      quote: c.quote.text,
+      name: c.quote.name,
+      role: c.quote.role,
+      company: c.company,
+      service: c.service,
+      industry: c.industry,
+      href: `/work/case-studies/${c.slug}/`,
+    });
+  for (const [service, s] of Object.entries(load().services))
+    for (const q of s.quotes)
+      if (!out.has(q.name))
+        out.set(q.name, {
+          quote: q.quote,
+          name: q.name,
+          role: q.role,
+          company: q.company,
+          service,
+          industry: INDUSTRY_OF_COMPANY[q.company] ?? "ind.professional-services",
+        });
+  return [...out.values()];
+}
+
+/** Labels for the wall's filters: service slug or industry id to its name. */
+export type Labels = { services: Record<string, string>; industries: Record<string, string> };
+
+/** The Testimonials page (review builds only, noindex): every sample quote with filters. */
+export function sampleTestimonialsPage(labels: Labels): Page {
+  const all = sampleTestimonials();
+  return {
+    id: "sample.testimonials",
+    kind: "hub",
+    locale: "en",
+    path: "/testimonials/",
+    title: "Client Testimonials and Reviews | DECHY",
+    description:
+      "What clients say about working with DECHY on software, websites, mobile apps, AI, and more, by service and by industry.",
+    breadcrumbLabel: "Testimonials",
+    intent: { primary: "dechy testimonials", secondary: [] },
+    indexing: "noindex",
+    claims: [],
+    datePublished: "2026-10-20",
+    dateModified: "2026-10-20",
+    schemaTypes: ["WebPage"],
+    sections: [
+      {
+        type: "hero",
+        id: "hero",
+        variant: "hub",
+        eyebrow: "Testimonials",
+        headline: "What our clients say about working with us",
+        lead: "Founders, operations leaders, and product teams on what we built, how we worked, and what changed for their business. Filter by service or industry to find teams like yours.",
+        ctas: [
+          { label: "Start a project", href: "/contact/" },
+          { label: "See case studies", href: "/work/#case-studies" },
+        ],
+        stats: [],
+        slides: [],
+      },
+      {
+        type: "testimonial-wall",
+        id: "testimonials",
+        tone: "ink",
+        label: "Client stories",
+        heading: `${all.length} clients, in their own words`,
+        items: all.map((t) => ({
+          ...t,
+          serviceLabel: labels.services[t.service] ?? t.service,
+          industryLabel: labels.industries[t.industry] ?? t.industry,
+        })),
+      },
+      {
+        type: "cta",
+        id: "contact-cta",
+        heading: "Want results like these?",
+        body: "Tell us what you need. We reply with a plan, a fixed quote, and a timeline.",
+        primary: { label: "Start a project", href: "/contact/" },
+        secondary: { label: "See case studies", href: "/work/#case-studies" },
+      },
+    ] as Block[],
+  };
+}
+
+/** Testimonials for an industry page: that industry first, then its related services. */
+export function industryTestimonials(industryId: string, services: string[]): Block[] {
+  const all = sampleTestimonials();
+  const own = all.filter((t) => t.industry === industryId);
+  const near = all.filter((t) => t.industry !== industryId && services.includes(t.service));
+  const items = [...own, ...near].slice(0, 3);
+  if (items.length === 0) return [];
+  return [
+    {
+      type: "testimonials",
+      id: "client-quotes",
+      tone: "ink",
+      draft: true,
+      label: "What clients say",
+      heading: "Teams like yours, in their own words",
+      items: items.map(({ quote, name, role, company }) => ({ quote, name, role, company })),
+    },
+  ] as Block[];
+}

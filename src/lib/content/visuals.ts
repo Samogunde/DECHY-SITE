@@ -209,12 +209,20 @@ function pick(pool: string[], page: Page, n: number, used: Map<string, number>):
   return { asset: `asset.photo-${id}`, layout: "split", position: "50% 50%" };
 }
 
+/** One face per person: a name always shows the same portrait wherever it appears. */
+const PEOPLE = new Map<string, PhotoRef>();
+
 /** Photographs set by hand in the content (the home page) are counted as used first. */
 export function reservePhotographs(
   pages: Page[],
   used: Map<string, number>,
   collect: (b: Block) => PhotoRef[],
 ) {
+  PEOPLE.clear();
+  for (const p of pages)
+    for (const b of p.sections)
+      if (b.type === "testimonials")
+        for (const q of b.items) if (q.photo) PEOPLE.set(q.name, q.photo);
   for (const p of pages)
     for (const b of p.sections)
       for (const ph of collect(b)) {
@@ -233,9 +241,20 @@ export function applyPhotographs(
   serviceOfEntity: (id: string) => string | undefined,
   used: Map<string, number>,
 ) {
+  let n = 0;
+  const person = (name: string, position: string): PhotoRef => {
+    const known = PEOPLE.get(name);
+    if (known) return known;
+    const photo = {
+      ...pick(portraitPool(name), page, n++, used),
+      layout: "rail" as const,
+      position,
+    };
+    PEOPLE.set(name, photo);
+    return photo;
+  };
   if (page.kind === "home") return;
   const topic = poolFor(pageTopic(page, serviceOfEntity));
-  let n = 0;
   if (page.kind === "article" && page.article && !page.article.photo) {
     page.article.photo = pick(topic, page, n++, used);
   }
@@ -249,26 +268,16 @@ export function applyPhotographs(
     } else if (b.type === "case-studies") {
       for (const c of b.items) c.photo ??= pick(topic, page, n++, used);
     } else if (b.type === "team") {
-      for (const m of b.members)
-        m.photo ??= {
-          ...pick(portraitPool(m.name), page, n++, used),
-          layout: "rail",
-          position: "50% 22%",
-        };
-    } else if (b.type === "testimonials") {
-      for (const q of b.items)
-        q.photo ??= {
-          ...pick(portraitPool(q.name), page, n++, used),
-          layout: "rail",
-          position: "50% 25%",
-        };
+      for (const m of b.members) m.photo ??= person(m.name, "50% 22%");
+    } else if (b.type === "testimonials" || b.type === "testimonial-wall") {
+      for (const q of b.items) q.photo ??= person(q.name, "50% 25%");
     }
   }
 }
 
 /** First names used in the sample people, so each portrait matches the name beside it. */
 const FEMALE = new Set(
-  "Grace Helen Laura Sarah Emma Rachel Claire Nina Victoria Sophie Megan Anna Lucy Karen Natalie Sofia Olivia Hannah Charlotte Amelia Isabel Julia Rebecca Alice Emily Kate Maria Elena Priya Mia Leah Zoe Ruth Jane Ellen Fiona Tessa Ingrid Clara Naomi Chloe Margaret Diana Paula Lisa".split(
+  "Grace Helen Laura Sarah Emma Rachel Claire Nina Victoria Sophie Megan Anna Lucy Karen Natalie Sofia Olivia Hannah Charlotte Amelia Isabel Julia Rebecca Alice Emily Kate Maria Elena Priya Mia Leah Zoe Ruth Jane Ellen Fiona Tessa Ingrid Clara Naomi Chloe Margaret Diana Paula Lisa Julia".split(
     " ",
   ),
 );

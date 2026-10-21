@@ -578,6 +578,42 @@ export const Block = z.discriminatedUnion("type", [
       )
       .min(4),
   }),
+  /** Every testimonial with service and industry filters (the Testimonials page). */
+  z.object({
+    type: z.literal("testimonial-wall"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          quote: z.string(),
+          name: z.string(),
+          role: z.string(),
+          company: z.string(),
+          service: z.string(),
+          serviceLabel: z.string(),
+          industry: z.string(),
+          industryLabel: z.string(),
+          href: z.string().optional(),
+          photo: PhotoRef.optional(),
+        }),
+      )
+      .min(2),
+  }),
+  /** A photo gallery: one large photograph and smaller ones beside it, each with a short note. */
+  z.object({
+    type: z.literal("gallery"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z
+      .array(z.object({ photo: PhotoRef, title: z.string(), text: z.string() }))
+      .min(2)
+      .max(4),
+  }),
   /** The team: portrait, name, and role, with a short bio that opens in place. */
   z.object({
     type: z.literal("team"),

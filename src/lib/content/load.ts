@@ -7,7 +7,14 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
-import { sampleCasePages, sampleProof, sampleWork, servicePricing } from "./samples";
+import {
+  industryTestimonials,
+  sampleCasePages,
+  sampleProof,
+  sampleTestimonialsPage,
+  sampleWork,
+  servicePricing,
+} from "./samples";
 import { blockPhotos } from "./photos";
 import { loadArticles } from "./articles";
 import { z } from "zod";
@@ -232,6 +239,27 @@ export function buildRegistry(): Registry {
     );
   // Review builds: a page for every sample case study (noindex; real ones replace them).
   if (showDrafts()) pages.push(...sampleCasePages());
+  // Review builds: the Testimonials page, and client quotes on every industry page.
+  if (showDrafts()) {
+    const industries = Object.fromEntries(
+      [...nodes.values()].filter((n) => n.type === "industry").map((n) => [n.id, n.name]),
+    );
+    const services = Object.fromEntries(svcFile.services.map((s) => [s.slug, s.name]));
+    pages.push(sampleTestimonialsPage({ services, industries }));
+    for (const page of pages.filter((p) => p.kind === "industry" && p.entityId)) {
+      const related = page.sections.find((b) => b.type === "related");
+      const svc =
+        related && related.type === "related"
+          ? related.groups.flatMap((g) => g.entityIds).filter((id) => id.startsWith("svc."))
+          : [];
+      const quotes = industryTestimonials(
+        page.entityId!,
+        svc.map((id) => id.replace(/^svc\./, "")),
+      );
+      const at = page.sections.findIndex((b) => b.type === "faq" || b.type === "related");
+      page.sections.splice(at < 0 ? page.sections.length : at, 0, ...quotes);
+    }
+  }
   // Photographs: hand-placed ones first, then every other placement gets an unused one.
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);

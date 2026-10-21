@@ -145,3 +145,23 @@ Owner direction, 20 October 2026.
   - "you may not need us" callouts turned into "How we pick the right approach"
   - buyer headings in place of "Under the hood"
 - **Menus.** A menu closes as soon as the pointer leaves the menu card. A pointer check covers missed leave events.
+
+## Sixth pass (20 October 2026): brand files, office photos, menu, testimonials
+
+Owner direction, 20 October 2026.
+
+- **Brand.**
+  - The owner supplied SVG masters: a white logo for dark backgrounds, a white monogram, and a monogram on black.
+  - `scripts/brand-v2.ts` renders the header and footer logo, the favicon, and the app and assistant icons. The light plate behind the logo is gone.
+  - The older navy logo stays as the structured-data logo.
+- **Office photos.**
+  - Six owner-supplied photographs of the DECHY workspace (reception, engineering floor, boardroom, meeting rooms, team meetings). They are stored byte for byte with SEO file names and descriptive alt text.
+  - They appear on About us (hero and an "Inside DECHY" gallery), in the home numbers section, and on How we work.
+  - The supplied files are 1536 px wide, so they are placed where they render sharp at 2x.
+  - About us may carry 6 photographs. No address or city is stated.
+- **Menu.** The order is now Services, Industries, Our Work, Solutions, Technologies, Insights, About us. The URLs are unchanged. The Our Work menu links to case studies and testimonials when they exist.
+- **Testimonials.**
+  - A Testimonials page (review builds only until real testimonials exist).
+  - The layout has a featured quote, a sticky filter rail by service and by industry with counts, and a masonry wall of quote cards with portraits, tags, and case study links. On phones the filters become two select menus.
+  - Industry pages show quotes from that industry first, then from related services.
+  - Each person always shows the same portrait everywhere on the site.

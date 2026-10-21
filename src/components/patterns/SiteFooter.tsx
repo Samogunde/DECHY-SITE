@@ -36,7 +36,7 @@ export function SiteFooter() {
               aria-label="DECHY home"
               className="flex min-h-11 w-[12rem] max-w-full items-center"
             >
-              <Logo sizes="192px" className="w-full" />
+              <Logo tone="dark" sizes="192px" className="h-9" />
             </Link>
             <p className="t-small mt-5 max-w-[34ch]">
               <span className="font-[family-name:var(--font-heading)] font-semibold">
