@@ -31,6 +31,9 @@ const LABEL_KEYS = new Set([
   "kind",
 ]);
 const SKIP_KEYS = new Set([
+  "serviceLabel",
+  "industryLabel",
+  "sector",
   "id",
   "type",
   "tone",

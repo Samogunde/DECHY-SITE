@@ -96,6 +96,9 @@ const APPROVED_NAV = [
 ];
 
 const SKIP_KEYS = new Set([
+  "serviceLabel",
+  "industryLabel",
+  "sector",
   "id",
   "type",
   "tone",
@@ -167,7 +170,6 @@ const UNSUPPORTED = [
   /\bour branch(?:es)?\b/i,
   /\blocal team\b/i,
   /\bvisit us\b/i,
-  /\bcase stud(?:y|ies)\b/i,
   /\b\d[\d,]*\+?\s+(?:clients|customers|projects|years)\b/i,
   /\btrusted by\b/i,
 ];
@@ -435,7 +437,9 @@ export function validateRegistry(input: Registry): Issue[] {
     // Sample (draft) sections show in review builds only and do not count toward the limit.
     const livePhotos = page.sections
       .filter((b) => !("draft" in b && b.draft))
-      .flatMap((b) => blockPhotos(b));
+      .flatMap((b) => blockPhotos(b))
+      // Portfolio screens are project work, not photographs, and do not count.
+      .filter((ph) => !ph.asset.startsWith("asset.photo-portfolio-"));
     if (livePhotos.length > photoLimit)
       err(
         "photo-count",
@@ -701,7 +705,10 @@ export function validateRegistry(input: Registry): Issue[] {
       if (a.alt.length < 20) err("asset-photo", a.id, "A photograph needs descriptive alt text");
       // Sharp at 2x: the stored width must be at least twice the widest the photograph is painted
       // at in any layout it is placed in, crop included (a full-width band keeps a 2400 px floor).
-      const ratio = (a.width ?? 1) / (a.height ?? 1);
+      // Portfolio screens are shown whole in 4:3 frames, never cropped wider.
+      const ratio = a.id.startsWith("asset.photo-portfolio-")
+        ? Math.min((a.width ?? 1) / (a.height ?? 1), 4 / 3)
+        : (a.width ?? 1) / (a.height ?? 1);
       const need = Math.max(
         0,
         ...[...(photoUse.get(a.id) ?? [])].map((l) => requiredPhotoWidth(l, ratio)),
@@ -853,6 +860,8 @@ export function validateRegistry(input: Registry): Issue[] {
   const resources = registry.pageByPath.get("/resources/");
   if (resources?.sections.some((b) => b.type === "articles"))
     for (const p of registry.pages) if (p.kind === "article") link("/resources/", p.path);
+  // Every case study is linked from the portfolio grid on Our Work.
+  for (const p of registry.pages) if (p.kind === "case-study") link("/work/", p.path);
   for (const page of registry.pages) {
     if (page.path === "/") continue;
     if (!inbound.get(page.path) || inbound.get(page.path)!.size === 0)

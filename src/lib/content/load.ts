@@ -9,13 +9,13 @@ import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
 import {
   industryTestimonials,
-  sampleCasePages,
   sampleProof,
   sampleTestimonialsPage,
   sampleWork,
   servicePricing,
 } from "./samples";
 import { blockPhotos } from "./photos";
+import { portfolioGrid, portfolioPages, projects, selectedWork } from "./portfolio";
 import { loadArticles } from "./articles";
 import { z } from "zod";
 import {
@@ -27,6 +27,7 @@ import {
   EntityFile,
   Fact,
   FactFile,
+  type Block,
   Page,
   Relation,
   RelationFile,
@@ -222,23 +223,58 @@ export function buildRegistry(): Registry {
       ...servicePricing(page.path.replace(/\//g, "")),
     );
   }
-  // Review builds: sample case studies and testimonials on service pages, before the closing call.
-  if (showDrafts())
-    for (const page of pages.filter((p) => p.kind === "service")) {
-      const samples = sampleProof(page.path.replace(/\//g, ""));
-      const at = page.sections.findIndex((b) => b.type === "cta");
-      page.sections.splice(at < 0 ? page.sections.length : at, 0, ...samples);
-    }
-  // Review builds: the Work page opens with sample case studies until real ones are supplied.
-  const work = showDrafts() ? pages.find((p) => p.path === "/work/") : undefined;
+  // The portfolio (owner's real projects): case study pages, the Work grid, and selected work on
+  // every service and industry page.
+  const labels = {
+    services: Object.fromEntries(svcFile.services.map((s) => [s.slug, s.name])),
+    industries: Object.fromEntries(
+      [...nodes.values()].filter((n) => n.type === "industry").map((n) => [n.id, n.name]),
+    ),
+  };
+  pages.push(...portfolioPages(labels));
+  const beforeClose = (page: Page, blocks: Block[]) => {
+    const at = page.sections.findIndex((b) => b.type === "faq" || b.type === "related");
+    page.sections.splice(at < 0 ? page.sections.length : at, 0, ...blocks);
+  };
+  for (const page of pages.filter((p) => p.kind === "service")) {
+    const slug = page.path.replace(/\//g, "");
+    const list = projects()
+      .filter((p) => p.services.includes(slug))
+      .sort((a, b) => Number(b.service === slug) - Number(a.service === slug));
+    beforeClose(
+      page,
+      selectedWork(
+        list,
+        labels,
+        showDrafts(),
+        `${labels.services[slug] ?? "Our"} projects we have delivered`,
+      ),
+    );
+    // Review builds: sample client quotes until real testimonials are supplied.
+    if (showDrafts())
+      beforeClose(
+        page,
+        sampleProof(slug).filter((b) => b.type === "testimonials"),
+      );
+  }
+  for (const page of pages.filter((p) => p.kind === "industry" && p.entityId))
+    beforeClose(
+      page,
+      selectedWork(
+        projects().filter((p) => p.industry === page.entityId),
+        labels,
+        showDrafts(),
+        `${labels.industries[page.entityId!] ?? "Industry"} projects we have delivered`,
+      ),
+    );
+  const work = pages.find((p) => p.path === "/work/");
   if (work)
     work.sections.splice(
       1,
       0,
-      ...sampleWork(Object.fromEntries(svcFile.services.map((s) => [s.slug, s.name]))),
+      portfolioGrid(labels, showDrafts()),
+      ...(showDrafts() ? sampleWork(labels.services).filter((b) => b.type !== "case-grid") : []),
     );
-  // Review builds: a page for every sample case study (noindex; real ones replace them).
-  if (showDrafts()) pages.push(...sampleCasePages());
   // Review builds: the Testimonials page, and client quotes on every industry page.
   if (showDrafts()) {
     const industries = Object.fromEntries(
@@ -264,14 +300,6 @@ export function buildRegistry(): Registry {
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);
   for (const page of pages) applyPhotographs(page, serviceOfEntity, usedPhotos);
-  // Case study cards show the same photograph as the case study they open.
-  for (const page of pages)
-    for (const b of page.sections)
-      if (b.type === "case-grid")
-        for (const item of b.items) {
-          const hero = pages.find((p) => p.path === item.href)?.sections[0];
-          if (hero?.type === "hero" && hero.photo) item.photo = { ...hero.photo, layout: "split" };
-        }
   const pageByPath = new Map<string, Page>();
   for (const p of pages) {
     if (pageByPath.has(p.path)) throw new Error(`Two pages share the path ${p.path}`);

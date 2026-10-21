@@ -3,7 +3,8 @@ kind: company
 locale: en
 path: /company/
 title: "About Us: Global Software and Technology Company | DECHY"
-description: "About DECHY, a global technology and software company: who we help, how we think, how we work, and how to start a project with us."
+description: "About DECHY, a global technology and software company: who we help, how we think, how
+  we work, and how to start a project with us."
 breadcrumbLabel: About us
 intent:
   primary: about dechy
@@ -25,11 +26,16 @@ datePublished: "2026-10-05"
 dateModified: "2026-10-05"
 schemaTypes: [WebPage, AboutPage, FAQPage]
 comprehension:
-  what: "DECHY is a global company for technology, software, AI, and digital solutions, operating since 2010 and working with clients remotely."
-  problem: "When you choose a technology partner you want to know who they are, what they do, how they think, and how they would work with you."
+  what: "DECHY is a global company for technology, software, AI, and digital solutions, operating
+    since 2010 and working with clients remotely."
+  problem:
+    "When you choose a technology partner you want to know who they are, what they do, how they
+    think, and how they would work with you."
   audience: "Buyers and partners checking who DECHY is before they get in touch."
-  choose: "Read how we work and who we work with, then judge the approach against your own needs and your questions."
-  next: "If the approach sounds right, tell us what you are trying to do and we will say honestly whether we are a good fit."
+  choose: "Read how we work and who we work with, then judge the approach against your own needs and
+    your questions."
+  next: "If the approach sounds right, tell us what you are trying to do and we will say honestly
+    whether we are a good fit."
 
 sections:
   - type: hero
@@ -37,7 +43,9 @@ sections:
     variant: hub
     eyebrow: About us
     headline: About DECHY
-    lead: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We help organizations build, connect, automate, and scale, working with clients remotely, around the world."
+    lead: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We help
+      organizations build, connect, automate, and scale, working with clients remotely, around the
+      world."
     photo:
       asset: asset.photo-dechy-office-reception
       layout: aside
@@ -64,16 +72,37 @@ sections:
         - title: Decide
           text: Advice before you spend.
     purpose: relationship
-    takeaway: "DECHY covers building, connecting, automating, running, designing, and deciding, so these parts can work as one system."
+    takeaway:
+      "DECHY covers building, connecting, automating, running, designing, and deciding, so these
+      parts can work as one system."
     visualTitle: "What DECHY does, in six verbs"
-    figureCaption: "This diagram shows DECHY at the center with six areas of work around it: build, connect, automate, run, design, and decide."
+    figureCaption: "This diagram shows DECHY at the center with six areas of work around it: build,
+      connect, automate, run, design, and decide."
+
+  - type: definition
+    id: what-is
+    photo: { asset: asset.photo-company-team-working-session, layout: aside, position: "50% 42%" }
+    tone: paper
+    label: Who we are
+    heading: A technology company that works as one team
+    answer:
+      "{{fact:company.positioning}} We work with clients around the world, in person and remotely,
+      across many time zones."
+    paragraphs:
+      - "{{fact:company.breadth}}"
+      - "We keep this breadth deliberately. Most real problems cross several kinds of work: a
+        website needs design, a system needs security, an automation needs integration. Having these
+        under one roof means fewer hand-offs and fewer gaps between them."
+      - "Every project gets one team from the first workshop to long-term support: strategy, design,
+        engineering, and delivery working side by side."
 
   - type: stats
     id: facts
     tone: ink
     label: DECHY facts
     heading: The facts, in one place
-    intro: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We work with clients worldwide, remotely."
+    intro: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We work with
+      clients worldwide, remotely."
     items:
       - value: "{{fact:company.founded}}"
         label: Operating since
@@ -84,12 +113,20 @@ sections:
       - value: "50+"
         label: Technologies we build with
 
+  - type: statement
+    id: since-2010
+    tone: white
+    label: About DECHY
+    factId: company.statement
+
   - type: gallery
     id: inside
     tone: ink
     label: Inside DECHY
     heading: Where we plan, build, and review your software
-    intro: Our engineers, designers, and project leads work side by side, so decisions are made in one room instead of across five email threads.
+    intro:
+      Our engineers, designers, and project leads work side by side, so decisions are made in one
+      room instead of across five email threads.
     items:
       - photo:
           {
@@ -97,87 +134,14 @@ sections:
             layout: split,
             position: 50% 50%,
           }
-        title: Engineering floor
-        text: Where our developers build, test, and ship client software every day.
       - photo:
           { asset: asset.photo-dechy-boardroom-client-workshops, layout: split, position: 50% 50% }
-        title: Client workshops
-        text: Discovery sessions, scoping, and planning with your team.
       - photo:
           {
             asset: asset.photo-dechy-meeting-room-project-reviews,
             layout: split,
             position: 50% 50%,
           }
-        title: Project reviews
-        text: Weekly demos and release reviews, in the room or on a call.
-
-  - type: team
-    id: team
-    draft: true
-    tone: ink
-    label: Our team
-    heading: The people who design, build, and support your systems
-    intro: Strategy, engineering, design, and delivery in one team, so nothing gets lost between handoffs. Hover or tap a card to read more.
-    members:
-      - name: Daniel Whitaker
-        role: Founder and CEO
-        bio: Daniel started DECHY in 2010 to give growing businesses the kind of technology team large companies have. He still joins the first call on most projects and keeps every engagement focused on business results.
-        focus: [Strategy, Client relationships, Growth]
-      - name: Sarah Mitchell
-        role: Chief Technology Officer
-        bio: Sarah leads architecture and engineering standards across every project. She has designed platforms for finance, healthcare, and logistics, and makes sure what we build is secure, tested, and easy to maintain.
-        focus: [Architecture, Security, Engineering standards]
-      - name: James Calloway
-        role: Head of Delivery
-        bio: James runs delivery and project management. Every client gets a clear plan, weekly demos, and one person who always knows the status. He is the reason our timelines stay short.
-        focus: [Project management, Planning, Quality]
-      - name: Ethan Brooks
-        role: Lead Software Engineer
-        bio: Ethan leads our web and back-end engineers. He builds with React, Next.js, Node.js, and Python, and has shipped portals, SaaS products, and integrations used by thousands of people every day.
-        focus: [Web apps, APIs, Cloud]
-      - name: Marcus Reid
-        role: Mobile Lead
-        bio: Marcus leads iPhone and Android development in Flutter, React Native, Swift, and Kotlin. He cares about apps that work offline, load fast, and pass app store review the first time.
-        focus: [iOS, Android, Flutter]
-      - name: Olivia Grant
-        role: Lead Product Designer
-        bio: Olivia turns rough ideas into screens people understand. She runs research, builds clickable prototypes, and owns our design systems, so the product feels simple from the first release.
-        focus: [UX research, UI design, Design systems]
-      - name: Lucas Moreno
-        role: AI and Automation Lead
-        bio: Lucas builds the AI assistants, agents, and automations that take repetitive work off your team. He makes sure every AI feature is accurate, measured, and has a person in control.
-        focus: [AI assistants, Automation, Integrations]
-      - name: Ryan Foster
-        role: Cloud and DevOps Lead
-        bio: Ryan looks after hosting, deployment, monitoring, and cost. He has moved dozens of systems to AWS, Azure, and Google Cloud without downtime, and keeps them running after launch.
-        focus: [AWS, Azure, Monitoring]
-      - name: Chloe Bennett
-        role: Client Success Manager
-        bio: Chloe is your contact after launch. She runs support, plans improvements with you, and makes sure small requests get done quickly and big ones get planned properly.
-        focus: [Support, Training, Roadmaps]
-      - name: Hannah Cole
-        role: Head of People
-        bio: Hannah leads hiring and growth for the DECHY team. She brings in engineers and designers who communicate clearly, and makes sure the same people stay with your project from start to finish.
-        focus: [Hiring, Team growth, Culture]
-
-  - type: statement
-    id: since-2010
-    tone: white
-    label: About DECHY
-    factId: company.statement
-
-  - type: definition
-    id: what-is
-    photo: { asset: asset.photo-company-team-working-session, layout: aside, position: "50% 42%" }
-    tone: paper
-    label: Who we are
-    heading: A technology company that works as one team
-    answer: "{{fact:company.positioning}} We are a global company, and we work with clients remotely, in many time zones."
-    paragraphs:
-      - "{{fact:company.breadth}}"
-      - "We keep this breadth deliberately. Most real problems cross several kinds of work: a website needs design, a system needs security, an automation needs integration. Having these under one roof means fewer hand-offs and fewer gaps between them."
-      - "We are a global company. We do not claim offices, branches, or local teams, and we work with clients wherever they are."
 
   - type: columns
     id: principles
@@ -201,6 +165,65 @@ sections:
         items:
           - "We do not promise what nobody can promise, such as rankings or perfect security."
           - "We state what we do not know."
+
+  - type: team
+    id: team
+    draft: true
+    tone: ink
+    label: Our team
+    heading: The people who design, build, and support your systems
+    intro: Strategy, engineering, design, and delivery in one team, so nothing gets lost between handoffs.
+    members:
+      - name: Daniel Whitaker
+        role: Founder and CEO
+        bio: Founded DECHY and still joins the first call on most projects.
+        focus: [Strategy, Client relationships, Growth]
+      - name: Sarah Mitchell
+        role: Chief Technology Officer
+        bio:
+          Leads architecture and engineering standards so everything we build is secure and easy to
+          maintain.
+        focus: [Architecture, Security, Engineering standards]
+      - name: James Calloway
+        role: Head of Delivery
+        bio: Runs delivery, weekly demos, and the short timelines our clients count on.
+        focus: [Project management, Planning, Quality]
+      - name: Ethan Brooks
+        role: Lead Software Engineer
+        bio: Leads our web and back-end engineers across portals, SaaS products, and integrations.
+        focus: [Web apps, APIs, Cloud]
+      - name: Marcus Reid
+        role: Mobile Lead
+        bio: Leads iPhone and Android development in Flutter, React Native, Swift, and Kotlin.
+        focus: [iOS, Android, Flutter]
+      - name: Olivia Grant
+        role: Lead Product Designer
+        bio: Turns rough ideas into screens people understand, from research to design systems.
+        focus: [UX research, UI design, Design systems]
+      - name: Lucas Moreno
+        role: AI and Automation Lead
+        bio: Builds the AI assistants, agents, and automations that take repetitive work off your team.
+        focus: [AI assistants, Automation, Integrations]
+      - name: Ryan Foster
+        role: Cloud and DevOps Lead
+        bio: Keeps hosting, deployments, monitoring, and cloud costs in shape after launch.
+        focus: [AWS, Azure, Monitoring]
+      - name: Chloe Bennett
+        role: Client Success Manager
+        bio: Your contact after launch for support, training, and planning improvements.
+        focus: [Support, Training, Roadmaps]
+      - name: Hannah Cole
+        role: Head of People
+        bio: Hires and grows the team, and keeps the same people on your project from start to finish.
+        focus: [Hiring, Team growth, Culture]
+      - name: Adrian Cole
+        role: Data and Analytics Lead
+        bio: Builds the data pipelines and dashboards our clients run their businesses on.
+        focus: [Dashboards, Data pipelines, Reporting]
+      - name: Nora Ellison
+        role: Quality Assurance Lead
+        bio: Leads testing on every project; nothing ships until it passes her checklist.
+        focus: [Test automation, Release checks, Accessibility]
 
   - type: index
     id: next
@@ -228,16 +251,26 @@ sections:
     heading: Questions about DECHY
     items:
       - q: Where is DECHY based?
-        a: "DECHY is a global company that works remotely with clients worldwide. We do not operate public offices or branches."
+        a:
+          "DECHY is a global company. Our team works from the DECHY office and remotely, and we serve
+          clients worldwide, with workshops in person or by video, whichever suits you."
       - q: How long has DECHY been working?
-        a: "We have been operating since {{fact:company.founded}}. The statement above sets out the scale in the words we have approved."
+        a:
+          "We have been operating since {{fact:company.founded}}. The statement above sets out the scale in
+          the words we have approved."
       - q: Do you work with small organizations?
-        a: "Yes. We help individuals and small teams as well as larger organizations. See [who we work with](/company/who-we-work-with/)."
+        a:
+          "Yes. We help individuals and small teams as well as larger organizations. See [who we work
+          with](/company/who-we-work-with/)."
       - q: How do I start?
-        a: "Use the contact page to describe what you want to do. We reply with an honest view of whether and how we can help."
+        a:
+          "Use the contact page to describe what you want to do. We reply with an honest view of whether
+          and how we can help."
 
   - type: cta
     id: contact-cta
     heading: Tell us what you are trying to do
-    body: "Describe your situation in your own words. We will say honestly whether we are a good fit and what a first step could be."
+    body:
+      "Describe your situation in your own words. We will say honestly whether we are a good fit and
+      what a first step could be."
     primary: { label: Talk to DECHY, href: "/contact/" }

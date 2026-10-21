@@ -12,15 +12,17 @@ import {
   ServiceExplorer,
 } from "@/components/home/Motion";
 import { TechLogo } from "@/components/home/TechLogo";
-import { BlogGrid } from "@/components/home/BlogGrid";
 import { TestimonialWall } from "@/components/home/TestimonialWall";
+import { PortfolioGrid } from "@/components/home/PortfolioGrid";
+import { PortfolioCard } from "./PortfolioCard";
+import { projectPath, projects } from "@/lib/content/portfolio";
 import { Arrow } from "@/components/primitives/Arrow";
 import { Icon } from "@/components/primitives/Icon";
 import { Inline } from "@/components/primitives/Inline";
 import { LinkButton } from "@/components/primitives/LinkButton";
 import { Photo } from "@/components/primitives/Photo";
 import { expandFacts } from "@/lib/content/inline";
-import { getRegistry } from "@/lib/content/load";
+import { getRegistry, showDrafts } from "@/lib/content/load";
 import type { Block, IconName } from "@/lib/content/schema";
 import { pathExists, publishedPath } from "@/lib/content/urls";
 import { Section } from "./Section";
@@ -793,45 +795,46 @@ export function PartnersBlock({ block }: { block: Of<"partners"> }) {
 }
 
 export function CaseGridBlock({ block }: { block: Of<"case-grid"> }) {
-  const counts = new Map<string, { label: string; count: number }>();
-  for (const i of block.items) {
-    const c = counts.get(i.service) ?? { label: i.serviceLabel, count: 0 };
-    c.count++;
-    counts.set(i.service, c);
-  }
+  const registry = getRegistry();
+  const drafts = showDrafts();
+  const facet = (key: "service" | "industry", label: "serviceLabel" | "industryLabel") => {
+    const m = new Map<string, { label: string; count: number }>();
+    for (const i of block.items) {
+      const k = i[key];
+      if (!k) continue;
+      const f = m.get(k) ?? { label: i[label] ?? k, count: 0 };
+      f.count++;
+      m.set(k, f);
+    }
+    return [...m]
+      .map(([k, v]) => ({ key: k, ...v }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  };
+  const list = block.items
+    .map((i) => projects().find((p) => projectPath(p) === i.href))
+    .filter((p): p is NonNullable<typeof p> => !!p);
   return (
     <Section id={block.id} tone={block.tone} ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
       <div className="mt-10">
-        <BlogGrid
-          total={block.items.length}
-          categories={[...counts].map(([key, v]) => ({ key, label: v.label, count: v.count }))}
-          cards={block.items.map((i) => ({
-            key: i.href,
-            category: i.service,
-            node: (
-              <Link href={i.href} className="case-card">
-                {i.photo ? (
-                  <span className="case-card-photo">
-                    <Photo photo={i.photo} />
-                  </span>
-                ) : null}
-                <span className="case-card-body">
-                  <span className="case-card-sector">{i.sector}</span>
-                  <span className="case-card-title">{i.title}</span>
-                  <span className="case-card-company">{i.company}</span>
-                  <span className="case-card-result">
-                    <strong>{i.result.value}</strong> {i.result.label}
-                  </span>
-                  <span className="case-card-go">
-                    Read the case study <Arrow />
-                  </span>
-                </span>
-              </Link>
-            ),
+        <PortfolioGrid
+          services={facet("service", "serviceLabel")}
+          industries={facet("industry", "industryLabel")}
+          cards={list.map((p) => ({
+            key: p.slug,
+            service: p.service,
+            industry: p.industry,
+            node: <PortfolioCard project={p} registry={registry} drafts={drafts} />,
           }))}
         />
       </div>
+      {block.items.length <= 6 ? (
+        <div className="quote-more">
+          <Link href="/work/" className="mega-foot-link">
+            See all case studies <Arrow />
+          </Link>
+        </div>
+      ) : null}
     </Section>
   );
 }
@@ -842,31 +845,22 @@ export function TeamBlock({ block }: { block: Of<"team"> }) {
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
       <ul className="team-grid" data-reveal="group">
         {block.members.map((m) => (
-          <li key={m.name}>
-            <details className="team-card">
-              <summary>
-                {m.photo ? (
-                  <span className="team-photo">
-                    <Photo photo={m.photo} />
-                  </span>
-                ) : null}
-                <span className="team-name">{m.name}</span>
-                <span className="team-role">{m.role}</span>
-                <span className="team-more" aria-hidden="true">
-                  Bio
-                </span>
-              </summary>
-              <div className="team-bio">
-                <p>{m.bio}</p>
-                {m.focus.length ? (
-                  <ul className="team-focus">
-                    {m.focus.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                ) : null}
-              </div>
-            </details>
+          <li key={m.name} className="team-card">
+            {m.photo ? (
+              <span className="team-photo">
+                <Photo photo={m.photo} />
+              </span>
+            ) : null}
+            <span className="team-name">{m.name}</span>
+            <span className="team-role">{m.role}</span>
+            <p className="team-bio">{m.bio}</p>
+            {m.focus.length ? (
+              <ul className="team-focus">
+                {m.focus.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -880,12 +874,14 @@ export function GalleryBlock({ block }: { block: Of<"gallery"> }) {
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
       <ul className="gallery" data-count={block.items.length} data-reveal="group">
         {block.items.map((g) => (
-          <li key={g.title} className="gallery-item">
+          <li key={g.photo.asset} className="gallery-item">
             <Photo photo={g.photo} />
-            <div className="gallery-note">
-              <p className="gallery-title">{g.title}</p>
-              <p className="gallery-text">{g.text}</p>
-            </div>
+            {g.title || g.text ? (
+              <div className="gallery-note">
+                {g.title ? <p className="gallery-title">{g.title}</p> : null}
+                {g.text ? <p className="gallery-text">{g.text}</p> : null}
+              </div>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -902,8 +898,6 @@ function WallCard({
 }) {
   return (
     <figure className={`tw-card${big ? " tw-card-big" : ""}`}>
-      <Quotes className="tw-mark" weight="fill" aria-hidden="true" />
-      <blockquote className="tw-quote">{t.quote}</blockquote>
       <figcaption className="tw-person">
         {t.photo ? (
           <span className="tw-avatar">
@@ -916,7 +910,9 @@ function WallCard({
             {t.role}, {t.company}
           </span>
         </span>
+        <Quotes className="tw-mark" weight="fill" aria-hidden="true" />
       </figcaption>
+      <blockquote className="tw-quote">{t.quote}</blockquote>
       <div className="tw-tags">
         <span className="tw-tag tw-tag-service">{t.serviceLabel}</span>
         <span className="tw-tag">{t.industryLabel}</span>
@@ -946,7 +942,25 @@ export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> 
   return (
     <Section id={block.id} tone={block.tone} ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <div className="mt-10">
+      <dl className="tw-summary">
+        <div>
+          <dt>Client stories</dt>
+          <dd>{block.items.length}</dd>
+        </div>
+        <div>
+          <dt>Services covered</dt>
+          <dd>{new Set(block.items.map((t) => t.service)).size}</dd>
+        </div>
+        <div>
+          <dt>Industries</dt>
+          <dd>{new Set(block.items.map((t) => t.industry)).size}</dd>
+        </div>
+        <div>
+          <dt>Working with clients since</dt>
+          <dd>{getRegistry().facts.get("company.founded")?.value}</dd>
+        </div>
+      </dl>
+      <div className="mt-8">
         <TestimonialWall
           services={facets("service", "serviceLabel")}
           industries={facets("industry", "industryLabel")}

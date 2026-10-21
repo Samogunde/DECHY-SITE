@@ -11,6 +11,7 @@
 @import "../styles/home.css" layer(components);
 @import "../styles/dark.css" layer(components);
 @import "../styles/premium.css" layer(components);
+@import "../styles/portfolio.css" layer(components);
 
 /* ------------------------------------------------------------------------------------------
    DECHY design tokens.

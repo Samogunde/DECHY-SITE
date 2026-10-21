@@ -118,8 +118,9 @@ export function DefinitionBlock({
           <p className="answer-lead" data-reveal="block">
             <Inline text={block.answer} />
           </p>
+          {block.photo ? <Photo photo={block.photo} className="answer-photo" /> : null}
         </div>
-        {block.paragraphs.length > 0 || block.photo ? (
+        {block.paragraphs.length > 0 ? (
           <div className="answer-split-col">
             {block.paragraphs.length > 0 ? (
               <div className="prose-service answer-split-body" data-reveal="block">
@@ -130,7 +131,6 @@ export function DefinitionBlock({
                 ))}
               </div>
             ) : null}
-            {block.photo ? <Photo photo={block.photo} className="answer-photo" /> : null}
           </div>
         ) : null}
       </div>

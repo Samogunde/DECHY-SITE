@@ -93,6 +93,8 @@ describe("photography: provenance is mandatory", () => {
         const asset = base.assets.find((a) => a.id === block.photo!.asset)!;
         // Photographs from the topic library may appear on any page of their topic.
         if (TOPIC_PHOTO_IDS.has(asset.id.replace(/^asset\.photo-/, ""))) continue;
+        // Portfolio screens appear wherever their project does (case study, Work, services).
+        if (asset.id.startsWith("asset.photo-portfolio-")) continue;
         const slug = page.kind === "home" ? "home" : page.path.replace(/\//g, "");
         expect(asset.usage, `${asset.id} on ${page.path}`).toContain(slug);
       }

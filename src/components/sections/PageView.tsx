@@ -12,7 +12,18 @@ import { IndustryProfile, SolutionBlueprint, SystemFrame, TechProfile } from "./
 import { AtAGlance, SectionNav } from "./GuidanceBlocks";
 import { DraftFrame } from "./HomeBlocks";
 import { ArticleView } from "./ArticleView";
+import { CaseStudyView } from "./CaseStudyView";
 import { LinkButton } from "@/components/primitives/LinkButton";
+
+/** "At a glance" helps buyers decide on commercial pages only (owner, 21 October 2026). */
+const GLANCE_KINDS = new Set([
+  "service",
+  "industry",
+  "solution",
+  "technology",
+  "work-area",
+  "location",
+]);
 
 const MID_CTA_KINDS = new Set([
   "service",
@@ -62,6 +73,13 @@ export function PageView({ path }: { path: string }) {
       <>
         <JsonLd data={buildGraph(page, registry)} />
         <ArticleView page={page} registry={registry} />
+      </>
+    );
+  if (page.kind === "case-study")
+    return (
+      <>
+        <JsonLd data={buildGraph(page, registry)} />
+        <CaseStudyView page={page} registry={registry} />
       </>
     );
   const crumbs = breadcrumbsFor(page, registry);
@@ -150,7 +168,7 @@ export function PageView({ path }: { path: string }) {
           aside={aside}
         />
       ) : null}
-      {guided && page.comprehension ? (
+      {guided && page.comprehension && GLANCE_KINDS.has(page.kind) ? (
         <AtAGlance comprehension={page.comprehension} cta={glanceCta} kind={page.kind} />
       ) : null}
       {showNav ? <SectionNav items={navItems} /> : null}

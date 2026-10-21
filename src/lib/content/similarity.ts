@@ -119,7 +119,10 @@ export function similarityIssues(
   const issues: SimilarityIssue[] = [];
   const prepared = pages.map((p) => ({
     page: p,
-    seq: p.sections.map((s) => s.type as string),
+    // Shared site-wide sections (pricing, selected work, client quotes) are not page structure.
+    seq: p.sections
+      .filter((s) => !["pricing", "selected-work", "client-quotes", "sample-quotes"].includes(s.id))
+      .map((s) => s.type as string),
     shingles: shingles(pageWords(p, facts)),
     headings: new Set(headingsOf(p)),
     diagrams: new Set(diagramKeys(p)),

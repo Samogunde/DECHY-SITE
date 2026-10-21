@@ -8567,3 +8567,595 @@ assets:
     usage: [companyhow-we-work]
     approval: approved
     acquired: "2026-10-20"
+
+  - id: asset.photo-portfolio-claimbridge-insurance-claims-dashboard
+    kind: file
+    file: public/photos/portfolio-claimbridge-insurance-claims-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-claimbridge-insurance-claims-dashboard.md.
+    originalFilename: "ClaimBridge Insurance Dashboard.png"
+    sha256: 0b4c0a36cf72c382486172629604cd7dac9441110e8fc8765cadcda28a30967b
+    width: 1448
+    height: 1086
+    alt: "ClaimBridge insurance claims platform dashboard showing claims workflow, document verification, and recent claims"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-forgeplan-manufacturing-dashboard
+    kind: file
+    file: public/photos/portfolio-forgeplan-manufacturing-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-forgeplan-manufacturing-dashboard.md.
+    originalFilename: "ForgePlan Manufacturing Dashboard.png"
+    sha256: bf6026d05c29248bd0181f44864391755464bb76a399a6af73d625c5002b1938
+    width: 1448
+    height: 1086
+    alt: "ForgePlan manufacturing operations dashboard with production schedule, machine status, inventory, and quality control"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-clinora-hospital-management-dashboard
+    kind: file
+    file: public/photos/portfolio-clinora-hospital-management-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-clinora-hospital-management-dashboard.md.
+    originalFilename: "Clinora Healthcare Dashboard Mockup.png"
+    sha256: c679f9de181967c6e2b0666b8145afcc7284cc2c4ab11668b0f3cfa3e1f113fd
+    width: 1448
+    height: 1086
+    alt: "Clinora hospital management dashboard with appointments, clinician schedule, admissions, and revenue reporting"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-clinic-management-dashboard
+    kind: file
+    file: public/photos/portfolio-clinic-management-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-clinic-management-dashboard.md.
+    originalFilename: "Modern Clinic Management Dashboard.png"
+    sha256: 0236f7ea7dffc16ca7a95643d0ae369d8adc835bea73655b3ea74fc1cbbd9397
+    width: 1448
+    height: 1086
+    alt: "Clinic operations platform on a desktop screen in a clinic, showing appointments, consultations, and patient overview"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-property-management-dashboard
+    kind: file
+    file: public/photos/portfolio-property-management-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-property-management-dashboard.md.
+    originalFilename: "Modern Property Management Dashboard (1).png"
+    sha256: 5024f3c84ba03b3ff63e01938d405983c33ad93c6f0a81af49152a86c47c971a
+    width: 1448
+    height: 1086
+    alt: "Property management platform on a desktop screen showing portfolio, occupancy, property map, and financial summary"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-fleet-operations-dashboard
+    kind: file
+    file: public/photos/portfolio-fleet-operations-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-fleet-operations-dashboard.md.
+    originalFilename: "Modern Fleet Operations Dashboard.png"
+    sha256: 10e89eac7c501fa5950d34cf90dec272b8b6fd8a2210bcd76cf47ef92732d369
+    width: 1448
+    height: 1086
+    alt: "Fleet operations platform on a desktop screen showing live fleet tracking, vehicle status, and delivery performance"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-alder-stone-law-firm-website
+    kind: file
+    file: public/photos/portfolio-alder-stone-law-firm-website.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-alder-stone-law-firm-website.md.
+    originalFilename: "Alder & Stone Legal Homepage.png"
+    sha256: 7b7d451c876cc143284842ee3ef6176ba1ea09a0c46522e44faa1f10684a3e46
+    width: 1448
+    height: 1086
+    alt: "Alder and Stone law firm website home page with practice areas, lawyers, insights, and consultation request form"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-ironvale-industrial-equipment-website
+    kind: file
+    file: public/photos/portfolio-ironvale-industrial-equipment-website.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-ironvale-industrial-equipment-website.md.
+    originalFilename: "Ironvale Industrial Solutions Homepage.png"
+    sha256: 039bf4ed443555bb7ae7207177adf85a53cbf1dc3d2d1f3abbc209aa26ad553f
+    width: 1448
+    height: 1086
+    alt: "Ironvale industrial equipment website home page with featured equipment, industries, and quote request form"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-stillwater-house-hotel-website
+    kind: file
+    file: public/photos/portfolio-stillwater-house-hotel-website.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-stillwater-house-hotel-website.md.
+    originalFilename: "Stillwater House Coastal Hotel Homepage.png"
+    sha256: 43d04686f84f57abb179622d5547bda6cb8fdc1cd0bb5be69d8d054cd2e785c3
+    width: 1448
+    height: 1086
+    alt: "Stillwater House boutique hotel website with availability search, featured rooms, and direct booking"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-learnspring-learning-platform-dashboard
+    kind: file
+    file: public/photos/portfolio-learnspring-learning-platform-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-learnspring-learning-platform-dashboard.md.
+    originalFilename: "LearnSpring E-Learning Dashboard.png"
+    sha256: 5ac7d83696ef8cefabf59de572010573080169ec1a2cde17018fb2ce288333ea
+    width: 1448
+    height: 1086
+    alt: "LearnSpring e-learning platform dashboard with learning progress, recommended courses, and AI next steps"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-learnspring-personalized-learning-path
+    kind: file
+    file: public/photos/portfolio-learnspring-personalized-learning-path.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-learnspring-personalized-learning-path.md.
+    originalFilename: "LearnSpring Learning Dashboard Mockup.png"
+    sha256: ea6aa6dc25b0c67688ae86f2960e55493db5a48cee4cb42e083368ca2c62da8c
+    width: 1448
+    height: 1086
+    alt: "LearnSpring personalized learning path with recommended lessons and course progress on a laptop"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-signalledger-fraud-monitoring-dashboard
+    kind: file
+    file: public/photos/portfolio-signalledger-fraud-monitoring-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-signalledger-fraud-monitoring-dashboard.md.
+    originalFilename: "SignalLedger Fraud Monitoring Dashboard.png"
+    sha256: 46ed1a4ed0383cf3dc6b0e0190f5315b863ddd6fa9ed09c2806096f9afd1ebb3
+    width: 1448
+    height: 1086
+    alt: "SignalLedger AI fraud monitoring dashboard with transaction activity, risk distribution, and flagged payments"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-finance-insights-dashboard
+    kind: file
+    file: public/photos/portfolio-finance-insights-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-finance-insights-dashboard.md.
+    originalFilename: "Executive Finance Dashboard Workspace.png"
+    sha256: ee961626d65bc8fa76c644e04ffd9450814cd6fe5b2fbc5ada5a10f64f7e4628
+    width: 1448
+    height: 1086
+    alt: "Personal finance web app on a desktop screen showing cash flow forecast, budget overview, and upcoming payments"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-carepath-healthcare-mobile-app
+    kind: file
+    file: public/photos/portfolio-carepath-healthcare-mobile-app.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-carepath-healthcare-mobile-app.md.
+    originalFilename: "CarePath Healthcare App Showcase.png"
+    sha256: 315b73818f9614954abedc2711b8a3ac9f55775881fd7ce4d2770c8cb6a07644
+    width: 1448
+    height: 1086
+    alt: "CarePath healthcare mobile app screens for finding doctors, booking appointments, and quick health actions"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-mintlane-finance-mobile-app
+    kind: file
+    file: public/photos/portfolio-mintlane-finance-mobile-app.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-mintlane-finance-mobile-app.md.
+    originalFilename: "Mintlane Financial App Showcase.png"
+    sha256: 36666cc2d05cea819aedf1c1c8619cee6aace9be45ed84d4de7ac0440f6646db
+    width: 1448
+    height: 1086
+    alt: "Mintlane money app screens showing balance, transactions, monthly budget, and sending money"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-fieldwise-farm-management-app
+    kind: file
+    file: public/photos/portfolio-fieldwise-farm-management-app.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-fieldwise-farm-management-app.md.
+    originalFilename: "Fieldwise Agritech App Showcase.png"
+    sha256: 521583dcb48950148bc7067f051720c8cfca58c79666ac21a6174af99f382810
+    width: 1448
+    height: 1086
+    alt: "Fieldwise farming app screens with mapped fields, irrigation schedule, scouting notes, and harvest plan"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-fieldwise-farming-app-dashboard
+    kind: file
+    file: public/photos/portfolio-fieldwise-farming-app-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-fieldwise-farming-app-dashboard.md.
+    originalFilename: "Fieldwise Farming App Dashboard.png"
+    sha256: 34dc316e9ee9d10073600e3fc766d53513a1290e9a48b72f798ed92b15055c1f
+    width: 1448
+    height: 1086
+    alt: "Fieldwise farm management app home and task screens with fields, weather, crops, and upcoming harvest"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-formtrack-fitness-mobile-app
+    kind: file
+    file: public/photos/portfolio-formtrack-fitness-mobile-app.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-formtrack-fitness-mobile-app.md.
+    originalFilename: "FormTrack Fitness App Dashboard.png"
+    sha256: cd33c78fc32a40571820e585436265c34bae69d4ddf64ce4e1d460a766360e94
+    width: 1448
+    height: 1086
+    alt: "FormTrack fitness app screens with the daily workout, exercises, weekly activity, and training plan"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-parcelpilot-delivery-driver-app
+    kind: file
+    file: public/photos/portfolio-parcelpilot-delivery-driver-app.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-parcelpilot-delivery-driver-app.md.
+    originalFilename: "ParcelPilot Delivery App Mockup.png"
+    sha256: 110e69445e4dc54b9848b1471a4368f8a88e158fa56c9afd032fc7732d2f2f73
+    width: 1448
+    height: 1086
+    alt: "ParcelPilot delivery driver app with optimized route map, next delivery, and proof of delivery steps"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-machinawatch-ai-predictive-maintenance
+    kind: file
+    file: public/photos/portfolio-machinawatch-ai-predictive-maintenance.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-machinawatch-ai-predictive-maintenance.md.
+    originalFilename: "AI-Powered Predictive Maintenance Dashboard.png"
+    sha256: 01e58693c70ecac26b0679c156bc8468275db53370c9e17fd0e8ff05e979ad23
+    width: 1448
+    height: 1086
+    alt: "MachinaWatch AI predictive maintenance overview from sensor data to risk assessment and maintenance action"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-machinawatch-equipment-monitoring-dashboard
+    kind: file
+    file: public/photos/portfolio-machinawatch-equipment-monitoring-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-machinawatch-equipment-monitoring-dashboard.md.
+    originalFilename: "MachinaWatch Equipment Monitoring Dashboard.png"
+    sha256: 67514e256fdef32647272a5448521c07e1ede243730914cfc5b21284e5e55142
+    width: 1448
+    height: 1086
+    alt: "MachinaWatch equipment monitoring dashboard with machine health, sensor trends, alerts, and upcoming maintenance"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-clinsift-ai-medical-document-review
+    kind: file
+    file: public/photos/portfolio-clinsift-ai-medical-document-review.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-clinsift-ai-medical-document-review.md.
+    originalFilename: "ClinSift Medical Document Review Dashboard (1).png"
+    sha256: cee6081b0dd52408ff7973655217439953ab5c77c86fec0c3d512c4c7a69d34d
+    width: 1448
+    height: 1086
+    alt: "ClinSift AI medical document review screen extracting patient details, symptoms, and vital signs from a clinical note"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-clinsift-medical-document-extraction
+    kind: file
+    file: public/photos/portfolio-clinsift-medical-document-extraction.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-clinsift-medical-document-extraction.md.
+    originalFilename: "ClinSift Medical Document Review Dashboard.png"
+    sha256: e6e0b49202da10d7c7575585e50969cb19ed94e33a85e1f4d01d3c40636f4899
+    width: 1448
+    height: 1086
+    alt: "ClinSift dashboard showing processed documents, extracted information, AI highlights, and confidence score"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-talentflow-automated-recruitment-workflow
+    kind: file
+    file: public/photos/portfolio-talentflow-automated-recruitment-workflow.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-talentflow-automated-recruitment-workflow.md.
+    originalFilename: "TalentFlow Automated Recruitment Workflow.png"
+    sha256: 5c5a20fc29fcf46040833443b213d921feda4aa020d059fd2db41c7c8c611039
+    width: 1448
+    height: 1086
+    alt: "TalentFlow automated recruitment workflow from application and AI screening to interviews and offer"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-talentflow-recruiting-dashboard
+    kind: file
+    file: public/photos/portfolio-talentflow-recruiting-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-talentflow-recruiting-dashboard.md.
+    originalFilename: "TalentFlow Recruiting Dashboard.png"
+    sha256: 4953240a3f5c917355524a2a829f74911a3fcd347ba09bac8e738c09f051aa0b
+    width: 1448
+    height: 1086
+    alt: "TalentFlow recruiting dashboard with recruitment pipeline, candidates, AI screening summary, and documents"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-stayflow-hotel-booking-automation
+    kind: file
+    file: public/photos/portfolio-stayflow-hotel-booking-automation.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-stayflow-hotel-booking-automation.md.
+    originalFilename: "StayFlow Hotel Booking Automation Flowchart.png"
+    sha256: 8cfa31fee1c908327596279546c4b223e47547c5ed5afad7ac3d77bd237d9307
+    width: 1448
+    height: 1086
+    alt: "StayFlow hotel booking automation from guest enquiry and availability check to confirmed reservation"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-onboardhq-client-onboarding-dashboard
+    kind: file
+    file: public/photos/portfolio-onboardhq-client-onboarding-dashboard.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-onboardhq-client-onboarding-dashboard.md.
+    originalFilename: "OnboardHQ Client Onboarding Dashboard.png"
+    sha256: 81e198fb8830f5800df6eff1e208327219718b98c58a884785c8833c4752f098
+    width: 1448
+    height: 1086
+    alt: "OnboardHQ client onboarding dashboard with onboarding progress, checklist, documents, and activity timeline"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-onboardhq-automated-onboarding-workflow
+    kind: file
+    file: public/photos/portfolio-onboardhq-automated-onboarding-workflow.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-onboardhq-automated-onboarding-workflow.md.
+    originalFilename: "OnboardHQ Client Onboarding Workflow.png"
+    sha256: b8d321ebe1a3d00712b61bf2705e09183c1010fe249a7e4939c705298ecdb222
+    width: 1448
+    height: 1086
+    alt: "OnboardHQ automated client onboarding workflow from welcome to verification, e-signature, approval, and handover"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-orderrail-ecommerce-fulfilment-automation
+    kind: file
+    file: public/photos/portfolio-orderrail-ecommerce-fulfilment-automation.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-orderrail-ecommerce-fulfilment-automation.md.
+    originalFilename: "OrderRail Ecommerce Fulfilment Workflow.png"
+    sha256: a569a6ab91d562e877ddf1cffc65d5d0a12fff49e616bbc27d6d55e7fd0715b2
+    width: 1448
+    height: 1086
+    alt: "OrderRail ecommerce order fulfillment automation from checkout and payment to packing, shipping, and delivery"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-cloudnest-saas-cloud-architecture
+    kind: file
+    file: public/photos/portfolio-cloudnest-saas-cloud-architecture.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-cloudnest-saas-cloud-architecture.md.
+    originalFilename: "CloudNest SaaS Architecture Blueprint.png"
+    sha256: 2cde98d4d3414ace0a4e143b0daec72111809bf6be3567830e512b6af7c4d377
+    width: 1448
+    height: 1086
+    alt: "CloudNest scalable SaaS cloud architecture with edge security, container orchestration, data services, and CI/CD"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-healthbridge-healthcare-cloud-migration
+    kind: file
+    file: public/photos/portfolio-healthbridge-healthcare-cloud-migration.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-healthbridge-healthcare-cloud-migration.md.
+    originalFilename: "HealthBridge Cloud Migration Blueprint.png"
+    sha256: b24a9a8e2326c46eb2ab7448ebccf421bf585adfdb46a6fcb573e3a93136592a
+    width: 1448
+    height: 1086
+    alt: "HealthBridge healthcare data platform cloud migration from on-premises systems to a secure cloud environment"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-shopscale-ecommerce-cicd-pipeline
+    kind: file
+    file: public/photos/portfolio-shopscale-ecommerce-cicd-pipeline.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-shopscale-ecommerce-cicd-pipeline.md.
+    originalFilename: "ShopScale CI_CD Ecommerce Architecture.png"
+    sha256: c706839595b640832925509d04cbb0653f90a39707a5ad2e8eefb2a4060182e3
+    width: 1448
+    height: 1086
+    alt: "ShopScale CI/CD pipeline and deployment architecture for a high-traffic ecommerce platform"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-streamhub-media-streaming-pipeline
+    kind: file
+    file: public/photos/portfolio-streamhub-media-streaming-pipeline.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-streamhub-media-streaming-pipeline.md.
+    originalFilename: "StreamHub Media Streaming Pipeline.png"
+    sha256: ee82c26c5f30d74d36d3f4a63a5ffb74a2ed53c91422631d54222491ae3b5638
+    width: 1448
+    height: 1086
+    alt: "StreamHub media streaming pipeline from video upload and transcoding to global delivery and playback"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-keyharbor-identity-access-management
+    kind: file
+    file: public/photos/portfolio-keyharbor-identity-access-management.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-keyharbor-identity-access-management.md.
+    originalFilename: "KeyHarbor Identity Access Dashboard.png"
+    sha256: e218acbb8a191b7eac5de0e8adff33444ce060dc3b72e9474a4a6d27e45add63
+    width: 1448
+    height: 1086
+    alt: "KeyHarbor identity and access management with role-based access matrix, identity lifecycle, and audit reporting"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-careshield-healthcare-data-audit
+    kind: file
+    file: public/photos/portfolio-careshield-healthcare-data-audit.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-careshield-healthcare-data-audit.md.
+    originalFilename: "CareShield Healthcare Audit Dashboard.png"
+    sha256: 7f4c122ec0f351734fe0b7f027efd05019bee20b98bffc755c9014654e977744
+    width: 1448
+    height: 1086
+    alt: "CareShield healthcare data access audit dashboard with audit trail, suspicious access alerts, and key controls"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-safepoint-facility-security-monitoring
+    kind: file
+    file: public/photos/portfolio-safepoint-facility-security-monitoring.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-safepoint-facility-security-monitoring.md.
+    originalFilename: "Dual Security and Retail Analytics Dashboards.png"
+    sha256: b90c68627cb35673a70bca2f678d720cedcc9ac40201cf8166663275e5c125dc
+    width: 1448
+    height: 556
+    alt: "SafePoint facility security monitoring with a live floor plan, access events, and restricted zone alerts"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.photo-portfolio-retailtrack-retail-sales-analytics
+    kind: file
+    file: public/photos/portfolio-retailtrack-retail-sales-analytics.jpg
+    role: photograph
+    source: owner-supplied
+    creator: DECHY
+    license: DECHY project work supplied by the owner. Evidence in data/assets/licenses/photo-portfolio-retailtrack-retail-sales-analytics.md.
+    originalFilename: "Dual Security and Retail Analytics Dashboards.png"
+    sha256: ac0f22b8d4ac67b6a39d5e842791b4f935199feb60ced75f9a2de2497b15098a
+    width: 1448
+    height: 530
+    alt: "RetailTrack retail sales and inventory analytics with sales by category, stock alerts, and store performance"
+    usage: [portfolio]
+    approval: approved
+    acquired: "2026-10-21"

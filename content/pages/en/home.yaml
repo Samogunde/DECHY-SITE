@@ -126,9 +126,9 @@ sections:
         href: /software-development/
         action: Explore custom software
         photo:
-          asset: asset.photo-service-software-developers
-          layout: split
-          position: 60% 50%
+          asset: asset.photo-portfolio-claimbridge-insurance-claims-dashboard
+          layout: aside
+          position: 50% 50%
         includes:
           - Internal tools and admin systems
           - Customer and staff portals
@@ -141,8 +141,8 @@ sections:
         href: /web-development/
         action: Explore web development
         photo:
-          asset: asset.photo-service-web-analytics-laptop
-          layout: split
+          asset: asset.photo-portfolio-alder-stone-law-firm-website
+          layout: aside
           position: 50% 50%
         includes:
           - Business websites and landing pages
@@ -156,9 +156,9 @@ sections:
         href: /mobile-app-development/
         action: Explore mobile apps
         photo:
-          asset: asset.photo-service-mobile-app-code
-          layout: split
-          position: 50% 45%
+          asset: asset.photo-portfolio-carepath-healthcare-mobile-app
+          layout: aside
+          position: 50% 50%
         includes:
           - iPhone and Android apps
           - One shared codebase or fully native

@@ -60,7 +60,7 @@ describe("content validator: it rejects what the architecture forbids", () => {
       " Our offices are in Berlin.",
       " Read our testimonials.",
       " An award-winning team.",
-      " See our case studies.",
+      " We are award-winning.",
       " Trusted by leading brands.",
     ]) {
       expect(codes(withPages((p) => (para(p).paragraphs[0] += bad))), bad).toContain(

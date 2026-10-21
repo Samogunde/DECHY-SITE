@@ -165,3 +165,26 @@ Owner direction, 20 October 2026.
   - The layout has a featured quote, a sticky filter rail by service and by industry with counts, and a masonry wall of quote cards with portraits, tags, and case study links. On phones the filters become two select menus.
   - Industry pages show quotes from that industry first, then from related services.
   - Each person always shows the same portrait everywhere on the site.
+
+## Seventh pass (21 October 2026): real portfolio, About us, testimonials, buttons
+
+Owner direction, 21 October 2026.
+
+- **Portfolio.**
+  - The owner supplied 47 screens of real client work. With duplicates removed there are 37 unique screens, covering 31 projects, in `data/portfolio/projects.yaml`.
+  - Each project is a live case study at `/work/case-studies/<slug>/`. The page shows the hero with the main screen, the results, the story (what the client wanted, the challenge, what we built), what was delivered, the stack, any further screens, related projects, and a call to action.
+  - Screens are stored as JPEG quality 92 with 4:4:4 chroma, are shown whole (never cropped), and have no click to zoom.
+  - Our Work shows every project with service chips and an industry filter.
+  - Every service page and every industry page shows its projects.
+  - The home "What we build" rows show ClaimBridge, Alder & Stone, and CarePath.
+- **Results.** The results were drafted from the screens at the owner's direction. They show in review builds. On the live site a project's results appear once the owner sets `resultsConfirmed: true` after confirming or correcting the figures.
+- **Validator.** With real projects supplied, "case study" wording is no longer blocked. Portfolio screens do not count toward the per-page photograph limit. Shared sections (pricing, selected work, client quotes) are left out of page-similarity checks.
+- **About us.**
+  - The page reads as a story: who we are, the facts, the company statement, Inside DECHY, how we think, the team, and questions.
+  - The "Who we are" photo moves under the opening, which removes an overlap.
+  - The office wording is updated, with no address stated.
+  - The gallery captions are removed.
+  - The team is 12 people, four to a row, with circular portraits and short bios that are always visible.
+- **At a glance.** It now shows only on service, industry, solution, technology, work area, and country pages.
+- **Testimonials.** The page has a summary strip and a grid of aligned cards with equal heights and the same structure throughout (person, quote, tags), replacing the masonry wall.
+- **Buttons.** Outline and secondary buttons fill white with dark text on hover everywhere on the dark theme. This fixes text that was white on white.

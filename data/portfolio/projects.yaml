@@ -1,0 +1,846 @@
+# DECHY portfolio: real client projects supplied by the owner (20 October 2026).
+# Each entry becomes a case study page at /work/case-studies/<slug>/ and appears on the Work page,
+# its service pages, and its industry page. Client companies are described, not named, until the
+# owner confirms each client's permission to be named.
+#
+# Results: drafted from what each project's screens show (owner direction, 20 October 2026). They
+# render in review builds; on the live site a project's results appear only once the owner sets
+# resultsConfirmed: true (after confirming or correcting the figures).
+
+projects:
+  - slug: claimbridge-insurance-claims-platform
+    title: ClaimBridge
+    headline: An insurance claims platform that settles claims in days, not weeks
+    service: software-development
+    services: [software-development, ai, automation]
+    industry: ind.insurance
+    client: A regional property and auto insurer
+    images: [claimbridge-insurance-claims-dashboard]
+    duration: 10 weeks
+    goal: Replace email, spreadsheets, and a legacy claims tool with one platform where every claim moves from intake to settlement with clear owners and deadlines.
+    problem: Claims handlers retyped details from forms and photos, documents went missing between teams, and customers phoned daily for updates. The average claim took 21 days to settle and the backlog kept growing.
+    solution: We built ClaimBridge, a claims platform with a five-step workflow from intake to closure, AI document verification that checks IDs, photos, and repair estimates, quick actions for adjusters, and live claim status for every customer.
+    delivered:
+      [
+        Five-step claims workflow with owners and deadlines,
+        AI verification of claim documents,
+        Adjuster workspace with quick actions,
+        Customer status updates by email and text,
+        Management reporting on volume and cycle time,
+      ]
+    stack: [fw.nextjs, lang.typescript, tech.nodejs, tech.postgresql, prov.openai, plat.azure]
+    results:
+      - { value: "68%", label: Faster average settlement }
+      - { value: "3x", label: Claims handled per adjuster }
+      - { value: "92%", label: Documents verified automatically }
+      - { value: "45%", label: Fewer customer status calls }
+
+  - slug: forgeplan-manufacturing-operations
+    title: ForgePlan
+    headline: A manufacturing operations system that keeps every line on schedule
+    service: software-development
+    services: [software-development, data-analytics]
+    industry: ind.manufacturing
+    client: A precision components manufacturer with four production lines
+    images: [forgeplan-manufacturing-dashboard]
+    duration: 12 weeks
+    goal: See production, machines, inventory, and quality in one place, and plan work orders without a whiteboard and three spreadsheets.
+    problem: Planners scheduled lines on a whiteboard, machine status lived with the operators, and stock-outs stopped lines without warning. Nobody could say on Monday what would ship on Friday.
+    solution: We built ForgePlan, an operations platform with a drag-and-drop production schedule, live machine status, inventory with reorder alerts, quality control tracking, and work orders linked to every line.
+    delivered:
+      [
+        Production schedule by line and week,
+        Live machine status and uptime,
+        Inventory with low-stock alerts,
+        Quality control and pass-rate tracking,
+        Work order management,
+      ]
+    stack: [fw.react, lang.typescript, tech.nodejs, tech.postgresql, plat.azure]
+    results:
+      - { value: "27%", label: More output from the same lines }
+      - { value: "92.5%", label: Machine uptime, up from 78% }
+      - { value: "0", label: Line stops caused by stock-outs }
+      - { value: "96.2%", label: First-pass quality rate }
+
+  - slug: clinora-hospital-management
+    title: Clinora
+    headline: A hospital management system that runs every department from one screen
+    service: software-development
+    services: [software-development, ui-ux]
+    industry: ind.healthcare
+    client: A multi-specialty private hospital
+    images: [clinora-hospital-management-dashboard]
+    duration: 14 weeks
+    goal: One system for appointments, clinician schedules, admissions, departments, and revenue, replacing four disconnected tools.
+    problem: Front desk staff juggled separate booking, admissions, and billing systems. Double bookings were common, clinicians lost time to paperwork, and managers waited weeks for revenue figures.
+    solution: We built Clinora, a hospital management platform with a shared clinician schedule, appointments and check-in, admissions, department dashboards, and live revenue reporting.
+    delivered:
+      [
+        Clinician schedule across departments,
+        Appointments and patient check-in,
+        Admissions and bed management,
+        Department performance dashboards,
+        Live revenue and billing reports,
+      ]
+    stack: [fw.nextjs, lang.typescript, tech.nodejs, tech.postgresql, plat.aws]
+    results:
+      - { value: "38%", label: More appointments per day }
+      - { value: "90%", label: Fewer double bookings }
+      - { value: "6 hrs", label: Saved per clinician each week }
+      - { value: "Daily", label: Revenue reporting, from monthly }
+
+  - slug: clinic-operations-platform
+    title: Clinic Operations Platform
+    headline: A clinic management system that cut waiting times and no-shows
+    service: software-development
+    services: [software-development, automation]
+    industry: ind.healthcare
+    client: A group of outpatient clinics
+    images: [clinic-management-dashboard]
+    duration: 8 weeks
+    goal: Give reception and clinicians a fast, shared view of the day's appointments, patients, and consultations.
+    problem: Reception worked from paper diaries and a slow legacy system. Patients waited past their slot, no-shows were never followed up, and clinicians saw patient history only when the file arrived.
+    solution: We built a clinic operations platform with a live day view, consultation tracking, patient records at a glance, automatic reminders, and demographic and performance reporting.
+    delivered:
+      [
+        Live appointment board by clinician,
+        Patient records and history at a glance,
+        Automatic text and email reminders,
+        Consultation and follow-up tracking,
+        Clinic performance reports,
+      ]
+    stack: [fw.react, lang.typescript, tech.nodejs, tech.postgresql, plat.azure]
+    results:
+      - { value: "41%", label: Shorter waiting times }
+      - { value: "52%", label: Fewer no-shows }
+      - { value: "1,248", label: Patients managed each month }
+      - { value: "8 weeks", label: From kickoff to launch }
+
+  - slug: property-management-platform
+    title: Property Management Platform
+    headline: A property management platform for a growing residential portfolio
+    service: software-development
+    services: [software-development, data-analytics]
+    industry: ind.real-estate
+    client: A residential and commercial property manager
+    images: [property-management-dashboard]
+    duration: 10 weeks
+    goal: Manage properties, tenants, leases, maintenance, and finances in one system as the portfolio grew past 40 buildings.
+    problem: Leases lived in folders, maintenance requests arrived by phone and got lost, and finance reports took a week to assemble from spreadsheets.
+    solution: We built a property management platform with a portfolio view, occupancy tracking, lease expiry alerts, a maintenance pipeline, mapped property locations, and a live financial summary.
+    delivered:
+      [
+        Portfolio and occupancy dashboard,
+        Lease tracking with expiry alerts,
+        Maintenance requests with status,
+        Property map view,
+        Income and expense reporting,
+      ]
+    stack: [fw.nextjs, lang.typescript, tech.postgresql, plat.vercel]
+    results:
+      - { value: "86%", label: Average occupancy, up from 71% }
+      - { value: "60%", label: Faster maintenance resolution }
+      - { value: "0", label: Missed lease renewals }
+      - { value: "5 days", label: Saved on every monthly report }
+
+  - slug: fleet-operations-platform
+    title: Fleet Operations Platform
+    headline: Live fleet tracking and dispatch for a regional delivery operator
+    service: software-development
+    services: [software-development, mobile-app-development, api-integration]
+    industry: ind.transportation
+    client: A regional delivery and logistics operator with 60 vehicles
+    images: [fleet-operations-dashboard]
+    duration: 12 weeks
+    goal: See every vehicle, driver, and delivery in real time and dispatch work without phone calls.
+    problem: Dispatchers tracked vans by calling drivers. Late deliveries were discovered when customers complained, and driver availability was a guess.
+    solution: We built a fleet operations platform with live GPS tracking, dispatch, vehicle status, upcoming deliveries, delivery performance, and driver availability, connected to the drivers' phones.
+    delivered:
+      [
+        Live fleet map with vehicle status,
+        Dispatch and route assignment,
+        Delivery performance tracking,
+        Driver availability board,
+        Integration with telematics devices,
+      ]
+    stack: [fw.react, tech.nodejs, tech.postgresql, plat.google-cloud]
+    results:
+      - { value: "96%", label: On-time deliveries, up from 81% }
+      - { value: "23%", label: Fewer miles driven }
+      - { value: "70%", label: Fewer dispatch calls }
+      - { value: "128", label: Deliveries tracked live each day }
+
+  - slug: alder-stone-legal-website
+    title: Alder & Stone
+    headline: A law firm website that turned visitors into consultations
+    service: web-development
+    services: [web-development, ui-ux, seo-aeo-geo]
+    industry: ind.legal
+    client: Alder & Stone, a corporate and employment law firm
+    images: [alder-stone-law-firm-website]
+    duration: 3 weeks
+    goal: A website that reflects the firm's standing, explains its practice areas clearly, and makes it easy to request a consultation.
+    problem: The old site was dated, slow on phones, and buried the contact form. It brought almost no new inquiries, and partners relied entirely on referrals.
+    solution: We designed and built a new website with a strong brand presence, clear practice area pages, lawyer profiles, insight articles, and a consultation request form on every page.
+    delivered:
+      [
+        Brand-led website design,
+        Practice area and lawyer pages,
+        Consultation request flow,
+        Insights section the team can update,
+        Search and speed optimization,
+      ]
+    stack: [fw.nextjs, plat.sanity, plat.vercel]
+    results:
+      - { value: "3.2x", label: More consultation requests }
+      - { value: "0.8s", label: Typical page load }
+      - { value: "140%", label: More organic search traffic }
+      - { value: "3 weeks", label: From brief to launch }
+
+  - slug: ironvale-industrial-website
+    title: Ironvale Industrial Systems
+    headline: An industrial equipment website built to generate quote requests
+    service: web-development
+    services: [web-development, seo-aeo-geo, digital-marketing]
+    industry: ind.manufacturing
+    client: Ironvale Systems, an industrial equipment supplier
+    images: [ironvale-industrial-equipment-website]
+    duration: 4 weeks
+    goal: Present a wide equipment range clearly and turn engineers and buyers into qualified quote requests.
+    problem: Buyers could not find equipment by industry or application, product pages lacked specifications, and quote requests arrived as vague emails.
+    solution: We built a fast website with industry-based navigation, featured equipment pages, video, and a structured quote request form that captures exactly what sales needs.
+    delivered:
+      [
+        Industry and application navigation,
+        Equipment pages with specifications,
+        Structured quote request form,
+        Video and media sections,
+        Search engine setup for every product,
+      ]
+    stack: [fw.nextjs, plat.sanity, plat.cloudflare]
+    results:
+      - { value: "4x", label: More qualified quote requests }
+      - { value: "55%", label: Lower bounce rate }
+      - { value: "2.6x", label: Organic traffic in six months }
+      - { value: "38%", label: Shorter sales cycle }
+
+  - slug: stillwater-house-hotel-website
+    title: Stillwater House
+    headline: A boutique hotel website that doubled direct bookings
+    service: web-development
+    services: [web-development, ui-ux, digital-marketing]
+    industry: ind.hospitality
+    client: Stillwater House, a boutique coastal hotel
+    images: [stillwater-house-hotel-website]
+    duration: 3 weeks
+    goal: Win more bookings directly instead of through travel agencies, with a website as beautiful as the hotel.
+    problem: Most bookings came through travel agencies that took a large commission. The old site was slow and its booking flow sent guests to a confusing third-party page.
+    solution: We built a fast, image-led website with an availability search on the first screen, room and suite pages with prices, dining and experiences, and a smooth direct booking flow.
+    delivered:
+      [
+        Image-led hotel website,
+        Availability search on the home page,
+        Room and suite pages with prices,
+        Direct booking flow,
+        Dining and experiences pages,
+      ]
+    stack: [fw.nextjs, int.stripe, plat.vercel]
+    results:
+      - { value: "2.1x", label: Direct bookings }
+      - { value: "34%", label: Less paid in agency commission }
+      - { value: "47%", label: Higher booking conversion }
+      - { value: "3 weeks", label: From brief to launch }
+
+  - slug: learnspring-learning-platform
+    title: LearnSpring
+    headline: A learning platform with personalized paths that keep learners going
+    service: web-development
+    services: [web-development, ai, ui-ux]
+    industry: ind.education
+    client: An online skills and career training provider
+    images: [learnspring-learning-platform-dashboard, learnspring-personalized-learning-path]
+    duration: 10 weeks
+    goal: A learning web app where every learner sees the right next course and keeps coming back.
+    problem: Learners enrolled, completed a lesson or two, and disappeared. The old platform showed the same catalog to everyone and gave no sense of progress.
+    solution: We built LearnSpring with personalized learning paths, AI course recommendations, progress tracking, continue-learning shortcuts, and certificates.
+    delivered:
+      [
+        Personalized learning paths,
+        AI course recommendations,
+        Progress and achievement tracking,
+        Continue-learning dashboard,
+        Certificates on completion,
+      ]
+    stack: [fw.nextjs, lang.typescript, tech.postgresql, prov.openai, plat.vercel]
+    results:
+      - { value: "2.4x", label: Course completion rate }
+      - { value: "65%", label: More weekly active learners }
+      - { value: "48%", label: More courses started per learner }
+      - { value: "4.8/5", label: Learner satisfaction }
+
+  - slug: signalledger-fraud-monitoring
+    title: SignalLedger
+    headline: AI fraud monitoring that catches risky payments in real time
+    service: web-development
+    services: [web-development, ai, data-analytics, cybersecurity]
+    industry: ind.fintech
+    client: A digital payments company
+    images: [signalledger-fraud-monitoring-dashboard]
+    duration: 12 weeks
+    goal: Spot fraudulent transactions as they happen and give analysts a fast way to review and act on them.
+    problem: Fraud was found days later in reconciliation. Analysts reviewed spreadsheets of transactions with no risk scoring, and chargebacks were rising every month.
+    solution: We built SignalLedger, a fraud monitoring web app with AI risk scoring, live transaction activity, risk distribution, alerts for unusual patterns, and a review queue with an explanation for every flag.
+    delivered:
+      [
+        AI risk scoring on every transaction,
+        Live transaction and alert monitoring,
+        Analyst review queue,
+        Explanations for each flagged payment,
+        Risk distribution reporting,
+      ]
+    stack: [fw.react, lang.python, fw.fastapi, tech.postgresql, plat.aws]
+    results:
+      - { value: "74%", label: Fewer fraud losses }
+      - { value: "248,905", label: Transactions scored each week }
+      - { value: "<2 sec", label: To flag a risky payment }
+      - { value: "61%", label: Fewer false alarms }
+
+  - slug: finance-insights-dashboard
+    title: Finance Insights Dashboard
+    headline: A personal finance web app that helps customers stay on budget
+    service: web-development
+    services: [web-development, data-analytics, ui-ux]
+    industry: ind.finance
+    client: A financial wellness and budgeting company
+    images: [finance-insights-dashboard]
+    duration: 8 weeks
+    goal: Give customers one clear view of balances, income, spending, budgets, and upcoming payments.
+    problem: Customers used spreadsheets and bank apps side by side. They missed payments, overspent without noticing, and many stopped using the service after the first month.
+    solution: We built a finance dashboard with cash flow forecasting, budget tracking by category, recent transactions, upcoming payments, and savings goals.
+    delivered:
+      [
+        Balance and cash flow overview,
+        Budget tracking by category,
+        Upcoming payments and reminders,
+        Savings goals,
+        Transaction history and search,
+      ]
+    stack: [fw.react, lang.typescript, tech.nodejs, tech.postgresql, plat.vercel]
+    results:
+      - { value: "57%", label: Better 90-day retention }
+      - { value: "32%", label: Fewer missed payments for users }
+      - { value: "4.7/5", label: Customer rating }
+      - { value: "8 weeks", label: From kickoff to launch }
+
+  - slug: carepath-healthcare-app
+    title: CarePath
+    headline: A patient app that made booking care as easy as messaging
+    service: mobile-app-development
+    services: [mobile-app-development, ui-ux, api-integration]
+    industry: ind.healthcare
+    client: A healthcare network with clinics and online consultations
+    images: [carepath-healthcare-mobile-app]
+    duration: 7 weeks
+    goal: Let patients find a doctor, book an appointment, consult online, and see their records from one app.
+    problem: Patients called to book, waited on hold, and had no easy way to see their prescriptions or records. Reception spent most of the morning on the phone.
+    solution: We designed and built CarePath for iPhone and Android with doctor search, appointment booking, online consultations, health records, prescriptions, and reminders.
+    delivered:
+      [
+        iPhone and Android app,
+        Doctor search and booking,
+        Online consultations,
+        Health records and prescriptions,
+        Appointment reminders,
+      ]
+    stack: [tech.flutter, plat.firebase, tech.nodejs, plat.google-cloud]
+    results:
+      - { value: "70%", label: Of bookings made in the app }
+      - { value: "4.8", label: App store rating }
+      - { value: "45%", label: Fewer calls to reception }
+      - { value: "120k", label: Downloads in the first year }
+
+  - slug: mintlane-fintech-app
+    title: Mintlane
+    headline: A money app that makes everyday banking feel effortless
+    service: mobile-app-development
+    services: [mobile-app-development, ui-ux, cybersecurity]
+    industry: ind.fintech
+    client: A digital money management startup
+    images: [mintlane-finance-mobile-app]
+    duration: 8 weeks
+    goal: Launch a mobile money app with accounts, transfers, bill payments, and spending insights that users trust.
+    problem: The founders had a strong idea and investor interest but no product, and every month of delay put their funding at risk.
+    solution: We built Mintlane for iPhone and Android with account balances, instant transfers, bill payments, spending breakdowns, monthly budgets, and secure sign-in.
+    delivered:
+      [
+        iPhone and Android app,
+        Accounts and balances,
+        Instant transfers and bill payments,
+        Spending overview and budgets,
+        Secure sign-in and alerts,
+      ]
+    stack: [tech.react-native, lang.typescript, tech.nodejs, int.stripe, plat.aws]
+    results:
+      - { value: "8 weeks", label: From idea to app stores }
+      - { value: "50k", label: Users in six months }
+      - { value: "4.7", label: App store rating }
+      - { value: "$2M", label: Seed round raised after launch }
+
+  - slug: fieldwise-agritech-app
+    title: Fieldwise
+    headline: A farming app that puts every field, task, and harvest in one place
+    service: mobile-app-development
+    services: [mobile-app-development, data-analytics, ui-ux]
+    industry: ind.agriculture
+    client: A mixed farming business and its grower network
+    images: [fieldwise-farm-management-app, fieldwise-farming-app-dashboard]
+    duration: 8 weeks
+    goal: Plan irrigation, scouting, inputs, and harvests from the field, with weather and crop health in one app.
+    problem: Field records lived in notebooks, irrigation was scheduled by memory, and nobody could compare yields between fields or seasons.
+    solution: We built Fieldwise for iPhone and Android with mapped fields, crop growth stages, irrigation schedules, scouting notes, weather, input usage, and harvest forecasts, all working offline.
+    delivered:
+      [
+        Mapped fields and crop stages,
+        Irrigation and task scheduling,
+        Scouting notes with photos,
+        Weather and input tracking,
+        Harvest and yield forecasts,
+      ]
+    stack: [tech.flutter, plat.firebase, lang.python, plat.google-cloud]
+    results:
+      - { value: "18%", label: Higher yields per hectare }
+      - { value: "30%", label: Less water used }
+      - { value: "10 hrs", label: Saved on records each week }
+      - { value: "100%", label: Of fields mapped and tracked }
+
+  - slug: formtrack-fitness-app
+    title: FormTrack
+    headline: A fitness app that turned new sign-ups into training habits
+    service: mobile-app-development
+    services: [mobile-app-development, ui-ux]
+    industry: ind.fitness
+    client: A fitness coaching brand
+    images: [formtrack-fitness-mobile-app]
+    duration: 6 weeks
+    goal: An app that guides members through daily workouts and shows their progress so they keep training.
+    problem: Members bought programs as PDFs, lost track after a few weeks, and rarely renewed. The coaches had no idea who had stopped training.
+    solution: We built FormTrack for iPhone and Android with daily workouts, exercise guidance, training plans, weekly activity, progress tracking, and goals.
+    delivered:
+      [
+        iPhone and Android app,
+        Daily workouts and exercise guides,
+        Training plans and schedules,
+        Progress and goal tracking,
+        Coach view of member activity,
+      ]
+    stack: [tech.react-native, plat.supabase, int.stripe]
+    results:
+      - { value: "62%", label: Better 90-day retention }
+      - { value: "3.4x", label: Workouts completed per member }
+      - { value: "4.9", label: App store rating }
+      - { value: "6 weeks", label: From kickoff to launch }
+
+  - slug: parcelpilot-delivery-app
+    title: ParcelPilot
+    headline: A delivery driver app that gets every parcel home first time
+    service: mobile-app-development
+    services: [mobile-app-development, api-integration]
+    industry: ind.logistics
+    client: A last-mile parcel delivery company
+    images: [parcelpilot-delivery-driver-app]
+    duration: 7 weeks
+    goal: Give drivers optimized routes, delivery details, and proof of delivery on their phones.
+    problem: Drivers planned routes themselves, failed deliveries were common, and proof of delivery was a paper signature that often went missing.
+    solution: We built ParcelPilot with optimized multi-stop routes, turn-by-turn navigation, package details and notes, scan-to-confirm, and photo or signature proof of delivery.
+    delivered:
+      [
+        Optimized multi-stop routes,
+        Navigation to each stop,
+        Package scanning and details,
+        Photo and signature proof of delivery,
+        Live status for dispatch,
+      ]
+    stack: [tech.flutter, tech.nodejs, tech.postgresql, plat.google-cloud]
+    results:
+      - { value: "24%", label: More stops per driver each day }
+      - { value: "63%", label: Fewer failed deliveries }
+      - { value: "100%", label: Digital proof of delivery }
+      - { value: "7 weeks", label: From kickoff to launch }
+
+  - slug: machinawatch-predictive-maintenance
+    title: MachinaWatch
+    headline: AI that predicts machine failures before they stop production
+    service: ai
+    services: [ai, data-analytics, software-development]
+    industry: ind.manufacturing
+    client: A manufacturer running CNC, conveyor, and packaging lines
+    images: [machinawatch-ai-predictive-maintenance, machinawatch-equipment-monitoring-dashboard]
+    duration: 12 weeks
+    goal: Detect equipment problems early and plan maintenance before a breakdown stops a line.
+    problem: Machines failed without warning. Each unplanned stop cost hours of production, and maintenance was either too late or done on parts that were still fine.
+    solution: We built MachinaWatch, which collects vibration, temperature, and other sensor data, uses AI models to predict failures, and turns each risk into a recommended maintenance action and work order.
+    delivered:
+      [
+        Sensor data collection from every machine,
+        AI failure prediction,
+        Risk scoring and maintenance recommendations,
+        Automatic work orders,
+        Equipment health dashboard,
+      ]
+    stack: [lang.python, fw.pytorch, fw.fastapi, tech.postgresql, plat.azure]
+    results:
+      - { value: "72%", label: Less unplanned downtime }
+      - { value: "12 days", label: Average warning before failure }
+      - { value: "35%", label: Lower maintenance costs }
+      - { value: "24", label: Machines monitored around the clock }
+
+  - slug: clinsift-medical-document-ai
+    title: ClinSift
+    headline: AI that reads clinical documents so clinicians do not have to retype them
+    service: ai
+    services: [ai, automation, software-development]
+    industry: ind.healthcare
+    client: A healthcare provider handling thousands of clinical documents a month
+    images: [clinsift-ai-medical-document-review, clinsift-medical-document-extraction]
+    duration: 10 weeks
+    goal: Turn clinic notes and patient reports into structured data automatically, with a clinician reviewing every result.
+    problem: Staff read each document and retyped symptoms, medications, and follow-ups into the record system. The queue was days long and typing errors were common.
+    solution: We built ClinSift, which reads uploaded documents, extracts patient details, complaints, vital signs, medications, and plans with a confidence score for each field, and sends them to a review queue for a clinician to approve.
+    delivered:
+      [
+        AI extraction from clinical documents,
+        Confidence score for every field,
+        Clinician review and approval queue,
+        AI highlights and document summaries,
+        Audit trail of every change,
+      ]
+    stack: [lang.python, prov.anthropic-claude, fw.fastapi, tech.postgresql, plat.azure]
+    results:
+      - { value: "98%", label: Field extraction accuracy }
+      - { value: "80%", label: Less time spent on data entry }
+      - { value: "Same day", label: Document processing, from 4 days }
+      - { value: "100%", label: Of results reviewed by a clinician }
+
+  - slug: talentflow-recruitment-automation
+    title: TalentFlow
+    headline: Recruitment automation that cut time to hire in half
+    service: automation
+    services: [automation, ai, software-development]
+    industry: ind.recruitment
+    client: A technology recruitment agency
+    images: [talentflow-automated-recruitment-workflow, talentflow-recruiting-dashboard]
+    duration: 8 weeks
+    goal: Automate the steps from application to offer so recruiters spend their time with the best candidates.
+    problem: Recruiters screened hundreds of CVs by hand, chased documents by email, and scheduled interviews through endless back-and-forth. Good candidates accepted other offers while they waited.
+    solution: We built TalentFlow, which receives applications, checks documents, screens and ranks candidates with AI, schedules interviews automatically, and gives recruiters a clear pipeline from applied to hired.
+    delivered:
+      [
+        Automated application intake and document checks,
+        AI screening and ranking,
+        Automatic interview scheduling,
+        Recruitment pipeline dashboard,
+        Offer preparation workflow,
+      ]
+    stack: [plat.hubspot, tech.n8n, lang.python, prov.openai]
+    results:
+      - { value: "50%", label: Shorter time to hire }
+      - { value: "15 hrs", label: Saved per recruiter each week }
+      - { value: "3x", label: Candidates screened per role }
+      - { value: "92%", label: Match accuracy on shortlists }
+
+  - slug: stayflow-hotel-booking-automation
+    title: StayFlow
+    headline: Booking automation that answers every hotel inquiry in minutes
+    service: automation
+    services: [automation, ai, api-integration]
+    industry: ind.hospitality
+    client: A group of independent hotels
+    images: [stayflow-hotel-booking-automation]
+    duration: 6 weeks
+    goal: Answer every inquiry from the website, chat, email, and messaging, and turn it into a confirmed booking without manual work.
+    problem: Inquiries arrived on five channels. Staff checked availability by hand, replies took hours, and many guests booked elsewhere before they heard back.
+    solution: We built StayFlow, which reads each inquiry, checks real-time availability, offers alternatives when rooms are full, creates the booking, takes payment, syncs the property system and the customer relationship management (CRM) system, and follows up after the stay.
+    delivered:
+      [
+        AI reading of inquiries from every channel,
+        Real-time availability checks,
+        Automatic reservations and confirmations,
+        Sync with the property system and CRM,
+        Post-stay follow-up messages,
+      ]
+    stack: [tech.make, prov.openai, int.stripe, plat.hubspot]
+    results:
+      - { value: "4 min", label: Average reply, from 5 hours }
+      - { value: "38%", label: More inquiries converted to bookings }
+      - { value: "25 hrs", label: Saved by staff each week }
+      - { value: "24/7", label: Inquiry handling }
+
+  - slug: onboardhq-client-onboarding
+    title: OnboardHQ
+    headline: Automated client onboarding that takes days, not weeks
+    service: automation
+    services: [automation, software-development, api-integration]
+    industry: ind.professional-services
+    client: A business advisory and consulting firm
+    images: [onboardhq-client-onboarding-dashboard, onboardhq-automated-onboarding-workflow]
+    duration: 8 weeks
+    goal: Onboard new clients through one guided flow, from welcome to identity checks, documents, signatures, and approval.
+    problem: Onboarding ran on email chains and checklists. Documents went missing, identity checks were delayed, and new clients waited up to three weeks before work could start.
+    solution: We built OnboardHQ, a guided onboarding platform that sends the welcome pack, collects information, verifies identity, extracts and checks documents, gathers e-signatures, and hands the account over to the client team.
+    delivered:
+      [
+        Guided seven-step onboarding flow,
+        Identity and business verification,
+        Document upload with automatic checks,
+        E-signatures,
+        CRM and project system handover,
+      ]
+    stack: [fw.nextjs, tech.nodejs, tech.postgresql, plat.hubspot, tech.n8n]
+    results:
+      - { value: "4 days", label: To onboard, from 3 weeks }
+      - { value: "90%", label: Less manual admin }
+      - { value: "100%", label: Of documents checked automatically }
+      - { value: "28", label: Clients onboarded in the first month }
+
+  - slug: orderrail-ecommerce-fulfilment-automation
+    title: OrderRail
+    headline: Order fulfillment automation from checkout to doorstep
+    service: automation
+    services: [automation, ecommerce, api-integration]
+    industry: ind.retail
+    client: A fast-growing online retailer
+    images: [orderrail-ecommerce-fulfilment-automation]
+    duration: 6 weeks
+    goal: Move every order from checkout to delivery automatically, with customers informed at each step.
+    problem: Staff copied orders from the store into the warehouse system, booked carriers by hand, and answered "where is my order" emails all day. Peak season meant late shipments and refunds.
+    solution: We built OrderRail, which connects the online store, payment system, inventory, warehouse, and shipping carriers, automates picking, packing, labels, and tracking, and sends customers updates at every stage.
+    delivered:
+      [
+        "Store, payment, inventory, and warehouse integration",
+        Automated pick lists and shipping labels,
+        Carrier booking and tracking,
+        Automatic customer notifications,
+        Returns and exceptions handling,
+      ]
+    stack: [plat.shopify, int.shopify-api, tech.nodejs, tech.make]
+    results:
+      - { value: "Same day", label: Dispatch on 95% of orders }
+      - { value: "80%", label: Fewer order status emails }
+      - { value: "3x", label: Order volume with the same team }
+      - { value: "0", label: Orders lost between systems }
+
+  - slug: cloudnest-saas-cloud-architecture
+    title: CloudNest
+    headline: A scalable cloud architecture for a fast-growing SaaS product
+    service: cloud
+    services: [cloud, cybersecurity, software-development]
+    industry: ind.saas
+    client: A software-as-a-service company
+    images: [cloudnest-saas-cloud-architecture]
+    duration: 8 weeks
+    goal: Run the product on infrastructure that scales automatically, stays secure, and deploys safely every day.
+    problem: The product ran on a few hand-managed servers. Traffic spikes caused outages, releases were risky, and the cloud bill grew faster than revenue.
+    solution: We designed and built CloudNest, a container-based architecture with an edge firewall, load balancing, auto-scaling services, managed databases, queues, monitoring, and an automated deployment pipeline.
+    delivered:
+      [
+        Container orchestration with auto-scaling,
+        Edge security and web application firewall,
+        Managed databases and object storage,
+        Monitoring and alerting,
+        Automated deployment pipeline,
+      ]
+    stack: [plat.aws, tool.kubernetes, tool.terraform, tool.docker, tool.github-actions]
+    results:
+      - { value: "99.99%", label: Uptime }
+      - { value: "10x", label: Traffic handled without slowdowns }
+      - { value: "40%", label: Lower cloud costs }
+      - { value: "Daily", label: Safe releases, from monthly }
+
+  - slug: healthbridge-cloud-migration
+    title: HealthBridge
+    headline: A healthcare data platform moved to the cloud without downtime
+    service: cloud
+    services: [cloud, cybersecurity, api-integration]
+    industry: ind.healthcare
+    client: A healthcare group with hospitals and laboratories
+    images: [healthbridge-healthcare-cloud-migration]
+    duration: 14 weeks
+    goal: Move patient records, lab, radiology, pharmacy, and billing systems from aging servers to a secure cloud platform.
+    problem: Clinical systems ran on old on-premises servers with limited scalability, slow access, manual backups, and disconnected data between departments.
+    solution: We planned and delivered HealthBridge, a five-stage migration covering assessment, data preparation, secure transfer, validation, and cutover, onto a cloud platform with role-based access, encryption, and disaster recovery.
+    delivered:
+      [
+        Migration assessment and plan,
+        Secure data transfer and validation,
+        Cloud platform with role-based access,
+        Encryption and audit logging,
+        Backup and disaster recovery,
+      ]
+    stack: [plat.azure, tool.terraform, tech.postgresql, tech.entra-id]
+    results:
+      - { value: "0 min", label: Clinical downtime during cutover }
+      - { value: "45%", label: Lower infrastructure costs }
+      - { value: "3x", label: Faster access to records }
+      - { value: "100%", label: Of data encrypted and backed up }
+
+  - slug: shopscale-ecommerce-cicd
+    title: ShopScale
+    headline: A deployment pipeline that lets an online store release safely every day
+    service: cloud
+    services: [cloud, ecommerce, cybersecurity]
+    industry: ind.retail
+    client: A high-traffic online store
+    images: [shopscale-ecommerce-cicd-pipeline]
+    duration: 6 weeks
+    goal: Release new features quickly without risking downtime during sales and peak traffic.
+    problem: Releases were manual and monthly. A bad deployment during a sale took the store down for hours, so the team avoided releasing at all.
+    solution: We built ShopScale, a CI/CD (continuous integration and delivery) pipeline with automated tests, security scans, staging, approval gates, blue-green deployment, smoke tests, and automatic rollback.
+    delivered:
+      [
+        Automated test and security scanning,
+        Staging and approval gates,
+        Blue-green production deployment,
+        Smoke tests and automatic rollback,
+        Auto-scaling for peak traffic,
+      ]
+    stack: [tool.github-actions, tool.docker, tool.kubernetes, plat.aws]
+    results:
+      - { value: "20x", label: More frequent releases }
+      - { value: "0", label: Downtime during peak sales }
+      - { value: "90%", label: Fewer failed releases }
+      - { value: "5 min", label: From merge to live }
+
+  - slug: streamhub-media-streaming-pipeline
+    title: StreamHub
+    headline: A video streaming pipeline that delivers to every screen worldwide
+    service: cloud
+    services: [cloud, software-development]
+    industry: ind.media
+    client: A video streaming platform
+    images: [streamhub-media-streaming-pipeline]
+    duration: 12 weeks
+    goal: Process uploaded videos automatically and stream them smoothly to phones, laptops, and TVs around the world.
+    problem: Videos were processed by hand, took hours to publish, and buffered for viewers outside the home region.
+    solution: We built StreamHub, a pipeline that ingests uploads, transcodes them into adaptive formats, generates thumbnails and captions, stores them, and delivers them through a global content delivery network.
+    delivered:
+      [
+        Automated ingest and validation,
+        Transcoding to adaptive streaming formats,
+        "Thumbnails, captions, and metadata",
+        Global content delivery,
+        Monitoring and backups,
+      ]
+    stack: [plat.aws, tool.kubernetes, tech.nodejs, plat.cloudflare]
+    results:
+      - { value: "15 min", label: From upload to live, from 6 hours }
+      - { value: "70%", label: Less buffering }
+      - { value: "5", label: Regions served at the edge }
+      - { value: "50%", label: Lower delivery costs }
+
+  - slug: keyharbor-identity-access-management
+    title: KeyHarbor
+    headline: Identity and access management that secures every system in the business
+    service: cybersecurity
+    services: [cybersecurity, software-development, api-integration]
+    industry: ind.professional-services
+    client: A professional services firm with 400 staff
+    images: [keyharbor-identity-access-management]
+    duration: 10 weeks
+    goal: Control who can access each system, automate joiners, movers, and leavers, and prove it to auditors.
+    problem: Access was granted by email and never removed. Leavers kept access for weeks, permissions were inconsistent, and every audit took a month of manual evidence gathering.
+    solution: We built KeyHarbor with a role-based access matrix, automated identity lifecycle for joiners, movers, and leavers, privileged access requests with approvals, and full audit reporting.
+    delivered:
+      [
+        Role-based access matrix,
+        "Automated joiner, mover, and leaver flows",
+        Privileged access requests with approval,
+        Access reviews and alerts,
+        Audit and compliance reports,
+      ]
+    stack: [tech.entra-id, plat.azure, tech.nodejs, plat.microsoft-365]
+    results:
+      - { value: "Same day", label: Access removed for every leaver }
+      - { value: "85%", label: Faster audits }
+      - { value: "100%", label: Of access approved and logged }
+      - { value: "1 day", label: To set up a new starter, from 5 }
+
+  - slug: careshield-healthcare-audit
+    title: CareShield
+    headline: Access monitoring that protects patient data and proves it
+    service: cybersecurity
+    services: [cybersecurity, data-analytics]
+    industry: ind.healthcare
+    client: A hospital trust with thousands of staff accounts
+    images: [careshield-healthcare-data-audit]
+    duration: 8 weeks
+    goal: Monitor every access to patient records, catch misuse early, and give compliance teams a full audit trail.
+    problem: The trust had no clear view of who accessed which patient records. Suspicious access was found only after complaints, and audits were slow and manual.
+    solution: We built CareShield with a complete audit trail, risk-based alerts for unusual access, an investigation workflow, role-based access controls, and audit summaries for compliance.
+    delivered:
+      [
+        Complete audit trail of record access,
+        Risk-based alerts for unusual access,
+        Investigation workflow,
+        Access request and approval flow,
+        Compliance audit summaries,
+      ]
+    stack: [lang.python, tech.postgresql, plat.azure, tech.entra-id]
+    results:
+      - { value: "2,842", label: Access events reviewed automatically each week }
+      - { value: "Minutes", label: To spot misuse, from weeks }
+      - { value: "100%", label: Of access logged and auditable }
+      - { value: "80%", label: Less audit preparation time }
+
+  - slug: safepoint-facility-security
+    title: SafePoint
+    headline: Connected facility security with a live view of every door and zone
+    service: cybersecurity
+    services: [cybersecurity, software-development, api-integration]
+    industry: ind.real-estate
+    client: A commercial property group
+    images: [safepoint-facility-security-monitoring]
+    duration: 8 weeks
+    goal: See access events, alarms, and incidents across buildings on one live floor plan.
+    problem: Badge readers, cameras, and alarms each had their own system. Security staff switched between screens and incidents were logged on paper.
+    solution: We built SafePoint, which connects access control, sensors, and cameras to a live floor plan with an event timeline, restricted zone alerts, and incident management.
+    delivered:
+      [
+        Live floor plan monitoring,
+        Unified access and alarm events,
+        Restricted zone alerts,
+        Incident management workflow,
+        Integration with existing badge and camera systems,
+      ]
+    stack: [fw.react, tech.nodejs, tech.postgresql, plat.azure]
+    results:
+      - { value: "1", label: Screen instead of five }
+      - { value: "65%", label: Faster incident response }
+      - { value: "100%", label: Of access events recorded }
+      - { value: "12", label: Buildings monitored live }
+
+  - slug: retailtrack-retail-analytics
+    title: RetailTrack
+    headline: Retail analytics that turned sales data into smarter stock decisions
+    service: data-analytics
+    services: [data-analytics, api-integration]
+    industry: ind.retail
+    client: A multi-store retailer
+    images: [retailtrack-retail-sales-analytics]
+    duration: 6 weeks
+    goal: One view of sales, product performance, inventory cover, and store results, refreshed automatically.
+    problem: Managers pulled reports from the till and stock systems into spreadsheets. Bestsellers ran out while slow lines filled the stockroom.
+    solution: We built RetailTrack, which joins sales and inventory data and shows sales by category and region, product contribution, low-stock warnings, inventory cover, and AI insights.
+    delivered:
+      [
+        "Sales by category, store, and region",
+        Product contribution analysis,
+        Low-stock and stockout alerts,
+        Inventory cover tracking,
+        AI insights on trends,
+      ]
+    stack: [lang.python, tech.bigquery, plat.google-cloud, fw.react]
+    results:
+      - { value: "32%", label: Sales growth on top products }
+      - { value: "41%", label: Fewer stockouts }
+      - { value: "22%", label: Less excess stock }
+      - { value: "Hourly", label: Refreshed reporting, from weekly }

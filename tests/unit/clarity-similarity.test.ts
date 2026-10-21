@@ -150,6 +150,8 @@ describe("scope control", () => {
       /^\/(solutions|industries|locations)\/[a-z0-9-]+\/$/,
       // Blog (owner direction, 20 October 2026): the planned launch articles
       /^\/resources\/(guides|comparisons|definitions|articles)\/[a-z0-9-]+\/$/,
+      // Portfolio (owner direction, 21 October 2026): one case study per real client project
+      /^\/work\/case-studies\/[a-z0-9-]+\/$/,
     ];
     for (const p of registry.pages)
       expect(

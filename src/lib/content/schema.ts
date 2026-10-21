@@ -610,7 +610,9 @@ export const Block = z.discriminatedUnion("type", [
     heading: z.string(),
     intro: z.string().optional(),
     items: z
-      .array(z.object({ photo: PhotoRef, title: z.string(), text: z.string() }))
+      .array(
+        z.object({ photo: PhotoRef, title: z.string().optional(), text: z.string().optional() }),
+      )
       .min(2)
       .max(4),
   }),
@@ -648,6 +650,8 @@ export const Block = z.discriminatedUnion("type", [
           sector: z.string(),
           service: z.string(),
           serviceLabel: z.string(),
+          industry: z.string().optional(),
+          industryLabel: z.string().optional(),
           result: Stat,
           href: z.string(),
           photo: PhotoRef.optional(),
