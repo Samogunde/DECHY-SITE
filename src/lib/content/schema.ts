@@ -836,6 +836,15 @@ export const Block = z.discriminatedUnion("type", [
     intro: z.string().optional(),
     limit: z.number().int().min(4).max(12).default(8),
   }),
+  /** Partner programs and compliance standards (data/partners/partnerships.yaml). */
+  z.object({
+    type: z.literal("partnerships"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    more: Cta.optional(),
+  }),
   /** Every certification, grouped by area (data/certifications/certifications.yaml). */
   z.object({
     type: z.literal("certification-list"),

@@ -43,6 +43,7 @@ export const NAV_KINDS = [
   "solutions",
   "industries",
   "resources",
+  "about",
   "link",
 ] as const;
 
@@ -72,6 +73,11 @@ const NavFile = z.object({
   }),
   solutions: MenuList,
   industries: MenuList,
+  about: z.object({
+    heading: z.string(),
+    allLabel: z.string(),
+    links: z.array(z.object({ label: z.string(), path: z.string(), summary: z.string() })),
+  }),
   resources: z.object({
     heading: z.string(),
     allLabel: z.string(),

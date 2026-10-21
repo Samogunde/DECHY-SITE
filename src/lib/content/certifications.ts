@@ -63,3 +63,25 @@ export function featuredCertifications(limit: number): Cert[] {
   }
   return out;
 }
+
+/** Partner programs and compliance standards the owner confirmed (data/partners/partnerships.yaml). */
+const PartnerFile = z.object({
+  partners: z
+    .array(z.object({ name: z.string(), program: z.string(), short: z.string(), text: z.string() }))
+    .min(1),
+  compliance: z.array(z.object({ name: z.string(), text: z.string() })).min(1),
+});
+export type Partnerships = z.infer<typeof PartnerFile>;
+
+let partnerCache: Partnerships | undefined;
+export function partnerships(): Partnerships {
+  partnerCache ??= PartnerFile.parse(
+    YAML.parse(
+      fs.readFileSync(
+        path.join(/*turbopackIgnore: true*/ process.cwd(), "data/partners/partnerships.yaml"),
+        "utf8",
+      ),
+    ),
+  );
+  return partnerCache;
+}

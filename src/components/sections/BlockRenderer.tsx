@@ -26,6 +26,7 @@ import {
   CertificationFiguresBlock,
   CertificationListBlock,
   CertificationStripBlock,
+  PartnershipsBlock,
 } from "./CertificationBlocks";
 import { Hero } from "./Hero";
 import {
@@ -145,6 +146,8 @@ export function BlockRenderer({
       return <GlossaryBlock block={block} />;
     case "library":
       return <LibraryBlock block={block} />;
+    case "partnerships":
+      return <PartnershipsBlock block={block} />;
     case "certification-strip":
       return <CertificationStripBlock block={block} />;
     case "certification-list":

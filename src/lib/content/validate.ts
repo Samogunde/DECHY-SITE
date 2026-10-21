@@ -799,6 +799,7 @@ export function validateRegistry(input: Registry): Issue[] {
     Solutions: "solutions",
     Industries: "industries",
     Resources: "resources",
+    "About us": "about",
   };
   for (const item of registry.nav.primary) {
     const want = KIND_BY_LABEL[item.label] ?? "link";

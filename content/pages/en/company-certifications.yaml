@@ -3,8 +3,8 @@ kind: company
 locale: en
 path: /company/certifications/
 parent: /company/
-title: "Certifications: AWS, Microsoft, Google, Salesforce | DECHY"
-description: "The professional certifications held by the DECHY team: AWS, Microsoft Azure, Google Cloud, Salesforce, Meta, GitHub, PMI, and more, and what each one proves."
+title: "Certifications, Partners and Compliance | DECHY"
+description: "DECHY's certifications, partner programs, and compliance: AWS, Microsoft, Google Cloud, Salesforce, ISO, CMMI, GDPR, HIPAA, and what each one means."
 breadcrumbLabel: Certifications
 intent:
   primary: dechy certifications
@@ -30,7 +30,7 @@ sections:
     variant: hub
     eyebrow: Certifications
     headline: Certified by the platforms the world runs on
-    lead: "Our engineers, architects, and project leads hold professional certifications from AWS, Microsoft, Google, Salesforce, Meta, GitHub, and PMI. Each one was earned by passing the issuer's own exams. When you work with DECHY, the skills behind your project are proven, not promised."
+    lead: "DECHY is a partner of AWS, Microsoft, Google Cloud, and Salesforce, works to ISO, CMMI, GDPR (the EU data protection law), and HIPAA requirements, and our engineers, architects, and project leads hold professional certifications from the platforms themselves. When you work with DECHY, the skills behind your project are proven, not promised."
     ctas:
       - { label: Talk to a certified team, href: "/contact/" }
       - { label: See every certification, href: "#all" }
@@ -39,6 +39,13 @@ sections:
     id: figures
     tone: ink
     heading: Our certifications in figures
+
+  - type: partnerships
+    id: partners
+    tone: ink
+    label: Partnerships and compliance
+    heading: Recognized partners, compliant delivery
+    intro: "Our partner programs give us direct access to the platforms' guidance, tools, and support. Our compliance commitments mean your data and your users are protected to recognized standards."
 
   - type: certification-list
     id: all
@@ -77,8 +84,8 @@ sections:
     items:
       - q: Who holds these certifications?
         a: "Members of the DECHY team: our engineers, architects, designers, and project leads. Certifications belong to the people who earn them, and the people who hold them work on our clients' projects."
-      - q: Does a certification make DECHY a partner of that company?
-        a: "No. A certification proves an individual's skill on a platform. Partner programs are a separate, company-level relationship. We list certifications here because they show the proven skill behind our work."
+      - q: What is the difference between a certification and a partnership?
+        a: "A certification proves an individual's skill on a platform. A partnership is a company-level relationship. DECHY is a member of the AWS, Microsoft, Google Cloud, and Salesforce partner programs, and our team holds the certifications listed on this page."
       - q: Will certified people work on my project?
         a: "Yes. We match people to the work: cloud-certified engineers on infrastructure, AI-certified engineers on assistants and agents, and certified project leads running delivery."
       - q: Do you add new certifications?

@@ -110,6 +110,33 @@ export function DefinitionBlock({
         visual={visual}
       />
     );
+  // With a photograph: heading and answer across the top, then the photograph beside the
+  // supporting paragraphs, both centered on the same row (owner, 21 October 2026).
+  if (block.photo)
+    return (
+      <Section id={block.id} tone={block.tone} className="def-photo">
+        <div className="def-photo-head">
+          <SectionHeader id={block.id} label={block.label} heading={block.heading} />
+          <p className="answer-lead def-photo-answer" data-reveal="block">
+            <Inline text={block.answer} />
+          </p>
+        </div>
+        <div className="def-photo-row">
+          <figure className="def-photo-figure">
+            <Photo photo={block.photo} />
+          </figure>
+          {block.paragraphs.length > 0 ? (
+            <div className="def-photo-card" data-reveal="block">
+              {block.paragraphs.map((p, i) => (
+                <p key={i}>
+                  <Inline text={p} />
+                </p>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      </Section>
+    );
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="answer-split">
@@ -118,7 +145,6 @@ export function DefinitionBlock({
           <p className="answer-lead" data-reveal="block">
             <Inline text={block.answer} />
           </p>
-          {block.photo ? <Photo photo={block.photo} className="answer-photo" /> : null}
         </div>
         {block.paragraphs.length > 0 ? (
           <div className="answer-split-col">

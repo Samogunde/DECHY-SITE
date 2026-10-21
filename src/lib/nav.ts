@@ -54,7 +54,7 @@ export type NavItemModel =
       extra: NavLinkModel[];
     }
   | {
-      kind: "solutions" | "industries" | "resources";
+      kind: "solutions" | "industries" | "resources" | "about";
       label: string;
       href: string | null;
       heading: string;
@@ -159,15 +159,24 @@ export function buildNavModel(registry: Registry): NavModel {
         items,
       };
     }
-    if (item.kind === "resources") {
-      const list = registry.nav.resources;
+    if (item.kind === "resources" || item.kind === "about") {
+      const list = registry.nav[item.kind];
       const has = (category: string) =>
         registry.pages.some((p) => p.kind === "article" && p.article?.category === category);
+      // A link to a section ("/#numbers") needs that section on the page as well as the page.
+      const exists = (path: string) => {
+        const [page = "", anchor] = path.split("#");
+        const target = hub(page) ? registry.pageByPath.get(page) : undefined;
+        return Boolean(target && (!anchor || target.sections.some((b) => b.id === anchor)));
+      };
       const items = list.links
-        .filter((l) => (!l.when || has(l.when)) && hub(l.path.split("#")[0] ?? ""))
+        .filter((l) => {
+          const when = (l as { when?: string }).when;
+          return (!when || has(when)) && exists(l.path);
+        })
         .map((l) => ({ id: l.path, label: l.label, href: l.path, summary: l.summary }));
       return {
-        kind: "resources",
+        kind: item.kind,
         label: item.label,
         href,
         heading: list.heading,
@@ -199,7 +208,12 @@ export function navDestinations(model: NavModel): string[] {
       for (const c of item.categories) for (const i of c.all) out.push(i.href);
     if (item.kind === "work")
       for (const g of item.groups) for (const i of g.items) out.push(i.href);
-    if (item.kind === "solutions" || item.kind === "industries" || item.kind === "resources")
+    if (
+      item.kind === "solutions" ||
+      item.kind === "industries" ||
+      item.kind === "resources" ||
+      item.kind === "about"
+    )
       for (const i of item.items) out.push(i.href);
   }
   return out;

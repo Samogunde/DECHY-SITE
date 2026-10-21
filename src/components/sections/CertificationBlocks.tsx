@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { Arrow } from "@/components/primitives/Arrow";
+import { TechLogo } from "@/components/home/TechLogo";
 import {
   certificationGroups,
   certificationSrc,
   featuredCertifications,
+  partnerships,
 } from "@/lib/content/certifications";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
@@ -141,6 +144,67 @@ export function CertificationFiguresBlock({ block }: { block: Of<"certification-
           </ul>
         </div>
       </div>
+    </Section>
+  );
+}
+
+/** Partner programs and compliance standards, side by side (home and Certifications page). */
+export function PartnershipsBlock({ block }: { block: Of<"partnerships"> }) {
+  const { partners, compliance } = partnerships();
+  const LOGO: Record<string, string> = { "Google Cloud": "plat.google-cloud" };
+  const more = block.more && getRegistry().pageByPath.has(block.more.href.split("#")[0] ?? "");
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false} className="ptn-section">
+      <div className="cert-strip-head">
+        <div>
+          <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
+          <h2 id={`${block.id}-h`} className="home-h2 mt-4">
+            {block.heading}
+          </h2>
+        </div>
+        {block.intro ? <p className="cert-strip-intro">{block.intro}</p> : null}
+      </div>
+      <div className="ptn-grid">
+        <div className="ptn-panel">
+          <h3 className="ptn-panel-title">Partnerships</h3>
+          <ul className="ptn-tiles">
+            {partners.map((p) => (
+              <li key={p.name} className="ptn-tile">
+                <span className="ptn-mark">
+                  {LOGO[p.short] ? <TechLogo id={LOGO[p.short]!} name={p.short} /> : null}
+                  <span className="ptn-name">{p.short}</span>
+                </span>
+                <span className="ptn-program">{p.program}</span>
+                <span className="ptn-text">{p.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="ptn-panel">
+          <h3 className="ptn-panel-title">Compliance</h3>
+          <ul className="compliance-tiles">
+            {compliance.map((c) => (
+              <li key={c.name} className="compliance-tile">
+                <CheckCircle aria-hidden="true" weight="fill" />
+                <span>
+                  <span className="compliance-name">{c.name}</span>
+                  <span className="compliance-text">{c.text}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {more && block.more ? (
+        <div className="cert-strip-foot">
+          <p className="m-0">
+            Certified people, recognized partner programs, and compliant delivery.
+          </p>
+          <Link href={block.more.href} className="mega-foot-link">
+            {block.more.label} <Arrow />
+          </Link>
+        </div>
+      ) : null}
     </Section>
   );
 }

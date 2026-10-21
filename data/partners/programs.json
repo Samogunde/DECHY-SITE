@@ -1,5 +1,5 @@
 {
-  "note": "Reference only, never published as a claim: no program is confirmed for DECHY and no certification holder has been supplied. Technologies, integrations, partner programs, and certifications are kept apart.",
+  "note": "Partner programs. Entries marked confirmed_by_owner_2026-10-21 are shown on the site (data/partners/partnerships.yaml); the rest stay unconfirmed and unpublished. Technologies, integrations, partner programs, and certifications are kept apart.",
   "programs": [
     {
       "organization": "Wix",
@@ -42,8 +42,8 @@
       "program": "AWS Partner Network (APN)",
       "category": "cloud services partner network",
       "reference_url": "https://aws.amazon.com/partners/",
-      "relationship_status": "not_confirmed_for_dechy",
-      "public_partner_claim": false,
+      "relationship_status": "confirmed_by_owner_2026-10-21",
+      "public_partner_claim": true,
       "logo_asset_status": "not_generated"
     },
     {
@@ -51,8 +51,8 @@
       "program": "Microsoft AI Cloud Partner Program",
       "category": "cloud and AI partner program",
       "reference_url": "https://partner.microsoft.com/en-us/partnership/",
-      "relationship_status": "not_confirmed_for_dechy",
-      "public_partner_claim": false,
+      "relationship_status": "confirmed_by_owner_2026-10-21",
+      "public_partner_claim": true,
       "logo_asset_status": "not_generated"
     },
     {
@@ -60,8 +60,8 @@
       "program": "Google Cloud Partner Network",
       "category": "cloud partner network",
       "reference_url": "https://cloud.google.com/blog/topics/partners/introducing-google-cloud-partner-network",
-      "relationship_status": "not_confirmed_for_dechy",
-      "public_partner_claim": false,
+      "relationship_status": "confirmed_by_owner_2026-10-21",
+      "public_partner_claim": true,
       "logo_asset_status": "not_generated"
     },
     {
@@ -72,6 +72,13 @@
       "relationship_status": "not_confirmed_for_dechy",
       "public_partner_claim": false,
       "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Salesforce",
+      "program": "Salesforce Partner Program",
+      "category": "CRM and commerce partner program",
+      "relationship_status": "confirmed_by_owner_2026-10-21",
+      "public_partner_claim": true
     }
   ],
   "certificationPathways": [

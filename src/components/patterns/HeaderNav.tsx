@@ -88,6 +88,11 @@ const MENU_INTRO: Record<string, { title: string; text: string; cta: string }> =
     text: "How each sector's data, rules, and customers shape the systems we build.",
     cta: "See all industries",
   },
+  about: {
+    title: "A certified, partnered team",
+    text: "Partners of AWS, Microsoft, Google Cloud, and Salesforce, with certified engineers and one team from first call to support.",
+    cta: "About DECHY",
+  },
   resources: {
     title: "Decide with the facts",
     text: "Guides, cost guides, comparisons, and a glossary, written in plain language so you can plan and choose with confidence.",
@@ -457,7 +462,7 @@ function ListPanel({
   item,
   onNavigate,
 }: {
-  item: Extract<MenuItem, { kind: "solutions" | "industries" | "resources" }>;
+  item: Extract<MenuItem, { kind: "solutions" | "industries" | "resources" | "about" }>;
   onNavigate: () => void;
 }) {
   // Long lists (thirty industries) show names only, three to a row.
@@ -631,7 +636,8 @@ function MobileSection({
             ) : null}
             {item.kind === "solutions" ||
             item.kind === "industries" ||
-            item.kind === "resources" ? (
+            item.kind === "resources" ||
+            item.kind === "about" ? (
               <>
                 <p className="t-eyebrow eyebrow-accent m-0 mb-3 uppercase">{item.heading}</p>
                 <MobileLinks links={item.items} onNavigate={onNavigate} />
@@ -836,7 +842,10 @@ export function HeaderNav({ model }: Props) {
     !(item.kind === "technologies" && item.categories.length === 0) &&
     !(item.kind === "work" && item.groups.length === 0) &&
     !(
-      (item.kind === "solutions" || item.kind === "industries" || item.kind === "resources") &&
+      (item.kind === "solutions" ||
+        item.kind === "industries" ||
+        item.kind === "resources" ||
+        item.kind === "about") &&
       item.items.length === 0
     );
 

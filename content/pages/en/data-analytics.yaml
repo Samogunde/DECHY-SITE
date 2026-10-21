@@ -64,7 +64,7 @@ sections:
       each line is moving.
   - type: definition
     id: what-is
-    photo: { asset: asset.photo-data-team-reviewing-reports, layout: aside, position: "45% 40%" }
+    photo: { asset: asset.photo-data-team-reviewing-reports, layout: split, position: "45% 40%" }
     tone: white
     label: Our approach
     heading: Decisions made on numbers, not guesses

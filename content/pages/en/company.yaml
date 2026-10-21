@@ -81,7 +81,8 @@ sections:
 
   - type: definition
     id: what-is
-    photo: { asset: asset.photo-company-team-working-session, layout: aside, position: "50% 42%" }
+    photo:
+      { asset: asset.photo-team-planning-whiteboard-office, layout: split, position: "50% 45%" }
     tone: paper
     label: Who we are
     heading: A technology company that works as one team

@@ -31,7 +31,8 @@ describe("navigation model", () => {
     expect(model.items.find((i) => i.label === "Industries")!.href).toBe("/industries/");
     expect(model.items.find((i) => i.label === "Resources")!.href).toBe("/resources/");
     expect(model.items.find((i) => i.label === "Solutions")!.kind).toBe("solutions");
-    expect(model.items.find((i) => i.label === "About us")!.kind).toBe("link");
+    expect(model.items.find((i) => i.label === "About us")!.kind).toBe("about");
+    expect(model.items.find((i) => i.label === "About us")!.href).toBe("/company/");
   });
 
   it("every destination in every menu is a built page: no dead ends", () => {
@@ -126,7 +127,7 @@ describe("navigation model", () => {
     expect(s.families.flatMap((f) => f.services)).toHaveLength(15);
   });
 
-  it("has menus for Services, Industries, Our Work, Solutions, Technologies, and Resources only, and none for Locations", () => {
+  it("has menus for every primary item except Locations, which has none", () => {
     expect(registry.nav.primary.filter((i) => i.kind !== "link").map((i) => i.label)).toEqual([
       "Services",
       "Industries",
@@ -134,6 +135,7 @@ describe("navigation model", () => {
       "Solutions",
       "Technologies",
       "Resources",
+      "About us",
     ]);
     expect(registry.nav.primary.map((i) => i.label)).not.toContain("Locations");
   });

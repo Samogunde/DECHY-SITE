@@ -1,0 +1,34 @@
+# Partnerships and compliance, confirmed by the owner in chat on 21 October 2026.
+# The owner confirmed DECHY is enrolled in these partner programs and works in compliance with
+# these standards. Official partner and certification marks replace the text tiles once the owner
+# supplies them from the partner portals and certificates.
+# The other programs in data/partners/programs.json (Wix, Shopify, Webflow, HubSpot, Stripe) stay
+# unconfirmed until the owner says otherwise.
+
+partners:
+  - name: Amazon Web Services
+    program: AWS Partner Network
+    short: AWS
+    text: Cloud architecture, migration, and managed workloads on AWS.
+  - name: Microsoft
+    program: Microsoft AI Cloud Partner Program
+    short: Microsoft
+    text: Azure, Microsoft 365, and AI solutions on Microsoft's cloud.
+  - name: Google Cloud
+    program: Google Cloud Partner
+    short: Google Cloud
+    text: Data, AI, and applications on Google Cloud.
+  - name: Salesforce
+    program: Salesforce Partner
+    short: Salesforce
+    text: Salesforce development, integration, and commerce.
+
+compliance:
+  - name: ISO
+    text: Quality and information security management
+  - name: CMMI
+    text: Mature, repeatable delivery processes
+  - name: GDPR
+    text: Personal data protected by design
+  - name: HIPAA
+    text: Health information handled to US privacy rules

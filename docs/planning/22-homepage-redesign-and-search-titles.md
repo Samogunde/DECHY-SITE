@@ -282,3 +282,18 @@ Owner direction, 21 October 2026, with mediusware's recognition section as the r
   - Compliance badges such as ISO and CMMI, which need the certificates.
   - Awards, which the owner will supply.
   - Real client testimonial wording.
+
+## Twelfth pass (21 October 2026): partnerships, compliance, menu, layout fixes
+
+- **Partnerships and compliance.** The owner confirmed in chat that DECHY is enrolled in four partner programs and works in compliance with four standards.
+  - Partner programs: AWS Partner Network, Microsoft AI Cloud Partner Program, Google Cloud Partner, and Salesforce Partner.
+  - Standards: ISO, CMMI, GDPR, and HIPAA.
+  - These are recorded in `data/partners/partnerships.yaml` and as `confirmed_by_owner_2026-10-21` in `data/partners/programs.json`. Wix, Shopify, Webflow, HubSpot, and Stripe stay unconfirmed.
+  - A `partnerships` block shows partner tiles beside compliance tiles. It is live on the home page, replacing the draft "platforms" section, and on the Certifications page, which is now titled "Certifications, Partners and Compliance".
+  - Official partner and ISO or CMMI marks replace the text tiles once the owner supplies them.
+- **Menu.** About us is now a dropdown: About DECHY, How we work, Who we work with, Certifications and partners, Our impact, and Testimonials (review builds). A link to a home section appears only when that section exists.
+- **Overlaps fixed.**
+  - In the menu and drawer, the clients figure takes its own full row.
+  - The hero proof items are centered on one line.
+  - The home clients figure steps down in size beside the faces.
+- **"Who we are" layout.** The heading and answer sit across the top, then a wide photograph beside a card holding the paragraphs. The same layout applies to every definition section with a photograph.

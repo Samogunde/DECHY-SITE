@@ -14,7 +14,7 @@ primary:
   - { label: Solutions, kind: solutions, path: /solutions/ }
   - { label: Technologies, kind: technologies, path: /technologies/ }
   - { label: Resources, kind: resources, path: /resources/ }
-  - { label: About us, kind: link, path: /company/ }
+  - { label: About us, kind: about, path: /company/ }
 cta:
   label: Talk to DECHY
   path: /contact/
@@ -222,6 +222,32 @@ resources:
     - label: Glossary
       path: /resources/glossary/
       summary: Technology terms explained in plain English, A to Z.
+
+# About us menu (owner, 21 October 2026): the company pages and the proof people look for,
+# so nothing depends on finding the hamburger menu. An entry whose page or home section does not
+# exist is left out.
+about:
+  heading: About DECHY
+  allLabel: About us
+  links:
+    - label: About DECHY
+      path: /company/
+      summary: Who we are, what we stand for, and the team behind the work.
+    - label: How we work
+      path: /company/how-we-work/
+      summary: From the first call to launch and long-term support.
+    - label: Who we work with
+      path: /company/who-we-work-with/
+      summary: The organizations we help and what each tends to need.
+    - label: Certifications and partners
+      path: /company/certifications/
+      summary: Our partner programs, compliance, and team certifications.
+    - label: Our impact
+      path: /#numbers
+      summary: What we have delivered, in numbers.
+    - label: Testimonials
+      path: /testimonials/
+      summary: What clients say about working with us.
 
 footer:
   explore:

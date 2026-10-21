@@ -323,3 +323,210 @@
   line-height: 1.65;
   color: var(--text-body, #aeb6c3);
 }
+
+/* The clients figure in the menu and drawer takes a full row, so the faces never crowd the
+   figures beside it (owner review, 21 October 2026). */
+.mega-intro-stats > div:first-child,
+.drawer-proof > div:first-child {
+  grid-column: 1 / -1;
+}
+.faces-dd {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+/* Hero proof line: every item centered on one line, faces included. */
+.hero-proof {
+  align-items: center;
+}
+.hero-proof li {
+  align-items: center !important;
+}
+.hero-proof-clients > span {
+  white-space: nowrap;
+}
+
+/* "Who we are" with a photograph: heading and answer on top, photo beside the paragraphs. */
+.def-photo-head {
+  display: grid;
+  gap: 1.25rem 4rem;
+  align-items: end;
+  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+@media (min-width: 64rem) {
+  .def-photo-head {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+.def-photo-answer {
+  margin: 0 !important;
+}
+.def-photo-row {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 64rem) {
+  .def-photo-row {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 3rem;
+  }
+}
+.def-photo-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+}
+.def-photo-figure .photo,
+.def-photo-figure .photo-frame {
+  aspect-ratio: 4 / 3 !important;
+  margin: 0;
+}
+.def-photo-card {
+  display: grid;
+  gap: 1.1rem;
+  padding: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-left: 3px solid #2f6fed;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #141c2f, #0f1626);
+}
+.def-photo-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-body, #aeb6c3);
+}
+.def-photo-card p:first-child {
+  font-size: 1.0625rem;
+  color: var(--text-lead, #cdd3dc);
+}
+
+/* ---------------- Partnerships and compliance ---------------- */
+.ptn-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 64rem) {
+  .ptn-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+.ptn-panel {
+  padding: clamp(1.25rem, 1rem + 1vw, 2rem);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #131b2d, #0e1525);
+}
+.ptn-panel-title {
+  margin: 0 0 1.25rem;
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: #7aa5f8;
+}
+.ptn-tiles,
+.compliance-tiles {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 40rem) {
+  .ptn-tiles,
+  .compliance-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.ptn-tile {
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 16px;
+  background: #0b111e;
+  transition: border-color 180ms ease;
+}
+.ptn-tile:hover {
+  border-color: rgb(47 111 237 / 0.55);
+}
+.ptn-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ptn-mark .tech-logo {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #fff;
+}
+.ptn-name {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.ptn-program {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #f5a524;
+}
+.ptn-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-body, #aeb6c3);
+}
+.compliance-tile {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 16px;
+  background: #0b111e;
+}
+.compliance-tile svg {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.1rem;
+  color: #22c55e;
+}
+.compliance-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+.compliance-text {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--text-body, #aeb6c3);
+}
+.mega-intro-stats {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.ptn-name {
+  white-space: nowrap;
+}
+.drawer-proof {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* The phone menu is fixed to the screen, but the header's blur makes the header its containing
+   block, so "top to bottom" collapsed to nothing. An explicit height keeps it full screen. */
+@media (max-width: 79.99rem) {
+  header .nav-panel.fixed {
+    bottom: auto;
+    height: calc(100dvh - var(--header-h));
+    overflow-y: auto;
+  }
+}
