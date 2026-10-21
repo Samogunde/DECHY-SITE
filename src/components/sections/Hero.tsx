@@ -7,6 +7,7 @@ import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
 import { RotatingHero } from "@/components/home/RotatingHero";
 import { Photo } from "@/components/primitives/Photo";
+import { ClientFaces } from "@/components/primitives/ClientFaces";
 
 type HeroBlock = Extract<Block, { type: "hero" }>;
 
@@ -133,11 +134,14 @@ export function Hero({
             </div>
             {!isHome ? (
               <ul className="hero-proof" aria-label="DECHY in brief">
-                <li>
-                  <strong>
-                    <Inline text="{{fact:company.clients}}" />
-                  </strong>{" "}
-                  clients helped
+                <li className="hero-proof-clients">
+                  <ClientFaces size="md" />
+                  <span>
+                    <strong>
+                      <Inline text="{{fact:company.clients}}" />
+                    </strong>{" "}
+                    clients helped
+                  </span>
                 </li>
                 <li>
                   Building since{" "}

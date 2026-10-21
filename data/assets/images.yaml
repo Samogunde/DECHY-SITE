@@ -9159,3 +9159,384 @@ assets:
     usage: [portfolio]
     approval: approved
     acquired: "2026-10-21"
+
+  - id: asset.cert-aws-certified-solutions-architect-professional
+    kind: file
+    file: public/certifications/aws-certified-solutions-architect-professional.png
+    role: logo
+    source: owner-supplied
+    creator: "Amazon Web Services"
+    license: "Certification badge issued by Amazon Web Services to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 6753a50a9d18f74b7eaa8238bd7196687250bbc82cc7b70da327d7ef467048ca
+    width: 506
+    height: 584
+    alt: "AWS Certified Solutions Architect, Professional badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-aws-certified-devops-engineer-professional
+    kind: file
+    file: public/certifications/aws-certified-devops-engineer-professional.png
+    role: logo
+    source: owner-supplied
+    creator: "Amazon Web Services"
+    license: "Certification badge issued by Amazon Web Services to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 174e88b254a92929956d0162d239a224302b2efe05532ac8d5b14ea9b70c5e6d
+    width: 555
+    height: 640
+    alt: "AWS Certified DevOps Engineer, Professional badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-aws-certified-developer-associate
+    kind: file
+    file: public/certifications/aws-certified-developer-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Amazon Web Services"
+    license: "Certification badge issued by Amazon Web Services to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: feb109fb391af86c47642256a3c8d8359d269181b4a2463b61d3a8257a249669
+    width: 254
+    height: 292
+    alt: "AWS Certified Developer, Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-microsoft-certified-azure-developer-associate
+    kind: file
+    file: public/certifications/microsoft-certified-azure-developer-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Microsoft"
+    license: "Certification badge issued by Microsoft to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 56e287ce9d58840382f4546fee1a91a565f3f36f8d20fb82c6a099aacb340315
+    width: 570
+    height: 590
+    alt: "Microsoft Certified Azure Developer Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-google-cloud-certified-cloud-digital-leader
+    kind: file
+    file: public/certifications/google-cloud-certified-cloud-digital-leader.png
+    role: logo
+    source: owner-supplied
+    creator: "Google Cloud"
+    license: "Certification badge issued by Google Cloud to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: f8791e7636d2844f30a5c6b1b4bc43ee308dbdc3544c7552c46b945559a17b1d
+    width: 640
+    height: 640
+    alt: "Google Cloud Certified Cloud Digital Leader badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-aws-certified-generative-ai-developer-professional
+    kind: file
+    file: public/certifications/aws-certified-generative-ai-developer-professional.png
+    role: logo
+    source: owner-supplied
+    creator: "Amazon Web Services"
+    license: "Certification badge issued by Amazon Web Services to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 33041946e1e020baab6e7df41b4f38cb068e5ae1e5feda887adefe09401dad77
+    width: 506
+    height: 584
+    alt: "AWS Certified Generative AI Developer, Professional badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-microsoft-certified-azure-ai-engineer-associate
+    kind: file
+    file: public/certifications/microsoft-certified-azure-ai-engineer-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Microsoft"
+    license: "Certification badge issued by Microsoft to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: f7e47a86d293360572f4e4ece702d4da5c7bc2cf6f8e4b24954ec48b7ef0cc0f
+    width: 415
+    height: 430
+    alt: "Microsoft Certified Azure AI Engineer Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-microsoft-certified-azure-ai-apps-and-agents-developer-associate
+    kind: file
+    file: public/certifications/microsoft-certified-azure-ai-apps-and-agents-developer-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Microsoft"
+    license: "Certification badge issued by Microsoft to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: bdde534227cb3c17109e3b155ada9e2f36f8f0cbd6630bbec33d392ff956a6d0
+    width: 562
+    height: 563
+    alt: "Microsoft Certified Azure AI Apps and Agents Developer Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-microsoft-certified-ai-agent-builder-associate
+    kind: file
+    file: public/certifications/microsoft-certified-ai-agent-builder-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Microsoft"
+    license: "Certification badge issued by Microsoft to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: dabd02485c5239238019a24e0ee554bb3fe42fff6ba4242c06131d191b0c49ef
+    width: 262
+    height: 270
+    alt: "Microsoft Certified AI Agent Builder Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-github-agentic-ai-developer
+    kind: file
+    file: public/certifications/github-agentic-ai-developer.png
+    role: logo
+    source: owner-supplied
+    creator: "GitHub"
+    license: "Certification badge issued by GitHub to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: e9f29d4b2fbc785371ea6973653fe56abc72446762c12365e1c12ed445d71754
+    width: 310
+    height: 306
+    alt: "GitHub Agentic AI Developer badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-certiprof-ai-risk-manager
+    kind: file
+    file: public/certifications/certiprof-ai-risk-manager.png
+    role: logo
+    source: owner-supplied
+    creator: "Certiprof"
+    license: "Certification badge issued by Certiprof to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 3296ab9ea4a64e4cbfbde42dafab94314ddf42db520c03a2dda29218c3941d87
+    width: 481
+    height: 439
+    alt: "Certiprof AI Risk Manager (AIRMPC) badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-salesforce-certified-platform-developer-ii
+    kind: file
+    file: public/certifications/salesforce-certified-platform-developer-ii.png
+    role: logo
+    source: owner-supplied
+    creator: "Salesforce"
+    license: "Certification badge issued by Salesforce to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 3f40f04ae3d2e4e189b0495c7efcebd98a0be388b224b8efb26082b9cd104532
+    width: 640
+    height: 626
+    alt: "Salesforce Certified Platform Developer II badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-salesforce-certified-b2c-commerce-developer
+    kind: file
+    file: public/certifications/salesforce-certified-b2c-commerce-developer.png
+    role: logo
+    source: owner-supplied
+    creator: "Salesforce"
+    license: "Certification badge issued by Salesforce to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 5f4f907aadb4ce94ba0ddd24d92dd4df1a3c18ecfebf91f875fccf3c9ed77203
+    width: 640
+    height: 625
+    alt: "Salesforce Certified B2C Commerce Developer badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-microsoft-365-certified-developer-associate
+    kind: file
+    file: public/certifications/microsoft-365-certified-developer-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Microsoft"
+    license: "Certification badge issued by Microsoft to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 98ecd78920a748d32518781182346515776ee72f1e380bd2969638a17e6a0623
+    width: 570
+    height: 589
+    alt: "Microsoft 365 Certified Developer Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-zoho-creator-certified-developer-associate
+    kind: file
+    file: public/certifications/zoho-creator-certified-developer-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Zoho"
+    license: "Certification badge issued by Zoho to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: d34f326c6dc4d67e01501763f0d4e9b3c0fff8da283b631dfc71835d527c5518
+    width: 272
+    height: 269
+    alt: "Zoho Creator Certified Developer Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-edchart-certified-flutter-developer
+    kind: file
+    file: public/certifications/edchart-certified-flutter-developer.png
+    role: logo
+    source: owner-supplied
+    creator: "Edchart"
+    license: "Certification badge issued by Edchart to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: cc7172cbf3e78a18289b5204ce2713a8f564cf1fd018f0850ee0c9f432460330
+    width: 477
+    height: 518
+    alt: "Edchart Certified Flutter Developer, Subject Matter Expert badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-google-cybersecurity-certificate-comptia-security-plus
+    kind: file
+    file: public/certifications/google-cybersecurity-certificate-comptia-security-plus.png
+    role: logo
+    source: owner-supplied
+    creator: "Google and CompTIA"
+    license: "Certification badge issued by Google and CompTIA to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 1a6f83184152a9dc969bfb1f9e185cf47032105da913523f69be48500706797c
+    width: 640
+    height: 497
+    alt: "Google Cybersecurity Certificate and CompTIA Security+ badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-pmi-project-management-professional-pmp
+    kind: file
+    file: public/certifications/pmi-project-management-professional-pmp.png
+    role: logo
+    source: owner-supplied
+    creator: "Project Management Institute"
+    license: "Certification badge issued by Project Management Institute to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: b84d43479d154dfa255f69f56c7ad39bb511cd96ab95baecbe68de57bef7ed1a
+    width: 496
+    height: 496
+    alt: "Project Management Professional (PMP) badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-certiprof-project-management-essentials
+    kind: file
+    file: public/certifications/certiprof-project-management-essentials.png
+    role: logo
+    source: owner-supplied
+    creator: "Certiprof"
+    license: "Certification badge issued by Certiprof to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 01945e427c51dfd00ca74f71c7bff149d38621ff07962139b8774458fcfa48cf
+    width: 586
+    height: 537
+    alt: "Certiprof Project Management Essentials (PMEPC) badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-meta-certified-digital-marketing-associate
+    kind: file
+    file: public/certifications/meta-certified-digital-marketing-associate.png
+    role: logo
+    source: owner-supplied
+    creator: "Meta"
+    license: "Certification badge issued by Meta to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 64b3ac36340d0e01806c2388a600f8d6086ae35b745d49260da413a9bd370f73
+    width: 486
+    height: 486
+    alt: "Meta Certified Digital Marketing Associate badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-moz-seo-essentials-certified
+    kind: file
+    file: public/certifications/moz-seo-essentials-certified.png
+    role: logo
+    source: owner-supplied
+    creator: "Moz"
+    license: "Certification badge issued by Moz to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 5e3c731aa3663d2b5113be18c86dc78c80fd199c470cd5ce274f8173b98f8146
+    width: 640
+    height: 489
+    alt: "Moz SEO Essentials Certified badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.cert-seo-expert-certification
+    kind: file
+    file: public/certifications/seo-expert-certification.png
+    role: logo
+    source: owner-supplied
+    creator: "Cancanit"
+    license: "Certification badge issued by Cancanit to a DECHY team member, supplied by the owner. Background removed only. Evidence in data/assets/licenses/certifications.md."
+    sha256: 886ecbf1cdd7571d074cf5c89b427e8718fdaff13165748dc62aa5787c1d3923
+    width: 311
+    height: 310
+    alt: "SEO Expert Certification badge"
+    usage: [certifications]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.avatar-dechy-client-1
+    kind: file
+    file: public/avatars/dechy-client-1.webp
+    role: photograph
+    source: licensed-stock
+    creator: "Kooldark (Pexels)"
+    license: "Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-24.md. Cropped and background replaced with the brand blue (scripts/prepare-client-avatars.mjs)."
+    sourceUrl: https://www.pexels.com/photo/professional-portrait-of-a-businesswoman-29995646/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 7f1a9d6d50fbccf1bee5941b68a5a375748c6de10a506e8bf28d99541322260b
+    width: 192
+    height: 192
+    alt: "Portrait beside the clients helped figure"
+    usage: [client-faces]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.avatar-dechy-client-2
+    kind: file
+    file: public/avatars/dechy-client-2.webp
+    role: photograph
+    source: licensed-stock
+    creator: "Luisbecerrafotografo (Pexels)"
+    license: "Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-m-47.md. Cropped and background replaced with the brand blue (scripts/prepare-client-avatars.mjs)."
+    sourceUrl: https://www.pexels.com/photo/a-man-in-a-suit-jacket-5906433/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: 5c51940011a860ad24ce557e6229e6d42d89b6bc8bff2e67af147e3891e7710e
+    width: 192
+    height: 192
+    alt: "Portrait beside the clients helped figure"
+    usage: [client-faces]
+    approval: approved
+    acquired: "2026-10-21"
+
+  - id: asset.avatar-dechy-client-3
+    kind: file
+    file: public/avatars/dechy-client-3.webp
+    role: photograph
+    source: licensed-stock
+    creator: "Ifeyinkastudios (Pexels)"
+    license: "Pexels License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-portraits-f-02.md. Cropped and background replaced with the brand blue (scripts/prepare-client-avatars.mjs)."
+    sourceUrl: https://www.pexels.com/photo/professional-corporate-headshot-of-smiling-woman-29852895/
+    licenseUrl: https://www.pexels.com/license/
+    sha256: abd79d72ebc2ecd56290427fd66da8e61506a0a232e1a6e6c839090437bd33e1
+    width: 192
+    height: 192
+    alt: "Portrait beside the clients helped figure"
+    usage: [client-faces]
+    approval: approved
+    acquired: "2026-10-21"

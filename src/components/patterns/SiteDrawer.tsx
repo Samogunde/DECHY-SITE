@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ClientFaces } from "@/components/primitives/ClientFaces";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
@@ -160,7 +161,10 @@ export function SiteDrawer({
                 <dl className="drawer-proof">
                   <div>
                     <dt>Clients helped</dt>
-                    <dd>{proof.clients}</dd>
+                    <dd className="faces-dd">
+                      <ClientFaces size="sm" />
+                      {proof.clients}
+                    </dd>
                   </div>
                   <div>
                     <dt>Building since</dt>

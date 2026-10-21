@@ -1,0 +1,124 @@
+# Certifications held by the DECHY team (owner-supplied badges, 21 October 2026).
+# Each badge is in public/certifications/ (prepared by scripts/prepare-certification-badges.mjs,
+# which only removes the plain background; the artwork is never redrawn or recolored).
+# A certification belongs to the people who earned it; copy says "our team holds", never
+# "DECHY is a partner of". Awards follow when the owner supplies them.
+
+groups:
+  - id: cloud
+    label: Cloud and DevOps
+    summary: Architecture, delivery, and operations on the clouds your business runs on.
+    items:
+      - name: AWS Certified Solutions Architect, Professional
+        issuer: Amazon Web Services
+        file: aws-certified-solutions-architect-professional.png
+        text: AWS's most advanced architecture certification. It proves the skill to design secure, resilient, cost-efficient systems across many accounts and workloads.
+      - name: AWS Certified DevOps Engineer, Professional
+        issuer: Amazon Web Services
+        file: aws-certified-devops-engineer-professional.png
+        text: The professional-level proof of automated delivery on AWS, from release pipelines and infrastructure as code to monitoring and incident response.
+      - name: AWS Certified Developer, Associate
+        issuer: Amazon Web Services
+        file: aws-certified-developer-associate.png
+        text: Shows hands-on skill in building, deploying, and debugging cloud applications with AWS services.
+      - name: Microsoft Certified Azure Developer Associate
+        issuer: Microsoft
+        file: microsoft-certified-azure-developer-associate.png
+        text: Proves the ability to design, build, test, and maintain cloud applications and services on Microsoft Azure.
+      - name: Google Cloud Certified Cloud Digital Leader
+        issuer: Google Cloud
+        file: google-cloud-certified-cloud-digital-leader.png
+        text: Shows a clear grasp of how Google Cloud products support business goals, so cloud decisions start from outcomes, not tools.
+
+  - id: ai
+    label: AI and automation
+    summary: Generative AI, AI agents, and responsible AI, certified on the leading platforms.
+    items:
+      - name: AWS Certified Generative AI Developer, Professional
+        issuer: Amazon Web Services
+        file: aws-certified-generative-ai-developer-professional.png
+        text: Professional-level proof of building production generative AI applications on AWS, including retrieval, agents, evaluation, and safety.
+      - name: Microsoft Certified Azure AI Engineer Associate
+        issuer: Microsoft
+        file: microsoft-certified-azure-ai-engineer-associate.png
+        text: Proves the skill to build, manage, and deploy AI solutions with Azure AI services, from language and vision to search.
+      - name: Microsoft Certified Azure AI Apps and Agents Developer Associate
+        issuer: Microsoft
+        file: microsoft-certified-azure-ai-apps-and-agents-developer-associate.png
+        text: Shows the ability to design and build AI applications and agents on Azure that are grounded in business data.
+      - name: Microsoft Certified AI Agent Builder Associate
+        issuer: Microsoft
+        file: microsoft-certified-ai-agent-builder-associate.png
+        text: Proves skill in building AI agents that automate real business tasks across Microsoft's platform.
+      - name: GitHub Agentic AI Developer
+        issuer: GitHub
+        file: github-agentic-ai-developer.png
+        text: Shows command of agentic AI development on GitHub, using AI agents to plan, write, and review code safely.
+      - name: Certiprof AI Risk Manager (AIRMPC)
+        issuer: Certiprof
+        file: certiprof-ai-risk-manager.png
+        text: Proves the ability to identify, assess, and manage the risks of AI systems, so the AI we build is safe and accountable.
+
+  - id: platforms
+    label: Software and platforms
+    summary: Development on the business platforms and frameworks our clients rely on.
+    items:
+      - name: Salesforce Certified Platform Developer II
+        issuer: Salesforce
+        file: salesforce-certified-platform-developer-ii.png
+        text: Salesforce's advanced developer certification. It proves the skill to build complex, scalable business logic and integrations on the Salesforce platform.
+      - name: Salesforce Certified B2C Commerce Developer
+        issuer: Salesforce
+        file: salesforce-certified-b2c-commerce-developer.png
+        text: Shows the ability to build and customize online stores on Salesforce B2C Commerce Cloud.
+      - name: Microsoft 365 Certified Developer Associate
+        issuer: Microsoft
+        file: microsoft-365-certified-developer-associate.png
+        text: Proves the skill to build apps and integrations across Microsoft 365, Teams, and Microsoft Graph.
+      - name: Zoho Creator Certified Developer Associate
+        issuer: Zoho
+        file: zoho-creator-certified-developer-associate.png
+        text: Shows the ability to build custom business apps and workflows on Zoho Creator.
+      - name: Edchart Certified Flutter Developer, Subject Matter Expert
+        issuer: Edchart
+        file: edchart-certified-flutter-developer.png
+        text: Shows expert-level Flutter skill for building one app that runs on both iPhone and Android.
+
+  - id: security
+    label: Security
+    summary: Security knowledge that shapes every system we build.
+    items:
+      - name: Google Cybersecurity Certificate and CompTIA Security+
+        issuer: Google and CompTIA
+        file: google-cybersecurity-certificate-comptia-security-plus.png
+        text: Two respected security credentials covering threats, risk, access control, network security, and incident response.
+
+  - id: delivery
+    label: Delivery and project management
+    summary: Projects run with discipline, on time and in the open.
+    items:
+      - name: Project Management Professional (PMP)
+        issuer: Project Management Institute
+        file: pmi-project-management-professional-pmp.png
+        text: One of the most recognized project management certifications in the world. It proves the skill to lead projects from plan to delivery.
+      - name: Certiprof Project Management Essentials (PMEPC)
+        issuer: Certiprof
+        file: certiprof-project-management-essentials.png
+        text: Shows a solid grounding in planning, scheduling, risk, and stakeholder management.
+
+  - id: growth
+    label: Marketing and search
+    summary: Growth and search visibility, certified by the platforms that measure them.
+    items:
+      - name: Meta Certified Digital Marketing Associate
+        issuer: Meta
+        file: meta-certified-digital-marketing-associate.png
+        text: Proves the skill to plan, run, and measure advertising and marketing across Facebook and Instagram.
+      - name: Moz SEO Essentials Certified
+        issuer: Moz
+        file: moz-seo-essentials-certified.png
+        text: Shows command of search engine optimization, from keyword research and on-page work to technical SEO and reporting.
+      - name: SEO Expert Certification
+        issuer: Cancanit
+        file: seo-expert-certification.png
+        text: An expert-level search engine optimization certification covering strategy, content, and technical search work.

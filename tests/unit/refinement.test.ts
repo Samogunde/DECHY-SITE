@@ -51,7 +51,8 @@ describe("photography: provenance is mandatory", () => {
   });
 
   it("keeps stored photographs web-sized", () => {
-    for (const a of photos) {
+    // The client faces are 192 px thumbnails shown at 48 px, not layout photographs.
+    for (const a of photos.filter((p) => !p.usage.includes("client-faces"))) {
       const size = fs.statSync(path.join(process.cwd(), a.file)).size;
       // Lossless PNG masters (kept as supplied, so no lossy step comes before the optimizer) are
       // never sent to browsers; only their WebP derivatives are. Lossy files must already be small.

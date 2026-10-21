@@ -22,6 +22,11 @@ import {
   PathFinderBlock,
   TechnicalBlock,
 } from "./GuidanceBlocks";
+import {
+  CertificationFiguresBlock,
+  CertificationListBlock,
+  CertificationStripBlock,
+} from "./CertificationBlocks";
 import { Hero } from "./Hero";
 import {
   CaseStudiesBlock,
@@ -140,6 +145,12 @@ export function BlockRenderer({
       return <GlossaryBlock block={block} />;
     case "library":
       return <LibraryBlock block={block} />;
+    case "certification-strip":
+      return <CertificationStripBlock block={block} />;
+    case "certification-list":
+      return <CertificationListBlock block={block} />;
+    case "certification-figures":
+      return <CertificationFiguresBlock block={block} />;
     case "note":
       return <NoteBlock block={block} />;
     case "contact-form":

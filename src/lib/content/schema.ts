@@ -827,6 +827,27 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
   }),
+  /** A row of certification badges linking to the Certifications page (home, About us). */
+  z.object({
+    type: z.literal("certification-strip"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    limit: z.number().int().min(4).max(12).default(8),
+  }),
+  /** Every certification, grouped by area (data/certifications/certifications.yaml). */
+  z.object({
+    type: z.literal("certification-list"),
+    ...base,
+    heading: z.string(),
+  }),
+  /** The Certifications page figures: badges, issuers, areas, and the platforms certified on. */
+  z.object({
+    type: z.literal("certification-figures"),
+    ...base,
+    heading: z.string(),
+  }),
   /** One short line of text, centered (a promise or a note at the end of a page). */
   z.object({
     type: z.literal("note"),

@@ -234,6 +234,7 @@ footer:
     - { label: Glossary, path: /resources/glossary/ }
     - { label: Locations, path: /locations/ }
     - { label: About us, path: /company/ }
+    - { label: Certifications, path: /company/certifications/ }
     - { label: Contact, path: /contact/ }
   legal:
     - { label: Privacy policy, path: /privacy/ }

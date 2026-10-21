@@ -260,3 +260,25 @@ At the owner's direction, eight resource pages are written and published as live
   - The process statements are ones the site already makes: a written plan with a fixed quote and timeline after a short call, staged delivery, and client ownership of code and data.
 - **Validator.** The short answer and the comparison table now count as page text for the length check, and pass the same style checks as other copy.
 - **Tests.** Cost guides and the two unplanned comparisons are allowed outside the 53-article plan. The search test checks the eight results the search box shows.
+
+## Eleventh pass (21 October 2026): certifications, client faces, testimonial counts
+
+Owner direction, 21 October 2026, with mediusware's recognition section as the reference.
+
+- **Certifications.**
+  - The owner supplied 23 badge files covering 22 certifications. One was a duplicate.
+  - `scripts/prepare-certification-badges.mjs` removes plain backgrounds by filling inward from the edges, so the artwork is never touched. It also trims the margins and writes descriptive names to `public/certifications/`.
+  - The data is in `data/certifications/certifications.yaml`, in six areas: cloud, AI, platforms, security, delivery, and growth.
+  - The page `/company/certifications/` has a hero, figures (badges, issuers, areas, and the platforms the team is certified on), a sticky area bar, rows of badge, issuer, name, and what each one proves, why it matters, questions, and a call to action.
+  - The home page and About us show eight badges in a strip, with a link to the page. Links also go in the footer and the drawer.
+  - Copy says the team holds the certifications, never that DECHY is a partner of the issuer.
+- **Client faces.**
+  - Three licensed library portraits are cropped, and their studio background is replaced with the brand blue (`scripts/prepare-client-avatars.mjs`).
+  - They appear beside every "clients helped" figure: the page heroes, the home and About figures, the menus, and the drawer.
+  - The portraits were chosen for plain backgrounds and framing.
+- **Testimonials.** Every count is removed: the summary strip, the number in the heading, the industry menu counts, the result count, "Show more" totals, and the slider counter.
+- **Pending the owner.**
+  - Partnerships, which need confirmed partner program membership.
+  - Compliance badges such as ISO and CMMI, which need the certificates.
+  - Awards, which the owner will supply.
+  - Real client testimonial wording.

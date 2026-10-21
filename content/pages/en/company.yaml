@@ -113,6 +113,14 @@ sections:
       - value: "50+"
         label: Technologies we build with
 
+  - type: certification-strip
+    id: certifications
+    tone: ink
+    label: Certified team
+    heading: Skills proven by the people who set the standard
+    intro: "Our team's certifications come from the companies whose platforms we build on, so you know the skills are proven, not just claimed."
+    limit: 8
+
   - type: statement
     id: since-2010
     tone: white

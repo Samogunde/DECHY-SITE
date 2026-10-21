@@ -39,7 +39,6 @@ export function QuoteCarousel({ label, cards }: { label: string; cards: ReactNod
     setAt(next);
     el.scrollTo({ left: card.offsetLeft - el.offsetLeft, behavior: "smooth" });
   };
-  const pad = (n: number) => String(n).padStart(2, "0");
   return (
     <div className="qcar">
       <ul ref={track} className="qcar-track" aria-label={label}>
@@ -51,9 +50,6 @@ export function QuoteCarousel({ label, cards }: { label: string; cards: ReactNod
       </ul>
       {cards.length > perView ? (
         <div className="qcar-nav">
-          <span className="qcar-count" aria-hidden="true">
-            <strong>{pad(Math.min(at + 1, cards.length))}</strong> / {pad(cards.length)}
-          </span>
           <span className="qcar-bar" aria-hidden="true">
             <span style={{ width: `${((Math.min(at, last) + perView) / cards.length) * 100}%` }} />
           </span>

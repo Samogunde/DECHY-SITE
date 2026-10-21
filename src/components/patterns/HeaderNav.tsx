@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ClientFaces } from "@/components/primitives/ClientFaces";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Arrow } from "@/components/primitives/Arrow";
@@ -117,7 +118,10 @@ function MegaIntro({
       <dl className="mega-intro-stats">
         <div>
           <dt>Clients helped</dt>
-          <dd>{proof.clients}</dd>
+          <dd className="faces-dd">
+            <ClientFaces size="sm" />
+            {proof.clients}
+          </dd>
         </div>
         <div>
           <dt>Building since</dt>

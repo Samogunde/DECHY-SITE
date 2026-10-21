@@ -90,7 +90,7 @@ describe("clarity standard on the shipped pages", () => {
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(144);
+    expect(guided.length).toBe(145);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(
@@ -141,7 +141,7 @@ describe("scope control", () => {
     const allowed = [
       /^\/$/,
       /^\/(contact|privacy|cookies|terms|accessibility|services|solutions|technologies|industries|locations|resources|work|company)\/$/,
-      /^\/company\/(how-we-work|who-we-work-with)\/$/,
+      /^\/company\/(how-we-work|who-we-work-with|certifications)\/$/,
       /^\/work\/areas\/[a-z0-9-]+\/$/,
       /^\/(software-development|ai|automation|api-integration|data-analytics|cloud|cybersecurity|web-development|mobile-app-development|ecommerce|ui-ux|branding|seo-aeo-geo|digital-marketing|consulting)\/$/,
       // Phase 3: one page per approved technology, under its canonical service

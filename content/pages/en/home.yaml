@@ -91,6 +91,14 @@ sections:
       - { name: Fairmont Industries, icon: compass }
       - { name: Emberfall House, icon: sparkles }
 
+  - type: certification-strip
+    id: certifications
+    tone: ink
+    label: Certified team
+    heading: Certified by the platforms your business runs on
+    intro: "Our engineers, architects, and project leads hold professional certifications from AWS, Microsoft, Google, Salesforce, Meta, and PMI. Every badge was earned by passing the issuer's own exams."
+    limit: 8
+
   - type: stats
     id: numbers
     tone: ink

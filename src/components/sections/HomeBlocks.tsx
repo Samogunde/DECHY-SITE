@@ -22,6 +22,7 @@ import { Icon } from "@/components/primitives/Icon";
 import { Inline } from "@/components/primitives/Inline";
 import { LinkButton } from "@/components/primitives/LinkButton";
 import { Photo } from "@/components/primitives/Photo";
+import { ClientFaces } from "@/components/primitives/ClientFaces";
 import { expandFacts } from "@/lib/content/inline";
 import { getRegistry, showDrafts } from "@/lib/content/load";
 import type { Block, IconName } from "@/lib/content/schema";
@@ -240,6 +241,7 @@ export function StatsBlock({ block }: { block: Of<"stats"> }) {
               <div key={s.label} className="stat">
                 <dt>{s.label}</dt>
                 <dd>
+                  {s.value.includes("company.clients") ? <ClientFaces size="md" /> : null}
                   <CountUp value={statValue(s.value)} />
                 </dd>
                 {s.detail ? <p className="stat-detail">{s.detail}</p> : null}
@@ -939,24 +941,6 @@ export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> 
   return (
     <Section id={block.id} tone={block.tone} ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <dl className="tw-summary">
-        <div>
-          <dt>Client stories</dt>
-          <dd>{block.items.length}</dd>
-        </div>
-        <div>
-          <dt>Services covered</dt>
-          <dd>{new Set(block.items.map((t) => t.service)).size}</dd>
-        </div>
-        <div>
-          <dt>Industries</dt>
-          <dd>{new Set(block.items.map((t) => t.industry)).size}</dd>
-        </div>
-        <div>
-          <dt>Working with clients since</dt>
-          <dd>{getRegistry().facts.get("company.founded")?.value}</dd>
-        </div>
-      </dl>
       <div className="mt-8">
         <TestimonialWall
           services={facets("service", "serviceLabel")}

@@ -240,7 +240,7 @@ export function sampleTestimonialsPage(labels: Labels): Page {
         id: "testimonials",
         tone: "ink",
         label: "Client stories",
-        heading: `${all.length} clients, in their own words`,
+        heading: "In our clients' own words",
         items: all.map((q) => ({
           quote: q.quote,
           name: q.name,

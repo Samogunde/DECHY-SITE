@@ -67,13 +67,12 @@ export function TestimonialWall({
               <option value="">All industries</option>
               {industries.map((f) => (
                 <option key={f.key} value={f.key}>
-                  {f.label} ({f.count})
+                  {f.label}
                 </option>
               ))}
             </select>
           </label>
           <p className="tw-result" aria-live="polite">
-            <strong>{visible.length}</strong> {visible.length === 1 ? "story" : "stories"}
             {service || industry ? (
               <button
                 type="button"
@@ -102,9 +101,6 @@ export function TestimonialWall({
         <div className="tw-more">
           <button type="button" className="tw-more-btn" onClick={() => setLimit(limit + PAGE)}>
             Show more stories
-            <span>
-              {limit} of {visible.length}
-            </span>
           </button>
         </div>
       ) : null}

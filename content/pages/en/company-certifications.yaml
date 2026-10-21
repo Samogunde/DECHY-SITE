@@ -1,0 +1,91 @@
+id: page.company-certifications
+kind: company
+locale: en
+path: /company/certifications/
+parent: /company/
+title: "Certifications: AWS, Microsoft, Google, Salesforce | DECHY"
+description: "The professional certifications held by the DECHY team: AWS, Microsoft Azure, Google Cloud, Salesforce, Meta, GitHub, PMI, and more, and what each one proves."
+breadcrumbLabel: Certifications
+intent:
+  primary: dechy certifications
+  secondary:
+    - aws certified software company
+    - microsoft certified developers
+    - certified software development team
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-21"
+dateModified: "2026-10-21"
+schemaTypes: [WebPage, AboutPage, FAQPage]
+comprehension:
+  what: "The DECHY team holds professional certifications from AWS, Microsoft, Google, Salesforce, Meta, GitHub, PMI, and other respected issuers."
+  problem: "Anyone can list technologies on a website. Buyers need proof that a team has the skills it claims before trusting it with their systems."
+  audience: "Buyers comparing technology partners who want independent proof of skill in cloud, AI, platforms, security, delivery, and search."
+  choose: "Look for the certifications that match your project: cloud and DevOps for infrastructure, AI for assistants and agents, platform certifications for Salesforce or Microsoft work."
+  next: "Tell us what you are building, and we will put certified people on it from the first call."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Certifications
+    headline: Certified by the platforms the world runs on
+    lead: "Our engineers, architects, and project leads hold professional certifications from AWS, Microsoft, Google, Salesforce, Meta, GitHub, and PMI. Each one was earned by passing the issuer's own exams. When you work with DECHY, the skills behind your project are proven, not promised."
+    ctas:
+      - { label: Talk to a certified team, href: "/contact/" }
+      - { label: See every certification, href: "#all" }
+
+  - type: certification-figures
+    id: figures
+    tone: ink
+    heading: Our certifications in figures
+
+  - type: certification-list
+    id: all
+    tone: ink
+    heading: Every certification our team holds
+
+  - type: columns
+    id: why
+    tone: ink
+    label: Why it matters
+    heading: What certified people mean for your project
+    intro: "A certification is earned the hard way: by passing exams the platform owner writes and grades. Here is what that gives you."
+    columns:
+      - title: Fewer surprises
+        items:
+          - "Certified architects design for security, cost, and scale from the first diagram."
+          - "Problems that trip up first-time teams are caught at the planning stage."
+      - title: Current best practice
+        items:
+          - "Issuers update their exams as their platforms change."
+          - "Our team works to today's recommended patterns, not last year's."
+      - title: The right person for each part
+        items:
+          - "Cloud work goes to cloud-certified engineers, AI work to AI-certified engineers."
+          - "Projects are led by people certified in delivery and project management."
+      - title: Independent proof
+        items:
+          - "Each certification is issued by the platform owner, not by us."
+          - "You can rely on proof that someone outside DECHY has checked."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about our certifications
+    items:
+      - q: Who holds these certifications?
+        a: "Members of the DECHY team: our engineers, architects, designers, and project leads. Certifications belong to the people who earn them, and the people who hold them work on our clients' projects."
+      - q: Does a certification make DECHY a partner of that company?
+        a: "No. A certification proves an individual's skill on a platform. Partner programs are a separate, company-level relationship. We list certifications here because they show the proven skill behind our work."
+      - q: Will certified people work on my project?
+        a: "Yes. We match people to the work: cloud-certified engineers on infrastructure, AI-certified engineers on assistants and agents, and certified project leads running delivery."
+      - q: Do you add new certifications?
+        a: "Yes. Our team keeps learning as the platforms change, and we add each new certification to this page once it is earned."
+
+  - type: cta
+    id: contact-cta
+    heading: Put a certified team on your project
+    body: "Tell us what you want to build. We will reply with a plan, a fixed quote, and a timeline, and the certified people who will deliver it."
+    primary: { label: Start a project, href: "/contact/" }

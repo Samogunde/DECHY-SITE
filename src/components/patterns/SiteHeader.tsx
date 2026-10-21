@@ -40,6 +40,13 @@ function drawerLinks(): DrawerLink[] {
       ok: registry.pageByPath.has("/testimonials/") || has("testimonials"),
     },
     {
+      label: "Certifications",
+      href: "/company/certifications/",
+      text: "Our team's professional certifications",
+      icon: "shield",
+      ok: true,
+    },
+    {
       label: "Partnership",
       href: "/#partners",
       text: "Platforms and partners",
