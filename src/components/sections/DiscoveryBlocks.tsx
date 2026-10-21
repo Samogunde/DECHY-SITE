@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BlogGrid } from "@/components/home/BlogGrid";
+import { ResourceLibrary } from "@/components/home/ResourceLibrary";
 import { Photo } from "@/components/primitives/Photo";
 import { readingMinutes } from "@/lib/content/articles";
 import { CATEGORY_LABEL } from "./ArticleView";
@@ -331,5 +332,120 @@ export function ArticlesBlock({ block }: { block: Of<"articles"> }) {
           .map((p) => ({ key: p.path, category: p.article?.category ?? "guide", node: card(p) }))}
       />
     </Section>
+  );
+}
+
+/** Which tab an article belongs to on the Resources page. */
+const LIBRARY_GROUP = (p: Page) =>
+  p.article?.category === "comparison"
+    ? "comparisons"
+    : p.article?.category === "cost"
+      ? "cost-guides"
+      : "guides";
+
+const LIBRARY_TABS: { key: string; label: string }[] = [
+  { key: "guides", label: "Guides" },
+  { key: "comparisons", label: "Comparisons" },
+  { key: "cost-guides", label: "Cost guides" },
+];
+
+/** A resource card: category, reading time, title, and summary. */
+function ResourceCard({ p, featured = false }: { p: Page; featured?: boolean }) {
+  return (
+    <Link
+      href={p.path}
+      className={`blog-card link-card${featured ? " is-featured" : ""}`}
+      data-spotlight
+    >
+      {p.article?.photo ? (
+        <span className="blog-photo">
+          <Photo photo={p.article.photo} />
+        </span>
+      ) : null}
+      <span className="blog-text">
+        <span className="blog-meta">
+          <span className="article-cat">{CATEGORY_LABEL[p.article?.category ?? "guide"]}</span>
+          <span>{readingMinutes(p)} min read</span>
+        </span>
+        <span className="blog-title">{p.breadcrumbLabel}</span>
+        <span className="blog-summary">{p.article?.summary ?? p.description}</span>
+      </span>
+      <HoverArrow />
+    </Link>
+  );
+}
+
+/**
+ * The Resources page library: filter tabs, the featured article, the latest articles, then a
+ * row of cost guides and a row of comparisons (each only once one exists), and the Glossary.
+ */
+export function LibraryBlock({ block }: { block: Of<"library"> }) {
+  const registry = getRegistry();
+  const articles = articlePages(registry);
+  if (articles.length === 0) return null;
+  const featured = articles.find((p) => p.article?.number === 1) ?? articles[0]!;
+  const tabs = LIBRARY_TABS.map((t) => ({
+    ...t,
+    count: articles.filter((p) => LIBRARY_GROUP(p) === t.key).length,
+  })).filter((t) => t.count > 0);
+  const glossaryHref = registry.pageByPath.has("/resources/glossary/")
+    ? "/resources/glossary/"
+    : undefined;
+  const row = (id: string, label: string, heading: string) => {
+    const list = articles.filter((p) => LIBRARY_GROUP(p) === id);
+    if (list.length === 0) return null;
+    return (
+      <div id={id} className="rl-row">
+        <div className="rl-row-head">
+          <p className="t-eyebrow eyebrow-accent m-0">{label}</p>
+          <h3 className="rl-row-title">{heading}</h3>
+        </div>
+        <ul className="blog-grid">
+          {list.map((p) => (
+            <li key={p.path}>
+              <ResourceCard p={p} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <h2 id={`${block.id}-h`} className="sr-only">
+        {block.heading}
+      </h2>
+      <ResourceLibrary
+        tabs={tabs}
+        glossaryHref={glossaryHref}
+        featured={<ResourceCard p={featured} featured />}
+        cards={articles
+          .filter((p) => p !== featured)
+          .map((p) => ({ key: p.path, group: LIBRARY_GROUP(p), node: <ResourceCard p={p} /> }))}
+      />
+      {row("cost-guides", "Cost guides", "What it costs, and why")}
+      {row("comparisons", "Comparisons", "Two options, side by side")}
+      {glossaryHref ? (
+        <Link href={glossaryHref} className="rl-glossary link-card" data-spotlight>
+          <span className="rl-glossary-label">Glossary</span>
+          <span className="rl-glossary-title">Technology terms in plain English, A to Z</span>
+          <span className="rl-glossary-text">
+            {registry.pageByPath.get(glossaryHref)?.description}
+          </span>
+          <HoverArrow />
+        </Link>
+      ) : null}
+    </Section>
+  );
+}
+
+/** One short centered line at the end of a page. */
+export function NoteBlock({ block }: { block: Of<"note"> }) {
+  return (
+    <div className={`note-line tone-${block.tone}`}>
+      <div className="container-site">
+        <p>{block.text}</p>
+      </div>
+    </div>
   );
 }

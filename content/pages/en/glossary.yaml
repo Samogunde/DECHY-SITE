@@ -1,0 +1,39 @@
+id: page.glossary
+kind: hub
+locale: en
+path: /resources/glossary/
+parent: /resources/
+title: "Technology Glossary: Terms in Plain English | DECHY"
+description: "Plain-English definitions of the technology terms that come up when you plan software, websites, apps, AI, automation, cloud, security, and search."
+breadcrumbLabel: Glossary
+h1: Technology glossary
+lead: "The terms that come up when you plan software, websites, apps, AI, automation, cloud, security, and search, explained in plain English."
+intent:
+  primary: technology glossary
+  secondary:
+    - software terms explained
+    - what does api mean
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-21"
+dateModified: "2026-10-21"
+schemaTypes: [WebPage]
+comprehension:
+  what: "A glossary of technology terms, each explained in a sentence or two of plain English."
+  problem: "Technology conversations are full of abbreviations and terms that make it hard to follow a proposal or compare options."
+  audience: "Owners and teams who are planning a project and want to understand the words suppliers use."
+  choose: "Find the term by its first letter, read the short definition, then follow the link to the service where it matters."
+  next: "If a term still leaves you unsure what you need, ask us and we will explain it for your situation."
+
+sections:
+  - type: glossary
+    id: glossary
+    tone: paper
+    label: A to Z
+    heading: Technology terms in plain English
+
+  - type: cta
+    id: contact-cta
+    heading: Still unsure what a term means for you?
+    body: "Tell us what you are planning. We will explain the parts that matter for your project, in plain English."
+    primary: { label: Talk to DECHY, href: "/contact/" }

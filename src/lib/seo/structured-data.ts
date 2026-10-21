@@ -163,9 +163,28 @@ export function buildGraph(page: Page, registry: Registry): Graph {
       inLanguage: "en",
       datePublished: page.datePublished,
       dateModified: page.dateModified,
-      author: { "@id": orgId() },
+      author: page.article?.author
+        ? { "@type": "Person", name: page.article.author, worksFor: { "@id": orgId() } }
+        : { "@id": orgId() },
       publisher: { "@id": orgId() },
       mainEntityOfPage: { "@id": `${url}#webpage` },
+    } as Thing);
+  }
+
+  // A glossary page describes its terms as a DefinedTermSet.
+  const glossary = page.sections.find((b) => b.type === "glossary");
+  if (glossary && glossary.type === "glossary" && glossary.items.length > 0) {
+    nodes.push({
+      "@type": "DefinedTermSet",
+      "@id": `${url}#terms`,
+      name: page.h1 ?? page.title,
+      url,
+      hasDefinedTerm: glossary.items.map((t) => ({
+        "@type": "DefinedTerm",
+        name: t.term,
+        description: t.definition,
+        inDefinedTermSet: { "@id": `${url}#terms` },
+      })),
     } as Thing);
   }
 

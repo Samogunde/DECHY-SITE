@@ -5,7 +5,14 @@ import type { Block, Page } from "@/lib/content/schema";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { ContactForm } from "./ContactForm";
 import { ContactPaths } from "./ContactPaths";
-import { ArticlesBlock, BrowseBlock, ConnectsBlock, DirectoryBlock } from "./DiscoveryBlocks";
+import {
+  ArticlesBlock,
+  BrowseBlock,
+  ConnectsBlock,
+  DirectoryBlock,
+  LibraryBlock,
+  NoteBlock,
+} from "./DiscoveryBlocks";
 import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./EditorialBlocks";
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
 import {
@@ -131,6 +138,10 @@ export function BlockRenderer({
       return <CalloutBlock block={block} />;
     case "glossary":
       return <GlossaryBlock block={block} />;
+    case "library":
+      return <LibraryBlock block={block} />;
+    case "note":
+      return <NoteBlock block={block} />;
     case "contact-form":
       return <ContactFormBlock block={block} />;
     case "lead-services":

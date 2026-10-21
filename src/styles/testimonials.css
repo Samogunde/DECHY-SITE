@@ -1,0 +1,330 @@
+/* Client quotes (owner review, 21 October 2026): one card design everywhere. The person comes
+   first, then the quote, then tags. Service, industry, and home pages slide two cards at a time;
+   the Testimonials page shows an even grid under a filter bar. */
+
+.qc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1.75rem;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #141c2f 0%, #0f1626 100%);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset;
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+.qc:hover {
+  border-color: rgb(47 111 237 / 0.45);
+}
+.qc-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.07);
+}
+.qc-head .quote-avatar {
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.9375rem;
+  box-shadow:
+    0 0 0 2px #0f1626,
+    0 0 0 3px rgb(47 111 237 / 0.5);
+}
+.qc-who {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+.qc-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.qc-role,
+.qc-company {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--text-muted, #8a93a3);
+}
+.qc-company {
+  color: #9db8f5;
+}
+.qc-mark {
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: auto;
+  align-self: flex-start;
+  color: #f5a524;
+  opacity: 0.9;
+}
+.qc-quote {
+  margin: 0;
+}
+.qc-quote p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-lead, #cdd3dc);
+}
+.qc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: auto 0 0;
+}
+.qc-tag {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text-body, #aeb6c3);
+}
+.qc-tag-main {
+  border-color: rgb(47 111 237 / 0.4);
+  background: rgb(47 111 237 / 0.12);
+  color: #c9d8fb;
+}
+
+/* Section head: heading on the left, "See all" on the right. */
+.quotes-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: 2.25rem;
+}
+
+/* The sliding row. */
+.qcar-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 88%;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0 0 0.25rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+.qcar-track::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .qcar-track {
+    grid-auto-columns: calc((100% - 1.25rem) / 2);
+  }
+}
+.qcar-item {
+  display: flex;
+  scroll-snap-align: start;
+}
+.qcar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.qcar-count {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  color: var(--text-muted, #8a93a3);
+  font-variant-numeric: tabular-nums;
+}
+.qcar-count strong {
+  color: #fff;
+}
+.qcar-bar {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(255 255 255 / 0.1);
+  overflow: hidden;
+}
+.qcar-bar span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: #2f6fed;
+  transition: width 300ms ease;
+}
+.qcar-btn {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+.qcar-btn:hover:not(:disabled) {
+  border-color: #2f6fed;
+  background: #2f6fed;
+}
+.qcar-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.qcar-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ---------------- Testimonials page ---------------- */
+.tw {
+  display: block;
+}
+.tw-toolbar {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 20px;
+  background: rgb(255 255 255 / 0.025);
+}
+.tw-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tw-tabs::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .tw-tabs {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}
+.tw-tab {
+  flex: none;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.875rem;
+  color: var(--text-body, #aeb6c3);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+.tw-tab:hover {
+  border-color: rgb(47 111 237 / 0.6);
+  color: #fff;
+}
+.tw-tab[aria-pressed="true"] {
+  border-color: #2f6fed;
+  background: #2f6fed;
+  color: #fff;
+}
+.tw-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 0.07);
+}
+.tw-select {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-muted, #8a93a3);
+}
+.tw-select select {
+  min-height: 2.75rem;
+  min-width: 15rem;
+  padding: 0 2.25rem 0 0.9rem;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 12px;
+  background: #0f1626;
+  font-size: 0.9375rem;
+  color: #fff;
+}
+.tw-result {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted, #8a93a3);
+}
+.tw-result strong {
+  font-family: var(--font-heading);
+  color: #fff;
+}
+.tw-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+@media (min-width: 48rem) {
+  .tw-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 72rem) {
+  .tw-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.tw-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.tw-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  border-radius: 999px;
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+.tw-more-btn:hover {
+  background: #fff;
+  color: #111827;
+}
+.tw-more-btn span {
+  font-weight: 400;
+  opacity: 0.65;
+}
+.tw-empty {
+  margin: 2rem 0 0;
+  text-align: center;
+  color: var(--text-muted, #8a93a3);
+}

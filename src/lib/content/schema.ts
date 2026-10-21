@@ -820,6 +820,19 @@ export const Block = z.discriminatedUnion("type", [
     heading: z.string(),
     intro: z.string().optional(),
   }),
+  /** The Resources library: tabs, the featured article, the latest, cost and comparison rows. */
+  z.object({
+    type: z.literal("library"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+  }),
+  /** One short line of text, centered (a promise or a note at the end of a page). */
+  z.object({
+    type: z.literal("note"),
+    ...base,
+    text: z.string(),
+  }),
   z.object({
     type: z.literal("service-index"),
     ...base,
@@ -938,6 +951,14 @@ export const Block = z.discriminatedUnion("type", [
 export type Block = z.infer<typeof Block>;
 export type BlockType = Block["type"];
 
+/** A comparison article: two or more options, compared row by row. */
+export const ArticleCompare = z.object({
+  options: z.array(z.string()).min(2).max(3),
+  rows: z.array(z.object({ label: z.string(), values: z.array(z.string()) })).min(2),
+  choose: z.array(z.object({ option: z.string(), when: z.array(z.string()).min(1) })).min(2),
+  recommendation: z.string(),
+});
+
 export const Page = z.object({
   id: z.string(),
   kind: z.enum([
@@ -987,8 +1008,20 @@ export const Page = z.object({
   /** Resource and article pages only: how the piece is classified. The author is always DECHY. */
   article: z
     .object({
-      category: z.enum(["guide", "comparison", "decision", "explainer", "industry"]),
+      category: z.enum(["guide", "comparison", "decision", "explainer", "industry", "cost"]),
       summary: z.string().min(40),
+      /** The writer's name as supplied; DECHY's team when none is given. */
+      author: z.string().optional(),
+      /** Last reviewed date (ISO), shown beside the published date. */
+      reviewed: z.string().optional(),
+      /** The short answer shown in a box at the top. */
+      answer: z.string().optional(),
+      /** Comparisons: the options side by side, when to choose each, and our recommendation. */
+      compare: ArticleCompare.optional(),
+      /** Cost guides: the service whose price ranges (data/pricing) are shown as a table. */
+      pricing: z.string().optional(),
+      /** Hand-picked related links; related articles on the same service are added after them. */
+      related: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
       /** The service the article reports to (its canonical home). */
       service: z.string().optional(),
       /** Its number in the 53-article plan. */

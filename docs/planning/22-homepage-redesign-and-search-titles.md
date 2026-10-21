@@ -212,3 +212,32 @@ The owner supplied `DECHY_Content_Data_Pack_v2.zip` with implementation instruct
 - **Client Identity Register.** The 300 testimonial companies in the register are the companies on the quotes. The home "Trusted by" strip now uses eight of them. The 75 concept brands are not used, because the concept case studies were not imported.
 - **Partner and certification reference.** It is stored as reference only in `data/partners/programs.json`. No program is confirmed for DECHY and nothing is published from it. The home section now reads "The platforms we build on".
 - **Not imported.** The editorial authors and the concept case studies were not imported, at the owner's direction.
+
+## Ninth pass (21 October 2026): owner review fixes, Resources, templates
+
+Owner review, 21 October 2026.
+
+- **Testimonial text.** The pack's 300 quotes are built from templates: 904 sentences, only 294 of them distinct, and each closing line used 20 times. The pack itself labels them `fictional_testimonial_example`. No original wording was supplied to compare against, so no quote was rewritten.
+  - The home page now shows three software, web, and mobile quotes, replacing the Digital Marketing quote.
+  - The real client wording is needed before any quote can go live.
+- **Testimonial layout.**
+  - Service, industry, and home pages show a slider: two equal cards at a time (one on phones), with arrows, a counter, and a progress bar.
+  - Each card shows the person first, then the quote.
+  - The Testimonials page has a filter bar (service tabs and an industry menu) above an even three-column grid, twelve stories at a time with "Show more".
+- **Case studies.**
+  - Technologies without a logo show a monogram, so names such as "Azure" no longer appear twice.
+  - The number counter shows the real value until it starts, always ends on the exact value, and never counts durations or decimals, so "1 weeks" can no longer appear.
+- **Mobile page.**
+  - "The life of an app" diagram is merged into the process, now called "From first idea to the app stores and beyond", which gains a sixth step: Keep improving.
+  - The thin "See the mobile systems we build" links were a duplicate of the Related section and are removed.
+  - The "App updates and support after launch" text moves into "Keeping an app healthy".
+  - Service pages no longer show the "On this page" strip or the mid-page call to action. At a glance and the pricing section carry the call to action.
+- **Menu.** "Insights" is renamed "Resources", with a dropdown: Guides and articles, Cost guides, Comparisons, and Glossary. Cost guides and Comparisons appear only once a page of that kind is published. The footer adds Glossary.
+- **Resources page.**
+  - The page shows the title, one line, filter tabs (All, Guides, Comparisons, Cost guides, and Glossary as a link), the featured article, the latest articles, a cost guides row and a comparisons row (each once one exists), a Glossary card, one call to action, and the promise line.
+  - The pathfinder, the "Five kinds of resource" columns, the standards callout, and the FAQ are removed.
+- **Glossary.** The glossary has its own page at `/resources/glossary/`, A to Z, with DefinedTermSet structured data. It is in the sitemap, the menu, and the footer.
+- **Article template.**
+  - Front matter can now set `author`, `reviewed`, `answer` (the short answer box), `related`, `compare` (side-by-side table, when to choose each, our recommendation), and `pricing` (a cost guide's price table from `data/pricing/services.yaml`).
+  - New type `cost-guides` and category `cost`. URLs are `/resources/<type>/<slug>/`.
+  - A service's pricing section links to its cost guide once one is published.

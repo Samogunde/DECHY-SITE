@@ -18,6 +18,12 @@ type PriceFile = {
 };
 let prices: PriceFile | undefined;
 
+/** A service's price tiers and cost drivers (data/pricing/services.yaml), for cost guides. */
+export function pricingFor(serviceSlug: string): PriceFile["services"][string] | undefined {
+  prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;
+  return prices.services[serviceSlug];
+}
+
 /** The pricing section for a service page (data/pricing/services.yaml), or none. */
 export function servicePricing(serviceSlug: string): Block[] {
   prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;

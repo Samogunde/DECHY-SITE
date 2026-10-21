@@ -5,7 +5,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /**
- * A number that counts up from 1 when it scrolls into view ("1,500+"). The server renders the
+ * A number that counts up from 1 when it scrolls into view ("1,500+"). It shows the real value
+ * until it starts and ends on it exactly. The server renders the
  * final value, so search engines, screen readers, and visitors without JavaScript always see the
  * real figure; the count only plays as an enhancement, once, and never under reduced motion.
  */
@@ -17,9 +18,10 @@ export function CountUp({ value }: { value: string }) {
     if (!el || !m || reducedMotion() || typeof IntersectionObserver === "undefined") return;
     const [, pre = "", digits = "", post = ""] = m;
     const target = Number(digits.replace(/,/g, ""));
-    if (!Number.isFinite(target) || target < 2) return;
+    // Durations ("8 weeks"), decimals ("2.6x"), and small numbers stay as written: counting them
+    // would show "1 weeks" or "1.6x" on the way.
+    if (!Number.isFinite(target) || target < 10 || /^[.\d]|[a-z]/i.test(post)) return;
     const format = (n: number) => `${pre}${n.toLocaleString("en-US")}${post}`;
-    el.textContent = format(1);
     let raf = 0;
     const io = new IntersectionObserver(
       ([e]) => {
@@ -30,7 +32,8 @@ export function CountUp({ value }: { value: string }) {
         const tick = (now: number) => {
           const t = Math.min(1, (now - start) / dur);
           const eased = 1 - Math.pow(1 - t, 3);
-          el.textContent = format(Math.max(1, Math.round(eased * target)));
+          // The count always ends on the exact value as written.
+          el.textContent = t < 1 ? format(Math.max(1, Math.round(eased * target))) : value;
           if (t < 1) raf = requestAnimationFrame(tick);
         };
         raf = requestAnimationFrame(tick);

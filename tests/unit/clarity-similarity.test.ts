@@ -90,7 +90,7 @@ describe("clarity standard on the shipped pages", () => {
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(143);
+    expect(guided.length).toBe(144);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(
@@ -149,7 +149,9 @@ describe("scope control", () => {
       // Phase 4: Solution pages, the first industry pages, and the first-wave country pages
       /^\/(solutions|industries|locations)\/[a-z0-9-]+\/$/,
       // Blog (owner direction, 20 October 2026): the planned launch articles
-      /^\/resources\/(guides|comparisons|definitions|articles)\/[a-z0-9-]+\/$/,
+      /^\/resources\/(guides|comparisons|cost-guides|definitions|articles)\/[a-z0-9-]+\/$/,
+      // Resources (owner direction, 21 October 2026): the Glossary page
+      /^\/resources\/glossary\/$/,
       // Portfolio (owner direction, 21 October 2026): one case study per real client project
       /^\/work\/case-studies\/[a-z0-9-]+\/$/,
     ];
@@ -164,7 +166,7 @@ describe("scope control", () => {
     const forbidden = /^\/(insights|articles|countries|problems|cities)\/./;
     for (const p of registry.pages) expect(forbidden.test(p.path), p.path).toBe(false);
     for (const p of registry.pages)
-      if (p.path.startsWith("/resources/") && p.path !== "/resources/")
+      if (p.path.startsWith("/resources/") && !/^\/resources\/(glossary\/)?$/.test(p.path))
         expect(p.kind, p.path).toBe("article");
   });
 

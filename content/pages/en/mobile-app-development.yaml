@@ -110,37 +110,6 @@ sections:
           label: Explore a web app
           href: /contact/?service=mobile-app-development
   - type: diagram
-    id: app-screen-map
-    tone: white
-    label: The life of an app
-    heading: From first idea to the app stores and beyond
-    intro:
-      An app is never finished at launch. It moves from scope to design, build, test, and release,
-      then keeps changing as phones and customers do.
-    spec:
-      kind: flow
-      steps:
-        - title: Idea and scope
-          text: What the first version must do, and for whom.
-        - title: Design
-          text: Screens people can use with one hand.
-        - title: Build
-          text: The app and the system behind it.
-        - title: Test
-          text: On real phones, old and new.
-        - title: App stores
-          text: Review and release on Apple and Google.
-        - title: Updates
-          text: Fixes and features for years to come.
-    purpose: sequence
-    takeaway: An app is never finished at launch. It moves from idea to design, build, test, and
-      release, then keeps changing.
-    visualTitle: The life of a mobile app
-    caption:
-      This diagram traces a mobile app through six stages, from the first idea to the app stores
-      and the updates that follow.
-    points: []
-  - type: diagram
     id: inside
     tone: white
     label: How it works
@@ -210,7 +179,10 @@ sections:
     tone: white
     label: After launch
     heading: Keeping an app healthy
-    intro: Launch day is the start. These are the things that keep an app working.
+    intro:
+      Launch day is the start. Phones and operating systems change every year, and an app that is not
+      kept up to date eventually stops working well. We plan for updates from the start and agree who
+      looks after the app once it is live.
     columns:
       - title: Keeping up with phones
         items:
@@ -232,7 +204,10 @@ sections:
     id: process
     tone: paper
     label: How a project runs
-    heading: From idea to the app stores
+    heading: From first idea to the app stores and beyond
+    intro:
+      An app is never finished at launch. It moves from scope to design, build, test, and release,
+      then keeps changing as phones and customers do.
     steps:
       - title: Find the first version
         body: We decide the few things the first release must do well, and what can wait.
@@ -260,6 +235,11 @@ sections:
         artifacts:
           - Store release
           - Usage and crash reports
+      - title: Keep improving
+        body: We ship fixes and new features, and keep the app working as phones and store rules change.
+        artifacts:
+          - Regular updates
+          - Support with agreed response times
   - type: callout
     id: when-not
     tone: white
@@ -299,27 +279,6 @@ sections:
             platform such as [Firebase](ref:plat.firebase).
           - Sign-in, notifications, and offline use designed from the start.
           - Automated tests and a release pipeline for each store.
-  - type: index
-    id: work
-    tone: white
-    label: What it looks like
-    heading: See the mobile systems we build
-    items:
-      - title: Mobile apps
-        href: /work/areas/mobile-apps/
-        body: Native and cross-platform apps, and the systems that support them.
-      - title: Digital products
-        href: /work/areas/digital-products/
-        body: Online products designed, built, launched, and improved over time.
-  - type: prose
-    id: stores
-    tone: paper
-    label: After launch
-    heading: App updates and support after launch
-    paragraphs:
-      - Phones and operating systems change every year, and an app that is not kept up to date will
-        eventually stop working well. We plan for updates from the start, and agree who looks after
-        the app once it is live.
   - type: faq
     id: faq
     tone: paper

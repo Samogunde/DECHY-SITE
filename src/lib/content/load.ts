@@ -42,6 +42,7 @@ export const NAV_KINDS = [
   "work",
   "solutions",
   "industries",
+  "resources",
   "link",
 ] as const;
 
@@ -71,6 +72,18 @@ const NavFile = z.object({
   }),
   solutions: MenuList,
   industries: MenuList,
+  resources: z.object({
+    heading: z.string(),
+    allLabel: z.string(),
+    links: z.array(
+      z.object({
+        label: z.string(),
+        path: z.string(),
+        summary: z.string(),
+        when: z.enum(["cost", "comparison"]).optional(),
+      }),
+    ),
+  }),
   footer: z.object({
     explore: z.array(z.object({ label: z.string(), path: z.string() })),
     legal: z.array(z.object({ label: z.string(), path: z.string() })),
@@ -307,6 +320,16 @@ export function buildRegistry(): Registry {
       portfolioGrid(labels, showDrafts()),
       ...(showDrafts() ? quoteBlock(spare.slice(0, 6), "In our clients' words") : []),
     );
+  // A service's pricing section links to its full cost guide once one is published.
+  for (const page of pages.filter((p) => p.kind === "service")) {
+    const slug = page.path.replace(/\//g, "");
+    const guide = pages.find(
+      (p) => p.kind === "article" && p.article?.category === "cost" && p.article.pricing === slug,
+    );
+    const block = page.sections.find((b) => b.type === "pricing");
+    if (guide && block && block.type === "pricing")
+      block.note = `${block.note ?? ""} [Read the full cost guide](${guide.path}).`.trim();
+  }
   // The glossary terms (data/glossary/terms.json) fill every glossary section.
   const { records: terms } = readYaml(
     "data/glossary/terms.json",

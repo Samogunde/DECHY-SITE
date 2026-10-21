@@ -53,7 +53,13 @@ function drawerLinks(): DrawerLink[] {
       icon: "steps",
       ok: true,
     },
-    { label: "Insights", href: "/resources/", text: "Guides and articles", icon: "book", ok: true },
+    {
+      label: "Resources",
+      href: "/resources/",
+      text: "Guides, costs, and comparisons",
+      icon: "book",
+      ok: true,
+    },
     {
       label: "About us",
       href: "/company/",

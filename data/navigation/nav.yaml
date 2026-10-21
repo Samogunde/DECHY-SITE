@@ -13,7 +13,7 @@ primary:
   - { label: Our Work, kind: work, path: /work/ }
   - { label: Solutions, kind: solutions, path: /solutions/ }
   - { label: Technologies, kind: technologies, path: /technologies/ }
-  - { label: Insights, kind: link, path: /resources/ }
+  - { label: Resources, kind: resources, path: /resources/ }
   - { label: About us, kind: link, path: /company/ }
 cta:
   label: Talk to DECHY
@@ -202,6 +202,27 @@ work:
         - workarea.digital-marketing-systems
         - workarea.digital-transformation
 
+# Resources menu (owner, 21 October 2026). An entry with `when` appears only once at least one
+# article of that category is published, so the menu never points at an empty list.
+resources:
+  heading: Resources
+  allLabel: All resources
+  links:
+    - label: Guides and articles
+      path: /resources/#library
+      summary: Plain-language guides to planning and choosing technology.
+    - label: Cost guides
+      path: /resources/#cost-guides
+      summary: What software, websites, and apps cost, and why.
+      when: cost
+    - label: Comparisons
+      path: /resources/#comparisons
+      summary: Two options side by side, with our recommendation.
+      when: comparison
+    - label: Glossary
+      path: /resources/glossary/
+      summary: Technology terms explained in plain English, A to Z.
+
 footer:
   explore:
     - { label: All services, path: /services/ }
@@ -210,6 +231,7 @@ footer:
     - { label: Industries, path: /industries/ }
     - { label: Work, path: /work/ }
     - { label: Resources, path: /resources/ }
+    - { label: Glossary, path: /resources/glossary/ }
     - { label: Locations, path: /locations/ }
     - { label: About us, path: /company/ }
     - { label: Contact, path: /contact/ }

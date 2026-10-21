@@ -91,7 +91,7 @@ const APPROVED_NAV = [
   "Our Work",
   "Solutions",
   "Technologies",
-  "Insights",
+  "Resources",
   "About us",
 ];
 
@@ -573,8 +573,11 @@ export function validateRegistry(input: Registry): Issue[] {
       for (const m of readabilityIssues(page, registry.facts).errors) err("readability", where, m);
     }
     for (const m of diagramIssues(page)) err("diagram-clarity", where, m);
-    const minVariety =
-      page.kind === "home" || page.kind === "service"
+    // The Resources library and the Glossary are deliberately lean listings (owner, 21 October 2026).
+    const LISTING_PAGES = new Set(["/resources/", "/resources/glossary/"]);
+    const minVariety = LISTING_PAGES.has(page.path)
+      ? 1
+      : page.kind === "home" || page.kind === "service"
         ? 8
         : page.kind === "work-area" || page.kind === "hub"
           ? 6
@@ -785,6 +788,7 @@ export function validateRegistry(input: Registry): Issue[] {
     "Our Work": "work",
     Solutions: "solutions",
     Industries: "industries",
+    Resources: "resources",
   };
   for (const item of registry.nav.primary) {
     const want = KIND_BY_LABEL[item.label] ?? "link";
@@ -858,7 +862,7 @@ export function validateRegistry(input: Registry): Issue[] {
   }
   // The blog listing on /resources/ links every published article.
   const resources = registry.pageByPath.get("/resources/");
-  if (resources?.sections.some((b) => b.type === "articles"))
+  if (resources?.sections.some((b) => b.type === "articles" || b.type === "library"))
     for (const p of registry.pages) if (p.kind === "article") link("/resources/", p.path);
   // Every case study is linked from the portfolio grid on Our Work.
   for (const p of registry.pages) if (p.kind === "case-study") link("/work/", p.path);

@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { z } from "zod";
-import { Page } from "./schema";
+import { ArticleCompare, Page } from "./schema";
 
 /**
  * Blog articles (the 53 launch articles, docs/planning/06-article-plan-53.md) are written as
@@ -14,12 +14,16 @@ import { Page } from "./schema";
  *   - "## Heading" to start a section;
  *   - "- item" lines for a list, shown as a "Key points" panel beside that section;
  *   - "## Common questions" followed by "### Question" and its answer, for the FAQ.
+ *
+ * Optional front matter: author, reviewed (date), answer (the short answer box), related links,
+ * compare (comparison table, when to choose each, recommendation), and pricing (a service slug
+ * whose price ranges a cost guide shows). Types map to URLs: /resources/<type>/<slug>/.
  */
 const Front = z.object({
-  number: z.number().int().min(1).max(53),
+  number: z.number().int().min(1).optional(),
   slug: z.string().regex(/^[a-z0-9-]+$/),
-  type: z.enum(["guides", "comparisons", "definitions", "articles"]),
-  category: z.enum(["guide", "comparison", "decision", "explainer", "industry"]),
+  type: z.enum(["guides", "comparisons", "cost-guides", "definitions", "articles"]),
+  category: z.enum(["guide", "comparison", "decision", "explainer", "industry", "cost"]),
   service: z.string(),
   title: z.string(),
   description: z.string(),
@@ -27,6 +31,19 @@ const Front = z.object({
   summary: z.string(),
   intent: z.string(),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  /** Last reviewed date; the published date when not given. */
+  reviewed: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional(),
+  /** The writer's name as supplied. */
+  author: z.string().optional(),
+  /** The short answer at the top; the summary when not given. */
+  answer: z.string().optional(),
+  compare: ArticleCompare.optional(),
+  /** Cost guides: the service slug whose price ranges are shown (data/pricing/services.yaml). */
+  pricing: z.string().optional(),
+  related: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
   cta: z.string().optional(),
 });
 
@@ -36,6 +53,7 @@ const CATEGORY_LABEL: Record<string, string> = {
   decision: "Decision guide",
   explainer: "Explainer",
   industry: "Industry note",
+  cost: "Cost guide",
 };
 
 function parse(file: string, raw: string): Page {
@@ -124,7 +142,7 @@ function parse(file: string, raw: string): Page {
     indexing: "index",
     claims: [],
     datePublished: front.date,
-    dateModified: front.date,
+    dateModified: front.reviewed ?? front.date,
     parent: "/resources/",
     schemaTypes: faq.length >= 2 ? ["WebPage", "Article", "FAQPage"] : ["WebPage", "Article"],
     article: {
@@ -132,6 +150,12 @@ function parse(file: string, raw: string): Page {
       summary: front.summary,
       service: front.service,
       number: front.number,
+      author: front.author,
+      reviewed: front.reviewed,
+      answer: front.answer,
+      compare: front.compare,
+      pricing: front.pricing,
+      related: front.related,
     },
     sections: blocks,
   });

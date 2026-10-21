@@ -6,6 +6,7 @@ import { readingMinutes } from "@/lib/content/articles";
 import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import type { Registry } from "@/lib/content/load";
 import type { Page } from "@/lib/content/schema";
+import { pricingFor } from "@/lib/content/samples";
 import { pathExists } from "@/lib/content/urls";
 import { BlockRenderer } from "./BlockRenderer";
 import { HoverArrow } from "./HomeBlocks";
@@ -16,6 +17,7 @@ export const CATEGORY_LABEL: Record<string, string> = {
   decision: "Decision guide",
   explainer: "Explainer",
   industry: "Industry note",
+  cost: "Cost guide",
 };
 
 export function formatDate(iso: string): string {
@@ -34,8 +36,23 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
   const crumbs = breadcrumbsFor(page, registry);
   const prose = page.sections.filter((b) => b.type === "prose");
   const after = page.sections.filter((b) => b.type !== "prose");
-  const service = registry.services.find((s) => s.slug === page.article?.service);
+  const a = page.article;
+  const service = registry.services.find((s) => s.slug === a?.service);
   const serviceHref = service ? `/${service.slug}/` : undefined;
+  const price = a?.pricing ? pricingFor(a.pricing) : undefined;
+  // Related reading: the links the writer chose, then other articles on the same service.
+  const related = [
+    ...(a?.related ?? []).filter((r) => pathExists(r.href.split("#")[0] ?? "", registry)),
+    ...registry.pages
+      .filter(
+        (p) => p.kind === "article" && p.path !== page.path && p.article?.service === a?.service,
+      )
+      .map((p) => ({ label: p.h1 ?? p.title, href: p.path })),
+  ]
+    .filter((r, i, all) => all.findIndex((x) => x.href === r.href) === i)
+    .slice(0, 4);
+  const faq = after.filter((b) => b.type === "faq");
+  const rest = after.filter((b) => b.type !== "faq");
   return (
     <>
       <header className="tone-paper page-hero article-hero">
@@ -45,10 +62,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
           </div>
           <div className="article-head">
             <p className="article-meta">
-              <span className="article-cat">
-                {CATEGORY_LABEL[page.article?.category ?? "guide"]}
-              </span>
-              <span>{formatDate(page.datePublished)}</span>
+              <span className="article-cat">{CATEGORY_LABEL[a?.category ?? "guide"]}</span>
               <span>{readingMinutes(page)} min read</span>
             </p>
             <h1 className="t-h1 article-title">{page.h1}</h1>
@@ -57,6 +71,24 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                 <Inline text={page.lead} />
               </p>
             ) : null}
+            <dl className="article-byline">
+              <div>
+                <dt>Written by</dt>
+                <dd>{a?.author ?? "The DECHY team"}</dd>
+              </div>
+              <div>
+                <dt>Published</dt>
+                <dd>
+                  <time dateTime={page.datePublished}>{formatDate(page.datePublished)}</time>
+                </dd>
+              </div>
+              <div>
+                <dt>Last reviewed</dt>
+                <dd>
+                  <time dateTime={page.dateModified}>{formatDate(page.dateModified)}</time>
+                </dd>
+              </div>
+            </dl>
           </div>
           {page.article?.photo ? (
             <figure className="article-cover">
@@ -90,6 +122,51 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
             ) : null}
           </aside>
           <article className="article-body">
+            <aside className="article-answer" aria-label="Short answer">
+              <p className="article-answer-title">The short answer</p>
+              <p>
+                <Inline text={a?.answer ?? a?.summary ?? ""} />
+              </p>
+            </aside>
+            {a?.compare ? <CompareTable compare={a.compare} /> : null}
+            {price ? (
+              <section className="article-section" aria-labelledby="price-h">
+                <h2 id="price-h" className="article-h2">
+                  Typical price ranges
+                </h2>
+                <div className="cmp-scroll">
+                  <table className="cmp-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Project</th>
+                        <th scope="col">Typical range</th>
+                        <th scope="col">Timeline</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {price.plans.map((p) => (
+                        <tr key={p.name}>
+                          <th scope="row">
+                            {p.name}
+                            <span className="cmp-sub">{p.summary}</span>
+                          </th>
+                          <td>{p.range}</td>
+                          <td>{p.timeline}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="article-points">
+                  <p className="article-points-title">What moves the price</p>
+                  <ul>
+                    {price.factors.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            ) : null}
             {prose.map((b) =>
               b.type === "prose" ? (
                 <section
@@ -121,12 +198,101 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                 </section>
               ) : null,
             )}
+            {a?.compare ? (
+              <section className="article-section" aria-labelledby="choose-h">
+                <h2 id="choose-h" className="article-h2">
+                  When to choose each
+                </h2>
+                <div className="cmp-choose">
+                  {a.compare.choose.map((c) => (
+                    <div key={c.option} className="cmp-option">
+                      <p className="cmp-option-title">Choose {c.option} when</p>
+                      <ul>
+                        {c.when.map((w) => (
+                          <li key={w}>
+                            <Inline text={w} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <div className="cmp-reco">
+                  <p className="cmp-reco-title">Our recommendation</p>
+                  <p>
+                    <Inline text={a.compare.recommendation} />
+                  </p>
+                </div>
+              </section>
+            ) : null}
           </article>
         </div>
       </div>
-      {after.map((b) => (
+      {faq.map((b) => (
+        <BlockRenderer key={b.id} block={b} page={page} />
+      ))}
+      {related.length ? (
+        <section className="section tone-paper article-related" aria-labelledby="related-h">
+          <div className="container-site">
+            <h2 id="related-h" className="t-h2">
+              Related reading
+            </h2>
+            <ul className="article-related-list">
+              {related.map((r) => (
+                <li key={r.href}>
+                  <Link href={r.href} className="article-related-link link-card" data-spotlight>
+                    <span>{r.label}</span>
+                    <HoverArrow />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null}
+      {rest.map((b) => (
         <BlockRenderer key={b.id} block={b} page={page} />
       ))}
     </>
+  );
+}
+
+/** A comparison: the options side by side, one row per question. */
+function CompareTable({ compare }: { compare: NonNullable<Page["article"]>["compare"] }) {
+  if (!compare) return null;
+  return (
+    <section className="article-section" aria-labelledby="compare-h">
+      <h2 id="compare-h" className="article-h2">
+        Side by side
+      </h2>
+      <div className="cmp-scroll">
+        <table className="cmp-table">
+          <thead>
+            <tr>
+              <th scope="col">
+                <span className="sr-only">Question</span>
+              </th>
+              {compare.options.map((o) => (
+                <th key={o} scope="col">
+                  {o}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {compare.rows.map((r) => (
+              <tr key={r.label}>
+                <th scope="row">{r.label}</th>
+                {r.values.map((v, i) => (
+                  <td key={i}>
+                    <Inline text={v} />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
   );
 }

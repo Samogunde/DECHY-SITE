@@ -13,6 +13,7 @@ import {
 } from "@/components/home/Motion";
 import { TechLogo } from "@/components/home/TechLogo";
 import { TestimonialWall } from "@/components/home/TestimonialWall";
+import { QuoteCarousel } from "@/components/home/QuoteCarousel";
 import { PortfolioGrid } from "@/components/home/PortfolioGrid";
 import { PortfolioCard } from "./PortfolioCard";
 import { projectPath, projects } from "@/lib/content/portfolio";
@@ -661,38 +662,72 @@ export function CaseStudiesBlock({ block }: { block: Of<"case-studies"> }) {
   );
 }
 
-export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
+/** One client quote: who said it at the top, then the quote, then optional tags. */
+function QuoteCard({
+  quote,
+  name,
+  role,
+  company,
+  photo,
+  tags = [],
+}: {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  photo?: { asset: string };
+  tags?: string[];
+}) {
   return (
-    <Section id={block.id} tone={block.tone} ruled={false}>
-      <SplitHeader id={block.id} label={block.label} heading={block.heading} />
-      <ul className="quote-grid" data-reveal="group">
-        {block.items.map((q) => (
-          <li key={q.name}>
-            <figure className="quote-card" data-spotlight>
-              <Quotes aria-hidden="true" weight="fill" className="quote-mark" />
-              <blockquote className="quote-text">
-                <p>{q.quote}</p>
-              </blockquote>
-              <figcaption className="quote-who">
-                <Avatar photo={q.photo} name={q.name} />
-                <span>
-                  <span className="quote-name">{q.name}</span>
-                  <span className="quote-role">
-                    {q.role}, {q.company}
-                  </span>
-                </span>
-              </figcaption>
-            </figure>
-          </li>
-        ))}
-      </ul>
-      {getRegistry().pageByPath.has("/testimonials/") ? (
-        <div className="quote-more">
+    <figure className="qc" data-spotlight>
+      <figcaption className="qc-head">
+        <Avatar photo={photo} name={name} />
+        <span className="qc-who">
+          <span className="qc-name">{name}</span>
+          <span className="qc-role">{role}</span>
+          <span className="qc-company">{company}</span>
+        </span>
+        <Quotes aria-hidden="true" weight="fill" className="qc-mark" />
+      </figcaption>
+      <blockquote className="qc-quote">
+        <p>{quote}</p>
+      </blockquote>
+      {tags.length ? (
+        <p className="qc-tags">
+          {tags.map((t, i) => (
+            <span key={t} className={i === 0 ? "qc-tag qc-tag-main" : "qc-tag"}>
+              {t}
+            </span>
+          ))}
+        </p>
+      ) : null}
+    </figure>
+  );
+}
+
+export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
+  const more = getRegistry().pageByPath.has("/testimonials/");
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false} className="quotes-section">
+      <div className="quotes-head">
+        <div>
+          <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
+          <h2 id={`${block.id}-h`} className="home-h2 mt-4">
+            {block.heading}
+          </h2>
+        </div>
+        {more ? (
           <Link href="/testimonials/" className="mega-foot-link">
             See all client testimonials <Arrow />
           </Link>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
+      <QuoteCarousel
+        label={block.heading}
+        cards={block.items.map((q) => (
+          <QuoteCard key={q.name} {...q} />
+        ))}
+      />
     </Section>
   );
 }
@@ -889,51 +924,6 @@ export function GalleryBlock({ block }: { block: Of<"gallery"> }) {
   );
 }
 
-function WallCard({
-  t,
-  big = false,
-}: {
-  t: Of<"testimonial-wall">["items"][number];
-  big?: boolean;
-}) {
-  return (
-    <figure className={`tw-card${big ? " tw-card-big" : ""}`}>
-      <figcaption className="tw-person">
-        {t.photo ? (
-          <span className="tw-avatar">
-            <Photo photo={t.photo} />
-          </span>
-        ) : (
-          <span className="tw-avatar tw-initials" aria-hidden="true">
-            {t.name
-              .split(/\s+/)
-              .map((w) => w[0])
-              .slice(0, 2)
-              .join("")}
-          </span>
-        )}
-        <span className="tw-who">
-          <span className="tw-name">{t.name}</span>
-          <span className="tw-role">
-            {t.role}, {t.company}
-          </span>
-        </span>
-        <Quotes className="tw-mark" weight="fill" aria-hidden="true" />
-      </figcaption>
-      <blockquote className="tw-quote">{t.quote}</blockquote>
-      <div className="tw-tags">
-        <span className="tw-tag tw-tag-service">{t.serviceLabel}</span>
-        <span className="tw-tag">{t.industryLabel}</span>
-        {t.href && getRegistry().pageByPath.has(t.href) ? (
-          <Link href={t.href} className="tw-case">
-            Case study <Arrow />
-          </Link>
-        ) : null}
-      </div>
-    </figure>
-  );
-}
-
 export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> }) {
   const facets = (key: "service" | "industry", label: "serviceLabel" | "industryLabel") => {
     const m = new Map<string, { label: string; count: number }>();
@@ -946,7 +936,6 @@ export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> 
       .map(([k, v]) => ({ key: k, ...v }))
       .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   };
-  const [first, ...rest] = block.items;
   return (
     <Section id={block.id} tone={block.tone} ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
@@ -972,12 +961,11 @@ export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> 
         <TestimonialWall
           services={facets("service", "serviceLabel")}
           industries={facets("industry", "industryLabel")}
-          featured={first ? <WallCard t={first} big /> : undefined}
-          cards={[...(first ? [first] : []), ...rest].map((t) => ({
+          cards={block.items.map((t) => ({
             key: t.name,
             service: t.service,
             industry: t.industry,
-            node: <WallCard t={t} />,
+            node: <QuoteCard {...t} tags={[t.serviceLabel, t.industryLabel]} />,
           }))}
         />
       </div>

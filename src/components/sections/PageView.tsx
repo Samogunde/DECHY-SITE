@@ -25,14 +25,9 @@ const GLANCE_KINDS = new Set([
   "location",
 ]);
 
-const MID_CTA_KINDS = new Set([
-  "service",
-  "solution",
-  "industry",
-  "work-area",
-  "technology",
-  "location",
-]);
+// Service pages carry their call to action in At a glance and in the pricing section, so they
+// skip the mid-page band and the "On this page" strip (owner, 21 October 2026: no thin strips).
+const MID_CTA_KINDS = new Set(["solution", "industry", "work-area", "technology", "location"]);
 
 const MID_CTA_LINE: Record<string, string> = {
   service: "Tell us what you need. We reply with a plan, a price range, and a timeline.",
@@ -104,7 +99,7 @@ export function PageView({ path }: { path: string }) {
           ? "Related"
           : (b as { label: string }).label,
     }));
-  const showNav = guided && navItems.length >= 6;
+  const showNav = guided && navItems.length >= 6 && page.kind !== "service";
   const first = page.sections[0];
   const restBase = first?.type === "hero" ? page.sections.slice(1) : page.sections;
   const rest = restBase;

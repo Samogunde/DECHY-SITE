@@ -532,14 +532,14 @@ sections:
         name: Annika Marlowe
         role: Agritech Implementation Director
         company: Highbury Technologies
-      - quote: "We wanted one clearer way to approach product workflows, account permissions, subscription events, and product feedback without overcomplicating the work. The most useful change was having a clear line from the campaign idea to the destination page and the action we wanted people to take. The overall direction was more coherent and easier for different roles to work with."
-        name: Tristan Ellison
-        role: Platform Transformation Manager
-        company: Wrenfield Technologies
-      - quote: "We wanted to improve registrations, schedule changes, supplier details, and updates for attendees and organizers, but the solution still had to fit the way our people work. The work brought more structure to deployment and infrastructure decisions, with clear separation between stages and services. The work gave us a more coherent direction and a sensible basis for the next stage."
-        name: Gideon Lockwood
-        role: Sponsorship Operations Director
-        company: Crestwick Studio
+      - quote: "Consistency was our main concern with customer inquiries, appointments, job assignments, and updates from field teams, especially when work moved between teams. The site structure was planned around what visitors need to understand first, with a consistent experience from mobile through desktop. The approach was straightforward to follow and gave the team something concrete to work from."
+        name: Emilia Holloway
+        role: Customer Care Transformation Manager
+        company: Foxmere Clinical Partners
+      - quote: "We wanted to improve service bookings, parts availability, repair updates, and handoffs between advisers and technicians, but the solution still had to fit the way our people work. The screens were built around real mobile behavior, so important actions were easier to reach and the next step was visible. I came away with a clearer picture of what mattered first and what could be handled in a later phase."
+        name: Nathaniel Waverly
+        role: Vehicle Data Program Lead
+        company: Highstone Data Systems
 
   - type: partners
     id: partners

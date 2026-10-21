@@ -18,7 +18,7 @@ describe("navigation model", () => {
       "Our Work",
       "Solutions",
       "Technologies",
-      "Insights",
+      "Resources",
       "About us",
     ]);
     expect(model.cta.label).toBe("Talk to DECHY");
@@ -29,13 +29,13 @@ describe("navigation model", () => {
       if (i.href) expect(paths.has(i.href), i.label).toBe(true);
     }
     expect(model.items.find((i) => i.label === "Industries")!.href).toBe("/industries/");
-    expect(model.items.find((i) => i.label === "Insights")!.href).toBe("/resources/");
+    expect(model.items.find((i) => i.label === "Resources")!.href).toBe("/resources/");
     expect(model.items.find((i) => i.label === "Solutions")!.kind).toBe("solutions");
     expect(model.items.find((i) => i.label === "About us")!.kind).toBe("link");
   });
 
   it("every destination in every menu is a built page: no dead ends", () => {
-    for (const d of navDestinations(model)) expect(paths.has(d), d).toBe(true);
+    for (const d of navDestinations(model)) expect(paths.has(d.split("#")[0]!), d).toBe(true);
   });
 
   it("Technologies: eight categories, only published pages, editorial order, within the limit", () => {
@@ -126,13 +126,14 @@ describe("navigation model", () => {
     expect(s.families.flatMap((f) => f.services)).toHaveLength(15);
   });
 
-  it("has menus for Services, Industries, Our Work, Solutions, and Technologies only, and none for Locations", () => {
+  it("has menus for Services, Industries, Our Work, Solutions, Technologies, and Resources only, and none for Locations", () => {
     expect(registry.nav.primary.filter((i) => i.kind !== "link").map((i) => i.label)).toEqual([
       "Services",
       "Industries",
       "Our Work",
       "Solutions",
       "Technologies",
+      "Resources",
     ]);
     expect(registry.nav.primary.map((i) => i.label)).not.toContain("Locations");
   });

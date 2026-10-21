@@ -162,12 +162,25 @@ function hoverColor(hex: string): string {
 
 export function TechLogo({ id, name }: { id: string; name: string }) {
   const icon = LOGOS[id];
-  if (!icon)
+  // No logo: a monogram, never the full name (the name is always printed beside the mark).
+  if (!icon) {
+    const words = name
+      .replace(/[^A-Za-z0-9 ]/g, " ")
+      .split(/\s+/)
+      .filter(Boolean);
+    const mono =
+      words.length > 1
+        ? words
+            .map((w) => w[0])
+            .slice(0, 2)
+            .join("")
+        : (words[0] ?? "").slice(0, 2);
     return (
-      <span className="tech-wordmark" aria-hidden="true">
-        {name}
+      <span className="tech-wordmark tech-monogram" aria-hidden="true">
+        {mono}
       </span>
     );
+  }
   return (
     <svg
       className="tech-logo"
