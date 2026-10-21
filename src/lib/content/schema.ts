@@ -738,6 +738,15 @@ export const Block = z.discriminatedUnion("type", [
       )
       .min(2),
   }),
+  /** A glossary: plain definitions, A to Z (terms come from data/glossary/terms.json). */
+  z.object({
+    type: z.literal("glossary"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    items: z.array(z.object({ term: z.string(), definition: z.string() })).default([]),
+  }),
   z.object({
     type: z.literal("callout"),
     ...base,

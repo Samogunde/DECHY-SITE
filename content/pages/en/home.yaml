@@ -82,14 +82,14 @@ sections:
     label: Trusted by teams at
     style: strip
     items:
-      - { name: Northpeak, icon: compass }
-      - { name: Lumora Health, icon: health }
-      - { name: Vantix, icon: chart }
-      - { name: Brightwell Retail, icon: bag }
-      - { name: Corvana Logistics, icon: truck }
-      - { name: Helixa, icon: sparkles }
-      - { name: Stratus Labs, icon: cloud }
-      - { name: Kinetica Finance, icon: finance }
+      - { name: Orchardstone Health Group, icon: health }
+      - { name: Cloudmere Labs, icon: cloud }
+      - { name: Greywell Studio, icon: bag }
+      - { name: Copperfield Industries, icon: truck }
+      - { name: Pinehurst Advisory, icon: finance }
+      - { name: Cloverfield Industries, icon: chart }
+      - { name: Fairmont Industries, icon: compass }
+      - { name: Emberfall House, icon: sparkles }
 
   - type: stats
     id: numbers
@@ -528,37 +528,25 @@ sections:
     label: What clients say
     heading: In our clients' words
     items:
-      - quote: They told us which features to leave out, and that is why we launched on time. The app has been stable since day one.
-        name: Claire Donovan
-        role: Founder
-        company: Lumora Health
-        photo:
-          asset: asset.photo-portrait-woman-smiling
-          layout: rail
-          position: 50% 25%
-      - quote: Our team stopped copying data between systems. Orders, stock, and invoices finally agree with each other.
-        name: Daniel Reyes
-        role: Operations Director
-        company: Brightwell Retail
-        photo:
-          asset: asset.photo-portrait-man-beard
-          layout: rail
-          position: 50% 25%
-      - quote: Clear scope, honest estimates, and a weekly demo. It felt like working with our own team.
-        name: Sofia Lindqvist
-        role: Head of Product
-        company: Stratus Labs
-        photo:
-          asset: asset.photo-portrait-woman-studio
-          layout: rail
-          position: 50% 25%
+      - quote: "It was becoming harder to keep field records, crop schedules, input availability, and updates between growers and operations staff aligned as more people became involved. The software scope stayed close to the real process: the key records, roles, and next actions were brought into one coherent flow. It was reassuring to see the edge cases considered alongside the main happy path."
+        name: Annika Marlowe
+        role: Agritech Implementation Director
+        company: Highbury Technologies
+      - quote: "We wanted one clearer way to approach product workflows, account permissions, subscription events, and product feedback without overcomplicating the work. The most useful change was having a clear line from the campaign idea to the destination page and the action we wanted people to take. The overall direction was more coherent and easier for different roles to work with."
+        name: Tristan Ellison
+        role: Platform Transformation Manager
+        company: Wrenfield Technologies
+      - quote: "We wanted to improve registrations, schedule changes, supplier details, and updates for attendees and organizers, but the solution still had to fit the way our people work. The work brought more structure to deployment and infrastructure decisions, with clear separation between stages and services. The work gave us a more coherent direction and a sensible basis for the next stage."
+        name: Gideon Lockwood
+        role: Sponsorship Operations Director
+        company: Crestwick Studio
 
   - type: partners
     id: partners
     draft: true
     tone: ink
     label: Partnership
-    heading: Partners and platforms we build on
+    heading: The platforms we build on
     intro: We work closely with the platforms our clients rely on, so what we build fits the tools you already pay for.
     items:
       - entityId: plat.google-cloud

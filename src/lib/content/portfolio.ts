@@ -83,7 +83,7 @@ export function portfolioGrid(labels: Labels, drafts: boolean): Block {
   } as Block;
 }
 
-/** Selected work for a service or industry page: the given projects, at most six. */
+/** Selected work for a service or industry page: the given projects, at most three. */
 export function selectedWork(
   list: Project[],
   labels: Labels,
@@ -98,7 +98,7 @@ export function selectedWork(
       tone: "ink",
       label: "Selected work",
       heading,
-      items: list.slice(0, 6).map((p) => projectCard(p, labels, drafts)),
+      items: list.slice(0, 3).map((p) => projectCard(p, labels, drafts)),
     } as Block,
   ];
 }

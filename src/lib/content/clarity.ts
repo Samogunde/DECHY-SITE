@@ -67,6 +67,10 @@ export function bodyCopy(page: Page, facts: Map<string, Fact>): string[] {
     } else if (Array.isArray(value)) {
       for (const v of value) walk(v, key);
     } else if (value && typeof value === "object") {
+      // A glossary entry reads as one line: "Term: its definition".
+      const { term, definition } = value as { term?: unknown; definition?: unknown };
+      if (typeof term === "string" && typeof definition === "string")
+        return push(`${term}: ${definition}`);
       for (const [k, v] of Object.entries(value)) walk(v, k);
     }
   };

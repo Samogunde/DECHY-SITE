@@ -286,3 +286,39 @@ export function CalloutBlock({ block }: { block: Of<"callout"> }) {
     </Section>
   );
 }
+
+/** A glossary: a letter index, then each term with its plain definition, A to Z. */
+export function GlossaryBlock({ block }: { block: Of<"glossary"> }) {
+  const items = [...block.items].sort((a, b) => a.term.localeCompare(b.term));
+  const anchor = (term: string) =>
+    `term-${term
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "")}`;
+  const letters = [...new Set(items.map((t) => t.term[0]!.toUpperCase()))];
+  return (
+    <Section id={block.id} tone={block.tone} ruled={false}>
+      <SectionHeader
+        id={block.id}
+        label={block.label}
+        heading={block.heading}
+        intro={block.intro}
+      />
+      <nav className="glossary-letters" aria-label="Glossary letters">
+        {letters.map((l) => (
+          <a key={l} href={`#${anchor(items.find((t) => t.term[0]!.toUpperCase() === l)!.term)}`}>
+            {l}
+          </a>
+        ))}
+      </nav>
+      <dl className="glossary-grid">
+        {items.map((t) => (
+          <div key={t.term} id={anchor(t.term)} className="glossary-item">
+            <dt>{t.term}</dt>
+            <dd>{t.definition}</dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
+  );
+}

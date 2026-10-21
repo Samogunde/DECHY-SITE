@@ -72,6 +72,56 @@ sections:
     intro: "Each page covers where the technology fits, when it is the right choice, what the alternatives are, and what we do with it. More are added as they earn a page."
     source: technologies
 
+  - type: stack
+    id: ecosystem
+    tone: ink
+    label: Tools and platforms
+    heading: The platforms and tools we work in every day
+    intro: "Beyond the technologies above, these are the website builders, no-code platforms, design tools, and business systems our teams use on client projects. We choose by fit, and we work with the tools you already have."
+    groups:
+      - title: Websites and CMS
+        entityIds:
+          [
+            plat.wix,
+            plat.wix-studio,
+            plat.wix-velo,
+            plat.wordpress,
+            plat.elementor,
+            plat.squarespace,
+            plat.webflow,
+            plat.framer,
+          ]
+      - title: Commerce, booking, and payments
+        entityIds: [plat.shopify, plat.woocommerce, plat.wix-bookings, int.stripe]
+      - title: No-code and low-code
+        entityIds: [plat.bubble, plat.glide, plat.xano, tech.flutterflow, plat.adalo, plat.appsheet]
+      - title: Back end, APIs, and integration
+        entityIds: [plat.firebase, tech.rest-apis, tech.webhooks]
+      - title: Product design
+        entityIds: [tool.figma, tool.adobe-xd]
+      - title: Creative tools
+        entityIds:
+          [
+            tool.photoshop,
+            tool.illustrator,
+            tool.canva,
+            tool.powerpoint,
+            tool.google-slides,
+            tool.v-ray,
+          ]
+      - title: Cloud and hosting
+        entityIds: [tech.s3, plat.netlify, plat.vercel, plat.siteground, plat.bluehost]
+      - title: SEO and analytics
+        entityIds: [tool.google-search-console, tool.semrush, tool.ahrefs, tool.google-analytics]
+      - title: Marketing and CRM
+        entityIds: [plat.mailchimp, plat.brevo, plat.klaviyo, plat.gohighlevel]
+      - title: Work management
+        entityIds: [plat.mondaycom, plat.notion, plat.clickup, plat.asana]
+      - title: Automation and data
+        entityIds: [tool.google-sheets, tech.zapier, tech.make, plat.airtable]
+      - title: Office and productivity
+        entityIds: [tool.microsoft-excel, plat.google-workspace]
+
   - type: browse
     id: ways
     tone: paper

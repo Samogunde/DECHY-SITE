@@ -188,3 +188,27 @@ Owner direction, 21 October 2026.
 - **At a glance.** It now shows only on service, industry, solution, technology, work area, and country pages.
 - **Testimonials.** The page has a summary strip and a grid of aligned cards with equal heights and the same structure throughout (person, quote, tags), replacing the masonry wall.
 - **Buttons.** Outline and secondary buttons fill white with dark text on hover everywhere on the dark theme. This fixes text that was white on white.
+
+## Eighth pass (21 October 2026): content pack v2
+
+The owner supplied `DECHY_Content_Data_Pack_v2.zip` with implementation instructions. `scripts/import-content-pack.mjs` imports it into `data/`. US English is applied to the pack text, and names, roles, companies, and meaning are kept as supplied.
+
+- **Facts.** The pack matches `data/facts/company.yaml`. Nothing was changed and no statistics were added.
+- **Testimonials (300).** `data/samples/testimonials.json` now holds the pack's testimonials.
+  - They replace the earlier sample quotes. `data/samples/proof.yaml` and `data/samples/case-studies.yaml` are removed.
+  - Every service page and every industry page shows six. No quote appears on two pages.
+  - Industry pages choose first, from the matching pack industries (`PACK_INDUSTRIES` in `src/lib/content/samples.ts`). Service pages then take quotes for their own service.
+  - The Testimonials page shows all 300, filtered by 15 services and the pack's 30 industries.
+  - Of the quotes no page uses, three appear on the home page and six on Our Work.
+  - The testimonials show initials rather than portraits. The pack has no portraits, and the stock set has 113 faces, so a face would otherwise appear under two names.
+  - The pack calls these illustrative examples, not verified endorsements, so they stay in review builds only.
+- **Team (12).** About us lists the pack's twelve profiles (review builds only).
+- **Selected work.** Service and industry pages show three projects. The full portfolio is on Our Work (`/work/`). The portfolio projects, their names, screens, and copy are unchanged.
+- **Technology ecosystem (52).** The Technologies hub has a "Tools and platforms" section in twelve categories.
+  - The 30 tools already in the graph were reused, and 22 missing ones were added in `data/taxonomy/technologies-ecosystem.yaml`.
+  - Sixteen gained a logo.
+  - No entry implies a partnership.
+- **Glossary (30).** The Resources page has a glossary with a letter index. The terms come from `data/glossary/terms.json`, and the clarity check reads each entry as "Term: definition".
+- **Client Identity Register.** The 300 testimonial companies in the register are the companies on the quotes. The home "Trusted by" strip now uses eight of them. The 75 concept brands are not used, because the concept case studies were not imported.
+- **Partner and certification reference.** It is stored as reference only in `data/partners/programs.json`. No program is confirmed for DECHY and nothing is published from it. The home section now reads "The platforms we build on".
+- **Not imported.** The editorial authors and the concept case studies were not imported, at the owner's direction.

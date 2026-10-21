@@ -1,0 +1,203 @@
+# Technology ecosystem additions (owner's content pack v2, 20 October 2026).
+# The pack's 52 tools and platforms, organized by category on the Technologies hub
+# (data/technology/ecosystem.json). Entries already in the graph were reused; these are the ones
+# that were missing. Reference entities: no page, no menu entry, and no partnership implied.
+entities:
+  - id: plat.elementor
+    type: platform
+    name: Elementor
+    slug: elementor
+    primaryService: svc.web-development
+    group: Website builders
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.framer
+    type: platform
+    name: Framer
+    slug: framer
+    primaryService: svc.web-development
+    group: Website builders
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.wix-bookings
+    type: platform
+    name: Wix Bookings
+    slug: wix-bookings
+    primaryService: svc.ecommerce
+    group: Commerce platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.bubble
+    type: platform
+    name: Bubble
+    slug: bubble
+    primaryService: svc.software-development
+    group: No-code and low-code
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.glide
+    type: platform
+    name: Glide
+    slug: glide
+    primaryService: svc.mobile-app-development
+    group: No-code and low-code
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.adalo
+    type: platform
+    name: Adalo
+    slug: adalo
+    primaryService: svc.mobile-app-development
+    group: No-code and low-code
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.appsheet
+    type: platform
+    name: AppSheet
+    slug: appsheet
+    primaryService: svc.software-development
+    group: No-code and low-code
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.powerpoint
+    type: tool
+    name: Microsoft PowerPoint
+    slug: powerpoint
+    primaryService: svc.branding
+    group: Creative tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.google-slides
+    type: tool
+    name: Google Slides
+    slug: google-slides
+    primaryService: svc.branding
+    group: Creative tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.v-ray
+    type: tool
+    name: V-Ray
+    slug: v-ray
+    primaryService: svc.branding
+    group: Creative tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.siteground
+    type: platform
+    name: SiteGround
+    slug: siteground
+    primaryService: svc.cloud
+    group: Hosting
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.bluehost
+    type: platform
+    name: Bluehost
+    slug: bluehost
+    primaryService: svc.cloud
+    group: Hosting
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.google-search-console
+    type: tool
+    name: Google Search Console
+    slug: google-search-console
+    primaryService: svc.seo-aeo-geo
+    group: SEO tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.semrush
+    type: tool
+    name: Semrush
+    slug: semrush
+    primaryService: svc.seo-aeo-geo
+    group: SEO tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.ahrefs
+    type: tool
+    name: Ahrefs
+    slug: ahrefs
+    primaryService: svc.seo-aeo-geo
+    group: SEO tools
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.google-analytics
+    type: tool
+    name: Google Analytics 4
+    slug: google-analytics
+    primaryService: svc.data-analytics
+    group: Analytics
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.mailchimp
+    type: platform
+    name: Mailchimp
+    slug: mailchimp
+    primaryService: svc.digital-marketing
+    group: Marketing platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.brevo
+    type: platform
+    name: Brevo
+    slug: brevo
+    primaryService: svc.digital-marketing
+    group: Marketing platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.klaviyo
+    type: platform
+    name: Klaviyo
+    slug: klaviyo
+    primaryService: svc.digital-marketing
+    group: Marketing platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: plat.gohighlevel
+    type: platform
+    name: GoHighLevel
+    slug: gohighlevel
+    primaryService: svc.digital-marketing
+    group: Marketing platforms
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.google-sheets
+    type: tool
+    name: Google Sheets
+    slug: google-sheets
+    primaryService: svc.automation
+    group: Office and productivity
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none
+  - id: tool.microsoft-excel
+    type: tool
+    name: Microsoft Excel
+    slug: microsoft-excel
+    primaryService: svc.data-analytics
+    group: Office and productivity
+    prominence: reference
+    pagePolicy: REVIEW
+    evidenceLevel: none

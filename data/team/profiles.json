@@ -1,0 +1,65 @@
+{
+  "note": "Imported from DECHY_Content_Data_Pack_v2 by scripts/import-content-pack.mjs. Illustrative examples, not verified client endorsements: shown only in review builds (DECHY_SHOW_DRAFTS=true).",
+  "records": [
+    {
+      "name": "Benedict Shaw",
+      "role": "Managing Director",
+      "bio": "Sets company direction and keeps delivery priorities aligned with customer needs. Focuses on clear scope, accountable decisions, and durable working relationships."
+    },
+    {
+      "name": "Freya Montrose",
+      "role": "Director of Software Engineering",
+      "bio": "Guides application architecture, code quality, and engineering decisions across software initiatives. Favors systems that are understandable, maintainable, and ready to evolve."
+    },
+    {
+      "name": "Alina Westcott",
+      "role": "AI & Automation Lead",
+      "bio": "Shapes responsible AI-assisted workflows and practical automation patterns. Connects model capabilities with review steps, exception handling, and real operational needs."
+    },
+    {
+      "name": "Callum Everly",
+      "role": "Cloud & DevOps Architect",
+      "bio": "Plans deployment environments, infrastructure patterns, and release processes. Brings reliability and operational ownership into early technical decisions."
+    },
+    {
+      "name": "Isadora Lockhart",
+      "role": "Head of Product Design",
+      "bio": "Leads product discovery, interaction design, and interface systems. Works to make complex products feel clear without stripping away useful detail."
+    },
+    {
+      "name": "Matteo Redmond",
+      "role": "Cybersecurity Engineering Lead",
+      "bio": "Focuses on identity, access boundaries, risk treatment, and secure operational design. Helps make security requirements specific enough to build and test."
+    },
+    {
+      "name": "Claudia Barrow",
+      "role": "Data & Analytics Lead",
+      "bio": "Connects data definitions, reporting needs, and decision workflows. Emphasizes context and interpretation rather than dashboards full of disconnected metrics."
+    },
+    {
+      "name": "Ronan Ashford",
+      "role": "Director of Delivery",
+      "bio": "Coordinates planning, dependencies, stakeholder communication, and delivery reviews. Keeps project decisions visible and milestones grounded in agreed scope."
+    },
+    {
+      "name": "Tessa Pembroke",
+      "role": "Quality Engineering Manager",
+      "bio": "Defines quality checks across requirements, interfaces, integrations, and edge cases. Promotes repeatable testing and clear acceptance criteria."
+    },
+    {
+      "name": "Dorian Waverly",
+      "role": "Client Partnerships Director",
+      "bio": "Coordinates discovery conversations and keeps business priorities connected to proposed solutions. Values honest scope, useful feedback, and clear communication."
+    },
+    {
+      "name": "Mira Hensley",
+      "role": "Technical Program Manager",
+      "bio": "Connects business owners, designers, and technical contributors through delivery planning. Tracks risks and decisions so teams can move forward with shared context."
+    },
+    {
+      "name": "Julian Hawthorne",
+      "role": "Digital Strategy Lead",
+      "bio": "Works across web, product, discovery, and digital operations to shape practical improvement plans. Brings customer journeys and business goals into the same conversation."
+    }
+  ]
+}

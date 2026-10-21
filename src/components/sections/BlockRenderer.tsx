@@ -8,7 +8,13 @@ import { ContactPaths } from "./ContactPaths";
 import { ArticlesBlock, BrowseBlock, ConnectsBlock, DirectoryBlock } from "./DiscoveryBlocks";
 import { DefinitionBlock, IndexBlock, ProseBlock, StatementBlock } from "./EditorialBlocks";
 import { CtaBlock, FaqBlock, LegalBlock } from "./FaqCtaLegalBlocks";
-import { CalloutBlock, ChooserBlock, PathFinderBlock, TechnicalBlock } from "./GuidanceBlocks";
+import {
+  CalloutBlock,
+  ChooserBlock,
+  GlossaryBlock,
+  PathFinderBlock,
+  TechnicalBlock,
+} from "./GuidanceBlocks";
 import { Hero } from "./Hero";
 import {
   CaseStudiesBlock,
@@ -123,6 +129,8 @@ export function BlockRenderer({
       return <TechnicalBlock block={block} />;
     case "callout":
       return <CalloutBlock block={block} />;
+    case "glossary":
+      return <GlossaryBlock block={block} />;
     case "contact-form":
       return <ContactFormBlock block={block} />;
     case "lead-services":

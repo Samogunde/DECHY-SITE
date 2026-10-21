@@ -1,0 +1,115 @@
+{
+  "note": "Reference only, never published as a claim: no program is confirmed for DECHY and no certification holder has been supplied. Technologies, integrations, partner programs, and certifications are kept apart.",
+  "programs": [
+    {
+      "organization": "Wix",
+      "program": "Wix Partner Program",
+      "category": "website platform partner program",
+      "reference_url": "https://support.wix.com/en/article/wix-studio-joining-the-wix-partner-program",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Shopify",
+      "program": "Shopify Partner Program",
+      "category": "commerce platform partner program",
+      "reference_url": "https://help.shopify.com/en/partners/partner-program/about",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Webflow",
+      "program": "Webflow Certified Partner Program",
+      "category": "website platform partner program",
+      "reference_url": "https://webflow.com/certified-partners/apply",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "HubSpot",
+      "program": "HubSpot Solutions Partner Program",
+      "category": "CRM and growth solutions partner program",
+      "reference_url": "https://offers.hubspot.com/contact-us-about-partners-program",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Amazon Web Services",
+      "program": "AWS Partner Network (APN)",
+      "category": "cloud services partner network",
+      "reference_url": "https://aws.amazon.com/partners/",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Microsoft",
+      "program": "Microsoft AI Cloud Partner Program",
+      "category": "cloud and AI partner program",
+      "reference_url": "https://partner.microsoft.com/en-us/partnership/",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Google Cloud",
+      "program": "Google Cloud Partner Network",
+      "category": "cloud partner network",
+      "reference_url": "https://cloud.google.com/blog/topics/partners/introducing-google-cloud-partner-network",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    },
+    {
+      "organization": "Stripe",
+      "program": "Stripe partner ecosystem",
+      "category": "payments and platform ecosystem",
+      "reference_url": "https://stripe.com/",
+      "relationship_status": "not_confirmed_for_dechy",
+      "public_partner_claim": false,
+      "logo_asset_status": "not_generated"
+    }
+  ],
+  "certificationPathways": [
+    {
+      "area": "Cloud architecture and operations",
+      "examples": "Vendor-issued cloud architecture, developer, and operations credentials",
+      "current_dechy_holders": "Not supplied",
+      "public_badge_status": "No credential claim supplied"
+    },
+    {
+      "area": "AI and machine learning",
+      "examples": "Vendor-issued AI, machine-learning, and AI application credentials",
+      "current_dechy_holders": "Not supplied",
+      "public_badge_status": "No credential claim supplied"
+    },
+    {
+      "area": "Cybersecurity and identity",
+      "examples": "Vendor-issued security, identity, and compliance credentials",
+      "current_dechy_holders": "Not supplied",
+      "public_badge_status": "No credential claim supplied"
+    },
+    {
+      "area": "Analytics and measurement",
+      "examples": "Analytics and measurement platform certifications",
+      "current_dechy_holders": "Not supplied",
+      "public_badge_status": "No credential claim supplied"
+    },
+    {
+      "area": "Marketing and CRM",
+      "examples": "CRM, email marketing, and digital marketing platform credentials",
+      "current_dechy_holders": "Not supplied",
+      "public_badge_status": "No credential claim supplied"
+    },
+    {
+      "area": "Project and service delivery",
+      "examples": "Project management, service management, and agile delivery credentials",
+      "current_dechy_holders": "Not supplied",
+      "public_badge_status": "No credential claim supplied"
+    }
+  ]
+}

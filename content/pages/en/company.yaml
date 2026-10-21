@@ -174,56 +174,42 @@ sections:
     heading: The people who design, build, and support your systems
     intro: Strategy, engineering, design, and delivery in one team, so nothing gets lost between handoffs.
     members:
-      - name: Daniel Whitaker
-        role: Founder and CEO
-        bio: Founded DECHY and still joins the first call on most projects.
-        focus: [Strategy, Client relationships, Growth]
-      - name: Sarah Mitchell
-        role: Chief Technology Officer
-        bio:
-          Leads architecture and engineering standards so everything we build is secure and easy to
-          maintain.
-        focus: [Architecture, Security, Engineering standards]
-      - name: James Calloway
-        role: Head of Delivery
-        bio: Runs delivery, weekly demos, and the short timelines our clients count on.
-        focus: [Project management, Planning, Quality]
-      - name: Ethan Brooks
-        role: Lead Software Engineer
-        bio: Leads our web and back-end engineers across portals, SaaS products, and integrations.
-        focus: [Web apps, APIs, Cloud]
-      - name: Marcus Reid
-        role: Mobile Lead
-        bio: Leads iPhone and Android development in Flutter, React Native, Swift, and Kotlin.
-        focus: [iOS, Android, Flutter]
-      - name: Olivia Grant
-        role: Lead Product Designer
-        bio: Turns rough ideas into screens people understand, from research to design systems.
-        focus: [UX research, UI design, Design systems]
-      - name: Lucas Moreno
-        role: AI and Automation Lead
-        bio: Builds the AI assistants, agents, and automations that take repetitive work off your team.
-        focus: [AI assistants, Automation, Integrations]
-      - name: Ryan Foster
-        role: Cloud and DevOps Lead
-        bio: Keeps hosting, deployments, monitoring, and cloud costs in shape after launch.
-        focus: [AWS, Azure, Monitoring]
-      - name: Chloe Bennett
-        role: Client Success Manager
-        bio: Your contact after launch for support, training, and planning improvements.
-        focus: [Support, Training, Roadmaps]
-      - name: Hannah Cole
-        role: Head of People
-        bio: Hires and grows the team, and keeps the same people on your project from start to finish.
-        focus: [Hiring, Team growth, Culture]
-      - name: Adrian Cole
-        role: Data and Analytics Lead
-        bio: Builds the data pipelines and dashboards our clients run their businesses on.
-        focus: [Dashboards, Data pipelines, Reporting]
-      - name: Nora Ellison
-        role: Quality Assurance Lead
-        bio: Leads testing on every project; nothing ships until it passes her checklist.
-        focus: [Test automation, Release checks, Accessibility]
+      - name: Benedict Shaw
+        role: "Managing Director"
+        bio: "Sets company direction and keeps delivery priorities aligned with customer needs. Focuses on clear scope, accountable decisions, and durable working relationships."
+      - name: Freya Montrose
+        role: "Director of Software Engineering"
+        bio: "Guides application architecture, code quality, and engineering decisions across software initiatives. Favors systems that are understandable, maintainable, and ready to evolve."
+      - name: Alina Westcott
+        role: "AI & Automation Lead"
+        bio: "Shapes responsible AI-assisted workflows and practical automation patterns. Connects model capabilities with review steps, exception handling, and real operational needs."
+      - name: Callum Everly
+        role: "Cloud & DevOps Architect"
+        bio: "Plans deployment environments, infrastructure patterns, and release processes. Brings reliability and operational ownership into early technical decisions."
+      - name: Isadora Lockhart
+        role: "Head of Product Design"
+        bio: "Leads product discovery, interaction design, and interface systems. Works to make complex products feel clear without stripping away useful detail."
+      - name: Matteo Redmond
+        role: "Cybersecurity Engineering Lead"
+        bio: "Focuses on identity, access boundaries, risk treatment, and secure operational design. Helps make security requirements specific enough to build and test."
+      - name: Claudia Barrow
+        role: "Data & Analytics Lead"
+        bio: "Connects data definitions, reporting needs, and decision workflows. Emphasizes context and interpretation rather than dashboards full of disconnected metrics."
+      - name: Ronan Ashford
+        role: "Director of Delivery"
+        bio: "Coordinates planning, dependencies, stakeholder communication, and delivery reviews. Keeps project decisions visible and milestones grounded in agreed scope."
+      - name: Tessa Pembroke
+        role: "Quality Engineering Manager"
+        bio: "Defines quality checks across requirements, interfaces, integrations, and edge cases. Promotes repeatable testing and clear acceptance criteria."
+      - name: Dorian Waverly
+        role: "Client Partnerships Director"
+        bio: "Coordinates discovery conversations and keeps business priorities connected to proposed solutions. Values honest scope, useful feedback, and clear communication."
+      - name: Mira Hensley
+        role: "Technical Program Manager"
+        bio: "Connects business owners, designers, and technical contributors through delivery planning. Tracks risks and decisions so teams can move forward with shared context."
+      - name: Julian Hawthorne
+        role: "Digital Strategy Lead"
+        bio: "Works across web, product, discovery, and digital operations to shape practical improvement plans. Brings customer journeys and business goals into the same conversation."
 
   - type: index
     id: next

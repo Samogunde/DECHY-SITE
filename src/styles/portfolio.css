@@ -478,3 +478,90 @@ a.cs-stack-item:hover {
 .lead-visual img[src*="portfolio-"] {
   object-fit: contain !important;
 }
+
+/* Testimonial initials (the pack quotes carry no portraits). */
+.tw-initials {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #2f6fed, #1d3f8f);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.tw-card-big .tw-initials {
+  background: #fff;
+  color: #2f6fed;
+}
+
+/* Glossary (Resources page): a letter index and a two-column list of plain definitions. */
+.glossary-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.glossary-letters a {
+  display: grid;
+  place-items: center;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.03);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+.glossary-letters a:hover {
+  border-color: #2f6fed;
+  background: rgb(47 111 237 / 0.18);
+}
+.glossary-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+@media (min-width: 48rem) {
+  .glossary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 80rem) {
+  .glossary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.glossary-item {
+  scroll-margin-top: 7rem;
+  padding: 1.5rem;
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #131b2d, #0f1626);
+}
+.glossary-item:target {
+  border-color: #2f6fed;
+}
+.glossary-item dt {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.glossary-item dd {
+  margin: 0.5rem 0 0;
+  color: var(--text-body, #aeb6c3);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+/* The pack quotes run longer; the featured quote stays readable without towering. */
+.tw-card-big .tw-quote {
+  font-size: clamp(1.125rem, 1.4vw, 1.3125rem);
+  line-height: 1.6;
+}

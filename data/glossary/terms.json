@@ -1,0 +1,125 @@
+{
+  "note": "Imported from DECHY_Content_Data_Pack_v2. Shown on the Resources page.",
+  "records": [
+    {
+      "term": "API",
+      "definition": "An application programming interface that lets software systems exchange requests and data through defined rules."
+    },
+    {
+      "term": "AEO",
+      "definition": "Answer engine optimization: structuring useful information so answer-oriented search experiences can interpret and surface it."
+    },
+    {
+      "term": "AI agent",
+      "definition": "A software system that can interpret a goal, choose from permitted actions, and carry out a multi-step task within defined boundaries."
+    },
+    {
+      "term": "AI model",
+      "definition": "A trained computational system that identifies patterns in input and produces outputs such as classifications, predictions, text, or recommendations."
+    },
+    {
+      "term": "Automation",
+      "definition": "A configured process that carries out defined actions when specified events or conditions occur."
+    },
+    {
+      "term": "Backlink",
+      "definition": "A link from one website to another; relevant, trustworthy links can help people discover content and may support search authority."
+    },
+    {
+      "term": "Canonical URL",
+      "definition": "The preferred URL specified for a page when similar or duplicate versions exist."
+    },
+    {
+      "term": "CI/CD",
+      "definition": "Continuous integration and continuous delivery or deployment: practices for testing, packaging, and releasing software in repeatable stages."
+    },
+    {
+      "term": "Cloud computing",
+      "definition": "On-demand access to computing resources such as servers, storage, databases, and managed services over a network."
+    },
+    {
+      "term": "Conversion rate",
+      "definition": "The proportion of visitors or users who complete a defined action, calculated against the relevant population."
+    },
+    {
+      "term": "CRM",
+      "definition": "Customer relationship management: tools and processes for organizing customer details, interactions, sales activity, and follow-up."
+    },
+    {
+      "term": "Data pipeline",
+      "definition": "A sequence of steps that collects, transforms, validates, and moves data between sources and destinations."
+    },
+    {
+      "term": "DevOps",
+      "definition": "A set of practices that improves collaboration between software development and operations, often through automation and shared responsibility."
+    },
+    {
+      "term": "ERP",
+      "definition": "Enterprise resource planning: connected software for managing core business operations such as finance, inventory, purchasing, and planning."
+    },
+    {
+      "term": "GEO",
+      "definition": "Generative engine optimization: making accurate, useful information easier for generative AI systems to understand and cite."
+    },
+    {
+      "term": "Headless CMS",
+      "definition": "A content management system that stores and manages content separately from the front-end presentation layer."
+    },
+    {
+      "term": "Identity and access management",
+      "definition": "Policies and systems used to identify users and control which resources and actions they are permitted to access."
+    },
+    {
+      "term": "Integration",
+      "definition": "A connection between systems that allows them to exchange data or coordinate actions."
+    },
+    {
+      "term": "Machine learning",
+      "definition": "A branch of AI in which models learn patterns from examples or data to support predictions, classifications, or other tasks."
+    },
+    {
+      "term": "Metadata",
+      "definition": "Information that describes other information, such as a page title, image description, publication date, or data field."
+    },
+    {
+      "term": "MVP",
+      "definition": "Minimum viable product: a focused initial version that tests the core value of a product with the smallest practical feature set."
+    },
+    {
+      "term": "No-code",
+      "definition": "A development approach that uses visual tools and configuration to build applications or workflows with little or no hand-written code."
+    },
+    {
+      "term": "OAuth",
+      "definition": "A standard authorization framework that allows an application to access permitted resources without receiving the user's password."
+    },
+    {
+      "term": "Responsive design",
+      "definition": "An approach to interface design that adapts layout and interaction to different screen sizes and device contexts."
+    },
+    {
+      "term": "SEO",
+      "definition": "Search engine optimization: improving technical accessibility, content relevance, and site structure to help search engines understand pages."
+    },
+    {
+      "term": "Structured data",
+      "definition": "A standardized way of describing information on a page so search engines and other software can interpret its meaning."
+    },
+    {
+      "term": "Webhook",
+      "definition": "An event-triggered message sent by one system to another when a specified action or change occurs."
+    },
+    {
+      "term": "Workflow",
+      "definition": "A defined sequence of tasks, decisions, and handoffs used to complete a process."
+    },
+    {
+      "term": "Zero-trust security",
+      "definition": "A security approach that checks access explicitly and does not automatically trust a user or device solely because it is inside a network."
+    },
+    {
+      "term": "Webhook retry",
+      "definition": "A configured attempt to resend an event notification after a delivery failure, usually with limits and backoff to avoid repeated load."
+    }
+  ]
+}

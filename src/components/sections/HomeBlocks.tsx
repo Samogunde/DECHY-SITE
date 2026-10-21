@@ -109,7 +109,7 @@ function Avatar({ photo, name }: { photo?: { asset: string }; name: string }) {
     return (
       <span className="quote-avatar" aria-hidden="true">
         {name
-          .split(/s+/)
+          .split(/\s+/)
           .map((w) => w[0])
           .slice(0, 2)
           .join("")}
@@ -903,7 +903,15 @@ function WallCard({
           <span className="tw-avatar">
             <Photo photo={t.photo} />
           </span>
-        ) : null}
+        ) : (
+          <span className="tw-avatar tw-initials" aria-hidden="true">
+            {t.name
+              .split(/\s+/)
+              .map((w) => w[0])
+              .slice(0, 2)
+              .join("")}
+          </span>
+        )}
         <span className="tw-who">
           <span className="tw-name">{t.name}</span>
           <span className="tw-role">

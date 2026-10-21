@@ -124,6 +124,13 @@ sections:
     heading: Guides and articles
     intro: "Published guides, comparisons, and explainers, newest first."
 
+  - type: glossary
+    id: glossary
+    tone: ink
+    label: Glossary
+    heading: Technology terms in plain English
+    intro: "Short, plain definitions of the terms that come up when you plan software, websites, AI, automation, cloud, security, and search."
+
   - type: callout
     id: standards
     tone: paper

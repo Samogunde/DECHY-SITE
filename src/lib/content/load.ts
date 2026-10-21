@@ -8,10 +8,10 @@ import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
 import {
-  industryTestimonials,
-  sampleProof,
+  assignQuotes,
+  packQuotes,
+  quoteBlock,
   sampleTestimonialsPage,
-  sampleWork,
   servicePricing,
 } from "./samples";
 import { blockPhotos } from "./photos";
@@ -236,6 +236,22 @@ export function buildRegistry(): Registry {
     const at = page.sections.findIndex((b) => b.type === "faq" || b.type === "related");
     page.sections.splice(at < 0 ? page.sections.length : at, 0, ...blocks);
   };
+  // Review builds: six pack testimonials on every industry and service page, none repeated.
+  const industryPages = pages.filter((p) => p.kind === "industry" && p.entityId);
+  const quotes = assignQuotes(
+    industryPages.map((page) => {
+      const related = page.sections.find((b) => b.type === "related");
+      const services =
+        related && related.type === "related"
+          ? related.groups
+              .flatMap((g) => g.entityIds)
+              .filter((id) => id.startsWith("svc."))
+              .map((id) => id.replace(/^svc\./, ""))
+          : [];
+      return { id: page.entityId!, services };
+    }),
+    labels.services,
+  );
   for (const page of pages.filter((p) => p.kind === "service")) {
     const slug = page.path.replace(/\//g, "");
     const list = projects()
@@ -250,14 +266,10 @@ export function buildRegistry(): Registry {
         `${labels.services[slug] ?? "Our"} projects we have delivered`,
       ),
     );
-    // Review builds: sample client quotes until real testimonials are supplied.
     if (showDrafts())
-      beforeClose(
-        page,
-        sampleProof(slug).filter((b) => b.type === "testimonials"),
-      );
+      beforeClose(page, quoteBlock(quotes.services.get(slug) ?? [], "In our clients' words"));
   }
-  for (const page of pages.filter((p) => p.kind === "industry" && p.entityId))
+  for (const page of industryPages) {
     beforeClose(
       page,
       selectedWork(
@@ -267,35 +279,44 @@ export function buildRegistry(): Registry {
         `${labels.industries[page.entityId!] ?? "Industry"} projects we have delivered`,
       ),
     );
+    if (showDrafts())
+      beforeClose(
+        page,
+        quoteBlock(
+          quotes.industries.get(page.entityId!) ?? [],
+          "Teams like yours, in their own words",
+        ),
+      );
+  }
+  // The quotes no page has used: the home page names three (home.yaml), the Work page shows six.
+  const shown = new Set(
+    [...quotes.industries.values(), ...quotes.services.values()].flat().map((q) => q.id),
+  );
+  const onHome = new Set(
+    pages
+      .filter((p) => p.kind === "home")
+      .flatMap((p) => p.sections)
+      .flatMap((b) => (b.type === "testimonials" ? b.items.map((q) => q.name) : [])),
+  );
+  const spare = packQuotes().filter((q) => !shown.has(q.id) && !onHome.has(q.name));
   const work = pages.find((p) => p.path === "/work/");
   if (work)
     work.sections.splice(
       1,
       0,
       portfolioGrid(labels, showDrafts()),
-      ...(showDrafts() ? sampleWork(labels.services).filter((b) => b.type !== "case-grid") : []),
+      ...(showDrafts() ? quoteBlock(spare.slice(0, 6), "In our clients' words") : []),
     );
-  // Review builds: the Testimonials page, and client quotes on every industry page.
-  if (showDrafts()) {
-    const industries = Object.fromEntries(
-      [...nodes.values()].filter((n) => n.type === "industry").map((n) => [n.id, n.name]),
-    );
-    const services = Object.fromEntries(svcFile.services.map((s) => [s.slug, s.name]));
-    pages.push(sampleTestimonialsPage({ services, industries }));
-    for (const page of pages.filter((p) => p.kind === "industry" && p.entityId)) {
-      const related = page.sections.find((b) => b.type === "related");
-      const svc =
-        related && related.type === "related"
-          ? related.groups.flatMap((g) => g.entityIds).filter((id) => id.startsWith("svc."))
-          : [];
-      const quotes = industryTestimonials(
-        page.entityId!,
-        svc.map((id) => id.replace(/^svc\./, "")),
-      );
-      const at = page.sections.findIndex((b) => b.type === "faq" || b.type === "related");
-      page.sections.splice(at < 0 ? page.sections.length : at, 0, ...quotes);
-    }
-  }
+  // The glossary terms (data/glossary/terms.json) fill every glossary section.
+  const { records: terms } = readYaml(
+    "data/glossary/terms.json",
+    z.object({ records: z.array(z.object({ term: z.string(), definition: z.string() })) }),
+  );
+  for (const page of pages)
+    for (const b of page.sections)
+      if (b.type === "glossary" && b.items.length === 0) b.items = terms;
+  // Review builds: the Testimonials page, every pack quote with filters.
+  if (showDrafts()) pages.push(sampleTestimonialsPage({ services: labels.services }));
   // Photographs: hand-placed ones first, then every other placement gets an unused one.
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);

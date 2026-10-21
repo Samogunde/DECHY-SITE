@@ -1,0 +1,265 @@
+{
+  "note": "Imported from DECHY_Content_Data_Pack_v2. Tools and platforms DECHY works with; no entry is a formal partnership.",
+  "records": [
+    {
+      "category": "Website & CMS",
+      "name": "Wix",
+      "usage": "Website creation and management"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "Wix Studio",
+      "usage": "Responsive site design and professional site building"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "Wix Velo",
+      "usage": "Custom Wix functionality and data-driven site behavior"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "WordPress",
+      "usage": "Content-managed websites"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "Elementor",
+      "usage": "WordPress visual page design"
+    },
+    {
+      "category": "Commerce",
+      "name": "Shopify",
+      "usage": "Online storefronts and commerce operations"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "Squarespace",
+      "usage": "Website and portfolio publishing"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "Webflow",
+      "usage": "Visual website design and CMS"
+    },
+    {
+      "category": "Website & CMS",
+      "name": "Framer",
+      "usage": "Interactive marketing and product websites"
+    },
+    {
+      "category": "No-code & Low-code",
+      "name": "Bubble",
+      "usage": "Visual web application development"
+    },
+    {
+      "category": "No-code & Low-code",
+      "name": "Glide",
+      "usage": "Data-driven no-code applications"
+    },
+    {
+      "category": "No-code & Low-code",
+      "name": "Xano",
+      "usage": "Backend services and data APIs"
+    },
+    {
+      "category": "Backend & Data",
+      "name": "Firebase",
+      "usage": "Application backend, data, and authentication services"
+    },
+    {
+      "category": "No-code & Low-code",
+      "name": "FlutterFlow",
+      "usage": "Visual mobile application development"
+    },
+    {
+      "category": "No-code & Low-code",
+      "name": "Adalo",
+      "usage": "No-code mobile and web applications"
+    },
+    {
+      "category": "No-code & Low-code",
+      "name": "AppSheet",
+      "usage": "Workflow and data-driven applications"
+    },
+    {
+      "category": "Product Design",
+      "name": "Figma",
+      "usage": "Interface design, prototyping, and design systems"
+    },
+    {
+      "category": "Product Design",
+      "name": "Adobe XD",
+      "usage": "Interface design and prototyping"
+    },
+    {
+      "category": "Creative Tools",
+      "name": "Adobe Photoshop",
+      "usage": "Raster image editing and creative production"
+    },
+    {
+      "category": "Creative Tools",
+      "name": "Canva",
+      "usage": "Design and campaign material production"
+    },
+    {
+      "category": "Creative Tools",
+      "name": "Adobe Illustrator",
+      "usage": "Vector illustration and brand asset creation"
+    },
+    {
+      "category": "Creative Tools",
+      "name": "Microsoft PowerPoint",
+      "usage": "Presentation design"
+    },
+    {
+      "category": "Creative Tools",
+      "name": "Google Slides",
+      "usage": "Presentation design and collaboration"
+    },
+    {
+      "category": "Creative Tools",
+      "name": "V-Ray",
+      "usage": "3D visualization and rendering"
+    },
+    {
+      "category": "Cloud & Hosting",
+      "name": "Amazon S3",
+      "usage": "Object storage and static asset hosting"
+    },
+    {
+      "category": "Cloud & Hosting",
+      "name": "Netlify",
+      "usage": "Web deployment and hosting workflows"
+    },
+    {
+      "category": "Cloud & Hosting",
+      "name": "Vercel",
+      "usage": "Web application deployment and hosting"
+    },
+    {
+      "category": "Cloud & Hosting",
+      "name": "SiteGround",
+      "usage": "Website hosting"
+    },
+    {
+      "category": "Cloud & Hosting",
+      "name": "Bluehost",
+      "usage": "Website hosting"
+    },
+    {
+      "category": "Commerce & Booking",
+      "name": "WooCommerce",
+      "usage": "WordPress commerce"
+    },
+    {
+      "category": "Commerce & Booking",
+      "name": "Wix Bookings",
+      "usage": "Online appointment and service booking"
+    },
+    {
+      "category": "SEO & Analytics",
+      "name": "Google Search Console",
+      "usage": "Search visibility and indexing diagnostics"
+    },
+    {
+      "category": "SEO & Analytics",
+      "name": "Semrush",
+      "usage": "SEO research and competitor analysis"
+    },
+    {
+      "category": "SEO & Analytics",
+      "name": "Ahrefs",
+      "usage": "SEO research, backlink analysis, and content opportunities"
+    },
+    {
+      "category": "Marketing & CRM",
+      "name": "Mailchimp",
+      "usage": "Email marketing and audience communication"
+    },
+    {
+      "category": "Marketing & CRM",
+      "name": "Brevo (formerly Sendinblue)",
+      "usage": "Email marketing and customer communication"
+    },
+    {
+      "category": "Marketing & CRM",
+      "name": "Klaviyo",
+      "usage": "Ecommerce email and customer lifecycle marketing"
+    },
+    {
+      "category": "Marketing & CRM",
+      "name": "GoHighLevel",
+      "usage": "CRM and marketing workflow management"
+    },
+    {
+      "category": "Work Management",
+      "name": "Monday.com",
+      "usage": "Project and work management"
+    },
+    {
+      "category": "Work Management",
+      "name": "Notion",
+      "usage": "Knowledge management and team documentation"
+    },
+    {
+      "category": "Work Management",
+      "name": "ClickUp",
+      "usage": "Project and task management"
+    },
+    {
+      "category": "Work Management",
+      "name": "Asana",
+      "usage": "Project and work tracking"
+    },
+    {
+      "category": "Automation & Data",
+      "name": "Google Sheets",
+      "usage": "Structured data and operational tracking"
+    },
+    {
+      "category": "Automation & Data",
+      "name": "Zapier",
+      "usage": "App-to-app workflow automation"
+    },
+    {
+      "category": "Automation & Data",
+      "name": "Make",
+      "usage": "Visual automation and integrations"
+    },
+    {
+      "category": "Automation & Data",
+      "name": "Airtable",
+      "usage": "Relational data and workflow apps"
+    },
+    {
+      "category": "Payments & Integrations",
+      "name": "Stripe",
+      "usage": "Payment processing integration"
+    },
+    {
+      "category": "Analytics",
+      "name": "Google Analytics 4",
+      "usage": "Digital analytics"
+    },
+    {
+      "category": "Office & Productivity",
+      "name": "Microsoft Excel",
+      "usage": "Spreadsheet analysis and reporting"
+    },
+    {
+      "category": "Office & Productivity",
+      "name": "Google Workspace",
+      "usage": "Collaborative documents and productivity"
+    },
+    {
+      "category": "APIs & Integration",
+      "name": "REST APIs",
+      "usage": "System-to-system data and service integration"
+    },
+    {
+      "category": "APIs & Integration",
+      "name": "Webhooks",
+      "usage": "Event-driven integration patterns"
+    }
+  ]
+}
