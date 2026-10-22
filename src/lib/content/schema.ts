@@ -592,44 +592,131 @@ export const Block = z.discriminatedUnion("type", [
       )
       .min(4),
   }),
-  /** Every testimonial with service and industry filters (the Testimonials page). */
+  /*
+   * The Testimonials page (owner direction, 21 October 2026: the section order, layout, and
+   * motion of the reference testimonial page the owner chose, with DECHY's own testimonials and
+   * copy). Quotes, companies, figures, partners, and certifications come from the data files; the
+   * content only sets headings, photographs, and the people or projects each section features.
+   */
+  /** Opening: headline with highlighted words, a photograph, and the proof figures beneath. */
   z.object({
-    type: z.literal("testimonial-wall"),
+    type: z.literal("tm-hero"),
     ...base,
-    label: z.string(),
+    eyebrow: z.string(),
+    headline: z.string(),
+    /** The words of the headline shown in the accent color. */
+    accent: z.string().optional(),
+    lead: z.string(),
+    cta: Cta,
+    photo: PhotoRef,
+  }),
+  /** The companies behind the testimonials, as a grid of name tiles. */
+  z.object({
+    type: z.literal("tm-logos"),
+    ...base,
     heading: z.string(),
     intro: z.string().optional(),
   }),
-  /** A few testimonials, one large at a time, chosen from a row of people (Testimonials page). */
+  /** Large client stories, one at a time over a photograph, with name labels. */
   z.object({
-    type: z.literal("testimonial-spotlight"),
+    type: z.literal("tm-stories"),
     ...base,
-    label: z.string(),
     heading: z.string(),
     intro: z.string().optional(),
-    /** The people to feature, by name, as written in data/testimonials/testimonials.yaml. */
-    names: z.array(z.string()).min(2).max(8),
+    slides: z
+      .array(z.object({ name: z.string(), photo: PhotoRef }))
+      .min(2)
+      .max(8),
   }),
-  /** One card per service with the clients who spoke about it (Testimonials page). */
+  /** The client journey: a sticky heading and photograph beside steps that light up in turn. */
   z.object({
-    type: z.literal("testimonial-services"),
+    type: z.literal("tm-journey"),
     ...base,
-    label: z.string(),
-    heading: z.string(),
-    intro: z.string().optional(),
-  }),
-  /** How working with DECHY goes, as numbered steps beside a photograph. */
-  z.object({
-    type: z.literal("journey"),
-    ...base,
-    label: z.string(),
     heading: z.string(),
     intro: z.string().optional(),
     photo: PhotoRef,
     steps: z
       .array(z.object({ title: z.string(), text: z.string() }))
       .min(3)
+      .max(8),
+  }),
+  /** Every testimonial in a sliding row, three at a time. */
+  z.object({
+    type: z.literal("tm-outcomes"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+  }),
+  /** Featured voices: choose a person and their testimonial shows beside the photograph. */
+  z.object({
+    type: z.literal("tm-founders"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+    photo: PhotoRef,
+    names: z.array(z.string()).min(2).max(8),
+  }),
+  /** Case study summaries from the portfolio, each linking to its full story. */
+  z.object({
+    type: z.literal("tm-cases"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+    slugs: z.array(z.string()).min(1).max(3),
+  }),
+  /** What working with DECHY gives you: a list that opens on hover, beside a photograph. */
+  z.object({
+    type: z.literal("tm-partner"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+    photo: PhotoRef,
+    items: z
+      .array(z.object({ icon: IconName, title: z.string(), text: z.string() }))
+      .min(3)
       .max(6),
+  }),
+  /** One testimonial for each service, in a sliding row. */
+  z.object({
+    type: z.literal("tm-services"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+  }),
+  /** The proof figures in one ruled row. */
+  z.object({
+    type: z.literal("tm-measured"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+  }),
+  /** Why clients stay: numbered reasons that open in place, beside a photograph. */
+  z.object({
+    type: z.literal("tm-retention"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+    photo: PhotoRef,
+    items: z
+      .array(z.object({ title: z.string(), text: z.string(), icon: IconName.optional() }))
+      .min(3)
+      .max(6),
+  }),
+  /** Projects delivered and clients helped beside the partner programs and compliance. */
+  z.object({
+    type: z.literal("tm-excellence"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+    note: z.string(),
+  }),
+  /** Certifications as a ruled list of badge, name, and what it proves. */
+  z.object({
+    type: z.literal("tm-recognized"),
+    ...base,
+    heading: z.string(),
+    intro: z.string().optional(),
+    limit: z.number().int().min(3).max(12).default(6),
   }),
   /** A photo gallery: one large photograph and smaller ones beside it, each with a short note. */
   z.object({
@@ -1014,6 +1101,8 @@ export const Block = z.discriminatedUnion("type", [
     body: z.string(),
     primary: Cta,
     secondary: Cta.optional(),
+    /** "center": a large centered heading and one button (the Testimonials page). */
+    style: z.enum(["split", "center"]).default("split"),
   }),
   z.object({
     type: z.literal("legal"),
@@ -1142,7 +1231,14 @@ export const Asset = z.object({
   kind: z.enum(["file", "component"]),
   file: z.string(),
   role: z.enum(["logo", "open-graph", "diagram", "interface-visual", "photograph", "icon"]),
-  source: z.enum(["owner-supplied", "original", "licensed-stock", "client-supplied"]),
+  source: z.enum([
+    "owner-supplied",
+    "original",
+    "licensed-stock",
+    "client-supplied",
+    // A partner's own logo, shown because the owner confirmed the partnership.
+    "partner-trademark",
+  ]),
   creator: z.string(),
   license: z.string().min(10),
   originalFilename: z.string().optional(),

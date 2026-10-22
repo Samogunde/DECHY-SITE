@@ -17,7 +17,7 @@
   border-radius: var(--radius-lg);
 }
 .nav-chevron:hover {
-  color: var(--color-blue);
+  color: var(--color-accent);
 }
 
 /* A short invisible bridge keeps a hover-opened panel open while the pointer crosses into it. */
@@ -61,7 +61,7 @@
   background: var(--color-paper);
 }
 .tech-tab[aria-selected="true"] {
-  border-inline-start-color: var(--color-blue);
+  border-inline-start-color: var(--color-accent);
   background: var(--color-paper);
 }
 .tech-count {
@@ -116,7 +116,7 @@
   background: transparent;
   color: var(--color-slate-text);
   font: inherit;
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   cursor: pointer;
 }
 .search-status {
@@ -150,12 +150,12 @@
 }
 .search-kind {
   color: var(--color-slate-text);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
 }
 .search-desc {
   grid-column: 1 / -1;
   color: var(--color-slate-text);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   line-height: 1.4;
 }
 .search-hint {
@@ -216,7 +216,7 @@
   border: 1.5px solid var(--color-ink);
   border-radius: var(--radius-lg);
   font-family: var(--font-heading);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.2;
   cursor: pointer;

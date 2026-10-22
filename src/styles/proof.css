@@ -10,7 +10,7 @@
 .client-faces img {
   width: var(--face, 2.5rem);
   height: var(--face, 2.5rem);
-  border: 2px solid var(--face-ring, #0b0f19);
+  border: 2px solid var(--face-ring, #0a0a0b);
   border-radius: 50%;
   background: #2f6fed;
   object-fit: cover;
@@ -55,7 +55,7 @@
   place-items: center;
   border: 1px solid rgb(255 255 255 / 0.07);
   border-radius: 18px;
-  background: radial-gradient(circle at 50% 40%, #1a2440 0%, #111827 70%);
+  background: radial-gradient(circle at 50% 40%, #1c1c1f 0%, #0a0a0b 70%);
 }
 .cert-tile img {
   width: 72%;
@@ -81,7 +81,7 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 .cert-strip {
   display: grid;
@@ -117,7 +117,7 @@
   padding-top: 1.25rem;
   border-top: 1px solid rgb(255 255 255 / 0.08);
   font-size: 0.9375rem;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 .cert-strip-foot strong {
   color: #fff;
@@ -148,7 +148,7 @@
   padding: 1.5rem;
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 18px;
-  background: linear-gradient(180deg, #141c2f, #0f1626);
+  background: linear-gradient(180deg, #161618, #121214);
 }
 .cert-figure-list dd {
   margin: 0;
@@ -160,12 +160,12 @@
   color: #fff !important;
 }
 .cert-figure-list > div:first-child dd {
-  color: #f5a524 !important;
+  color: var(--color-accent-text) !important;
 }
 .cert-figure-list dt {
   font-size: 0.875rem;
   line-height: 1.45;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 @media (max-width: 39.99rem) {
   .cert-figure-list {
@@ -174,17 +174,17 @@
 }
 .cert-platforms {
   padding: 1.5rem;
-  border: 1px solid rgb(122 165 248 / 0.3);
+  border: 1px solid rgb(70 108 185 / 0.3);
   border-radius: 18px;
-  background: rgb(47 111 237 / 0.08);
+  background: rgb(70 108 185 / 0.08);
 }
 .cert-platforms-title {
   margin: 0 0 1rem;
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
-  color: #7aa5f8;
+  color: var(--color-accent-text);
 }
 .cert-platforms ul {
   display: flex;
@@ -198,7 +198,7 @@
   padding: 0.55rem 0.95rem;
   border: 1px solid rgb(255 255 255 / 0.14);
   border-radius: 10px;
-  background: #0f1626;
+  background: #121214;
   font-family: var(--font-heading);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -217,7 +217,7 @@
   overflow-x: auto;
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 999px;
-  background: rgb(11 15 25 / 0.88);
+  background: rgb(10 10 11 / 0.88);
   backdrop-filter: blur(10px);
   scrollbar-width: none;
 }
@@ -228,8 +228,8 @@
   flex: none;
   padding: 0.55rem 1rem;
   border-radius: 999px;
-  font-size: 0.875rem;
-  color: var(--text-body, #aeb6c3);
+  font-size: 0.9375rem;
+  color: var(--text-body, #b0b0b6);
   text-decoration: none;
   white-space: nowrap;
   transition:
@@ -237,7 +237,7 @@
     color 160ms ease;
 }
 .cert-nav a:hover {
-  background: #2f6fed;
+  background: var(--color-accent);
   color: #fff;
 }
 .cert-group {
@@ -268,12 +268,12 @@
 .cert-group-summary {
   margin: 0;
   font-size: 1rem;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 .cert-rows {
   margin: 0;
   padding: 0 0 0 1.5rem;
-  border-left: 2px solid #2f6fed;
+  border-left: 2px solid var(--color-accent);
   list-style: none;
 }
 .cert-row {
@@ -301,11 +301,11 @@
 }
 .cert-issuer {
   margin: 0 0 0.35rem;
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
-  color: #f5a524;
+  color: var(--color-accent-text);
 }
 .cert-name {
   margin: 0;
@@ -321,7 +321,7 @@
   margin: 0.6rem 0 0;
   font-size: 0.9375rem;
   line-height: 1.65;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 
 /* The clients figure in the menu and drawer takes a full row, so the faces never crowd the
@@ -387,19 +387,19 @@
   gap: 1.1rem;
   padding: clamp(1.5rem, 1.2rem + 1vw, 2.25rem);
   border: 1px solid rgb(255 255 255 / 0.08);
-  border-left: 3px solid #2f6fed;
+  border-left: 3px solid var(--color-accent);
   border-radius: 20px;
-  background: linear-gradient(180deg, #141c2f, #0f1626);
+  background: linear-gradient(180deg, #161618, #121214);
 }
 .def-photo-card p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 .def-photo-card p:first-child {
   font-size: 1.0625rem;
-  color: var(--text-lead, #cdd3dc);
+  color: var(--text-lead, #d2d2d6);
 }
 
 /* ---------------- Partnerships and compliance ---------------- */
@@ -417,15 +417,15 @@
   padding: clamp(1.25rem, 1rem + 1vw, 2rem);
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 22px;
-  background: linear-gradient(180deg, #131b2d, #0e1525);
+  background: linear-gradient(180deg, #161618, #111113);
 }
 .ptn-panel-title {
   margin: 0 0 1.25rem;
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
-  color: #7aa5f8;
+  color: var(--color-accent-text);
 }
 .ptn-tiles,
 .compliance-tiles {
@@ -448,16 +448,17 @@
   padding: 1.1rem 1.2rem;
   border: 1px solid rgb(255 255 255 / 0.1);
   border-radius: 16px;
-  background: #0b111e;
+  background: #0c0c0d;
   transition: border-color 180ms ease;
 }
 .ptn-tile:hover {
-  border-color: rgb(47 111 237 / 0.55);
+  border-color: rgb(70 108 185 / 0.55);
 }
 .ptn-mark {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  min-height: 2.25rem;
 }
 .ptn-mark .tech-logo {
   width: 1.6rem;
@@ -472,14 +473,14 @@
   color: #fff;
 }
 .ptn-program {
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  color: #f5a524;
+  color: var(--color-accent-text);
 }
 .ptn-text {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 .compliance-tile {
   display: flex;
@@ -488,14 +489,14 @@
   padding: 1.1rem 1.2rem;
   border: 1px solid rgb(255 255 255 / 0.1);
   border-radius: 16px;
-  background: #0b111e;
+  background: #0c0c0d;
 }
 .compliance-tile svg {
   flex: none;
   width: 1.4rem;
   height: 1.4rem;
   margin-top: 0.1rem;
-  color: #22c55e;
+  color: var(--color-accent);
 }
 .compliance-name {
   display: block;
@@ -507,9 +508,9 @@
 .compliance-text {
   display: block;
   margin-top: 0.2rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.45;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
 }
 .mega-intro-stats {
   grid-template-columns: minmax(0, 1fr) !important;
@@ -529,4 +530,22 @@
     height: calc(100dvh - var(--header-h));
     overflow-y: auto;
   }
+}
+
+/* Partner logos (owner, 22 October 2026): the official mark, with the name beside a symbol. */
+.partner-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.partner-logo-img {
+  display: block;
+  max-width: 100%;
+}
+.partner-logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
 }

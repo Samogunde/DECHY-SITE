@@ -78,9 +78,13 @@ export function PageView({ path }: { path: string }) {
       </>
     );
   const crumbs = breadcrumbsFor(page, registry);
-  const hasHero = page.sections.some((b) => b.type === "hero");
+  // The Testimonials page opens with its own hero and follows the owner's reference page: no
+  // breadcrumb header, "At a glance", or extra call-to-action band between its sections.
+  const ownHero = page.sections[0]?.type === "tm-hero";
+  const hasHero = ownHero || page.sections.some((b) => b.type === "hero");
   const graph = buildGraph(page, registry);
-  const guided = page.kind !== "home" && page.kind !== "contact" && page.kind !== "legal";
+  const guided =
+    !ownHero && page.kind !== "home" && page.kind !== "contact" && page.kind !== "legal";
   const primaryCta = page.sections.find((b) => b.type === "cta");
   const glanceCta = primaryCta && primaryCta.type === "cta" ? primaryCta.primary : undefined;
   const navItems = page.sections
@@ -104,7 +108,8 @@ export function PageView({ path }: { path: string }) {
   const restBase = first?.type === "hero" ? page.sections.slice(1) : page.sections;
   const rest = restBase;
   // A call to action after the first third of the page (consultant brief, 20 October 2026).
-  const midAt = MID_CTA_KINDS.has(page.kind) && rest.length >= 6 ? Math.floor(rest.length / 3) : -1;
+  const midAt =
+    !ownHero && MID_CTA_KINDS.has(page.kind) && rest.length >= 6 ? Math.floor(rest.length / 3) : -1;
 
   // Each page family opens differently. Technology and industry pages show a profile beside the
   // headline and move the hero's teaching diagram next to the opening text; solution pages show

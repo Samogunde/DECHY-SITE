@@ -26,7 +26,8 @@ export function FaqBlock({ block }: { block: Of<"faq"> }) {
         </div>
         <div className="faq faq-cards" data-reveal="group">
           {block.items.map((item, i) => (
-            <details key={item.q}>
+            // One question open at a time: opening another closes it (owner, 22 October 2026).
+            <details key={item.q} name={`${block.id}-faq`}>
               <summary>
                 <span className="faq-n" aria-hidden="true">
                   {String(i + 1).padStart(2, "0")}

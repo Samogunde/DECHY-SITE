@@ -17,7 +17,7 @@
   align-items: center;
   gap: 0.75rem;
   justify-self: start;
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -28,8 +28,8 @@
   padding: 0 0.85rem;
   border: 1px solid rgb(255 255 255 / 0.16);
   border-radius: 999px;
-  background: #121a2a;
-  font-size: 0.875rem;
+  background: #141416;
+  font-size: 0.9375rem;
   letter-spacing: 0;
   text-transform: none;
   color: #fff;
@@ -70,9 +70,9 @@
 }
 .pf-card:hover,
 .pf-card:focus-visible {
-  border-color: rgb(122 165 248 / 0.5);
+  border-color: rgb(70 108 185 / 0.5);
   transform: translateY(-4px);
-  box-shadow: 0 30px 60px -30px rgb(47 111 237 / 0.45);
+  box-shadow: 0 30px 60px -30px rgb(70 108 185 / 0.18);
 }
 .pf-shot {
   display: block;
@@ -105,14 +105,14 @@
   flex-wrap: wrap;
   gap: 0.25rem 0.5rem;
   font-family: var(--font-heading);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #f5a524;
+  color: var(--color-accent-text);
 }
 .pf-dot {
-  color: #8fb3fa;
+  color: #7290ca;
 }
 .pf-dot::before {
   content: "";
@@ -143,8 +143,8 @@
   margin-top: 0.4rem;
   padding: 0.7rem 0.85rem;
   border-radius: 12px;
-  background: rgb(47 111 237 / 0.12);
-  font-size: 0.8125rem;
+  background: rgb(70 108 185 / 0.12);
+  font-size: 0.9375rem;
   color: #c9d8fb;
 }
 .pf-result strong {
@@ -160,9 +160,9 @@
   gap: 0.4rem;
   margin-top: 0.35rem;
   font-family: var(--font-heading);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  color: #8fb3fa;
+  color: #7290ca;
 }
 .pf-card:hover .pf-go {
   color: #fff;
@@ -172,7 +172,7 @@
 .cs-hero {
   padding-block: 1.5rem clamp(3rem, 2rem + 3vw, 5rem);
   background:
-    radial-gradient(60rem 30rem at 85% 10%, rgb(47 111 237 / 0.22), transparent 60%),
+    radial-gradient(60rem 30rem at 85% 10%, rgb(70 108 185 / 0.088), transparent 60%),
     var(--surface-1);
 }
 .cs-hero-grid {
@@ -191,7 +191,7 @@
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 700;
-  color: #8fb3fa !important;
+  color: #7290ca !important;
 }
 .cs-title {
   margin: 0.4rem 0 0;
@@ -221,7 +221,7 @@
   }
 }
 .cs-meta dt {
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -237,7 +237,7 @@
 .cs-meta dd a {
   color: #fff;
   text-decoration: underline;
-  text-decoration-color: rgb(122 165 248 / 0.6);
+  text-decoration-color: rgb(70 108 185 / 0.6);
   text-underline-offset: 3px;
 }
 .cs-services {
@@ -247,16 +247,16 @@
 }
 .cs-chip {
   padding: 0.2rem 0.65rem;
-  border: 1px solid rgb(122 165 248 / 0.35);
+  border: 1px solid rgb(70 108 185 / 0.35);
   border-radius: 999px;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #c9d8fb !important;
   text-decoration: none !important;
 }
 .cs-chip:hover {
-  border-color: #2f6fed;
-  background: #2f6fed;
+  border-color: var(--color-accent);
+  background: var(--color-accent);
   color: #fff !important;
 }
 .cs-screen {
@@ -299,14 +299,14 @@
   display: grid;
   gap: 0.35rem;
   padding: 1.5rem 1.4rem;
-  border: 1px solid rgb(122 165 248 / 0.25);
+  border: 1px solid rgb(70 108 185 / 0.25);
   border-radius: 18px;
   background:
-    radial-gradient(20rem 10rem at 0% 0%, rgb(47 111 237 / 0.22), transparent 70%), #0f1830;
+    radial-gradient(20rem 10rem at 0% 0%, rgb(70 108 185 / 0.088), transparent 70%), #0f1830;
 }
 .cs-stats li:first-child {
   border-color: transparent;
-  background: #2f6fed;
+  background: var(--color-accent);
 }
 .cs-stat-value {
   font-family: var(--font-heading);
@@ -343,14 +343,14 @@
   background: rgb(255 255 255 / 0.03);
 }
 .cs-steps li.cs-step-solution {
-  border-color: rgb(122 165 248 / 0.35);
-  background: rgb(47 111 237 / 0.08);
+  border-color: rgb(70 108 185 / 0.35);
+  background: rgb(70 108 185 / 0.08);
 }
 .cs-step-n {
   font-family: var(--font-heading);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 800;
-  color: #f5a524;
+  color: var(--color-accent-text);
 }
 .cs-steps h3 {
   margin: 0.6rem 0 0;
@@ -391,14 +391,14 @@
   border-radius: 12px;
   background: rgb(255 255 255 / 0.03);
   font-size: 0.9375rem !important;
-  color: #e6eaf0 !important;
+  color: #eaeaed !important;
 }
 .cs-delivered svg {
   flex: none;
   width: 1.2rem;
   height: 1.2rem;
   margin-top: 0.1rem;
-  color: #2f6fed;
+  color: var(--color-accent);
 }
 .cs-stack {
   padding: 1.5rem;
@@ -409,11 +409,11 @@
 .cs-stack-title {
   margin: 0 0 1rem;
   font-family: var(--font-heading);
-  font-size: 0.6875rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #f5a524 !important;
+  color: var(--color-accent-text) !important;
 }
 .cs-stack ul {
   display: grid;
@@ -430,13 +430,13 @@
   padding: 0.55rem 0.7rem;
   border-radius: 10px;
   background: rgb(255 255 255 / 0.04);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  color: #e6eaf0;
+  color: #eaeaed;
   text-decoration: none;
 }
 a.cs-stack-item:hover {
-  background: rgb(47 111 237 / 0.18);
+  background: rgb(70 108 185 / 0.18);
   color: #fff;
 }
 .cs-stack-mark {
@@ -457,7 +457,7 @@ a.cs-stack-item:hover {
   margin: 1.1rem 0 0;
   padding-top: 1rem;
   border-top: 1px solid rgb(255 255 255 / 0.08);
-  font-size: 0.875rem !important;
+  font-size: 0.9375rem !important;
 }
 .cs-related-head {
   display: flex;
@@ -503,8 +503,8 @@ a.cs-stack-item:hover {
     border-color 160ms ease;
 }
 .glossary-letters a:hover {
-  border-color: #2f6fed;
-  background: rgb(47 111 237 / 0.18);
+  border-color: var(--color-accent);
+  background: rgb(70 108 185 / 0.18);
 }
 .glossary-grid {
   display: grid;
@@ -526,10 +526,10 @@ a.cs-stack-item:hover {
   padding: 1.5rem;
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 1rem;
-  background: linear-gradient(180deg, #131b2d, #0f1626);
+  background: linear-gradient(180deg, #161618, #121214);
 }
 .glossary-item:target {
-  border-color: #2f6fed;
+  border-color: var(--color-accent);
 }
 .glossary-item dt {
   color: #fff;
@@ -539,7 +539,7 @@ a.cs-stack-item:hover {
 }
 .glossary-item dd {
   margin: 0.5rem 0 0;
-  color: var(--text-body, #aeb6c3);
+  color: var(--text-body, #b0b0b6);
   font-size: 0.9375rem;
   line-height: 1.65;
 }
@@ -552,7 +552,7 @@ a.cs-stack-item:hover {
   border: 1px solid rgb(255 255 255 / 0.16);
   border-radius: 0.6rem;
   background: rgb(255 255 255 / 0.05);
-  font-size: 0.8125rem !important;
+  font-size: 0.875rem !important;
   letter-spacing: 0.01em;
 }
 .cs-stack-mark .tech-monogram {
@@ -560,5 +560,5 @@ a.cs-stack-item:hover {
   height: 100%;
   border: 0;
   background: none;
-  font-size: 0.6875rem !important;
+  font-size: 0.875rem !important;
 }

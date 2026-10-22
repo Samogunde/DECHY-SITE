@@ -15,6 +15,8 @@ const Testimonial = z.object({
   service: z.string().min(1),
   industry: z.string().regex(/^ind\./),
   home: z.boolean().default(false),
+  /** The client's own rating out of 5, shown only when the client gave one. */
+  rating: z.number().min(1).max(5).optional(),
   quote: z.string().min(1),
 });
 export type Testimonial = z.infer<typeof Testimonial> & { id: string };

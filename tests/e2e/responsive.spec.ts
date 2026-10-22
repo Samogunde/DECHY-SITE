@@ -21,7 +21,8 @@ for (const width of WIDTHS) {
         const vw = document.documentElement.clientWidth;
         const bad: string[] = [];
         for (const el of Array.from(document.body.querySelectorAll<HTMLElement>("*"))) {
-          if (el.closest(".table-wrap")) continue; // tables scroll inside their own region
+          // Tables and sliding rows scroll inside their own region.
+          if (el.closest(".table-wrap, .tmc-track")) continue;
           const r = el.getBoundingClientRect();
           if (r.width === 0 || r.height === 0) continue;
           const style = getComputedStyle(el);

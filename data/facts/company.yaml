@@ -18,9 +18,9 @@ facts:
 
   - id: company.statement
     label: Approved company statement
-    value: "Since 2010, DECHY has helped over 1,500 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types."
+    value: "Since 2010, DECHY has helped over 1,200 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types."
     status: approved
-    source: DECHY_CLAUDE_MASTER_HANDOFF.md section 2; owner instruction (figures not to be altered)
+    source: DECHY_CLAUDE_MASTER_HANDOFF.md section 2; client figure changed from 1,500 to 1,200 by the owner in chat, 22 October 2026 ("take it to 1,200+ everywhere")
 
   - id: company.founded
     label: Operating since
@@ -48,9 +48,9 @@ facts:
 
   - id: company.clients
     label: Clients helped (short form)
-    value: "1,500+"
+    value: "1,200+"
     status: approved
-    source: Approved company statement ("over 1,500"); short form for proof figures
+    source: Owner instruction in chat, 22 October 2026 (clients 1,200+; projects delivered stay 1,500+)
 
   - id: company.team
     label: Engineers and designers

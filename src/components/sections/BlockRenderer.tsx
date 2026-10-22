@@ -50,13 +50,23 @@ import {
   StackBlock,
   StatsBlock,
 } from "./HomeBlocks";
+import { TestimonialsBlock } from "./TestimonialBlocks";
 import {
-  JourneyBlock,
-  TestimonialServicesBlock,
-  TestimonialSpotlightBlock,
-  TestimonialWallBlock,
-  TestimonialsBlock,
-} from "./TestimonialBlocks";
+  TmCasesBlock,
+  TmCta,
+  TmExcellenceBlock,
+  TmFoundersBlock,
+  TmHeroBlock,
+  TmJourneyBlock,
+  TmLogosBlock,
+  TmMeasuredBlock,
+  TmOutcomesBlock,
+  TmPartnerBlock,
+  TmRecognizedBlock,
+  TmRetentionBlock,
+  TmServicesBlock,
+  TmStoriesBlock,
+} from "./TestimonialPage";
 import { ColumnsBlock, EntitiesBlock, RelatedBlock, ServiceIndexBlock } from "./ListBlocks";
 import { DiagramBlock, ProcessBlock, TableBlock } from "./ProcessTableBlocks";
 import { Section, SectionHeader } from "./Section";
@@ -138,7 +148,7 @@ export function BlockRenderer({
     case "articles":
       return <ArticlesBlock block={block} />;
     case "cta":
-      return <CtaBlock block={block} />;
+      return block.style === "center" ? <TmCta block={block} /> : <CtaBlock block={block} />;
     case "legal":
       return <LegalBlock block={block} />;
     case "pathfinder":
@@ -195,14 +205,32 @@ export function BlockRenderer({
       return <TeamBlock block={block} />;
     case "gallery":
       return <GalleryBlock block={block} />;
-    case "testimonial-wall":
-      return <TestimonialWallBlock block={block} />;
-    case "testimonial-spotlight":
-      return <TestimonialSpotlightBlock block={block} />;
-    case "testimonial-services":
-      return <TestimonialServicesBlock block={block} />;
-    case "journey":
-      return <JourneyBlock block={block} />;
+    case "tm-hero":
+      return <TmHeroBlock block={block} />;
+    case "tm-logos":
+      return <TmLogosBlock block={block} />;
+    case "tm-stories":
+      return <TmStoriesBlock block={block} />;
+    case "tm-journey":
+      return <TmJourneyBlock block={block} />;
+    case "tm-outcomes":
+      return <TmOutcomesBlock block={block} />;
+    case "tm-founders":
+      return <TmFoundersBlock block={block} />;
+    case "tm-cases":
+      return <TmCasesBlock block={block} />;
+    case "tm-partner":
+      return <TmPartnerBlock block={block} />;
+    case "tm-services":
+      return <TmServicesBlock block={block} />;
+    case "tm-measured":
+      return <TmMeasuredBlock block={block} />;
+    case "tm-retention":
+      return <TmRetentionBlock block={block} />;
+    case "tm-excellence":
+      return <TmExcellenceBlock block={block} />;
+    case "tm-recognized":
+      return <TmRecognizedBlock block={block} />;
     case "promise":
       return <PromiseBlock block={block} />;
     case "stats":

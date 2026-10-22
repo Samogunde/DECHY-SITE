@@ -377,3 +377,33 @@ Owner direction, 21 October 2026. The owner chose the mediusware testimonial pag
 - **Similarity.** Testimonials are the clients' own words and repeat across pages by design, so the copy-overlap check skips them.
 - **"Trusted by" strip** (review builds only): now eight companies from the testimonials.
 - **For the owner.** Four testimonials name DECHY people (Luis, Amara, Daniel, Maya). None of them is on the team section.
+
+## Sixteenth pass (21 and 22 October 2026): the reference testimonial page, black, calm blue, readable text
+
+Owner direction, 21 and 22 October 2026.
+
+- **Testimonials page, rebuilt after the reference page.** Fifteen sections in the reference order, layout, and motion, with DECHY's own testimonials and wording:
+  - hero with the proof figures
+  - companies behind the testimonials
+  - client stories slider
+  - client journey (sticky photograph, steps that light up on scroll)
+  - outcomes row (every testimonial)
+  - featured voices (hover a person to read their testimonial)
+  - case studies in depth
+  - "your technology partner" list that opens on hover
+  - testimonials by service
+  - the measured figures
+  - why clients stay
+  - quality, partnerships, and compliance
+  - certifications
+  - questions
+  - a closing call
+  Nothing is invented: ratings show only when a client gives one, and the figures are the approved proof figures. The reference's videos, NPS, CSAT, retention, and referral figures have no DECHY equivalent and are not shown.
+- **Motion.** The outcomes and by-service rows loop without end: after the last card the first follows straight on. Rows and stories move on by themselves and pause while the pointer is over them; the dashes change the slide on hover.
+- **Questions.** Every FAQ on the site opens one question at a time, with none open at first. The Testimonials page uses the standard FAQ with every question shown.
+- **Black, not bluish.** Dark surfaces, cards, borders, and gray text are neutral blacks, charcoals, and grays. The header, mega menus, drawer, and footer are pure black. Background glows keep a trace of blue at well under half their former strength.
+- **Calm blue, one accent.** The amber second accent is retired. The brand blue #2F6FED stays on the calls to action: buttons, the CTA band, and the drawer and partner invitations. Decorative uses (lines, icons, small fills, accent words, links) use the same hue with less saturation: #466CB9 for lines and fills, #7290CA for text (5:1 or more on every dark surface).
+- **Readable text.** Nothing on the site is under 14px. Labels, tags, counts, and eyebrows are 14px; text people read is at least 15px. The eyebrow token is 14px in both the site and the approved specification (`docs/design/typography-tokens.css`). Interface mockups, diagram nodes, and the private admin keep their own sizes.
+- **Clients 1,200+.** The owner set the clients figure to 1,200+ everywhere, including the approved statement ("over 1,200"). Projects delivered stay 1,500+.
+- **Partner logos.** AWS, Microsoft, Google Cloud, and Salesforce show their official logos wherever the partnerships appear (`public/partners/`, provenance in `data/assets/licenses/partner-logos.md`). The compliance check marks are blue.
+- **Icons.** Professional duotone icons are used where they help scanning: the partner list, the reasons clients stay, and the measured figures. They are not added everywhere.

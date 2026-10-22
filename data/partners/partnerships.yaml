@@ -2,6 +2,12 @@
 # The owner confirmed DECHY is enrolled in these partner programs and works in compliance with
 # these standards. Official partner and certification marks replace the text tiles once the owner
 # supplies them from the partner portals and certificates.
+# Logos (owner direction, 22 October 2026: "the logo of those partners anywhere they appear"):
+# the official SVG logos from Wikimedia Commons, in public/partners/. For the black site the
+# AWS and Google Cloud wordmark text is white and the Microsoft symbol drops its gray backing
+# square, as in each company's own light-on-dark version. Shapes and brand colors are unchanged.
+# Sources: commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg,
+# File:Microsoft_logo.svg, File:Salesforce.com_logo.svg, File:Google_Cloud_logo.svg.
 # The other programs in data/partners/programs.json (Wix, Shopify, Webflow, HubSpot, Stripe) stay
 # unconfirmed until the owner says otherwise.
 
@@ -9,18 +15,26 @@ partners:
   - name: Amazon Web Services
     program: AWS Partner Network
     short: AWS
+    logo: aws.svg
+    wordmark: true
     text: Cloud architecture, migration, and managed workloads on AWS.
   - name: Microsoft
     program: Microsoft AI Cloud Partner Program
     short: Microsoft
+    logo: microsoft.svg
+    wordmark: false
     text: Azure, Microsoft 365, and AI solutions on Microsoft's cloud.
   - name: Google Cloud
     program: Google Cloud Partner
     short: Google Cloud
+    logo: google-cloud.svg
+    wordmark: true
     text: Data, AI, and applications on Google Cloud.
   - name: Salesforce
     program: Salesforce Partner
     short: Salesforce
+    logo: salesforce.svg
+    wordmark: true
     text: Salesforce development, integration, and commerce.
 
 compliance:

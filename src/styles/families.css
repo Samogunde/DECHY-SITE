@@ -39,7 +39,7 @@
 .profile-kind {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
@@ -162,7 +162,7 @@
 .aside-card-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
@@ -227,8 +227,8 @@
   background: var(--color-paper);
 }
 .option-card[data-here] {
-  border-color: var(--color-blue);
-  box-shadow: inset 0 3px 0 var(--color-blue);
+  border-color: var(--color-accent);
+  box-shadow: inset 0 3px 0 var(--color-accent);
 }
 @media (hover: hover) {
   .option-card:hover {
@@ -236,9 +236,9 @@
     box-shadow: 0 18px 36px -28px rgb(17 24 39 / 0.45);
   }
   .option-card[data-here]:hover {
-    border-color: var(--color-blue);
+    border-color: var(--color-accent);
     box-shadow:
-      inset 0 3px 0 var(--color-blue),
+      inset 0 3px 0 var(--color-accent),
       0 18px 36px -28px rgb(17 24 39 / 0.45);
   }
 }
@@ -264,7 +264,7 @@
   flex: none;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  background: rgb(47 111 237 / 0.1);
+  background: rgb(70 108 185 / 0.1);
   color: var(--color-blue-strong);
   font-family: var(--font-heading);
   font-size: var(--fs-label);
@@ -680,13 +680,13 @@
 }
 .dest-card:hover,
 .dest-card:focus-visible {
-  border-color: var(--color-blue);
+  border-color: var(--color-accent);
   text-decoration: none;
 }
 .dest-card:hover .dest-card-go,
 .dest-card:focus-visible .dest-card-go {
-  background: var(--color-blue);
-  border-color: var(--color-blue);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-white);
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
@@ -754,7 +754,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   font-family: var(--font-heading);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
 }
 .sysframe-live {
@@ -762,7 +762,7 @@
   align-items: center;
   gap: 0.35rem;
   font-family: var(--font-heading);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   font-weight: 700;
   color: var(--color-slate-text);
 }
@@ -822,7 +822,7 @@
   place-items: center;
   width: var(--step-badge);
   height: var(--step-badge);
-  border: 1.5px solid var(--color-blue);
+  border: 1.5px solid var(--color-accent);
   border-radius: 50%;
   background: var(--color-paper);
   color: var(--color-blue-strong);
@@ -841,7 +841,7 @@
   left: calc(var(--step-badge) / 2 - 0.75px);
   top: var(--step-badge);
   bottom: -1rem;
-  border-left: 1.5px solid rgb(47 111 237 / 0.35);
+  border-left: 1.5px solid rgb(70 108 185 / 0.35);
 }
 .step-card {
   padding: 1.15rem 1.25rem 1.25rem;
@@ -888,7 +888,7 @@
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-md);
   background: var(--color-paper);
-  font-size: var(--fs-label);
+  font-size: 0.9375rem;
   line-height: 1.4;
   color: var(--color-ink);
 }
@@ -930,7 +930,7 @@
     top: calc(var(--step-badge) / 2 - 0.75px);
     bottom: auto;
     border-left: 0;
-    border-top: 1.5px solid rgb(47 111 237 / 0.35);
+    border-top: 1.5px solid rgb(70 108 185 / 0.35);
   }
   .steps[data-count="5"] .step-card {
     padding: 1rem 1rem 1.1rem;
@@ -949,7 +949,7 @@
     box-shadow: 0 16px 32px -28px rgb(17 24 39 / 0.45);
   }
   .step:hover .step-n {
-    background: var(--color-blue);
+    background: var(--color-accent);
     color: var(--color-white);
   }
 }
@@ -981,8 +981,8 @@
 }
 .row-link:hover .path-go,
 .row-link:focus-visible .path-go {
-  border-color: var(--color-blue);
-  background: var(--color-blue);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
   color: var(--color-white);
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {

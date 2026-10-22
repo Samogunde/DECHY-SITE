@@ -149,7 +149,7 @@ describe("voice: DECHY speaks as a company", () => {
   it("keeps the approved statement, descriptor and positioning exactly", () => {
     const statement = base.facts.get("company.statement")!.value;
     expect(statement).toBe(
-      "Since 2010, DECHY has helped over 1,500 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types.",
+      "Since 2010, DECHY has helped over 1,200 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types.",
     );
     const hero = home.sections.find((s) => s.type === "hero");
     // Owner direction, 19 October 2026: the home headline leads with websites, apps, and software;

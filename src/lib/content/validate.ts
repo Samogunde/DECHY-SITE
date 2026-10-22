@@ -349,8 +349,9 @@ export function validateRegistry(input: Registry): Issue[] {
     }
 
     // One H1 per page: a hero block (first) or h1 on the record, never both or neither.
-    const heroes = page.sections.filter((s) => s.type === "hero");
-    const heroFirst = page.sections[0]?.type === "hero";
+    const isHero = (t: string) => t === "hero" || t === "tm-hero";
+    const heroes = page.sections.filter((s) => isHero(s.type));
+    const heroFirst = isHero(page.sections[0]?.type ?? "");
     if (heroes.length > 1) err("h1-multiple", where, "More than one hero block");
     if (heroes.length === 1 && !heroFirst)
       err("hero-position", where, "Hero must be the first block");
@@ -391,8 +392,12 @@ export function validateRegistry(input: Registry): Issue[] {
       for (const re of draftStrings.has(s) ? [] : UNSUPPORTED)
         if (re.test(s)) err("unsupported-claim", label, `Unsupported claim wording (${re})`);
       // The company statistic and history may only come from the facts register.
-      // Prices such as "$1,500" are not the client count.
-      if (/(?<!\$)\b1,?500\b|\b2010\b/.test(s.replace(/\{\{fact:[^}]+\}\}/g, ""))) {
+      // Prices such as "$1,500" are not the client count (1,200+, owner, 22 October 2026).
+      if (
+        /(?<!\$)\b1,?500\b|(?<!\$)\b1,?200\+|\b1,?200 (?:clients|organizations|customers|businesses)\b|\b2010\b/.test(
+          s.replace(/\{\{fact:[^}]+\}\}/g, ""),
+        )
+      ) {
         err(
           "fact-bypass",
           label,
@@ -455,7 +460,16 @@ export function validateRegistry(input: Registry): Issue[] {
         }
     // The home page carries the photographic story (owner direction, 19 October 2026).
     // About us shows the DECHY workspace as a gallery (owner direction, 20 October 2026).
-    const photoLimit = page.kind === "home" ? 40 : page.path === "/company/" ? 6 : 4;
+    // The Testimonials page follows the owner's reference page, a photograph in most sections
+    // (owner direction, 21 October 2026).
+    const photoLimit =
+      page.kind === "home"
+        ? 40
+        : page.path === "/company/"
+          ? 6
+          : page.path === "/testimonials/"
+            ? 10
+            : 4;
     // Sample (draft) sections show in review builds only and do not count toward the limit.
     const livePhotos = page.sections
       .filter((b) => !("draft" in b && b.draft))

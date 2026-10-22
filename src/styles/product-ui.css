@@ -417,8 +417,8 @@
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 50%;
-  background: #7aa5f8;
-  box-shadow: 0 0 0 3px rgb(122 165 248 / 0.3);
+  background: var(--color-accent-text);
+  box-shadow: 0 0 0 3px rgb(47 111 237 / 0.3);
 }
 @container dgm (max-width: 34rem) {
   .pu-site-body {

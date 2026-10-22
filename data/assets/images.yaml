@@ -546,7 +546,7 @@ assets:
     width: 2600
     height: 1463
     alt: "A product team talking through a plan in front of a chalkboard covered in sketches."
-    usage: [home]
+    usage: [home, testimonials]
     approval: approved
     acquired: "2026-10-19"
 
@@ -614,7 +614,7 @@ assets:
     width: 2600
     height: 1463
     alt: "Team members reviewing a release together on a desktop screen."
-    usage: [home]
+    usage: [home, testimonials]
     approval: approved
     acquired: "2026-10-19"
 
@@ -631,7 +631,7 @@ assets:
     width: 2600
     height: 1463
     alt: "A team gathered around a laptop, reviewing work together in an open office."
-    usage: [home]
+    usage: [home, testimonials]
     approval: approved
     acquired: "2026-10-19"
 
@@ -971,7 +971,7 @@ assets:
     width: 2600
     height: 1733
     alt: "A man mapping an automated workflow on a whiteboard."
-    usage: [home]
+    usage: [home, testimonials]
     approval: approved
     acquired: "2026-10-19"
 
@@ -8500,7 +8500,7 @@ assets:
     width: 1536
     height: 1024
     alt: "The DECHY team in a working meeting at a shared table, laptops open, with the DECHY logo on the wall behind them"
-    usage: [home]
+    usage: [home, testimonials]
     approval: approved
     acquired: "2026-10-20"
 
@@ -8532,7 +8532,7 @@ assets:
     width: 1536
     height: 1024
     alt: "DECHY software engineers building and testing client software at their desks in the DECHY office"
-    usage: [company]
+    usage: [company, testimonials]
     approval: approved
     acquired: "2026-10-20"
 
@@ -8548,7 +8548,7 @@ assets:
     width: 1536
     height: 1024
     alt: "A DECHY meeting room set up for project reviews and client demos, with the DECHY logo on screen"
-    usage: [company]
+    usage: [company, testimonials]
     approval: approved
     acquired: "2026-10-20"
 
@@ -8564,7 +8564,7 @@ assets:
     width: 1536
     height: 1024
     alt: "A DECHY project team planning the next release together in a glass meeting room"
-    usage: [companyhow-we-work]
+    usage: [companyhow-we-work, testimonials]
     approval: approved
     acquired: "2026-10-20"
 
@@ -9540,3 +9540,67 @@ assets:
     usage: [client-faces]
     approval: approved
     acquired: "2026-10-21"
+
+  - id: asset.partner-aws
+    kind: file
+    file: public/partners/aws.svg
+    role: logo
+    source: partner-trademark
+    creator: "Amazon Web Services"
+    license: "Amazon Web Services trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg
+    sha256: 754b681a11b56abde9f8fe2877f598a8d5b7802c48bece46e98ce31bbef69914
+    width: 304
+    height: 182
+    alt: "Amazon Web Services logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-microsoft
+    kind: file
+    file: public/partners/microsoft.svg
+    role: logo
+    source: partner-trademark
+    creator: "Microsoft"
+    license: "Microsoft trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Microsoft_logo.svg
+    sha256: 831baa6d6ba5286c11edff70358eecee20b3f612a7bb0352efc52efe8e64b2f1
+    width: 23
+    height: 23
+    alt: "Microsoft logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-google-cloud
+    kind: file
+    file: public/partners/google-cloud.svg
+    role: logo
+    source: partner-trademark
+    creator: "Google Cloud"
+    license: "Google Cloud trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Google_Cloud_logo.svg
+    sha256: a479f759c9faddf733cf2f5cf0cee8b91955b9c0b91ee8265403c2a7143f7d86
+    width: 181
+    height: 28
+    alt: "Google Cloud logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-salesforce
+    kind: file
+    file: public/partners/salesforce.svg
+    role: logo
+    source: partner-trademark
+    creator: "Salesforce"
+    license: "Salesforce trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Salesforce.com_logo.svg
+    sha256: b52421bd13f49ae3960601c2d86a1787133066ca5aadf4d1837c11c442b676b2
+    width: 273
+    height: 191
+    alt: "Salesforce logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"

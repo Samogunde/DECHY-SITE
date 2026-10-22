@@ -67,7 +67,18 @@ export function featuredCertifications(limit: number): Cert[] {
 /** Partner programs and compliance standards the owner confirmed (data/partners/partnerships.yaml). */
 const PartnerFile = z.object({
   partners: z
-    .array(z.object({ name: z.string(), program: z.string(), short: z.string(), text: z.string() }))
+    .array(
+      z.object({
+        name: z.string(),
+        program: z.string(),
+        short: z.string(),
+        text: z.string(),
+        /** The partner's official logo in public/partners/, light on dark. */
+        logo: z.string().optional(),
+        /** True when the logo already spells the name; otherwise the name shows beside it. */
+        wordmark: z.boolean().default(false),
+      }),
+    )
     .min(1),
   compliance: z.array(z.object({ name: z.string(), text: z.string() })).min(1),
 });

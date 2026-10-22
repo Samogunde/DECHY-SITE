@@ -1,8 +1,8 @@
+import { PartnerLogo } from "@/components/primitives/PartnerLogo";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { Arrow } from "@/components/primitives/Arrow";
-import { TechLogo } from "@/components/home/TechLogo";
 import {
   certificationGroups,
   certificationSrc,
@@ -151,7 +151,6 @@ export function CertificationFiguresBlock({ block }: { block: Of<"certification-
 /** Partner programs and compliance standards, side by side (home and Certifications page). */
 export function PartnershipsBlock({ block }: { block: Of<"partnerships"> }) {
   const { partners, compliance } = partnerships();
-  const LOGO: Record<string, string> = { "Google Cloud": "plat.google-cloud" };
   const more = block.more && getRegistry().pageByPath.has(block.more.href.split("#")[0] ?? "");
   return (
     <Section id={block.id} tone={block.tone} ruled={false} className="ptn-section">
@@ -171,8 +170,7 @@ export function PartnershipsBlock({ block }: { block: Of<"partnerships"> }) {
             {partners.map((p) => (
               <li key={p.name} className="ptn-tile">
                 <span className="ptn-mark">
-                  {LOGO[p.short] ? <TechLogo id={LOGO[p.short]!} name={p.short} /> : null}
-                  <span className="ptn-name">{p.short}</span>
+                  <PartnerLogo partner={p} height={p.wordmark ? 30 : 26} />
                 </span>
                 <span className="ptn-program">{p.program}</span>
                 <span className="ptn-text">{p.text}</span>

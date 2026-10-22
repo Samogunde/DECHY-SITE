@@ -33,7 +33,7 @@
   --dgm-border: rgb(17 24 39 / 0.3);
   --dgm-fill: var(--color-white);
   --dgm-muted: var(--color-slate-text);
-  --dgm-accent: var(--color-blue);
+  --dgm-accent: var(--color-accent);
   --dgm-gap: clamp(0.5rem, 0.35rem + 1.2cqw, 0.85rem);
   --dgm-pad-y: 0.6rem;
   --dgm-pad-x: 0.9rem;
@@ -100,7 +100,7 @@
 .dgm-label {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--fs-eyebrow);
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
@@ -125,7 +125,7 @@
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;
-  background: var(--color-blue);
+  background: var(--color-accent);
   color: #fff;
   font-family: var(--font-heading);
   font-size: var(--fs-label);
@@ -169,7 +169,7 @@
 }
 .sysmap-bus {
   position: relative;
-  background: var(--color-blue);
+  background: var(--color-accent);
 }
 .sysmap-rows > li:first-child .sysmap-bus {
   border-start-start-radius: var(--radius-md);
@@ -579,8 +579,8 @@
   background: var(--dgm-fill);
 }
 .q-layer-top {
-  border-color: var(--color-blue);
-  background: var(--color-blue);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
 }
 .q-layer-top .dgm-title,
 .q-layer-top .dgm-text {
@@ -651,8 +651,8 @@
   color: var(--dgm-accent);
 }
 .q-gate[data-state="on"] .q-node {
-  border-color: var(--color-blue);
-  background: var(--color-blue);
+  border-color: var(--color-accent);
+  background: var(--color-accent);
   color: #fff;
 }
 .q-gate-title {
@@ -922,7 +922,7 @@
 .ba-connected {
   margin-top: 0.75rem;
   padding-left: 1.2rem;
-  border-left: 4px solid var(--color-blue);
+  border-left: 4px solid var(--color-accent);
 }
 .ba-connected .ba-nodes {
   margin-top: 0;
@@ -934,7 +934,7 @@
   left: -1.2rem;
   top: 50%;
   width: 1.2rem;
-  border-top: 2px solid var(--color-blue);
+  border-top: 2px solid var(--color-accent);
 }
 .ba-bus-label {
   margin: 0 0 0.6rem;
@@ -1286,11 +1286,11 @@
   @keyframes step-on {
     0% {
       transform: scale(0.6);
-      box-shadow: 0 0 0 0 rgb(47 111 237 / 0.5);
+      box-shadow: 0 0 0 0 rgb(70 108 185 / 0.2);
     }
     55% {
       transform: scale(1.12);
-      box-shadow: 0 0 0 7px rgb(47 111 237 / 0);
+      box-shadow: 0 0 0 7px rgb(70 108 185 / 0);
     }
     100% {
       transform: scale(1);
