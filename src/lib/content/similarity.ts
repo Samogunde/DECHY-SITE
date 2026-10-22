@@ -111,6 +111,9 @@ const choosersOf = (page: Page): string[] =>
 
 export type SimilarityIssue = { a: string; b: string; message: string };
 
+/** Shared site-wide sections (pricing, selected work, client quotes) are not page structure. */
+const SHARED = ["pricing", "selected-work", "client-quotes", "sample-quotes"];
+
 export function similarityIssues(
   pages: Page[],
   facts: Map<string, Fact>,
@@ -119,11 +122,11 @@ export function similarityIssues(
   const issues: SimilarityIssue[] = [];
   const prepared = pages.map((p) => ({
     page: p,
-    // Shared site-wide sections (pricing, selected work, client quotes) are not page structure.
-    seq: p.sections
-      .filter((s) => !["pricing", "selected-work", "client-quotes", "sample-quotes"].includes(s.id))
-      .map((s) => s.type as string),
-    shingles: shingles(pageWords(p, facts)),
+    seq: p.sections.filter((s) => !SHARED.includes(s.id)).map((s) => s.type as string),
+    // Client quotes are the clients' words, shown wherever they apply, so they are not page copy.
+    shingles: shingles(
+      pageWords({ ...p, sections: p.sections.filter((s) => s.id !== "client-quotes") }, facts),
+    ),
     headings: new Set(headingsOf(p)),
     diagrams: new Set(diagramKeys(p)),
     takeaways: new Set(takeawaysOf(p)),

@@ -1,0 +1,154 @@
+id: page.testimonials
+kind: hub
+locale: en
+path: /testimonials/
+title: "Client Testimonials and Reviews | DECHY"
+description: "What our clients say about working with DECHY on custom software, websites, mobile apps, AI, automation, cloud, and more, by service and by industry."
+breadcrumbLabel: Testimonials
+intent:
+  primary: dechy testimonials
+  secondary:
+    - dechy reviews
+    - software development company reviews
+    - client testimonials software agency
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-21"
+dateModified: "2026-10-21"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "Our clients describe, in their own words, what we built or fixed for them and what changed afterwards, across every service we offer."
+  problem: "Every agency says it is good to work with. Buyers want to hear from the people who actually hired one."
+  audience: "Anyone choosing a technology partner who wants to know what working with DECHY is like before the first call."
+  choose: "Filter by the service you need or the industry you work in, and read what teams like yours said."
+  next: "When a story sounds like your situation, tell us about it. We reply with a written plan, a fixed quote, and a timeline."
+
+sections:
+  - type: hero
+    id: hero
+    variant: hub
+    eyebrow: Testimonials
+    headline: What our clients say about working with us
+    lead: "Operations managers, founders, marketers, and product leads on what we built, what we fixed, and what changed for their teams afterwards. Every service we offer, in our clients' own words."
+    ctas:
+      - { label: Start a project, href: "/contact/" }
+      - { label: Read the testimonials, href: "#testimonials" }
+
+  - type: proof-strip
+    id: proof
+    tone: ink
+
+  - type: testimonial-spotlight
+    id: featured
+    tone: ink
+    label: Featured
+    heading: The problems clients brought us, and what changed
+    intro: "Choose a person to read their story. Each one names the problem they brought us and what is different now."
+    names:
+      - Edward Clarke
+      - Grace Williams
+      - Hannah Foster
+      - Leah Scott
+      - Victoria Hayes
+      - Fatima Bello
+
+  - type: testimonial-wall
+    id: testimonials
+    tone: ink
+    label: All testimonials
+    heading: Our clients, in their own words
+    intro: "Filter by the service you need or the industry you work in. Every card links to the service it talks about."
+
+  - type: columns
+    id: themes
+    tone: ink
+    label: What clients value
+    heading: The four things clients mention most
+    intro: "Read the testimonials together and the same themes come up again and again."
+    columns:
+      - title: We question the brief
+        items:
+          - "We push back on pages, features, and systems that will not earn their cost."
+          - "Clients leave with a decision list, not a longer wish list."
+      - title: We fit how your team works
+        items:
+          - "Tools are shaped around the real process, from the shop floor to the front desk."
+          - "People keep the final call, and unusual cases still reach a person."
+      - title: We fix the handoffs
+        items:
+          - "Details are entered once and reach every system that needs them."
+          - "Nobody has to remember the next step, chase updates, or rebuild a report by hand."
+      - title: We leave clear next steps
+        items:
+          - "Audits come with a fix list in a clear order, not a page of scores."
+          - "Technical issues are written up so your own developer can act on them."
+
+  - type: journey
+    id: journey
+    tone: ink
+    label: Client journey
+    heading: What working with us looks like
+    intro: "Every project in these testimonials followed the same path, from the first call to the support that follows launch."
+    photo:
+      asset: asset.photo-dechy-boardroom-client-workshops
+      layout: split
+      position: 50% 50%
+    steps:
+      - title: A short first call
+        text: "You tell us what is not working and what a good result looks like. We ask about the people, systems, and deadlines involved."
+      - title: A written plan and a fixed quote
+        text: "After the call you receive the scope, the price, and the timeline in writing, with the options we considered and the one we recommend."
+      - title: Work you can see every few weeks
+        text: "We build in short cycles. At the end of each, you see working results and tell us what to change before we continue."
+      - title: Testing with your people
+        text: "The people who will use the result try it first, so problems surface before launch rather than after."
+      - title: A careful launch
+        text: "We release in stages, train your team, and keep a way back ready in case anything needs to be undone."
+      - title: Support after launch
+        text: "We look after what we built and keep improving it, with agreed response times so you always know who to ask."
+
+  - type: testimonial-services
+    id: by-service
+    tone: ink
+    label: By service
+    heading: Testimonials for every service we offer
+    intro: "Clients speak for every one of our services. Open a service to read their testimonials alongside the work, prices, and timelines."
+
+  - type: certification-strip
+    id: certifications
+    tone: ink
+    label: Certified team
+    heading: The certified people behind these projects
+    intro: "Our engineers, architects, and project leads hold professional certifications from AWS, Microsoft, Google, Salesforce, Meta, and PMI."
+    limit: 8
+
+  - type: partnerships
+    id: partners
+    tone: ink
+    label: Partnerships and compliance
+    heading: Partnered with the platforms, working to recognized standards
+    more: { label: See our certifications and partners, href: "/company/certifications/" }
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about our testimonials
+    items:
+      - q: Who are the people in these testimonials?
+        a: "Clients who hired us for one of our services: operations managers, school and clinic administrators, marketing leads, product designers, and directors. Each testimonial shows the person's name, role, and company."
+      - q: How do I find testimonials for my kind of project?
+        a: "Use the service buttons above the testimonials to see what clients said about that service, or the industry menu to see teams in your sector. Each card also links to the service page, where its testimonials appear beside our prices and timelines."
+      - q: Why do the testimonials talk about small details?
+        a: "Because that is where the difference shows. A report that arrives before the meeting, a booking that no longer has to be typed twice, or a page parents can find on a phone is what changes a team's week."
+      - q: Where can I see the projects behind the testimonials?
+        a: "Our Work page shows the projects we have delivered, with the problem, what we built, and the results. Each service and industry page also shows selected projects."
+      - q: How do I start a project like these?
+        a: "Tell us what is not working and what you want instead. We reply with a written plan, a fixed quote, and a timeline."
+
+  - type: cta
+    id: contact-cta
+    heading: Want a testimonial like these?
+    body: "Tell us what you need. We reply with a plan, a fixed quote, and a timeline, and we start with the part that will make the biggest difference."
+    primary: { label: Start a project, href: "/contact/" }
+    secondary: { label: See our work, href: "/work/" }

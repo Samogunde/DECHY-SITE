@@ -479,22 +479,6 @@ a.cs-stack-item:hover {
   object-fit: contain !important;
 }
 
-/* Testimonial initials (the pack quotes carry no portraits). */
-.tw-initials {
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #2f6fed, #1d3f8f);
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.tw-card-big .tw-initials {
-  background: #fff;
-  color: #2f6fed;
-}
-
 /* Glossary (Resources page): a letter index and a two-column list of plain definitions. */
 .glossary-letters {
   display: flex;
@@ -558,12 +542,6 @@ a.cs-stack-item:hover {
   color: var(--text-body, #aeb6c3);
   font-size: 0.9375rem;
   line-height: 1.65;
-}
-
-/* The pack quotes run longer; the featured quote stays readable without towering. */
-.tw-card-big .tw-quote {
-  font-size: clamp(1.125rem, 1.4vw, 1.3125rem);
-  line-height: 1.6;
 }
 
 /* Technologies without a logo show a monogram tile instead of repeating their name. */

@@ -254,48 +254,18 @@
     "lib-portraits-29",
     "lib-portraits-30"
   ],
-  "fitness": [
-    "lib-fitness-01",
-    "lib-fitness-02",
-    "lib-fitness-03",
-    "lib-fitness-04"
-  ],
-  "beauty": [
-    "lib-beauty-01",
-    "lib-beauty-02",
-    "lib-beauty-03",
-    "lib-beauty-04"
-  ],
-  "fintech": [
-    "lib-fintech-01",
-    "lib-fintech-02",
-    "lib-fintech-03",
-    "lib-fintech-04"
-  ],
-  "banking": [
-    "lib-banking-01",
-    "lib-banking-02",
-    "lib-banking-03",
-    "lib-banking-04"
-  ],
-  "insurance": [
-    "lib-insurance-01",
-    "lib-insurance-02",
-    "lib-insurance-03",
-    "lib-insurance-04"
-  ],
+  "fitness": ["lib-fitness-01", "lib-fitness-02", "lib-fitness-03", "lib-fitness-04"],
+  "beauty": ["lib-beauty-01", "lib-beauty-02", "lib-beauty-03", "lib-beauty-04"],
+  "fintech": ["lib-fintech-01", "lib-fintech-02", "lib-fintech-03", "lib-fintech-04"],
+  "banking": ["lib-banking-01", "lib-banking-02", "lib-banking-03", "lib-banking-04"],
+  "insurance": ["lib-insurance-01", "lib-insurance-02", "lib-insurance-03", "lib-insurance-04"],
   "construction": [
     "lib-construction-01",
     "lib-construction-02",
     "lib-construction-03",
     "lib-construction-04"
   ],
-  "energy": [
-    "lib-energy-01",
-    "lib-energy-02",
-    "lib-energy-03",
-    "lib-energy-04"
-  ],
+  "energy": ["lib-energy-01", "lib-energy-02", "lib-energy-03", "lib-energy-04"],
   "field-services": [
     "lib-field-services-01",
     "lib-field-services-02",
@@ -314,12 +284,7 @@
     "lib-hospitality-03",
     "lib-hospitality-04"
   ],
-  "travel": [
-    "lib-travel-01",
-    "lib-travel-02",
-    "lib-travel-03",
-    "lib-travel-04"
-  ],
+  "travel": ["lib-travel-01", "lib-travel-02", "lib-travel-03", "lib-travel-04"],
   "marketplaces": [
     "lib-marketplaces-01",
     "lib-marketplaces-02",
@@ -350,18 +315,8 @@
     "lib-recruitment-03",
     "lib-recruitment-04"
   ],
-  "legal": [
-    "lib-legal-01",
-    "lib-legal-02",
-    "lib-legal-03",
-    "lib-legal-04"
-  ],
-  "media": [
-    "lib-media-01",
-    "lib-media-02",
-    "lib-media-03",
-    "lib-media-04"
-  ],
+  "legal": ["lib-legal-01", "lib-legal-02", "lib-legal-03", "lib-legal-04"],
+  "media": ["lib-media-01", "lib-media-02", "lib-media-03", "lib-media-04"],
   "nonprofits": [
     "lib-nonprofits-01",
     "lib-nonprofits-02",
@@ -374,12 +329,7 @@
     "lib-government-03",
     "lib-government-04"
   ],
-  "saas": [
-    "lib-saas-01",
-    "lib-saas-02",
-    "lib-saas-03",
-    "lib-saas-04"
-  ],
+  "saas": ["lib-saas-01", "lib-saas-02", "lib-saas-03", "lib-saas-04"],
   "telecommunications": [
     "lib-telecommunications-01",
     "lib-telecommunications-02",

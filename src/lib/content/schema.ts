@@ -552,7 +552,10 @@ export const Block = z.discriminatedUnion("type", [
       .min(1)
       .max(6),
   }),
-  /** Client quotes, with the person's real name, role, and organization. */
+  /**
+   * Client quotes, with the person's real name, role, and organization. Left empty in the content,
+   * the section shows the home page's six from data/testimonials/testimonials.yaml.
+   */
   z.object({
     type: z.literal("testimonials"),
     ...base,
@@ -566,10 +569,15 @@ export const Block = z.discriminatedUnion("type", [
           role: z.string(),
           company: z.string(),
           photo: PhotoRef.optional(),
+          /** The service and industry the quote speaks for, linked when the page exists. */
+          tags: z
+            .array(z.object({ label: z.string(), href: z.string().optional() }))
+            .max(3)
+            .default([]),
         }),
       )
-      .min(1)
-      .max(6),
+      .max(6)
+      .default([]),
   }),
   /** Client, partner, or press names as a logo wall or a slow strip. */
   z.object({
@@ -591,22 +599,37 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
     intro: z.string().optional(),
-    items: z
-      .array(
-        z.object({
-          quote: z.string(),
-          name: z.string(),
-          role: z.string(),
-          company: z.string(),
-          service: z.string(),
-          serviceLabel: z.string(),
-          industry: z.string(),
-          industryLabel: z.string(),
-          href: z.string().optional(),
-          photo: PhotoRef.optional(),
-        }),
-      )
-      .min(2),
+  }),
+  /** A few testimonials, one large at a time, chosen from a row of people (Testimonials page). */
+  z.object({
+    type: z.literal("testimonial-spotlight"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    /** The people to feature, by name, as written in data/testimonials/testimonials.yaml. */
+    names: z.array(z.string()).min(2).max(8),
+  }),
+  /** One card per service with the clients who spoke about it (Testimonials page). */
+  z.object({
+    type: z.literal("testimonial-services"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+  }),
+  /** How working with DECHY goes, as numbered steps beside a photograph. */
+  z.object({
+    type: z.literal("journey"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+    photo: PhotoRef,
+    steps: z
+      .array(z.object({ title: z.string(), text: z.string() }))
+      .min(3)
+      .max(6),
   }),
   /** A photo gallery: one large photograph and smaller ones beside it, each with a short note. */
   z.object({

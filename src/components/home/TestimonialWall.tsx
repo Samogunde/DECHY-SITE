@@ -3,14 +3,14 @@
 import { useMemo, useState, type ReactNode } from "react";
 
 type Card = { key: string; service: string; industry: string; node: ReactNode };
-type Facet = { key: string; label: string; count: number };
+type Facet = { key: string; label: string };
 
-const PAGE = 12;
+const PAGE = 9;
 
 /**
- * The Testimonials page: a filter bar (service tabs and an industry menu) above an even grid of
- * quote cards, twelve at a time with "Show more". Every quote is in the HTML; filters and paging
- * only hide cards.
+ * The Testimonials page grid: service tabs and an industry menu above an even grid of quote
+ * cards, nine at a time with "Show more". No counts are shown (owner, 21 October 2026). Every
+ * quote is in the HTML; filters and paging only hide cards.
  */
 export function TestimonialWall({
   cards,
@@ -37,12 +37,12 @@ export function TestimonialWall({
     setLimit(PAGE);
   };
   return (
-    <div className="tw">
-      <div className="tw-toolbar">
-        <div className="tw-tabs" role="group" aria-label="Filter by service">
+    <div className="tqw">
+      <div className="tqw-bar">
+        <div className="tqw-tabs" role="group" aria-label="Filter by service">
           <button
             type="button"
-            className="tw-tab"
+            className="tqw-tab"
             aria-pressed={!service}
             onClick={() => pick(() => setService(""))}
           >
@@ -52,7 +52,7 @@ export function TestimonialWall({
             <button
               key={f.key}
               type="button"
-              className="tw-tab"
+              className="tqw-tab"
               aria-pressed={service === f.key}
               onClick={() => pick(() => setService(f.key))}
             >
@@ -60,8 +60,8 @@ export function TestimonialWall({
             </button>
           ))}
         </div>
-        <div className="tw-tools">
-          <label className="tw-select">
+        <div className="tqw-tools">
+          <label className="tqw-select">
             <span>Industry</span>
             <select value={industry} onChange={(e) => pick(() => setIndustry(e.target.value))}>
               <option value="">All industries</option>
@@ -72,11 +72,11 @@ export function TestimonialWall({
               ))}
             </select>
           </label>
-          <p className="tw-result" aria-live="polite">
+          <p className="tqw-result" aria-live="polite">
             {service || industry ? (
               <button
                 type="button"
-                className="tw-clear"
+                className="tqw-clear"
                 onClick={() =>
                   pick(() => {
                     setService("");
@@ -90,7 +90,7 @@ export function TestimonialWall({
           </p>
         </div>
       </div>
-      <ul className="tw-grid">
+      <ul className="tq-grid" data-count="9">
         {cards.map((c) => (
           <li key={c.key} hidden={!shown.has(c.key)}>
             {c.node}
@@ -98,14 +98,16 @@ export function TestimonialWall({
         ))}
       </ul>
       {visible.length > limit ? (
-        <div className="tw-more">
-          <button type="button" className="tw-more-btn" onClick={() => setLimit(limit + PAGE)}>
-            Show more stories
+        <div className="tqw-more">
+          <button type="button" className="tqw-more-btn" onClick={() => setLimit(limit + PAGE)}>
+            Show more testimonials
           </button>
         </div>
       ) : null}
       {visible.length === 0 ? (
-        <p className="tw-empty">No stories match these filters yet. Try another industry.</p>
+        <p className="tqw-empty">
+          No testimonials match both filters. Try another industry or service.
+        </p>
       ) : null}
     </div>
   );

@@ -41,7 +41,6 @@ import {
   CaseGridBlock,
   TeamBlock,
   GalleryBlock,
-  TestimonialWallBlock,
   PhasesBlock,
   PricingBlock,
   PromiseBlock,
@@ -50,8 +49,14 @@ import {
   ServiceStripBlock,
   StackBlock,
   StatsBlock,
-  TestimonialsBlock,
 } from "./HomeBlocks";
+import {
+  JourneyBlock,
+  TestimonialServicesBlock,
+  TestimonialSpotlightBlock,
+  TestimonialWallBlock,
+  TestimonialsBlock,
+} from "./TestimonialBlocks";
 import { ColumnsBlock, EntitiesBlock, RelatedBlock, ServiceIndexBlock } from "./ListBlocks";
 import { DiagramBlock, ProcessBlock, TableBlock } from "./ProcessTableBlocks";
 import { Section, SectionHeader } from "./Section";
@@ -192,6 +197,12 @@ export function BlockRenderer({
       return <GalleryBlock block={block} />;
     case "testimonial-wall":
       return <TestimonialWallBlock block={block} />;
+    case "testimonial-spotlight":
+      return <TestimonialSpotlightBlock block={block} />;
+    case "testimonial-services":
+      return <TestimonialServicesBlock block={block} />;
+    case "journey":
+      return <JourneyBlock block={block} />;
     case "promise":
       return <PromiseBlock block={block} />;
     case "stats":

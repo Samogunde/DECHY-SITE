@@ -1,0 +1,223 @@
+# Client testimonials supplied by the owner on 21 October 2026, in the clients' own words.
+# They replace the content pack's 300 illustrative examples. Each is tagged with the service it is
+# about (a service slug) and the client's industry (an industry entity id), so it appears on the
+# right service and industry pages. "home: true" marks the six shown on the home page.
+# Quotes are reproduced as supplied, in US spelling (site rule: "enquiries" became "inquiries");
+# do not edit the wording.
+
+testimonials:
+  - name: Rachel Morgan
+    role: Referral Operations Manager
+    company: Bridgeway Professional Network
+    service: software-development
+    industry: ind.professional-services
+    quote: "We stopped keeping a second list just to track referral follow-ups. The team can see who owns the next step, and I no longer spend Friday afternoons asking where things got stuck."
+
+  - name: Thomas Reed
+    role: Dispatch Operations Manager
+    company: Harborline Logistics
+    service: software-development
+    industry: ind.logistics
+    home: true
+    quote: "DECHY fixed the part of our dispatch board that left us chasing updates in three places. I can see what is delayed and why, without ringing around."
+
+  - name: Priya Nair
+    role: School Administrator
+    company: BrightPath Learning Academy
+    service: web-development
+    industry: ind.education
+    home: true
+    quote: "Our old site looked fine on a laptop, but parents struggled to find dates and fees on their phones. The new pages put those details where people actually look."
+
+  - name: Edward Clarke
+    role: Managing Partner
+    company: Clearview Business Advisory
+    service: web-development
+    industry: ind.professional-services
+    quote: "DECHY pushed back on two pages we thought we needed. I'm glad they did. The site feels clearer, and prospects arrive at calls with a better idea of what we do."
+
+  - name: Sofia Alvarez
+    role: Field Service Operations Manager
+    company: Summit Property Maintenance
+    service: mobile-app-development
+    industry: ind.field-services
+    home: true
+    quote: "Luis from DECHY helped us fix how technicians close visits on-site. They can add photos and parts before leaving the property, and I no longer get a pile of paperwork at night."
+
+  - name: Olivia Brooks
+    role: Retail Store Manager
+    company: MarketRow Retail
+    service: mobile-app-development
+    industry: ind.retail
+    quote: "During busy weekends, staff were leaving the shop floor to check stock on a desktop."
+
+  - name: James Bennett
+    role: Customer Support Manager
+    company: RelayDesk Customer Services
+    service: ai
+    industry: ind.professional-services
+    home: true
+    quote: "We were spending too much time sorting incoming tickets by hand, so we asked DECHY for help. Our agents still make the final call, but now they start in a better place."
+
+  - name: Chloe Martin
+    role: Customer Experience Lead
+    company: Kindred Homeware
+    service: ai
+    industry: ind.retail
+    quote: "I was worried we'd end up sending customers canned answers. Amara at DECHY understood that. I like that unusual questions still reach a person who can actually help."
+
+  - name: Grace Williams
+    role: Clinic Administrator
+    company: Oakwell Medical Practice
+    service: automation
+    industry: ind.healthcare
+    quote: "Missed confirmations used to leave gaps in the diary that we noticed too late. The reminders now go out on schedule, and the team can see which patients still need a call."
+
+  - name: Noah Campbell
+    role: People Operations Manager
+    company: Westbridge Consulting
+    service: automation
+    industry: ind.professional-services
+    quote: "I felt bad when a new starter arrived without access to the tools they needed. DECHY helped us get that handoff right, and we no longer depend on one person remembering everything."
+
+  - name: Ethan Park
+    role: Software Engineering Manager
+    company: Copperline Software
+    service: cloud
+    industry: ind.saas
+    quote: "Releases used to depend on one engineer being available late in the day."
+
+  - name: Mia Patel
+    role: Quality Assurance Lead
+    company: BluePeak Software
+    service: cloud
+    industry: ind.saas
+    quote: "The staging environment finally behaves like production often enough for us to trust the tests. We still catch surprises, of course, but fewer of them arrive after a release has gone out."
+
+  - name: Andre Wilson
+    role: IT Operations Manager
+    company: Meridian Business Services
+    service: cybersecurity
+    industry: ind.professional-services
+    quote: "We can finally see who has access and who approved it. The old spreadsheet was always behind."
+
+  - name: Hannah Foster
+    role: IT and Security Manager
+    company: Northstar Business Group
+    service: cybersecurity
+    industry: ind.professional-services
+    quote: "After a staff member left, we weren't confident we'd closed every account. Daniel at DECHY helped us spot gaps we hadn't considered, and now we feel much more confident about offboarding."
+
+  - name: Amelia Price
+    role: Merchandising Manager
+    company: Willow & Pine Retail
+    service: data-analytics
+    industry: ind.retail
+    quote: "The margin report used to arrive after the buying meeting. Now I can compare margin, discounts, and stock in the same view before we decide what to reorder."
+
+  - name: Michael Chen
+    role: Finance Operations Manager
+    company: Crestline Distribution
+    service: data-analytics
+    industry: ind.logistics
+    home: true
+    quote: "I used to combine three exports before every morning meeting. DECHY helped us get to one set of numbers. We spend the meeting deciding what to do, not arguing over which report is right."
+
+  - name: Zara Thompson
+    role: Inventory Control Manager
+    company: Urban Basket Stores
+    service: api-integration
+    industry: ind.retail
+    quote: "We used to oversell items when store stock fell out of step. We no longer find out about a mismatch from an upset customer."
+
+  - name: Liam Murphy
+    role: Bookings and CRM Manager
+    company: Evergreen Appointment Services
+    service: api-integration
+    industry: ind.professional-services
+    home: true
+    quote: "The booking team had to copy customer details into the CRM after every call. DECHY fixed that handoff, and we're no longer entering the same information twice."
+
+  - name: Isabella Green
+    role: E-commerce Manager
+    company: Thread & Timber Online
+    service: ecommerce
+    industry: ind.retail
+    quote: "Customers can find product bundles without emailing us first. Checkout shows delivery costs upfront."
+
+  - name: Daniel Brooks
+    role: Café Operations Manager
+    company: Little Fern Café
+    service: ecommerce
+    industry: ind.restaurants
+    quote: "Our café customers were emailing orders in different formats, and mistakes showed up when we started packing. Now orders come in consistently, and I spend less time checking what someone meant."
+
+  - name: Aiden Rivera
+    role: Product Design Lead
+    company: LearnSpring Education
+    service: ui-ux
+    industry: ind.education
+    quote: "Five students got stuck on the same screen during our first usability session. By the next round, they were getting through it without needing us to explain every step."
+
+  - name: Leah Scott
+    role: Membership Services Manager
+    company: CommunityFit Club
+    service: ui-ux
+    industry: ind.fitness
+    quote: "I expected a new visual design. What we got first was a clearer way to choose a membership. People could compare the plans without opening several pages, and the team had fewer questions to answer at the front desk."
+
+  - name: Nora Evans
+    role: Brand and Marketing Manager
+    company: Juniper Lane Studio
+    service: branding
+    industry: ind.media
+    quote: "Maya at DECHY helped us sort out the brand files. People can now choose the right logo without asking me, and our proposals, website, and social posts finally look like they're from the same business."
+
+  - name: Caleb Turner
+    role: Events Coordinator
+    company: Gatherwell Events
+    service: branding
+    industry: ind.hospitality
+    quote: "The event materials had been designed by three different people and looked like three different events."
+
+  - name: Fatima Bello
+    role: Digital Marketing Manager
+    company: TrueNorth Consulting
+    service: seo-aeo-geo
+    industry: ind.professional-services
+    quote: "Our important pages were buried three clicks down, and several weren't being indexed. The audit gave us a fix list we could work through, rather than another report full of scores and no clear order."
+
+  - name: Oliver James
+    role: Marketing Manager
+    company: Everwell Digital Services
+    service: seo-aeo-geo
+    industry: ind.professional-services
+    quote: "I used to get asked why our site never appeared for the services we actually provide. We now have dedicated pages that answer those questions properly, with the technical issues documented for our developer."
+
+  - name: Maya Wilson
+    role: Campaign Analytics Manager
+    company: CivicBridge Foundation
+    service: digital-marketing
+    industry: ind.nonprofits
+    quote: "The DECHY team helped us fix our campaign tracking. We can now tell which ads lead to real inquiries, instead of spending the monthly review guessing."
+
+  - name: Samuel Okafor
+    role: Fundraising Manager
+    company: OpenHands Foundation
+    service: digital-marketing
+    industry: ind.nonprofits
+    quote: "We stopped counting likes and started tracking completed donations. That changed our campaign review."
+
+  - name: Victoria Hayes
+    role: Operations Director
+    company: Ironwood Business Group
+    service: consulting
+    industry: ind.professional-services
+    quote: "Different teams had systems they wanted replaced, but the budget couldn't cover everything. I appreciated having someone challenge our assumptions and help us agree what actually needed attention first."
+
+  - name: Benjamin Cole
+    role: Business Operations Manager
+    company: Pioneer Lane Services
+    service: consulting
+    industry: ind.professional-services
+    quote: "Honestly, we needed someone to tell us which parts of the process were worth fixing before we bought another system. We left with a decision list we could actually use."

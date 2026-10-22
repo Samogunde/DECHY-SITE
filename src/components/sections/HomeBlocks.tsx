@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { ArrowUpRight, CheckCircle, Clock, Quotes } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, CheckCircle, Clock } from "@phosphor-icons/react/dist/ssr";
 import { Figure } from "@/components/figures/Figure";
-import Image from "next/image";
 import {
   CaseViewer,
   CountUp,
@@ -12,8 +11,6 @@ import {
   ServiceExplorer,
 } from "@/components/home/Motion";
 import { TechLogo } from "@/components/home/TechLogo";
-import { TestimonialWall } from "@/components/home/TestimonialWall";
-import { QuoteCarousel } from "@/components/home/QuoteCarousel";
 import { PortfolioGrid } from "@/components/home/PortfolioGrid";
 import { PortfolioCard } from "./PortfolioCard";
 import { projectPath, projects } from "@/lib/content/portfolio";
@@ -60,7 +57,7 @@ function MoreLink({ cta }: { cta?: { label: string; href: string } }) {
 }
 
 /** Heading on the left and the intro (or an action) beside it on wide screens. */
-function SplitHeader({
+export function SplitHeader({
   id,
   label,
   heading,
@@ -104,35 +101,8 @@ function Checks({ items }: { items: string[] }) {
   );
 }
 
-/** A testimonial portrait: the person's photograph in a circle, or their initials. */
-function Avatar({ photo, name }: { photo?: { asset: string }; name: string }) {
-  const asset = photo ? getRegistry().assets.find((a) => a.id === photo.asset) : undefined;
-  if (!asset || !asset.width || !asset.height) {
-    return (
-      <span className="quote-avatar" aria-hidden="true">
-        {name
-          .split(/\s+/)
-          .map((w) => w[0])
-          .slice(0, 2)
-          .join("")}
-      </span>
-    );
-  }
-  return (
-    <Image
-      className="quote-avatar quote-photo"
-      src={`/${asset.file.replace(/^public\//, "")}`}
-      alt=""
-      width={112}
-      height={112}
-      sizes="56px"
-      quality={85}
-    />
-  );
-}
-
 /** Icons for the fifteen services, by slug. */
-const SERVICE_ICONS: Record<string, IconName> = {
+export const SERVICE_ICONS: Record<string, IconName> = {
   "software-development": "code",
   "web-development": "globe",
   "mobile-app-development": "phone",
@@ -664,76 +634,6 @@ export function CaseStudiesBlock({ block }: { block: Of<"case-studies"> }) {
   );
 }
 
-/** One client quote: who said it at the top, then the quote, then optional tags. */
-function QuoteCard({
-  quote,
-  name,
-  role,
-  company,
-  photo,
-  tags = [],
-}: {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-  photo?: { asset: string };
-  tags?: string[];
-}) {
-  return (
-    <figure className="qc" data-spotlight>
-      <figcaption className="qc-head">
-        <Avatar photo={photo} name={name} />
-        <span className="qc-who">
-          <span className="qc-name">{name}</span>
-          <span className="qc-role">{role}</span>
-          <span className="qc-company">{company}</span>
-        </span>
-        <Quotes aria-hidden="true" weight="fill" className="qc-mark" />
-      </figcaption>
-      <blockquote className="qc-quote">
-        <p>{quote}</p>
-      </blockquote>
-      {tags.length ? (
-        <p className="qc-tags">
-          {tags.map((t, i) => (
-            <span key={t} className={i === 0 ? "qc-tag qc-tag-main" : "qc-tag"}>
-              {t}
-            </span>
-          ))}
-        </p>
-      ) : null}
-    </figure>
-  );
-}
-
-export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
-  const more = getRegistry().pageByPath.has("/testimonials/");
-  return (
-    <Section id={block.id} tone={block.tone} ruled={false} className="quotes-section">
-      <div className="quotes-head">
-        <div>
-          <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
-          <h2 id={`${block.id}-h`} className="home-h2 mt-4">
-            {block.heading}
-          </h2>
-        </div>
-        {more ? (
-          <Link href="/testimonials/" className="mega-foot-link">
-            See all client testimonials <Arrow />
-          </Link>
-        ) : null}
-      </div>
-      <QuoteCarousel
-        label={block.heading}
-        cards={block.items.map((q) => (
-          <QuoteCard key={q.name} {...q} />
-        ))}
-      />
-    </Section>
-  );
-}
-
 export function LogosBlock({ block }: { block: Of<"logos"> }) {
   const headingId = `${block.id}-h`;
   const mark = (i: (typeof block.items)[number]) => (
@@ -922,37 +822,6 @@ export function GalleryBlock({ block }: { block: Of<"gallery"> }) {
           </li>
         ))}
       </ul>
-    </Section>
-  );
-}
-
-export function TestimonialWallBlock({ block }: { block: Of<"testimonial-wall"> }) {
-  const facets = (key: "service" | "industry", label: "serviceLabel" | "industryLabel") => {
-    const m = new Map<string, { label: string; count: number }>();
-    for (const t of block.items) {
-      const f = m.get(t[key]) ?? { label: t[label], count: 0 };
-      f.count++;
-      m.set(t[key], f);
-    }
-    return [...m]
-      .map(([k, v]) => ({ key: k, ...v }))
-      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
-  };
-  return (
-    <Section id={block.id} tone={block.tone} ruled={false}>
-      <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <div className="mt-8">
-        <TestimonialWall
-          services={facets("service", "serviceLabel")}
-          industries={facets("industry", "industryLabel")}
-          cards={block.items.map((t) => ({
-            key: t.name,
-            service: t.service,
-            industry: t.industry,
-            node: <QuoteCard {...t} tags={[t.serviceLabel, t.industryLabel]} />,
-          }))}
-        />
-      </div>
     </Section>
   );
 }

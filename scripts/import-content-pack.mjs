@@ -1,8 +1,10 @@
 // Imports the owner's content pack (DECHY_Content_Data_Pack_v2) into data/.
 // Usage: node scripts/import-content-pack.mjs <pack folder>
-// Copies the testimonial, team, technology, glossary, and partner reference datasets, in US
+// Copies the team, technology, glossary, and partner reference datasets, in US
 // English (site rule) and without wrapping quote marks. Names, roles, companies, and meaning are
 // kept as supplied. The editorial authors and concept case studies are not imported (owner).
+// The pack's 300 example testimonials were replaced by the owner's 30 real ones on 21 October
+// 2026 (data/testimonials/testimonials.yaml) and are no longer imported.
 import fs from "node:fs";
 import path from "node:path";
 
@@ -72,7 +74,6 @@ const us = (s) =>
     .replace(/\s*[–—]\s*/g, ", ")
     .replace(/[‘’]/g, "'")
     .trim();
-const unquote = (s) => s.replace(/^[“"]+|[”"]+$/g, "").trim();
 
 const out = (file, data) => {
   const to = path.join("data", file);
@@ -83,19 +84,6 @@ const out = (file, data) => {
 
 const note =
   "Imported from DECHY_Content_Data_Pack_v2 by scripts/import-content-pack.mjs. Illustrative examples, not verified client endorsements: shown only in review builds (DECHY_SHOW_DRAFTS=true).";
-
-out("samples/testimonials.json", {
-  note,
-  records: read("Testimonial_Examples_300").records.map((r) => ({
-    id: r.id,
-    name: r.person_name,
-    role: us(r.job_title),
-    company: r.company_name,
-    industry: r.industry,
-    service: r.primary_service,
-    quote: us(unquote(r.quote)),
-  })),
-});
 
 out("team/profiles.json", {
   note,

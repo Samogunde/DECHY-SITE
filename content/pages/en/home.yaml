@@ -125,14 +125,15 @@ sections:
     label: Trusted by teams at
     style: strip
     items:
-      - { name: Orchardstone Health Group, icon: health }
-      - { name: Cloudmere Labs, icon: cloud }
-      - { name: Greywell Studio, icon: bag }
-      - { name: Copperfield Industries, icon: truck }
-      - { name: Pinehurst Advisory, icon: finance }
-      - { name: Cloverfield Industries, icon: chart }
-      - { name: Fairmont Industries, icon: compass }
-      - { name: Emberfall House, icon: sparkles }
+      # Companies from the client testimonials (data/testimonials/testimonials.yaml).
+      - { name: Harborline Logistics, icon: truck }
+      - { name: Oakwell Medical Practice, icon: health }
+      - { name: Copperline Software, icon: cloud }
+      - { name: MarketRow Retail, icon: bag }
+      - { name: Clearview Business Advisory, icon: finance }
+      - { name: Crestline Distribution, icon: chart }
+      - { name: Ironwood Business Group, icon: compass }
+      - { name: Juniper Lane Studio, icon: sparkles }
 
   - type: certification-strip
     id: certifications
@@ -572,25 +573,12 @@ sections:
           layout: split
           position: 50% 50%
 
+  # The six testimonials marked "home" in data/testimonials/testimonials.yaml.
   - type: testimonials
     id: testimonials
-    draft: true
     tone: ink
     label: What clients say
-    heading: In our clients' words
-    items:
-      - quote: "It was becoming harder to keep field records, crop schedules, input availability, and updates between growers and operations staff aligned as more people became involved. The software scope stayed close to the real process: the key records, roles, and next actions were brought into one coherent flow. It was reassuring to see the edge cases considered alongside the main happy path."
-        name: Annika Marlowe
-        role: Agritech Implementation Director
-        company: Highbury Technologies
-      - quote: "Consistency was our main concern with customer inquiries, appointments, job assignments, and updates from field teams, especially when work moved between teams. The site structure was planned around what visitors need to understand first, with a consistent experience from mobile through desktop. The approach was straightforward to follow and gave the team something concrete to work from."
-        name: Emilia Holloway
-        role: Customer Care Transformation Manager
-        company: Foxmere Clinical Partners
-      - quote: "We wanted to improve service bookings, parts availability, repair updates, and handoffs between advisers and technicians, but the solution still had to fit the way our people work. The screens were built around real mobile behavior, so important actions were easier to reach and the next step was visible. I came away with a clearer picture of what mattered first and what could be handled in a later phase."
-        name: Nathaniel Waverly
-        role: Vehicle Data Program Lead
-        company: Highstone Data Systems
+    heading: What changed for our clients, in their own words
 
   - type: partnerships
     id: partners

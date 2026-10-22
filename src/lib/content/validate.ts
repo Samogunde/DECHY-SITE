@@ -184,7 +184,6 @@ const WRONG_DESCRIPTOR = [
 ];
 /** Claims DECHY has not supplied evidence for (AGENTS 46 and 47). */
 const UNSUPPORTED = [
-  /\btestimonials?\b/i,
   /\baward[- ]winning\b/i,
   /\bawarded\b/i,
   /\bcertified (?:partner|expert)\b/i,
@@ -809,6 +808,9 @@ export function validateRegistry(input: Registry): Issue[] {
   for (const l of registry.nav.footer.explore)
     if (pathExists(l.path, registry)) link("footer", l.path);
   if (pathExists(registry.nav.cta.path, registry)) link("nav", registry.nav.cta.path);
+  // The Resources and About us menus link their pages from every page's header.
+  for (const l of [...(registry.nav.resources?.links ?? []), ...(registry.nav.about?.links ?? [])])
+    if (pathExists(l.path, registry)) link("nav", l.path.split("#")[0] ?? l.path);
   // Menus: kinds match the approved structure; every technology and Work Area page is placed once.
   const KIND_BY_LABEL: Record<string, string> = {
     Services: "services",

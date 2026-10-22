@@ -7,13 +7,8 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
-import {
-  assignQuotes,
-  packQuotes,
-  quoteBlock,
-  sampleTestimonialsPage,
-  servicePricing,
-} from "./samples";
+import { servicePricing } from "./samples";
+import { forIndustry, forService, homeTestimonials, type Testimonial } from "./testimonials";
 import { blockPhotos } from "./photos";
 import { portfolioGrid, portfolioPages, projectPath, projects, selectedWork } from "./portfolio";
 import { placeCtas, type CtaContext } from "./ctas";
@@ -256,22 +251,41 @@ export function buildRegistry(): Registry {
     const at = page.sections.findIndex((b) => b.type === "faq" || b.type === "related");
     page.sections.splice(at < 0 ? page.sections.length : at, 0, ...blocks);
   };
-  // Review builds: six pack testimonials on every industry and service page, none repeated.
-  const industryPages = pages.filter((p) => p.kind === "industry" && p.entityId);
-  const quotes = assignQuotes(
-    industryPages.map((page) => {
-      const related = page.sections.find((b) => b.type === "related");
-      const services =
-        related && related.type === "related"
-          ? related.groups
-              .flatMap((g) => g.entityIds)
-              .filter((id) => id.startsWith("svc."))
-              .map((id) => id.replace(/^svc\./, ""))
-          : [];
-      return { id: page.entityId!, services };
-    }),
-    labels.services,
+  // Client testimonials (data/testimonials/testimonials.yaml): each card names the service it is
+  // about and the client's industry, linked to those pages when they exist.
+  const industryPath = new Map(
+    pages.filter((p) => p.kind === "industry" && p.entityId).map((p) => [p.entityId!, p.path]),
   );
+  const quoteItems = (list: Testimonial[]) =>
+    list.map((t) => ({
+      quote: t.quote,
+      name: t.name,
+      role: t.role,
+      company: t.company,
+      tags: [
+        { label: labels.services[t.service] ?? t.service, href: `/${t.service}/` },
+        { label: labels.industries[t.industry] ?? t.industry, href: industryPath.get(t.industry) },
+      ],
+    }));
+  const quoteBlock = (list: Testimonial[], heading: string): Block[] =>
+    list.length
+      ? [
+          {
+            type: "testimonials",
+            id: "client-quotes",
+            tone: "ink",
+            label: "What clients say",
+            heading,
+            items: quoteItems(list),
+          } as Block,
+        ]
+      : [];
+  for (const page of pages)
+    for (const b of page.sections)
+      if (b.type === "testimonials" && b.items.length === 0)
+        b.items = quoteItems(homeTestimonials());
+  const industryPages = pages.filter((p) => p.kind === "industry" && p.entityId);
+  const borrowed = new Map<string, number>();
   for (const page of pages.filter((p) => p.kind === "service")) {
     const slug = page.path.replace(/\//g, "");
     const list = projects()
@@ -286,8 +300,7 @@ export function buildRegistry(): Registry {
         `${labels.services[slug] ?? "Our"} projects we have delivered`,
       ),
     );
-    if (showDrafts())
-      beforeClose(page, quoteBlock(quotes.services.get(slug) ?? [], "In our clients' words"));
+    beforeClose(page, quoteBlock(forService(slug), "In our clients' words"));
   }
   for (const page of industryPages) {
     beforeClose(
@@ -299,34 +312,24 @@ export function buildRegistry(): Registry {
         `${labels.industries[page.entityId!] ?? "Industry"} projects we have delivered`,
       ),
     );
-    if (showDrafts())
-      beforeClose(
-        page,
-        quoteBlock(
-          quotes.industries.get(page.entityId!) ?? [],
-          "Teams like yours, in their own words",
-        ),
-      );
-  }
-  // The quotes no page has used: the home page names three (home.yaml), the Work page shows six.
-  const shown = new Set(
-    [...quotes.industries.values(), ...quotes.services.values()].flat().map((q) => q.id),
-  );
-  const onHome = new Set(
-    pages
-      .filter((p) => p.kind === "home")
-      .flatMap((p) => p.sections)
-      .flatMap((b) => (b.type === "testimonials" ? b.items.map((q) => q.name) : [])),
-  );
-  const spare = packQuotes().filter((q) => !shown.has(q.id) && !onHome.has(q.name));
-  const work = pages.find((p) => p.path === "/work/");
-  if (work)
-    work.sections.splice(
-      1,
-      0,
-      portfolioGrid(labels, showDrafts()),
-      ...(showDrafts() ? quoteBlock(spare.slice(0, 6), "In our clients' words") : []),
+    const related = page.sections.find((b) => b.type === "related");
+    const services =
+      related && related.type === "related"
+        ? related.groups
+            .flatMap((g) => g.entityIds)
+            .filter((id) => id.startsWith("svc."))
+            .map((id) => id.replace(/^svc\./, ""))
+        : [];
+    beforeClose(
+      page,
+      quoteBlock(
+        forIndustry(page.entityId!, services, borrowed),
+        "Teams like yours, in their own words",
+      ),
     );
+  }
+  const work = pages.find((p) => p.path === "/work/");
+  if (work) work.sections.splice(1, 0, portfolioGrid(labels, showDrafts()));
   // A service's pricing section links to its full cost guide once one is published.
   for (const page of pages.filter((p) => p.kind === "service")) {
     const slug = page.path.replace(/\//g, "");
@@ -373,8 +376,6 @@ export function buildRegistry(): Registry {
       page.kind === "home" || page.kind === "service" ? 6 : page.kind === "industry" ? 4 : 0;
     if (target) placeCtas(page, ctaContext, target);
   }
-  // Review builds: the Testimonials page, every pack quote with filters.
-  if (showDrafts()) pages.push(sampleTestimonialsPage({ services: labels.services }));
   // Photographs: hand-placed ones first, then every other placement gets an unused one.
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);

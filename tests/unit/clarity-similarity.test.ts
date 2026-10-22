@@ -90,7 +90,7 @@ describe("clarity standard on the shipped pages", () => {
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(147);
+    expect(guided.length).toBe(148);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(
@@ -155,6 +155,8 @@ describe("scope control", () => {
       // Cost hub and the cost estimator (owner direction, 21 October 2026)
       /^\/cost\/$/,
       /^\/tools\/cost-estimator\/$/,
+      // Testimonials from the owner's clients (owner direction, 21 October 2026)
+      /^\/testimonials\/$/,
       // Portfolio (owner direction, 21 October 2026): one case study per real client project
       /^\/work\/case-studies\/[a-z0-9-]+\/$/,
     ];

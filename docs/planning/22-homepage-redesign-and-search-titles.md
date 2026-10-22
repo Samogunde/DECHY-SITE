@@ -346,3 +346,34 @@ Owner direction, 21 October 2026: "put in all the numbers, figures, costs", with
   - Dedicated team prices, at the owner's instruction.
   - Third-party fees.
 - **Hourly rates** are now three simple rates, not a per-role card: design and development $35 to $55, specialist work $45 to $80, and testing $25 to $35. Most work stays fixed price.
+
+## Fifteenth pass (21 October 2026): thirty client testimonials and a new Testimonials page
+
+Owner direction, 21 October 2026. The owner chose the mediusware testimonial page as the reference layout.
+
+- **The testimonials.** The owner supplied 30 testimonials, two for each of the fifteen services. They replace the content pack's 300 example quotes, which are deleted (`data/samples/testimonials.json`) and no longer imported.
+  - They live in `data/testimonials/testimonials.yaml`. Each one lists the service it is about and the client's industry.
+  - The wording is as supplied, except for one spelling change to US English ("enquiries" became "inquiries").
+  - They are live content, not drafts, so the validator no longer blocks the word "testimonials".
+- **Where they appear.**
+  - **Home:** six testimonials marked `home`.
+  - **Service pages:** the two testimonials for that service.
+  - **Industry pages:** that industry's own testimonials first (up to six), filled to three with testimonials for the services the page links to.
+  - **The full set:** the Testimonials page.
+- **One card everywhere.** The card shows:
+  - a quote mark and the service as a link at the top
+  - the quote in the heading font
+  - initials, name, role, company, and the industry as a link
+  Real clients are never shown with stock faces.
+- **The Testimonials page** (`/testimonials/`, indexed). Its sections, in order:
+  - the hero and the proof strip
+  - a featured spotlight (one large quote, chosen from six people)
+  - every testimonial, with service buttons, an industry menu, and nine at a time with "Show more"
+  - the four themes clients mention most
+  - the client journey (six steps beside a photograph)
+  - testimonials by service (fifteen cards)
+  - certifications, partnerships and compliance, questions, and a call to action
+  - No counts are shown, per the eleventh pass.
+- **Similarity.** Testimonials are the clients' own words and repeat across pages by design, so the copy-overlap check skips them.
+- **"Trusted by" strip** (review builds only): now eight companies from the testimonials.
+- **For the owner.** Four testimonials name DECHY people (Luis, Amara, Daniel, Maya). None of them is on the team section.

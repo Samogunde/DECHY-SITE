@@ -58,7 +58,7 @@ describe("content validator: it rejects what the architecture forbids", () => {
   it("unsupported evidence claims", () => {
     for (const bad of [
       " Our offices are in Berlin.",
-      " Read our testimonials.",
+      " Visit us at our headquarters.",
       " An award-winning team.",
       " We are award-winning.",
       " Trusted by leading brands.",

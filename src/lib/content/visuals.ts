@@ -270,8 +270,7 @@ export function applyPhotographs(
     } else if (b.type === "team") {
       for (const m of b.members) m.photo ??= person(m.name, "50% 22%");
     }
-    // Testimonials show initials: the pack has 300 people and no portraits, and a face must
-    // never appear under two names.
+    // Testimonials show initials: a real client is never shown with a stock face.
   }
 }
 

@@ -8516,7 +8516,7 @@ assets:
     width: 1536
     height: 1024
     alt: "The DECHY boardroom behind glass, where client workshops and project planning take place"
-    usage: [company]
+    usage: [company, testimonials]
     approval: approved
     acquired: "2026-10-20"
 
