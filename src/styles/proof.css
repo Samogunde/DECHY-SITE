@@ -549,3 +549,20 @@
   letter-spacing: -0.01em;
   color: #fff;
 }
+
+/* Thirteen partners (owner, 22 October 2026): partners take the full width, four across, and
+   compliance follows as its own row. */
+@media (min-width: 64rem) {
+  .ptn-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ptn-tiles,
+  .compliance-tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .ptn-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

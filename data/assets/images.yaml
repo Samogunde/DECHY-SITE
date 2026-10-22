@@ -4902,23 +4902,6 @@ assets:
     approval: approved
     acquired: "2026-10-20"
 
-  - id: asset.photo-lib-company-02
-    kind: file
-    file: public/photos/lib-company-02.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "Cherrydeck (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-02.md.
-    sourceUrl: https://unsplash.com/photos/rMILC1PIwM0
-    licenseUrl: https://unsplash.com/license
-    sha256: 2045f359297592aaae0c8207956fb5889718de4ba7f5976cb90aeab543534b56
-    width: 2400
-    height: 1554
-    alt: "A team working at laptops in an office"
-    usage: [library]
-    approval: approved
-    acquired: "2026-10-20"
-
   - id: asset.photo-lib-company-04
     kind: file
     file: public/photos/lib-company-04.jpg
@@ -4966,40 +4949,6 @@ assets:
     width: 2400
     height: 1600
     alt: "A team sitting around a table with laptops"
-    usage: [library]
-    approval: approved
-    acquired: "2026-10-20"
-
-  - id: asset.photo-lib-company-07
-    kind: file
-    file: public/photos/lib-company-07.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "Cherrydeck (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-07.md.
-    sourceUrl: https://unsplash.com/photos/UpsEF48wAgk
-    licenseUrl: https://unsplash.com/license
-    sha256: b82132557f0e9118ebbe36ac9cfaf483df4fca35e7cd8d5ec166d7f0f1db3a31
-    width: 2400
-    height: 1569
-    alt: "Four people collaborating around a laptop in a modern office"
-    usage: [library]
-    approval: approved
-    acquired: "2026-10-20"
-
-  - id: asset.photo-lib-company-09
-    kind: file
-    file: public/photos/lib-company-09.jpg
-    role: photograph
-    source: licensed-stock
-    creator: "Cherrydeck (Unsplash)"
-    license: Unsplash License (free commercial use, no attribution required). Evidence in data/assets/licenses/photo-lib-company-09.md.
-    sourceUrl: https://unsplash.com/photos/05gac-Qn0k4
-    licenseUrl: https://unsplash.com/license
-    sha256: c815db6899efb2bf3621fae43c5030e15861c7e4b15e29855a543e8d8399e97d
-    width: 2400
-    height: 1583
-    alt: "Four people in a meeting around a table in a modern office"
     usage: [library]
     approval: approved
     acquired: "2026-10-20"
@@ -8532,7 +8481,7 @@ assets:
     width: 1536
     height: 1024
     alt: "DECHY software engineers building and testing client software at their desks in the DECHY office"
-    usage: [company, testimonials]
+    usage: [company, testimonials, companycertifications]
     approval: approved
     acquired: "2026-10-20"
 
@@ -9601,6 +9550,150 @@ assets:
     width: 273
     height: 191
     alt: "Salesforce logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-shopify
+    kind: file
+    file: public/partners/shopify.svg
+    role: logo
+    source: partner-trademark
+    creator: "Shopify"
+    license: "Shopify trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://simpleicons.org/?q=shopify
+    sha256: f1194a77a9f4457d9ddb98f5e39aec6fabb3701cfd176b3c70f0aebb16a9ba32
+    width: 24
+    height: 24
+    alt: "Shopify logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-adobe
+    kind: file
+    file: public/partners/adobe.svg
+    role: logo
+    source: partner-trademark
+    creator: "Adobe"
+    license: "Adobe trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Adobe_Corporate_Horizontal_Red_HEX.svg
+    sha256: ba5bd5b9ee6ae893fecab7daacc571a271817f5e0412f05c9fd8f9c7520cb776
+    width: 133
+    height: 118
+    alt: "Adobe logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-oracle
+    kind: file
+    file: public/partners/oracle.svg
+    role: logo
+    source: partner-trademark
+    creator: "Oracle"
+    license: "Oracle trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Oracle_logo.svg
+    sha256: 305d310fda8165fb38e24273c643f2c61107e2440e12abc3c209bd49c2deff15
+    width: 231
+    height: 30
+    alt: "Oracle logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-cisco
+    kind: file
+    file: public/partners/cisco.svg
+    role: logo
+    source: partner-trademark
+    creator: "Cisco"
+    license: "Cisco trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://simpleicons.org/?q=cisco
+    sha256: b40d68251b56adc9737c3932ad34ac1639285bf99128cba84f5d856b487c502c
+    width: 24
+    height: 24
+    alt: "Cisco logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-meta
+    kind: file
+    file: public/partners/meta.svg
+    role: logo
+    source: partner-trademark
+    creator: "Meta"
+    license: "Meta trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://simpleicons.org/?q=meta
+    sha256: e0a27e1a5b377352268e9689cd3a49c4c519ce129e0bf04199576c7eea3f56c8
+    width: 24
+    height: 24
+    alt: "Meta logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-wix
+    kind: file
+    file: public/partners/wix.svg
+    role: logo
+    source: partner-trademark
+    creator: "Wix"
+    license: "Wix trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://simpleicons.org/?q=wix
+    sha256: 0fd56aa72b29f24dbdd5d957c824af111c9e29ccb364b59e8d868e0b382d5a9e
+    width: 24
+    height: 24
+    alt: "Wix logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-squarespace
+    kind: file
+    file: public/partners/squarespace.svg
+    role: logo
+    source: partner-trademark
+    creator: "Squarespace"
+    license: "Squarespace trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://simpleicons.org/?q=squarespace
+    sha256: e44d3ba8bde24e618dbac222b353970ca9fa445a1a5b12057894ad03bd71f86e
+    width: 24
+    height: 24
+    alt: "Squarespace logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-wordpress
+    kind: file
+    file: public/partners/wordpress.svg
+    role: logo
+    source: partner-trademark
+    creator: "WordPress"
+    license: "WordPress trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://simpleicons.org/?q=wordpress
+    sha256: 785e7effb222f0a7b8104d6dc582bf82299045c77679a57d320c9dd2d22b1dee
+    width: 24
+    height: 24
+    alt: "WordPress logo"
+    usage: [home, company-certifications, testimonials]
+    approval: approved
+    acquired: "2026-10-22"
+
+  - id: asset.partner-figma
+    kind: file
+    file: public/partners/figma.svg
+    role: logo
+    source: partner-trademark
+    creator: "Figma"
+    license: "Figma trademark, shown to identify the confirmed partner program. Evidence in data/assets/licenses/partner-logos.md."
+    sourceUrl: https://commons.wikimedia.org/wiki/File:Figma-logo.svg
+    sha256: 9513b11ee2e238a1059af63d32cc4f795265578257225eadadb8d95a6614a787
+    width: 200
+    height: 300
+    alt: "Figma logo"
     usage: [home, company-certifications, testimonials]
     approval: approved
     acquired: "2026-10-22"

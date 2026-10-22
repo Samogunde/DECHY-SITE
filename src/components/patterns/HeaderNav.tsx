@@ -90,7 +90,7 @@ const MENU_INTRO: Record<string, { title: string; text: string; cta: string }> =
   },
   about: {
     title: "A certified, partnered team",
-    text: "Partners of AWS, Microsoft, Google Cloud, and Salesforce, with certified engineers and one team from first call to support.",
+    text: "Partners of AWS, Microsoft, Google Cloud, Salesforce, Shopify, Adobe, and more, with certified engineers and one team from first call to support.",
     cta: "About DECHY",
   },
   resources: {

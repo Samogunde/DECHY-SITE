@@ -8,8 +8,13 @@
 # square, as in each company's own light-on-dark version. Shapes and brand colors are unchanged.
 # Sources: commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg,
 # File:Microsoft_logo.svg, File:Salesforce.com_logo.svg, File:Google_Cloud_logo.svg.
-# The other programs in data/partners/programs.json (Wix, Shopify, Webflow, HubSpot, Stripe) stay
-# unconfirmed until the owner says otherwise.
+# Owner, 22 October 2026: DECHY is also in partnership with Wix, Squarespace, Shopify, WordPress,
+# Figma, Meta, Adobe, Oracle, and Cisco, with more to follow from the owner. Their logos: Adobe,
+# Oracle, and Figma from Wikimedia Commons (File:Adobe_Corporate_Horizontal_Red_HEX.svg,
+# File:Oracle_logo.svg, File:Figma-logo.svg); the others are the marks from Simple Icons
+# (simple-icons package), in brand color or white on the black site. WordPress and Figma show
+# "Agency partner" until the owner names the program. Webflow, HubSpot, and Stripe in
+# data/partners/programs.json stay unconfirmed until the owner says otherwise.
 
 partners:
   - name: Amazon Web Services
@@ -36,6 +41,61 @@ partners:
     logo: salesforce.svg
     wordmark: true
     text: Salesforce development, integration, and commerce.
+
+  - name: Shopify
+    program: Shopify Partner Program
+    short: Shopify
+    logo: shopify.svg
+    wordmark: false
+    text: Shopify stores, themes, apps, and checkout built for growth.
+  - name: Adobe
+    program: Adobe Solution Partner Program
+    short: Adobe
+    logo: adobe.svg
+    wordmark: false
+    text: Adobe Commerce, Experience Cloud, and creative workflows.
+  - name: Oracle
+    program: Oracle PartnerNetwork
+    short: Oracle
+    logo: oracle.svg
+    wordmark: true
+    text: Oracle Cloud, databases, and enterprise integration.
+  - name: Cisco
+    program: Cisco Partner Program
+    short: Cisco
+    logo: cisco.svg
+    wordmark: true
+    text: Secure networks, collaboration, and connected infrastructure.
+  - name: Meta
+    program: Meta Business Partner
+    short: Meta
+    logo: meta.svg
+    wordmark: false
+    text: Facebook and Instagram advertising, commerce, and messaging.
+  - name: Wix
+    program: Wix Partner Program
+    short: Wix
+    logo: wix.svg
+    wordmark: true
+    text: Wix and Wix Studio websites, stores, and booking sites.
+  - name: Squarespace
+    program: Squarespace Circle
+    short: Squarespace
+    logo: squarespace.svg
+    wordmark: false
+    text: Squarespace websites, online stores, and portfolios.
+  - name: WordPress
+    program: Agency partner
+    short: WordPress
+    logo: wordpress.svg
+    wordmark: false
+    text: WordPress and WooCommerce websites, themes, and plugins.
+  - name: Figma
+    program: Agency partner
+    short: Figma
+    logo: figma.svg
+    wordmark: false
+    text: Product design, prototypes, and design systems in Figma.
 
 compliance:
   - name: ISO
