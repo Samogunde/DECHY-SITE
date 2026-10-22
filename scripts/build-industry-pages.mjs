@@ -74,7 +74,12 @@ const page = (i) => ({
       heading: `${i.name} projects, costs, and timelines`,
       intro: i.projects.intro,
       caption: `Typical ${i.name.toLowerCase()} projects with what they include, what they cost, and how long they take`,
-      columns: ["Project", "What it includes", "Typical cost", "Timeline"],
+      columns: [
+        "Project",
+        "What it includes",
+        "Typical cost",
+        "Typical timeline from approved scope",
+      ],
       rows: i.projects.rows,
       note: "Every project is quoted in writing after a short call. The top of each range covers larger builds and more integrations.",
     },

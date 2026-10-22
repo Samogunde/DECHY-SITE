@@ -520,6 +520,8 @@ export const Block = z.discriminatedUnion("type", [
           timeline: z.string(),
           summary: z.string(),
           includes: z.array(z.string()).max(6).default([]),
+          /** Where a first version starts, shown under the range ("Landing pages from $2,000"). */
+          start: z.string().optional(),
           featured: z.boolean().optional(),
         }),
       )
@@ -578,6 +580,8 @@ export const Block = z.discriminatedUnion("type", [
       )
       .max(6)
       .default([]),
+    /** "spotlight": one large quote beside the list of clients (the home page). */
+    layout: z.enum(["grid", "spotlight"]).default("grid"),
   }),
   /** Client, partner, or press names as a logo wall or a slow strip. */
   z.object({
@@ -1165,7 +1169,8 @@ export const Page = z.object({
   path: z.string().regex(/^\/([a-z0-9-]+\/)*$/, "path needs leading and trailing slash"),
   entityId: z.string().optional(),
   title: z.string().min(10).max(70),
-  description: z.string().min(70).max(165),
+  /** 70 to 165 characters once fact and price tokens are filled in (checked by the validator). */
+  description: z.string().min(40).max(400),
   breadcrumbLabel: z.string(),
   /** H1 and lead for pages without a hero block (contact, legal). */
   h1: z.string().optional(),

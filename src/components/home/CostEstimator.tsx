@@ -1,14 +1,25 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { estimate, money, weeksText, type EstimatorData, type Selection } from "@/lib/estimate";
+import {
+  estimate,
+  featureLimit,
+  featureState,
+  money,
+  switchTarget,
+  switchText,
+  weeksText,
+  type EstimatorData,
+  type Selection,
+} from "@/lib/estimate";
 
-const STEPS = ["What you are building", "Type and size", "Features and setup", "Timeline"];
+const STEPS = ["What you are building", "Type and size", "Features and setup", "When to start"];
 
 /**
  * The cost estimator: four short steps, then a price range, a timeline range, and what drives
  * them. The result shows first; name and email are asked only afterwards, to send the full
- * breakdown and book a call. Leads go to the same inbox as the contact form.
+ * breakdown and book a call. Leads go to the same inbox as the contact form. When the visitor
+ * wants to start never changes the price (owner's pricing review, 22 October 2026).
  */
 export function CostEstimator({
   data,
@@ -18,9 +29,7 @@ export function CostEstimator({
   /** Service page slug -> estimator service key, for links like ?service=mobile-app-development. */
   serviceBySlug: Record<string, string>;
 }) {
-  const [step, setStep] = useState(0);
-  const [done, setDone] = useState(false);
-  const [sel, setSel] = useState<Selection>({
+  const fresh: Selection = {
     service: "",
     tier: 0,
     size: "medium",
@@ -29,8 +38,18 @@ export function CostEstimator({
     web: false,
     design: "custom",
     integrations: 0,
-    timeline: "standard",
-  });
+    start: "",
+  };
+  // What each step owns, so going back past a step clears exactly its answers.
+  const STEP_FIELDS: (keyof Selection)[][] = [
+    ["service"],
+    ["tier", "size"],
+    ["features", "platform", "web", "design", "integrations"],
+    ["start"],
+  ];
+  const [step, setStep] = useState(0);
+  const [done, setDone] = useState(false);
+  const [sel, setSel] = useState<Selection>(fresh);
   const top = useRef<HTMLDivElement>(null);
 
   // Open on the service a page linked from (?service=...), once the page has loaded.
@@ -49,11 +68,44 @@ export function CostEstimator({
   const svc = data.services.find((s) => s.key === sel.service);
   const result = useMemo(() => estimate(data, sel), [data, sel]);
   const set = (patch: Partial<Selection>) => setSel((s) => ({ ...s, ...patch }));
+  /** The answers of every step after `k`, back to their defaults. */
+  const clearedAfter = (k: number): Partial<Selection> =>
+    Object.fromEntries(
+      STEP_FIELDS.slice(k + 1)
+        .flat()
+        .map((f) => [f, fresh[f]]),
+    ) as Partial<Selection>;
+  // A new service or tier starts its later answers again, so totals never carry over.
+  const chooseService = (key: string) => set({ ...clearedAfter(0), service: key });
+  const chooseTier = (i: number) => set({ ...clearedAfter(1), tier: i, size: sel.size });
+  // Switching to a bigger tier keeps the features that asked for it.
+  const switchTier = (i: number, keep: string[]) => set({ tier: i, features: keep });
   const go = (n: number) => {
     setStep(n);
     top.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  const canNext = step === 0 ? Boolean(svc) : true;
+  const canNext = step === 0 ? Boolean(svc) : step === 3 ? Boolean(sel.start) : true;
+
+  const limit = svc ? featureLimit(svc, sel.tier) : Infinity;
+  const blocked = svc
+    ? svc.features.filter((f) => featureState(svc, sel.tier, f) === "blocked")
+    : [];
+  const wantedBigger = svc
+    ? switchTarget(
+        svc,
+        sel.tier,
+        svc.features
+          .filter((f) => sel.features.includes(f.id) && featureState(svc, sel.tier, f) === "bigger")
+          .map((f) => f.id),
+      )
+    : -1;
+  const blockedBigger = svc
+    ? switchTarget(
+        svc,
+        sel.tier,
+        blocked.map((f) => f.id),
+      )
+    : -1;
 
   return (
     <div className="est" ref={top}>
@@ -76,9 +128,21 @@ export function CostEstimator({
           sel={sel}
           result={result}
           interest={svc.interest}
-          onEdit={() => {
+          outgrownNote={
+            result.outgrown >= 0
+              ? `Your choices reach the top of what a ${svc.tiers[sel.tier]?.name.toLowerCase()} costs. A ${svc.tiers[result.outgrown]?.name.toLowerCase()} may suit you better.`
+              : ""
+          }
+          onSwitch={() => {
+            switchTier(result.outgrown, sel.features);
             setDone(false);
-            go(0);
+            go(1);
+          }}
+          onEdit={(k) => {
+            // Change my answers: clear only the steps after the one being changed.
+            set(clearedAfter(k));
+            setDone(false);
+            go(k);
           }}
         />
       ) : (
@@ -94,7 +158,7 @@ export function CostEstimator({
                       name="service"
                       value={s.key}
                       checked={sel.service === s.key}
-                      onChange={() => set({ service: s.key, tier: 0, features: [] })}
+                      onChange={() => chooseService(s.key)}
                     />
                     <span className="est-card-title">{s.label}</span>
                     <span className="est-card-hint">{s.hint}</span>
@@ -115,7 +179,7 @@ export function CostEstimator({
                         type="radio"
                         name="tier"
                         checked={sel.tier === i}
-                        onChange={() => set({ tier: i })}
+                        onChange={() => chooseTier(i)}
                       />
                       <span className="est-option-main">
                         <span className="est-option-title">{t.name}</span>
@@ -154,28 +218,58 @@ export function CostEstimator({
             <>
               <fieldset className="est-field">
                 <legend>Which features do you need?</legend>
+                {Number.isFinite(limit) ? (
+                  <p className="est-legend-hint">
+                    Up to {limit} on a {svc.tiers[sel.tier]?.name.toLowerCase()}.
+                  </p>
+                ) : null}
                 <div className="est-checks">
-                  {svc.features.map((f) => (
-                    <label
-                      key={f.id}
-                      className="est-check"
-                      data-checked={sel.features.includes(f.id)}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={sel.features.includes(f.id)}
-                        onChange={(e) =>
-                          set({
-                            features: e.target.checked
-                              ? [...sel.features, f.id]
-                              : sel.features.filter((x) => x !== f.id),
-                          })
-                        }
-                      />
-                      <span>{f.label}</span>
-                    </label>
-                  ))}
+                  {svc.features.map((f) => {
+                    const state = featureState(svc, sel.tier, f);
+                    const checked = sel.features.includes(f.id) && state !== "blocked";
+                    const full = !checked && sel.features.length >= limit;
+                    return (
+                      <label
+                        key={f.id}
+                        className="est-check"
+                        data-checked={checked}
+                        data-disabled={state === "blocked" || full ? "true" : undefined}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          disabled={state === "blocked" || full}
+                          onChange={(e) =>
+                            set({
+                              features: e.target.checked
+                                ? [...sel.features, f.id]
+                                : sel.features.filter((x) => x !== f.id),
+                            })
+                          }
+                        />
+                        <span>{f.label}</span>
+                      </label>
+                    );
+                  })}
                 </div>
+                {wantedBigger >= 0 || blockedBigger >= 0 ? (
+                  <div className="est-switch" role="status">
+                    <p>{switchText(svc, wantedBigger >= 0 ? wantedBigger : blockedBigger)}</p>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      onClick={() =>
+                        switchTier(wantedBigger >= 0 ? wantedBigger : blockedBigger, sel.features)
+                      }
+                    >
+                      See the{" "}
+                      {svc.tiers[
+                        wantedBigger >= 0 ? wantedBigger : blockedBigger
+                      ]?.name.toLowerCase()}{" "}
+                      estimate
+                    </button>
+                  </div>
+                ) : null}
               </fieldset>
               {svc.platforms ? (
                 <fieldset className="est-field">
@@ -251,15 +345,16 @@ export function CostEstimator({
 
           {step === 3 ? (
             <fieldset className="est-field">
-              <legend>When do you need it?</legend>
+              <legend>When do you want to start?</legend>
+              <p className="est-legend-hint">This does not change the price.</p>
               <div className="est-segment">
-                {data.timelines.map((t) => (
-                  <label key={t.key} className="est-seg" data-checked={sel.timeline === t.key}>
+                {data.starts.map((t) => (
+                  <label key={t.key} className="est-seg" data-checked={sel.start === t.key}>
                     <input
                       type="radio"
-                      name="timeline"
-                      checked={sel.timeline === t.key}
-                      onChange={() => set({ timeline: t.key })}
+                      name="start"
+                      checked={sel.start === t.key}
+                      onChange={() => set({ start: t.key })}
                     />
                     <span className="est-seg-title">{t.label}</span>
                   </label>
@@ -289,6 +384,7 @@ export function CostEstimator({
               <button
                 type="button"
                 className="btn btn-primary"
+                disabled={!canNext}
                 onClick={() => {
                   setDone(true);
                   top.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -309,13 +405,19 @@ function Result({
   sel,
   result,
   interest,
+  outgrownNote,
+  onSwitch,
   onEdit,
 }: {
   data: EstimatorData;
   sel: Selection;
   result: NonNullable<ReturnType<typeof estimate>>;
   interest: string;
-  onEdit: () => void;
+  /** Shown when the choices go past the next tier; offers that tier. */
+  outgrownNote: string;
+  onSwitch: () => void;
+  /** Go back to step `k`, clearing only the steps after it. */
+  onEdit: (k: number) => void;
 }) {
   const [asking, setAsking] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -327,10 +429,11 @@ function Result({
   }, []);
   const priceText = `${money(result.price[0])} to ${money(result.price[1])}${result.open ? "+" : ""}`;
   const timeText = weeksText(result.weeks);
+  const startText = data.starts.find((t) => t.key === sel.start)?.label ?? "Not given";
   const summary = [
     `Cost estimator result: ${priceText}, ${timeText}.`,
     ...result.lines.map((l) => `- ${l.label}: ${l.detail}`),
-    `Timeline preference: ${data.timelines.find((t) => t.key === sel.timeline)?.label ?? sel.timeline}.`,
+    `Wants to start: ${startText}.`,
   ].join("\n");
 
   async function send(form: HTMLFormElement) {
@@ -375,12 +478,26 @@ function Result({
       <div className="est-result-main">
         <p className="est-result-label">Your estimate</p>
         <p className="est-result-price">{priceText}</p>
+        <p className="est-result-mid">Most projects like this land near the middle of the range.</p>
+        {outgrownNote ? (
+          <div className="est-switch">
+            <p>{outgrownNote}</p>
+            <button type="button" className="btn btn-secondary" onClick={onSwitch}>
+              Compare that estimate
+            </button>
+          </div>
+        ) : null}
         <p className="est-result-time">
-          Typical timeline: <strong>{timeText}</strong>
+          Typical timeline from approved scope: <strong>{timeText}</strong>
         </p>
-        <button type="button" className="est-edit" onClick={onEdit}>
-          Change my answers
-        </button>
+        <div className="est-edit-row">
+          <span>Change my answers:</span>
+          {STEPS.map((label, k) => (
+            <button key={label} type="button" className="est-edit" onClick={() => onEdit(k)}>
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
       <div className="est-result-side">
         <p className="est-result-label">What drives the number</p>

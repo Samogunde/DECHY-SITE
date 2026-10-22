@@ -18,21 +18,21 @@ type PriceFile = {
 };
 let prices: PriceFile | undefined;
 
-/** A service's price tiers and cost drivers (data/pricing/services.yaml), for cost guides. */
+/** A service's price tiers and cost drivers (data/pricing/prices.yaml), for cost guides. */
 export function pricingFor(serviceSlug: string): PriceFile["services"][string] | undefined {
-  prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;
+  prices ??= YAML.parse(readFile("data/pricing/prices.yaml")) as PriceFile;
   return prices.services[serviceSlug];
 }
 
 /** Every service's price tiers, in file order (the "How we price" guide). */
 export function allPricing(): [string, PriceFile["services"][string]][] {
-  prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;
+  prices ??= YAML.parse(readFile("data/pricing/prices.yaml")) as PriceFile;
   return Object.entries(prices.services);
 }
 
-/** The pricing section for a service page (data/pricing/services.yaml), or none. */
+/** The pricing section for a service page (data/pricing/prices.yaml), or none. */
 export function servicePricing(serviceSlug: string): Block[] {
-  prices ??= YAML.parse(readFile("data/pricing/services.yaml")) as PriceFile;
+  prices ??= YAML.parse(readFile("data/pricing/prices.yaml")) as PriceFile;
   const p = prices.services[serviceSlug];
   if (!p) return [];
   return [
@@ -60,14 +60,14 @@ type ModelsFile = {
 };
 let models: ModelsFile | undefined;
 
-/** Rates, dedicated teams, care plans, and MVP prices (data/pricing/models.yaml) as tables. */
+/** Rates, dedicated teams, care plans, and MVP prices (data/pricing/prices.yaml) as tables. */
 export function modelTable(key: keyof ModelsFile): {
   heading: string;
   columns: string[];
   rows: string[][];
   note?: string;
 } {
-  models ??= YAML.parse(readFile("data/pricing/models.yaml")) as ModelsFile;
+  models ??= YAML.parse(readFile("data/pricing/prices.yaml")) as ModelsFile;
   const m = models;
   switch (key) {
     case "rates":
@@ -91,7 +91,7 @@ export function modelTable(key: keyof ModelsFile): {
     case "mvp":
       return {
         heading: "What an MVP costs",
-        columns: ["Type of MVP", "Typical cost", "Timeline"],
+        columns: ["Type of MVP", "Typical cost", "Typical timeline from approved scope"],
         rows: m.mvp.map((p) => [p.name, p.range, p.timeline]),
       };
   }

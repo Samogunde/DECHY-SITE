@@ -5,6 +5,10 @@ import type { Block, Page } from "@/lib/content/schema";
 import { SelectPanel } from "./SelectPanel";
 import { Section, SectionHeader } from "./Section";
 
+/** Timelines count from approved scope (owner's pricing review, 22 October 2026). */
+const TIME_NOTE =
+  "The timeline starts once the scope is approved and we have what we need from you.";
+
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
 /** Numbered delivery path: connected step cards, each with what it produces. */
@@ -101,10 +105,10 @@ export function TableBlock({ block, page }: { block: Of<"table">; page?: Page })
             {block.rows.map((row, i) => (
               <div key={i} className="compare-row" role="row">
                 <span className="compare-q" role="rowheader">
-                  <Inline text={row[0] ?? ""} />
+                  <Inline text={row[0] ?? ""} />{" "}
                 </span>
                 <span className="compare-a" role="cell" data-label={a}>
-                  <Inline text={row[1] ?? ""} />
+                  <Inline text={row[1] ?? ""} />{" "}
                 </span>
                 <span className="compare-b" role="cell" data-label={b}>
                   <Inline text={row[2] ?? ""} />
@@ -237,6 +241,7 @@ export function TableBlock({ block, page }: { block: Of<"table">; page?: Page })
       </Section>
     );
   }
+  const timed = block.columns.some((c) => /from approved scope/i.test(c));
   return (
     <Section id={block.id} tone={block.tone}>
       <div className="editorial">
@@ -271,11 +276,11 @@ export function TableBlock({ block, page }: { block: Of<"table">; page?: Page })
                     {row.map((cell, k) =>
                       k === 0 ? (
                         <th key={k} scope="row">
-                          <Inline text={cell} />
+                          <Inline text={cell} />{" "}
                         </th>
                       ) : (
                         <td key={k} data-label={block.columns[k]}>
-                          <Inline text={cell} />
+                          <Inline text={cell} />{" "}
                         </td>
                       ),
                     )}
@@ -284,9 +289,11 @@ export function TableBlock({ block, page }: { block: Of<"table">; page?: Page })
               </tbody>
             </table>
           </div>
-          {block.note ? (
+          {block.note || timed ? (
             <p className="t-caption mt-3 max-w-[60ch]">
-              <Inline text={block.note} />
+              {block.note ? <Inline text={block.note} /> : null}
+              {block.note && timed ? " " : null}
+              {timed ? TIME_NOTE : null}
             </p>
           ) : null}
         </div>

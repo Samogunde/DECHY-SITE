@@ -159,15 +159,15 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Publishing website rebuild
         - Fast templates, content migration, and search setup
-        - $6,000 to $16,000
+        - $6,000 to $15,000
         - 2 to 4 weeks
       - - Subscriptions and paywall
         - Plans, metering, accounts, payments, and offers
-        - $8,000 to $24,000
+        - $8,000 to $20,000
         - 3 to 5 weeks
       - - Podcast or video platform
         - Players, feeds, members-only content, and analytics
@@ -187,8 +187,8 @@ sections:
     items:
       - q: How much does a publishing platform cost?
         a:
-          A rebuilt publishing site usually costs $6,000 to $16,000. Adding subscriptions and a paywall
-          usually costs $8,000 to $24,000.
+          A rebuilt publishing site usually costs $6,000 to $15,000. Adding subscriptions and a paywall
+          usually costs $8,000 to $20,000.
       - q: Can you migrate our archive?
         a: Yes. We move articles, images, authors, and URLs, with redirects so search rankings carry over.
       - q: Will the site stay up when a story goes viral?

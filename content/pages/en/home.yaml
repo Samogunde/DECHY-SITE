@@ -147,7 +147,7 @@ sections:
     id: numbers
     tone: ink
     label: DECHY in numbers
-    heading: One team for the software, the website, and the app
+    heading: One team for [[the software, the website, and the app]]
     intro: We have built for startups, growing businesses, and enterprises across many industries, and we stay with what we build.
     items:
       - value: "{{fact:company.clients}}"
@@ -168,7 +168,7 @@ sections:
     id: services
     tone: ink
     label: What we build
-    heading: Software, websites, and apps, designed and built end to end
+    heading: Software, websites, and apps, [[designed and built end to end]]
     intro: Most projects start with one of these three. Each is a full practice, from first idea and design to launch, hosting, and support.
     items:
       - title: Custom software
@@ -241,7 +241,7 @@ sections:
     id: built-in
     tone: ink
     label: Built in, not bolted on
-    heading: AI, automation, and integration come with the product
+    heading: AI, automation, and integration [[come with the product]]
     intro: The hardest problems sit between systems. At DECHY, we design the connections at the same time as the screens, so what we build keeps working with everything around it.
     items:
       - icon: sparkles
@@ -354,7 +354,7 @@ sections:
     tone: ink
     style: panels
     label: Industries
-    heading: Built for the sector you work in
+    heading: Built for [[the sector you work in]]
     intro: Each sector's data, rules, and customers shape the work. These are the sectors we write about in depth.
     items:
       - icon: health
@@ -471,7 +471,7 @@ sections:
     id: process
     tone: ink
     label: How a project runs
-    heading: A clear process, with something to see at every step
+    heading: A clear process, [[with something to see at every step]]
     intro: The details change with each project. The stages stay the same, and you decide at every step.
     steps:
       - title: Discover and define
@@ -577,8 +577,9 @@ sections:
   - type: testimonials
     id: testimonials
     tone: ink
+    layout: spotlight
     label: What clients say
-    heading: What changed for our clients, in their own words
+    heading: What changed for our clients, [[in their own words]]
 
   - type: partnerships
     id: partners
@@ -592,11 +593,12 @@ sections:
     id: pricing
     tone: ink
     label: Pricing
-    heading: What projects typically cost
+    heading: What projects [[typically cost]]
     intro: Every project is quoted in writing after a short discovery. These ranges show where most projects land, so you can plan before you talk to us.
     plans:
       - name: Website
-        range: "$2,000 to $10,000+"
+        range: "{{fact:price.summary-website}}"
+        start: "Landing pages from {{fact:price.summary-website-start}}"
         timeline: 1 to 2 weeks
         summary: A business website or landing pages your team can edit.
         includes:
@@ -604,7 +606,8 @@ sections:
           - Responsive build and editing tools
           - Speed, accessibility, and search setup
       - name: Web application
-        range: "$5,000 to $50,000+"
+        range: "{{fact:price.summary-web-app}}"
+        start: "Simple web apps from {{fact:price.web-development-web-app-from}}"
         timeline: 1 to 3 weeks
         summary: A web app with accounts, dashboards, and the logic behind them.
         includes:
@@ -612,7 +615,8 @@ sections:
           - Front end, back end, and database
           - Integrations, testing, and hosting
       - name: Mobile app
-        range: "$10,000 to $60,000+"
+        range: "{{fact:price.summary-mobile-app}}"
+        start: "A first version from {{fact:price.summary-mobile-app-start}}"
         timeline: 2 to 8 weeks
         summary: An iPhone and Android app with its back end.
         includes:
@@ -620,7 +624,8 @@ sections:
           - Cross-platform or native build
           - App store release and back end
       - name: Custom software
-        range: "$15,000 to $100,000+"
+        range: "{{fact:price.summary-custom-software}}"
+        start: "Internal tools from {{fact:price.summary-custom-software-start}}"
         timeline: 2 to 4 months
         summary: A system built around how your organization works.
         includes:
@@ -699,7 +704,7 @@ sections:
 
   - type: cta
     id: contact-cta
-    heading: Tell us what you want to build.
+    heading: Tell us what you want [[to build]].
     body: A short conversation is enough to find out whether and how we can help, and roughly what it would cost. There is no obligation.
     primary:
       label: Get a project estimate

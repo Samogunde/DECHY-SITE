@@ -1083,15 +1083,6 @@ main.theme-dark .anatomy-support-wrap {
   border-top: 0 !important;
 }
 
-/* Service pricing: up to six tiers, figures sized to stay on one or two lines. */
-.page-hero:is(#hero, .page-hero) ~ * .price-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)) !important;
-}
-.page-hero:is(#hero, .page-hero) ~ * .price-range {
-  font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem) !important;
-  line-height: 1.15;
-}
-
 /* Gallery (About us): a large photograph beside two stacked ones, each with a note below. */
 .gallery {
   display: grid;

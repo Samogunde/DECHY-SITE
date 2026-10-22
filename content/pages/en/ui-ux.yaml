@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: UI/UX and product design people understand at a glance
+    headline: UI/UX and product design [[people understand at a glance]]
     lead:
       We design websites, apps, and software that feel obvious to use. You get research with real
       users, clickable prototypes, and finished screens that developers can build exactly, so your

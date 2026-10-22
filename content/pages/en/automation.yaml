@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Business automation that takes repetitive work off your team
+    headline: Business automation that [[takes repetitive work off your team]]
     lead:
       We automate the approvals, updates, data entry, and reports your team repeats every day. You
       get workflows that run on their own across the tools you already use, with AI where it helps

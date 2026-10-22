@@ -38,7 +38,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Digital marketing that brings in qualified leads and sales
+    headline: Digital marketing that [[brings in qualified leads and sales]]
     lead:
       "We run focused campaigns across search, social, and email, track every one from first click
       to customer, and connect the results to your sales records. You see exactly what each channel
@@ -273,7 +273,7 @@ sections:
     items:
       - q: How much should we spend on marketing?
         a:
-          "Campaign setup usually costs $1,200 to $3,000, and monthly management $800 to $4,000 plus ad
+          "Campaign setup usually costs {{fact:price.digital-marketing-campaign-setup}}, and monthly management {{fact:price.digital-marketing-paid-media-management}} plus ad
           spend. We start with a measured test budget, then put more behind the channels that bring
           customers."
       - q: How soon will we see results?

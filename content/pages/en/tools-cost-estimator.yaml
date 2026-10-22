@@ -19,7 +19,7 @@ datePublished: "2026-10-21"
 dateModified: "2026-10-21"
 schemaTypes: [WebPage, FAQPage]
 comprehension:
-  what: "A free estimator that turns what you are building, its size, its features, and your timeline into a price range and a timeline range."
+  what: "A free estimator that turns what you are building, its size, its features, and the features you need into a price range and a timeline range."
   problem: "Most businesses have no idea whether a project costs five thousand dollars or fifty thousand until they have spoken to several suppliers."
   audience: "Founders, owners, and managers planning a software, web, app, ecommerce, AI, or integration project and setting a budget."
   choose: "Pick the type of project closest to yours, the size, and the features you need. Change any answer to see how it moves the price."
@@ -49,11 +49,12 @@ sections:
       - title: Platforms, design, and connections
         items:
           - "Two native mobile apps cost about 60 percent more than one shared app."
-          - "Each system you connect adds $1,500 to $5,000, our single integration range."
-      - title: Your timeline
+          - "Each system you connect adds {{fact:price.api-integration-single-integration}}, our single integration range."
+          - "A proven template takes 10 percent off; custom and premium design add a set amount."
+      - title: When you start
         items:
-          - "A flexible timeline saves about 5 percent because we can plan the work around other projects."
-          - "A fast timeline adds about 20 percent because more people work in parallel."
+          - "When you want to start never changes the price."
+          - "Timelines count from approved scope, once we have what we need from you."
 
   - type: columns
     id: changes
@@ -89,7 +90,7 @@ sections:
     items:
       - "Third-party fees: hosting, app store accounts, payment processing, AI usage, and paid plugins."
       - "Content you supply, such as photography, video, and legal text, unless you ask us to create it."
-      - "Care after launch, which is a monthly plan from $250."
+      - "Care after launch, which is a monthly plan from {{fact:price.care-essential-from}}."
       - "Taxes, which depend on where your business is registered."
 
   - type: faq
@@ -100,6 +101,8 @@ sections:
     items:
       - q: How accurate is the estimate?
         a: "It starts from the same price ranges we quote from, so it is a realistic guide to your budget. The range is wide on purpose: two projects with the same features can still differ in data, rules, and connections. A 30-minute call is enough to narrow it to a fixed price."
+      - q: Does starting sooner cost more?
+        a: "No. When you want to start never changes the price. We ask so we can plan the work and reply in the right order."
       - q: Why is the result a range and not one number?
         a: "Because a single number before anyone has seen your project would be a guess. The low end assumes a focused scope and clean data; the high end allows for the extra work most projects uncover in planning."
       - q: Do I have to give my email to see the result?

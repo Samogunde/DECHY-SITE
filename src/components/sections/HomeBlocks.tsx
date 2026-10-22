@@ -25,6 +25,7 @@ import { getRegistry, showDrafts } from "@/lib/content/load";
 import type { Block, IconName } from "@/lib/content/schema";
 import { pathExists, publishedPath } from "@/lib/content/urls";
 import { Section } from "./Section";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -75,7 +76,7 @@ export function SplitHeader({
       <div className="split-main">
         <p className="t-eyebrow eyebrow-accent m-0">{label}</p>
         <h2 id={`${id}-h`} className="home-h2 mt-4">
-          {heading}
+          <AccentText text={heading} />
         </h2>
         {intro ? (
           <p className="split-intro">
@@ -199,7 +200,7 @@ export function StatsBlock({ block }: { block: Of<"stats"> }) {
             {block.label}
           </p>
           <h2 id={`${block.id}-h`} className="home-h2 mt-4" data-reveal="block">
-            {block.heading}
+            <AccentText text={block.heading} />
           </h2>
           {block.intro ? (
             <p className="split-intro mt-5" data-reveal="block">
@@ -403,7 +404,7 @@ export function StackBlock({ block }: { block: Of<"stack"> }) {
         <div className="stack-head">
           <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
           <h2 id={`${block.id}-h`} className="home-h2 mt-4">
-            {block.heading}
+            <AccentText text={block.heading} />
           </h2>
           {block.intro ? (
             <p className="split-intro mt-5">
@@ -536,27 +537,56 @@ export function InsightsBlock({ block }: { block: Of<"insights"> }) {
   );
 }
 
+/**
+ * Price cards (owner's pricing review, 22 October 2026): what most projects cost on one line,
+ * where a first version starts, what is included, and the timeline from approved scope. No
+ * accent bar on hover; every card is equal.
+ */
 export function PricingBlock({ block }: { block: Of<"pricing"> }) {
   const live = useLive();
   return (
     <Section id={block.id} tone={block.tone} className="pricing" ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <ul className="price-grid" data-reveal="group">
+      <ul className="pc-grid" data-reveal="group">
         {block.plans.map((p) => (
-          <li key={p.name} className="price-card" data-spotlight>
-            <h3 className="price-name">{p.name}</h3>
-            <p className="price-from">Typical range</p>
-            <p className="price-range">{p.range}</p>
-            <p className="price-summary">
+          <li key={p.name} className="pc">
+            <h3 className="pc-name">{p.name}</h3>{" "}
+            <p className="pc-summary">
               <Inline text={p.summary} />
             </p>
-            <p className="price-time">
-              <Clock aria-hidden="true" weight="light" className="price-clock" />
-              {p.timeline}
+            <div className="pc-price-box">
+              <p className="pc-label">{p.start ? "Most projects" : "Typical range"}</p>{" "}
+              <p className="pc-price">
+                <Inline text={p.range} />
+              </p>{" "}
+              {p.start ? (
+                <p className="pc-start">
+                  <Inline text={p.start} />
+                </p>
+              ) : null}{" "}
+            </div>{" "}
+            {p.includes.length ? (
+              <ul className="pc-includes">
+                {p.includes.map((x) => (
+                  <li key={x}>
+                    <CheckCircle aria-hidden="true" weight="fill" />
+                    <span>{x}</span>{" "}
+                  </li>
+                ))}
+              </ul>
+            ) : null}{" "}
+            <p className="pc-time">
+              <Clock aria-hidden="true" weight="light" />
+              <span>
+                <strong>{p.timeline}</strong> from approved scope
+              </span>
             </p>
           </li>
         ))}
       </ul>
+      <p className="pc-scope-note">
+        The timeline starts once the scope is approved and we have what we need from you.
+      </p>
       <div className="price-foot" data-reveal="block">
         <div>
           <h3 className="price-foot-title">{block.factors.title}</h3>

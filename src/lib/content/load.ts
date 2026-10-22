@@ -8,6 +8,8 @@ import path from "node:path";
 import YAML from "yaml";
 import { applyPhotographs, reservePhotographs } from "./visuals";
 import { servicePricing } from "./samples";
+import { priceFacts } from "./prices";
+import { expandFacts } from "./inline";
 import { forIndustry, forService, homeTestimonials, type Testimonial } from "./testimonials";
 import { blockPhotos } from "./photos";
 import { portfolioGrid, portfolioPages, projectPath, projects, selectedWork } from "./portfolio";
@@ -206,6 +208,11 @@ export function buildRegistry(): Registry {
     if (facts.has(f.id)) throw new Error(`Duplicate fact id: ${f.id}`);
     facts.set(f.id, f);
   }
+  // Every price in data/pricing/prices.yaml, as {{fact:price.<id>}} (owner, 22 October 2026).
+  for (const f of priceFacts()) {
+    if (facts.has(f.id)) throw new Error(`Duplicate price id: ${f.id}`);
+    facts.set(f.id, f);
+  }
 
   const assets = readYaml("data/assets/images.yaml", AssetFile).assets;
 
@@ -380,6 +387,14 @@ export function buildRegistry(): Registry {
   const usedPhotos = new Map<string, number>();
   reservePhotographs(pages, usedPhotos, blockPhotos);
   for (const page of pages) applyPhotographs(page, serviceOfEntity, usedPhotos);
+  // Titles, descriptions, headlines, and leads go to metadata, structured data, and the search
+  // index as plain strings, so their fact and price tokens are filled in here, once.
+  for (const p of pages) {
+    p.title = expandFacts(p.title, facts);
+    p.description = expandFacts(p.description, facts);
+    if (p.h1) p.h1 = expandFacts(p.h1, facts);
+    if (p.lead) p.lead = expandFacts(p.lead, facts);
+  }
   const pageByPath = new Map<string, Page>();
   for (const p of pages) {
     if (pageByPath.has(p.path)) throw new Error(`Two pages share the path ${p.path}`);

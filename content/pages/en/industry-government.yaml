@@ -196,11 +196,11 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Accessible online form and payment
         - Form, validation, payment, and confirmation for one service
-        - $6,000 to $16,000
+        - $6,000 to $15,000
         - 2 to 4 weeks
       - - Citizen portal
         - Accounts, applications, status tracking, and messages
@@ -224,7 +224,7 @@ sections:
     items:
       - q: How much does a digital public service cost?
         a:
-          One accessible online form with payment usually costs $6,000 to $16,000. Case management and
+          One accessible online form with payment usually costs $6,000 to $15,000. Case management and
           portals cost more and are delivered in stages.
       - q: Do you meet accessibility standards?
         a: Yes. We build to the WCAG guidelines and test with screen readers, keyboards, and real users.

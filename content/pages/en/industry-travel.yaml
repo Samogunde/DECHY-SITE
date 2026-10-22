@@ -152,7 +152,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Tour and activity booking site
         - Listings, dates, live availability, and payments

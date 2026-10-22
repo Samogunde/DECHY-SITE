@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Websites and web apps built to load fast and bring in business
+    headline: Websites and web apps built to [[load fast and bring in business]]
     lead:
       We build fast, good-looking websites and web apps that your team can edit and your customers
       enjoy using. You get a site that loads in a blink, works on every screen, ranks in search, and
@@ -325,11 +325,7 @@ sections:
     heading: Questions about websites and web systems
     items:
       - q: How much does a website cost?
-        a:
-          Most business websites cost $2,000 to $10,000. A landing page starts around $2,000, a business
-          website costs $3,000 to $7,000, and a larger content site $5,000 to $10,000. Web apps cost
-          $5,000 to $50,000 or more depending on accounts, dashboards, payments, and integrations.
-          Every quote is fixed in writing.
+        a: "Most business websites cost {{fact:price.summary-website}}, including design, an editable site, and launch. A landing page starts from {{fact:price.summary-website-start}}, and a larger content site costs {{fact:price.web-development-content-or-cms-website}}. Most web apps cost {{fact:price.summary-web-app}}; advanced products with many roles and integrations cost more. Every quote is fixed in writing."
       - q: How long does it take?
         a:
           A business website usually goes live in 1 to 2 weeks and a larger site in 2 to 3 weeks. Web apps

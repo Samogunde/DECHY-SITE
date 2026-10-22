@@ -21,7 +21,26 @@ const File = z.object({
       hint: z.string(),
       pricing: z.array(z.string()).min(1),
       platforms: z.boolean().optional(),
-      features: z.array(z.object({ id: z.string(), label: z.string(), cost: Pair, weeks: Pair })),
+      features: z.array(
+        z.object({
+          id: z.string(),
+          label: z.string(),
+          cost: Pair,
+          weeks: Pair,
+          from: z.string().optional(),
+        }),
+      ),
+      tierRules: z
+        .record(
+          z.string(),
+          z.object({
+            onlyFeatures: z.array(z.string()).optional(),
+            maxFeatures: z.number().int().min(1).optional(),
+          }),
+        )
+        .default({}),
+      designs: z.object({ custom: Pair, premium: Pair }),
+      switchNote: z.string().optional(),
     }),
   ),
   sizes: z.array(z.object({ key: z.string(), label: z.string(), hint: z.string(), share: Pair })),
@@ -29,22 +48,22 @@ const File = z.object({
   webCompanion: z.object({ label: z.string(), cost: Pair, weeks: Pair }),
   designs: z.array(Choice),
   integration: z.object({ cost: Pair, weeks: Pair }),
-  timelines: z.array(Choice),
+  starts: z.array(z.object({ key: z.string(), label: z.string() })).min(1),
   excludes: z.array(z.string()).min(1),
 });
 
 /**
- * The estimator's data: the choices in data/pricing/estimator.yaml with base tiers read from the
+ * The estimator's data: the estimator section of data/pricing/prices.yaml with base tiers read from the
  * approved service ranges, so the tool and the cost guides always agree.
  */
 export function estimatorData(serviceNames: Record<string, string>): EstimatorData {
   const raw = File.parse(
     YAML.parse(
       fs.readFileSync(
-        path.join(/*turbopackIgnore: true*/ process.cwd(), "data/pricing/estimator.yaml"),
+        path.join(/*turbopackIgnore: true*/ process.cwd(), "data/pricing/prices.yaml"),
         "utf8",
       ),
-    ),
+    ).estimator,
   );
   const pricing = new Map(allPricing());
   return {
@@ -56,6 +75,9 @@ export function estimatorData(serviceNames: Record<string, string>): EstimatorDa
       interest: serviceNames[s.pricing[0]!] ?? s.label,
       platforms: Boolean(s.platforms),
       features: s.features,
+      tierRules: s.tierRules,
+      designAdd: s.designs,
+      switchNote: s.switchNote,
       tiers: s.pricing.flatMap((slug) =>
         (pricing.get(slug)?.plans ?? [])
           // Monthly retainers are not projects, so they are not estimated here.

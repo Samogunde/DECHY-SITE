@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Inline } from "@/components/primitives/Inline";
+import { AccentText } from "@/components/primitives/AccentText";
 
 export type Tone = "paper" | "white" | "ink";
 
@@ -46,7 +47,7 @@ export function SectionHeader({
     <div className={className} data-reveal="block">
       <p className="t-eyebrow eyebrow-accent m-0">{label}</p>
       <h2 id={`${id}-h`} className="t-h2 mt-3 max-w-[22ch]">
-        {heading}
+        <AccentText text={heading} />
       </h2>
       {intro ? (
         <p className="t-body mt-4 max-w-[40ch] opacity-90">

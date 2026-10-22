@@ -42,7 +42,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: AI solutions that save time and answer customers
+    headline: AI solutions that [[save time and answer customers]]
     lead: "We build AI that does real work for your business: assistants that answer from your own
       documents, tools that read and sort paperwork, agents that handle routine tasks, and
       predictions that support decisions. You get measurable time saved, with people in control."
@@ -380,8 +380,8 @@ sections:
       - q: How long does an AI project take?
         a:
           A focused AI assistant or document tool usually goes live in 1 to 4 weeks. AI agents connected to
-          your systems take 4 to 6 weeks, and custom models or platforms 2 to 3 months. Typical
-          costs range from $4,000 to $120,000 or more depending on scope.
+          your systems take 4 to 6 weeks, and custom models or platforms 2 to 3 months. Most
+          business AI projects cost {{fact:price.summary-ai}}; larger agents and platforms cost more.
       - q: How is AI different from automation?
         a:
           "Automation follows fixed rules to do repetitive work. AI handles work that needs reading,

@@ -8,8 +8,8 @@ group: build
 title: "How Much Does Custom Software Cost? | DECHY"
 description: "Typical price ranges and timelines for custom software, from internal tools to enterprise systems, and the factors that move the price up or down."
 h1: "How much does custom software cost?"
-summary: Custom software usually costs between $15,000 and $100,000 or more, depending on what it has to do. This guide shows typical ranges by type of system, what drives the price, and how to keep the first version affordable.
-answer: "Most custom software projects we deliver land between $15,000 and $100,000. A focused internal tool sits at the low end and takes 4 to 6 weeks. A customer portal or operations platform sits in the middle. Large systems and modernization projects start around $100,000. The biggest factors are the number of user roles, the integrations, and how much existing data has to move."
+summary: "Most custom software projects cost {{fact:price.summary-custom-software}}, and a focused internal tool can start from {{fact:price.summary-custom-software-start}}. This guide shows typical ranges by type of system, what each includes, what drives the price, and how to keep the first version affordable."
+answer: "Most custom software projects we deliver cost {{fact:price.summary-custom-software}}. A focused internal tool can start from {{fact:price.summary-custom-software-start}} and takes 4 to 6 weeks. Customer portals and operations platforms sit in the middle of that range. Large systems and modernization projects start from {{fact:price.software-development-enterprise-system-or-modernization-from}}. The biggest factors are the number of user roles, the integrations, and how much existing data has to move."
 intent: how much does custom software cost
 date: 2026-10-21
 reviewed: 2026-10-21

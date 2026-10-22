@@ -6,10 +6,10 @@ group: build
 service: software-development
 models: [mvp]
 title: "How Much Does It Cost to Build an MVP? | DECHY"
-description: "An MVP costs $3,000 for a clickable prototype to $50,000 for a SaaS product with billing. See what each type includes, how long it takes, and what to leave out."
+description: "Most MVPs cost {{fact:price.summary-mvp}}, and a clickable prototype starts from {{fact:price.mvp-clickable-prototype-from}}. See what each type includes, how long it takes, and what to leave out."
 h1: "How much does it cost to build an MVP?"
-summary: A minimum viable product usually costs between $6,000 and $24,000 and takes two to four weeks. A clickable prototype costs less; a subscription product with billing costs more. This guide shows the ranges, what belongs in a first version, and what to leave for later.
-answer: "A clickable prototype costs $3,000 to $6,000. A working web app MVP costs $6,000 to $16,000, a mobile app MVP $10,000 to $20,000, and an AI product MVP $8,000 to $24,000, each in two to four weeks. A SaaS MVP with sign-up, plans, and billing costs $25,000 to $50,000 and takes six to eight weeks. The single biggest cost lever is how ruthlessly you cut the feature list."
+summary: "Most MVPs cost {{fact:price.summary-mvp}} and take two to four weeks. A clickable prototype costs less; a subscription product with billing costs more. This guide shows the ranges, what belongs in a first version, and what to leave for later."
+answer: "A clickable prototype costs {{fact:price.mvp-clickable-prototype}}. A working web app MVP costs {{fact:price.mvp-web-app-mvp}}, a mobile app MVP {{fact:price.mvp-mobile-app-mvp}}, and an AI product MVP {{fact:price.mvp-ai-product-mvp}}, each in two to four weeks. A SaaS MVP with sign-up, plans, and billing costs {{fact:price.mvp-saas-mvp-with-billing}} and takes six to eight weeks. The single biggest cost lever is how ruthlessly you cut the feature list."
 intent: how much does it cost to build an mvp
 date: 2026-10-21
 reviewed: 2026-10-21

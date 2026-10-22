@@ -42,7 +42,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Data analytics and dashboards your team trusts
+    headline: Data analytics and dashboards [[your team trusts]]
     lead:
       We turn scattered information into numbers you can act on. We bring data together from your
       tools, clean it, agree what every figure means, and build dashboards and reports that update

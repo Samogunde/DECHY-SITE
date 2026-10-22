@@ -42,7 +42,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Mobile apps for iOS and Android, designed, built, and looked after by one team
+    headline: Mobile apps for iOS and Android, [[designed, built, and looked after by one team]]
     lead:
       We design, build, and launch mobile apps for iPhone and Android, then keep them fast and up to
       date. You get an app people keep on their home screen, connected to your website, customer
@@ -286,11 +286,7 @@ sections:
     heading: Questions about mobile apps
     items:
       - q: How much does an app cost?
-        a:
-          Most mobile apps cost $10,000 to $60,000 or more. A focused first version (MVP, short for minimum
-          viable product) costs $10,000 to $20,000, a business app with accounts and payments
-          $20,000 to $35,000, and a marketplace or complex app $30,000 to $60,000 or more. Every
-          quote is fixed in writing after a short call.
+        a: "Most business apps cost {{fact:price.summary-mobile-app}}, including accounts, notifications, and payments. A first version to test an idea can start from {{fact:price.summary-mobile-app-start}}, and marketplace or complex apps cost {{fact:price.mobile-app-development-marketplace-or-on-demand-app-from}} or more. Every quote is fixed in writing and covers design, testing on real devices, and app store release."
       - q: How long does it take?
         a:
           Most apps take 2 to 8 weeks. A first version usually reaches the app stores in 2 to 4 weeks, and

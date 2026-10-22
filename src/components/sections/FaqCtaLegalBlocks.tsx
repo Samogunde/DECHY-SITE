@@ -4,6 +4,7 @@ import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -73,7 +74,7 @@ export function CtaBlock({ block }: { block: Of<"cta"> }) {
         <div className="grid items-end gap-10 lg:grid-cols-12" data-reveal="block">
           <div className="lg:col-span-8">
             <h2 id={`${block.id}-h`} className="t-h2 max-w-[24ch]">
-              {block.heading}
+              <AccentText text={block.heading} />
             </h2>
             <p className="t-body-lg mt-5 max-w-[56ch]">
               <Inline text={block.body} />

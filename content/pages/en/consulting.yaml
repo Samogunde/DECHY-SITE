@@ -43,7 +43,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Technology consulting and digital transformation that pays off
+    headline: Technology consulting and digital transformation [[that pays off]]
     lead:
       We help you decide what to build, buy, or fix before you spend the money. You get a clear view
       of your systems, options in plain language, and a costed roadmap you can follow, whether or
@@ -279,8 +279,9 @@ sections:
           Yes. You can take our advice to any provider. We can also build what we recommend, but we keep
           the two clearly separate so the advice is honest.
       - q: How long does a consulting project take?
-        a: A technology assessment usually takes 1 to 2 weeks and costs $2,000 to $6,000. A full
-          transformation roadmap takes 2 to 4 weeks and costs $6,000 to $16,000. Ongoing advisory
+        a:
+          A technology assessment usually takes 1 to 2 weeks and costs {{fact:price.consulting-technology-assessment}}. A full
+          transformation roadmap takes 2 to 4 weeks and costs {{fact:price.consulting-transformation-roadmap}}. Ongoing advisory
           starts at $2,500 a month.
       - q: What if we only want help with AI?
         a:

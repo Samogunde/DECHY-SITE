@@ -426,6 +426,13 @@ export function validateRegistry(input: Registry): Issue[] {
         }
       }
     }
+    // Descriptions are measured as they appear, with fact and price tokens filled in.
+    if (page.description.length < 70 || page.description.length > 165)
+      err(
+        "description-length",
+        where,
+        `Description is ${page.description.length} characters; it must be 70 to 165`,
+      );
     for (const claim of page.claims) {
       if (!registry.facts.has(claim))
         err("claim-fact", where, `claims[] cites unknown fact ${claim}`);

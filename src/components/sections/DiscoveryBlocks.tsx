@@ -13,6 +13,7 @@ import { connectionsFor } from "@/lib/connections";
 import { buildNavModel } from "@/lib/nav";
 import { publishedPath } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -413,7 +414,7 @@ export function LibraryBlock({ block }: { block: Of<"library"> }) {
   return (
     <Section id={block.id} tone={block.tone} ruled={false}>
       <h2 id={`${block.id}-h`} className="sr-only">
-        {block.heading}
+        <AccentText text={block.heading} />
       </h2>
       <ResourceLibrary
         tabs={tabs}

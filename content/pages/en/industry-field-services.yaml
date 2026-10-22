@@ -126,11 +126,11 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Online booking and quotes
         - Services, real slots, pricing, and confirmations
-        - $3,000 to $8,000
+        - $3,000 to $7,500
         - 1 to 2 weeks
       - - Technician app
         - Jobs, checklists, photos, signatures, and offline use
@@ -221,7 +221,7 @@ sections:
     items:
       - q: How much does field service software cost?
         a:
-          A technician app with dispatch and invoicing usually costs $12,000 to $32,000 and takes 4 to 8
+          A technician app with dispatch and invoicing usually costs $12,000 to $30,000 and takes 4 to 8
           weeks.
       - q: Why not buy an off-the-shelf tool?
         a:

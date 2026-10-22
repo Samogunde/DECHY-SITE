@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Cloud and DevOps services for reliable, affordable software
+    headline: Cloud and DevOps services for [[reliable, affordable software]]
     lead:
       We move, set up, and run your software in the cloud so it stays fast, secure, and affordable.
       You get automatic deployments, monitoring, and backups, and a team that keeps everything

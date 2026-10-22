@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Cybersecurity services that protect your business and your customers
+    headline: Cybersecurity services that [[protect your business and your customers]]
     lead:
       We find the weak points in your software, systems, and habits, then fix them in order of real
       risk. You get practical protection, clear evidence for customers and auditors, and security

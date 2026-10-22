@@ -11,6 +11,7 @@ import { getRegistry } from "@/lib/content/load";
 import { proofCounters, proofTeamLine } from "@/lib/content/proof";
 import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -109,7 +110,7 @@ export function CostEstimatorBlock({ block }: { block: Of<"cost-estimator"> }) {
     >
       <div className="container-site">
         <h2 id={`${block.id}-h`} className="sr-only">
-          {block.heading}
+          <AccentText text={block.heading} />
         </h2>
         <CostEstimator data={estimatorData(names)} serviceBySlug={ESTIMATOR_FOR_SERVICE} />
       </div>
@@ -143,7 +144,7 @@ export function CostHubBlock({ block }: { block: Of<"cost-hub"> }) {
       <div className="container-site">
         <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
         <h2 id={`${block.id}-h`} className="home-h2 mt-4">
-          {block.heading}
+          <AccentText text={block.heading} />
         </h2>
         {block.intro ? <p className="cost-hub-intro">{block.intro}</p> : null}
         {estimator ? (

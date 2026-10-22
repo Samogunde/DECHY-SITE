@@ -166,7 +166,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Hotel website and booking flow
         - Rooms, offers, real-time rates, and payments
@@ -174,7 +174,7 @@ sections:
         - 2 to 3 weeks
       - - Online check-in and upsells
         - Pre-arrival check-in, upgrades, extras, and messages
-        - $6,000 to $16,000
+        - $6,000 to $15,000
         - 2 to 4 weeks
       - - Guest app
         - Requests, digital key where supported, dining, and offers

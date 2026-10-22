@@ -40,18 +40,17 @@ sections:
     heading: The cost questions we hear most
     items:
       - q: How much does custom software cost?
-        a: "Most custom software we build costs $15,000 to $100,000. A focused internal tool starts around $15,000; enterprise systems and modernization start around $100,000 and are delivered in stages."
+        a: "Most custom software we build costs {{fact:price.summary-custom-software}}. A focused internal tool can start from {{fact:price.summary-custom-software-start}}; enterprise systems and modernization start from {{fact:price.software-development-enterprise-system-or-modernization-from}} and are delivered in stages."
       - q: How much does a website cost?
-        a: "A landing page costs $2,000 to $4,000, a business website $3,000 to $7,000, and a larger content site $5,000 to $10,000. Web apps with accounts and payments cost $5,000 to $50,000 or more."
+        a: "Most business websites cost {{fact:price.summary-website}}, and a landing page starts from {{fact:price.summary-website-start}}. A larger content site costs {{fact:price.web-development-content-or-cms-website}}. Most web apps cost {{fact:price.summary-web-app}}; advanced web apps with many roles and integrations cost more."
       - q: How much does a mobile app cost?
-        a: "A first version of an app costs $10,000 to $20,000. Business apps cost $20,000 to $35,000, marketplace apps $30,000 to $50,000, and complex apps from $50,000."
+        a: "Most business apps cost {{fact:price.summary-mobile-app}}. A first version to test an idea can start from {{fact:price.summary-mobile-app-start}}, and marketplace apps cost {{fact:price.mobile-app-development-marketplace-or-on-demand-app}}."
       - q: Why do quotes for the same project vary so much?
         a: "Usually because they cover different work. Check that every quote includes design, testing, data migration, launch, and support before you compare totals."
       - q: Do you charge fixed prices or by the hour?
         a: "Defined projects get a fixed price in writing. Open-ended work, such as ongoing improvements or a dedicated team, is billed monthly at rates agreed before it starts."
       - q: What does software cost to run after launch?
-        a: "Plan for hosting, updates, and improvements. Our care plans start at $250 a month for websites and $1,000 a month for apps in daily use."
-
+        a: "Plan for hosting, updates, and improvements. Our care plans start from {{fact:price.care-essential-from}} a month for websites and {{fact:price.care-growth-from}} a month for apps in daily use."
   - type: cta
     id: contact-cta
     heading: Get a fixed quote for your project

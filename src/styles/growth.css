@@ -765,3 +765,48 @@
   margin: 0;
   color: #fca5a5;
 }
+
+/* Estimator review (owner, 22 October 2026): add-ons a tier does not take, the offer to switch
+   to the bigger tier, the "middle of the range" line, and choosing which answer to change. */
+.est-check[data-disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.est-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgb(70 108 185 / 0.45);
+  border-radius: 14px;
+  background: rgb(70 108 185 / 0.1);
+}
+.est-switch p,
+main.theme-dark .est-switch p {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #f0f0f2;
+}
+.est-result-mid,
+main.theme-dark .est-result-mid {
+  margin: 0.5rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-lead, #d2d2d6);
+}
+.est-edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted, #8f8f96);
+}
+.est-edit-row .est-edit {
+  margin-top: 0;
+}

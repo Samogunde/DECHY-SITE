@@ -27,7 +27,7 @@ sections:
     id: hero
     variant: hub
     eyebrow: Services
-    headline: Fifteen services, one team
+    headline: Fifteen services, [[one team]]
     lead: "At DECHY, our services cover building technology, connecting and automating it, running it safely, designing and promoting it, and deciding what to do about it. Start from what you need and we will point you to the right service."
     support: "Most projects use several services together. We say so when that is the case."
     ctas:

@@ -343,17 +343,13 @@ export function TmStories({
   const [hover, setHover] = useState(false);
   useEffect(() => {
     if (hover || reduced()) return;
-    const t = window.setTimeout(() => setAt((a) => (a + 1) % slides.length), 6500);
+    const t = window.setTimeout(() => setAt((a) => (a + 1) % slides.length), 4500);
     return () => window.clearTimeout(t);
   }, [at, hover, slides.length]);
   const go = (n: number) => setAt((n + slides.length) % slides.length);
   return (
-    <div className="tms">
-      <div
-        className="tms-stage"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
+    <div className="tms" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <div className="tms-stage">
         {slides.map((s, i) => (
           <div
             key={s.key}

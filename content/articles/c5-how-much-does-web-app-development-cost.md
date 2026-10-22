@@ -5,10 +5,10 @@ category: cost
 group: build
 service: web-development
 title: "How Much Does Web App Development Cost? | DECHY"
-description: "Web app development costs $5,000 to $100,000 or more. See typical prices for booking tools, client portals, dashboards, and SaaS products, with timelines."
+description: "Most web apps cost {{fact:price.summary-web-app}}. See prices for booking tools, client portals, dashboards, and SaaS products, with what each includes and timelines."
 h1: "How much does web app development cost?"
-summary: A web app usually costs between $5,000 and $50,000, and a full software as a service product can reach $100,000. This guide breaks the price down by type of app, shows what is included, and explains the features that move the number most.
-answer: "A simple web app, such as a booking or quoting tool, costs $5,000 to $20,000 and takes one to three weeks. An advanced web app with accounts, dashboards, and payments costs $20,000 to $50,000. A customer portal costs $25,000 to $50,000, and a subscription product with billing and an admin console costs $50,000 to $100,000. User roles, integrations, and real-time features drive most of the difference."
+summary: "Most web apps cost {{fact:price.summary-web-app}}, and advanced products with many roles, integrations, or billing cost more. This guide breaks the price down by type of app, shows what is included, and explains the features that move the number most."
+answer: "A simple web app, such as a booking or quoting tool, costs {{fact:price.web-development-web-app}} and takes one to three weeks. An advanced web app with accounts, dashboards, and payments costs {{fact:price.web-development-advanced-web-app}}. A customer portal costs {{fact:price.software-development-customer-or-partner-portal}}, and a subscription product with billing and an admin console costs {{fact:price.software-development-saas-product}}. User roles, integrations, and real-time features drive most of the difference."
 intent: how much does web app development cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -18,13 +18,13 @@ tables:
     rows:
       - [
           "Simple web app",
-          "$5,000 to $20,000",
+          "{{fact:price.web-development-web-app}}",
           "1 to 3 weeks",
           "One audience, a few screens, a form-driven process such as bookings or quotes",
         ]
       - [
           "Advanced web app",
-          "$20,000 to $50,000",
+          "{{fact:price.web-development-advanced-web-app}}",
           "3 to 6 weeks",
           "Accounts, dashboards, payments, and two or three integrations",
         ]
@@ -36,7 +36,7 @@ tables:
         ]
       - [
           "SaaS product",
-          "$50,000 to $100,000",
+          "{{fact:price.software-development-saas-product}}",
           "2 to 3 months",
           "Plans and billing, onboarding, an admin console, and multi-tenant data",
         ]
@@ -137,7 +137,7 @@ Ask each supplier for a written list of screens, roles, and integrations. Check 
 
 ### How much does a simple web app cost?
 
-A simple web app with one audience and a handful of screens usually costs $5,000 to $20,000 and takes one to three weeks.
+A simple web app with one audience and a handful of screens usually costs {{fact:price.web-development-web-app}} and takes one to three weeks.
 
 ### Is a web app cheaper than a mobile app?
 
@@ -145,11 +145,11 @@ Usually, yes. A web app is built once and runs in every browser, while a mobile 
 
 ### How much does a SaaS product cost to build?
 
-A subscription product with plans, billing, onboarding, and an admin console usually costs $50,000 to $100,000 and takes two to three months. A smaller first version for early customers can cost much less.
+A subscription product with plans, billing, onboarding, and an admin console usually costs {{fact:price.software-development-saas-product}} and takes two to three months. A smaller first version for early customers can cost much less.
 
 ### What does a web app cost to run?
 
-Hosting for most business web apps is modest. Plan for a care plan of $1,000 to $2,500 a month for apps in daily use, which covers updates, monitoring, and a set number of improvement hours.
+Hosting for most business web apps is modest. Plan for a care plan of {{fact:price.care-growth}} for apps in daily use, which covers updates, monitoring, and a set number of improvement hours.
 
 ### Can you work with a design we already have?
 

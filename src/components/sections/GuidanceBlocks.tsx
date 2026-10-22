@@ -8,6 +8,7 @@ import { pathExists } from "@/lib/content/urls";
 import { SelectPanel } from "./SelectPanel";
 import { Tabs } from "./Tabs";
 import { Section, SectionHeader } from "./Section";
+import { plainHeading } from "@/lib/content/inline";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -216,7 +217,7 @@ export function TechnicalBlock({ block }: { block: Of<"technical"> }) {
         />
         <div className="technical-card" data-reveal="block">
           <Tabs
-            label={block.heading}
+            label={plainHeading(block.heading)}
             items={block.panels.map((p) => ({
               label: p.title,
               body: (

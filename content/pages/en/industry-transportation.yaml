@@ -120,7 +120,7 @@ sections:
     items:
       - q: How much does fleet management software cost?
         a:
-          A driver app with tracking usually costs $10,000 to $28,000. A full platform with planning and
+          A driver app with tracking usually costs $10,000 to $25,000. A full platform with planning and
           maintenance costs $40,000 to $96,000 or more.
       - q: Can you work with our telematics provider?
         a:
@@ -201,7 +201,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Driver app and proof of delivery
         - Jobs, checks, photos, signatures, and offline use

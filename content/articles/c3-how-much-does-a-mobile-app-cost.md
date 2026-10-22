@@ -23,7 +23,7 @@ tables:
         ]
       - [
           "iPhone and Android, one shared app (Flutter or React Native)",
-          "$20,000 to $35,000",
+          "{{fact:price.mobile-app-development-business-app}}",
           "4 to 6 weeks",
           "Most business and customer apps",
         ]
@@ -37,8 +37,8 @@ tables:
 title: "How Much Does a Mobile App Cost? | DECHY"
 description: "Typical prices and timelines for iPhone and Android apps, from a first version to an enterprise app, and the choices that move the cost."
 h1: "How much does a mobile app cost?"
-summary: A mobile app usually costs between $10,000 and $60,000 or more. A first version to test an idea sits at the low end, and apps with marketplaces, offline use, or heavy integrations sit at the high end. This guide explains what drives the price.
-answer: "A first version of an app (an MVP) typically costs $10,000 to $20,000 and takes 2 to 4 weeks. A business app with accounts, notifications, and payments usually costs $20,000 to $35,000. Marketplace and on-demand apps cost $30,000 to $50,000. Complex or enterprise apps start around $50,000. The main factors are the platforms, the number of screens, and the system behind the app."
+summary: "Most business apps cost {{fact:price.summary-mobile-app}}, with accounts, notifications, and payments. A first version to test an idea can start from {{fact:price.summary-mobile-app-start}}, and apps with marketplaces, offline use, or heavy integrations cost more. This guide explains what drives the price."
+answer: "A first version of an app (an MVP) typically costs {{fact:price.mobile-app-development-mvp-app}} and takes 2 to 4 weeks. A business app with accounts, notifications, and payments usually costs {{fact:price.mobile-app-development-business-app}}. Marketplace and on-demand apps cost {{fact:price.mobile-app-development-marketplace-or-on-demand-app}}. Complex or enterprise apps start from {{fact:price.mobile-app-development-complex-or-enterprise-app-from}}. The main factors are the platforms, the number of screens, and the system behind the app."
 intent: how much does a mobile app cost
 date: 2026-10-21
 reviewed: 2026-10-21

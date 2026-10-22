@@ -17,6 +17,11 @@ import { Arrow } from "@/components/primitives/Arrow";
 
 const ESTIMATOR = "/tools/cost-estimator/";
 const COST_HUB = "/cost/";
+/** Timelines count from approved scope (owner's pricing review, 22 October 2026). */
+const TIME_HEAD = "Typical timeline from approved scope";
+const TIME_NOTE =
+  "The timeline starts once the scope is approved and we have what we need from you.";
+const isTime = (c: string) => /^(typical )?timeline/i.test(c);
 
 /** A call to action inside the reading column. */
 function ArticleCta({
@@ -199,13 +204,13 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                                 )}
                               </th>
                               <td>
-                                {r.first.range}
+                                {r.first.range}{" "}
                                 <span className="cmp-sub">
                                   {r.first.name}, {r.first.timeline}
                                 </span>
                               </td>
                               <td>
-                                {r.last.range}
+                                {r.last.range}{" "}
                                 <span className="cmp-sub">
                                   {r.last.name}, {r.last.timeline}
                                 </span>
@@ -252,7 +257,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                       <tr>
                         {t.columns.map((c) => (
                           <th key={c} scope="col">
-                            {c}
+                            {isTime(c) ? TIME_HEAD : c}
                           </th>
                         ))}
                       </tr>
@@ -267,7 +272,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                               </th>
                             ) : (
                               <td key={i}>
-                                <Inline text={cell} />
+                                <Inline text={cell} />{" "}
                               </td>
                             ),
                           )}
@@ -276,9 +281,13 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                     </tbody>
                   </table>
                 </div>
-                {t.note ? (
+                {t.note || t.columns.some(isTime) ? (
                   <p className="cmp-note">
-                    <Inline text={t.note} />
+                    <Inline
+                      text={[t.note, t.columns.some(isTime) ? TIME_NOTE : ""]
+                        .filter(Boolean)
+                        .join(" ")}
+                    />
                   </p>
                 ) : null}
               </section>
@@ -294,23 +303,25 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                       <tr>
                         <th scope="col">Project</th>
                         <th scope="col">Typical range</th>
-                        <th scope="col">Timeline</th>
+                        <th scope="col">{TIME_HEAD}</th>
                       </tr>
                     </thead>
                     <tbody>
                       {price.plans.map((p) => (
                         <tr key={p.name}>
                           <th scope="row">
-                            {p.name}
-                            <span className="cmp-sub">{p.summary}</span>
+                            {p.name} <span className="cmp-sub">{p.summary}</span>{" "}
                           </th>
-                          <td>{p.range}</td>
-                          <td>{p.timeline}</td>
+                          <td>
+                            <Inline text={p.range} />{" "}
+                          </td>
+                          <td>{p.timeline} </td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
+                <p className="cmp-note">{TIME_NOTE}</p>
                 <div className="article-points">
                   <p className="article-points-title">What moves the price</p>
                   <ul>
@@ -468,7 +479,7 @@ function CompareTable({ compare }: { compare: NonNullable<Page["article"]>["comp
                 <th scope="row">{r.label}</th>
                 {r.values.map((v, i) => (
                   <td key={i}>
-                    <Inline text={v} />
+                    <Inline text={v} />{" "}
                   </td>
                 ))}
               </tr>

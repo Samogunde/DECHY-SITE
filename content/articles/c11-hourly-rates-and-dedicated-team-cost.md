@@ -9,7 +9,7 @@ title: "Software Developer Hourly Rates and Team Cost | DECHY"
 description: "Our hourly rates, from $25 to $80 an hour, and what a dedicated development team costs each month, from one engineer to a full squad."
 h1: "Hourly rates and dedicated team cost"
 summary: Most of our work is quoted as a fixed price. For change requests and time-and-materials work we use three simple hourly rates, from $25 to $80 an hour. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a full squad. This guide explains both.
-answer: "We quote most projects as a fixed price, so you rarely pay by the hour. For change requests and time-and-materials work we use three rates: $35 to $55 an hour for design and development, $45 to $80 for specialist AI, cloud, and architecture work, and $25 to $35 for testing. A dedicated team is billed monthly: $6,000 to $11,000 for one engineer, $11,000 to $17,000 for a starter squad, $18,000 to $28,000 for a product squad, and $35,000 to $55,000 or more for a scale team."
+answer: "We quote most projects as a fixed price, so you rarely pay by the hour. For change requests and time-and-materials work we use three rates: {{fact:price.rate-design-and-development}} for design and development, $45 to $80 for specialist AI, cloud, and architecture work, and $25 to $35 for testing. A dedicated team is billed monthly: $6,000 to $11,000 for one engineer, $11,000 to $17,000 for a starter squad, $18,000 to $28,000 for a product squad, and $35,000 to $55,000 or more for a scale team."
 intent: software developer hourly rate
 date: 2026-10-21
 reviewed: 2026-10-21

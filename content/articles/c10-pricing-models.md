@@ -92,7 +92,7 @@ We quote fixed prices for defined projects: websites, web apps, mobile apps, sto
 
 Hourly rates for time and materials run from $25 an hour for testing to $80 an hour for specialist AI, cloud, and architecture work, with most design and development at $35 to $55. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a scale team of four to six engineers with design, delivery, QA, and DevOps (the work of keeping software deployed, monitored, and running) support.
 
-Fixed prices follow the ranges on our service pages: $3,000 to $7,000 for a business website, $10,000 to $20,000 for a mobile app MVP, and $15,000 to $100,000 or more for custom software.
+Fixed prices follow the ranges on our service pages: most business websites cost {{fact:price.summary-website}}, a mobile app MVP {{fact:price.mvp-mobile-app-mvp}}, and most custom software {{fact:price.summary-custom-software}}.
 
 ## What each model asks of you
 

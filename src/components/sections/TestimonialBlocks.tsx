@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { Quotes } from "@phosphor-icons/react/dist/ssr";
+import { HomeQuotes } from "@/components/home/HomeQuotes";
 import { Arrow } from "@/components/primitives/Arrow";
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
 import { Section } from "./Section";
+import { AccentText } from "@/components/primitives/AccentText";
+import { plainHeading } from "@/lib/content/inline";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 type Tag = { label: string; href?: string };
@@ -82,7 +85,7 @@ export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
         <div>
           <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
           <h2 id={`${block.id}-h`} className="home-h2 mt-4">
-            {block.heading}
+            <AccentText text={block.heading} />
           </h2>
         </div>
         {more ? (
@@ -91,13 +94,37 @@ export function TestimonialsBlock({ block }: { block: Of<"testimonials"> }) {
           </Link>
         ) : null}
       </div>
-      <ul className="tq-grid" data-count={block.items.length} data-reveal="group">
-        {block.items.map((q) => (
-          <li key={q.name}>
-            <QuoteCard {...q} />
-          </li>
-        ))}
-      </ul>
+      {block.layout === "spotlight" ? (
+        <div data-reveal="block">
+          <HomeQuotes
+            label={plainHeading(block.heading)}
+            items={block.items.map((q) => ({
+              name: q.name,
+              role: q.role,
+              company: q.company,
+              quote: q.quote,
+              initials: q.name
+                .split(/\s+/)
+                .map((w) => w[0])
+                .slice(0, 2)
+                .join(""),
+              hue: q.name.charCodeAt(0) % 4,
+              tags: q.tags.map((t) => ({
+                ...t,
+                live: Boolean(t.href && getRegistry().pageByPath.has(t.href)),
+              })),
+            }))}
+          />
+        </div>
+      ) : (
+        <ul className="tq-grid" data-count={block.items.length} data-reveal="group">
+          {block.items.map((q) => (
+            <li key={q.name}>
+              <QuoteCard {...q} />
+            </li>
+          ))}
+        </ul>
+      )}
     </Section>
   );
 }

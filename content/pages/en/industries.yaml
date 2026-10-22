@@ -27,7 +27,7 @@ sections:
     id: hero
     variant: hub
     eyebrow: Industries
-    headline: Technology that fits how your industry works
+    headline: Technology that fits [[how your industry works]]
     lead: "We build the same kinds of system for many fields, but no two fields use them the same way. These pages explain what is different in each, which systems teams in that field ask for most, and what to take care over."
     support: "DECHY is a global company and works with clients remotely, in any of these fields and in others."
     ctas:

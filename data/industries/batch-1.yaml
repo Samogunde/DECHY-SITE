@@ -148,7 +148,7 @@ industries:
       heading: Questions about fitness software
       items:
         - - How much does a fitness app cost?
-          - Most member apps cost $8,000 to $28,000 and take 2 to 6 weeks. A full platform with
+          - Most member apps cost $8,000 to $20,000 and take 2 to 6 weeks. A full platform with
             coaching, billing, and multiple sites sits at the top of that range or above.
         - - Can you connect to the gym system we already use?
           - Usually, yes. We connect through the booking and billing platform you have, so staff
@@ -344,7 +344,7 @@ industries:
       heading: Questions about salon software
       items:
         - - How much does a salon booking website cost?
-          - Most booking websites cost $2,500 to $8,000 and launch in 1 to 3 weeks. A branded app
+          - Most booking websites cost $2,500 to $6,000 and launch in 1 to 3 weeks. A branded app
             with loyalty usually adds $8,000 to $20,000.
         - - Can we keep the booking system we already pay for?
           - Yes, if it has an open connection. We can build your website and app on top of it, or
@@ -389,7 +389,7 @@ industries:
           - 1 to 2 weeks
         - - Deposits and client records
           - Card deposits, cancellation rules, notes, and history
-          - $3,000 to $8,000
+          - $3,000 to $7,500
           - 1 to 3 weeks
         - - Branded booking app
           - Rebooking, loyalty, offers, and notifications
@@ -1371,7 +1371,7 @@ industries:
           - 4 to 6 weeks
         - - Meter and asset data platform
           - Collection, cleaning, monitoring, and dashboards
-          - $32,000 to $96,000+
+          - $32,000 to $80,000+
           - 2 to 4 months
   - slug: field-services
     entity: ind.field-services
@@ -1511,7 +1511,7 @@ industries:
       heading: Questions about field service software
       items:
         - - How much does field service software cost?
-          - A technician app with dispatch and invoicing usually costs $12,000 to $32,000 and takes
+          - A technician app with dispatch and invoicing usually costs $12,000 to $30,000 and takes
             4 to 8 weeks.
         - - Why not buy an off-the-shelf tool?
           - Many companies should, and we will say so. We build when your trade, pricing, or
@@ -1551,7 +1551,7 @@ industries:
       rows:
         - - Online booking and quotes
           - Services, real slots, pricing, and confirmations
-          - $3,000 to $8,000
+          - $3,000 to $7,500
           - 1 to 2 weeks
         - - Technician app
           - Jobs, checklists, photos, signatures, and offline use

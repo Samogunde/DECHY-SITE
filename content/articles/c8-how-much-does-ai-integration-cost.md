@@ -6,10 +6,10 @@ group: build
 service: ai
 pricing: ai
 title: "How Much Does AI Integration Cost? | DECHY"
-description: "AI integration costs $4,000 to $120,000 or more. See prices for AI assistants, AI features, agents, and custom models, plus the running costs of AI usage."
+description: "Most business AI projects cost {{fact:price.summary-ai}}. See prices for AI assistants, AI features, agents, and custom models, plus the running costs of AI usage."
 h1: "How much does AI integration cost?"
-summary: Adding AI to your business usually costs between $4,000 and $40,000, and a custom model or AI platform can cost $120,000 or more. This guide shows typical prices by type, the monthly usage costs most people miss, and how to start small.
-answer: "An AI assistant that answers questions from your own documents costs $4,000 to $12,000 and takes one to three weeks. An AI feature inside your product, such as summaries or smart search, costs $8,000 to $24,000. An AI agent that takes actions in your systems costs $16,000 to $40,000. A custom model or AI platform costs $40,000 to $120,000 or more. Usage fees for the AI provider come on top, and usually run from a few dollars to a few hundred dollars a month for most business tools."
+summary: "Most business AI projects cost {{fact:price.summary-ai}}, and larger agents and platforms cost more. This guide shows typical prices by type, what each one includes, the monthly usage costs most people miss, and how to start small with one measured use case before you spend more."
+answer: "An AI assistant that answers questions from your own documents costs {{fact:price.ai-ai-assistant-on-your-content}} and takes one to three weeks. An AI feature inside your product, such as summaries or smart search, costs {{fact:price.ai-ai-feature-in-your-product}}. An AI agent that takes actions in your systems costs {{fact:price.ai-ai-agent-connected-to-your-systems}}. A custom model or AI platform costs {{fact:price.ai-custom-model-or-ai-platform}}. Usage fees for the AI provider come on top, and usually run from a few dollars to a few hundred dollars a month for most business tools."
 intent: how much does ai integration cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -31,7 +31,7 @@ tables:
       - [
           "Monitoring and tuning",
           "Reviewing answers, updating content, improving accuracy",
-          "Included in a care plan from $1,000",
+          "Included in a care plan from {{fact:price.care-growth-from}}",
         ]
     note: "Usage costs depend on volume. We estimate them from your expected number of questions or documents before you commit."
 related:
@@ -104,7 +104,7 @@ Ask which model provider they plan to use, why, and how easily it could be swapp
 
 ### How much does it cost to add ChatGPT to my website?
 
-A chat assistant that answers from your own content costs $4,000 to $12,000 to build, plus usage fees that are usually modest for a typical business.
+A chat assistant that answers from your own content costs {{fact:price.ai-ai-assistant-on-your-content}} to build, plus usage fees that are usually modest for a typical business.
 
 ### Do we need our own AI model?
 

@@ -1040,3 +1040,8 @@ main.theme-dark
     radial-gradient(70% 80% at 50% 0%, rgb(47 111 237 / 0.16), transparent 70%),
     linear-gradient(180deg, #0c1428 0%, #0a1020 100%) !important;
 }
+
+/* Heading words in the brand blue, written [[like this]] in content (owner, 22 October 2026). */
+.h-accent {
+  color: var(--color-accent-text);
+}

@@ -1264,76 +1264,7 @@ a.stack-tile:hover .tech-logo {
 }
 
 /* ---------------- pricing ---------------- */
-.price-grid {
-  list-style: none;
-  margin: clamp(2.5rem, 2rem + 2vw, 3.5rem) 0 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-}
-.price-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  padding: 1.75rem;
-  border-radius: var(--radius-card);
-  background: var(--glass);
-  border: 1px solid var(--glass-line);
-  color: #fff;
-}
-.price-card.is-featured {
-  border-color: rgb(70 108 185 / 0.55);
-  box-shadow: var(--glow-blue);
-}
-.price-card.is-featured::after {
-  content: "";
-  position: absolute;
-  inset: -1px -1px auto;
-  height: 3px;
-  border-radius: var(--radius-card) var(--radius-card) 0 0;
-  background: var(--color-accent);
-}
-.price-name {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: var(--fs-h4);
-  font-weight: 600;
-}
-.price-range {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.95rem);
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-.price-time {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  width: fit-content;
-  margin: 0;
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
-  background: rgb(70 108 185 / 0.12);
-  color: var(--color-accent-text);
-  font-family: var(--font-heading);
-  font-size: 0.9375rem;
-  font-weight: 700;
-}
-.price-clock {
-  width: 1rem;
-  height: 1rem;
-}
-.price-summary {
-  margin: 0 0 0.25rem;
-  color: var(--text-dim);
-}
-.price-card .check-list li {
-  color: rgb(255 255 255 / 0.86);
-}
+
 .price-foot {
   display: grid;
   gap: 1.5rem;
@@ -1814,51 +1745,7 @@ a.explorer-card:hover .arrow {
 }
 
 /* ---------------- pricing: short cards, the hovered one lights up ---------------- */
-.price-card {
-  gap: 0.6rem;
-  transition:
-    transform 300ms var(--ease-out),
-    border-color 300ms var(--ease-out),
-    box-shadow 300ms var(--ease-out),
-    background-color 300ms var(--ease-out);
-}
-.price-card::after {
-  content: "";
-  position: absolute;
-  inset: -1px -1px auto;
-  height: 3px;
-  border-radius: var(--radius-card) var(--radius-card) 0 0;
-  background: var(--color-accent);
-  opacity: 0;
-  transition: opacity 300ms var(--ease-out);
-}
-.price-card:hover,
-.price-card:focus-within {
-  border-color: rgb(70 108 185 / 0.55);
-  background-color: rgb(255 255 255 / 0.06);
-  box-shadow: var(--glow-blue);
-  transform: translateY(-6px);
-}
-.price-card:hover::after,
-.price-card:focus-within::after {
-  opacity: 1;
-}
-.price-from {
-  margin: 0.4rem 0 0;
-  font-size: 0.9375rem;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
-  color: rgb(255 255 255 / 0.5);
-}
-.price-range {
-  font-size: clamp(1.6rem, 1.3rem + 0.9vw, 2.1rem);
-}
-.price-summary {
-  margin: 0.25rem 0 0.75rem;
-}
-.price-time {
-  margin-top: auto;
-}
+
 .factor-chips {
   list-style: none;
   margin: 0;
@@ -2107,4 +1994,130 @@ a.lead-visual {
 .explorer-card {
   position: relative;
   padding-right: 2.5rem;
+}
+
+/* ---------------- price cards (owner's pricing review, 22 October 2026) ----------------
+   Every card is equal: no accent bar. The range stays on one line at any card width (the size
+   follows the card, not the screen), and each card says what is included. */
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.5rem), 1fr));
+  gap: 1rem;
+  margin: clamp(2.25rem, 1.75rem + 2vw, 3.25rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pc {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgb(255 255 255 / 0.09);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #161618 0%, #111113 100%);
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+.pc:hover,
+.pc:focus-within {
+  border-color: rgb(255 255 255 / 0.2);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pc:hover {
+    transform: translateY(-2px);
+  }
+}
+.pc-name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+.pc-summary,
+main.theme-dark .pc .pc-summary {
+  margin: -0.4rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--text-body, #b0b0b6);
+}
+.pc-price-box {
+  padding: 1rem 0;
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+.pc-label,
+main.theme-dark .pc .pc-label {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted, #8f8f96);
+}
+.pc-price,
+main.theme-dark .pc .pc-price {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 7.2cqi, 1.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  color: #fff;
+}
+.pc-start,
+main.theme-dark .pc .pc-start {
+  margin: 0.4rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--color-accent-text);
+}
+.pc-includes {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pc-includes li,
+main.theme-dark .pc .pc-includes li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--text-lead, #d2d2d6);
+}
+.pc-includes svg {
+  flex: none;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: 0.15rem;
+  color: var(--color-accent);
+}
+.pc-time,
+main.theme-dark .pc .pc-time {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: auto 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted, #8f8f96);
+}
+.pc-time strong {
+  color: #fff;
+  font-weight: 600;
+}
+.pc-time svg {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.pc-scope-note,
+main.theme-dark .pc-scope-note {
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted, #8f8f96);
 }

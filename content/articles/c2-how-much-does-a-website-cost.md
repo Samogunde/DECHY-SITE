@@ -8,8 +8,8 @@ group: build
 title: "How Much Does a Website Cost? | DECHY"
 description: "Typical prices and timelines for a business website, from a single landing page to an advanced web app, and what moves the cost up or down."
 h1: "How much does a website cost?"
-summary: A professional business website usually costs between $3,000 and $10,000, and a landing page can cost less. Web apps with accounts and payments cost more. This guide explains the ranges, the factors behind them, and the costs people forget.
-answer: "A focused landing page typically costs $2,000 to $4,000 and takes about a week. A business website usually costs $3,000 to $7,000 and takes 1 to 2 weeks. Larger content sites cost $5,000 to $10,000. Web apps with accounts, bookings, or payments range from $5,000 to $50,000 or more. Pages, content, integrations, and user accounts drive most of the difference."
+summary: "Most business websites cost {{fact:price.summary-website}}, and a landing page starts from {{fact:price.summary-website-start}}. Web apps with accounts and payments cost more. This guide explains the ranges, what each includes, the factors behind them, and the costs people forget."
+answer: "A focused landing page typically costs {{fact:price.web-development-landing-page}} and takes about a week. A business website usually costs {{fact:price.web-development-business-website}} and takes 1 to 2 weeks. Larger content sites cost {{fact:price.web-development-content-or-cms-website}}. Most web apps with accounts, bookings, or payments cost {{fact:price.summary-web-app}}, and advanced products cost more. Pages, content, integrations, and user accounts drive most of the difference."
 intent: how much does a website cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -57,7 +57,7 @@ A business website, typically $3,000 to $7,000, covers your services, about page
 
 A content or CMS website, typically $5,000 to $10,000, suits larger sites. A content management system (CMS) is the tool your team uses to add and edit pages without a developer. These sites often have a blog or resource library, several page types, or more than one language.
 
-A web app, from $5,000 to $20,000, runs in the browser but does real work: bookings, quotes, client areas, or internal tools. Advanced web apps, from $20,000 to $50,000 or more, add dashboards, payments, and integrations for a product people use every day.
+A web app, from {{fact:price.web-development-web-app}}, runs in the browser but does real work: bookings, quotes, client areas, or internal tools. Advanced web apps, from {{fact:price.web-development-advanced-web-app}}, add dashboards, payments, and integrations for a product people use every day.
 
 ## Choosing the right platform
 

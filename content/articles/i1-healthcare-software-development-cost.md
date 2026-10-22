@@ -8,7 +8,7 @@ title: "Healthcare Software Development Cost | DECHY"
 description: "What healthcare software costs to build: patient portals, booking, telehealth apps, and EHR integration, plus the HIPAA and security work every project needs."
 h1: "How much does healthcare software development cost?"
 summary: Healthcare software usually costs between $12,000 and $72,000. Patient booking sits at the low end and telehealth apps at the high end. Privacy rules, records integration, and audit trails add cost that other industries do not carry. This guide explains where the money goes.
-answer: "Patient booking and reminders cost $12,000 to $28,000. A patient portal costs $24,000 to $48,000. A telehealth app for iPhone, Android, and web costs $36,000 to $72,000. Connecting to an electronic health record system costs $10,000 to $32,000 per system. Getting ready for HIPAA, the US health privacy law, adds $6,000 to $16,000 for security review, audit logging, and access controls. Expect healthcare projects to cost about 20 to 30 percent more than the same software in a less regulated industry."
+answer: "Patient booking and reminders cost $12,000 to $28,000. A patient portal costs $24,000 to $48,000. A telehealth app for iPhone, Android, and web costs $36,000 to $72,000. Connecting to an electronic health record system costs $10,000 to $25,000 per system. Getting ready for HIPAA, the US health privacy law, adds $6,000 to $15,000 for security review, audit logging, and access controls. Expect healthcare projects to cost about 20 to 30 percent more than the same software in a less regulated industry."
 intent: healthcare software development cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -23,10 +23,10 @@ tables:
           "6 to 10 weeks",
         ]
       - ["Telehealth app on iPhone, Android, and web", "$36,000 to $72,000", "8 to 12 weeks"]
-      - ["Electronic health record integration, per system", "$10,000 to $32,000", "3 to 6 weeks"]
+      - ["Electronic health record integration, per system", "$10,000 to $25,000", "3 to 6 weeks"]
       - [
           "HIPAA readiness: security review, audit logs, access controls",
-          "$6,000 to $16,000",
+          "$6,000 to $15,000",
           "2 to 4 weeks",
         ]
   - heading: "Cost drivers specific to healthcare"
@@ -40,7 +40,7 @@ tables:
       - [
           "Records integration",
           "Clinical systems use specialist standards and strict access",
-          "$10,000 to $32,000 per system",
+          "$10,000 to $25,000 per system",
         ]
       - ["Identity checks", "Patients must be verified before seeing records", "$2,500 to $6,000"]
       - ["Accessibility", "Patients include older people and people with disabilities", "+5 to 10%"]
@@ -73,7 +73,7 @@ Those rules touch every part of the software. Access must be limited to the peop
 
 The first is privacy and security. Encryption, role-based access, audit logs, session timeouts, and secure hosting add roughly 10 to 15 percent to a project compared with the same features elsewhere.
 
-The second is records integration. Most clinics run an electronic health record (EHR) system, the software that holds patient histories. Connecting to it usually means working with a healthcare data standard called FHIR, which defines how clinical systems exchange information, and passing the vendor's own approval process. Each connection costs $10,000 to $32,000.
+The second is records integration. Most clinics run an electronic health record (EHR) system, the software that holds patient histories. Connecting to it usually means working with a healthcare data standard called FHIR, which defines how clinical systems exchange information, and passing the vendor's own approval process. Each connection costs $10,000 to $25,000.
 
 The third is identity. Patients must be verified before they see their records, usually with a one-time code or an identity check.
 
@@ -129,11 +129,11 @@ A patient portal with records, messages, forms, and payments usually costs $24,0
 
 ### What does HIPAA compliance add to the cost?
 
-Expect $6,000 to $16,000 for the security review, audit logging, and access controls, and about 10 to 15 percent more across the build for privacy-aware design and testing.
+Expect $6,000 to $15,000 for the security review, audit logging, and access controls, and about 10 to 15 percent more across the build for privacy-aware design and testing.
 
 ### Can you connect to our EHR system?
 
-Usually, yes, through the system's standard interfaces. The cost depends on the vendor and ranges from $10,000 to $32,000 per system.
+Usually, yes, through the system's standard interfaces. The cost depends on the vendor and ranges from $10,000 to $25,000 per system.
 
 ### How much does a telehealth app cost?
 
@@ -145,4 +145,4 @@ Yes. Where we handle protected health information, we sign the agreement the law
 
 ### What does healthcare software cost to run after launch?
 
-Plan for secure hosting, usually $100 to $500 a month for a clinic group, plus a care plan from $1,000 a month that covers security updates, monitoring, and audit log reviews.
+Plan for secure hosting, usually $100 to $500 a month for a clinic group, plus a care plan from {{fact:price.care-growth-from}} a month that covers security updates, monitoring, and audit log reviews.

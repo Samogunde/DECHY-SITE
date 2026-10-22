@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type Slide = { label: string; headline: string; lead: string; offer: string; chips: string[] };
 
@@ -80,7 +81,7 @@ export function RotatingHero({
         <div className="hero-rot-copy">
           {eyebrow ? <p className="t-eyebrow hero-eyebrow m-0">{eyebrow}</p> : null}
           <h1 id="hero-h" className="visually-hidden">
-            {title}
+            <AccentText text={title} />
           </h1>
           <div className="hero-slides">
             {slides.map((s, i) => (

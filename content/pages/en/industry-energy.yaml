@@ -105,7 +105,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Installer quoting and booking
         - Sizing, quotes, finance options, and scheduling
@@ -121,7 +121,7 @@ sections:
         - 4 to 6 weeks
       - - Meter and asset data platform
         - Collection, cleaning, monitoring, and dashboards
-        - $32,000 to $96,000+
+        - $32,000 to $80,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.

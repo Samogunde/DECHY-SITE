@@ -40,8 +40,11 @@ export function parseInline(input: string): InlineToken[] {
 }
 
 /** Plain text with markup removed (for meta text, JSON-LD answers, and word counts). */
+/** A heading without its accent marks ([[words]] shown in the brand blue). */
+export const plainHeading = (text: string) => text.replace(/\[\[|\]\]/g, "");
+
 export function toPlainText(input: string, facts: Map<string, Fact>): string {
-  return parseInline(expandFacts(input, facts))
+  return parseInline(expandFacts(plainHeading(input), facts))
     .map((t) => (t.kind === "link" ? t.label : t.text))
     .join("");
 }

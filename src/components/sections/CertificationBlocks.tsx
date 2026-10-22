@@ -12,6 +12,7 @@ import {
 import { getRegistry } from "@/lib/content/load";
 import type { Block } from "@/lib/content/schema";
 import { Section } from "./Section";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -36,7 +37,7 @@ export function CertificationStripBlock({ block }: { block: Of<"certification-st
         <div>
           <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
           <h2 id={`${block.id}-h`} className="home-h2 mt-4">
-            {block.heading}
+            <AccentText text={block.heading} />
           </h2>
         </div>
         {block.intro ? <p className="cert-strip-intro">{block.intro}</p> : null}
@@ -69,7 +70,7 @@ export function CertificationListBlock({ block }: { block: Of<"certification-lis
   return (
     <Section id={block.id} tone={block.tone} ruled={false} className="cert-list-section">
       <h2 id={`${block.id}-h`} className="sr-only">
-        {block.heading}
+        <AccentText text={block.heading} />
       </h2>
       <nav className="cert-nav" aria-label="Certification areas">
         {groups.map((g) => (
@@ -118,7 +119,7 @@ export function CertificationFiguresBlock({ block }: { block: Of<"certification-
   return (
     <Section id={block.id} tone={block.tone} ruled={false} className="cert-figures-section">
       <h2 id={`${block.id}-h`} className="sr-only">
-        {block.heading}
+        <AccentText text={block.heading} />
       </h2>
       <div className="cert-figures">
         <dl className="cert-figure-list">
@@ -158,7 +159,7 @@ export function PartnershipsBlock({ block }: { block: Of<"partnerships"> }) {
         <div>
           <p className="t-eyebrow eyebrow-accent m-0">{block.label}</p>
           <h2 id={`${block.id}-h`} className="home-h2 mt-4">
-            {block.heading}
+            <AccentText text={block.heading} />
           </h2>
         </div>
         {block.intro ? <p className="cert-strip-intro">{block.intro}</p> : null}

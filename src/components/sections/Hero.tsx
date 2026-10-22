@@ -9,6 +9,7 @@ import { pathExists } from "@/lib/content/urls";
 import { RotatingHero } from "@/components/home/RotatingHero";
 import { Photo } from "@/components/primitives/Photo";
 import { ClientFaces } from "@/components/primitives/ClientFaces";
+import { AccentText } from "@/components/primitives/AccentText";
 
 type HeroBlock = Extract<Block, { type: "hero" }>;
 
@@ -96,7 +97,7 @@ export function Hero({
               id={`${block.id}-h`}
               className={`${isHome ? "t-display" : "t-h1"} mt-4 ${isHome ? "max-w-[22ch]" : "max-w-[19ch]"}`}
             >
-              {block.headline}
+              <AccentText text={block.headline} />
             </h1>
             <p className="t-lead mt-6 min-[48rem]:mt-8">
               <Inline text={block.lead} />

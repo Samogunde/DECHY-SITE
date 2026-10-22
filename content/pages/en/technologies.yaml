@@ -27,7 +27,7 @@ sections:
     id: hero
     variant: hub
     eyebrow: Technologies
-    headline: Technology chosen for fit
+    headline: Technology [[chosen for fit]]
     lead: "At DECHY, we work with a wide range of languages, frameworks, platforms, and tools. What matters more than the list is how we choose among them. We choose for each project, not from habit, and explain the reasoning before you commit."
     support: "We recommend what fits you, including tools you already own, and we explain why."
     ctas:

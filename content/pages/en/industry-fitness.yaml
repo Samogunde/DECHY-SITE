@@ -103,7 +103,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Booking website
         - Timetable, online booking, memberships, and payments
@@ -197,7 +197,7 @@ sections:
     items:
       - q: How much does a fitness app cost?
         a:
-          Most member apps cost $8,000 to $28,000 and take 2 to 6 weeks. A full platform with coaching,
+          Most member apps cost $8,000 to $20,000 and take 2 to 6 weeks. A full platform with coaching,
           billing, and multiple sites sits at the top of that range or above.
       - q: Can you connect to the gym system we already use?
         a:

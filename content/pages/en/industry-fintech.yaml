@@ -104,7 +104,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Payment or wallet first version
         - Accounts, payments, ledger, and onboarding on proven providers

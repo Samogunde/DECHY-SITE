@@ -29,7 +29,7 @@ sections:
     id: hero
     variant: hub
     eyebrow: Certifications
-    headline: Certified by the platforms the world runs on
+    headline: Certified by [[the platforms the world runs on]]
     lead: "DECHY is a partner of AWS, Microsoft, Google Cloud, Salesforce, Shopify, Adobe, Oracle, Cisco, and other leading platforms. We work to ISO, CMMI, GDPR (the EU data protection law), and HIPAA requirements, and our engineers, architects, and project leads hold professional certifications from the platforms themselves. The skills behind your project are proven, not promised."
     ctas:
       - { label: Talk to a certified team, href: "/contact/" }

@@ -135,7 +135,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Customer self-service app
         - Plans, bills, usage, payments, and fault reporting

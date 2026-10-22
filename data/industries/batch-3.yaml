@@ -275,7 +275,7 @@ industries:
           - 2 to 3 weeks
         - - Document automation
           - Templates, question flows, and drafts for standard documents
-          - $8,000 to $24,000
+          - $8,000 to $20,000
           - 3 to 5 weeks
         - - Secure client portal
           - Documents, updates, messages, and payments
@@ -355,7 +355,7 @@ industries:
       heading: Questions about legal software
       items:
         - - How much does legal document automation cost?
-          - Document automation for a set of standard documents usually costs $8,000 to $24,000 and
+          - Document automation for a set of standard documents usually costs $8,000 to $20,000 and
             takes 3 to 5 weeks.
         - - Will AI give legal advice to our clients?
           - No. AI helps your lawyers summarize and draft, and a lawyer reviews everything before it
@@ -464,11 +464,11 @@ industries:
       rows:
         - - Publishing website rebuild
           - Fast templates, content migration, and search setup
-          - $6,000 to $16,000
+          - $6,000 to $15,000
           - 2 to 4 weeks
         - - Subscriptions and paywall
           - Plans, metering, accounts, payments, and offers
-          - $8,000 to $24,000
+          - $8,000 to $20,000
           - 3 to 5 weeks
         - - Podcast or video platform
           - Players, feeds, members-only content, and analytics
@@ -552,8 +552,8 @@ industries:
       heading: Questions about media and publishing platforms
       items:
         - - How much does a publishing platform cost?
-          - A rebuilt publishing site usually costs $6,000 to $16,000. Adding subscriptions and a
-            paywall usually costs $8,000 to $24,000.
+          - A rebuilt publishing site usually costs $6,000 to $15,000. Adding subscriptions and a
+            paywall usually costs $8,000 to $20,000.
         - - Can you migrate our archive?
           - Yes. We move articles, images, authors, and URLs, with redirects so search rankings
             carry over.
@@ -674,7 +674,7 @@ industries:
           - 2 to 4 weeks
         - - Volunteer management
           - Sign-up, roles, shifts, reminders, and hours
-          - $6,000 to $16,000
+          - $6,000 to $15,000
           - 3 to 5 weeks
         - - Supporter platform and impact reporting
           - One supporter record, integrations, and dashboards
@@ -863,7 +863,7 @@ industries:
       rows:
         - - Accessible online form and payment
           - Form, validation, payment, and confirmation for one service
-          - $6,000 to $16,000
+          - $6,000 to $15,000
           - 2 to 4 weeks
         - - Citizen portal
           - Accounts, applications, status tracking, and messages
@@ -950,7 +950,7 @@ industries:
       heading: Questions about public sector software
       items:
         - - How much does a digital public service cost?
-          - One accessible online form with payment usually costs $6,000 to $16,000. Case management
+          - One accessible online form with payment usually costs $6,000 to $15,000. Case management
             and portals cost more and are delivered in stages.
         - - Do you meet accessibility standards?
           - Yes. We build to the WCAG guidelines and test with screen readers, keyboards, and real
@@ -1072,11 +1072,11 @@ industries:
           - 3 to 5 weeks
         - - Integrations and public interface
           - Connections to popular tools and a documented interface for customers
-          - $8,000 to $28,000
+          - $8,000 to $20,000
           - 3 to 6 weeks
         - - Platform rebuild or scale-up
           - Architecture, performance, testing, and migration
-          - $40,000 to $120,000+
+          - $40,000 to $100,000+
           - 2 to 4 months
     needs:
       heading: Software product work we do

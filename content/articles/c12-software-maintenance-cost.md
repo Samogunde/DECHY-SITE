@@ -6,10 +6,10 @@ group: pricing
 service: software-development
 models: [maintenance]
 title: "App and Software Maintenance Cost After Launch | DECHY"
-description: "What it costs to maintain an app, website, or software after launch: care plans from $250 a month, the yearly budget rule, and what maintenance actually covers."
+description: "What it costs to maintain an app, website, or software after launch: care plans from {{fact:price.care-essential-from}} a month, the yearly budget rule, and what maintenance covers."
 h1: "App and software maintenance cost after launch"
-summary: Maintaining software after launch usually costs 15 to 20 percent of the build cost each year. Our care plans run from $250 a month for websites to $8,000 or more for business-critical products. This guide explains what maintenance covers and how to budget for it.
-answer: "Plan to spend 15 to 20 percent of the original build cost each year to keep software secure, working, and improving. For a website, that is usually $250 to $650 a month. For a web or mobile app in daily use, $1,000 to $2,500 a month. For business-critical systems and SaaS products, $3,000 to $8,000 or more. Hosting and third-party fees come on top, and usually cost far less than the maintenance itself."
+summary: "Maintaining software after launch usually costs 15 to 25 percent of the build cost each year. Our care plans run from {{fact:price.care-essential-from}} a month for websites to {{fact:price.care-product-to}} for business-critical products. This guide explains what maintenance covers and how to budget for it."
+answer: "Plan to spend 15 to 25 percent of the original build cost each year to keep software secure, working, and improving. For a website, that is usually {{fact:price.care-essential}}. For a web or mobile app in daily use, {{fact:price.care-growth}}. For business-critical systems and SaaS products, {{fact:price.care-product}}. Hosting and third-party fees come on top, and usually cost far less than the maintenance itself."
 intent: software maintenance cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -17,19 +17,27 @@ tables:
   - heading: "A yearly maintenance budget by type of product"
     columns: ["Product", "Typical build cost", "Yearly maintenance budget"]
     rows:
-      - ["Business website", "$3,000 to $7,000", "$3,000 to $7,800 (Essential care)"]
-      - ["Web app in daily use", "$20,000 to $50,000", "$12,000 to $30,000 (Growth care)"]
+      - [
+          "Business website",
+          "{{fact:price.web-development-business-website}}",
+          "{{fact:price.care-essential-year}} (Essential care)",
+        ]
+      - [
+          "Web app in daily use",
+          "{{fact:price.web-development-advanced-web-app}}",
+          "{{fact:price.care-growth-year}} (Growth care)",
+        ]
       - [
           "Mobile app on iPhone and Android",
-          "$20,000 to $35,000",
-          "$12,000 to $30,000 (Growth care)",
+          "{{fact:price.mobile-app-development-business-app}}",
+          "{{fact:price.care-growth-year}} (Growth care)",
         ]
       - [
           "SaaS product or operations platform",
-          "$50,000 to $100,000",
-          "$36,000 to $96,000 (Product care)",
+          "{{fact:price.software-development-saas-product}}",
+          "{{fact:price.care-product-year}} (Product care)",
         ]
-    note: "Maintenance for small websites is a higher share of the build cost because some work, such as security updates and backups, is the same however small the site is."
+    note: "Maintenance for small websites is a higher share of the build cost because some work, such as security updates and backups, is the same however small the site is. Business-critical products with on-call cover sit at the top of the rule."
 related:
   - {
       label: "How much does custom software cost?",
@@ -68,11 +76,11 @@ Improvements are small changes and new features: a new report, a better form, a 
 - Fixes for bugs and broken connections
 - Improvements, in a fixed number of hours
 
-## The 15 to 20 percent rule
+## The 15 to 25 percent rule
 
-A useful rule of thumb is to budget 15 to 20 percent of the build cost each year for maintenance. A $40,000 web app needs $6,000 to $8,000 a year at the very least, and more if the business wants regular improvements.
+A useful rule of thumb is to budget 15 to 25 percent of the build cost each year for maintenance. A $40,000 web app needs $6,000 to $10,000 a year, and more if the business wants regular improvements.
 
-Small websites break the rule. Their build cost is low, but some work, such as backups, uptime monitoring, and security updates, costs the same however small the site is. That is why our smallest plan starts at $250 a month.
+Small websites break the rule. Their build cost is low, but some work, such as backups, uptime monitoring, and security updates, costs the same however small the site is. That is why our smallest plan starts at {{fact:price.care-essential-from}} a month.
 
 ## Running costs that are not maintenance
 

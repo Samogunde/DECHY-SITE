@@ -6,10 +6,10 @@ group: build
 service: api-integration
 pricing: api-integration
 title: "How Much Does API and Systems Integration Cost? | DECHY"
-description: "API and systems integration costs $1,500 to $64,000 or more. See prices for single connections, multi-system work, custom APIs, and integration platforms."
+description: "Most integrations cost {{fact:price.summary-integration}}. See prices for single connections, multi-system work, custom APIs, and integration platforms."
 h1: "How much does API and systems integration cost?"
-summary: Connecting your systems usually costs between $1,500 and $24,000, and a full integration platform can reach $64,000 or more. This guide shows typical prices, explains why some connections cost five times more than others, and covers running costs.
-answer: "A single connection between two modern tools, such as your store and your accounting package, costs $1,500 to $5,000 and takes about a week. Connecting three or more systems costs $5,000 to $16,000. Building a custom API for your own product costs $8,000 to $24,000. An integration platform that moves data across a whole business costs $24,000 to $64,000 or more. The quality of each system's API, the amount of data, and how fast it must sync drive most of the difference."
+summary: "Most integrations cost {{fact:price.summary-integration}}, and a full integration platform costs more. This guide shows typical prices, explains why some connections cost much more than others, and covers running costs."
+answer: "A single connection between two modern tools, such as your store and your accounting package, costs {{fact:price.api-integration-single-integration}} and takes about a week. Connecting three or more systems costs {{fact:price.api-integration-multi-system-integration}}. Building a custom API for your own product costs {{fact:price.api-integration-custom-api}}. An integration platform that moves data across a whole business costs {{fact:price.api-integration-integration-platform}}. The quality of each system's API, the amount of data, and how fast it must sync drive most of the difference."
 intent: how much does api integration cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -21,7 +21,7 @@ tables:
       - ["Website forms to CRM with lead routing", "$1,500 to $3,000", "3 to 5 days"]
       - ["CRM to accounting to project tool", "$5,000 to $10,000", "2 to 3 weeks"]
       - ["Store, warehouse, and point of sale stock sync", "$6,000 to $14,000", "2 to 4 weeks"]
-      - ["Older system with no modern API to a new platform", "$8,000 to $20,000", "3 to 5 weeks"]
+      - ["Older system with no modern API to a new platform", "$8,000 to $16,000", "3 to 5 weeks"]
 related:
   - {
       label: "How much does AI integration cost?",
@@ -71,7 +71,7 @@ A single connection between two modern tools takes about a week. Connecting seve
 
 ## Running costs
 
-Integrations need light care. APIs change, tokens expire, and systems are upgraded. Some integrations run on a hosted service with a small monthly fee, usually $20 to $200. Monitoring and fixes are covered by a care plan, from $250 a month for a few connections to $1,000 a month for business-critical syncs.
+Integrations need light care. APIs change, tokens expire, and systems are upgraded. Some integrations run on a hosted service with a small monthly fee, usually $20 to $200. Monitoring and fixes are covered by a care plan, from {{fact:price.care-essential-from}} a month for a few connections to {{fact:price.care-product-from}} a month for business-critical syncs.
 
 ## A worked example
 
@@ -101,11 +101,11 @@ Finally, ask for the integration map before work starts. If a supplier cannot dr
 
 ### How much does it cost to integrate two systems?
 
-Connecting two modern tools usually costs $1,500 to $5,000 and takes about a week.
+Connecting two modern tools usually costs {{fact:price.api-integration-single-integration}} and takes about a week.
 
 ### Can you connect a system with no API?
 
-Usually, yes. We can read from exports, databases, or files, and sometimes build a small API in front of the older system. It costs more, typically $8,000 to $20,000.
+Usually, yes. We can read from exports, databases, or files, and sometimes build a small API in front of the older system. It costs more, typically $8,000 to $16,000.
 
 ### Should we use Zapier or a custom integration?
 
@@ -117,7 +117,7 @@ Monitoring alerts us when a connection fails, and a care plan covers the fix. Mo
 
 ### Do you build APIs for our own product?
 
-Yes. A custom API with documentation and access control costs $8,000 to $24,000 and lets partners and customers connect to your product.
+Yes. A custom API with documentation and access control costs {{fact:price.api-integration-custom-api}} and lets partners and customers connect to your product.
 
 ### How long does an integration take to pay for itself?
 

@@ -27,7 +27,7 @@ sections:
     id: hero
     variant: hub
     eyebrow: Solutions
-    headline: Start from the problem
+    headline: Start from [[the problem]]
     lead: "At DECHY, a solution is the answer to a business problem. Below are the problems we are asked about most and how we solve each one. Where a kind of system answers your need better than a single solution, we point you to it."
     support: "Each solution leads to the services, systems, and technologies behind it."
     ctas:

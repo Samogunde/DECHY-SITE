@@ -178,7 +178,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - First product version
         - Core features, accounts, billing, and an admin console
@@ -190,11 +190,11 @@ sections:
         - 3 to 5 weeks
       - - Integrations and public interface
         - Connections to popular tools and a documented interface for customers
-        - $8,000 to $28,000
+        - $8,000 to $20,000
         - 3 to 6 weeks
       - - Platform rebuild or scale-up
         - Architecture, performance, testing, and migration
-        - $40,000 to $120,000+
+        - $40,000 to $100,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.

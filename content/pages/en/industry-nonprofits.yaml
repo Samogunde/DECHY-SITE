@@ -219,7 +219,7 @@ sections:
       - Project
       - What it includes
       - Typical cost
-      - Timeline
+      - Typical timeline from approved scope
     rows:
       - - Donation website
         - Fast donation journey, monthly giving, and receipts
@@ -231,7 +231,7 @@ sections:
         - 2 to 4 weeks
       - - Volunteer management
         - Sign-up, roles, shifts, reminders, and hours
-        - $6,000 to $16,000
+        - $6,000 to $15,000
         - 3 to 5 weeks
       - - Supporter platform and impact reporting
         - One supporter record, integrations, and dashboards

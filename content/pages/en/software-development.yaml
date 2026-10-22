@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Custom software built around how your business runs
+    headline: Custom software [[built around how your business runs]]
     lead:
       "At DECHY, we design, build, and look after custom software that fits how your business runs: business
       tools, customer portals, online platforms, dashboards, and internal systems. You get one team
@@ -428,11 +428,7 @@ sections:
     heading: Questions about custom software
     items:
       - q: How much does custom software cost?
-        a:
-          "Most custom software projects cost $15,000 to $100,000 or more. An internal tool usually costs
-          $15,000 to $30,000, a customer portal $25,000 to $50,000, and a full business platform or
-          SaaS product $50,000 to $100,000 or more. Every quote is fixed in writing after a short
-          discovery call, and it includes testing, security, documentation, and launch support."
+        a: "Most custom software projects cost {{fact:price.summary-custom-software}}. A focused internal tool can start from {{fact:price.summary-custom-software-start}}, a customer portal costs {{fact:price.software-development-customer-or-partner-portal}}, and a SaaS product {{fact:price.software-development-saas-product}}. Every quote is fixed in writing after a short discovery call, and it includes testing, security, documentation, and launch support."
       - q: How long does a custom software project take?
         a:
           Most projects take 4 weeks to 4 months. An internal tool usually goes live in 4 to 6 weeks, a

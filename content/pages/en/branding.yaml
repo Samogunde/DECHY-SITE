@@ -41,7 +41,7 @@ sections:
     id: hero
     variant: service
     eyebrow: Service
-    headline: Branding and creative that make you look as good as you are
+    headline: Branding and creative that [[make you look as good as you are]]
     lead:
       "We create brand identities that work everywhere: logo, colors, type, voice, and the templates
       your team uses every day. You get a brand that looks current, feels consistent, and is ready
@@ -292,8 +292,9 @@ sections:
           Not always. Sometimes a logo works and the rest of the identity needs attention. We look at what
           you have and recommend the lightest change that solves the problem.
       - q: How long does a branding project take?
-        a: A logo and starter identity usually takes about a week and costs $1,200 to $3,000. A full
-          identity with guidelines takes 2 to 3 weeks and costs $3,000 to $10,000. A rebrand with
+        a:
+          A logo and starter identity usually takes about a week and costs {{fact:price.branding-logo-and-starter-identity}}. A full
+          identity with guidelines takes 2 to 3 weeks and costs {{fact:price.branding-full-brand-identity}}. A rebrand with
           messaging and rollout takes 4 to 6 weeks.
       - q: Will you also design our website?
         a:

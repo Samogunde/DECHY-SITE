@@ -25,6 +25,8 @@ import type { Block, IconName } from "@/lib/content/schema";
 import { testimonials, type Testimonial } from "@/lib/content/testimonials";
 import { pathExists } from "@/lib/content/urls";
 import { Initials } from "./TestimonialBlocks";
+import { AccentText } from "@/components/primitives/AccentText";
+import { plainHeading } from "@/lib/content/inline";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -67,7 +69,7 @@ function TmHead({
     <div className={`tm-head${aside ? " has-aside" : ""}`} data-reveal="block">
       <div>
         <h2 id={`${id}-h`} className="tm-h2">
-          {heading}
+          <AccentText text={heading} />
         </h2>
         {intro ? (
           <p className="tm-intro">
@@ -252,7 +254,7 @@ export function TmStoriesBlock({ block }: { block: Of<"tm-stories"> }) {
     <TmSection id={block.id}>
       <TmHead id={block.id} heading={block.heading} intro={block.intro} />
       <div data-reveal="block">
-        <TmStories label={block.heading} slides={slides} />
+        <TmStories label={plainHeading(block.heading)} slides={slides} />
       </div>
     </TmSection>
   );
@@ -321,7 +323,7 @@ export function TmOutcomesBlock({ block }: { block: Of<"tm-outcomes"> }) {
   return (
     <TmSection id={block.id}>
       <TmHead id={block.id} heading={block.heading} intro={block.intro} />
-      <TmCarousel label={block.heading} autoplay className="tmo-row">
+      <TmCarousel label={plainHeading(block.heading)} autoplay className="tmo-row">
         {testimonials().map((t) => (
           <OutcomeCard key={t.id} t={t} />
         ))}
@@ -339,7 +341,7 @@ export function TmFoundersBlock({ block }: { block: Of<"tm-founders"> }) {
       <TmHead id={block.id} heading={block.heading} intro={block.intro} />
       <div data-reveal="block">
         <TmFounders
-          label={block.heading}
+          label={plainHeading(block.heading)}
           visual={
             <>
               <Photo photo={block.photo} />
@@ -467,7 +469,7 @@ export function TmServicesBlock({ block }: { block: Of<"tm-services"> }) {
   return (
     <TmSection id={block.id}>
       <TmHead id={block.id} heading={block.heading} intro={block.intro} />
-      <TmCarousel label={block.heading} className="tmv-row">
+      <TmCarousel label={plainHeading(block.heading)} className="tmv-row">
         {cards.map(({ s, t }) => {
           const href = `/${s.slug}/`;
           return (
