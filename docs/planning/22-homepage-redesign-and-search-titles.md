@@ -407,3 +407,4 @@ Owner direction, 21 and 22 October 2026.
 - **Clients 1,200+.** The owner set the clients figure to 1,200+ everywhere, including the approved statement ("over 1,200"). Projects delivered stay 1,500+.
 - **Partner logos.** AWS, Microsoft, Google Cloud, and Salesforce show their official logos wherever the partnerships appear (`public/partners/`, provenance in `data/assets/licenses/partner-logos.md`). The compliance check marks are blue.
 - **Icons.** Professional duotone icons are used where they help scanning: the partner list, the reasons clients stay, and the measured figures. They are not added everywhere.
+- **Section rhythm** (owner, 22 October 2026: "sections are not well divided"). Every section after the opening takes the next of three backgrounds in turn: black, charcoal (#18181B), and the faded blue (navy with a soft blue glow from the top), with a hairline at its top. The opening, the call-to-action bands, and the closing call keep their own designs.

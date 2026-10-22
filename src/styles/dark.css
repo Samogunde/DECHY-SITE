@@ -994,3 +994,49 @@ main.theme-dark .figure :is(.dgm-box, .dgm-box-ink, .dgm-box-accent) {
   background: rgb(255 255 255 / 0.04) !important;
   color: #f0f0f2;
 }
+
+/* ==========================================================================================
+   Section rhythm (owner direction, 22 October 2026): neighboring sections must read as separate.
+   Every section after the opening takes the next of three backgrounds in turn: black, charcoal,
+   and the faded blue, with a hairline at its top. The opening, the call-to-action bands, and the
+   closing call keep their own designs. Cards and panels sit on any of the three.
+   ========================================================================================== */
+main.theme-dark
+  > section:not(:first-of-type, .cta-band, .tm-cta, .reveal-band, .glance, .page-hero, .tm-hero) {
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+}
+main.theme-dark
+  > section:nth-of-type(3n + 2):not(
+    .cta-band,
+    .tm-cta,
+    .reveal-band,
+    .glance,
+    .page-hero,
+    .tm-hero
+  ) {
+  background: #000 !important;
+}
+main.theme-dark
+  > section:nth-of-type(3n + 3):not(
+    .cta-band,
+    .tm-cta,
+    .reveal-band,
+    .glance,
+    .page-hero,
+    .tm-hero
+  ) {
+  background: #18181b !important;
+}
+main.theme-dark
+  > section:nth-of-type(3n + 4):not(
+    .cta-band,
+    .tm-cta,
+    .reveal-band,
+    .glance,
+    .page-hero,
+    .tm-hero
+  ) {
+  background:
+    radial-gradient(70% 80% at 50% 0%, rgb(47 111 237 / 0.16), transparent 70%),
+    linear-gradient(180deg, #0c1428 0%, #0a1020 100%) !important;
+}
