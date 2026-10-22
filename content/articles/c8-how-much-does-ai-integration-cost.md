@@ -6,10 +6,10 @@ group: build
 service: ai
 pricing: ai
 title: "How Much Does AI Integration Cost? | DECHY"
-description: "AI integration costs $5,000 to $150,000 or more. See prices for AI assistants, AI features, agents, and custom models, plus the running costs of AI usage."
+description: "AI integration costs $4,000 to $120,000 or more. See prices for AI assistants, AI features, agents, and custom models, plus the running costs of AI usage."
 h1: "How much does AI integration cost?"
-summary: Adding AI to your business usually costs between $5,000 and $50,000, and a custom model or AI platform can cost $150,000 or more. This guide shows typical prices by type, the monthly usage costs most people miss, and how to start small.
-answer: "An AI assistant that answers questions from your own documents costs $5,000 to $15,000 and takes one to three weeks. An AI feature inside your product, such as summaries or smart search, costs $10,000 to $30,000. An AI agent that takes actions in your systems costs $20,000 to $50,000. A custom model or AI platform costs $50,000 to $150,000 or more. Usage fees for the AI provider come on top, and usually run from a few dollars to a few hundred dollars a month for most business tools."
+summary: Adding AI to your business usually costs between $4,000 and $40,000, and a custom model or AI platform can cost $120,000 or more. This guide shows typical prices by type, the monthly usage costs most people miss, and how to start small.
+answer: "An AI assistant that answers questions from your own documents costs $4,000 to $12,000 and takes one to three weeks. An AI feature inside your product, such as summaries or smart search, costs $8,000 to $24,000. An AI agent that takes actions in your systems costs $16,000 to $40,000. A custom model or AI platform costs $40,000 to $120,000 or more. Usage fees for the AI provider come on top, and usually run from a few dollars to a few hundred dollars a month for most business tools."
 intent: how much does ai integration cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -31,7 +31,7 @@ tables:
       - [
           "Monitoring and tuning",
           "Reviewing answers, updating content, improving accuracy",
-          "Included in a care plan from $1,200",
+          "Included in a care plan from $1,000",
         ]
     note: "Usage costs depend on volume. We estimate them from your expected number of questions or documents before you commit."
 related:
@@ -86,7 +86,7 @@ An assistant on your content goes live in one to three weeks. An AI feature in y
 
 Picture a property management company with a support team answering the same tenant questions every day: rent dates, repair requests, parking rules, and move-out steps. Answers live in a policy folder and old emails.
 
-The first project is an AI assistant on the company's own documents, available to staff first and tenants second. It answers with a link to the source passage, and hands anything about money or disputes to a person. It falls in the $8,000 to $12,000 range and launches in about two weeks, with usage costs of around $60 a month at their volume.
+The first project is an AI assistant on the company's own documents, available to staff first and tenants second. It answers with a link to the source passage, and hands anything about money or disputes to a person. It falls in the $6,000 to $10,000 range and launches in about two weeks, with usage costs of around $60 a month at their volume.
 
 Once it proves reliable, a second project lets it create repair tickets automatically, turning it into a simple agent.
 
@@ -104,7 +104,7 @@ Ask which model provider they plan to use, why, and how easily it could be swapp
 
 ### How much does it cost to add ChatGPT to my website?
 
-A chat assistant that answers from your own content costs $5,000 to $15,000 to build, plus usage fees that are usually modest for a typical business.
+A chat assistant that answers from your own content costs $4,000 to $12,000 to build, plus usage fees that are usually modest for a typical business.
 
 ### Do we need our own AI model?
 

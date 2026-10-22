@@ -330,3 +330,19 @@ Owner direction, 21 October 2026: "put in all the numbers, figures, costs", with
   - The header button reads "Get a quote" and stays visible on scroll.
 - **Case studies.** A client quote block between the results and the related projects, shown when a project has a supplied `quote`. None has been supplied yet.
 - **Contact.** `PUBLIC_BOOKING_URL`, `PUBLIC_CONTACT_EMAIL`, and `PUBLIC_CONTACT_PHONE` show a booking button, email, and phone when set. "Book a call" buttons use the booking link and fall back to the contact form.
+
+## Fourteenth pass (21 October 2026): owner figures and a 20% price cut
+
+- **New facts from the owner.** Projects delivered 1,500+ (`company.projects`) and countries served 20+ (`company.countries`). The proof strip now shows all five counters.
+- **20% price cut.** Every DECHY price was cut by 20% (script: rounded figures within 8% of an exact cut). The cut covers:
+  - the eleven services whose ranges the owner did not set
+  - their FAQ answers
+  - all 30 industry pages
+  - the new cost guides
+  - the care plans and MVP prices
+  - the estimator's feature and integration add-ons; the rush premium drops from 25% to 20%
+- **Not cut.**
+  - The owner's fixed ranges: custom software, website, web app, and mobile app.
+  - Dedicated team prices, at the owner's instruction.
+  - Third-party fees.
+- **Hourly rates** are now three simple rates, not a per-role card: design and development $35 to $55, specialist work $45 to $80, and testing $25 to $35. Most work stays fixed price.

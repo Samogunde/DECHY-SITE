@@ -139,19 +139,19 @@ sections:
     rows:
       - - Customer self-service app
         - Plans, bills, usage, payments, and fault reporting
-        - $20,000 to $45,000
+        - $16,000 to $36,000
         - 4 to 8 weeks
       - - Online ordering and availability
         - Address checks, plan selection, checkout, and booking
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Engineer field app
         - Jobs, equipment, tests, photos, and sign-off
-        - $20,000 to $40,000
+        - $16,000 to $32,000
         - 4 to 6 weeks
       - - Provisioning automation and data dashboards
         - Order flow automation and network service dashboards
-        - $40,000 to $100,000+
+        - $32,000 to $80,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -228,7 +228,7 @@ sections:
     items:
       - q: How much does a telecom self-service app cost?
         a:
-          A customer self-service app usually costs $20,000 to $45,000 and takes 4 to 8 weeks, depending on
+          A customer self-service app usually costs $16,000 to $36,000 and takes 4 to 8 weeks, depending on
           billing integration.
       - q: Can you connect to our billing system?
         a:

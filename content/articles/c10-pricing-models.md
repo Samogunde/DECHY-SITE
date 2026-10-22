@@ -9,7 +9,7 @@ title: "Fixed Price vs Time and Materials vs Dedicated Team | DECHY"
 description: "How software pricing models work: fixed price, time and materials, and a dedicated team compared on cost, risk, flexibility, and when each is the right choice."
 h1: "Fixed price vs time and materials vs dedicated team: how pricing works"
 summary: Software projects are priced in three main ways. A fixed price suits a clear scope, time and materials suits changing work, and a dedicated team suits a product that grows every month. This guide compares them and shows what each costs.
-answer: "Choose a fixed price when the scope can be written down before work starts: you know the cost up front and the supplier carries the risk of overruns. Choose time and materials when the work will change as you learn: you pay for hours used, at rates from $30 to $100 an hour depending on the role. Choose a dedicated team when you need people working on your product every month: teams cost from $6,000 a month for one engineer to $55,000 or more for a full squad."
+answer: "Choose a fixed price when the scope can be written down before work starts: you know the cost up front and the supplier carries the risk of overruns. Choose time and materials when the work will change as you learn: you pay for hours used, at rates from $25 to $80 an hour depending on the work. Choose a dedicated team when you need people working on your product every month: teams cost from $6,000 a month for one engineer to $55,000 or more for a full squad."
 intent: fixed price vs time and materials
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -90,7 +90,7 @@ We quote fixed prices for defined projects: websites, web apps, mobile apps, sto
 
 ## What the numbers look like
 
-Hourly rates for time and materials range from $30 an hour for quality assurance to $100 an hour for a solutions architect, with most engineering at $40 to $70. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a scale team of four to six engineers with design, delivery, QA, and DevOps (the work of keeping software deployed, monitored, and running) support.
+Hourly rates for time and materials run from $25 an hour for testing to $80 an hour for specialist AI, cloud, and architecture work, with most design and development at $35 to $55. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a scale team of four to six engineers with design, delivery, QA, and DevOps (the work of keeping software deployed, monitored, and running) support.
 
 Fixed prices follow the ranges on our service pages: $3,000 to $7,000 for a business website, $10,000 to $20,000 for a mobile app MVP, and $15,000 to $100,000 or more for custom software.
 

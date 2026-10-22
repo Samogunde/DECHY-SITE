@@ -130,19 +130,19 @@ sections:
     rows:
       - - Direct ordering website
         - Menu, delivery and collection, payments, and order alerts
-        - $3,000 to $8,000
+        - $2,500 to $6,000
         - 1 to 2 weeks
       - - Booking and deposits
         - Table booking, deposits, reminders, and waitlists
-        - $3,000 to $7,000
+        - $2,500 to $6,000
         - 1 to 2 weeks
       - - Branded ordering and loyalty app
         - Ordering, rewards, offers, and push notifications
-        - $12,000 to $30,000
+        - $10,000 to $24,000
         - 3 to 5 weeks
       - - Multi-site restaurant platform
         - Several sites, kitchen display, menu control, and reporting
-        - $30,000 to $60,000+
+        - $24,000 to $48,000+
         - 5 to 8 weeks
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -154,8 +154,8 @@ sections:
     items:
       - q: How much does a restaurant ordering system cost?
         a:
-          A direct ordering website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks. A branded
-          app with loyalty usually costs $12,000 to $30,000.
+          A direct ordering website usually costs $2,500 to $6,000 and launches in 1 to 2 weeks. A branded
+          app with loyalty usually costs $10,000 to $24,000.
       - q: Will customers really order direct?
         a:
           Regulars will, when ordering is just as easy and they get a reward for it. Most restaurants move

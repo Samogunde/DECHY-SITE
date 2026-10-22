@@ -6,10 +6,10 @@ group: pricing
 service: consulting
 models: [rates, teams]
 title: "Software Developer Hourly Rates and Team Cost | DECHY"
-description: "Software developer hourly rates by role, from $30 to $100 an hour, and what a dedicated development team costs each month, from one engineer to a full squad."
+description: "Our hourly rates, from $25 to $80 an hour, and what a dedicated development team costs each month, from one engineer to a full squad."
 h1: "Hourly rates and dedicated team cost"
-summary: Our rates run from $30 an hour for quality assurance to $100 an hour for a solutions architect, with most engineering between $40 and $70. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a full squad. This guide explains the rates and what you get for them.
-answer: "Engineering at DECHY costs $40 to $70 an hour for most roles: front-end, back-end, and mobile engineers. Designers and delivery leads cost $40 to $65 an hour, AI engineers $60 to $90, cloud engineers $55 to $80, and solutions architects $70 to $100. A dedicated team is billed monthly: $6,000 to $11,000 for one engineer, $11,000 to $17,000 for a starter squad, $18,000 to $28,000 for a product squad, and $35,000 to $55,000 or more for a scale team."
+summary: Most of our work is quoted as a fixed price. For change requests and time-and-materials work we use three simple hourly rates, from $25 to $80 an hour. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a full squad. This guide explains both.
+answer: "We quote most projects as a fixed price, so you rarely pay by the hour. For change requests and time-and-materials work we use three rates: $35 to $55 an hour for design and development, $45 to $80 for specialist AI, cloud, and architecture work, and $25 to $35 for testing. A dedicated team is billed monthly: $6,000 to $11,000 for one engineer, $11,000 to $17,000 for a starter squad, $18,000 to $28,000 for a product squad, and $35,000 to $55,000 or more for a scale team."
 intent: software developer hourly rate
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -30,7 +30,11 @@ Search for developer rates and you will find anything from $15 to $250 an hour. 
 
 A low rate for an individual freelancer often excludes project management, testing, code review, and cover when someone is ill. A high rate from a large consultancy often includes layers of account management you never see. The useful comparison is not the hourly rate, but the cost of delivering working, tested software.
 
-Our rates sit in the middle of the market, and they include delivery oversight, code review, and continuity: if someone on your project is away, the work continues.
+Our rates sit below most agencies in the US and Western Europe, and they include delivery oversight, code review, and continuity: if someone on your project is away, the work continues.
+
+## When the hourly rates apply
+
+Most projects never see an hourly rate. A website, an app, a store, or an integration is quoted as one fixed price in writing, and that price does not change unless you change the scope. The rates are used in three situations only: small change requests after launch, open-ended discovery or research where the answer is not yet known, and extra work you ask for during a fixed-price project. In every case, you approve the hours before they are spent.
 
 ## What each role does
 

@@ -149,7 +149,7 @@ A subscription product with plans, billing, onboarding, and an admin console usu
 
 ### What does a web app cost to run?
 
-Hosting for most business web apps is modest. Plan for a care plan of $1,200 to $3,000 a month for apps in daily use, which covers updates, monitoring, and a set number of improvement hours.
+Hosting for most business web apps is modest. Plan for a care plan of $1,000 to $2,500 a month for apps in daily use, which covers updates, monitoring, and a set number of improvement hours.
 
 ### Can you work with a design we already have?
 

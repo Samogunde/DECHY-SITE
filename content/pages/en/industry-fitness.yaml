@@ -107,19 +107,19 @@ sections:
     rows:
       - - Booking website
         - Timetable, online booking, memberships, and payments
-        - $3,000 to $8,000
+        - $2,500 to $6,000
         - 1 to 2 weeks
       - - Branded member app
         - Booking, progress, notifications, and your branding on iPhone and Android
-        - $10,000 to $25,000
+        - $8,000 to $20,000
         - 2 to 5 weeks
       - - Online coaching platform
         - Programs, video library, check-ins, and messaging
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Multi-site fitness platform
         - Several locations, staff roles, reporting, and integrations
-        - $35,000 to $60,000+
+        - $28,000 to $48,000+
         - 6 to 8 weeks
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -197,7 +197,7 @@ sections:
     items:
       - q: How much does a fitness app cost?
         a:
-          Most member apps cost $10,000 to $35,000 and take 2 to 6 weeks. A full platform with coaching,
+          Most member apps cost $8,000 to $28,000 and take 2 to 6 weeks. A full platform with coaching,
           billing, and multiple sites sits at the top of that range or above.
       - q: Can you connect to the gym system we already use?
         a:

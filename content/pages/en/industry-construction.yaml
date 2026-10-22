@@ -106,19 +106,19 @@ sections:
     rows:
       - - Site diary and reporting app
         - Daily reports, labor, delays, and photos, offline
-        - $15,000 to $30,000
+        - $12,000 to $24,000
         - 4 to 6 weeks
       - - Purchase approvals
         - Routing, mobile approvals, and orders created in your accounts
-        - $10,000 to $25,000
+        - $8,000 to $20,000
         - 2 to 4 weeks
       - - Cost tracking dashboard
         - Budget, committed, and actual cost by project
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Full project platform
         - Diaries, approvals, documents, safety, and a subcontractor portal
-        - $50,000 to $120,000+
+        - $40,000 to $96,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -167,7 +167,7 @@ sections:
     items:
       - q: How much does a construction app cost?
         a:
-          A site diary or approvals app usually costs $15,000 to $35,000 and takes 4 to 6 weeks. A full
+          A site diary or approvals app usually costs $12,000 to $28,000 and takes 4 to 6 weeks. A full
           project platform costs more and is built in stages.
       - q: Will site teams actually use it?
         a: They do when it saves them time. We design with site managers and keep every task to a few taps.

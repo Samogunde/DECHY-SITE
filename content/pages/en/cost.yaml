@@ -50,7 +50,7 @@ sections:
       - q: Do you charge fixed prices or by the hour?
         a: "Defined projects get a fixed price in writing. Open-ended work, such as ongoing improvements or a dedicated team, is billed monthly at rates agreed before it starts."
       - q: What does software cost to run after launch?
-        a: "Plan for hosting, updates, and improvements. Our care plans start at $300 a month for websites and $1,200 a month for apps in daily use."
+        a: "Plan for hosting, updates, and improvements. Our care plans start at $250 a month for websites and $1,000 a month for apps in daily use."
 
   - type: cta
     id: contact-cta

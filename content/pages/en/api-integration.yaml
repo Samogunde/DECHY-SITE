@@ -321,8 +321,8 @@ sections:
           if a problem lasts. We also watch for changes in the tools we connect.
       - q: How long does an integration take?
         a:
-          A single integration between two systems usually takes about a week and costs $2,000 to $6,000.
-          Connecting several systems takes 2 to 4 weeks and costs $6,000 to $20,000. Larger
+          A single integration between two systems usually takes about a week and costs $1,500 to $5,000.
+          Connecting several systems takes 2 to 4 weeks and costs $5,000 to $16,000. Larger
           integration platforms take 6 to 10 weeks.
       - q: Do we need integration or automation?
         a:

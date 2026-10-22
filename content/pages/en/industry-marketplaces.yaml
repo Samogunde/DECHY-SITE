@@ -148,8 +148,8 @@ sections:
     items:
       - q: How much does a marketplace app cost?
         a:
-          A focused first version usually costs $20,000 to $40,000 and takes 4 to 6 weeks. On-demand apps
-          with live tracking cost $30,000 to $60,000.
+          A focused first version usually costs $16,000 to $32,000 and takes 4 to 6 weeks. On-demand apps
+          with live tracking cost $24,000 to $48,000.
       - q: How do payments to sellers work?
         a:
           Buyers pay the platform, your fee is kept automatically, and sellers are paid on a schedule
@@ -199,19 +199,19 @@ sections:
     rows:
       - - Marketplace first version
         - Listings, search, checkout, payouts, and basic ratings
-        - $20,000 to $40,000
+        - $16,000 to $32,000
         - 4 to 6 weeks
       - - On-demand service app
         - Customer app, provider app, matching, and payments
-        - $30,000 to $50,000
+        - $24,000 to $40,000
         - 6 to 8 weeks
       - - Delivery app with live tracking
         - Customer, courier, and store apps with live maps
-        - $35,000 to $60,000
+        - $28,000 to $48,000
         - 6 to 10 weeks
       - - Scaled multi-vendor platform
         - Vendor portal, admin, disputes, analytics, and growth features
-        - $60,000 to $120,000+
+        - $48,000 to $96,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.

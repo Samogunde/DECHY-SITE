@@ -156,19 +156,19 @@ sections:
     rows:
       - - Tour and activity booking site
         - Listings, dates, live availability, and payments
-        - $5,000 to $12,000
+        - $4,000 to $10,000
         - 2 to 3 weeks
       - - Package and itinerary builder
         - Packages, extras, deposits, balances, and documents
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Traveler itinerary app
         - Bookings, tickets, maps, offline use, and updates
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Travel marketplace or booking platform
         - Many suppliers, search, payments, and agent tools
-        - $40,000 to $90,000+
+        - $32,000 to $72,000+
         - 2 to 3 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -180,8 +180,8 @@ sections:
     items:
       - q: How much does a travel booking platform cost?
         a:
-          A tour or activity booking site usually costs $5,000 to $12,000. A full platform with many
-          suppliers and agent tools costs $40,000 to $90,000 or more.
+          A tour or activity booking site usually costs $4,000 to $10,000. A full platform with many
+          suppliers and agent tools costs $32,000 to $72,000 or more.
       - q: Can you connect to our suppliers?
         a: Usually, yes, through their systems or the booking networks they use. Where there is no
           connection, we build simple supplier tools.

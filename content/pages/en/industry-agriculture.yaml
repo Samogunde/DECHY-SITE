@@ -130,19 +130,19 @@ sections:
     rows:
       - - Field or livestock records app
         - Fields, inputs, work, or animals recorded offline
-        - $12,000 to $25,000
+        - $10,000 to $20,000
         - 3 to 5 weeks
       - - Sensor and machine data dashboard
         - Soil, weather, and equipment data in one view
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Traceability system
         - Batches tracked from field to buyer with documents
-        - $20,000 to $45,000
+        - $16,000 to $36,000
         - 5 to 8 weeks
       - - Agribusiness platform
         - Growers, ordering, traceability, and reporting together
-        - $50,000 to $100,000+
+        - $40,000 to $80,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -202,8 +202,8 @@ sections:
     items:
       - q: How much does farm management software cost?
         a:
-          A records app usually costs $12,000 to $25,000. A full agribusiness platform with traceability
-          and portals costs $50,000 to $100,000 or more.
+          A records app usually costs $10,000 to $20,000. A full agribusiness platform with traceability
+          and portals costs $40,000 to $80,000 or more.
       - q: Does it work without signal?
         a: Yes. Everything works offline and syncs when the phone finds a connection.
       - q: Can you use data from our tractors and sensors?

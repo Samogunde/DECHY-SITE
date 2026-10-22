@@ -109,19 +109,19 @@ sections:
     rows:
       - - Installer quoting and booking
         - Sizing, quotes, finance options, and scheduling
-        - $10,000 to $25,000
+        - $8,000 to $20,000
         - 2 to 4 weeks
       - - Customer portal and app
         - Bills, usage, payments, and account changes online
-        - $20,000 to $50,000
+        - $16,000 to $40,000
         - 4 to 8 weeks
       - - Field service app
         - Jobs, routes, safety checks, and photos for crews
-        - $20,000 to $40,000
+        - $16,000 to $32,000
         - 4 to 6 weeks
       - - Meter and asset data platform
         - Collection, cleaning, monitoring, and dashboards
-        - $40,000 to $120,000+
+        - $32,000 to $96,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -133,7 +133,7 @@ sections:
     items:
       - q: How much does an energy customer portal cost?
         a:
-          Most customer portals cost $20,000 to $50,000 and take 4 to 8 weeks, depending on billing and
+          Most customer portals cost $16,000 to $40,000 and take 4 to 8 weeks, depending on billing and
           metering integration.
       - q: Can you build tools for solar and battery installers?
         a: Yes. We build quoting, scheduling, installation checklists, and customer apps for installers.

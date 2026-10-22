@@ -49,11 +49,11 @@ sections:
       - title: Platforms, design, and connections
         items:
           - "Two native mobile apps cost about 60 percent more than one shared app."
-          - "Each system you connect adds $2,000 to $6,000, our single integration range."
+          - "Each system you connect adds $1,500 to $5,000, our single integration range."
       - title: Your timeline
         items:
           - "A flexible timeline saves about 5 percent because we can plan the work around other projects."
-          - "A fast timeline adds about 25 percent because more people work in parallel."
+          - "A fast timeline adds about 20 percent because more people work in parallel."
 
   - type: columns
     id: changes
@@ -89,7 +89,7 @@ sections:
     items:
       - "Third-party fees: hosting, app store accounts, payment processing, AI usage, and paid plugins."
       - "Content you supply, such as photography, video, and legal text, unless you ask us to create it."
-      - "Care after launch, which is a monthly plan from $300."
+      - "Care after launch, which is a monthly plan from $250."
       - "Taxes, which depend on where your business is registered."
 
   - type: faq

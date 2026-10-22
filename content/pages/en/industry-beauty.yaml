@@ -107,19 +107,19 @@ sections:
     rows:
       - - Booking website
         - Services, team, real-time booking, and local search setup
-        - $3,000 to $7,000
+        - $2,500 to $6,000
         - 1 to 2 weeks
       - - Deposits and client records
         - Card deposits, cancellation rules, notes, and history
-        - $4,000 to $10,000
+        - $3,000 to $8,000
         - 1 to 3 weeks
       - - Branded booking app
         - Rebooking, loyalty, offers, and notifications
-        - $10,000 to $25,000
+        - $8,000 to $20,000
         - 3 to 5 weeks
       - - Multi-location platform with store
         - Several salons, retail store, reporting, and integrations
-        - $25,000 to $45,000+
+        - $20,000 to $36,000+
         - 5 to 8 weeks
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -155,8 +155,8 @@ sections:
     items:
       - q: How much does a salon booking website cost?
         a:
-          Most booking websites cost $3,000 to $10,000 and launch in 1 to 3 weeks. A branded app with
-          loyalty usually adds $10,000 to $25,000.
+          Most booking websites cost $2,500 to $8,000 and launch in 1 to 3 weeks. A branded app with
+          loyalty usually adds $8,000 to $20,000.
       - q: Can we keep the booking system we already pay for?
         a:
           Yes, if it has an open connection. We can build your website and app on top of it, or replace it

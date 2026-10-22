@@ -154,7 +154,7 @@ sections:
     heading: Questions about nonprofit technology
     items:
       - q: How much does a nonprofit donation website cost?
-        a: A donation website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks.
+        a: A donation website usually costs $2,500 to $6,000 and launches in 1 to 2 weeks.
       - q: Can you connect to our supporter database?
         a: Usually, yes. We connect donation and volunteer tools to the database you already use.
       - q: Do you offer nonprofit pricing?
@@ -223,19 +223,19 @@ sections:
     rows:
       - - Donation website
         - Fast donation journey, monthly giving, and receipts
-        - $3,000 to $8,000
+        - $2,500 to $6,000
         - 1 to 2 weeks
       - - Campaign and event fundraising
         - Appeal pages, peer fundraising, and event tickets
-        - $6,000 to $15,000
+        - $5,000 to $12,000
         - 2 to 4 weeks
       - - Volunteer management
         - Sign-up, roles, shifts, reminders, and hours
-        - $8,000 to $20,000
+        - $6,000 to $16,000
         - 3 to 5 weeks
       - - Supporter platform and impact reporting
         - One supporter record, integrations, and dashboards
-        - $20,000 to $45,000+
+        - $16,000 to $36,000+
         - 5 to 8 weeks
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.

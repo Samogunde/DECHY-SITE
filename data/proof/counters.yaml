@@ -1,8 +1,8 @@
 # The proof strip under the home hero, repeated on About us and every service page in the same
 # wording (owner, 21 October 2026). Values come from the Approved Facts Register ({{fact:...}}) or
 # from the site's own data (certifications are counted from data/certifications). A counter with
-# no approved value is not shown: projects delivered and countries served wait for the owner's
-# figures (they are "not provided" in the approved facts).
+# no approved value is not shown. Projects delivered and countries served were supplied by the
+# owner on 21 October 2026.
 #
 # href: where the counter links; fallback: used when that page or section is not published.
 counters:
@@ -14,6 +14,7 @@ counters:
     faces: true
   - id: projects
     label: Projects delivered
+    value: "{{fact:company.projects}}"
     href: /work/
   - id: team
     label: Engineers and designers
@@ -22,6 +23,7 @@ counters:
     fallback: /company/
   - id: countries
     label: Countries served
+    value: "{{fact:company.countries}}"
     href: /locations/
   - id: certifications
     label: Certifications

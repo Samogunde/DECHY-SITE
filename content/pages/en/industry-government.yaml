@@ -200,19 +200,19 @@ sections:
     rows:
       - - Accessible online form and payment
         - Form, validation, payment, and confirmation for one service
-        - $8,000 to $20,000
+        - $6,000 to $16,000
         - 2 to 4 weeks
       - - Citizen portal
         - Accounts, applications, status tracking, and messages
-        - $20,000 to $45,000
+        - $16,000 to $36,000
         - 5 to 8 weeks
       - - Case management system
         - Work queues, deadlines, documents, and decisions
-        - $30,000 to $70,000
+        - $24,000 to $56,000
         - 2 to 3 months
       - - Data and reporting platform
         - Service data joined for performance and planning
-        - $40,000 to $100,000+
+        - $32,000 to $80,000+
         - 2 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -224,7 +224,7 @@ sections:
     items:
       - q: How much does a digital public service cost?
         a:
-          One accessible online form with payment usually costs $8,000 to $20,000. Case management and
+          One accessible online form with payment usually costs $6,000 to $16,000. Case management and
           portals cost more and are delivered in stages.
       - q: Do you meet accessibility standards?
         a: Yes. We build to the WCAG guidelines and test with screen readers, keyboards, and real users.

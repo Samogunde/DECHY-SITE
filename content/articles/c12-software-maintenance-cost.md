@@ -6,10 +6,10 @@ group: pricing
 service: software-development
 models: [maintenance]
 title: "App and Software Maintenance Cost After Launch | DECHY"
-description: "What it costs to maintain an app, website, or software after launch: care plans from $300 a month, the yearly budget rule, and what maintenance actually covers."
+description: "What it costs to maintain an app, website, or software after launch: care plans from $250 a month, the yearly budget rule, and what maintenance actually covers."
 h1: "App and software maintenance cost after launch"
-summary: Maintaining software after launch usually costs 15 to 20 percent of the build cost each year. Our care plans run from $300 a month for websites to $10,000 or more for business-critical products. This guide explains what maintenance covers and how to budget for it.
-answer: "Plan to spend 15 to 20 percent of the original build cost each year to keep software secure, working, and improving. For a website, that is usually $300 to $800 a month. For a web or mobile app in daily use, $1,200 to $3,000 a month. For business-critical systems and SaaS products, $4,000 to $10,000 or more. Hosting and third-party fees come on top, and usually cost far less than the maintenance itself."
+summary: Maintaining software after launch usually costs 15 to 20 percent of the build cost each year. Our care plans run from $250 a month for websites to $8,000 or more for business-critical products. This guide explains what maintenance covers and how to budget for it.
+answer: "Plan to spend 15 to 20 percent of the original build cost each year to keep software secure, working, and improving. For a website, that is usually $250 to $650 a month. For a web or mobile app in daily use, $1,000 to $2,500 a month. For business-critical systems and SaaS products, $3,000 to $8,000 or more. Hosting and third-party fees come on top, and usually cost far less than the maintenance itself."
 intent: software maintenance cost
 date: 2026-10-21
 reviewed: 2026-10-21
@@ -17,17 +17,17 @@ tables:
   - heading: "A yearly maintenance budget by type of product"
     columns: ["Product", "Typical build cost", "Yearly maintenance budget"]
     rows:
-      - ["Business website", "$3,000 to $7,000", "$3,600 to $9,600 (Essential care)"]
-      - ["Web app in daily use", "$20,000 to $50,000", "$14,400 to $36,000 (Growth care)"]
+      - ["Business website", "$3,000 to $7,000", "$3,000 to $7,800 (Essential care)"]
+      - ["Web app in daily use", "$20,000 to $50,000", "$12,000 to $30,000 (Growth care)"]
       - [
           "Mobile app on iPhone and Android",
           "$20,000 to $35,000",
-          "$14,400 to $36,000 (Growth care)",
+          "$12,000 to $30,000 (Growth care)",
         ]
       - [
           "SaaS product or operations platform",
           "$50,000 to $100,000",
-          "$48,000 to $120,000 (Product care)",
+          "$36,000 to $96,000 (Product care)",
         ]
     note: "Maintenance for small websites is a higher share of the build cost because some work, such as security updates and backups, is the same however small the site is."
 related:
@@ -72,7 +72,7 @@ Improvements are small changes and new features: a new report, a better form, a 
 
 A useful rule of thumb is to budget 15 to 20 percent of the build cost each year for maintenance. A $40,000 web app needs $6,000 to $8,000 a year at the very least, and more if the business wants regular improvements.
 
-Small websites break the rule. Their build cost is low, but some work, such as backups, uptime monitoring, and security updates, costs the same however small the site is. That is why our smallest plan starts at $300 a month.
+Small websites break the rule. Their build cost is low, but some work, such as backups, uptime monitoring, and security updates, costs the same however small the site is. That is why our smallest plan starts at $250 a month.
 
 ## Running costs that are not maintenance
 
@@ -107,13 +107,13 @@ Plan major updates before they become urgent. Framework versions are supported f
 
 Picture a services company with a customer portal built two years ago by another supplier. Nobody has updated it since launch. It still works, but it runs on an outdated framework version with known security issues, and a payment provider has announced it will retire the connection the portal uses.
 
-The first step is a one-off catch-up: updating the framework, replacing the payment connection, and adding monitoring, quoted at about $6,000. After that, the portal moves to Growth care at $1,800 a month, including 12 hours of improvements. The company now gets a monthly report, and the backlog of small requests finally moves.
+The first step is a one-off catch-up: updating the framework, replacing the payment connection, and adding monitoring, quoted at about $5,000. After that, the portal moves to Growth care at $1,500 a month, including 12 hours of improvements. The company now gets a monthly report, and the backlog of small requests finally moves.
 
 ## Common questions
 
 ### How much does it cost to maintain an app per year?
 
-For a web or mobile app in daily use, plan $14,400 to $36,000 a year, which is our Growth care plan. Simple apps can cost less; business-critical platforms cost more.
+For a web or mobile app in daily use, plan $12,000 to $30,000 a year, which is our Growth care plan. Simple apps can cost less; business-critical platforms cost more.
 
 ### Can you maintain software another company built?
 

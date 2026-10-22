@@ -173,7 +173,7 @@ sections:
     items:
       - q: How much does legal document automation cost?
         a:
-          Document automation for a set of standard documents usually costs $10,000 to $30,000 and takes 3
+          Document automation for a set of standard documents usually costs $8,000 to $24,000 and takes 3
           to 5 weeks.
       - q: Will AI give legal advice to our clients?
         a:
@@ -222,19 +222,19 @@ sections:
     rows:
       - - Online intake and booking
         - Questionnaires, conflict checks, and consultation booking
-        - $5,000 to $12,000
+        - $4,000 to $10,000
         - 2 to 3 weeks
       - - Document automation
         - Templates, question flows, and drafts for standard documents
-        - $10,000 to $30,000
+        - $8,000 to $24,000
         - 3 to 5 weeks
       - - Secure client portal
         - Documents, updates, messages, and payments
-        - $15,000 to $35,000
+        - $12,000 to $28,000
         - 4 to 6 weeks
       - - Matter platform with AI tools
         - Matters, deadlines, AI research and summaries, and billing links
-        - $40,000 to $90,000+
+        - $32,000 to $72,000+
         - 2 to 3 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.

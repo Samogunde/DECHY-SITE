@@ -105,19 +105,19 @@ sections:
     rows:
       - - Journey redesign in the current app
         - Research, design, and build for one customer journey
-        - $25,000 to $50,000
+        - $20,000 to $40,000
         - 6 to 8 weeks
       - - Digital account opening
         - Identity checks, account setup, and staff handoff
-        - $40,000 to $80,000
+        - $32,000 to $64,000
         - 8 to 12 weeks
       - - Loan origination tool
         - Applications, documents, decisions, and offers
-        - $50,000 to $100,000
+        - $40,000 to $80,000
         - 2 to 3 months
       - - Integration layer and new channel
         - Controlled access to the core for new apps
-        - $80,000 to $150,000+
+        - $64,000 to $120,000+
         - 3 to 4 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -234,7 +234,7 @@ sections:
           build.
       - q: What does a banking project cost?
         a:
-          Most journeys cost $40,000 to $100,000 depending on integration and review needs. Larger programs
+          Most journeys cost $32,000 to $80,000 depending on integration and review needs. Larger programs
           are planned in stages.
       - q: Can you improve the app we already have?
         a:

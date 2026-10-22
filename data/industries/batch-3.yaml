@@ -79,19 +79,19 @@ industries:
       rows:
         - - Branded job board
           - Job listings, search, applications, and alerts
-          - $5,000 to $12,000
+          - $4,000 to $10,000
           - 2 to 3 weeks
         - - Applicant tracking system
           - Pipelines, notes, emails, and client shortlists
-          - $20,000 to $45,000
+          - $16,000 to $36,000
           - 5 to 8 weeks
         - - Onboarding and timesheets
           - Documents, checks, timesheets, and invoicing
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Full recruitment platform with AI screening
           - Job board, tracking, portals, onboarding, and AI tools
-          - $50,000 to $100,000+
+          - $40,000 to $80,000+
           - 2 to 4 months
     needs:
       heading: Recruitment and HR software we build
@@ -164,7 +164,7 @@ industries:
       heading: Questions about recruitment software
       items:
         - - How much does an applicant tracking system cost?
-          - A custom applicant tracking system usually costs $20,000 to $45,000 and takes 5 to 8
+          - A custom applicant tracking system usually costs $16,000 to $36,000 and takes 5 to 8
             weeks. A full platform with portals and AI costs more.
         - - Can you connect to the job boards we use?
           - Usually, yes. We post roles and import applications through job board interfaces where
@@ -271,19 +271,19 @@ industries:
       rows:
         - - Online intake and booking
           - Questionnaires, conflict checks, and consultation booking
-          - $5,000 to $12,000
+          - $4,000 to $10,000
           - 2 to 3 weeks
         - - Document automation
           - Templates, question flows, and drafts for standard documents
-          - $10,000 to $30,000
+          - $8,000 to $24,000
           - 3 to 5 weeks
         - - Secure client portal
           - Documents, updates, messages, and payments
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Matter platform with AI tools
           - Matters, deadlines, AI research and summaries, and billing links
-          - $40,000 to $90,000+
+          - $32,000 to $72,000+
           - 2 to 3 months
     needs:
       heading: Legal software we build
@@ -355,7 +355,7 @@ industries:
       heading: Questions about legal software
       items:
         - - How much does legal document automation cost?
-          - Document automation for a set of standard documents usually costs $10,000 to $30,000 and
+          - Document automation for a set of standard documents usually costs $8,000 to $24,000 and
             takes 3 to 5 weeks.
         - - Will AI give legal advice to our clients?
           - No. AI helps your lawyers summarize and draft, and a lawyer reviews everything before it
@@ -464,19 +464,19 @@ industries:
       rows:
         - - Publishing website rebuild
           - Fast templates, content migration, and search setup
-          - $8,000 to $20,000
+          - $6,000 to $16,000
           - 2 to 4 weeks
         - - Subscriptions and paywall
           - Plans, metering, accounts, payments, and offers
-          - $10,000 to $30,000
+          - $8,000 to $24,000
           - 3 to 5 weeks
         - - Podcast or video platform
           - Players, feeds, members-only content, and analytics
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Full media platform with apps
           - Editorial system, subscriptions, newsletters, and apps
-          - $40,000 to $100,000+
+          - $32,000 to $80,000+
           - 2 to 4 months
     needs:
       heading: Media and publishing software we build
@@ -552,8 +552,8 @@ industries:
       heading: Questions about media and publishing platforms
       items:
         - - How much does a publishing platform cost?
-          - A rebuilt publishing site usually costs $8,000 to $20,000. Adding subscriptions and a
-            paywall usually costs $10,000 to $30,000.
+          - A rebuilt publishing site usually costs $6,000 to $16,000. Adding subscriptions and a
+            paywall usually costs $8,000 to $24,000.
         - - Can you migrate our archive?
           - Yes. We move articles, images, authors, and URLs, with redirects so search rankings
             carry over.
@@ -666,19 +666,19 @@ industries:
       rows:
         - - Donation website
           - Fast donation journey, monthly giving, and receipts
-          - $3,000 to $8,000
+          - $2,500 to $6,000
           - 1 to 2 weeks
         - - Campaign and event fundraising
           - Appeal pages, peer fundraising, and event tickets
-          - $6,000 to $15,000
+          - $5,000 to $12,000
           - 2 to 4 weeks
         - - Volunteer management
           - Sign-up, roles, shifts, reminders, and hours
-          - $8,000 to $20,000
+          - $6,000 to $16,000
           - 3 to 5 weeks
         - - Supporter platform and impact reporting
           - One supporter record, integrations, and dashboards
-          - $20,000 to $45,000+
+          - $16,000 to $36,000+
           - 5 to 8 weeks
     needs:
       heading: Nonprofit software we build
@@ -752,7 +752,7 @@ industries:
       heading: Questions about nonprofit technology
       items:
         - - How much does a nonprofit donation website cost?
-          - A donation website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks.
+          - A donation website usually costs $2,500 to $6,000 and launches in 1 to 2 weeks.
         - - Can you connect to our supporter database?
           - Usually, yes. We connect donation and volunteer tools to the database you already use.
         - - Do you offer nonprofit pricing?
@@ -863,19 +863,19 @@ industries:
       rows:
         - - Accessible online form and payment
           - Form, validation, payment, and confirmation for one service
-          - $8,000 to $20,000
+          - $6,000 to $16,000
           - 2 to 4 weeks
         - - Citizen portal
           - Accounts, applications, status tracking, and messages
-          - $20,000 to $45,000
+          - $16,000 to $36,000
           - 5 to 8 weeks
         - - Case management system
           - Work queues, deadlines, documents, and decisions
-          - $30,000 to $70,000
+          - $24,000 to $56,000
           - 2 to 3 months
         - - Data and reporting platform
           - Service data joined for performance and planning
-          - $40,000 to $100,000+
+          - $32,000 to $80,000+
           - 2 to 4 months
     needs:
       heading: Public sector software we build
@@ -950,7 +950,7 @@ industries:
       heading: Questions about public sector software
       items:
         - - How much does a digital public service cost?
-          - One accessible online form with payment usually costs $8,000 to $20,000. Case management
+          - One accessible online form with payment usually costs $6,000 to $16,000. Case management
             and portals cost more and are delivered in stages.
         - - Do you meet accessibility standards?
           - Yes. We build to the WCAG guidelines and test with screen readers, keyboards, and real
@@ -1064,19 +1064,19 @@ industries:
       rows:
         - - First product version
           - Core features, accounts, billing, and an admin console
-          - $30,000 to $60,000
+          - $24,000 to $48,000
           - 6 to 10 weeks
         - - Billing and subscription system
           - Plans, trials, upgrades, invoices, and usage billing
-          - $12,000 to $30,000
+          - $10,000 to $24,000
           - 3 to 5 weeks
         - - Integrations and public interface
           - Connections to popular tools and a documented interface for customers
-          - $10,000 to $35,000
+          - $8,000 to $28,000
           - 3 to 6 weeks
         - - Platform rebuild or scale-up
           - Architecture, performance, testing, and migration
-          - $50,000 to $150,000+
+          - $40,000 to $120,000+
           - 2 to 4 months
     needs:
       heading: Software product work we do
@@ -1149,7 +1149,7 @@ industries:
       heading: Questions about software product development
       items:
         - - How much does it cost to build a software product?
-          - A focused first version usually costs $30,000 to $60,000 and takes 6 to 10 weeks.
+          - A focused first version usually costs $24,000 to $48,000 and takes 6 to 10 weeks.
             Ongoing feature work is priced per release or per month.
         - - Can you work alongside our engineers?
           - Yes. We join your process, tools, and code reviews, and work as part of your team.
@@ -1262,19 +1262,19 @@ industries:
       rows:
         - - Customer self-service app
           - Plans, bills, usage, payments, and fault reporting
-          - $20,000 to $45,000
+          - $16,000 to $36,000
           - 4 to 8 weeks
         - - Online ordering and availability
           - Address checks, plan selection, checkout, and booking
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Engineer field app
           - Jobs, equipment, tests, photos, and sign-off
-          - $20,000 to $40,000
+          - $16,000 to $32,000
           - 4 to 6 weeks
         - - Provisioning automation and data dashboards
           - Order flow automation and network service dashboards
-          - $40,000 to $100,000+
+          - $32,000 to $80,000+
           - 2 to 4 months
     needs:
       heading: Telecom software we build
@@ -1347,7 +1347,7 @@ industries:
       heading: Questions about telecom software
       items:
         - - How much does a telecom self-service app cost?
-          - A customer self-service app usually costs $20,000 to $45,000 and takes 4 to 8 weeks,
+          - A customer self-service app usually costs $16,000 to $36,000 and takes 4 to 8 weeks,
             depending on billing integration.
         - - Can you connect to our billing system?
           - Usually, yes, through its interfaces. Billing stays the source of truth and the app

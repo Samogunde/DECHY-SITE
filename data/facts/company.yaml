@@ -57,3 +57,15 @@ facts:
     value: "100+"
     status: approved
     source: Owner instruction in chat, 21 October 2026 ("Engineers and designers (100+)")
+
+  - id: company.projects
+    label: Projects delivered
+    value: "1,500+"
+    status: approved
+    source: Owner instruction in chat, 21 October 2026 ("we have delivered over 1,500 projects")
+
+  - id: company.countries
+    label: Countries served
+    value: "20+"
+    status: approved
+    source: Owner instruction in chat, 21 October 2026 ("about 20 countries", including the United States, United Kingdom, Germany, Spain, France, Portugal, Italy, Brazil, and Australia)

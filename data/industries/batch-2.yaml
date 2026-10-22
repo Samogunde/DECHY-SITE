@@ -75,19 +75,19 @@ industries:
       rows:
         - - Direct ordering website
           - Menu, delivery and collection, payments, and order alerts
-          - $3,000 to $8,000
+          - $2,500 to $6,000
           - 1 to 2 weeks
         - - Booking and deposits
           - Table booking, deposits, reminders, and waitlists
-          - $3,000 to $7,000
+          - $2,500 to $6,000
           - 1 to 2 weeks
         - - Branded ordering and loyalty app
           - Ordering, rewards, offers, and push notifications
-          - $12,000 to $30,000
+          - $10,000 to $24,000
           - 3 to 5 weeks
         - - Multi-site restaurant platform
           - Several sites, kitchen display, menu control, and reporting
-          - $30,000 to $60,000+
+          - $24,000 to $48,000+
           - 5 to 8 weeks
     needs:
       heading: Restaurant software we build
@@ -163,8 +163,8 @@ industries:
       heading: Questions about restaurant software
       items:
         - - How much does a restaurant ordering system cost?
-          - A direct ordering website usually costs $3,000 to $8,000 and launches in 1 to 2 weeks. A
-            branded app with loyalty usually costs $12,000 to $30,000.
+          - A direct ordering website usually costs $2,500 to $6,000 and launches in 1 to 2 weeks. A
+            branded app with loyalty usually costs $10,000 to $24,000.
         - - Will customers really order direct?
           - Regulars will, when ordering is just as easy and they get a reward for it. Most
             restaurants move a good share of repeat orders within months.
@@ -269,19 +269,19 @@ industries:
       rows:
         - - Hotel website and booking flow
           - Rooms, offers, real-time rates, and payments
-          - $5,000 to $12,000
+          - $4,000 to $10,000
           - 2 to 3 weeks
         - - Online check-in and upsells
           - Pre-arrival check-in, upgrades, extras, and messages
-          - $8,000 to $20,000
+          - $6,000 to $16,000
           - 2 to 4 weeks
         - - Guest app
           - Requests, digital key where supported, dining, and offers
-          - $20,000 to $40,000
+          - $16,000 to $32,000
           - 4 to 6 weeks
         - - Group booking and guest platform
           - Several properties, central rates, loyalty, and reporting
-          - $40,000 to $80,000+
+          - $32,000 to $64,000+
           - 6 to 10 weeks
     needs:
       heading: Hospitality software we build
@@ -354,7 +354,7 @@ industries:
       heading: Questions about hotel software
       items:
         - - How much does a hotel booking website cost?
-          - A hotel website with a direct booking flow usually costs $5,000 to $12,000 and launches
+          - A hotel website with a direct booking flow usually costs $4,000 to $10,000 and launches
             in 2 to 3 weeks.
         - - Can you connect to our property management system?
           - Usually, yes. We connect through its interfaces so rooms, rates, and guests stay in sync.
@@ -467,19 +467,19 @@ industries:
       rows:
         - - Tour and activity booking site
           - Listings, dates, live availability, and payments
-          - $5,000 to $12,000
+          - $4,000 to $10,000
           - 2 to 3 weeks
         - - Package and itinerary builder
           - Packages, extras, deposits, balances, and documents
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Traveler itinerary app
           - Bookings, tickets, maps, offline use, and updates
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Travel marketplace or booking platform
           - Many suppliers, search, payments, and agent tools
-          - $40,000 to $90,000+
+          - $32,000 to $72,000+
           - 2 to 3 months
     needs:
       heading: Travel and tourism software we build
@@ -555,8 +555,8 @@ industries:
       heading: Questions about travel software
       items:
         - - How much does a travel booking platform cost?
-          - A tour or activity booking site usually costs $5,000 to $12,000. A full platform with
-            many suppliers and agent tools costs $40,000 to $90,000 or more.
+          - A tour or activity booking site usually costs $4,000 to $10,000. A full platform with
+            many suppliers and agent tools costs $32,000 to $72,000 or more.
         - - Can you connect to our suppliers?
           - Usually, yes, through their systems or the booking networks they use. Where there is no
             connection, we build simple supplier tools.
@@ -663,19 +663,19 @@ industries:
       rows:
         - - Marketplace first version
           - Listings, search, checkout, payouts, and basic ratings
-          - $20,000 to $40,000
+          - $16,000 to $32,000
           - 4 to 6 weeks
         - - On-demand service app
           - Customer app, provider app, matching, and payments
-          - $30,000 to $50,000
+          - $24,000 to $40,000
           - 6 to 8 weeks
         - - Delivery app with live tracking
           - Customer, courier, and store apps with live maps
-          - $35,000 to $60,000
+          - $28,000 to $48,000
           - 6 to 10 weeks
         - - Scaled multi-vendor platform
           - Vendor portal, admin, disputes, analytics, and growth features
-          - $60,000 to $120,000+
+          - $48,000 to $96,000+
           - 2 to 4 months
     needs:
       heading: Marketplace software we build
@@ -749,8 +749,8 @@ industries:
       heading: Questions about marketplace development
       items:
         - - How much does a marketplace app cost?
-          - A focused first version usually costs $20,000 to $40,000 and takes 4 to 6 weeks.
-            On-demand apps with live tracking cost $30,000 to $60,000.
+          - A focused first version usually costs $16,000 to $32,000 and takes 4 to 6 weeks.
+            On-demand apps with live tracking cost $24,000 to $48,000.
         - - How do payments to sellers work?
           - Buyers pay the platform, your fee is kept automatically, and sellers are paid on a
             schedule through a marketplace payment service.
@@ -853,19 +853,19 @@ industries:
       rows:
         - - Dealer website with live inventory
           - Stock feed, search, vehicle pages, and lead forms
-          - $6,000 to $15,000
+          - $5,000 to $12,000
           - 2 to 3 weeks
         - - Service booking system
           - Workshop slots, reminders, and courtesy car booking
-          - $5,000 to $12,000
+          - $4,000 to $10,000
           - 1 to 3 weeks
         - - Finance and trade-in tools
           - Online finance applications and trade-in valuation
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 3 to 5 weeks
         - - Dealer group platform and app
           - Several brands and sites, customer app, and reporting
-          - $40,000 to $80,000+
+          - $32,000 to $64,000+
           - 6 to 10 weeks
     needs:
       heading: Automotive software we build
@@ -940,7 +940,7 @@ industries:
       heading: Questions about automotive software
       items:
         - - How much does a dealership website cost?
-          - A dealer website with live inventory usually costs $6,000 to $15,000 and launches in 2
+          - A dealer website with live inventory usually costs $5,000 to $12,000 and launches in 2
             to 3 weeks.
         - - Can you connect to our dealer management system?
           - Usually, yes, through its interface or a stock export, so your website always shows real
@@ -1050,19 +1050,19 @@ industries:
       rows:
         - - Driver app and proof of delivery
           - Jobs, checks, photos, signatures, and offline use
-          - $12,000 to $25,000
+          - $10,000 to $20,000
           - 3 to 5 weeks
         - - Live tracking and customer updates
           - Vehicle locations, arrival estimates, and customer messages
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 2 to 4 weeks
         - - Planning and dispatch board
           - Orders, routes, loads, and driver assignment
-          - $25,000 to $50,000
+          - $20,000 to $40,000
           - 5 to 8 weeks
         - - Full fleet management platform
           - Booking, planning, apps, maintenance, and reporting
-          - $50,000 to $120,000+
+          - $40,000 to $96,000+
           - 2 to 4 months
     needs:
       heading: Transportation software we build
@@ -1135,8 +1135,8 @@ industries:
       heading: Questions about transport software
       items:
         - - How much does fleet management software cost?
-          - A driver app with tracking usually costs $12,000 to $35,000. A full platform with
-            planning and maintenance costs $50,000 to $120,000 or more.
+          - A driver app with tracking usually costs $10,000 to $28,000. A full platform with
+            planning and maintenance costs $40,000 to $96,000 or more.
         - - Can you work with our telematics provider?
           - Usually, yes. We read location and vehicle data from their systems and build the
             operations layer on top.
@@ -1245,19 +1245,19 @@ industries:
       rows:
         - - Field or livestock records app
           - Fields, inputs, work, or animals recorded offline
-          - $12,000 to $25,000
+          - $10,000 to $20,000
           - 3 to 5 weeks
         - - Sensor and machine data dashboard
           - Soil, weather, and equipment data in one view
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Traceability system
           - Batches tracked from field to buyer with documents
-          - $20,000 to $45,000
+          - $16,000 to $36,000
           - 5 to 8 weeks
         - - Agribusiness platform
           - Growers, ordering, traceability, and reporting together
-          - $50,000 to $100,000+
+          - $40,000 to $80,000+
           - 2 to 4 months
     needs:
       heading: Agriculture software we build
@@ -1330,8 +1330,8 @@ industries:
       heading: Questions about agriculture software
       items:
         - - How much does farm management software cost?
-          - A records app usually costs $12,000 to $25,000. A full agribusiness platform with
-            traceability and portals costs $50,000 to $100,000 or more.
+          - A records app usually costs $10,000 to $20,000. A full agribusiness platform with
+            traceability and portals costs $40,000 to $80,000 or more.
         - - Does it work without signal?
           - Yes. Everything works offline and syncs when the phone finds a connection.
         - - Can you use data from our tractors and sensors?

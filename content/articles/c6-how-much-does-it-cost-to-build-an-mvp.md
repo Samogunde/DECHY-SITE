@@ -6,24 +6,24 @@ group: build
 service: software-development
 models: [mvp]
 title: "How Much Does It Cost to Build an MVP? | DECHY"
-description: "An MVP costs $4,000 for a clickable prototype to $50,000 for a SaaS product with billing. See what each type includes, how long it takes, and what to leave out."
+description: "An MVP costs $3,000 for a clickable prototype to $50,000 for a SaaS product with billing. See what each type includes, how long it takes, and what to leave out."
 h1: "How much does it cost to build an MVP?"
-summary: A minimum viable product usually costs between $8,000 and $30,000 and takes two to four weeks. A clickable prototype costs less; a subscription product with billing costs more. This guide shows the ranges, what belongs in a first version, and what to leave for later.
-answer: "A clickable prototype costs $4,000 to $8,000. A working web app MVP costs $8,000 to $20,000, a mobile app MVP $10,000 to $20,000, and an AI product MVP $10,000 to $30,000, each in two to four weeks. A SaaS MVP with sign-up, plans, and billing costs $25,000 to $50,000 and takes six to eight weeks. The single biggest cost lever is how ruthlessly you cut the feature list."
+summary: A minimum viable product usually costs between $6,000 and $24,000 and takes two to four weeks. A clickable prototype costs less; a subscription product with billing costs more. This guide shows the ranges, what belongs in a first version, and what to leave for later.
+answer: "A clickable prototype costs $3,000 to $6,000. A working web app MVP costs $6,000 to $16,000, a mobile app MVP $10,000 to $20,000, and an AI product MVP $8,000 to $24,000, each in two to four weeks. A SaaS MVP with sign-up, plans, and billing costs $25,000 to $50,000 and takes six to eight weeks. The single biggest cost lever is how ruthlessly you cut the feature list."
 intent: how much does it cost to build an mvp
 date: 2026-10-21
 reviewed: 2026-10-21
 tables:
-  - heading: "What goes into a $15,000 web app MVP"
+  - heading: "What goes into a $12,000 web app MVP"
     columns: ["Part", "What it covers", "Typical cost"]
     rows:
-      - ["Scope workshop", "The one job the MVP must do, and the list of what waits", "$1,000"]
-      - ["Prototype", "Clickable screens tested with five to eight target users", "$2,000"]
-      - ["Core feature", "The workflow that proves the idea", "$6,500"]
-      - ["Accounts and sign-in", "Sign-up, login, password reset", "$1,500"]
-      - ["Admin view", "A simple screen for you to see users and activity", "$1,500"]
-      - ["Analytics", "Tracking the actions that show whether the idea works", "$700"]
-      - ["Testing and launch", "Device testing, hosting, and release", "$1,800"]
+      - ["Scope workshop", "The one job the MVP must do, and the list of what waits", "$800"]
+      - ["Prototype", "Clickable screens tested with five to eight target users", "$1,600"]
+      - ["Core feature", "The workflow that proves the idea", "$5,200"]
+      - ["Accounts and sign-in", "Sign-up, login, password reset", "$1,200"]
+      - ["Admin view", "A simple screen for you to see users and activity", "$1,200"]
+      - ["Analytics", "Tracking the actions that show whether the idea works", "$550"]
+      - ["Testing and launch", "Device testing, hosting, and release", "$1,450"]
 related:
   - {
       label: "How much does web app development cost?",
@@ -100,15 +100,15 @@ Plan a short second release from the start. Most MVPs need two to three weeks of
 
 Picture a founder with an idea for a booking tool for independent fitness coaches. The full vision includes client apps, payments, group classes, packages, a marketplace, and reporting.
 
-The MVP focuses on one job: coaches share a booking link, and clients book and pay for single sessions. Coaches see their week in one view. There is no client app, no marketplace, and no packages. It is a web app MVP at about $15,000, live in four weeks.
+The MVP focuses on one job: coaches share a booking link, and clients book and pay for single sessions. Coaches see their week in one view. There is no client app, no marketplace, and no packages. It is a web app MVP at about $12,000, live in four weeks.
 
 After two months, usage shows that coaches mostly sell packages of ten sessions. Packages become the first feature of the next release. The founder spent money only on what customers proved they wanted.
 
 ## Common questions
 
-### Can I build an MVP for under $10,000?
+### Can I build an MVP for under $8,000?
 
-Yes, if it is a clickable prototype or a tightly scoped web app with one workflow. A working product with accounts, payments, and an admin view usually starts around $10,000.
+Yes, if it is a clickable prototype or a tightly scoped web app with one workflow. A working product with accounts, payments, and an admin view usually starts around $8,000.
 
 ### Should my MVP be a web app or a mobile app?
 

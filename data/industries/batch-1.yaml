@@ -148,7 +148,7 @@ industries:
       heading: Questions about fitness software
       items:
         - - How much does a fitness app cost?
-          - Most member apps cost $10,000 to $35,000 and take 2 to 6 weeks. A full platform with
+          - Most member apps cost $8,000 to $28,000 and take 2 to 6 weeks. A full platform with
             coaching, billing, and multiple sites sits at the top of that range or above.
         - - Can you connect to the gym system we already use?
           - Usually, yes. We connect through the booking and billing platform you have, so staff
@@ -190,19 +190,19 @@ industries:
       rows:
         - - Booking website
           - Timetable, online booking, memberships, and payments
-          - $3,000 to $8,000
+          - $2,500 to $6,000
           - 1 to 2 weeks
         - - Branded member app
           - Booking, progress, notifications, and your branding on iPhone and Android
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 2 to 5 weeks
         - - Online coaching platform
           - Programs, video library, check-ins, and messaging
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Multi-site fitness platform
           - Several locations, staff roles, reporting, and integrations
-          - $35,000 to $60,000+
+          - $28,000 to $48,000+
           - 6 to 8 weeks
   - slug: beauty
     entity: ind.beauty
@@ -344,8 +344,8 @@ industries:
       heading: Questions about salon software
       items:
         - - How much does a salon booking website cost?
-          - Most booking websites cost $3,000 to $10,000 and launch in 1 to 3 weeks. A branded app
-            with loyalty usually adds $10,000 to $25,000.
+          - Most booking websites cost $2,500 to $8,000 and launch in 1 to 3 weeks. A branded app
+            with loyalty usually adds $8,000 to $20,000.
         - - Can we keep the booking system we already pay for?
           - Yes, if it has an open connection. We can build your website and app on top of it, or
             replace it if it holds you back.
@@ -385,19 +385,19 @@ industries:
       rows:
         - - Booking website
           - Services, team, real-time booking, and local search setup
-          - $3,000 to $7,000
+          - $2,500 to $6,000
           - 1 to 2 weeks
         - - Deposits and client records
           - Card deposits, cancellation rules, notes, and history
-          - $4,000 to $10,000
+          - $3,000 to $8,000
           - 1 to 3 weeks
         - - Branded booking app
           - Rebooking, loyalty, offers, and notifications
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 3 to 5 weeks
         - - Multi-location platform with store
           - Several salons, retail store, reporting, and integrations
-          - $25,000 to $45,000+
+          - $20,000 to $36,000+
           - 5 to 8 weeks
   - slug: fintech
     entity: ind.fintech
@@ -542,7 +542,7 @@ industries:
       heading: Questions about fintech development
       items:
         - - How much does a fintech app cost?
-          - A focused first product usually costs $25,000 to $60,000 and takes 6 to 10 weeks.
+          - A focused first product usually costs $20,000 to $48,000 and takes 6 to 10 weeks.
             Lending or investment platforms with many rules cost more.
         - - Do you handle licensing?
           - No. Licensing is a legal matter for you and your advisers. We build the product and the
@@ -585,19 +585,19 @@ industries:
       rows:
         - - Payment or wallet first version
           - Accounts, payments, ledger, and onboarding on proven providers
-          - $25,000 to $45,000
+          - $20,000 to $36,000
           - 6 to 8 weeks
         - - Merchant and payout platform
           - Checkout, invoicing, split payments, and payouts
-          - $30,000 to $60,000
+          - $24,000 to $48,000
           - 6 to 10 weeks
         - - Lending platform
           - Applications, decisions, repayments, and collections
-          - $40,000 to $80,000
+          - $32,000 to $64,000
           - 2 to 3 months
         - - Investment or banking-grade app
           - Portfolios or accounts, statements, controls, and reporting
-          - $60,000 to $150,000+
+          - $48,000 to $120,000+
           - 3 to 4 months
   - slug: banking
     entity: ind.banking
@@ -753,7 +753,7 @@ industries:
           - Yes. We often work alongside bank teams, sharing code standards and handing over
             everything we build.
         - - What does a banking project cost?
-          - Most journeys cost $40,000 to $100,000 depending on integration and review needs. Larger
+          - Most journeys cost $32,000 to $80,000 depending on integration and review needs. Larger
             programs are planned in stages.
         - - Can you improve the app we already have?
           - Yes. Many banks start by fixing the journeys customers complain about in their current
@@ -784,19 +784,19 @@ industries:
       rows:
         - - Journey redesign in the current app
           - Research, design, and build for one customer journey
-          - $25,000 to $50,000
+          - $20,000 to $40,000
           - 6 to 8 weeks
         - - Digital account opening
           - Identity checks, account setup, and staff handoff
-          - $40,000 to $80,000
+          - $32,000 to $64,000
           - 8 to 12 weeks
         - - Loan origination tool
           - Applications, documents, decisions, and offers
-          - $50,000 to $100,000
+          - $40,000 to $80,000
           - 2 to 3 months
         - - Integration layer and new channel
           - Controlled access to the core for new apps
-          - $80,000 to $150,000+
+          - $64,000 to $120,000+
           - 3 to 4 months
   - slug: insurance
     entity: ind.insurance
@@ -932,7 +932,7 @@ industries:
       heading: Questions about insurance software
       items:
         - - How much does claims automation cost?
-          - A focused claims intake and document reading project usually costs $25,000 to $60,000
+          - A focused claims intake and document reading project usually costs $20,000 to $48,000
             and takes 6 to 10 weeks.
         - - Will AI make claims decisions?
           - No. AI reads and suggests. Your handlers decide, and every suggestion is logged with its
@@ -974,19 +974,19 @@ industries:
       rows:
         - - Online quote and buy
           - Quote, checkout, payment, and policy documents for one product
-          - $20,000 to $45,000
+          - $16,000 to $36,000
           - 4 to 8 weeks
         - - Claims intake and tracking
           - Online first notice of loss, uploads, and status updates
-          - $20,000 to $40,000
+          - $16,000 to $32,000
           - 4 to 6 weeks
         - - AI document reading
           - Extraction, review screen, and filing into your claims system
-          - $25,000 to $60,000
+          - $20,000 to $48,000
           - 6 to 10 weeks
         - - Broker portal and policy tools
           - Quotes, renewals, documents, commissions, and integrations
-          - $40,000 to $100,000+
+          - $32,000 to $80,000+
           - 2 to 3 months
   - slug: construction
     entity: ind.construction
@@ -1126,7 +1126,7 @@ industries:
       heading: Questions about construction software
       items:
         - - How much does a construction app cost?
-          - A site diary or approvals app usually costs $15,000 to $35,000 and takes 4 to 6 weeks. A
+          - A site diary or approvals app usually costs $12,000 to $28,000 and takes 4 to 6 weeks. A
             full project platform costs more and is built in stages.
         - - Will site teams actually use it?
           - They do when it saves them time. We design with site managers and keep every task to a
@@ -1167,19 +1167,19 @@ industries:
       rows:
         - - Site diary and reporting app
           - Daily reports, labor, delays, and photos, offline
-          - $15,000 to $30,000
+          - $12,000 to $24,000
           - 4 to 6 weeks
         - - Purchase approvals
           - Routing, mobile approvals, and orders created in your accounts
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 2 to 4 weeks
         - - Cost tracking dashboard
           - Budget, committed, and actual cost by project
-          - $15,000 to $35,000
+          - $12,000 to $28,000
           - 4 to 6 weeks
         - - Full project platform
           - Diaries, approvals, documents, safety, and a subcontractor portal
-          - $50,000 to $120,000+
+          - $40,000 to $96,000+
           - 2 to 4 months
   - slug: energy
     entity: ind.energy
@@ -1318,7 +1318,7 @@ industries:
       heading: Questions about energy software
       items:
         - - How much does an energy customer portal cost?
-          - Most customer portals cost $20,000 to $50,000 and take 4 to 8 weeks, depending on
+          - Most customer portals cost $16,000 to $40,000 and take 4 to 8 weeks, depending on
             billing and metering integration.
         - - Can you build tools for solar and battery installers?
           - Yes. We build quoting, scheduling, installation checklists, and customer apps for
@@ -1359,19 +1359,19 @@ industries:
       rows:
         - - Installer quoting and booking
           - Sizing, quotes, finance options, and scheduling
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 2 to 4 weeks
         - - Customer portal and app
           - Bills, usage, payments, and account changes online
-          - $20,000 to $50,000
+          - $16,000 to $40,000
           - 4 to 8 weeks
         - - Field service app
           - Jobs, routes, safety checks, and photos for crews
-          - $20,000 to $40,000
+          - $16,000 to $32,000
           - 4 to 6 weeks
         - - Meter and asset data platform
           - Collection, cleaning, monitoring, and dashboards
-          - $40,000 to $120,000+
+          - $32,000 to $96,000+
           - 2 to 4 months
   - slug: field-services
     entity: ind.field-services
@@ -1511,7 +1511,7 @@ industries:
       heading: Questions about field service software
       items:
         - - How much does field service software cost?
-          - A technician app with dispatch and invoicing usually costs $15,000 to $40,000 and takes
+          - A technician app with dispatch and invoicing usually costs $12,000 to $32,000 and takes
             4 to 8 weeks.
         - - Why not buy an off-the-shelf tool?
           - Many companies should, and we will say so. We build when your trade, pricing, or
@@ -1551,17 +1551,17 @@ industries:
       rows:
         - - Online booking and quotes
           - Services, real slots, pricing, and confirmations
-          - $4,000 to $10,000
+          - $3,000 to $8,000
           - 1 to 2 weeks
         - - Technician app
           - Jobs, checklists, photos, signatures, and offline use
-          - $12,000 to $25,000
+          - $10,000 to $20,000
           - 3 to 5 weeks
         - - Dispatch and invoicing
           - Scheduling board, invoices, payments, and accounting link
-          - $10,000 to $25,000
+          - $8,000 to $20,000
           - 3 to 5 weeks
         - - Full field service platform
           - Booking, dispatch, app, invoicing, and service plans
-          - $30,000 to $60,000+
+          - $24,000 to $48,000+
           - 6 to 8 weeks

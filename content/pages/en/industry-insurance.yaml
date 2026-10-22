@@ -104,19 +104,19 @@ sections:
     rows:
       - - Online quote and buy
         - Quote, checkout, payment, and policy documents for one product
-        - $20,000 to $45,000
+        - $16,000 to $36,000
         - 4 to 8 weeks
       - - Claims intake and tracking
         - Online first notice of loss, uploads, and status updates
-        - $20,000 to $40,000
+        - $16,000 to $32,000
         - 4 to 6 weeks
       - - AI document reading
         - Extraction, review screen, and filing into your claims system
-        - $25,000 to $60,000
+        - $20,000 to $48,000
         - 6 to 10 weeks
       - - Broker portal and policy tools
         - Quotes, renewals, documents, commissions, and integrations
-        - $40,000 to $100,000+
+        - $32,000 to $80,000+
         - 2 to 3 months
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -150,7 +150,7 @@ sections:
     items:
       - q: How much does claims automation cost?
         a:
-          A focused claims intake and document reading project usually costs $25,000 to $60,000 and takes 6
+          A focused claims intake and document reading project usually costs $20,000 to $48,000 and takes 6
           to 10 weeks.
       - q: Will AI make claims decisions?
         a: No. AI reads and suggests. Your handlers decide, and every suggestion is logged with its source.

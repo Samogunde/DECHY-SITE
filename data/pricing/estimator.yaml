@@ -12,38 +12,38 @@ services:
       - {
           id: roles,
           label: "Several user roles and permissions",
-          cost: [3000, 8000],
+          cost: [2500, 6000],
           weeks: [1, 2],
         }
-      - { id: dashboards, label: "Dashboards and reports", cost: [3000, 10000], weeks: [1, 2] }
+      - { id: dashboards, label: "Dashboards and reports", cost: [2500, 8000], weeks: [1, 2] }
       - {
           id: migration,
           label: "Moving data from spreadsheets or an old system",
-          cost: [2500, 12000],
+          cost: [2000, 10000],
           weeks: [1, 2],
         }
       - {
           id: payments,
           label: "Payments, invoices, or subscriptions",
-          cost: [3000, 8000],
+          cost: [2500, 6000],
           weeks: [1, 2],
         }
       - {
           id: documents,
           label: "Document upload, signing, or generation",
-          cost: [2000, 6000],
+          cost: [1500, 5000],
           weeks: [0.5, 1],
         }
       - {
           id: ai,
           label: "An AI feature (assistant, summaries, predictions)",
-          cost: [5000, 15000],
+          cost: [4000, 12000],
           weeks: [1, 3],
         }
       - {
           id: audit,
           label: "Audit logs and compliance controls",
-          cost: [3000, 9000],
+          cost: [2500, 7000],
           weeks: [1, 2],
         }
   - key: web
@@ -51,36 +51,36 @@ services:
     hint: Business websites, content sites, booking and client areas, web apps
     pricing: [web-development]
     features:
-      - { id: cms, label: "Editable pages and a blog", cost: [800, 2500], weeks: [0, 0.5] }
-      - { id: copy, label: "We write the content", cost: [1200, 4000], weeks: [0.5, 1] }
-      - { id: booking, label: "Bookings or quote requests", cost: [1500, 5000], weeks: [0.5, 1] }
+      - { id: cms, label: "Editable pages and a blog", cost: [650, 2000], weeks: [0, 0.5] }
+      - { id: copy, label: "We write the content", cost: [950, 3000], weeks: [0.5, 1] }
+      - { id: booking, label: "Bookings or quote requests", cost: [1200, 4000], weeks: [0.5, 1] }
       - {
           id: accounts,
           label: "User accounts and a client area",
-          cost: [3000, 9000],
+          cost: [2500, 7000],
           weeks: [1, 2],
         }
-      - { id: payments, label: "Online payments", cost: [1500, 5000], weeks: [0.5, 1] }
-      - { id: languages, label: "More than one language", cost: [1500, 4000], weeks: [0.5, 1] }
-      - { id: seo, label: "Search setup and launch analytics", cost: [800, 2500], weeks: [0, 0.5] }
+      - { id: payments, label: "Online payments", cost: [1200, 4000], weeks: [0.5, 1] }
+      - { id: languages, label: "More than one language", cost: [1200, 3000], weeks: [0.5, 1] }
+      - { id: seo, label: "Search setup and launch analytics", cost: [650, 2000], weeks: [0, 0.5] }
   - key: mobile
     label: Mobile app
     hint: iPhone and Android apps for customers, staff, or field teams
     pricing: [mobile-app-development]
     platforms: true
     features:
-      - { id: accounts, label: "Sign-in and user profiles", cost: [2000, 5000], weeks: [0.5, 1] }
-      - { id: push, label: "Push notifications", cost: [1000, 3000], weeks: [0.5, 1] }
+      - { id: accounts, label: "Sign-in and user profiles", cost: [1500, 4000], weeks: [0.5, 1] }
+      - { id: push, label: "Push notifications", cost: [800, 2500], weeks: [0.5, 1] }
       - {
           id: payments,
           label: "In-app payments or subscriptions",
-          cost: [3000, 8000],
+          cost: [2500, 6000],
           weeks: [1, 2],
         }
-      - { id: offline, label: "Works offline and syncs later", cost: [4000, 12000], weeks: [1, 2] }
-      - { id: maps, label: "Maps, location, or live tracking", cost: [3000, 9000], weeks: [1, 2] }
-      - { id: chat, label: "In-app chat or messaging", cost: [4000, 10000], weeks: [1, 2] }
-      - { id: admin, label: "An admin panel for your team", cost: [4000, 12000], weeks: [1, 2] }
+      - { id: offline, label: "Works offline and syncs later", cost: [3000, 10000], weeks: [1, 2] }
+      - { id: maps, label: "Maps, location, or live tracking", cost: [2500, 7000], weeks: [1, 2] }
+      - { id: chat, label: "In-app chat or messaging", cost: [3000, 8000], weeks: [1, 2] }
+      - { id: admin, label: "An admin panel for your team", cost: [3000, 10000], weeks: [1, 2] }
   - key: ecommerce
     label: Online store
     hint: Shopify, WooCommerce, custom stores, marketplaces
@@ -89,34 +89,34 @@ services:
       - {
           id: catalog,
           label: "More than 500 products or many variants",
-          cost: [1500, 5000],
+          cost: [1200, 4000],
           weeks: [0.5, 1],
         }
       - {
           id: subscriptions,
           label: "Subscriptions or memberships",
-          cost: [2500, 7000],
+          cost: [2000, 6000],
           weeks: [1, 1.5],
         }
       - {
           id: b2b,
           label: "Trade accounts and wholesale pricing",
-          cost: [3000, 8000],
+          cost: [2500, 6000],
           weeks: [1, 2],
         }
       - {
           id: inventory,
           label: "Live stock sync with your warehouse or POS",
-          cost: [3000, 9000],
+          cost: [2500, 7000],
           weeks: [1, 2],
         }
       - {
           id: migration,
           label: "Moving from another platform",
-          cost: [2000, 6000],
+          cost: [1500, 5000],
           weeks: [0.5, 1],
         }
-      - { id: checkout, label: "A custom checkout", cost: [3000, 10000], weeks: [1, 2] }
+      - { id: checkout, label: "A custom checkout", cost: [2500, 8000], weeks: [1, 2] }
   - key: ai
     label: AI or automation
     hint: Assistants, AI features, agents, workflow and process automation
@@ -125,23 +125,23 @@ services:
       - {
           id: documents,
           label: "Reads documents, emails, or forms",
-          cost: [3000, 10000],
+          cost: [2500, 8000],
           weeks: [1, 2],
         }
       - {
           id: assistant,
           label: "A chat assistant for customers or staff",
-          cost: [4000, 12000],
+          cost: [3000, 10000],
           weeks: [1, 2],
         }
-      - { id: approvals, label: "Human approval steps", cost: [1500, 5000], weeks: [0.5, 1] }
+      - { id: approvals, label: "Human approval steps", cost: [1200, 4000], weeks: [0.5, 1] }
       - {
           id: reporting,
           label: "Accuracy and usage reporting",
-          cost: [2000, 6000],
+          cost: [1500, 5000],
           weeks: [0.5, 1],
         }
-      - { id: languages, label: "Several languages", cost: [2000, 6000], weeks: [0.5, 1] }
+      - { id: languages, label: "Several languages", cost: [1500, 5000], weeks: [0.5, 1] }
   - key: integration
     label: Connecting systems
     hint: CRM, accounting, store, ERP, and custom APIs working together
@@ -150,22 +150,22 @@ services:
       - {
           id: realtime,
           label: "Real-time sync instead of nightly",
-          cost: [2000, 7000],
+          cost: [1500, 6000],
           weeks: [0.5, 1],
         }
       - {
           id: legacy,
           label: "An older system with no modern API",
-          cost: [4000, 12000],
+          cost: [3000, 10000],
           weeks: [1, 2],
         }
       - {
           id: monitoring,
           label: "Monitoring, alerts, and retry handling",
-          cost: [1500, 5000],
+          cost: [1200, 4000],
           weeks: [0.5, 1],
         }
-      - { id: history, label: "Moving historical records", cost: [2000, 8000], weeks: [0.5, 1.5] }
+      - { id: history, label: "Moving historical records", cost: [1500, 6000], weeks: [0.5, 1.5] }
 
 # Size within the chosen project type: the share of its range a project of that size usually uses.
 sizes:
@@ -199,12 +199,12 @@ designs:
   - { key: premium, label: "Premium design with motion and illustration", factor: 1.15 }
 
 # Integrations with other systems: the approved single-integration range, per system.
-integration: { cost: [2000, 6000], weeks: [0.5, 1] }
+integration: { cost: [1500, 5000], weeks: [0.5, 1] }
 
 timelines:
   - { key: flexible, label: "Flexible: best price", factor: 0.95, weeks: 1.2 }
   - { key: standard, label: "Standard", factor: 1, weeks: 1 }
-  - { key: rush, label: "Fast: as soon as possible", factor: 1.25, weeks: 0.75 }
+  - { key: rush, label: "Fast: as soon as possible", factor: 1.2, weeks: 0.75 }
 
 excludes:
   - Third-party subscriptions and fees, such as hosting, app store accounts, payment processing, AI usage, and paid plugins.

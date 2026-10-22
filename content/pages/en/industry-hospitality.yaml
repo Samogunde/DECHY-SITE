@@ -170,19 +170,19 @@ sections:
     rows:
       - - Hotel website and booking flow
         - Rooms, offers, real-time rates, and payments
-        - $5,000 to $12,000
+        - $4,000 to $10,000
         - 2 to 3 weeks
       - - Online check-in and upsells
         - Pre-arrival check-in, upgrades, extras, and messages
-        - $8,000 to $20,000
+        - $6,000 to $16,000
         - 2 to 4 weeks
       - - Guest app
         - Requests, digital key where supported, dining, and offers
-        - $20,000 to $40,000
+        - $16,000 to $32,000
         - 4 to 6 weeks
       - - Group booking and guest platform
         - Several properties, central rates, loyalty, and reporting
-        - $40,000 to $80,000+
+        - $32,000 to $64,000+
         - 6 to 10 weeks
     note: Every project is quoted in writing after a short call. The top of each range covers larger
       builds and more integrations.
@@ -219,7 +219,7 @@ sections:
     items:
       - q: How much does a hotel booking website cost?
         a:
-          A hotel website with a direct booking flow usually costs $5,000 to $12,000 and launches in 2 to 3
+          A hotel website with a direct booking flow usually costs $4,000 to $10,000 and launches in 2 to 3
           weeks.
       - q: Can you connect to our property management system?
         a: Usually, yes. We connect through its interfaces so rooms, rates, and guests stay in sync.
