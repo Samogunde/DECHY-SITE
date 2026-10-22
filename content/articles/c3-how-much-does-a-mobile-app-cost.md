@@ -4,6 +4,36 @@ type: cost-guides
 category: cost
 service: mobile-app-development
 pricing: mobile-app-development
+group: build
+tables:
+  - heading: "iOS, Android, and cross-platform side by side"
+    columns: ["Approach", "Typical cost for a business app", "Timeline", "Best for"]
+    rows:
+      - [
+          "iPhone only (native Swift)",
+          "$14,000 to $24,500",
+          "3 to 5 weeks",
+          "Audiences that are almost all on iPhone",
+        ]
+      - [
+          "Android only (native Kotlin)",
+          "$14,000 to $24,500",
+          "3 to 5 weeks",
+          "Field teams on company Android devices",
+        ]
+      - [
+          "iPhone and Android, one shared app (Flutter or React Native)",
+          "$20,000 to $35,000",
+          "4 to 6 weeks",
+          "Most business and customer apps",
+        ]
+      - [
+          "iPhone and Android, two native apps",
+          "$32,000 to $56,000",
+          "5 to 8 weeks",
+          "Apps built on advanced phone features or heavy graphics",
+        ]
+    note: "Ranges are for a business app with accounts, notifications, payments, and an admin panel. A first version costs less; marketplace and enterprise apps cost more."
 title: "How Much Does a Mobile App Cost? | DECHY"
 description: "Typical prices and timelines for iPhone and Android apps, from a first version to an enterprise app, and the choices that move the cost."
 h1: "How much does a mobile app cost?"
@@ -85,6 +115,24 @@ A quote that leaves out design or device testing may look cheaper, but the cost 
 - Screens designed for one-handed use on the move
 - Testing on real phones, old and new
 - Accessibility checks before release
+
+## What is included in the price
+
+An app quote from us covers the full path from idea to the stores. We start with a discovery workshop and a list of the screens the first version needs. The design is a clickable prototype tested with real people before anything is built.
+
+The build covers the app and its back end, built in rounds you can try on your own phone. Testing happens on a range of real devices, old and new. Launch covers store listings, screenshots, privacy details, and submission to Apple and Google, plus fixes from their review.
+
+- Discovery workshop and screen list
+- Clickable prototype tested with real people
+- The app, the back end, and the admin panel
+- Testing on real iPhone and Android devices
+- Store listings, submission, and review fixes
+
+## A typical timeline
+
+A first version usually takes two to four weeks: a few days of design, then the build in short rounds, then testing and store submission. A business app takes four to six weeks. Marketplace apps take six to eight weeks, because two sides of the product are built and tested together.
+
+Apple's review usually takes a day or two, and Google's is often faster. We plan for both so the launch date holds.
 
 ## Costs after launch
 

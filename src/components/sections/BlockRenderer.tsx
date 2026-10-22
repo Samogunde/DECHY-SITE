@@ -5,6 +5,7 @@ import type { Block, Page } from "@/lib/content/schema";
 import { CONNECTS_KINDS } from "@/lib/connections";
 import { ContactForm } from "./ContactForm";
 import { ContactPaths } from "./ContactPaths";
+import { publicChannels } from "@/lib/contact/channels";
 import {
   ArticlesBlock,
   BrowseBlock,
@@ -28,6 +29,7 @@ import {
   CertificationStripBlock,
   PartnershipsBlock,
 } from "./CertificationBlocks";
+import { CostEstimatorBlock, CostHubBlock, CtaBandBlock, ProofStripBlock } from "./GrowthBlocks";
 import { Hero } from "./Hero";
 import {
   CaseStudiesBlock,
@@ -58,7 +60,7 @@ function ContactFormBlock({ block }: { block: Extract<Block, { type: "contact-fo
   const options = getRegistry().services.map((s) => ({ value: s.slug, label: s.name }));
   return (
     <Section id={block.id} tone={block.tone}>
-      <ContactPaths formId={`${block.id}-start`} />
+      <ContactPaths formId={`${block.id}-start`} channels={publicChannels()} />
       <div className="editorial mt-12 min-[48rem]:mt-16">
         <div className="rail">
           <SectionHeader
@@ -146,6 +148,14 @@ export function BlockRenderer({
       return <GlossaryBlock block={block} />;
     case "library":
       return <LibraryBlock block={block} />;
+    case "cost-estimator":
+      return <CostEstimatorBlock block={block} />;
+    case "cost-hub":
+      return <CostHubBlock block={block} />;
+    case "proof-strip":
+      return <ProofStripBlock block={block} />;
+    case "cta-band":
+      return <CtaBandBlock block={block} />;
     case "partnerships":
       return <PartnershipsBlock block={block} />;
     case "certification-strip":

@@ -342,20 +342,26 @@ export const Block = z.discriminatedUnion("type", [
     photo: PhotoRef.optional(),
     /** Home only: proof figures under the buttons. Values may use {{fact:...}} macros. */
     stats: z.array(Stat).max(4).default([]),
-    /** Home only: the offers the headline cycles through, each with its own line and screen. */
+    /**
+     * Home only: one slide per offer (owner, 21 October 2026). Each states what the buyer gets
+     * (headline), one supporting line, one specific offer, and its own button. The label names the
+     * tab; href is the service page the slide belongs to.
+     */
     slides: z
       .array(
         z.object({
           label: z.string(),
-          word: z.string(),
+          headline: z.string(),
           lead: z.string(),
+          offer: z.string(),
+          cta: Cta,
           href: z.string(),
           figure: FigureId.optional(),
           photo: PhotoRef.optional(),
           chips: z.array(z.string()).max(3).default([]),
         }),
       )
-      .max(5)
+      .max(8)
       .default([]),
   }),
   /** Every service, grouped by family: choose a family to see its services beside a photograph. */
@@ -827,6 +833,34 @@ export const Block = z.discriminatedUnion("type", [
     label: z.string(),
     heading: z.string(),
   }),
+  /** The cost estimator tool (data/pricing/estimator.yaml over the approved service ranges). */
+  z.object({
+    type: z.literal("cost-estimator"),
+    ...base,
+    heading: z.string(),
+  }),
+  /** Every cost guide, grouped, with the estimator first (the /cost/ hub). */
+  z.object({
+    type: z.literal("cost-hub"),
+    ...base,
+    label: z.string(),
+    heading: z.string(),
+    intro: z.string().optional(),
+  }),
+  /** Proof counters under the hero (data/proof/counters.yaml), the same wording everywhere. */
+  z.object({
+    type: z.literal("proof-strip"),
+    ...base,
+  }),
+  /** A call to action band: "primary" ends a section, "soft" points somewhere useful mid-page. */
+  z.object({
+    type: z.literal("cta-band"),
+    ...base,
+    variant: z.enum(["primary", "soft"]),
+    text: z.string(),
+    primary: Cta,
+    secondary: Cta.optional(),
+  }),
   /** A row of certification badges linking to the Certifications page (home, About us). */
   z.object({
     type: z.literal("certification-strip"),
@@ -981,6 +1015,14 @@ export const Block = z.discriminatedUnion("type", [
 export type Block = z.infer<typeof Block>;
 export type BlockType = Block["type"];
 
+/** A table in an article: a heading, column titles, and rows of cells. */
+export const ArticleTable = z.object({
+  heading: z.string(),
+  columns: z.array(z.string()).min(2).max(5),
+  rows: z.array(z.array(z.string()).min(2).max(5)).min(2),
+  note: z.string().optional(),
+});
+
 /** A comparison article: two or more options, compared row by row. */
 export const ArticleCompare = z.object({
   options: z.array(z.string()).min(2).max(3),
@@ -1050,6 +1092,12 @@ export const Page = z.object({
       compare: ArticleCompare.optional(),
       /** Cost guides: the service whose price ranges (data/pricing) are shown as a table. */
       pricing: z.string().optional(),
+      /** Price tables read from data/pricing/models.yaml (rates, teams, care plans, MVPs). */
+      models: z.array(z.enum(["rates", "teams", "maintenance", "mvp"])).default([]),
+      /** Cost guides: where the guide sits on the /cost/ hub. */
+      group: z.enum(["build", "pricing", "industry"]).optional(),
+      /** Breakdown tables shown after the short answer (cost guides). */
+      tables: z.array(ArticleTable).default([]),
       /** Hand-picked related links; related articles on the same service are added after them. */
       related: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
       /** The service the article reports to (its canonical home). */

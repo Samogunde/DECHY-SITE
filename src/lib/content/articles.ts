@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { z } from "zod";
-import { ArticleCompare, Page } from "./schema";
+import { ArticleCompare, ArticleTable, Page } from "./schema";
 
 /**
  * Blog articles (the 53 launch articles, docs/planning/06-article-plan-53.md) are written as
@@ -43,6 +43,9 @@ const Front = z.object({
   compare: ArticleCompare.optional(),
   /** Cost guides: the service slug whose price ranges are shown (data/pricing/services.yaml). */
   pricing: z.string().optional(),
+  group: z.enum(["build", "pricing", "industry"]).optional(),
+  models: z.array(z.enum(["rates", "teams", "maintenance", "mvp"])).default([]),
+  tables: z.array(ArticleTable).default([]),
   related: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
   cta: z.string().optional(),
 });
@@ -155,6 +158,9 @@ function parse(file: string, raw: string): Page {
       answer: front.answer,
       compare: front.compare,
       pricing: front.pricing,
+      group: front.group,
+      models: front.models,
+      tables: front.tables,
       related: front.related,
     },
     sections: blocks,

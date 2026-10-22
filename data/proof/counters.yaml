@@ -1,0 +1,32 @@
+# The proof strip under the home hero, repeated on About us and every service page in the same
+# wording (owner, 21 October 2026). Values come from the Approved Facts Register ({{fact:...}}) or
+# from the site's own data (certifications are counted from data/certifications). A counter with
+# no approved value is not shown: projects delivered and countries served wait for the owner's
+# figures (they are "not provided" in the approved facts).
+#
+# href: where the counter links; fallback: used when that page or section is not published.
+counters:
+  - id: clients
+    label: Happy clients
+    value: "{{fact:company.clients}}"
+    href: /testimonials/
+    fallback: /work/
+    faces: true
+  - id: projects
+    label: Projects delivered
+    href: /work/
+  - id: team
+    label: Engineers and designers
+    value: "{{fact:company.team}}"
+    href: /company/#team
+    fallback: /company/
+  - id: countries
+    label: Countries served
+    href: /locations/
+  - id: certifications
+    label: Certifications
+    value: "{{count:certifications}}"
+    href: /company/certifications/
+
+# One sentence on team size and what it means for the client.
+team: "Every project gets its own squad from our {{fact:company.team}} engineers and designers: a project lead, a product designer, and engineers matched to your stack, with the same people from kickoff to launch."

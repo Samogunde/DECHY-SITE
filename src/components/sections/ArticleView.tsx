@@ -6,10 +6,52 @@ import { readingMinutes } from "@/lib/content/articles";
 import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import type { Registry } from "@/lib/content/load";
 import type { Page } from "@/lib/content/schema";
-import { allPricing, pricingFor } from "@/lib/content/samples";
+import { allPricing, modelTable, pricingFor } from "@/lib/content/samples";
+import { callHref } from "@/lib/contact/channels";
 import { pathExists } from "@/lib/content/urls";
 import { BlockRenderer } from "./BlockRenderer";
 import { HoverArrow } from "./HomeBlocks";
+import { CtaBandBlock } from "./GrowthBlocks";
+import { LinkButton } from "@/components/primitives/LinkButton";
+import { Arrow } from "@/components/primitives/Arrow";
+
+const ESTIMATOR = "/tools/cost-estimator/";
+const COST_HUB = "/cost/";
+
+/** A call to action inside the reading column. */
+function ArticleCta({
+  text,
+  primary,
+  secondary,
+  soft = false,
+}: {
+  text: string;
+  primary: { label: string; href: string };
+  secondary?: { label: string; href: string };
+  soft?: boolean;
+}) {
+  return (
+    <aside className={`article-cta${soft ? " article-cta-soft" : ""}`} aria-label={primary.label}>
+      <p>{text}</p>
+      <div className="article-cta-actions">
+        {soft ? (
+          <Link href={primary.href} className="cta-soft-link">
+            {primary.label} <Arrow />
+          </Link>
+        ) : (
+          <LinkButton href={primary.href} arrow>
+            {primary.label}
+          </LinkButton>
+        )}
+        {secondary ? (
+          <Link href={secondary.href} className="cta-soft-link">
+            {secondary.label} <Arrow />
+          </Link>
+        ) : null}
+      </div>
+    </aside>
+  );
+}
 
 export const CATEGORY_LABEL: Record<string, string> = {
   guide: "Guide",
@@ -61,6 +103,26 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
     .filter((r, i, all) => all.findIndex((x) => x.href === r.href) === i)
     .slice(0, 4);
   const faq = after.filter((b) => b.type === "faq");
+  const live = (href: string) => pathExists(href, registry);
+  const isCost = a?.category === "cost";
+  const slug = a?.pricing && a.pricing !== "all" ? a.pricing : a?.service;
+  const quoteHref = `/contact/${slug ? `?service=${slug}` : ""}`;
+  const estimatorHref = `${ESTIMATOR}${slug ? `?service=${slug}` : ""}`;
+  // Midway through the article: a soft step (the estimator, the cost hub, or the service).
+  const midSection = Math.max(0, Math.floor(prose.length / 2) - 1);
+  const midCta = isCost
+    ? live(COST_HUB)
+      ? {
+          text: "Comparing options? Every cost guide we publish is on one page, with the estimator.",
+          primary: { label: "See all cost guides", href: COST_HUB },
+        }
+      : undefined
+    : live(ESTIMATOR)
+      ? {
+          text: "Want a number for your own project? The estimator gives a price and timeline range in two minutes.",
+          primary: { label: "Try the estimator", href: estimatorHref },
+        }
+      : undefined;
   const rest = after.filter((b) => b.type !== "faq");
   return (
     <>
@@ -181,6 +243,46 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
               </p>
             </aside>
             {a?.compare ? <CompareTable compare={a.compare} /> : null}
+            {[...(a?.models ?? []).map((k) => modelTable(k)), ...(a?.tables ?? [])].map((t) => (
+              <section key={t.heading} className="article-section">
+                <h2 className="article-h2">{t.heading}</h2>
+                <div className="cmp-scroll">
+                  <table className="cmp-table">
+                    <thead>
+                      <tr>
+                        {t.columns.map((c) => (
+                          <th key={c} scope="col">
+                            {c}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {t.rows.map((r) => (
+                        <tr key={r.join("|")}>
+                          {r.map((cell, i) =>
+                            i === 0 ? (
+                              <th key={i} scope="row">
+                                <Inline text={cell} />
+                              </th>
+                            ) : (
+                              <td key={i}>
+                                <Inline text={cell} />
+                              </td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {t.note ? (
+                  <p className="cmp-note">
+                    <Inline text={t.note} />
+                  </p>
+                ) : null}
+              </section>
+            ))}
             {price ? (
               <section className="article-section" aria-labelledby="price-h">
                 <h2 id="price-h" className="article-h2">
@@ -219,7 +321,16 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                 </div>
               </section>
             ) : null}
-            {prose.map((b) =>
+            {isCost ? (
+              <ArticleCta
+                text={`Prices depend on scope. Tell us yours and we will send a fixed quote in writing, or try the estimator first.`}
+                primary={{ label: "Get a quote for your project", href: quoteHref }}
+                secondary={
+                  live(ESTIMATOR) ? { label: "Try the estimator", href: estimatorHref } : undefined
+                }
+              />
+            ) : null}
+            {prose.map((b, bi) =>
               b.type === "prose" ? (
                 <section
                   key={b.id}
@@ -246,6 +357,9 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                         ))}
                       </ul>
                     </div>
+                  ) : null}
+                  {bi === midSection && midCta ? (
+                    <ArticleCta text={midCta.text} soft primary={midCta.primary} />
                   ) : null}
                 </section>
               ) : null,
@@ -283,6 +397,23 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
       {faq.map((b) => (
         <BlockRenderer key={b.id} block={b} page={page} />
       ))}
+      {faq.length ? (
+        <CtaBandBlock
+          block={{
+            type: "cta-band",
+            id: "cta-faq",
+            tone: "ink",
+            variant: "primary",
+            text: isCost
+              ? "Still not sure what your project will cost? Ask an engineer on a 30-minute call."
+              : "Have a question this guide did not answer? Ask us on a 30-minute call.",
+            primary: { label: "Book a call", href: callHref() },
+            secondary: live(COST_HUB)
+              ? { label: "See every cost guide", href: COST_HUB }
+              : undefined,
+          }}
+        />
+      ) : null}
       {related.length ? (
         <section className="section tone-paper article-related" aria-labelledby="related-h">
           <div className="container-site">

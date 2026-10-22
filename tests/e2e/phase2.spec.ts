@@ -107,7 +107,7 @@ test.describe("phase 2 interactive blocks work without a mouse", () => {
       const p = registry.pages.find((x) => x.entityId === s.id)!;
       await page.goto(p.path);
       await expect(
-        page.getByRole("link", { name: /Talk to DECHY|Talk to us/ }).first(),
+        page.getByRole("link", { name: /Get a quote|Talk to us/ }).first(),
       ).toBeVisible();
     }
   });

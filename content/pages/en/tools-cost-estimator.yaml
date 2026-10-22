@@ -1,0 +1,119 @@
+id: page.tools-cost-estimator
+kind: hub
+locale: en
+path: /tools/cost-estimator/
+title: "Software Cost Estimator: Apps, Websites, AI | DECHY"
+description: "Estimate what your software, website, web app, mobile app, store, AI, or integration project will cost and how long it takes. Free, instant, no email needed."
+breadcrumbLabel: Cost estimator
+h1: Software and app cost estimator
+lead: "Answer four short questions and get a price range and a timeline for your project, based on the prices we actually quote. No email needed to see the result."
+intent:
+  primary: software development cost estimator
+  secondary:
+    - app development cost calculator
+    - website cost calculator
+    - how much will my app cost
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-21"
+dateModified: "2026-10-21"
+schemaTypes: [WebPage, FAQPage]
+comprehension:
+  what: "A free estimator that turns what you are building, its size, its features, and your timeline into a price range and a timeline range."
+  problem: "Most businesses have no idea whether a project costs five thousand dollars or fifty thousand until they have spoken to several suppliers."
+  audience: "Founders, owners, and managers planning a software, web, app, ecommerce, AI, or integration project and setting a budget."
+  choose: "Pick the type of project closest to yours, the size, and the features you need. Change any answer to see how it moves the price."
+  next: "When the range fits your budget, ask for an exact quote. We reply with a written plan, a fixed price, and a timeline."
+
+sections:
+  - type: cost-estimator
+    id: estimator
+    tone: ink
+    heading: Estimate your project
+
+  - type: columns
+    id: based-on
+    tone: ink
+    label: How the estimate works
+    heading: What the estimate is based on
+    intro: "The numbers come from the same price ranges we publish on every service page and cost guide, so the estimate and a real quote start from the same place."
+    columns:
+      - title: Our published price ranges
+        items:
+          - "Each project type starts from the range we quote most often for that kind of work."
+          - "Size moves your project within that range: a focused first version sits low, a large build sits high."
+      - title: The features you choose
+        items:
+          - "Each feature adds the cost we typically see for building, testing, and launching it."
+          - "Features are built alongside each other, so they add less time than cost."
+      - title: Platforms, design, and connections
+        items:
+          - "Two native mobile apps cost about 60 percent more than one shared app."
+          - "Each system you connect adds $2,000 to $6,000, our single integration range."
+      - title: Your timeline
+        items:
+          - "A flexible timeline saves about 5 percent because we can plan the work around other projects."
+          - "A fast timeline adds about 25 percent because more people work in parallel."
+
+  - type: columns
+    id: changes
+    tone: ink
+    label: What moves the number
+    heading: What changes the price
+    intro: "Two projects with the same name can differ by tens of thousands of dollars. These are the differences that matter most."
+    columns:
+      - title: Who uses it
+        items:
+          - "One team using a tool costs less than staff, managers, customers, and partners each with their own screens."
+          - "Every extra role needs its own permissions and testing."
+      - title: What it connects to
+        items:
+          - "Modern tools with an API (the defined way one system shares data with another) connect quickly."
+          - "Older systems without one need more work, and sometimes a workaround."
+      - title: The data you already have
+        items:
+          - "Starting fresh is cheapest."
+          - "Moving years of records out of spreadsheets or an old system means cleaning, mapping, and checking every field."
+      - title: Rules you must follow
+        items:
+          - "Health, payment, and personal data need stronger security, audit logs, and review."
+          - "That work is never optional, so it is always in the quote."
+
+  - type: callout
+    id: excludes
+    tone: ink
+    variant: note
+    title: What the estimate does not include
+    paragraphs:
+      - "The estimate covers the work to plan, design, build, test, and launch your project. A few costs sit outside it, and we list them separately in every quote so nothing surprises you."
+    items:
+      - "Third-party fees: hosting, app store accounts, payment processing, AI usage, and paid plugins."
+      - "Content you supply, such as photography, video, and legal text, unless you ask us to create it."
+      - "Care after launch, which is a monthly plan from $300."
+      - "Taxes, which depend on where your business is registered."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Common questions
+    heading: Questions about the estimate
+    items:
+      - q: How accurate is the estimate?
+        a: "It starts from the same price ranges we quote from, so it is a realistic guide to your budget. The range is wide on purpose: two projects with the same features can still differ in data, rules, and connections. A 30-minute call is enough to narrow it to a fixed price."
+      - q: Why is the result a range and not one number?
+        a: "Because a single number before anyone has seen your project would be a guess. The low end assumes a focused scope and clean data; the high end allows for the extra work most projects uncover in planning."
+      - q: Do I have to give my email to see the result?
+        a: "No. The result appears as soon as you answer the questions. We only ask for your name and email if you want the full breakdown sent to you and a call booked."
+      - q: Does the estimate include design and testing?
+        a: "Yes. Planning, design, building, testing on real devices, and launch are all included. Only third-party fees, content you supply, care after launch, and taxes sit outside it."
+      - q: What if my project is bigger than the options?
+        a: "Choose the largest option and size. Projects above the top of a range are quoted on their own scope, usually in stages, each with its own fixed price."
+      - q: How do I turn the estimate into a real quote?
+        a: "Select Get an exact quote under your result. We review your answers, ask a few questions on a short call, and send a written plan with a fixed price and timeline, free."
+
+  - type: cta
+    id: contact-cta
+    heading: Want an exact number?
+    body: "Tell us about your project and we will send a written plan, a fixed quote, and a timeline. The plan and quote are free."
+    primary: { label: Get an exact quote, href: "/contact/" }
+    secondary: { label: See every cost guide, href: "/cost/" }

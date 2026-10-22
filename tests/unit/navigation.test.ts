@@ -21,7 +21,7 @@ describe("navigation model", () => {
       "Resources",
       "About us",
     ]);
-    expect(model.cta.label).toBe("Talk to DECHY");
+    expect(model.cta.label).toBe("Get a quote");
   });
 
   it("links a hub only when it exists; unbuilt sections are plain text", () => {

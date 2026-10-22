@@ -194,6 +194,59 @@ export function CaseStudyView({ page, registry }: { page: Page; registry: Regist
         </div>
       </section>
 
+      <aside className="cta-band-x cta-band-soft tone-ink" aria-label="Similar projects">
+        <div className="container-site">
+          <div className="cta-band-x-card">
+            <p className="cta-band-x-text">
+              Planning something like {p.title}? See what a project of this kind costs, then compare
+              it with the rest of our work.
+            </p>
+            <div className="cta-band-x-actions">
+              <Link href={`/tools/cost-estimator/?service=${p.service}`} className="cta-soft-link">
+                Estimate a similar project <Arrow />
+              </Link>
+              <Link href="/work/" className="cta-soft-link">
+                See similar projects <Arrow />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {p.quote ? (
+        <section className="section cs-quote" aria-label="What the client said">
+          <div className="container-site">
+            <figure className="cs-quote-card">
+              <blockquote>
+                <p>{p.quote.text}</p>
+              </blockquote>
+              <figcaption>
+                <span className="cs-quote-name">{p.quote.name}</span>
+                <span className="cs-quote-role">
+                  {p.quote.role}, {p.client}
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      ) : null}
+
+      <aside className="cta-band-x cta-band-primary tone-ink" aria-label="Get a quote">
+        <div className="container-site">
+          <div className="cta-band-x-card">
+            <p className="cta-band-x-text">
+              Projects like this one start with a 30-minute call and a written plan with a fixed
+              quote.
+            </p>
+            <div className="cta-band-x-actions">
+              <LinkButton href={`/contact/?service=${p.service}`} arrow>
+                Get a quote for a project like this
+              </LinkButton>
+            </div>
+          </div>
+        </div>
+      </aside>
+
       {p.images.length > 1 ? (
         <section className="section cs-more" aria-label={`More from ${p.title}`}>
           <div className="container-site">

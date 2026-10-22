@@ -25,6 +25,11 @@ export type Project = {
   stack: string[];
   results: { value: string; label: string }[];
   resultsConfirmed?: boolean;
+  /**
+   * The client's own words about the project, exactly as supplied (owner). Shown between the
+   * results and the related projects; absent until the owner supplies it.
+   */
+  quote?: { text: string; name: string; role: string };
 };
 
 let cache: Project[] | undefined;

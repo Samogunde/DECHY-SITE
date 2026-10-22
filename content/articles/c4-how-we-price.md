@@ -4,6 +4,7 @@ type: cost-guides
 category: cost
 service: consulting
 pricing: all
+group: pricing
 title: "How We Price Software and Web Projects | DECHY"
 description: "How DECHY prices projects: a short call, a written plan with a fixed quote and timeline, typical ranges for all fifteen services, and what changes the price."
 h1: "How we price projects"

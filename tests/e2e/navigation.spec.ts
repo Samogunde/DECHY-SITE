@@ -36,7 +36,7 @@ test.describe("desktop navigation", () => {
       await expect(labelLink(page, label), label).toHaveAttribute("href", href);
     // Only the five sections with real children have a menu control
     await expect(page.locator("[data-chevron]")).toHaveCount(5);
-    const cta = page.locator("header").getByRole("link", { name: "Talk to DECHY" });
+    const cta = page.locator("header").getByRole("link", { name: "Get a quote" });
     await expect(cta).toHaveAttribute("href", "/contact/");
   });
 
@@ -288,7 +288,7 @@ test.describe("mobile navigation", () => {
     const box = await menu.boundingBox();
     expect(box!.width).toBeGreaterThanOrEqual(43.5);
     expect(box!.height).toBeGreaterThanOrEqual(43.5);
-    await expect(page.locator("header").getByRole("link", { name: "Talk to DECHY" })).toBeVisible();
+    await expect(page.locator("header").getByRole("link", { name: "Get a quote" })).toBeVisible();
   });
 
   test("opens as a modal dialog, traps focus, closes with Escape, and restores focus", async ({
@@ -387,7 +387,7 @@ test.describe("mobile navigation", () => {
     await page.getByRole("button", { name: "Open menu" }).click();
     const cta = page
       .getByRole("dialog", { name: "Site menu" })
-      .getByRole("link", { name: "Talk to DECHY" });
+      .getByRole("link", { name: "Get a quote" });
     await expect(cta).toBeInViewport();
     await cta.click();
     await expect(page).toHaveURL(/\/contact\/$/);

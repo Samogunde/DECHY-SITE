@@ -15,7 +15,8 @@ import {
   servicePricing,
 } from "./samples";
 import { blockPhotos } from "./photos";
-import { portfolioGrid, portfolioPages, projects, selectedWork } from "./portfolio";
+import { portfolioGrid, portfolioPages, projectPath, projects, selectedWork } from "./portfolio";
+import { placeCtas, type CtaContext } from "./ctas";
 import { loadArticles } from "./articles";
 import { z } from "zod";
 import {
@@ -344,6 +345,34 @@ export function buildRegistry(): Registry {
   for (const page of pages)
     for (const b of page.sections)
       if (b.type === "glossary" && b.items.length === 0) b.items = terms;
+  // The proof strip under every service page's hero, then calls to action through each page.
+  for (const page of pages.filter((p) => p.kind === "service"))
+    page.sections.splice(1, 0, { type: "proof-strip", id: "proof", tone: "ink" } as Block);
+  const has = (path: string) => pages.some((p) => p.path === path);
+  const ctaContext: CtaContext = {
+    estimator: has("/tools/cost-estimator/") ? "/tools/cost-estimator/" : undefined,
+    costHub: has("/cost/") ? "/cost/" : undefined,
+    costGuide: (slug) =>
+      pages.find(
+        (p) => p.kind === "article" && p.article?.category === "cost" && p.article.pricing === slug,
+      )?.path,
+    serviceName: (slug) => labels.services[slug],
+    work: (page) => {
+      const slug = page.path.replace(/\//g, "");
+      const list =
+        page.kind === "service"
+          ? projects().filter((p) => p.services.includes(slug))
+          : page.kind === "industry"
+            ? projects().filter((p) => p.industry === page.entityId)
+            : projects();
+      return list.slice(0, 2).map((p) => ({ title: p.title, path: projectPath(p) }));
+    },
+  };
+  for (const page of pages) {
+    const target =
+      page.kind === "home" || page.kind === "service" ? 6 : page.kind === "industry" ? 4 : 0;
+    if (target) placeCtas(page, ctaContext, target);
+  }
   // Review builds: the Testimonials page, every pack quote with filters.
   if (showDrafts()) pages.push(sampleTestimonialsPage({ services: labels.services }));
   // Photographs: hand-placed ones first, then every other placement gets an unused one.

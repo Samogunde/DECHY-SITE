@@ -297,3 +297,36 @@ Owner direction, 21 October 2026, with mediusware's recognition section as the r
   - The hero proof items are centered on one line.
   - The home clients figure steps down in size beside the faces.
 - **"Who we are" layout.** The heading and answer sit across the top, then a wide photograph beside a card holding the paragraphs. The same layout applies to every definition section with a photograph.
+
+## Thirteenth pass (21 October 2026): offers, proof, estimator, cost content, calls to action
+
+Owner direction, 21 October 2026: "put in all the numbers, figures, costs", with real copy and no templated text.
+
+- **Hero.**
+  - Seven slides: custom software, websites and web apps, mobile apps, AI, automation, ecommerce, and integration.
+  - Each slide has its own headline, supporting line, offer, button, and link to its service page.
+  - The slides share one grid cell, so the hero never shifts as they change. Only slide one's photo loads eagerly, and slides change every 6.5 seconds.
+- **Proof strip.**
+  - Counters under the hero on the home page, About us, and every service page, with the same wording everywhere (`data/proof/counters.yaml`).
+  - Live counters: happy clients (1,500+), engineers and designers (100+, an owner fact recorded as `company.team`), and certifications (22, counted from the data). Each counter links to its page.
+  - Projects delivered and countries served stay hidden until the owner supplies figures, since both are "not provided" in the approved facts.
+  - One sentence explains the squad that works on each project.
+- **Cost estimator** (`/tools/cost-estimator/`).
+  - Four steps lead to a price range, a timeline range, and a breakdown. The result shows first; name and email are asked only afterwards, and leads go to the contact inbox.
+  - Base ranges come from `data/pricing/services.yaml`, and the choices in `data/pricing/estimator.yaml` add to them, so the estimator and the guides agree.
+  - The page also covers what the estimate is based on, what changes the price, what it excludes, and six questions.
+  - It is linked from the Resources menu, the footer, every cost guide, every service page, and every case study.
+- **Cost hub** (`/cost/`): the estimator and every cost guide, grouped into what it costs to build, how pricing works, and cost by industry.
+- **Cost guides.**
+  - Thirteen new guides: web app development, MVP, ecommerce store, AI integration, API and systems integration, pricing models, hourly rates and dedicated teams, maintenance, and five industries (healthcare, fintech, real estate, logistics, and retail).
+  - The three existing build guides gain sections on what is included and the timeline. The mobile guide adds iOS, Android, and cross-platform side by side.
+  - Duplicate "development cost" guides were not created, because they would compete with the existing ones in search.
+  - Retail replaces ecommerce among the industries, because ecommerce has its own guide.
+- **New prices.** Hourly rates, dedicated teams, care plans, and MVP prices live in `data/pricing/models.yaml`. They are proposed and await the owner's sign-off. The industry ranges in the industry guides are proposed in the same way.
+- **Calls to action** (`src/lib/content/ctas.ts`).
+  - Primary bands (a quote or a call) end sections; soft bands (the cost, the estimator, similar work) sit mid-page.
+  - Each band is written from the page's own service, price range, and projects.
+  - Targets: home and service pages 6, industry pages 4, and cost guides 4 (in the article view). Case studies reach 3 through their own view.
+  - The header button reads "Get a quote" and stays visible on scroll.
+- **Case studies.** A client quote block between the results and the related projects, shown when a project has a supplied `quote`. None has been supplied yet.
+- **Contact.** `PUBLIC_BOOKING_URL`, `PUBLIC_CONTACT_EMAIL`, and `PUBLIC_CONTACT_PHONE` show a booking button, email, and phone when set. "Book a call" buttons use the booking link and fall back to the contact form.

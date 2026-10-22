@@ -3,6 +3,7 @@
  * same rules run in the CLI (npm run validate, part of every build), in unit tests, and in CI.
  * A rule that fails an `error` fails the build; this is how the architecture is enforced.
  */
+import { modelTable, pricingFor } from "./samples";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -135,8 +136,20 @@ export function pageStrings(page: Page): string[] {
     page.breadcrumbLabel,
     page.h1 ?? "",
     page.lead ?? "",
-    // Article fields the page shows: the short answer and the comparison.
+    // Article fields the page shows: the short answer, the tables, and the comparison.
     page.article?.answer ?? "",
+    ...(page.article?.pricing && page.article.pricing !== "all"
+      ? (pricingFor(page.article.pricing)?.plans ?? []).flatMap((p) => [
+          p.name,
+          p.range,
+          p.timeline,
+          p.summary,
+        ])
+      : []),
+    ...[
+      ...(page.article?.models ?? []).map((k) => modelTable(k)),
+      ...(page.article?.tables ?? []),
+    ].flatMap((t) => [t.heading, ...t.columns, ...t.rows.flat(), t.note ?? ""]),
     ...(page.article?.compare
       ? [
           ...page.article.compare.options,
@@ -584,7 +597,12 @@ export function validateRegistry(input: Registry): Issue[] {
     }
     for (const m of diagramIssues(page)) err("diagram-clarity", where, m);
     // The Resources library and the Glossary are deliberately lean listings (owner, 21 October 2026).
-    const LISTING_PAGES = new Set(["/resources/", "/resources/glossary/"]);
+    const LISTING_PAGES = new Set([
+      "/resources/",
+      "/resources/glossary/",
+      "/cost/",
+      "/tools/cost-estimator/",
+    ]);
     const minVariety = LISTING_PAGES.has(page.path)
       ? 1
       : page.kind === "home" || page.kind === "service"
@@ -779,8 +797,8 @@ export function validateRegistry(input: Registry): Issue[] {
   const primaryLabels = registry.nav.primary.map((i) => i.label);
   if (JSON.stringify(primaryLabels) !== JSON.stringify(APPROVED_NAV))
     err("nav-approved", "nav.yaml", `Primary navigation must be ${APPROVED_NAV.join(", ")}`);
-  if (registry.nav.cta.label !== "Talk to DECHY")
-    err("nav-cta", "nav.yaml", "CTA must be Talk to DECHY");
+  if (registry.nav.cta.label !== "Get a quote")
+    err("nav-cta", "nav.yaml", "The header button must read Get a quote (owner, 21 October 2026)");
   if (!pathExists(registry.nav.cta.path, registry))
     err("nav-cta-path", "nav.yaml", "CTA target page does not exist");
   for (const l of registry.nav.footer.legal) {

@@ -15,6 +15,7 @@
 @import "../styles/testimonials.css" layer(components);
 @import "../styles/resources.css" layer(components);
 @import "../styles/proof.css" layer(components);
+@import "../styles/growth.css" layer(components);
 
 /* ------------------------------------------------------------------------------------------
    DECHY design tokens.

@@ -32,7 +32,9 @@ describe("the 53 launch article briefs", () => {
       );
       // Cost guides and comparisons the owner asked for on 21 October 2026 may sit outside the
       // 53-article plan; a numbered article must match its brief.
-      if (p.article?.number !== undefined || !OWNER_ADDED.has(p.path))
+      // Every cost guide was added at the owner's direction (21 October 2026), outside the plan.
+      const ownerAdded = OWNER_ADDED.has(p.path) || p.path.startsWith("/resources/cost-guides/");
+      if (p.article?.number !== undefined || !ownerAdded)
         expect(numbers.has(p.article?.number ?? 0), p.path).toBe(true);
     }
   });

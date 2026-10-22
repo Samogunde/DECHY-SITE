@@ -79,6 +79,10 @@ sections:
     figureCaption: "This diagram shows DECHY at the center with six areas of work around it: build,
       connect, automate, run, design, and decide."
 
+  - type: proof-strip
+    id: proof
+    tone: ink
+
   - type: definition
     id: what-is
     photo:

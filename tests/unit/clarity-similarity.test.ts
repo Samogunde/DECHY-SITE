@@ -90,7 +90,7 @@ describe("clarity standard on the shipped pages", () => {
   );
 
   it("covers every commercial page with a comprehension record and a next step", () => {
-    expect(guided.length).toBe(145);
+    expect(guided.length).toBe(147);
     for (const p of guided) {
       expect(p.comprehension, p.path).toBeDefined();
       expect(
@@ -152,6 +152,9 @@ describe("scope control", () => {
       /^\/resources\/(guides|comparisons|cost-guides|definitions|articles)\/[a-z0-9-]+\/$/,
       // Resources (owner direction, 21 October 2026): the Glossary page
       /^\/resources\/glossary\/$/,
+      // Cost hub and the cost estimator (owner direction, 21 October 2026)
+      /^\/cost\/$/,
+      /^\/tools\/cost-estimator\/$/,
       // Portfolio (owner direction, 21 October 2026): one case study per real client project
       /^\/work\/case-studies\/[a-z0-9-]+\/$/,
     ];

@@ -4,6 +4,7 @@ type: cost-guides
 category: cost
 service: software-development
 pricing: software-development
+group: build
 title: "How Much Does Custom Software Cost? | DECHY"
 description: "Typical price ranges and timelines for custom software, from internal tools to enterprise systems, and the factors that move the price up or down."
 h1: "How much does custom software cost?"
@@ -78,6 +79,26 @@ Be clear about what is out of scope. A short written list of what the first vers
 - Connect tools that already work instead of replacing them
 - Use proven components for sign-in, payments, and storage
 - Write down what the first version will not include
+
+## What is included in the price
+
+Every custom software quote we send covers the whole job, from the first workshop to the day the system goes live. Nothing on this list is an extra.
+
+Planning comes first: workshops with the people who will use the system, a written scope, and a list of what the first version will and will not do. Design follows, with clickable screens your team tries before anything is built. The build itself happens in short rounds, each ending in working software you can review.
+
+Testing runs throughout, not just at the end. Launch includes setting up hosting, moving your data, training your team, and handing over documentation.
+
+- Discovery workshops and a written scope
+- Clickable screen designs, reviewed by your team
+- The build, in rounds you can review
+- Testing, data migration, launch, and training
+- Documentation and handover of the code
+
+## A typical timeline
+
+A focused internal tool usually runs for four to six weeks. The first week covers discovery and design. Weeks two to five are the build, with a review at the end of each week. The final week is testing, data migration, and launch.
+
+Larger systems follow the same rhythm in stages. A customer portal takes six to eight weeks. An operations platform or SaaS product takes two to three months. Enterprise modernization runs for three to four months per stage, and each stage goes live before the next begins.
 
 ## Costs after launch
 

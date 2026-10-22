@@ -51,3 +51,9 @@ facts:
     value: "1,500+"
     status: approved
     source: Approved company statement ("over 1,500"); short form for proof figures
+
+  - id: company.team
+    label: Engineers and designers
+    value: "100+"
+    status: approved
+    source: Owner instruction in chat, 21 October 2026 ("Engineers and designers (100+)")

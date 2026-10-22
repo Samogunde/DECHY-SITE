@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { Figure } from "@/components/figures/Figure";
 import { Inline } from "@/components/primitives/Inline";
@@ -25,34 +26,36 @@ export function Hero({
   const isHome = block.variant === "home";
   const hasVisual = Boolean(aside || block.photo || block.figure || block.spec);
   if (isHome && block.slides.length > 0) {
-    const actions = block.ctas
-      .filter((c) => c.href.startsWith("#") || pathExists(c.href.split(/[?#]/)[0] ?? "", registry))
-      .map((c, i) =>
-        c.href.startsWith("#") ? (
-          <a key={c.label} href={c.href} className="btn btn-ghost">
-            {c.label}
-          </a>
-        ) : (
-          <LinkButton
-            key={c.label}
-            href={c.href}
-            variant={i === 0 ? "primary" : "secondary"}
-            arrow={i === 0}
-          >
-            {c.label}
+    // Each slide: its own offer button, and a link to the service page it belongs to.
+    const live = (href: string) => pathExists(href.split(/[?#]/)[0] ?? "", registry);
+    const explore = (label: string) =>
+      `Explore ${/^[A-Z]{2}/.test(label) ? label : label[0]!.toLowerCase() + label.slice(1)}`;
+    const actions = block.slides.map((s) => (
+      <>
+        {live(s.cta.href) ? (
+          <LinkButton href={s.cta.href} arrow>
+            {s.cta.label}
           </LinkButton>
-        ),
-      );
+        ) : null}
+        {live(s.href) ? (
+          <Link href={s.href} className="hero-explore">
+            {explore(s.label)}
+          </Link>
+        ) : null}
+      </>
+    ));
     return (
       <RotatingHero
         eyebrow={block.eyebrow}
         title={block.headline}
         slides={block.slides.map((s) => ({
           label: s.label,
-          word: s.word,
+          headline: s.headline,
           lead: s.lead,
+          offer: s.offer,
           chips: s.chips,
         }))}
+        actions={actions}
         visuals={block.slides.map((s, i) =>
           s.photo ? (
             <Photo key={s.label} photo={s.photo} className="hero-photo" priority={i === 0} />
@@ -65,7 +68,6 @@ export function Hero({
             />
           ) : null,
         )}
-        actions={actions}
       />
     );
   }

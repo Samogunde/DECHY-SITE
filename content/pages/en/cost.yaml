@@ -1,0 +1,60 @@
+id: page.cost
+kind: hub
+locale: en
+path: /cost/
+title: "Software, App and Website Cost Guides | DECHY"
+description: "What custom software, websites, web apps, mobile apps, MVPs, stores, AI, and integrations cost, with real price ranges, timelines, and a free cost estimator."
+breadcrumbLabel: Cost guides
+h1: What software, apps, and websites really cost
+lead: "Real price ranges from the projects we quote, with timelines, worked examples, and the factors that move the number. Start with the estimator, or pick the guide closest to your project."
+intent:
+  primary: software development cost
+  secondary:
+    - app development cost
+    - website cost
+    - software pricing guide
+indexing: index
+claims: [company.name]
+datePublished: "2026-10-21"
+dateModified: "2026-10-21"
+schemaTypes: [WebPage, CollectionPage, FAQPage]
+comprehension:
+  what: "Every cost guide DECHY publishes, grouped by what you are building, how pricing works, and your industry, with a free estimator."
+  problem: "Software prices online range from a few hundred dollars to millions, which makes it hard to set a realistic budget."
+  audience: "Anyone budgeting for custom software, a website, a web app, a mobile app, an online store, AI, or integration work."
+  choose: "Use the estimator for a quick range, then read the guide that matches your project for the detail behind it."
+  next: "When you have a budget in mind, ask for a fixed quote. We reply with a written plan, a price, and a timeline."
+
+sections:
+  - type: cost-hub
+    id: guides
+    tone: ink
+    label: Cost guides
+    heading: Every cost guide, in one place
+    intro: "Each guide shows typical ranges, a breakdown table, what is included, what changes the price, a timeline, and a worked example."
+
+  - type: faq
+    id: faq
+    tone: white
+    label: Cost questions
+    heading: The cost questions we hear most
+    items:
+      - q: How much does custom software cost?
+        a: "Most custom software we build costs $15,000 to $100,000. A focused internal tool starts around $15,000; enterprise systems and modernization start around $100,000 and are delivered in stages."
+      - q: How much does a website cost?
+        a: "A landing page costs $2,000 to $4,000, a business website $3,000 to $7,000, and a larger content site $5,000 to $10,000. Web apps with accounts and payments cost $5,000 to $50,000 or more."
+      - q: How much does a mobile app cost?
+        a: "A first version of an app costs $10,000 to $20,000. Business apps cost $20,000 to $35,000, marketplace apps $30,000 to $50,000, and complex apps from $50,000."
+      - q: Why do quotes for the same project vary so much?
+        a: "Usually because they cover different work. Check that every quote includes design, testing, data migration, launch, and support before you compare totals."
+      - q: Do you charge fixed prices or by the hour?
+        a: "Defined projects get a fixed price in writing. Open-ended work, such as ongoing improvements or a dedicated team, is billed monthly at rates agreed before it starts."
+      - q: What does software cost to run after launch?
+        a: "Plan for hosting, updates, and improvements. Our care plans start at $300 a month for websites and $1,200 a month for apps in daily use."
+
+  - type: cta
+    id: contact-cta
+    heading: Get a fixed quote for your project
+    body: "Tell us what you are building. We reply with a written plan, a fixed price, and a timeline, free."
+    primary: { label: Get a quote, href: "/contact/" }
+    secondary: { label: Try the cost estimator, href: "/tools/cost-estimator/" }

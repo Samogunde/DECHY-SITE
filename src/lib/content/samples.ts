@@ -263,3 +263,48 @@ export function sampleTestimonialsPage(labels: Labels): Page {
     ] as Block[],
   };
 }
+
+type ModelsFile = {
+  rates: { role: string; range: string }[];
+  teams: { name: string; range: string; who: string }[];
+  maintenance: { name: string; range: string; for: string; includes: string }[];
+  mvp: { name: string; range: string; timeline: string }[];
+};
+let models: ModelsFile | undefined;
+
+/** Rates, dedicated teams, care plans, and MVP prices (data/pricing/models.yaml) as tables. */
+export function modelTable(key: keyof ModelsFile): {
+  heading: string;
+  columns: string[];
+  rows: string[][];
+  note?: string;
+} {
+  models ??= YAML.parse(readFile("data/pricing/models.yaml")) as ModelsFile;
+  const m = models;
+  switch (key) {
+    case "rates":
+      return {
+        heading: "Hourly rates by role",
+        columns: ["Role", "Rate"],
+        rows: m.rates.map((r) => [r.role, r.range]),
+      };
+    case "teams":
+      return {
+        heading: "Dedicated team pricing",
+        columns: ["Team", "Who is on it", "Monthly cost"],
+        rows: m.teams.map((t) => [t.name, t.who, t.range]),
+      };
+    case "maintenance":
+      return {
+        heading: "Care plans after launch",
+        columns: ["Plan", "Best for", "What it covers", "Monthly cost"],
+        rows: m.maintenance.map((p) => [p.name, p.for, p.includes, p.range]),
+      };
+    case "mvp":
+      return {
+        heading: "What an MVP costs",
+        columns: ["Type of MVP", "Typical cost", "Timeline"],
+        rows: m.mvp.map((p) => [p.name, p.range, p.timeline]),
+      };
+  }
+}

@@ -16,7 +16,7 @@ primary:
   - { label: Resources, kind: resources, path: /resources/ }
   - { label: About us, kind: about, path: /company/ }
 cta:
-  label: Talk to DECHY
+  label: Get a quote
   path: /contact/
 
 # Technologies menu and directory. Order is editorial (commercial relevance, then search intent),
@@ -212,9 +212,11 @@ resources:
       path: /resources/#library
       summary: Plain-language guides to planning and choosing technology.
     - label: Cost guides
-      path: /resources/#cost-guides
-      summary: What software, websites, and apps cost, and why.
-      when: cost
+      path: /cost/
+      summary: What software, websites, apps, AI, and integration cost, and why.
+    - label: Cost estimator
+      path: /tools/cost-estimator/
+      summary: A price and timeline range for your project in two minutes.
     - label: Comparisons
       path: /resources/#comparisons
       summary: Two options side by side, with our recommendation.
@@ -257,6 +259,8 @@ footer:
     - { label: Industries, path: /industries/ }
     - { label: Work, path: /work/ }
     - { label: Resources, path: /resources/ }
+    - { label: Cost guides, path: /cost/ }
+    - { label: Cost estimator, path: /tools/cost-estimator/ }
     - { label: Glossary, path: /resources/glossary/ }
     - { label: Locations, path: /locations/ }
     - { label: About us, path: /company/ }

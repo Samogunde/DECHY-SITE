@@ -2,31 +2,32 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-type Slide = { label: string; word: string; lead: string; chips: string[] };
+type Slide = { label: string; headline: string; lead: string; offer: string; chips: string[] };
 
-const INTERVAL = 3400;
+const INTERVAL = 6500;
 
 /**
- * The home hero. The headline stays "We build ..." and the offer cycles: custom software,
- * websites, web apps, mobile apps, each with its own line and screen. It is not a carousel: the
- * text and the screen change in place. It keeps moving while hovered (owner direction), stops when
- * the tab is hidden, never moves under prefers-reduced-motion, and has a pause button (WCAG 2.2.2).
- * The service buttons choose a slide.
- * Every slide is in the HTML, and the heading carries the full list for search and screen readers.
+ * The home hero: one slide per offer (owner, 21 October 2026). Each slide states what the buyer
+ * gets, one supporting line, one specific offer, and its own button. Every slide sits in the same
+ * grid cell, so the hero keeps the height of the tallest slide and nothing jumps as slides change.
+ * It keeps moving while hovered (owner direction), stops when the tab is hidden, never moves under
+ * prefers-reduced-motion, and has a pause button (WCAG 2.2.2). The tabs choose a slide.
+ * Every slide is in the HTML; the visually hidden heading carries the full offer for search.
  */
 export function RotatingHero({
   eyebrow,
   title,
   slides,
-  visuals,
   actions,
+  visuals,
 }: {
   eyebrow?: string;
   /** The full heading text for assistive technology and search. */
   title: string;
   slides: Slide[];
+  /** One block of buttons per slide. */
+  actions: ReactNode[];
   visuals: ReactNode[];
-  actions: ReactNode;
 }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -78,33 +79,29 @@ export function RotatingHero({
       <div className="container-site hero-rot-grid">
         <div className="hero-rot-copy">
           {eyebrow ? <p className="t-eyebrow hero-eyebrow m-0">{eyebrow}</p> : null}
-          <h1 id="hero-h" className="hero-rot-title">
-            <span className="visually-hidden">{title}</span>
-            <span aria-hidden="true" className="hero-we">
-              We build
-            </span>
-            <span aria-hidden="true" className="hero-words">
-              {slides.map((s, i) => (
-                <span key={s.word} className="hero-word" data-active={i === active}>
-                  {s.word}
-                </span>
-              ))}
-            </span>
+          <h1 id="hero-h" className="visually-hidden">
+            {title}
           </h1>
-          <div className="hero-leads">
+          <div className="hero-slides">
             {slides.map((s, i) => (
-              <p
-                key={s.word}
-                className="hero-lead"
+              <div
+                key={s.label}
+                className="hero-slide"
                 data-active={i === active}
                 aria-hidden={i !== active}
+                inert={i !== active}
               >
-                {s.lead}
-              </p>
+                <p className="hero-slide-title">{s.headline}</p>
+                <p className="hero-slide-lead">{s.lead}</p>
+                <p className="hero-offer">
+                  <span className="hero-offer-tag">Offer</span>
+                  <span>{s.offer}</span>
+                </p>
+                <div className="hero-actions">{actions[i]}</div>
+              </div>
             ))}
           </div>
-          <div className="hero-actions">{actions}</div>
-          <div className="hero-tabs" role="group" aria-label="What we build">
+          <div className="hero-tabs" role="group" aria-label="Choose an offer">
             {slides.map((s, i) => (
               <button
                 key={s.label}
@@ -125,7 +122,7 @@ export function RotatingHero({
                 type="button"
                 className="hero-pause"
                 aria-pressed={paused}
-                aria-label={paused ? "Play the rotating headline" : "Pause the rotating headline"}
+                aria-label={paused ? "Play the slides" : "Pause the slides"}
                 onClick={() => setPaused((p) => !p)}
               >
                 {paused ? (

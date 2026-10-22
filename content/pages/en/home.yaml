@@ -33,47 +33,90 @@ sections:
     headline: We build custom software, websites, web apps, and mobile apps that work as one system.
     lead: We design, build, and support digital products for startups and growing businesses, with AI, automation, and integrations built in from the start.
     ctas:
-      - label: Get a project estimate
+      - label: Get a fixed quote
         href: /contact/
-      - label: See what we build
-        href: "#services"
     slides:
       - label: Custom software
-        word: custom software.
-        lead: Internal tools, portals, and platforms built around the way your business works, so your team stops fighting spreadsheets.
+        headline: Custom software built around the way your team already works
+        lead: Portals, internal tools, and operations platforms that replace spreadsheets and copy-paste, delivered in weeks and owned outright by you.
+        offer: "Free: a written plan and a fixed quote after one 30-minute call."
+        cta: { label: Get a fixed quote, href: "/contact/?service=software-development" }
         href: /software-development/
         photo:
           asset: asset.photo-hero-software-developer-monitors
           layout: split
           position: 55% 40%
         chips: [Customer portal, Role-based access, Connected to your tools]
-      - label: Websites
-        word: websites.
-        lead: Fast, accessible websites that explain what you do, rank in search, and turn visitors into inquiries.
+      - label: Websites and web apps
+        headline: A fast website or web app that turns visitors into leads
+        lead: Pages that load quickly, rank in search, and send every inquiry straight to your inbox or CRM, with a site your team can edit without us.
+        offer: "Free site and speed review: we test your current site and send the five fixes that matter most."
+        cta: { label: Plan my website, href: "/contact/?service=web-development" }
         href: /web-development/
         photo:
           asset: asset.photo-hero-website-laptop
           layout: split
           position: 50% 50%
         chips: [Loads fast, Easy to edit, Search ready]
-      - label: Web apps
-        word: web apps.
-        lead: Browser apps with accounts, dashboards, bookings, and payments, connected to the systems behind them.
-        href: /web-development/
-        photo:
-          asset: asset.photo-hero-web-app-dashboard
-          layout: split
-          position: 50% 45%
-        chips: [Live dashboards, Payments, Secure sign-in]
       - label: Mobile apps
-        word: mobile apps.
-        lead: iPhone and Android apps for customers, staff, and field teams, from the first prototype to the app stores.
+        headline: Your app, live in the App Store and Google Play
+        lead: iPhone and Android apps for customers, staff, and field teams, designed for one-handed use and prepared for store review from the first build.
+        offer: "A scoped plan with screens, timeline, and a cost range before you commit a dollar."
+        cta: { label: Plan my app, href: "/contact/?service=mobile-app-development" }
         href: /mobile-app-development/
         photo:
           asset: asset.photo-hero-mobile-app-hands
           layout: split
           position: 50% 50%
         chips: [iOS and Android, Works offline, App store release]
+      - label: AI and machine learning
+        headline: Put AI to work on the tasks your team repeats every day
+        lead: Assistants that answer from your own documents and models that sort, summarize, and predict, with a person approving anything that matters.
+        offer: "A 60-minute workshop to find the first AI use case worth paying for."
+        cta: { label: Find my first AI use case, href: "/contact/?service=ai" }
+        href: /ai/
+        photo:
+          asset: asset.photo-service-ai-tablet
+          layout: split
+          position: 50% 50%
+        chips: [Answers from your data, Human review, Measured accuracy]
+      - label: Automation
+        headline: Stop copying data between tools by hand
+        lead: Workflows that move orders, invoices, leads, and approvals between your systems on their own, and flag the cases that need a decision.
+        offer: "A workflow audit that ranks your manual steps by the hours automation would save."
+        cta: { label: Audit my workflows, href: "/contact/?service=automation" }
+        href: /automation/
+        photo:
+          asset: asset.photo-lib-automation-14
+          layout: split
+          position: 50% 45%
+        chips: [No retyping, Alerts on exceptions, Runs around the clock]
+      - label: Ecommerce
+        headline: An online store where orders, stock, and payments always match
+        lead: Shopify, WooCommerce, or custom stores wired to your inventory, accounting, and shipping, so nothing is oversold or keyed in twice.
+        offer: "A store and inventory review with a ranked list of what to fix first."
+        cta: { label: Review my store, href: "/contact/?service=ecommerce" }
+        href: /ecommerce/
+        photo:
+          asset: asset.photo-ecommerce-phone-shopping
+          layout: split
+          position: 50% 50%
+        chips: [Live stock levels, Faster checkout, Synced accounting]
+      - label: Integration
+        headline: Connect the systems you already pay for
+        lead: Your CRM, accounting, store, and operations tools sharing the same data in real time, through monitored connections that alert us before you notice a problem.
+        offer: "A free integration map of your tools, showing where data breaks today and how to join it up."
+        cta: { label: Connect my systems, href: "/contact/?service=api-integration" }
+        href: /api-integration/
+        photo:
+          asset: asset.photo-api-cable-network
+          layout: split
+          position: 50% 50%
+        chips: [One source of truth, Monitored connections, No double entry]
+
+  - type: proof-strip
+    id: proof
+    tone: ink
 
   - type: logos
     id: clients

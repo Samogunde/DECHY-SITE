@@ -1,0 +1,54 @@
+# Pricing beyond the per-service ranges (data/pricing/services.yaml), set 21 October 2026 at the
+# owner's direction ("put in all the numbers, figures, costs"). These are DECHY's own published
+# prices, PROPOSED by Claude from the approved service ranges and awaiting the owner's sign-off.
+# Every cost guide, the estimator, and the cost hub read them from here, so one edit updates all.
+
+# Hourly rates by role, for time-and-materials work and to explain how fixed quotes are built.
+rates:
+  - { role: Delivery lead or project manager, range: "$45 to $65 an hour" }
+  - { role: Product or UX designer, range: "$40 to $60 an hour" }
+  - { role: Front-end engineer, range: "$40 to $60 an hour" }
+  - { role: Back-end engineer, range: "$45 to $70 an hour" }
+  - { role: Mobile engineer (iOS, Android, Flutter), range: "$45 to $70 an hour" }
+  - { role: AI or machine learning engineer, range: "$60 to $90 an hour" }
+  - { role: Cloud and DevOps engineer, range: "$55 to $80 an hour" }
+  - { role: Quality assurance engineer, range: "$30 to $45 an hour" }
+  - { role: Solutions architect, range: "$70 to $100 an hour" }
+
+# Dedicated teams, billed monthly (about 160 hours per full-time person).
+teams:
+  - name: One dedicated engineer
+    range: "$6,000 to $11,000 a month"
+    who: One full-time engineer matched to your stack, with a delivery lead overseeing quality.
+  - name: Starter squad
+    range: "$11,000 to $17,000 a month"
+    who: Two engineers and a part-time delivery lead.
+  - name: Product squad
+    range: "$18,000 to $28,000 a month"
+    who: Two to three engineers, a part-time designer, a delivery lead, and part-time QA.
+  - name: Scale team
+    range: "$35,000 to $55,000+ a month"
+    who: Four to six engineers, a designer, a delivery lead, QA, and DevOps.
+
+# Care plans after launch, billed monthly.
+maintenance:
+  - name: Essential care
+    range: "$300 to $800 a month"
+    for: Websites and simple web apps
+    includes: Platform and plugin updates, daily backups, uptime monitoring, security patches, and up to 3 hours of small changes.
+  - name: Growth care
+    range: "$1,200 to $3,000 a month"
+    for: Web apps and mobile apps in daily use
+    includes: Everything in Essential, plus iOS and Android release updates, error tracking, a monthly report, and 10 to 20 hours of improvements.
+  - name: Product care
+    range: "$4,000 to $10,000+ a month"
+    for: Business-critical systems and SaaS products
+    includes: Everything in Growth, plus a one-hour response target for urgent issues, on-call cover, performance tuning, and 40 or more hours of development.
+
+# MVPs: the first version that proves an idea.
+mvp:
+  - { name: Clickable prototype, range: "$4,000 to $8,000", timeline: "1 to 2 weeks" }
+  - { name: Web app MVP, range: "$8,000 to $20,000", timeline: "2 to 4 weeks" }
+  - { name: Mobile app MVP, range: "$10,000 to $20,000", timeline: "2 to 4 weeks" }
+  - { name: AI product MVP, range: "$10,000 to $30,000", timeline: "2 to 4 weeks" }
+  - { name: SaaS MVP with billing, range: "$25,000 to $50,000", timeline: "6 to 8 weeks" }

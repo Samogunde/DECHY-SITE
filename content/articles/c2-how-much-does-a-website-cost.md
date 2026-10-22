@@ -4,6 +4,7 @@ type: cost-guides
 category: cost
 service: web-development
 pricing: web-development
+group: build
 title: "How Much Does a Website Cost? | DECHY"
 description: "Typical prices and timelines for a business website, from a single landing page to an advanced web app, and what moves the cost up or down."
 h1: "How much does a website cost?"
@@ -63,6 +64,24 @@ A web app, from $5,000 to $20,000, runs in the browser but does real work: booki
 The platform affects both the build cost and the running cost. WordPress powers a large share of business websites and has plugins for most common needs. Webflow and similar visual builders suit marketing teams who want design control. A custom build suits sites with unusual features, high traffic, or strict performance needs.
 
 There is no single right answer. A business website with standard pages rarely needs a custom build. A product that customers log into almost always does. Our comparison of [WordPress and a custom website](/resources/comparisons/wordpress-vs-custom-website/) explains the trade-offs in detail.
+
+## What is included in the price
+
+A website quote from us covers everything needed to launch, not just the build. That means a short discovery call, a page plan, and the design of your home page and key templates. It also covers the build on a platform your team can edit, the forms connected to your inbox or CRM, and the search basics set up properly.
+
+Before launch we test on phones, tablets, and desktops, check speed and accessibility, and set up analytics. After launch, you get a short training session so your team can edit pages and publish without us.
+
+- Discovery and a page plan
+- Design of the home page and key templates
+- Build on an editable platform
+- Forms, analytics, and search setup
+- Testing on every device size, then launch and training
+
+## A typical timeline
+
+A landing page usually goes live in about a week. A business website takes one to two weeks. Days one to three cover the page plan and design, days four to eight the build, and the final days testing and launch. A content site with many page types takes two to three weeks. Web apps take from one week for a simple tool to six weeks for an advanced product.
+
+The biggest factor in timing is usually content. When your text and images are ready on day one, the timeline holds.
 
 ## Costs people forget
 
