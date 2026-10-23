@@ -276,7 +276,7 @@ export function applyPhotographs(
 
 /** First names used in the sample people, so each portrait matches the name beside it. */
 const FEMALE = new Set(
-  "Grace Helen Laura Sarah Emma Rachel Claire Nina Victoria Sophie Megan Anna Lucy Karen Natalie Sofia Olivia Hannah Charlotte Amelia Isabel Julia Rebecca Alice Emily Kate Maria Elena Priya Mia Leah Zoe Ruth Jane Ellen Fiona Tessa Ingrid Freya Alina Isadora Claudia Mira Clara Naomi Chloe Margaret Diana Paula Lisa Julia Nora".split(
+  "Grace Helen Laura Sarah Emma Rachel Claire Nina Victoria Sophie Megan Anna Lucy Karen Natalie Sofia Olivia Hannah Charlotte Amelia Isabel Julia Rebecca Alice Emily Kate Maria Elena Priya Mia Leah Zoe Ruth Jane Ellen Fiona Tessa Ingrid Freya Alina Isadora Claudia Mira Clara Naomi Chloe Margaret Diana Paula Lisa Julia Nora Amara Maya".split(
     " ",
   ),
 );
