@@ -19,7 +19,12 @@ export function siteOrigin(): string {
 
 /** Search indexing is off unless explicitly enabled (previews and pre-domain environments). */
 export function indexingEnabled(): boolean {
-  return (process.env.SITE_INDEXING ?? "false").trim().toLowerCase() === "true";
+  if ((process.env.SITE_INDEXING ?? "false").trim().toLowerCase() !== "true") return false;
+  // Only the production deploy of the main address is indexed (owner, 25 October 2026): deploy
+  // previews, branch deploys, and the netlify.app address stay noindex.
+  const context = process.env.CONTEXT;
+  if (context && context !== "production") return false;
+  return /^https:\/\/www\.dechytech\.com\/?$/.test((process.env.SITE_ORIGIN ?? "").trim());
 }
 
 /** Absolute URL for a site path. Paths always carry a leading and trailing slash. */

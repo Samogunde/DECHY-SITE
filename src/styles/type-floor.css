@@ -181,3 +181,11 @@
   justify-content: space-between;
   width: 100%;
 }
+
+/* Section headings on laptop and desktop sit below the hero (owner, 25 October 2026): 42px at
+   1280, 44px at 1440. Tablet and phone sizes are unchanged. */
+@media (min-width: 64rem) {
+  main.theme-dark :is(.t-h2, .home-h2) {
+    font-size: clamp(2.625rem, 1.625rem + 1.25vw, 2.75rem) !important;
+  }
+}

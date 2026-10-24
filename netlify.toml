@@ -14,3 +14,11 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# The netlify.app address sends visitors to the main address (owner, 25 October 2026). Deploy
+# previews and branch deploys use their own hostnames and are not affected.
+[[redirects]]
+  from = "https://dechy-site.netlify.app/*"
+  to = "https://www.dechytech.com/:splat"
+  status = 301
+  force = true

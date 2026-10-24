@@ -47,11 +47,18 @@ describe("site configuration", () => {
     );
   });
 
-  it("keeps indexing off unless explicitly enabled", () => {
+  it("indexes only the production deploy of www.dechytech.com, when enabled", () => {
+    vi.stubEnv("SITE_ORIGIN", "https://www.dechytech.com");
     vi.stubEnv("SITE_INDEXING", "");
     expect(indexingEnabled()).toBe(false);
     vi.stubEnv("SITE_INDEXING", "true");
     expect(indexingEnabled()).toBe(true);
+    vi.stubEnv("CONTEXT", "deploy-preview");
+    expect(indexingEnabled()).toBe(false);
+    vi.stubEnv("CONTEXT", "production");
+    expect(indexingEnabled()).toBe(true);
+    vi.stubEnv("SITE_ORIGIN", "https://dechy-site.netlify.app");
+    expect(indexingEnabled()).toBe(false);
   });
 });
 
@@ -78,6 +85,7 @@ describe("metadata", () => {
 
   it("is indexable only when both the environment and the page allow it", () => {
     vi.stubEnv("SITE_INDEXING", "true");
+    vi.stubEnv("SITE_ORIGIN", "https://www.dechytech.com");
     expect((pageMetadata(page).robots as { index: boolean }).index).toBe(true);
     const noindexPage = { ...page, indexing: "noindex" as const };
     expect((pageMetadata(noindexPage).robots as { index: boolean }).index).toBe(false);
@@ -94,10 +102,10 @@ describe("robots.txt and sitemap", () => {
 
   it("allows crawling, excludes the API, and links the sitemap once enabled", () => {
     vi.stubEnv("SITE_INDEXING", "true");
-    vi.stubEnv("SITE_ORIGIN", "https://example.test");
+    vi.stubEnv("SITE_ORIGIN", "https://www.dechytech.com");
     const r = robots();
     expect(JSON.stringify(r.rules)).toContain("/api/");
-    expect(r.sitemap).toBe("https://example.test/sitemap.xml");
+    expect(r.sitemap).toBe("https://www.dechytech.com/sitemap.xml");
   });
 
   it("lists only indexable pages, with trailing slashes and true modification dates", () => {

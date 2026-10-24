@@ -87,7 +87,15 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     if (!isProd) return [];
-    return [{ source: "/:path*", headers: securityHeaders }];
+    const noindex = [{ key: "X-Robots-Tag", value: "noindex, nofollow" }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // Never indexed: the private admin, the API and functions, and search results.
+      { source: "/admin/:path*", headers: noindex },
+      { source: "/api/:path*", headers: noindex },
+      { source: "/.netlify/:path*", headers: noindex },
+      { source: "/search/:path*", headers: noindex },
+    ];
   },
 };
 
