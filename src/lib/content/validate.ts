@@ -30,6 +30,7 @@ type PhotoLayout = PhotoRef["layout"];
 import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
 import { DESCRIPTOR } from "@/lib/site";
+import { PUBLIC_EMAILS } from "@/lib/contact/emails";
 
 /** Entity types a technology page may belong to. */
 const TECHNOLOGY_TYPES = new Set([
@@ -412,6 +413,11 @@ export function validateRegistry(input: Registry): Issue[] {
       } catch (e) {
         err("fact-unknown", label, (e as Error).message);
       }
+      // Only the four public business addresses may appear; the business mailbox never does.
+      for (const m of s.matchAll(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g)) {
+        if (!PUBLIC_EMAILS.has(m[0].toLowerCase()))
+          err("email-address", label, `Only the public business addresses may be shown: ${m[0]}`);
+      }
       // Links
       for (const target of linkTargets(s)) {
         if (target.startsWith("ref:")) {
@@ -421,6 +427,9 @@ export function validateRegistry(input: Registry): Issue[] {
           if (!pathExists(target, registry))
             err("link-path", label, `Internal link to missing page ${target}`);
           else link(page.path, target);
+        } else if (target.startsWith("mailto:")) {
+          if (!PUBLIC_EMAILS.has(target.slice(7)))
+            err("link-email", label, `Only the public business addresses may be shown: ${target}`);
         } else if (!/^https:\/\//.test(target)) {
           err("link-scheme", label, `Unsupported link target ${target}`);
         }
@@ -691,10 +700,14 @@ export function validateRegistry(input: Registry): Issue[] {
         "award",
         "sameAs",
         "numberOfEmployees",
-        "contactPoint",
       ]) {
         if (banned in n)
           err("jsonld-unsupported", where, `JSON-LD property ${banned} has no supporting fact`);
+      }
+      // Contact points carry only the owner's public business addresses (24 October 2026).
+      for (const cp of [n, ...((n.contactPoint as Record<string, unknown>[] | undefined) ?? [])]) {
+        if (typeof cp.email === "string" && !PUBLIC_EMAILS.has(cp.email))
+          err("jsonld-email", where, `JSON-LD email ${cp.email} is not a public business address`);
       }
       if (n["@type"] === "LocalBusiness")
         err("jsonld-localbusiness", where, "LocalBusiness is not applicable");

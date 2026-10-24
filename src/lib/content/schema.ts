@@ -353,6 +353,8 @@ export const Block = z.discriminatedUnion("type", [
           label: z.string(),
           headline: z.string(),
           lead: z.string(),
+          /** What the visitor gets, in one to three words (Free plan, Free audit, Workshop). */
+          badge: z.string().max(18),
           offer: z.string(),
           cta: Cta,
           href: z.string(),
@@ -974,6 +976,8 @@ export const Block = z.discriminatedUnion("type", [
     text: z.string(),
     primary: Cta,
     secondary: Cta.optional(),
+    /** A business address shown under the buttons ("Or email sales@..."). */
+    email: z.enum(["hello", "sales", "support"]).optional(),
   }),
   /** A row of certification badges linking to the Certifications page (home, About us). */
   z.object({

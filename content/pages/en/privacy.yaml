@@ -22,7 +22,7 @@ sections:
     sections:
       - heading: Who we are
         paragraphs:
-          - "This website is operated by DECHY, a global technology company. In this policy, DECHY, we, and us mean the operator of this website. You can contact us about privacy through the [contact page](/contact/)."
+          - "This website is operated by DECHY, a global technology company. In this policy, DECHY, we, and us mean the operator of this website. You can contact us about privacy at {{email:hello}} or through the [contact page](/contact/)."
       - heading: What information we collect
         paragraphs:
           - "Contact form. We receive your name, your email address, what you need help with, and the message you write. You may also choose to give an organization name, a timeline, and an estimated budget."
@@ -47,7 +47,7 @@ sections:
           - "We keep inquiries and support requests only as long as needed to respond and to manage any resulting relationship, and then delete them. Assistant conversations are deleted automatically after a limited period (currently 90 days) unless they were passed to our team, in which case they are kept with the inquiry or support request they belong to. Our internal activity log, which records events such as a new inquiry by reference, is trimmed after 365 days. These deletions run automatically every day. Hosting logs are kept for short periods for security and operations."
       - heading: Your rights
         paragraphs:
-          - "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, to data portability, and to withdraw consent where we rely on it. To exercise a right, contact us through the [contact page](/contact/); we handle each request individually, including deleting your inquiries, support requests, and conversations. You may also complain to your local data protection authority."
+          - "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, to data portability, and to withdraw consent where we rely on it. To exercise a right, email {{email:hello}} or use the [contact page](/contact/); we handle each request individually, including deleting your inquiries, support requests, and conversations. You may also complain to your local data protection authority."
       - heading: Security
         paragraphs:
           - "We use measures such as encryption in transit, sign-in protected access for our team, rate limiting, and input validation to protect information. No method of transmission over the internet is perfectly secure."

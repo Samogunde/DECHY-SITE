@@ -53,6 +53,7 @@ export function Hero({
           label: s.label,
           headline: s.headline,
           lead: s.lead,
+          badge: s.badge,
           offer: s.offer,
           chips: s.chips,
         }))}

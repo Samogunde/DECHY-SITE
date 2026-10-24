@@ -49,6 +49,8 @@ sections:
         a: "Usually because they cover different work. Check that every quote includes design, testing, data migration, launch, and support before you compare totals."
       - q: Do you charge fixed prices or by the hour?
         a: "Defined projects get a fixed price in writing. Open-ended work, such as ongoing improvements or a dedicated team, is billed monthly at rates agreed before it starts."
+      - q: How do invoices and payments work?
+        a: "The payment schedule is set out in your written quote before any work starts, so you know what is due and when. For a question about an invoice or a payment, email {{email:billing}}."
       - q: What does software cost to run after launch?
         a: "Plan for hosting, updates, and improvements. Our care plans start from {{fact:price.care-essential-from}} a month for websites and {{fact:price.care-growth-from}} a month for apps in daily use."
   - type: cta

@@ -1,6 +1,7 @@
 "use client";
 
 import { openAssistant } from "@/components/assistant/AssistantLauncher";
+import { EmailLink } from "@/components/primitives/EmailLink";
 
 /**
  * Three ways to reach DECHY, each a different intent: work out the need with the assistant, send
@@ -11,21 +12,36 @@ export function ContactPaths({
   channels,
 }: {
   formId: string;
-  /** Booking link, email, and phone, each shown only when the owner has configured it. */
-  channels: { booking?: string; email?: string; phone?: string };
+  /** Booking link and phone, each shown only when the owner has configured it. */
+  channels: { booking?: string; phone?: string };
 }) {
   return (
     <>
-      {channels.booking || channels.email || channels.phone ? (
+      <dl className="contact-emails">
+        <div>
+          <dt>General questions</dt>
+          <dd>
+            <EmailLink kind="hello" />
+          </dd>
+        </div>
+        <div>
+          <dt>Quotes and new projects</dt>
+          <dd>
+            <EmailLink kind="sales" />
+          </dd>
+        </div>
+        <div>
+          <dt>Existing clients</dt>
+          <dd>
+            <EmailLink kind="support" />
+          </dd>
+        </div>
+      </dl>
+      {channels.booking || channels.phone ? (
         <div className="contact-direct">
           {channels.booking ? (
             <a href={channels.booking} className="btn btn-primary" target="_blank" rel="noopener">
               Book a 30-minute call
-            </a>
-          ) : null}
-          {channels.email ? (
-            <a href={`mailto:${channels.email}`} className="contact-direct-link">
-              {channels.email}
             </a>
           ) : null}
           {channels.phone ? (

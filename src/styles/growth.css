@@ -810,3 +810,43 @@ main.theme-dark .est-result-mid {
 .est-edit-row .est-edit {
   margin-top: 0;
 }
+
+/* The copy column of a band: the line, then the business address under it (24 October 2026). */
+.cta-band-x-copy {
+  flex: 1 1 22rem;
+  display: grid;
+  gap: 0.35rem;
+}
+.cta-band-x-copy .cta-band-x-text {
+  flex: none;
+}
+.cta-band-x-email {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted, #a1a1aa);
+}
+.cta-band-x-email a {
+  color: var(--color-accent-text, #7290ca);
+  overflow-wrap: anywhere;
+}
+
+/* Support address under "Ask a question" in every questions section (24 October 2026). */
+.faq-ask-support {
+  margin: 0.9rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted, #a1a1aa);
+}
+.faq-ask-support a {
+  color: var(--color-accent-text, #7290ca);
+  overflow-wrap: anywhere;
+}
+
+.est-result-email {
+  margin: 0.85rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted, #a1a1aa);
+}
+.est-result-email a {
+  color: var(--color-accent-text, #7290ca);
+  overflow-wrap: anywhere;
+}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import type { AssistantRequest } from "./AssistantLauncher";
+import { EMAILS } from "@/lib/contact/emails";
 
 type Rec = { id: string; name: string; path: string; kind: string; reason?: string };
 type SourceLink = { name: string; path: string };
@@ -610,7 +611,11 @@ export default function AssistantPanel({
         if (!completed) {
           dropPending();
           setOfferHuman(true);
-          setError((e) => e || "The answer was interrupted. Try again, or talk to the team.");
+          setError(
+            (e) =>
+              e ||
+              `The answer was interrupted. Try again, talk to the team, or email ${EMAILS.support}.`,
+          );
         }
         return;
       }
@@ -627,7 +632,9 @@ export default function AssistantPanel({
     } catch {
       dropPending();
       setOfferHuman(true);
-      setError("We could not reach the assistant. Check your connection, or talk to the team.");
+      setError(
+        `We could not reach the assistant. Check your connection, or email ${EMAILS.support}.`,
+      );
     } finally {
       setBusy(false);
     }
@@ -700,10 +707,12 @@ export default function AssistantPanel({
       else
         setError(
           b?.message ??
-            "We could not send this right now. Please try again, or use the contact form.",
+            `We could not send this right now. Please try again, or email ${EMAILS.support}.`,
         );
     } catch {
-      setError("We could not reach the server. Check your connection and try again.");
+      setError(
+        `We could not reach the server. Check your connection and try again, or email ${EMAILS.support}.`,
+      );
     } finally {
       setSubmitting(false);
     }

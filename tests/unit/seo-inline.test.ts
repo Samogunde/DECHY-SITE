@@ -145,12 +145,22 @@ describe("structured data", () => {
         "sameAs",
         "numberOfEmployees",
         '"award"',
-        "contactPoint",
         '"geo"',
       ]) {
         expect(s, `${p} ${banned}`).not.toContain(banned);
       }
     }
+  });
+
+  it("lists only the public business addresses and the alternate name (owner, 24 October 2026)", () => {
+    const s = JSON.stringify(graphOf("/"));
+    expect(s).toContain('"alternateName":"Deki"');
+    expect(s).toContain('"contactType":"sales","email":"sales@dechytech.com"');
+    expect(s).toContain('"email":"support@dechytech.com"');
+    for (const m of s.matchAll(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/gi))
+      expect(["hello", "sales", "support", "billing"].map((k) => `${k}@dechytech.com`)).toContain(
+        m[0],
+      );
   });
 
   it("adds Service, FAQPage, and BreadcrumbList to the service page", () => {

@@ -419,6 +419,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
               ? "Still not sure what your project will cost? Ask an engineer on a 30-minute call."
               : "Have a question this guide did not answer? Ask us on a 30-minute call.",
             primary: { label: "Book a call", href: callHref() },
+            email: "sales",
             secondary: live(COST_HUB)
               ? { label: "See every cost guide", href: COST_HUB }
               : undefined,

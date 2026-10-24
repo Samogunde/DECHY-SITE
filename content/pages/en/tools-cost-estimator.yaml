@@ -112,7 +112,7 @@ sections:
       - q: What if my project is bigger than the options?
         a: "Choose the largest option and size. Projects above the top of a range are quoted on their own scope, usually in stages, each with its own fixed price."
       - q: How do I turn the estimate into a real quote?
-        a: "Select Get an exact quote under your result. We review your answers, ask a few questions on a short call, and send a written plan with a fixed price and timeline, free."
+        a: "Select Get an exact quote under your result. We review your answers, ask a few questions on a short call, and send a written plan with a fixed price and timeline, free. You can also email your answers to {{email:sales}}."
 
   - type: cta
     id: contact-cta

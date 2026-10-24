@@ -5,9 +5,11 @@
  *   [label](/contact/)                 link to an internal path; the path must exist
  *   [label](https://example.org/)      external link
  *   {{fact:company.statement}}         approved fact from the facts register
+ *   {{email:sales}}                    a public business address with its mailto link
  * The same parser feeds the renderer, the metadata/JSON-LD text extractor, and the validator.
  */
 import type { Fact } from "./schema";
+import { EMAILS } from "@/lib/contact/emails";
 
 export type InlineToken =
   | { kind: "text"; text: string }
@@ -15,13 +17,20 @@ export type InlineToken =
   | { kind: "link"; label: string; target: string };
 
 const FACT = /\{\{fact:([a-z0-9.-]+)\}\}/g;
+const EMAIL = /\{\{email:([a-z]+)\}\}/g;
 
 export function expandFacts(input: string, facts: Map<string, Fact>): string {
-  return input.replace(FACT, (_m, id: string) => {
-    const f = facts.get(id);
-    if (!f) throw new Error(`Unknown fact "${id}" in content: ${input.slice(0, 60)}`);
-    return f.value;
-  });
+  return input
+    .replace(EMAIL, (_m, kind: string) => {
+      const address = (EMAILS as Record<string, string>)[kind];
+      if (!address) throw new Error(`Unknown email "${kind}" in content: ${input.slice(0, 60)}`);
+      return `[${address}](mailto:${address})`;
+    })
+    .replace(FACT, (_m, id: string) => {
+      const f = facts.get(id);
+      if (!f) throw new Error(`Unknown fact "${id}" in content: ${input.slice(0, 60)}`);
+      return f.value;
+    });
 }
 
 export function parseInline(input: string): InlineToken[] {

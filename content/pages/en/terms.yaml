@@ -60,4 +60,4 @@ sections:
           - "The law that governs a written services agreement, and the courts that deal with disputes, are set out in that agreement. For use of the website itself, the law that applies to you as a consumer, where there is one, is not affected by these terms."
       - heading: Contact
         paragraphs:
-          - "To ask about these terms, use the [contact page](/contact/)."
+          - "To ask about these terms, email {{email:hello}} or use the [contact page](/contact/). For questions about an invoice or a payment, email {{email:billing}}."

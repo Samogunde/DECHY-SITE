@@ -1013,6 +1013,34 @@
 }
 
 /* ---------------- Contact page: three paths ---------------- */
+/* The public business addresses, plain text with mailto links (owner, 24 October 2026). */
+.contact-emails {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+}
+.contact-emails > div {
+  display: grid;
+  gap: 0.1rem;
+}
+.contact-emails dt {
+  font-size: 0.875rem;
+  color: var(--text-muted, #a1a1aa);
+}
+.contact-emails dd {
+  margin: 0;
+  font-size: 1rem;
+}
+.contact-emails a {
+  color: var(--color-accent-text, #7290ca);
+  overflow-wrap: anywhere;
+}
+@media (min-width: 48rem) {
+  .contact-emails {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
 .contact-paths {
   display: grid;
   gap: 0.75rem;

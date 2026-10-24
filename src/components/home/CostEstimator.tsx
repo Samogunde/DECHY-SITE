@@ -12,6 +12,7 @@ import {
   type EstimatorData,
   type Selection,
 } from "@/lib/estimate";
+import { EmailLink } from "@/components/primitives/EmailLink";
 
 const STEPS = ["What you are building", "Type and size", "Features and setup", "When to start"];
 
@@ -519,8 +520,8 @@ function Result({
       <div className="est-result-cta">
         {state === "sent" ? (
           <p className="est-sent">
-            Thank you. We will email your full breakdown within one business day and suggest times
-            for a call{ref ? ` (reference ${ref})` : ""}.
+            Thank you. We will email your full breakdown and suggest times for a call
+            {ref ? ` (reference ${ref})` : ""}.
           </p>
         ) : asking ? (
           <form
@@ -560,6 +561,9 @@ function Result({
             Get an exact quote
           </button>
         )}
+        <p className="est-result-email">
+          Prefer email? Send your answers to <EmailLink kind="sales" />
+        </p>
       </div>
     </div>
   );

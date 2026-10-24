@@ -1,10 +1,12 @@
 /**
  * JSON-LD generated from the content model. Nothing is hand-typed per page.
  * Only evidenced properties are emitted: no LocalBusiness, address, ratings, reviews, awards,
- * employee counts, or sameAs entries (no external profiles are confirmed). The Organization
+ * employee counts, or sameAs entries (no external profiles are confirmed). The email and contact
+ * points are the owner's public business addresses (24 October 2026). The Organization
  * description uses the exact descriptor; foundingDate comes from the approved facts register.
  */
 import type { Graph, Thing } from "schema-dts";
+import { EMAILS } from "@/lib/contact/emails";
 import { breadcrumbsFor } from "@/lib/content/breadcrumbs";
 import { toPlainText } from "@/lib/content/inline";
 import type { Registry } from "@/lib/content/load";
@@ -33,6 +35,7 @@ export function organizationNode(registry: Registry): Thing {
     "@type": "Organization",
     "@id": orgId(),
     name: SITE_NAME,
+    alternateName: "Deki",
     url: `${siteOrigin()}/`,
     logo: {
       "@type": "ImageObject",
@@ -44,6 +47,21 @@ export function organizationNode(registry: Registry): Thing {
     foundingDate: fact(registry, "company.founded"),
     areaServed: "Worldwide",
     knowsAbout: registry.services.map((s) => s.name),
+    email: EMAILS.hello,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: EMAILS.sales,
+        areaServed: "Worldwide",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: EMAILS.support,
+        areaServed: "Worldwide",
+      },
+    ],
   } as Thing;
 }
 

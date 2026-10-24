@@ -3,6 +3,7 @@ import { PublicShell } from "@/components/patterns/PublicShell";
 import { LinkButton } from "@/components/primitives/LinkButton";
 import { EntityName } from "@/components/primitives/Inline";
 import { getRegistry } from "@/lib/content/load";
+import { EmailLink } from "@/components/primitives/EmailLink";
 
 export const metadata: Metadata = {
   title: { absolute: "Page not found | DECHY" },
@@ -22,6 +23,9 @@ export default function NotFound() {
           <p className="t-lead mt-5">
             The address may be mistyped, or the page may have moved. Start from the homepage, or
             browse what DECHY builds.
+          </p>
+          <p className="t-body mt-4">
+            Looking for something specific? Email <EmailLink kind="hello" />.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <LinkButton href="/">Go to the homepage</LinkButton>

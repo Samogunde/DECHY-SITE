@@ -36,6 +36,12 @@ export function Inline({ text }: { text: string }) {
             <span key={i}>{label}</span>
           );
         }
+        if (target.startsWith("mailto:"))
+          return (
+            <a key={i} href={target}>
+              {label}
+            </a>
+          );
         return (
           <a key={i} href={target} rel="noopener noreferrer">
             {label}

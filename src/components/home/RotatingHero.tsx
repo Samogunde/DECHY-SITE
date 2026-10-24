@@ -3,7 +3,14 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { AccentText } from "@/components/primitives/AccentText";
 
-type Slide = { label: string; headline: string; lead: string; offer: string; chips: string[] };
+type Slide = {
+  label: string;
+  headline: string;
+  lead: string;
+  badge: string;
+  offer: string;
+  chips: string[];
+};
 
 const INTERVAL = 6500;
 
@@ -95,7 +102,7 @@ export function RotatingHero({
                 <p className="hero-slide-title">{s.headline}</p>
                 <p className="hero-slide-lead">{s.lead}</p>
                 <p className="hero-offer">
-                  <span className="hero-offer-tag">Offer</span>
+                  <span className="hero-offer-tag">{s.badge}</span>
                   <span>{s.offer}</span>
                 </p>
                 <div className="hero-actions">{actions[i]}</div>

@@ -1045,3 +1045,26 @@ main.theme-dark
 .h-accent {
   color: var(--color-accent-text);
 }
+
+/* Footer business addresses (owner, 24 October 2026): plain text with mailto links. */
+.site-footer-dark .footer-emails li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.3em;
+  min-height: 2.75rem;
+}
+.site-footer-dark .footer-email {
+  color: #e4e4e7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgb(255 255 255 / 0.3);
+}
+.site-footer-dark .footer-email:hover {
+  text-decoration-color: currentColor;
+}
+@media (min-width: 64rem) {
+  .site-footer-dark .footer-emails li {
+    min-height: 2rem;
+  }
+}

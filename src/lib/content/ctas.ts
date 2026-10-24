@@ -54,7 +54,9 @@ function band(
   primary: { label: string; href: string },
   secondary?: { label: string; href: string },
 ): Band {
-  return { type: "cta-band", id, tone: "ink", variant, text, primary, secondary } as Band;
+  // Quote and call bands offer the sales address as well (owner, 24 October 2026).
+  const email = variant === "primary" ? ("sales" as const) : undefined;
+  return { type: "cta-band", id, tone: "ink", variant, text, primary, secondary, email } as Band;
 }
 
 /** The bands a page can use, in the order they are tried, written for that page. */

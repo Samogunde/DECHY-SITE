@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getRegistry } from "@/lib/content/load";
 import { publishedPath } from "@/lib/content/urls";
 import { Logo } from "./Logo";
+import { EmailLink } from "@/components/primitives/EmailLink";
+import { mailto } from "@/lib/contact/emails";
 
 function FooterLink({ label, href }: { label: string; href: string | null }) {
   if (!href)
@@ -46,6 +48,17 @@ export function SiteFooter() {
             <p className="t-small mt-3 max-w-[38ch] text-slate-text">
               A global technology company working with organizations and clients worldwide.
             </p>
+            <ul className="footer-emails m-0 mt-5 list-none p-0">
+              <li className="t-small">
+                <EmailLink kind="hello" className="footer-email" />
+              </li>
+              <li className="t-small">
+                <span className="text-slate-text">Existing client? </span>
+                <a href={mailto("support")} className="footer-email">
+                  Get support
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="min-[64rem]:col-span-5">

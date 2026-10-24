@@ -5,6 +5,7 @@ import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
 import { AccentText } from "@/components/primitives/AccentText";
+import { EmailLink } from "@/components/primitives/EmailLink";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -54,6 +55,9 @@ export function FaqBlock({ block }: { block: Of<"faq"> }) {
             <LinkButton href="/contact/" variant="secondary" arrow>
               Ask a question
             </LinkButton>
+            <p className="faq-ask-support">
+              Already a client? Email <EmailLink kind="support" />
+            </p>
           </div>
         ) : null}
       </div>

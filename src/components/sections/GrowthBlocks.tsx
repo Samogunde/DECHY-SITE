@@ -12,6 +12,7 @@ import { proofCounters, proofTeamLine } from "@/lib/content/proof";
 import type { Block } from "@/lib/content/schema";
 import { pathExists } from "@/lib/content/urls";
 import { AccentText } from "@/components/primitives/AccentText";
+import { EmailLink } from "@/components/primitives/EmailLink";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -73,9 +74,16 @@ export function CtaBandBlock({ block }: { block: Of<"cta-band"> }) {
     >
       <div className="container-site">
         <div className="cta-band-x-card">
-          <p className="cta-band-x-text">
-            <Inline text={block.text} />
-          </p>
+          <div className="cta-band-x-copy">
+            <p className="cta-band-x-text">
+              <Inline text={block.text} />
+            </p>
+            {block.email ? (
+              <p className="cta-band-x-email">
+                Or email <EmailLink kind={block.email} />
+              </p>
+            ) : null}
+          </div>
           <div className="cta-band-x-actions">
             {block.variant === "primary" ? (
               <LinkButton href={block.primary.href} arrow>
