@@ -175,3 +175,15 @@ Done: project `z2m5oecdku` (https://dechytech.com). Keep masking at "Balanced" o
   - any non-production context
   - any push that only changes `docs/`
 - **Photographs:** stored as progressive mozjpeg JPEG, quality 84, at the width each layout needs (floor 1800 px). Total 89 MB, down from 203 MB. Re-run `npx tsx scripts/compress-photos.ts --write` after adding photographs. It only replaces a file when that saves at least 12 percent.
+
+### What happened on 24 October 2026 (deploy notes)
+
+- **Netlify's Free plan blocks some builds.** Even with the repository public, Netlify still records it as private. It blocks builds started by a push or by the build hook ("unrecognized Git contributor"). A build started by the owner in Netlify (Trigger deploy, or Retry with latest branch commit) goes through. Until the owner links their Git account (the "Link Git account" button on a failed deploy), the owner presses **Trigger deploy, then Deploy site** for each deploy.
+- **Production branch is `site-preview`.** Re-linking the repository reset it to `main` once. Check it after any re-link.
+- **Server routes ship every file in `content/` and `data/`** (`outputFileTracingIncludes`). Before 24 October only YAML was included, and DECHY Admin and the contact endpoint failed on Netlify.
+- **Verified live on 24 October 2026:**
+  - All four forms reached Netlify Forms, the business mailbox, and the Gmail forward.
+  - Telegram and phone alerts arrived for a test lead.
+  - Two-step sign-in is on.
+  - DECHY Admin is installed on the owner's phone.
+- **Credits:** each production deploy costs 15 credits. Blocked or failed builds cost nothing. Batch changes into as few deploys as possible.
