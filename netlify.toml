@@ -5,6 +5,8 @@
 [build]
   command = "node scripts/netlify-build.mjs"
   publish = ".next"
+  # Builds only the production branch, never pull request previews or doc-only changes.
+  ignore = "node scripts/netlify-ignore.mjs"
 
 [build.environment]
   NODE_VERSION = "22"
