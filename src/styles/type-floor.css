@@ -126,3 +126,58 @@
   max-width: 100%;
   overflow-x: auto;
 }
+
+/* Owner, 25 October 2026: on tablet and desktop, body and card text 16px, uppercase labels 15px. */
+@media (min-width: 48rem) {
+  .page-hero:is(#hero, .page-hero) ~ * :is(.t-small, .step-body, .faq-ask-text, .t-body),
+  .page-hero:is(#hero, .page-hero)
+    ~ *
+    :is(.dest-card, .tile-card, .step-card, .callout, .glance, .sp-panel)
+    :is(p, li),
+  main :is([class*="card"], [class*="tile"]) p,
+  :is(.team-owns, .pc-summary, .pc-includes li, .step-out-list li, .def-photo-card p) {
+    font-size: 1rem !important;
+  }
+  :is(.t-eyebrow, .proof-label, .article-points-title, .rl-result-cat, .search-suggest-label) {
+    font-size: 0.9375rem !important;
+  }
+}
+
+/* The assistant: 15px throughout, on every screen (owner, 25 October 2026). */
+.assist-panel {
+  --a-body: 0.9375rem;
+  --a-small: 0.9375rem;
+  --a-label: 0.9375rem;
+}
+
+/* Stats: equal cards, the number wraps under the avatars instead of overflowing, no lone card. */
+.proof-counter {
+  grid-template-rows: auto 1fr;
+  align-items: start;
+}
+.proof-counter .proof-label {
+  align-self: end;
+}
+.proof-value {
+  flex-wrap: wrap;
+  row-gap: 0.4rem;
+  min-width: 0;
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.5rem) !important;
+}
+@media (max-width: 47.99rem) {
+  .proof-counters > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Site-wide: grid and flex children may shrink, and long words wrap inside their box. */
+:where(main) :where(div, section, article, li, ul, ol, p, figure, header, a, span, dl, dd) {
+  min-width: 0;
+}
+:where(main) :where(h1, h2, h3, h4, p, li, dd, dt, a, span) {
+  overflow-wrap: break-word;
+}
+.proof-counter .proof-label {
+  justify-content: space-between;
+  width: 100%;
+}
