@@ -3,7 +3,8 @@
  * stored in the repository, and admin stays locked until the environment provides one.
  *
  *   ADMIN_EMAIL            the administrator's sign-in email
- *   ADMIN_PASSWORD_HASH    scrypt hash produced by `npm run admin:hash` (never the password itself)
+ *   ADMIN_PASSWORD_HASH    scrypt hash from `npm run admin:hash`, or a PBKDF2 hash made in the
+ *                          browser at /admin/setup/ (never the password itself)
  *   ADMIN_SESSION_SECRET   at least 32 random characters; signs the session cookie
  *   ADMIN_API_TOKEN        optional; a long random token for server-to-server or mobile access
  *                          (sent as "Authorization: Bearer <token>")
@@ -23,7 +24,7 @@ export const SESSION_TTL_MS = 8 * 60 * 60 * 1000;
 export function adminConfigured(env: Env = process.env): boolean {
   return Boolean(
     env.ADMIN_EMAIL?.trim() &&
-    env.ADMIN_PASSWORD_HASH?.trim().startsWith("scrypt:") &&
+    /^(scrypt|pbkdf2):/.test(env.ADMIN_PASSWORD_HASH?.trim() ?? "") &&
     (env.ADMIN_SESSION_SECRET?.length ?? 0) >= 32,
   );
 }
@@ -37,7 +38,29 @@ export function hashPassword(password: string, salt = crypto.randomBytes(16)): s
   return `scrypt:${N}:${r}:${p}:${salt.toString("base64")}:${hash.toString("base64")}`;
 }
 
+/**
+ * pbkdf2:sha256:iterations:saltBase64:hashBase64, made in the owner's browser at /admin/setup/
+ * (Web Crypto PBKDF2), so the password never leaves their device.
+ */
+function verifyPbkdf2(password: string, stored: string): boolean {
+  const [, digest, iter, saltB64, hashB64] = stored.split(":");
+  const iterations = Number(iter);
+  if (digest !== "sha256" || !Number.isInteger(iterations) || iterations < 100_000) return false;
+  if (iterations > 5_000_000) return false;
+  const expected = Buffer.from(hashB64 ?? "", "base64");
+  if (expected.length < 32) return false;
+  const actual = crypto.pbkdf2Sync(
+    password,
+    Buffer.from(saltB64 ?? "", "base64"),
+    iterations,
+    expected.length,
+    "sha256",
+  );
+  return crypto.timingSafeEqual(actual, expected);
+}
+
 export function verifyPassword(password: string, stored: string): boolean {
+  if (stored.startsWith("pbkdf2:")) return verifyPbkdf2(password, stored);
   const parts = stored.split(":");
   if (parts.length !== 6 || parts[0] !== "scrypt") return false;
   const [, n, r, p, saltB64, hashB64] = parts;

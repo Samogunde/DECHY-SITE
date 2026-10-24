@@ -8,6 +8,7 @@ const NAV = [
   { href: "/admin/inbox/", label: "Inbox" },
   { href: "/admin/conversations/", label: "AI conversations" },
   { href: "/admin/contacts/", label: "Contacts" },
+  { href: "/admin/security/", label: "Security" },
 ];
 
 /** Signed-in admin chrome: brand, navigation, and sign out. Server component. */

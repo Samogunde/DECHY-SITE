@@ -2,7 +2,6 @@ import { sameOrigin } from "@/lib/contact/handler";
 import { authorizeRequest } from "@/lib/server/auth";
 import { NO_STORE } from "@/lib/server/http";
 import {
-  pushConfigured,
   removeSubscription,
   saveSubscription,
   sendPush,
@@ -26,7 +25,6 @@ export async function POST(request: Request) {
   if (!authorizeRequest(request.headers)) return json({ ok: false, code: "unauthorized" }, 401);
   if (!sameOrigin(request.headers, siteOrigin()))
     return json({ ok: false, code: "forbidden" }, 403);
-  if (!pushConfigured()) return json({ ok: false, code: "not_configured" }, 503);
   const body = (await request.json().catch(() => null)) as {
     action?: string;
     subscription?: unknown;

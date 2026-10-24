@@ -7,7 +7,7 @@ import {
   verifyCredentials,
 } from "@/lib/server/auth";
 import { clientAddress, overLimit, peekLimit } from "@/lib/server/ratelimit";
-import { matchTotp, totpRequired } from "@/lib/server/totp";
+import { activeTotpSecret, matchTotp } from "@/lib/server/totp";
 import { getStore } from "@/lib/server/store";
 import { siteOrigin } from "@/lib/site";
 
@@ -46,8 +46,9 @@ export async function POST(request: Request) {
   };
   if (!email || !password || !verifyCredentials(email, password)) return fail();
   // Two-step sign-in (owner, 24 October 2026): the authenticator code, used once only.
-  if (totpRequired()) {
-    const step = matchTotp(code);
+  const totp = await activeTotpSecret(store);
+  if (totp) {
+    const step = matchTotp(code, { ADMIN_TOTP_SECRET: totp });
     if (step === null) return fail();
     const last = await store.get<number>("admin/totp-last-step").catch(() => null);
     if (last !== null && step <= last) return fail();

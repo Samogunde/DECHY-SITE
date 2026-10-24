@@ -156,8 +156,10 @@ Done: project `z2m5oecdku` (https://dechytech.com). Keep masking at "Balanced" o
   - **Two-step sign-in:** a six-digit code from an authenticator app, required once `ADMIN_TOTP_SECRET` is set. Each code is accepted once only.
   - **Statuses:** shown as New, Open, Replied, Closed, and Archived. The stored values are unchanged.
   - The inbox, transcripts, notes, assignment, and CSV export already existed.
-- **Owner setup for step 2 (secrets, so the owner enters them in Netlify):**
-  1. On your computer, run `npm run admin:totp`. Add the setup key to your authenticator app, then set `ADMIN_TOTP_SECRET` in Netlify (secret).
-  2. Run `npm run admin:vapid` and set `VAPID_PUBLIC_KEY` and `VAPID_PRIVATE_KEY` (secret) in Netlify.
-  3. If not set already, set `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH` (`npm run admin:hash`), and `ADMIN_SESSION_SECRET`.
-  4. After the next deploy, sign in on the phone, install the app, and turn alerts on.
+- **Owner setup for step 2 (no commands, no secret copied by anyone else):**
+  1. Open `https://dechy-site.netlify.app/admin/setup/`. Enter your email and a new password (at least 12 characters). The page makes three lines in your browser: `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, and `ADMIN_SESSION_SECRET`. Nothing is sent anywhere.
+  2. In Netlify, go to the project, then Project configuration, then Environment variables. Add the three, marking the last two secret, then ask for a redeploy.
+  3. Sign in at `/admin/login/`. Open Security and scan the QR code with your authenticator app. Enter the six-digit code to turn two-step sign-in on. The secret stays on the server.
+  4. On the phone, install DECHY Admin, open Overview, then Phone alerts, and turn alerts on. The push keys are created by the server the first time.
+  5. Lost the phone: set `ADMIN_2FA_RESET=1`, redeploy, sign in, set it up again, then remove the variable.
+  6. `npm run admin:totp` and `npm run admin:vapid` remain as optional alternatives, setting the values in Netlify instead.

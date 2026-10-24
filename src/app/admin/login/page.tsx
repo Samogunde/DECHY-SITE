@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { Logo } from "@/components/patterns/Logo";
 import { SESSION_COOKIE, adminConfigured, readSession } from "@/lib/server/auth";
 import { totpRequired } from "@/lib/server/totp";
+import { getStore } from "@/lib/server/store";
 
 export const dynamic = "force-dynamic";
 
@@ -14,7 +15,17 @@ export default async function AdminLogin({
   const configured = adminConfigured();
   if (configured && readSession((await cookies()).get(SESSION_COOKIE)?.value)) redirect("/admin/");
   const { error } = await searchParams;
-  const twoStep = totpRequired();
+  const twoStep = configured
+    ? await totpRequired(
+        (() => {
+          try {
+            return getStore();
+          } catch {
+            return null;
+          }
+        })(),
+      )
+    : false;
   return (
     <main id="main" className="admin-login">
       <div className="admin-login-card">

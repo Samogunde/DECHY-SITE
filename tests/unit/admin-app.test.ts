@@ -89,3 +89,39 @@ describe("phone alerts (web push)", () => {
     expect(send).not.toHaveBeenCalled();
   });
 });
+
+describe("setup without copying secrets (owner, 24 October 2026)", () => {
+  it("turns two-step sign-in on only with a code from the new secret", async () => {
+    const { beginTotpSetup, confirmTotpSetup, totpRequired, activeTotpSecret } =
+      await import("../../src/lib/server/totp");
+    const store = new MemoryStore();
+    expect(await totpRequired(store, {})).toBe(false);
+    const { secret } = await beginTotpSetup(store, "owner@example.org");
+    const now = 1_800_000_000_000;
+    expect(await confirmTotpSetup(store, "000000", now)).toBe(false);
+    const good = totpAt(base32Decode(secret), Math.floor(now / 30_000));
+    expect(await confirmTotpSetup(store, good, now)).toBe(true);
+    expect(await activeTotpSecret(store, {})).toBe(secret);
+    expect(await totpRequired(store, { ADMIN_2FA_RESET: "1" })).toBe(false);
+  });
+
+  it("creates the push keys once and keeps them", async () => {
+    const { vapidKeys } = await import("../../src/lib/server/push");
+    const store = new MemoryStore();
+    expect(await vapidKeys(store, {})).toBeNull();
+    const made = await vapidKeys(store, {}, true);
+    expect(made?.publicKey).toMatch(/^[A-Za-z0-9_-]{80,}$/);
+    expect(await vapidKeys(store, {})).toEqual(made);
+  });
+
+  it("signs in with a password hash made in the browser (PBKDF2)", async () => {
+    const crypto = await import("node:crypto");
+    const { verifyPassword } = await import("../../src/lib/server/auth");
+    const salt = crypto.randomBytes(16);
+    const hash = crypto.pbkdf2Sync("correct horse battery", salt, 600_000, 32, "sha256");
+    const stored = `pbkdf2:sha256:600000:${salt.toString("base64")}:${hash.toString("base64")}`;
+    expect(verifyPassword("correct horse battery", stored)).toBe(true);
+    expect(verifyPassword("wrong password here", stored)).toBe(false);
+    expect(verifyPassword("x", "pbkdf2:sha256:10:AAAA:AAAA")).toBe(false);
+  });
+});

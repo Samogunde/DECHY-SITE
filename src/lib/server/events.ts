@@ -14,7 +14,7 @@
  * never holds more personal data than it needs. The full record opens in DECHY Admin.
  */
 import crypto from "node:crypto";
-import { pushConfigured, sendPush } from "./push";
+import { sendPush } from "./push";
 import type { Activity } from "./records";
 import { getStore } from "./store";
 import { Repo } from "./records";
@@ -112,7 +112,7 @@ export function signBody(body: string, secret: string): string {
 
 /** Phone notifications from the installed DECHY Admin app (web push), next to the provider. */
 async function pushAlert(event: DechyEvent, env: Env) {
-  if (!ALERTS.has(event.type) || !pushConfigured(env)) return;
+  if (!ALERTS.has(event.type)) return;
   try {
     await sendPush(
       getStore(env),

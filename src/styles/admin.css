@@ -613,3 +613,36 @@ a.admin-row:hover {
   font-size: 0.9em;
   overflow-wrap: anywhere;
 }
+
+/* Two-step sign-in setup (24 October 2026). */
+.admin-steps {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+}
+.admin-qr {
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+.admin-qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.admin-setup-key code {
+  font-size: 1.125rem;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+.admin-setup-lines {
+  margin: 0.75rem 0;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  background: #0b0b0c;
+  color: #e4e4e7;
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  user-select: all;
+}

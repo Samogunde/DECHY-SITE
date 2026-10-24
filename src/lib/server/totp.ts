@@ -2,12 +2,16 @@
  * Two-step sign-in for DECHY Admin (owner, 24 October 2026): a six-digit code from an
  * authenticator app (RFC 6238 TOTP: SHA-1, 30-second steps), checked after the password.
  *
- *   ADMIN_TOTP_SECRET   base32 secret from `npm run admin:totp`; when set, the code is required
+ * The owner turns it on inside DECHY Admin (Security): the server creates the secret, shows it once
+ * as a QR code, and keeps it in private storage, so it never passes through anyone else. A secret
+ * in ADMIN_TOTP_SECRET (from `npm run admin:totp`) is used instead when set. ADMIN_2FA_RESET=1
+ * switches the stored one off for a phone that is lost: sign in, set it up again, remove the variable.
  *
  * One step either side is accepted for clock drift, and a code that has been used cannot be used
  * again (the last accepted step is kept in storage). Server-only.
  */
 import crypto from "node:crypto";
+import type { Store } from "./store";
 
 type Env = Record<string, string | undefined>;
 
@@ -57,8 +61,48 @@ export function totpAt(secret: Buffer, step: number): string {
   return bin.toString().padStart(6, "0");
 }
 
-export function totpRequired(env: Env = process.env): boolean {
-  return Boolean(env.ADMIN_TOTP_SECRET?.trim());
+const STORED = "admin/totp";
+const PENDING = "admin/totp-pending";
+
+type StoredTotp = { secret: string; enabledAt: string };
+
+/** The active secret: the environment's, else the one turned on in DECHY Admin, else none. */
+export async function activeTotpSecret(store: Store | null, env: Env = process.env) {
+  const fromEnv = env.ADMIN_TOTP_SECRET?.trim();
+  if (fromEnv) return fromEnv;
+  if (!store || store.kind === "none" || env.ADMIN_2FA_RESET === "1") return null;
+  const rec = await store.get<StoredTotp>(STORED).catch(() => null);
+  return rec?.secret ?? null;
+}
+
+export async function totpRequired(store: Store | null, env: Env = process.env) {
+  return (await activeTotpSecret(store, env)) !== null;
+}
+
+/** Starts setup: a new secret kept as pending until the owner proves the app has it. */
+export async function beginTotpSetup(store: Store, account: string) {
+  const fresh = newTotpSecret(account);
+  await store.set(PENDING, { secret: fresh.secret, createdAt: new Date().toISOString() });
+  return fresh;
+}
+
+export async function pendingTotp(store: Store, account: string) {
+  const p = await store.get<{ secret: string }>(PENDING).catch(() => null);
+  return p ? { secret: p.secret, uri: totpUri(p.secret, account) } : null;
+}
+
+/** Finishes setup when the code matches the pending secret. */
+export async function confirmTotpSetup(store: Store, code: string, now = Date.now()) {
+  const p = await store.get<{ secret: string }>(PENDING).catch(() => null);
+  if (!p || matchTotp(code, { ADMIN_TOTP_SECRET: p.secret }, now) === null) return false;
+  await store.set(STORED, { secret: p.secret, enabledAt: new Date(now).toISOString() });
+  await store.delete(PENDING);
+  return true;
+}
+
+export async function disableTotp(store: Store) {
+  await store.delete(STORED);
+  await store.delete(PENDING);
 }
 
 /**
@@ -82,10 +126,13 @@ export function matchTotp(code: string, env: Env = process.env, now = Date.now()
   return null;
 }
 
+export function totpUri(secret: string, account: string) {
+  const label = encodeURIComponent(`DECHY Admin:${account}`);
+  return `otpauth://totp/${label}?secret=${secret}&issuer=DECHY%20Admin&algorithm=SHA1&digits=6&period=30`;
+}
+
 /** A new secret and the link an authenticator app reads (enter the secret by hand, or as a QR). */
 export function newTotpSecret(account: string): { secret: string; uri: string } {
   const secret = base32Encode(crypto.randomBytes(20));
-  const label = encodeURIComponent(`DECHY Admin:${account}`);
-  const uri = `otpauth://totp/${label}?secret=${secret}&issuer=DECHY%20Admin&algorithm=SHA1&digits=6&period=30`;
-  return { secret, uri };
+  return { secret, uri: totpUri(secret, account) };
 }
