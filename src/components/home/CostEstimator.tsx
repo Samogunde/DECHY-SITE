@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   estimate,
@@ -13,6 +14,7 @@ import {
   type Selection,
 } from "@/lib/estimate";
 import { EmailLink } from "@/components/primitives/EmailLink";
+import { leadSource } from "@/lib/contact/lead-source";
 
 const STEPS = ["What you are building", "Type and size", "Features and setup", "When to start"];
 
@@ -452,6 +454,8 @@ function Result({
           message: `${summary}\n\nSent from the cost estimator. Please send the full breakdown and book a call.`,
           website: String(fd.get("website") ?? ""),
           startedAt: started.current,
+          form: "estimator",
+          source: leadSource(),
         }),
       });
       const body = (await res.json()) as {
@@ -551,6 +555,10 @@ function Result({
               {state === "sending" ? "Sending..." : "Send my breakdown and book a call"}
             </button>
             {state === "error" ? <p className="est-error">{error}</p> : null}
+            <p className="est-consent">
+              We use your details only to send your breakdown and reply. See our{" "}
+              <Link href="/privacy/">privacy policy</Link>.
+            </p>
           </form>
         ) : (
           <button

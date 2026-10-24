@@ -109,7 +109,7 @@ function bandsFor(page: Page, ctx: CtaContext): { after?: string; band: Band }[]
           "cta-price",
           "primary",
           "Every quote is fixed and in writing before any work starts.",
-          { label: "Get a quote for your project", href: "/contact/" },
+          { label: "Get a quote for your project", href: "/contact/?intent=quote" },
           estimator ? { label: "Try the estimator first", href: estimator } : undefined,
         ),
       },
@@ -138,7 +138,7 @@ function bandsFor(page: Page, ctx: CtaContext): { after?: string; band: Band }[]
           "cta-plan",
           "primary",
           "Tell us what you are building. You get a plan, a fixed quote, and a timeline, free.",
-          { label: "Get a quote", href: "/contact/" },
+          { label: "Get a quote", href: "/contact/?intent=quote" },
         ),
       },
       {

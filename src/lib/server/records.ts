@@ -111,6 +111,23 @@ export type Inquiry = RecordBase & {
   budget: string;
   subject: string;
   message: string;
+  /** Which website form sent it (contact, quote, estimator); absent on older records. */
+  form?: "contact" | "quote" | "estimator";
+  /** Where the visitor came from (UTM tags, landing page, referrer); absent on older records. */
+  source?: {
+    utm_source: string;
+    utm_medium: string;
+    utm_campaign: string;
+    landing_page: string;
+    referrer: string;
+  };
+};
+
+/** A newsletter signup: the address, when, and where the visitor came from. */
+export type Subscriber = {
+  email: string;
+  createdAt: string;
+  source: NonNullable<Inquiry["source"]> | null;
 };
 
 /** An existing client asking for help with work already under way (support, not new business). */
@@ -484,6 +501,25 @@ export class Repo {
     return out
       .filter((r) => !filter.channel || r.channel === filter.channel)
       .filter((r) => !filter.status || r.status === filter.status)
+      .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  }
+
+  /* newsletter subscribers (owner, 24 October 2026) */
+
+  /** Adds or refreshes a subscriber; returns false when the address was already on the list. */
+  async addSubscriber(email: string, source: Subscriber["source"]): Promise<boolean> {
+    const key = `subscriber/${emailKey(email)}`;
+    const existing = await this.store.get<Subscriber>(key);
+    if (existing) return false;
+    await this.store.set(key, { email: email.trim().toLowerCase(), createdAt: this.iso(), source });
+    return true;
+  }
+
+  async listSubscribers(): Promise<Subscriber[]> {
+    const keys = await this.store.list("subscriber/");
+    const all = await Promise.all(keys.map((k) => this.store.get<Subscriber>(k)));
+    return all
+      .filter((x): x is Subscriber => x !== null)
       .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }
 

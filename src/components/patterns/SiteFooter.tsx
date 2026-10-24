@@ -4,6 +4,7 @@ import { publishedPath } from "@/lib/content/urls";
 import { Logo } from "./Logo";
 import { EmailLink } from "@/components/primitives/EmailLink";
 import { mailto } from "@/lib/contact/emails";
+import { NewsletterForm } from "@/components/patterns/NewsletterForm";
 
 function FooterLink({ label, href }: { label: string; href: string | null }) {
   if (!href)
@@ -59,6 +60,9 @@ export function SiteFooter() {
                 </a>
               </li>
             </ul>
+            <div className="footer-newsletter mt-6 max-w-[26rem]">
+              <NewsletterForm variant="line" />
+            </div>
           </div>
 
           <div className="min-[64rem]:col-span-5">

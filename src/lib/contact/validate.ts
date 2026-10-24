@@ -23,6 +23,23 @@ export const BUDGETS = [
 /** The "What can we help with?" choice when the visitor does not know which service fits. */
 export const NOT_SURE = "Not sure yet";
 
+/**
+ * Which website form sent a lead (owner, 24 October 2026): each has its own Netlify Forms name and
+ * notification subject, so the team can tell them apart in the mailbox.
+ */
+export const LEAD_FORMS = ["contact", "quote", "estimator"] as const;
+export type LeadForm = (typeof LEAD_FORMS)[number];
+
+/** Where a visitor came from: saved on the first page of the visit and sent with every form. */
+export const LeadSource = z.object({
+  utm_source: z.string().trim().max(200).optional().default(""),
+  utm_medium: z.string().trim().max(200).optional().default(""),
+  utm_campaign: z.string().trim().max(200).optional().default(""),
+  landing_page: z.string().trim().max(500).optional().default(""),
+  referrer: z.string().trim().max(500).optional().default(""),
+});
+export type LeadSource = z.infer<typeof LeadSource>;
+
 export const ContactInput = z.object({
   name: z.string().trim().min(2, "Please enter your name.").max(120, "That name is too long."),
   email: z.string().trim().email("Please enter a valid email address.").max(200),
@@ -43,6 +60,9 @@ export const ContactInput = z.object({
   website: z.string().max(500).optional().default(""),
   /** Client timestamp (ms) when the form was rendered; used to reject instant bot submissions. */
   startedAt: z.number().int().positive().optional(),
+  /** Which form sent it; a plain message from the contact page when absent. */
+  form: z.enum(LEAD_FORMS).optional().default("contact"),
+  source: LeadSource.optional(),
 });
 export type ContactInput = z.infer<typeof ContactInput>;
 

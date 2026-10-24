@@ -29,11 +29,16 @@ export async function recordInquiry(
     budget: data.budget ?? "",
     subject: "",
     message: data.message,
+    form: data.form,
+    source: data.source,
   });
+  const label = { contact: "message", quote: "quote request", estimator: "estimator lead" }[
+    data.form
+  ];
   await emit(repo, {
     type: "inquiry.created",
     ref: inquiry.ref,
-    title: `New inquiry: ${data.interest}`,
+    title: `New ${label}: ${data.interest}`,
     actor: "visitor",
   });
   return { ref: inquiry.ref };

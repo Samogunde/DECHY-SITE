@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Arrow } from "@/components/primitives/Arrow";
+import { leadSource } from "@/lib/contact/lead-source";
 
 type Option = { value: string; label: string };
 type Fields = "name" | "email" | "organization" | "interest" | "timeline" | "budget" | "message";
@@ -49,7 +50,11 @@ export function ContactForm({ services }: { services: Option[] }) {
     () => window.location.search,
     () => "",
   );
-  const preset = new URLSearchParams(search).get("service") ?? "";
+  const params = new URLSearchParams(search);
+  const preset = params.get("service") ?? "";
+  // A visitor who came from a quote button or a service page sends a quote request; anyone else a
+  // general message. Each has its own Netlify form and notification subject.
+  const form = preset || params.get("intent") === "quote" ? "quote" : "contact";
   const presetLabel = services.find((s) => s.value === preset)?.label ?? "";
 
   const [status, setStatus] = useState<Status>("idle");
@@ -99,6 +104,8 @@ export function ContactForm({ services }: { services: Option[] }) {
           budget: values.budget || undefined,
           website: String(fd.get("website") ?? ""),
           startedAt: startedAt.current,
+          form,
+          source: leadSource(),
         }),
       });
       const body = (await res.json().catch(() => null)) as
@@ -338,8 +345,8 @@ export function ContactForm({ services }: { services: Option[] }) {
           )}
         </button>
         <p className="t-caption mt-3 max-w-[52ch]">
-          By sending this form you agree that DECHY may use your details to respond to your inquiry.
-          See the <Link href="/privacy/">privacy policy</Link> for how data is handled.
+          We use your details only to reply to your message. See our{" "}
+          <Link href="/privacy/">privacy policy</Link>.
         </p>
       </div>
       <p className="visually-hidden" aria-live="polite">

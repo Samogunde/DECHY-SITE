@@ -832,7 +832,8 @@ export function validateRegistry(input: Registry): Issue[] {
     err("nav-approved", "nav.yaml", `Primary navigation must be ${APPROVED_NAV.join(", ")}`);
   if (registry.nav.cta.label !== "Get a quote")
     err("nav-cta", "nav.yaml", "The header button must read Get a quote (owner, 21 October 2026)");
-  if (!pathExists(registry.nav.cta.path, registry))
+  const ctaPath = registry.nav.cta.path.split("?")[0] ?? "";
+  if (!pathExists(ctaPath, registry))
     err("nav-cta-path", "nav.yaml", "CTA target page does not exist");
   for (const l of registry.nav.footer.legal) {
     if (!pathExists(l.path, registry))
@@ -841,7 +842,7 @@ export function validateRegistry(input: Registry): Issue[] {
   }
   for (const l of registry.nav.footer.explore)
     if (pathExists(l.path, registry)) link("footer", l.path);
-  if (pathExists(registry.nav.cta.path, registry)) link("nav", registry.nav.cta.path);
+  if (pathExists(ctaPath, registry)) link("nav", ctaPath);
   // The Resources and About us menus link their pages from every page's header.
   for (const l of [...(registry.nav.resources?.links ?? []), ...(registry.nav.about?.links ?? [])])
     if (pathExists(l.path, registry)) link("nav", l.path.split("#")[0] ?? l.path);

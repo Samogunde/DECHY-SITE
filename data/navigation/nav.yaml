@@ -17,7 +17,7 @@ primary:
   - { label: About us, kind: about, path: /company/ }
 cta:
   label: Get a quote
-  path: /contact/
+  path: /contact/?intent=quote
 
 # Technologies menu and directory. Order is editorial (commercial relevance, then search intent),
 # never alphabetical. Every technology page must appear in exactly one category (a validator

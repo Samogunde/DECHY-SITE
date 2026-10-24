@@ -28,6 +28,16 @@ export type HandlerDeps = {
   record?: (data: Parameters<typeof deliver>[0]) => Promise<{ ref: string } | null>;
   /** Allowed "What can we help with?" values (service names and "Not sure yet"). */
   interests?: readonly string[];
+  /**
+   * Shared rate limit across serverless instances (true when over the limit). The in-memory
+   * window below still applies on its own.
+   */
+  overLimit?: (client: string) => Promise<boolean>;
+  /** The Netlify Forms copy of the lead (email notification, dashboard, CSV export). */
+  forward?: (
+    data: Parameters<typeof deliver>[0],
+    ref?: string,
+  ) => Promise<{ ok: boolean; skipped?: boolean }>;
 };
 
 const MAX_BODY = 16 * 1024;
@@ -90,7 +100,11 @@ export async function handleContact(
     return { status: 403, body: { ok: false, code: "forbidden", message: "Request not allowed." } };
   }
   const now = deps.now();
-  if (limited(clientKey(req.headers), now)) {
+  const client = clientKey(req.headers);
+  if (
+    limited(client, now) ||
+    (deps.overLimit && (await deps.overLimit(client).catch(() => false)))
+  ) {
     return {
       status: 429,
       body: {
@@ -140,8 +154,11 @@ export async function handleContact(
     }
   }
   const delivered = await deps.deliver(data, stored?.ref);
+  const forwarded = deps.forward
+    ? await deps.forward(data, stored?.ref).catch(() => ({ ok: false }))
+    : { ok: false };
   if (stored) return { status: 200, body: { ok: true, ref: stored.ref } };
-  if (delivered.ok) return { status: 200, body: { ok: true } };
+  if (delivered.ok || forwarded.ok) return { status: 200, body: { ok: true } };
   if (delivered.reason === "unconfigured") {
     return {
       status: 503,

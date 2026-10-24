@@ -98,6 +98,23 @@ export default async function AdminOverview() {
             </ul>
           )}
         </section>
+        <section aria-labelledby="export-h" className="admin-card">
+          <h2 id="export-h" className="admin-h2">
+            Export
+          </h2>
+          <p className="admin-note">
+            Download every lead or the newsletter list as a spreadsheet (CSV). Netlify Forms keeps a
+            second copy of each lead with its own export.
+          </p>
+          <p className="admin-actions">
+            <a href="/api/admin/export/?type=leads" className="admin-btn" download>
+              Leads (CSV)
+            </a>{" "}
+            <a href="/api/admin/export/?type=subscribers" className="admin-btn" download>
+              Newsletter subscribers (CSV)
+            </a>
+          </p>
+        </section>
         <section aria-labelledby="config-h" className="admin-card">
           <h2 id="config-h" className="admin-h2">
             Connections

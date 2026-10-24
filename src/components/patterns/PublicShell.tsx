@@ -1,6 +1,7 @@
 import { AssistantLauncher } from "@/components/assistant/AssistantLauncher";
 import { SiteFooter } from "@/components/patterns/SiteFooter";
 import { SiteHeader } from "@/components/patterns/SiteHeader";
+import { LeadSourceCapture } from "@/components/patterns/LeadSourceCapture";
 import { MotionProvider } from "@/components/primitives/MotionProvider";
 import { aiConfigured } from "@/lib/assistant/engine";
 
@@ -22,6 +23,7 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
       </main>
       <SiteFooter />
       <MotionProvider />
+      <LeadSourceCapture />
       {/* The label says "AI" only when real AI answers are configured on the server. */}
       <AssistantLauncher ai={aiConfigured()} />
     </>

@@ -14,6 +14,7 @@ import { buildNavModel } from "@/lib/nav";
 import { publishedPath } from "@/lib/content/urls";
 import { Section, SectionHeader } from "./Section";
 import { AccentText } from "@/components/primitives/AccentText";
+import { NewsletterForm } from "@/components/patterns/NewsletterForm";
 
 type Of<T extends Block["type"]> = Extract<Block, { type: T }>;
 
@@ -436,6 +437,9 @@ export function LibraryBlock({ block }: { block: Of<"library"> }) {
           <HoverArrow />
         </Link>
       ) : null}
+      <div className="rl-newsletter">
+        <NewsletterForm />
+      </div>
     </Section>
   );
 }

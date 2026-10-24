@@ -12,3 +12,4 @@ data/taxonomy/generated
 *.png
 src/styles/typography-tokens.css
 CLAUDE.md
+public/__forms.html

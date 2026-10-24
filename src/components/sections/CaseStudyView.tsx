@@ -84,7 +84,7 @@ export function CaseStudyView({ page, registry }: { page: Page; registry: Regist
                 </div>
               </dl>
               <div className="mt-8 flex flex-wrap gap-3">
-                <LinkButton href="/contact/" arrow>
+                <LinkButton href="/contact/?intent=quote" arrow>
                   Start a similar project
                 </LinkButton>
                 <LinkButton href="/work/" variant="secondary">
@@ -294,7 +294,7 @@ export function CaseStudyView({ page, registry }: { page: Page; registry: Regist
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end">
-              <LinkButton href="/contact/" arrow>
+              <LinkButton href="/contact/?intent=quote" arrow>
                 Start a similar project
               </LinkButton>
             </div>

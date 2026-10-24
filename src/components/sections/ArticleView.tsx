@@ -14,6 +14,7 @@ import { HoverArrow } from "./HomeBlocks";
 import { CtaBandBlock } from "./GrowthBlocks";
 import { LinkButton } from "@/components/primitives/LinkButton";
 import { Arrow } from "@/components/primitives/Arrow";
+import { NewsletterForm } from "@/components/patterns/NewsletterForm";
 
 const ESTIMATOR = "/tools/cost-estimator/";
 const COST_HUB = "/cost/";
@@ -111,7 +112,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
   const live = (href: string) => pathExists(href, registry);
   const isCost = a?.category === "cost";
   const slug = a?.pricing && a.pricing !== "all" ? a.pricing : a?.service;
-  const quoteHref = `/contact/${slug ? `?service=${slug}` : ""}`;
+  const quoteHref = `/contact/${slug ? `?service=${slug}` : "?intent=quote"}`;
   const estimatorHref = `${ESTIMATOR}${slug ? `?service=${slug}` : ""}`;
   // Midway through the article: a soft step (the estimator, the cost hub, or the service).
   const midSection = Math.max(0, Math.floor(prose.length / 2) - 1);
@@ -402,6 +403,9 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                 </div>
               </section>
             ) : null}
+            <aside className="article-newsletter" aria-label="Newsletter">
+              <NewsletterForm />
+            </aside>
           </article>
         </div>
       </div>
