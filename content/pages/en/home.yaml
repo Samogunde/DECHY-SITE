@@ -111,7 +111,7 @@ sections:
       - label: Integration
         headline: Connect the systems you already pay for
         lead: Your CRM, accounting, store, and operations tools sharing the same data in real time, through monitored connections that alert us before you notice a problem.
-        badge: Free map
+        badge: Map
         offer: "A map of your tools, showing where data breaks today and how to join it up."
         cta: { label: Connect my systems, href: "/contact/?service=api-integration" }
         href: /api-integration/
