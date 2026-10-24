@@ -1,17 +1,25 @@
 name: CI
 
+# Quick checks on every change: types, lint, formatting, unit tests, content validation, the
+# dependency audit, and the production build. The full browser suite lives in browser-tests.yml and
+# runs only when started by hand (before launch, before the domain switch, or on request), so the
+# free GitHub Actions minutes for this private repository last the month (owner, 24 October 2026).
 on:
   push:
-    branches: ["**"]
+    # Dependabot branches are checked once, through their pull request, not twice.
+    branches-ignore: ["dependabot/**"]
+    # Planning documents do not change the site.
+    paths-ignore: ["docs/**"]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
-# A newer push cancels an older run on a branch, but never on main: every commit on main must
-# finish its own full run, so a green main always means the pushed state was validated.
+# A newer push cancels an older run on the same branch (a push and its pull request share one
+# group), but never on main: every commit on main finishes its own run.
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 env:
@@ -21,10 +29,10 @@ env:
   CONTACT_DELIVERY: log
 
 jobs:
-  static:
-    name: Static gates and build
+  quick:
+    name: Quick checks and build
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -56,42 +64,3 @@ jobs:
 
       - name: Production build
         run: npm run build
-
-  # The complete browser suite (routes, responsive widths, navigation, accessibility, security
-  # headers, alignment) runs on every push, split into four parallel shards. No test is skipped or
-  # reduced; sharding only divides the same tests across runners.
-  browser:
-    name: Browser tests (shard ${{ matrix.shard }} of 4)
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [1, 2, 3, 4]
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Production build
-        run: npm run build
-
-      - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
-
-      - name: Browser tests
-        run: npx playwright test --shard=${{ matrix.shard }}/4
-
-      - name: Upload Playwright traces on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-results-${{ matrix.shard }}
-          path: test-results/
-          retention-days: 7
