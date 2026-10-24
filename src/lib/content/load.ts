@@ -394,6 +394,8 @@ export function buildRegistry(): Registry {
     p.description = expandFacts(p.description, facts);
     if (p.h1) p.h1 = expandFacts(p.h1, facts);
     if (p.lead) p.lead = expandFacts(p.lead, facts);
+    // Guide summaries are printed as plain text on the cost hub and Resources cards.
+    if (p.article?.summary) p.article.summary = expandFacts(p.article.summary, facts);
   }
   const pageByPath = new Map<string, Page>();
   for (const p of pages) {

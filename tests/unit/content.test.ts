@@ -174,3 +174,17 @@ describe("pages and graph", () => {
     expect(solvedBy).toContain("sol.internal-business-software");
   });
 });
+
+describe("plain-text fields carry no raw tokens (24 October 2026)", () => {
+  it("fills in prices in every title, description, lead, and guide summary", () => {
+    for (const p of registry.pages)
+      for (const text of [
+        p.title,
+        p.description,
+        p.h1 ?? "",
+        p.lead ?? "",
+        p.article?.summary ?? "",
+      ])
+        expect(text, p.path).not.toMatch(/\{\{(fact|email):/);
+  });
+});
