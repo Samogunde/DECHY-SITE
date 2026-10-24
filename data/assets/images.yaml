@@ -9806,7 +9806,7 @@ assets:
     sha256: 3c4823f5bc609529cb2822c0203247faf1b37ff8199fd2be2cd47a2976f3717a
     width: 1000
     height: 1000
-    alt: "David Wood, Data & Analytics Lead at DECHY"
+    alt: "Rebecca Sinclair, Data & Analytics Lead at DECHY"
     usage: [company]
     approval: approved
     acquired: "2026-10-24"
@@ -9903,6 +9903,70 @@ assets:
     width: 1000
     height: 1000
     alt: "Samuel Abims, Project Consultant at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-mobile-product-lead
+    kind: file
+    file: public/photos/team-mobile-product-lead.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-mobile-product-lead.md.
+    originalFilename: "Luis_Castellan.png"
+    sha256: e6aefd8b6ea03a8ce80a72db7d5d4a93ade2c7cbccd52d4f9a69f49ab187d2ea
+    width: 1000
+    height: 1000
+    alt: "Luis Castellan, Mobile Product Lead at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-conversational-ai-lead
+    kind: file
+    file: public/photos/team-conversational-ai-lead.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-conversational-ai-lead.md.
+    originalFilename: "Professional Corporate Headshot of Amara Linwood.png"
+    sha256: bcd323864c340ac96bd507e2f981019f031e54aa86dbdc556770a5dc909c2e46
+    width: 1000
+    height: 1000
+    alt: "Amara Linwood, Conversational AI Lead at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-security-consultant
+    kind: file
+    file: public/photos/team-security-consultant.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-security-consultant.md.
+    originalFilename: "Daniel_Fairbanks.png"
+    sha256: 14720e0cdf59e93c0fbd8d96489c74853836d40ddb2559f6854e5f812fe776f5
+    width: 1000
+    height: 1000
+    alt: "Daniel Fairbanks, Security Consultant at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-brand-designer
+    kind: file
+    file: public/photos/team-brand-designer.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-brand-designer.md.
+    originalFilename: "Professional Olive Blazer Headshot.png"
+    sha256: 2f2ddbe9a63a1012382ee1c513a3570e1b1b3a67f4083e790d2907881dfd30f5
+    width: 1000
+    height: 1000
+    alt: "Maya Thornbury, Brand Designer at DECHY"
     usage: [company]
     approval: approved
     acquired: "2026-10-24"

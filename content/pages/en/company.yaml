@@ -221,7 +221,7 @@ sections:
             layout: rail,
             position: "50% 30%",
           }
-      - name: David Wood
+      - name: Rebecca Sinclair
         role: "Data & Analytics Lead"
         bio: "Connects data definitions, reporting needs, and decision workflows. Emphasizes context and interpretation rather than dashboards full of disconnected metrics."
         photo: { asset: asset.photo-team-data-analytics-lead, layout: rail, position: "50% 30%" }
@@ -259,15 +259,19 @@ sections:
       - name: Luis Castellan
         role: "Mobile Product Lead"
         bio: "Builds mobile apps for people who work away from a desk, such as technicians, drivers, and field crews. Makes sure they can finish a job on the phone, add photos and notes on the spot, and keep working when the signal drops."
+        photo: { asset: asset.photo-team-mobile-product-lead, layout: rail, position: "50% 30%" }
       - name: Amara Linwood
         role: "Conversational AI Lead"
         bio: "Builds AI assistants that answer common customer questions and pass everything else to a person on your team. Sets clear rules for when a conversation is handed over, so customers never get stuck with a canned reply."
+        photo: { asset: asset.photo-team-conversational-ai-lead, layout: rail, position: "50% 30%" }
       - name: Daniel Fairbanks
         role: "Security Consultant"
         bio: "Helps clients see who can reach which systems and close the accounts that should no longer be open. Sets up joining and leaving checklists so access is added and removed the same way every time, and explains each risk in plain terms."
+        photo: { asset: asset.photo-team-security-consultant, layout: rail, position: "50% 30%" }
       - name: Maya Thornbury
         role: "Brand Designer"
         bio: "Turns scattered logos, colors, and templates into one brand kit the whole team can use. Prepares the right files for the website, documents, and social posts, with simple guidance on which to use where."
+        photo: { asset: asset.photo-team-brand-designer, layout: rail, position: "50% 30%" }
 
   - type: index
     id: next
