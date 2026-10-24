@@ -163,3 +163,15 @@ Done: project `z2m5oecdku` (https://dechytech.com). Keep masking at "Balanced" o
   4. On the phone, install DECHY Admin, open Overview, then Phone alerts, and turn alerts on. The push keys are created by the server the first time.
   5. Lost the phone: set `ADMIN_2FA_RESET=1`, redeploy, sign in, set it up again, then remove the variable.
   6. `npm run admin:totp` and `npm run admin:vapid` remain as optional alternatives, setting the values in Netlify instead.
+
+## 6. Deploys and build minutes
+
+- Netlify builds from GitHub once the repository is linked (owner authorizes the Netlify GitHub app).
+- **Production branch:** `site-preview`, a branch that moves only when a deploy is wanted. Daily work stays on `homepage-redesign-sample` and triggers no Netlify build. To deploy, `site-preview` is fast-forwarded to the commit to publish.
+- **Netlify UI settings:**
+  - Branch deploys: "Deploy only the production branch".
+  - Deploy Previews: "Don't deploy pull requests".
+- `scripts/netlify-ignore.mjs` (the `ignore` step in `netlify.toml`) also skips:
+  - any non-production context
+  - any push that only changes `docs/`
+- **Photographs:** stored as progressive mozjpeg JPEG, quality 84, at the width each layout needs (floor 1800 px). Total 89 MB, down from 203 MB. Re-run `npx tsx scripts/compress-photos.ts --write` after adding photographs. It only replaces a file when that saves at least 12 percent.
