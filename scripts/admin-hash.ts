@@ -23,9 +23,9 @@ async function ask(question: string): Promise<string> {
 
 async function main() {
   const password =
-    process.env.ADMIN_PASSWORD ?? (await ask("Admin password (at least 12 characters): "));
-  if (password.length < 12) {
-    console.error("Use at least 12 characters.");
+    process.env.ADMIN_PASSWORD ?? (await ask("Admin password (at least 6 characters): "));
+  if (password.length < 6) {
+    console.error("Use at least 6 characters.");
     process.exit(1);
   }
   console.log(`\nADMIN_PASSWORD_HASH=${hashPassword(password)}`);

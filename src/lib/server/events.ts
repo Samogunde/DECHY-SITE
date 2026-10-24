@@ -25,6 +25,7 @@ export type EventType =
   | "assistant.escalated"
   | "email.received"
   | "person.requested"
+  | "newsletter.subscribed"
   | "record.status_changed";
 
 export type DechyEvent = {
@@ -47,6 +48,7 @@ const ALERTS = new Set<EventType>([
   "assistant.escalated",
   "person.requested",
   "email.received",
+  "newsletter.subscribed",
 ]);
 
 const adminPathOf = (e: DechyEvent) =>

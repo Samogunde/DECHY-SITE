@@ -23,7 +23,7 @@ export function SetupForm() {
     const password = String(fd.get("password") ?? "");
     const again = String(fd.get("again") ?? "");
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setError("Enter your email address.");
-    if (password.length < 12) return setError("Use at least 12 characters for the password.");
+    if (password.length < 6) return setError("Use at least 6 characters for the password.");
     if (password !== again) return setError("The two passwords do not match.");
     setError("");
     setBusy(true);
@@ -83,7 +83,7 @@ export function SetupForm() {
         <input id="setup-email" name="email" type="email" autoComplete="username" required />
       </div>
       <div className="field">
-        <label htmlFor="setup-password">New password (at least 12 characters)</label>
+        <label htmlFor="setup-password">New password (at least 6 characters)</label>
         <input
           id="setup-password"
           name="password"

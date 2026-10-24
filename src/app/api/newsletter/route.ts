@@ -1,5 +1,6 @@
 import { forwardToNetlify, newsletterFields } from "@/lib/contact/netlify-forms";
 import { handleNewsletter } from "@/lib/contact/newsletter";
+import { notify } from "@/lib/server/events";
 import { overLimit } from "@/lib/server/ratelimit";
 import { Repo } from "@/lib/server/records";
 import { getStore } from "@/lib/server/store";
@@ -25,7 +26,18 @@ export async function POST(request: Request) {
     save: async (data) => {
       const repo = new Repo();
       if (repo.storeKind === "none") return null;
-      return repo.addSubscriber(data.email, data.source ?? null);
+      const added = await repo.addSubscriber(data.email, data.source ?? null);
+      // Alert only a new address, and never show it: the page and a link to the export.
+      if (added)
+        await notify({
+          type: "newsletter.subscribed",
+          ref: null,
+          title: "New newsletter signup",
+          actor: "visitor",
+          page: data.source?.landing_page || undefined,
+          adminPath: "/admin/",
+        });
+      return added;
     },
     forward: (data) => forwardToNetlify("newsletter", newsletterFields(data.email, data.source)),
   });

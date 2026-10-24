@@ -994,3 +994,16 @@ main.theme-dark .est-result-mid {
     flex: 1 1 0;
   }
 }
+
+/* Form results on the dark theme (24 October 2026): the thank-you text was faded on a dark panel. */
+main.theme-dark .form-result {
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.05);
+  color: #e4e4e7;
+}
+main.theme-dark .form-result :is(h3, p, strong) {
+  color: #fff;
+}
+main.theme-dark .form-result p {
+  color: #d4d4d8;
+}
