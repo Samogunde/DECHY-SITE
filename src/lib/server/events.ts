@@ -14,7 +14,9 @@
  * never holds more personal data than it needs. The full record opens in DECHY Admin.
  */
 import crypto from "node:crypto";
+import { pushConfigured, sendPush } from "./push";
 import type { Activity } from "./records";
+import { getStore } from "./store";
 import { Repo } from "./records";
 
 export type EventType =
@@ -108,12 +110,42 @@ export function signBody(body: string, secret: string): string {
   return `sha256=${crypto.createHmac("sha256", secret).update(body).digest("hex")}`;
 }
 
+/** Phone notifications from the installed DECHY Admin app (web push), next to the provider. */
+async function pushAlert(event: DechyEvent, env: Env) {
+  if (!ALERTS.has(event.type) || !pushConfigured(env)) return;
+  try {
+    await sendPush(
+      getStore(env),
+      {
+        title: event.title.slice(0, 120),
+        body:
+          [event.name, event.page].filter(Boolean).join(", ").slice(0, 200) || "Open DECHY Admin",
+        url: adminPathOf(event),
+        tag: event.ref ?? event.type,
+      },
+      env,
+    );
+  } catch {
+    // a failed push must not fail the visitor's request
+  }
+}
+
 /** Sends the notification. Never throws: a failed notification must not fail the visitor's request. */
 export async function notify(
   event: DechyEvent,
   env: Env = process.env,
   fetchImpl: FetchLike = fetch,
   log: (line: string) => void = (l) => console.info(l),
+): Promise<"sent" | "skipped" | "failed"> {
+  const [result] = await Promise.all([provider(event, env, fetchImpl, log), pushAlert(event, env)]);
+  return result;
+}
+
+async function provider(
+  event: DechyEvent,
+  env: Env,
+  fetchImpl: FetchLike,
+  log: (line: string) => void,
 ): Promise<"sent" | "skipped" | "failed"> {
   const provider = (env.NOTIFICATION_PROVIDER ?? "none").trim().toLowerCase();
   if (provider === "log") {

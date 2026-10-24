@@ -20,18 +20,21 @@
     "e2e": "playwright test",
     "check": "npm run typecheck && npm run lint && npm run test && npm run build",
     "admin:hash": "tsx scripts/admin-hash.ts",
+    "admin:totp": "tsx scripts/admin-totp.ts",
+    "admin:vapid": "tsx scripts/admin-vapid.ts",
     "brand:derivatives": "tsx scripts/brand-derivatives.ts"
   },
   "dependencies": {
     "@netlify/blobs": "11.1.0",
     "@phosphor-icons/react": "2.1.10",
-    "next": "16.3.8",
+    "next": "^16.4.3",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "schema-dts": "^2.1.0",
     "simple-icons": "16.32.0",
+    "web-push": "^3.6.7",
     "yaml": "^2.9.1",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
@@ -40,8 +43,9 @@
     "@types/node": "^22.20.5",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "@types/web-push": "^3.6.4",
     "eslint": "^9.39.5",
-    "eslint-config-next": "16.3.8",
+    "eslint-config-next": "^16.4.3",
     "prettier": "^3.9.9",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",

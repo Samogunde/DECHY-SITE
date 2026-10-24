@@ -56,7 +56,8 @@ Owner direction, 24 October 2026. This records what was built and the steps that
   - A one-line choice (Decline, Accept, equal buttons) appears until answered. Cookie settings in the footer reopens it.
 - Team traffic: open any page with `?dechy-internal=1` once per browser and analytics stays off in that browser (`?dechy-internal=0` clears it).
 - Checking events on the preview: `?dechy-analytics-debug=1` logs each event to the browser console. Nothing is sent from the preview. `?consent-preview=1` shows the banner there.
-- Microsoft Clarity loads when its project ID is set in `CLARITY_ID` (`src/lib/analytics.ts`). Forms and the assistant conversation are masked, and Clarity receives the same consent choice.
+- Microsoft Clarity project `z2m5oecdku` follows the same domain rule. Forms and the assistant conversation are masked, and Clarity receives the same consent choice.
+- Verified 24 October 2026 on the preview build: no request to googletagmanager.com, google-analytics.com, or clarity.ms, and no data layer. A unit test pins the host rule. The IDs stay the same after the domain is connected. To confirm at launch, check GA4 Realtime.
 - The tag is not added as a `noscript` iframe, because it could not respect the domain rule or consent.
 
 ### Events pushed to the data layer
@@ -104,7 +105,7 @@ Page views, sessions, engagement time, source and medium, country, device, and n
 
 ### Owner steps (Clarity)
 
-Create a project for https://www.dechytech.com at clarity.microsoft.com and send the project ID. Keep masking at "Balanced" or "Strict".
+Done: project `z2m5oecdku` (https://dechytech.com). Keep masking at "Balanced" or "Strict" in Clarity's settings.
 
 ### At launch only (not before)
 
@@ -145,4 +146,18 @@ Create a project for https://www.dechytech.com at clarity.microsoft.com and send
   3. Open `https://api.telegram.org/bot<token>/getUpdates` in a browser and copy the `chat` `id` from the reply.
   4. In Netlify, go to the project, then Project configuration, then Environment variables. Add `NOTIFICATION_PROVIDER=telegram`, `TELEGRAM_BOT_TOKEN` (mark it secret), and `TELEGRAM_CHAT_ID`.
   5. After the next deploy, DECHY Admin, Overview shows "Telegram alerts" under Configuration.
-- **Step 2:** DECHY Admin as an installable app, with web push and two-step sign-in.
+- **Step 2, installable DECHY Admin (built):**
+  - **App:** `/admin/` has its own web app manifest (name "DECHY Admin", scope `/admin/`, standalone). Install it from Chrome on Android ("Install app"), or on iPhone from Share, then Add to Home Screen.
+  - **Phone alerts:**
+    - DECHY Admin, Overview, Phone alerts, then "Turn on alerts on this device" subscribes that device to web push. Send a test from the same card.
+    - The alert carries the same content as Telegram (what happened, name, page), and tapping it opens the record.
+    - The service worker caches nothing.
+    - On iPhone, alerts work only from the home screen app (iOS 16.4 or later).
+  - **Two-step sign-in:** a six-digit code from an authenticator app, required once `ADMIN_TOTP_SECRET` is set. Each code is accepted once only.
+  - **Statuses:** shown as New, Open, Replied, Closed, and Archived. The stored values are unchanged.
+  - The inbox, transcripts, notes, assignment, and CSV export already existed.
+- **Owner setup for step 2 (secrets, so the owner enters them in Netlify):**
+  1. On your computer, run `npm run admin:totp`. Add the setup key to your authenticator app, then set `ADMIN_TOTP_SECRET` in Netlify (secret).
+  2. Run `npm run admin:vapid` and set `VAPID_PUBLIC_KEY` and `VAPID_PRIVATE_KEY` (secret) in Netlify.
+  3. If not set already, set `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH` (`npm run admin:hash`), and `ADMIN_SESSION_SECRET`.
+  4. After the next deploy, sign in on the phone, install the app, and turn alerts on.

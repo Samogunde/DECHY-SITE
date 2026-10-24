@@ -7,6 +7,7 @@ import {
   verifyCredentials,
 } from "@/lib/server/auth";
 import { clientAddress, overLimit, peekLimit } from "@/lib/server/ratelimit";
+import { matchTotp, totpRequired } from "@/lib/server/totp";
 import { getStore } from "@/lib/server/store";
 import { siteOrigin } from "@/lib/site";
 
@@ -36,9 +37,21 @@ export async function POST(request: Request) {
     return back("/admin/login/?error=locked");
   const email = String(form?.get("email") ?? "").slice(0, 200);
   const password = String(form?.get("password") ?? "").slice(0, 500);
-  if (!email || !password || !verifyCredentials(email, password)) {
+  const code = String(form?.get("code") ?? "")
+    .replace(/\s/g, "")
+    .slice(0, 6);
+  const fail = async () => {
     await overLimit(store, "admin-login", client, 5, 15 * 60 * 1000);
     return back("/admin/login/?error=1");
+  };
+  if (!email || !password || !verifyCredentials(email, password)) return fail();
+  // Two-step sign-in (owner, 24 October 2026): the authenticator code, used once only.
+  if (totpRequired()) {
+    const step = matchTotp(code);
+    if (step === null) return fail();
+    const last = await store.get<number>("admin/totp-last-step").catch(() => null);
+    if (last !== null && step <= last) return fail();
+    await store.set("admin/totp-last-step", step).catch(() => {});
   }
   return back("/admin/", sessionCookie(createSession(email)));
 }

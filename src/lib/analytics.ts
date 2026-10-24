@@ -10,9 +10,9 @@
  * Browser only.
  */
 
-/** Public container IDs (not secrets). Clarity stays off until its project ID is set. */
+/** Public IDs (not secrets): Tag Manager (which carries GA4 G-426RNZV61C) and Clarity. */
 export const GTM_ID = "GTM-M7VGXV5C";
-export const CLARITY_ID = "";
+export const CLARITY_ID = "z2m5oecdku";
 
 /** The hosts that may load analytics: the live domain only. */
 export const ANALYTICS_HOSTS = ["www.dechytech.com", "dechytech.com"];

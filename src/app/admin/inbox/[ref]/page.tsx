@@ -9,7 +9,13 @@ import {
   when,
 } from "@/components/admin/AdminShell";
 import { requireAdmin } from "@/lib/server/admin-session";
-import { conversationIdOf, Repo, STATUSES, type FieldSource } from "@/lib/server/records";
+import {
+  conversationIdOf,
+  Repo,
+  STATUS_LABEL,
+  STATUSES,
+  type FieldSource,
+} from "@/lib/server/records";
 
 export const dynamic = "force-dynamic";
 
@@ -176,7 +182,7 @@ export default async function AdminRecord({ params }: { params: Promise<{ ref: s
               <select id="status" name="status" defaultValue={record.status}>
                 {STATUSES.map((s) => (
                   <option key={s} value={s}>
-                    {s}
+                    {STATUS_LABEL[s]}
                   </option>
                 ))}
               </select>

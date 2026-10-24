@@ -40,6 +40,17 @@ export function emailKey(email: string): string {
 export type Channel = "contact-form" | "assistant" | "human-support" | "email";
 export type Status = "new" | "open" | "waiting" | "resolved" | "archived";
 export const STATUSES: Status[] = ["new", "open", "waiting", "resolved", "archived"];
+/**
+ * How each status reads in DECHY Admin (owner, 24 October 2026: new, replied, closed). The stored
+ * values stay the same, so older records and the API are unchanged.
+ */
+export const STATUS_LABEL: Record<Status, string> = {
+  new: "New",
+  open: "Open",
+  waiting: "Replied",
+  resolved: "Closed",
+  archived: "Archived",
+};
 
 export type Contact = {
   id: string;

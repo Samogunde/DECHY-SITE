@@ -5,6 +5,9 @@ import "@/styles/admin.css";
 export const metadata: Metadata = {
   title: { absolute: "DECHY Admin" },
   robots: { index: false, follow: false, nocache: true },
+  // Installable on a phone's home screen (owner, 24 October 2026), with its own name and scope.
+  manifest: "/admin/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "DECHY Admin", statusBarStyle: "black" },
 };
 
 /** Private admin area: its own layout, outside the public site chrome and bundles. */

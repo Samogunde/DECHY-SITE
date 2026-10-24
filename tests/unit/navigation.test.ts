@@ -36,7 +36,7 @@ describe("navigation model", () => {
   });
 
   it("every destination in every menu is a built page: no dead ends", () => {
-    for (const d of navDestinations(model)) expect(paths.has(d.split("#")[0]!), d).toBe(true);
+    for (const d of navDestinations(model)) expect(paths.has(d.split(/[?#]/)[0]!), d).toBe(true);
   });
 
   it("Technologies: eight categories, only published pages, editorial order, within the limit", () => {

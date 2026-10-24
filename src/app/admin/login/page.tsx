@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Logo } from "@/components/patterns/Logo";
 import { SESSION_COOKIE, adminConfigured, readSession } from "@/lib/server/auth";
+import { totpRequired } from "@/lib/server/totp";
 
 export const dynamic = "force-dynamic";
 
@@ -13,6 +14,7 @@ export default async function AdminLogin({
   const configured = adminConfigured();
   if (configured && readSession((await cookies()).get(SESSION_COOKIE)?.value)) redirect("/admin/");
   const { error } = await searchParams;
+  const twoStep = totpRequired();
   return (
     <main id="main" className="admin-login">
       <div className="admin-login-card">
@@ -49,6 +51,21 @@ export default async function AdminLogin({
                 required
               />
             </div>
+            {twoStep ? (
+              <div className="field">
+                <label htmlFor="admin-code">Code from your authenticator app</label>
+                <input
+                  id="admin-code"
+                  name="code"
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9 ]{6,7}"
+                  maxLength={7}
+                  autoComplete="one-time-code"
+                  required
+                />
+              </div>
+            ) : null}
             <button type="submit" className="btn btn-primary">
               Sign in
             </button>

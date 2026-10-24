@@ -54,6 +54,13 @@ This file tells every Claude Code session how to work on DECHY. It adds no compa
   - Care plans $100 to $300, $350 to $900, $1,200 to $3,000; timelines read "from approved scope".
   - Redesigned home price cards and testimonials; accent words in some headings.
   - Reference: doc 22, seventeenth pass.
+- Business email, forms, newsletter, analytics, alerts, installable admin (24 October 2026, owner direction): **built on branch `homepage-redesign-sample`.**
+  - Public addresses hello@, sales@, support@, and billing@dechytech.com (`src/lib/contact/emails.ts`); the business mailbox never appears; schema `alternateName: Deki`.
+  - Contact, quote, estimator, and newsletter forms are checked by our handler, stored for DECHY Admin, and copied to Netlify Forms (`NETLIFY_FORMS=on`); every lead carries UTM, landing page, and referrer; admin CSV export.
+  - GTM `GTM-M7VGXV5C` (GA4 `G-426RNZV61C`) and Clarity `z2m5oecdku` load only on dechytech.com and www.dechytech.com, with Consent Mode v2.
+  - Telegram and web push alerts carry a name, the page, and a link only. DECHY Admin is installable, with two-step sign-in.
+  - CI runs quick checks on every change; the browser suite runs by hand (`browser-tests.yml`).
+  - Reference: `docs/planning/23-forms-analytics-alerts.md`.
 - Netlify (7 October 2026): site `dechy-site` created on the owner's Netlify team and deployed at https://dechy-site.netlify.app (site id 4c3031f8-b780-46b4-89aa-62d5568c8b2a), with `SITE_ORIGIN` set to that URL. Indexing stays off (noindex, robots Disallow) until `SITE_INDEXING=true` is set at launch. Deploys so far are manual uploads from a clean `git archive` copy (the upload tool zips the whole folder, so never run it from the working tree). Not yet done: GitHub-linked continuous deploys (needs the owner to authorize the Netlify GitHub app), custom domain and DNS, and the contact-form destination.
 - Technology and Solutions qualification and reconciliation (ADR 0006): **decided and recorded, nothing built.** The first-wave Solution architecture is **six standalone Solution pages** (Business Process Automation, Legacy System Modernization, Cloud Migration, CRM Integration, Business Dashboards, AI Customer Support); the earlier twelve are superseded. Grouped technologies use the `partOf` relation. Solution to Industry mapping is deferred. Nine named technologies are CONFIRMATION REQUIRED. The next technology wave and Phase 4 are not started. Authoritative: `docs/planning/14-technology-and-solutions-qualification.md` sections 10 and 11.
 - Working copy: `C:\DECHY-SITE`. Remote: `https://github.com/Samogunde/DECHY-SITE.git` (private; GitHub is the permanent source of truth). Never use or reference the abandoned Codex repository or its code.

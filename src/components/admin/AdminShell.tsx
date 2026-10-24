@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/patterns/Logo";
 import type { FieldSource, InboxRecord } from "@/lib/server/records";
+import { STATUS_LABEL, type Status } from "@/lib/server/records";
 
 const NAV = [
   { href: "/admin/", label: "Overview" },
@@ -59,7 +60,11 @@ export function AdminShell({
 }
 
 export function StatusBadge({ status }: { status: string }) {
-  return <span className={`admin-status admin-status-${status}`}>{status}</span>;
+  return (
+    <span className={`admin-status admin-status-${status}`}>
+      {STATUS_LABEL[status as Status] ?? status}
+    </span>
+  );
 }
 
 export const CHANNEL_LABEL: Record<string, string> = {

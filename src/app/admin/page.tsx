@@ -6,6 +6,9 @@ import { requireAdmin } from "@/lib/server/admin-session";
 import { limits, todayUsage } from "@/lib/server/ai-budget";
 import { Repo } from "@/lib/server/records";
 import { getStore } from "@/lib/server/store";
+import { PushToggle } from "@/components/admin/PushToggle";
+import { pushConfigured } from "@/lib/server/push";
+import { totpRequired } from "@/lib/server/totp";
 
 export const dynamic = "force-dynamic";
 
@@ -100,6 +103,23 @@ export default async function AdminOverview() {
                 </li>
               ))}
             </ul>
+          )}
+        </section>
+        <section aria-labelledby="push-h" className="admin-card">
+          <h2 id="push-h" className="admin-h2">
+            Phone alerts
+          </h2>
+          <p className="admin-note">
+            Get a notification on this phone or computer for every new lead and every request for a
+            person. Two-step sign-in is {totpRequired() ? "on" : "off (set ADMIN_TOTP_SECRET)"}.
+          </p>
+          {pushConfigured() ? (
+            <PushToggle publicKey={process.env.VAPID_PUBLIC_KEY!.trim()} />
+          ) : (
+            <p className="admin-note">
+              Set VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY (from <code>npm run admin:vapid</code>) to
+              turn phone alerts on.
+            </p>
           )}
         </section>
         <section aria-labelledby="export-h" className="admin-card">
