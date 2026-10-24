@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from "react";
+import { track } from "@/lib/analytics";
 
 /** The panel is loaded only when a visitor opens it, so pages carry almost no assistant code. */
 const AssistantPanel = lazy(() => import("./AssistantPanel"));
@@ -102,6 +103,7 @@ export function AssistantLauncher({ ai }: { ai: boolean }) {
   const close = useCallback(() => hide("closed"), [hide]);
 
   const open = () => {
+    track("assistant_open", { page_path: window.location.pathname });
     setState("open");
     setExpanded(false);
     write(session, OPEN_KEY, "1");

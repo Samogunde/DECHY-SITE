@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/patterns/SiteHeader";
 import { LeadSourceCapture } from "@/components/patterns/LeadSourceCapture";
 import { MotionProvider } from "@/components/primitives/MotionProvider";
 import { aiConfigured } from "@/lib/assistant/engine";
+import { Analytics } from "@/components/patterns/Analytics";
 
 /**
  * The public website's chrome, in one place: skip link, header, footer, motion, and the DECHY
@@ -24,6 +25,7 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
       <SiteFooter />
       <MotionProvider />
       <LeadSourceCapture />
+      <Analytics />
       {/* The label says "AI" only when real AI answers are configured on the server. */}
       <AssistantLauncher ai={aiConfigured()} />
     </>

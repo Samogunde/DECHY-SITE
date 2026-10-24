@@ -3,16 +3,16 @@ kind: legal
 locale: en
 path: /cookies/
 title: "Cookie Policy | DECHY"
-description: "What cookies and similar technologies the DECHY website uses. At present it sets no cookies and uses no analytics, advertising, or tracking technologies."
+description: "What cookies and similar technologies the DECHY website uses: analytics with your consent, and the browser storage that keeps the site and assistant working."
 breadcrumbLabel: Cookie policy
 h1: Cookie policy
-lead: "What this website stores in your browser. Last updated 7 October 2026."
+lead: "What this website stores in your browser. Last updated 24 October 2026."
 intent:
   primary: read the website cookie policy
 indexing: index
 claims: [company.name]
 datePublished: "2026-10-04"
-dateModified: "2026-10-07"
+dateModified: "2026-10-24"
 schemaTypes: [WebPage]
 
 sections:
@@ -25,11 +25,14 @@ sections:
           - "Cookies are small files that a website can store in your browser. Similar technologies, such as local storage, serve comparable purposes."
       - heading: What this website uses
         paragraphs:
-          - "The public website sets no cookies and uses no analytics, advertising, or tracking technologies. The contact form and the website assistant do not set cookies. So that you can continue a conversation as you move between pages, your browser keeps a random conversation reference in session storage, which is cleared when you close the tab. So that you can reopen earlier chats on this device, local storage also keeps a short list of your own conversation references (at most 20, and only references: the conversations themselves are kept on our server for up to 90 days and then deleted). The assistant also remembers in local storage that its label has been shown, so the label is not expanded again on later visits. None of this is used for tracking or shared with anyone, and clearing your browser data removes it. Fonts are served from this website itself rather than from a third-party font service."
+          - "Analytics cookies, only as your choice allows. Google Analytics sets _ga and _ga_ followed by an ID, which tell visits apart and last up to two years. Microsoft Clarity sets _clck (one year) and _clsk (one day), and Microsoft may set MUID, to group a visit's pages for heatmaps and recordings. In the European Economic Area, the United Kingdom, and Switzerland, none of these is set until you accept. Elsewhere, they are set unless you decline. We use no advertising cookies."
+          - "Your choice is kept in local storage (dechy-consent), so the question is not asked on every page. Change it at any time with Cookie settings at the foot of every page."
+          - "Where your visit came from. Session storage keeps the campaign tags of the link you followed, your first page, and the referring site (dechy-lead-source) until you close the tab, so a form you send can include them. Nothing is sent unless you submit a form."
+          - "The forms and the website assistant do not set cookies. So that you can continue a conversation as you move between pages, your browser keeps a random conversation reference in session storage, which is cleared when you close the tab. So that you can reopen earlier chats on this device, local storage also keeps a short list of your own conversation references (at most 20, and only references: the conversations themselves are kept on our server for up to 90 days and then deleted). The assistant also remembers in local storage that its label has been shown, so the label is not expanded again on later visits. None of this is used for tracking or shared with anyone, and clearing your browser data removes it. Fonts are served from this website itself rather than from a third-party font service."
           - "The private DECHY Admin area, used only by our team, sets one strictly necessary cookie to keep a signed-in session. Visitors to the public website never receive it."
       - heading: If this changes
         paragraphs:
-          - "If we add analytics or other optional technologies, we will update this policy and ask for your consent first where the law requires it."
+          - "If we add other optional technologies, we will update this policy and ask for your consent first where the law requires it."
       - heading: Managing cookies
         paragraphs:
           - "You can control or delete cookies in your browser settings at any time. See the [privacy policy](/privacy/) for how personal information is handled, or reach us through the [contact page](/contact/) with any question."

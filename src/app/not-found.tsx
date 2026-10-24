@@ -4,6 +4,7 @@ import { LinkButton } from "@/components/primitives/LinkButton";
 import { EntityName } from "@/components/primitives/Inline";
 import { getRegistry } from "@/lib/content/load";
 import { EmailLink } from "@/components/primitives/EmailLink";
+import { TrackOnMount } from "@/components/patterns/Analytics";
 
 export const metadata: Metadata = {
   title: { absolute: "Page not found | DECHY" },
@@ -18,6 +19,7 @@ export default function NotFound() {
     <PublicShell>
       <div className="section">
         <div className="container-site">
+          <TrackOnMount event="page_not_found" />
           <p className="t-eyebrow m-0">Error 404</p>
           <h1 className="t-h1 mt-3 max-w-[22ch]">That page does not exist.</h1>
           <p className="t-lead mt-5">

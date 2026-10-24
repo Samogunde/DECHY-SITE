@@ -15,6 +15,7 @@ import {
 } from "@/lib/estimate";
 import { EmailLink } from "@/components/primitives/EmailLink";
 import { leadSource } from "@/lib/contact/lead-source";
+import { track } from "@/lib/analytics";
 
 const STEPS = ["What you are building", "Type and size", "Features and setup", "When to start"];
 
@@ -84,6 +85,12 @@ export function CostEstimator({
   // Switching to a bigger tier keeps the features that asked for it.
   const switchTier = (i: number, keep: string[]) => set({ tier: i, features: keep });
   const go = (n: number) => {
+    if (n === 1 && step === 0) track("estimator_start", { service: sel.service });
+    track("estimator_step", {
+      step_number: n + 1,
+      step_name: STEPS[n] ?? "",
+      service: sel.service,
+    });
     setStep(n);
     top.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -390,6 +397,13 @@ export function CostEstimator({
                 disabled={!canNext}
                 onClick={() => {
                   setDone(true);
+                  if (result)
+                    track("estimator_result", {
+                      service: sel.service,
+                      tier: svc?.tiers[sel.tier]?.name ?? "",
+                      price_low: result.price[0],
+                      price_high: result.price[1],
+                    });
                   top.current?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
               >
@@ -471,6 +485,8 @@ function Result({
             "Could not send. Please try again.",
         );
       setRef(body.ref ?? "");
+      track("form_submit", { form_name: "estimator" });
+      track("estimator_lead", { service: interest });
       setState("sent");
     } catch (e) {
       setError((e as Error).message);
@@ -530,6 +546,7 @@ function Result({
         ) : asking ? (
           <form
             className="est-lead"
+            data-clarity-mask="true"
             onSubmit={(e) => {
               e.preventDefault();
               void send(e.currentTarget);

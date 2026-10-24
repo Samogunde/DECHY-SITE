@@ -5,6 +5,7 @@ import { Logo } from "./Logo";
 import { EmailLink } from "@/components/primitives/EmailLink";
 import { mailto } from "@/lib/contact/emails";
 import { NewsletterForm } from "@/components/patterns/NewsletterForm";
+import { CookieSettingsButton } from "@/components/patterns/Analytics";
 
 function FooterLink({ label, href }: { label: string; href: string | null }) {
   if (!href)
@@ -104,6 +105,9 @@ export function SiteFooter() {
                 </Link>
               </li>
             ))}
+            <li>
+              <CookieSettingsButton className="footer-cookie-btn inline-flex min-h-11 items-center text-slate-text underline lg:min-h-8" />
+            </li>
           </ul>
         </div>
       </div>

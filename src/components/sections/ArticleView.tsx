@@ -241,7 +241,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
               </Link>
             ) : null}
           </aside>
-          <article className="article-body">
+          <article className="article-body" data-read-depth={page.path}>
             <aside className="article-answer" aria-label="Short answer">
               <p className="article-answer-title">The short answer</p>
               <p>

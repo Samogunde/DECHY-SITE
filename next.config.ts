@@ -11,13 +11,28 @@ const isProd = process.env.NODE_ENV === "production";
  * foreign form targets, no base-tag hijack). Revisit with hash/SRI-based CSP when Next.js support
  * for static hashing is stable. Applied in production builds only because dev tooling needs eval.
  */
+/**
+ * Analytics origins (owner, 24 October 2026): Google Tag Manager and Google Analytics 4, and
+ * Microsoft Clarity. They load only on the live domain and only as the visitor's consent allows
+ * (src/components/patterns/Analytics.tsx); the policy simply permits them.
+ */
+const ANALYTICS_SCRIPTS = "https://www.googletagmanager.com https://*.clarity.ms";
+const ANALYTICS_CONNECT = [
+  "https://*.google-analytics.com",
+  "https://*.analytics.google.com",
+  "https://*.googletagmanager.com",
+  "https://*.clarity.ms",
+  "https://c.bing.com",
+].join(" ");
+
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline' ${ANALYTICS_SCRIPTS}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:",
+  `img-src 'self' data: blob: ${ANALYTICS_CONNECT}`,
   "font-src 'self' data:",
-  "connect-src 'self'",
+  `connect-src 'self' ${ANALYTICS_CONNECT}`,
+  "frame-src https://www.googletagmanager.com",
   "media-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",

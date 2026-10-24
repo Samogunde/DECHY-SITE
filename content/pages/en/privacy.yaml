@@ -3,16 +3,16 @@ kind: legal
 locale: en
 path: /privacy/
 title: "Privacy Policy | DECHY"
-description: "How DECHY handles personal information from this website: the contact form, the assistant, support requests, hosting data, cookies, and your rights."
+description: "How DECHY handles personal information from this website: forms, the newsletter, the assistant, analytics, cookies, service providers, and your rights."
 breadcrumbLabel: Privacy policy
 h1: Privacy policy
-lead: "How this website handles personal information. Last updated 7 October 2026."
+lead: "How this website handles personal information. Last updated 24 October 2026."
 intent:
   primary: read the website privacy policy
 indexing: index
 claims: [company.name]
 datePublished: "2026-10-04"
-dateModified: "2026-10-07"
+dateModified: "2026-10-24"
 schemaTypes: [WebPage]
 
 sections:
@@ -25,26 +25,29 @@ sections:
           - "This website is operated by DECHY, a global technology company. In this policy, DECHY, we, and us mean the operator of this website. You can contact us about privacy at {{email:hello}} or through the [contact page](/contact/)."
       - heading: What information we collect
         paragraphs:
-          - "Contact form. We receive your name, your email address, what you need help with, and the message you write. You may also choose to give an organization name, a timeline, and an estimated budget."
+          - "Contact and quote forms. We receive your name, your email address, what you need help with, and the message you write. You may also choose to give an organization name, a timeline, and an estimated budget."
+          - "Cost estimator. The estimator works in your browser and sends nothing until you ask for the full breakdown. Then we receive your name, your email address, and the answers and estimate you chose to send."
+          - "Newsletter. When you subscribe, we receive your email address."
+          - "Where your visit came from. With any form, we also receive the campaign tags in the link you followed (for example utm_source), the first page you visited, and the website that sent you, so we know which pages and campaigns bring inquiries. This is kept in your browser for the visit and sent only when you submit a form."
           - "Website assistant. When you use the assistant, the messages you type and its replies are kept as a conversation so it can follow the thread, together with the page of this website you were on, so its suggestions fit what you were reading. If you mention your name, email address, or organization, it may note them so you do not have to type them again when you talk to the team. When the assistant is powered by AI, your messages are sent to an AI model provider acting on our behalf to generate the replies."
           - "Talking to the team. When you ask to talk to the team, we note that you asked. Only when you confirm with your email address do we receive your name, your email address, and, if you choose, your organization, a note, and whether the request is time-sensitive, together with the assistant conversation and a short summary of it, so you do not have to repeat yourself. A request about new work becomes an inquiry; a request about work already under way becomes a support request."
           - "Information collected automatically. The website is delivered by a hosting provider, which processes standard technical data such as your IP address, browser type, and request details in order to serve pages and keep the site secure. To limit abuse of the contact form and the assistant, and to cap how many AI replies one visitor can receive in a day, we keep a one-way hash of the requesting address for no more than a day; the address itself is not stored. We also count AI usage per day as plain totals, without any personal information."
-          - "This website does not currently use analytics, advertising, or tracking cookies. See the [cookie policy](/cookies/)."
+          - "Analytics. We use Google Analytics 4, loaded through Google Tag Manager, to count visits and see which pages and actions are used: pages viewed, time on page, how far a page is read, the button and link you choose, the forms you send, the country and type of device, and the site that referred you. We use Microsoft Clarity for heatmaps and session recordings that show how pages are used; form fields and the assistant conversation are hidden from recordings. Visitors in the European Economic Area, the United Kingdom, and Switzerland are measured only after they accept analytics. Elsewhere, analytics runs unless you decline. You can change your choice at any time with Cookie settings at the foot of every page. See the [cookie policy](/cookies/)."
       - heading: How we use information
         paragraphs:
-          - "We use the information you send through the contact form, the assistant, or a support request to respond to you, to suggest which of our services might help, and to assess how DECHY might help. We use technical data to operate and secure the website. We do not sell personal information, and we do not use these submissions for unrelated marketing."
+          - "We use the information you send through a form, the assistant, or a support request to respond to you, to suggest which of our services might help, and to assess how DECHY might help. We use your email address for the newsletter only if you subscribe, and every issue will let you unsubscribe. We use analytics to improve the website and to understand which pages and campaigns bring inquiries. We use technical data to operate and secure the website. We do not sell personal information, and we do not use these submissions for unrelated marketing."
       - heading: Legal bases
         paragraphs:
-          - "Where data protection law such as the GDPR or the UK GDPR applies, we rely on our legitimate interest in responding to inquiries and operating a secure website, and on taking steps at your request before entering into a contract."
+          - "Where data protection law such as the GDPR or the UK GDPR applies, we rely on our legitimate interest in responding to inquiries and operating a secure website, on taking steps at your request before entering into a contract, and on your consent for analytics and the newsletter. You can withdraw consent at any time."
       - heading: Who receives information
         paragraphs:
-          - "Information is processed by service providers that help operate the website on our behalf and only for those purposes: hosting and data storage, email delivery, notifications to our team, and, when the assistant uses AI, an AI model provider. We may also disclose information when the law requires it."
+          - "Information is processed by service providers that help operate the website on our behalf and only for those purposes: Netlify (hosting, data storage, and form handling, including a copy of each form submission and email notifications to our team), our business email provider, Google (Google Analytics and Google Tag Manager), Microsoft (Clarity), Telegram (alerts to our team, which carry only a name, the page, and a link to our private records), and, when the assistant uses AI, an AI model provider. We may also disclose information when the law requires it."
       - heading: International transfers
         paragraphs:
           - "DECHY works globally, and our service providers may process information in countries other than your own. Where the law requires it, we use appropriate safeguards for those transfers."
       - heading: How long we keep information
         paragraphs:
-          - "We keep inquiries and support requests only as long as needed to respond and to manage any resulting relationship, and then delete them. Assistant conversations are deleted automatically after a limited period (currently 90 days) unless they were passed to our team, in which case they are kept with the inquiry or support request they belong to. Our internal activity log, which records events such as a new inquiry by reference, is trimmed after 365 days. These deletions run automatically every day. Hosting logs are kept for short periods for security and operations."
+          - "We keep inquiries and support requests only as long as needed to respond and to manage any resulting relationship, and then delete them. Assistant conversations are deleted automatically after a limited period (currently 90 days) unless they were passed to our team, in which case they are kept with the inquiry or support request they belong to. Our internal activity log, which records events such as a new inquiry by reference, is trimmed after 365 days. These deletions run automatically every day. Hosting logs are kept for short periods for security and operations. Newsletter addresses are kept until you unsubscribe. Google Analytics data is kept for 14 months, and Clarity recordings for up to 30 days."
       - heading: Your rights
         paragraphs:
           - "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, to object to certain processing, to data portability, and to withdraw consent where we rely on it. To exercise a right, email {{email:hello}} or use the [contact page](/contact/); we handle each request individually, including deleting your inquiries, support requests, and conversations. You may also complain to your local data protection authority."

@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState, useSyncExternalStore } from "react"
 import Link from "next/link";
 import { Arrow } from "@/components/primitives/Arrow";
 import { leadSource } from "@/lib/contact/lead-source";
+import { track } from "@/lib/analytics";
 
 type Option = { value: string; label: string };
 type Fields = "name" | "email" | "organization" | "interest" | "timeline" | "budget" | "message";
@@ -115,6 +116,8 @@ export function ContactForm({ services }: { services: Option[] }) {
       if (res.ok && body?.ok) {
         setReference(body.ref ?? "");
         setStatus("success");
+        track("form_submit", { form_name: form });
+        track("lead_submit", { form_name: form, service: values.interest });
         requestAnimationFrame(() => resultRef.current?.focus());
         return;
       }
@@ -167,6 +170,7 @@ export function ContactForm({ services }: { services: Option[] }) {
       method="post"
       action="/api/contact/"
       className="grid gap-6"
+      data-clarity-mask="true"
     >
       {presetLabel ? (
         <p className="t-small m-0 border-l-2 border-blue pl-4">

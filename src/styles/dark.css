@@ -1068,3 +1068,10 @@ main.theme-dark
     min-height: 2rem;
   }
 }
+.site-footer-dark .footer-cookie-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}

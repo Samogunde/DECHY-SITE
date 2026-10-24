@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import type { AssistantRequest } from "./AssistantLauncher";
 import { EMAILS } from "@/lib/contact/emails";
+import { track } from "@/lib/analytics";
 
 type Rec = { id: string; name: string; path: string; kind: string; reason?: string };
 type SourceLink = { name: string; path: string };
@@ -511,6 +512,7 @@ export default function AssistantPanel({
   const openCard = useCallback(
     async (from: Via = "header") => {
       if (handoffRef) return;
+      track("assistant_handoff_request", { via: from, page_path: page });
       setVia(from);
       let prefill = EMPTY_PREFILL;
       try {
@@ -542,6 +544,7 @@ export default function AssistantPanel({
   async function send(text: string) {
     const message = text.trim();
     if (!message || busy) return;
+    track("assistant_message", { page_path: page });
     setError("");
     setInput("");
     setConfirmNew(false);
@@ -690,6 +693,7 @@ export default function AssistantPanel({
           remember(b.conversationId);
         }
         setHandoffRef(b.ref);
+        track("assistant_handoff_sent", { kind: values.kind ?? "", page_path: page });
         setConvState("handed-off");
         setCard(null);
         setOfferHuman(false);
@@ -773,6 +777,7 @@ export default function AssistantPanel({
       ref={panel}
       className="assist-panel"
       role="dialog"
+      data-clarity-mask="true"
       aria-modal="false"
       aria-labelledby={fid("title")}
       aria-describedby={fid("disclosure")}

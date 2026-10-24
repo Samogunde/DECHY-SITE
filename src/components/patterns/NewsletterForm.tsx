@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { leadSource } from "@/lib/contact/lead-source";
+import { track } from "@/lib/analytics";
 
 /**
  * The newsletter signup (owner, 24 October 2026): email only, placed quietly at the end of each
@@ -44,6 +45,8 @@ export function NewsletterForm({ variant = "block" }: { variant?: "block" | "lin
       const body = (await res.json().catch(() => null)) as { ok: boolean; message?: string } | null;
       if (!res.ok || !body?.ok) throw new Error(body?.message ?? "Please try again in a moment.");
       setState("done");
+      track("form_submit", { form_name: "newsletter" });
+      track("newsletter_signup", { placement: variant });
     } catch (e) {
       setError((e as Error).message);
       setState("error");
@@ -74,7 +77,13 @@ export function NewsletterForm({ variant = "block" }: { variant?: "block" | "lin
           New guides by email, about once a month.
         </p>
       )}
-      <form className="nl-form" onSubmit={onSubmit} noValidate aria-labelledby={`${uid}-t`}>
+      <form
+        className="nl-form"
+        onSubmit={onSubmit}
+        noValidate
+        aria-labelledby={`${uid}-t`}
+        data-clarity-mask="true"
+      >
         <label htmlFor={`${uid}-email`} className="visually-hidden">
           Your email address
         </label>

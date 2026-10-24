@@ -17,6 +17,7 @@ import {
 import type { Page } from "@/lib/content/schema";
 import { publishedPath } from "@/lib/content/urls";
 import { PortfolioCard } from "./PortfolioCard";
+import { TrackOnMount } from "@/components/patterns/Analytics";
 
 /** A case study page: hero with the main screen, results, the story, what we built, more screens. */
 export function CaseStudyView({ page, registry }: { page: Page; registry: Registry }) {
@@ -41,6 +42,7 @@ export function CaseStudyView({ page, registry }: { page: Page; registry: Regist
   const results = showResults(p, drafts);
   return (
     <>
+      <TrackOnMount event="case_study_view" params={{ case_study: p.slug }} />
       <section id="hero" className="page-hero cs-hero" aria-labelledby="hero-h">
         <div className="container-site">
           <div className="mb-8">
