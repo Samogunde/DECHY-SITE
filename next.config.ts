@@ -65,9 +65,12 @@ const nextConfig: NextConfig = {
   // The API and admin routes read the content registry (content/ and data/ YAML) at request time.
   // File access is excluded from automatic tracing (so the whole project is never bundled), so the
   // files those routes need are declared here.
+  // Server routes read content and data at request time (YAML, the photo library JSON, team and
+  // testimonial JSON, article Markdown), so every file in both folders ships with the functions.
+  // Without the JSON files, DECHY Admin failed on Netlify (24 October 2026).
   outputFileTracingIncludes: {
-    "/api/**/*": ["./content/**/*.yaml", "./data/**/*.yaml"],
-    "/admin/**/*": ["./content/**/*.yaml", "./data/**/*.yaml"],
+    "/api/**/*": ["./content/**/*", "./data/**/*"],
+    "/admin/**/*": ["./content/**/*", "./data/**/*"],
   },
   images: {
     // WebP only: at the same visual budget AVIF measurably softened photographic detail (hair,
