@@ -544,11 +544,11 @@ maintenance:
   - name: Growth care
     range: "$350 to $900 a month"
     for: Web apps and mobile apps in daily use
-    includes: Everything in Essential, plus iOS and Android release updates, error tracking, a monthly report, and 10 to 20 hours of improvements.
+    includes: Everything in Essential, plus iOS and Android release updates, error tracking, a monthly report, 10 to 20 hours of improvements, and we aim to respond within one business day.
   - name: Product care
     range: "$1,200 to $3,000 a month"
     for: Business-critical systems and SaaS products
-    includes: Everything in Growth, plus a one-hour response target for urgent issues, on-call cover, performance tuning, and 40 or more hours of development.
+    includes: Everything in Growth, plus priority response for urgent issues, on-call cover, performance tuning, and 40 or more hours of development.
 
 # Headline ranges (owner's pricing review, 22 October 2026): what most projects of each kind
 # cost, and where a first version starts. Guide introductions, the cost hub, and the service pages

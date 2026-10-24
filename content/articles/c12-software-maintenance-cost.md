@@ -94,7 +94,7 @@ Unmaintained software rarely fails all at once. It degrades. A plugin stops work
 
 ## What is included in our care plans
 
-Essential care suits websites and simple web apps: updates, daily backups, uptime monitoring, security patches, and up to three hours of small changes each month. Growth care suits web and mobile apps in daily use: everything in Essential, plus iPhone and Android release updates, error tracking, a monthly report, and 10 to 20 hours of improvements. Product care suits business-critical systems: a one-hour response target for urgent issues, on-call cover, performance tuning, and 40 or more hours of development a month.
+Essential care suits websites and simple web apps: updates, daily backups, uptime monitoring, security patches, and up to 2 hours of small changes each month. Growth care suits web and mobile apps in daily use: everything in Essential, plus iPhone and Android release updates, error tracking, a monthly report, and 10 to 20 hours of improvements. Product care suits business-critical systems: priority response for urgent issues, on-call cover, performance tuning, and 40 or more hours of development a month.
 
 ## How to keep maintenance costs down
 
@@ -133,7 +133,7 @@ Unused improvement hours carry over for one month, so a quiet month is not waste
 
 ### What is the response time for urgent problems?
 
-Product care includes a one-hour response target for urgent issues. Growth care responds within one business day, and Essential care within two.
+Product care includes priority response for urgent issues. On Growth care, we aim to respond within one business day.
 
 ### Do we have to sign a long contract?
 
