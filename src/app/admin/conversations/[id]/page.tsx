@@ -110,7 +110,13 @@ export default async function AdminConversation({ params }: { params: Promise<{ 
           {c.messages.map((m, i) => (
             <li key={i} data-role={m.kind === "handoff" ? "system" : m.role}>
               <span className="admin-transcript-who">
-                {m.kind === "handoff" ? "Handoff" : m.role === "visitor" ? "Visitor" : "Assistant"}{" "}
+                {m.kind === "handoff"
+                  ? "Handoff"
+                  : m.role === "visitor"
+                    ? "Visitor"
+                    : m.role === "team"
+                      ? "DECHY team (Telegram)"
+                      : "Assistant"}{" "}
                 · {when(m.at)}
                 {m.page ? (
                   <>

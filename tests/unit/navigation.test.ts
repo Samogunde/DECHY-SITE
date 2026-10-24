@@ -277,10 +277,14 @@ describe("Where this connects", () => {
 describe("site search", () => {
   const entries = buildSearchEntries(registry);
   const top = (q: string) => searchEntries(entries, q, 5).map((e) => e.t);
+  const all = (q: string) => searchEntries(entries, q, 10_000).map((e) => e.t);
 
-  it("indexes exactly the published, indexable pages", () => {
-    expect(entries).toHaveLength(registry.pages.filter((p) => p.indexing === "index").length);
-    for (const e of entries) expect(paths.has(e.p), e.p).toBe(true);
+  it("indexes every published, indexable page, plus questions and the team", () => {
+    const pagesOnly = entries.filter((e) => e.k !== "FAQ" && e.k !== "Team");
+    expect(pagesOnly).toHaveLength(registry.pages.filter((p) => p.indexing === "index").length);
+    for (const e of entries) expect(paths.has(e.p.replace(/#.*$/, "")), e.p).toBe(true);
+    expect(entries.some((e) => e.k === "FAQ")).toBe(true);
+    expect(entries.filter((e) => e.k === "Team").map((e) => e.t)).toContain("Samuel Abims");
   });
 
   it("finds technologies however they are typed", () => {
@@ -297,10 +301,16 @@ describe("site search", () => {
     expect(searchEntries(entries, "automation", 5).map((e) => e.p)).toContain("/automation/");
   });
 
-  it("matches by category and service, so a visitor can search by kind", () => {
-    // The search box shows eight results; guides about mobile apps rank alongside the technologies.
-    const mobile = searchEntries(entries, "mobile", 8).map((e) => e.t);
-    expect(mobile).toEqual(expect.arrayContaining(["Flutter", "Swift"]));
+  it("matches partial words, small typos, and plurals", () => {
+    expect(top("shopfy")[0]).toBe("Shopify");
+    expect(top("cyber securty")).toContain("Cybersecurity");
+    expect(top("integr")).toContain("API & Systems Integration");
+    expect(all("chatbots").length).toBeGreaterThan(5);
+    expect(all("chatbot")).toEqual(expect.arrayContaining(all("chatbots").slice(0, 3)));
+  });
+
+  it("keeps weaker matches, so a search by kind still reaches every related page", () => {
+    expect(all("mobile")).toEqual(expect.arrayContaining(["Flutter", "Swift"]));
   });
 
   it("returns nothing for gibberish and never an unbuilt entity", () => {

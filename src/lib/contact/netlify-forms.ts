@@ -13,7 +13,7 @@
  */
 import type { ContactInput, LeadSource } from "./validate";
 
-export type NetlifyFormKey = "contact" | "quote" | "estimator" | "newsletter";
+export type NetlifyFormKey = "contact" | "quote" | "estimator" | "newsletter" | "assistant";
 
 const SOURCE_FIELDS = [
   "utm_source",
@@ -67,6 +67,12 @@ export const NETLIFY_FORMS: Record<
     name: "newsletter",
     subject: "DECHY website: new newsletter signup",
     fields: ["email", ...SOURCE_FIELDS],
+  },
+  /** A visitor asked the assistant for a person: their details and the chat transcript. */
+  assistant: {
+    name: "assistant-chat",
+    subject: "DECHY website: a visitor asked the assistant for a person",
+    fields: ["name", "email", "organization", "message", "transcript", "reference", "page"],
   },
 };
 

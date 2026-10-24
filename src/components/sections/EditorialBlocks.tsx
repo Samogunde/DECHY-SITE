@@ -116,7 +116,12 @@ export function DefinitionBlock({
     return (
       <Section id={block.id} tone={block.tone} className="def-photo">
         <div className="def-photo-head">
-          <SectionHeader id={block.id} label={block.label} heading={block.heading} />
+          <SectionHeader
+            id={block.id}
+            label={block.label}
+            heading={block.heading}
+            className="def-photo-title"
+          />
           <p className="answer-lead def-photo-answer" data-reveal="block">
             <Inline text={block.answer} />
           </p>

@@ -488,7 +488,8 @@ export function validateRegistry(input: Registry): Issue[] {
             : 4;
     // Sample (draft) sections show in review builds only and do not count toward the limit.
     const livePhotos = page.sections
-      .filter((b) => !("draft" in b && b.draft))
+      // Team portraits show people, not scenes, and do not count.
+      .filter((b) => !("draft" in b && b.draft) && b.type !== "team")
       .flatMap((b) => blockPhotos(b))
       // Portfolio screens are project work, not photographs, and do not count.
       .filter((ph) => !ph.asset.startsWith("asset.photo-portfolio-"));

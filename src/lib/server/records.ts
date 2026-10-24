@@ -160,7 +160,8 @@ export type SupportRequest = RecordBase & {
 export type AIHandoff = InboxRecord & { handoff: HandoffContext };
 
 export type ConversationMessage = {
-  role: "visitor" | "assistant";
+  /** "team": a person at DECHY replying live, through Telegram, after a handoff. */
+  role: "visitor" | "assistant" | "team";
   text: string;
   at: string;
   /** Entity ids the assistant recommended with this reply. */
@@ -169,6 +170,8 @@ export type ConversationMessage = {
   reasons?: Record<string, string>;
   /** Page ids the answer drew on. */
   sources?: string[];
+  /** Pages a site answer was quoted from (prices, timelines, a page's questions). */
+  links?: { name: string; path: string }[];
   /** The page the visitor was on. */
   page?: string;
   /** Sent after the conversation was handed to the team; attached to that record. */

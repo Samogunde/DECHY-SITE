@@ -2,6 +2,7 @@ import { after } from "next/server";
 import { z } from "zod";
 import {
   aiConfigured,
+  turnsOf,
   MAX_MESSAGE,
   MAX_TURNS,
   recommendationLinks,
@@ -18,6 +19,7 @@ import { maybeMaintain } from "@/lib/server/maintenance";
 import { clientAddress, overLimit } from "@/lib/server/ratelimit";
 import { Repo, type Conversation } from "@/lib/server/records";
 import { getStore } from "@/lib/server/store";
+import { linkMessage, sendToTeam, telegramConfigured } from "@/lib/server/telegram";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -68,6 +70,10 @@ type Payload = {
   handoffRef: string | null;
   handoff?: ReturnType<typeof prefill>;
   suggestions: string[];
+  /** Pages the answer came from. */
+  links: AssistantResult["links"];
+  /** Live chat: the message went to the team, with no automated reply. */
+  forwarded?: boolean;
 };
 
 /** One visitor message in, one reply out. Streams (server-sent events) when the client asks. */
@@ -102,9 +108,7 @@ export async function POST(request: Request) {
   } catch {
     conv = null;
   }
-  const history: Turn[] = conv
-    ? conv.messages.filter((m) => m.kind !== "handoff").map((m) => ({ role: m.role, text: m.text }))
-    : [];
+  const history: Turn[] = conv ? turnsOf(conv.messages) : [];
   if (history.filter((t) => t.role === "visitor").length >= MAX_TURNS)
     return json({
       ok: true,
@@ -119,6 +123,44 @@ export async function POST(request: Request) {
       handoffRef: conv?.supportRef ?? null,
       suggestions: [],
     });
+
+  // After a handoff with live chat on, the visitor is talking to the team: the message goes to the
+  // team's Telegram, and no automated reply is added.
+  if (conv?.supportRef && telegramConfigured()) {
+    const ref = conv.supportRef;
+    conv.messages.push({
+      role: "visitor",
+      text: message,
+      at: new Date().toISOString(),
+      page,
+      afterHandoff: true,
+    });
+    conv.lastPage = page || conv.lastPage;
+    try {
+      await repo.saveConversation(conv);
+      await repo.markFollowUp(ref);
+    } catch {
+      // the message still reaches the team
+    }
+    const name = conv.extracted.name?.value ?? "Visitor";
+    const id = await sendToTeam(`${name} (${ref}): ${message}`);
+    if (id) await linkMessage(store, id, { conversationId: conv.id, ref }).catch(() => undefined);
+    const live: Payload = {
+      ok: true,
+      conversationId: conv.id,
+      reply: "",
+      mode: conv.mode,
+      recommendations: [],
+      sources: [],
+      links: [],
+      offerHuman: false,
+      humanRequested: false,
+      handoffRef: ref,
+      suggestions: [],
+      forwarded: true,
+    };
+    return json(live);
+  }
 
   const allowAI = aiConfigured() && (await aiAllowed(store, client));
   const streaming = (request.headers.get("accept") ?? "").includes("text/event-stream");
@@ -152,6 +194,7 @@ export async function POST(request: Request) {
       humanRequested: result.humanRequested,
       handoffRef: conv?.supportRef ?? null,
       suggestions: result.suggestions,
+      links: result.links,
       ...(result.humanRequested ? { handoff: prefill(conv) } : {}),
     };
   };

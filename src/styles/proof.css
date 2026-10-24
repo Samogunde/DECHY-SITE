@@ -345,20 +345,24 @@
   white-space: nowrap;
 }
 
-/* "Who we are" with a photograph: heading and answer on top, photo beside the paragraphs. */
+/* "Who we are" with a photograph: heading and answer on top, photo beside the paragraphs.
+   The top and the row share one column grid, so the answer spans exactly the card's width, and
+   the answer's first line sits on the heading's first baseline (owner, 24 October 2026). */
 .def-photo-head {
   display: grid;
-  gap: 1.25rem 4rem;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0.75rem;
   margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
 }
-@media (min-width: 64rem) {
-  .def-photo-head {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
+.def-photo-title {
+  display: contents;
+}
+.def-photo-title > h2 {
+  margin-top: 0 !important;
 }
 .def-photo-answer {
-  margin: 0 !important;
+  max-width: none !important;
+  margin: 0.5rem 0 0 !important;
 }
 .def-photo-row {
   display: grid;
@@ -366,9 +370,24 @@
   align-items: center;
 }
 @media (min-width: 64rem) {
+  .def-photo-head,
   .def-photo-row {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-    gap: 3rem;
+    column-gap: 3rem;
+  }
+  .def-photo-title > :first-child {
+    grid-column: 1 / -1;
+  }
+  .def-photo-title > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: first baseline;
+  }
+  .def-photo-answer {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: first baseline;
+    margin: 0 !important;
   }
 }
 .def-photo-figure {

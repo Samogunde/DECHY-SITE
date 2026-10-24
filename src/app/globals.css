@@ -16,6 +16,8 @@
 @import "../styles/resources.css" layer(components);
 @import "../styles/proof.css" layer(components);
 @import "../styles/growth.css" layer(components);
+@import "../styles/search.css" layer(components);
+@import "../styles/type-floor.css" layer(components);
 
 /* ------------------------------------------------------------------------------------------
    DECHY design tokens.

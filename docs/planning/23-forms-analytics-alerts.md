@@ -187,3 +187,16 @@ Done: project `z2m5oecdku` (https://dechytech.com). Keep masking at "Balanced" o
   - Two-step sign-in is on.
   - DECHY Admin is installed on the owner's phone.
 - **Credits:** each production deploy costs 15 credits. Blocked or failed builds cost nothing. Batch changes into as few deploys as possible.
+
+## 7. Assistant handoff and Telegram live chat (24 October 2026)
+
+Owner direction: no AI provider for now. The assistant answers from the site, and a person takes over through Telegram.
+
+- **Answers from the site.** The starting questions are "What do you build?", "How much does a project cost?", "How long does it take?", and "Talk to a person". Price and timeline answers quote `data/pricing/prices.yaml`, and questions already answered on a page quote that page's answer. Every answer links to the pages it came from (`src/lib/assistant/answers.ts`). Nothing is invented. Price questions are answered, never handed over.
+- **When a person is offered.** The visitor asks for one, the assistant misses twice, the visitor sounds frustrated, or the topic is a contract, a complaint, or anything legal. A one-time offer to follow up with a tailored price appears only after two helpful answers.
+- **Handoff.** The visitor confirms a short card (name, email, optional note). The record goes to DECHY Admin. The transcript goes to the business mailbox through the Netlify form `assistant-chat`, so the address never appears in the site code. The conversation opens as a live chat in the team's Telegram. No response time is promised.
+- **Live chat.** Messages the visitor writes after the handoff go to Telegram with their name and reference. A reply to any of those messages in Telegram (swipe to reply), or a message starting with the reference (`DECHY-ABC123 ...`), appears in the visitor's chat. The panel checks every 5 seconds while open and every 20 seconds while minimized.
+  - The webhook is `/api/telegram/`. Telegram sends a secret header derived from the bot token, and replies are accepted from `TELEGRAM_CHAT_ID` only.
+  - Live chat carries message text to Telegram: that is its purpose, and the visitor is told a person reads it. Lead alerts still carry the name, the page, and a link only.
+- **Switching it on.** After the deploy, open DECHY Admin, then Security, then Telegram live chat, and press "Connect Telegram replies". This points the bot's webhook at the site. No new environment variable is needed.
+- **Cost.** No paid tools. Credits stay small: about 0.05 credits for a ten-minute live chat, from polling. Netlify Forms submissions are free.

@@ -252,7 +252,9 @@ export default async function AdminRecord({ params }: { params: Promise<{ ref: s
                       ? "Handoff"
                       : m.role === "visitor"
                         ? "Visitor"
-                        : "Assistant"}
+                        : m.role === "team"
+                          ? "DECHY team (Telegram)"
+                          : "Assistant"}
                     {" · "}
                     {when(m.at)}
                     {m.page ? (

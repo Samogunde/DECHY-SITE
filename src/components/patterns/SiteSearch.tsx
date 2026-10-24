@@ -1,10 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { searchEntries, type SearchEntry } from "@/lib/search";
+import {
+  Highlight,
+  SearchSuggestions,
+  resultText,
+  useSiteIndex,
+} from "@/components/patterns/search/SearchKit";
 
 export const OPEN_SEARCH_EVENT = "dechy:search";
+
+const PAGE = 8;
 
 function SearchIcon() {
   return (
@@ -17,36 +24,41 @@ function SearchIcon() {
 
 /**
  * Site search in a native modal dialog (focus trap, Escape, and inert backdrop come with the
- * element). It fetches one static index on first open, matches in the browser, and stores nothing.
- * Opening: the header button, "/" outside a text field, or Ctrl/Cmd+K.
+ * element). It fetches one static index on first open and matches in the browser as you type:
+ * partial words, small typos, and plurals still match. Every match is reachable: the first eight,
+ * then more on request, then the full results page. Opening: the header button, "/" outside a text
+ * field, or Ctrl/Cmd+K.
  */
 export function SiteSearch({ className = "" }: { className?: string }) {
   const router = useRouter();
   const dialog = useRef<HTMLDialogElement>(null);
   const input = useRef<HTMLInputElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
-  const [entries, setEntries] = useState<SearchEntry[] | null>(null);
-  const [failed, setFailed] = useState(false);
+  const [opened, setOpened] = useState(false);
   const [query, setQuery] = useState("");
+  const [shown, setShown] = useState(PAGE);
   const [active, setActive] = useState(0);
+  const { index, entries, failed } = useSiteIndex(opened);
+  const deferred = useDeferredValue(query);
   const uid = useId();
   const listId = `${uid}-results`;
 
-  const load = useCallback(() => {
-    if (entries || failed) return;
-    fetch("/search-index.json")
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((j: SearchEntry[]) => setEntries(j))
-      .catch(() => setFailed(true));
-  }, [entries, failed]);
+  const result = useMemo(
+    () => (index && deferred.trim() ? index.search(deferred) : null),
+    [index, deferred],
+  );
+  const hits = result?.hits ?? [];
+  const visible = hits.slice(0, shown);
+  const firstPartial = visible.findIndex((h) => !h.full);
+  const safeActive = Math.min(active, Math.max(0, visible.length - 1));
 
   const open = useCallback(() => {
     const d = dialog.current;
     if (!d || d.open) return;
-    load();
+    setOpened(true);
     d.showModal();
     input.current?.focus();
-  }, [load]);
+  }, []);
 
   const close = useCallback(() => {
     dialog.current?.close();
@@ -74,13 +86,11 @@ export function SiteSearch({ className = "" }: { className?: string }) {
     };
   }, [open]);
 
-  const results = entries ? searchEntries(entries, query, 8) : [];
-  const safeActive = Math.min(active, Math.max(0, results.length - 1));
-
   const go = (path: string) => {
     close();
     router.push(path);
   };
+  const seeAll = () => go(`/search/?q=${encodeURIComponent(query.trim())}`);
 
   const onInputKey = (e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
@@ -89,15 +99,33 @@ export function SiteSearch({ className = "" }: { className?: string }) {
       close();
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
-      setActive((safeActive + 1) % Math.max(1, results.length));
+      setActive((safeActive + 1) % Math.max(1, visible.length));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      setActive((safeActive - 1 + results.length) % Math.max(1, results.length));
-    } else if (e.key === "Enter" && results[safeActive]) {
+      setActive((safeActive - 1 + visible.length) % Math.max(1, visible.length));
+    } else if (e.key === "Enter") {
       e.preventDefault();
-      go(results[safeActive]!.p);
+      const hit = visible[safeActive];
+      if (hit && entries) go(entries[hit.doc]!.p);
+      else if (query.trim()) seeAll();
     }
   };
+
+  const q = query.trim();
+  const status = failed
+    ? "Search is not available right now. Use the menu to browse."
+    : q && !index
+      ? "Loading search..."
+      : q && index && deferred === query
+        ? hits.length === 0
+          ? `Nothing matches "${q}". Try another word, or start from one of these.`
+          : (() => {
+              const full = hits.filter((h) => h.full).length;
+              return full
+                ? `${full} ${full === 1 ? "result" : "results"}${hits.length > full ? `, plus ${hits.length - full} partial matches` : ""}`
+                : `${hits.length} pages mention some of these words`;
+            })()
+        : "";
 
   return (
     <>
@@ -105,7 +133,7 @@ export function SiteSearch({ className = "" }: { className?: string }) {
         ref={trigger}
         type="button"
         onClick={open}
-        aria-label="Search the site"
+        aria-label="Search the site (Ctrl+K)"
         aria-haspopup="dialog"
         className={`inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-lg border-0 bg-transparent text-ink hover:text-blue ${className}`}
       >
@@ -118,6 +146,7 @@ export function SiteSearch({ className = "" }: { className?: string }) {
         onClose={() => {
           setQuery("");
           setActive(0);
+          setShown(PAGE);
           trigger.current?.focus();
         }}
         onClick={(e) => {
@@ -131,59 +160,97 @@ export function SiteSearch({ className = "" }: { className?: string }) {
               ref={input}
               type="search"
               role="combobox"
-              aria-expanded={results.length > 0}
+              aria-expanded={visible.length > 0}
               aria-controls={listId}
-              aria-activedescendant={results.length ? `${uid}-r${safeActive}` : undefined}
-              aria-label="Search services, technologies, and work"
-              placeholder="Search services, technologies, and work"
+              aria-activedescendant={visible.length ? `${uid}-r${safeActive}` : undefined}
+              aria-label="Search pages, services, articles, and questions"
+              placeholder="Search pages, services, articles, and questions"
               autoComplete="off"
               spellCheck={false}
+              enterKeyHint="search"
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
                 setActive(0);
+                setShown(PAGE);
               }}
               onKeyDown={onInputKey}
               className="search-input"
             />
+            <kbd className="search-kbd" aria-hidden="true">
+              Esc
+            </kbd>
             <button type="button" onClick={close} className="search-close">
               Close
             </button>
           </div>
-          <div aria-live="polite" className="search-status t-small">
-            {failed
-              ? "Search is not available right now. Use the menu to browse."
-              : query.trim() && entries && results.length === 0
-                ? `No pages match "${query.trim()}". Try a service, a technology, or a kind of system.`
-                : ""}
+          <div aria-live="polite" className="search-status">
+            {status}
           </div>
-          <ul id={listId} role="listbox" aria-label="Results" className="search-results">
-            {results.map((r, i) => (
-              <li
-                key={r.p}
-                id={`${uid}-r${i}`}
-                role="option"
-                aria-selected={i === safeActive}
-                data-active={i === safeActive}
-              >
-                <a
-                  href={r.p}
-                  tabIndex={-1}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    go(r.p);
-                  }}
-                >
-                  <span className="search-title">{r.t}</span>
-                  <span className="search-kind">{r.k}</span>
-                  <span className="search-desc">{r.d}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-          <p className="search-hint t-caption">
-            Press / to search from any page. Use the arrow keys, Enter to open, Escape to close.
-          </p>
+          <div className="search-scroll">
+            {q && result && visible.length > 0 ? (
+              <ul id={listId} role="listbox" aria-label="Results" className="search-results">
+                {visible.map((h, i) => {
+                  const e = entries![h.doc]!;
+                  return (
+                    <li
+                      key={`${e.p}|${e.t}`}
+                      id={`${uid}-r${i}`}
+                      role="option"
+                      aria-selected={i === safeActive}
+                      data-active={i === safeActive}
+                      data-partial-start={i === firstPartial && i > 0 ? "true" : undefined}
+                    >
+                      <a
+                        href={e.p}
+                        tabIndex={-1}
+                        onMouseEnter={() => setActive(i)}
+                        onClick={(ev) => {
+                          ev.preventDefault();
+                          go(e.p);
+                        }}
+                      >
+                        <span className="search-title">
+                          <Highlight text={e.t} terms={result.terms} />
+                        </span>
+                        <span className="search-kind">{e.k}</span>
+                        <span className="search-desc">
+                          <Highlight text={resultText(e, result.terms)} terms={result.terms} />
+                        </span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : null}
+            {q && hits.length > shown ? (
+              <button type="button" className="search-more" onClick={() => setShown((n) => n + 10)}>
+                Show more results ({hits.length - shown} more)
+              </button>
+            ) : null}
+            {!q || (result && hits.length === 0) ? (
+              <SearchSuggestions
+                onPick={(s) => {
+                  setQuery(s);
+                  setShown(PAGE);
+                  input.current?.focus();
+                }}
+                onNavigate={close}
+              />
+            ) : null}
+          </div>
+          <div className="search-foot">
+            {q && hits.length > 0 ? (
+              <button type="button" className="search-all" onClick={seeAll}>
+                See all {hits.length} results
+              </button>
+            ) : (
+              <span />
+            )}
+            <p className="search-hint">
+              <kbd>Ctrl</kbd> <kbd>K</kbd> or <kbd>/</kbd> to search, arrows to move, Enter to open
+            </p>
+          </div>
         </div>
       </dialog>
     </>

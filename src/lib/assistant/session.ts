@@ -84,6 +84,8 @@ export function visitorView(c: Conversation) {
         ? recommendationLinks(m.recommendations, m.reasons ?? {})
         : [],
       sources: m.sources ? sourceLinks(m.sources) : [],
+      links: m.links ?? [],
+      at: m.at,
     })),
     handoffRef: c.supportRef,
     personRequested: Boolean(c.personRequestedAt),
@@ -150,6 +152,7 @@ export function applyTurn(
     recommendations: r.recommendations,
     reasons: r.reasons,
     sources: r.sources,
+    ...(r.links.length ? { links: r.links } : {}),
     ...(after ? { afterHandoff: true } : {}),
   });
   if (r.need) c.detectedNeed = r.need;

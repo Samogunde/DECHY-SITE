@@ -2,6 +2,7 @@ import QRCode from "qrcode";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { requireAdmin } from "@/lib/server/admin-session";
 import { getStore } from "@/lib/server/store";
+import { webhookStatus } from "@/lib/server/telegram";
 import { beginTotpSetup, pendingTotp, totpRequired } from "@/lib/server/totp";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +14,13 @@ export const dynamic = "force-dynamic";
 export default async function Security({
   searchParams,
 }: {
-  searchParams: Promise<{ done?: string; error?: string; off?: string; again?: string }>;
+  searchParams: Promise<{
+    done?: string;
+    error?: string;
+    off?: string;
+    again?: string;
+    tg?: string;
+  }>;
 }) {
   const { email } = await requireAdmin();
   const sp = await searchParams;
@@ -29,6 +36,7 @@ export default async function Security({
       qr: await QRCode.toString(pending.uri, { type: "svg", margin: 1, width: 220 }),
     };
   }
+  const tg = await webhookStatus();
   return (
     <AdminShell email={email} current="/admin/security/" title="Security">
       <section className="admin-card admin-security" aria-labelledby="twostep-h">
@@ -118,6 +126,47 @@ export default async function Security({
             </p>
           </>
         ) : null}
+      </section>
+      <section id="telegram" className="admin-card admin-security" aria-labelledby="telegram-h">
+        <h2 id="telegram-h" className="admin-h2">
+          Telegram live chat
+        </h2>
+        <p className="admin-note">
+          When a visitor asks for a person, their conversation is posted to your Telegram chat.
+          Reply to that message in Telegram and the reply appears in the visitor&rsquo;s chat
+          window.
+        </p>
+        {sp.tg === "connected" ? (
+          <p className="admin-note" role="status">
+            Telegram replies are connected.
+          </p>
+        ) : null}
+        {sp.tg === "failed" ? (
+          <p className="admin-error" role="alert">
+            Telegram did not accept the connection. Check TELEGRAM_BOT_TOKEN in Netlify and that
+            SITE_ORIGIN is the site&rsquo;s https address.
+          </p>
+        ) : null}
+        {!tg.configured ? (
+          <p className="admin-note">
+            Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Netlify first.
+          </p>
+        ) : (
+          <>
+            <p className="admin-note">
+              Status: {tg.connected ? "connected" : "not connected yet"}
+              {tg.lastError ? `. Last error from Telegram: ${tg.lastError}` : ""}
+            </p>
+            <form method="post" action="/api/admin/telegram/">
+              <button
+                type="submit"
+                className={`admin-btn${tg.connected ? " admin-btn-quiet" : ""}`}
+              >
+                {tg.connected ? "Reconnect Telegram replies" : "Connect Telegram replies"}
+              </button>
+            </form>
+          </>
+        )}
       </section>
     </AdminShell>
   );

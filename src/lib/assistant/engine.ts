@@ -25,6 +25,7 @@ import {
   type PageContext,
 } from "./knowledge";
 import { EMAILS } from "@/lib/contact/emails";
+import { faqAnswer, menuAnswer, MENU, type AnswerLink, type SiteAnswer } from "./answers";
 
 type Env = Record<string, string | undefined>;
 type FetchLike = (input: string, init?: RequestInit) => Promise<Response>;
@@ -35,6 +36,15 @@ export const MAX_TURNS = 24;
 export const META = "@@META@@";
 
 export type Turn = { role: "visitor" | "assistant"; text: string };
+
+/** The visitor and assistant turns of a stored conversation (team replies and notes left out). */
+export function turnsOf(
+  messages: { role: "visitor" | "assistant" | "team"; text: string; kind?: string }[],
+): Turn[] {
+  return messages
+    .filter((m): m is typeof m & Turn => m.kind !== "handoff" && m.role !== "team")
+    .map((m) => ({ role: m.role, text: m.text }));
+}
 
 /** Details the visitor gave about themselves. Always shown back for confirmation. */
 export type Extraction = {
@@ -62,6 +72,8 @@ export type AssistantResult = {
   extracted: Extraction;
   /** Quick replies the visitor may tap (starting points); never assumptions. */
   suggestions: string[];
+  /** Pages the answer came from (site answers: prices, timelines, questions answered on a page). */
+  links: AnswerLink[];
 };
 
 export type RespondContext = {
@@ -177,7 +189,18 @@ function guidedReasons(
 }
 
 /** Starting points offered after a greeting, a capability question, or "I'm not sure". */
-export const STARTERS = Object.values(STARTER_LABELS);
+/** The starting questions (owner, 24 October 2026); the older starting points still work. */
+export const STARTERS: string[] = Object.values(MENU);
+export const OLD_STARTERS = Object.values(STARTER_LABELS);
+
+/** The visitor is unhappy with the answers: offer a person at once. */
+const FRUSTRATED =
+  /\b(useless|unhelpful|not helpful|(does ?n[o']?t|did ?n[o']?t|not) (help|work|answer)|not what i (asked|meant)|annoying|frustrat\w*|ridiculous|waste of (my )?time|stupid|terrible|awful|wrong answer|you('re| are) not understanding|this is (bad|wrong|pointless))\b|!{3,}|\?{3,}/i;
+/** Topics a person should handle: a contract, a complaint, or anything legal (not prices). */
+const SENSITIVE =
+  /\b(contracts?|agreements?|nda|legal\w*|lawyers?|lawsuit|sue|liabilit\w*|complain\w*|refunds?|disputes?|breach\w*|terms and conditions|gdpr request|delete my data)\b/i;
+const QUESTION =
+  /\?\s*$|^(how|what|which|who|why|when|where|can|could|do|does|did|is|are|will|would|should)\b/i;
 
 /** What a starting point leads to: one question that narrows it down, with tappable answers. */
 const STARTER_FOLLOW_UP: Record<StarterId, { reply: string; suggestions: string[] }> = {
@@ -293,10 +316,17 @@ export function guidedReply(
     reasons: {},
     sources: [],
     suggestions: [],
+    links: [],
     humanRequested: false,
     offerHuman: false,
     extracted,
   };
+  const fromSite = (a: SiteAnswer): AssistantResult => ({
+    ...base,
+    reply: a.reply,
+    links: a.links,
+    suggestions: a.suggestions,
+  });
   if (wantsHuman(text))
     return {
       ...base,
@@ -310,6 +340,26 @@ export function guidedReply(
       ...base,
       reply: `Thank you. I've added this to your request ${handoffRef}, so the team will see it with the rest of the conversation.`,
     };
+  if (FRUSTRATED.test(text))
+    return {
+      ...base,
+      reply:
+        "I'm sorry this hasn't helped. A person on the DECHY team can sort it out properly. I'll pass along this conversation so you don't have to repeat yourself.",
+      offerHuman: true,
+    };
+  if (SENSITIVE.test(text)) {
+    const site = faqAnswer(text);
+    return {
+      ...base,
+      reply: `${site ? `${site.reply} ` : ""}For anything about your own contract, a complaint, or a legal question, a person on the team should answer. I can pass this conversation to them now.`,
+      links: site?.links ?? [],
+      offerHuman: true,
+    };
+  }
+  // The starting questions, a tapped price or timeline option, or a question about prices or
+  // timelines: answered from DECHY's published figures, never handed over.
+  const menu = menuAnswer(text);
+  if (menu) return fromSite(menu);
 
   const intent = classify(text);
   switch (intent.kind) {
@@ -382,6 +432,13 @@ export function guidedReply(
       break;
   }
 
+  // A question already answered on one of the site's pages: quote that answer, with the page.
+  const asked = QUESTION.test(text.trim());
+  if (asked) {
+    const site = faqAnswer(text);
+    if (site) return fromSite(site);
+  }
+
   // A tapped answer: its service is known, so either recommend (when it names a solution) or ask.
   const chip =
     CHIPS[
@@ -421,6 +478,8 @@ export function guidedReply(
   const systems = rank(combined, ["work-area"]);
   const top = services[0];
   if (!top || top.score < 2) {
+    const site = asked ? null : faqAnswer(text);
+    if (site) return fromSite(site);
     const m = misses(history);
     return {
       ...base,
@@ -733,6 +792,7 @@ export function parseModelReply(
     offerHuman: m.wantsHuman === true,
     extracted,
     suggestions: [],
+    links: [],
   };
 }
 

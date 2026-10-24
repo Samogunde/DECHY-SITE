@@ -806,31 +806,52 @@ export function CaseGridBlock({ block }: { block: Of<"case-grid"> }) {
   );
 }
 
+type TeamMember = Of<"team">["members"][number];
+
+function TeamCard({ m }: { m: TeamMember }) {
+  return (
+    <li className={`team-card${m.lead ? " is-lead" : ""}`}>
+      {m.photo ? (
+        <span className="team-photo">
+          <Photo photo={m.photo} />
+        </span>
+      ) : null}
+      <span className="team-head">
+        <span className="team-name">{m.name}</span>
+        <span className="team-role">{m.role}</span>
+      </span>
+      <p className="team-owns">{m.owns}</p>
+      {m.focus.length ? (
+        <ul className="team-focus" aria-label={`${m.name}'s skills`}>
+          {m.focus.map((f) => (
+            <li key={f}>{f}</li>
+          ))}
+        </ul>
+      ) : null}
+    </li>
+  );
+}
+
 export function TeamBlock({ block }: { block: Of<"team"> }) {
+  const leads = block.members.filter((m) => m.lead);
+  const rest = block.members.filter((m) => !m.lead);
   return (
     <Section id={block.id} tone={block.tone} ruled={false}>
       <SplitHeader id={block.id} label={block.label} heading={block.heading} intro={block.intro} />
-      <ul className="team-grid" data-reveal="group">
-        {block.members.map((m) => (
-          <li key={m.name} className="team-card">
-            {m.photo ? (
-              <span className="team-photo">
-                <Photo photo={m.photo} />
-              </span>
-            ) : null}
-            <span className="team-name">{m.name}</span>
-            <span className="team-role">{m.role}</span>
-            <p className="team-bio">{m.bio}</p>
-            {m.focus.length ? (
-              <ul className="team-focus">
-                {m.focus.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-            ) : null}
-          </li>
-        ))}
-      </ul>
+      {leads.length ? (
+        <ul className="team-grid team-leads" data-count={leads.length} data-reveal="group">
+          {leads.map((m) => (
+            <TeamCard key={m.name} m={m} />
+          ))}
+        </ul>
+      ) : null}
+      {rest.length ? (
+        <ul className="team-grid team-compact" data-count={rest.length} data-reveal="group">
+          {rest.map((m) => (
+            <TeamCard key={m.name} m={m} />
+          ))}
+        </ul>
+      ) : null}
     </Section>
   );
 }

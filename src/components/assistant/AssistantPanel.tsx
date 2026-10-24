@@ -9,13 +9,18 @@ import { track } from "@/lib/analytics";
 type Rec = { id: string; name: string; path: string; kind: string; reason?: string };
 type SourceLink = { name: string; path: string };
 type Msg = {
-  role: "visitor" | "assistant";
+  /** "team": a person at DECHY replying live (through Telegram) after a handoff. */
+  role: "visitor" | "assistant" | "team";
   text: string;
   kind?: "message" | "handoff";
   recs?: Rec[];
   sources?: SourceLink[];
+  /** Pages the answer came from. */
+  links?: SourceLink[];
   suggestions?: string[];
   pending?: boolean;
+  /** A visitor message passed straight to the team (live chat). */
+  delivered?: boolean;
 };
 type Extracted = { value: string; source: string } | null;
 type Prefill = {
@@ -38,11 +43,13 @@ type Done = {
   mode: "ai" | "guided";
   recommendations: Rec[];
   sources: SourceLink[];
+  links?: SourceLink[];
   suggestions?: string[];
   offerHuman: boolean;
   humanRequested: boolean;
   handoffRef: string | null;
   handoff?: Prefill;
+  forwarded?: boolean;
 };
 type Via = "header" | "offer" | "message" | "contact";
 type ConvState = "active" | "inactive" | "closed" | "handed-off";
@@ -56,7 +63,7 @@ type HistoryItem = {
 type ConversationView = {
   id: string;
   mode: "ai" | "guided";
-  messages: (Msg & { recommendations?: Rec[] })[];
+  messages: (Msg & { recommendations?: Rec[]; at?: string })[];
   handoffRef: string | null;
   state: ConvState;
 };
@@ -72,13 +79,16 @@ const HISTORY_MAX = 20;
 const REMIND_AFTER_MS = 10 * 60 * 1000;
 const INACTIVE_AFTER_MS = 30 * 60 * 1000;
 
-/** The four starting points; tapping one sends its label as the visitor's message. */
-const STARTERS = [
-  "Build something new",
-  "Add AI or automation",
-  "Connect our systems",
-  "Improve or modernize what we have",
-];
+/** The starting questions (owner, 24 October 2026). The last one opens the form for a person. */
+const STARTERS = ["What do you build?", "How much does a project cost?", "How long does it take?"];
+const PERSON = "Talk to a person";
+/** Shown after a handoff when live chat is on. Never a promised response time. */
+const LIVE_NOTE =
+  "A person from the team can reply right here in this chat, and by email if you have gone.";
+
+/** Live chat: how often to look for a team reply, open and minimized. */
+const POLL_OPEN_MS = 5000;
+const POLL_HIDDEN_MS = 20000;
 
 const KIND_LABEL: Record<string, string> = {
   service: "Service",
@@ -268,6 +278,18 @@ const Icon = {
       />
     </svg>
   ),
+  person: (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <circle cx="10" cy="7" r="3" fill="none" stroke="currentColor" strokeWidth="1.7" />
+      <path
+        d="M4.5 16c.8-2.8 3-4.3 5.5-4.3s4.7 1.5 5.5 4.3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
   check: (
     <svg viewBox="0 0 20 20" aria-hidden="true">
       <path
@@ -343,6 +365,15 @@ export default function AssistantPanel({
   const cardFirst = useRef<HTMLInputElement>(null);
   const handledRequest = useRef(0);
   const panel = useRef<HTMLDivElement>(null);
+  /** Time of the newest team reply shown, so polling only fetches newer ones. */
+  const lastTeamAt = useRef(new Date().toISOString());
+  /** Answers that helped (quoted from the site or pointing to pages): the lead offer waits for two. */
+  const [helpful, setHelpful] = useState(0);
+  const [leadDismissed, setLeadDismissed] = useState(false);
+  const reducedMotion = useRef(false);
+  useEffect(() => {
+    reducedMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
 
   /** Shows a conversation the server returned (restore, or reopened from history). */
   const show = useCallback(
@@ -354,13 +385,23 @@ export default function AssistantPanel({
       setConvState(c.state);
       setMode((m) => (c.mode === "ai" ? "ai" : m));
       setMessages(
-        c.messages.map((m) => ({
-          role: m.role,
-          text: m.text,
-          kind: m.kind,
-          recs: m.recommendations,
-        })),
+        c.messages
+          // An empty automated turn (a message passed to the team) is not shown.
+          .filter((m) => m.role !== "assistant" || m.text || m.kind === "handoff")
+          .map((m) => ({
+            role: m.role,
+            text: m.text,
+            kind: m.kind,
+            recs: m.recommendations,
+            links: m.links,
+          })),
       );
+      lastTeamAt.current =
+        c.messages
+          .filter((m) => m.role === "team" && m.at)
+          .map((m) => m.at!)
+          .sort()
+          .at(-1) ?? new Date(0).toISOString();
       setCard(null);
       setOfferHuman(false);
       setReminder(false);
@@ -421,6 +462,31 @@ export default function AssistantPanel({
       window.clearTimeout(pause);
     };
   }, [conversationId, visitorSpoke, busy, convState, activity, hidden]);
+
+  /* Live chat: while the conversation is with the team, look for their replies (from Telegram):
+     every few seconds while open, less often while minimized. Closing the panel stops it. */
+  useEffect(() => {
+    if (!conversationId || !handoffRef) return;
+    let live = true;
+    const tick = async () => {
+      const b = await conversations<{ replies?: { text: string; at: string }[] }>({
+        action: "poll",
+        conversationId,
+        after: lastTeamAt.current,
+      });
+      const replies = b?.replies ?? [];
+      if (!live || replies.length === 0) return;
+      lastTeamAt.current = replies.at(-1)!.at;
+      setMessages((m) => [...m, ...replies.map((r) => ({ role: "team" as const, text: r.text }))]);
+      setActivity((n) => n + 1);
+    };
+    void tick();
+    const id = window.setInterval(() => void tick(), hidden ? POLL_HIDDEN_MS : POLL_OPEN_MS);
+    return () => {
+      live = false;
+      window.clearInterval(id);
+    };
+  }, [conversationId, handoffRef, hidden]);
 
   async function openHistory() {
     setView("history");
@@ -545,6 +611,8 @@ export default function AssistantPanel({
     const message = text.trim();
     if (!message || busy) return;
     track("assistant_message", { page_path: page });
+    // Writing on instead of answering the lead offer dismisses it.
+    if (helpful >= 2) setLeadDismissed(true);
     setError("");
     setInput("");
     setConfirmNew(false);
@@ -565,7 +633,7 @@ export default function AssistantPanel({
         return next;
       });
     const dropPending = () => setMessages((all) => all.filter((m) => !(m.pending && !m.text)));
-    const finish = (b: Done) => {
+    const finish = (b: Done, streamed = false) => {
       if (b.conversationId) {
         setConversationId(b.conversationId);
         store(b.conversationId);
@@ -573,12 +641,40 @@ export default function AssistantPanel({
       }
       setMode(b.mode);
       setActivity((n) => n + 1);
-      patchLast(() => ({
+      if (b.forwarded) {
+        // Live chat: the message went to the team; no automated reply.
+        setMessages((all) => {
+          const next = all.filter((m) => !(m.pending && !m.text));
+          const i = next.findLastIndex((m) => m.role === "visitor");
+          if (i >= 0) next[i] = { ...next[i]!, delivered: true };
+          return next;
+        });
+        if (b.handoffRef) setHandoffRef(b.handoffRef);
+        return;
+      }
+      const final: Msg = {
         role: "assistant",
         text: b.reply,
         recs: b.recommendations,
+        links: b.links,
         suggestions: b.suggestions,
-      }));
+      };
+      if ((b.links?.length ?? 0) > 0 || b.recommendations.length > 0) setHelpful((n) => n + 1);
+      if (streamed || reducedMotion.current || b.reply.length < 40) patchLast(() => final);
+      else {
+        // Answers from the site arrive whole; show them a few words at a time, like typing.
+        const words = b.reply.split(/(\s+)/);
+        let shown = 0;
+        const step = () => {
+          shown = Math.min(words.length, shown + 6);
+          const done = shown >= words.length;
+          patchLast(() =>
+            done ? final : { role: "assistant", text: words.slice(0, shown).join("") },
+          );
+          if (!done) window.setTimeout(step, 28);
+        };
+        step();
+      }
       if (b.handoffRef) setHandoffRef(b.handoffRef);
       if (b.offerHuman) setOfferHuman(true);
       if (b.humanRequested && !b.handoffRef) {
@@ -603,7 +699,7 @@ export default function AssistantPanel({
             patchLast((m) => ({ ...m, text: m.text + t }));
           } else if (event === "done") {
             completed = true;
-            finish(data as Done);
+            finish(data as Done, (data as Done).mode === "ai");
           } else if (event === "error") {
             setError(
               (data as { message?: string })?.message ??
@@ -623,7 +719,7 @@ export default function AssistantPanel({
         return;
       }
       const b = (await res.json().catch(() => null)) as (Done & { message?: string }) | null;
-      if (!res.ok || !b?.ok || !b.reply) {
+      if (!res.ok || !b?.ok || (!b.reply && !b.forwarded)) {
         dropPending();
         setOfferHuman(true);
         setError(
@@ -685,6 +781,7 @@ export default function AssistantPanel({
         conversationId?: string | null;
         message?: string;
         errors?: Record<string, string>;
+        live?: boolean;
       } | null;
       if (res.ok && b?.ok && b.ref) {
         if (b.conversationId) {
@@ -702,7 +799,9 @@ export default function AssistantPanel({
           {
             role: "assistant",
             kind: "handoff",
-            text: `Sent to the DECHY team. Your reference is ${b.ref}. A person will reply by email.`,
+            text: `Sent to the DECHY team. Your reference is ${b.ref}. ${
+              b.live ? LIVE_NOTE : "A person will reply by email."
+            }`,
           },
         ]);
         return;
@@ -762,6 +861,8 @@ export default function AssistantPanel({
     setActivity((n) => n + 1);
     requestAnimationFrame(() => inputRef.current?.focus());
   };
+  // The lead offer appears once; writing another message instead of answering it dismisses it.
+  const showLead = helpful >= 2 && !leadDismissed && !offerHuman && !card && !handoffRef && !busy;
   const stateLabel = (i: HistoryItem) =>
     i.state === "handed-off"
       ? `With the DECHY team · ${i.handoffRef ?? ""}`
@@ -795,15 +896,22 @@ export default function AssistantPanel({
             height={32}
             className="assist-head-mark"
           />
-          <p id={fid("title")} className="assist-title">
-            {isAI ? (
-              <>
-                DECHY <span className="assist-title-ai">AI</span>
-              </>
-            ) : (
-              "Ask DECHY"
-            )}
-          </p>
+          <div className="assist-title-wrap">
+            <p id={fid("title")} className="assist-title">
+              Ask DECHY
+              <span className="assist-badge">{isAI ? "AI assistant" : "Assistant"}</span>
+            </p>
+            <p className="assist-subtitle">
+              {handoffRef ? (
+                <>
+                  <span className="assist-live-dot" aria-hidden="true" />
+                  With the DECHY team
+                </>
+              ) : (
+                "Answers from our site"
+              )}
+            </p>
+          </div>
           <button
             type="button"
             className="assist-tool assist-only-wide"
@@ -865,6 +973,17 @@ export default function AssistantPanel({
               New<span className="assist-word-long"> chat</span>
             </span>
           </button>
+          {handoffRef ? null : (
+            <button
+              type="button"
+              className="assist-person"
+              onClick={() => void openCard("header")}
+              disabled={Boolean(card)}
+            >
+              {Icon.person}
+              <span>{PERSON}</span>
+            </button>
+          )}
         </div>
       </div>
 
@@ -933,12 +1052,12 @@ export default function AssistantPanel({
       >
         {empty ? (
           <div className="assist-hello">
-            <p className="assist-hello-title">What are you working on?</p>
+            <p className="assist-hello-title">Hi, how can we help?</p>
             <p className="assist-hello-text">
-              Tell me what you&apos;re trying to do. I&apos;ll help you work it out, and point you
-              to the right part of DECHY when it helps.
+              Pick a question, or type your own. Answers come from our site, with links to read
+              more. Want a person instead? Tap &ldquo;{PERSON}&rdquo; at any time.
             </p>
-            <ul className="assist-starters" aria-label="Starting points">
+            <ul className="assist-starters" aria-label="Common questions">
               {STARTERS.map((s) => (
                 <li key={s}>
                   <button type="button" className="assist-starter" onClick={() => void send(s)}>
@@ -946,6 +1065,16 @@ export default function AssistantPanel({
                   </button>
                 </li>
               ))}
+              <li>
+                <button
+                  type="button"
+                  className="assist-starter assist-starter-person"
+                  onClick={() => void openCard("header")}
+                >
+                  {Icon.person}
+                  {PERSON}
+                </button>
+              </li>
             </ul>
             {pageCtx ? (
               <button
@@ -970,7 +1099,7 @@ export default function AssistantPanel({
                   <span className="ref-code">
                     {/DECHY-[A-Z0-9]{6}/.exec(m.text)?.[0] ?? handoffRef}
                   </span>
-                  . A person will reply by email.
+                  . {m.text.split(/reference is DECHY-[A-Z0-9]{6}\.\s*/)[1] ?? ""}
                 </p>
               </div>
             );
@@ -989,8 +1118,28 @@ export default function AssistantPanel({
                   </span>
                 </div>
               ) : (
-                <p className="assist-bubble">{m.text}</p>
+                <>
+                  {m.role === "team" ? <p className="assist-from">DECHY team</p> : null}
+                  <p className="assist-bubble">{m.text}</p>
+                  {m.delivered ? (
+                    <p className="assist-delivered">{Icon.check} Sent to the team</p>
+                  ) : null}
+                </>
               )}
+              {m.links && m.links.length > 0 && !m.pending ? (
+                <div className="assist-sources">
+                  <p className="assist-related-k">Read more on our site</p>
+                  <ul aria-label="Pages this answer came from">
+                    {m.links.map((l) => (
+                      <li key={l.path}>
+                        <Link href={l.path} onClick={followed}>
+                          {l.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
               {m.recs && m.recs.length > 0 ? (
                 <div className="assist-related">
                   <p className="assist-related-k">Related at DECHY</p>
@@ -1013,7 +1162,11 @@ export default function AssistantPanel({
                 <ul className="assist-chips" aria-label="Suggested replies">
                   {m.suggestions!.map((s) => (
                     <li key={s}>
-                      <button type="button" className="assist-chip" onClick={() => void send(s)}>
+                      <button
+                        type="button"
+                        className="assist-chip"
+                        onClick={() => (s === PERSON ? void openCard("offer") : void send(s))}
+                      >
                         {s}
                       </button>
                     </li>
@@ -1055,8 +1208,37 @@ export default function AssistantPanel({
               className="assist-btn-sm assist-btn-quiet"
               onClick={() => void openCard("offer")}
             >
-              Talk to the team
+              {PERSON}
             </button>
+          </div>
+        ) : null}
+
+        {/* Only once, and only after the assistant has been useful twice. */}
+        {showLead ? (
+          <div className="assist-offer assist-lead">
+            <p>
+              Would a tailored price help? Leave your name and email, and the team will look at your
+              project and follow up.
+            </p>
+            <div className="assist-after-actions">
+              <button
+                type="button"
+                className="assist-btn-sm"
+                onClick={() => {
+                  setLeadDismissed(true);
+                  void openCard("offer");
+                }}
+              >
+                Yes, get in touch
+              </button>
+              <button
+                type="button"
+                className="assist-link-button"
+                onClick={() => setLeadDismissed(true)}
+              >
+                Not now
+              </button>
+            </div>
           </div>
         ) : null}
 
@@ -1259,7 +1441,7 @@ export default function AssistantPanel({
             value={input}
             maxLength={1000}
             rows={1}
-            placeholder={handoffRef ? "Add to your request" : "Message DECHY"}
+            placeholder={handoffRef ? "Write to the DECHY team" : "Ask a question"}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
@@ -1275,22 +1457,20 @@ export default function AssistantPanel({
         </form>
         <div className="assist-foot-row">
           <p id={fid("disclosure")} className="assist-disclosure">
-            {isAI
-              ? "You're chatting with DECHY AI. It can make mistakes."
-              : "Automated assistant, not a person."}
+            {handoffRef
+              ? "A person at DECHY reads what you write here."
+              : isAI
+                ? "AI assistant: it can make mistakes."
+                : "Automated answers from our site, not a person."}{" "}
+            Please don&apos;t share passwords or payment details.{" "}
+            <Link href="/privacy/" onClick={followed}>
+              Privacy
+            </Link>
           </p>
           {handoffRef ? (
             <span className="assist-foot-ref">
               Request <span className="ref-code">{handoffRef}</span>
             </span>
-          ) : !card ? (
-            <button
-              type="button"
-              className="assist-team-link"
-              onClick={() => void openCard("header")}
-            >
-              Talk to the team
-            </button>
           ) : null}
         </div>
       </div>

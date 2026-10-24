@@ -6,6 +6,9 @@
    under reduced motion.
    ------------------------------------------------------------------------------------------ */
 
+/* Launcher (owner, 24 October 2026): a dark pill with a small icon and "Ask DECHY". It slides in
+   once, and on phones it steps aside while the cookie banner, the footer, or a form's buttons are
+   under it (data-hide, set by the launcher). */
 .assist-launcher {
   position: fixed;
   right: max(1rem, env(safe-area-inset-right));
@@ -13,82 +16,93 @@
   z-index: 60;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   min-height: 3rem;
-  padding: 0.3rem;
-  border: 1px solid rgb(255 255 255 / 0.08);
+  padding: 0.35rem 1.1rem 0.35rem 0.4rem;
+  border: 1px solid rgb(255 255 255 / 0.14);
   border-radius: 999px;
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: #0b0b0d;
+  color: #fff;
   font-family: var(--font-heading);
-  font-size: var(--fs-body-sm);
+  font-size: 1rem;
   font-weight: 700;
+  letter-spacing: -0.005em;
   cursor: pointer;
-  box-shadow: 0 14px 30px -16px rgb(17 24 39 / 0.65);
+  box-shadow:
+    0 18px 40px -18px rgb(0 0 0 / 0.9),
+    0 0 0 1px rgb(70 108 185 / 0.18);
   transition:
-    transform var(--dur-fast) var(--ease-out),
-    box-shadow var(--dur-base) var(--ease-out);
+    transform 220ms var(--ease-out),
+    opacity 220ms var(--ease-out),
+    border-color 160ms var(--ease-out),
+    box-shadow 220ms var(--ease-out);
 }
 .assist-launcher:focus-visible {
-  outline: 3px solid var(--color-blue);
+  outline: 3px solid #6f95e0;
   outline-offset: 3px;
 }
-.assist-mark {
-  display: block;
-  flex: none;
-  width: 2.375rem;
-  height: 2.375rem;
+.assist-launcher-icon {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--color-blue, #2f6fed);
+  color: #fff;
 }
-.assist-ai {
-  margin-left: -0.15rem;
-  padding-right: 0.55rem;
-  font-family: var(--font-heading);
-  font-size: 0.9375rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--color-blue-on-dark);
+.assist-launcher-icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
 }
-.assist-launcher-label {
-  max-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
+.assist-launcher-dot {
+  position: absolute;
+  top: 0.35rem;
+  left: 2.1rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 2px solid #0b0b0d;
+  border-radius: 50%;
+  background: #34c37a;
+}
+.assist-launcher[data-hide] {
   opacity: 0;
-  transition:
-    max-width var(--dur-base) var(--ease-out),
-    opacity var(--dur-fast) var(--ease-out),
-    padding var(--dur-base) var(--ease-out);
-}
-/* With the label showing, the "AI" mark folds into it ("Ask DECHY AI"). */
-.assist-launcher[data-expanded] .assist-ai {
-  display: none;
-}
-.assist-launcher[data-expanded] .assist-launcher-label {
-  max-width: 12rem;
-  padding-right: 0.85rem;
-  opacity: 1;
+  transform: translateY(calc(100% + 1.5rem));
+  pointer-events: none;
 }
 @media (hover: hover) {
-  .assist-launcher:hover .assist-ai,
-  .assist-launcher:focus-visible .assist-ai {
-    display: none;
-  }
-  .assist-launcher:hover .assist-launcher-label,
-  .assist-launcher:focus-visible .assist-launcher-label {
-    max-width: 12rem;
-    padding-right: 0.85rem;
-    opacity: 1;
+  .assist-launcher:hover {
+    border-color: rgb(111 149 224 / 0.6);
+    box-shadow:
+      0 22px 44px -18px rgb(0 0 0 / 0.95),
+      0 0 0 1px rgb(111 149 224 / 0.35);
   }
 }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .assist-launcher:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 34px -16px rgb(17 24 39 / 0.7);
+@media (prefers-reduced-motion: no-preference) {
+  .assist-launcher {
+    animation: assist-launcher-in 420ms var(--ease-out) 900ms both;
+  }
+  @media (hover: hover) {
+    .assist-launcher:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+@keyframes assist-launcher-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .assist-launcher,
-  .assist-launcher-label {
+  .assist-launcher {
     transition: none;
+  }
+}
+@media (max-width: 39.99rem) {
+  .assist-launcher {
+    min-height: 2.875rem;
+    padding-right: 0.95rem;
+    font-size: 0.9375rem;
   }
 }
 @media (min-width: 64rem) {
@@ -103,8 +117,8 @@
    scale (which grows with the window) would make it feel oversized on large screens. */
 .assist-panel {
   --a-body: 1rem; /* 16px: the conversation */
-  --a-small: 0.9375rem; /* 15px: cards, chips, supporting text */
-  --a-label: 0.875rem; /* 14px: labels, meta */
+  --a-small: 1rem; /* 16px: cards, chips, supporting text (owner: 16px minimum) */
+  --a-label: 1rem; /* 16px: labels and meta too (owner: 16px minimum in the chat) */
   --a-title: 1.125rem; /* 18px */
   --a-hello: 1.25rem; /* 20px */
   position: fixed;
@@ -206,7 +220,7 @@
   border-radius: 0.375rem;
   background: var(--color-ink);
   color: var(--color-paper);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 800;
   letter-spacing: 0.06em;
 }
@@ -233,7 +247,7 @@
   background: transparent;
   color: var(--color-ink);
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
@@ -288,7 +302,7 @@
   padding: 0.7rem 0.9rem;
   border-bottom: 1px solid var(--color-line);
   background: #fff8ea;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
 }
 .assist-confirm p {
   margin: 0;
@@ -350,7 +364,7 @@
   color: var(--color-ink);
   font: inherit;
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 700;
   line-height: 1.3;
   text-align: left;
@@ -379,12 +393,12 @@
   background: transparent;
   color: var(--color-ink);
   font: inherit;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   text-align: left;
   cursor: pointer;
 }
 .assist-suggest-k {
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   font-weight: 600;
   color: var(--color-slate-text);
 }
@@ -442,7 +456,7 @@
   border-radius: calc(var(--radius-lg) * 1.25);
   border-top-left-radius: 0.35rem;
   background: var(--color-white);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   color: var(--color-slate-text);
 }
 
@@ -490,7 +504,7 @@
   padding: 0.6rem 0.8rem;
   border: 1px dashed var(--color-line);
   border-radius: var(--radius-lg);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
 }
 .assist-notice p {
   margin: 0;
@@ -517,12 +531,12 @@
 .assist-history-note,
 .assist-history-fine {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   line-height: 1.45;
   color: var(--color-slate-text);
 }
 .assist-history-fine {
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
 }
 .assist-history-list {
   display: grid;
@@ -559,13 +573,13 @@
 .assist-history-name {
   overflow: hidden;
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 700;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .assist-history-meta {
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   color: var(--color-slate-text);
 }
 
@@ -586,7 +600,7 @@
   background: var(--color-white);
   color: var(--color-ink);
   font: inherit;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 600;
   cursor: pointer;
   transition: border-color var(--dur-fast) var(--ease-out);
@@ -599,7 +613,7 @@
 }
 .assist-related-k {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   font-weight: 600;
   color: var(--color-slate-text);
 }
@@ -640,16 +654,16 @@
 }
 .assist-rec-name {
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 700;
   color: var(--color-link);
 }
 .assist-rec-kind {
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   color: var(--color-slate-text);
 }
 .assist-rec-why {
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   line-height: 1.45;
   color: var(--color-ink);
 }
@@ -658,7 +672,7 @@
   display: grid;
   gap: 0.35rem;
   justify-items: start;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
 }
 .assist-offer p,
 .assist-after p {
@@ -679,7 +693,7 @@
   border: 1px solid #b9d4c3;
   border-radius: var(--radius-lg);
   background: #f1f8f3;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   line-height: 1.5;
 }
 .assist-sent svg {
@@ -702,7 +716,7 @@
   border-left: 3px solid var(--color-accent);
   border-radius: calc(var(--radius-lg) * 1.25);
   background: var(--color-white);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
 }
 .assist-card-head {
   display: grid;
@@ -718,7 +732,7 @@
 .assist-card-note,
 .assist-fine {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   line-height: 1.45;
   color: var(--color-slate-text);
 }
@@ -740,24 +754,24 @@
   align-items: baseline;
 }
 .assist-card-facts dt {
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   color: var(--color-slate-text);
 }
 .assist-card-facts dd {
   margin: 0;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   overflow-wrap: anywhere;
 }
 .assist-inline-edit {
   min-height: auto;
   margin-left: 0.5rem;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
 }
 .assist-card .field {
   gap: 0.3rem;
 }
 .assist-card .field label {
-  font-size: 0.875rem;
+  font-size: var(--a-label);
 }
 .assist-card textarea {
   min-height: 4rem;
@@ -773,7 +787,7 @@
   margin-bottom: 0.3rem;
   padding: 0;
   font-family: var(--font-heading);
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   font-weight: 700;
   line-height: 1.4;
 }
@@ -791,7 +805,7 @@
   padding: 0.35rem 0.5rem;
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   font-weight: 600;
   text-align: center;
   cursor: pointer;
@@ -816,7 +830,7 @@
   align-items: center;
   gap: 0.4rem;
   min-height: 2.75rem;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 600;
   color: var(--color-link);
   cursor: pointer;
@@ -841,7 +855,7 @@
   align-items: center;
   gap: 0.6rem;
   min-height: 2.75rem;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   cursor: pointer;
 }
 .assist-check input {
@@ -866,7 +880,7 @@
   background: var(--color-blue-strong);
   color: var(--color-white);
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 700;
   cursor: pointer;
 }
@@ -895,7 +909,7 @@
   background: none;
   padding: 0;
   font: inherit;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -905,7 +919,7 @@
 .assist-error {
   margin: 0;
   padding: 0.55rem 1rem;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   color: var(--color-error-text);
   background: var(--color-white);
   border-top: 1px solid var(--color-line);
@@ -983,7 +997,7 @@
 .assist-disclosure {
   margin: 0;
   min-width: 0;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   line-height: 1.3;
   color: var(--color-slate-text);
 }
@@ -995,7 +1009,7 @@
   background: none;
   font: inherit;
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   font-weight: 700;
   color: var(--color-ink);
   text-decoration: underline;
@@ -1008,7 +1022,7 @@
 }
 .assist-foot-ref {
   flex: none;
-  font-size: 0.9375rem;
+  font-size: var(--a-small);
   color: var(--color-slate-text);
 }
 
@@ -1024,7 +1038,7 @@
   gap: 0.1rem;
 }
 .contact-emails dt {
-  font-size: 0.875rem;
+  font-size: var(--a-label);
   color: var(--text-muted, #a1a1aa);
 }
 .contact-emails dd {
@@ -1109,4 +1123,206 @@
   font-size: var(--fs-body-sm);
   line-height: 1.5;
   color: var(--color-slate-text);
+}
+
+/* ---------------- dark theme and the 24 October 2026 additions ---------------- */
+/* The panel matches the site: the brand tokens it uses are re-pointed to dark values here, so every
+   rule above draws on dark surfaces without being rewritten. */
+.assist-panel {
+  --color-white: #121214;
+  --color-paper: #1b1b1e;
+  --color-ink: #f4f4f5;
+  --color-line: #2e2e33;
+  --color-slate-text: #b4b4bb;
+  --color-link: #9db7ea;
+  --color-input-border: #5a5a62;
+  --color-error-text: #f3a3a3;
+  --color-blue-strong: #2f5fc4;
+  color-scheme: dark;
+  background: #121214;
+  color: #f4f4f5;
+  white-space: normal;
+}
+@media (min-width: 40rem) {
+  .assist-panel {
+    border-color: rgb(255 255 255 / 0.12);
+    box-shadow: 0 40px 90px -30px rgb(0 0 0 / 0.9);
+  }
+}
+.assist-panel :is(input, textarea, select) {
+  background: #0d0d0f;
+  color: #fff;
+}
+.assist-bubble {
+  white-space: pre-line;
+}
+.assist-msg-visitor .assist-bubble {
+  background: #2f5fc4;
+  border-color: #2f5fc4;
+  color: #fff;
+}
+.assist-msg-team .assist-bubble {
+  border: 1px solid rgb(52 195 122 / 0.45);
+  background: rgb(52 195 122 / 0.1);
+  color: #fff;
+}
+.assist-from {
+  margin: 0 0 0.3rem;
+  color: #7fe0ae;
+  font-size: var(--a-label);
+  font-weight: 700;
+}
+.assist-delivered {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  margin: 0.3rem 0 0;
+  color: #b4b4bb;
+  font-size: var(--a-label);
+}
+.assist-delivered svg {
+  width: 1rem;
+  height: 1rem;
+  color: #7fe0ae;
+}
+.assist-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+.assist-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+.assist-badge {
+  padding: 0.05rem 0.5rem;
+  border: 1px solid rgb(111 149 224 / 0.45);
+  border-radius: 999px;
+  color: #b8cbf2;
+  font-family: var(--font-body);
+  font-size: var(--a-label);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.assist-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.1rem 0 0;
+  color: #b4b4bb;
+  font-size: var(--a-label);
+  line-height: 1.35;
+}
+.assist-live-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #34c37a;
+  box-shadow: 0 0 0 3px rgb(52 195 122 / 0.2);
+}
+.assist-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  margin-left: auto;
+  padding: 0 0.9rem;
+  border: 1px solid rgb(52 195 122 / 0.5);
+  border-radius: 999px;
+  background: rgb(52 195 122 / 0.1);
+  color: #fff;
+  font: inherit;
+  font-size: var(--a-small);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.assist-person svg,
+.assist-starter-person svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: none;
+}
+.assist-person:hover {
+  background: rgb(52 195 122 / 0.18);
+}
+.assist-person:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.assist-starter-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-color: rgb(52 195 122 / 0.5) !important;
+}
+.assist-sources {
+  margin-top: 0.6rem;
+}
+.assist-sources ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.assist-sources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.75rem;
+  padding: 0 0.85rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 10px;
+  color: #cfdcf6;
+  font-size: var(--a-small);
+  text-decoration: none;
+}
+.assist-sources a::after {
+  content: "\2192";
+  color: #6f95e0;
+}
+.assist-sources a:hover {
+  border-color: rgb(111 149 224 / 0.6);
+  color: #fff;
+}
+.assist-lead {
+  border-color: rgb(111 149 224 / 0.45) !important;
+}
+.assist-notice {
+  background: #1d1a12 !important;
+}
+.assist-sent {
+  border-color: rgb(52 195 122 / 0.45) !important;
+  background: rgb(52 195 122 / 0.08) !important;
+  color: #e9fff3 !important;
+}
+.assist-sent svg {
+  color: #7fe0ae !important;
+}
+.assist-disclosure a {
+  color: #9db7ea;
+}
+@media (max-width: 26rem) {
+  .assist-person span {
+    font-size: var(--a-label);
+  }
+}
+
+/* Phones: Chats and New chat show their icons only (the names stay for screen readers), so
+   "Talk to a person" always fits in the toolbar. */
+@media (max-width: 39.99rem) {
+  .assist-toolbar {
+    flex-wrap: nowrap;
+  }
+  .assist-toolbar .assist-tool:not(.assist-only-phone-flex) span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
 }

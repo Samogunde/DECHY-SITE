@@ -20,6 +20,8 @@ const Body = z.discriminatedUnion("action", [
     conversationId: Id,
     state: z.enum(["inactive", "closed"]),
   }),
+  /** Live chat: team replies (from Telegram) written after the given time. */
+  z.object({ action: z.literal("poll"), conversationId: Id, after: z.string().max(40) }),
 ]);
 
 /**
@@ -34,7 +36,17 @@ export async function POST(request: Request) {
   const parsed = Body.safeParse(raw);
   if (!parsed.success) return fail(400, "invalid", "Invalid request.");
   const store = getStore();
-  if (await overLimit(store, "conversations", clientAddress(request.headers), 120, 10 * 60 * 1000))
+  // Live chat polls every few seconds while open, so it has its own, larger allowance.
+  const poll = parsed.data.action === "poll";
+  if (
+    await overLimit(
+      store,
+      poll ? "conversation-poll" : "conversations",
+      clientAddress(request.headers),
+      poll ? 400 : 120,
+      10 * 60 * 1000,
+    )
+  )
     return fail(429, "rate_limited", "Too many requests. Please wait a few minutes and try again.");
   const repo = new Repo(store);
   const body = parsed.data;
@@ -50,6 +62,13 @@ export async function POST(request: Request) {
     const conv = await repo.getConversation(body.conversationId);
     if (!conv) return json({ ok: true, conversation: null });
     if (body.action === "open") return json({ ok: true, conversation: visitorView(conv) });
+    if (body.action === "poll")
+      return json({
+        ok: true,
+        replies: conv.messages
+          .filter((m) => m.role === "team" && m.at > body.after)
+          .map((m) => ({ text: m.text, at: m.at })),
+      });
     // Idle states never touch a conversation that was handed to the team.
     if (!conv.supportRef && conv.status !== "escalated" && conv.status !== body.state) {
       conv.status = body.state;

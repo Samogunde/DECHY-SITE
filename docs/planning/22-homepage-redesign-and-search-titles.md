@@ -435,3 +435,24 @@ Owner direction, 24 October 2026. The owner supplied 50 articles. Nine cover top
 - **US spelling, site rules.** Spelling is US English. Titles are at most 60 characters with " | DECHY", descriptions 70 to 160. Jargon is explained in plain words at first use. Wording the validator rejects was reworded: "placeholder", "local teams", and numbered customer counts.
 - **Length.** Twenty-six articles were under the 1,400-word article minimum by 1 to 186 words. Each gained one section, written for its topic, on how we handle that work and what it costs with us. It sits before the questions.
 - **Markdown.** The article parser now reads tables, numbered lists, checklists, "###" subheadings (shown as bold lead-ins), and a line of text followed by a list (kept in place as an inline list).
+
+## Nineteenth pass (24 October 2026): team of eight, alignment, site search, type floor, assistant
+
+Owner direction, 24 October 2026.
+
+- **Team.**
+  - Eight people: the Managing Director and two directors first, in larger cards, then five in a compact grid. The five include Samuel Abims and the four people named in testimonials.
+  - Each card shows the name, the role, one line on the outcome the person owns, and three skill tags. There are no experience lines and no LinkedIn links.
+  - The section is published; it was a draft before, which is why it was missing on Netlify. Team portraits do not count toward a page's photo limit.
+- **"Who we are."** The heading row and the photo row share one grid. The answer spans exactly the card's width, and its first line sits on the heading's baseline. It stacks below 1024px.
+- **Site search.**
+  - One index covers every page, each page's questions, and the team. It opens from the header button, `/`, or Ctrl/Cmd+K.
+  - It searches as you type and matches partial words, typos, and plurals (`src/lib/search-engine.ts`, no dependency). Results show a highlighted snippet and the page type.
+  - Full matches come first, then pages that match some of the words, with "Show more". `/search/` is the full results page; it is noindex and not in the sitemap.
+- **Resources search.** A search over the full text of every article (`/articles-index.json`), with category filters (Guides, Decision guides, Comparisons, Cost guides, Industry notes, Explainers) and a result count.
+- **Type floor (`src/styles/type-floor.css`).**
+  - Article reading text is 17px. Answers and statements are 16px.
+  - All other text is at least 15px, except short uppercase labels and number badges (14px).
+  - Header links are 15px at 1280 to 1439px. The selected count badge has white text.
+  - The assistant uses 16px throughout.
+- **Assistant.** An "Ask DECHY" pill launcher that steps aside on phones for the cookie banner, the footer, and form buttons. The panel is dark, with "Talk to a person" always in view. Live chat runs through Telegram (doc 23, section 7).

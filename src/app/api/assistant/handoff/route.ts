@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { aiConfigured, summarize, wantsHuman, type Turn } from "@/lib/assistant/engine";
+import { aiConfigured, summarize, turnsOf, wantsHuman, type Turn } from "@/lib/assistant/engine";
 import { byId } from "@/lib/assistant/knowledge";
 import { prefill } from "@/lib/assistant/session";
 import { aiAllowed } from "@/lib/server/ai-budget";
@@ -14,6 +14,15 @@ import {
 } from "@/lib/server/records";
 import { getStore } from "@/lib/server/store";
 import { notify } from "@/lib/server/events";
+import { forwardToNetlify } from "@/lib/contact/netlify-forms";
+import {
+  LIVE_NOTE,
+  linkMessage,
+  liveChatOpening,
+  sendToTeam,
+  telegramConfigured,
+  transcript,
+} from "@/lib/server/telegram";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -126,9 +135,7 @@ export async function POST(request: Request) {
   const conv = await load(repo, d.conversationId);
   if (conv?.supportRef) return json({ ok: true, ref: conv.supportRef, kind: "existing-handoff" });
   const page = safePage(d.page);
-  const history: Turn[] = conv
-    ? conv.messages.filter((m) => m.kind !== "handoff").map((m) => ({ role: m.role, text: m.text }))
-    : [];
+  const history: Turn[] = conv ? turnsOf(conv.messages) : [];
   const service = conv?.recommendedService ? byId(conv.recommendedService) : undefined;
   const solution = conv?.recommendedSolution ? byId(conv.recommendedSolution) : undefined;
   const allowAI = aiConfigured() && (await aiAllowed(store, client));
@@ -221,15 +228,37 @@ export async function POST(request: Request) {
         role: "assistant",
         kind: "handoff",
         at,
-        text: `Sent to the DECHY team. Your reference is ${result.ref}. A person will reply by email.`,
+        text: `Sent to the DECHY team. Your reference is ${result.ref}. ${
+          telegramConfigured() ? LIVE_NOTE : "A person will reply by email."
+        }`,
       });
       await repo.saveConversation(conv);
+      // The transcript goes to the business mailbox (Netlify Forms) and, as a live chat, to the
+      // team's Telegram. Neither may fail the visitor's request.
+      const chatPage = conv.handoffPage || conv.lastPage;
+      await Promise.all([
+        forwardToNetlify("assistant", {
+          name: d.name,
+          email: d.email,
+          organization: d.organization,
+          message: d.note,
+          transcript: transcript(conv, 8000),
+          reference: result.ref,
+          page: chatPage,
+        }),
+        (async () => {
+          if (!telegramConfigured()) return;
+          const id = await sendToTeam(liveChatOpening(conv, d.name, result.ref, chatPage));
+          if (id) await linkMessage(store, id, { conversationId: conv.id, ref: result.ref });
+        })().catch(() => undefined),
+      ]);
     }
     return json({
       ok: true,
       ref: result.ref,
       kind: result.kind,
       conversationId: thread?.id ?? null,
+      live: telegramConfigured(),
     });
   } catch {
     return fail(

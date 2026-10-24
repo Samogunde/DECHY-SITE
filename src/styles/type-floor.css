@@ -1,0 +1,128 @@
+/* ------------------------------------------------------------------------------------------
+   Type floor (owner, 24 October 2026). Loaded last so it settles the minimums everywhere:
+   - reading text in articles is 17px, and other reading text (answers, statements) 16px;
+   - every other text is at least 15px, except short uppercase labels and number badges (14px).
+   ------------------------------------------------------------------------------------------ */
+
+/* Article reading text. A broad card rule (premium.css) set paragraphs inside <article> to 15px. */
+.article-body :is(p, li):not(.article-points-title, .article-answer-title, .cmp-note, .t-eyebrow) {
+  font-size: 1.0625rem !important;
+  line-height: 1.75 !important;
+}
+
+/* Other reading text: question answers and service statements. */
+.faq-ask-text,
+.sp-statement {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Everything else that is read, not scanned as a tag: at least 15px. */
+:is(
+  .chip,
+  .cs-chip,
+  .profile-row dt,
+  .nl-consent,
+  .dgm-text,
+  .stack-name,
+  .option-card-fields dt,
+  .option-card-badge,
+  .proof-label,
+  .article-service-label,
+  .sysframe-foot-label,
+  .phase-tags li,
+  .blueprint-foot dt,
+  .hq-person-id,
+  .hq-person-svc,
+  .hq-svc,
+  .hq-ind,
+  .field label,
+  .form-optional,
+  .form-optional legend,
+  .form-optional span,
+  .hq-person-id *,
+  header button > span.hidden,
+  .cert-figure-list dt,
+  .contact-emails dt,
+  .tmf-thumb-co,
+  .directory-filter legend,
+  .tms-service,
+  .pf-count,
+  .team-focus li
+) {
+  font-size: 0.9375rem !important;
+}
+
+/* Header links at 1280 to 1439px: 15px, with tighter spacing so the menu still fits. */
+@media (min-width: 80rem) and (max-width: 89.99rem) {
+  .site-header-dark nav[aria-label="Primary"] :is(.nav-link, .nav-chevron) {
+    font-size: 0.9375rem !important;
+  }
+  .site-header-dark nav[aria-label="Primary"] > ul > li > .nav-link {
+    padding-inline: 0.4rem !important;
+  }
+}
+
+/* Count badges on a selected filter: white on the blue chip (one state had dark text, 3.5:1). */
+:is([aria-pressed="true"], [aria-selected="true"], [aria-current="true"], .is-active)
+  .explorer-count {
+  color: #fff !important;
+}
+
+/* Touch screens: everything tapped is at least 44px tall (owner, 24 October 2026). */
+@media (pointer: coarse) {
+  :is(
+    .footer-email,
+    .chip,
+    .cs-chip,
+    .tq-ind,
+    .tq-svc,
+    .hq-svc,
+    .hq-ind,
+    .mega-foot-link,
+    .hero-explore,
+    .tmo-big,
+    .tmv-svc,
+    .lead-title a
+  ) {
+    display: inline-flex !important;
+    min-height: 44px !important;
+    align-items: center;
+  }
+  :is(.cs-stack-item, .directory select, .pf-filters select, select) {
+    min-height: 44px !important;
+  }
+  .menu-link {
+    min-width: 44px !important;
+  }
+  /* Carousel dashes keep their look; the area that takes the tap grows around them. */
+  .tmc-dash {
+    position: relative;
+  }
+  .tmc-dash::after {
+    content: "";
+    position: absolute;
+    inset: -8px -2px;
+  }
+}
+
+/* A long word in an article's contents list wraps instead of widening the page on phones. */
+.article-side,
+.article-toc {
+  min-width: 0;
+  max-width: 100%;
+}
+.article-toc :is(a, li, p) {
+  overflow-wrap: anywhere;
+}
+
+/* Wide price tables scroll inside their own box instead of stretching the article on phones. */
+.article-body,
+.article-section {
+  min-width: 0;
+  max-width: 100%;
+}
+.article-section .cmp-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}

@@ -738,7 +738,10 @@ export const Block = z.discriminatedUnion("type", [
       .min(2)
       .max(4),
   }),
-  /** The team: portrait, name, and role, with a short bio that opens in place. */
+  /**
+   * The team: portrait, name, role, the outcome the person owns, and up to three skill tags.
+   * Leadership (`lead`) is shown first and larger; everyone else in a compact grid.
+   */
   z.object({
     type: z.literal("team"),
     ...base,
@@ -750,8 +753,10 @@ export const Block = z.discriminatedUnion("type", [
         z.object({
           name: z.string(),
           role: z.string(),
-          bio: z.string(),
-          focus: z.array(z.string()).max(4).default([]),
+          lead: z.boolean().default(false),
+          /** One line: the outcome this person is responsible for. */
+          owns: z.string().max(90),
+          focus: z.array(z.string()).max(3).default([]),
           photo: PhotoRef.optional(),
         }),
       )

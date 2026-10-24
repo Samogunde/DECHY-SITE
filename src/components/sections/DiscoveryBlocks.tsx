@@ -345,10 +345,13 @@ const LIBRARY_GROUP = (p: Page) =>
       ? "cost-guides"
       : "guides";
 
-const LIBRARY_TABS: { key: string; label: string }[] = [
-  { key: "guides", label: "Guides" },
-  { key: "comparisons", label: "Comparisons" },
-  { key: "cost-guides", label: "Cost guides" },
+const CATEGORY_TABS: { key: string; label: string }[] = [
+  { key: "guide", label: "Guides" },
+  { key: "decision", label: "Decision guides" },
+  { key: "comparison", label: "Comparisons" },
+  { key: "cost", label: "Cost guides" },
+  { key: "industry", label: "Industry notes" },
+  { key: "explainer", label: "Explainers" },
 ];
 
 /** A resource card: category, reading time, title, and summary. */
@@ -386,9 +389,11 @@ export function LibraryBlock({ block }: { block: Of<"library"> }) {
   const articles = articlePages(registry);
   if (articles.length === 0) return null;
   const featured = articles.find((p) => p.article?.number === 1) ?? articles[0]!;
-  const tabs = LIBRARY_TABS.map((t) => ({
+  // Filters by category (owner, 24 October 2026): every article category that has articles.
+  const category = (p: Page) => p.article?.category ?? "guide";
+  const tabs = CATEGORY_TABS.map((t) => ({
     ...t,
-    count: articles.filter((p) => LIBRARY_GROUP(p) === t.key).length,
+    count: articles.filter((p) => category(p) === t.key).length,
   })).filter((t) => t.count > 0);
   const glossaryHref = registry.pageByPath.has("/resources/glossary/")
     ? "/resources/glossary/"
@@ -421,9 +426,12 @@ export function LibraryBlock({ block }: { block: Of<"library"> }) {
         tabs={tabs}
         glossaryHref={glossaryHref}
         featured={<ResourceCard p={featured} featured />}
-        cards={articles
-          .filter((p) => p !== featured)
-          .map((p) => ({ key: p.path, group: LIBRARY_GROUP(p), node: <ResourceCard p={p} /> }))}
+        featuredKey={featured.path}
+        cards={articles.map((p) => ({
+          key: p.path,
+          group: category(p),
+          node: <ResourceCard p={p} />,
+        }))}
       />
       {row("cost-guides", "Cost guides", "What it costs, and why")}
       {row("comparisons", "Comparisons", "Two options, side by side")}

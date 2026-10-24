@@ -964,24 +964,42 @@ main.theme-dark .anatomy-support-wrap {
   color: #7290ca;
 }
 
-/* Team (About us): four to a row, circular portraits, short bios always visible. */
+/* Team (About us): leadership first in larger cards, everyone else in a compact grid. Each card:
+   portrait, name, role, the outcome the person owns, and up to three skill tags. */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin: clamp(2rem, 1.5rem + 2vw, 3rem) 0 0;
   padding: 0;
   list-style: none;
 }
-@media (min-width: 64rem) {
-  .team-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.25rem;
+.team-leads {
+  grid-template-columns: minmax(0, 1fr);
+}
+.team-compact {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 1rem;
+}
+@media (min-width: 40rem) {
+  .team-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (max-width: 26rem) {
-  .team-grid {
-    grid-template-columns: minmax(0, 1fr);
+@media (min-width: 52rem) {
+  .team-leads {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .team-compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 72rem) {
+  .team-compact[data-count="5"] {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .team-compact[data-count="4"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 .team-card {
@@ -1001,8 +1019,20 @@ main.theme-dark .anatomy-support-wrap {
   border-color: rgb(70 108 185 / 0.45);
   transform: translateY(-4px);
 }
+.team-card.is-lead {
+  padding: 2.25rem 1.75rem 2rem;
+  background:
+    radial-gradient(120% 70% at 50% 0%, rgb(70 108 185 / 0.14), transparent 70%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.015));
+}
+.team-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .team-photo {
   display: block;
+  flex: none;
   width: 7.5rem;
   height: 7.5rem;
   margin-bottom: 1rem;
@@ -1012,6 +1042,45 @@ main.theme-dark .anatomy-support-wrap {
     0 0 0 3px #0a0a0b,
     0 0 0 5px rgb(70 108 185 / 0.28),
     0 20px 40px -20px rgb(0 0 0 / 0.8);
+}
+.is-lead .team-photo {
+  width: 9.5rem;
+  height: 9.5rem;
+  margin-bottom: 1.25rem;
+}
+.is-lead .team-name {
+  font-size: 1.25rem;
+}
+.team-compact .team-photo {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-bottom: 0.85rem;
+}
+/* Phones: compact cards lay the portrait beside the name to save height. */
+@media (max-width: 39.99rem) {
+  .team-compact .team-card {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    align-items: center;
+    padding: 1.25rem;
+    text-align: left;
+  }
+  .team-compact .team-photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 0;
+  }
+  .team-compact .team-head {
+    align-items: flex-start;
+  }
+  .team-compact .team-owns,
+  .team-compact .team-focus {
+    grid-column: 1 / -1;
+  }
+  .team-compact .team-focus {
+    justify-content: flex-start;
+  }
 }
 .team-photo .photo,
 .team-photo .photo-frame {
@@ -1035,10 +1104,14 @@ main.theme-dark .anatomy-support-wrap {
   font-weight: 600;
   color: var(--color-accent-text);
 }
-.team-bio {
+.team-owns {
   margin: 0.75rem 0 0;
   font-size: 0.9375rem !important;
   line-height: 1.55;
+  color: rgb(255 255 255 / 0.78);
+}
+.is-lead .team-owns {
+  font-size: 1rem !important;
 }
 .team-focus {
   display: flex;

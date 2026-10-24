@@ -9,8 +9,8 @@ export function formsSkeleton(): string {
       `    <input type="hidden" name="form-name" value="${esc(f.name)}" />`,
       `    <input type="hidden" name="subject" value="${esc(f.subject)}" data-remove-prefix />`,
       ...f.fields.map((name) =>
-        name === "message"
-          ? `    <textarea name="message"></textarea>`
+        name === "message" || name === "transcript"
+          ? `    <textarea name="${name}"></textarea>`
           : `    <input type="${name === "email" ? "email" : "text"}" name="${esc(name)}" />`,
       ),
     ];
