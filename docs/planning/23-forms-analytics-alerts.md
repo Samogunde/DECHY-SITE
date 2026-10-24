@@ -130,5 +130,19 @@ Create a project for https://www.dechytech.com at clarity.microsoft.com and send
 
 - Today the assistant runs inside the site. Conversations, inquiries, support requests, and newsletter subscribers are stored in Netlify Blobs.
 - Every new inquiry and handoff raises an event (`src/lib/server/events.ts`) that is recorded in DECHY Admin and handed to the alert provider.
-- **Step 1, Telegram:** the alert carries the visitor's name, the page, and a link to the record in DECHY Admin. It never carries the email address or the message text.
+- **Step 1, Telegram (built):**
+  - Alerts go out for:
+    - a new contact, quote, or estimator lead
+    - a support request
+    - an assistant handoff
+    - the moment a visitor asks the assistant for a person (before they confirm an email)
+    - an inbound business email, once that is connected
+  - Each alert shows what happened, the visitor's name, the page, and the reference, with an "Open in DECHY Admin" button.
+  - It never carries the email address or the message text.
+- **Owner setup, about 5 minutes (the token is a secret, so the owner enters it):**
+  1. In Telegram, open @BotFather, send `/newbot`, and name it, for example "DECHY Alerts". Copy the token it gives.
+  2. Open the new bot and send it any message (or add it to a team group and send a message there).
+  3. Open `https://api.telegram.org/bot<token>/getUpdates` in a browser and copy the `chat` `id` from the reply.
+  4. In Netlify, go to the project, then Project configuration, then Environment variables. Add `NOTIFICATION_PROVIDER=telegram`, `TELEGRAM_BOT_TOKEN` (mark it secret), and `TELEGRAM_CHAT_ID`.
+  5. After the next deploy, DECHY Admin, Overview shows "Telegram alerts" under Configuration.
 - **Step 2:** DECHY Admin as an installable app, with web push and two-step sign-in.

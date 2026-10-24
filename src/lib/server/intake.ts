@@ -40,6 +40,8 @@ export async function recordInquiry(
     ref: inquiry.ref,
     title: `New ${label}: ${data.interest}`,
     actor: "visitor",
+    name: data.name,
+    page: data.form === "estimator" ? "/tools/cost-estimator/" : "/contact/",
   });
   return { ref: inquiry.ref };
 }
@@ -116,6 +118,8 @@ export async function recordHandoff(
             : "DECHY AI handed a new inquiry to the team"
           : "A visitor asked to talk to the team",
         actor: "visitor",
+        name: input.name,
+        page: h.handoffPage || h.startPage,
       });
     } catch {
       ref = "";
@@ -179,6 +183,7 @@ export async function recordEmail(
     ref: inquiry.ref,
     title: `New email: ${e.subject.slice(0, 80) || "(no subject)"}`,
     actor: "visitor",
+    name: e.fromName,
   });
   return inquiry;
 }

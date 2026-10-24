@@ -31,9 +31,13 @@ function configState() {
     {
       label: "Notifications",
       state:
-        (env.NOTIFICATION_PROVIDER ?? "none") === "webhook" && env.NOTIFICATION_WEBHOOK
-          ? "Webhook"
-          : "Ready for configuration",
+        (env.NOTIFICATION_PROVIDER ?? "none") === "telegram" &&
+        env.TELEGRAM_BOT_TOKEN &&
+        env.TELEGRAM_CHAT_ID
+          ? "Telegram alerts"
+          : (env.NOTIFICATION_PROVIDER ?? "none") === "webhook" && env.NOTIFICATION_WEBHOOK
+            ? "Webhook"
+            : "Ready for configuration",
     },
     {
       label: "Inbound email",

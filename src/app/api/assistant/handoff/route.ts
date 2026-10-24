@@ -13,6 +13,7 @@ import {
   type HandoffContext,
 } from "@/lib/server/records";
 import { getStore } from "@/lib/server/store";
+import { notify } from "@/lib/server/events";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -91,6 +92,15 @@ export async function POST(request: Request) {
           ref: null,
           summary: "A visitor asked DECHY AI to talk to the team",
           actor: "visitor",
+        });
+        // Alert at once: the visitor may still be on the site while the team picks it up.
+        await notify({
+          type: "person.requested",
+          ref: null,
+          title: "A visitor asked DECHY AI for a person",
+          actor: "visitor",
+          page: conv.handoffPage,
+          adminPath: `/admin/conversations/${conv.id}/`,
         });
       } catch {
         // the card still works without storage
