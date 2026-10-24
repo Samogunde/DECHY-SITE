@@ -54,11 +54,16 @@ const SKIP_KEYS = new Set([
 /** Explanatory copy in reading order: hero text, the at-a-glance answers, then the blocks. */
 export function bodyCopy(page: Page, facts: Map<string, Fact>): string[] {
   const out: string[] = [];
+  // Each line reads on its own: an inline list ("label" then "- item" lines) is several lines.
   const push = (s: string) => {
-    try {
-      out.push(toPlainText(s, facts));
-    } catch {
-      out.push(s);
+    for (const line of s.split(/\n+/)) {
+      const text = line.replace(/^-\s+/, "").trim();
+      if (!text) continue;
+      try {
+        out.push(toPlainText(text, facts));
+      } catch {
+        out.push(text);
+      }
     }
   };
   const walk = (value: unknown, key = "") => {

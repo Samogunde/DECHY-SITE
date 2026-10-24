@@ -18,6 +18,20 @@ const OWNER_ADDED = new Set([
   "/resources/comparisons/in-house-team-vs-agency/",
 ]);
 
+// The owner's own articles (24 October 2026) are content/articles/w*.md, outside the plan.
+const articlesDir = path.join(process.cwd(), "content/articles");
+const OWNER_ARTICLES = new Set(
+  fs
+    .readdirSync(articlesDir)
+    .filter((f) => /^w\d\d-.*\.md$/.test(f))
+    .map((f) => fs.readFileSync(path.join(articlesDir, f), "utf8"))
+    .map((raw) => {
+      const type = raw.match(/^type: (.+)$/m)?.[1]?.trim();
+      const slug = raw.match(/^slug: (.+)$/m)?.[1]?.trim();
+      return `/resources/${type}/${slug}/`;
+    }),
+);
+
 describe("the 53 launch article briefs", () => {
   it("are kept as data, all 53, numbered 1 to 53", () => {
     expect(briefs.map((b) => b.number)).toEqual(Array.from({ length: 53 }, (_, i) => i + 1));
@@ -33,7 +47,10 @@ describe("the 53 launch article briefs", () => {
       // Cost guides and comparisons the owner asked for on 21 October 2026 may sit outside the
       // 53-article plan; a numbered article must match its brief.
       // Every cost guide was added at the owner's direction (21 October 2026), outside the plan.
-      const ownerAdded = OWNER_ADDED.has(p.path) || p.path.startsWith("/resources/cost-guides/");
+      const ownerAdded =
+        OWNER_ADDED.has(p.path) ||
+        OWNER_ARTICLES.has(p.path) ||
+        p.path.startsWith("/resources/cost-guides/");
       if (p.article?.number !== undefined || !ownerAdded)
         expect(numbers.has(p.article?.number ?? 0), p.path).toBe(true);
     }

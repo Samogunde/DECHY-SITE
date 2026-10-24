@@ -425,3 +425,13 @@ Owner direction, 22 October 2026. Every figure is an agreed target that the owne
 - **Headlines and timelines.** Price headlines read "Most projects cost X to Y, a first version from Z" for the eight product types. Timeline columns read "Typical timeline from approved scope", with the line "The timeline starts once the scope is approved and we have what we need from you."
 - **Text that runs together.** Prices, labels, and timelines in cards and tables now have real spaces between them, so readers that take the raw text (search, AI answers, copy and paste) no longer see "$24,5003 to 5 weeks".
 - **Design.** The home price cards are redesigned: the price stays on one line, and there is no accent bar on hover. The home testimonials show one large quote beside the list of clients; it moves on by itself every 7 seconds, pauses on hover, and hovering a client shows their quote. The Testimonials page stories move every 4.5 seconds and pause on hover. Some headings carry a calm blue accent on a few words (`[[words]]` in content, rendered by `AccentText`).
+
+## Eighteenth pass (24 October 2026): the owner's 41 articles
+
+Owner direction, 24 October 2026. The owner supplied 50 articles. Nine cover topics already on the site and were skipped (numbers 01 to 05, 13, 25, 32, and 49); the other 41 are published under Resources as `content/articles/w06-*.md` to `w50-*.md`. Their links to the nine skipped topics point at the existing pages.
+
+- **Our prices, not market prices.** Every project figure is a DECHY price fact (`{{fact:price....}}`), so the articles change with `data/pricing/prices.yaml`. Industry articles (healthcare, logistics, fintech, real estate) use the figures of the matching industry cost guides. Third-party fees (subscriptions, hosting, app store fees, AI usage), salaries, regional market rates, and illustrative return examples stay as written, because they are not our prices.
+- **Questions.** Each article's "Common questions" become its FAQ block, with FAQPage structured data.
+- **US spelling, site rules.** Spelling is US English. Titles are at most 60 characters with " | DECHY", descriptions 70 to 160. Jargon is explained in plain words at first use. Wording the validator rejects was reworded: "placeholder", "local teams", and numbered customer counts.
+- **Length.** Twenty-six articles were under the 1,400-word article minimum by 1 to 186 words. Each gained one section, written for its topic, on how we handle that work and what it costs with us. It sits before the questions.
+- **Markdown.** The article parser now reads tables, numbered lists, checklists, "###" subheadings (shown as bold lead-ins), and a line of text followed by a list (kept in place as an inline list).

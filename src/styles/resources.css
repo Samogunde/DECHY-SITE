@@ -270,3 +270,21 @@
 .cmp-table a:hover {
   color: #fff;
 }
+
+/* Inline lists inside article sections (24 October 2026). */
+.article-list {
+  margin: 0.25rem 0 1.25rem;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+  list-style: disc outside;
+}
+.article-list li {
+  display: list-item;
+  padding-left: 0.2rem;
+  color: var(--text-lead, #d2d2d6);
+  line-height: 1.6;
+}
+.article-list li::marker {
+  color: #8b8b93;
+}

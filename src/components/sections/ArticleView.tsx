@@ -24,6 +24,81 @@ const TIME_NOTE =
   "The timeline starts once the scope is approved and we have what we need from you.";
 const isTime = (c: string) => /^(typical )?timeline/i.test(c);
 
+/** A comparison or price table inside the reading column, with its note. */
+function DataTable({
+  t,
+}: {
+  t: { heading: string; columns: string[]; rows: string[][]; note?: string };
+}) {
+  return (
+    <>
+      <div className="cmp-scroll">
+        <table className="cmp-table">
+          <thead>
+            <tr>
+              {t.columns.map((c) => (
+                <th key={c} scope="col">
+                  {isTime(c) ? TIME_HEAD : c}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {t.rows.map((r, ri) => (
+              <tr key={ri}>
+                {r.map((cell, i) =>
+                  i === 0 ? (
+                    <th key={i} scope="row">
+                      <Inline text={cell} />
+                    </th>
+                  ) : (
+                    <td key={i}>
+                      <Inline text={cell} />{" "}
+                    </td>
+                  ),
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {t.note || t.columns.some(isTime) ? (
+        <p className="cmp-note">
+          <Inline
+            text={[t.note, t.columns.some(isTime) ? TIME_NOTE : ""].filter(Boolean).join(" ")}
+          />
+        </p>
+      ) : null}
+    </>
+  );
+}
+
+/** A paragraph, or a label with the inline list that follows it ("- item" lines). */
+function Paragraph({ text }: { text: string }) {
+  const [first, ...lines] = text.split("\n");
+  const items = lines.filter((l) => l.startsWith("- ")).map((l) => l.slice(2));
+  if (!items.length)
+    return (
+      <p>
+        <Inline text={text} />
+      </p>
+    );
+  return (
+    <>
+      <p>
+        <Inline text={first ?? ""} />
+      </p>
+      <ul className="article-list">
+        {items.map((x, i) => (
+          <li key={i}>
+            <Inline text={x} />
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
 /** A call to action inside the reading column. */
 function ArticleCta({
   text,
@@ -252,45 +327,7 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
             {[...(a?.models ?? []).map((k) => modelTable(k)), ...(a?.tables ?? [])].map((t) => (
               <section key={t.heading} className="article-section">
                 <h2 className="article-h2">{t.heading}</h2>
-                <div className="cmp-scroll">
-                  <table className="cmp-table">
-                    <thead>
-                      <tr>
-                        {t.columns.map((c) => (
-                          <th key={c} scope="col">
-                            {isTime(c) ? TIME_HEAD : c}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {t.rows.map((r) => (
-                        <tr key={r.join("|")}>
-                          {r.map((cell, i) =>
-                            i === 0 ? (
-                              <th key={i} scope="row">
-                                <Inline text={cell} />
-                              </th>
-                            ) : (
-                              <td key={i}>
-                                <Inline text={cell} />{" "}
-                              </td>
-                            ),
-                          )}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                {t.note || t.columns.some(isTime) ? (
-                  <p className="cmp-note">
-                    <Inline
-                      text={[t.note, t.columns.some(isTime) ? TIME_NOTE : ""]
-                        .filter(Boolean)
-                        .join(" ")}
-                    />
-                  </p>
-                ) : null}
+                <DataTable t={t} />
               </section>
             ))}
             {price ? (
@@ -354,16 +391,17 @@ export function ArticleView({ page, registry }: { page: Page; registry: Registry
                     {b.heading}
                   </h2>
                   {b.paragraphs.map((p, i) => (
-                    <p key={i}>
-                      <Inline text={p} />
-                    </p>
+                    <Paragraph key={i} text={p} />
+                  ))}
+                  {b.tables.map((t, ti) => (
+                    <DataTable key={ti} t={t} />
                   ))}
                   {b.aside ? (
                     <div className="article-points">
                       <p className="article-points-title">{b.aside.title}</p>
                       <ul>
-                        {b.aside.items.map((x) => (
-                          <li key={x}>
+                        {b.aside.items.map((x, i) => (
+                          <li key={i}>
                             <Inline text={x} />
                           </li>
                         ))}

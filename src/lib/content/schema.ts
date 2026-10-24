@@ -897,6 +897,17 @@ export const Block = z.discriminatedUnion("type", [
     aside: z.object({ title: z.string(), items: z.array(z.string()) }).optional(),
     /** A photograph set beside the opening text (layout "aside"). */
     photo: PhotoRef.optional(),
+    /** Articles: tables that belong to this section, shown after its paragraphs. */
+    tables: z
+      .array(
+        z.object({
+          heading: z.string(),
+          columns: z.array(z.string()).min(2).max(6),
+          rows: z.array(z.array(z.string()).min(2).max(6)).min(1),
+          note: z.string().optional(),
+        }),
+      )
+      .default([]),
   }),
   z.object({
     type: z.literal("index"),

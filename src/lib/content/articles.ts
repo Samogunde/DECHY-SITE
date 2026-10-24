@@ -13,7 +13,11 @@ import { ArticleCompare, ArticleTable, Page } from "./schema";
  *   - paragraphs separated by a blank line;
  *   - "## Heading" to start a section;
  *   - "- item" lines for a list, shown as a "Key points" panel beside that section;
- *   - "## Common questions" followed by "### Question" and its answer, for the FAQ.
+ *   - "1. item" lines for a numbered list (shown like "- item" lists);
+ *   - "| a | b |" lines for a table, shown inside its section after the paragraphs;
+ *   - "### Subheading" inside a section, shown as a bold lead-in to the next paragraph;
+ *   - "## Common questions" (or "## Frequently asked questions") followed by "### Question" and
+ *     its answer, for the FAQ.
  *
  * Optional front matter: author, reviewed (date), answer (the short answer box), related links,
  * compare (comparison table, when to choose each, recommendation), and pricing (a service slug
@@ -65,19 +69,35 @@ function parse(file: string, raw: string): Page {
   const front = Front.parse(YAML.parse(m[1] ?? ""));
   const body = (m[2] ?? "").replace(/\r\n/g, "\n");
 
-  type Sec = { heading: string; paragraphs: string[]; items: string[] };
+  type Table = { heading: string; columns: string[]; rows: string[][] };
+  type Sec = { heading: string; paragraphs: string[]; items: string[]; tables: Table[] };
   const sections: Sec[] = [];
   const faq: { q: string; a: string }[] = [];
   let inFaq = false;
   let current: Sec | undefined;
+  let leadIn = "";
+  // List lines: "- item", "1. item", and checklist "- [ ] item" (the box is dropped).
+  const isItem = (l: string) => /^(-\s|\d+\.\s)/.test(l.trim());
+  const item = (l: string) =>
+    l
+      .trim()
+      .replace(/^(-|\d+\.)\s+/, "")
+      .replace(/^\[[ xX]\]\s*/, "")
+      .trim();
+  const cells = (line: string) =>
+    line
+      .trim()
+      .replace(/^\||\|$/g, "")
+      .split("|")
+      .map((c) => c.trim());
   for (const chunk of body
     .split(/\n{2,}/)
     .map((c) => c.trim())
     .filter(Boolean)) {
     if (chunk.startsWith("## ")) {
       const heading = chunk.slice(3).trim();
-      inFaq = /^common questions$/i.test(heading);
-      current = inFaq ? undefined : { heading, paragraphs: [], items: [] };
+      inFaq = /^(common|frequently asked) questions$/i.test(heading);
+      current = inFaq ? undefined : { heading, paragraphs: [], items: [], tables: [] };
       if (current) sections.push(current);
       continue;
     }
@@ -92,13 +112,40 @@ function parse(file: string, raw: string): Page {
       continue;
     }
     if (!current) {
-      current = { heading: front.h1, paragraphs: [], items: [] };
+      current = { heading: front.h1, paragraphs: [], items: [], tables: [] };
       sections.push(current);
     }
-    if (chunk.split("\n").every((l) => l.startsWith("- "))) {
-      current.items.push(...chunk.split("\n").map((l) => l.slice(2).trim()));
+    const lines = chunk.split("\n");
+    // Text followed by a list ("What the team does:" then "- item" lines) stays in place as one
+    // paragraph with an inline list; the text before the list labels it.
+    const prose = (text: string[]) => {
+      const k = text.findIndex(isItem);
+      const listed = k >= 0 && text.slice(k).every(isItem);
+      const label = [leadIn, ...(listed ? text.slice(0, k) : text)].filter(Boolean).join(" ");
+      current!.paragraphs.push(
+        listed
+          ? `${label}\n${text
+              .slice(k)
+              .map((l) => `- ${item(l)}`)
+              .join("\n")}`
+          : label,
+      );
+      leadIn = "";
+    };
+    if (chunk.startsWith("### ")) {
+      // A subheading inside a section becomes a bold lead-in to what follows it.
+      const [head, ...rest] = lines;
+      leadIn = `**${(head ?? "").slice(4).trim().replace(/[.:]$/, "")}.**`;
+      if (rest.length) prose(rest);
+    } else if (lines.every((l) => l.trim().startsWith("|"))) {
+      const rows = lines.filter((l) => !/^\s*\|?\s*:?-{2,}/.test(l)).map(cells);
+      const [columns, ...rest] = rows;
+      if (columns && rest.length)
+        current.tables.push({ heading: current.heading, columns, rows: rest });
+    } else if (lines.every(isItem) && !leadIn) {
+      current.items.push(...lines.map(item));
     } else {
-      current.paragraphs.push(chunk.replace(/\n/g, " "));
+      prose(lines);
     }
   }
 
@@ -112,6 +159,7 @@ function parse(file: string, raw: string): Page {
     ...(s.items.length && s.paragraphs.length
       ? { aside: { title: "Key points", items: s.items } }
       : {}),
+    tables: s.tables,
   }));
   if (faq.length >= 2)
     blocks.push({
