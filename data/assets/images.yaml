@@ -9697,3 +9697,212 @@ assets:
     usage: [home, company-certifications, testimonials]
     approval: approved
     acquired: "2026-10-22"
+
+  # ---- DECHY team portraits (owner-supplied, 24 October 2026) ----
+  - id: asset.photo-team-managing-director
+    kind: file
+    file: public/photos/team-managing-director.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-managing-director.md.
+    originalFilename: "Managing_Director.png"
+    sha256: 29d73cc159de0fd30517294831162dc64f822a6d99203baafc3f809bafa15038
+    width: 1000
+    height: 1000
+    alt: "Peter Lawson, Managing Director at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-director-of-software-engineering
+    kind: file
+    file: public/photos/team-director-of-software-engineering.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-director-of-software-engineering.md.
+    originalFilename: "Director_of_Software_Engineering.png"
+    sha256: 63ef88f0aac09fae8d686b04e1baa64531b3a098eb4973115543a47f01a7ec13
+    width: 1000
+    height: 1000
+    alt: "Aaron Douglas, Director of Software Engineering at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-ai-automation-lead
+    kind: file
+    file: public/photos/team-ai-automation-lead.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-ai-automation-lead.md.
+    originalFilename: "AI and Automation Lead Portrait.png"
+    sha256: 210e4cf62e4be09050e96d7a7f42539a217d48316215718311e95ae96aa1ad96
+    width: 1000
+    height: 1000
+    alt: "Kunal Kapoor, AI & Automation Lead at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-cloud-devops-architect
+    kind: file
+    file: public/photos/team-cloud-devops-architect.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-cloud-devops-architect.md.
+    originalFilename: "Cloud_and_Dev_Architect.png"
+    sha256: de3a27353a6d10548b133e9ab2b9388a80d3704f5046c1614bbeb305a4fd7057
+    width: 1000
+    height: 1000
+    alt: "Toby Harrison, Cloud & DevOps Architect at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-head-of-product-design
+    kind: file
+    file: public/photos/team-head-of-product-design.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-head-of-product-design.md.
+    originalFilename: "Head_of_Product_Design.png"
+    sha256: d1edf3267837c9b6e31154a51c03bc23deeb0e5a6246bf9402ac96780bc91ab0
+    width: 1000
+    height: 1000
+    alt: "Natalie Ross, Head of Product Design at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-cybersecurity-engineering-lead
+    kind: file
+    file: public/photos/team-cybersecurity-engineering-lead.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-cybersecurity-engineering-lead.md.
+    originalFilename: "Cyber_Security_Engineering_Lead.png"
+    sha256: 3c516091dc2bd03d1a97cae86378c581322e2d8cf899f474ac1d5ce7332cc59a
+    width: 1000
+    height: 1000
+    alt: "Nabil Hossain, Cybersecurity Engineering Lead at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-data-analytics-lead
+    kind: file
+    file: public/photos/team-data-analytics-lead.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-data-analytics-lead.md.
+    originalFilename: "Data_Analytics_Lead.png"
+    sha256: 3c4823f5bc609529cb2822c0203247faf1b37ff8199fd2be2cd47a2976f3717a
+    width: 1000
+    height: 1000
+    alt: "David Wood, Data & Analytics Lead at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-director-of-delivery
+    kind: file
+    file: public/photos/team-director-of-delivery.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-director-of-delivery.md.
+    originalFilename: "Director_of_Delivery.png"
+    sha256: 1277c7812c05ec0de95a7312fbcab95a3e5a5e670f05e362d8c4e6d04ee90226
+    width: 1000
+    height: 1000
+    alt: "James Anderson, Director of Delivery at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-quality-engineering-manager
+    kind: file
+    file: public/photos/team-quality-engineering-manager.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-quality-engineering-manager.md.
+    originalFilename: "Quality_Engineering_Management.png"
+    sha256: 11502ece053fed00a5849932a459bef788f426442d11f12235edee9a9f0fff58
+    width: 1000
+    height: 1000
+    alt: "Jessica Flynn, Quality Engineering Manager at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-client-partnerships-director
+    kind: file
+    file: public/photos/team-client-partnerships-director.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-client-partnerships-director.md.
+    originalFilename: "Client_Partnership_Director.png"
+    sha256: c12fe122f4453ae389de68f773f055ae12c35bb7551a0341257abd43b3c490aa
+    width: 1000
+    height: 1000
+    alt: "Owen Fletcher, Client Partnerships Director at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-technical-program-manager
+    kind: file
+    file: public/photos/team-technical-program-manager.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-technical-program-manager.md.
+    originalFilename: "Technical Program Manager portrait (supplied in chat)"
+    sha256: 08ca38c5ba4acf3bd884a9f867114c22341932916bb9b98b303085e63969f1b3
+    width: 1000
+    height: 1000
+    alt: "Dylan Shaw, Technical Program Manager at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-business-analysis-lead
+    kind: file
+    file: public/photos/team-business-analysis-lead.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-business-analysis-lead.md.
+    originalFilename: "Confident Executive in Modern Office.png"
+    sha256: 93553a0b0d70f46d9edc94d37a90bea00d94715d48160d05a3a809b48e6a1e03
+    width: 1000
+    height: 1000
+    alt: "Neil Prescott, Business Analysis Lead at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"
+
+  - id: asset.photo-team-project-consultant
+    kind: file
+    file: public/photos/team-project-consultant.jpg
+    role: photograph
+    source: owner-supplied
+    creator: Supplied by DECHY
+    license: Supplied by the owner for the DECHY team section. Rights confirmed by the owner; no visible attribution is required. Evidence in data/assets/licenses/photo-team-project-consultant.md.
+    originalFilename: "Project_Consultant.png"
+    sha256: baf73bf1924d8429f15791d240bad24168c758f299428f051f06f4b357c7cba3
+    width: 1000
+    height: 1000
+    alt: "Samuel Abims, Project Consultant at DECHY"
+    usage: [company]
+    approval: approved
+    acquired: "2026-10-24"

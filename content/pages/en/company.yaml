@@ -187,42 +187,75 @@ sections:
     heading: The people who design, build, and support your systems
     intro: Strategy, engineering, design, and delivery in one team, so nothing gets lost between handoffs.
     members:
-      - name: Benedict Shaw
+      - name: Peter Lawson
         role: "Managing Director"
         bio: "Sets company direction and keeps delivery priorities aligned with customer needs. Focuses on clear scope, accountable decisions, and durable working relationships."
-      - name: Freya Montrose
+        photo: { asset: asset.photo-team-managing-director, layout: rail, position: "50% 30%" }
+      - name: Aaron Douglas
         role: "Director of Software Engineering"
         bio: "Guides application architecture, code quality, and engineering decisions across software initiatives. Favors systems that are understandable, maintainable, and ready to evolve."
-      - name: Alina Westcott
+        photo:
+          {
+            asset: asset.photo-team-director-of-software-engineering,
+            layout: rail,
+            position: "50% 30%",
+          }
+      - name: Kunal Kapoor
         role: "AI & Automation Lead"
         bio: "Shapes responsible AI-assisted workflows and practical automation patterns. Connects model capabilities with review steps, exception handling, and real operational needs."
-      - name: Callum Everly
+        photo: { asset: asset.photo-team-ai-automation-lead, layout: rail, position: "50% 30%" }
+      - name: Toby Harrison
         role: "Cloud & DevOps Architect"
         bio: "Plans deployment environments, infrastructure patterns, and release processes. Brings reliability and operational ownership into early technical decisions."
-      - name: Isadora Lockhart
+        photo: { asset: asset.photo-team-cloud-devops-architect, layout: rail, position: "50% 30%" }
+      - name: Natalie Ross
         role: "Head of Product Design"
         bio: "Leads product discovery, interaction design, and interface systems. Works to make complex products feel clear without stripping away useful detail."
-      - name: Matteo Redmond
+        photo: { asset: asset.photo-team-head-of-product-design, layout: rail, position: "50% 30%" }
+      - name: Nabil Hossain
         role: "Cybersecurity Engineering Lead"
         bio: "Focuses on identity, access boundaries, risk treatment, and secure operational design. Helps make security requirements specific enough to build and test."
-      - name: Claudia Barrow
+        photo:
+          {
+            asset: asset.photo-team-cybersecurity-engineering-lead,
+            layout: rail,
+            position: "50% 30%",
+          }
+      - name: David Wood
         role: "Data & Analytics Lead"
         bio: "Connects data definitions, reporting needs, and decision workflows. Emphasizes context and interpretation rather than dashboards full of disconnected metrics."
-      - name: Ronan Ashford
+        photo: { asset: asset.photo-team-data-analytics-lead, layout: rail, position: "50% 30%" }
+      - name: James Anderson
         role: "Director of Delivery"
         bio: "Coordinates planning, dependencies, stakeholder communication, and delivery reviews. Keeps project decisions visible and milestones grounded in agreed scope."
-      - name: Tessa Pembroke
+        photo: { asset: asset.photo-team-director-of-delivery, layout: rail, position: "50% 30%" }
+      - name: Jessica Flynn
         role: "Quality Engineering Manager"
         bio: "Defines quality checks across requirements, interfaces, integrations, and edge cases. Promotes repeatable testing and clear acceptance criteria."
-      - name: Dorian Waverly
+        photo:
+          { asset: asset.photo-team-quality-engineering-manager, layout: rail, position: "50% 30%" }
+      - name: Owen Fletcher
         role: "Client Partnerships Director"
         bio: "Coordinates discovery conversations and keeps business priorities connected to proposed solutions. Values honest scope, useful feedback, and clear communication."
-      - name: Mira Hensley
+        photo:
+          {
+            asset: asset.photo-team-client-partnerships-director,
+            layout: rail,
+            position: "50% 30%",
+          }
+      - name: Dylan Shaw
         role: "Technical Program Manager"
         bio: "Connects business owners, designers, and technical contributors through delivery planning. Tracks risks and decisions so teams can move forward with shared context."
-      - name: Julian Hawthorne
-        role: "Digital Strategy Lead"
-        bio: "Works across web, product, discovery, and digital operations to shape practical improvement plans. Brings customer journeys and business goals into the same conversation."
+        photo:
+          { asset: asset.photo-team-technical-program-manager, layout: rail, position: "50% 30%" }
+      - name: Neil Prescott
+        role: "Business Analysis Lead"
+        bio: "Turns how a business really works into clear requirements before anything is built. Maps processes, data, and decisions with the people who run them, so the scope matches the need."
+        photo: { asset: asset.photo-team-business-analysis-lead, layout: rail, position: "50% 30%" }
+      - name: Samuel Abims
+        role: "Project Consultant"
+        bio: "Is often the first person new clients speak to. Listens to what a business needs, explains the options and costs in plain words, and stays the main point of contact through the project."
+        photo: { asset: asset.photo-team-project-consultant, layout: rail, position: "50% 30%" }
       - name: Luis Castellan
         role: "Mobile Product Lead"
         bio: "Builds mobile apps for people who work away from a desk, such as technicians, drivers, and field crews. Makes sure they can finish a job on the phone, add photos and notes on the spot, and keep working when the signal drops."
