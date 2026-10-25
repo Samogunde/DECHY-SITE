@@ -754,8 +754,8 @@ export const Block = z.discriminatedUnion("type", [
           name: z.string(),
           role: z.string(),
           lead: z.boolean().default(false),
-          /** One line: the outcome this person is responsible for. */
-          owns: z.string().max(90),
+          /** A short bio: what this person does for clients (owner, 25 October 2026). */
+          owns: z.string().max(400),
           focus: z.array(z.string()).max(3).default([]),
           photo: PhotoRef.optional(),
         }),

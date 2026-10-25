@@ -15,6 +15,7 @@ import {
 import { getStore } from "@/lib/server/store";
 import { notify } from "@/lib/server/events";
 import { forwardToNetlify } from "@/lib/contact/netlify-forms";
+import { siteOrigin } from "@/lib/site";
 import {
   LIVE_NOTE,
   linkMessage,
@@ -237,14 +238,29 @@ export async function POST(request: Request) {
       // team's Telegram. Neither may fail the visitor's request.
       const chatPage = conv.handoffPage || conv.lastPage;
       await Promise.all([
-        forwardToNetlify("assistant", {
+        // Through the contact form, which reliably reaches the mailbox: Netlify's spam filter held
+        // the separate transcript form (owner, 25 October 2026). The email carries the note, the
+        // visitor's last messages, and a link to the full conversation in DECHY Admin.
+        forwardToNetlify("contact", {
           name: d.name,
           email: d.email,
           organization: d.organization,
-          message: d.note,
-          transcript: transcript(conv, 8000),
+          interest: "Assistant hand-off",
+          timeline: "",
+          budget: "",
+          message: [
+            d.note,
+            conv.messages
+              .filter((m) => m.role === "visitor")
+              .slice(-3)
+              .map((m) => `Visitor: ${m.text.slice(0, 300)}`)
+              .join("\n"),
+            `Full conversation: ${siteOrigin()}/admin/conversations/${conv.id}/`,
+          ]
+            .filter(Boolean)
+            .join("\n\n"),
           reference: result.ref,
-          page: chatPage,
+          landing_page: chatPage,
         }),
         (async () => {
           if (!telegramConfigured()) return;

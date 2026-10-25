@@ -189,7 +189,7 @@ sections:
       - name: Peter Lawson
         role: "Managing Director"
         lead: true
-        owns: "Projects that deliver what was agreed, on clear terms."
+        owns: "Peter turns ambitious business goals into clear technology direction. He helps organizations see the bigger picture, uncover opportunities, and make smarter decisions about the digital solutions that move their businesses forward."
         focus:
           - "Strategy"
           - "Client partnerships"
@@ -198,7 +198,7 @@ sections:
       - name: Aaron Douglas
         role: "Director of Software Engineering"
         lead: true
-        owns: "Software that stays fast, secure, and easy to change after launch."
+        owns: "Aaron brings complex ideas to life through thoughtful software engineering. From application architecture to integrations and scalable systems, he focuses on building technology that performs reliably today and remains ready for tomorrow."
         focus:
           - "Architecture"
           - "Code quality"
@@ -207,7 +207,7 @@ sections:
       - name: James Anderson
         role: "Director of Delivery"
         lead: true
-        owns: "Projects that ship on the agreed scope, with no surprises."
+        owns: "James turns complex project requirements into coordinated action. He brings people, priorities, and timelines together, keeping projects focused, communication clear, and delivery aligned with the outcomes that matter most to clients."
         focus:
           - "Planning"
           - "Risk management"
@@ -215,7 +215,7 @@ sections:
         photo: { asset: asset.photo-team-director-of-delivery, layout: rail, position: "50% 30%" }
       - name: Samuel Abims
         role: "Project Consultant"
-        owns: "A clear first plan and price for every new client."
+        owns: "Samuel helps clients move from uncertainty to a workable plan. He brings structure to early ideas, clarifies what a project truly needs, and helps establish the scope, priorities, and next steps for successful execution."
         focus:
           - "Discovery"
           - "Scoping"
@@ -223,7 +223,7 @@ sections:
         photo: { asset: asset.photo-team-project-consultant, layout: rail, position: "50% 30%" }
       - name: Luis Castellan
         role: "Mobile Product Lead"
-        owns: "Field apps that let crews finish the job on the phone."
+        owns: "Luis bridges user needs and practical mobile innovation. He shapes mobile experiences that feel intuitive, work around real-world challenges, and help people get important tasks done with less friction, wherever their work takes them."
         focus:
           - "iOS and Android"
           - "Offline use"
@@ -231,7 +231,7 @@ sections:
         photo: { asset: asset.photo-team-mobile-product-lead, layout: rail, position: "50% 30%" }
       - name: Amara Linwood
         role: "Conversational AI Lead"
-        owns: "Assistants that answer well and hand over to people at the right moment."
+        owns: "Amara makes AI more useful in everyday business. She focuses on intelligent conversations that help people find answers, simplify routine interactions, and move smoothly from automated assistance to human support when it matters."
         focus:
           - "AI assistants"
           - "Handover rules"
@@ -239,7 +239,7 @@ sections:
         photo: { asset: asset.photo-team-conversational-ai-lead, layout: rail, position: "50% 30%" }
       - name: Daniel Fairbanks
         role: "Security Consultant"
-        owns: "Access that is granted and removed the same way every time."
+        owns: "Daniel helps businesses build confidence in the systems they depend on. He focuses on practical security controls, access governance, and risk reduction, helping organizations protect important information without losing sight of how work gets done."
         focus:
           - "Access control"
           - "Security reviews"
@@ -247,7 +247,7 @@ sections:
         photo: { asset: asset.photo-team-security-consultant, layout: rail, position: "50% 30%" }
       - name: Maya Thornbury
         role: "Brand Designer"
-        owns: "One brand kit the whole team can use with confidence."
+        owns: "Maya transforms brand ideas into clear, memorable visual identities. From brand systems to digital assets, she brings consistency and character to the way businesses present themselves, helping every touchpoint feel recognizably connected."
         focus:
           - "Brand identity"
           - "Design systems"
