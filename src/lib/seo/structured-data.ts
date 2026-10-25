@@ -39,9 +39,9 @@ export function organizationNode(registry: Registry): Thing {
     url: `${siteOrigin()}/`,
     logo: {
       "@type": "ImageObject",
-      url: absoluteUrl("/brand/dechy-logo.png"),
-      width: "2172",
-      height: "724",
+      url: absoluteUrl("/brand/dechy-logo-square.png"),
+      width: "1200",
+      height: "1200",
     },
     description: `${DESCRIPTOR}. ${fact(registry, "company.breadth")}`,
     foundingDate: fact(registry, "company.founded"),

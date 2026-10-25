@@ -40,8 +40,8 @@ test.describe("brand assets", () => {
     await expect(page.locator('link[rel="icon"]').first()).toHaveAttribute("href", /favicon|icon/);
     await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveCount(1);
     const og = await page.locator('meta[property="og:image"]').getAttribute("content");
-    expect(og).toBe(`${baseURL}/og/dechy-technology-solutions-social-image.png`);
-    expect((await request.get("/og/dechy-technology-solutions-social-image.png")).status()).toBe(
+    expect(og).toBe(`${baseURL}/og/dechy-share-image.png`);
+    expect((await request.get("/og/dechy-share-image.png")).status()).toBe(
       200,
     );
     await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(

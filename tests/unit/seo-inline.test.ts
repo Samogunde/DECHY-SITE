@@ -73,7 +73,7 @@ describe("metadata", () => {
     );
     expect(m.openGraph?.url).toBe("https://example.test/software-development/");
     expect(JSON.stringify(m.openGraph)).toContain(
-      "/og/dechy-technology-solutions-social-image.png",
+      "/og/dechy-share-image.png",
     );
     expect((m.twitter as { card: string }).card).toBe("summary_large_image");
   });

@@ -7,7 +7,7 @@ Status: implemented 7 to 8 October 2026 (owner briefs "Next production implement
 | Asset | Role |
 |---|---|
 | `brand/logos/primary/dechy-logo.png` (supplied as "DECHY Geometric Logo on White.png") | The site logo: header, footer, Organization logo (`/brand/dechy-logo.png`). Wordmark without the descriptor. Shown by framing the untouched file with `mix-blend-mode: darken`, so its white background disappears on Warm Off White without editing pixels. |
-| `brand/social/DECHY Technology Solutions Social Image.png` | Default Open Graph and X image, served as `/og/dechy-technology-solutions-social-image.png` (scaled to 1200 wide and padded with its own background to 1200 x 630 so platforms that crop to 1.91:1 never cut the wordmark or descriptor). Never the site logo. |
+| `brand/social/DECHY Technology Solutions Social Image.png` | Default Open Graph and X image, served as `/og/dechy-share-image.png` (scaled to 1200 wide and padded with its own background to 1200 x 630 so platforms that crop to 1.91:1 never cut the wordmark or descriptor). Never the site logo. |
 | `brand/monogram/DECHY_Monogram_On_Dark_Background.png` | favicon.ico (16, 32, 48), icon.png (96), and `/brand/dechy-monogram.png` (128, the assistant's identity in the launcher and panel), surround made transparent. Never redrawn. |
 | `brand/monogram/Minimalist Navy D Emblem with Blue Accent.png` | apple-icon (180) and manifest icons (192, 512, maskable). |
 

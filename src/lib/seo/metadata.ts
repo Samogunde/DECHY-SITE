@@ -3,7 +3,7 @@ import type { Page } from "@/lib/content/schema";
 import { DESCRIPTOR, SITE_NAME, absoluteUrl, indexingEnabled } from "@/lib/site";
 
 export const OG_IMAGE = {
-  path: "/og/dechy-technology-solutions-social-image.png",
+  path: "/og/dechy-share-image.png",
   width: 1200,
   height: 630,
   alt: `${SITE_NAME}: ${DESCRIPTOR}`,

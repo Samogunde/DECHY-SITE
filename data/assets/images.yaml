@@ -58,14 +58,29 @@ assets:
     approval: approved
     acquired: "2026-10-07"
 
+  - id: asset.logo-square
+    kind: file
+    file: public/brand/dechy-logo-square.png
+    role: logo
+    source: owner-supplied
+    creator: DECHY
+    license: Owned by DECHY. Built by scripts/brand-derivatives.ts from the approved primary logo, scaled to 960 wide and centred on its own background in 1200 x 1200, for the Organization structured data (owner, 25 October 2026).
+    sha256: 6509fdf114c8d51ccecebcee820c3be1a1e005a5679a498be80a8894a52ee531
+    width: 1200
+    height: 1200
+    alt: "DECHY"
+    usage: [structured-data]
+    approval: approved
+    acquired: "2026-10-25"
+
   - id: asset.og-default
     kind: file
-    file: public/og/dechy-technology-solutions-social-image.png
+    file: public/og/dechy-share-image.png
     role: open-graph
     source: owner-supplied
     creator: DECHY
-    license: Owned by DECHY. Built by scripts/brand-derivatives.ts from the approved social image, scaled to 1200 wide and padded with its own background to 1200 x 630 so platforms that crop to 1.91:1 never cut the artwork.
-    sha256: bbb09cc0a50de429c00894eb1f4cc65f3ef5ea5ff9b84ff4d3009c922aaa207d
+    license: Owned by DECHY. Built by scripts/brand-derivatives.ts from the approved social image, scaled to 560 wide and centred on its own background in 1200 x 630, so a square or wide crop (search result cards) always shows the whole mark (owner, 25 October 2026).
+    sha256: db4f1c3cbf4c1fa78bf62b9a4bb787c7741df5ad58cb58740296e44344e47659
     width: 1200
     height: 630
     alt: "DECHY: Technology, Software, AI & Digital Solutions"

@@ -21,7 +21,7 @@ for (const p of PAGES) {
       expect(await meta('meta[property="og:title"]')).toBe(p.title);
       expect(await meta('meta[property="og:url"]')).toBe(`${baseURL}${p.path}`);
       expect(await meta('meta[property="og:image"]')).toBe(
-        `${baseURL}/og/dechy-technology-solutions-social-image.png`,
+        `${baseURL}/og/dechy-share-image.png`,
       );
       expect(await meta('meta[name="twitter:card"]')).toBe("summary_large_image");
       expect(await page.locator("html").getAttribute("lang")).toBe("en");

@@ -3,7 +3,7 @@
  * derivatives are scaled, padded, or have their plain background made transparent, nothing else.
  *
  *   brand/logos/primary/dechy-logo.png                      -> public/brand/dechy-logo.png (byte copy)
- *   brand/social/DECHY Technology Solutions Social Image.png -> public/og/dechy-technology-solutions-social-image.png
+ *   brand/social/DECHY Technology Solutions Social Image.png -> public/og/dechy-share-image.png
  *        (scaled to 1200 wide and padded top and bottom with its own background to 1200 x 630, so
  *         platforms that crop to 1.91:1 never cut into the wordmark or the descriptor)
  *   brand/monogram/DECHY_Monogram_On_Dark_Background.png    -> src/app/favicon.ico (16, 32, 48) and
@@ -141,17 +141,27 @@ async function main() {
 
   fs.copyFileSync(LOGO, p("public/brand/dechy-logo.png"));
 
-  // Social image: 1200 wide, padded to 1200 x 630 with the master's own background.
-  const scaled = await sharp(SOCIAL).resize({ width: 1200, kernel: "lanczos3" }).toBuffer();
-  const h = (await sharp(scaled).metadata()).height!;
-  await sharp(scaled)
-    .extend({
-      top: Math.floor((630 - h) / 2),
-      bottom: Math.ceil((630 - h) / 2),
-      background: { r: 254, g: 254, b: 254 },
-    })
-    .png({ compressionLevel: 9 })
-    .toFile(p("public/og/dechy-technology-solutions-social-image.png"));
+  // Logo and social image centred on their own background with clear space, so a square or wide
+  // crop (Google's result cards crop to a square) always shows the whole mark (owner, 25 October
+  // 2026). The artwork is only scaled, never redrawn or recoloured.
+  const centred = async (src: string, width: number, W: number, H: number, out: string) => {
+    const scaled = await sharp(src).resize({ width, kernel: "lanczos3" }).toBuffer();
+    const h = (await sharp(scaled).metadata()).height!;
+    await sharp(scaled)
+      .extend({
+        top: Math.floor((H - h) / 2),
+        bottom: Math.ceil((H - h) / 2),
+        left: Math.floor((W - width) / 2),
+        right: Math.ceil((W - width) / 2),
+        background: { r: 254, g: 254, b: 254 },
+      })
+      .png({ compressionLevel: 9 })
+      .toFile(p(out));
+  };
+  // 1200 x 630 share image: the mark sits inside the central 630 x 630 square.
+  await centred(SOCIAL, 560, 1200, 630, "public/og/dechy-share-image.png");
+  // 1200 x 1200 logo for the Organization structured data.
+  await centred(LOGO, 960, 1200, 1200, "public/brand/dechy-logo-square.png");
 
   const tile = await (await tileWithAlpha()).png().toBuffer();
   const at = (size: number) =>
