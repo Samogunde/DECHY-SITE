@@ -908,7 +908,7 @@ export default function AssistantPanel({
                   With the DECHY team
                 </>
               ) : (
-                "Answers from our site"
+                "Here to help, any time"
               )}
             </p>
           </div>
@@ -1054,8 +1054,8 @@ export default function AssistantPanel({
           <div className="assist-hello">
             <p className="assist-hello-title">Hi, how can we help?</p>
             <p className="assist-hello-text">
-              Pick a question, or type your own. Answers come from our site, with links to read
-              more. Want a person instead? Tap &ldquo;{PERSON}&rdquo; at any time.
+              Pick a question, or type your own. Want a person instead? Tap &ldquo;{PERSON}&rdquo;
+              at any time.
             </p>
             <ul className="assist-starters" aria-label="Common questions">
               {STARTERS.map((s) => (
@@ -1461,7 +1461,7 @@ export default function AssistantPanel({
               ? "A person at DECHY reads what you write here."
               : isAI
                 ? "AI assistant: it can make mistakes."
-                : "Automated answers from our site, not a person."}{" "}
+                : "Automated assistant, not a person."}{" "}
             Please don&apos;t share passwords or payment details.{" "}
             <Link href="/privacy/" onClick={followed}>
               Privacy
