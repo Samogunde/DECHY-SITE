@@ -1,0 +1,41 @@
+# DECHY
+
+> DECHY: Technology, Software, AI & Digital Solutions. A global technology company that designs, builds, and supports custom software, websites and web apps, mobile apps, AI and automation, system integrations, cloud and security, data, design, branding, search visibility, digital marketing, and technology consulting. Since 2010, DECHY has helped over 1,200 organizations, companies, firms, brands, businesses, individuals, professionals, teams, and other clients across a wide range of industries and business types.
+
+DECHY works with clients worldwide, online. It has no physical offices. Contact: hello@dechytech.com or https://www.dechytech.com/contact/
+
+## Main pages
+
+- [Home](https://www.dechytech.com/): what DECHY does and how to start
+- [Services](https://www.dechytech.com/services/): all 15 services
+- [Industries](https://www.dechytech.com/industries/): how DECHY helps by sector
+- [Solutions](https://www.dechytech.com/solutions/): common business problems and how they are solved
+- [Technologies](https://www.dechytech.com/technologies/): the platforms and tools DECHY builds with
+- [Our Work](https://www.dechytech.com/work/): the kinds of systems DECHY builds, and case studies
+- [About us](https://www.dechytech.com/company/): who DECHY is and how it works
+- [Contact](https://www.dechytech.com/contact/): talk to the team or request a quote
+
+## Services
+
+- [Software Development](https://www.dechytech.com/software-development/)
+- [Web Development](https://www.dechytech.com/web-development/)
+- [Mobile App Development](https://www.dechytech.com/mobile-app-development/)
+- [AI & Machine Learning](https://www.dechytech.com/ai/)
+- [Automation, Workflows & AI Solutions](https://www.dechytech.com/automation/)
+- [Cloud & DevOps](https://www.dechytech.com/cloud/)
+- [Cybersecurity](https://www.dechytech.com/cybersecurity/)
+- [Data & Analytics](https://www.dechytech.com/data-analytics/)
+- [API & Systems Integration](https://www.dechytech.com/api-integration/)
+- [Ecommerce Solutions](https://www.dechytech.com/ecommerce/)
+- [UI/UX & Product Design](https://www.dechytech.com/ui-ux/)
+- [Branding & Creative](https://www.dechytech.com/branding/)
+- [SEO, AEO & GEO](https://www.dechytech.com/seo-aeo-geo/)
+- [Digital Marketing](https://www.dechytech.com/digital-marketing/)
+- [Consulting & Digital Transformation](https://www.dechytech.com/consulting/)
+
+## Prices and resources
+
+- [What it costs](https://www.dechytech.com/cost/): typical price ranges and cost guides
+- [Cost estimator](https://www.dechytech.com/tools/cost-estimator/): a price range for a project in about two minutes
+- [Resources](https://www.dechytech.com/resources/): guides, comparisons, cost guides, and a glossary
+- [Sitemap](https://www.dechytech.com/sitemap.xml): every public page
