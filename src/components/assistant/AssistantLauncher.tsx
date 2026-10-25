@@ -17,6 +17,8 @@ export function openAssistant(mode: AssistantMode = "guide") {
 
 /** Per-viewer convenience only: whether the panel was open, to reopen it after a reload. */
 const OPEN_KEY = "dechy-assistant-open";
+/** Whether the "Hi, need help?" tip was shown this visit. */
+const TIP_KEY = "dechy-assistant-tip";
 
 function read(storage: () => Storage, key: string): string | null {
   try {
@@ -120,8 +122,20 @@ export function AssistantLauncher({ ai }: { ai: boolean }) {
   const minimize = useCallback(() => hide("minimized"), [hide]);
   const close = useCallback(() => hide("closed"), [hide]);
 
+  // One small "Hi, need help?" tip after 8 seconds, once per visit (owner, 25 October 2026).
+  const [tip, setTip] = useState(false);
+  useEffect(() => {
+    if (read(session, TIP_KEY)) return;
+    const t = window.setTimeout(() => {
+      write(session, TIP_KEY, "1");
+      setTip(true);
+    }, 8000);
+    return () => window.clearTimeout(t);
+  }, []);
+
   const open = () => {
     track("assistant_open", { page_path: window.location.pathname });
+    setTip(false);
     setState("open");
     write(session, OPEN_KEY, "1");
   };
@@ -139,25 +153,41 @@ export function AssistantLauncher({ ai }: { ai: boolean }) {
           tabIndex={blocked ? -1 : undefined}
           onClick={open}
         >
+          {/* A chat bubble with a small spark: help, quickly. */}
           <span className="assist-launcher-icon" aria-hidden="true">
-            <svg viewBox="0 0 20 20">
+            <svg viewBox="0 0 24 24">
               <path
-                d="M4 5.5A2.5 2.5 0 0 1 6.5 3h7A2.5 2.5 0 0 1 16 5.5v5a2.5 2.5 0 0 1-2.5 2.5H9l-3.5 3v-3h0A2.5 2.5 0 0 1 4 10.5z"
+                d="M4.5 7.5A3 3 0 0 1 7.5 4.5h6M19.5 11v2a3 3 0 0 1-3 3h-5.5l-4.5 3.5V16h0a3 3 0 0 1-2-2.8V10"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.7"
+                strokeWidth="1.8"
+                strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M7.5 7.5h5M7.5 10h3"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
+                d="M18 2.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"
+                fill="currentColor"
               />
             </svg>
           </span>
-          <span>Ask DECHY</span>
+          <span className="assist-launcher-dot" aria-hidden="true" />
+          <span className="assist-launcher-text">Ask DECHY</span>
         </button>
+      ) : null}
+      {tip && state === "closed" && !blocked ? (
+        <div className="assist-tip" role="status">
+          <button type="button" className="assist-tip-open" onClick={open}>
+            Hi, need help?
+          </button>
+          <button
+            type="button"
+            className="assist-tip-close"
+            aria-label="Dismiss"
+            onClick={() => setTip(false)}
+          >
+            ×
+          </button>
+        </div>
       ) : null}
       {state !== "closed" ? (
         <Suspense fallback={null}>

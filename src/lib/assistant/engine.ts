@@ -292,7 +292,7 @@ const CHIPS: Record<string, { service: string; solution?: string; ask?: string }
 
 const misses = (history: Turn[]) =>
   history.filter(
-    (t) => t.role === "assistant" && t.text.startsWith("I want to make sure I understand"),
+    (t) => t.role === "assistant" && /^I'm (still )?not sure I understood/.test(t.text),
   ).length;
 
 /** Context the conversation already established (from earlier turns), never from the page. */
@@ -368,21 +368,66 @@ export function guidedReply(
     case "greeting":
       return {
         ...base,
-        reply:
-          "Hello. I'm DECHY's assistant. What are you working on? Tell me in your own words, or pick a starting point.",
+        reply: "Hi, I'm the DECHY assistant. What can I help you with?",
         suggestions: STARTERS,
       };
     case "thanks":
       return {
         ...base,
-        reply:
-          "You're welcome. Is there anything else you'd like to work through? I can also bring in the DECHY team whenever you like.",
+        reply: "You're welcome. Anything else I can help with?",
+        suggestions: STARTERS,
       };
+    case "ack":
+    case "yes":
+      return { ...base, reply: "Great. What would you like to know next?", suggestions: STARTERS };
+    case "no":
+      return {
+        ...base,
+        reply: "No problem. If anything else comes up, I'm here.",
+        suggestions: STARTERS,
+      };
+    case "how-are-you":
+      return {
+        ...base,
+        reply: "I'm doing well, thanks for asking. How can I help you today?",
+        suggestions: STARTERS,
+      };
+    case "goodbye":
+      return {
+        ...base,
+        reply: "Thanks for stopping by. If you need anything later, I'm right here.",
+      };
+    case "compliment":
+      return {
+        ...base,
+        reply: "Thank you, that's kind. What else can I help with?",
+        suggestions: STARTERS,
+      };
+    case "small-talk":
+      return {
+        ...base,
+        reply:
+          "I'd love to chat, but I'm best at questions about DECHY's services. What would you like to know?",
+        suggestions: STARTERS,
+      };
+    case "gibberish": {
+      const m = misses(history);
+      return {
+        ...base,
+        reply:
+          m >= 1
+            ? "I'm still not sure I understood. A person on the team can help: tap Talk to a person, or pick one of these."
+            : "I'm not sure I understood. Here is what I can help with.",
+        suggestions: STARTERS,
+        offerHuman: m >= 1,
+      };
+    }
     case "identity":
       return {
         ...base,
         reply:
-          "I'm DECHY's website assistant, an automated assistant rather than a person. I can explain what DECHY does, help you work out what you need, and bring in the DECHY team whenever you'd like to talk to someone.",
+          "I'm the DECHY assistant, an automated helper rather than a person. I can answer questions about our services, prices, and how projects work, and bring in the team whenever you'd like to talk to someone.",
+        suggestions: STARTERS,
       };
     case "capability":
       return {
@@ -485,9 +530,9 @@ export function guidedReply(
       ...base,
       reply:
         m >= 1
-          ? "I want to make sure I understand, and a person on the team can usually work it out quickly. You can talk to the team at any time, or describe what happens today and what you'd like to happen instead."
-          : "I want to make sure I understand. Could you tell me a bit more about what you're trying to do? For example, what happens today, and what would you like to happen instead?",
-      suggestions: m >= 1 ? [] : STARTERS,
+          ? "I'm still not sure I understood. A person on the team can help: tap Talk to a person, or pick one of these."
+          : "I'm not sure I understood. Here is what I can help with.",
+      suggestions: STARTERS,
       offerHuman: m >= 1,
     };
   }

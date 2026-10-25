@@ -263,9 +263,9 @@ export function ContactForm({ services }: { services: Option[] }) {
           aria-describedby={describedBy("message", true)}
         />
         <p id={`${id("message")}-hint`} className="hint">
-          Describe the situation in your own words: what you want to build, connect, or fix, and
-          what is in the way. A few sentences is enough. Please do not include passwords or
-          sensitive personal data.
+          At least 20 characters. Describe what you want to build, connect, or fix, and what is in
+          the way: a few sentences is enough. Please do not include passwords or sensitive personal
+          data.
         </p>
         {errors.message ? (
           <p id={`${id("message")}-err`} className="error">

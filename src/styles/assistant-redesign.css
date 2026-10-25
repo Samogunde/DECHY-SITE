@@ -1,0 +1,317 @@
+/* ------------------------------------------------------------------------------------------
+   Assistant redesign (owner, 25 October 2026): softer, lighter, less boxy. Loaded after
+   assistant.css, so these rules settle the launcher and panel.
+   ------------------------------------------------------------------------------------------ */
+
+/* Launcher: a 60px round button with a brand-blue ring, a spark-and-chat icon, and an online dot.
+   On desktop it opens into an "Ask DECHY" pill on hover. */
+.assist-launcher {
+  width: 3.75rem;
+  height: 3.75rem;
+  min-height: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 0;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background:
+    linear-gradient(#0b0b0d, #0b0b0d) padding-box,
+    conic-gradient(from 210deg, #2f6fed, #7fa6f3, #2f6fed 55%, #1d3f8f, #2f6fed) border-box;
+  box-shadow:
+    0 18px 40px -16px rgb(47 111 237 / 0.55),
+    0 8px 20px -10px rgb(0 0 0 / 0.8);
+  overflow: visible;
+  transition:
+    width 240ms var(--ease-out),
+    transform 200ms var(--ease-out),
+    opacity 200ms var(--ease-out),
+    box-shadow 200ms var(--ease-out);
+}
+.assist-launcher-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: radial-gradient(circle at 30% 25%, #4d86f3, #2f6fed 60%, #2459c9);
+}
+.assist-launcher-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.assist-launcher-dot {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  left: auto;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid #0b0b0d;
+  border-radius: 50%;
+  background: #34c37a;
+}
+.assist-launcher-text {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    max-width 240ms var(--ease-out),
+    opacity 160ms var(--ease-out),
+    margin 240ms var(--ease-out);
+}
+@media (hover: hover) and (min-width: 40rem) {
+  .assist-launcher:hover,
+  .assist-launcher:focus-visible {
+    width: auto;
+    padding: 0 1.2rem 0 0.35rem;
+    justify-content: flex-start;
+  }
+  .assist-launcher:hover .assist-launcher-text,
+  .assist-launcher:focus-visible .assist-launcher-text {
+    max-width: 8rem;
+    margin-left: 0.65rem;
+    opacity: 1;
+  }
+}
+.assist-tip {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 4.5rem);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.35rem 0.35rem 0.95rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 16px 16px 4px 16px;
+  background: rgb(22 22 26 / 0.92);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: 0.9375rem;
+  box-shadow: 0 16px 34px -18px rgb(0 0 0 / 0.9);
+  animation: assist-launcher-in 260ms var(--ease-out) both;
+}
+.assist-tip-open {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.assist-tip-close {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgb(255 255 255 / 0.7);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+@media (min-width: 64rem) {
+  .assist-tip {
+    right: 1.5rem;
+    bottom: 6rem;
+  }
+}
+
+/* Panel: dark glass, 380 x 600, 20px corners, with a 200ms open. */
+@media (min-width: 40rem) {
+  .assist-panel {
+    width: min(23.75rem, calc(100vw - 2rem));
+    height: min(37.5rem, calc(100dvh - 2rem));
+    border: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: 20px;
+    background: rgb(16 16 19 / 0.88);
+    backdrop-filter: blur(20px) saturate(140%);
+    box-shadow:
+      0 40px 80px -30px rgb(0 0 0 / 0.95),
+      0 0 0 1px rgb(47 111 237 / 0.08);
+  }
+  .assist-panel:not([hidden]) {
+    animation: assist-panel-in 200ms var(--ease-out) both;
+  }
+}
+@keyframes assist-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .assist-panel:not([hidden]),
+  .assist-tip {
+    animation: none;
+  }
+}
+.assist-head {
+  border-bottom: 1px solid rgb(255 255 255 / 0.07) !important;
+  background: linear-gradient(180deg, rgb(47 111 237 / 0.12), transparent) !important;
+}
+.assist-head-mark {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(47 111 237 / 0.5);
+}
+.assist-toolbar {
+  border: 0 !important;
+  gap: 0.25rem !important;
+}
+.assist-tool {
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: rgb(255 255 255 / 0.72) !important;
+}
+.assist-tool:hover {
+  background: rgb(255 255 255 / 0.06) !important;
+  color: #fff !important;
+}
+.assist-log {
+  background: transparent !important;
+}
+
+/* Messages: the assistant on the left with its avatar, the visitor on the right in brand blue. */
+.assist-msg-assistant,
+.assist-msg-team {
+  position: relative;
+  padding-left: 2.4rem;
+}
+.assist-msg-assistant::before,
+.assist-msg-team::before {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  background: #0b0b0d url("/brand/dechy-monogram.png") center / 70% no-repeat;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.12);
+}
+.assist-bubble {
+  border: 0 !important;
+  border-radius: 18px 18px 18px 6px !important;
+  background: rgb(255 255 255 / 0.07) !important;
+  color: #f2f2f4 !important;
+  line-height: 1.55 !important;
+}
+.assist-msg-visitor .assist-bubble {
+  border-radius: 18px 18px 6px 18px !important;
+  background: linear-gradient(180deg, #3a78f0, #2f6fed) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px -12px rgb(47 111 237 / 0.8);
+}
+.assist-msg-team .assist-bubble {
+  background: rgb(52 195 122 / 0.12) !important;
+}
+
+/* Options: outlined pills. */
+:is(.assist-chip, .assist-starter) {
+  min-height: 2.75rem !important;
+  padding: 0 1rem !important;
+  border: 1px solid rgb(111 149 224 / 0.45) !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: #dfe8fb !important;
+  font-weight: 600 !important;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease;
+}
+:is(.assist-chip, .assist-starter):hover {
+  border-color: #6f95e0 !important;
+  background: rgb(47 111 237 / 0.14) !important;
+}
+.assist-starters {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.5rem !important;
+}
+.assist-hello {
+  text-align: left;
+}
+.assist-hello-title {
+  font-size: 1.125rem !important;
+}
+
+/* Links: small cards with a title. */
+.assist-sources a {
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.04);
+}
+
+/* Typing dots. */
+.assist-dots span {
+  background: #7fa6f3 !important;
+}
+
+/* Input: one clean rounded field with a round send button. */
+.assist-foot {
+  border-top: 1px solid rgb(255 255 255 / 0.07) !important;
+  background: transparent !important;
+}
+.assist-input {
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.3rem 0.3rem 0.3rem 0.9rem !important;
+  border: 1px solid rgb(255 255 255 / 0.12) !important;
+  border-radius: 999px !important;
+  background: rgb(255 255 255 / 0.05) !important;
+}
+.assist-input:focus-within {
+  border-color: rgb(111 149 224 / 0.7) !important;
+}
+.assist-input textarea {
+  min-height: 2.5rem !important;
+  padding: 0.55rem 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.assist-send {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  min-width: 2.75rem !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #2f6fed !important;
+  color: #fff !important;
+}
+.assist-send:disabled {
+  background: rgb(255 255 255 / 0.1) !important;
+  color: rgb(255 255 255 / 0.5) !important;
+}
+
+/* Hand-off: a compact card inside the conversation, not a big form. */
+.assist-card {
+  gap: 0.6rem !important;
+  padding: 0.9rem !important;
+  border: 1px solid rgb(52 195 122 / 0.35) !important;
+  border-radius: 16px !important;
+  background: rgb(52 195 122 / 0.06) !important;
+}
+.assist-card .field {
+  gap: 0.25rem !important;
+  margin: 0 !important;
+}
+.assist-card :is(input, textarea) {
+  min-height: 2.75rem !important;
+  border: 1px solid rgb(255 255 255 / 0.14) !important;
+  border-radius: 12px !important;
+  background: rgb(0 0 0 / 0.25) !important;
+}
+.assist-card-title {
+  font-size: 1rem !important;
+}
+.assist-btn-sm {
+  border-radius: 999px !important;
+}
+:is(.assist-offer, .assist-notice, .assist-after, .assist-sent) {
+  border-radius: 16px !important;
+}
+
+/* Primary buttons in the panel keep white text on blue. */
+.assist-btn-sm:not(.assist-btn-quiet) {
+  color: #fff !important;
+}

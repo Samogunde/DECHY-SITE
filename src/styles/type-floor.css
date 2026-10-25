@@ -189,3 +189,45 @@
     font-size: clamp(2.625rem, 1.625rem + 1.25vw, 2.75rem) !important;
   }
 }
+
+/* Form errors are red, bold, and impossible to miss on the dark theme (owner, 25 October 2026). */
+:root {
+  --form-error: #ff8a8a;
+}
+:is(.error, .nl-error, .est-error, .assist-error, .admin-error, .form-error) {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.4rem;
+  color: var(--form-error) !important;
+  font-weight: 600 !important;
+}
+:is(.error, .nl-error, .est-error, .assist-error)::before {
+  content: "!";
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
+  border-radius: 50%;
+  background: var(--form-error);
+  color: #1a0b0b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+:is(input, textarea, select)[aria-invalid="true"],
+:is(input, textarea, select):user-invalid {
+  border-color: var(--form-error) !important;
+  box-shadow: 0 0 0 3px rgb(255 138 138 / 0.2) !important;
+}
+.field:has([aria-invalid="true"]) label {
+  color: var(--form-error) !important;
+}
+.form-result.border-error-text {
+  border-color: var(--form-error) !important;
+  background: rgb(255 138 138 / 0.08) !important;
+}
+.form-result.border-error-text p {
+  color: var(--form-error) !important;
+}

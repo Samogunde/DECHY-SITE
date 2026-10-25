@@ -8,6 +8,14 @@ export type Intent =
   | { kind: "starter"; id: StarterId }
   | { kind: "greeting" }
   | { kind: "thanks" }
+  | { kind: "ack" }
+  | { kind: "how-are-you" }
+  | { kind: "goodbye" }
+  | { kind: "yes" }
+  | { kind: "no" }
+  | { kind: "compliment" }
+  | { kind: "small-talk" }
+  | { kind: "gibberish" }
   | { kind: "identity" }
   | { kind: "capability" }
   | { kind: "unsure" }
@@ -17,8 +25,32 @@ export type Intent =
 
 const GREETING =
   /^(hi|hello|hey|hiya|howdy|greetings|good\s+(morning|afternoon|evening|day)|morning|afternoon|evening)\b[\s,!.]*(there|team|dechy|everyone|all)?[\s,!.]*/i;
-const THANKS =
-  /^(thanks|thank\s+you|thx|cheers|great|perfect|ok(ay)?|got\s+it|sounds\s+good|nice|cool)\b[\s,!.]*(so\s+much|a\s+lot|again)?[\s,!.]*$/i;
+const THANKS = /^(thanks|thank\s+you|thx|ty|cheers)\b[\s,!.]*(so\s+much|a\s+lot|again)?[\s,!.]*$/i;
+/** Acknowledgements and reactions: "ok", "got it", "lol". */
+const ACK =
+  /^(ok(ay)?|k|got\s+it|sounds\s+good|great|perfect|nice|cool|alright|fine|lol|haha+|hehe|hmm+|i\s+see|understood|noted)[\s,!.]*$/i;
+const HOW_ARE_YOU =
+  /^(how\s+(are|r)\s+(you|u|things)|how['’]?s\s+it\s+going|how\s+is\s+it\s+going|how\s+have\s+you\s+been|how\s+do\s+you\s+do|what['’]?s\s+up|sup|you\s+ok(ay)?)\b[\w\s,!.?]*$/i;
+const GOODBYE =
+  /^(bye|goodbye|good\s*bye|see\s+(you|ya)|later|cya|have\s+a\s+(good|nice|great)\s+\w+|that['’]?s\s+all|i['’]?m\s+done|good\s+night)[\s,!.]*$/i;
+const YES = /^(yes|yeah|yep|yup|sure|of\s+course|yes\s+please|definitely|absolutely)[\s,!.]*$/i;
+const NO = /^(no|nope|nah|no\s+thanks|not\s+now|no\s+thank\s+you)[\s,!.]*$/i;
+const COMPLIMENT =
+  /^((you['’]?re|you\s+are|that['’]?s|this\s+is)\s+(great|awesome|amazing|helpful|brilliant|excellent|very\s+helpful|so\s+helpful)|(great|good|nice)\s+(job|work|bot|answer)|love\s+it|well\s+done)/i;
+/** Off-topic small talk: answered briefly, then back to what the assistant is for. */
+const SMALL_TALK =
+  /\b(joke|weather|raining|sunny|temperature|football|soccer|basketball|cricket|sports?|movie|film|music|song|recipe|hungry|bored|meaning\s+of\s+life|your\s+favou?rite|do\s+you\s+like|are\s+you\s+happy|tell\s+me\s+something\s+(fun|interesting)|horoscope)\b/i;
+const KEYBOARD = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
+/** Keyboard mashing, or a single word with no vowels: "asdfgh", "qwerty", "xkcdq". */
+function gibberish(text: string): boolean {
+  const words = text.trim().split(/\s+/);
+  if (words.length > 2) return false;
+  const t = text.toLowerCase().replace(/[^a-z]/g, "");
+  if (t.length < 4) return false;
+  if (KEYBOARD.some((row) => row.includes(t.slice(0, 4)))) return true;
+  // Five letters or more: short terms such as "html" or "crm" are real words here.
+  return t.length >= 5 && !/[aeiouy]/.test(t);
+}
 const IDENTITY =
   /\b(who\s+(are|r)\s+(you|u)|what\s+are\s+you|are\s+you\s+(a\s+|an\s+)?(bot|robot|ai|human|person|real|chatbot)|your\s+name|who\s+am\s+i\s+(talking|speaking)\s+(to|with))\b/i;
 const CAPABILITY =
@@ -52,6 +84,7 @@ export function classify(raw: string): Intent {
   const text = raw.trim();
   for (const [id, label] of Object.entries(STARTER_LABELS))
     if (norm(text) === norm(label)) return { kind: "starter", id: id as StarterId };
+  if (HOW_ARE_YOU.test(text)) return { kind: "how-are-you" };
   const greeting = text.match(GREETING);
   if (greeting) {
     const rest = text.slice(greeting[0].length).trim();
@@ -59,8 +92,15 @@ export function classify(raw: string): Intent {
     return classify(rest);
   }
   if (THANKS.test(text)) return { kind: "thanks" };
+  if (ACK.test(text)) return { kind: "ack" };
+  if (GOODBYE.test(text)) return { kind: "goodbye" };
+  if (YES.test(text)) return { kind: "yes" };
+  if (NO.test(text)) return { kind: "no" };
+  if (COMPLIMENT.test(text)) return { kind: "compliment" };
+  if (gibberish(text)) return { kind: "gibberish" };
   if (IDENTITY.test(text)) return { kind: "identity" };
   if (CAPABILITY.test(text)) return { kind: "capability" };
+  if (SMALL_TALK.test(text)) return { kind: "small-talk" };
   if (PAGE_QUESTION.test(text)) return { kind: "page-question" };
   const def = text.match(DEFINITION);
   if (def && !/\b(you|we|our|us|i|my)\b/i.test(def[3] ?? ""))

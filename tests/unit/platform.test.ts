@@ -200,7 +200,7 @@ describe("assistant engine", () => {
     const vague = guidedReply("asdf qwerty", []);
     expect(vague.service).toBe("");
     expect(vague.recommendations).toEqual([]);
-    expect(vague.reply).toMatch(/tell me a bit more/i);
+    expect(vague.reply).toMatch(/not sure I understood/i);
   });
 
   const ctx = (over: Partial<RespondContext> = {}): RespondContext => ({
@@ -362,7 +362,7 @@ describe("assistant engine", () => {
       for (const text of ["Hello", "Hi", "Hey", "Good morning", "Good afternoon", "Good evening"]) {
         const r = guidedReply(text, [], page);
         expect(r.reply, `${text} on ${path}`).toMatch(
-          /^Hello\. I'm DECHY's assistant\. What are you working on\?/,
+          /^Hi, I'm the DECHY assistant\. What can I help you with\?/,
         );
         expect(r.recommendations, `${text} on ${path}`).toEqual([]);
         expect(r.service).toBe("");
@@ -371,7 +371,7 @@ describe("assistant engine", () => {
       }
       for (const text of ["Who are you?", "What are you?"]) {
         const r = guidedReply(text, [], page);
-        expect(r.reply).toMatch(/DECHY's website assistant/);
+        expect(r.reply).toMatch(/I'm the DECHY assistant/);
         expect(r.recommendations).toEqual([]);
       }
       for (const text of ["What can you do?", "How can you help?", "What can DECHY AI do?"]) {
