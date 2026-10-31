@@ -4,7 +4,7 @@ locale: en
 path: /data-analytics/bigquery/
 parent: /data-analytics/
 entityId: tech.bigquery
-title: BigQuery Consulting and Development | DECHY
+title: BigQuery Consulting and Development | DECHY Tech
 description: "BigQuery from DECHY: building a data warehouse on Google Cloud, keeping its cost in check, and connecting it to reports, dashboards, and AI."
 breadcrumbLabel: BigQuery
 intent:

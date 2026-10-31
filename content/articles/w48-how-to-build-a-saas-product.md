@@ -3,7 +3,7 @@ slug: how-to-build-a-saas-product
 type: guides
 category: decision
 service: software-development
-title: "How to Build a SaaS Product: Idea to Customers | DECHY"
+title: "How to Build a SaaS Product: Idea to Customers | DECHY Tech"
 description: "A practical SaaS roadmap from idea to your first 100 paying customers: validate demand, build an MVP, price, launch, get early users and improve retention."
 h1: "From Idea to First Customers: A SaaS Launch Roadmap"
 summary: "A practical roadmap for SaaS (software sold as an online subscription). Go from idea to your first paying customers: validate demand, build an MVP (minimum viable product, a first version with only the essentials), price, launch and keep users."

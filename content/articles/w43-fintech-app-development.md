@@ -3,7 +3,7 @@ slug: fintech-app-development
 type: guides
 category: industry
 service: software-development
-title: "Fintech App Development: Cost and Compliance | DECHY"
+title: "Fintech App Development: Cost and Compliance | DECHY Tech"
 description: "What it takes to build a fintech app: core features, security, regulation, partner choices, realistic costs and the mistakes that delay or sink launches."
 h1: "Fintech App Development: Costs, Compliance and Common Pitfalls"
 summary: "What it takes to build a fintech app: core features, security, regulation, partner choices, realistic costs and the mistakes that delay or sink launches."

@@ -3,7 +3,7 @@ slug: real-estate-crm-software
 type: guides
 category: industry
 service: software-development
-title: "Real Estate CRM Software: Features That Matter | DECHY"
+title: "Real Estate CRM Software: Features That Matter | DECHY Tech"
 description: "The real estate CRM features that matter: lead capture, follow-up automation, pipeline tracking, listings and communication. Plus build vs buy and costs."
 h1: Real Estate CRM Features That Actually Help Agents Close
 summary: "The real estate CRM (customer relationship management system) features that matter: lead capture, follow-up automation, pipeline tracking, listings and communication. Plus build vs buy and costs."

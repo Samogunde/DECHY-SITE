@@ -2,7 +2,7 @@ id: page.privacy
 kind: legal
 locale: en
 path: /privacy/
-title: "Privacy Policy | DECHY"
+title: "Privacy Policy | DECHY Tech"
 description: "How DECHY handles personal information from this website: forms, the newsletter, the assistant, analytics, cookies, service providers, and your rights."
 breadcrumbLabel: Privacy policy
 h1: Privacy policy
@@ -22,7 +22,7 @@ sections:
     sections:
       - heading: Who we are
         paragraphs:
-          - "This website is operated by DECHY, a global technology company. In this policy, DECHY, we, and us mean the operator of this website. You can contact us about privacy at {{email:hello}} or through the [contact page](/contact/)."
+          - "This website is operated by DECHY Tech, a global technology company. In this policy, DECHY Tech, DECHY, we, and us mean the operator of this website. You can contact us about privacy at {{email:hello}} or through the [contact page](/contact/)."
       - heading: What information we collect
         paragraphs:
           - "Contact and quote forms. We receive your name, your email address, what you need help with, and the message you write. You may also choose to give an organization name, a timeline, and an estimated budget."

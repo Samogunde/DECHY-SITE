@@ -4,7 +4,7 @@ locale: en
 path: /cloud/kubernetes/
 parent: /cloud/
 entityId: tool.kubernetes
-title: "Kubernetes Consulting and Implementation | DECHY"
+title: "Kubernetes Consulting and Implementation | DECHY Tech"
 description: "Kubernetes from DECHY: an honest assessment of whether you need it, and where you do, a platform that is simple to run, secure, and affordable."
 breadcrumbLabel: Kubernetes
 intent:

@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/devops-infrastructure/
 entityId: workarea.devops-infrastructure
-title: "DevOps Pipelines, Monitoring and Infrastructure | DECHY"
+title: "DevOps Pipelines, Monitoring and Infrastructure | DECHY Tech"
 description: "DevOps and infrastructure that make releasing software routine: automated testing, safe releases, monitoring, and recovery, so changes reach users calmly."
 breadcrumbLabel: DevOps and Infrastructure
 parent: /work/

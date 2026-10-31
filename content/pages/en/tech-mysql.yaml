@@ -4,7 +4,7 @@ locale: en
 path: /data-analytics/mysql/
 parent: /data-analytics/
 entityId: tech.mysql
-title: "MySQL Consulting and Migration | DECHY"
+title: "MySQL Consulting and Migration | DECHY Tech"
 description: "MySQL from DECHY: upgrading old versions, speeding up slow queries, running managed MySQL, and deciding when to stay or move to PostgreSQL."
 breadcrumbLabel: MySQL
 intent:

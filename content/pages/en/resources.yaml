@@ -2,7 +2,7 @@ id: page.resources
 kind: hub
 locale: en
 path: /resources/
-title: "Technology Guides and Decision Resources | DECHY"
+title: "Technology Guides and Decision Resources | DECHY Tech"
 description: "Guides, cost guides, comparisons, and a glossary from DECHY to help you plan, budget for, and choose software, websites, apps, and AI."
 breadcrumbLabel: Resources
 intent:

@@ -4,7 +4,7 @@ locale: en
 path: /solutions/legacy-system-modernization/
 parent: /solutions/
 entityId: sol.legacy-system-modernization
-title: Legacy System Modernization Services | DECHY
+title: Legacy System Modernization Services | DECHY Tech
 description: "Legacy system modernization from DECHY: moving old business software to a supported, maintainable setup in safe stages, without stopping the business."
 breadcrumbLabel: Legacy system modernization
 intent:

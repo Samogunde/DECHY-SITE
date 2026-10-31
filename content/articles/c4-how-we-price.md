@@ -5,7 +5,7 @@ category: cost
 service: consulting
 pricing: all
 group: pricing
-title: "How We Price Software and Web Projects | DECHY"
+title: "How We Price Software and Web Projects | DECHY Tech"
 description: "How DECHY prices projects: a short call, a written plan with a fixed quote and timeline, typical ranges for all fifteen services, and what changes the price."
 h1: "How we price projects"
 summary: We price every project in writing after a short call, with a plan, a fixed quote, and a timeline. This page shows the typical range for each of our fifteen services and explains what moves a price up or down.

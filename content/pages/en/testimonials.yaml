@@ -2,7 +2,7 @@ id: page.testimonials
 kind: hub
 locale: en
 path: /testimonials/
-title: "Client Testimonials and Reviews | DECHY"
+title: "Client Testimonials and Reviews | DECHY Tech"
 description: "What our clients say about working with DECHY on custom software, websites, mobile apps, AI, automation, cloud, and more, by service and by industry."
 breadcrumbLabel: Testimonials
 intent:

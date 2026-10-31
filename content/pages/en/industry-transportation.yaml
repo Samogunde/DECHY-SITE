@@ -5,7 +5,7 @@ locale: en
 path: /industries/transportation/
 parent: /industries/
 entityId: ind.transportation
-title: Transportation and Fleet Management Software | DECHY
+title: Transportation and Fleet Management Software | DECHY Tech
 description: "Transportation software from DECHY: fleet management, driver apps, route planning,
   booking, and tracking for transport and fleet operators."
 breadcrumbLabel: Transportation

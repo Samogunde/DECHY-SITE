@@ -5,7 +5,7 @@ locale: en
 path: /industries/travel/
 parent: /industries/
 entityId: ind.travel
-title: Travel Booking Platform and Tour Software | DECHY
+title: Travel Booking Platform and Tour Software | DECHY Tech
 description: "Travel and tourism software from DECHY: booking platforms, tour and activity booking,
   itinerary apps, and supplier integrations for travel companies."
 breadcrumbLabel: Travel and tourism

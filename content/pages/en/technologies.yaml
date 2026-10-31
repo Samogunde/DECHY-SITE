@@ -2,7 +2,7 @@ id: page.technologies
 kind: hub
 locale: en
 path: /technologies/
-title: "Technologies We Use and How We Choose | DECHY"
+title: "Technologies We Use and How We Choose | DECHY Tech"
 description: "The languages, frameworks, platforms, and tools DECHY works with, and how we choose among them: by fit, maintainability, cost, and risk, not fashion."
 breadcrumbLabel: Technologies
 intent:

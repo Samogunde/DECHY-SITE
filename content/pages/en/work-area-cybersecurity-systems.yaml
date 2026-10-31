@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/cybersecurity-systems/
 entityId: workarea.cybersecurity-systems
-title: "Cybersecurity Systems: Access, Data and Monitoring | DECHY"
+title: "Cybersecurity Systems: Access and Monitoring | DECHY Tech"
 description: "Cybersecurity systems that control who can reach what, protect data, and detect problems early: the layers, how we test them, and what no system can promise."
 breadcrumbLabel: Cybersecurity Systems
 parent: /work/

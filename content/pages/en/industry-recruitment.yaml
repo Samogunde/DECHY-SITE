@@ -5,7 +5,7 @@ locale: en
 path: /industries/recruitment/
 parent: /industries/
 entityId: ind.recruitment
-title: Recruitment and HR Software Development | DECHY
+title: Recruitment and HR Software Development | DECHY Tech
 description: "Recruitment and HR software from DECHY: job boards, applicant tracking, candidate and
   client portals, onboarding, and AI screening tools."
 breadcrumbLabel: HR and recruitment

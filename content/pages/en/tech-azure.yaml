@@ -4,7 +4,7 @@ locale: en
 path: /cloud/azure/
 parent: /cloud/
 entityId: plat.azure
-title: "Microsoft Azure Cloud Services | DECHY"
+title: "Microsoft Azure Cloud Services | DECHY Tech"
 description: "Azure work from DECHY: building and running applications on Microsoft Azure, with Microsoft identity in mind, plus migration, security, and cost control."
 breadcrumbLabel: Azure
 intent:

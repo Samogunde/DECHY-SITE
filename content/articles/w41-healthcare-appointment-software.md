@@ -3,7 +3,7 @@ slug: healthcare-appointment-software
 type: guides
 category: industry
 service: software-development
-title: "Healthcare Appointment Software: Features, Cost | DECHY"
+title: "Healthcare Appointment Software: Features, Cost | DECHY Tech"
 description: "What to look for in healthcare appointment software: must-have features, privacy and security basics, build vs buy, integrations and typical costs."
 h1: "Healthcare Appointment Software: Features, Privacy and Cost"
 summary: "What to look for in healthcare appointment software: must-have features, privacy and security basics, build vs buy, integrations and typical costs."

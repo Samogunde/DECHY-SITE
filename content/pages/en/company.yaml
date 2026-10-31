@@ -2,7 +2,7 @@ id: page.company
 kind: company
 locale: en
 path: /company/
-title: "About Us: Global Software and Technology Company | DECHY"
+title: "About Us: A Global Technology Company | DECHY Tech"
 description: "About DECHY, a global technology and software company: who we help, how we think, how
   we work, and how to start a project with us."
 breadcrumbLabel: About us
@@ -43,7 +43,7 @@ sections:
     variant: hub
     eyebrow: About us
     headline: About DECHY
-    lead: "DECHY is a global company for Technology, Software, AI & Digital Solutions. We help
+    lead: "DECHY Tech is a global company for Technology, Software, AI & Digital Solutions. We help
       organizations build, connect, automate, and scale, working with clients remotely, around the
       world."
     photo:

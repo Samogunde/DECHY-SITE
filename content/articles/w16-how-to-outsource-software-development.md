@@ -3,7 +3,7 @@ slug: how-to-outsource-software-development
 type: guides
 category: guide
 service: software-development
-title: "How to Outsource Software Development Well | DECHY"
+title: "How to Outsource Software Development Well | DECHY Tech"
 description: "A guide to outsourcing software development: write a brief, choose a partner, set up governance, protect your IP and keep control of quality and cost."
 h1: How to Outsource Software Development Without Losing Control
 summary: "A guide to outsourcing software development: write a brief, choose a partner, set up governance, protect your IP and keep control of quality and cost."

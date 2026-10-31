@@ -4,7 +4,7 @@ locale: en
 path: /cloud/firebase/
 parent: /cloud/
 entityId: plat.firebase
-title: Firebase Development Services | DECHY
+title: Firebase Development Services | DECHY Tech
 description: "Firebase development from DECHY: launching apps quickly on Google's ready-made back end, knowing its limits and costs, and moving off it when needed."
 breadcrumbLabel: Firebase
 intent:

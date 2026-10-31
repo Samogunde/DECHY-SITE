@@ -3,7 +3,7 @@ slug: questions-to-ask-a-software-development-company
 type: guides
 category: guide
 service: software-development
-title: 15 Questions to Ask a Software Development Company | DECHY
+title: 15 Questions to Ask a Development Company | DECHY Tech
 description: The 15 questions that reveal whether a software development company is right for you, with what a good answer sounds like and which answers are warnings.
 h1: 15 Questions to Ask Before Hiring a Software Development Company
 summary: The 15 questions that reveal whether a software development company is right for you, with what a good answer sounds like and which answers are warnings.

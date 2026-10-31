@@ -4,7 +4,7 @@ slug: wordpress-vs-custom-website
 type: comparisons
 category: comparison
 service: web-development
-title: "WordPress vs Custom Website: Which Is Right? | DECHY"
+title: "WordPress vs Custom Website: Which Is Right? | DECHY Tech"
 description: "WordPress or a custom-built website? A side-by-side comparison of cost, editing, speed, security, and flexibility, with when each is the right choice."
 h1: "WordPress vs a custom website: which is right for you?"
 summary: WordPress gives you a proven content system with thousands of plugins. A custom website is built from scratch for exactly what you need. This comparison explains the trade-offs in cost, editing, speed, security, and growth.

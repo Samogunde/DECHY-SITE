@@ -4,7 +4,7 @@ type: cost-guides
 category: cost
 group: industry
 service: software-development
-title: "Real Estate Software Development Cost | DECHY"
+title: "Real Estate Software Development Cost | DECHY Tech"
 description: "What real estate software costs: agency websites with live listings, property management portals, tenant apps, listing feeds, and owner reporting."
 h1: "How much does real estate software development cost?"
 summary: Real estate software usually costs between $6,000 and $48,000. An agency website with live listings sits at the low end; a property management portal for owners, tenants, and staff sits at the high end. Listing feeds, payments, and multi-property permissions drive the price.

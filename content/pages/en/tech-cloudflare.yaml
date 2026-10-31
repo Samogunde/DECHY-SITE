@@ -4,7 +4,7 @@ locale: en
 path: /cloud/cloudflare/
 parent: /cloud/
 entityId: plat.cloudflare
-title: Cloudflare Setup and Consulting Services | DECHY
+title: Cloudflare Setup and Consulting Services | DECHY Tech
 description: "Cloudflare services from DECHY: faster pages, DNS, firewall rules, and attack protection, set up and tuned so your site stays quick and available."
 breadcrumbLabel: Cloudflare
 intent:

@@ -3,7 +3,7 @@ slug: e-learning-platform-development
 type: guides
 category: industry
 service: software-development
-title: "E-Learning Platform Development: Features, Cost | DECHY"
+title: "E-Learning Platform Development: Features, Cost | DECHY Tech"
 description: "How to build an e-learning platform or LMS: must-have features, build vs buy, video hosting, costs, timelines and mistakes that hurt course completion."
 h1: "E-Learning Platform Development: Features, Costs and Options"
 summary: "How to build an e-learning platform or LMS: must-have features, build vs buy, video hosting, costs, timelines and mistakes that hurt course completion."

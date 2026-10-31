@@ -5,7 +5,7 @@ locale: en
 path: /industries/legal/
 parent: /industries/
 entityId: ind.legal
-title: Legal Software and Law Firm Technology | DECHY
+title: Legal Software and Law Firm Technology | DECHY Tech
 description: "Legal software from DECHY: client portals, intake, document automation, matter
   management, and AI tools for law firms and legal teams."
 breadcrumbLabel: Legal

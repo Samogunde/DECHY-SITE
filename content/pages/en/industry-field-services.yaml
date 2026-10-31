@@ -5,7 +5,7 @@ locale: en
 path: /industries/field-services/
 parent: /industries/
 entityId: ind.field-services
-title: Field Service App and Scheduling Software | DECHY
+title: Field Service App and Scheduling Software | DECHY Tech
 description: "Field service software from DECHY: booking, dispatch, technician apps, quotes, and
   invoicing for trades and home service companies."
 breadcrumbLabel: Home and field services

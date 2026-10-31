@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/api-integrations/
 entityId: workarea.api-integrations
-title: "Custom API Integrations Between Business Tools | DECHY"
+title: "Custom API Integrations Between Business Tools | DECHY Tech"
 description: "API integrations connect your tools so information flows between them: how they work, what can go wrong, and how to design connections that last."
 breadcrumbLabel: API Integrations
 parent: /work/

@@ -5,7 +5,7 @@ category: cost
 group: build
 service: ai
 pricing: ai
-title: "AI Chatbot Development Cost in 2026: Real Ranges | DECHY"
+title: "AI Chatbot Development Cost in 2026 | DECHY Tech"
 description: "What an AI chatbot costs in 2026: ready-made versus custom builds, price ranges, running costs, and what drives the price up or down."
 h1: How Much Does an AI Chatbot Cost to Build?
 summary: "What an AI chatbot costs in 2026: ready-made versus custom builds, price ranges, running costs, and what drives the price up or down."

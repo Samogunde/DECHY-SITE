@@ -5,7 +5,7 @@ locale: en
 path: /industries/fintech/
 parent: /industries/
 entityId: ind.fintech
-title: Fintech Software and Payment App Development | DECHY
+title: Fintech Software and Payment App Development | DECHY Tech
 description: "Fintech software from DECHY: payment apps, wallets, lending platforms, and customer
   onboarding, built secure, tested, and ready to scale."
 breadcrumbLabel: Fintech and payments

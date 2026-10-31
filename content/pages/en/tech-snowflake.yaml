@@ -4,7 +4,7 @@ locale: en
 path: /data-analytics/snowflake/
 parent: /data-analytics/
 entityId: plat.snowflake
-title: Snowflake Consulting and Development | DECHY
+title: Snowflake Consulting and Development | DECHY Tech
 description: "Snowflake from DECHY: designing a cloud data platform, controlling its cost, sharing data safely, and choosing between Snowflake, BigQuery, and simpler options."
 breadcrumbLabel: Snowflake
 intent:

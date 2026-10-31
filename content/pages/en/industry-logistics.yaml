@@ -4,7 +4,7 @@ locale: en
 path: /industries/logistics/
 parent: /industries/
 entityId: ind.logistics
-title: Logistics and Transport Software | DECHY
+title: Logistics and Transport Software | DECHY Tech
 description: "Software for logistics, transport, and warehousing from DECHY: order and shipment tracking, carrier connections, dispatch tools, and delivery reporting."
 breadcrumbLabel: Logistics
 intent:

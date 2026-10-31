@@ -3,7 +3,7 @@ slug: ci-cd-for-small-teams
 type: guides
 category: guide
 service: cloud
-title: "CI/CD for Small Teams: A Practical Setup Guide | DECHY"
+title: "CI/CD for Small Teams: A Practical Setup Guide | DECHY Tech"
 description: "What CI/CD is and how small teams can set it up: automated tests, safe deployments, rollbacks, tool choices, costs and the mistakes that slow teams down."
 h1: "CI/CD for Small Teams: Ship Faster Without Breaking Things"
 summary: "What CI/CD is and how small teams can set it up: automated tests, safe deployments, rollbacks, tool choices, costs and the mistakes that slow teams down."

@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/knowledge-and-content-systems/
 entityId: workarea.knowledge-and-content-systems
-title: "Knowledge Bases and Content Systems | DECHY"
+title: "Knowledge Bases and Content Systems | DECHY Tech"
 description: "Knowledge and content systems organize what your organization knows so people and AI assistants can find and use it: structure, search, and accuracy over time."
 breadcrumbLabel: Knowledge and Content Systems
 parent: /work/

@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /software-development/
 entityId: svc.software-development
-title: "Custom Software Development Services | DECHY"
+title: "Custom Software Development Services | DECHY Tech"
 description: "Custom software from DECHY: business applications, customer portals, online platforms,
   dashboards, and internal tools, built, tested, secured, and maintained."
 breadcrumbLabel: Software Development

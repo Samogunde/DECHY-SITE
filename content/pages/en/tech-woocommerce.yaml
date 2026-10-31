@@ -4,7 +4,7 @@ locale: en
 path: /ecommerce/woocommerce/
 parent: /ecommerce/
 entityId: plat.woocommerce
-title: "WooCommerce Development Services | DECHY"
+title: "WooCommerce Development Services | DECHY Tech"
 description: "WooCommerce development from DECHY: building and running an online store you own on WordPress, and a clear comparison with Shopify and a custom build."
 breadcrumbLabel: WooCommerce
 intent:

@@ -4,7 +4,7 @@ type: cost-guides
 category: cost
 group: industry
 service: software-development
-title: "Logistics Software Development Cost | DECHY"
+title: "Logistics Software Development Cost | DECHY Tech"
 description: "What logistics software costs: driver apps with proof of delivery, dispatch and tracking platforms, customer tracking, route planning, and carrier integration."
 h1: "How much does logistics software development cost?"
 summary: Logistics software usually costs between $12,000 and $80,000. A customer tracking portal sits at the low end, and a full dispatch and tracking platform sits at the high end. Live location, offline driver apps, and connections to carriers and warehouses drive the price.

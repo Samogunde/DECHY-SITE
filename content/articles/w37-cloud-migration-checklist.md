@@ -3,7 +3,7 @@ slug: cloud-migration-checklist
 type: guides
 category: guide
 service: cloud
-title: "Cloud Migration Checklist for Businesses | DECHY"
+title: "Cloud Migration Checklist for Businesses | DECHY Tech"
 description: "A step-by-step cloud migration checklist: plan, audit, choose your approach, secure, migrate, test and optimize costs, with common mistakes to avoid."
 h1: Cloud Migration Checklist for Growing Businesses
 summary: "A step-by-step cloud migration checklist: plan, audit, choose your approach, secure, migrate, test and optimize costs, with common mistakes to avoid."

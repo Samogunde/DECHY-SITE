@@ -5,7 +5,7 @@ locale: en
 path: /industries/energy/
 parent: /industries/
 entityId: ind.energy
-title: Energy and Utility Software Development | DECHY
+title: Energy and Utility Software Development | DECHY Tech
 description: "Energy and utility software from DECHY: customer portals, field service apps, asset
   monitoring, and data platforms for energy companies and utilities."
 breadcrumbLabel: Energy and utilities

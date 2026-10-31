@@ -4,7 +4,7 @@ locale: en
 path: /ecommerce/shopify/
 parent: /ecommerce/
 entityId: plat.shopify
-title: "Shopify Development Services | DECHY"
+title: "Shopify Development Services | DECHY Tech"
 description: "Shopify development from DECHY: new stores, redesigns, custom features, migrations, and connections to stock, accounting, and shipping."
 breadcrumbLabel: Shopify
 intent:

@@ -4,7 +4,7 @@ locale: en
 path: /automation/make/
 parent: /automation/
 entityId: tech.make
-title: "Make Automation Services | DECHY"
+title: "Make Automation Services | DECHY Tech"
 description: "Make automation from DECHY: visual workflows with branching, loops, and data handling, for processes too involved for a simple connector."
 breadcrumbLabel: Make
 intent:

@@ -5,7 +5,7 @@ category: cost
 service: software-development
 pricing: software-development
 group: build
-title: "How Much Does Custom Software Cost? | DECHY"
+title: "How Much Does Custom Software Cost? | DECHY Tech"
 description: "Typical price ranges and timelines for custom software, from internal tools to enterprise systems, and the factors that move the price up or down."
 h1: "How much does custom software cost?"
 summary: "Most custom software projects cost {{fact:price.summary-custom-software}}, and a focused internal tool can start from {{fact:price.summary-custom-software-start}}. This guide shows typical ranges by type of system, what each includes, what drives the price, and how to keep the first version affordable."

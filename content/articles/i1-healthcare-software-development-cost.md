@@ -4,7 +4,7 @@ type: cost-guides
 category: cost
 group: industry
 service: software-development
-title: "Healthcare Software Development Cost | DECHY"
+title: "Healthcare Software Development Cost | DECHY Tech"
 description: "What healthcare software costs to build: patient portals, booking, telehealth apps, and EHR integration, plus the HIPAA and security work every project needs."
 h1: "How much does healthcare software development cost?"
 summary: Healthcare software usually costs between $12,000 and $72,000. Patient booking sits at the low end and telehealth apps at the high end. Privacy rules, records integration, and audit trails add cost that other industries do not carry. This guide explains where the money goes.

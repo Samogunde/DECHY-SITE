@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /api-integration/
 entityId: svc.api-integration
-title: API and Systems Integration Services | DECHY
+title: API and Systems Integration Services | DECHY Tech
 description: "System integration from DECHY: connect your website, customer records, payments,
   accounting, and internal tools so information moves between them automatically."
 breadcrumbLabel: API & Systems Integration

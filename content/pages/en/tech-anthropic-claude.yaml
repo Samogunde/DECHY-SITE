@@ -4,7 +4,7 @@ locale: en
 path: /ai/anthropic-claude/
 parent: /ai/
 entityId: prov.anthropic-claude
-title: "Anthropic Claude Integration Services | DECHY"
+title: "Anthropic Claude Integration Services | DECHY Tech"
 description: "Claude integration from DECHY: Anthropic's models for long documents, careful drafting, and tool-using assistants, with testing, limits, and comparison."
 breadcrumbLabel: Anthropic Claude
 intent:

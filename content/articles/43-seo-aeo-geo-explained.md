@@ -4,7 +4,7 @@ slug: seo-aeo-geo-explained
 type: definitions
 category: explainer
 service: seo-aeo-geo
-title: "SEO, AEO and GEO: What Each Means | DECHY"
+title: "SEO, AEO and GEO: What Each Means | DECHY Tech"
 description: "What SEO, AEO, and GEO mean, how search engines and AI assistants find and describe a business, and how the three work together in practice."
 h1: "SEO, AEO, and GEO: what each one means and how they work together"
 summary: People now find businesses through search results, direct answers, and AI assistants. This guide explains the three disciplines behind that, and how one solid foundation serves all of them.

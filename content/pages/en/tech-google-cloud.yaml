@@ -4,7 +4,7 @@ locale: en
 path: /cloud/google-cloud/
 parent: /cloud/
 entityId: plat.google-cloud
-title: "Google Cloud Services and Architecture | DECHY"
+title: "Google Cloud Services and Architecture | DECHY Tech"
 description: "Google Cloud work from DECHY: applications, data platforms, and AI workloads on Google Cloud, with a clear view of cost, security, and when it fits."
 breadcrumbLabel: Google Cloud
 intent:

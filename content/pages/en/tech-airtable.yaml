@@ -4,7 +4,7 @@ locale: en
 path: /automation/airtable/
 parent: /automation/
 entityId: plat.airtable
-title: "Airtable Development and Automation | DECHY"
+title: "Airtable Development and Automation | DECHY Tech"
 description: "Airtable development from DECHY: turning spreadsheets into shared databases, forms, and automated workflows, and a clear view of when to outgrow it."
 breadcrumbLabel: Airtable
 intent:

@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /cloud/
 entityId: svc.cloud
-title: Cloud and DevOps Services | DECHY
+title: Cloud and DevOps Services | DECHY Tech
 description: "Cloud and DevOps from DECHY: move to the cloud safely, keep systems reliable and
   affordable, and release new features without the risk and delay."
 breadcrumbLabel: Cloud & DevOps

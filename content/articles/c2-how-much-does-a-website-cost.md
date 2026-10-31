@@ -5,7 +5,7 @@ category: cost
 service: web-development
 pricing: web-development
 group: build
-title: "How Much Does a Website Cost? | DECHY"
+title: "How Much Does a Website Cost? | DECHY Tech"
 description: "Typical prices and timelines for a business website, from a single landing page to an advanced web app, and what moves the cost up or down."
 h1: "How much does a website cost?"
 summary: "Most business websites cost {{fact:price.summary-website}}, and a landing page starts from {{fact:price.summary-website-start}}. Web apps with accounts and payments cost more. This guide explains the ranges, what each includes, the factors behind them, and the costs people forget."

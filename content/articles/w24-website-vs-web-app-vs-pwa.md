@@ -3,7 +3,7 @@ slug: website-vs-web-app-vs-pwa
 type: comparisons
 category: comparison
 service: web-development
-title: "Website vs Web App vs PWA: Which One Do You Need? | DECHY"
+title: "Website vs Web App vs PWA: Which Do You Need? | DECHY Tech"
 description: Website, web app or progressive web app? Learn the differences, costs, strengths and limits of each, and which one fits your business goals and budget.
 h1: "Website, Web App or PWA: Which Do You Actually Need?"
 summary: Website, web app or progressive web app? Learn the differences, costs, strengths and limits of each, and which one fits your business goals and budget.

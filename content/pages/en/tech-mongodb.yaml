@@ -4,7 +4,7 @@ locale: en
 path: /data-analytics/mongodb/
 parent: /data-analytics/
 entityId: tech.mongodb
-title: "MongoDB Database Services | DECHY"
+title: "MongoDB Database Services | DECHY Tech"
 description: "MongoDB from DECHY: document databases for flexible, fast-changing data, with honest advice on when MongoDB fits and when a relational database is safer."
 breadcrumbLabel: MongoDB
 intent:

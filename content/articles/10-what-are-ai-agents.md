@@ -4,7 +4,7 @@ slug: what-are-ai-agents
 type: definitions
 category: explainer
 service: ai
-title: "What Are AI Agents and How Do They Differ? | DECHY"
+title: "What Are AI Agents and How Do They Differ? | DECHY Tech"
 description: "What an AI agent is, how it differs from a chatbot and from ordinary automation, where agents help a business, and how to keep them safe."
 h1: What are AI agents, and how do they differ from chatbots and automation?
 summary: An AI agent can plan and carry out steps on its own, using your tools. This guide explains how that differs from a chatbot or a workflow, and when an agent is worth it.

@@ -3,7 +3,7 @@ slug: core-web-vitals
 type: guides
 category: guide
 service: web-development
-title: "Core Web Vitals Explained, and How to Fix Them | DECHY"
+title: "Core Web Vitals Explained, and How to Fix Them | DECHY Tech"
 description: "A plain guide to Core Web Vitals for business websites: LCP, INP and CLS, the targets to hit, how to test your site and the fixes that matter most."
 h1: "Core Web Vitals for Business Sites: What Matters and How to Fix It"
 summary: "A plain guide to Core Web Vitals for business websites: LCP, INP and CLS, the targets to hit, how to test your site and the fixes that matter most."

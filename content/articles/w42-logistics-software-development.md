@@ -3,7 +3,7 @@ slug: logistics-software-development
 type: guides
 category: industry
 service: software-development
-title: "Logistics Software: Features, Costs, Planning | DECHY"
+title: "Logistics Software: Features, Costs, Planning | DECHY Tech"
 description: "A guide to logistics and transport software: fleet tracking, route planning, warehouse and order tools, integrations, costs and when custom beats off-the-shelf."
 h1: "Logistics Software Development: What to Build and What to Buy"
 summary: "A guide to logistics and transport software: fleet tracking, route planning, warehouse and order tools, integrations, costs and when custom beats off-the-shelf."

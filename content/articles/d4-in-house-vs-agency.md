@@ -3,7 +3,7 @@ slug: in-house-team-vs-agency
 type: comparisons
 category: comparison
 service: consulting
-title: "In-House Team vs Agency for Software Projects | DECHY"
+title: "In-House Team vs Agency for Software Projects | DECHY Tech"
 description: "Should you hire an in-house team or work with an agency to build your software? A balanced comparison of cost, speed, skills, control, and risk."
 h1: "In-house team vs agency: who should build your software?"
 summary: An in-house team works only for you. An agency brings a ready-made team with a wide range of skills. This comparison sets out the real trade-offs in cost, speed, skills, control, and continuity, including when an in-house team is the better choice.

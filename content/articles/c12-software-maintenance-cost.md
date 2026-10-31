@@ -5,7 +5,7 @@ category: cost
 group: pricing
 service: software-development
 models: [maintenance]
-title: "App and Software Maintenance Cost After Launch | DECHY"
+title: "App and Software Maintenance Cost After Launch | DECHY Tech"
 description: "What it costs to maintain an app, website, or software after launch: care plans from {{fact:price.care-essential-from}} a month, the yearly budget rule, and what maintenance covers."
 h1: "App and software maintenance cost after launch"
 summary: "Maintaining software after launch usually costs 15 to 25 percent of the build cost each year. Our care plans run from {{fact:price.care-essential-from}} a month for websites to {{fact:price.care-product-to}} for business-critical products. This guide explains what maintenance covers and how to budget for it."

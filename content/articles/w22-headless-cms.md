@@ -3,7 +3,7 @@ slug: headless-cms
 type: guides
 category: guide
 service: web-development
-title: Headless CMS Explained in Plain English (2026) | DECHY
+title: Headless CMS Explained in Plain English (2026) | DECHY Tech
 description: What a headless CMS is, how it differs from WordPress, its benefits and downsides, popular options, costs and when your business should use one.
 h1: Headless CMS Explained for Non-Developers
 summary: What a headless CMS is, how it differs from WordPress, its benefits and downsides, popular options, costs and when your business should use one.

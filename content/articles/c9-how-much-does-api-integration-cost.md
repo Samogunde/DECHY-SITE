@@ -5,7 +5,7 @@ category: cost
 group: build
 service: api-integration
 pricing: api-integration
-title: "How Much Does API and Systems Integration Cost? | DECHY"
+title: "How Much Does API and Systems Integration Cost? | DECHY Tech"
 description: "Most integrations cost {{fact:price.summary-integration}}. See prices for single connections, multi-system work, custom APIs, and integration platforms."
 h1: "How much does API and systems integration cost?"
 summary: "Most integrations cost {{fact:price.summary-integration}}, and a full integration platform costs more. This guide shows typical prices, explains why some connections cost much more than others, and covers running costs."

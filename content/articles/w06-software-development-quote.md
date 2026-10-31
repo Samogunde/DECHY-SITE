@@ -5,7 +5,7 @@ category: cost
 group: pricing
 service: software-development
 pricing: software-development
-title: How to Get an Accurate Software Development Quote | DECHY
+title: How to Get an Accurate Software Quote | DECHY Tech
 description: Get a software quote you can trust. Learn what to prepare, what to ask, how to compare quotes fairly and which details make estimates accurate.
 h1: How to Get an Accurate Software Quote (and What to Prepare)
 summary: Get a software quote you can trust. Learn what to prepare, what to ask, how to compare quotes fairly and which details make estimates accurate.

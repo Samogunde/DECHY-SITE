@@ -4,7 +4,7 @@ locale: en
 path: /solutions/crm-integration/
 parent: /solutions/
 entityId: sol.crm-integration
-title: CRM Integration Services | DECHY
+title: CRM Integration Services | DECHY Tech
 description: "CRM integration from DECHY: connecting your customer records to your website, billing, support, and marketing tools so everyone works from one current record."
 breadcrumbLabel: CRM integration
 intent:

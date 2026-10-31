@@ -4,7 +4,7 @@ locale: en
 path: /industries/education/
 parent: /industries/
 entityId: ind.education
-title: Education Software and Systems | DECHY
+title: Education Software and Systems | DECHY Tech
 description: "Software for schools, colleges, and training providers from DECHY: learner portals, enrolment, communication, reporting, and connected systems."
 breadcrumbLabel: Education
 intent:

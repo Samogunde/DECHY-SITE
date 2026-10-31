@@ -5,7 +5,7 @@ category: cost
 group: build
 service: ai
 pricing: ai
-title: "How Much Does AI Integration Cost? | DECHY"
+title: "How Much Does AI Integration Cost? | DECHY Tech"
 description: "Most business AI projects cost {{fact:price.summary-ai}}. See prices for AI assistants, AI features, agents, and custom models, plus the running costs of AI usage."
 h1: "How much does AI integration cost?"
 summary: "Most business AI projects cost {{fact:price.summary-ai}}, and larger agents and platforms cost more. This guide shows typical prices by type, what each one includes, the monthly usage costs most people miss, and how to start small with one measured use case before you spend more."

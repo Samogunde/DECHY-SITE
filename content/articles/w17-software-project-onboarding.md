@@ -3,7 +3,7 @@ slug: software-project-onboarding
 type: guides
 category: guide
 service: software-development
-title: "First 30 Days of a Software Project: What to Expect | DECHY"
+title: "The First 30 Days of a Software Project | DECHY Tech"
 description: "What really happens in the first 30 days of a software development project: kickoff, discovery, design, setup, first demo and what you need to do as the client."
 h1: What Happens in the First 30 Days of a Software Project
 summary: "What really happens in the first 30 days of a software development project: kickoff, discovery, design, setup, first demo and what you need to do as the client."

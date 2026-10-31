@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/customer-portals/
 entityId: workarea.customer-portals
-title: "Customer Portal Development | DECHY"
+title: "Customer Portal Development | DECHY Tech"
 description: "Customer portals give clients a private place to see orders, documents, and messages: what they contain, how access is controlled, and what they save."
 breadcrumbLabel: Customer Portals
 parent: /work/

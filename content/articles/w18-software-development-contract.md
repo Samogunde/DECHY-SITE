@@ -3,7 +3,7 @@ slug: software-development-contract
 type: guides
 category: guide
 service: software-development
-title: "Software Development Contract Checklist | DECHY"
+title: "Software Development Contract Checklist | DECHY Tech"
 description: "What a software development contract should include: scope, payments, IP ownership, acceptance, changes, confidentiality, warranty and exit terms."
 h1: Software Development Contract Checklist for Business Owners
 summary: "What a software development contract should include: scope, payments, IP ownership, acceptance, changes, confidentiality, warranty and exit terms."

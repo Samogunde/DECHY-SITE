@@ -3,7 +3,7 @@ slug: how-to-choose-a-software-development-company
 type: guides
 category: guide
 service: software-development
-title: How to Choose a Software Development Company in 2026 | DECHY
+title: How to Choose a Software Development Company | DECHY Tech
 description: "A practical guide to choosing a software development company: what to check, what to ask, red flags to avoid, and how to compare proposals fairly."
 h1: How to Choose a Software Development Company
 summary: "A practical guide to choosing a software development company: what to check, what to ask, red flags to avoid, and how to compare proposals fairly."

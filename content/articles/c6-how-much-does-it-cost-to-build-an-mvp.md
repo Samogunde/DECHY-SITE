@@ -5,7 +5,7 @@ category: cost
 group: build
 service: software-development
 models: [mvp]
-title: "How Much Does It Cost to Build an MVP? | DECHY"
+title: "How Much Does It Cost to Build an MVP? | DECHY Tech"
 description: "Most MVPs cost {{fact:price.summary-mvp}}, and a clickable prototype starts from {{fact:price.mvp-clickable-prototype-from}}. See what each type includes, how long it takes, and what to leave out."
 h1: "How much does it cost to build an MVP?"
 summary: "Most MVPs cost {{fact:price.summary-mvp}} and take two to four weeks. A clickable prototype costs less; a subscription product with billing costs more. This guide shows the ranges, what belongs in a first version, and what to leave for later."

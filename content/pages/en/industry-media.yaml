@@ -5,7 +5,7 @@ locale: en
 path: /industries/media/
 parent: /industries/
 entityId: ind.media
-title: Media and Publishing Platform Development | DECHY
+title: Media and Publishing Platform Development | DECHY Tech
 description: "Media and publishing software from DECHY: fast publishing sites, subscriptions and
   paywalls, podcast and video platforms, and newsroom tools."
 breadcrumbLabel: Media and publishing

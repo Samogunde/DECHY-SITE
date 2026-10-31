@@ -4,7 +4,7 @@ locale: en
 path: /automation/hubspot/
 parent: /automation/
 entityId: plat.hubspot
-title: HubSpot Integration and Automation | DECHY
+title: HubSpot Integration and Automation | DECHY Tech
 description: "HubSpot work from DECHY: setting up the CRM, connecting it to your website and tools, and automating follow-up so leads are tracked from click to customer."
 breadcrumbLabel: HubSpot
 intent:

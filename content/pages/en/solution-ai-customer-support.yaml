@@ -4,7 +4,7 @@ locale: en
 path: /solutions/ai-customer-support/
 parent: /solutions/
 entityId: sol.ai-customer-support
-title: AI Customer Support Solutions | DECHY
+title: AI Customer Support Solutions | DECHY Tech
 description: "AI customer support from DECHY: answering routine questions quickly from your own content, handing the hard ones to your team, and keeping answers accurate."
 breadcrumbLabel: AI customer support
 intent:

@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/automation-systems/
 entityId: workarea.automation-systems
-title: "Business Automation Systems and Examples | DECHY"
+title: "Business Automation Systems and Examples | DECHY Tech"
 description: "Automation systems that move information and trigger actions between your tools without re-entry: what they contain, how they are watched, when to skip them."
 breadcrumbLabel: Automation Systems
 parent: /work/

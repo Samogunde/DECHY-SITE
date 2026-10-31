@@ -4,7 +4,7 @@ locale: en
 path: /locations/united-states/
 parent: /locations/
 entityId: loc.united-states
-title: "Software and Technology Services in the US | DECHY"
+title: "Software and Technology Services in the US | DECHY Tech"
 description: "How DECHY works with organizations in the US: software, AI, and automation delivered remotely, with US privacy and security expectations in view."
 breadcrumbLabel: United States
 intent:

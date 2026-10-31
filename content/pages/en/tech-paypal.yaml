@@ -4,7 +4,7 @@ locale: en
 path: /api-integration/paypal/
 parent: /api-integration/
 entityId: int.paypal
-title: PayPal Integration Services | DECHY
+title: PayPal Integration Services | DECHY Tech
 description: "PayPal integration from DECHY: adding PayPal checkout, subscriptions, and payouts to stores and apps, and reconciling payments with your accounts."
 breadcrumbLabel: PayPal
 intent:

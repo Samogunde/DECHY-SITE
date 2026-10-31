@@ -5,7 +5,7 @@ category: cost
 group: build
 service: ecommerce
 pricing: ecommerce
-title: "How Much Does an Ecommerce Store Cost to Build? | DECHY"
+title: "How Much Does an Ecommerce Store Cost to Build? | DECHY Tech"
 description: "Most online stores cost {{fact:price.summary-online-store}} to build. Compare Shopify, WooCommerce, and custom stores, and see what inventory sync and migration add."
 h1: "How much does an ecommerce store cost to build?"
 summary: "Most online stores cost {{fact:price.summary-online-store}}, and marketplaces start from {{fact:price.summary-online-store-start}}. This guide compares platforms, breaks down the cost, and shows the monthly fees most store owners forget."

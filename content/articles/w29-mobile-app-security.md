@@ -3,7 +3,7 @@ slug: mobile-app-security
 type: guides
 category: guide
 service: mobile-app-development
-title: "Mobile App Security Best Practices | DECHY"
+title: "Mobile App Security Best Practices | DECHY Tech"
 description: "A plain-language guide to mobile app security: data storage, login, APIs, encryption, third-party code, testing and what to ask your developer before launch."
 h1: "Mobile App Security: A Practical Guide for Business Owners"
 summary: "A plain-language guide to mobile app security: data storage, login, APIs (the defined ways systems share data with each other), encryption, third-party code, testing and what to ask your developer before launch."

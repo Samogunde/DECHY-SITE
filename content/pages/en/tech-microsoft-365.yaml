@@ -4,7 +4,7 @@ locale: en
 path: /automation/microsoft-365/
 parent: /automation/
 entityId: plat.microsoft-365
-title: Microsoft 365 Consulting and Integration | DECHY
+title: Microsoft 365 Consulting and Integration | DECHY Tech
 description: "Microsoft 365 consulting from DECHY: SharePoint sites, Teams apps, automation, and integrations that make the tools you already pay for work as one system."
 breadcrumbLabel: Microsoft 365
 intent:

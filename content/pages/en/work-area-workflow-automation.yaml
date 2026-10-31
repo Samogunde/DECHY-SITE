@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/workflow-automation/
 entityId: workarea.workflow-automation
-title: "Workflow and Approval Automation | DECHY"
+title: "Workflow and Approval Automation | DECHY Tech"
 description: "Workflow automation moves a piece of work from person to person: requests, approvals, and hand-offs tracked from start to finish. See the parts and design."
 breadcrumbLabel: Workflow Automation
 parent: /work/

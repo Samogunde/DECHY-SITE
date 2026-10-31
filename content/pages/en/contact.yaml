@@ -2,11 +2,11 @@ id: page.contact
 kind: contact
 locale: en
 path: /contact/
-title: "Contact Us for a Project Estimate | DECHY"
+title: "Contact Us for a Project Estimate | DECHY Tech"
 description: "Tell us what you want to build, connect, or fix, and get a project estimate for software, a website, a web or mobile app, AI, or automation."
 breadcrumbLabel: Contact
 h1: Talk to DECHY
-lead: "Tell us what you are trying to build, connect, or fix. A few sentences are enough to start."
+lead: "Tell DECHY Tech what you are trying to build, connect, or fix. A few sentences are enough to start."
 intent:
   primary: contact a technology company about a project
   secondary:

@@ -4,7 +4,7 @@ locale: en
 path: /locations/ireland/
 parent: /locations/
 entityId: loc.ireland
-title: "Software and Technology Services in Ireland | DECHY"
+title: "Software and Technology Services in Ireland | DECHY Tech"
 description: "How DECHY works with organizations in Ireland: software, AI, and automation delivered remotely, with EU data protection and single-market rules in view."
 breadcrumbLabel: Ireland
 intent:

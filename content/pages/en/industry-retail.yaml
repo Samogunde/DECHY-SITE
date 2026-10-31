@@ -4,7 +4,7 @@ locale: en
 path: /industries/retail/
 parent: /industries/
 entityId: ind.retail
-title: Retail and Ecommerce Software | DECHY
+title: Retail and Ecommerce Software | DECHY Tech
 description: "Software for retail and ecommerce from DECHY: online stores, stock and order connections, customer records, support, and reporting that agree with each other."
 breadcrumbLabel: Retail
 intent:

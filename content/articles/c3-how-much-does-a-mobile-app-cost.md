@@ -34,7 +34,7 @@ tables:
           "Apps built on advanced phone features or heavy graphics",
         ]
     note: "Ranges are for a business app with accounts, notifications, payments, and an admin panel. A first version costs less; marketplace and enterprise apps cost more."
-title: "How Much Does a Mobile App Cost? | DECHY"
+title: "How Much Does a Mobile App Cost? | DECHY Tech"
 description: "Typical prices and timelines for iPhone and Android apps, from a first version to an enterprise app, and the choices that move the cost."
 h1: "How much does a mobile app cost?"
 summary: "Most business apps cost {{fact:price.summary-mobile-app}}, with accounts, notifications, and payments. A first version to test an idea can start from {{fact:price.summary-mobile-app-start}}, and apps with marketplaces, offline use, or heavy integrations cost more. This guide explains what drives the price."

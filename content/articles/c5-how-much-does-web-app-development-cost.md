@@ -4,7 +4,7 @@ type: cost-guides
 category: cost
 group: build
 service: web-development
-title: "How Much Does Web App Development Cost? | DECHY"
+title: "How Much Does Web App Development Cost? | DECHY Tech"
 description: "Most web apps cost {{fact:price.summary-web-app}}. See prices for booking tools, client portals, dashboards, and SaaS products, with what each includes and timelines."
 h1: "How much does web app development cost?"
 summary: "Most web apps cost {{fact:price.summary-web-app}}, and advanced products with many roles, integrations, or billing cost more. This guide breaks the price down by type of app, shows what is included, and explains the features that move the number most."

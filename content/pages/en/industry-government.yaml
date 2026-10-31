@@ -5,7 +5,7 @@ locale: en
 path: /industries/government/
 parent: /industries/
 entityId: ind.government
-title: Government and Public Sector Software Development | DECHY
+title: Government and Public Sector Software | DECHY Tech
 description: "Public sector software from DECHY: accessible digital services, online forms and
   payments, case management, and data platforms for public bodies."
 breadcrumbLabel: Government and public sector

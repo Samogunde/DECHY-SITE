@@ -5,7 +5,7 @@ industries:
     entity: ind.recruitment
     name: HR and recruitment
     service: software-development
-    title: Recruitment and HR Software Development | DECHY
+    title: Recruitment and HR Software Development | DECHY Tech
     description:
       "Recruitment and HR software from DECHY: job boards, applicant tracking, candidate and
       client portals, onboarding, and AI screening tools."
@@ -202,7 +202,7 @@ industries:
     entity: ind.legal
     name: Legal
     service: software-development
-    title: Legal Software and Law Firm Technology | DECHY
+    title: Legal Software and Law Firm Technology | DECHY Tech
     description: "Legal software from DECHY: client portals, intake, document automation, matter
       management, and AI tools for law firms and legal teams."
     intent:
@@ -394,7 +394,7 @@ industries:
     entity: ind.media
     name: Media and publishing
     service: web-development
-    title: Media and Publishing Platform Development | DECHY
+    title: Media and Publishing Platform Development | DECHY Tech
     description: "Media and publishing software from DECHY: fast publishing sites, subscriptions and
       paywalls, podcast and video platforms, and newsroom tools."
     intent:
@@ -593,7 +593,7 @@ industries:
     entity: ind.nonprofits
     name: Nonprofits
     service: web-development
-    title: Nonprofit Website, Donation, and Volunteer Software | DECHY
+    title: Nonprofit Websites, Donations and Volunteers | DECHY Tech
     description: "Nonprofit software from DECHY: donation websites, fundraising platforms, volunteer
       management, supporter records, and impact reporting."
     intent:
@@ -793,7 +793,7 @@ industries:
     entity: ind.government
     name: Government and public sector
     service: software-development
-    title: Government and Public Sector Software Development | DECHY
+    title: Government and Public Sector Software | DECHY Tech
     description: "Public sector software from DECHY: accessible digital services, online forms and
       payments, case management, and data platforms for public bodies."
     intent:
@@ -990,7 +990,7 @@ industries:
     entity: ind.saas
     name: SaaS and software companies
     service: software-development
-    title: SaaS Product Development for Software Companies | DECHY
+    title: SaaS Product Development for Software Companies | DECHY Tech
     description: "SaaS product development from DECHY: new products, platform rebuilds, billing,
       integrations, AI features, and extra engineering capacity for software companies."
     intent:
@@ -1188,7 +1188,7 @@ industries:
     entity: ind.telecommunications
     name: Telecommunications
     service: software-development
-    title: Telecom Software Development and Customer Platforms | DECHY
+    title: Telecom Software and Customer Platforms | DECHY Tech
     description: "Telecommunications software from DECHY: customer self-service apps, ordering and
       provisioning, field service tools, and network data dashboards."
     intent:

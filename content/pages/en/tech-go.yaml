@@ -4,7 +4,7 @@ locale: en
 path: /software-development/go/
 parent: /software-development/
 entityId: lang.go
-title: Go (Golang) Development Services | DECHY
+title: Go (Golang) Development Services | DECHY Tech
 description: "Go development from DECHY: building fast, dependable back-end services, command-line tools, and infrastructure software, and when another language is better."
 breadcrumbLabel: Go
 intent:

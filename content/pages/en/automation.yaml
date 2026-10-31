@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /automation/
 entityId: svc.automation
-title: Automation and Workflow Services | DECHY
+title: Automation and Workflow Services | DECHY Tech
 description: "Business automation from DECHY: we map how work flows, then automate approvals, data
   entry, reports, and follow-up so your team can focus on real work."
 breadcrumbLabel: Automation & Workflows

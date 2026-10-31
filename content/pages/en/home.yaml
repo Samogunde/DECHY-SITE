@@ -2,7 +2,7 @@ id: page.home
 kind: home
 locale: en
 path: /
-title: "Custom Software, Web & Mobile App Development | DECHY"
+title: "Custom Software, Web & Mobile App Development | DECHY Tech"
 description: "Custom software, websites, web apps, and mobile apps for startups and growing businesses, with AI, automation, and integration built in. Clear scope and price."
 breadcrumbLabel: Home
 intent:
@@ -31,14 +31,14 @@ sections:
     variant: home
     eyebrow: Technology, Software, AI & Digital Solutions
     headline: We build custom software, websites, web apps, and mobile apps that work as one system.
-    lead: We design, build, and support digital products for startups and growing businesses, with AI, automation, and integrations built in from the start.
+    lead: At DECHY Tech, we design, build, and support digital products for startups and growing businesses, with AI, automation, and integrations built in from the start.
     ctas:
       - label: Get a fixed quote
         href: /contact/
     slides:
       - label: Custom software
         headline: Custom software built around the way your team already works
-        lead: Portals, internal tools, and operations platforms that replace spreadsheets and copy-paste, delivered in weeks and owned outright by you.
+        lead: DECHY Tech builds portals, internal tools, and operations platforms that replace spreadsheets and copy-paste, delivered in weeks and owned outright by you.
         badge: Free plan
         offer: "A written plan and a fixed quote after one 30-minute call."
         cta: { label: Get a fixed quote, href: "/contact/?service=software-development" }

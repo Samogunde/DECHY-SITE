@@ -4,7 +4,7 @@ locale: en
 path: /automation/n8n/
 parent: /automation/
 entityId: tech.n8n
-title: "n8n Automation Services | DECHY"
+title: "n8n Automation Services | DECHY Tech"
 description: "n8n automation from DECHY: workflow automation you can host yourself, with code where you need it, for teams that want control of their data and costs."
 breadcrumbLabel: n8n
 intent:

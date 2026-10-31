@@ -4,7 +4,7 @@ type: cost-guides
 category: cost
 group: industry
 service: software-development
-title: "Fintech App Development Cost | DECHY"
+title: "Fintech App Development Cost | DECHY Tech"
 description: "What a fintech app costs to build: payments, wallets, lending portals, identity checks, bank connections, and the security and compliance work behind them."
 h1: "How much does fintech app development cost?"
 summary: Fintech software usually costs between $24,000 and $96,000. Payment tools sit at the low end, consumer money apps at the high end. Identity checks, bank connections, ledger accuracy, and security audits add costs no other industry carries in the same way.

@@ -4,7 +4,7 @@ locale: en
 path: /industries/professional-services/
 parent: /industries/
 entityId: ind.professional-services
-title: Professional Services Software | DECHY
+title: Professional Services Software | DECHY Tech
 description: "Software for consultancies, agencies, accountants, and other professional firms from DECHY: client portals, time and billing, document workflows, and reporting."
 breadcrumbLabel: Professional services
 intent:

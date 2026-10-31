@@ -4,7 +4,7 @@ locale: en
 path: /automation/salesforce/
 parent: /automation/
 entityId: plat.salesforce
-title: "Salesforce Integration and Automation | DECHY"
+title: "Salesforce Integration and Automation | DECHY Tech"
 description: "Salesforce work from DECHY: connecting Salesforce to your other systems, automating its processes, and keeping customization manageable as you grow."
 breadcrumbLabel: Salesforce
 intent:

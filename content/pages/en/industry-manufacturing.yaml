@@ -4,7 +4,7 @@ locale: en
 path: /industries/manufacturing/
 parent: /industries/
 entityId: ind.manufacturing
-title: Manufacturing Software and Systems | DECHY
+title: Manufacturing Software and Systems | DECHY Tech
 description: "Software for manufacturers from DECHY: connecting planning, production, quality, and supplier systems, replacing spreadsheets, and giving managers a live view."
 breadcrumbLabel: Manufacturing
 intent:

@@ -4,7 +4,7 @@ locale: en
 path: /web-development/php/
 parent: /web-development/
 entityId: lang.php
-title: "PHP Development Services | DECHY"
+title: "PHP Development Services | DECHY Tech"
 description: "PHP development from DECHY: building, maintaining, and modernizing PHP sites and applications, and a clear view of when to keep PHP and when to move on."
 breadcrumbLabel: PHP
 intent:

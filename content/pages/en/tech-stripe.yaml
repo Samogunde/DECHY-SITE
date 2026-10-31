@@ -4,7 +4,7 @@ locale: en
 path: /api-integration/stripe/
 parent: /api-integration/
 entityId: int.stripe
-title: "Stripe Integration Services | DECHY"
+title: "Stripe Integration Services | DECHY Tech"
 description: "Stripe integration from DECHY: payments, subscriptions, and payouts connected to your orders, accounting, and customer records, with failures handled properly."
 breadcrumbLabel: Stripe
 intent:

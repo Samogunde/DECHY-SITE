@@ -5,7 +5,7 @@ locale: en
 path: /industries/agriculture/
 parent: /industries/
 entityId: ind.agriculture
-title: Agriculture and Farm Management Software Development | DECHY
+title: Agriculture and Farm Management Software | DECHY Tech
 description: "Agriculture software from DECHY: farm management, field and livestock records, sensor
   data, traceability, and supply apps for farms and agribusiness."
 breadcrumbLabel: Agriculture

@@ -3,7 +3,7 @@ slug: ecommerce-automation
 type: guides
 category: guide
 service: automation
-title: "Ecommerce Automation: 12 Workflows That Save Time | DECHY"
+title: "Ecommerce Automation: 12 Time-Saving Workflows | DECHY Tech"
 description: "Practical ecommerce automation ideas: order handling, inventory, customer emails, returns, reporting and AI support, with tools, costs and how to start safely."
 h1: "Ecommerce Automation: 12 Workflows That Save Hours Every Week"
 summary: "Practical ecommerce automation ideas: order handling, inventory, customer emails, returns, reporting and AI support, with tools, costs and how to start safely."

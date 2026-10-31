@@ -5,7 +5,7 @@ category: cost
 group: pricing
 service: consulting
 models: [teams]
-title: "Fixed Price vs Time and Materials vs Dedicated Team | DECHY"
+title: "Fixed Price, Time and Materials, or a Team? | DECHY Tech"
 description: "How software pricing models work: fixed price, time and materials, and a dedicated team compared on cost, risk, flexibility, and when each is the right choice."
 h1: "Fixed price vs time and materials vs dedicated team: how pricing works"
 summary: Software projects are priced in three main ways. A fixed price suits a clear scope, time and materials suits changing work, and a dedicated team suits a product that grows every month. This guide compares them and shows what each costs.

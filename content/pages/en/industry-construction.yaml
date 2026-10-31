@@ -5,7 +5,7 @@ locale: en
 path: /industries/construction/
 parent: /industries/
 entityId: ind.construction
-title: Construction Software Development and Site Apps | DECHY
+title: Construction Software Development and Site Apps | DECHY Tech
 description: "Construction software from DECHY: site apps, project tracking, approvals, and
   reporting that connect the office to every site."
 breadcrumbLabel: Construction

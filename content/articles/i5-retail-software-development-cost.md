@@ -4,7 +4,7 @@ type: cost-guides
 category: cost
 group: industry
 service: ecommerce
-title: "Retail Software Development Cost | DECHY"
+title: "Retail Software Development Cost | DECHY Tech"
 description: "What retail software costs: stores connected to point of sale, click and collect, loyalty apps, inventory and product data platforms, and retail dashboards."
 h1: "How much does retail software development cost?"
 summary: Retail software for businesses with physical shops usually costs between $6,000 and $64,000. Connecting an online store to your tills sits at the low end, and an inventory and product data platform across many locations sits at the high end. Stock accuracy across channels drives most of the price.

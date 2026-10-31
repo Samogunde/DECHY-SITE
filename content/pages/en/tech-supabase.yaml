@@ -4,7 +4,7 @@ locale: en
 path: /cloud/supabase/
 parent: /cloud/
 entityId: plat.supabase
-title: Supabase Development Services | DECHY
+title: Supabase Development Services | DECHY Tech
 description: "Supabase development from DECHY: building products on a PostgreSQL-based back end with sign-in and storage, and when it beats Firebase or a custom build."
 breadcrumbLabel: Supabase
 intent:

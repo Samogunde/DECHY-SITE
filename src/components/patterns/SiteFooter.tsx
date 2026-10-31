@@ -93,7 +93,7 @@ export function SiteFooter() {
         </div>
 
         <div className="rule-top mt-12 flex flex-col gap-4 pt-6 min-[48rem]:flex-row min-[48rem]:items-center min-[48rem]:justify-between">
-          <p className="t-caption m-0">&copy; {year} DECHY. All rights reserved.</p>
+          <p className="t-caption m-0">&copy; {year} DECHY Tech. All rights reserved.</p>
           <ul className="t-caption m-0 flex list-none flex-wrap gap-x-6 gap-y-1 p-0">
             {registry.nav.footer.legal.map((l) => (
               <li key={l.path}>

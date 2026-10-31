@@ -4,7 +4,7 @@ slug: build-buy-or-integrate-business-software
 type: guides
 category: decision
 service: software-development
-title: "Build, Buy or Integrate Business Software | DECHY"
+title: "Build, Buy or Integrate Business Software | DECHY Tech"
 description: "A practical way to decide whether to build custom software, buy an off-the-shelf product, or connect the tools you already have."
 h1: "Build, buy, or integrate: how to choose business software"
 summary: Most software decisions come down to three routes. This guide gives you the questions that point to the right one, and the warning signs that you are about to choose the wrong one.

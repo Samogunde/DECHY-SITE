@@ -4,7 +4,7 @@ locale: en
 path: /software-development/nodejs/
 parent: /software-development/
 entityId: tech.nodejs
-title: "Node.js Development Services | DECHY"
+title: "Node.js Development Services | DECHY Tech"
 description: "Node.js development from DECHY: building fast back ends, APIs, and real-time features, and an honest view of when Node.js is the right server technology."
 breadcrumbLabel: Node.js
 intent:

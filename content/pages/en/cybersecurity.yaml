@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /cybersecurity/
 entityId: svc.cybersecurity
-title: Cybersecurity Services for Business | DECHY
+title: Cybersecurity Services for Business | DECHY Tech
 description: "Cybersecurity from DECHY: understand what you must protect, find the weak points, and
   build practical protection into your software, systems, and daily habits."
 breadcrumbLabel: Cybersecurity

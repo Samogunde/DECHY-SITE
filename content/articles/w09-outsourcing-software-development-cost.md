@@ -5,7 +5,7 @@ category: cost
 group: pricing
 service: software-development
 models: [rates, teams]
-title: "Outsourcing vs In-House Development Cost (2026) | DECHY"
+title: "Outsourcing vs In-House Development Cost (2026) | DECHY Tech"
 description: "Compare the real cost of outsourcing software development with hiring in-house: salaries, rates by region, hidden costs, quality risks and when each wins."
 h1: "Outsourcing Software Development: Real Costs vs Hiring In-House"
 summary: "Compare the real cost of outsourcing software development with hiring in-house: salaries, rates by region, hidden costs, quality risks and when each wins."

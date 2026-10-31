@@ -3,7 +3,7 @@ slug: build-a-mobile-app-mvp
 type: guides
 category: guide
 service: mobile-app-development
-title: "How to Build a Mobile App MVP: Step-by-Step Guide | DECHY"
+title: "How to Build a Mobile App MVP, Step by Step | DECHY Tech"
 description: "A step-by-step plan to build a mobile app MVP: validate the idea, define the core feature, design, build, test, launch and learn, with budgets and timelines."
 h1: How to Build a Mobile App MVP, Step by Step
 summary: "A step-by-step plan to build a mobile app MVP: validate the idea, define the core feature, design, build, test, launch and learn, with budgets and timelines."

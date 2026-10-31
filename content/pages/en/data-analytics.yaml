@@ -3,7 +3,7 @@ kind: service
 locale: en
 path: /data-analytics/
 entityId: svc.data-analytics
-title: Data and Analytics Services | DECHY
+title: Data and Analytics Services | DECHY Tech
 description: "Data and analytics from DECHY: bring your information together, clean it, and turn it
   into dashboards and reports your team can trust and act on."
 breadcrumbLabel: Data & Analytics

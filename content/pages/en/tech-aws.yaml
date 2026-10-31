@@ -4,7 +4,7 @@ locale: en
 path: /cloud/aws/
 parent: /cloud/
 entityId: plat.aws
-title: "AWS Cloud Services and Architecture | DECHY"
+title: "AWS Cloud Services and Architecture | DECHY Tech"
 description: "AWS work from DECHY: designing, building, and running applications on Amazon Web Services, with sensible structure, cost control, and security."
 breadcrumbLabel: AWS
 intent:

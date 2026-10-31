@@ -5,7 +5,7 @@ import { absoluteUrl } from "@/lib/site";
 
 // Search results are for visitors only: never indexed, never in the sitemap.
 export const metadata: Metadata = {
-  title: "Search | DECHY",
+  title: "Search | DECHY Tech",
   description: "Search every DECHY page, service, industry, article, question, and team member.",
   robots: { index: false, follow: true },
   alternates: { canonical: absoluteUrl("/search/") },

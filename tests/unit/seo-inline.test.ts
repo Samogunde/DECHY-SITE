@@ -72,9 +72,7 @@ describe("metadata", () => {
       "https://example.test/software-development/",
     );
     expect(m.openGraph?.url).toBe("https://example.test/software-development/");
-    expect(JSON.stringify(m.openGraph)).toContain(
-      "/og/dechy-share-image.png",
-    );
+    expect(JSON.stringify(m.openGraph)).toContain("/og/dechy-share-image.png");
     expect((m.twitter as { card: string }).card).toBe("summary_large_image");
   });
 
@@ -150,7 +148,6 @@ describe("structured data", () => {
         "aggregateRating",
         '"review"',
         '"address"',
-        "sameAs",
         "numberOfEmployees",
         '"award"',
         '"geo"',
@@ -162,7 +159,11 @@ describe("structured data", () => {
 
   it("lists only the public business addresses and the alternate name (owner, 24 October 2026)", () => {
     const s = JSON.stringify(graphOf("/"));
-    expect(s).toContain('"alternateName":"Deki"');
+    expect(s).toContain('"alternateName":["DECHY Tech","Dechytech","Deki"]');
+    // Public profiles the owner confirmed (31 October 2026), and nothing else.
+    expect(s).toContain(
+      '"sameAs":["https://clutch.co/profile/dechy-tech","https://www.goodfirms.co/company/dechy"]',
+    );
     expect(s).toContain('"contactType":"sales","email":"sales@dechytech.com"');
     expect(s).toContain('"email":"support@dechytech.com"');
     for (const m of s.matchAll(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/gi))

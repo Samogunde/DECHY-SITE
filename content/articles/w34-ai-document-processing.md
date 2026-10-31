@@ -3,7 +3,7 @@ slug: ai-document-processing
 type: guides
 category: guide
 service: ai
-title: "AI Document Processing: How It Works and Cost | DECHY"
+title: "AI Document Processing: How It Works and Cost | DECHY Tech"
 description: "How AI document processing extracts data from invoices, contracts and forms: methods, accuracy, human review, costs and a step-by-step plan to start."
 h1: "AI Document Processing: How It Works and What It Costs"
 summary: "How AI document processing extracts data from invoices, contracts and forms: methods, accuracy, human review, costs and a step-by-step plan to start."

@@ -3,7 +3,7 @@ slug: custom-software-vs-off-the-shelf
 type: comparisons
 category: comparison
 service: software-development
-title: "Custom Software vs Off-the-Shelf Software | DECHY"
+title: "Custom Software vs Off-the-Shelf Software | DECHY Tech"
 description: "Custom or off-the-shelf software? A side-by-side comparison of cost, fit, speed, ownership, and risk, with when to choose each and our recommendation."
 h1: "Custom software vs off-the-shelf software"
 summary: Off-the-shelf software is a ready-made product you subscribe to. Custom software is built around your own way of working. This comparison shows how they differ in cost, fit, speed, ownership, and risk, and when each is right.

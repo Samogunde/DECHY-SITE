@@ -2,7 +2,7 @@ id: page.terms
 kind: legal
 locale: en
 path: /terms/
-title: "Website Terms of Use | DECHY"
+title: "Website Terms of Use | DECHY Tech"
 description: "The terms for using the DECHY website: what the site is for, intellectual property, acceptable use, links, no warranty, and how services are agreed separately."
 breadcrumbLabel: Terms of use
 h1: Terms of use
@@ -22,7 +22,7 @@ sections:
     sections:
       - heading: About these terms
         paragraphs:
-          - "These terms apply to your use of this website, which is operated by DECHY, a global technology company. In these terms, DECHY, we, and us mean the operator of this website. By using the website you agree to these terms. If you do not agree, please do not use it."
+          - "These terms apply to your use of this website, which is operated by DECHY Tech, a global technology company. In these terms, DECHY Tech, DECHY, we, and us mean the operator of this website. By using the website you agree to these terms. If you do not agree, please do not use it."
           - "These terms cover the website only. Any services we provide are agreed separately, in writing, before work begins."
       - heading: What the website is for
         paragraphs:

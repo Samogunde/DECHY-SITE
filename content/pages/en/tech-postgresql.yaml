@@ -4,7 +4,7 @@ locale: en
 path: /data-analytics/postgresql/
 parent: /data-analytics/
 entityId: tech.postgresql
-title: "PostgreSQL Database Services | DECHY"
+title: "PostgreSQL Database Services | DECHY Tech"
 description: "PostgreSQL from DECHY: designing, running, and tuning databases for applications and reporting, with sound structure, backups, and honest advice."
 breadcrumbLabel: PostgreSQL
 intent:

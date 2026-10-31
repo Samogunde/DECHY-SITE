@@ -3,7 +3,7 @@ slug: marketplace-app-development-cost
 type: guides
 category: industry
 service: software-development
-title: "Marketplace App Development Cost and Features | DECHY"
+title: "Marketplace App Development Cost and Features | DECHY Tech"
 description: "What it costs to build an online marketplace like Airbnb or Etsy: features, payments, trust and safety, the chicken-and-egg problem, timeline and budgets."
 h1: How Much Does It Cost to Build a Marketplace App?
 summary: "What it costs to build an online marketplace like Airbnb or Etsy: features, payments, trust and safety, the chicken-and-egg problem, timeline and budgets."

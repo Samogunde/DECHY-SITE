@@ -4,7 +4,7 @@ locale: en
 path: /software-development/dotnet/
 parent: /software-development/
 entityId: tech.dotnet
-title: .NET Development Services | DECHY
+title: .NET Development Services | DECHY Tech
 description: ".NET development from DECHY: building business applications on Microsoft's platform, and moving older .NET systems to a supported, maintainable setup."
 breadcrumbLabel: .NET
 intent:

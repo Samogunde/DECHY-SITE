@@ -5,7 +5,7 @@ locale: en
 path: /industries/telecommunications/
 parent: /industries/
 entityId: ind.telecommunications
-title: Telecom Software Development and Customer Platforms | DECHY
+title: Telecom Software and Customer Platforms | DECHY Tech
 description: "Telecommunications software from DECHY: customer self-service apps, ordering and
   provisioning, field service tools, and network data dashboards."
 breadcrumbLabel: Telecommunications

@@ -5,7 +5,7 @@ category: cost
 group: pricing
 service: consulting
 models: [rates, teams]
-title: "Software Developer Hourly Rates and Team Cost | DECHY"
+title: "Software Developer Hourly Rates and Team Cost | DECHY Tech"
 description: "Our hourly rates, from $25 to $80 an hour, and what a dedicated development team costs each month, from one engineer to a full squad."
 h1: "Hourly rates and dedicated team cost"
 summary: Most of our work is quoted as a fixed price. For change requests and time-and-materials work we use three simple hourly rates, from $25 to $80 an hour. A dedicated team costs from $6,000 a month for one engineer to $55,000 or more for a full squad. This guide explains both.

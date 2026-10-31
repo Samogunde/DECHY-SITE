@@ -3,7 +3,7 @@ slug: website-redesign
 type: guides
 category: guide
 service: web-development
-title: "Website Redesign: When to Do It, How to Keep SEO | DECHY"
+title: "Website Redesign: When, and How to Keep SEO | DECHY Tech"
 description: How to know when your website needs a redesign, what to plan, how to protect your Google rankings during the switch, and what a redesign costs.
 h1: "Website Redesign: Signs It's Time and How to Do It Right"
 summary: How to know when your website needs a redesign, what to plan, how to protect your Google rankings during the switch, and what a redesign costs.

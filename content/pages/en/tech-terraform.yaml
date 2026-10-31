@@ -4,7 +4,7 @@ locale: en
 path: /cloud/terraform/
 parent: /cloud/
 entityId: tool.terraform
-title: "Terraform and Infrastructure as Code | DECHY"
+title: "Terraform and Infrastructure as Code | DECHY Tech"
 description: "Terraform from DECHY: describing cloud infrastructure in code so it can be reviewed, repeated, and restored, with safeguards that keep it manageable."
 breadcrumbLabel: Terraform
 intent:

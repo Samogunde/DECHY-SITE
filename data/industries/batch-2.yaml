@@ -5,7 +5,7 @@ industries:
     entity: ind.restaurants
     name: Food and restaurants
     service: web-development
-    title: Restaurant Ordering and Food Business Software | DECHY
+    title: Restaurant Ordering and Food Business Software | DECHY Tech
     description:
       "Restaurant software from DECHY: direct online ordering, table booking, loyalty apps,
       and kitchen tools that cut delivery commissions and fill tables."
@@ -203,7 +203,7 @@ industries:
     entity: ind.hospitality
     name: Hospitality
     service: web-development
-    title: Hotel Booking Engine and Hospitality Software | DECHY
+    title: Hotel Booking Engine and Hospitality Software | DECHY Tech
     description: "Hospitality software from DECHY: direct booking websites, guest apps, upsells, and
       integrations with your property system for hotels and venues."
     intent:
@@ -395,7 +395,7 @@ industries:
     entity: ind.travel
     name: Travel and tourism
     service: web-development
-    title: Travel Booking Platform and Tour Software | DECHY
+    title: Travel Booking Platform and Tour Software | DECHY Tech
     description:
       "Travel and tourism software from DECHY: booking platforms, tour and activity booking,
       itinerary apps, and supplier integrations for travel companies."
@@ -594,7 +594,7 @@ industries:
     entity: ind.marketplaces
     name: Marketplaces and on-demand
     service: software-development
-    title: Marketplace and On-Demand App Development | DECHY
+    title: Marketplace and On-Demand App Development | DECHY Tech
     description: "Marketplace and on-demand app development from DECHY: two-sided platforms with
       listings, matching, payments, payouts, and tracking."
     intent:
@@ -787,7 +787,7 @@ industries:
     entity: ind.automotive
     name: Automotive
     service: web-development
-    title: Automotive Dealership Software and App Development | DECHY
+    title: Automotive Dealership Software and Apps | DECHY Tech
     description: "Automotive software from DECHY: dealership websites, vehicle inventory, service
       booking, finance applications, and apps for dealers and service centers."
     intent:
@@ -981,7 +981,7 @@ industries:
     entity: ind.transportation
     name: Transportation
     service: software-development
-    title: Transportation and Fleet Management Software | DECHY
+    title: Transportation and Fleet Management Software | DECHY Tech
     description: "Transportation software from DECHY: fleet management, driver apps, route planning,
       booking, and tracking for transport and fleet operators."
     intent:
@@ -1173,7 +1173,7 @@ industries:
     entity: ind.agriculture
     name: Agriculture
     service: software-development
-    title: Agriculture and Farm Management Software Development | DECHY
+    title: Agriculture and Farm Management Software | DECHY Tech
     description:
       "Agriculture software from DECHY: farm management, field and livestock records, sensor
       data, traceability, and supply apps for farms and agribusiness."

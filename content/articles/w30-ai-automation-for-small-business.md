@@ -3,7 +3,7 @@ slug: ai-automation-for-small-business
 type: guides
 category: guide
 service: automation
-title: "AI Automation for Small Business: A Practical Start | DECHY"
+title: "AI Automation for Small Business | DECHY Tech"
 description: "A practical guide to AI automation for small business: the best first tasks to automate, tools to use, costs, risks, and a simple 30-day plan to begin."
 h1: "AI Automation for Small Business: Where to Start"
 summary: "A practical guide to AI automation for small business: the best first tasks to automate, tools to use, costs, risks, and a simple 30-day plan to begin."

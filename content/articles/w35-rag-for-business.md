@@ -3,7 +3,7 @@ slug: rag-for-business
 type: guides
 category: guide
 service: ai
-title: "RAG for Business: AI That Answers From Your Own Data | DECHY"
+title: "RAG for Business: AI That Uses Your Own Data | DECHY Tech"
 description: What retrieval-augmented generation (RAG) is, how it lets AI answer from your documents, where it works, where it fails, and what a business RAG project costs.
 h1: "RAG Explained: AI That Answers From Your Own Company Data"
 summary: What retrieval-augmented generation (RAG) is, how it lets AI answer from your documents, where it works, where it fails, and what a business RAG project costs.

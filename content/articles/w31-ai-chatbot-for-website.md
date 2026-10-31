@@ -3,7 +3,7 @@ slug: ai-chatbot-for-website
 type: guides
 category: guide
 service: ai
-title: "How to Add an AI Chatbot to Your Website | DECHY"
+title: "How to Add an AI Chatbot to Your Website | DECHY Tech"
 description: "Learn how to add an AI chatbot to your website: the options, a step-by-step plan, what it costs, how to keep answers accurate, and when to hand off to a human."
 h1: How to Add an AI Chatbot to Your Website
 summary: "Learn how to add an AI chatbot to your website: the options, a step-by-step plan, what it costs, how to keep answers accurate, and when to hand off to a human."

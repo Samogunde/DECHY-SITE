@@ -4,7 +4,7 @@ locale: en
 path: /software-development/python/
 parent: /software-development/
 entityId: lang.python
-title: "Python Development Services | DECHY"
+title: "Python Development Services | DECHY Tech"
 description: "Python development from DECHY: back ends, data pipelines, automation, and AI-connected systems, and an honest view of where Python is the right language."
 breadcrumbLabel: Python
 intent:

@@ -4,7 +4,7 @@ locale: en
 path: /ai/langchain/
 parent: /ai/
 entityId: fw.langchain
-title: "LangChain Development Services | DECHY"
+title: "LangChain Development Services | DECHY Tech"
 description: "LangChain development from DECHY: AI features that retrieve information, call tools, and answer reliably, and a candid view of when a framework helps."
 breadcrumbLabel: LangChain
 intent:

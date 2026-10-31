@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/integration-platforms/
 entityId: workarea.integration-platforms
-title: "Integration Platforms and Data Hubs | DECHY"
+title: "Integration Platforms and Data Hubs | DECHY Tech"
 description: "Integration platforms connect many tools through one hub, so each connects once and data stays consistent, and when a direct link is enough."
 breadcrumbLabel: Integration Platforms
 parent: /work/

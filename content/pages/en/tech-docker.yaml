@@ -4,7 +4,7 @@ locale: en
 path: /cloud/docker/
 parent: /cloud/
 entityId: tool.docker
-title: "Docker and Containerization Services | DECHY"
+title: "Docker and Containerization Services | DECHY Tech"
 description: "Docker from DECHY: packaging software in containers so it runs the same everywhere, with the practices that keep containers safe and small."
 breadcrumbLabel: Docker
 intent:

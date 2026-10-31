@@ -4,7 +4,7 @@ locale: en
 path: /solutions/business-process-automation/
 parent: /solutions/
 entityId: sol.business-process-automation
-title: Business Process Automation Services | DECHY
+title: Business Process Automation Services | DECHY Tech
 description: "Business process automation from DECHY: removing repeated manual work, slow approvals, and re-typed data by automating the steps that follow fixed rules."
 breadcrumbLabel: Business process automation
 intent:

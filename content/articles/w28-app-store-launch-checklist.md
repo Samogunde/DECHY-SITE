@@ -3,7 +3,7 @@ slug: app-store-launch-checklist
 type: guides
 category: guide
 service: mobile-app-development
-title: "App Store Launch Checklist for iOS and Android | DECHY"
+title: "App Store Launch Checklist for iOS and Android | DECHY Tech"
 description: "A practical checklist for launching your app on the Apple App Store and Google Play: accounts, listing, privacy, testing, review tips, and post-launch steps."
 h1: "App Store Launch Checklist: Apple and Google Play"
 summary: "A practical checklist for launching your app on the Apple App Store and Google Play: accounts, listing, privacy, testing, review tips, and post-launch steps."

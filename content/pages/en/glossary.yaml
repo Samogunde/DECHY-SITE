@@ -3,7 +3,7 @@ kind: hub
 locale: en
 path: /resources/glossary/
 parent: /resources/
-title: "Technology Glossary: Terms in Plain English | DECHY"
+title: "Technology Glossary: Terms in Plain English | DECHY Tech"
 description: "Plain-English definitions of the technology terms that come up when you plan software, websites, apps, AI, automation, cloud, security, and search."
 breadcrumbLabel: Glossary
 h1: Technology glossary

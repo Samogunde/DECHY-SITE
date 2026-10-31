@@ -4,7 +4,7 @@ locale: en
 path: /ecommerce/bigcommerce/
 parent: /ecommerce/
 entityId: plat.bigcommerce
-title: "BigCommerce Development Services | DECHY"
+title: "BigCommerce Development Services | DECHY Tech"
 description: "BigCommerce development from DECHY: building stores with open interfaces, B2B pricing, and headless front ends, and choosing it over Shopify or WooCommerce."
 breadcrumbLabel: BigCommerce
 intent:

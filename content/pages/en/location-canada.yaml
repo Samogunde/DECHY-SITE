@@ -4,7 +4,7 @@ locale: en
 path: /locations/canada/
 parent: /locations/
 entityId: loc.canada
-title: "Software and Technology Services in Canada | DECHY"
+title: "Software and Technology Services in Canada | DECHY Tech"
 description: "How DECHY works with organizations in Canada: software, AI, and automation delivered remotely, with Canadian privacy rules and bilingual needs in view."
 breadcrumbLabel: Canada
 intent:

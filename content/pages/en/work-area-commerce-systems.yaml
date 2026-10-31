@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/commerce-systems/
 entityId: workarea.commerce-systems
-title: "Commerce Systems: Orders, Subscriptions, Payments | DECHY"
+title: "Commerce Systems: Orders and Subscriptions | DECHY Tech"
 description: "Commerce systems for what happens around the store: pricing, orders, subscriptions, payments, and fulfillment, for businesses that sell beyond a basic shop."
 breadcrumbLabel: Commerce Systems
 parent: /work/

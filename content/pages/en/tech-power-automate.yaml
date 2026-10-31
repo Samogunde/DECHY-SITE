@@ -4,7 +4,7 @@ locale: en
 path: /automation/microsoft-power-automate/
 parent: /automation/
 entityId: tech.microsoft-power-automate
-title: "Power Automate Consulting and Build | DECHY"
+title: "Power Automate Consulting and Build | DECHY Tech"
 description: "Microsoft Power Automate from DECHY: automating approvals, notices, and data entry across Microsoft 365, and when another automation tool fits better."
 breadcrumbLabel: Power Automate
 intent:

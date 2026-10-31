@@ -18,6 +18,15 @@ export function siteOrigin(): string {
 }
 
 /** Search indexing is off unless explicitly enabled (previews and pre-domain environments). */
+/**
+ * Public company profiles, listed as sameAs in the Organization data (owner, 31 October 2026).
+ * Add a new profile as one line once it loads publicly.
+ */
+export const PROFILES = [
+  "https://clutch.co/profile/dechy-tech",
+  "https://www.goodfirms.co/company/dechy",
+];
+
 export function indexingEnabled(): boolean {
   if ((process.env.SITE_INDEXING ?? "false").trim().toLowerCase() !== "true") return false;
   // Only the production deploy of the main address is indexed (owner, 25 October 2026): deploy

@@ -4,7 +4,7 @@ locale: en
 path: /web-development/typescript/
 parent: /web-development/
 entityId: lang.typescript
-title: "TypeScript Development Services | DECHY"
+title: "TypeScript Development Services | DECHY Tech"
 description: "TypeScript development from DECHY: safer web and server code that catches mistakes as it is written, and a practical way to adopt it in an existing project."
 breadcrumbLabel: TypeScript
 intent:

@@ -3,7 +3,7 @@ slug: ai-automation-roi
 type: guides
 category: guide
 service: automation
-title: "AI Automation ROI: How to Know If It's Worth It | DECHY"
+title: "AI Automation ROI: How to Know If It's Worth It | DECHY Tech"
 description: "A practical way to measure AI automation ROI: count time saved, errors avoided and revenue gained, compare with total cost and decide before you build."
 h1: Is AI Automation Worth It? How to Measure the Return
 summary: "A practical way to measure AI automation ROI: count time saved, errors avoided and revenue gained, compare with total cost and decide before you build."

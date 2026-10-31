@@ -4,7 +4,7 @@ slug: business-process-automation-where-to-start
 type: guides
 category: guide
 service: automation
-title: "Business Process Automation: Where to Start | DECHY"
+title: "Business Process Automation: Where to Start | DECHY Tech"
 description: "What business process automation is, which processes to automate first, how to prepare them, and how to keep automations reliable once they run."
 h1: "Business process automation: what it is and where to start"
 summary: Automation takes repetitive work off your team. This guide explains which processes to start with, how to prepare them, and how to keep automations running reliably.

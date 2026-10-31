@@ -5,7 +5,7 @@ industries:
     entity: ind.fitness
     name: Fitness and wellness
     service: mobile-app-development
-    title: Fitness App and Gym Software Development | DECHY
+    title: Fitness App and Gym Software Development | DECHY Tech
     description:
       "Gym, studio, and wellness software from DECHY: member apps, class booking, payments,
       and coaching tools that keep members coming back."
@@ -208,7 +208,7 @@ industries:
     entity: ind.beauty
     name: Beauty and salons
     service: web-development
-    title: Salon and Spa Booking Software Development | DECHY
+    title: Salon and Spa Booking Software Development | DECHY Tech
     description:
       Booking apps, websites, and client tools for salons, spas, clinics, and beauty brands,
       built by DECHY to fill chairs and cut no-shows.
@@ -403,7 +403,7 @@ industries:
     entity: ind.fintech
     name: Fintech and payments
     service: software-development
-    title: Fintech Software and Payment App Development | DECHY
+    title: Fintech Software and Payment App Development | DECHY Tech
     description:
       "Fintech software from DECHY: payment apps, wallets, lending platforms, and customer
       onboarding, built secure, tested, and ready to scale."
@@ -603,7 +603,7 @@ industries:
     entity: ind.banking
     name: Banking
     service: software-development
-    title: Banking Software Development and Modernization | DECHY
+    title: Banking Software Development and Modernization | DECHY Tech
     description:
       "Banking software from DECHY: digital banking apps, customer onboarding, lending tools,
       and core system integration for banks and credit unions."
@@ -802,7 +802,7 @@ industries:
     entity: ind.insurance
     name: Insurance
     service: software-development
-    title: Insurance Software Development and Claims Automation | DECHY
+    title: Insurance Software and Claims Automation | DECHY Tech
     description: "Insurance software from DECHY: quote and buy journeys, claims automation, broker
       portals, and AI document reading for insurers and brokers."
     intent:
@@ -992,7 +992,7 @@ industries:
     entity: ind.construction
     name: Construction
     service: software-development
-    title: Construction Software Development and Site Apps | DECHY
+    title: Construction Software Development and Site Apps | DECHY Tech
     description: "Construction software from DECHY: site apps, project tracking, approvals, and
       reporting that connect the office to every site."
     intent:
@@ -1185,7 +1185,7 @@ industries:
     entity: ind.energy
     name: Energy and utilities
     service: software-development
-    title: Energy and Utility Software Development | DECHY
+    title: Energy and Utility Software Development | DECHY Tech
     description:
       "Energy and utility software from DECHY: customer portals, field service apps, asset
       monitoring, and data platforms for energy companies and utilities."
@@ -1377,7 +1377,7 @@ industries:
     entity: ind.field-services
     name: Home and field services
     service: mobile-app-development
-    title: Field Service App and Scheduling Software | DECHY
+    title: Field Service App and Scheduling Software | DECHY Tech
     description: "Field service software from DECHY: booking, dispatch, technician apps, quotes, and
       invoicing for trades and home service companies."
     intent:

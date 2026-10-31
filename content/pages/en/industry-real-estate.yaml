@@ -4,7 +4,7 @@ locale: en
 path: /industries/real-estate/
 parent: /industries/
 entityId: ind.real-estate
-title: Real Estate and Property Software | DECHY
+title: Real Estate and Property Software | DECHY Tech
 description: "Software for real estate and property management from DECHY: lead follow-up, tenant and owner portals, maintenance requests, and connected back-office systems."
 breadcrumbLabel: Real estate
 intent:

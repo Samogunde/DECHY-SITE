@@ -4,7 +4,7 @@ slug: native-vs-cross-platform-apps
 type: comparisons
 category: comparison
 service: mobile-app-development
-title: "Native vs Cross-Platform Apps: Which to Choose | DECHY"
+title: "Native vs Cross-Platform Apps: Which to Choose | DECHY Tech"
 description: "Native or cross-platform for your mobile app? A side-by-side comparison of cost, speed, performance, and phone features, with when to choose each."
 h1: "Native vs cross-platform apps: which should you choose?"
 summary: Native apps are built separately for iPhone and Android. Cross-platform apps share one build across both. This comparison explains the real differences in cost, speed, performance, and access to phone features, and when each is the right choice.

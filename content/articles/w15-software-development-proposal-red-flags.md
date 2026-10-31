@@ -3,7 +3,7 @@ slug: software-development-proposal-red-flags
 type: guides
 category: guide
 service: software-development
-title: 10 Red Flags in a Software Development Proposal | DECHY
+title: 10 Red Flags in a Software Development Proposal | DECHY Tech
 description: "Spot the warning signs in a software development proposal before you sign: vague scope, missing testing, unclear ownership, unrealistic timelines and more."
 h1: 10 Red Flags in a Software Development Proposal
 summary: "Spot the warning signs in a software development proposal before you sign: vague scope, missing testing, unclear ownership, unrealistic timelines and more."

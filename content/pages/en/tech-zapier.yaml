@@ -4,7 +4,7 @@ locale: en
 path: /automation/zapier/
 parent: /automation/
 entityId: tech.zapier
-title: Zapier Automation Services | DECHY
+title: Zapier Automation Services | DECHY Tech
 description: "Zapier automation from DECHY: connecting the apps your team uses so tasks move on their own, with sensible limits, monitoring, and a view of when to outgrow it."
 breadcrumbLabel: Zapier
 intent:

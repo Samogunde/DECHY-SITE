@@ -4,7 +4,7 @@ locale: en
 path: /ai/google-gemini/
 parent: /ai/
 entityId: prov.google-gemini
-title: "Google Gemini Integration Services | DECHY"
+title: "Google Gemini Integration Services | DECHY Tech"
 description: "Gemini integration from DECHY: AI features on Google's models for text, images, audio, and video, especially where Google Cloud and Workspace are in use."
 breadcrumbLabel: Google Gemini
 intent:

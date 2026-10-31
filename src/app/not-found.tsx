@@ -7,7 +7,7 @@ import { EmailLink } from "@/components/primitives/EmailLink";
 import { TrackOnMount } from "@/components/patterns/Analytics";
 
 export const metadata: Metadata = {
-  title: { absolute: "Page not found | DECHY" },
+  title: { absolute: "Page not found | DECHY Tech" },
   robots: { index: false, follow: false },
 };
 

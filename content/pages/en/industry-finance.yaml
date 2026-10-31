@@ -4,7 +4,7 @@ locale: en
 path: /industries/finance/
 parent: /industries/
 entityId: ind.finance
-title: Financial Services Software and Systems | DECHY
+title: Financial Services Software and Systems | DECHY Tech
 description: "Software for finance, banking, and insurance teams from DECHY: connected systems, onboarding workflows, reporting, and portals with audit trails."
 breadcrumbLabel: Finance
 intent:

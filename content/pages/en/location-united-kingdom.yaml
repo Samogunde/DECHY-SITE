@@ -4,7 +4,7 @@ locale: en
 path: /locations/united-kingdom/
 parent: /locations/
 entityId: loc.united-kingdom
-title: "Software and Technology Services in the UK | DECHY"
+title: "Software and Technology Services in the UK | DECHY Tech"
 description: "How DECHY works with organizations in the UK: software, AI, and automation delivered remotely, with UK data protection and payment practice in view."
 breadcrumbLabel: United Kingdom
 intent:

@@ -4,7 +4,7 @@ locale: en
 path: /solutions/business-dashboards/
 parent: /solutions/
 entityId: sol.business-dashboards
-title: Business Dashboard Development | DECHY
+title: Business Dashboard Development | DECHY Tech
 description: "Business dashboards from DECHY: one trusted, current view of the numbers that run your business, built from your own systems and shaped for each role."
 breadcrumbLabel: Business dashboards
 intent:

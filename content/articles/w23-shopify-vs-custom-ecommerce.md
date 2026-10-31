@@ -3,7 +3,7 @@ slug: shopify-vs-custom-ecommerce
 type: comparisons
 category: comparison
 service: ecommerce
-title: "Shopify vs Custom Ecommerce: How to Decide (2026) | DECHY"
+title: "Shopify vs Custom Ecommerce: How to Decide | DECHY Tech"
 description: Shopify or a custom ecommerce build? Compare cost, speed, flexibility, fees and growth limits to choose the right platform for your online store.
 h1: "Shopify or Custom Ecommerce: How to Decide"
 summary: Shopify or a custom ecommerce build? Compare cost, speed, flexibility, fees and growth limits to choose the right platform for your online store.

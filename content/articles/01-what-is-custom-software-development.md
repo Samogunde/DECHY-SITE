@@ -4,7 +4,7 @@ slug: what-is-custom-software-development
 type: definitions
 category: explainer
 service: software-development
-title: "What Is Custom Software Development? | DECHY"
+title: "What Is Custom Software Development? | DECHY Tech"
 description: "What custom software is, how it differs from off-the-shelf tools, what it costs to own, and the signs that a business genuinely needs it."
 h1: What is custom software development, and when does a business need it?
 summary: Custom software is built around one organization's own work. This guide explains what that means, how it compares with ready-made tools, and how to tell whether you need it.

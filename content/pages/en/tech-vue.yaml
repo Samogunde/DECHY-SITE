@@ -4,7 +4,7 @@ locale: en
 path: /web-development/vue/
 parent: /web-development/
 entityId: fw.vue
-title: Vue.js Development Services | DECHY
+title: Vue.js Development Services | DECHY Tech
 description: "Vue development from DECHY: building web interfaces and dashboards, adding Vue to an existing site step by step, and choosing between Vue, React, and Angular."
 breadcrumbLabel: Vue
 intent:

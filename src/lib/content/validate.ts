@@ -29,7 +29,7 @@ type PhotoLayout = PhotoRef["layout"];
 
 import { entityPath, pathExists, publishedPath } from "./urls";
 import { buildGraph } from "@/lib/seo/structured-data";
-import { DESCRIPTOR } from "@/lib/site";
+import { DESCRIPTOR, PROFILES } from "@/lib/site";
 import { PUBLIC_EMAILS } from "@/lib/contact/emails";
 
 /** Entity types a technology page may belong to. */
@@ -323,8 +323,12 @@ export function validateRegistry(input: Registry): Issue[] {
     if (titles.has(page.title)) err("title-dup", where, `Same title as ${titles.get(page.title)}`);
     titles.set(page.title, where);
     // Search titles say what the page is first and carry the brand once, at the end.
-    if (!page.title.endsWith(" | DECHY") || page.title.indexOf("DECHY") !== page.title.length - 5)
-      err("title-format", where, `Title must describe the page and end with " | DECHY" only`);
+    // Owner, 31 October 2026: titles end with the full name, " | DECHY Tech", and name it once.
+    if (
+      !page.title.endsWith(" | DECHY Tech") ||
+      page.title.indexOf("DECHY") !== page.title.length - 10
+    )
+      err("title-format", where, `Title must describe the page and end with " | DECHY Tech" only`);
     if (page.title.length > 60)
       err("title-length", where, `Title is ${page.title.length} characters (max 60)`);
     if (page.description.length < 70 || page.description.length > 160)
@@ -694,16 +698,19 @@ export function validateRegistry(input: Registry): Issue[] {
         if (idsSeen.has(id)) err("jsonld-id-dup", where, `Duplicate JSON-LD @id ${id}`);
         idsSeen.add(id);
       }
-      for (const banned of [
-        "address",
-        "aggregateRating",
-        "review",
-        "award",
-        "sameAs",
-        "numberOfEmployees",
-      ]) {
+      for (const banned of ["address", "aggregateRating", "review", "award", "numberOfEmployees"]) {
         if (banned in n)
           err("jsonld-unsupported", where, `JSON-LD property ${banned} has no supporting fact`);
+      }
+      // sameAs lists only the public profiles the owner confirmed (PROFILES, 31 October 2026).
+      if ("sameAs" in n) {
+        const links = ([] as unknown[]).concat(n.sameAs);
+        if (links.some((l) => typeof l !== "string" || !PROFILES.includes(l)))
+          err(
+            "jsonld-unsupported",
+            where,
+            "JSON-LD sameAs lists a profile the owner has not confirmed",
+          );
       }
       // Contact points carry only the owner's public business addresses (24 October 2026).
       for (const cp of [n, ...((n.contactPoint as Record<string, unknown>[] | undefined) ?? [])]) {

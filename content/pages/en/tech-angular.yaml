@@ -4,7 +4,7 @@ locale: en
 path: /web-development/angular/
 parent: /web-development/
 entityId: fw.angular
-title: Angular Development Services | DECHY
+title: Angular Development Services | DECHY Tech
 description: "Angular development from DECHY: building large business applications, and moving older AngularJS systems to a supported version without stopping the business."
 breadcrumbLabel: Angular
 intent:

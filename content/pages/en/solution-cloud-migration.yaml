@@ -4,7 +4,7 @@ locale: en
 path: /solutions/cloud-migration/
 parent: /solutions/
 entityId: sol.cloud-migration
-title: Cloud Migration Services | DECHY
+title: Cloud Migration Services | DECHY Tech
 description: "Cloud migration from DECHY: moving servers, applications, and data to the cloud with a clear plan, tested cut-over, and costs you can predict and control."
 breadcrumbLabel: Cloud migration
 intent:

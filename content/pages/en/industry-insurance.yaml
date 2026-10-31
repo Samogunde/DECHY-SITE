@@ -5,7 +5,7 @@ locale: en
 path: /industries/insurance/
 parent: /industries/
 entityId: ind.insurance
-title: Insurance Software Development and Claims Automation | DECHY
+title: Insurance Software and Claims Automation | DECHY Tech
 description: "Insurance software from DECHY: quote and buy journeys, claims automation, broker
   portals, and AI document reading for insurers and brokers."
 breadcrumbLabel: Insurance

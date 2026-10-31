@@ -118,7 +118,7 @@ export function portfolioPages(labels: Labels): Page[] {
       kind: "case-study",
       locale: "en",
       path: projectPath(p),
-      title: `${p.title} Case Study | DECHY`,
+      title: `${p.title} Case Study | DECHY Tech`,
       description: description.length > 160 ? `${p.headline}. A DECHY case study.` : description,
       breadcrumbLabel: p.title,
       intent: { primary: `${p.title.toLowerCase()} case study`, secondary: [] },

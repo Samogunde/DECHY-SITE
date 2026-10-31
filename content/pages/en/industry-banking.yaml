@@ -5,7 +5,7 @@ locale: en
 path: /industries/banking/
 parent: /industries/
 entityId: ind.banking
-title: Banking Software Development and Modernization | DECHY
+title: Banking Software Development and Modernization | DECHY Tech
 description: "Banking software from DECHY: digital banking apps, customer onboarding, lending tools,
   and core system integration for banks and credit unions."
 breadcrumbLabel: Banking

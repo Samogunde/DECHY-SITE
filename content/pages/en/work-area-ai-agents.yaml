@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/ai-agents/
 entityId: workarea.ai-agents
-title: "AI Agent Development for Business Workflows | DECHY"
+title: "AI Agent Development for Business Workflows | DECHY Tech"
 description: "AI agents that carry out multi-step tasks with tools, limits, and human oversight: what they are, how they are controlled, and when simpler automation wins."
 breadcrumbLabel: AI Agents
 parent: /work/

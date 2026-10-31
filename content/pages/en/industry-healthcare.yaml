@@ -4,7 +4,7 @@ locale: en
 path: /industries/healthcare/
 parent: /industries/
 entityId: ind.healthcare
-title: Healthcare Software and Systems | DECHY
+title: Healthcare Software and Systems | DECHY Tech
 description: "Software for healthcare organizations from DECHY: patient portals, connected systems, booking, and reporting, built with privacy and access control first."
 breadcrumbLabel: Healthcare
 intent:

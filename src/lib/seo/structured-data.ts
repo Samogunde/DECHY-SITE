@@ -16,6 +16,7 @@ import {
   DESCRIPTOR,
   ORG_ID_FRAGMENT,
   SITE_NAME,
+  PROFILES,
   WEBSITE_ID_FRAGMENT,
   absoluteUrl,
   siteOrigin,
@@ -35,7 +36,8 @@ export function organizationNode(registry: Registry): Thing {
     "@type": "Organization",
     "@id": orgId(),
     name: SITE_NAME,
-    alternateName: "Deki",
+    alternateName: ["DECHY Tech", "Dechytech", "Deki"],
+    sameAs: PROFILES,
     url: `${siteOrigin()}/`,
     logo: {
       "@type": "ImageObject",

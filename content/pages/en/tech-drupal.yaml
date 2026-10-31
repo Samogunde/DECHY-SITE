@@ -4,7 +4,7 @@ locale: en
 path: /web-development/drupal/
 parent: /web-development/
 entityId: plat.drupal
-title: Drupal Development and Migration Services | DECHY
+title: Drupal Development and Migration Services | DECHY Tech
 description: "Drupal development from DECHY: building and upgrading content-rich sites with many editors and strict permissions, and moving old Drupal versions forward."
 breadcrumbLabel: Drupal
 intent:

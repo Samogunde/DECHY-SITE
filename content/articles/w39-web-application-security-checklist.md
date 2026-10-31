@@ -3,7 +3,7 @@ slug: web-application-security-checklist
 type: guides
 category: guide
 service: cybersecurity
-title: Web Application Security Checklist Before You Launch | DECHY
+title: Web App Security Checklist Before Launch | DECHY Tech
 description: "A practical web application security checklist: authentication, data protection, input validation, dependencies, infrastructure and monitoring before launch."
 h1: Security Checklist Before You Launch a Web App
 summary: "A practical web application security checklist: authentication, data protection, input validation, dependencies, infrastructure and monitoring before launch."

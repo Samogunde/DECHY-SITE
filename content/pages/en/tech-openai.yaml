@@ -4,7 +4,7 @@ locale: en
 path: /ai/openai/
 parent: /ai/
 entityId: prov.openai
-title: OpenAI Integration and Development | DECHY
+title: OpenAI Integration and Development | DECHY Tech
 description: "OpenAI integration from DECHY: text, image, speech, and search features in your software, with cost control, testing, and clear data handling."
 breadcrumbLabel: OpenAI
 intent:

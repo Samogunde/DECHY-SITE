@@ -3,7 +3,7 @@ slug: legacy-software-modernization
 type: guides
 category: guide
 service: software-development
-title: "Legacy Software Modernization: Rewrite or Replace? | DECHY"
+title: "Legacy Software: Rewrite, Rehost or Replace? | DECHY Tech"
 description: "How to modernize old business software: signs it's time, the main strategies, costs, risks, a phased plan and why big-bang rewrites so often fail."
 h1: "Legacy Software Modernization: Rewrite, Rehost or Replace?"
 summary: "How to modernize old business software: signs it's time, the main strategies, costs, risks, a phased plan and why big-bang rewrites so often fail."

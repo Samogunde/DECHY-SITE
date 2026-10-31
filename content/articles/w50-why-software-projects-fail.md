@@ -3,7 +3,7 @@ slug: why-software-projects-fail
 type: guides
 category: decision
 service: software-development
-title: Why Software Projects Fail (and How to Avoid It) | DECHY
+title: Why Software Projects Fail, and How to Avoid It | DECHY Tech
 description: "The real reasons software projects fail: unclear goals, scope creep, poor communication and weak testing. How to spot trouble early and keep yours on track."
 h1: Why Software Projects Fail, and How to Avoid It
 summary: "The real reasons software projects fail: unclear goals, scope creep, poor communication and weak testing. How to spot trouble early and keep yours on track."

@@ -5,7 +5,7 @@ category: cost
 group: build
 service: mobile-app-development
 models: [maintenance]
-title: "App Maintenance Cost: What Owning an App Costs | DECHY"
+title: "App Maintenance Cost: What Owning an App Costs | DECHY Tech"
 description: "Building an app is only the start. See what it costs to run and maintain one: hosting, updates, security, support, store fees and how to budget for them."
 h1: "The Hidden Costs of Owning an App: Hosting, Updates and Support"
 summary: "Building an app is only the start. See what it costs to run and maintain one: hosting, updates, security, support, store fees and how to budget for them."

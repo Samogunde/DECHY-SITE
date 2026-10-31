@@ -5,7 +5,7 @@ category: cost
 group: build
 service: automation
 pricing: automation
-title: "Business Process Automation Cost (2026 Guide) | DECHY"
+title: "Business Process Automation Cost (2026 Guide) | DECHY Tech"
 description: "What business process automation costs in 2026: tools, setup, custom builds and running costs, with example prices and how to estimate your return."
 h1: How Much Does Business Process Automation Cost?
 summary: "What business process automation costs in 2026: tools, setup, custom builds and running costs, with example prices and how to estimate your return."

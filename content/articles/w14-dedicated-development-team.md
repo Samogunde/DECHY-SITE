@@ -3,7 +3,7 @@ slug: dedicated-development-team
 type: guides
 category: guide
 service: software-development
-title: "Dedicated Development Team: When It Works | DECHY"
+title: "Dedicated Development Team: When It Works | DECHY Tech"
 description: What a dedicated development team is, how it works, what it costs, and when it is the right choice compared with project-based outsourcing or hiring in-house.
 h1: "Dedicated Development Team: When It Works and When It Doesn't"
 summary: What a dedicated development team is, how it works, what it costs, and when it is the right choice compared with project-based outsourcing or hiring in-house.

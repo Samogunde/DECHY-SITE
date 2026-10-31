@@ -3,7 +3,7 @@ kind: work-area
 locale: en
 path: /work/areas/data-analytics/
 entityId: workarea.data-analytics
-title: "Data Platforms, Pipelines and Reporting Systems | DECHY"
+title: "Data Platforms, Pipelines and Reporting Systems | DECHY Tech"
 description: "Data systems that bring your information together, check it, and turn it into reports and dashboards people trust: the parts, the process, and the limits."
 breadcrumbLabel: Data and Analytics Systems
 parent: /work/
